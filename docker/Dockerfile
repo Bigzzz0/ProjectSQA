@@ -25,8 +25,6 @@ WORKDIR /opt
 RUN git clone https://github.com/rjust/defects4j.git
 WORKDIR /opt/defects4j
 RUN ./init.sh
-RUN ./framework/bin/defects4j sanity-check
-
 ENV PATH=/opt/defects4j/framework/bin:$PATH
 
 WORKDIR /workspace
