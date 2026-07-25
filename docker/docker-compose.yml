@@ -1,0 +1,10 @@
+services:
+  defects4j-env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: defects4j_sqa
+    volumes:
+      - ../:/workspace
+    tty: true
+    stdin_open: true
