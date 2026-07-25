@@ -8,6 +8,10 @@ RUN apt-get update && apt-get install -y \
     git \
     perl \
     cpanminus \
+    libdbi-perl \
+    libdbd-csv-perl \
+    libtemplate-perl \
+    libxml-xpath-perl \
     curl \
     wget \
     build-essential \
