@@ -1,0 +1,15 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Docker / Build logs
+*.log
+.docker/
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# Temporary test outputs
+tmp/
+*.tmp
