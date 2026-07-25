@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # ติดตั้ง Dependencies สำหรับ Java 8, Perl, Git, Python และการสั่งรัน Defects4J
 RUN apt-get update && apt-get install -y \
-    openjdk-8-jdk \
+    openjdk-11-jdk \
     git \
     perl \
     curl \
@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Clone และ Setup Defects4J Framework
