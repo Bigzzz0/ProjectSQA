@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     openjdk-11-jdk \
     git \
     perl \
+    cpanminus \
     curl \
     wget \
     build-essential \
@@ -15,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     ca-certificates \
+    && cpanm -n String::Interpolate \
     && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
