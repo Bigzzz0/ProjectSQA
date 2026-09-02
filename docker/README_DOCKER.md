@@ -50,4 +50,23 @@ defects4j coverage
 
 ## 💡 หมายเหตุสำหรับสมาชิกในทีม
 - โฟลเดอร์ `ProjectSQA/` บนเครื่องโฮสต์ของคุณจะถูก Sync เข้ากับโฟลเดอร์ `/workspace` ภายใน Container อัตโนมัติ
-- หากสมาชิกทำการเจน Test Code (เช่น จาก EvoSuite, ACTS หรือ AI) สามารถเซฟไว้ใน `/workspace/Combinatorial_IPO/TestCode` หรือโฟลเดอร์ที่เกี่ยวข้องได้ทันที
+- สเปกข้อมูลบั๊กและคลาสเป้าหมายถูกจัดเก็บไว้ที่ `target_benchmark/Lang_1b/BUG_SPEC_LANG_1B.md`
+
+---
+
+## ⚙️ สคริปต์อัตโนมัติสำหรับ Member 4 (Automation Tools)
+
+### 1. การสกัด Target Class เพื่อส่งต่อให้เพื่อน (`extract_target.sh`)
+รันคำสั่งนี้ภายใน Container เพื่อ Checkout โปรเจกต์ และคัดลอกไฟล์ `.java` ออกมาไว้ที่ Host Workspace ทันที:
+```bash
+# ตัวอย่าง: สกัดคลาสเป้าหมายและ Ground Truth ของ Lang-1
+bash /workspace/docker/extract_target.sh Lang 1
+```
+*ผลลัพธ์:* ซอร์สโค้ดและข้อมูลบั๊กจะถูกนำไปเก็บไว้ใน `target_benchmark/Lang_1b/` อัตโนมัติ
+
+### 2. การรันประเมินผลและวัดผล Coverage ทุกเครื่องมือ (`evaluate_all.sh`)
+เมื่อเพื่อนๆ (Member 1, 2, 3) วางไฟล์ Test ลงในโฟลเดอร์ `TestCode/` ของแต่ละสายงานแล้ว ให้ Member 4 รันคำสั่งนี้เพื่อวัดผลทั้งหมดแบบรวดเดียว:
+```bash
+bash /workspace/docker/evaluate_all.sh Lang 1
+```
+*ผลลัพธ์:* สคริปต์จะคอมไพล์ วัดผล Line/Branch Coverage และตรวจสอบ Fault Detection Rate ของทั้ง 4 เครื่องมือ พร้อมสร้างตารางสรุปผลไว้ที่ `benchmark_results.md`

@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     ca-certificates \
-    && cpanm -n String::Interpolate \
+    && cpanm -n String::Interpolate DBI DBD::CSV \
     && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
