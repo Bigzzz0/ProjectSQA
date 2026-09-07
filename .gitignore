@@ -13,3 +13,9 @@ Thumbs.db
 # Temporary test outputs
 tmp/
 *.tmp
+
+# Environment variables & API Keys
+.env
+.env.*
+*.key
+
