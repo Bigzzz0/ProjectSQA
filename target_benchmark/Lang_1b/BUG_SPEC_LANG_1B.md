@@ -81,8 +81,8 @@ public static Number createNumber(final String str) throws NumberFormatException
 ### 🔹 สำหรับ Member 3 (AI Prompt Engineer - Claude & Gemini)
 * **เป้าหมาย:** นำซอร์สโค้ดของ `NumberUtils.java` ไปใส่ใน Master Prompt
 * **ชื่อคลาสสำหรับ Test Case ที่ต้องการ:**
-  * Claude: `NumberUtilsClaudeTest.java` (วางที่ `Claude-sonnet_4_6/TestCode/`)
-  * Gemini: `NumberUtilsGeminiTest.java` (วางที่ `Gemini-3_6_flash/TestCode/`)
+  * Claude: `NumberUtilsClaudeTest.java` (วางที่ `Claude-sonnet_5/TestCode/`)
+  * Gemini: `NumberUtilsGeminiTest.java` (วางที่ `Gemini-3_8_flash/TestCode/`)
 * **ข้อกำหนดทางเทคนิค:**
   * ต้องประกาศ `package org.apache.commons.lang3.math;`
   * ใช้ JUnit 4 (`import org.junit.Test;`, `import static org.junit.Assert.*;`)

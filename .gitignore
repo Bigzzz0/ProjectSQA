@@ -13,6 +13,8 @@ Thumbs.db
 # Temporary test outputs
 tmp/
 *.tmp
+__pycache__/
+*.pyc
 
 # Environment variables & API Keys
 .env

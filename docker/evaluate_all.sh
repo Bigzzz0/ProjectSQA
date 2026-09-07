@@ -4,8 +4,8 @@
 # Purpose: Benchmark evaluator for all 4 test generation tools:
 #          1. Combinatorial IPO (PICT)
 #          2. MIO Algorithm (EvoSuite)
-#          3. Claude Sonnet 4.6
-#          4. Gemini 3.6 Flash
+#          3. Claude Sonnet 5
+#          4. Gemini 3.8 Flash
 # Usage: ./evaluate_all.sh [Project] [Bug_ID]
 # Example: ./evaluate_all.sh Lang 1
 # ==============================================================================
@@ -37,12 +37,12 @@ fi
 TEST_TARGET_SUBDIR="src/test/java/org/apache/commons/lang3/math"
 
 # กำหนดรายชื่อเครื่องมือและโฟลเดอร์ TestCode
-TOOLS=("IPO_Algorithm" "MIO_EvoSuite" "Claude_Sonnet_4_6" "Gemini_3_6_Flash")
+TOOLS=("IPO_Algorithm" "MIO_EvoSuite" "Claude_Sonnet_5" "Gemini_3_8_Flash")
 TEST_PATHS=(
     "/workspace/Combinatorial_IPO/TestCode"
     "/workspace/MIO_Algorithm/TestCode"
-    "/workspace/Claude-sonnet_4_6/TestCode"
-    "/workspace/Gemini-3_6_flash/TestCode"
+    "/workspace/Claude-sonnet_5/TestCode"
+    "/workspace/Gemini-3_8_flash/TestCode"
 )
 
 # เตรียมส่วนหัวของไฟล์ Markdown สรุปผล

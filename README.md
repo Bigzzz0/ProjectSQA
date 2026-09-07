@@ -44,11 +44,11 @@ ProjectSQA/
 │   ├── Result_Round1/
 │   ├── Result_Round2/
 │   └── TestCode/                      # JUnit Test Cases ที่ MIO/EvoSuite สร้างขึ้น
-├── Claude-sonnet_4_6/                 # AI Tool 1: Claude Sonnet 4.6
+├── Claude-sonnet_5/                   # AI Tool 1: Claude Sonnet 5
 │   ├── Prompt/                        # System Prompts & Few-Shot Templates
 │   ├── Result/                        # ค่า Coverage & Bug Finding Metrics
 │   └── TestCode/                      # Java Test Code ที่ Claude สร้างให้
-└── Gemini-3_6_flash/                  # AI Tool 2: Gemini 3.6 Flash
+└── Gemini-3_8_flash/                  # AI Tool 2: Gemini 3.8 Flash
     ├── Prompt/                        # System Prompts & Few-Shot Templates
     ├── Result/                        # ค่า Coverage & Bug Finding Metrics
     └── TestCode/                      # Java Test Code ที่ Gemini สร้างให้
@@ -97,8 +97,8 @@ defects4j coverage
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **IPO Algorithm (Microsoft PICT)** | - | - | - | - | - |
 | **MIO Algorithm (EvoSuite)** | - | - | - | - | - |
-| **Claude Sonnet 4.6** | - | - | - | - | - |
-| **Gemini 3.6 Flash** | - | - | - | - | - |
+| **Claude Sonnet 5** | - | - | - | - | - |
+| **Gemini 3.8 Flash** | - | - | - | - | - |
 
 ---
 

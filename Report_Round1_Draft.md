@@ -24,12 +24,12 @@
 
 ### 1.1 ที่มาและความสำคัญ
 
-การทดสอบซอฟต์แวร์ระดับหน่วย (Unit Testing) เป็นกระบวนการสำคัญในการรับประกันคุณภาพของซอฟต์แวร์ โครงการนี้มีวัตถุประสงค์เพื่อศึกษาและเปรียบเทียบประสิทธิภาพระหว่าง **Automatic Test Case Generation Algorithms** (IPO Algorithm และ MIO Algorithm) กับ **AI-Assisting Tools** (Claude Sonnet 4.6 และ Gemini 3.6 Flash ผ่าน Antigravity) บนชุดข้อมูลมาตรฐาน Defects4J Dataset
+การทดสอบซอฟต์แวร์ระดับหน่วย (Unit Testing) เป็นกระบวนการสำคัญในการรับประกันคุณภาพของซอฟต์แวร์ โครงการนี้มีวัตถุประสงค์เพื่อศึกษาและเปรียบเทียบประสิทธิภาพระหว่าง **Automatic Test Case Generation Algorithms** (IPO Algorithm และ MIO Algorithm) กับ **AI-Assisting Tools** (Claude Sonnet 5 และ Gemini 3.8 Flash ผ่าน Antigravity) บนชุดข้อมูลมาตรฐาน Defects4J Dataset
 
 ### 1.2 วัตถุประสงค์
 
 1. เพื่อประยุกต์ใช้ IPO Algorithm (NIST ACTS Tool) และ MIO Algorithm (EvoSuite) ในการสร้างชุดทดสอบ Unit Test แบบอัตโนมัติ
-2. เพื่อออกแบบ Prompt Engineering สั่งการ Claude Sonnet 4.6 และ Gemini 3.6 Flash ให้สร้างชุดทดสอบสำหรับ Java Projects ใน Defects4J
+2. เพื่อออกแบบ Prompt Engineering สั่งการ Claude Sonnet 5 และ Gemini 3.8 Flash ให้สร้างชุดทดสอบสำหรับ Java Projects ใน Defects4J
 3. เพื่อเปรียบเทียบประสิทธิภาพในมิติของ Code Coverage (Line / Branch Coverage) และ Fault Detection Rate (อัตราการตรวจจับข้อบกพร่องจริง)
 
 ---
@@ -61,10 +61,10 @@
 - ใช้โครงสร้าง System Prompt + Context Ingestion + Few-Shot Prompting + Chain-of-Thought (CoT)
 - กำหนดเงื่อนไขบังคับ (Constraints) เช่น บังคับใช้ JUnit 4/5, บังคับรองรับ JDK 8 และให้ส่งคืนเฉพาะบล็อกรหัส Java เท่านั้น
 
-### 3.2 เปรียบเทียบแนวทางระหว่าง Claude Sonnet 4.6 และ Gemini 3.6 Flash
+### 3.2 เปรียบเทียบแนวทางระหว่าง Claude Sonnet 5 และ Gemini 3.8 Flash
 
-- **Claude Sonnet 4.6**: เน้นการวิเคราะห์ Edge Cases และการเขียน Assertion ที่แม่นยำ
-- **Gemini 3.6 Flash**: เน้นความเร็วในการประมวลผลและการใช้ Chain-of-Thought เพื่อแกะ Branch Logic
+- **Claude Sonnet 5**: เน้นการวิเคราะห์ Edge Cases และการเขียน Assertion ที่แม่นยำ
+- **Gemini 3.8 Flash**: เน้นความเร็วในการประมวลผลและการใช้ Chain-of-Thought เพื่อแกะ Branch Logic
 
 ---
 

@@ -12,6 +12,14 @@ import re
 import argparse
 import requests
 
+# ป้องกัน UnicodeEncodeError บน Windows terminal เมื่อแสดงผล emoji และภาษาไทย
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 API_BASE_URL = "https://gen.ai.kku.ac.th/api/v1"
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -72,16 +80,24 @@ def list_available_models(api_key):
 
 def extract_java_code(text):
     """สกัดเฉพาะบล็อกรหัสภาษา Java ออกมาจากข้อความที่ AI ตอบ"""
-    pattern = r"```java(.*?)```"
+    pattern = r"```java\s*(.*?)\s*```"
     matches = re.findall(pattern, text, re.DOTALL)
     if matches:
         return matches[0].strip()
     # หากไม่มี ```java ลองหา ``` ธรรมดา
-    pattern_generic = r"```(.*?)```"
+    pattern_generic = r"```\s*(.*?)\s*```"
     matches_generic = re.findall(pattern_generic, text, re.DOTALL)
     if matches_generic:
         return matches_generic[0].strip()
-    return text.strip()
+    # กรณีโค้ดถูกตัดจบกลางคัน (ไม่มี ``` ปิดท้าย) ให้ลบแท็กเปิด ```java หรือ ``` ออก
+    cleaned = text.strip()
+    if cleaned.startswith("```java"):
+        cleaned = cleaned[7:].strip()
+    elif cleaned.startswith("```"):
+        cleaned = cleaned[3:].strip()
+    if cleaned.endswith("```"):
+        cleaned = cleaned[:-3].strip()
+    return cleaned
 
 def run_test_generation(target_ai, api_key, model_identifier=None):
     """ส่ง Prompt ไปยัง KKU API และบันทึกผลลัพธ์อัตโนมัติ"""
@@ -96,29 +112,75 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
 
     # กำหนดค่าตาม AI ที่เลือก
     if target_ai.lower() == "claude":
-        tool_dir = "Claude-sonnet_4_6"
+        tool_dir = "Claude-sonnet_5"
         output_class_name = "NumberUtilsClaudeTest"
-        ai_display_name = "Claude Sonnet (via KKU API)"
-        default_model = "claude-sonnet-4"
+        ai_display_name = "Claude Sonnet 5 (via KKU API)"
+        default_model = "claude-sonnet-5"
     else:
-        tool_dir = "Gemini-3_6_flash"
+        tool_dir = "Gemini-3_8_flash"
         output_class_name = "NumberUtilsGeminiTest"
-        ai_display_name = "Gemini Flash (via KKU API)"
-        default_model = "gemini-3.5-flash"
+        ai_display_name = "Gemini 3.8 Flash (via KKU API)"
+        default_model = "gemini-3.8-flash"
 
     model_to_use = model_identifier if model_identifier else default_model
 
-    system_prompt = (
-        "You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4.\n"
-        "Your task is to generate high-coverage Unit Tests for org.apache.commons.lang3.math.NumberUtils from Defects4J.\n\n"
-        "Constraints:\n"
-        "1. Package declaration MUST be: package org.apache.commons.lang3.math;\n"
-        "2. Framework: JUnit 4 ONLY (import org.junit.Test; import static org.junit.Assert.*;). Do NOT use JUnit 5/Jupiter.\n"
-        f"3. Class name MUST be: public class {output_class_name}\n"
-        "4. Fully compatible with JDK 8.\n"
-        "5. Maximize Line & Branch Coverage on createNumber(String str).\n"
-        "6. Return ONLY pure executable Java code inside ```java block. No greetings or Markdown explanations."
-    )
+    system_prompt = f"""You are a Principal Software Quality Assurance (SQA) Engineer and Test Automation Specialist.
+Your mission is to perform advanced White-Box Testing on an Apache Commons Lang Java source class from the Defects4J benchmark to generate a production-grade, fault-revealing JUnit 4 test suite.
+
+---
+
+###  Core Objectives:
+1. Maximize **Line Coverage** and **Branch Coverage (Decision/Condition Coverage)** on the core numeric parsing logic (specifically `createNumber(String str)` and related conversion paths).
+2. Expose latent defects, boundary regressions, and type-handling flaws (focusing on Lang-1b defect patterns).
+3. Ensure **100% deterministic, zero-flakiness, and zero-compilation-error** execution on Java 8 / Defects4J.
+
+---
+
+###  Engineering Guidelines & Rules:
+
+#### 1. Imports & Environment Hygiene
+- Target Environment: Strictly **Java 8** and **JUnit 4**.
+- Package Declaration: Must declare `package org.apache.commons.lang3.math;` as line 1.
+- Mandatory Explicit Imports:
+  * `import org.junit.Test;`
+  * `import static org.junit.Assert.*;`
+  * `import java.math.BigInteger;`
+  * `import java.math.BigDecimal;`
+- Strict Prohibitions:
+  * NO JUnit 5 / Jupiter imports (`org.junit.jupiter.*`).
+  * NO mocking or third-party assertion libraries (AssertJ, Mockito, Truth).
+  * NO non-deterministic dependencies (e.g., `System.currentTimeMillis()`, `new Random()`).
+- Class Name: Name the test class `{output_class_name}` (`public class {output_class_name}`).
+
+#### 2. Test Architecture & Timeout Guard
+- Execution Guard: Every single `@Test` method MUST declare a timeout: `@Test(timeout = 4000)`.
+- Exception Handling: For invalid input scenarios expecting `NumberFormatException`, test them using `@Test(expected = NumberFormatException.class, timeout = 4000)` or explicit `try {{ ... fail(); }} catch (NumberFormatException expected) {{ ... }}`.
+- Granular Assertions: Always assert both the **Exact Returned Type** (e.g., `assertTrue(result instanceof Long)`) and the **Exact Value** (`assertEquals(...)`).
+
+#### 3. Systematic Equivalence Partitioning & Boundary Value Analysis (BVA)
+Structure the test suite into distinct logical sections covering:
+- **Partition A: Standard Numeric Primitives** (`Integer`, `Long`, `Float`, `Double`, `BigInteger`, `BigDecimal`).
+- **Partition B: Hexadecimal Representations (Critical Bug Zone)**:
+  * Prefixes: `0x`, `0X`, `#`
+  * Sign handling: Positive (`0x10`), Negative (`-0x10`, `-#1234`)
+  * Boundary & Large Hex: Values exceeding 32-bit signed int (e.g., `0x80000000`, `0xFFFFFFFF`)
+  * Suffix with Hex: e.g., `0x12L`, `0x12l`
+- **Partition C: Scientific / Exponent Notations**:
+  * Formats: `e`, `E`, signs in exponent (`1.2e+3`, `-2.5E-4`, `00E0`)
+- **Partition D: Type Qualifiers & Case Sensitivity**:
+  * Suffixes: `f`, `F`, `d`, `D`, `l`, `L`
+- **Partition E: Edge & Degenerate Cases**:
+  * `null`, empty string `""`, single whitespace, strings with leading/trailing characters, all zeros `000`, multiple signs/dots (`--1`, `1.2.3`).
+
+#### 4. In-Code Reasoning (Mental Sandbox)
+Before writing the Java test methods, include an in-line Javadoc/block comment at the top of the class summarizing your:
+`/* [Branch & Defect Analysis Matrix] */` listing the specific decision branches and boundary conditions being targeted.
+
+---
+
+###  ABSOLUTE OUTPUT CONSTRAINT:
+- Output MUST contain **ONLY compilable Java code** within a single ```java ... ``` block.
+- DO NOT output any introductory text, markdown explanations outside the code block, notes, or conversational closings."""
 
     user_prompt = (
         f"Here is the source code of NumberUtils.java:\n\n"
@@ -133,7 +195,7 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
             {"role": "user", "content": user_prompt}
         ],
         "temperature": 0.2,
-        "max_tokens": 4096
+        "max_tokens": 65536
     }
 
     headers = {
@@ -152,7 +214,7 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
             f"{API_BASE_URL}/chat/completions",
             headers=headers,
             json=payload,
-            timeout=180
+            timeout=300
         )
     except Exception as e:
         print(f"❌ เกิดข้อผิดพลาดในการเชื่อมต่อ: {e}")
@@ -175,7 +237,8 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
     raw_content = choices[0].get("message", {}).get("content", "")
     java_code = extract_java_code(raw_content)
 
-    # 2. ดึงสถิติ Token
+    # 2. ดึงสถิติ Token และตรวจสอบ finish_reason
+    finish_reason = choices[0].get("finish_reason", "")
     usage = res_json.get("usage", {})
     prompt_tokens = usage.get("prompt_tokens", 0)
     completion_tokens = usage.get("completion_tokens", 0)
@@ -183,6 +246,8 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
     quota = res_json.get("model_quota", {})
 
     print(f"\n✅ สร้างโค้ดสำเร็จในเวลา {elapsed_time} วินาที!")
+    if finish_reason == "length":
+        print("   ⚠️ คำเตือน: โค้ดถูกตัดจบก่อนเสร็จสมบูรณ์เนื่องจากชนขีดจำกัด token (finish_reason='length')")
     print(f"   📊 Token Usage -> Input: {prompt_tokens} | Output: {completion_tokens} | Total: {total_tokens}")
     if quota:
         print(f"   💳 Quota เหลือวันนี้: {quota.get('daily_remaining_tokens', 'N/A')} tokens")
@@ -198,19 +263,20 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
     # 4. บันทึก Prompt ที่ใช้
     prompt_dir = os.path.join(PROJECT_ROOT, tool_dir, "Prompt")
     os.makedirs(prompt_dir, exist_ok=True)
-    prompt_record_path = os.path.join(prompt_dir, f"actual_prompt_used.md")
+    target_class_name = os.path.splitext(os.path.basename(source_file))[0]
+    prompt_record_path = os.path.join(prompt_dir, f"actual_prompt_{target_class_name}.md")
     with open(prompt_record_path, "w", encoding="utf-8") as f:
         f.write(f"# Prompt Record for {output_class_name}\n\n")
         f.write(f"- **Timestamp:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"- **Model Used:** {model_to_use}\n\n")
         f.write(f"## System Prompt\n```text\n{system_prompt}\n```\n\n")
-        f.write(f"## User Prompt\n(Source code of NumberUtils.java included)\n")
+        f.write(f"## User Prompt\n(Source code of {target_class_name}.java included)\n")
     print(f"   📝 บันทึกประวัติ Prompt เรียบร้อยที่: {prompt_record_path}")
 
     # 5. บันทึกสถิติลงใน Result/
     result_dir = os.path.join(PROJECT_ROOT, tool_dir, "Result")
     os.makedirs(result_dir, exist_ok=True)
-    metrics_path = os.path.join(result_dir, "generation_metrics.md")
+    metrics_path = os.path.join(result_dir, f"generation_metrics_{target_class_name}.md")
     with open(metrics_path, "w", encoding="utf-8") as f:
         f.write(f"# 📊 สถิติการใช้งาน AI: {ai_display_name}\n\n")
         f.write(f"* **วัน-เวลาที่ทดลอง:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
