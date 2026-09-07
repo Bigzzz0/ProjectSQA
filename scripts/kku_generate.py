@@ -13,6 +13,7 @@ import argparse
 import requests
 
 API_BASE_URL = "https://gen.ai.kku.ac.th/api/v1"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def get_api_key():
     """ดึง API Key จาก Environment Variable หรือไฟล์ .env หรือถามผู้ใช้"""
@@ -20,8 +21,8 @@ def get_api_key():
     if key:
         return key.strip()
     
-    # ลองหาจากไฟล์ .env
-    env_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    # ลองหาจากไฟล์ .env ใน project root
+    env_file = os.path.join(PROJECT_ROOT, ".env")
     if os.path.exists(env_file):
         with open(env_file, "r", encoding="utf-8") as f:
             for line in f:
@@ -84,8 +85,7 @@ def extract_java_code(text):
 
 def run_test_generation(target_ai, api_key, model_identifier=None):
     """ส่ง Prompt ไปยัง KKU API และบันทึกผลลัพธ์อัตโนมัติ"""
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    source_file = os.path.join(base_dir, "target_benchmark", "Lang_1b", "NumberUtils.java")
+    source_file = os.path.join(PROJECT_ROOT, "target_benchmark", "Lang_1b", "NumberUtils.java")
     
     if not os.path.exists(source_file):
         print(f"❌ ไม่พบไฟล์ซอร์สโค้ด: {source_file}")
@@ -188,7 +188,7 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
         print(f"   💳 Quota เหลือวันนี้: {quota.get('daily_remaining_tokens', 'N/A')} tokens")
 
     # 3. บันทึกไฟล์ TestCode
-    testcode_dir = os.path.join(base_dir, tool_dir, "TestCode")
+    testcode_dir = os.path.join(PROJECT_ROOT, tool_dir, "TestCode")
     os.makedirs(testcode_dir, exist_ok=True)
     test_file_path = os.path.join(testcode_dir, f"{output_class_name}.java")
     with open(test_file_path, "w", encoding="utf-8") as f:
@@ -196,7 +196,7 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
     print(f"   💾 บันทึกไฟล์ Test เรียบร้อยที่: {test_file_path}")
 
     # 4. บันทึก Prompt ที่ใช้
-    prompt_dir = os.path.join(base_dir, tool_dir, "Prompt")
+    prompt_dir = os.path.join(PROJECT_ROOT, tool_dir, "Prompt")
     os.makedirs(prompt_dir, exist_ok=True)
     prompt_record_path = os.path.join(prompt_dir, f"actual_prompt_used.md")
     with open(prompt_record_path, "w", encoding="utf-8") as f:
@@ -208,7 +208,7 @@ def run_test_generation(target_ai, api_key, model_identifier=None):
     print(f"   📝 บันทึกประวัติ Prompt เรียบร้อยที่: {prompt_record_path}")
 
     # 5. บันทึกสถิติลงใน Result/
-    result_dir = os.path.join(base_dir, tool_dir, "Result")
+    result_dir = os.path.join(PROJECT_ROOT, tool_dir, "Result")
     os.makedirs(result_dir, exist_ok=True)
     metrics_path = os.path.join(result_dir, "generation_metrics.md")
     with open(metrics_path, "w", encoding="utf-8") as f:

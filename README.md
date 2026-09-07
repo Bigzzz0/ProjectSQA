@@ -24,6 +24,10 @@
 ProjectSQA/
 ├── README.md                          # เอกสารแนะนำโปรเจกต์ ขั้นตอนการรัน และสรุปผลลัพธ์
 ├── Report_Round1_Draft.md             # ร่างรายงานส่งรอบที่ 1 (Deadline 22 ส.ค. 2569)
+├── scripts/                           # สคริปต์เสริมสำหรับอำนวยความสะดวกในการทดลอง
+│   └── kku_generate.py                # สคริปต์ยิง KKU IntelSphere API สร้าง Test Suite อัตโนมัติ
+├── target_benchmark/                  # ข้อมูลคลาสและ Ground Truth จาก Defects4J
+│   └── Lang_1b/                       # Benchmark เป้าหมาย: Commons-Lang (Bug 1)
 ├── docker/                            # สภาพแวดล้อมกลางสำหรับรัน Defects4J Dataset
 │   ├── Dockerfile
 │   ├── docker-compose.yml
