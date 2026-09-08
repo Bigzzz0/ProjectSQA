@@ -99,48 +99,60 @@ def extract_java_code(text):
         cleaned = cleaned[:-3].strip()
     return cleaned
 
-def run_test_generation(target_ai, api_key, model_identifier=None):
+def run_test_generation(target_ai, api_key, model_identifier=None, source_file=None):
     """ส่ง Prompt ไปยัง KKU API และบันทึกผลลัพธ์อัตโนมัติ"""
-    source_file = os.path.join(PROJECT_ROOT, "target_benchmark", "Lang_1b", "NumberUtils.java")
+    if not source_file:
+        source_file = os.path.join(PROJECT_ROOT, "target_benchmark", "Lang_1b", "NumberUtils.java")
     
     if not os.path.exists(source_file):
         print(f"❌ ไม่พบไฟล์ซอร์สโค้ด: {source_file}")
         sys.exit(1)
         
-    with open(source_file, "r", encoding="utf-8") as f:
+    with open(source_file, "r", encoding="utf-8", errors="replace") as f:
         target_code = f.read()
+
+    # Extract target class name and package dynamically
+    base_class = os.path.splitext(os.path.basename(source_file))[0]
+    package_name = ""
+    for line in target_code.splitlines():
+        line = line.strip()
+        if line.startswith("package ") and line.endswith(";"):
+            package_name = line[8:-1].strip()
+            break
 
     # กำหนดค่าตาม AI ที่เลือก
     if target_ai.lower() == "claude":
         tool_dir = "Claude-sonnet_5"
-        output_class_name = "NumberUtilsClaudeTest"
+        output_class_name = f"{base_class}ClaudeTest"
         ai_display_name = "Claude Sonnet 5 (via KKU API)"
         default_model = "claude-sonnet-5"
     else:
         tool_dir = "Gemini-3_8_flash"
-        output_class_name = "NumberUtilsGeminiTest"
+        output_class_name = f"{base_class}GeminiTest"
         ai_display_name = "Gemini 3.8 Flash (via KKU API)"
         default_model = "gemini-3.8-flash"
 
     model_to_use = model_identifier if model_identifier else default_model
 
+    pkg_decl = f"package {package_name};" if package_name else "// No package"
+
     system_prompt = f"""You are a Principal Software Quality Assurance (SQA) Engineer and Test Automation Specialist.
-Your mission is to perform advanced White-Box Testing on an Apache Commons Lang Java source class from the Defects4J benchmark to generate a production-grade, fault-revealing JUnit 4 test suite.
+Your mission is to perform advanced White-Box Testing on the target Java class from the Defects4J benchmark to generate a production-grade, fault-revealing JUnit 4 test suite.
 
 ---
 
-###  Core Objectives:
-1. Maximize **Line Coverage** and **Branch Coverage (Decision/Condition Coverage)** on the core numeric parsing logic (specifically `createNumber(String str)` and related conversion paths).
-2. Expose latent defects, boundary regressions, and type-handling flaws (focusing on Lang-1b defect patterns).
+### 🎯 Core Objectives:
+1. Maximize **Line Coverage** and **Branch Coverage (Decision/Condition Coverage)** on the target class logic.
+2. Expose latent defects, boundary regressions, and type-handling flaws.
 3. Ensure **100% deterministic, zero-flakiness, and zero-compilation-error** execution on Java 8 / Defects4J.
 
 ---
 
-###  Engineering Guidelines & Rules:
+### 🛠️ Engineering Guidelines & Rules:
 
 #### 1. Imports & Environment Hygiene
 - Target Environment: Strictly **Java 8** and **JUnit 4**.
-- Package Declaration: Must declare `package org.apache.commons.lang3.math;` as line 1.
+- Package Declaration: Must declare `{pkg_decl}` as line 1.
 - Mandatory Explicit Imports:
   * `import org.junit.Test;`
   * `import static org.junit.Assert.*;`
@@ -281,7 +293,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         f.write(f"# 📊 สถิติการใช้งาน AI: {ai_display_name}\n\n")
         f.write(f"* **วัน-เวลาที่ทดลอง:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"* **โมเดลที่ใช้:** `{model_to_use}`\n")
-        f.write(f"* **คลาสเป้าหมาย:** `org.apache.commons.lang3.math.NumberUtils` (Lang-1b)\n\n")
+        f.write(f"* **คลาสเป้าหมาย:** `{package_name}.{base_class}`\n\n")
         f.write(f"### 1. ข้อมูลประสิทธิภาพ (Empirical Metrics from KKU IntelSphere API)\n")
         f.write(f"| พารามิเตอร์ | ค่าที่วัดได้จริง | แหล่งที่มาของข้อมูล |\n")
         f.write(f"| :--- | :---: | :--- |\n")
@@ -300,6 +312,7 @@ if __name__ == "__main__":
     parser.add_argument("--list-models", action="store_true", help="แสดงรายชื่อโมเดลทั้งหมดในระบบ KKU API")
     parser.add_argument("--ai", choices=["claude", "gemini"], help="เลือก AI ที่ต้องการสร้าง (claude หรือ gemini)")
     parser.add_argument("--model-id", type=str, help="ระบุ Model ID หรือ Model Name เจาะจง")
+    parser.add_argument("--source-file", type=str, help="ระบุที่อยู่ไฟล์ Java ซอร์สโค้ดเป้าหมาย")
     args = parser.parse_args()
 
     api_key = get_api_key()
@@ -307,10 +320,11 @@ if __name__ == "__main__":
     if args.list_models:
         list_available_models(api_key)
     elif args.ai:
-        run_test_generation(args.ai, api_key, args.model_id)
+        run_test_generation(args.ai, api_key, args.model_id, args.source_file)
     else:
         print("\nตัวอย่างการใช้งาน:")
         print("  1. ดูรายชื่อโมเดล: python kku_generate.py --list-models")
         print("  2. เจนเทสด้วย Claude: python kku_generate.py --ai claude")
         print("  3. เจนเทสด้วย Gemini: python kku_generate.py --ai gemini")
-        print("  4. ระบุโมเดลเฉพาะ:  python kku_generate.py --ai claude --model-id 1\n")
+        print("  4. ระบุไฟล์ซอร์สโค้ด: python kku_generate.py --ai gemini --source-file target_benchmark/Lang_1b/NumberUtils.java")
+        print("  5. ระบุโมเดลเฉพาะ:  python kku_generate.py --ai claude --model-id 1\n")

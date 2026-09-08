@@ -1,10 +1,15 @@
+version: '3.8'
+
 services:
   defects4j-env:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: defects4j_sqa
+    shm_size: '2gb'
     volumes:
       - ../:/workspace
     tty: true
     stdin_open: true
+    environment:
+      - TZ=Asia/Bangkok

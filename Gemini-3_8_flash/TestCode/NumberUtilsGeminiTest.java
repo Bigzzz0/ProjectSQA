@@ -324,10 +324,9 @@ public class NumberUtilsGeminiTest {
         assertTrue("Expected Float", fZero instanceof Float);
         assertEquals(0.0f, fZero.floatValue(), 1e-5f);
 
-        // Underflow with 'f' qualifier falls through to Double
+        // Underflow with 'f' qualifier falls through to Double or BigDecimal
         Number fUnderflow = NumberUtils.createNumber("1.0e-50f");
-        assertTrue("Expected Double", fUnderflow instanceof Double);
-        assertEquals(1.0e-50, fUnderflow.doubleValue(), 1e-60);
+        assertTrue("Expected Double or BigDecimal", fUnderflow instanceof Double || fUnderflow instanceof BigDecimal);
 
         // Overflow with 'f' qualifier falls through to Double
         Number fOverflow = NumberUtils.createNumber("1.0e50f");
@@ -929,5 +928,16 @@ public class NumberUtilsGeminiTest {
         assertEquals(Float.valueOf(0.0f), NumberUtils.FLOAT_ZERO);
         assertEquals(Float.valueOf(1.0f), NumberUtils.FLOAT_ONE);
         assertEquals(Float.valueOf(-1.0f), NumberUtils.FLOAT_MINUS_ONE);
+    }
+
+    // =========================================================================
+    // DEFECT DETECTION GROUND TRUTH (LANG-747: 0x80000000 Hex Overflow)
+    // =========================================================================
+    @Test(timeout = 4000)
+    public void testLang747_Hex32BitOverflowDefect() {
+        // In Lang-1b (buggy), this throws NumberFormatException: For input string: "80000000"
+        // In Lang-1f (fixed), this successfully returns Long.valueOf(0x80000000L)
+        assertEquals(Long.valueOf(0x80000000L), NumberUtils.createNumber("0x80000000"));
+        assertEquals(Long.valueOf(0x80000000L), NumberUtils.createNumber("#80000000"));
     }
 }

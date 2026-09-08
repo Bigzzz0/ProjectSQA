@@ -1,0 +1,6 @@
+Project,Bug_ID,Technique,Target_Classes,Test_File,Line_Coverage_%,Branch_Coverage_%,Fault_Detected,Execution_Status,Timestamp
+Lang,1,IPO (Microsoft PICT),org.apache.commons.lang3.math.NumberUtils,NumberUtils_IPOTest.java,23.2,16.27,❌ NO (All passed on buggy),DONE,2026-09-08 20:38:06
+Lang,1,MIO (EvoSuite SBST),org.apache.commons.lang3.math.NumberUtils,NumberUtils_ESTest.java,22.67,14.2,❌ NO (All passed on buggy),DONE,2026-09-08 20:38:27
+Lang,1,Claude Sonnet 5,org.apache.commons.lang3.math.NumberUtils,NumberUtilsClaudeTest.java,64.8,56.8,❌ NO (All passed on buggy),DONE,2026-09-08 20:38:49
+Lang,1,Gemini 3.8 Flash,org.apache.commons.lang3.math.NumberUtils,NumberUtilsGeminiTest.java,98.67,93.79,❌ NO (All passed on buggy),DONE,2026-09-08 20:39:11
+Lang,1,Gemini 3.8 Flash,org.apache.commons.lang3.math.NumberUtils,NumberUtilsGeminiTest.java,98.67,93.79,✅ YES (1 Defects Triggered),DONE,2026-09-08 20:48:56

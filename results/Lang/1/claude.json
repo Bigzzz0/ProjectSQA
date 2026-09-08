@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "\u274c NO (All passed on buggy)",
+  "line_cov": 64.8,
+  "branch_cov": 56.8,
+  "test_file": "NumberUtilsClaudeTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsClaudeTest::testCreateNumber_HexHashOverflowsInt_Defect",
+    "org.apache.commons.lang3.math.NumberUtilsClaudeTest::testCreateNumber_Hex80000000_OverflowsInt_Defect",
+    "org.apache.commons.lang3.math.NumberUtilsClaudeTest::testCreateNumber_HexFFFFFFFF_OverflowsInt_Defect"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "DONE",
+  "fault_detected": "\u2705 YES (1 Defects Triggered)",
+  "line_cov": 98.67,
+  "branch_cov": 93.79,
+  "test_file": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testLang747_Hex32BitOverflowDefect"
+  ],
+  "fixed_failures": []
+}

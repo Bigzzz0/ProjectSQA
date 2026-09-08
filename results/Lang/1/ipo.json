@@ -1,0 +1,10 @@
+{
+  "status": "DONE",
+  "fault_detected": "\u274c NO (All passed on buggy)",
+  "line_cov": 23.2,
+  "branch_cov": 16.27,
+  "test_file": "NumberUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

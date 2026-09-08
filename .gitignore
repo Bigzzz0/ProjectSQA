@@ -18,6 +18,7 @@ __pycache__/
 
 # Environment variables & API Keys
 .env
-.env.*
+.env.local
+!.env.example
 *.key
 

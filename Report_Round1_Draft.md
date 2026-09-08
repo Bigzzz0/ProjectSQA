@@ -59,7 +59,7 @@
 ### 3.1 เทคนิคการออกแบบ Prompt
 
 - ใช้โครงสร้าง System Prompt + Context Ingestion + Few-Shot Prompting + Chain-of-Thought (CoT)
-- กำหนดเงื่อนไขบังคับ (Constraints) เช่น บังคับใช้ JUnit 4/5, บังคับรองรับ JDK 8 และให้ส่งคืนเฉพาะบล็อกรหัส Java เท่านั้น
+- กำหนดเงื่อนไขบังคับ (Constraints) เช่น บังคับใช้ JUnit 4 เท่านั้น (ห้ามใช้ JUnit 5 เพื่อความเข้ากันได้กับ Defects4J), บังคับรองรับ JDK 8 และให้ส่งคืนเฉพาะบล็อกรหัส Java เท่านั้น
 
 ### 3.2 เปรียบเทียบแนวทางระหว่าง Claude Sonnet 5 และ Gemini 3.8 Flash
 
@@ -74,13 +74,14 @@
 
 ### 4.1 สภาพแวดล้อม Defects4J
 
-ใช้ Docker Container (Ubuntu 20.04 + Java 8 OpenJDK + Defects4J Framework) เพื่อให้ทุกคนในทีมทดลองบนสภาพแวดล้อมมาตรฐานเดียวกัน
+ใช้ Docker Container (Ubuntu 20.04 + Multi-JDK OpenJDK 8/11 + Defects4J Framework + PICT + EvoSuite) เพื่อให้ทุกคนในทีมทดลองบนสภาพแวดล้อมมาตรฐานเดียวกันและสามารถทำซ้ำได้ (Reproducible)
 
 ### 4.2 ดรรชนีชี้วัดประสิทธิภาพ (Evaluation Metrics)
 
-1. **Line Coverage ($Coverage_{Line}$)**:
+1. **Target Class Line Coverage ($Coverage_{Line}$)**:
    $$Coverage_{Line} = \left(\frac{L_{covered}}{L_{total}}\right) \times 100\%$$
-2. **Branch Coverage ($Coverage_{Branch}$)**:
+2. **Target Class Branch Coverage ($Coverage_{Branch}$)**:
    $$Coverage_{Branch} = \left(\frac{B_{covered}}{B_{total}}\right) \times 100\%$$
-3. **Fault Detection Rate (FDR)**:
-   $$FDR = \left(\frac{D_{detected}}{D_{total\_known\_bugs}}\right) \times 100\%$$
+3. **Fault Detection Rate on Evaluated Sample ($FDR$)**:
+   $$FDR = \left(\frac{D_{detected}}{D_{total\_sample\_bugs}}\right) \times 100\%$$
+

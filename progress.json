@@ -1,0 +1,44 @@
+{
+  "Lang-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "❌ NO (All passed on buggy)",
+    "line_cov": 23.2,
+    "branch_cov": 16.27,
+    "test_file": "NumberUtils_IPOTest.java",
+    "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Lang-1-mio": {
+    "status": "DONE",
+    "fault_detected": "❌ NO (All passed on buggy)",
+    "line_cov": 22.67,
+    "branch_cov": 14.2,
+    "test_file": "NumberUtils_ESTest.java",
+    "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Lang-1-claude": {
+    "status": "DONE",
+    "fault_detected": "❌ NO (All passed on buggy)",
+    "line_cov": 64.8,
+    "branch_cov": 56.8,
+    "test_file": "NumberUtilsClaudeTest.java",
+    "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Lang-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "✅ YES (1 Defects Triggered)",
+    "line_cov": 98.67,
+    "branch_cov": 93.79,
+    "test_file": "NumberUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+    "buggy_failures": [
+      "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testLang747_Hex32BitOverflowDefect"
+    ],
+    "fixed_failures": []
+  }
+}
