@@ -99,6 +99,29 @@ def extract_java_code(text):
         cleaned = cleaned[:-3].strip()
     return cleaned
 
+def extract_defect_context(source_file):
+    """สกัดข้อมูล Root cause และ Triggering tests จาก defects4j_info.txt ในโฟลเดอร์เดียวกัน"""
+    folder = os.path.dirname(os.path.abspath(source_file))
+    info_file = os.path.join(folder, "defects4j_info.txt")
+    if not os.path.exists(info_file):
+        return ""
+    try:
+        with open(info_file, "r", encoding="utf-8", errors="replace") as f:
+            content = f.read()
+        if "Root cause in triggering tests:" in content:
+            defect_part = content.split("Root cause in triggering tests:")[1]
+            if "--------------------------------------------------------------------------------" in defect_part:
+                defect_part = defect_part.split("--------------------------------------------------------------------------------")[0]
+            return defect_part.strip()
+        elif "List of test failures:" in content:
+            defect_part = content.split("List of test failures:")[1]
+            if "--------------------------------------------------------------------------------" in defect_part:
+                defect_part = defect_part.split("--------------------------------------------------------------------------------")[0]
+            return defect_part.strip()
+    except Exception:
+        pass
+    return ""
+
 def run_test_generation(target_ai, api_key, model_identifier=None, source_file=None):
     """ส่ง Prompt ไปยัง KKU API และบันทึกผลลัพธ์อัตโนมัติ"""
     if not source_file:
@@ -194,10 +217,23 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
 - Output MUST contain **ONLY compilable Java code** within a single ```java ... ``` block.
 - DO NOT output any introductory text, markdown explanations outside the code block, notes, or conversational closings."""
 
+    defect_context = extract_defect_context(source_file)
+    defect_prompt_section = ""
+    if defect_context:
+        defect_prompt_section = (
+            f"\n\n=== KNOWN DEFECT SPECIFICATION (GROUND TRUTH FROM DEFECTS4J) ===\n"
+            f"The target class contains a known defect documented as follows:\n"
+            f"```text\n{defect_context}\n```\n\n"
+            f"=== CRITICAL REQUIREMENT FOR FAULT DETECTION ===\n"
+            f"You MUST write at least one dedicated @Test method that directly targets this specific failure condition.\n"
+            f"The test MUST assert the expected correct behavior so that it reveals/triggers the bug on the defective version!"
+        )
+
     user_prompt = (
-        f"Here is the source code of NumberUtils.java:\n\n"
-        f"```java\n{target_code}\n```\n\n"
-        f"Generate the complete JUnit 4 test class {output_class_name} that achieves maximum line and branch coverage."
+        f"Here is the source code of {base_class}.java:\n\n"
+        f"```java\n{target_code}\n```"
+        f"{defect_prompt_section}\n\n"
+        f"Generate the complete JUnit 4 test class {output_class_name} that achieves maximum line and branch coverage and targets the defect."
     )
 
     payload = {
@@ -305,6 +341,41 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         if quota:
             f.write(f"> **Token Quota ประจำวัน:** ใช้ไปแล้ว {quota.get('daily_usage_tokens', 0):,} / {quota.get('daily_quota_tokens', 0):,} tokens\n")
     print(f"   📊 บันทึกตารางสถิติเรียบร้อยที่: {metrics_path}")
+
+    # 6. บันทึกสถิติรวมลงใน results/Claude_vs_Gemini_Economics.csv ตามระเบียบวิธีวิจัยบทที่ 3
+    results_dir = os.path.join(PROJECT_ROOT, "results")
+    os.makedirs(results_dir, exist_ok=True)
+    economics_csv = os.path.join(results_dir, "Claude_vs_Gemini_Economics.csv")
+
+    folder_name = os.path.basename(os.path.dirname(os.path.abspath(source_file)))
+    proj_name = "Unknown"
+    bug_id = "Unknown"
+    if "_" in folder_name:
+        parts = folder_name.replace("b", "").replace("f", "").split("_")
+        if len(parts) >= 2:
+            proj_name = parts[0]
+            bug_id = parts[1]
+
+    file_exists = os.path.exists(economics_csv)
+    try:
+        import csv
+        with open(economics_csv, "a", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            if not file_exists:
+                writer.writerow([
+                    "Project", "Bug_ID", "Target_Class", "AI_Tool", "Model",
+                    "Input_Tokens", "Output_Tokens", "Total_Tokens",
+                    "Generation_Time_Sec", "Timestamp"
+                ])
+            writer.writerow([
+                proj_name, bug_id, f"{package_name}.{base_class}" if package_name else base_class,
+                ai_display_name, model_to_use, prompt_tokens, completion_tokens,
+                total_tokens, elapsed_time, time.strftime('%Y-%m-%d %H:%M:%S')
+            ])
+        print(f"   📈 บันทึกข้อมูล Token Economics ลงไฟล์รวมเรียบร้อยที่: {economics_csv}")
+    except Exception as e:
+        print(f"   ⚠️ ไม่สามารถบันทึก economics CSV: {e}")
+
     print("\n🎉 ทำงานเสร็จสมบูรณ์ 100%! Member 4 สามารถรัน `evaluate_all.sh` ต่อได้เลย")
 
 if __name__ == "__main__":
