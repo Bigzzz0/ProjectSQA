@@ -1,38 +1,38 @@
-Summary of configuration for Project: Math
+Summary of configuration for Project: Gson
 --------------------------------------------------------------------------------
     Script dir: /opt/defects4j/framework
       Base dir: /opt/defects4j
     Major root: /opt/defects4j/major
       Repo dir: /opt/defects4j/project_repos
 --------------------------------------------------------------------------------
-    Project ID: Math
-       Program: commons-math
-    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+    Project ID: Gson
+       Program: gson
+    Build file: /opt/defects4j/framework/projects/Gson/Gson.build.xml
 --------------------------------------------------------------------------------
            Vcs: Vcs::Git
-    Repository: /opt/defects4j/project_repos/commons-math.git
-     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
-Number of bugs: 106
+    Repository: /opt/defects4j/project_repos/gson.git
+     Commit db: /opt/defects4j/framework/projects/Gson/active-bugs.csv
+Number of bugs: 18
 --------------------------------------------------------------------------------
 
-Summary for Bug: Math-2
+Summary for Bug: Gson-1
 --------------------------------------------------------------------------------
 Revision ID (fixed version):
-f1467e45ab538789090f968f549f88bd0b8c26c7
+c6a4f55d1a9b191dbbd958c366091e567191ccab
 --------------------------------------------------------------------------------
 Revision date (fixed version):
-2013-08-10 00:57:48 +0000
+2010-11-02 03:32:39 +0000
 --------------------------------------------------------------------------------
 Bug report id:
-MATH-1021
+40
 --------------------------------------------------------------------------------
 Bug report url:
-https://issues.apache.org/jira/browse/MATH-1021
+https://github.com/google/gson/issues/40
 --------------------------------------------------------------------------------
 Root cause in triggering tests:
- - org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021
-   --> junit.framework.AssertionFailedError: sample=-50
+ - com.google.gson.functional.TypeVariableTest::testSingle
+   --> java.lang.UnsupportedOperationException: Expecting parameterized type, got class com.google.gson.functional.TypeVariableTest$Bar.
 --------------------------------------------------------------------------------
 List of modified sources:
- - org.apache.commons.math3.distribution.HypergeometricDistribution
+ - com.google.gson.TypeInfoFactory
 --------------------------------------------------------------------------------

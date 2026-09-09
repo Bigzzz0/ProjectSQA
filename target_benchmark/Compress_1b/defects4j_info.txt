@@ -1,38 +1,38 @@
-Summary of configuration for Project: Math
+Summary of configuration for Project: Compress
 --------------------------------------------------------------------------------
     Script dir: /opt/defects4j/framework
       Base dir: /opt/defects4j
     Major root: /opt/defects4j/major
       Repo dir: /opt/defects4j/project_repos
 --------------------------------------------------------------------------------
-    Project ID: Math
-       Program: commons-math
-    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+    Project ID: Compress
+       Program: commons-compress
+    Build file: /opt/defects4j/framework/projects/Compress/Compress.build.xml
 --------------------------------------------------------------------------------
            Vcs: Vcs::Git
-    Repository: /opt/defects4j/project_repos/commons-math.git
-     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
-Number of bugs: 106
+    Repository: /opt/defects4j/project_repos/commons-compress.git
+     Commit db: /opt/defects4j/framework/projects/Compress/active-bugs.csv
+Number of bugs: 47
 --------------------------------------------------------------------------------
 
-Summary for Bug: Math-2
+Summary for Bug: Compress-1
 --------------------------------------------------------------------------------
 Revision ID (fixed version):
-f1467e45ab538789090f968f549f88bd0b8c26c7
+004124ac5dbf5edbf925078652526267468821e7
 --------------------------------------------------------------------------------
 Revision date (fixed version):
-2013-08-10 00:57:48 +0000
+2009-03-26 10:36:45 +0000
 --------------------------------------------------------------------------------
 Bug report id:
-MATH-1021
+COMPRESS-28
 --------------------------------------------------------------------------------
 Bug report url:
-https://issues.apache.org/jira/browse/MATH-1021
+https://issues.apache.org/jira/browse/COMPRESS-28
 --------------------------------------------------------------------------------
 Root cause in triggering tests:
- - org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021
-   --> junit.framework.AssertionFailedError: sample=-50
+ - org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive
+   --> java.io.EOFException
 --------------------------------------------------------------------------------
 List of modified sources:
- - org.apache.commons.math3.distribution.HypergeometricDistribution
+ - org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream
 --------------------------------------------------------------------------------

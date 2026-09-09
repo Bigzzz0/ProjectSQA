@@ -1,38 +1,39 @@
-Summary of configuration for Project: Math
+Summary of configuration for Project: Time
 --------------------------------------------------------------------------------
     Script dir: /opt/defects4j/framework
       Base dir: /opt/defects4j
     Major root: /opt/defects4j/major
       Repo dir: /opt/defects4j/project_repos
 --------------------------------------------------------------------------------
-    Project ID: Math
-       Program: commons-math
-    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+    Project ID: Time
+       Program: joda-time
+    Build file: /opt/defects4j/framework/projects/Time/Time.build.xml
 --------------------------------------------------------------------------------
            Vcs: Vcs::Git
-    Repository: /opt/defects4j/project_repos/commons-math.git
-     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
-Number of bugs: 106
+    Repository: /opt/defects4j/project_repos/joda-time.git
+     Commit db: /opt/defects4j/framework/projects/Time/active-bugs.csv
+Number of bugs: 26
 --------------------------------------------------------------------------------
 
-Summary for Bug: Math-2
+Summary for Bug: Time-1
 --------------------------------------------------------------------------------
 Revision ID (fixed version):
-f1467e45ab538789090f968f549f88bd0b8c26c7
+9a62b06be5d0df8e833ff8583398cca386608cac
 --------------------------------------------------------------------------------
 Revision date (fixed version):
-2013-08-10 00:57:48 +0000
+2013-12-02 21:11:47 +0000
 --------------------------------------------------------------------------------
 Bug report id:
-MATH-1021
+93
 --------------------------------------------------------------------------------
 Bug report url:
-https://issues.apache.org/jira/browse/MATH-1021
+https://github.com/JodaOrg/joda-time/issues/93
 --------------------------------------------------------------------------------
 Root cause in triggering tests:
- - org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021
-   --> junit.framework.AssertionFailedError: sample=-50
+ - org.joda.time.TestPartial_Constructors::testConstructorEx7_TypeArray_intArray
+   --> junit.framework.AssertionFailedError
 --------------------------------------------------------------------------------
 List of modified sources:
- - org.apache.commons.math3.distribution.HypergeometricDistribution
+ - org.joda.time.field.UnsupportedDurationField
+ - org.joda.time.Partial
 --------------------------------------------------------------------------------
