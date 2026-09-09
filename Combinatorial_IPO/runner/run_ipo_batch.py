@@ -9,6 +9,7 @@ import math
 import re
 import sys
 from pathlib import Path
+from time import perf_counter
 from typing import Dict, List, Mapping, Optional, Sequence, Tuple
 
 
@@ -17,15 +18,12 @@ PROJECT_ROOT = IPO_ROOT.parent
 if str(IPO_ROOT) not in sys.path:
     sys.path.insert(0, str(IPO_ROOT))
 
-from algorithm.ipo import (  # noqa: E402
-    PictGenerationError,
-    build_pict_model,
-    generate_pairwise,
-)
+from algorithm.ipo import generate_pairwise  # noqa: E402
 from analyzer.java_parser import parse_java_file  # noqa: E402
 from domain.semantic_overrides import find_semantic_override  # noqa: E402
 from domain.value_generator import get_domain_for_type  # noqa: E402
 from generator.junit_generator import synthesize_junit_suite  # noqa: E402
+from verification.pair_coverage import verify_pair_coverage  # noqa: E402
 
 
 TARGET_DIRECTORY_PATTERN = re.compile(r"^(?P<project>.+)_(?P<bug_id>\d+)b$")
@@ -114,7 +112,6 @@ def _write_combinations(
 def run_batch(
     target_root: Path,
     output_root: Path,
-    pict_executable: str = "pict",
     project_filter: Optional[str] = None,
     bug_filter: Optional[int] = None,
     method_filter: Optional[str] = None,
@@ -183,16 +180,25 @@ def run_batch(
                         if semantic_override
                         else "generic_type_domains"
                     )
-                    model_text, token_lookup = build_pict_model(factor_domains)
+                    generation_started = perf_counter()
                     factor_combinations = generate_pairwise(
                         factor_domains,
-                        pict_executable=pict_executable,
                         seed_combinations=(
                             semantic_override.seed_combinations
                             if semantic_override
                             else ()
                         ),
                     )
+                    generation_seconds = perf_counter() - generation_started
+                    coverage_report = verify_pair_coverage(
+                        factor_domains, factor_combinations
+                    )
+                    if not coverage_report.complete:
+                        raise ValueError(
+                            "Native IPO output is missing {} required pairs".format(
+                                len(coverage_report.missing_pairs)
+                            )
+                        )
                     concrete_combinations = (
                         [
                             semantic_override.materialize(combination)
@@ -202,17 +208,15 @@ def run_batch(
                         else factor_combinations
                     )
 
-                    model_path = model_dir / "{}_model.txt".format(method_id)
-                    values_path = model_dir / "{}_values.json".format(method_id)
+                    domains_path = model_dir / "{}_domains.json".format(method_id)
                     combinations_path = result_dir / "{}_combinations.tsv".format(
                         method_id
                     )
                     inputs_path = result_dir / "{}_inputs.tsv".format(method_id)
                     oracle_path = result_dir / "{}_oracle.json".format(method_id)
-                    model_path.parent.mkdir(parents=True, exist_ok=True)
-                    model_path.write_text(model_text, encoding="utf-8")
-                    values_path.write_text(
-                        json.dumps(token_lookup, indent=2), encoding="utf-8"
+                    domains_path.parent.mkdir(parents=True, exist_ok=True)
+                    domains_path.write_text(
+                        json.dumps(factor_domains, indent=2), encoding="utf-8"
                     )
                     _write_combinations(
                         combinations_path,
@@ -243,8 +247,11 @@ def run_batch(
                         "bug_id": bug_id,
                         "class": class_name,
                         "method": method.get("name"),
+                        "method_signature": _method_signature(method),
                         "method_id": method_id,
                         "status": "GENERATED",
+                        "generation_backend": "ipo",
+                        "strength": 2,
                         "strategy": strategy,
                         "seed_count": (
                             len(semantic_override.seed_combinations)
@@ -254,6 +261,11 @@ def run_batch(
                         "factor_count": len(factor_domains),
                         "cartesian_count": cartesian_count,
                         "pairwise_count": pairwise_count,
+                        "expected_pair_count": coverage_report.expected_pair_count,
+                        "covered_pair_count": coverage_report.covered_pair_count,
+                        "missing_pair_count": len(coverage_report.missing_pairs),
+                        "pair_coverage_percent": coverage_report.coverage_percent,
+                        "generation_seconds": round(generation_seconds, 6),
                         "unique_concrete_input_count": len(
                             {
                                 tuple(combination.items())
@@ -261,10 +273,11 @@ def run_batch(
                             }
                         ),
                         "reduction_percent": round(reduction_percent, 4),
-                        "model": str(model_path.relative_to(output_root)),
+                        "domains": str(domains_path.relative_to(output_root)),
                         "combinations": str(combinations_path.relative_to(output_root)),
                         "inputs": str(inputs_path.relative_to(output_root)),
                     }
+                    method_case = None
                     if oracle_path.exists():
                         oracle_outcomes = json.loads(
                             oracle_path.read_text(encoding="utf-8")
@@ -272,19 +285,32 @@ def run_batch(
                         if not isinstance(oracle_outcomes, list):
                             raise ValueError("Oracle file must contain a list")
                         record["oracle"] = str(oracle_path.relative_to(output_root))
-                        record["oracle_status"] = "REUSED"
-                        method_case = (
-                            method,
-                            concrete_combinations,
-                            oracle_outcomes,
+                        oracle_matches = len(oracle_outcomes) == len(
+                            concrete_combinations
+                        ) and all(
+                            isinstance(outcome, dict)
+                            and outcome.get("id") == index
+                            and outcome.get("arguments") == dict(combination)
+                            for index, (outcome, combination) in enumerate(
+                                zip(oracle_outcomes, concrete_combinations), start=1
+                            )
                         )
+                        if oracle_matches:
+                            record["oracle_status"] = "REUSED"
+                            method_case = (
+                                method,
+                                concrete_combinations,
+                                oracle_outcomes,
+                            )
+                        else:
+                            record["oracle_status"] = "STALE"
                     else:
                         record["oracle_status"] = "MISSING"
-                        method_case = (method, concrete_combinations)
                     records.append(record)
-                    class_records.append(record)
-                    method_cases.append(method_case)
-                except (ValueError, PictGenerationError) as exc:
+                    if method_case is not None:
+                        class_records.append(record)
+                        method_cases.append(method_case)
+                except ValueError as exc:
                     records.append(
                         {
                             "project": project,
@@ -316,6 +342,8 @@ def run_batch(
 
     manifest = {
         "target_root": str(target_root),
+        "generation_backend": "ipo",
+        "strength": 2,
         "generated_method_count": sum(
             record.get("status") == "GENERATED" for record in records
         ),
@@ -333,7 +361,6 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Generate IPO suites for Defects4J targets")
     parser.add_argument("--target-root", type=Path, default=PROJECT_ROOT / "target_benchmark")
     parser.add_argument("--output-root", type=Path, default=IPO_ROOT)
-    parser.add_argument("--pict", default="pict", help="PICT executable path")
     parser.add_argument("--project", help="Generate only one project")
     parser.add_argument("--bug", type=int, help="Generate only one bug ID")
     method_selection = parser.add_mutually_exclusive_group()
@@ -349,7 +376,6 @@ def main() -> None:
     manifest = run_batch(
         target_root=args.target_root,
         output_root=args.output_root,
-        pict_executable=args.pict,
         project_filter=args.project,
         bug_filter=args.bug,
         method_filter=args.method,

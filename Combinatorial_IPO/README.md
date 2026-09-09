@@ -1,125 +1,93 @@
-# Combinatorial Testing: IPO Algorithm (Microsoft PICT Tool)
+# Combinatorial Testing: Native IPO 2-Way Pipeline
 
-**ผู้รับผิดชอบหลัก:** Member 1 (นายปวริศช์ ประมวล - Algorithm Lead 1)
+**ผู้รับผิดชอบหลัก:** Member 1 (นายปวริศช์ ประมวล)
 
-> [!TIP]
-> **📖 คู่มือปฏิบัติงานและคำสั่งทีละขั้นตอน:** สามารถอ่านฉบับเต็มได้ที่ [TEAM_WORKFLOW_GUIDE.md (ส่วนของ Member 1)](../TEAM_WORKFLOW_GUIDE.md#-member-1-นายปวริศช์-ประมวล-algorithm-lead-1---ipo--combinatorial)
+คู่มือแม่บทของทีมอยู่ที่ [`TEAM_WORKFLOW_GUIDE.md`](../TEAM_WORKFLOW_GUIDE.md) ส่วนนี้อธิบายการใช้งาน implementation ปัจจุบันของ Member 1
 
----
+## Academic distinction
 
-## 📌 บทบาทและคำนิยามทางวิชาการ (Academic Context)
+- **IPO (In-Parameter-Order)** คือ algorithm ที่โครงการ implement เองใน `algorithm/ipo.py` โดยมี initial construction, Horizontal Growth และ Vertical Growth
+- **Microsoft PICT** เป็นเครื่องมือแยกต่างหากที่เก็บไว้ใน `backends/pict_backend.py` สำหรับ reference baseline เท่านั้น
+- ผลจาก PICT ห้ามรายงานว่าเป็นผลจาก IPO แม้ทั้งสองชุดจะมี pair coverage ครบหรือมีจำนวนแถวเท่ากัน
 
-* **ขั้นตอนวิธี (Algorithm):** **In-Parameter-Order (IPO)** เป็นเทคนิค Combinatorial Testing แบบ Deterministic สำหรับสร้าง Pairwise (2-way) และ t-way Test Combinations โดยขยายกรณีทดสอบทีละพารามิเตอร์ในแนวนอน (Horizontal Growth) และเติมกรณีทดสอบใหม่ในแนวตั้ง (Vertical Growth)
-* **เครื่องมือที่เลือกใช้ (Tool):** **Microsoft PICT (Pairwise Independent Combinatorial Testing)** ซึ่งเป็นเครื่องมือสร้าง Combination Matrix ระดับมาตรฐานอุตสาหกรรม โดยนำแนวคิด Combinatorial Interaction Testing มาใช้
-* **เป้าหมายของ Member 1:** เปลี่ยน Input Space ของ **Target Modified Classes** ใน Defects4J ให้เป็นไฟล์ JUnit 4 Test Suite ที่มีคุณภาพสูงและจับข้อบกพร่องได้จริง
-
----
-
-## 🛠️ ขั้นตอนการทำงานจริงแบบละเอียด (Step-by-Step Workflow)
-
-### ขั้นตอนที่ 1: รับข้อมูลคลาสเป้าหมาย (Target Class Input)
-1. เปิดดู Source Code และข้อมูลข้อบกพร่องที่ Member 4 จัดเตรียมไว้ให้ในโฟลเดอร์:
-   `target_benchmark/<Project>_<BugID>b/` (เช่น `target_benchmark/Lang_1b/NumberUtils.java`)
-2. ศึกษาเมธอดเป้าหมายที่มีข้อบกพร่อง (Faulty Method) เช่น `createNumber(String str)` เพื่อดูว่ารับพารามิเตอร์อะไร และมีเงื่อนไข Validation อะไรบ้าง
-
----
-
-### ขั้นตอนที่ 2: ออกแบบ Parameter Model (`Configuration/model.txt`)
-สร้างไฟล์โมเดลใน `Configuration/` โดยแตกพารามิเตอร์ของเมธอดออกมาเป็นหมวดหมู่ (Categories & Values) พร้อมเงื่อนไขบังคับ (Constraints):
+Main pipeline ไม่เรียก PICT และไม่ต้องติดตั้ง PICT:
 
 ```text
-# ตัวอย่าง: Configuration/Lang_1b_model.txt (สำหรับ NumberUtils.createNumber)
-Prefix:      None, Plus, Minus, Hex0x, HexMinus0x, Hash, Invalid
-ValueType:   Integer, Float, ScientificE, HexDigits, Empty, AllZeros, Exceed32Bit
-Suffix:      None, l, L, f, F, d, D, Invalid
-Sign:        Positive, Negative
-
-# Constraints (กฎเงื่อนไขเพื่อตัดกรณีที่ไม่เมคเซนส์ออก)
-IF [Prefix] in {"Hex0x", "HexMinus0x", "Hash"} THEN [ValueType] in {"HexDigits", "Empty"};
-IF [Prefix] in {"Hex0x", "HexMinus0x"} THEN [Suffix] in {"None", "l", "L"};
+Java source
+  -> exact method signature
+  -> factor domains
+  -> native IPO 2-way generation
+  -> independent pair-coverage verification
+  -> concrete Java inputs
+  -> fixed-version oracle
+  -> oracle-backed JUnit 4
 ```
 
----
+## Current Lang-1 status
 
-### ขั้นตอนที่ 3: สั่งรัน PICT เพื่อสร้าง Combinations
-สั่งรันคำสั่ง PICT ภายใน Defects4J Docker Container:
+ชุด `NumberUtils.createNumber(String)` จำนวน 48 cases ที่อยู่ใน repository ก่อน native IPO implementation เป็น **PICT pilot baseline** ซึ่งผ่านการเก็บ oracle และ fixed-version verification แล้ว ห้ามเขียนทับชุดนี้ระหว่างทดลอง
 
-```bash
-# 1. รัน Pairwise (2-way Combinations)
-pict Configuration/Lang_1b_model.txt > Result_Round1/combinations_2way.txt
+Native IPO สร้าง abstract combinations จาก factor model เดียวกันได้ 48 แถว ครอบคลุม 194/194 pairs และรักษา mandatory seed แต่ยังต้องเก็บ oracle ใหม่ตาม arguments ของ native IPO ก่อนใช้เป็น TestCode รอบสุดท้าย
 
-# 2. รัน 3-way Combinations (เพื่อเปรียบเทียบ Configuration ตามข้อ 1.7)
-pict Configuration/Lang_1b_model.txt /o:3 > Result_Round2/combinations_3way.txt
+## Project structure
+
+```text
+Combinatorial_IPO/
+├── algorithm/                 # Native IPO implementation
+├── analyzer/                  # Java source and signature analysis
+├── backends/                  # Optional reference backends such as PICT
+├── domain/                    # Generic domains and semantic overrides
+├── generator/                 # Oracle-backed JUnit 4 synthesis
+├── oracle/                    # Fixed-version oracle collection/verification
+├── runner/                    # Safe filtered batch orchestration
+├── verification/              # Backend-independent pair coverage
+├── tests/                     # Python unit and integration tests
+├── Models/                    # Native IPO factor-domain artifacts
+├── Result_Round1/             # Native IPO combinations, inputs and oracle
+└── TestCode/                  # Fixed-verified JUnit suites for Member 4
 ```
 
----
+PICT pilot artifacts will be archived under `baselines/pict/` immediately before native IPO artifacts replace the legacy delivery paths
 
-### ขั้นตอนที่ 4: พัฒนา Generator Script แปลง Combinations เป็น JUnit 4 Test
-เขียนสคริปต์ Python ในโฟลเดอร์ `Combinatorial_IPO/Code/generate_ipo_tests.py` เพื่ออ่านไฟล์ `combinations_2way.txt` แล้วสร้างเป็นโค้ดภาษา Java โดยอัตโนมัติ:
+## Run tests
 
-#### ตัวอย่างโค้ด Generator Script (`Code/generate_ipo_tests.py`):
-```python
-import csv
+จาก PowerShell ที่ repository root:
 
-def generate_junit():
-    header = """package org.apache.commons.lang3.math;
-
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-public class NumberUtils_IPOTest {
-"""
-    body = ""
-    with open("../Result_Round1/combinations_2way.txt", "r") as f:
-        reader = csv.reader(f, delimiter='\t')
-        headers = next(reader)
-        for idx, row in enumerate(reader):
-            # ประกอบ Input String ตามค่า Combination ที่ได้
-            val = build_input_string(row)
-            body += f"""
-    @Test(timeout = 4000)
-    public void testIPO_Case_{idx+1}() {{
-        try {{
-            Number res = NumberUtils.createNumber("{val}");
-            assertNotNull(res);
-        }} catch (NumberFormatException expected) {{
-            // ผ่านการตรวจสอบเมื่ออินพุตไม่ถูกต้อง
-        }} catch (Exception e) {{
-            fail("Unexpected exception: " + e.getMessage());
-        }}
-    }}
-"""
-    footer = "}\n"
-    with open("../TestCode/NumberUtils_IPOTest.java", "w") as out:
-        out.write(header + body + footer)
-
-if __name__ == "__main__":
-    generate_junit()
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 -m unittest discover -s tests -p "test_*.py" -v'
 ```
 
----
+Tests ไม่เรียก PICT executable และใช้ temporary directories สำหรับ runner integration
 
-### ขั้นตอนที่ 5: ตรวจสอบความถูกต้องและส่งมอบ (Delivery to TestCode/)
+## Safe native IPO trial
 
-ไฟล์เทสที่เจนได้ต้องนำมาเก็บไว้ที่:
-`Combinatorial_IPO/TestCode/<ClassName>_IPOTest.java`
+ระบุ project, bug และ exact signature พร้อมเขียนผลลงพื้นที่ทดลองเสมอ:
 
-#### 📋 กฎเหล็กที่ Member 1 ต้องตรวจสอบก่อนส่งมอบ:
-1. **Package Declaration:** บรรทัดแรกต้องตรงกับคลาสเป้าหมายเสมอ เช่น `package org.apache.commons.lang3.math;`
-2. **Framework:** บังคับใช้ **JUnit 4** (`import org.junit.Test;`)
-3. **Timeout:** มี `@Test(timeout = 4000)` ทุกเมธอด ป้องกัน Runner ค้าง
-4. **Exception Handling:** กรณีที่ป้อนค่าผิดปกติ ต้องดักจับ Exception ที่ถูกต้อง (เช่น `catch (NumberFormatException expected)`) เพื่อไม่ให้เทสพังโดยไม่ตั้งใจ
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 runner/run_ipo_batch.py --target-root /workspace/target_benchmark --output-root /tmp/ipo-native-trial --project Lang --bug 1 --signature "createNumber(String)"'
+```
 
----
+ผลรอบแรกประกอบด้วย domains, abstract combinations, concrete inputs และ manifest เมื่อยังไม่มี oracle ที่ตรงกับ arguments ระบบจะรายงาน `oracle_status: MISSING` และไม่สร้างไฟล์ใน `TestCode/`
 
-## 📂 รายการไฟล์ที่ Member 1 ต้องส่งมอบในแต่ละรอบ
+หากพบ oracle เก่าที่จำนวนหรือลำดับ arguments ไม่ตรง ระบบจะรายงาน `oracle_status: STALE` และไม่สร้าง JUnit
 
-* **รอบที่ 1 (Phase 1):**
-  * `Configuration/Lang_1b_model.txt`
-  * `Result_Round1/combinations_2way.txt`
-  * `Code/generate_ipo_tests.py`
-  * `TestCode/NumberUtils_IPOTest.java`
-* **รอบที่ 2 (Phase 2):**
-  * ขยายผล Model สำหรับ Target Classes ในชุด Benchmark
-  * `Result_Round2/combinations_3way.txt` (เปรียบเทียบ 2-way vs 3-way ตามข้อ 1.7)
-  * สรุปจุดเด่น/ข้อจำกัดของ IPO Algorithm ลงใน `Result_Round2/summary_ipo.md`
+## Delivery gate
+
+ไฟล์ `<Class>_IPOTest.java` จะสร้างได้เมื่อ:
+
+1. native IPO generation สำเร็จ
+2. independent pair coverage ครบ 100%
+3. oracle มี case ID และ arguments ตรงทุก combination
+4. generated JUnit ใช้ JUnit 4 และทุก test มี `@Test(timeout = 4000)`
+5. suite compile และผ่านบน Defects4J fixed version ก่อนนำไปวางเป็นชุดส่งมอบ
+
+Member 1 ไม่รัน buggy version, coverage หรือ Fault Detection Rate ในขั้นนี้ งานดังกล่าวเป็นความรับผิดชอบของ Member 4
+
+## Current limitations
+
+- ยืนยัน end-to-end เดิมแล้วเฉพาะ `NumberUtils.createNumber(String)`; native IPO oracle/fixed verification ยังเป็นขั้นถัดไป
+- รองรับหลัก ๆ เฉพาะ public static methods ที่มี parameters
+- parser เป็น lightweight regex analyzer
+- constructor, instance method, collection, complex object และ constraints ยังไม่รองรับทั่วไป
+- unsupported targets ต้องถูก skip พร้อมสถานะ ห้ามสร้าง input โดยเดา
+- ห้ามเปิด all-target batch จนกว่า representative methods และ failure isolation จะผ่าน readiness gates ใน `TEAM_WORKFLOW_GUIDE.md`

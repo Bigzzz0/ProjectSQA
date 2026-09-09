@@ -1,2 +1,1 @@
-"""Combinatorial generation backends for the IPO pipeline."""
-
+"""Native combinatorial algorithms implemented by the project."""
