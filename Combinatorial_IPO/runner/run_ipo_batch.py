@@ -58,6 +58,34 @@ def _method_id(method: Mapping[str, object]) -> str:
     return re.sub(r"[^A-Za-z0-9_.-]+", "_", raw).strip("_")
 
 
+def _method_signature(method: Mapping[str, object]) -> str:
+    """Return a stable Java-style signature used to select overloads."""
+    name = method.get("name")
+    parameters = method.get("parameters")
+    if not isinstance(name, str) or not isinstance(parameters, list):
+        raise ValueError("Method name and parameters are required")
+
+    parameter_types: List[str] = []
+    for parameter in parameters:
+        if not isinstance(parameter, dict) or not isinstance(
+            parameter.get("type"), str
+        ):
+            raise ValueError("Every method parameter must have a type")
+        parameter_types.append(re.sub(r"\s+", "", parameter["type"]))
+    return "{}({})".format(name, ",".join(parameter_types))
+
+
+def _matches_method_filter(
+    method: Mapping[str, object],
+    method_filter: Optional[str],
+    signature_filter: Optional[str],
+) -> bool:
+    """Match either the legacy method name or one exact overload signature."""
+    if signature_filter:
+        return _method_signature(method) == re.sub(r"\s+", "", signature_filter)
+    return not method_filter or method.get("name") == method_filter
+
+
 def _domains_for_method(method: Mapping[str, object]) -> Dict[str, List[str]]:
     domains: Dict[str, List[str]] = {}
     for parameter in method.get("parameters", []):
@@ -90,6 +118,7 @@ def run_batch(
     project_filter: Optional[str] = None,
     bug_filter: Optional[int] = None,
     method_filter: Optional[str] = None,
+    signature_filter: Optional[str] = None,
 ) -> Dict[str, object]:
     """Generate models, combinations, and JUnit suites for discovered targets."""
     records: List[Dict[str, object]] = []
@@ -130,7 +159,9 @@ def run_batch(
             for method in methods if isinstance(methods, list) else []:
                 if not isinstance(method, dict):
                     continue
-                if method_filter and method.get("name") != method_filter:
+                if not _matches_method_filter(
+                    method, method_filter, signature_filter
+                ):
                     continue
                 if method.get("static") is not True or not method.get("parameters"):
                     continue
@@ -305,7 +336,14 @@ def main() -> None:
     parser.add_argument("--pict", default="pict", help="PICT executable path")
     parser.add_argument("--project", help="Generate only one project")
     parser.add_argument("--bug", type=int, help="Generate only one bug ID")
-    parser.add_argument("--method", help="Generate only methods with this name")
+    method_selection = parser.add_mutually_exclusive_group()
+    method_selection.add_argument(
+        "--method", help="Generate all overloads with this method name"
+    )
+    method_selection.add_argument(
+        "--signature",
+        help='Generate one exact overload, for example "min(int,int,int)"',
+    )
     args = parser.parse_args()
 
     manifest = run_batch(
@@ -315,6 +353,7 @@ def main() -> None:
         project_filter=args.project,
         bug_filter=args.bug,
         method_filter=args.method,
+        signature_filter=args.signature,
     )
     print(json.dumps(manifest, indent=2))
 
