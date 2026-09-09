@@ -127,22 +127,37 @@ ProjectSQA/
 ## 3. 🧑‍💻 Member 1: นายปวริศช์ ประมวล (IPO / Combinatorial Specialist)
 
 **รหัสนักศึกษา:** 673380278-9  
-**บทบาท:** ศึกษาและประยุกต์ใช้ขั้นตอนวิธี **In-Parameter-Order (IPO / IPOG Algorithm)** ในการสร้าง Combinatorial Pairwise Test Suite และใช้เครื่องมือ **Microsoft PICT (Pairwise Independent Combinatorial Testing v3.7+)** เป็น Reference Implementation & Verification Tool ในการสร้างและตรวจสอบตาราง Combinatorial Matrix แปลงเป็น JUnit 4 Test Suite
+**บทบาท:** พัฒนาและประยุกต์ใช้ขั้นตอนวิธี **In-Parameter-Order (IPO / IPOG Algorithm)** สำหรับสร้าง Combinatorial Pairwise Test Suite โดย implement ขั้นตอน **Horizontal Growth** และ **Vertical Growth** ในโค้ดของโครงการ แล้วใช้ **Microsoft PICT (Pairwise Independent Combinatorial Testing v3.7+)** เป็นเครื่องมืออ้างอิงแยกต่างหากสำหรับสร้าง empirical baseline และช่วยตรวจสอบผล
 
 > **🎓 ข้อกำหนดความถูกต้องทางวิชาการ (Academic Distinction: IPO vs. PICT):**  
 > - **IPO (In-Parameter-Order):** คือขั้นตอนวิธีเชิงทฤษฎี (Algorithm) ที่คิดค้นโดย Yu Lei et al. สำหรับ Combinatorial Testing โดยขยายคู่ทดสอบแบบ Horizontal Growth และ Vertical Growth ตามลำดับพารามิเตอร์  
 > - **Microsoft PICT:** คือเครื่องมืออุตสาหกรรม (CLI Tool) พัฒนาโดย Microsoft ซึ่งใช้ Combinatorial Heuristics ช่วยสร้างคู่ทดสอบ Pairwise อย่างรวดเร็ว  
-> - **ในงานวิจัยนี้:** เราศึกษาทฤษฎี **IPO Algorithm** เป็นแกนหลัก และใช้ **PICT** เป็น Verification Tool / Generation Backend ที่ใช้สร้างตารางทดสอบเปรียบเทียบเชิงประจักษ์ (Empirical Baseline) ห้ามเขียนสรุปว่า *PICT = IPO* โดยตรง
-1. ไฟล์โมเดลพารามิเตอร์: `Combinatorial_IPO/Models/<Class>_model.txt`
-2. ตาราง Combinations: `Combinatorial_IPO/Result_Round1/combinations_<Class>.txt`
-3. ไฟล์ Java Unit Test: `Combinatorial_IPO/TestCode/<Class>_IPOTest.java`
-4. สถิติจำนวนกรณีทดสอบก่อนลดรูป (Full) vs หลังลดรูป (Pairwise) บันทึกลงในเอกสารสรุปผล
+> - **ในงานวิจัยนี้:** ผลที่รายงานในฐานะ **IPO** ต้องสร้างจาก IPO implementation ของทีมเท่านั้น ส่วนผลจาก **PICT** ต้องระบุว่าเป็น `PICT reference baseline` ห้ามสรุปว่า *PICT = IPO* หรือเรียก PICT-generated combinations ว่าเป็นผลจาก IPO
+
+**สถานะรอบนำร่อง Lang-1:** ชุด 48 combinations ของ `NumberUtils.createNumber(String)` ที่มีอยู่เดิมสร้างด้วย Microsoft PICT และผ่านการเก็บ oracle/ตรวจบน Lang-1f แล้ว จึงเก็บเป็น **PICT pilot baseline** ไม่ใช่ผล IPO รอบสุดท้าย เมื่อ IPO implementation พร้อม ต้องสร้าง combinations และ oracle ชุดใหม่ก่อนส่งผลในชื่อ IPO
+
+**หลักฐาน provenance ที่ต้องบันทึกทุกการทดลอง:**
+
+1. `generation_backend`: `ipo` หรือ `pict`
+2. `strength`: ค่า interaction strength เช่น `2`
+3. exact Java method signature
+4. จำนวน Cartesian combinations, generated combinations และ reduction percentage
+5. ผลการตรวจ pair coverage
+6. model, concrete inputs, oracle และ generated JUnit ที่เชื่อมโยงกันได้
+
+**ตำแหน่งผลลัพธ์หลัก:**
+
+1. IPO implementation: `Combinatorial_IPO/algorithm/ipo.py`
+2. PICT adapter: `Combinatorial_IPO/backends/pict_backend.py`
+3. PICT pilot/reference artifacts: `Combinatorial_IPO/baselines/pict/<Project>_<BugID>b/`
+4. IPO models/results: `Combinatorial_IPO/Models/` และ `Combinatorial_IPO/Result_Round1/`
+5. IPO JUnit 4 ที่ผ่าน fixed-version verification: `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java`
 
 ---
 
 ### 🛠️ คู่มือขั้นตอนการทำงานอย่างละเอียด (Generic IPO Engineering):
 
-> **⚠️ ข้อควรระวัง:** `Prefix, Value, Suffix` ในรอบนำร่องนั้น **เป็นเฉพาะของ `NumberUtils` เท่านั้น** คุณไม่สามารถนำโมเดลเดิมไปใช้กับคลาสอื่นได้ ในแต่ละคลาส คุณต้องทำตามกระบวนการวิศวกรรม IPO 5 ขั้นตอนดังนี้:
+> **⚠️ ข้อควรระวัง:** `Prefix, ValueType, Suffix, Length` ในรอบนำร่องเป็น semantic factors เฉพาะ `NumberUtils.createNumber(String)` ห้ามนำไปใช้กับ method อื่นโดยอัตโนมัติ แต่ละ method ต้องใช้ type domains หรือ semantic override ที่อธิบายเหตุผลและทำซ้ำได้
 
 #### ขั้นที่ 1: ตรวจสอบ Method Signature ใน Target Class
 เปิดดูไฟล์ซอร์สโค้ดใน `target_benchmark/<Project>_<BugID>b/<Class>.java` เพื่อดูว่า Constructor หรือ Method หลักรับ Input อะไรบ้าง โดยแบ่งเป็น 3 กลุ่มพารามิเตอร์:
@@ -153,241 +168,123 @@ ProjectSQA/
 * **กลุ่ม C: Object / Collection / State Parameters:**
   - แบ่งพาร์ทิชัน: `NullRef`, `EmptyCollection`, `SingleItem`, `MultipleItems`, `InvalidState`
 
-#### ขั้นที่ 2: สร้างไฟล์โมเดลพารามิเตอร์ (`Combinatorial_IPO/Models/<Class>_model.txt`)
-สร้างไฟล์โมเดลใหม่ในโฟลเดอร์ `Models/` ตัวอย่างเช่นสำหรับคลาส `HypergeometricDistribution` ใน Math-2:
+#### ขั้นที่ 2: สร้าง Factor Domains และ Concrete-Value Mapping
+
+ระบบต้องสร้าง factor domains จาก exact method signature โดยอัตโนมัติเป็นหลัก และใช้ semantic override เฉพาะกรณีที่ generic type domain ไม่สามารถแทน input semantics ได้ ตัวอย่างโมเดลเชิงแนวคิดสำหรับ `HypergeometricDistribution`:
 ```text
 # Combinatorial_IPO/Models/Math_HypergeometricDistribution_model.txt
 populationSize:      Negative, Zero, SmallValid, LargeValid, MaxInt
 numberOfSuccesses:   Negative, Zero, LessThanPop, EqualPop, GreaterThanPop
 sampleSize:          Negative, Zero, ValidSample, EqualPop, ExceedPop
 
-# Constraints: กฎความสัมพันธ์ทางตรรกะห้ามจับคู่ขัดแย้ง
-IF [numberOfSuccesses] = "GreaterThanPop" THEN [populationSize] IN {"SmallValid", "LargeValid"};
-IF [sampleSize] = "ExceedPop" THEN [populationSize] IN {"SmallValid"};
 ```
 
-#### ขั้นที่ 3: สั่งรันคำสั่ง PICT เพื่อหาคู่ทดสอบ 2-Way (Pairwise Combinations)
-คุณสามารถรันคำสั่งผ่าน Docker Container ได้ทันที:
-```bash
-docker exec -it defects4j_sqa pict /workspace/Combinatorial_IPO/Models/<Class>_model.txt > Combinatorial_IPO/Result_Round1/combinations_<Class>.txt
-```
-*(ระบบจะสร้างตารางที่มีเฉพาะคู่ค่าที่จำเป็น ช่วยลดขนาดการทดสอบจากหลักพันเหลือเพียงไม่กี่สิบเคส)*
+Constraint handling ยังไม่ถือว่ารองรับจนกว่าจะมี implementation และ tests โดยตรง หากพบ model ที่ต้องใช้ constraints ให้รายงาน `UNSUPPORTED` แทนการสร้างค่าที่อาจผิดความหมาย
 
-#### ขั้นที่ 4: แปลงตารางเป็น JUnit 4 Test Suite
-นำผลลัพธ์จาก `combinations_<Class>.txt` มาเขียนเป็นโค้ด JUnit 4:
-```java
-package org.apache.commons.math3.distribution;
+#### ขั้นที่ 3: สร้าง 2-Way Combinations ด้วย IPO Implementation
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+`Combinatorial_IPO/algorithm/ipo.py` ต้องเริ่มจาก Cartesian product ของสอง factors แรก จากนั้นเพิ่ม factor ตามลำดับด้วย Horizontal Growth และเติม uncovered pairs ด้วย Vertical Growth ต้องใช้ deterministic tie-breaking เพื่อให้รันซ้ำแล้วได้ผลเหมือนเดิม
 
-public class HypergeometricDistribution_IPOTest {
+#### ขั้นที่ 4: ตรวจ Pair Coverage แบบอิสระ
 
-    @Test(timeout = 4000)
-    public void test_ipo_pairwise_01() {
-        try {
-            // Pairwise: populationSize=SmallValid(100), numberOfSuccesses=LessThanPop(20), sampleSize=ValidSample(10)
-            HypergeometricDistribution dist = new HypergeometricDistribution(100, 20, 10);
-            assertNotNull(dist);
-            assertEquals(100, dist.getPopulationSize());
-        } catch (IllegalArgumentException | ArithmeticException e) {
-            // Expected exception handled gracefully
-        }
-    }
+นำผล IPO ไปตรวจด้วย verifier ที่ไม่ขึ้นกับ generator โดยทุก value pair ของทุก factor pair ต้องปรากฏอย่างน้อยหนึ่งครั้ง หากไม่ครบให้หยุดและห้ามสร้าง TestCode สำหรับส่งมอบ ผล PICT อาจใช้เป็น reference เพิ่มเติมได้ แต่การที่ PICT ผ่านไม่แทนการตรวจผล IPO
 
-    @Test(timeout = 4000)
-    public void test_ipo_pairwise_boundary_negative() {
-        try {
-            // Pairwise: populationSize=Negative(-1), numberOfSuccesses=Zero(0), sampleSize=Zero(0)
-            new HypergeometricDistribution(-1, 0, 0);
-            fail("Expected NotPositiveException");
-        } catch (Exception e) {
-            // Handled expected boundary behavior
-        }
-    }
-}
-```
+#### ขั้นที่ 5: แปลง Abstract Factors เป็น Concrete Java Inputs
 
-#### ขั้นที่ 5: คำนวณเปอร์เซ็นต์การลดรูป (Reduction %) เพื่อใส่ในรายงานบทที่ 2.1
-สูตรคำนวณ:
-$$\text{Reduction Rate (\%)} = \left(1 - \frac{N_{\text{pairwise}}}{N_{\text{cartesian}}}\right) \times 100\%$$
-*ตัวอย่าง:* Full Combinations $= 5 \times 5 \times 5 = 125$ เคส แต่หลังรัน PICT เหลือเพียง $18$ เคส $\rightarrow$ ลดรูปได้ถึง $85.6\%$!
+generic domains สามารถใช้ Java expressions ได้โดยตรง ส่วน semantic factors ต้อง materialize เป็น arguments ที่ตรง exact signature ตรวจและรายงาน duplicate concrete inputs แยกจากจำนวน abstract combinations
+
+#### ขั้นที่ 6: เก็บ Oracle จาก Defects4J Fixed Version
+
+ผลลัพธ์ที่คาดหวังและ exception type ต้องเก็บจาก `<Project>-<BugID>f` ใน temporary checkout แล้วลบ checkout หลังใช้งาน Oracle ต้องผูกกับ arguments และลำดับ combination อย่างตรวจสอบย้อนกลับได้
+
+#### ขั้นที่ 7: สร้างและตรวจ JUnit 4 Test Suite
+
+สร้าง JUnit 4 ที่มี `@Test(timeout = 4000)` ทุก test และ assertion จาก fixed-version oracle จากนั้น compile/run บน fixed version ให้ผ่านทั้งหมดก่อนวางใน `TestCode/` ห้ามใช้การ `catch Exception` แบบกว้างเพื่อทำให้ test ผ่านโดยไม่มี oracle
+
+#### ขั้นที่ 8: บันทึกสถิติสำหรับรายงาน
+
+$$\text{Reduction Rate (\%)} = \left(1 - \frac{N_{\text{generated}}}{N_{\text{cartesian}}}\right) \times 100\%$$
+
+ต้องรายงาน backend, factor count, Cartesian count, generated count, unique concrete input count, reduction percentage, pair-coverage result, generation time และ fixed-version verification result
 
 ---
 
 ### 💡 วิธีสร้างระบบ Automated IPO Engine (พิมพ์เขียวแบบละเอียดสำหรับ Member 1)
 
-> **🎯 เป้าหมาย:** เปลี่ยนจาก "คนนั่งเขียน `model.txt` ทีละไฟล์ด้วยมือ" มาเป็น **"ระบบอัตโนมัติที่แปลง Java Source สู่ JUnit 4 ผ่าน IPO Algorithm"** เพื่อให้ Member 1 สามารถสร้างชุดทดสอบสำหรับหลายๆ บั๊กได้อย่างรวดเร็วโดยไม่ต้องเหนื่อยล้า:
+> **🎯 เป้าหมาย:** สร้างระบบที่แปลง Java Source เป็น oracle-backed JUnit 4 ผ่าน IPO implementation ของทีมโดยอัตโนมัติ พร้อม provenance และ failure isolation สำหรับขยายไปยัง Defects4J targets หลายรายการ โดยไม่ต้องสร้าง model ด้วยมือทีละ method
 
 ```mermaid
 flowchart TD
     JavaFile["Java Source File (*.java)<br/>ใน target_benchmark/"] --> M1["Module 1: Java Parser<br/>สกัด Method Name & Param Types"]
     M1 --> M2["Module 2: Value Domain Generator<br/>สร้าง Boundary Values ตาม Type"]
-    M2 --> M3["Module 3: IPO Algorithm Engine<br/>คำนวณ 2-Way Pairwise Combinations"]
-    M3 --> M4["Module 4: JUnit 4 Synthesizer<br/>แปลง Combinations เป็น @Test Method"]
-    M4 --> M5["Module 5: Batch Runner<br/>วนลูปทุกคลาสและเซฟลง TestCode/"]
-    M5 --> Out["<Class>_IPOTest.java พร้อมประเมินผล!"]
+    M2 --> IPO["Module 3: IPO Engine<br/>Horizontal + Vertical Growth"]
+    M2 -. reference .-> PICT["PICT Backend<br/>Empirical Baseline"]
+    IPO --> Verify["Module 4: Independent Pair-Coverage Verifier"]
+    PICT -. compare .-> Verify
+    Verify --> Oracle["Module 5: Fixed-Version Oracle"]
+    Oracle --> JUnit["Module 6: JUnit 4 Synthesizer"]
+    JUnit --> Batch["Module 7: Safe Batch Runner"]
+    Batch --> Out["Verified <Class>_IPOTest.java"]
 ```
 
-#### รายละเอียดวิธีพัฒนาทั้ง 5 โมดูล (Step-by-Step Implementation Guide):
+#### รายละเอียดระบบทั้ง 7 โมดูล (Step-by-Step Implementation Guide):
 
 1. **โมดูลที่ 1: Java Method & Parameter Analyzer (`Combinatorial_IPO/analyzer/java_parser.py`)**
-   - **หน้าที่:** อ่านไฟล์ `.java` แล้วใช้ Regular Expression สกัด Package, Class Name, และ Method Signature
-   - **แนวทางการเขียนโค้ด (Pattern):**
-     ```python
-     import re
+   - สกัด package, class, modifiers, return type และ parameter name/type จาก source
+   - ระบุ method ด้วย exact signature เพื่อแยก overload และเลือกเฉพาะขอบเขตที่ pipeline รองรับ
+   - parser ปัจจุบันเป็น lightweight regex analyzer; signature ที่ซับซ้อนต้องถูก skip พร้อมเหตุผลแทนการเดา
 
-     def parse_java_file(filepath):
-         with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-             code = f.read()
-         
-         # สกัด Package Name
-         pkg_match = re.search(r'package\s+([\w\.]+);', code)
-         package_name = pkg_match.group(1) if pkg_match else ""
-         
-         # สกัด Class Name
-         class_match = re.search(r'public\s+(?:abstract\s+|final\s+)?class\s+(\w+)', code)
-         class_name = class_match.group(1) if class_match else "TargetClass"
-         
-         # สกัด Public Methods และ Parameters
-         # รูปแบบ: public [static] ReturnType methodName(Type1 p1, Type2 p2)
-         method_pattern = r'public\s+(?:static\s+)?(?:[\w<>\[\]]+)\s+(\w+)\s*\(([^)]*)\)'
-         methods = []
-         for m in re.finditer(method_pattern, code):
-             m_name = m.group(1)
-             params_raw = m.group(2).strip()
-             if params_raw:
-                 param_list = [p.strip().split() for p in params_raw.split(',') if len(p.strip().split()) >= 2]
-                 # ได้รายการ [(type, name), ...]
-                 params = [(p[0], p[1]) for p in param_list]
-                 methods.append({'name': m_name, 'params': params})
-                 
-         return {'package': package_name, 'class': class_name, 'methods': methods}
-     ```
+2. **โมดูลที่ 2: Value Domain Generator (`Combinatorial_IPO/domain/`)**
+   - `value_generator.py` สร้าง nominal/boundary values สำหรับ primitive, wrapper และ String types ที่ประกาศว่ารองรับ
+   - `semantic_overrides.py` เก็บ factor model/materializer เฉพาะ exact class-method signature
+   - domain ต้องมีค่าที่เข้า success path, invalid path และ boundary ที่เกี่ยวข้อง ไม่ใช้ `null` เป็น fallback เงียบ ๆ สำหรับ object ที่ไม่รู้วิธีสร้าง
+   - unknown object, collection, constructor หรือ instance-state requirement ให้รายงาน `UNSUPPORTED` จนกว่าจะมี strategy และ tests
 
-2. **โมดูลที่ 2: Value Domain Generator (`Combinatorial_IPO/domain/value_generator.py`)**
-   - **หน้าที่:** แปลง Java Data Types เป็นชุดค่า Boundary Values & Nominal Values เพื่อสร้าง Parameter Model
-   - **แนวทางการเขียนโค้ด (Pattern):**
-     ```python
-     TYPE_DOMAINS = {
-         'int': ["0", "1", "-1", "Integer.MAX_VALUE", "Integer.MIN_VALUE"],
-         'Integer': ["null", "0", "1", "-1", "Integer.MAX_VALUE"],
-         'double': ["0.0d", "1.0d", "-1.0d", "Double.NaN", "Double.POSITIVE_INFINITY"],
-         'Double': ["null", "0.0d", "1.0d", "-1.0d", "Double.MAX_VALUE"],
-         'boolean': ["true", "false"],
-         'Boolean': ["null", "true", "false"],
-         'String': ['null', '""', '"0"', '"123"', '"-1"', '"test_string"', '"0x80000000"'],
-         'long': ["0L", "1L", "-1L", "Long.MAX_VALUE", "Long.MIN_VALUE"]
-     }
+3. **โมดูลที่ 3: IPO Engine และ PICT Reference Backend (ต้องแยก implementation)**
+   - `Combinatorial_IPO/algorithm/ipo.py`: IPO 2-way ที่ทีมพัฒนาเอง ต้องมี Horizontal Growth, Vertical Growth และ deterministic tie-breaking
+   - `Combinatorial_IPO/backends/pict_backend.py`: adapter สำหรับเรียก Microsoft PICT เพื่อสร้าง reference baseline เท่านั้น
+   - ทั้งสอง backend รับ factor domains รูปแบบเดียวกัน แต่ต้องบันทึก `generation_backend` แยกกัน และห้ามใช้ผล PICT เป็นผล IPO
+   - ไม่ต้องบังคับให้ IPO กับ PICT ได้แถวเหมือนกัน ให้เปรียบเทียบ pair coverage, suite size, reduction และ generation time
 
-     def get_domain_for_type(param_type):
-         # หากเป็น Object ชนิดอื่น ให้ใช้ default เป็น null หรือ mock พื้นฐาน
-         return TYPE_DOMAINS.get(param_type, ["null"])
-     ```
+4. **โมดูลที่ 4: Independent Pair-Coverage Verifier (`Combinatorial_IPO/verification/pair_coverage.py`)**
+   - คำนวณ expected pairs จาก factor domains และ observed pairs จาก generated rows
+   - รายงาน missing pairs และปฏิเสธแถวที่มีค่าอยู่นอก domain
+   - ใช้ verifier เดียวกันตรวจทั้ง IPO และ PICT reference โดยไม่พึ่ง backend ใด
 
-3. **โมดูลที่ 3: Combinatorial Engine - IPO Algorithm / PICT Reference Backend (`Combinatorial_IPO/algorithm/ipo.py`)**
-   - **หน้าที่:** คำนวณ Pairwise Combinations (2-Way) ตามทฤษฎี Combinatorial Testing
-   - **แนวทางการพัฒนา:** Member 1 สามารถเลือกพัฒนาได้ 2 ทาง:
-     * **ทางเลือก 3A (เขียน IPO/IPOG Algorithm เองใน Python):** ใช้อัลกอริทึม In-Parameter-Order (Lei et al.) ขยายผลแบบ Horizontal Growth ตามด้วย Vertical Growth
-     * **ทางเลือก 3B (ใช้ Microsoft PICT เป็น Reference Backend):** เรียกใช้เครื่องมือ Microsoft PICT ผ่าน Python `subprocess` เพื่อความสะดวกรวดเร็วในการสร้างตาราง Matrix:
-     ```python
-     import subprocess
-     import tempfile
-     import os
+5. **โมดูลที่ 5: Fixed-Version Oracle (`Combinatorial_IPO/oracle/`)**
+   - checkout `<Project>-<BugID>f` ลง temporary directory เพื่อรัน concrete inputs
+   - บันทึก return value หรือ exact exception type พร้อม arguments และ case ID
+   - ลบ temporary checkout เมื่อเสร็จและเก็บ oracle JSON สำหรับทำซ้ำ
 
-     def generate_pairwise(param_domains):
-         # สร้างไฟล์ model ชั่วคราว
-         # รูปแบบ PICT:
-         # param1: val1, val2, val3
-         # param2: valA, valB
-         with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:
-             for name, vals in param_domains.items():
-                 f.write(f"{name}: {', '.join(vals)}\n")
-             temp_model = f.name
-         
-         try:
-             # เรียกคำสั่ง pict ผ่าน subprocess
-             res = subprocess.run(["pict", temp_model], capture_output=True, text=True, check=True)
-             lines = [line.strip().split('\t') for line in res.stdout.strip().split('\n') if line.strip()]
-             headers = lines[0]
-             combinations = [dict(zip(headers, row)) for row in lines[1:]]
-             return combinations
-         finally:
-             if os.path.exists(temp_model):
-                 os.remove(temp_model)
-     ```
+6. **โมดูลที่ 6: Oracle-Backed JUnit 4 Synthesizer (`Combinatorial_IPO/generator/junit_generator.py`)**
+   - สร้างชื่อ test ไม่ซ้ำแม้ method มี overload และเรียก exact signature ที่เลือก
+   - ทุก test ต้องมี `@Test(timeout = 4000)` และ assertion จาก fixed-version oracle
+   - ห้ามกลืน exception แบบกว้างเพื่อทำให้ test ผ่าน
 
-4. **โมดูลที่ 4: JUnit 4 Test Synthesizer (`Combinatorial_IPO/generator/junit_generator.py`)**
-   - **หน้าที่:** นำผลลัพธ์ Combinations แต่ละแถวมาจัดรูปแบบเป็นโค้ด JUnit 4 ที่ได้มาตรฐานโครงการ
-   - **แนวทางการเขียนโค้ด (Pattern):**
-     ```python
-     def synthesize_junit(package_name, class_name, method_name, combinations):
-         test_methods = []
-         for idx, comb in enumerate(combinations):
-             args_str = ", ".join(comb.values())
-             test_methods.append(f"""
-     @Test(timeout = 4000)
-     public void test_{method_name}_pairwise_{idx+1:03d}() {{
-         try {{
-             // Test Combination: {comb}
-             {class_name}.{method_name}({args_str});
-         }} catch (IllegalArgumentException | ArithmeticException | NullPointerException e) {{
-             // Handled expected boundary contract
-         }}
-     }}""")
+7. **โมดูลที่ 7: Safe Batch Runner (`Combinatorial_IPO/runner/run_ipo_batch.py`)**
+   - รองรับ project, bug และ exact-signature filters ก่อนเปิด all-target batch
+   - ใช้ IPO เป็น generation backend หลัก ส่วน PICT ใช้เฉพาะโหมด reference
+   - failure ของ target หนึ่งต้องไม่หยุดทั้ง batch และต้องบันทึกสถานะ/สาเหตุ เช่น `UNSUPPORTED`, `GENERATION_ERROR`, `ORACLE_ERROR`, `VERIFY_ERROR`
+   - เขียน TestCode สำหรับส่งมอบเฉพาะ target ที่ pair coverage ครบ มี oracle ครบ และผ่าน fixed-version verification
+   - ห้าม overwrite ชุดที่ผ่านแล้วด้วยผลทดลองหรือผลที่ยังไม่มี oracle
 
-         junit_code = f"""package {package_name};
+#### เกณฑ์ก่อนเปิด All-Target Batch
 
- import org.junit.Test;
- import static org.junit.Assert.*;
+ห้ามวนทุก target ทันทีหลังผ่านเพียง Lang-1 ต้องผ่าน representative methods หลายชนิดก่อน ได้แก่ primitive หลาย parameters, String ร่วมกับ primitive, floating point, boolean และ method จาก target classes/projects อื่น พร้อมยืนยันว่า unsupported signatures ถูก skip อย่างปลอดภัย
 
- public class {class_name}_IPOTest {{
- {"".join(test_methods)}
- }}
- """
-         return junit_code
-     ```
+อย่างน้อยทุกกรณีที่ประกาศว่ารองรับต้องผ่านเงื่อนไขต่อไปนี้:
 
-5. **โมดูลที่ 5: Master Batch Runner (`Combinatorial_IPO/runner/run_ipo_batch.py`)**
-   - **หน้าที่:** วนลูปอ่านไฟล์ Java ทุกโฟลเดอร์ใน `target_benchmark/` แล้วเซฟไฟล์ลง `Combinatorial_IPO/TestCode/`
-   - **แนวทางการเขียนโค้ด (Pattern):**
-     ```python
-     import glob, os
+1. exact signature selection ถูกต้องแม้มี overload
+2. IPO รันซ้ำแล้วได้ผลเหมือนเดิม
+3. independent pair coverage ครบ 100%
+4. concrete inputs ไม่มี duplicate ที่ไม่ได้อธิบาย
+5. oracle ครบทุก combination
+6. JUnit 4 compile และผ่านทั้งหมดบน fixed version
+7. ไม่มีการรัน buggy version, coverage หรือ FDR ในขั้น Member 1
 
-     def run_all():
-         java_files = glob.glob("target_benchmark/*/*.java")
-         print(f"[*] พบไฟล์ Java เป้าหมายทั้งหมด {len(java_files)} ไฟล์")
-         
-         for jf in java_files:
-             meta = parse_java_file(jf)
-             cls_name = meta['class']
-             pkg_name = meta['package']
-             
-             # เลือก Method สาธารณะหลักที่มีพารามิเตอร์
-             valid_methods = [m for m in meta['methods'] if len(m['params']) >= 2]
-             if not valid_methods:
-                 continue
-                 
-             target_m = valid_methods[0]
-             domains = {p[1]: get_domain_for_type(p[0]) for p in target_m['params']}
-             
-             # รัน IPO Pairwise
-             combs = generate_pairwise(domains)
-             
-             # สังเคราะห์โค้ด JUnit 4
-             code = synthesize_junit(pkg_name, cls_name, target_m['name'], combs)
-             
-             # เซฟลง TestCode/
-             out_path = f"Combinatorial_IPO/TestCode/{cls_name}_IPOTest.java"
-             with open(out_path, "w", encoding="utf-8") as f:
-                 f.write(code)
-             print(f"    [+] บันทึกชุดทดสอบสำเร็จ: {out_path} ({len(combs)} Pairwise Test Cases)")
+**ขอบเขตข้อมูล:** เป้าหมายสุดท้ายต้องสอดคล้องกับรายการ Defects4J targets ที่ทีมใช้ในการทดลอง และต้องบันทึก inclusion, exclusion หรือ unsupported status ครบทุกรายการ ห้ามรายงานเฉพาะกรณีที่สำเร็จแล้วตัด failure ออกจากผลรวม
 
-     if __name__ == '__main__':
-         run_all()
-     ```
-
-* **ก้าวแรกที่แนะนำ (Prototyping Strategy):** ให้ทดสอบกับคลาส `NumberUtils` (Lang-1) ก่อน เพื่อยืนยันว่าโค้ด Java ที่เจนออกมาสามารถคอมไพล์ผ่านและวัด Coverage ได้จริง 1 คลาส แล้วจึงสั่งรัน `run_all()` สำหรับทุกคลาสใน `target_benchmark/` ครับ!
+**ลำดับการพัฒนา:** เก็บ Lang-1 PICT pilot เป็น baseline -> แยก PICT adapter ออกจาก `algorithm/ipo.py` -> พัฒนาและทดสอบ IPO Horizontal/Vertical Growth -> รัน IPO กับ Lang-1 model เดิม -> เก็บ oracle/ตรวจ fixed version -> ทดลอง representative methods -> เปิด batch เมื่อผ่าน readiness gates เท่านั้น
 
 ---
 
@@ -880,7 +777,7 @@ sequenceDiagram
     M4-->>M3: แจ้ง Source Code พร้อมแล้ว
     
     par สมาชิกทำงานคู่ขนานกัน (Parallel Execution)
-        M1->>M1: วิเคราะห์ Parameter -> เขียน Math_model.txt -> รัน PICT -> แปลงเป็น HypergeometricDistribution_IPOTest.java
+        M1->>M1: วิเคราะห์ Parameter -> สร้าง Domains -> รัน IPO -> ตรวจ Pair Coverage -> สร้าง Oracle-backed HypergeometricDistribution_IPOTest.java
         M2->>M2: รัน run_evosuite_mio.sh Math 2 -> ได้ HypergeometricDistribution_ESTest.java
         M3->>M3: รัน kku_generate.py -> ได้ ClaudeTest.java และ GeminiTest.java
     end
@@ -944,7 +841,7 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{detected\_bugs}}}{N_{\text{eval
 | บทในรายงาน | หัวข้อรายงาน | ผู้รับผิดชอบหลัก | สิ่งที่ต้องเขียนและตารางที่ต้องใส่ |
 | :--- | :--- | :--- | :--- |
 | **บทที่ 1** | บทนำ วัตถุประสงค์ และขอบเขตงาน | **Member 4** | ที่มา ความสำคัญ, ขอบเขตงานวิจัย (Defect-Targeted Testing), Research Questions (RQ1: Coverage, RQ2: Bug-Level FDR, RQ3: Efficiency) |
-| **บทที่ 2.1** | Combinatorial Testing & IPO Algorithm | **Member 1** | ทฤษฎี In-Parameter-Order (IPO/IPOG) Algorithm, การใช้เครื่องมือ Microsoft PICT เป็น Reference Implementation / Baseline Tool, ตารางขนาด Full vs Pairwise Reduction % |
+| **บทที่ 2.1** | Combinatorial Testing & IPO Algorithm | **Member 1** | ทฤษฎีและ implementation ของ IPO/IPOG (Horizontal/Vertical Growth), Microsoft PICT ในฐานะ Reference Baseline, pair-coverage verification และตาราง Full vs Pairwise Reduction % |
 | **บทที่ 2.2** | Search-Based Testing & MIO Algorithm | **Member 2** | ทฤษฎี MIO ใน EvoSuite, ตารางสถิติ Mean ± SD ของ Search Budget (30s/60s/120s) ตามข้อ 1.7 |
 | **บทที่ 3** | Prompt Engineering Architecture | **Member 3** | โครงสร้าง System Prompt, เทคนิค BVA Guardrails, Defect Context Injection, ตาราง Token Usage & Cost ของ Claude vs Gemini |
 | **บทที่ 4** | สภาพแวดล้อมระบบและการทดลอง | **Member 4** | สถาปัตยกรรม Docker, ขอบเขต `classes.modified` vs Project-Wide, นิยามสูตรคำนวณ Coverage & Bug-Level FDR 5 สถานะ |
