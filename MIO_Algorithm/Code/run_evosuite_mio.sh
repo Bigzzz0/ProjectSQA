@@ -44,10 +44,20 @@ defects4j compile
 echo ">> Exporting compilation classpath..."
 CP=$(defects4j export -p cp.compile)
 
-# 4. สั่งรัน EvoSuite MIO (ใช้ Java 8 เพื่อรองรับ tools.jar)
+# 4. สั่งรัน EvoSuite MIO (ใช้ Java 8 เพื่อรองรับ tools.jar และ URLClassLoader)
+if [ -d "/usr/lib/jvm/java-8-openjdk-amd64" ]; then
+    export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    export PATH=$JAVA_HOME/bin:$PATH
+fi
+
 JAVA_BIN="java"
-if [ -f "/usr/lib/jvm/java-8-openjdk-amd64/bin/java" ]; then
-    JAVA_BIN="/usr/lib/jvm/java-8-openjdk-amd64/bin/java"
+TOOLS_JAR_OPT=""
+if [ -f "/usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar" ]; then
+    TOOLS_JAR_OPT="-Dtools_jar_location=/usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar"
+fi
+
+if [ ! -f "$EVOSUITE_JAR" ] && [ -f "/workspace/MIO_Algorithm/Code/evosuite-1.0.6.jar" ]; then
+    EVOSUITE_JAR="/workspace/MIO_Algorithm/Code/evosuite-1.0.6.jar"
 fi
 
 echo ">> Starting EvoSuite MIO Search (Budget: ${BUDGET}s) using $JAVA_BIN..."
@@ -58,6 +68,7 @@ echo ">> Starting EvoSuite MIO Search (Budget: ${BUDGET}s) using $JAVA_BIN..."
   -Dcriterion=LINE:BRANCH:EXCEPTION:MUTATION \
   -Dsearch_budget="$BUDGET" \
   -Dreport_dir="$REPORT_DIR" \
+  $TOOLS_JAR_OPT \
   -base_dir "$OUTPUT_DIR"
 
 echo "=========================================================="
