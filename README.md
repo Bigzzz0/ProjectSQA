@@ -10,7 +10,7 @@
 
 | ลำดับ | รหัสนักศึกษา | ชื่อ - สกุล | บทบาทในโครงการ | หน้าที่หลัก & สิ่งที่ต้องส่งมอบ (Deliverables) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1 | 673380278-9 | นายปวริศช์ ประมวล | **Member 1: Algorithm Lead 1**<br>(IPO / Combinatorial Testing) | • วิเคราะห์ Input Space ของ Target Classes<br>• ออกแบบ Parameter Model (`model.txt`) และรัน PICT<br>• พัฒนาสคริปต์แปลง Combinations เป็น JUnit 4 Test Suite<br>• **Output:** วางไฟล์ไว้ที่ `Combinatorial_IPO/TestCode/` |
+| 1 | 673380278-9 | นายปวริศช์ ประมวล | **Member 1: Algorithm Lead 1**<br>(IPO / Combinatorial Testing) | • วิเคราะห์ Input Space ของ Target Classes<br>• สร้าง Factor/Value-Domain Model และ Pairwise Combinations ด้วย Native IPO<br>• ใช้ PICT เฉพาะ Reference Baseline โดยไม่ถือว่า PICT เท่ากับ IPO<br>• แปลง Combinations เป็น JUnit 4 พร้อม Oracle จาก Defects4J Fixed Version<br>• **Output:** วางชุดที่ตรวจบน Fixed Version แล้วไว้ที่ `Combinatorial_IPO/TestCode/` |
 | 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | **Member 2: Algorithm Lead 2**<br>(MIO / Search-Based Testing) | • สั่งรัน EvoSuite MIO บน Defects4J Classpath<br>• ทดลองปรับ Search Budget (30s, 60s, 120s) และรันซ้ำ 3-5 รอบ<br>• จัดการ EvoSuite Runtime และบันทึกค่าสถิติ Mean / SD<br>• **Output:** วางไฟล์ไว้ที่ `MIO_Algorithm/TestCode/` |
 | 3 | 673380272-1 | นายธนภูมิ จันทรา | **Member 3: AI Prompt Engineer**<br>(Claude Sonnet 5 & Gemini 3.8 Flash) | • ออกแบบ Master Prompt Architecture (CoT, Boundary Analysis)<br>• พัฒนาสคริปต์ยิง KKU IntelSphere API (`kku_generate.py`)<br>• สกัด JUnit 4 Test Code และบันทึก Token Usage / Generation Time<br>• **Output:** วางไฟล์ที่ `Claude-sonnet_5/TestCode/` และ `Gemini-3_8_flash/TestCode/` |
 | 4 | 673380292-5 | นายศิฆรินทร์ อุปจันทร์ | **Member 4: Infrastructure & Data Lead**<br>(Defects4J & Repository Manager) | • จัดเตรียม Docker Environment (Multi-JDK, PICT, EvoSuite, Python)<br>• สกัด Target Classes และ Ground Truth บั๊กจาก Defects4J<br>• พัฒนา Universal Runner (`run_benchmark.py`) พร้อมระบบ Resume<br>• ประเมินผล Coverage, Fault Detection Rate และรวบรวมเล่มรายงาน |
@@ -75,11 +75,19 @@ ProjectSQA/
 │   ├── Dockerfile                     # Multi-JDK (Java 8 & 11) + PICT + EvoSuite + Python
 │   ├── docker-compose.yml
 │   └── README_DOCKER.md               # คู่มือการใช้งาน Docker Environment
-├── Combinatorial_IPO/                 # อัลกอริทึมที่ 1: In-Parameter-Order (IPO) via PICT
-│   ├── Code/                          # Generator Script แปลง Combinations เป็น JUnit Test
-│   ├── Configuration/                 # Parameter Models (*.txt)
-│   ├── Result_Round1/ & Result_Round2/
-│   └── TestCode/                      # ไฟล์ JUnit 4 (*_IPOTest.java)
+├── Combinatorial_IPO/                 # อัลกอริทึมที่ 1: Native In-Parameter-Order (IPO)
+│   ├── analyzer/                      # วิเคราะห์ Java Method และ Parameters
+│   ├── domain/                        # สร้าง Factor และ Value Domains
+│   ├── algorithm/                     # Native IPO: Horizontal/Vertical Growth
+│   ├── generator/                     # แปลง Concrete Inputs เป็น JUnit 4
+│   ├── oracle/                        # เก็บ Oracle และตรวจ Suite บน Fixed Version
+│   ├── runner/                        # จุดสั่งรัน Automated IPO Pipeline
+│   ├── verification/                  # ตรวจ Pair Coverage
+│   ├── backends/                      # Optional PICT Reference Backend
+│   ├── baselines/pict/                # เก็บ PICT Reference Artifacts แยกจากผล IPO
+│   ├── Models/                        # Factor/Domain Models ของ Native IPO
+│   ├── Result_Round1/                 # Combinations, Inputs, Oracle และ Manifest
+│   └── TestCode/                      # JUnit 4 ที่ผ่าน Fixed-Version Verification
 ├── MIO_Algorithm/                     # อัลกอริทึมที่ 2: Mutation Insertion Optimization (MIO) via EvoSuite
 │   ├── Code/                          # สคริปต์สั่งรัน EvoSuite MIO
 │   ├── Configuration/                 # คอนฟิก Search Budget (30s, 60s, 120s)

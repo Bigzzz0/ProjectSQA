@@ -25,7 +25,7 @@ Java source
 
 ## Current Lang-1 status
 
-ชุด `NumberUtils.createNumber(String)` จำนวน 48 cases ที่อยู่ใน repository ก่อน native IPO implementation เป็น **PICT pilot baseline** ซึ่งผ่านการเก็บ oracle และ fixed-version verification แล้ว ห้ามเขียนทับชุดนี้ระหว่างทดลอง
+ชุด `NumberUtils.createNumber(String)` จำนวน 48 cases ที่อยู่ใน repository ก่อน native IPO implementation เป็น **PICT pilot baseline** ซึ่งผ่านการเก็บ oracle และ fixed-version verification แล้ว และถูกเก็บแยกไว้ใต้ `baselines/pict/Lang_1b/` ห้ามนำชุดนี้ไปรายงานเป็นผล IPO
 
 Native IPO สร้าง abstract combinations จาก factor model เดียวกันได้ 48 แถว ครอบคลุม 194/194 pairs และรักษา mandatory seed แต่ยังต้องเก็บ oracle ใหม่ตาม arguments ของ native IPO ก่อนใช้เป็น TestCode รอบสุดท้าย
 
@@ -47,7 +47,7 @@ Combinatorial_IPO/
 └── TestCode/                  # Fixed-verified JUnit suites for Member 4
 ```
 
-PICT pilot artifacts will be archived under `baselines/pict/` immediately before native IPO artifacts replace the legacy delivery paths
+PICT pilot artifacts are archived under `baselines/pict/`. ตำแหน่ง `Models/`, `Result_Round1/` และ `TestCode/` สงวนไว้สำหรับผลจาก native IPO เท่านั้น
 
 ## Run tests
 

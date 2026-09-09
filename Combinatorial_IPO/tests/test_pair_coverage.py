@@ -92,8 +92,10 @@ class PairCoverageTests(unittest.TestCase):
         ipo_root = Path(__file__).resolve().parents[1]
         combinations_path = (
             ipo_root
-            / "Result_Round1"
+            / "baselines"
+            / "pict"
             / "Lang_1b"
+            / "Result_Round1"
             / "NumberUtils"
             / "createNumber__String_combinations.tsv"
         )
