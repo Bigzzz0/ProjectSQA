@@ -159,14 +159,41 @@ def run_test_generation(target_ai, api_key, model_identifier=None, source_file=N
 
     pkg_decl = f"package {package_name};" if package_name else "// No package"
 
-    system_prompt = f"""You are a Principal Software Quality Assurance (SQA) Engineer and Test Automation Specialist.
+    prompt_dir = os.path.join(PROJECT_ROOT, tool_dir, "Prompt")
+    os.makedirs(prompt_dir, exist_ok=True)
+    custom_prompt_file = os.path.join(prompt_dir, f"actual_prompt_{base_class}.md")
+
+    system_prompt = ""
+    custom_defect_req = ""
+
+    # ตรวจสอบว่ามีไฟล์ actual_prompt_<class>.md ที่ปรับแต่งเฉพาะไว้หรือไม่
+    if os.path.exists(custom_prompt_file):
+        try:
+            with open(custom_prompt_file, "r", encoding="utf-8") as pf:
+                custom_text = pf.read()
+            if "## System Prompt" in custom_text:
+                sys_part = custom_text.split("## System Prompt")[1]
+                if "```text" in sys_part:
+                    sys_code = sys_part.split("```text")[1].split("```")[0].strip()
+                    if sys_code:
+                        system_prompt = sys_code
+            if "=== CRITICAL REQUIREMENT FOR FAULT DETECTION ===" in custom_text:
+                req_part = custom_text.split("=== CRITICAL REQUIREMENT FOR FAULT DETECTION ===")[1]
+                if "Generate the complete JUnit 4" in req_part:
+                    req_part = req_part.split("Generate the complete JUnit 4")[0]
+                custom_defect_req = req_part.strip()
+        except Exception as e:
+            print(f"   ℹ️ ไม่สามารถอ่าน custom prompt ({e}), ใช้ Universal Prompt แทน")
+
+    if not system_prompt:
+        system_prompt = f"""You are a Principal Software Quality Assurance (SQA) Engineer and Test Automation Specialist.
 Your mission is to perform advanced White-Box Testing on the target Java class from the Defects4J benchmark to generate a production-grade, fault-revealing JUnit 4 test suite.
 
 ---
 
 ### 🎯 Core Objectives:
 1. Maximize **Line Coverage** and **Branch Coverage (Decision/Condition Coverage)** on the target class logic.
-2. Expose latent defects, boundary regressions, and type-handling flaws.
+2. Expose latent defects, boundary regressions, and state-handling flaws.
 3. Ensure **100% deterministic, zero-flakiness, and zero-compilation-error** execution on Java 8 / Defects4J.
 
 ---
@@ -179,8 +206,6 @@ Your mission is to perform advanced White-Box Testing on the target Java class f
 - Mandatory Explicit Imports:
   * `import org.junit.Test;`
   * `import static org.junit.Assert.*;`
-  * `import java.math.BigInteger;`
-  * `import java.math.BigDecimal;`
 - Strict Prohibitions:
   * NO JUnit 5 / Jupiter imports (`org.junit.jupiter.*`).
   * NO mocking or third-party assertion libraries (AssertJ, Mockito, Truth).
@@ -189,23 +214,16 @@ Your mission is to perform advanced White-Box Testing on the target Java class f
 
 #### 2. Test Architecture & Timeout Guard
 - Execution Guard: Every single `@Test` method MUST declare a timeout: `@Test(timeout = 4000)`.
-- Exception Handling: For invalid input scenarios expecting `NumberFormatException`, test them using `@Test(expected = NumberFormatException.class, timeout = 4000)` or explicit `try {{ ... fail(); }} catch (NumberFormatException expected) {{ ... }}`.
-- Granular Assertions: Always assert both the **Exact Returned Type** (e.g., `assertTrue(result instanceof Long)`) and the **Exact Value** (`assertEquals(...)`).
+- Exception Handling: For invalid arguments or error paths, assert expected exceptions using `@Test(expected = ...Exception.class, timeout = 4000)` or explicit `try {{ ... fail(); }} catch (Exception expected) {{ ... }}`.
+- Granular Assertions: Always assert both the **Exact Returned Type/State** and the **Exact Value**.
 
 #### 3. Systematic Equivalence Partitioning & Boundary Value Analysis (BVA)
 Structure the test suite into distinct logical sections covering:
-- **Partition A: Standard Numeric Primitives** (`Integer`, `Long`, `Float`, `Double`, `BigInteger`, `BigDecimal`).
-- **Partition B: Hexadecimal Representations (Critical Bug Zone)**:
-  * Prefixes: `0x`, `0X`, `#`
-  * Sign handling: Positive (`0x10`), Negative (`-0x10`, `-#1234`)
-  * Boundary & Large Hex: Values exceeding 32-bit signed int (e.g., `0x80000000`, `0xFFFFFFFF`)
-  * Suffix with Hex: e.g., `0x12L`, `0x12l`
-- **Partition C: Scientific / Exponent Notations**:
-  * Formats: `e`, `E`, signs in exponent (`1.2e+3`, `-2.5E-4`, `00E0`)
-- **Partition D: Type Qualifiers & Case Sensitivity**:
-  * Suffixes: `f`, `F`, `d`, `D`, `l`, `L`
-- **Partition E: Edge & Degenerate Cases**:
-  * `null`, empty string `""`, single whitespace, strings with leading/trailing characters, all zeros `000`, multiple signs/dots (`--1`, `1.2.3`).
+- **Partition A: Core Functional Logic & State Transitions** (Normal operational paths, state getters/setters).
+- **Partition B: Boundary Value Analysis (BVA) & Extremes** (null arguments, empty collections/strings, zero/negative/MAX boundaries).
+- **Partition C: Defect-Targeted Branch Zone** (Targeting known failure conditions from Defects4J ground truth).
+- **Partition D: Exception & Defensive Guard Paths** (Illegal arguments, out-of-range parameters).
+- **Partition E: Object Lifecycle & Contract Integrity** (equals, hashCode, clone, serialization if applicable).
 
 #### 4. In-Code Reasoning (Mental Sandbox)
 Before writing the Java test methods, include an in-line Javadoc/block comment at the top of the class summarizing your:
@@ -213,7 +231,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
 
 ---
 
-###  ABSOLUTE OUTPUT CONSTRAINT:
+### 🚫 ABSOLUTE OUTPUT CONSTRAINT:
 - Output MUST contain **ONLY compilable Java code** within a single ```java ... ``` block.
 - DO NOT output any introductory text, markdown explanations outside the code block, notes, or conversational closings."""
 
@@ -225,9 +243,14 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
             f"The target class contains a known defect documented as follows:\n"
             f"```text\n{defect_context}\n```\n\n"
             f"=== CRITICAL REQUIREMENT FOR FAULT DETECTION ===\n"
-            f"You MUST write at least one dedicated @Test method that directly targets this specific failure condition.\n"
-            f"The test MUST assert the expected correct behavior so that it reveals/triggers the bug on the defective version!"
         )
+        if custom_defect_req:
+            defect_prompt_section += f"{custom_defect_req}\n"
+        else:
+            defect_prompt_section += (
+                f"You MUST write at least one dedicated @Test(timeout = 4000) method that directly targets this specific failure condition.\n"
+                f"The test MUST assert the expected correct behavior so that it reveals/triggers the bug on the defective version!"
+            )
 
     user_prompt = (
         f"Here is the source code of {base_class}.java:\n\n"
@@ -313,12 +336,13 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     os.makedirs(prompt_dir, exist_ok=True)
     target_class_name = os.path.splitext(os.path.basename(source_file))[0]
     prompt_record_path = os.path.join(prompt_dir, f"actual_prompt_{target_class_name}.md")
-    with open(prompt_record_path, "w", encoding="utf-8") as f:
-        f.write(f"# Prompt Record for {output_class_name}\n\n")
-        f.write(f"- **Timestamp:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"- **Model Used:** {model_to_use}\n\n")
-        f.write(f"## System Prompt\n```text\n{system_prompt}\n```\n\n")
-        f.write(f"## User Prompt\n(Source code of {target_class_name}.java included)\n")
+    if not os.path.exists(prompt_record_path):
+        with open(prompt_record_path, "w", encoding="utf-8") as f:
+            f.write(f"# Prompt Record for {output_class_name}\n\n")
+            f.write(f"- **Timestamp:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"- **Model Used:** {model_to_use}\n\n")
+            f.write(f"## System Prompt\n```text\n{system_prompt}\n```\n\n")
+            f.write(f"## User Prompt\n(Source code of {target_class_name}.java included)\n")
     print(f"   📝 บันทึกประวัติ Prompt เรียบร้อยที่: {prompt_record_path}")
 
     # 5. บันทึกสถิติลงใน Result/
