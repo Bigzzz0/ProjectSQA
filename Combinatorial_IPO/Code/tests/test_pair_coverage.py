@@ -89,7 +89,7 @@ class PairCoverageTests(unittest.TestCase):
         self.assertEqual(100.0, report.coverage_percent)
 
     def test_lang1_pict_pilot_has_complete_pair_coverage(self) -> None:
-        ipo_root = Path(__file__).resolve().parents[1]
+        ipo_root = Path(__file__).resolve().parents[2]
         combinations_path = (
             ipo_root
             / "baselines"

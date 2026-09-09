@@ -1,0 +1,33 @@
+{
+  "Prefix": [
+    "None",
+    "Plus",
+    "Minus",
+    "ZeroX",
+    "MinusZeroX",
+    "Hash"
+  ],
+  "ValueType": [
+    "Integer",
+    "Decimal",
+    "Scientific",
+    "HexDigits",
+    "Alphanumeric"
+  ],
+  "Suffix": [
+    "None",
+    "f",
+    "F",
+    "d",
+    "D",
+    "l",
+    "L",
+    "Invalid"
+  ],
+  "Length": [
+    "Empty",
+    "SingleChar",
+    "Normal",
+    "ExceedLong"
+  ]
+}

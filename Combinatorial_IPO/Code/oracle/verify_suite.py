@@ -8,7 +8,10 @@ import shutil
 import tempfile
 from pathlib import Path
 
-from fixed_version_oracle import OracleCollectionError, _run
+if __package__:
+    from .fixed_version_oracle import OracleCollectionError, _run
+else:
+    from fixed_version_oracle import OracleCollectionError, _run
 
 
 def verify_suite(

@@ -175,8 +175,8 @@ Defects4J v2.0.0 ประกอบด้วย 17 โปรเจกต์ ร�
 
 **ตำแหน่งผลลัพธ์หลัก:**
 
-1. IPO implementation: `Combinatorial_IPO/algorithm/ipo.py`
-2. PICT adapter: `Combinatorial_IPO/backends/pict_backend.py`
+1. IPO implementation: `Combinatorial_IPO/Code/algorithm/ipo.py`
+2. PICT adapter: `Combinatorial_IPO/Code/backends/pict_backend.py`
 3. PICT pilot/reference artifacts: `Combinatorial_IPO/baselines/pict/<Project>_<BugID>b/`
 4. IPO models/results: `Combinatorial_IPO/Models/` และ `Combinatorial_IPO/Result_Round1/`
 5. IPO JUnit 4 ที่ผ่าน fixed-version verification: `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java`
@@ -211,7 +211,7 @@ Constraint handling ยังไม่ถือว่ารองรับจน
 
 #### ขั้นที่ 3: สร้าง 2-Way Combinations ด้วย IPO Implementation
 
-`Combinatorial_IPO/algorithm/ipo.py` ต้องเริ่มจาก Cartesian product ของสอง factors แรก จากนั้นเพิ่ม factor ตามลำดับด้วย Horizontal Growth และเติม uncovered pairs ด้วย Vertical Growth ต้องใช้ deterministic tie-breaking เพื่อให้รันซ้ำแล้วได้ผลเหมือนเดิม
+`Combinatorial_IPO/Code/algorithm/ipo.py` ต้องเริ่มจาก Cartesian product ของสอง factors แรก จากนั้นเพิ่ม factor ตามลำดับด้วย Horizontal Growth และเติม uncovered pairs ด้วย Vertical Growth ต้องใช้ deterministic tie-breaking เพื่อให้รันซ้ำแล้วได้ผลเหมือนเดิม
 
 #### ขั้นที่ 4: ตรวจ Pair Coverage แบบอิสระ
 
@@ -257,39 +257,39 @@ flowchart TD
 
 #### รายละเอียดระบบทั้ง 7 โมดูล (Step-by-Step Implementation Guide):
 
-1. **โมดูลที่ 1: Java Method & Parameter Analyzer (`Combinatorial_IPO/analyzer/java_parser.py`)**
+1. **โมดูลที่ 1: Java Method & Parameter Analyzer (`Combinatorial_IPO/Code/analyzer/java_parser.py`)**
    - สกัด package, class, modifiers, return type และ parameter name/type จาก source
    - ระบุ method ด้วย exact signature เพื่อแยก overload และเลือกเฉพาะขอบเขตที่ pipeline รองรับ
    - parser ปัจจุบันเป็น lightweight regex analyzer; signature ที่ซับซ้อนต้องถูก skip พร้อมเหตุผลแทนการเดา
 
-2. **โมดูลที่ 2: Value Domain Generator (`Combinatorial_IPO/domain/`)**
+2. **โมดูลที่ 2: Value Domain Generator (`Combinatorial_IPO/Code/domain/`)**
    - `value_generator.py` สร้าง nominal/boundary values สำหรับ primitive, wrapper และ String types ที่ประกาศว่ารองรับ
    - `semantic_overrides.py` เก็บ factor model/materializer เฉพาะ exact class-method signature
    - domain ต้องมีค่าที่เข้า success path, invalid path และ boundary ที่เกี่ยวข้อง ไม่ใช้ `null` เป็น fallback เงียบ ๆ สำหรับ object ที่ไม่รู้วิธีสร้าง
    - unknown object, collection, constructor หรือ instance-state requirement ให้รายงาน `UNSUPPORTED` จนกว่าจะมี strategy และ tests
 
 3. **โมดูลที่ 3: IPO Engine และ PICT Reference Backend (ต้องแยก implementation)**
-   - `Combinatorial_IPO/algorithm/ipo.py`: IPO 2-way ที่ทีมพัฒนาเอง ต้องมี Horizontal Growth, Vertical Growth และ deterministic tie-breaking
-   - `Combinatorial_IPO/backends/pict_backend.py`: adapter สำหรับเรียก Microsoft PICT เพื่อสร้าง reference baseline เท่านั้น
+   - `Combinatorial_IPO/Code/algorithm/ipo.py`: IPO 2-way ที่ทีมพัฒนาเอง ต้องมี Horizontal Growth, Vertical Growth และ deterministic tie-breaking
+   - `Combinatorial_IPO/Code/backends/pict_backend.py`: adapter สำหรับเรียก Microsoft PICT เพื่อสร้าง reference baseline เท่านั้น
    - ทั้งสอง backend รับ factor domains รูปแบบเดียวกัน แต่ต้องบันทึก `generation_backend` แยกกัน และห้ามใช้ผล PICT เป็นผล IPO
    - ไม่ต้องบังคับให้ IPO กับ PICT ได้แถวเหมือนกัน ให้เปรียบเทียบ pair coverage, suite size, reduction และ generation time
 
-4. **โมดูลที่ 4: Independent Pair-Coverage Verifier (`Combinatorial_IPO/verification/pair_coverage.py`)**
+4. **โมดูลที่ 4: Independent Pair-Coverage Verifier (`Combinatorial_IPO/Code/verification/pair_coverage.py`)**
    - คำนวณ expected pairs จาก factor domains และ observed pairs จาก generated rows
    - รายงาน missing pairs และปฏิเสธแถวที่มีค่าอยู่นอก domain
    - ใช้ verifier เดียวกันตรวจทั้ง IPO และ PICT reference โดยไม่พึ่ง backend ใด
 
-5. **โมดูลที่ 5: Fixed-Version Oracle (`Combinatorial_IPO/oracle/`)**
+5. **โมดูลที่ 5: Fixed-Version Oracle (`Combinatorial_IPO/Code/oracle/`)**
    - checkout `<Project>-<BugID>f` ลง temporary directory เพื่อรัน concrete inputs
    - บันทึก return value หรือ exact exception type พร้อม arguments และ case ID
    - ลบ temporary checkout เมื่อเสร็จและเก็บ oracle JSON สำหรับทำซ้ำ
 
-6. **โมดูลที่ 6: Oracle-Backed JUnit 4 Synthesizer (`Combinatorial_IPO/generator/junit_generator.py`)**
+6. **โมดูลที่ 6: Oracle-Backed JUnit 4 Synthesizer (`Combinatorial_IPO/Code/generator/junit_generator.py`)**
    - สร้างชื่อ test ไม่ซ้ำแม้ method มี overload และเรียก exact signature ที่เลือก
    - ทุก test ต้องมี `@Test(timeout = 4000)` และ assertion จาก fixed-version oracle
    - ห้ามกลืน exception แบบกว้างเพื่อทำให้ test ผ่าน
 
-7. **โมดูลที่ 7: Safe Batch Runner (`Combinatorial_IPO/runner/run_ipo_batch.py`)**
+7. **โมดูลที่ 7: Safe Batch Runner (`Combinatorial_IPO/Code/runner/run_ipo_batch.py`)**
    - รองรับ project, bug และ exact-signature filters ก่อนเปิด all-target batch
    - ใช้ IPO เป็น generation backend หลัก ส่วน PICT ใช้เฉพาะโหมด reference
    - failure ของ target หนึ่งต้องไม่หยุดทั้ง batch และต้องบันทึกสถานะ/สาเหตุ เช่น `UNSUPPORTED`, `GENERATION_ERROR`, `ORACLE_ERROR`, `VERIFY_ERROR`
@@ -318,7 +318,7 @@ flowchart TD
 เมื่อโค้ดของ Member 1 ผ่าน Readiness Gates ข้างต้นเรียบร้อยแล้ว ให้สั่งรัน `run_ipo_batch.py` โดยวนลูปอ่านจาก [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json) หรือโฟลเดอร์ใน `target_benchmark/`:
 ```bash
 # สั่งรันชุดทดสอบ 17 โปรเจกต์ผ่าน Python:
-python Combinatorial_IPO/runner/run_ipo_batch.py --catalog target_benchmark/catalog_17_projects.json
+python Combinatorial_IPO/Code/runner/run_ipo_batch.py --catalog target_benchmark/catalog_17_projects.json
 ```
 *ระบบจะสร้าง Parameter Model, รัน Horizontal/Vertical Growth, สกัด Fixed Version Oracle และเซฟไฟล์ JUnit 4 ลงใน `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java` โดยอัตโนมัติ*
 

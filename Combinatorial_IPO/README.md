@@ -6,8 +6,8 @@
 
 ## Academic distinction
 
-- **IPO (In-Parameter-Order)** คือ algorithm ที่โครงการ implement เองใน `algorithm/ipo.py` โดยมี initial construction, Horizontal Growth และ Vertical Growth
-- **Microsoft PICT** เป็นเครื่องมือแยกต่างหากที่เก็บไว้ใน `backends/pict_backend.py` สำหรับ reference baseline เท่านั้น
+- **IPO (In-Parameter-Order)** คือ algorithm ที่โครงการ implement เองใน `Code/algorithm/ipo.py` โดยมี initial construction, Horizontal Growth และ Vertical Growth
+- **Microsoft PICT** เป็นเครื่องมือแยกต่างหากที่เก็บไว้ใน `Code/backends/pict_backend.py` สำหรับ reference baseline เท่านั้น
 - ผลจาก PICT ห้ามรายงานว่าเป็นผลจาก IPO แม้ทั้งสองชุดจะมี pair coverage ครบหรือมีจำนวนแถวเท่ากัน
 
 Main pipeline ไม่เรียก PICT และไม่ต้องติดตั้ง PICT:
@@ -27,21 +27,23 @@ Java source
 
 ชุด `NumberUtils.createNumber(String)` จำนวน 48 cases ที่อยู่ใน repository ก่อน native IPO implementation เป็น **PICT pilot baseline** ซึ่งผ่านการเก็บ oracle และ fixed-version verification แล้ว และถูกเก็บแยกไว้ใต้ `baselines/pict/Lang_1b/` ห้ามนำชุดนี้ไปรายงานเป็นผล IPO
 
-Native IPO สร้าง abstract combinations จาก factor model เดียวกันได้ 48 แถว ครอบคลุม 194/194 pairs และรักษา mandatory seed แต่ยังต้องเก็บ oracle ใหม่ตาม arguments ของ native IPO ก่อนใช้เป็น TestCode รอบสุดท้าย
+Native IPO สร้าง abstract combinations 48 แถว ครอบคลุม 194/194 pairs รักษา mandatory seed เก็บ oracle ใหม่ครบ 48 outcomes และผ่าน JUnit 4 บน `Lang-1f` ครบ `OK (48 tests)` แล้ว ชุดส่งมอบอยู่ใน `TestCode/Lang_1b/`
 
 ## Project structure
 
 ```text
 Combinatorial_IPO/
-├── algorithm/                 # Native IPO implementation
-├── analyzer/                  # Java source and signature analysis
-├── backends/                  # Optional reference backends such as PICT
-├── domain/                    # Generic domains and semantic overrides
-├── generator/                 # Oracle-backed JUnit 4 synthesis
-├── oracle/                    # Fixed-version oracle collection/verification
-├── runner/                    # Safe filtered batch orchestration
-├── verification/              # Backend-independent pair coverage
-├── tests/                     # Python unit and integration tests
+├── Code/                      # Source code and automated tests
+│   ├── algorithm/             # Native IPO implementation
+│   ├── analyzer/              # Java source and signature analysis
+│   ├── backends/              # Optional reference backends such as PICT
+│   ├── domain/                # Generic domains and semantic overrides
+│   ├── generator/             # Oracle-backed JUnit 4 synthesis
+│   ├── oracle/                # Fixed-version oracle collection/verification
+│   ├── runner/                # Safe filtered batch orchestration
+│   ├── verification/          # Backend-independent pair coverage
+│   └── tests/                 # Python unit and integration tests
+├── baselines/                 # Reference results; PICT is not native IPO
 ├── Models/                    # Native IPO factor-domain artifacts
 ├── Result_Round1/             # Native IPO combinations, inputs and oracle
 └── TestCode/                  # Fixed-verified JUnit suites for Member 4
@@ -54,7 +56,7 @@ PICT pilot artifacts are archived under `baselines/pict/`. ตำแหน่ง
 จาก PowerShell ที่ repository root:
 
 ```powershell
-docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 -m unittest discover -s tests -p "test_*.py" -v'
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO/Code && python3 -m unittest discover -s tests -p "test_*.py" -v'
 ```
 
 Tests ไม่เรียก PICT executable และใช้ temporary directories สำหรับ runner integration
@@ -64,7 +66,7 @@ Tests ไม่เรียก PICT executable และใช้ temporary dire
 ระบุ project, bug และ exact signature พร้อมเขียนผลลงพื้นที่ทดลองเสมอ:
 
 ```powershell
-docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 runner/run_ipo_batch.py --target-root /workspace/target_benchmark --output-root /tmp/ipo-native-trial --project Lang --bug 1 --signature "createNumber(String)"'
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/run_ipo_batch.py --target-root /workspace/target_benchmark --output-root /tmp/ipo-native-trial --project Lang --bug 1 --signature "createNumber(String)"'
 ```
 
 ผลรอบแรกประกอบด้วย domains, abstract combinations, concrete inputs และ manifest เมื่อยังไม่มี oracle ที่ตรงกับ arguments ระบบจะรายงาน `oracle_status: MISSING` และไม่สร้างไฟล์ใน `TestCode/`
@@ -85,7 +87,7 @@ Member 1 ไม่รัน buggy version, coverage หรือ Fault Detection
 
 ## Current limitations
 
-- ยืนยัน end-to-end เดิมแล้วเฉพาะ `NumberUtils.createNumber(String)`; native IPO oracle/fixed verification ยังเป็นขั้นถัดไป
+- ยืนยัน native IPO end-to-end แล้วเฉพาะ `NumberUtils.createNumber(String)`; generic method ที่ไม่มี semantic override ยังเป็นขั้นถัดไป
 - รองรับหลัก ๆ เฉพาะ public static methods ที่มี parameters
 - parser เป็น lightweight regex analyzer
 - constructor, instance method, collection, complex object และ constraints ยังไม่รองรับทั่วไป

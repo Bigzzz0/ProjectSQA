@@ -13,10 +13,11 @@ from time import perf_counter
 from typing import Dict, List, Mapping, Optional, Sequence, Tuple
 
 
-IPO_ROOT = Path(__file__).resolve().parents[1]
+CODE_ROOT = Path(__file__).resolve().parents[1]
+IPO_ROOT = CODE_ROOT.parent
 PROJECT_ROOT = IPO_ROOT.parent
-if str(IPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(IPO_ROOT))
+if str(CODE_ROOT) not in sys.path:
+    sys.path.insert(0, str(CODE_ROOT))
 
 from algorithm.ipo import generate_pairwise  # noqa: E402
 from analyzer.java_parser import parse_java_file  # noqa: E402

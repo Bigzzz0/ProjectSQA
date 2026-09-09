@@ -57,7 +57,7 @@ class MethodFilterTests(unittest.TestCase):
         self.assertFalse(_matches_method_filter(INT_MIN, "max", None))
 
     def test_number_utils_int_min_signature_has_one_match(self) -> None:
-        project_root = Path(__file__).resolve().parents[2]
+        project_root = Path(__file__).resolve().parents[3]
         source_file = project_root / "target_benchmark" / "Lang_1b" / "NumberUtils.java"
         methods = parse_java_file(str(source_file))["methods"]
 
@@ -179,7 +179,7 @@ public class Sample {
             )
 
     def test_lang1_native_ipo_generation_uses_temporary_output(self) -> None:
-        project_root = Path(__file__).resolve().parents[2]
+        project_root = Path(__file__).resolve().parents[3]
         target_root = project_root / "target_benchmark"
         with tempfile.TemporaryDirectory() as temporary_directory:
             output_root = Path(temporary_directory) / "output"

@@ -1,0 +1,41 @@
+{
+  "target_root": "/workspace/target_benchmark",
+  "generation_backend": "ipo",
+  "strength": 2,
+  "generated_method_count": 1,
+  "generated_suite_count": 1,
+  "generated_suites": [
+    "TestCode/Lang_1b/NumberUtils_IPOTest.java"
+  ],
+  "records": [
+    {
+      "project": "Lang",
+      "bug_id": 1,
+      "class": "NumberUtils",
+      "method": "createNumber",
+      "method_signature": "createNumber(String)",
+      "method_id": "createNumber__String",
+      "status": "GENERATED",
+      "generation_backend": "ipo",
+      "strength": 2,
+      "strategy": "number_utils_numeric_string",
+      "seed_count": 1,
+      "factor_count": 4,
+      "cartesian_count": 960,
+      "pairwise_count": 48,
+      "expected_pair_count": 194,
+      "covered_pair_count": 194,
+      "missing_pair_count": 0,
+      "pair_coverage_percent": 100.0,
+      "generation_seconds": 0.001631,
+      "unique_concrete_input_count": 25,
+      "reduction_percent": 95.0,
+      "domains": "Models/Lang_1b/NumberUtils/createNumber__String_domains.json",
+      "combinations": "Result_Round1/Lang_1b/NumberUtils/createNumber__String_combinations.tsv",
+      "inputs": "Result_Round1/Lang_1b/NumberUtils/createNumber__String_inputs.tsv",
+      "oracle": "Result_Round1/Lang_1b/NumberUtils/createNumber__String_oracle.json",
+      "oracle_status": "REUSED",
+      "test_suite": "TestCode/Lang_1b/NumberUtils_IPOTest.java"
+    }
+  ]
+}
