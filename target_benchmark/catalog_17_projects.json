@@ -1,0 +1,172 @@
+[
+  {
+    "project": "Chart",
+    "bug_id": 1,
+    "target_class": "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer",
+    "simple_name": "AbstractCategoryItemRenderer",
+    "dir": "Chart_1b",
+    "domain": "Data Visualization & Chart Rendering",
+    "description": "Null check and dataset null handling in category plot item rendering",
+    "trigger_test": "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"
+  },
+  {
+    "project": "Cli",
+    "bug_id": 1,
+    "target_class": "org.apache.commons.cli.CommandLine",
+    "simple_name": "CommandLine",
+    "dir": "Cli_1b",
+    "domain": "Command-line Argument Parsing",
+    "description": "Handling multiple argument options with missing or hyphenated values",
+    "trigger_test": "org.apache.commons.cli.CommandLineTest::testBuilder"
+  },
+  {
+    "project": "Closure",
+    "bug_id": 1,
+    "target_class": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "simple_name": "RemoveUnusedVars",
+    "dir": "Closure_1b",
+    "domain": "JavaScript Compiler & AST Optimization",
+    "description": "Unused function parameters removal in simple mode vs advanced optimization",
+    "trigger_test": "com.google.javascript.jscomp.RemoveUnusedVarsTest::testIssue168b"
+  },
+  {
+    "project": "Codec",
+    "bug_id": 1,
+    "target_class": "org.apache.commons.codec.language.Soundex",
+    "simple_name": "Soundex",
+    "dir": "Codec_1b",
+    "domain": "Phonetic Algorithms & String Encoding",
+    "description": "Character mapping and uppercase locale independence in Soundex phonetic encoding",
+    "trigger_test": "org.apache.commons.codec.language.SoundexTest::testLocaleIndependence"
+  },
+  {
+    "project": "Collections",
+    "bug_id": 25,
+    "target_class": "org.apache.commons.collections4.IteratorUtils",
+    "simple_name": "IteratorUtils",
+    "dir": "Collections_25b",
+    "domain": "Data Structures & Collections Framework",
+    "description": "Empty iterator singleton handling and generic type safety",
+    "trigger_test": "org.apache.commons.collections4.IteratorUtilsTest::testCollIterator"
+  },
+  {
+    "project": "Compress",
+    "bug_id": 1,
+    "target_class": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
+    "simple_name": "CpioArchiveInputStream",
+    "dir": "Compress_1b",
+    "domain": "File Compression & Binary Archiving",
+    "description": "Stream boundary detection and EOF trailer marker parsing in CPIO archive",
+    "trigger_test": "org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive"
+  },
+  {
+    "project": "Csv",
+    "bug_id": 1,
+    "target_class": "org.apache.commons.csv.ExtendedBufferedReader",
+    "simple_name": "ExtendedBufferedReader",
+    "dir": "Csv_1b",
+    "domain": "Text Processing & Delimited Formats",
+    "description": "Line number and lookahead buffer counting when reading CRLF line breaks",
+    "trigger_test": "org.apache.commons.csv.CSVParserTest::testBackslashEscaping"
+  },
+  {
+    "project": "Gson",
+    "bug_id": 1,
+    "target_class": "com.google.gson.TypeInfoFactory",
+    "simple_name": "TypeInfoFactory",
+    "dir": "Gson_1b",
+    "domain": "JSON Serialization & Reflection",
+    "description": "Generic type argument resolution for parameterized and wildcard types",
+    "trigger_test": "com.google.gson.functional.TypeHierarchyAdapterTest::testTypeHierarchy"
+  },
+  {
+    "project": "JacksonCore",
+    "bug_id": 1,
+    "target_class": "com.fasterxml.jackson.core.io.NumberInput",
+    "simple_name": "NumberInput",
+    "dir": "JacksonCore_1b",
+    "domain": "High-Performance JSON Tokenizer",
+    "description": "BigDecimal parsing scale and precision limit checking without DoS vulnerability",
+    "trigger_test": "com.fasterxml.jackson.core.io.TestNumberInput::testParseBigDecimal"
+  },
+  {
+    "project": "JacksonDatabind",
+    "bug_id": 1,
+    "target_class": "com.fasterxml.jackson.databind.JavaType",
+    "simple_name": "JavaType",
+    "dir": "JacksonDatabind_1b",
+    "domain": "Object Mapping & Type Introspection",
+    "description": "Generic array type resolution and null type handling",
+    "trigger_test": "com.fasterxml.jackson.databind.type.TestTypeFactory::testNullType"
+  },
+  {
+    "project": "JacksonXml",
+    "bug_id": 1,
+    "target_class": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "simple_name": "FromXmlParser",
+    "dir": "JacksonXml_1b",
+    "domain": "XML Data Binding",
+    "description": "Empty element text token state transition in streaming parser",
+    "trigger_test": "com.fasterxml.jackson.dataformat.xml.deser.TestXmlTokenStream::testRootAttributes"
+  },
+  {
+    "project": "Jsoup",
+    "bug_id": 1,
+    "target_class": "org.jsoup.nodes.Element",
+    "simple_name": "Element",
+    "dir": "Jsoup_1b",
+    "domain": "HTML Parsing & DOM Tree Manipulation",
+    "description": "Preserving whitespace and block-level line breaks when appending text nodes",
+    "trigger_test": "org.jsoup.nodes.ElementTest::testSetHtmlTitle"
+  },
+  {
+    "project": "JxPath",
+    "bug_id": 1,
+    "target_class": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "simple_name": "DOMNodePointer",
+    "dir": "JxPath_1b",
+    "domain": "XML XPath Query Engine",
+    "description": "Namespace URI resolution and attribute pointer indexing on DOM elements",
+    "trigger_test": "org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testAxisChild"
+  },
+  {
+    "project": "Lang",
+    "bug_id": 1,
+    "target_class": "org.apache.commons.lang3.math.NumberUtils",
+    "simple_name": "NumberUtils",
+    "dir": "Lang_1b",
+    "domain": "Core Java Helper Utilities",
+    "description": "Hexadecimal string with type specifier prefix parsing to Number",
+    "trigger_test": "org.apache.commons.lang3.math.NumberUtilsTest::testLang747"
+  },
+  {
+    "project": "Math",
+    "bug_id": 2,
+    "target_class": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+    "simple_name": "HypergeometricDistribution",
+    "dir": "Math_2b",
+    "domain": "Numerical Computing & Discrete Mathematics",
+    "description": "Integer overflow in mean calculation producing negative sample value",
+    "trigger_test": "org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021"
+  },
+  {
+    "project": "Mockito",
+    "bug_id": 1,
+    "target_class": "org.mockito.internal.invocation.InvocationMatcher",
+    "simple_name": "InvocationMatcher",
+    "dir": "Mockito_1b",
+    "domain": "Testing & Dynamic Mocking Framework",
+    "description": "Varargs method invocation parameter matching and argument captor",
+    "trigger_test": "org.mockitousage.basicapi.UsingVarargsTest::shouldMatchEasilyEmptyVararg"
+  },
+  {
+    "project": "Time",
+    "bug_id": 1,
+    "target_class": "org.joda.time.Partial",
+    "simple_name": "Partial",
+    "dir": "Time_1b",
+    "domain": "Date & Time Calculation",
+    "description": "Field order comparison and chronological field validation in Partial datetime",
+    "trigger_test": "org.joda.time.TestPartial_Basics::testCompareTo"
+  }
+]

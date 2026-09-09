@@ -1,0 +1,14 @@
+Project: Math
+Bug ID: 2
+Buggy version: 2b
+Fixed version: 2f
+--------------------------------------------------
+List of modified sources:
+- org.apache.commons.math3.distribution.HypergeometricDistribution
+--------------------------------------------------
+Root cause in triggering tests:
+junit.framework.AssertionFailedError: sample=-1
+	at org.apache.commons.math3.distribution.HypergeometricDistributionTest.testMath1021(HypergeometricDistributionTest.java:298)
+--------------------------------------------------
+List of triggering tests:
+- org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021
