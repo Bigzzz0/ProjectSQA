@@ -1,0 +1,33 @@
+{
+  "Prefix": {
+    "P000V000": "None",
+    "P000V001": "Plus",
+    "P000V002": "Minus",
+    "P000V003": "ZeroX",
+    "P000V004": "MinusZeroX",
+    "P000V005": "Hash"
+  },
+  "ValueType": {
+    "P001V000": "Integer",
+    "P001V001": "Decimal",
+    "P001V002": "Scientific",
+    "P001V003": "HexDigits",
+    "P001V004": "Alphanumeric"
+  },
+  "Suffix": {
+    "P002V000": "None",
+    "P002V001": "f",
+    "P002V002": "F",
+    "P002V003": "d",
+    "P002V004": "D",
+    "P002V005": "l",
+    "P002V006": "L",
+    "P002V007": "Invalid"
+  },
+  "Length": {
+    "P003V000": "Empty",
+    "P003V001": "SingleChar",
+    "P003V002": "Normal",
+    "P003V003": "ExceedLong"
+  }
+}

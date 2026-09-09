@@ -1,0 +1,434 @@
+[
+  {
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "2147483648",
+    "arguments": {
+      "str": "\"0x80000000\""
+    }
+  },
+  {
+    "id": 2,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 3,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"AL\"",
+    "arguments": {
+      "str": "\"#AL\""
+    }
+  },
+  {
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.math.BigInteger",
+    "value_or_message": "3425394462494303714539886326678788327323834781",
+    "arguments": {
+      "str": "\"0x99999999999999999999999999999999e9999d\""
+    }
+  },
+  {
+    "id": 5,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "123.0",
+    "arguments": {
+      "str": "\"123d\""
+    }
+  },
+  {
+    "id": 7,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "-99999999999999999999999999999999999.1234L is not a valid number.",
+    "arguments": {
+      "str": "\"-99999999999999999999999999999999999.1234L\""
+    }
+  },
+  {
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Float",
+    "value_or_message": "1.0",
+    "arguments": {
+      "str": "\"1F\""
+    }
+  },
+  {
+    "id": 9,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "abc123abc123abc123abc123abc123abc123abc123abc123f is not a valid number.",
+    "arguments": {
+      "str": "\"abc123abc123abc123abc123abc123abc123abc123abc123f\""
+    }
+  },
+  {
+    "id": 10,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 11,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "+x is not a valid number.",
+    "arguments": {
+      "str": "\"+x\""
+    }
+  },
+  {
+    "id": 12,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"-12.34f\"",
+    "arguments": {
+      "str": "\"-0x12.34f\""
+    }
+  },
+  {
+    "id": 13,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 14,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "-12x34Z is not a valid number.",
+    "arguments": {
+      "str": "\"-12x34Z\""
+    }
+  },
+  {
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0E40",
+    "arguments": {
+      "str": "\"+9999999999999999999999999999999999999999d\""
+    }
+  },
+  {
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1",
+    "arguments": {
+      "str": "\"-1\""
+    }
+  },
+  {
+    "id": 17,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Float",
+    "value_or_message": "1200.0",
+    "arguments": {
+      "str": "\"+1.2e3F\""
+    }
+  },
+  {
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "31",
+    "arguments": {
+      "str": "\"0x1f\""
+    }
+  },
+  {
+    "id": 20,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"9.1234D\"",
+    "arguments": {
+      "str": "\"#99999999999999999999999999999999999.1234D\""
+    }
+  },
+  {
+    "id": 21,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 22,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 23,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "-Ad is not a valid number.",
+    "arguments": {
+      "str": "\"-Ad\""
+    }
+  },
+  {
+    "id": 24,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFf is not a valid number.",
+    "arguments": {
+      "str": "\"-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFf\""
+    }
+  },
+  {
+    "id": 25,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "1.2e3L is not a valid number.",
+    "arguments": {
+      "str": "\"1.2e3L\""
+    }
+  },
+  {
+    "id": 26,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "123.0",
+    "arguments": {
+      "str": "\"+123D\""
+    }
+  },
+  {
+    "id": 27,
+    "outcome": "RETURN",
+    "type": "java.math.BigInteger",
+    "value_or_message": "-67382509973517566017130986749138891753963510168834266632765",
+    "arguments": {
+      "str": "\"-0xabc123abc123abc123abc123abc123abc123abc123abc123d\""
+    }
+  },
+  {
+    "id": 28,
+    "outcome": "RETURN",
+    "type": "java.math.BigInteger",
+    "value_or_message": "14030415718376668014755374394076316988696952412575",
+    "arguments": {
+      "str": "\"#9999999999999999999999999999999999999999F\""
+    }
+  },
+  {
+    "id": 29,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"xD\"",
+    "arguments": {
+      "str": "\"0xxD\""
+    }
+  },
+  {
+    "id": 30,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"1.2e3\"",
+    "arguments": {
+      "str": "\"#1.2e3\""
+    }
+  },
+  {
+    "id": 31,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "Al is not a valid number.",
+    "arguments": {
+      "str": "\"Al\""
+    }
+  },
+  {
+    "id": 32,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-173",
+    "arguments": {
+      "str": "\"-0xAD\""
+    }
+  },
+  {
+    "id": 33,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"999999Z\"",
+    "arguments": {
+      "str": "\"-0x9999999999999999999999999999999999999999Z\""
+    }
+  },
+  {
+    "id": 34,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "-99999999999999999999999999999999999.1234l is not a valid number.",
+    "arguments": {
+      "str": "\"-99999999999999999999999999999999999.1234l\""
+    }
+  },
+  {
+    "id": 35,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 36,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "+xL is not a valid number.",
+    "arguments": {
+      "str": "\"+xL\""
+    }
+  },
+  {
+    "id": 37,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 38,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"9e9999L\"",
+    "arguments": {
+      "str": "\"-0x99999999999999999999999999999999e9999L\""
+    }
+  },
+  {
+    "id": 39,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "31",
+    "arguments": {
+      "str": "\"0x1F\""
+    }
+  },
+  {
+    "id": 40,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "+12.34l is not a valid number.",
+    "arguments": {
+      "str": "\"+12.34l\""
+    }
+  },
+  {
+    "id": 41,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"1Z\"",
+    "arguments": {
+      "str": "\"0x1Z\""
+    }
+  },
+  {
+    "id": 42,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "A blank string is not a valid number",
+    "arguments": {
+      "str": "\"\""
+    }
+  },
+  {
+    "id": 43,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"1l\"",
+    "arguments": {
+      "str": "\"0x1l\""
+    }
+  },
+  {
+    "id": 44,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0E40",
+    "arguments": {
+      "str": "\"+9999999999999999999999999999999999999999f\""
+    }
+  },
+  {
+    "id": 45,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"xZ\"",
+    "arguments": {
+      "str": "\"#xZ\""
+    }
+  },
+  {
+    "id": 46,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "For input string: \"-1l\"",
+    "arguments": {
+      "str": "\"-0x1l\""
+    }
+  },
+  {
+    "id": 47,
+    "outcome": "THROW",
+    "type": "java.lang.NumberFormatException",
+    "value_or_message": "-AF is not a valid number.",
+    "arguments": {
+      "str": "\"-AF\""
+    }
+  },
+  {
+    "id": 48,
+    "outcome": "RETURN",
+    "type": "java.lang.Float",
+    "value_or_message": "1.0E35",
+    "arguments": {
+      "str": "\"99999999999999999999999999999999999.1234\""
+    }
+  }
+]
