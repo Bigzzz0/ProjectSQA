@@ -85,3 +85,7 @@
 3. **Fault Detection Rate on Evaluated Sample ($FDR$)**:
    $$FDR = \left(\frac{D_{detected}}{D_{total\_sample\_bugs}}\right) \times 100\%$$
 
+### 4.3 ชุดข้อมูลการทดลอง (Evaluated Benchmark Dataset)
+
+งานวิจัยนี้ประเมินผลบนชุดข้อมูล **17 คลาสตัวแทนจาก 17 โปรเจกต์มาตรฐานใน Defects4J (The 17-Project Representative Benchmark)** ครอบคลุมโปรเจกต์หลากหลายประเภท ได้แก่ Mathematical Library (`Math`), Text & Data Parser (`Csv`, `Cli`), Compiler (`Closure`), Data Structures (`Collections`), JSON/XML Serialization (`Gson`, `JacksonCore`, `JacksonDatabind`, `JacksonXml`), DOM Engine (`Jsoup`, `JxPath`), Date/Time (`Time`), Encoding (`Codec`), Graphic (`Chart`), Core Utils (`Lang`), และ Test Framework (`Mockito`) โดยมีไฟล์คอนฟิกกลางควบคุมอยู่ที่ [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json)
+

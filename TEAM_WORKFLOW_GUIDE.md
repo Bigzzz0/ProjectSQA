@@ -11,6 +11,7 @@
 1. [การเตรียมสภาพแวดล้อมและภาพรวมระบบ (Setup & System Architecture)](#1-การเตรียมสภาพแวดล้อมและภาพรวมระบบ-setup--system-architecture)
 2. [กฎเหล็กกลางที่ทุกคนต้องปฏิบัติตาม (Universal Test Standards)](#2-กฎเหล็กกลางที่ทุกคนต้องปฏิบัติตาม-universal-test-standards)
    - [2.1 ขอบเขตการทดสอบและการวัดผล Coverage (Scope Specification)](#21-ขอบเขตการทดสอบและการวัดผล-coverage-scope-specification-defect-targeted-vs-project-wide)
+   - [2.2 คลังข้อมูลมาตรฐาน 17 คลาสตัวแทนจาก 17 โปรเจกต์ (17-Project Representative Benchmark Suite)](#22-คลังข้อมูลมาตรฐาน-17-คลาสตัวแทนจาก-17-โปรเจกต์-the-17-project-representative-benchmark-suite)
 3. [Member 1: นายปวริศช์ ประมวล (IPO / Combinatorial Specialist)](#3-member-1-นายปวริศช์-ประมวล-ipo--combinatorial-specialist)
    - [💡 วิธีสร้างระบบ Automated IPO Engine (พิมพ์เขียวสำหรับ Member 1)](#-วิธีสร้างระบบ-automated-ipo-engine-พิมพ์เขียวแบบละเอียดสำหรับ-member-1)
 4. [Member 2: นายแทนคุณ พันธ์นิกุล (MIO / EvoSuite Specialist)](#4-member-2-นายแทนคุณ-พันธ์นิกุล-mio--evosuite-specialist)
@@ -121,6 +122,33 @@ ProjectSQA/
 >    ค่า Line Coverage และ Branch Coverage ที่รายงานในตารางเปรียบเทียบหลักของงานวิจัยนี้ คือ **"Target Class Coverage"** (วัดเฉพาะบน Target Class ผ่าน flag `-c <target_class>` ใน Cobertura) ซึ่งเป็นตัวชี้วัดที่สะท้อนคุณภาพที่แท้จริงของแต่ละเทคนิคได้อย่างเป็นธรรม  
 > 3. **การรายงาน Project-Wide Coverage (หากมี):**  
 >    หากในรายงานหรือการนำเสนอต้องการกล่าวถึง Project-Wide Coverage จะต้องแยกรายงานเป็นตัวชี้วัดเสริม (Secondary Metric) และระบุขอบเขตให้ชัดเจนในบทที่ 5 ว่าค่า Project-wide coverage ย่อมมีค่าต่ำกว่า Target Class Coverage เสมอ เนื่องจากเราไม่ได้กระจายการสร้างชุดทดสอบไปยังคลาสอื่นๆ ที่ไม่เกี่ยวข้องกับ Defect
+
+### 2.2 คลังข้อมูลมาตรฐาน 17 คลาสตัวแทนจาก 17 โปรเจกต์ (The 17-Project Representative Benchmark Suite)
+
+> **🎯 Single Source of Truth:** ไฟล์คอนฟิกกลาง [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json)  
+> **📦 สถานะคลัง Source Code:** Member 4 ได้ทำการ Checkout และสกัดไฟล์ Java Source Code พร้อม Ground Truth (`defects4j_info.txt`) ของทั้ง 17 คลาสมาใส่ไว้ใน [`target_benchmark/`](target_benchmark/) ครบถ้วนแล้ว 100% เพื่อนทุกคนสามารถสั่ง `git pull` แล้วนำไปใช้งานได้ทันที!
+
+Defects4J v2.0.0 ประกอบด้วย 17 โปรเจกต์ รวม 835 บั๊ก ทีมของเราเลือกใช้ยุทธศาสตร์ **"1 คลาสตัวแทน ต่อ 1 โปรเจกต์" (The Golden 17 Benchmark)** เพื่อให้การประเมินผลมีความหลากหลายครอบคลุมครบทุกโดเมนซอฟต์แวร์ และทุกคนในทีมสามารถทำการทดลองเสร็จสิ้นได้จริงตามกำหนดเวลา:
+
+| # | Project ID | โดเมนของซอฟต์แวร์ | Bug ID | คลาสตัวแทนเป้าหมาย (Target Class Under Test) | Ground Truth Trigger Test | โฟลเดอร์ใน `target_benchmark/` |
+| :-: | :--- | :--- | :-: | :--- | :--- | :--- |
+| 1 | **Chart** | Graphic & Chart Rendering | `1b` | `org.jfree.chart.renderer.category.AbstractCategoryItemRenderer` | `AbstractCategoryItemRendererTests::test2947660` | `Chart_1b/` |
+| 2 | **Cli** | Command-line Argument Parser | `1b` | `org.apache.commons.cli.CommandLine` | `CommandLineTest::testBuilder` | `Cli_1b/` |
+| 3 | **Closure** | Compiler AST Optimization | `1b` | `com.google.javascript.jscomp.RemoveUnusedVars` | `RemoveUnusedVarsTest::testIssue168b` | `Closure_1b/` |
+| 4 | **Codec** | Phonetic & String Encoding | `1b` | `org.apache.commons.codec.language.Soundex` | `SoundexTest::testLocaleIndependence` | `Codec_1b/` |
+| 5 | **Collections** | Data Structures & Collections | `25b` | `org.apache.commons.collections4.IteratorUtils` | `IteratorUtilsTest::testCollIterator` | `Collections_25b/` |
+| 6 | **Compress** | Binary Archive & Compression | `1b` | `org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream` | `CpioTestCase::testCpioUnarchive` | `Compress_1b/` |
+| 7 | **Csv** | Delimited Text Parser & Buffer | `1b` | `org.apache.commons.csv.ExtendedBufferedReader` | `CSVParserTest::testBackslashEscaping` | `Csv_1b/` |
+| 8 | **Gson** | JSON Serialization & Reflection | `1b` | `com.google.gson.TypeInfoFactory` | `TypeHierarchyAdapterTest::testTypeHierarchy` | `Gson_1b/` |
+| 9 | **JacksonCore** | High-Speed JSON Tokenizer | `1b` | `com.fasterxml.jackson.core.io.NumberInput` | `TestNumberInput::testParseBigDecimal` | `JacksonCore_1b/` |
+| 10 | **JacksonDatabind**| Object Mapping & Introspection | `1b` | `com.fasterxml.jackson.databind.ser.BeanPropertyWriter` | `TestTypeFactory::testNullType` | `JacksonDatabind_1b/` |
+| 11 | **JacksonXml** | Streaming XML Data Binding | `1b` | `com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser` | `TestXmlTokenStream::testRootAttributes` | `JacksonXml_1b/` |
+| 12 | **Jsoup** | HTML Parsing & DOM Tree | `1b` | `org.jsoup.nodes.Document` | `ElementTest::testSetHtmlTitle` | `Jsoup_1b/` |
+| 13 | **JxPath** | XML XPath Query Engine | `1b` | `org.apache.commons.jxpath.ri.model.dom.DOMNodePointer` | `DOMModelTest::testAxisChild` | `JxPath_1b/` |
+| 14 | **Lang** | Java Core Utilities & Parsing | `1b` | `org.apache.commons.lang3.math.NumberUtils` | `NumberUtilsTest::testLang747` | `Lang_1b/` |
+| 15 | **Math** | Numerical & Probability Math | `2b` | `org.apache.commons.math3.distribution.HypergeometricDistribution` | `HypergeometricDistributionTest::testMath1021` | `Math_2b/` |
+| 16 | **Mockito** | Dynamic Mocking Framework | `1b` | `org.mockito.internal.invocation.InvocationMatcher` | `UsingVarargsTest::shouldMatchEasilyEmptyVararg` | `Mockito_1b/` |
+| 17 | **Time** | Date/Time Calculation Engine | `1b` | `org.joda.time.Partial` | `TestPartial_Basics::testCompareTo` | `Time_1b/` |
 
 ---
 
@@ -286,6 +314,14 @@ flowchart TD
 
 **ลำดับการพัฒนา:** เก็บ Lang-1 PICT pilot เป็น baseline -> แยก PICT adapter ออกจาก `algorithm/ipo.py` -> พัฒนาและทดสอบ IPO Horizontal/Vertical Growth -> รัน IPO กับ Lang-1 model เดิม -> เก็บ oracle/ตรวจ fixed version -> ทดลอง representative methods -> เปิด batch เมื่อผ่าน readiness gates เท่านั้น
 
+#### 🚀 การสั่งรัน IPO Batch บนชุด 17 คลาสตัวแทน:
+เมื่อโค้ดของ Member 1 ผ่าน Readiness Gates ข้างต้นเรียบร้อยแล้ว ให้สั่งรัน `run_ipo_batch.py` โดยวนลูปอ่านจาก [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json) หรือโฟลเดอร์ใน `target_benchmark/`:
+```bash
+# สั่งรันชุดทดสอบ 17 โปรเจกต์ผ่าน Python:
+python Combinatorial_IPO/runner/run_ipo_batch.py --catalog target_benchmark/catalog_17_projects.json
+```
+*ระบบจะสร้าง Parameter Model, รัน Horizontal/Vertical Growth, สกัด Fixed Version Oracle และเซฟไฟล์ JUnit 4 ลงใน `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java` โดยอัตโนมัติ*
+
 ---
 
 ## 4. 🧑‍💻 Member 2: นายแทนคุณ พันธ์นิกุล (MIO / EvoSuite Specialist)
@@ -362,28 +398,25 @@ flowchart TD
 
 #### รายละเอียดการเขียนสคริปต์อัตโนมัติ (Step-by-Step Implementation Guide):
 
-1. **ส่วนที่ 1: การสแกนเป้าหมายอัตโนมัติ (Target Discovery):**
-   - ให้สคริปต์สแกนหาโฟลเดอร์ใน `target_benchmark/` (เช่น `Math_2b`, `Lang_1b`) และอ่านชื่อ Target Class จากไฟล์ `defects4j_info.txt` หรือไฟล์ `.java`:
+1. **ส่วนที่ 1: การสแกนเป้าหมายอัตโนมัติ (Target Discovery ผ่าน Single Source of Truth):**
+   - ให้สคริปต์อ่านรายการ Target Classes โดยตรงจาก [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json) ซึ่งมีข้อมูลครบทั้ง 17 โปรเจกต์:
    ```python
-   import glob, os, re
+   import json, os
 
    def get_target_classes():
+       catalog_path = "target_benchmark/catalog_17_projects.json"
+       with open(catalog_path, "r", encoding="utf-8") as f:
+           catalog = json.load(f)
+       
        targets = []
-       for info_file in glob.glob("target_benchmark/*/defects4j_info.txt"):
-           folder = os.path.dirname(info_file)
-           folder_name = os.path.basename(folder) # เช่น Math_2b
-           proj, bug = folder_name.replace("b", "").split("_")
-           
-           # ค้นหาไฟล์ Java ในโฟลเดอร์เพื่อดึงชื่อ Class
-           java_files = glob.glob(f"{folder}/**/*.java", recursive=True)
-           if java_files:
-               cls_name = os.path.basename(java_files[0]).replace(".java", "")
-               # อ่าน package name จาก java
-               with open(java_files[0], 'r', encoding='utf-8', errors='ignore') as f:
-                   pkg_match = re.search(r'package\s+([\w\.]+);', f.read())
-                   pkg = pkg_match.group(1) if pkg_match else ""
-               fqcn = f"{pkg}.{cls_name}" if pkg else cls_name
-               targets.append({"project": proj, "bug": bug, "class": cls_name, "fqcn": fqcn})
+       for item in catalog:
+           targets.append({
+               "project": item["project"],
+               "bug": str(item["bug_id"]),
+               "class": item["simple_name"],
+               "fqcn": item["target_class"],
+               "dir": item["dir"]
+           })
        return targets
    ```
 
@@ -630,6 +663,42 @@ The target class has a known defect reported as follows:
 > - ตรวจสอบไฟล์ผลลัพธ์ว่าไม่มี Markdown Backticks หลุดเข้ามาในไฟล์ `.java`
 > - บันทึก Log ค่า Latency และ Token Count ไว้ทุกรอบเพื่อใช้เปรียบเทียบในเล่มรายงาน
 
+#### 🚀 คำสั่งรัน Batch อัตโนมัติครบ 17 โปรเจกต์สำหรับ Member 3:
+
+คุณสามารถสั่งให้ PowerShell หรือ Python วนลูปอ่าน [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json) เพื่อยิงสร้างเทสทั้ง 17 คลาสตัวแทนแบบอัตโนมัติรวดเดียว:
+
+**ตัวเลือกที่ 1: ผ่าน PowerShell (บนเครื่อง Host Windows):**
+```powershell
+Get-Content target_benchmark/catalog_17_projects.json | ConvertFrom-Json | ForEach-Object {
+    $dir = $_.dir
+    $src = (Get-ChildItem "target_benchmark/$dir/*.java" | Select-Object -First 1).FullName
+    Write-Host ">>> [Member 3] Generating Test for $($_.project)-$($_.bug_id) ($($_.simple_name))..." -ForegroundColor Cyan
+    python scripts/kku_generate.py --ai claude --source-file "$src"
+    Start-Sleep -Seconds 2
+    python scripts/kku_generate.py --ai gemini --source-file "$src"
+    Start-Sleep -Seconds 2
+}
+```
+
+**ตัวเลือกที่ 2: ผ่าน Python Script:**
+```python
+import json, subprocess, glob, time
+
+with open("target_benchmark/catalog_17_projects.json", "r", encoding="utf-8") as f:
+    catalog = json.load(f)
+
+for item in catalog:
+    src_files = glob.glob(f"target_benchmark/{item['dir']}/*.java")
+    if not src_files:
+        continue
+    src = src_files[0]
+    print(f">> [Member 3] Generating for {item['project']}-{item['bug_id']} ({item['simple_name']})...")
+    subprocess.run(["python", "scripts/kku_generate.py", "--ai", "claude", "--source-file", src])
+    time.sleep(2)
+    subprocess.run(["python", "scripts/kku_generate.py", "--ai", "gemini", "--source-file", src])
+    time.sleep(2)
+```
+
 ---
 
 ## 6. 🧑‍💻 Member 4: นายศิฆรินทร์ อุปจันทร์ (Infra & Data Analysis Lead)
@@ -647,13 +716,13 @@ The target class has a known defect reported as follows:
 
 ### 🛠️ คู่มือขั้นตอนการทำงานอย่างละเอียด:
 
-#### ขั้นที่ 1: สกัด Source Code ของบั๊กเป้าหมายให้เพื่อนในกลุ่ม
-เมื่อทีมตกลงจะเริ่มทำบั๊กใด ให้สั่งรันคำสั่ง:
+#### ขั้นที่ 1: สถานะการสกัดชุด 17 คลาสตัวแทน (17-Project Dataset Extracted)
+Member 4 ได้ทำการสกัดและตรวจสอบความสมบูรณ์ของ Source Code และ Ground Truth ทั้ง 17 โปรเจกต์ตัวแทนเข้าสู่ [`target_benchmark/`](target_benchmark/) เรียบร้อยแล้ว (มีครบทั้ง `Chart_1b` ถึง `Time_1b`):
+- เพื่อนร่วมทีมทุกคนสามารถ `git pull` เพื่อนำโค้ดและข้อมูลบั๊กไปสร้างเทสได้ทันที
+- หากต้องการสกัดใหม่หรืออัปเดตไฟล์ทั้งหมด สามารถสั่งรันผ่าน Docker:
 ```bash
-# ตัวอย่าง: สกัด Math บั๊กที่ 2
-docker exec defects4j_sqa /workspace/docker/extract_target.sh Math 2
+docker exec -it defects4j_sqa bash /workspace/scripts/extract_representative_17.sh
 ```
-- ซอร์สโค้ดและ Ground Truth จะถูกดึงมาไว้ที่ `target_benchmark/Math_2b/` ทันที จากนั้นแจ้งเพื่อนทั้ง 3 คนให้เริ่มสร้างเทส
 
 #### ขั้นที่ 2: ตรวจความพร้อมของ Test Suites ทั้ง 4 ชุด
 ก่อนสั่งรัน Runner ตรวจดูว่ามีไฟล์ในโฟลเดอร์ครบ:
