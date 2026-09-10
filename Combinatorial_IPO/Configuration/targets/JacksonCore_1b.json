@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "JacksonCore",
+  "bug_id": 1,
+  "suite": {
+    "package": "com.fasterxml.jackson.core",
+    "class_name": "JacksonCore_1b_IPOTest",
+    "imports": ["java.io.ByteArrayInputStream", "java.io.StringReader", "java.math.BigDecimal"]
+  },
+  "scenarios": [{
+    "id": "non_numeric_decimal",
+    "target_classes": ["com.fasterxml.jackson.core.io.NumberInput", "com.fasterxml.jackson.core.util.TextBuffer"],
+    "entrypoint": "JsonParser.getDecimalValue()",
+    "invocation_kind": "stateful",
+    "factors": {
+      "backend": {"reader": "factory.createParser(new StringReader(json))", "stream": "factory.createParser(new ByteArrayInputStream(json.getBytes(\"UTF-8\")))"},
+      "token": {"nan": "\"NaN\"", "positive_infinity": "\"+Infinity\"", "negative_infinity": "\"-Infinity\""},
+      "feature_configuration": {"factory": "true", "parser": "false"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"backend": "reader", "token": "nan", "feature_configuration": "factory"}, {"backend": "stream", "token": "nan", "feature_configuration": "factory"}],
+    "body": "JsonFactory factory = new JsonFactory();\nboolean configureFactory = {{feature_configuration}};\nif (configureFactory) { factory.enable(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS); }\nString json = \"[ \" + {{token}} + \" ]\";\nJsonParser parser = {{backend}};\nif (!configureFactory) { parser.enable(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS); }\nassertEquals(JsonToken.START_ARRAY, parser.nextToken());\nassertEquals(JsonToken.VALUE_NUMBER_FLOAT, parser.nextToken());\ntry {\n    parser.getDecimalValue();\n    fail(\"Expected non-finite value to be rejected as BigDecimal\");\n} catch (NumberFormatException expected) {\n    assertTrue(expected.getMessage().indexOf(\"BigDecimal\") >= 0);\n} finally {\n    parser.close();\n}",
+    "oracle": {"mode": "invariant", "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."},
+    "evidence": {
+      "patch_file": "JacksonCore/patches/1.src.patch",
+      "trigger_tests": ["com.fasterxml.jackson.core.json.TestParserNonStandard::testAllowNaN"],
+      "rationale": "Issue 98 changes NumberInput BigDecimal error wrapping and TextBuffer decimal conversion; the trigger requests BigDecimal from NaN using reader and stream parsers."
+    }
+  }]
+}

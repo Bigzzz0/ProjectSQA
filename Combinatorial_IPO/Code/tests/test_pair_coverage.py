@@ -15,6 +15,26 @@ from verification.pair_coverage import (
 
 
 class PairCoverageTests(unittest.TestCase):
+    def test_constrained_coverage_excludes_impossible_pairs(self):
+        domains = {"a": ["0", "1"], "b": ["0", "1"], "c": ["0", "1"]}
+        valid = [
+            {"a": "0", "b": "0", "c": "0"},
+            {"a": "0", "b": "1", "c": "1"},
+            {"a": "1", "b": "0", "c": "1"},
+        ]
+        report = verify_pair_coverage(domains, valid, valid_combinations=valid)
+        self.assertTrue(report.complete)
+        self.assertLess(report.expected_pair_count, 12)
+
+    def test_constrained_verifier_rejects_invalid_row(self):
+        domains = {"a": ["0", "1"], "b": ["0", "1"]}
+        valid = [{"a": "0", "b": "0"}]
+        with self.assertRaisesRegex(ValueError, "violates scenario constraints"):
+            verify_pair_coverage(
+                domains,
+                [{"a": "1", "b": "1"}],
+                valid_combinations=valid,
+            )
     def test_two_factor_cartesian_rows_have_complete_coverage(self) -> None:
         domains = {"left": ["0", "1"], "right": ["A", "B"]}
         rows = [

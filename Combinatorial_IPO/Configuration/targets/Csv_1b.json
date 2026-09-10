@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Csv",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.apache.commons.csv",
+    "class_name": "Csv_1b_IPOTest",
+    "imports": ["java.io.StringReader"]
+  },
+  "scenarios": [{
+    "id": "line_counter",
+    "target_classes": ["org.apache.commons.csv.ExtendedBufferedReader"],
+    "entrypoint": "ExtendedBufferedReader.read()/readLine()",
+    "invocation_kind": "stateful",
+    "factors": {
+      "line_ending": {"cr": "\"\\r\"", "lf": "\"\\n\"", "crlf": "\"\\r\\n\""},
+      "read_mode": {"character": "true", "line": "false"},
+      "line_count": {"two": "2", "three": "3"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"line_ending": "cr", "read_mode": "character", "line_count": "three"}],
+    "body": "String ending = {{line_ending}};\nint count = {{line_count}};\nboolean characterMode = {{read_mode}};\nString text = count == 2 ? \"a\" + ending + \"b\" : \"a\" + ending + \"b\" + ending + \"c\";\nExtendedBufferedReader reader = new ExtendedBufferedReader(new StringReader(text));\nif (characterMode) {\n    while (reader.read() != -1) { }\n} else {\n    while (reader.readLine() != null) { }\n}\nassertEquals(characterMode ? count - 1 : count, reader.getLineNumber());\nreader.close();",
+    "oracle": {"mode": "invariant", "description": "The reader must count logical line endings consistently for character and line reads."},
+    "evidence": {
+      "patch_file": "Csv/patches/1.src.patch",
+      "trigger_tests": ["org.apache.commons.csv.CSVParserTest::testGetLineNumberWithCR"],
+      "rationale": "CSV-75 changes CR/LF counting in ExtendedBufferedReader and the trigger uses CR-only records."
+    }
+  }]
+}

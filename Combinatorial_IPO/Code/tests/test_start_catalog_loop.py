@@ -25,8 +25,9 @@ class StartCatalogLoopTests(unittest.TestCase):
         loop_args = run.call_args_list[1].args[0]
         self.assertIn(READINESS_COMMAND, readiness_args)
         self.assertIn(LOOP_COMMAND, loop_args)
-        self.assertIn("--result-directory Result_Round2", LOOP_COMMAND)
-        self.assertIn("--collect-oracles --verify-suites", LOOP_COMMAND)
+        self.assertIn("scenario_catalog.py", LOOP_COMMAND)
+        self.assertIn("--scenarios /workspace/Combinatorial_IPO/Configuration/targets", LOOP_COMMAND)
+        self.assertNotIn("--no-verify", LOOP_COMMAND)
 
     def test_failed_readiness_never_starts_loop(self) -> None:
         failed = Mock(returncode=1)

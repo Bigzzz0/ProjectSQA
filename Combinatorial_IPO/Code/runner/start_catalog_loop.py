@@ -18,11 +18,10 @@ READINESS_COMMAND = (
 )
 LOOP_COMMAND = (
     "cd /workspace/Combinatorial_IPO && "
-    "python3 Code/runner/run_ipo_batch.py "
-    "--target-root /workspace/target_benchmark "
+    "python3 Code/runner/scenario_catalog.py "
     "--catalog /workspace/target_benchmark/catalog_17_projects.json "
-    "--result-directory Result_Round2 "
-    "--collect-oracles --verify-suites"
+    "--scenarios /workspace/Combinatorial_IPO/Configuration/targets "
+    "--output-root /workspace/Combinatorial_IPO"
 )
 
 

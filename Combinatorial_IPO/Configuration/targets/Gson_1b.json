@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Gson",
+  "bug_id": 1,
+  "suite": {
+    "package": "com.google.gson",
+    "class_name": "Gson_1b_IPOTest",
+    "imports": ["java.util.ArrayList", "java.util.HashMap", "java.util.List", "java.util.Map"],
+    "helpers": "    static class Foo<S,T> {\n        S first; T second; Map<S,List<T>> map = new HashMap<S,List<T>>();\n        Foo() { }\n        Foo(S first, T second) { this.first = first; this.second = second; }\n    }\n    static class Bar extends Foo<String,Integer> {\n        Bar() { }\n        Bar(String first, Integer second) { super(first, second); }\n    }"
+  },
+  "scenarios": [{
+    "id": "inherited_type_variables",
+    "target_classes": ["com.google.gson.TypeInfoFactory"],
+    "entrypoint": "Gson.toJson/fromJson inherited generic fields",
+    "invocation_kind": "harness",
+    "factors": {
+      "key": {"alpha": "\"alpha\"", "beta": "\"beta\""},
+      "scalar": {"one": "Integer.valueOf(1)", "large": "Integer.valueOf(1000)"},
+      "list": {"empty": "new ArrayList<Integer>()", "two": "new ArrayList<Integer>(java.util.Arrays.asList(1, 2))"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"key": "alpha", "scalar": "one", "list": "two"}],
+    "body": "String key = {{key}};\nInteger scalar = {{scalar}};\nList<Integer> values = {{list}};\nBar source = new Bar(key, scalar);\nsource.map.put(key, values);\nGson gson = new Gson();\nBar restored = gson.fromJson(gson.toJson(source), Bar.class);\nassertEquals(key, restored.first);\nassertEquals(scalar, restored.second);\nassertEquals(values, restored.map.get(key));",
+    "oracle": {"mode": "invariant", "description": "Inherited generic S/T types must resolve to String/Integer during round-trip serialization."},
+    "evidence": {
+      "patch_file": "Gson/patches/1.src.patch",
+      "trigger_tests": ["com.google.gson.functional.TypeVariableTest::testSingle"],
+      "rationale": "The patch changes recursive TypeVariable resolution and the trigger round-trips a subclass with inherited generic fields."
+    }
+  }]
+}

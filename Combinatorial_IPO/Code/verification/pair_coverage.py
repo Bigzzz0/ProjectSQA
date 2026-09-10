@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import itertools
 from dataclasses import dataclass
-from typing import List, Mapping, Sequence, Set, Tuple
+from typing import List, Mapping, Optional, Sequence, Set, Tuple
 
 
 @dataclass(frozen=True, order=True)
@@ -58,6 +58,7 @@ def _validate_domains(factor_domains: Mapping[str, Sequence[str]]) -> None:
 
 def expected_pairs(
     factor_domains: Mapping[str, Sequence[str]],
+    valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
 ) -> Set[InteractionPair]:
     """Return every required 2-way interaction for the supplied domains."""
     _validate_domains(factor_domains)
@@ -79,16 +80,21 @@ def expected_pairs(
                         second_value,
                     )
                 )
-    return pairs
+    if valid_combinations is None:
+        return pairs
+    valid_pairs: Set[InteractionPair] = set()
+    _observed_pairs(factor_domains, valid_combinations, valid_pairs)
+    return pairs & valid_pairs
 
 
 def _observed_pairs(
     factor_domains: Mapping[str, Sequence[str]],
     combinations: Sequence[Mapping[str, str]],
+    observed: Optional[Set[InteractionPair]] = None,
 ) -> Set[InteractionPair]:
     factors = list(factor_domains)
     expected_keys = set(factors)
-    observed: Set[InteractionPair] = set()
+    observed = observed if observed is not None else set()
 
     for row_number, combination in enumerate(combinations, start=1):
         if set(combination) != expected_keys:
@@ -125,10 +131,22 @@ def _observed_pairs(
 def verify_pair_coverage(
     factor_domains: Mapping[str, Sequence[str]],
     combinations: Sequence[Mapping[str, str]],
+    valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
 ) -> PairCoverageReport:
     """Validate rows and report their coverage of all required value pairs."""
-    required = expected_pairs(factor_domains)
+    required = expected_pairs(factor_domains, valid_combinations)
     observed = _observed_pairs(factor_domains, combinations)
+    if valid_combinations is not None:
+        valid_keys = {
+            tuple(row[factor] for factor in factor_domains)
+            for row in valid_combinations
+        }
+        for row_number, row in enumerate(combinations, start=1):
+            key = tuple(row[factor] for factor in factor_domains)
+            if key not in valid_keys:
+                raise ValueError(
+                    "Combination row {} violates scenario constraints".format(row_number)
+                )
     covered = required & observed
     missing = tuple(sorted(required - covered))
     return PairCoverageReport(

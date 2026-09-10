@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # ติดตั้ง OpenJDK 8 (คู่ขนานกับ Java 11), Perl dependencies และเครื่องมือ Build
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openjdk-8-jdk \
+    subversion \
     build-essential \
     libdbi-perl \
     libdbd-csv-perl \

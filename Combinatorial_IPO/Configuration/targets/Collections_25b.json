@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Collections",
+  "bug_id": 25,
+  "suite": {
+    "package": "org.apache.commons.collections4",
+    "class_name": "Collections_25b_IPOTest",
+    "imports": ["java.util.ArrayList", "java.util.Arrays", "java.util.Collections", "java.util.Comparator", "java.util.Iterator", "java.util.List", "org.apache.commons.collections4.comparators.ComparatorChain", "org.apache.commons.collections4.ComparatorUtils"]
+  },
+  "scenarios": [{
+    "id": "collated_iterator",
+    "target_classes": ["org.apache.commons.collections4.IteratorUtils"],
+    "entrypoint": "IteratorUtils.collatedIterator(Comparator,Iterator,Iterator)",
+    "invocation_kind": "static",
+    "factors": {
+      "comparator": {"natural": "null", "reverse": "ComparatorUtils.reversedComparator(ComparatorUtils.<Integer>naturalComparator())"},
+      "left": {"odd": "new ArrayList<Integer>(Arrays.asList(1, 3, 5))", "empty": "new ArrayList<Integer>()"},
+      "right": {"even": "new ArrayList<Integer>(Arrays.asList(2, 4, 6))", "single": "new ArrayList<Integer>(Arrays.asList(4))"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"comparator": "natural", "left": "odd", "right": "even"}],
+    "body": "Comparator<Integer> comparator = {{comparator}};\nList<Integer> left = {{left}};\nList<Integer> right = {{right}};\nif (comparator != null) { Collections.sort(left, comparator); Collections.sort(right, comparator); }\nIterator<Integer> iterator = IteratorUtils.collatedIterator(comparator, left.iterator(), right.iterator());\nList<Integer> actual = IteratorUtils.toList(iterator);\nList<Integer> expected = new ArrayList<Integer>();\nexpected.addAll(left); expected.addAll(right);\nif (comparator == null) { Collections.sort(expected); } else { Collections.sort(expected, comparator); }\nassertEquals(expected, actual);",
+    "oracle": {"mode": "invariant", "description": "Collation must use natural ordering for an explicit null comparator and the supplied comparator otherwise."},
+    "evidence": {
+      "patch_file": "Collections/patches/25.src.patch",
+      "trigger_tests": ["org.apache.commons.collections4.IteratorUtilsTest::testCollatedIterator"],
+      "rationale": "COLLECTIONS-566 changes null-comparator handling in all collatedIterator overloads; null is an intentional documented input, not a fallback."
+    }
+  }]
+}

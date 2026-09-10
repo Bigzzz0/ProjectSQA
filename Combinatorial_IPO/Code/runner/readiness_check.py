@@ -16,6 +16,8 @@ if str(CODE_ROOT) not in sys.path:
     sys.path.insert(0, str(CODE_ROOT))
 
 from verification.pair_coverage import verify_pair_coverage  # noqa: E402
+from runner.catalog import load_catalog  # noqa: E402
+from runner.scenario_catalog import load_scenario_catalog  # noqa: E402
 
 
 def _read_tsv(path: Path) -> List[Dict[str, str]]:
@@ -113,7 +115,11 @@ def _verify_representative(ipo_root: Path, expected: dict) -> dict:
 
 
 def check_readiness(
-    ipo_root: Path, representatives_path: Path, feasibility_path: Path
+    ipo_root: Path,
+    representatives_path: Path,
+    feasibility_path: Path,
+    catalog_path: Path = None,
+    scenario_root: Path = None,
 ) -> dict:
     """Check representative artifacts and non-generating catalog audit evidence."""
     representatives = json.loads(representatives_path.read_text(encoding="utf-8"))
@@ -148,21 +154,45 @@ def check_readiness(
     known_catalog_mismatches = int(
         feasibility.get("target_status_counts", {}).get("CATALOG_MISMATCH", 0)
     )
+    scenario_issues: List[str] = []
+    scenario_target_count = 0
+    scenario_count = 0
+    if catalog_path is not None or scenario_root is not None:
+        if catalog_path is None or scenario_root is None:
+            scenario_issues.append("Catalog and scenario root must be provided together")
+        else:
+            try:
+                plans = load_scenario_catalog(catalog_path, scenario_root)
+                scenario_target_count = len(plans)
+                scenario_count = sum(len(plan.scenarios) for plan in plans)
+                catalog = load_catalog(catalog_path)
+                if sum(len(target.modified_sources) for target in catalog) != 22:
+                    scenario_issues.append("Catalog does not contain 22 modified sources")
+                if sum(len(target.trigger_tests) for target in catalog) != 56:
+                    scenario_issues.append("Catalog does not contain 56 triggering tests")
+            except (ValueError, OSError, json.JSONDecodeError) as exc:
+                scenario_issues.append(str(exc))
     loop_state_path = ipo_root / "Result_Round2" / "catalog_loop_state.json"
     loop_started = False
     loop_state = None
     if loop_state_path.is_file():
         loop_state = json.loads(loop_state_path.read_text(encoding="utf-8"))
         loop_started = loop_state.get("started") is True
+    loop_in_progress = loop_started and loop_state.get("status") in {
+        "STARTED",
+        "PREFLIGHT",
+    }
 
     ready = (
         all(result["passed"] for result in method_results)
         and not catalog_issues
-        and not loop_started
+        and not scenario_issues
+        and not loop_in_progress
     )
     return {
         "ready_to_start_loop": ready,
         "loop_started": loop_started,
+        "loop_in_progress": loop_in_progress,
         "loop_state": loop_state,
         "representative_count": len(method_results),
         "representatives_passed": sum(
@@ -170,6 +200,9 @@ def check_readiness(
         ),
         "known_catalog_mismatches": known_catalog_mismatches,
         "catalog_issues": catalog_issues,
+        "scenario_target_count": scenario_target_count,
+        "scenario_count": scenario_count,
+        "scenario_issues": scenario_issues,
         "representatives": method_results,
     }
 
@@ -183,6 +216,16 @@ def main() -> None:
         default=IPO_ROOT / "Configuration" / "readiness_representatives.json",
     )
     parser.add_argument(
+        "--catalog",
+        type=Path,
+        default=IPO_ROOT.parent / "target_benchmark" / "catalog_17_projects.json",
+    )
+    parser.add_argument(
+        "--scenarios",
+        type=Path,
+        default=IPO_ROOT / "Configuration" / "targets",
+    )
+    parser.add_argument(
         "--feasibility",
         type=Path,
         default=IPO_ROOT / "Result_Round1" / "feasibility_audit.json",
@@ -194,7 +237,13 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    report = check_readiness(args.ipo_root, args.representatives, args.feasibility)
+    report = check_readiness(
+        args.ipo_root,
+        args.representatives,
+        args.feasibility,
+        catalog_path=args.catalog,
+        scenario_root=args.scenarios,
+    )
     rendered = json.dumps(report, indent=2)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(rendered, encoding="utf-8")

@@ -16,6 +16,40 @@ from verification.pair_coverage import verify_pair_coverage
 
 
 class IpoTests(unittest.TestCase):
+    def test_constraint_aware_generation_contains_only_valid_rows(self):
+        domains = {
+            "population": ["10", "20"],
+            "successes": ["5", "15"],
+            "sample": ["5", "15"],
+        }
+        valid = [
+            {"population": p, "successes": s, "sample": n}
+            for p in domains["population"]
+            for s in domains["successes"]
+            for n in domains["sample"]
+            if int(s) <= int(p) and int(n) <= int(p)
+        ]
+
+        rows = generate_pairwise(domains, valid_combinations=valid)
+
+        self.assertTrue(rows)
+        self.assertTrue(all(row in valid for row in rows))
+        report = verify_pair_coverage(domains, rows, valid_combinations=valid)
+        self.assertTrue(report.complete)
+
+    def test_constraint_violating_seed_is_rejected(self):
+        domains = {"mode": ["safe", "fast"], "input": ["small", "large"]}
+        valid = [
+            {"mode": "safe", "input": "small"},
+            {"mode": "safe", "input": "large"},
+            {"mode": "fast", "input": "small"},
+        ]
+        with self.assertRaisesRegex(ValueError, "violates scenario constraints"):
+            generate_pairwise(
+                domains,
+                seed_combinations=[{"mode": "fast", "input": "large"}],
+                valid_combinations=valid,
+            )
     def test_initial_construction_is_first_two_factor_cartesian_product(self) -> None:
         domains = {"a": ["0", "1"], "b": ["X", "Y"], "c": ["T", "F"]}
 

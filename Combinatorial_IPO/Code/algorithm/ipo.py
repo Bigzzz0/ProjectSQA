@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import itertools
 from dataclasses import dataclass
-from typing import Dict, List, Mapping, Sequence, Set, Tuple
+from typing import Dict, List, Mapping, Optional, Sequence, Set, Tuple
 
 
 @dataclass(frozen=True, order=True)
@@ -42,6 +42,7 @@ def _validate_domains(factor_domains: Mapping[str, Sequence[str]]) -> None:
 
 def initial_construction(
     factor_domains: Mapping[str, Sequence[str]],
+    valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
 ) -> List[Dict[str, str]]:
     """Construct the complete test set for the first two factors."""
     _validate_domains(factor_domains)
@@ -50,13 +51,67 @@ def initial_construction(
         raise ValueError("Initial IPO construction requires at least two factors")
 
     first_factor, second_factor = factors[:2]
-    return [
+    rows = [
         {first_factor: first_value, second_factor: second_value}
         for first_value, second_value in itertools.product(
             factor_domains[first_factor],
             factor_domains[second_factor],
         )
     ]
+    if valid_combinations is None:
+        return rows
+    valid_prefixes = {
+        (row[first_factor], row[second_factor]) for row in valid_combinations
+    }
+    return [
+        row
+        for row in rows
+        if (row[first_factor], row[second_factor]) in valid_prefixes
+    ]
+
+
+def _normalize_valid_combinations(
+    factor_domains: Mapping[str, Sequence[str]],
+    valid_combinations: Optional[Sequence[Mapping[str, str]]],
+) -> Optional[List[Dict[str, str]]]:
+    if valid_combinations is None:
+        return None
+    factors = list(factor_domains)
+    expected_keys = set(factors)
+    normalized: List[Dict[str, str]] = []
+    seen = set()
+    for row_number, source in enumerate(valid_combinations, start=1):
+        if set(source) != expected_keys:
+            raise ValueError(
+                "Valid combination {} must contain exactly factors {}".format(
+                    row_number, factors
+                )
+            )
+        row = {factor: source[factor] for factor in factors}
+        for factor, value in row.items():
+            if value not in factor_domains[factor]:
+                raise ValueError(
+                    "Valid combination {} contains value {!r} outside domain {!r}".format(
+                        row_number, value, factor
+                    )
+                )
+        key = tuple(row[factor] for factor in factors)
+        if key not in seen:
+            normalized.append(row)
+            seen.add(key)
+    if not normalized:
+        raise ValueError("Constraints leave no valid combinations")
+    return normalized
+
+
+def _can_extend(
+    partial: Mapping[str, str],
+    valid_combinations: Optional[Sequence[Mapping[str, str]]],
+) -> bool:
+    return valid_combinations is None or any(
+        all(candidate.get(factor) == value for factor, value in partial.items())
+        for candidate in valid_combinations
+    )
 
 
 def _growth_context(
@@ -107,9 +162,20 @@ def horizontal_growth(
     rows: Sequence[Mapping[str, str]],
     factor_domains: Mapping[str, Sequence[str]],
     new_factor: str,
+    valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
 ) -> Tuple[List[Dict[str, str]], Set[NewFactorPair]]:
     """Extend each row with the value covering the most missing new pairs."""
     previous_factors, uncovered = _growth_context(factor_domains, new_factor)
+    if valid_combinations is not None:
+        uncovered = {
+            pair
+            for pair in uncovered
+            if any(
+                row[pair.previous_factor] == pair.previous_value
+                and row[new_factor] == pair.new_value
+                for row in valid_combinations
+            )
+        }
     _validate_existing_rows(rows, factor_domains, previous_factors)
     extended_rows: List[Dict[str, str]] = []
 
@@ -117,6 +183,10 @@ def horizontal_growth(
         best_value = factor_domains[new_factor][0]
         best_score = -1
         for candidate in factor_domains[new_factor]:
+            proposed = dict(source_row)
+            proposed[new_factor] = candidate
+            if not _can_extend(proposed, valid_combinations):
+                continue
             score = sum(
                 NewFactorPair(
                     previous_factor,
@@ -130,6 +200,8 @@ def horizontal_growth(
                 best_value = candidate
                 best_score = score
 
+        if best_score < 0:
+            raise ValueError("A valid IPO row cannot be extended by {!r}".format(new_factor))
         extended_row = dict(source_row)
         extended_row[new_factor] = best_value
         extended_rows.append(extended_row)
@@ -150,6 +222,7 @@ def vertical_growth(
     factor_domains: Mapping[str, Sequence[str]],
     new_factor: str,
     uncovered_pairs: Set[NewFactorPair],
+    valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
 ) -> List[Dict[str, str]]:
     """Add the minimum rows needed by IPO_V for each new-factor value."""
     previous_factors, possible_pairs = _growth_context(
@@ -161,6 +234,34 @@ def vertical_growth(
         raise ValueError("Uncovered pairs contain interactions outside the domains")
 
     completed_rows = [dict(row) for row in rows]
+    if valid_combinations is not None:
+        remaining = set(uncovered_pairs)
+        prefix_keys = set()
+        candidates: List[Dict[str, str]] = []
+        for valid_row in valid_combinations:
+            prefix = {factor: valid_row[factor] for factor in all_factors}
+            key = tuple(prefix[factor] for factor in all_factors)
+            if key not in prefix_keys:
+                candidates.append(prefix)
+                prefix_keys.add(key)
+        while remaining:
+            best_row = None
+            best_covered: Set[NewFactorPair] = set()
+            for candidate in candidates:
+                covered = {
+                    pair
+                    for pair in remaining
+                    if candidate[pair.previous_factor] == pair.previous_value
+                    and candidate[new_factor] == pair.new_value
+                }
+                if len(covered) > len(best_covered):
+                    best_row = candidate
+                    best_covered = covered
+            if best_row is None or not best_covered:
+                raise ValueError("Constraint-aware vertical growth cannot cover valid pairs")
+            completed_rows.append(dict(best_row))
+            remaining -= best_covered
+        return completed_rows
     for new_value in factor_domains[new_factor]:
         missing_by_factor = {
             previous_factor: [
@@ -226,10 +327,12 @@ def _append_mandatory_seeds(
 def generate_pairwise(
     factor_domains: Mapping[str, Sequence[str]],
     seed_combinations: Sequence[Mapping[str, str]] = (),
+    valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
 ) -> List[Dict[str, str]]:
     """Generate a deterministic 2-way covering array using native IPO."""
     _validate_domains(factor_domains)
     factors = list(factor_domains)
+    valid_rows = _normalize_valid_combinations(factor_domains, valid_combinations)
 
     if len(factors) == 1:
         only_factor = factors[0]
@@ -237,19 +340,30 @@ def generate_pairwise(
             {only_factor: value} for value in factor_domains[only_factor]
         ]
     else:
-        rows = initial_construction(factor_domains)
+        rows = initial_construction(factor_domains, valid_rows)
         for new_factor in factors[2:]:
             rows, uncovered = horizontal_growth(
                 rows,
                 factor_domains,
                 new_factor,
+                valid_rows,
             )
             rows = vertical_growth(
                 rows,
                 factor_domains,
                 new_factor,
                 uncovered,
+                valid_rows,
             )
 
+    if valid_rows is not None:
+        rows = [row for row in rows if _can_extend(row, valid_rows)]
     _append_mandatory_seeds(rows, factor_domains, seed_combinations)
+    if valid_rows is not None:
+        valid_keys = {
+            tuple(row[factor] for factor in factors) for row in valid_rows
+        }
+        for seed in seed_combinations:
+            if tuple(seed[factor] for factor in factors) not in valid_keys:
+                raise ValueError("Mandatory seed violates scenario constraints")
     return rows

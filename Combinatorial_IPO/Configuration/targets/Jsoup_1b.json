@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Jsoup",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.jsoup.nodes",
+    "class_name": "Jsoup_1b_IPOTest",
+    "imports": ["org.jsoup.Jsoup"]
+  },
+  "scenarios": [{
+    "id": "body_snippet_order",
+    "target_classes": ["org.jsoup.nodes.Document"],
+    "entrypoint": "Jsoup.parse(String).text()",
+    "invocation_kind": "stateful",
+    "factors": {
+      "leading_text": {"foo": "\"foo\"", "hello": "\"hello\""},
+      "tag": {"bold": "\"b\"", "italic": "\"i\""},
+      "trailing_text": {"baz": "\"baz\"", "world": "\"world\""}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"leading_text": "foo", "tag": "bold", "trailing_text": "baz"}],
+    "body": "String leading = {{leading_text}};\nString tag = {{tag}};\nString trailing = {{trailing_text}};\nString html = leading + \" <\" + tag + \">bar</\" + tag + \"> \" + trailing;\nDocument document = Jsoup.parse(html);\nassertEquals(leading + \" bar \" + trailing, document.text());",
+    "oracle": {"mode": "invariant", "description": "Document normalization must retain text-node order around body elements."},
+    "evidence": {
+      "patch_file": "Jsoup/patches/1.src.patch",
+      "trigger_tests": ["org.jsoup.parser.ParserTest::createsStructureFromBodySnippet"],
+      "rationale": "The patch changes prepend to append during Document normalization; the trigger checks text order."
+    }
+  }]
+}

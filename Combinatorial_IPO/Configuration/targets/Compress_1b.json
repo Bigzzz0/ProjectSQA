@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Compress",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.apache.commons.compress.archivers.cpio",
+    "class_name": "Compress_1b_IPOTest",
+    "imports": ["java.io.ByteArrayOutputStream", "java.io.ByteArrayInputStream", "org.apache.commons.compress.archivers.ArchiveEntry"]
+  },
+  "scenarios": [{
+    "id": "close_finishes_archive",
+    "target_classes": ["org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream"],
+    "entrypoint": "CpioArchiveOutputStream.close()",
+    "invocation_kind": "stateful",
+    "factors": {
+      "format": {"new": "CpioConstants.FORMAT_NEW", "new_crc": "CpioConstants.FORMAT_NEW_CRC"},
+      "entry_count": {"one": "1", "two": "2"},
+      "close_mode": {"close": "false", "finish_then_close": "true"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"format": "new", "entry_count": "two", "close_mode": "close"}],
+    "body": "short format = {{format}};\nByteArrayOutputStream bytes = new ByteArrayOutputStream();\nCpioArchiveOutputStream output = new CpioArchiveOutputStream(bytes, format);\nfor (int i = 0; i < {{entry_count}}; i++) {\n    CpioArchiveEntry entry = new CpioArchiveEntry(format);\n    entry.setName(\"entry\" + i);\n    entry.setSize(0);\n    output.putArchiveEntry(entry);\n    output.closeArchiveEntry();\n}\nif ({{close_mode}}) { output.finish(); }\noutput.close();\nCpioArchiveInputStream input = new CpioArchiveInputStream(new ByteArrayInputStream(bytes.toByteArray()));\nint count = 0;\nwhile (input.getNextCPIOEntry() != null) { count++; }\ninput.close();\nassertEquals({{entry_count}}, count);",
+    "oracle": {"mode": "invariant", "description": "close() must finish the archive so all entries can be read without an explicit finish call."},
+    "evidence": {
+      "patch_file": "Compress/patches/1.src.patch",
+      "trigger_tests": ["org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive"],
+      "rationale": "COMPRESS-28 removes finish() from close(); the trigger closes then unarchives the resulting CPIO stream."
+    }
+  }]
+}

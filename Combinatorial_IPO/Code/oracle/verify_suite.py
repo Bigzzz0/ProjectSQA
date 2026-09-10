@@ -53,19 +53,30 @@ def verify_suite(
         test_classpath = _run(
             [defects4j_executable, "export", "-p", "cp.test"], checkout
         )
+        executable_path = shutil.which(defects4j_executable)
+        framework_junit = None
+        if executable_path:
+            framework_root = Path(executable_path).resolve().parents[1]
+            candidate = framework_root / "projects" / "lib" / "junit-4.12-hamcrest-1.3.jar"
+            if candidate.is_file():
+                framework_junit = str(candidate)
         class_binary_directory = _run(
             [defects4j_executable, "export", "-p", "dir.bin.classes"], checkout
         )
         test_binary_directory = _run(
             [defects4j_executable, "export", "-p", "dir.bin.tests"], checkout
         )
-        runtime_classpath = os.pathsep.join(
-            [
+        runtime_entries = [
                 str(checkout / test_binary_directory),
                 str(checkout / class_binary_directory),
-                test_classpath,
-            ]
-        )
+        ]
+        # Some early Defects4J projects export JUnit 3 only even though the
+        # infrastructure compiles generated JUnit 4 tests.  Prefer the bundled
+        # framework JUnit 4 jar so JUnitCore and @Test(timeout=...) are present.
+        if framework_junit:
+            runtime_entries.append(framework_junit)
+        runtime_entries.append(test_classpath)
+        runtime_classpath = os.pathsep.join(runtime_entries)
         return _run(
             [
                 java_executable,

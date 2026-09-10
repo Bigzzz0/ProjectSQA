@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Math",
+  "bug_id": 2,
+  "suite": {
+    "package": "org.apache.commons.math3.distribution",
+    "class_name": "Math_2b_IPOTest",
+    "imports": []
+  },
+  "scenarios": [{
+    "id": "hypergeometric_mean",
+    "target_classes": ["org.apache.commons.math3.distribution.HypergeometricDistribution"],
+    "entrypoint": "HypergeometricDistribution(int,int,int).getNumericalMean()",
+    "invocation_kind": "constructor",
+    "factors": {
+      "population": {"100000": "100000", "43130568": "43130568", "50000000": "50000000"},
+      "successes": {"50": "50", "42976365": "42976365", "45000000": "45000000"},
+      "sample": {"10": "10", "50": "50", "100000": "100000"}
+    },
+    "constraints": [
+      {"type": "compare", "left": "successes", "op": "le", "right": "population"},
+      {"type": "compare", "left": "sample", "op": "le", "right": "population"}
+    ],
+    "mandatory_seeds": [{"population": "43130568", "successes": "42976365", "sample": "50"}],
+    "body": "int population = {{population}};\nint successes = {{successes}};\nint sample = {{sample}};\nHypergeometricDistribution distribution = new HypergeometricDistribution(population, successes, sample);\ndouble expected = sample * (successes / (double) population);\nassertEquals(expected, distribution.getNumericalMean(), 0.0d);\nassertTrue(distribution.getNumericalMean() >= 0.0d);",
+    "oracle": {"mode": "invariant", "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."},
+    "evidence": {
+      "patch_file": "Math/patches/2.src.patch",
+      "trigger_tests": ["org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021"],
+      "rationale": "The patch changes getNumericalMean arithmetic and the seed reproduces MATH-1021."
+    }
+  }]
+}
