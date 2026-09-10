@@ -27,6 +27,8 @@ class StartCatalogLoopTests(unittest.TestCase):
         self.assertIn(LOOP_COMMAND, loop_args)
         self.assertIn("scenario_catalog.py", LOOP_COMMAND)
         self.assertIn("--scenarios /workspace/Combinatorial_IPO/Configuration/targets", LOOP_COMMAND)
+        self.assertIn("--experiment", READINESS_COMMAND)
+        self.assertIn("--experiment", LOOP_COMMAND)
         self.assertNotIn("--no-verify", LOOP_COMMAND)
 
     def test_failed_readiness_never_starts_loop(self) -> None:

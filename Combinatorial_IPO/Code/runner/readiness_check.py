@@ -6,6 +6,7 @@ import argparse
 import csv
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 from typing import Dict, List
 
@@ -16,7 +17,7 @@ if str(CODE_ROOT) not in sys.path:
     sys.path.insert(0, str(CODE_ROOT))
 
 from verification.pair_coverage import verify_pair_coverage  # noqa: E402
-from runner.catalog import load_catalog  # noqa: E402
+from runner.experiment import resolve_experiment  # noqa: E402
 from runner.scenario_catalog import load_scenario_catalog  # noqa: E402
 
 
@@ -120,6 +121,7 @@ def check_readiness(
     feasibility_path: Path,
     catalog_path: Path = None,
     scenario_root: Path = None,
+    experiment_path: Path = None,
 ) -> dict:
     """Check representative artifacts and non-generating catalog audit evidence."""
     representatives = json.loads(representatives_path.read_text(encoding="utf-8"))
@@ -127,7 +129,24 @@ def check_readiness(
         _verify_representative(ipo_root, expected) for expected in representatives
     ]
 
+    scenario_issues: List[str] = []
+    resolved_experiment = None
+    supplied_experiment_inputs = (catalog_path, scenario_root, experiment_path)
+    if any(item is not None for item in supplied_experiment_inputs):
+        if not all(item is not None for item in supplied_experiment_inputs):
+            scenario_issues.append(
+                "Catalog, scenario root, and experiment manifest must be provided together"
+            )
+        else:
+            try:
+                resolved_experiment = resolve_experiment(
+                    experiment_path, catalog_path, scenario_root
+                )
+            except (ValueError, OSError, json.JSONDecodeError) as exc:
+                scenario_issues.append(str(exc))
+
     catalog_issues: List[str] = []
+    audit_statuses = {}
     if not feasibility_path.is_file():
         catalog_issues.append("Missing feasibility audit")
         feasibility = {}
@@ -135,15 +154,57 @@ def check_readiness(
         feasibility = json.loads(feasibility_path.read_text(encoding="utf-8"))
         if feasibility.get("generation_performed") is not False:
             catalog_issues.append("Feasibility audit must not generate tests")
-        if feasibility.get("bug_target_count", feasibility.get("target_count")) != 17:
-            catalog_issues.append("Feasibility audit does not contain 17 targets")
-        statuses = feasibility.get("target_status_counts", {})
-        source_target_count = feasibility.get("source_target_count")
-        if source_target_count is not None and sum(statuses.values()) != source_target_count:
+        if resolved_experiment is not None:
+            audit_records = feasibility.get("targets")
+            if not isinstance(audit_records, list):
+                catalog_issues.append(
+                    "Feasibility audit requires per-source target records"
+                )
+                selected_audit_records = []
+            else:
+                selected_identities = {
+                    (target.project, target.bug_id)
+                    for target in resolved_experiment.targets
+                }
+                selected_audit_records = [
+                    record
+                    for record in audit_records
+                    if isinstance(record, dict)
+                    and (record.get("project"), record.get("bug_id"))
+                    in selected_identities
+                ]
+            audited_identities = {
+                (record.get("project"), record.get("bug_id"))
+                for record in selected_audit_records
+            }
+            if len(audited_identities) != resolved_experiment.spec.expected_target_count:
+                catalog_issues.append(
+                    "Feasibility audit target count does not match experiment"
+                )
+            if (
+                len(selected_audit_records)
+                != resolved_experiment.spec.expected_modified_source_count
+            ):
+                catalog_issues.append(
+                    "Feasibility audit modified source count does not match experiment"
+                )
+            audit_statuses = dict(
+                Counter(
+                    str(record.get("status")) for record in selected_audit_records
+                )
+            )
+            source_target_count = len(selected_audit_records)
+        else:
+            audit_statuses = feasibility.get("target_status_counts", {})
+            source_target_count = feasibility.get("source_target_count")
+        if (
+            source_target_count is not None
+            and sum(audit_statuses.values()) != source_target_count
+        ):
             catalog_issues.append(
                 "Feasibility source count does not match target status counts"
             )
-        unexpected = set(statuses) - {"AUDITED", "CATALOG_MISMATCH"}
+        unexpected = set(audit_statuses) - {"AUDITED", "CATALOG_MISMATCH"}
         if unexpected:
             catalog_issues.append(
                 "Unexpected feasibility statuses: {}".format(
@@ -152,26 +213,19 @@ def check_readiness(
             )
 
     known_catalog_mismatches = int(
-        feasibility.get("target_status_counts", {}).get("CATALOG_MISMATCH", 0)
+        audit_statuses.get("CATALOG_MISMATCH", 0)
     )
-    scenario_issues: List[str] = []
     scenario_target_count = 0
     scenario_count = 0
-    if catalog_path is not None or scenario_root is not None:
-        if catalog_path is None or scenario_root is None:
-            scenario_issues.append("Catalog and scenario root must be provided together")
-        else:
-            try:
-                plans = load_scenario_catalog(catalog_path, scenario_root)
-                scenario_target_count = len(plans)
-                scenario_count = sum(len(plan.scenarios) for plan in plans)
-                catalog = load_catalog(catalog_path)
-                if sum(len(target.modified_sources) for target in catalog) != 22:
-                    scenario_issues.append("Catalog does not contain 22 modified sources")
-                if sum(len(target.trigger_tests) for target in catalog) != 56:
-                    scenario_issues.append("Catalog does not contain 56 triggering tests")
-            except (ValueError, OSError, json.JSONDecodeError) as exc:
-                scenario_issues.append(str(exc))
+    if resolved_experiment is not None:
+        try:
+            plans = load_scenario_catalog(
+                catalog_path, scenario_root, experiment_path
+            )
+            scenario_target_count = len(plans)
+            scenario_count = sum(len(plan.scenarios) for plan in plans)
+        except (ValueError, OSError, json.JSONDecodeError) as exc:
+            scenario_issues.append(str(exc))
     loop_state_path = ipo_root / "Result_Round2" / "catalog_loop_state.json"
     loop_started = False
     loop_state = None
@@ -200,6 +254,16 @@ def check_readiness(
         ),
         "known_catalog_mismatches": known_catalog_mismatches,
         "catalog_issues": catalog_issues,
+        "experiment_id": (
+            resolved_experiment.spec.experiment_id
+            if resolved_experiment is not None
+            else None
+        ),
+        "experiment_target_count": (
+            resolved_experiment.spec.expected_target_count
+            if resolved_experiment is not None
+            else 0
+        ),
         "scenario_target_count": scenario_target_count,
         "scenario_count": scenario_count,
         "scenario_issues": scenario_issues,
@@ -226,6 +290,11 @@ def main() -> None:
         default=IPO_ROOT / "Configuration" / "targets",
     )
     parser.add_argument(
+        "--experiment",
+        type=Path,
+        default=IPO_ROOT / "Configuration" / "experiments" / "round2-17-targets.json",
+    )
+    parser.add_argument(
         "--feasibility",
         type=Path,
         default=IPO_ROOT / "Result_Round1" / "feasibility_audit.json",
@@ -243,6 +312,7 @@ def main() -> None:
         args.feasibility,
         catalog_path=args.catalog,
         scenario_root=args.scenarios,
+        experiment_path=args.experiment,
     )
     rendered = json.dumps(report, indent=2)
     args.output.parent.mkdir(parents=True, exist_ok=True)

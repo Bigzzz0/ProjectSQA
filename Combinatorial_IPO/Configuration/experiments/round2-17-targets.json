@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "experiment_id": "cp353201-round2-17-targets",
+  "strength": 2,
+  "targets": [
+    "Chart_1b",
+    "Cli_1b",
+    "Closure_1b",
+    "Codec_1b",
+    "Collections_25b",
+    "Compress_1b",
+    "Csv_1b",
+    "Gson_1b",
+    "JacksonCore_1b",
+    "JacksonDatabind_1b",
+    "JacksonXml_1b",
+    "Jsoup_1b",
+    "JxPath_1b",
+    "Lang_1b",
+    "Math_2b",
+    "Mockito_1b",
+    "Time_1b"
+  ],
+  "expected_summary": {
+    "target_count": 17,
+    "modified_source_count": 22,
+    "triggering_test_count": 56
+  },
+  "input_fingerprints": {
+    "selected_catalog_sha256": "186d702bf79c77402ee86614b5235aed034eae961a26b2c2e5e41cff98cc25e1",
+    "scenario_set_sha256": "23865e86af918ccc28c775bc625be2e94b281499b5fdc662492af15386a29b64"
+  }
+}

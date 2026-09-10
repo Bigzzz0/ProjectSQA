@@ -24,27 +24,19 @@ from algorithm.ipo import generate_pairwise  # noqa: E402
 from generator.scenario_junit_generator import synthesize_scenario_suite  # noqa: E402
 from oracle.fixed_version_oracle import OracleCollectionError  # noqa: E402
 from oracle.verify_suite import verify_suite  # noqa: E402
-from runner.catalog import CatalogTarget, load_catalog  # noqa: E402
+from runner.experiment import resolve_experiment  # noqa: E402
 from scenario.spec import TargetScenarioPlan, load_target_plan  # noqa: E402
 from verification.pair_coverage import verify_pair_coverage  # noqa: E402
 
 
 def load_scenario_catalog(
-    catalog_path: Path, scenario_root: Path
+    catalog_path: Path, scenario_root: Path, experiment_path: Path
 ) -> List[TargetScenarioPlan]:
-    targets = load_catalog(catalog_path)
-    expected = {target.target_key: target for target in targets}
-    actual = {path.stem: path for path in scenario_root.glob("*.json")}
-    missing = sorted(set(expected) - set(actual))
-    extra = sorted(set(actual) - set(expected))
-    if missing or extra:
-        raise ValueError(
-            "Scenario catalog mismatch; missing={}, extra={}".format(missing, extra)
-        )
-    plans = [load_target_plan(actual[key], expected[key]) for key in expected]
-    if len(plans) != 17:
-        raise ValueError("The controlled scenario catalog must contain exactly 17 bug targets")
-    return plans
+    resolved = resolve_experiment(experiment_path, catalog_path, scenario_root)
+    return [
+        load_target_plan(resolved.scenario_paths[target.target_key], target)
+        for target in resolved.targets
+    ]
 
 
 def _write_tsv(path: Path, fields: List[str], rows: List[Dict[str, str]]) -> None:
@@ -137,21 +129,34 @@ def _generate_target(plan: TargetScenarioPlan, target_dir: Path) -> Dict[str, ob
 def run_scenario_catalog(
     catalog_path: Path,
     scenario_root: Path,
+    experiment_path: Path,
     output_root: Path,
     defects4j_executable: str = "defects4j",
     verify_fixed: bool = True,
     run_id: Optional[str] = None,
 ) -> Dict[str, object]:
-    plans = load_scenario_catalog(catalog_path, scenario_root)
+    resolved = resolve_experiment(experiment_path, catalog_path, scenario_root)
+    plans = load_scenario_catalog(catalog_path, scenario_root, experiment_path)
+    expected_target_count = resolved.spec.expected_target_count
     run_id = run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     result_root = output_root / "Result_Round2"
     run_dir = result_root / run_id
     if run_dir.exists():
         raise ValueError("Run directory already exists: {}".format(run_dir))
     run_dir.mkdir(parents=True)
+    shutil.copy2(experiment_path, run_dir / "experiment_manifest.json")
     state_path = result_root / "catalog_loop_state.json"
     state_path.write_text(
-        json.dumps({"started": True, "status": "PREFLIGHT", "run_id": run_id}, indent=2),
+        json.dumps(
+            {
+                "started": True,
+                "status": "PREFLIGHT",
+                "run_id": run_id,
+                "experiment_id": resolved.spec.experiment_id,
+                "target_count": expected_target_count,
+            },
+            indent=2,
+        ),
         encoding="utf-8",
     )
 
@@ -189,15 +194,21 @@ def run_scenario_catalog(
                 }
             )
 
-    success = verify_fixed and len(records) == 17 and all(
+    success = verify_fixed and len(records) == expected_target_count and all(
         record["status"] == "VERIFIED" for record in records
     )
     manifest = {
         "run_id": run_id,
+        "experiment_id": resolved.spec.experiment_id,
+        "experiment": str(experiment_path),
         "catalog": str(catalog_path),
         "scenario_root": str(scenario_root),
+        "input_fingerprints": {
+            "selected_catalog_sha256": resolved.selected_catalog_sha256,
+            "scenario_set_sha256": resolved.scenario_set_sha256,
+        },
         "generation_backend": "native_ipo",
-        "strength": 2,
+        "strength": resolved.spec.strength,
         "target_count": len(records),
         "verified_target_count": sum(record["status"] == "VERIFIED" for record in records),
         "published_suite_count": 0,
@@ -219,7 +230,7 @@ def run_scenario_catalog(
                 destination.mkdir(parents=True, exist_ok=True)
                 for source in source_dir.iterdir():
                     source.replace(destination / source.name)
-            manifest["published_suite_count"] = 17
+            manifest["published_suite_count"] = len(records)
         finally:
             shutil.rmtree(staged, ignore_errors=True)
 
@@ -232,6 +243,7 @@ def run_scenario_catalog(
                 "started": True,
                 "status": manifest["status"],
                 "run_id": run_id,
+                "experiment_id": resolved.spec.experiment_id,
                 "target_count": len(records),
                 "verified_target_count": manifest["verified_target_count"],
                 "published_suite_count": manifest["published_suite_count"],
@@ -247,6 +259,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run approved native IPO scenarios")
     parser.add_argument("--catalog", type=Path, default=PROJECT_ROOT / "target_benchmark" / "catalog_17_projects.json")
     parser.add_argument("--scenarios", type=Path, default=IPO_ROOT / "Configuration" / "targets")
+    parser.add_argument(
+        "--experiment",
+        type=Path,
+        default=IPO_ROOT / "Configuration" / "experiments" / "round2-17-targets.json",
+    )
     parser.add_argument("--output-root", type=Path, default=IPO_ROOT)
     parser.add_argument("--defects4j", default="defects4j")
     parser.add_argument("--no-verify", action="store_true")
@@ -255,6 +272,7 @@ def main() -> None:
     manifest = run_scenario_catalog(
         args.catalog,
         args.scenarios,
+        args.experiment,
         args.output_root,
         defects4j_executable=args.defects4j,
         verify_fixed=not args.no_verify,

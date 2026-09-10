@@ -14,13 +14,15 @@ WINDOWS_DOCKER = Path(
 )
 READINESS_COMMAND = (
     "cd /workspace/Combinatorial_IPO && "
-    "python3 Code/runner/readiness_check.py"
+    "python3 Code/runner/readiness_check.py "
+    "--experiment Configuration/experiments/round2-17-targets.json"
 )
 LOOP_COMMAND = (
     "cd /workspace/Combinatorial_IPO && "
     "python3 Code/runner/scenario_catalog.py "
     "--catalog /workspace/target_benchmark/catalog_17_projects.json "
     "--scenarios /workspace/Combinatorial_IPO/Configuration/targets "
+    "--experiment /workspace/Combinatorial_IPO/Configuration/experiments/round2-17-targets.json "
     "--output-root /workspace/Combinatorial_IPO"
 )
 

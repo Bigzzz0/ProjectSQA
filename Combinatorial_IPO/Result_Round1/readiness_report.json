@@ -14,6 +14,8 @@
   "representatives_passed": 4,
   "known_catalog_mismatches": 0,
   "catalog_issues": [],
+  "experiment_id": "cp353201-round2-17-targets",
+  "experiment_target_count": 17,
   "scenario_target_count": 17,
   "scenario_count": 17,
   "scenario_issues": [],
