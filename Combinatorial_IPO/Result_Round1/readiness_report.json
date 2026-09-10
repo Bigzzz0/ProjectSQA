@@ -4,7 +4,7 @@
   "loop_state": null,
   "representative_count": 4,
   "representatives_passed": 4,
-  "known_catalog_mismatches": 4,
+  "known_catalog_mismatches": 0,
   "catalog_issues": [],
   "representatives": [
     {

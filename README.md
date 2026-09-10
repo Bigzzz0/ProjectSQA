@@ -69,7 +69,7 @@ ProjectSQA/
 │   ├── d4j_meta.py                    # โมดูลดึง Metadata จาก Defects4J CLI แบบ Dynamic
 │   ├── run_benchmark.py               # Universal Benchmark Runner (17 Projects & All-Bugs)
 │   └── kku_generate.py                # สคริปต์ยิง KKU IntelSphere API สำหรับสร้าง AI Tests
-├── target_benchmark/                  # คลังเก็บ Source Code และ Ground Truth ของ 17 คลาสตัวแทน (ครบ 17 โปรเจกต์)
+├── target_benchmark/                  # Ground Truth ของ 17 bug targets / 22 modified sources
 │   ├── catalog_17_projects.json       # สารบัญ Machine-Readable สำหรับระบบอัตโนมัติของทั้ง 4 สาย
 │   ├── README.md                      # สารบัญ Master Catalog แสดงรายละเอียดคลาสและ Trigger Tests
 │   └── <Project>_<BugID>b/            # โฟลเดอร์ของแต่ละบั๊ก (Chart_1b, Cli_1b, ..., Lang_1b, Math_2b, ..., Time_1b)

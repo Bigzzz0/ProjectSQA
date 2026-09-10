@@ -46,6 +46,8 @@ public class Sample {
 
             self.assertFalse(report["generation_performed"])
             self.assertEqual(1, report["target_count"])
+            self.assertEqual(1, report["bug_target_count"])
+            self.assertEqual(1, report["source_target_count"])
             self.assertEqual(
                 {
                     "CANDIDATE": 1,

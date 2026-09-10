@@ -39,6 +39,7 @@ from verification.pair_coverage import verify_pair_coverage  # noqa: E402
 
 
 TARGET_DIRECTORY_PATTERN = re.compile(r"^(?P<project>.+)_(?P<bug_id>\d+)b$")
+RESULT_DIRECTORIES = {"Result_Round1", "Result_Round2"}
 
 
 class UnsupportedMethodError(ValueError):
@@ -124,8 +125,21 @@ def run_batch(
     collect_oracles: bool = False,
     verify_suites: bool = False,
     defects4j_executable: str = "defects4j",
+    result_directory: Optional[str] = None,
 ) -> Dict[str, object]:
     """Generate models, combinations, and JUnit suites for discovered targets."""
+    selected_result_directory = result_directory or (
+        "Result_Round2" if catalog_path is not None else "Result_Round1"
+    )
+    if selected_result_directory not in RESULT_DIRECTORIES:
+        raise ValueError(
+            "result_directory must be Result_Round1 or Result_Round2"
+        )
+    if catalog_path is not None and selected_result_directory != "Result_Round2":
+        raise ValueError(
+            "Catalog-loop results must use Result_Round2 to preserve readiness evidence"
+        )
+    result_root = output_root / selected_result_directory
     records: List[Dict[str, object]] = []
     generated_suites: List[str] = []
 
@@ -136,7 +150,7 @@ def run_batch(
             catalog_path, target_root
         )
         catalog_loop_state_path = (
-            output_root / "Result_Round1" / "catalog_loop_state.json"
+            result_root / "catalog_loop_state.json"
         )
         catalog_loop_state_path.parent.mkdir(parents=True, exist_ok=True)
         catalog_loop_state_path.write_text(
@@ -156,7 +170,7 @@ def run_batch(
                 item.target.bug_id,
                 item.target_directory,
                 [item.source_file],
-                item.target.target_class,
+                item.target_class,
             )
             for item in resolved_targets
         ]
@@ -247,7 +261,7 @@ def run_batch(
                     continue
 
                 model_dir = output_root / "Models" / target_key / class_name
-                result_dir = output_root / "Result_Round1" / target_key / class_name
+                result_dir = result_root / target_key / class_name
                 try:
                     semantic_override = find_semantic_override(
                         fully_qualified_class, method
@@ -535,8 +549,7 @@ def run_batch(
                 "arguments; rows are retained to preserve verified abstract pair coverage"
             )
         record_path = (
-            output_root
-            / "Result_Round1"
+            result_root
             / "{}_{}b".format(record["project"], record["bug_id"])
             / str(record["class"])
             / "{}_record.json".format(record["method_id"])
@@ -548,6 +561,7 @@ def run_batch(
     manifest = {
         "target_root": str(target_root),
         "catalog": str(catalog_path) if catalog_path else None,
+        "result_directory": selected_result_directory,
         "collect_oracles": collect_oracles,
         "verify_suites": verify_suites,
         "generation_backend": "ipo",
@@ -559,7 +573,7 @@ def run_batch(
         "generated_suites": generated_suites,
         "records": records,
     }
-    manifest_path = output_root / "Result_Round1" / "batch_manifest.json"
+    manifest_path = result_root / "batch_manifest.json"
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     if catalog_loop_state_path is not None:
@@ -584,6 +598,11 @@ def main() -> None:
     parser.add_argument("--target-root", type=Path, default=PROJECT_ROOT / "target_benchmark")
     parser.add_argument("--output-root", type=Path, default=IPO_ROOT)
     parser.add_argument("--catalog", type=Path, help="Use an explicit target catalog")
+    parser.add_argument(
+        "--result-directory",
+        choices=sorted(RESULT_DIRECTORIES),
+        help="Result folder (catalog loops are always stored in Result_Round2)",
+    )
     parser.add_argument(
         "--collect-oracles",
         action="store_true",
@@ -618,6 +637,7 @@ def main() -> None:
         collect_oracles=args.collect_oracles,
         verify_suites=args.verify_suites,
         defects4j_executable=args.defects4j,
+        result_directory=args.result_directory,
     )
     print(json.dumps(manifest, indent=2))
 

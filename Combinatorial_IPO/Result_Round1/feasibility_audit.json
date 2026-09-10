@@ -3,62 +3,17 @@
   "target_root": "/workspace/target_benchmark",
   "generation_performed": false,
   "target_count": 17,
+  "bug_target_count": 17,
+  "source_target_count": 22,
   "target_status_counts": {
-    "AUDITED": 13,
-    "CATALOG_MISMATCH": 4
+    "AUDITED": 22
   },
   "method_status_counts": {
     "CANDIDATE": 23,
-    "NEEDS_SEMANTIC_MODEL": 85,
-    "UNSUPPORTED": 223
+    "NEEDS_SEMANTIC_MODEL": 89,
+    "UNSUPPORTED": 351
   },
   "targets": [
-    {
-      "project": "Codec",
-      "bug_id": 1,
-      "target_class": "org.apache.commons.codec.language.Soundex",
-      "source_directory": "Codec_1b",
-      "status": "CATALOG_MISMATCH",
-      "reason": "Catalog source file does not exist: Soundex.java",
-      "available_sources": [
-        "Caverphone.java",
-        "Metaphone.java",
-        "SoundexUtils.java"
-      ]
-    },
-    {
-      "project": "Compress",
-      "bug_id": 1,
-      "target_class": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
-      "source_directory": "Compress_1b",
-      "status": "CATALOG_MISMATCH",
-      "reason": "Catalog source file does not exist: CpioArchiveInputStream.java",
-      "available_sources": [
-        "CpioArchiveOutputStream.java"
-      ]
-    },
-    {
-      "project": "JacksonDatabind",
-      "bug_id": 1,
-      "target_class": "com.fasterxml.jackson.databind.JavaType",
-      "source_directory": "JacksonDatabind_1b",
-      "status": "CATALOG_MISMATCH",
-      "reason": "Catalog source file does not exist: JavaType.java",
-      "available_sources": [
-        "BeanPropertyWriter.java"
-      ]
-    },
-    {
-      "project": "Jsoup",
-      "bug_id": 1,
-      "target_class": "org.jsoup.nodes.Element",
-      "source_directory": "Jsoup_1b",
-      "status": "CATALOG_MISMATCH",
-      "reason": "Catalog source file does not exist: Element.java",
-      "available_sources": [
-        "Document.java"
-      ]
-    },
     {
       "project": "Chart",
       "bug_id": 1,
@@ -534,6 +489,99 @@
       ]
     },
     {
+      "project": "Codec",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.codec.language.Caverphone",
+      "source": "/workspace/target_benchmark/Codec_1b/Caverphone.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 4
+      },
+      "methods": [
+        {
+          "method": "caverphone",
+          "signature": "caverphone(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "encode",
+          "signature": "encode(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "encode",
+          "signature": "encode(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isCaverphoneEqual",
+          "signature": "isCaverphoneEqual(String,String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Codec",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.codec.language.Metaphone",
+      "source": "/workspace/target_benchmark/Codec_1b/Metaphone.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 6
+      },
+      "methods": [
+        {
+          "method": "metaphone",
+          "signature": "metaphone(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "encode",
+          "signature": "encode(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "encode",
+          "signature": "encode(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isMetaphoneEqual",
+          "signature": "isMetaphoneEqual(String,String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMaxCodeLen",
+          "signature": "getMaxCodeLen()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setMaxCodeLen",
+          "signature": "setMaxCodeLen(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Codec",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.codec.language.SoundexUtils",
+      "source": "/workspace/target_benchmark/Codec_1b/SoundexUtils.java",
+      "status": "AUDITED",
+      "method_status_counts": {},
+      "methods": []
+    },
+    {
       "project": "Collections",
       "bug_id": 25,
       "target_class": "org.apache.commons.collections4.IteratorUtils",
@@ -943,6 +991,60 @@
       ]
     },
     {
+      "project": "Compress",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+      "source": "/workspace/target_benchmark/Compress_1b/CpioArchiveOutputStream.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 7
+      },
+      "methods": [
+        {
+          "method": "putNextEntry",
+          "signature": "putNextEntry(CpioArchiveEntry)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "closeArchiveEntry",
+          "signature": "closeArchiveEntry()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "write",
+          "signature": "write(byte[],int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "finish",
+          "signature": "finish()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "close",
+          "signature": "close()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "putArchiveEntry",
+          "signature": "putArchiveEntry(ArchiveEntry)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "write",
+          "signature": "write(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
       "project": "Csv",
       "bug_id": 1,
       "target_class": "org.apache.commons.csv.ExtendedBufferedReader",
@@ -1105,6 +1207,366 @@
           "signature": "parseBigDecimal(char[],int,int)",
           "status": "NEEDS_SEMANTIC_MODEL",
           "reason": "No generic value domain for reference type: char[]"
+        }
+      ]
+    },
+    {
+      "project": "JacksonCore",
+      "bug_id": 1,
+      "target_class": "com.fasterxml.jackson.core.util.TextBuffer",
+      "source": "/workspace/target_benchmark/JacksonCore_1b/TextBuffer.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 24
+      },
+      "methods": [
+        {
+          "method": "releaseBuffers",
+          "signature": "releaseBuffers()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "resetWithEmpty",
+          "signature": "resetWithEmpty()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "resetWithShared",
+          "signature": "resetWithShared(char[],int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "resetWithCopy",
+          "signature": "resetWithCopy(char[],int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "resetWithString",
+          "signature": "resetWithString(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "size",
+          "signature": "size()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getTextOffset",
+          "signature": "getTextOffset()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasTextAsCharacters",
+          "signature": "hasTextAsCharacters()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getTextBuffer",
+          "signature": "getTextBuffer()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "contentsAsString",
+          "signature": "contentsAsString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "contentsAsArray",
+          "signature": "contentsAsArray()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "contentsAsDecimal",
+          "signature": "contentsAsDecimal()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "contentsAsDouble",
+          "signature": "contentsAsDouble()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "ensureNotShared",
+          "signature": "ensureNotShared()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "append",
+          "signature": "append(char)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "append",
+          "signature": "append(char[],int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "append",
+          "signature": "append(String,int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getCurrentSegment",
+          "signature": "getCurrentSegment()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "emptyAndGetCurrentSegment",
+          "signature": "emptyAndGetCurrentSegment()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getCurrentSegmentSize",
+          "signature": "getCurrentSegmentSize()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setCurrentLength",
+          "signature": "setCurrentLength(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "finishCurrentSegment",
+          "signature": "finishCurrentSegment()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "expandCurrentSegment",
+          "signature": "expandCurrentSegment()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "JacksonDatabind",
+      "bug_id": 1,
+      "target_class": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+      "source": "/workspace/target_benchmark/JacksonDatabind_1b/BeanPropertyWriter.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 32
+      },
+      "methods": [
+        {
+          "method": "rename",
+          "signature": "rename(NameTransformer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "assignSerializer",
+          "signature": "assignSerializer(JsonSerializer<Object>)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "assignNullSerializer",
+          "signature": "assignNullSerializer(JsonSerializer<Object>)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "unwrappingWriter",
+          "signature": "unwrappingWriter(NameTransformer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setNonTrivialBaseType",
+          "signature": "setNonTrivialBaseType(JavaType)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getName",
+          "signature": "getName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getType",
+          "signature": "getType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getWrapperName",
+          "signature": "getWrapperName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isRequired",
+          "signature": "isRequired()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getAnnotation",
+          "signature": "getAnnotation(Class<A>)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getContextAnnotation",
+          "signature": "getContextAnnotation(Class<A>)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMember",
+          "signature": "getMember()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "depositSchemaProperty",
+          "signature": "depositSchemaProperty(JsonObjectFormatVisitor)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getInternalSetting",
+          "signature": "getInternalSetting(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setInternalSetting",
+          "signature": "setInternalSetting(Object,Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "removeInternalSetting",
+          "signature": "removeInternalSetting(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSerializedName",
+          "signature": "getSerializedName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasSerializer",
+          "signature": "hasSerializer()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasNullSerializer",
+          "signature": "hasNullSerializer()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "willSuppressNulls",
+          "signature": "willSuppressNulls()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSerializer",
+          "signature": "getSerializer()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSerializationType",
+          "signature": "getSerializationType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getRawSerializationType",
+          "signature": "getRawSerializationType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getPropertyType",
+          "signature": "getPropertyType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getGenericPropertyType",
+          "signature": "getGenericPropertyType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getViews",
+          "signature": "getViews()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "depositSchemaProperty",
+          "signature": "depositSchemaProperty(ObjectNode,SerializerProvider)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "serializeAsField",
+          "signature": "serializeAsField(Object,JsonGenerator,SerializerProvider)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "serializeAsColumn",
+          "signature": "serializeAsColumn(Object,JsonGenerator,SerializerProvider)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "serializeAsPlaceholder",
+          "signature": "serializeAsPlaceholder(Object,JsonGenerator,SerializerProvider)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "get",
+          "signature": "get(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
         }
       ]
     },
@@ -1385,6 +1847,78 @@
       ]
     },
     {
+      "project": "Jsoup",
+      "bug_id": 1,
+      "target_class": "org.jsoup.nodes.Document",
+      "source": "/workspace/target_benchmark/Jsoup_1b/Document.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 10
+      },
+      "methods": [
+        {
+          "method": "createShell",
+          "signature": "createShell(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "head",
+          "signature": "head()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "body",
+          "signature": "body()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "title",
+          "signature": "title()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "title",
+          "signature": "title(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createElement",
+          "signature": "createElement(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "normalise",
+          "signature": "normalise()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "outerHtml",
+          "signature": "outerHtml()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "text",
+          "signature": "text(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "nodeName",
+          "signature": "nodeName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
       "project": "JxPath",
       "bug_id": 1,
       "target_class": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
@@ -1578,6 +2112,181 @@
         {
           "method": "compareChildNodePointers",
           "signature": "compareChildNodePointers(NodePointer,NodePointer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "JxPath",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+      "source": "/workspace/target_benchmark/JxPath_1b/JDOMNodePointer.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "NEEDS_SEMANTIC_MODEL": 3,
+        "UNSUPPORTED": 24
+      },
+      "methods": [
+        {
+          "method": "childIterator",
+          "signature": "childIterator(NodeTest,boolean,NodePointer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "attributeIterator",
+          "signature": "attributeIterator(QName)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "namespaceIterator",
+          "signature": "namespaceIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "namespacePointer",
+          "signature": "namespacePointer(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNamespaceURI",
+          "signature": "getNamespaceURI()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNamespaceURI",
+          "signature": "getNamespaceURI(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "compareChildNodePointers",
+          "signature": "compareChildNodePointers(NodePointer,NodePointer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBaseValue",
+          "signature": "getBaseValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isCollection",
+          "signature": "isCollection()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLength",
+          "signature": "getLength()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isLeaf",
+          "signature": "isLeaf()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getName",
+          "signature": "getName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getImmediateNode",
+          "signature": "getImmediateNode()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValue",
+          "signature": "getValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setValue",
+          "signature": "setValue(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "testNode",
+          "signature": "testNode(NodeTest)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "testNode",
+          "signature": "testNode(NodePointer,Object,NodeTest)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: NodePointer"
+        },
+        {
+          "method": "getPrefix",
+          "signature": "getPrefix(Object)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "getLocalName",
+          "signature": "getLocalName(Object)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "isLanguage",
+          "signature": "isLanguage(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createChild",
+          "signature": "createChild(JXPathContext,QName,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createChild",
+          "signature": "createChild(JXPathContext,QName,int,Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createAttribute",
+          "signature": "createAttribute(JXPathContext,QName)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "remove",
+          "signature": "remove()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "asPath",
+          "signature": "asPath()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hashCode",
+          "signature": "hashCode()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "equals",
+          "signature": "equals(Object)",
           "status": "UNSUPPORTED",
           "reason": "Only public static methods are supported"
         }
@@ -2121,6 +2830,151 @@
           "signature": "createFrom(List<Invocation>)",
           "status": "NEEDS_SEMANTIC_MODEL",
           "reason": "No generic value domain for reference type: List<Invocation>"
+        }
+      ]
+    },
+    {
+      "project": "Time",
+      "bug_id": 1,
+      "target_class": "org.joda.time.field.UnsupportedDurationField",
+      "source": "/workspace/target_benchmark/Time_1b/UnsupportedDurationField.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "NEEDS_SEMANTIC_MODEL": 1,
+        "UNSUPPORTED": 21
+      },
+      "methods": [
+        {
+          "method": "getInstance",
+          "signature": "getInstance(DurationFieldType)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: DurationFieldType"
+        },
+        {
+          "method": "getType",
+          "signature": "getType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getName",
+          "signature": "getName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isSupported",
+          "signature": "isSupported()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isPrecise",
+          "signature": "isPrecise()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValue",
+          "signature": "getValue(long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValueAsLong",
+          "signature": "getValueAsLong(long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValue",
+          "signature": "getValue(long,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValueAsLong",
+          "signature": "getValueAsLong(long,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMillis",
+          "signature": "getMillis(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMillis",
+          "signature": "getMillis(long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMillis",
+          "signature": "getMillis(int,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMillis",
+          "signature": "getMillis(long,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "add",
+          "signature": "add(long,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "add",
+          "signature": "add(long,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getDifference",
+          "signature": "getDifference(long,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getDifferenceAsLong",
+          "signature": "getDifferenceAsLong(long,long)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getUnitMillis",
+          "signature": "getUnitMillis()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "compareTo",
+          "signature": "compareTo(DurationField)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "equals",
+          "signature": "equals(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hashCode",
+          "signature": "hashCode()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
         }
       ]
     },

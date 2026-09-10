@@ -20,6 +20,8 @@ class ReadinessCheckTests(unittest.TestCase):
                 {
                     "generation_performed": False,
                     "target_count": 17,
+                    "bug_target_count": 17,
+                    "source_target_count": 17,
                     "target_status_counts": {"AUDITED": 17},
                 }
             ),
@@ -42,7 +44,7 @@ class ReadinessCheckTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
             representatives, feasibility = self._write_minimum_inputs(root)
-            state_path = root / "Result_Round1" / "catalog_loop_state.json"
+            state_path = root / "Result_Round2" / "catalog_loop_state.json"
             state_path.parent.mkdir(parents=True)
             state_path.write_text(
                 json.dumps({"started": True, "status": "STARTED"}),

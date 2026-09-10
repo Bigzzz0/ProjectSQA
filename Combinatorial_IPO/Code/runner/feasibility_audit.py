@@ -23,7 +23,7 @@ from domain.value_generator import (  # noqa: E402
     UnsupportedTypeError,
     get_domain_for_type,
 )
-from runner.catalog import resolve_catalog_targets  # noqa: E402
+from runner.catalog import load_catalog, resolve_catalog_targets  # noqa: E402
 
 
 def _audit_method(
@@ -87,6 +87,7 @@ def _audit_method(
 
 def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
     """Return a non-generating feasibility report for every catalog entry."""
+    catalog_targets = load_catalog(catalog_path)
     resolved_targets, issues = resolve_catalog_targets(catalog_path, target_root)
     targets: List[Dict[str, object]] = list(issues)
 
@@ -99,7 +100,7 @@ def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
                 {
                     "project": target.project,
                     "bug_id": target.bug_id,
-                    "target_class": target.target_class,
+                    "target_class": resolved.target_class,
                     "source": str(resolved.source_file),
                     "status": "ANALYZE_ERROR",
                     "reason": str(exc),
@@ -112,12 +113,12 @@ def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
             if metadata["package"]
             else str(metadata["class"])
         )
-        if actual_class != target.target_class:
+        if actual_class != resolved.target_class:
             targets.append(
                 {
                     "project": target.project,
                     "bug_id": target.bug_id,
-                    "target_class": target.target_class,
+                    "target_class": resolved.target_class,
                     "actual_class": actual_class,
                     "source": str(resolved.source_file),
                     "status": "CATALOG_MISMATCH",
@@ -136,7 +137,7 @@ def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
             {
                 "project": target.project,
                 "bug_id": target.bug_id,
-                "target_class": target.target_class,
+                "target_class": resolved.target_class,
                 "source": str(resolved.source_file),
                 "status": "AUDITED",
                 "method_status_counts": dict(sorted(method_counts.items())),
@@ -152,7 +153,9 @@ def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
         "catalog": str(catalog_path),
         "target_root": str(target_root),
         "generation_performed": False,
-        "target_count": len(targets),
+        "target_count": len(catalog_targets),
+        "bug_target_count": len(catalog_targets),
+        "source_target_count": len(targets),
         "target_status_counts": dict(sorted(target_counts.items())),
         "method_status_counts": dict(sorted(method_counts.items())),
         "targets": targets,
@@ -190,7 +193,8 @@ def main() -> None:
             json.dumps(
                 {
                     "generation_performed": report["generation_performed"],
-                    "target_count": report["target_count"],
+                    "bug_target_count": report["bug_target_count"],
+                    "source_target_count": report["source_target_count"],
                     "target_status_counts": report["target_status_counts"],
                     "method_status_counts": report["method_status_counts"],
                 },

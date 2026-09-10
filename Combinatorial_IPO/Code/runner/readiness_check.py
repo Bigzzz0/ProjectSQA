@@ -129,9 +129,14 @@ def check_readiness(
         feasibility = json.loads(feasibility_path.read_text(encoding="utf-8"))
         if feasibility.get("generation_performed") is not False:
             catalog_issues.append("Feasibility audit must not generate tests")
-        if feasibility.get("target_count") != 17:
+        if feasibility.get("bug_target_count", feasibility.get("target_count")) != 17:
             catalog_issues.append("Feasibility audit does not contain 17 targets")
         statuses = feasibility.get("target_status_counts", {})
+        source_target_count = feasibility.get("source_target_count")
+        if source_target_count is not None and sum(statuses.values()) != source_target_count:
+            catalog_issues.append(
+                "Feasibility source count does not match target status counts"
+            )
         unexpected = set(statuses) - {"AUDITED", "CATALOG_MISMATCH"}
         if unexpected:
             catalog_issues.append(
@@ -143,7 +148,7 @@ def check_readiness(
     known_catalog_mismatches = int(
         feasibility.get("target_status_counts", {}).get("CATALOG_MISMATCH", 0)
     )
-    loop_state_path = ipo_root / "Result_Round1" / "catalog_loop_state.json"
+    loop_state_path = ipo_root / "Result_Round2" / "catalog_loop_state.json"
     loop_started = False
     loop_state = None
     if loop_state_path.is_file():

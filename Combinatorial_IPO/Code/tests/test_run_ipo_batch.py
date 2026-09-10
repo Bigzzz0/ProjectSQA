@@ -120,15 +120,30 @@ public class Other {
             )
 
             self.assertEqual(str(catalog), manifest["catalog"])
+            self.assertEqual("Result_Round2", manifest["result_directory"])
             self.assertEqual(["Sample"], [record["class"] for record in manifest["records"]])
             self.assertFalse((output_root / "Models" / "Demo_1b" / "Other").exists())
             loop_state = json.loads(
-                (output_root / "Result_Round1" / "catalog_loop_state.json").read_text(
+                (output_root / "Result_Round2" / "catalog_loop_state.json").read_text(
                     encoding="utf-8"
                 )
             )
             self.assertTrue(loop_state["started"])
             self.assertEqual("COMPLETED", loop_state["status"])
+            self.assertFalse((output_root / "Result_Round1").exists())
+
+    def test_catalog_run_cannot_write_result_round1(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            catalog = root / "catalog.json"
+            catalog.write_text("[]", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "must use Result_Round2"):
+                run_batch(
+                    target_root=root,
+                    output_root=root / "output",
+                    catalog_path=catalog,
+                    result_directory="Result_Round1",
+                )
 
     def test_suite_generation_failure_is_isolated_per_method(self) -> None:
         source = """package example;

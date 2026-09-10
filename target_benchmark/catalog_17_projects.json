@@ -2,171 +2,351 @@
   {
     "project": "Chart",
     "bug_id": 1,
+    "dir": "Chart_1b",
     "target_class": "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer",
     "simple_name": "AbstractCategoryItemRenderer",
-    "dir": "Chart_1b",
-    "domain": "Data Visualization & Chart Rendering",
-    "description": "Null check and dataset null handling in category plot item rendering",
-    "trigger_test": "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"
+    "modified_sources": [
+      "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer"
+    ],
+    "trigger_test": "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660",
+    "trigger_tests": [
+      "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"
+    ],
+    "bug_report_id": "983",
+    "bug_report_url": "https://sourceforge.net/p/jfreechart/bugs/983",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Data Visualization & Chart Rendering"
   },
   {
     "project": "Cli",
     "bug_id": 1,
+    "dir": "Cli_1b",
     "target_class": "org.apache.commons.cli.CommandLine",
     "simple_name": "CommandLine",
-    "dir": "Cli_1b",
-    "domain": "Command-line Argument Parsing",
-    "description": "Handling multiple argument options with missing or hyphenated values",
-    "trigger_test": "org.apache.commons.cli.CommandLineTest::testBuilder"
+    "modified_sources": [
+      "org.apache.commons.cli.CommandLine"
+    ],
+    "trigger_test": "org.apache.commons.cli.bug.BugCLI13Test::testCLI13",
+    "trigger_tests": [
+      "org.apache.commons.cli.bug.BugCLI13Test::testCLI13"
+    ],
+    "bug_report_id": "CLI-13",
+    "bug_report_url": "https://issues.apache.org/jira/browse/CLI-13",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Command-line Argument Parsing"
   },
   {
     "project": "Closure",
     "bug_id": 1,
+    "dir": "Closure_1b",
     "target_class": "com.google.javascript.jscomp.RemoveUnusedVars",
     "simple_name": "RemoveUnusedVars",
-    "dir": "Closure_1b",
-    "domain": "JavaScript Compiler & AST Optimization",
-    "description": "Unused function parameters removal in simple mode vs advanced optimization",
-    "trigger_test": "com.google.javascript.jscomp.RemoveUnusedVarsTest::testIssue168b"
+    "modified_sources": [
+      "com.google.javascript.jscomp.RemoveUnusedVars"
+    ],
+    "trigger_test": "com.google.javascript.jscomp.CommandLineRunnerTest::testSimpleModeLeavesUnusedParams",
+    "trigger_tests": [
+      "com.google.javascript.jscomp.CommandLineRunnerTest::testSimpleModeLeavesUnusedParams",
+      "com.google.javascript.jscomp.CommandLineRunnerTest::testForwardDeclareDroppedTypes",
+      "com.google.javascript.jscomp.CommandLineRunnerTest::testDebugFlag1",
+      "com.google.javascript.jscomp.IntegrationTest::testIssue787",
+      "com.google.javascript.jscomp.RemoveUnusedVarsTest::testRemoveGlobal1",
+      "com.google.javascript.jscomp.RemoveUnusedVarsTest::testRemoveGlobal2",
+      "com.google.javascript.jscomp.RemoveUnusedVarsTest::testRemoveGlobal3",
+      "com.google.javascript.jscomp.RemoveUnusedVarsTest::testIssue168b"
+    ],
+    "bug_report_id": "253",
+    "bug_report_url": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-253.json",
+    "generated_from": "defects4j_info.txt",
+    "domain": "JavaScript Compiler & AST Optimization"
   },
   {
     "project": "Codec",
     "bug_id": 1,
-    "target_class": "org.apache.commons.codec.language.Soundex",
-    "simple_name": "Soundex",
     "dir": "Codec_1b",
-    "domain": "Phonetic Algorithms & String Encoding",
-    "description": "Character mapping and uppercase locale independence in Soundex phonetic encoding",
-    "trigger_test": "org.apache.commons.codec.language.SoundexTest::testLocaleIndependence"
+    "target_class": "org.apache.commons.codec.language.Caverphone",
+    "simple_name": "Caverphone",
+    "modified_sources": [
+      "org.apache.commons.codec.language.Caverphone",
+      "org.apache.commons.codec.language.Metaphone",
+      "org.apache.commons.codec.language.SoundexUtils"
+    ],
+    "trigger_test": "org.apache.commons.codec.language.CaverphoneTest::testLocaleIndependence",
+    "trigger_tests": [
+      "org.apache.commons.codec.language.CaverphoneTest::testLocaleIndependence",
+      "org.apache.commons.codec.language.DoubleMetaphoneTest::testLocaleIndependence",
+      "org.apache.commons.codec.language.MetaphoneTest::testLocaleIndependence",
+      "org.apache.commons.codec.language.RefinedSoundexTest::testLocaleIndependence",
+      "org.apache.commons.codec.language.SoundexTest::testLocaleIndependence"
+    ],
+    "bug_report_id": "CODEC-65",
+    "bug_report_url": "https://issues.apache.org/jira/browse/CODEC-65",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Phonetic Algorithms & String Encoding"
   },
   {
     "project": "Collections",
     "bug_id": 25,
+    "dir": "Collections_25b",
     "target_class": "org.apache.commons.collections4.IteratorUtils",
     "simple_name": "IteratorUtils",
-    "dir": "Collections_25b",
-    "domain": "Data Structures & Collections Framework",
-    "description": "Empty iterator singleton handling and generic type safety",
-    "trigger_test": "org.apache.commons.collections4.IteratorUtilsTest::testCollIterator"
+    "modified_sources": [
+      "org.apache.commons.collections4.IteratorUtils"
+    ],
+    "trigger_test": "org.apache.commons.collections4.IteratorUtilsTest::testCollatedIterator",
+    "trigger_tests": [
+      "org.apache.commons.collections4.IteratorUtilsTest::testCollatedIterator"
+    ],
+    "bug_report_id": "COLLECTIONS-566",
+    "bug_report_url": "https://issues.apache.org/jira/browse/COLLECTIONS-566",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Data Structures & Collections Framework"
   },
   {
     "project": "Compress",
     "bug_id": 1,
-    "target_class": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
-    "simple_name": "CpioArchiveInputStream",
     "dir": "Compress_1b",
-    "domain": "File Compression & Binary Archiving",
-    "description": "Stream boundary detection and EOF trailer marker parsing in CPIO archive",
-    "trigger_test": "org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive"
+    "target_class": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+    "simple_name": "CpioArchiveOutputStream",
+    "modified_sources": [
+      "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream"
+    ],
+    "trigger_test": "org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive",
+    "trigger_tests": [
+      "org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive"
+    ],
+    "bug_report_id": "COMPRESS-28",
+    "bug_report_url": "https://issues.apache.org/jira/browse/COMPRESS-28",
+    "generated_from": "defects4j_info.txt",
+    "domain": "File Compression & Binary Archiving"
   },
   {
     "project": "Csv",
     "bug_id": 1,
+    "dir": "Csv_1b",
     "target_class": "org.apache.commons.csv.ExtendedBufferedReader",
     "simple_name": "ExtendedBufferedReader",
-    "dir": "Csv_1b",
-    "domain": "Text Processing & Delimited Formats",
-    "description": "Line number and lookahead buffer counting when reading CRLF line breaks",
-    "trigger_test": "org.apache.commons.csv.CSVParserTest::testBackslashEscaping"
+    "modified_sources": [
+      "org.apache.commons.csv.ExtendedBufferedReader"
+    ],
+    "trigger_test": "org.apache.commons.csv.CSVParserTest::testGetLineNumberWithCR",
+    "trigger_tests": [
+      "org.apache.commons.csv.CSVParserTest::testGetLineNumberWithCR"
+    ],
+    "bug_report_id": "CSV-75",
+    "bug_report_url": "https://issues.apache.org/jira/browse/CSV-75",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Text Processing & Delimited Formats"
   },
   {
     "project": "Gson",
     "bug_id": 1,
+    "dir": "Gson_1b",
     "target_class": "com.google.gson.TypeInfoFactory",
     "simple_name": "TypeInfoFactory",
-    "dir": "Gson_1b",
-    "domain": "JSON Serialization & Reflection",
-    "description": "Generic type argument resolution for parameterized and wildcard types",
-    "trigger_test": "com.google.gson.functional.TypeHierarchyAdapterTest::testTypeHierarchy"
+    "modified_sources": [
+      "com.google.gson.TypeInfoFactory"
+    ],
+    "trigger_test": "com.google.gson.functional.TypeVariableTest::testSingle",
+    "trigger_tests": [
+      "com.google.gson.functional.TypeVariableTest::testSingle"
+    ],
+    "bug_report_id": "40",
+    "bug_report_url": "https://github.com/google/gson/issues/40",
+    "generated_from": "defects4j_info.txt",
+    "domain": "JSON Serialization & Reflection"
   },
   {
     "project": "JacksonCore",
     "bug_id": 1,
+    "dir": "JacksonCore_1b",
     "target_class": "com.fasterxml.jackson.core.io.NumberInput",
     "simple_name": "NumberInput",
-    "dir": "JacksonCore_1b",
-    "domain": "High-Performance JSON Tokenizer",
-    "description": "BigDecimal parsing scale and precision limit checking without DoS vulnerability",
-    "trigger_test": "com.fasterxml.jackson.core.io.TestNumberInput::testParseBigDecimal"
+    "modified_sources": [
+      "com.fasterxml.jackson.core.io.NumberInput",
+      "com.fasterxml.jackson.core.util.TextBuffer"
+    ],
+    "trigger_test": "com.fasterxml.jackson.core.json.TestParserNonStandard::testAllowNaN",
+    "trigger_tests": [
+      "com.fasterxml.jackson.core.json.TestParserNonStandard::testAllowNaN"
+    ],
+    "bug_report_id": "98",
+    "bug_report_url": "https://github.com/FasterXML/jackson-core/issues/98",
+    "generated_from": "defects4j_info.txt",
+    "domain": "High-Performance JSON Tokenizer"
   },
   {
     "project": "JacksonDatabind",
     "bug_id": 1,
-    "target_class": "com.fasterxml.jackson.databind.JavaType",
-    "simple_name": "JavaType",
     "dir": "JacksonDatabind_1b",
-    "domain": "Object Mapping & Type Introspection",
-    "description": "Generic array type resolution and null type handling",
-    "trigger_test": "com.fasterxml.jackson.databind.type.TestTypeFactory::testNullType"
+    "target_class": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+    "simple_name": "BeanPropertyWriter",
+    "modified_sources": [
+      "com.fasterxml.jackson.databind.ser.BeanPropertyWriter"
+    ],
+    "trigger_test": "com.fasterxml.jackson.databind.struct.TestPOJOAsArray::testNullColumn",
+    "trigger_tests": [
+      "com.fasterxml.jackson.databind.struct.TestPOJOAsArray::testNullColumn"
+    ],
+    "bug_report_id": "223",
+    "bug_report_url": "https://github.com/FasterXML/jackson-databind/issues/223",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Object Mapping & Type Introspection"
   },
   {
     "project": "JacksonXml",
     "bug_id": 1,
+    "dir": "JacksonXml_1b",
     "target_class": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
     "simple_name": "FromXmlParser",
-    "dir": "JacksonXml_1b",
-    "domain": "XML Data Binding",
-    "description": "Empty element text token state transition in streaming parser",
-    "trigger_test": "com.fasterxml.jackson.dataformat.xml.deser.TestXmlTokenStream::testRootAttributes"
+    "modified_sources": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser"
+    ],
+    "trigger_test": "com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test::testNestedUnwrappedLists180",
+    "trigger_tests": [
+      "com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test::testNestedUnwrappedLists180",
+      "com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedListsTest::testNestedWithEmpty2",
+      "com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedListsTest::testNestedWithEmpty"
+    ],
+    "bug_report_id": "180",
+    "bug_report_url": "https://github.com/FasterXML/jackson-dataformat-xml/issues/180",
+    "generated_from": "defects4j_info.txt",
+    "domain": "XML Data Binding"
   },
   {
     "project": "Jsoup",
     "bug_id": 1,
-    "target_class": "org.jsoup.nodes.Element",
-    "simple_name": "Element",
     "dir": "Jsoup_1b",
-    "domain": "HTML Parsing & DOM Tree Manipulation",
-    "description": "Preserving whitespace and block-level line breaks when appending text nodes",
-    "trigger_test": "org.jsoup.nodes.ElementTest::testSetHtmlTitle"
+    "target_class": "org.jsoup.nodes.Document",
+    "simple_name": "Document",
+    "modified_sources": [
+      "org.jsoup.nodes.Document"
+    ],
+    "trigger_test": "org.jsoup.parser.ParserTest::createsStructureFromBodySnippet",
+    "trigger_tests": [
+      "org.jsoup.parser.ParserTest::createsStructureFromBodySnippet"
+    ],
+    "bug_report_id": "23",
+    "bug_report_url": "https://github.com/jhy/jsoup/issues/23",
+    "generated_from": "defects4j_info.txt",
+    "domain": "HTML Parsing & DOM Tree Manipulation"
   },
   {
     "project": "JxPath",
     "bug_id": 1,
+    "dir": "JxPath_1b",
     "target_class": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
     "simple_name": "DOMNodePointer",
-    "dir": "JxPath_1b",
-    "domain": "XML XPath Query Engine",
-    "description": "Namespace URI resolution and attribute pointer indexing on DOM elements",
-    "trigger_test": "org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testAxisChild"
+    "modified_sources": [
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer"
+    ],
+    "trigger_test": "org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testGetNode",
+    "trigger_tests": [
+      "org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testGetNode",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMModelTest::testGetNode"
+    ],
+    "bug_report_id": "JXPATH-12",
+    "bug_report_url": "https://issues.apache.org/jira/browse/JXPATH-12",
+    "generated_from": "defects4j_info.txt",
+    "domain": "XML XPath Query Engine"
   },
   {
     "project": "Lang",
     "bug_id": 1,
+    "dir": "Lang_1b",
     "target_class": "org.apache.commons.lang3.math.NumberUtils",
     "simple_name": "NumberUtils",
-    "dir": "Lang_1b",
-    "domain": "Core Java Helper Utilities",
-    "description": "Hexadecimal string with type specifier prefix parsing to Number",
-    "trigger_test": "org.apache.commons.lang3.math.NumberUtilsTest::testLang747"
+    "modified_sources": [
+      "org.apache.commons.lang3.math.NumberUtils"
+    ],
+    "trigger_test": "org.apache.commons.lang3.math.NumberUtilsTest::TestLang747",
+    "trigger_tests": [
+      "org.apache.commons.lang3.math.NumberUtilsTest::TestLang747"
+    ],
+    "bug_report_id": "LANG-747",
+    "bug_report_url": "https://issues.apache.org/jira/browse/LANG-747",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Core Java Helper Utilities"
   },
   {
     "project": "Math",
     "bug_id": 2,
+    "dir": "Math_2b",
     "target_class": "org.apache.commons.math3.distribution.HypergeometricDistribution",
     "simple_name": "HypergeometricDistribution",
-    "dir": "Math_2b",
-    "domain": "Numerical Computing & Discrete Mathematics",
-    "description": "Integer overflow in mean calculation producing negative sample value",
-    "trigger_test": "org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021"
+    "modified_sources": [
+      "org.apache.commons.math3.distribution.HypergeometricDistribution"
+    ],
+    "trigger_test": "org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021",
+    "trigger_tests": [
+      "org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021"
+    ],
+    "bug_report_id": "MATH-1021",
+    "bug_report_url": "https://issues.apache.org/jira/browse/MATH-1021",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Numerical Computing & Discrete Mathematics"
   },
   {
     "project": "Mockito",
     "bug_id": 1,
+    "dir": "Mockito_1b",
     "target_class": "org.mockito.internal.invocation.InvocationMatcher",
     "simple_name": "InvocationMatcher",
-    "dir": "Mockito_1b",
-    "domain": "Testing & Dynamic Mocking Framework",
-    "description": "Varargs method invocation parameter matching and argument captor",
-    "trigger_test": "org.mockitousage.basicapi.UsingVarargsTest::shouldMatchEasilyEmptyVararg"
+    "modified_sources": [
+      "org.mockito.internal.invocation.InvocationMatcher"
+    ],
+    "trigger_test": "org.mockito.internal.invocation.InvocationMatcherTest::should_capture_arguments_when_args_count_does_NOT_match",
+    "trigger_tests": [
+      "org.mockito.internal.invocation.InvocationMatcherTest::should_capture_arguments_when_args_count_does_NOT_match",
+      "org.mockito.internal.util.reflection.FieldInitializerTest::can_instantiate_class_with_parameterized_constructor",
+      "org.mockito.internal.util.reflection.ParameterizedConstructorInstantiatorTest::should_report_failure_if_constructor_throws_exception",
+      "org.mockito.internal.util.reflection.ParameterizedConstructorInstantiatorTest::should_fail_if_an_argument_instance_type_do_not_match_wanted_type",
+      "org.mockito.internal.util.reflection.ParameterizedConstructorInstantiatorTest::should_instantiate_type_with_vararg_constructor",
+      "org.mockito.internal.util.reflection.ParameterizedConstructorInstantiatorTest::should_instantiate_type_if_resolver_provide_matching_types",
+      "org.mockitousage.basicapi.ResetTest::shouldRemoveAllStubbing",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldVerifyWithNullVarArgArray",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldVerifyWithAnyObject",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldStubBooleanVarargs",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldMatchEasilyEmptyVararg",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldVerifyBooleanVarargs",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldStubCorrectlyWhenMixedVarargsUsed",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldStubStringVarargs",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldStubCorrectlyWhenDoubleStringAndMixedVarargsUsed",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldVerifyStringVarargs",
+      "org.mockitousage.basicapi.UsingVarargsTest::shouldVerifyObjectVarargs",
+      "org.mockitousage.bugs.VarargsErrorWhenCallingRealMethodTest::shouldNotThrowAnyException",
+      "org.mockitousage.bugs.varargs.VarargsAndAnyObjectPicksUpExtraInvocationsTest::shouldVerifyCorrectlyWithAnyVarargs",
+      "org.mockitousage.bugs.varargs.VarargsAndAnyObjectPicksUpExtraInvocationsTest::shouldVerifyCorrectlyNumberOfInvocationsUsingAnyVarargAndEqualArgument",
+      "org.mockitousage.bugs.varargs.VarargsNotPlayingWithAnyObjectTest::shouldStubUsingAnyVarargs",
+      "org.mockitousage.matchers.VerificationAndStubbingUsingMatchersTest::shouldVerifyUsingMatchers",
+      "org.mockitousage.stubbing.BasicStubbingTest::test_stub_only_not_verifiable",
+      "org.mockitousage.stubbing.BasicStubbingTest::should_evaluate_latest_stubbing_first",
+      "org.mockitousage.stubbing.DeprecatedStubbingTest::shouldEvaluateLatestStubbingFirst",
+      "org.mockitousage.verification.VerificationInOrderMixedWithOrdiraryVerificationTest::shouldUseEqualsToVerifyMethodVarargs"
+    ],
+    "bug_report_id": "188",
+    "bug_report_url": "https://github.com/mockito/mockito/issues/188",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Testing & Dynamic Mocking Framework"
   },
   {
     "project": "Time",
     "bug_id": 1,
-    "target_class": "org.joda.time.Partial",
-    "simple_name": "Partial",
     "dir": "Time_1b",
-    "domain": "Date & Time Calculation",
-    "description": "Field order comparison and chronological field validation in Partial datetime",
-    "trigger_test": "org.joda.time.TestPartial_Basics::testCompareTo"
+    "target_class": "org.joda.time.field.UnsupportedDurationField",
+    "simple_name": "UnsupportedDurationField",
+    "modified_sources": [
+      "org.joda.time.field.UnsupportedDurationField",
+      "org.joda.time.Partial"
+    ],
+    "trigger_test": "org.joda.time.TestPartial_Constructors::testConstructorEx7_TypeArray_intArray",
+    "trigger_tests": [
+      "org.joda.time.TestPartial_Constructors::testConstructorEx7_TypeArray_intArray"
+    ],
+    "bug_report_id": "93",
+    "bug_report_url": "https://github.com/JodaOrg/joda-time/issues/93",
+    "generated_from": "defects4j_info.txt",
+    "domain": "Date & Time Calculation"
   }
 ]

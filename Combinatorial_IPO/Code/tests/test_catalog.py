@@ -58,11 +58,36 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual("CATALOG_MISMATCH", issues[0]["status"])
             self.assertEqual(["Other.java"], issues[0]["available_sources"])
 
+    def test_all_modified_sources_are_resolved(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            target_directory = root / "targets" / "Demo_1b"
+            target_directory.mkdir(parents=True)
+            for name in ("Sample.java", "Other.java"):
+                (target_directory / name).write_text(
+                    "public class {} {{}}".format(Path(name).stem),
+                    encoding="utf-8",
+                )
+            entry = _entry(
+                modified_sources=["example.Sample", "example.Other"],
+                trigger_tests=["example.SampleTest::testOne"],
+            )
+            catalog = root / "catalog.json"
+            catalog.write_text(json.dumps([entry]), encoding="utf-8")
+
+            resolved, issues = resolve_catalog_targets(catalog, root / "targets")
+
+            self.assertEqual([], issues)
+            self.assertEqual(
+                ["example.Sample", "example.Other"],
+                [item.target_class for item in resolved],
+            )
+
     def test_duplicate_project_bug_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
             catalog = Path(temporary_directory) / "catalog.json"
             catalog.write_text(
-                json.dumps([_entry(), _entry(simple_name="Other")]),
+                json.dumps([_entry(), _entry()]),
                 encoding="utf-8",
             )
 

@@ -36,7 +36,7 @@ Readiness representatives ผ่าน fixed-version verification แล้ว 4
 - `NumberInput.parseAsDouble(String,double)`: 60 tests, 60/60 pairs
 - `NumberInput.inLongRange(String,boolean)`: 24 tests, 24/24 pairs
 
-การตรวจ catalog แบบไม่ generate พบ 13 targets ที่อ่าน source ได้ และ catalog mismatch 4 targets ซึ่งระบบบันทึกตามจริงโดยไม่เดา source ทดแทน รายละเอียดอยู่ใน `Result_Round1/feasibility_audit.json` และผล readiness ล่าสุดอยู่ใน `Result_Round1/readiness_report.json` ทั้งสองไฟล์ยืนยันว่า `generation_performed`/`loop_started` เป็น `false` โดยเมื่อเริ่ม catalog batch ระบบจะสร้าง `Result_Round1/catalog_loop_state.json` ทันทีเพื่อไม่ให้ readiness รายงานสถานะจากค่าคงที่
+Catalog ถูกสร้างจาก `defects4j_info.txt` โดยอัตโนมัติและตรวจแบบไม่ generate แล้วครบ 17 bug targets, 22 modified source classes และไม่มี catalog mismatch รายละเอียดอยู่ใน `Result_Round1/feasibility_audit.json` และผล readiness ล่าสุดอยู่ใน `Result_Round1/readiness_report.json` ทั้งสองไฟล์ยืนยันว่า `generation_performed`/`loop_started` เป็น `false` โดยเมื่อเริ่ม catalog batch ระบบจะสร้าง `Result_Round2/catalog_loop_state.json` ทันทีเพื่อไม่ให้ readiness รายงานสถานะจากค่าคงที่
 
 ## Project structure
 
@@ -54,11 +54,12 @@ Combinatorial_IPO/
 │   └── tests/                 # Python unit and integration tests
 ├── baselines/                 # Reference results; PICT is not native IPO
 ├── Models/                    # Native IPO factor-domain artifacts
-├── Result_Round1/             # Native IPO combinations, inputs and oracle
+├── Result_Round1/             # Representative trials and readiness evidence
+├── Result_Round2/             # Results from the real catalog loop
 └── TestCode/                  # Fixed-verified JUnit suites for Member 4
 ```
 
-PICT pilot artifacts are archived under `baselines/pict/`. ตำแหน่ง `Models/`, `Result_Round1/` และ `TestCode/` สงวนไว้สำหรับผลจาก native IPO เท่านั้น
+PICT pilot artifacts are archived under `baselines/pict/`. `Result_Round1/` เก็บตัวทดลอง native IPO และ readiness โดยไม่ถูก catalog-loop เขียนทับ ส่วนผลลูปจริงอยู่ `Result_Round2/` และ JUnit ที่ verify ผ่านอยู่ `TestCode/`
 
 ## Run tests
 
@@ -71,6 +72,12 @@ docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO/Code && python
 Tests ไม่เรียก PICT executable และใช้ temporary directories สำหรับ runner integration
 
 ## Audit and readiness checks
+
+สร้าง catalog ใหม่จาก ground truth ในแต่ละ `defects4j_info.txt` (ฟิลด์ `target_class`/`simple_name` ยังคงไว้เป็น primary modified source เพื่อรองรับเครื่องมือเดิมของทีม):
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace && python3 Combinatorial_IPO/Code/runner/generate_catalog.py --target-root /workspace/target_benchmark --output /workspace/target_benchmark/catalog_17_projects.json --preserve-domains-from /workspace/target_benchmark/catalog_17_projects.json'
+```
 
 ตรวจ 17-target catalog โดยไม่สร้าง combinations, oracle หรือ JUnit:
 
@@ -112,13 +119,21 @@ docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Cod
 
 ## Start the 17-target loop
 
-ให้ผู้ควบคุมการทดลองเป็นผู้สั่งคำสั่งนี้เองหลังตรวจ `readiness_check.py` ผ่าน:
+วิธีหลักสำหรับผู้ควบคุมการทดลอง: เปิด `Code/runner/start_catalog_loop.py` ใน editor แล้วกด **Run Python File** ได้ทันที ไม่ต้องใส่ arguments สคริปต์จะตรวจ readiness ก่อนและจะไม่เริ่มลูปหากตรวจไม่ผ่าน
+
+หรือสั่ง entry point เดียวจาก repository root:
 
 ```powershell
-docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/run_ipo_batch.py --target-root /workspace/target_benchmark --catalog /workspace/target_benchmark/catalog_17_projects.json --collect-oracles --verify-suites'
+python Combinatorial_IPO/Code/runner/start_catalog_loop.py
 ```
 
-คำสั่งนี้จะประมวลผลเฉพาะ source ที่ระบุใน catalog, เก็บ fixed-version oracle และเผยแพร่เฉพาะ suite ที่ verify ผ่าน ทั้ง 4 catalog mismatches จะถูกรายงานและข้ามอย่างปลอดภัยแทนการเลือกคลาสอื่นโดยอัตโนมัติ
+คำสั่งแบบละเอียดที่ entry point เรียกภายใน Dockerคือ:
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/run_ipo_batch.py --target-root /workspace/target_benchmark --catalog /workspace/target_benchmark/catalog_17_projects.json --result-directory Result_Round2 --collect-oracles --verify-suites'
+```
+
+คำสั่งนี้จะประมวลผล modified sources ทั้งหมดที่มาจาก Defects4J metadata, เก็บ combinations/inputs/oracles/records/manifest ใน `Result_Round2/` และเผยแพร่เฉพาะ suite ที่ fixed-version verification ผ่านลง `TestCode/` ตัว runner ปฏิเสธ catalog-loop ที่พยายามเขียน `Result_Round1/`
 
 Member 1 ไม่รัน buggy version, coverage หรือ Fault Detection Rate ในขั้นนี้ งานดังกล่าวเป็นความรับผิดชอบของ Member 4
 
