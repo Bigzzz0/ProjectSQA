@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "format": "new",
+      "entry_count": "one",
+      "close_mode": "close"
+    },
+    "mode": "invariant",
+    "description": "close() must finish the archive so all entries can be read without an explicit finish call."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "format": "new",
+      "entry_count": "two",
+      "close_mode": "finish_then_close"
+    },
+    "mode": "invariant",
+    "description": "close() must finish the archive so all entries can be read without an explicit finish call."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "format": "new_crc",
+      "entry_count": "one",
+      "close_mode": "finish_then_close"
+    },
+    "mode": "invariant",
+    "description": "close() must finish the archive so all entries can be read without an explicit finish call."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "format": "new_crc",
+      "entry_count": "two",
+      "close_mode": "close"
+    },
+    "mode": "invariant",
+    "description": "close() must finish the archive so all entries can be read without an explicit finish call."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "format": "new",
+      "entry_count": "two",
+      "close_mode": "close"
+    },
+    "mode": "invariant",
+    "description": "close() must finish the archive so all entries can be read without an explicit finish call."
+  }
+]

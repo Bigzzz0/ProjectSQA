@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "null_column": "first",
+      "value": "bar",
+      "mapper_reuse": "fresh"
+    },
+    "mode": "invariant",
+    "description": "A null property in tabular array output must emit exactly one null column and continue with later columns."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "null_column": "first",
+      "value": "text",
+      "mapper_reuse": "shared_style"
+    },
+    "mode": "invariant",
+    "description": "A null property in tabular array output must emit exactly one null column and continue with later columns."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "null_column": "second",
+      "value": "bar",
+      "mapper_reuse": "shared_style"
+    },
+    "mode": "invariant",
+    "description": "A null property in tabular array output must emit exactly one null column and continue with later columns."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "null_column": "second",
+      "value": "text",
+      "mapper_reuse": "fresh"
+    },
+    "mode": "invariant",
+    "description": "A null property in tabular array output must emit exactly one null column and continue with later columns."
+  }
+]

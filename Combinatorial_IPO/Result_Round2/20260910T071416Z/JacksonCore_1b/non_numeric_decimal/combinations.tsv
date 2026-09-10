@@ -1,0 +1,8 @@
+backend	token	feature_configuration
+reader	nan	factory
+reader	positive_infinity	parser
+reader	negative_infinity	factory
+stream	nan	parser
+stream	positive_infinity	factory
+stream	negative_infinity	parser
+stream	nan	factory

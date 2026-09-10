@@ -1,0 +1,14 @@
+{
+  "leading_text": [
+    "foo",
+    "hello"
+  ],
+  "tag": [
+    "bold",
+    "italic"
+  ],
+  "trailing_text": [
+    "baz",
+    "world"
+  ]
+}

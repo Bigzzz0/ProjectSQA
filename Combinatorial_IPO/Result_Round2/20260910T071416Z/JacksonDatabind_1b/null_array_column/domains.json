@@ -1,0 +1,14 @@
+{
+  "null_column": [
+    "first",
+    "second"
+  ],
+  "value": [
+    "bar",
+    "text"
+  ],
+  "mapper_reuse": [
+    "fresh",
+    "shared_style"
+  ]
+}

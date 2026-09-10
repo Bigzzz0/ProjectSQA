@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "backend": "reader",
+      "token": "nan",
+      "feature_configuration": "factory"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "backend": "reader",
+      "token": "positive_infinity",
+      "feature_configuration": "parser"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "backend": "reader",
+      "token": "negative_infinity",
+      "feature_configuration": "factory"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "backend": "stream",
+      "token": "nan",
+      "feature_configuration": "parser"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "backend": "stream",
+      "token": "positive_infinity",
+      "feature_configuration": "factory"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "backend": "stream",
+      "token": "negative_infinity",
+      "feature_configuration": "parser"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "backend": "stream",
+      "token": "nan",
+      "feature_configuration": "factory"
+    },
+    "mode": "invariant",
+    "description": "NaN and infinities cannot be represented as BigDecimal and must produce an explanatory exception."
+  }
+]

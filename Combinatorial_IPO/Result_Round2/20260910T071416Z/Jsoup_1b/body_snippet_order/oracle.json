@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "leading_text": "foo",
+      "tag": "bold",
+      "trailing_text": "baz"
+    },
+    "mode": "invariant",
+    "description": "Document normalization must retain text-node order around body elements."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "leading_text": "foo",
+      "tag": "italic",
+      "trailing_text": "world"
+    },
+    "mode": "invariant",
+    "description": "Document normalization must retain text-node order around body elements."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "leading_text": "hello",
+      "tag": "bold",
+      "trailing_text": "world"
+    },
+    "mode": "invariant",
+    "description": "Document normalization must retain text-node order around body elements."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "leading_text": "hello",
+      "tag": "italic",
+      "trailing_text": "baz"
+    },
+    "mode": "invariant",
+    "description": "Document normalization must retain text-node order around body elements."
+  }
+]

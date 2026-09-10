@@ -1,0 +1,8 @@
+model	xpath	lenient
+dom	root	strict
+dom	element	lenient
+dom	attribute	strict
+jdom	root	lenient
+jdom	element	strict
+jdom	attribute	lenient
+jdom	root	strict

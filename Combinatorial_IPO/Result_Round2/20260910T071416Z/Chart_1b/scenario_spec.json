@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Chart",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.jfree.chart.renderer.category",
+    "class_name": "Chart_1b_IPOTest",
+    "imports": ["org.jfree.chart.LegendItemCollection", "org.jfree.chart.plot.CategoryPlot", "org.jfree.data.category.DefaultCategoryDataset"]
+  },
+  "scenarios": [{
+    "id": "legend_items_for_dataset",
+    "target_classes": ["org.jfree.chart.renderer.category.AbstractCategoryItemRenderer"],
+    "entrypoint": "AbstractCategoryItemRenderer.getLegendItems()",
+    "invocation_kind": "instance",
+    "factors": {
+      "dataset_size": {"missing": "-1", "empty": "0", "one_series": "1", "two_series": "2"},
+      "renderer_index": {"primary": "0", "secondary": "1"},
+      "column_count": {"one": "1", "two": "2"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"dataset_size": "one_series", "renderer_index": "primary", "column_count": "one"}],
+    "body": "int seriesCount = {{dataset_size}};\nint rendererIndex = {{renderer_index}};\nint columns = {{column_count}};\nAbstractCategoryItemRenderer renderer = new LineAndShapeRenderer();\nCategoryPlot plot = new CategoryPlot();\nplot.setRenderer(rendererIndex, renderer);\nif (seriesCount >= 0) {\n    DefaultCategoryDataset dataset = new DefaultCategoryDataset();\n    for (int row = 0; row < seriesCount; row++) {\n        for (int column = 0; column < columns; column++) { dataset.addValue(row + column + 1, \"S\" + row, \"C\" + column); }\n    }\n    plot.setDataset(rendererIndex, dataset);\n}\nLegendItemCollection items = renderer.getLegendItems();\nassertNotNull(items);\nassertEquals(Math.max(0, seriesCount), items.getItemCount());",
+    "oracle": {"mode": "invariant", "description": "Missing or empty datasets yield no legend items; each populated series yields one item."},
+    "evidence": {
+      "patch_file": "Chart/patches/1.src.patch",
+      "trigger_tests": ["org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"],
+      "rationale": "Chart-1 reverses the dataset null guard in getLegendItems; the trigger covers missing, empty, and populated datasets."
+    }
+  }]
+}

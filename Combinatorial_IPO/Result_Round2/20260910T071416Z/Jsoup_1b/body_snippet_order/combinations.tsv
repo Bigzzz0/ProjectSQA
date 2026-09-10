@@ -1,0 +1,5 @@
+leading_text	tag	trailing_text
+foo	bold	baz
+foo	italic	world
+hello	bold	world
+hello	italic	baz

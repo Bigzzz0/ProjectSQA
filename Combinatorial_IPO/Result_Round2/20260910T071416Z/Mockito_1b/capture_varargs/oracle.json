@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "arguments": "empty",
+      "matcher": "any_vararg",
+      "capture_count": "once"
+    },
+    "mode": "invariant",
+    "description": "Vararg capture must not throw for empty or populated varargs and supported matcher forms."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "arguments": "empty",
+      "matcher": "captor",
+      "capture_count": "twice"
+    },
+    "mode": "invariant",
+    "description": "Vararg capture must not throw for empty or populated varargs and supported matcher forms."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "arguments": "two",
+      "matcher": "any_vararg",
+      "capture_count": "twice"
+    },
+    "mode": "invariant",
+    "description": "Vararg capture must not throw for empty or populated varargs and supported matcher forms."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "arguments": "two",
+      "matcher": "captor",
+      "capture_count": "once"
+    },
+    "mode": "invariant",
+    "description": "Vararg capture must not throw for empty or populated varargs and supported matcher forms."
+  }
+]

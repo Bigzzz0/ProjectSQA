@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "field_order": "day_year_month",
+      "values": "ones",
+      "chronology": "iso"
+    },
+    "mode": "invariant",
+    "description": "Invalid field order must be rejected consistently across values and chronologies."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "field_order": "day_year_month",
+      "values": "mixed",
+      "chronology": "gregorian"
+    },
+    "mode": "invariant",
+    "description": "Invalid field order must be rejected consistently across values and chronologies."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "field_order": "year_day_era",
+      "values": "ones",
+      "chronology": "gregorian"
+    },
+    "mode": "invariant",
+    "description": "Invalid field order must be rejected consistently across values and chronologies."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "field_order": "year_day_era",
+      "values": "mixed",
+      "chronology": "iso"
+    },
+    "mode": "invariant",
+    "description": "Invalid field order must be rejected consistently across values and chronologies."
+  }
+]

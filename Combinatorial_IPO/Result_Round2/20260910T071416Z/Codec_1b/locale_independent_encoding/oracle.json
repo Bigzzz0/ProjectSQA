@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "encoder": "caverphone",
+      "locale": "english",
+      "input": "upper_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "encoder": "caverphone",
+      "locale": "turkish",
+      "input": "lower_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "encoder": "metaphone",
+      "locale": "english",
+      "input": "lower_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "encoder": "metaphone",
+      "locale": "turkish",
+      "input": "upper_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "encoder": "soundex",
+      "locale": "english",
+      "input": "upper_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "encoder": "soundex",
+      "locale": "turkish",
+      "input": "lower_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "encoder": "caverphone",
+      "locale": "turkish",
+      "input": "upper_i"
+    },
+    "mode": "invariant",
+    "description": "Encoding must not change with the JVM default locale."
+  }
+]

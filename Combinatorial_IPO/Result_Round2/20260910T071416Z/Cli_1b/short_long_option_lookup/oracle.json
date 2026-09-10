@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "command_name": "short",
+      "lookup_name": "short",
+      "value": "true"
+    },
+    "mode": "invariant",
+    "description": "Short and long aliases must resolve to the same parsed option and value."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "command_name": "short",
+      "lookup_name": "long",
+      "value": "false"
+    },
+    "mode": "invariant",
+    "description": "Short and long aliases must resolve to the same parsed option and value."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "command_name": "long",
+      "lookup_name": "short",
+      "value": "false"
+    },
+    "mode": "invariant",
+    "description": "Short and long aliases must resolve to the same parsed option and value."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "command_name": "long",
+      "lookup_name": "long",
+      "value": "true"
+    },
+    "mode": "invariant",
+    "description": "Short and long aliases must resolve to the same parsed option and value."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "command_name": "short",
+      "lookup_name": "long",
+      "value": "true"
+    },
+    "mode": "invariant",
+    "description": "Short and long aliases must resolve to the same parsed option and value."
+  }
+]

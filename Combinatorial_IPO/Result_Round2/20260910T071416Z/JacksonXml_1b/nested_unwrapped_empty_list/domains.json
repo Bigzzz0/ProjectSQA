@@ -1,0 +1,14 @@
+{
+  "empty_syntax": [
+    "paired",
+    "self_closing"
+  ],
+  "empty_position": [
+    "first",
+    "last"
+  ],
+  "field_name": [
+    "b",
+    "name"
+  ]
+}

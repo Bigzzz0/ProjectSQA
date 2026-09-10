@@ -1,0 +1,14 @@
+[
+  {
+    "type": "compare",
+    "left": "successes",
+    "op": "le",
+    "right": "population"
+  },
+  {
+    "type": "compare",
+    "left": "sample",
+    "op": "le",
+    "right": "population"
+  }
+]

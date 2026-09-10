@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Lang",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.apache.commons.lang3.math",
+    "class_name": "Lang_1b_IPOTest",
+    "imports": ["java.math.BigInteger"]
+  },
+  "scenarios": [{
+    "id": "hexadecimal_boundaries",
+    "target_classes": ["org.apache.commons.lang3.math.NumberUtils"],
+    "entrypoint": "NumberUtils.createNumber(String)",
+    "invocation_kind": "static",
+    "factors": {
+      "prefix": {"lower_0x": "\"0x\"", "upper_0x": "\"0X\"", "hash": "\"#\""},
+      "leading_zeroes": {"none": "\"\"", "two": "\"00\""},
+      "magnitude": {"int_max": "\"7FFFFFFF\"", "int_overflow": "\"80000000\"", "unsigned_int": "\"FFFFFFFF\""}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"prefix": "lower_0x", "leading_zeroes": "none", "magnitude": "int_overflow"}],
+    "body": "String text = {{prefix}} + {{leading_zeroes}} + {{magnitude}};\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+    "oracle": {"mode": "invariant", "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."},
+    "evidence": {
+      "patch_file": "Lang/patches/1.src.patch",
+      "trigger_tests": ["org.apache.commons.lang3.math.NumberUtilsTest::TestLang747"],
+      "rationale": "The patch changes hexadecimal width selection in createNumber and the mandatory seed is the trigger boundary."
+    }
+  }]
+}

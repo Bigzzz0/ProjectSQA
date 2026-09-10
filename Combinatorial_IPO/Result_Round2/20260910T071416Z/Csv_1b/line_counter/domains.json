@@ -1,0 +1,15 @@
+{
+  "line_ending": [
+    "cr",
+    "lf",
+    "crlf"
+  ],
+  "read_mode": [
+    "character",
+    "line"
+  ],
+  "line_count": [
+    "two",
+    "three"
+  ]
+}

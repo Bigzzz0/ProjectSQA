@@ -1,0 +1,16 @@
+{
+  "prefix": [
+    "lower_0x",
+    "upper_0x",
+    "hash"
+  ],
+  "leading_zeroes": [
+    "none",
+    "two"
+  ],
+  "magnitude": [
+    "int_max",
+    "int_overflow",
+    "unsigned_int"
+  ]
+}

@@ -1,0 +1,8 @@
+line_ending	read_mode	line_count
+cr	character	two
+cr	line	three
+lf	character	three
+lf	line	two
+crlf	character	two
+crlf	line	three
+cr	character	three

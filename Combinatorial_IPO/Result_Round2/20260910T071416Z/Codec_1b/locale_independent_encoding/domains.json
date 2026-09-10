@@ -1,0 +1,15 @@
+{
+  "encoder": [
+    "caverphone",
+    "metaphone",
+    "soundex"
+  ],
+  "locale": [
+    "english",
+    "turkish"
+  ],
+  "input": [
+    "upper_i",
+    "lower_i"
+  ]
+}

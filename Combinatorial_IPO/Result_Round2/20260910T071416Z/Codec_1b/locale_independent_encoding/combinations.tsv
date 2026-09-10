@@ -1,0 +1,8 @@
+encoder	locale	input
+caverphone	english	upper_i
+caverphone	turkish	lower_i
+metaphone	english	lower_i
+metaphone	turkish	upper_i
+soundex	english	upper_i
+soundex	turkish	lower_i
+caverphone	turkish	upper_i

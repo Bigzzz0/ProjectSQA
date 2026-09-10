@@ -1,0 +1,6 @@
+[
+  "String leading = \"foo\";\nString tag = \"b\";\nString trailing = \"baz\";\nString html = leading + \" <\" + tag + \">bar</\" + tag + \"> \" + trailing;\nDocument document = Jsoup.parse(html);\nassertEquals(leading + \" bar \" + trailing, document.text());",
+  "String leading = \"foo\";\nString tag = \"i\";\nString trailing = \"world\";\nString html = leading + \" <\" + tag + \">bar</\" + tag + \"> \" + trailing;\nDocument document = Jsoup.parse(html);\nassertEquals(leading + \" bar \" + trailing, document.text());",
+  "String leading = \"hello\";\nString tag = \"b\";\nString trailing = \"world\";\nString html = leading + \" <\" + tag + \">bar</\" + tag + \"> \" + trailing;\nDocument document = Jsoup.parse(html);\nassertEquals(leading + \" bar \" + trailing, document.text());",
+  "String leading = \"hello\";\nString tag = \"i\";\nString trailing = \"baz\";\nString html = leading + \" <\" + tag + \">bar</\" + tag + \"> \" + trailing;\nDocument document = Jsoup.parse(html);\nassertEquals(leading + \" bar \" + trailing, document.text());"
+]

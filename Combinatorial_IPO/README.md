@@ -13,14 +13,14 @@
 Main pipeline ไม่เรียก PICT และไม่ต้องติดตั้ง PICT:
 
 ```text
-Java source
-  -> exact method signature
-  -> factor domains
+Defects4J catalog + approved scenario spec
+  -> defect-related constructor/setup/input/action factors
+  -> constraint-aware valid combinations
   -> native IPO 2-way generation
-  -> independent pair-coverage verification
-  -> concrete Java inputs
-  -> fixed-version oracle
-  -> oracle-backed JUnit 4
+  -> independent valid-pair verification
+  -> Java scenario materialization + invariant/fixed oracle
+  -> fixed-version JUnit 4 verification
+  -> atomic TestCode publication after all 17 targets pass
 ```
 
 ## Current readiness status
@@ -36,7 +36,9 @@ Readiness representatives ผ่าน fixed-version verification แล้ว 4
 - `NumberInput.parseAsDouble(String,double)`: 60 tests, 60/60 pairs
 - `NumberInput.inLongRange(String,boolean)`: 24 tests, 24/24 pairs
 
-Catalog ถูกสร้างจาก `defects4j_info.txt` โดยอัตโนมัติและตรวจแบบไม่ generate แล้วครบ 17 bug targets, 22 modified source classes และไม่มี catalog mismatch รายละเอียดอยู่ใน `Result_Round1/feasibility_audit.json` และผล readiness ล่าสุดอยู่ใน `Result_Round1/readiness_report.json` ทั้งสองไฟล์ยืนยันว่า `generation_performed`/`loop_started` เป็น `false` โดยเมื่อเริ่ม catalog batch ระบบจะสร้าง `Result_Round2/catalog_loop_state.json` ทันทีเพื่อไม่ให้ readiness รายงานสถานะจากค่าคงที่
+Catalog ถูกสร้างจาก `defects4j_info.txt` โดยอัตโนมัติครบ 17 bug targets, 22 modified source classes และ 56 triggering tests โดย approved defect-focused specs อยู่ใน `Configuration/targets/` ครบหนึ่งไฟล์ต่อ bug target
+
+Full scenario run `20260910T071416Z` ผ่าน fixed-version verification ครบ 17/17 targets และเผยแพร่ 17 suites แล้ว ทุก scenario มี native IPO valid-pair coverage 100% รายละเอียดอยู่ใน `Result_Round2/20260910T071416Z/batch_manifest.json` ส่วน `Result_Round1/` ยังคงเป็นหลักฐาน readiness เดิมและไม่ถูกเขียนทับ
 
 ## Project structure
 
@@ -91,7 +93,7 @@ docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Cod
 docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/readiness_check.py'
 ```
 
-คำสั่ง readiness จะสำเร็จเมื่อทั้ง 4 representatives ผ่าน pair coverage, oracle alignment, timeout/class naming, fixed-version verification และ feasibility audit ครบตาม configuration ใน `Configuration/readiness_representatives.json`
+คำสั่ง readiness จะสำเร็จเมื่อทั้ง 4 representatives ผ่านเดิม, feasibility audit ครบ และ approved scenario catalog ตรงกับ 17 bug targets, 22 modified sources และ 56 triggering tests โดยจะบล็อกเฉพาะขณะที่ run เดิมมีสถานะ `STARTED`/`PREFLIGHT`; run ที่จบเป็น `VERIFIED` แล้วสามารถกด Run ซ้ำเพื่อพิสูจน์ reproducibility ได้
 
 ## Safe native IPO trial
 
@@ -130,18 +132,18 @@ python Combinatorial_IPO/Code/runner/start_catalog_loop.py
 คำสั่งแบบละเอียดที่ entry point เรียกภายใน Dockerคือ:
 
 ```powershell
-docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/run_ipo_batch.py --target-root /workspace/target_benchmark --catalog /workspace/target_benchmark/catalog_17_projects.json --result-directory Result_Round2 --collect-oracles --verify-suites'
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/scenario_catalog.py --catalog /workspace/target_benchmark/catalog_17_projects.json --scenarios /workspace/Combinatorial_IPO/Configuration/targets --output-root /workspace/Combinatorial_IPO'
 ```
 
-คำสั่งนี้จะประมวลผล modified sources ทั้งหมดที่มาจาก Defects4J metadata, เก็บ combinations/inputs/oracles/records/manifest ใน `Result_Round2/` และเผยแพร่เฉพาะ suite ที่ fixed-version verification ผ่านลง `TestCode/` ตัว runner ปฏิเสธ catalog-loop ที่พยายามเขียน `Result_Round1/`
+คำสั่งนี้ไม่ auto-scan ทุก method แต่ประมวลผลเฉพาะ approved scenarios ที่โยงกับ patch และ triggering tests เก็บ snapshot, domains, constraints, combinations, materialized inputs, oracle metadata, JUnit และ manifest ใต้ `Result_Round2/<run-id>/` จากนั้นเผยแพร่ `TestCode/` เมื่อ fixed verification ผ่านครบทั้ง 17 targets เท่านั้น
 
 Member 1 ไม่รัน buggy version, coverage หรือ Fault Detection Rate ในขั้นนี้ งานดังกล่าวเป็นความรับผิดชอบของ Member 4
 
 ## Current limitations
 
-- ยืนยัน native IPO end-to-end แล้ว 4 representative methods ตามหัวข้อ Current readiness status; ยังไม่ได้อ้างว่ารองรับทุก signature ใน Defects4J
-- รองรับหลัก ๆ เฉพาะ public static methods ที่มี parameters
-- parser เป็น lightweight regex analyzer
-- constructor, instance method, collection, complex object และ constraints ยังไม่รองรับทั่วไป
-- reference type ที่ไม่มี semantic model และ unsupported type ต้องถูก skip พร้อมสถานะ ห้ามแทนค่าเป็น `null` หรือสร้าง input โดยเดา
-- catalog mismatch ต้องบันทึกและข้าม ห้ามเดา source file ทดแทน
+- Scenario-driven catalog รองรับ 17 targets ที่อนุมัติแล้ว ไม่ได้อ้างว่า config เหล่านี้ใช้ได้กับ Defects4J ทุก bug ID
+- Target ใหม่ต้องมี spec ที่อ้าง modified source, source patch และ triggering test; runner จะไม่ย้อนกลับไป auto-scan เมธอดเพื่อเดา scenario
+- Java snippets ใน spec เป็น trusted configuration ที่ผ่าน fixed compile/run ไม่ใช่ input จากผู้ใช้ภายนอก
+- `null` ใช้ได้เฉพาะเมื่อเป็น input ตามสัญญาและมีเหตุผลจาก defect เช่น null comparator ของ Collections; unknown object type ยังห้าม fallback เป็น `null`
+- Chart รุ่นเก่าต้องใช้ `svn`; Dockerfile ติดตั้ง `subversion` เพื่อให้ rebuild แล้วทำซ้ำได้
+- Member 1 ยังไม่รัน buggy version, coverage หรือ Fault Detection Rate

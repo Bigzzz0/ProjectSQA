@@ -1,0 +1,5 @@
+comparator	left	right
+natural	odd	even
+natural	empty	single
+reverse	odd	single
+reverse	empty	even

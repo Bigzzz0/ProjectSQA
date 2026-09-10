@@ -1,0 +1,9 @@
+dataset_size	renderer_index	column_count
+missing	primary	one
+missing	secondary	two
+empty	primary	two
+empty	secondary	one
+one_series	primary	one
+one_series	secondary	two
+two_series	primary	one
+two_series	secondary	two

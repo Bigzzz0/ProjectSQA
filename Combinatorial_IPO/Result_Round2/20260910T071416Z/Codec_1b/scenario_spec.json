@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Codec",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.apache.commons.codec.language",
+    "class_name": "Codec_1b_IPOTest",
+    "imports": ["java.util.Locale", "org.apache.commons.codec.StringEncoder"]
+  },
+  "scenarios": [{
+    "id": "locale_independent_encoding",
+    "target_classes": ["org.apache.commons.codec.language.Caverphone", "org.apache.commons.codec.language.Metaphone", "org.apache.commons.codec.language.SoundexUtils"],
+    "entrypoint": "StringEncoder.encode(String)",
+    "invocation_kind": "instance",
+    "factors": {
+      "encoder": {"caverphone": "new Caverphone()", "metaphone": "new Metaphone()", "soundex": "new Soundex()"},
+      "locale": {"english": "Locale.ENGLISH", "turkish": "new Locale(\"tr\")"},
+      "input": {"upper_i": "\"I\"", "lower_i": "\"i\""}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"encoder": "caverphone", "locale": "turkish", "input": "upper_i"}],
+    "body": "Locale original = Locale.getDefault();\ntry {\n    StringEncoder encoder = {{encoder}};\n    String input = {{input}};\n    Locale.setDefault(Locale.ENGLISH);\n    String expected = encoder.encode(input);\n    Locale.setDefault({{locale}});\n    assertEquals(expected, encoder.encode(input));\n} finally {\n    Locale.setDefault(original);\n}",
+    "oracle": {"mode": "invariant", "description": "Encoding must not change with the JVM default locale."},
+    "evidence": {
+      "patch_file": "Codec/patches/1.src.patch",
+      "trigger_tests": ["org.apache.commons.codec.language.CaverphoneTest::testLocaleIndependence", "org.apache.commons.codec.language.MetaphoneTest::testLocaleIndependence", "org.apache.commons.codec.language.SoundexTest::testLocaleIndependence"],
+      "rationale": "All three modified sources changed locale-sensitive case conversion; the triggers compare English and Turkish defaults."
+    }
+  }]
+}

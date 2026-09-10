@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Time",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.joda.time",
+    "class_name": "Time_1b_IPOTest",
+    "imports": ["org.joda.time.chrono.GregorianChronology", "org.joda.time.chrono.ISOChronology"]
+  },
+  "scenarios": [{
+    "id": "partial_field_order",
+    "target_classes": ["org.joda.time.Partial", "org.joda.time.field.UnsupportedDurationField"],
+    "entrypoint": "Partial(DateTimeFieldType[],int[],Chronology)",
+    "invocation_kind": "constructor",
+    "factors": {
+      "field_order": {"day_year_month": "new DateTimeFieldType[] { DateTimeFieldType.dayOfMonth(), DateTimeFieldType.year(), DateTimeFieldType.monthOfYear() }", "year_day_era": "new DateTimeFieldType[] { DateTimeFieldType.year(), DateTimeFieldType.dayOfMonth(), DateTimeFieldType.era() }"},
+      "values": {"ones": "new int[] { 1, 1, 1 }", "mixed": "new int[] { 2, 2000, 3 }"},
+      "chronology": {"iso": "ISOChronology.getInstanceUTC()", "gregorian": "GregorianChronology.getInstanceUTC()"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"field_order": "day_year_month", "values": "ones", "chronology": "iso"}],
+    "body": "DateTimeFieldType[] types = {{field_order}};\nint[] values = {{values}};\ntry {\n    new Partial(types, values, {{chronology}});\n    fail(\"Expected invalid largest-to-smallest field order\");\n} catch (IllegalArgumentException expected) {\n    assertTrue(expected.getMessage().indexOf(\"order\") >= 0);\n}",
+    "oracle": {"mode": "invariant", "description": "Invalid field order must be rejected consistently across values and chronologies."},
+    "evidence": {
+      "patch_file": "Time/patches/1.src.patch",
+      "trigger_tests": ["org.joda.time.TestPartial_Constructors::testConstructorEx7_TypeArray_intArray"],
+      "rationale": "The patch changes duration-field comparison and Partial ordering validation; the trigger supplies invalid type orders."
+    }
+  }]
+}

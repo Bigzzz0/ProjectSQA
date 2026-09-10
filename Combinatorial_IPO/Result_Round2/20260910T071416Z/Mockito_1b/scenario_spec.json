@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Mockito",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.mockito.internal.invocation",
+    "class_name": "Mockito_1b_IPOTest",
+    "base_class": "TestBase",
+    "imports": ["java.util.List", "org.hamcrest.Matcher", "org.junit.Before", "org.mockito.Mock", "org.mockito.internal.matchers.AnyVararg", "org.mockito.internal.matchers.CapturingMatcher", "org.mockito.internal.matchers.LocalizedMatcher", "org.mockito.invocation.Invocation", "org.mockitousage.IMethods", "org.mockitoutil.TestBase", "static java.util.Arrays.asList"],
+    "helpers": "    @Mock private IMethods mock;"
+  },
+  "scenarios": [{
+    "id": "capture_varargs",
+    "target_classes": ["org.mockito.internal.invocation.InvocationMatcher"],
+    "entrypoint": "InvocationMatcher.captureArgumentsFrom(Invocation)",
+    "invocation_kind": "harness",
+    "factors": {
+      "arguments": {"empty": "new String[0]", "two": "new String[] { \"a\", \"b\" }"},
+      "matcher": {"any_vararg": "AnyVararg.ANY_VARARG", "captor": "new LocalizedMatcher(new CapturingMatcher())"},
+      "capture_count": {"once": "1", "twice": "2"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"arguments": "empty", "matcher": "any_vararg", "capture_count": "once"}],
+    "body": "mock.varargs({{arguments}});\nInvocation invocation = getLastInvocation();\nMatcher matcher = {{matcher}};\nInvocationMatcher invocationMatcher = new InvocationMatcher(invocation, (List) asList(matcher));\nfor (int i = 0; i < {{capture_count}}; i++) { invocationMatcher.captureArgumentsFrom(invocation); }\nassertNotNull(invocationMatcher);",
+    "oracle": {"mode": "invariant", "description": "Vararg capture must not throw for empty or populated varargs and supported matcher forms."},
+    "evidence": {
+      "patch_file": "Mockito/patches/1.src.patch",
+      "trigger_tests": ["org.mockito.internal.invocation.InvocationMatcherTest::should_capture_arguments_when_args_count_does_NOT_match"],
+      "rationale": "Mockito-1 replaces vararg capture logic with UnsupportedOperationException; the trigger exercises empty varargs with an AnyVararg matcher."
+    }
+  }]
+}

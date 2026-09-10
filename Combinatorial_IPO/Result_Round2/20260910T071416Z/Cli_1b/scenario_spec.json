@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Cli",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.apache.commons.cli",
+    "class_name": "Cli_1b_IPOTest",
+    "imports": []
+  },
+  "scenarios": [{
+    "id": "short_long_option_lookup",
+    "target_classes": ["org.apache.commons.cli.CommandLine"],
+    "entrypoint": "CommandLine.getOptionValue(String)",
+    "invocation_kind": "stateful",
+    "factors": {
+      "command_name": {"short": "\"-d\"", "long": "\"--debug\""},
+      "lookup_name": {"short": "\"d\"", "long": "\"debug\""},
+      "value": {"true": "\"true\"", "false": "\"false\""}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"command_name": "short", "lookup_name": "long", "value": "true"}],
+    "body": "Option option = OptionBuilder.withArgName(\"debug\").withDescription(\"debug\").withLongOpt(\"debug\").hasArg().create('d');\nOptions options = new Options();\noptions.addOption(option);\nString value = {{value}};\nCommandLine line = new PosixParser().parse(options, new String[] { {{command_name}}, value });\nassertEquals(value, line.getOptionValue({{lookup_name}}));\nassertTrue(line.hasOption({{lookup_name}}));",
+    "oracle": {"mode": "invariant", "description": "Short and long aliases must resolve to the same parsed option and value."},
+    "evidence": {
+      "patch_file": "Cli/patches/1.src.patch",
+      "trigger_tests": ["org.apache.commons.cli.bug.BugCLI13Test::testCLI13"],
+      "rationale": "CLI-13 changes option storage and alias resolution; the trigger checks both short and long names."
+    }
+  }]
+}

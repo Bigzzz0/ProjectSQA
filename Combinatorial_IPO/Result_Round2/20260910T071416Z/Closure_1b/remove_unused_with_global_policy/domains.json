@@ -1,0 +1,14 @@
+{
+  "remove_globals": [
+    "keep",
+    "remove"
+  ],
+  "program": [
+    "global",
+    "function"
+  ],
+  "preserve_names": [
+    "off",
+    "on"
+  ]
+}

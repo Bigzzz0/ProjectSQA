@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "remove_globals": "keep",
+      "program": "global",
+      "preserve_names": "off"
+    },
+    "mode": "invariant",
+    "description": "Local unused variables/arguments are removed while the removeGlobals policy controls global declarations."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "remove_globals": "keep",
+      "program": "function",
+      "preserve_names": "on"
+    },
+    "mode": "invariant",
+    "description": "Local unused variables/arguments are removed while the removeGlobals policy controls global declarations."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "remove_globals": "remove",
+      "program": "global",
+      "preserve_names": "on"
+    },
+    "mode": "invariant",
+    "description": "Local unused variables/arguments are removed while the removeGlobals policy controls global declarations."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "remove_globals": "remove",
+      "program": "function",
+      "preserve_names": "off"
+    },
+    "mode": "invariant",
+    "description": "Local unused variables/arguments are removed while the removeGlobals policy controls global declarations."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "remove_globals": "keep",
+      "program": "function",
+      "preserve_names": "off"
+    },
+    "mode": "invariant",
+    "description": "Local unused variables/arguments are removed while the removeGlobals policy controls global declarations."
+  }
+]

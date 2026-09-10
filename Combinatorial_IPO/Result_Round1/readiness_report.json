@@ -1,11 +1,22 @@
 {
   "ready_to_start_loop": true,
-  "loop_started": false,
-  "loop_state": null,
+  "loop_started": true,
+  "loop_in_progress": false,
+  "loop_state": {
+    "started": true,
+    "status": "VERIFIED",
+    "run_id": "20260910T071416Z",
+    "target_count": 17,
+    "verified_target_count": 17,
+    "published_suite_count": 17
+  },
   "representative_count": 4,
   "representatives_passed": 4,
   "known_catalog_mismatches": 0,
   "catalog_issues": [],
+  "scenario_target_count": 17,
+  "scenario_count": 17,
+  "scenario_issues": [],
   "representatives": [
     {
       "project": "Lang",

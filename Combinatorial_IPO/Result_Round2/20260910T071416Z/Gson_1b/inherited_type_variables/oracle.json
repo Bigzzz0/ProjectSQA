@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "key": "alpha",
+      "scalar": "one",
+      "list": "empty"
+    },
+    "mode": "invariant",
+    "description": "Inherited generic S/T types must resolve to String/Integer during round-trip serialization."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "key": "alpha",
+      "scalar": "large",
+      "list": "two"
+    },
+    "mode": "invariant",
+    "description": "Inherited generic S/T types must resolve to String/Integer during round-trip serialization."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "key": "beta",
+      "scalar": "one",
+      "list": "two"
+    },
+    "mode": "invariant",
+    "description": "Inherited generic S/T types must resolve to String/Integer during round-trip serialization."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "key": "beta",
+      "scalar": "large",
+      "list": "empty"
+    },
+    "mode": "invariant",
+    "description": "Inherited generic S/T types must resolve to String/Integer during round-trip serialization."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "key": "alpha",
+      "scalar": "one",
+      "list": "two"
+    },
+    "mode": "invariant",
+    "description": "Inherited generic S/T types must resolve to String/Integer during round-trip serialization."
+  }
+]

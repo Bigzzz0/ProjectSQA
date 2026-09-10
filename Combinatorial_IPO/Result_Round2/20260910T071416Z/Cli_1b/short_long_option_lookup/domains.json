@@ -1,0 +1,14 @@
+{
+  "command_name": [
+    "short",
+    "long"
+  ],
+  "lookup_name": [
+    "short",
+    "long"
+  ],
+  "value": [
+    "true",
+    "false"
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "dataset_size": "missing",
+      "renderer_index": "primary",
+      "column_count": "one"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "dataset_size": "missing",
+      "renderer_index": "secondary",
+      "column_count": "two"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "dataset_size": "empty",
+      "renderer_index": "primary",
+      "column_count": "two"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "dataset_size": "empty",
+      "renderer_index": "secondary",
+      "column_count": "one"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "dataset_size": "one_series",
+      "renderer_index": "primary",
+      "column_count": "one"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "dataset_size": "one_series",
+      "renderer_index": "secondary",
+      "column_count": "two"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "dataset_size": "two_series",
+      "renderer_index": "primary",
+      "column_count": "one"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  },
+  {
+    "id": 8,
+    "combination": {
+      "dataset_size": "two_series",
+      "renderer_index": "secondary",
+      "column_count": "two"
+    },
+    "mode": "invariant",
+    "description": "Missing or empty datasets yield no legend items; each populated series yields one item."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "dataset_size": [
+    "missing",
+    "empty",
+    "one_series",
+    "two_series"
+  ],
+  "renderer_index": [
+    "primary",
+    "secondary"
+  ],
+  "column_count": [
+    "one",
+    "two"
+  ]
+}

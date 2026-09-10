@@ -1,0 +1,11 @@
+prefix	leading_zeroes	magnitude
+lower_0x	none	int_max
+lower_0x	two	int_overflow
+upper_0x	none	int_overflow
+upper_0x	two	int_max
+hash	none	unsigned_int
+hash	two	int_max
+lower_0x	two	unsigned_int
+upper_0x	none	unsigned_int
+hash	none	int_overflow
+lower_0x	none	int_overflow

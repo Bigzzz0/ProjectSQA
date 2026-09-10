@@ -1,0 +1,5 @@
+empty_syntax	empty_position	field_name
+paired	first	b
+paired	last	name
+self_closing	first	name
+self_closing	last	b

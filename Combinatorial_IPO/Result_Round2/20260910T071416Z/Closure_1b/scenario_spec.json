@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "Closure",
+  "bug_id": 1,
+  "suite": {
+    "package": "com.google.javascript.jscomp",
+    "class_name": "Closure_1b_IPOTest",
+    "base_class": "CompilerTestCase",
+    "imports": [],
+    "helpers": "    private boolean removeGlobal;\n    private boolean preserveNames;\n    public Closure_1b_IPOTest() { super(\"function alert() {}\"); enableNormalize(); }\n    protected CompilerPass getProcessor(final Compiler compiler) {\n        return new RemoveUnusedVars(compiler, removeGlobal, preserveNames, false);\n    }"
+  },
+  "scenarios": [{
+    "id": "remove_unused_with_global_policy",
+    "target_classes": ["com.google.javascript.jscomp.RemoveUnusedVars"],
+    "entrypoint": "RemoveUnusedVars.process(Node,Node)",
+    "invocation_kind": "harness",
+    "factors": {
+      "remove_globals": {"keep": "false", "remove": "true"},
+      "program": {"global": "false", "function": "true"},
+      "preserve_names": {"off": "false", "on": "true"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"remove_globals": "keep", "program": "function", "preserve_names": "off"}],
+    "body": "removeGlobal = {{remove_globals}};\npreserveNames = {{preserve_names}};\nboolean functionProgram = {{program}};\nif (!functionProgram) {\n    if (removeGlobal) { test(\"var x=1\", \"\"); } else { testSame(\"var x=1\"); }\n} else {\n    String source = \"var y=function(x){var z;}\";\n    if (removeGlobal) { test(source, \"\"); } else { test(source, \"var y=function(x){}\"); }\n}\nassertTrue(true);",
+    "oracle": {"mode": "invariant", "description": "Local unused variables/arguments are removed while the removeGlobals policy controls global declarations."},
+    "evidence": {
+      "patch_file": "Closure/patches/1.src.patch",
+      "trigger_tests": ["com.google.javascript.jscomp.RemoveUnusedVarsTest::testRemoveGlobal1", "com.google.javascript.jscomp.RemoveUnusedVarsTest::testIssue168b"],
+      "rationale": "Closure-1 removes an early return guarded by removeGlobals in unused-function-argument removal; the triggers combine retained globals with removable local arguments."
+    }
+  }]
+}

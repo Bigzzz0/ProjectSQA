@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "empty_syntax": "paired",
+      "empty_position": "first",
+      "field_name": "b"
+    },
+    "mode": "invariant",
+    "description": "Empty unwrapped list entries must deserialize as non-null objects without swallowing adjacent populated entries."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "empty_syntax": "paired",
+      "empty_position": "last",
+      "field_name": "name"
+    },
+    "mode": "invariant",
+    "description": "Empty unwrapped list entries must deserialize as non-null objects without swallowing adjacent populated entries."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "empty_syntax": "self_closing",
+      "empty_position": "first",
+      "field_name": "name"
+    },
+    "mode": "invariant",
+    "description": "Empty unwrapped list entries must deserialize as non-null objects without swallowing adjacent populated entries."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "empty_syntax": "self_closing",
+      "empty_position": "last",
+      "field_name": "b"
+    },
+    "mode": "invariant",
+    "description": "Empty unwrapped list entries must deserialize as non-null objects without swallowing adjacent populated entries."
+  }
+]

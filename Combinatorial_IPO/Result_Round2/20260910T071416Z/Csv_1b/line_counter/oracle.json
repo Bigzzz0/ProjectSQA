@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "line_ending": "cr",
+      "read_mode": "character",
+      "line_count": "two"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "line_ending": "cr",
+      "read_mode": "line",
+      "line_count": "three"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "line_ending": "lf",
+      "read_mode": "character",
+      "line_count": "three"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "line_ending": "lf",
+      "read_mode": "line",
+      "line_count": "two"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "line_ending": "crlf",
+      "read_mode": "character",
+      "line_count": "two"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "line_ending": "crlf",
+      "read_mode": "line",
+      "line_count": "three"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "line_ending": "cr",
+      "read_mode": "character",
+      "line_count": "three"
+    },
+    "mode": "invariant",
+    "description": "The reader must count logical line endings consistently for character and line reads."
+  }
+]

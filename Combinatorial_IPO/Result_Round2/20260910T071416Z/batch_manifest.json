@@ -1,0 +1,595 @@
+{
+  "run_id": "20260910T071416Z",
+  "catalog": "/workspace/target_benchmark/catalog_17_projects.json",
+  "scenario_root": "/workspace/Combinatorial_IPO/Configuration/targets",
+  "generation_backend": "native_ipo",
+  "strength": 2,
+  "target_count": 17,
+  "verified_target_count": 17,
+  "published_suite_count": 17,
+  "status": "VERIFIED",
+  "records": [
+    {
+      "project": "Chart",
+      "bug_id": 1,
+      "target": "Chart_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.jfree.chart.renderer.category",
+      "suite_class": "Chart_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "legend_items_for_dataset",
+          "entrypoint": "AbstractCategoryItemRenderer.getLegendItems()",
+          "invocation_kind": "instance",
+          "factor_count": 3,
+          "cartesian_count": 16,
+          "valid_combination_count": 16,
+          "pairwise_count": 8,
+          "expected_pair_count": 20,
+          "covered_pair_count": 20,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Chart/patches/1.src.patch",
+            "trigger_tests": [
+              "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"
+            ],
+            "rationale": "Chart-1 reverses the dataset null guard in getLegendItems; the trigger covers missing, empty, and populated datasets."
+          }
+        }
+      ],
+      "verification_result": "OK (8 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Chart_1b/Chart_1b_IPOTest.java"
+    },
+    {
+      "project": "Cli",
+      "bug_id": 1,
+      "target": "Cli_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.cli",
+      "suite_class": "Cli_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "short_long_option_lookup",
+          "entrypoint": "CommandLine.getOptionValue(String)",
+          "invocation_kind": "stateful",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 5,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Cli/patches/1.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.cli.bug.BugCLI13Test::testCLI13"
+            ],
+            "rationale": "CLI-13 changes option storage and alias resolution; the trigger checks both short and long names."
+          }
+        }
+      ],
+      "verification_result": "OK (5 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Cli_1b/Cli_1b_IPOTest.java"
+    },
+    {
+      "project": "Closure",
+      "bug_id": 1,
+      "target": "Closure_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "com.google.javascript.jscomp",
+      "suite_class": "Closure_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "remove_unused_with_global_policy",
+          "entrypoint": "RemoveUnusedVars.process(Node,Node)",
+          "invocation_kind": "harness",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 5,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Closure/patches/1.src.patch",
+            "trigger_tests": [
+              "com.google.javascript.jscomp.RemoveUnusedVarsTest::testRemoveGlobal1",
+              "com.google.javascript.jscomp.RemoveUnusedVarsTest::testIssue168b"
+            ],
+            "rationale": "Closure-1 removes an early return guarded by removeGlobals in unused-function-argument removal; the triggers combine retained globals with removable local arguments."
+          }
+        }
+      ],
+      "verification_result": "OK (5 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Closure_1b/Closure_1b_IPOTest.java"
+    },
+    {
+      "project": "Codec",
+      "bug_id": 1,
+      "target": "Codec_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.codec.language",
+      "suite_class": "Codec_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "locale_independent_encoding",
+          "entrypoint": "StringEncoder.encode(String)",
+          "invocation_kind": "instance",
+          "factor_count": 3,
+          "cartesian_count": 12,
+          "valid_combination_count": 12,
+          "pairwise_count": 7,
+          "expected_pair_count": 16,
+          "covered_pair_count": 16,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Codec/patches/1.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.codec.language.CaverphoneTest::testLocaleIndependence",
+              "org.apache.commons.codec.language.MetaphoneTest::testLocaleIndependence",
+              "org.apache.commons.codec.language.SoundexTest::testLocaleIndependence"
+            ],
+            "rationale": "All three modified sources changed locale-sensitive case conversion; the triggers compare English and Turkish defaults."
+          }
+        }
+      ],
+      "verification_result": "OK (7 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Codec_1b/Codec_1b_IPOTest.java"
+    },
+    {
+      "project": "Collections",
+      "bug_id": 25,
+      "target": "Collections_25b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.collections4",
+      "suite_class": "Collections_25b_IPOTest",
+      "scenarios": [
+        {
+          "id": "collated_iterator",
+          "entrypoint": "IteratorUtils.collatedIterator(Comparator,Iterator,Iterator)",
+          "invocation_kind": "static",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 4,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Collections/patches/25.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.collections4.IteratorUtilsTest::testCollatedIterator"
+            ],
+            "rationale": "COLLECTIONS-566 changes null-comparator handling in all collatedIterator overloads; null is an intentional documented input, not a fallback."
+          }
+        }
+      ],
+      "verification_result": "OK (4 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Collections_25b/Collections_25b_IPOTest.java"
+    },
+    {
+      "project": "Compress",
+      "bug_id": 1,
+      "target": "Compress_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.compress.archivers.cpio",
+      "suite_class": "Compress_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "close_finishes_archive",
+          "entrypoint": "CpioArchiveOutputStream.close()",
+          "invocation_kind": "stateful",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 5,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Compress/patches/1.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive"
+            ],
+            "rationale": "COMPRESS-28 removes finish() from close(); the trigger closes then unarchives the resulting CPIO stream."
+          }
+        }
+      ],
+      "verification_result": "OK (5 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Compress_1b/Compress_1b_IPOTest.java"
+    },
+    {
+      "project": "Csv",
+      "bug_id": 1,
+      "target": "Csv_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.csv",
+      "suite_class": "Csv_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "line_counter",
+          "entrypoint": "ExtendedBufferedReader.read()/readLine()",
+          "invocation_kind": "stateful",
+          "factor_count": 3,
+          "cartesian_count": 12,
+          "valid_combination_count": 12,
+          "pairwise_count": 7,
+          "expected_pair_count": 16,
+          "covered_pair_count": 16,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Csv/patches/1.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.csv.CSVParserTest::testGetLineNumberWithCR"
+            ],
+            "rationale": "CSV-75 changes CR/LF counting in ExtendedBufferedReader and the trigger uses CR-only records."
+          }
+        }
+      ],
+      "verification_result": "OK (7 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Csv_1b/Csv_1b_IPOTest.java"
+    },
+    {
+      "project": "Gson",
+      "bug_id": 1,
+      "target": "Gson_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "com.google.gson",
+      "suite_class": "Gson_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "inherited_type_variables",
+          "entrypoint": "Gson.toJson/fromJson inherited generic fields",
+          "invocation_kind": "harness",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 5,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Gson/patches/1.src.patch",
+            "trigger_tests": [
+              "com.google.gson.functional.TypeVariableTest::testSingle"
+            ],
+            "rationale": "The patch changes recursive TypeVariable resolution and the trigger round-trips a subclass with inherited generic fields."
+          }
+        }
+      ],
+      "verification_result": "OK (5 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Gson_1b/Gson_1b_IPOTest.java"
+    },
+    {
+      "project": "JacksonCore",
+      "bug_id": 1,
+      "target": "JacksonCore_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "com.fasterxml.jackson.core",
+      "suite_class": "JacksonCore_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "non_numeric_decimal",
+          "entrypoint": "JsonParser.getDecimalValue()",
+          "invocation_kind": "stateful",
+          "factor_count": 3,
+          "cartesian_count": 12,
+          "valid_combination_count": 12,
+          "pairwise_count": 7,
+          "expected_pair_count": 16,
+          "covered_pair_count": 16,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 2,
+          "evidence": {
+            "patch_file": "JacksonCore/patches/1.src.patch",
+            "trigger_tests": [
+              "com.fasterxml.jackson.core.json.TestParserNonStandard::testAllowNaN"
+            ],
+            "rationale": "Issue 98 changes NumberInput BigDecimal error wrapping and TextBuffer decimal conversion; the trigger requests BigDecimal from NaN using reader and stream parsers."
+          }
+        }
+      ],
+      "verification_result": "OK (7 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/JacksonCore_1b/JacksonCore_1b_IPOTest.java"
+    },
+    {
+      "project": "JacksonDatabind",
+      "bug_id": 1,
+      "target": "JacksonDatabind_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "com.fasterxml.jackson.databind.ser",
+      "suite_class": "JacksonDatabind_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "null_array_column",
+          "entrypoint": "ObjectMapper.writeValueAsString(Object)",
+          "invocation_kind": "harness",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 4,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "JacksonDatabind/patches/1.src.patch",
+            "trigger_tests": [
+              "com.fasterxml.jackson.databind.struct.TestPOJOAsArray::testNullColumn"
+            ],
+            "rationale": "The patch removes the return after BeanPropertyWriter writes a null tabular column; the trigger serializes a two-column array with a null first property."
+          }
+        }
+      ],
+      "verification_result": "OK (4 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/JacksonDatabind_1b/JacksonDatabind_1b_IPOTest.java"
+    },
+    {
+      "project": "JacksonXml",
+      "bug_id": 1,
+      "target": "JacksonXml_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "com.fasterxml.jackson.dataformat.xml.deser",
+      "suite_class": "JacksonXml_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "nested_unwrapped_empty_list",
+          "entrypoint": "XmlMapper.readValue(String,Class)",
+          "invocation_kind": "stateful",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 4,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "JacksonXml/patches/1.src.patch",
+            "trigger_tests": [
+              "com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test::testNestedUnwrappedLists180"
+            ],
+            "rationale": "XML-180 changes empty-object token handling in FromXmlParser; the trigger combines an empty entry with a populated nested entry."
+          }
+        }
+      ],
+      "verification_result": "OK (4 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/JacksonXml_1b/JacksonXml_1b_IPOTest.java"
+    },
+    {
+      "project": "Jsoup",
+      "bug_id": 1,
+      "target": "Jsoup_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.jsoup.nodes",
+      "suite_class": "Jsoup_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "body_snippet_order",
+          "entrypoint": "Jsoup.parse(String).text()",
+          "invocation_kind": "stateful",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 4,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Jsoup/patches/1.src.patch",
+            "trigger_tests": [
+              "org.jsoup.parser.ParserTest::createsStructureFromBodySnippet"
+            ],
+            "rationale": "The patch changes prepend to append during Document normalization; the trigger checks text order."
+          }
+        }
+      ],
+      "verification_result": "OK (4 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Jsoup_1b/Jsoup_1b_IPOTest.java"
+    },
+    {
+      "project": "JxPath",
+      "bug_id": 1,
+      "target": "JxPath_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.jxpath",
+      "suite_class": "JxPath_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "dom_and_jdom_node_types",
+          "entrypoint": "JXPathContext.getPointer(String).getNode()",
+          "invocation_kind": "harness",
+          "factor_count": 3,
+          "cartesian_count": 12,
+          "valid_combination_count": 12,
+          "pairwise_count": 7,
+          "expected_pair_count": 16,
+          "covered_pair_count": 16,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 2,
+          "evidence": {
+            "patch_file": "JxPath/patches/1.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testGetNode",
+              "org.apache.commons.jxpath.ri.model.jdom.JDOMModelTest::testGetNode"
+            ],
+            "rationale": "Both modified node pointers change NODE_TYPE_NODE handling; the triggers compare root and descendant node types in DOM and JDOM."
+          }
+        }
+      ],
+      "verification_result": "OK (7 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/JxPath_1b/JxPath_1b_IPOTest.java"
+    },
+    {
+      "project": "Lang",
+      "bug_id": 1,
+      "target": "Lang_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.lang3.math",
+      "suite_class": "Lang_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "hexadecimal_boundaries",
+          "entrypoint": "NumberUtils.createNumber(String)",
+          "invocation_kind": "static",
+          "factor_count": 3,
+          "cartesian_count": 18,
+          "valid_combination_count": 18,
+          "pairwise_count": 10,
+          "expected_pair_count": 21,
+          "covered_pair_count": 21,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Lang/patches/1.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.lang3.math.NumberUtilsTest::TestLang747"
+            ],
+            "rationale": "The patch changes hexadecimal width selection in createNumber and the mandatory seed is the trigger boundary."
+          }
+        }
+      ],
+      "verification_result": "OK (10 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Lang_1b/Lang_1b_IPOTest.java"
+    },
+    {
+      "project": "Math",
+      "bug_id": 2,
+      "target": "Math_2b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.apache.commons.math3.distribution",
+      "suite_class": "Math_2b_IPOTest",
+      "scenarios": [
+        {
+          "id": "hypergeometric_mean",
+          "entrypoint": "HypergeometricDistribution(int,int,int).getNumericalMean()",
+          "invocation_kind": "constructor",
+          "factor_count": 3,
+          "cartesian_count": 27,
+          "valid_combination_count": 18,
+          "pairwise_count": 12,
+          "expected_pair_count": 24,
+          "covered_pair_count": 24,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Math/patches/2.src.patch",
+            "trigger_tests": [
+              "org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021"
+            ],
+            "rationale": "The patch changes getNumericalMean arithmetic and the seed reproduces MATH-1021."
+          }
+        }
+      ],
+      "verification_result": "OK (12 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Math_2b/Math_2b_IPOTest.java"
+    },
+    {
+      "project": "Mockito",
+      "bug_id": 1,
+      "target": "Mockito_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.mockito.internal.invocation",
+      "suite_class": "Mockito_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "capture_varargs",
+          "entrypoint": "InvocationMatcher.captureArgumentsFrom(Invocation)",
+          "invocation_kind": "harness",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 4,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Mockito/patches/1.src.patch",
+            "trigger_tests": [
+              "org.mockito.internal.invocation.InvocationMatcherTest::should_capture_arguments_when_args_count_does_NOT_match"
+            ],
+            "rationale": "Mockito-1 replaces vararg capture logic with UnsupportedOperationException; the trigger exercises empty varargs with an AnyVararg matcher."
+          }
+        }
+      ],
+      "verification_result": "OK (4 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Mockito_1b/Mockito_1b_IPOTest.java"
+    },
+    {
+      "project": "Time",
+      "bug_id": 1,
+      "target": "Time_1b",
+      "status": "VERIFIED",
+      "generation_backend": "native_ipo",
+      "strength": 2,
+      "suite_package": "org.joda.time",
+      "suite_class": "Time_1b_IPOTest",
+      "scenarios": [
+        {
+          "id": "partial_field_order",
+          "entrypoint": "Partial(DateTimeFieldType[],int[],Chronology)",
+          "invocation_kind": "constructor",
+          "factor_count": 3,
+          "cartesian_count": 8,
+          "valid_combination_count": 8,
+          "pairwise_count": 4,
+          "expected_pair_count": 12,
+          "covered_pair_count": 12,
+          "pair_coverage_percent": 100.0,
+          "mandatory_seed_count": 1,
+          "evidence": {
+            "patch_file": "Time/patches/1.src.patch",
+            "trigger_tests": [
+              "org.joda.time.TestPartial_Constructors::testConstructorEx7_TypeArray_intArray"
+            ],
+            "rationale": "The patch changes duration-field comparison and Partial ordering validation; the trigger supplies invalid type orders."
+          }
+        }
+      ],
+      "verification_result": "OK (4 tests)",
+      "test_suite": "Result_Round2/20260910T071416Z/Time_1b/Time_1b_IPOTest.java"
+    }
+  ]
+}

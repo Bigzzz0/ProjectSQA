@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "prefix": "lower_0x",
+      "leading_zeroes": "none",
+      "magnitude": "int_max"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "prefix": "lower_0x",
+      "leading_zeroes": "two",
+      "magnitude": "int_overflow"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "prefix": "upper_0x",
+      "leading_zeroes": "none",
+      "magnitude": "int_overflow"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "prefix": "upper_0x",
+      "leading_zeroes": "two",
+      "magnitude": "int_max"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "prefix": "hash",
+      "leading_zeroes": "none",
+      "magnitude": "unsigned_int"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "prefix": "hash",
+      "leading_zeroes": "two",
+      "magnitude": "int_max"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "prefix": "lower_0x",
+      "leading_zeroes": "two",
+      "magnitude": "unsigned_int"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 8,
+    "combination": {
+      "prefix": "upper_0x",
+      "leading_zeroes": "none",
+      "magnitude": "unsigned_int"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 9,
+    "combination": {
+      "prefix": "hash",
+      "leading_zeroes": "none",
+      "magnitude": "int_overflow"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  },
+  {
+    "id": 10,
+    "combination": {
+      "prefix": "lower_0x",
+      "leading_zeroes": "none",
+      "magnitude": "int_overflow"
+    },
+    "mode": "invariant",
+    "description": "The parsed Number must equal the hexadecimal magnitude across integer boundaries."
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "JacksonXml",
+  "bug_id": 1,
+  "suite": {
+    "package": "com.fasterxml.jackson.dataformat.xml.deser",
+    "class_name": "JacksonXml_1b_IPOTest",
+    "imports": ["java.util.ArrayList", "java.util.List", "com.fasterxml.jackson.dataformat.xml.XmlMapper", "com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper", "com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty"],
+    "helpers": "    static class Records {\n        @JacksonXmlElementWrapper(useWrapping=false) public List<Record> records = new ArrayList<Record>();\n    }\n    static class Record {\n        @JacksonXmlElementWrapper(useWrapping=false) public List<Field> fields = new ArrayList<Field>();\n    }\n    static class Field {\n        @JacksonXmlProperty(isAttribute=true) public String name;\n        public Field() { }\n    }"
+  },
+  "scenarios": [{
+    "id": "nested_unwrapped_empty_list",
+    "target_classes": ["com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser"],
+    "entrypoint": "XmlMapper.readValue(String,Class)",
+    "invocation_kind": "stateful",
+    "factors": {
+      "empty_syntax": {"paired": "\"<records></records>\"", "self_closing": "\"<records/>\""},
+      "empty_position": {"first": "true", "last": "false"},
+      "field_name": {"b": "\"b\"", "name": "\"name\""}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"empty_syntax": "paired", "empty_position": "first", "field_name": "b"}],
+    "body": "String empty = {{empty_syntax}};\nString populated = \"<records><fields name='\" + {{field_name}} + \"'/></records>\";\nString xml = \"<Records>\" + ({{empty_position}} ? empty + populated : populated + empty) + \"</Records>\";\nRecords result = new XmlMapper().readValue(xml, Records.class);\nassertNotNull(result.records);\nassertEquals(2, result.records.size());\nint populatedIndex = {{empty_position}} ? 1 : 0;\nassertNotNull(result.records.get(1 - populatedIndex));\nassertEquals({{field_name}}, result.records.get(populatedIndex).fields.get(0).name);",
+    "oracle": {"mode": "invariant", "description": "Empty unwrapped list entries must deserialize as non-null objects without swallowing adjacent populated entries."},
+    "evidence": {
+      "patch_file": "JacksonXml/patches/1.src.patch",
+      "trigger_tests": ["com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test::testNestedUnwrappedLists180"],
+      "rationale": "XML-180 changes empty-object token handling in FromXmlParser; the trigger combines an empty entry with a populated nested entry."
+    }
+  }]
+}

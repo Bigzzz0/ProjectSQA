@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "JxPath",
+  "bug_id": 1,
+  "suite": {
+    "package": "org.apache.commons.jxpath",
+    "class_name": "JxPath_1b_IPOTest",
+    "imports": ["java.io.StringReader", "javax.xml.parsers.DocumentBuilderFactory", "org.apache.commons.jxpath.Pointer", "org.jdom.input.SAXBuilder"]
+  },
+  "scenarios": [{
+    "id": "dom_and_jdom_node_types",
+    "target_classes": ["org.apache.commons.jxpath.ri.model.dom.DOMNodePointer", "org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer"],
+    "entrypoint": "JXPathContext.getPointer(String).getNode()",
+    "invocation_kind": "harness",
+    "factors": {
+      "model": {"dom": "DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new org.xml.sax.InputSource(new StringReader(xml)))", "jdom": "new SAXBuilder().build(new StringReader(xml))"},
+      "xpath": {"root": "\"/\"", "element": "\"/vendor/location\"", "attribute": "\"/vendor/location/@name\""},
+      "lenient": {"strict": "false", "lenient": "true"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"model": "dom", "xpath": "root", "lenient": "strict"}, {"model": "jdom", "xpath": "root", "lenient": "strict"}],
+    "body": "String xml = \"<vendor><location name='HQ'/></vendor>\";\nObject root = {{model}};\nString path = {{xpath}};\nJXPathContext context = JXPathContext.newContext(root);\ncontext.setLenient({{lenient}});\nObject node = context.getPointer(path).getNode();\nassertNotNull(node);\nif (path.equals(\"/\")) {\n    assertSame(root, node);\n} else if (path.endsWith(\"@name\")) {\n    assertTrue(node instanceof org.w3c.dom.Attr || node instanceof org.jdom.Attribute);\n} else {\n    assertTrue(node instanceof org.w3c.dom.Element || node instanceof org.jdom.Element);\n}",
+    "oracle": {"mode": "invariant", "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."},
+    "evidence": {
+      "patch_file": "JxPath/patches/1.src.patch",
+      "trigger_tests": ["org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testGetNode", "org.apache.commons.jxpath.ri.model.jdom.JDOMModelTest::testGetNode"],
+      "rationale": "Both modified node pointers change NODE_TYPE_NODE handling; the triggers compare root and descendant node types in DOM and JDOM."
+    }
+  }]
+}

@@ -1,0 +1,12 @@
+[
+  "String text = \"0x\" + \"\" + \"7FFFFFFF\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"0x\" + \"00\" + \"80000000\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"0X\" + \"\" + \"80000000\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"0X\" + \"00\" + \"7FFFFFFF\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"#\" + \"\" + \"FFFFFFFF\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"#\" + \"00\" + \"7FFFFFFF\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"0x\" + \"00\" + \"FFFFFFFF\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"0X\" + \"\" + \"FFFFFFFF\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"#\" + \"\" + \"80000000\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));",
+  "String text = \"0x\" + \"\" + \"80000000\";\nNumber actual = NumberUtils.createNumber(text);\nString hex = text.startsWith(\"#\") ? text.substring(1) : text.substring(2);\nassertEquals(new BigInteger(hex, 16), new BigInteger(String.valueOf(actual)));"
+]

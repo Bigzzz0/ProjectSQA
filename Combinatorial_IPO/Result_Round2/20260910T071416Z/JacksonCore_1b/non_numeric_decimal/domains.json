@@ -1,0 +1,15 @@
+{
+  "backend": [
+    "reader",
+    "stream"
+  ],
+  "token": [
+    "nan",
+    "positive_infinity",
+    "negative_infinity"
+  ],
+  "feature_configuration": [
+    "factory",
+    "parser"
+  ]
+}

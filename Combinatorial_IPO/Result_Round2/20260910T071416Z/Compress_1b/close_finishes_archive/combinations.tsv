@@ -1,0 +1,6 @@
+format	entry_count	close_mode
+new	one	close
+new	two	finish_then_close
+new_crc	one	finish_then_close
+new_crc	two	close
+new	two	close

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "comparator": "natural",
+      "left": "odd",
+      "right": "even"
+    },
+    "mode": "invariant",
+    "description": "Collation must use natural ordering for an explicit null comparator and the supplied comparator otherwise."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "comparator": "natural",
+      "left": "empty",
+      "right": "single"
+    },
+    "mode": "invariant",
+    "description": "Collation must use natural ordering for an explicit null comparator and the supplied comparator otherwise."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "comparator": "reverse",
+      "left": "odd",
+      "right": "single"
+    },
+    "mode": "invariant",
+    "description": "Collation must use natural ordering for an explicit null comparator and the supplied comparator otherwise."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "comparator": "reverse",
+      "left": "empty",
+      "right": "even"
+    },
+    "mode": "invariant",
+    "description": "Collation must use natural ordering for an explicit null comparator and the supplied comparator otherwise."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "format": [
+    "new",
+    "new_crc"
+  ],
+  "entry_count": [
+    "one",
+    "two"
+  ],
+  "close_mode": [
+    "close",
+    "finish_then_close"
+  ]
+}

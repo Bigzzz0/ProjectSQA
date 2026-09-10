@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "model": "dom",
+      "xpath": "root",
+      "lenient": "strict"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "model": "dom",
+      "xpath": "element",
+      "lenient": "lenient"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "model": "dom",
+      "xpath": "attribute",
+      "lenient": "strict"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "model": "jdom",
+      "xpath": "root",
+      "lenient": "lenient"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "model": "jdom",
+      "xpath": "element",
+      "lenient": "strict"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "model": "jdom",
+      "xpath": "attribute",
+      "lenient": "lenient"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "model": "jdom",
+      "xpath": "root",
+      "lenient": "strict"
+    },
+    "mode": "invariant",
+    "description": "Root, element, and attribute XPath expressions must expose the corresponding DOM/JDOM node types."
+  }
+]

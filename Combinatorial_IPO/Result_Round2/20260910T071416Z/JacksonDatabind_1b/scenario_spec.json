@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "project": "JacksonDatabind",
+  "bug_id": 1,
+  "suite": {
+    "package": "com.fasterxml.jackson.databind.ser",
+    "class_name": "JacksonDatabind_1b_IPOTest",
+    "imports": ["com.fasterxml.jackson.annotation.JsonFormat", "com.fasterxml.jackson.annotation.JsonPropertyOrder", "com.fasterxml.jackson.databind.ObjectMapper"],
+    "helpers": "    @JsonPropertyOrder(alphabetic=true)\n    @JsonFormat(shape=JsonFormat.Shape.ARRAY)\n    static class PairBean {\n        public String bar;\n        public String foo;\n        PairBean(String bar, String foo) { this.bar = bar; this.foo = foo; }\n    }"
+  },
+  "scenarios": [{
+    "id": "null_array_column",
+    "target_classes": ["com.fasterxml.jackson.databind.ser.BeanPropertyWriter"],
+    "entrypoint": "ObjectMapper.writeValueAsString(Object)",
+    "invocation_kind": "harness",
+    "factors": {
+      "null_column": {"first": "true", "second": "false"},
+      "value": {"bar": "\"bar\"", "text": "\"text\""},
+      "mapper_reuse": {"fresh": "new ObjectMapper()", "shared_style": "mapper"}
+    },
+    "constraints": [],
+    "mandatory_seeds": [{"null_column": "first", "value": "bar", "mapper_reuse": "fresh"}],
+    "body": "ObjectMapper mapper = new ObjectMapper();\nboolean firstNull = {{null_column}};\nString value = {{value}};\nPairBean bean = firstNull ? new PairBean(null, value) : new PairBean(value, null);\nObjectMapper selected = {{mapper_reuse}};\nString json = selected.writeValueAsString(bean);\nassertEquals(firstNull ? \"[null,\\\"\" + value + \"\\\"]\" : \"[\\\"\" + value + \"\\\",null]\", json);",
+    "oracle": {"mode": "invariant", "description": "A null property in tabular array output must emit exactly one null column and continue with later columns."},
+    "evidence": {
+      "patch_file": "JacksonDatabind/patches/1.src.patch",
+      "trigger_tests": ["com.fasterxml.jackson.databind.struct.TestPOJOAsArray::testNullColumn"],
+      "rationale": "The patch removes the return after BeanPropertyWriter writes a null tabular column; the trigger serializes a two-column array with a null first property."
+    }
+  }]
+}

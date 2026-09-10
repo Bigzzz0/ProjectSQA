@@ -1,0 +1,14 @@
+{
+  "arguments": [
+    "empty",
+    "two"
+  ],
+  "matcher": [
+    "any_vararg",
+    "captor"
+  ],
+  "capture_count": [
+    "once",
+    "twice"
+  ]
+}

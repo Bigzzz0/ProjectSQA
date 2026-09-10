@@ -1,0 +1,14 @@
+{
+  "comparator": [
+    "natural",
+    "reverse"
+  ],
+  "left": [
+    "odd",
+    "empty"
+  ],
+  "right": [
+    "even",
+    "single"
+  ]
+}

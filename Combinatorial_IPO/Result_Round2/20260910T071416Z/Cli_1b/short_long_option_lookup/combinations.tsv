@@ -1,0 +1,6 @@
+command_name	lookup_name	value
+short	short	true
+short	long	false
+long	short	false
+long	long	true
+short	long	true

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "combination": {
+      "population": "100000",
+      "successes": "50",
+      "sample": "10"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 2,
+    "combination": {
+      "population": "43130568",
+      "successes": "50",
+      "sample": "50"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 3,
+    "combination": {
+      "population": "43130568",
+      "successes": "42976365",
+      "sample": "10"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 4,
+    "combination": {
+      "population": "50000000",
+      "successes": "50",
+      "sample": "100000"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 5,
+    "combination": {
+      "population": "50000000",
+      "successes": "42976365",
+      "sample": "50"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 6,
+    "combination": {
+      "population": "50000000",
+      "successes": "45000000",
+      "sample": "10"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 7,
+    "combination": {
+      "population": "43130568",
+      "successes": "42976365",
+      "sample": "100000"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 8,
+    "combination": {
+      "population": "100000",
+      "successes": "50",
+      "sample": "50"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 9,
+    "combination": {
+      "population": "100000",
+      "successes": "50",
+      "sample": "100000"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 10,
+    "combination": {
+      "population": "50000000",
+      "successes": "45000000",
+      "sample": "50"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 11,
+    "combination": {
+      "population": "50000000",
+      "successes": "45000000",
+      "sample": "100000"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  },
+  {
+    "id": 12,
+    "combination": {
+      "population": "43130568",
+      "successes": "42976365",
+      "sample": "50"
+    },
+    "mode": "invariant",
+    "description": "The mean must equal n*(m/N) without integer overflow and remain non-negative."
+  }
+]
