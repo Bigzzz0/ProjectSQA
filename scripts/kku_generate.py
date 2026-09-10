@@ -80,6 +80,8 @@ def list_available_models(api_key):
 
 def extract_java_code(text):
     """สกัดเฉพาะบล็อกรหัสภาษา Java ออกมาจากข้อความที่ AI ตอบ"""
+    if not text or not isinstance(text, str):
+        return ""
     pattern = r"```java\s*(.*?)\s*```"
     matches = re.findall(pattern, text, re.DOTALL)
     if matches:
@@ -259,6 +261,8 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         f"Generate the complete JUnit 4 test class {output_class_name} that achieves maximum line and branch coverage and targets the defect."
     )
 
+    max_tokens_val = 190000
+
     payload = {
         "model": model_to_use,
         "messages": [
@@ -266,7 +270,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
             {"role": "user", "content": user_prompt}
         ],
         "temperature": 0.2,
-        "max_tokens": 65536
+        "max_tokens": max_tokens_val
     }
 
     headers = {
@@ -294,8 +298,19 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     elapsed_time = round(time.time() - start_time, 2)
 
     if response.status_code != 200:
-        print(f"❌ API Error {response.status_code}: {response.text}")
-        print("💡 แนะนำ: ลองรัน `python kku_generate.py --list-models` เพื่อดู Model ID/Name ที่ถูกต้องในระบบ")
+        error_msg = response.text
+        try:
+            err_json = response.json()
+            if "error" in err_json:
+                error_msg = err_json["error"]
+        except Exception:
+            pass
+        print(f"❌ API Error ({response.status_code}): {error_msg}")
+        if "reached daily limit" in str(error_msg).lower():
+            print(f"   ⚠️ โมเดล '{model_to_use}' ชนขีดจำกัดโควต้าประจำวันของระบบ KKU แล้ว (Daily Limit Reached)")
+            print(f"   💡 โควต้าของโมเดลนี้จะรีเซ็ตในวันถัดไป หรือสามารถใช้โมเดล Gemini ทำงานต่อได้ก่อน")
+        else:
+            print("💡 แนะนำ: ลองรัน `python kku_generate.py --list-models` เพื่อดู Model ID/Name ที่ถูกต้องในระบบ")
         return
 
     res_json = response.json()
@@ -305,8 +320,19 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     if not choices:
         print("❌ ไม่พบ choices ในคำตอบจาก AI")
         return
-    raw_content = choices[0].get("message", {}).get("content", "")
+    
+    message_obj = choices[0].get("message", {})
+    raw_content = message_obj.get("content")
+    if not raw_content:
+        raw_content = message_obj.get("text") or message_obj.get("reasoning") or ""
+        
     java_code = extract_java_code(raw_content)
+    if not java_code.strip():
+        finish_reason = choices[0].get("finish_reason", "")
+        print(f"❌ AI ไม่ได้ส่งเนื้อหาโค้ด Java กลับมา (Content is empty หรือถูกบล็อก)")
+        print(f"   ℹ️ finish_reason: {finish_reason}")
+        print(f"   ℹ️ message: {message_obj}")
+        return
 
     # 2. ดึงสถิติ Token และตรวจสอบ finish_reason
     finish_reason = choices[0].get("finish_reason", "")
@@ -314,12 +340,21 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     prompt_tokens = usage.get("prompt_tokens", 0)
     completion_tokens = usage.get("completion_tokens", 0)
     total_tokens = usage.get("total_tokens", prompt_tokens + completion_tokens)
+    
+    # คำนวณ Thinking / Reasoning Tokens (สำหรับโมเดลที่มี Chain-of-Thought เช่น Gemini 3.8 Flash)
+    reasoning_tokens = usage.get("completion_tokens_details", {}).get("reasoning_tokens", 0)
+    if not reasoning_tokens and total_tokens > (prompt_tokens + completion_tokens):
+        reasoning_tokens = total_tokens - (prompt_tokens + completion_tokens)
+
     quota = res_json.get("model_quota", {})
 
     print(f"\n✅ สร้างโค้ดสำเร็จในเวลา {elapsed_time} วินาที!")
     if finish_reason == "length":
         print("   ⚠️ คำเตือน: โค้ดถูกตัดจบก่อนเสร็จสมบูรณ์เนื่องจากชนขีดจำกัด token (finish_reason='length')")
-    print(f"   📊 Token Usage -> Input: {prompt_tokens} | Output: {completion_tokens} | Total: {total_tokens}")
+    if reasoning_tokens > 0:
+        print(f"   📊 Token Usage -> Input: {prompt_tokens:,} | Output: {completion_tokens:,} | Thinking (CoT): {reasoning_tokens:,} | Total: {total_tokens:,}")
+    else:
+        print(f"   📊 Token Usage -> Input: {prompt_tokens:,} | Output: {completion_tokens:,} | Total: {total_tokens:,}")
     if quota:
         print(f"   💳 Quota เหลือวันนี้: {quota.get('daily_remaining_tokens', 'N/A')} tokens")
 
@@ -360,8 +395,12 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         f.write(f"| **เวลาที่ใช้สร้าง (Generation Time)** | **{elapsed_time} วินาที** | จับเวลาผ่าน Python System Clock |\n")
         f.write(f"| **Input Tokens (Prompt + Source Code)** | **{prompt_tokens:,} tokens** | คืนค่าจาก API (`usage.prompt_tokens`) |\n")
         f.write(f"| **Output Tokens (Generated Test Code)** | **{completion_tokens:,} tokens** | คืนค่าจาก API (`usage.completion_tokens`) |\n")
+        if reasoning_tokens > 0:
+            f.write(f"| **Reasoning / Thinking Tokens (CoT)** | **{reasoning_tokens:,} tokens** | คำนวณจากกระบวนการคิดวิเคราะห์ภายใน (`total - (input + output)`) |\n")
         f.write(f"| **Total Tokens** | **{total_tokens:,} tokens** | คืนค่าจาก API (`usage.total_tokens`) |\n")
         f.write(f"| **สถานะการสร้าง** | **สำเร็จ (Code Extracted)** | สกัดบล็อก JUnit 4 เรียบร้อย |\n\n")
+        if reasoning_tokens > 0:
+            f.write(f"> 💡 **หมายเหตุทางวิชาการ (Token Economics):** โมเดล `{model_to_use}` มีกระบวนการให้เหตุผลภายใน (Internal Chain-of-Thought / Reasoning Process) โดยคิดวิเคราะห์ Boundary Condition เชิงลึกก่อนสร้างโค้ดทดสอบ ทำให้ Total Tokens รวมค่า Thinking Tokens ด้วย\n\n")
         if quota:
             f.write(f"> **Token Quota ประจำวัน:** ใช้ไปแล้ว {quota.get('daily_usage_tokens', 0):,} / {quota.get('daily_quota_tokens', 0):,} tokens\n")
     print(f"   📊 บันทึกตารางสถิติเรียบร้อยที่: {metrics_path}")
