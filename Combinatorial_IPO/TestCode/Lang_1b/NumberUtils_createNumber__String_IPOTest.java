@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 /**
  * Automatically generated pairwise test suite for NumberUtils.
  */
-public class NumberUtils_IPOTest {
+public class NumberUtils_createNumber__String_IPOTest {
     @Test(timeout = 4000)
     public void test_createNumber_pairwise_001() throws Exception {
         // Combination: str=""

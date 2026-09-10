@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "null",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "null",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "null",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "null",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "null",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "\"\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "\"\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "\"\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\" \"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "\" \"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\" \"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "\" \"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "\" \"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"a\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "\"a\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"a\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "\"a\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "\"a\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"test123\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "\"test123\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"test123\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "\"test123\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "\"test123\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 26,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"!@#\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 27,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "\"!@#\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 28,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"!@#\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 29,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "\"!@#\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 30,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "\"!@#\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 31,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"0\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 32,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"0\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 33,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"0\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 34,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"0\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 35,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"0\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 36,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"-1\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 37,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"-1\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 38,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"-1\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 39,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"-1\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 40,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"-1\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 41,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.5",
+    "arguments": {
+      "input": "\"1.5\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 42,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.5",
+    "arguments": {
+      "input": "\"1.5\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 43,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.5",
+    "arguments": {
+      "input": "\"1.5\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 44,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.5",
+    "arguments": {
+      "input": "\"1.5\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 45,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.5",
+    "arguments": {
+      "input": "\"1.5\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 46,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775807\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 47,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775807\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 48,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775807\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 49,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775807\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 50,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775807\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 51,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775808\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 52,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775808\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 53,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775808\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 54,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775808\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 55,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "9.223372036854776E18",
+    "arguments": {
+      "input": "\"9223372036854775808\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  },
+  {
+    "id": 56,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0",
+    "arguments": {
+      "input": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "defaultValue": "0.0d"
+    }
+  },
+  {
+    "id": 57,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "1.0",
+    "arguments": {
+      "input": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "defaultValue": "1.0d"
+    }
+  },
+  {
+    "id": 58,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "-1.0",
+    "arguments": {
+      "input": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "defaultValue": "-1.0d"
+    }
+  },
+  {
+    "id": 59,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN",
+    "arguments": {
+      "input": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "defaultValue": "Double.NaN"
+    }
+  },
+  {
+    "id": 60,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "Infinity",
+    "arguments": {
+      "input": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "defaultValue": "Double.POSITIVE_INFINITY"
+    }
+  }
+]

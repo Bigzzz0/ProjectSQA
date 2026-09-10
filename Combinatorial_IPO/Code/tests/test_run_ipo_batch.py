@@ -7,6 +7,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from analyzer.java_parser import parse_java_file
 from runner.run_ipo_batch import (
@@ -14,6 +15,7 @@ from runner.run_ipo_batch import (
     _method_signature,
     run_batch,
 )
+from oracle.fixed_version_oracle import OracleCollectionError
 
 
 INT_MIN = {
@@ -72,6 +74,299 @@ class MethodFilterTests(unittest.TestCase):
 
 
 class NativeIpoBatchTests(unittest.TestCase):
+    def test_catalog_run_processes_only_the_named_source(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            target_root = temporary_root / "targets"
+            target_directory = target_root / "Demo_1b"
+            target_directory.mkdir(parents=True)
+            (target_directory / "Sample.java").write_text(
+                """package example;
+public class Sample {
+    public static int min(int left, int right) { return Math.min(left, right); }
+}
+""",
+                encoding="utf-8",
+            )
+            (target_directory / "Other.java").write_text(
+                """package example;
+public class Other {
+    public static int max(int left, int right) { return Math.max(left, right); }
+}
+""",
+                encoding="utf-8",
+            )
+            catalog = temporary_root / "catalog.json"
+            catalog.write_text(
+                json.dumps(
+                    [
+                        {
+                            "project": "Demo",
+                            "bug_id": 1,
+                            "dir": "Demo_1b",
+                            "target_class": "example.Sample",
+                            "simple_name": "Sample",
+                        }
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            output_root = temporary_root / "output"
+            manifest = run_batch(
+                target_root=target_root,
+                output_root=output_root,
+                catalog_path=catalog,
+            )
+
+            self.assertEqual(str(catalog), manifest["catalog"])
+            self.assertEqual(["Sample"], [record["class"] for record in manifest["records"]])
+            self.assertFalse((output_root / "Models" / "Demo_1b" / "Other").exists())
+            loop_state = json.loads(
+                (output_root / "Result_Round1" / "catalog_loop_state.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertTrue(loop_state["started"])
+            self.assertEqual("COMPLETED", loop_state["status"])
+
+    def test_suite_generation_failure_is_isolated_per_method(self) -> None:
+        source = """package example;
+
+public class SuiteSample {
+    public static int first(int left, int right) { return left; }
+    public static int second(int left, int right) { return right; }
+}
+"""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            target_root = temporary_root / "targets"
+            target_directory = target_root / "Suite_1b"
+            target_directory.mkdir(parents=True)
+            (target_directory / "SuiteSample.java").write_text(
+                source, encoding="utf-8"
+            )
+
+            def fake_collector(**kwargs):
+                return [
+                    {
+                        "id": index,
+                        "outcome": "RETURN",
+                        "type": "java.lang.Integer",
+                        "value_or_message": "0",
+                    }
+                    for index, _ in enumerate(kwargs["combinations"], start=1)
+                ]
+
+            def fake_synthesizer(package_name, class_name, method_cases, test_class_name=None):
+                if method_cases[0][0]["name"] == "first":
+                    raise ValueError("simulated suite failure")
+                return "package {};\npublic class {} {{}}\n".format(
+                    package_name, test_class_name
+                )
+
+            with patch(
+                "runner.run_ipo_batch.collect_fixed_oracle",
+                side_effect=fake_collector,
+            ), patch(
+                "runner.run_ipo_batch.synthesize_junit_suite",
+                side_effect=fake_synthesizer,
+            ):
+                manifest = run_batch(
+                    target_root=target_root,
+                    output_root=temporary_root / "output",
+                    collect_oracles=True,
+                )
+
+            records = {record["method"]: record for record in manifest["records"]}
+            self.assertEqual("SUITE_ERROR", records["first"]["status"])
+            self.assertEqual("GENERATED", records["second"]["status"])
+            self.assertEqual(1, manifest["generated_suite_count"])
+
+    def test_suite_is_published_only_after_fixed_verification(self) -> None:
+        source = """package example;
+
+public class VerifiedSample {
+    public static int min(int left, int right) { return Math.min(left, right); }
+}
+"""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            target_root = temporary_root / "targets"
+            target_directory = target_root / "Verified_1b"
+            target_directory.mkdir(parents=True)
+            (target_directory / "VerifiedSample.java").write_text(
+                source, encoding="utf-8"
+            )
+
+            def fake_collector(**kwargs):
+                return [
+                    {
+                        "id": index,
+                        "outcome": "RETURN",
+                        "type": "java.lang.Integer",
+                        "value_or_message": "0",
+                    }
+                    for index, _ in enumerate(kwargs["combinations"], start=1)
+                ]
+
+            output_root = temporary_root / "output"
+            with patch(
+                "runner.run_ipo_batch.collect_fixed_oracle",
+                side_effect=fake_collector,
+            ), patch(
+                "runner.run_ipo_batch.verify_fixed_suite",
+                return_value="JUnit version 4\nOK (25 tests)",
+            ):
+                manifest = run_batch(
+                    target_root=target_root,
+                    output_root=output_root,
+                    collect_oracles=True,
+                    verify_suites=True,
+                )
+
+            record = manifest["records"][0]
+            self.assertEqual("VERIFIED", record["suite_status"])
+            self.assertEqual("OK (25 tests)", record["verification_result"])
+            self.assertEqual(1, manifest["generated_suite_count"])
+            self.assertTrue((output_root / record["test_suite"]).is_file())
+
+    def test_failed_fixed_verification_does_not_publish_suite(self) -> None:
+        source = """package example;
+
+public class FailedSample {
+    public static int min(int left, int right) { return Math.min(left, right); }
+}
+"""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            target_root = temporary_root / "targets"
+            target_directory = target_root / "Failed_1b"
+            target_directory.mkdir(parents=True)
+            (target_directory / "FailedSample.java").write_text(
+                source, encoding="utf-8"
+            )
+
+            def fake_collector(**kwargs):
+                return [
+                    {
+                        "id": index,
+                        "outcome": "RETURN",
+                        "type": "java.lang.Integer",
+                        "value_or_message": "0",
+                    }
+                    for index, _ in enumerate(kwargs["combinations"], start=1)
+                ]
+
+            output_root = temporary_root / "output"
+            with patch(
+                "runner.run_ipo_batch.collect_fixed_oracle",
+                side_effect=fake_collector,
+            ), patch(
+                "runner.run_ipo_batch.verify_fixed_suite",
+                side_effect=OracleCollectionError("simulated JUnit failure"),
+            ):
+                manifest = run_batch(
+                    target_root=target_root,
+                    output_root=output_root,
+                    collect_oracles=True,
+                    verify_suites=True,
+                )
+
+            record = manifest["records"][0]
+            self.assertEqual("SUITE_VERIFY_ERROR", record["status"])
+            self.assertEqual("FAILED", record["suite_status"])
+            self.assertEqual(0, manifest["generated_suite_count"])
+            self.assertFalse((output_root / "TestCode").exists())
+
+    def test_oracle_failure_is_isolated_per_method(self) -> None:
+        source = """package example;
+
+public class OracleSample {
+    public static int first(int left, int right) { return left; }
+    public static int second(int left, int right) { return right; }
+}
+"""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            target_root = temporary_root / "targets"
+            target_directory = target_root / "Oracle_1b"
+            target_directory.mkdir(parents=True)
+            (target_directory / "OracleSample.java").write_text(
+                source, encoding="utf-8"
+            )
+
+            def fake_collector(**kwargs):
+                if kwargs["method"]["name"] == "first":
+                    raise OracleCollectionError("simulated oracle failure")
+                return [
+                    {
+                        "id": index,
+                        "outcome": "RETURN",
+                        "type": "java.lang.Integer",
+                        "value_or_message": "0",
+                    }
+                    for index, _ in enumerate(kwargs["combinations"], start=1)
+                ]
+
+            with patch(
+                "runner.run_ipo_batch.collect_fixed_oracle",
+                side_effect=fake_collector,
+            ):
+                manifest = run_batch(
+                    target_root=target_root,
+                    output_root=temporary_root / "output",
+                    collect_oracles=True,
+                )
+
+            records = {record["method"]: record for record in manifest["records"]}
+            self.assertEqual("ORACLE_ERROR", records["first"]["status"])
+            self.assertEqual("ERROR", records["first"]["oracle_status"])
+            self.assertEqual("GENERATED", records["second"]["status"])
+            self.assertEqual("COLLECTED", records["second"]["oracle_status"])
+            self.assertEqual(1, manifest["generated_suite_count"])
+
+    def test_unsupported_method_does_not_block_supported_method(self) -> None:
+        source = """package example;
+
+public class MixedSample {
+    public static int min(int a, int b, int c) {
+        return Math.min(a, Math.min(b, c));
+    }
+
+    public static Object repeat(Object value, int count) {
+        return value;
+    }
+
+    public int instanceValue(int left, int right) {
+        return left + right;
+    }
+}
+"""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            temporary_root = Path(temporary_directory)
+            target_root = temporary_root / "targets"
+            target_directory = target_root / "Mixed_1b"
+            target_directory.mkdir(parents=True)
+            (target_directory / "MixedSample.java").write_text(
+                source, encoding="utf-8"
+            )
+
+            manifest = run_batch(
+                target_root=target_root,
+                output_root=temporary_root / "output",
+            )
+
+            statuses = {
+                record["method_signature"]: record["status"]
+                for record in manifest["records"]
+            }
+            self.assertEqual("GENERATED", statuses["min(int,int,int)"])
+            self.assertEqual(
+                "NEEDS_SEMANTIC_MODEL", statuses["repeat(Object,int)"]
+            )
+            self.assertEqual("UNSUPPORTED", statuses["instanceValue(int,int)"])
+
     def test_batch_uses_native_ipo_and_waits_for_oracle_before_junit(self) -> None:
         source = """package example;
 
@@ -111,6 +406,7 @@ public class Sample {
             self.assertEqual(75, record["expected_pair_count"])
             self.assertEqual(75, record["covered_pair_count"])
             self.assertEqual(100.0, record["pair_coverage_percent"])
+            self.assertEqual(0, record["duplicate_concrete_input_count"])
             self.assertEqual("MISSING", record["oracle_status"])
             self.assertFalse((output_root / "TestCode").exists())
 
@@ -174,9 +470,19 @@ public class Sample {
                     output_root
                     / "TestCode"
                     / "Demo_1b"
-                    / "Sample_IPOTest.java"
+                    / "Sample_min__int_int_int_IPOTest.java"
                 ).is_file()
             )
+            suite_source = (
+                output_root
+                / "TestCode"
+                / "Demo_1b"
+                / "Sample_min__int_int_int_IPOTest.java"
+            ).read_text(encoding="utf-8")
+            self.assertIn(
+                "public class Sample_min__int_int_int_IPOTest", suite_source
+            )
+            self.assertTrue((output_root / record["record_manifest"]).is_file())
 
     def test_lang1_native_ipo_generation_uses_temporary_output(self) -> None:
         project_root = Path(__file__).resolve().parents[3]

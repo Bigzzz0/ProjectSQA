@@ -1,0 +1,59 @@
+{
+  "ready_to_start_loop": true,
+  "loop_started": false,
+  "loop_state": null,
+  "representative_count": 4,
+  "representatives_passed": 4,
+  "known_catalog_mismatches": 4,
+  "catalog_issues": [],
+  "representatives": [
+    {
+      "project": "Lang",
+      "bug_id": 1,
+      "class": "NumberUtils",
+      "signature": "createNumber(String)",
+      "record": "Result_Round1/Lang_1b/NumberUtils/createNumber__String_record.json",
+      "passed": true,
+      "issues": [],
+      "pairwise_count": 48,
+      "expected_pair_count": 194,
+      "verification_result": "OK (48 tests)"
+    },
+    {
+      "project": "Lang",
+      "bug_id": 1,
+      "class": "NumberUtils",
+      "signature": "min(int,int,int)",
+      "record": "Result_Round1/Lang_1b/NumberUtils/min__int_int_int_record.json",
+      "passed": true,
+      "issues": [],
+      "pairwise_count": 28,
+      "expected_pair_count": 75,
+      "verification_result": "OK (28 tests)"
+    },
+    {
+      "project": "JacksonCore",
+      "bug_id": 1,
+      "class": "NumberInput",
+      "signature": "parseAsDouble(String,double)",
+      "record": "Result_Round1/JacksonCore_1b/NumberInput/parseAsDouble__String_double_record.json",
+      "passed": true,
+      "issues": [],
+      "pairwise_count": 60,
+      "expected_pair_count": 60,
+      "verification_result": "OK (60 tests)"
+    },
+    {
+      "project": "JacksonCore",
+      "bug_id": 1,
+      "class": "NumberInput",
+      "signature": "inLongRange(String,boolean)",
+      "record": "Result_Round1/JacksonCore_1b/NumberInput/inLongRange__String_boolean_record.json",
+      "passed": true,
+      "issues": [],
+      "pairwise_count": 24,
+      "expected_pair_count": 24,
+      "verification_result": "OK (24 tests)"
+    }
+  ]
+}

@@ -136,9 +136,13 @@ def synthesize_junit_suite(
     package_name: str,
     class_name: str,
     method_cases: Sequence[Tuple],
+    test_class_name: Optional[str] = None,
 ) -> str:
     """Create one JUnit 4 class containing cases for multiple static methods."""
     _require_java_identifier(class_name, "class name")
+    if test_class_name is None:
+        test_class_name = "{}_IPOTest".format(class_name)
+    _require_java_identifier(test_class_name, "test class name")
     if not method_cases:
         raise ValueError("At least one method and its combinations are required")
 
@@ -182,7 +186,6 @@ def synthesize_junit_suite(
             next_test_index += 1
 
     package_line = "package {};\n\n".format(package_name) if package_name else ""
-    test_class_name = "{}_IPOTest".format(class_name)
     methods = "\n".join(rendered_methods)
 
     return """{package_line}import org.junit.Test;

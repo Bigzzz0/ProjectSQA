@@ -1,0 +1,2338 @@
+{
+  "catalog": "/workspace/target_benchmark/catalog_17_projects.json",
+  "target_root": "/workspace/target_benchmark",
+  "generation_performed": false,
+  "target_count": 17,
+  "target_status_counts": {
+    "AUDITED": 13,
+    "CATALOG_MISMATCH": 4
+  },
+  "method_status_counts": {
+    "CANDIDATE": 23,
+    "NEEDS_SEMANTIC_MODEL": 85,
+    "UNSUPPORTED": 223
+  },
+  "targets": [
+    {
+      "project": "Codec",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.codec.language.Soundex",
+      "source_directory": "Codec_1b",
+      "status": "CATALOG_MISMATCH",
+      "reason": "Catalog source file does not exist: Soundex.java",
+      "available_sources": [
+        "Caverphone.java",
+        "Metaphone.java",
+        "SoundexUtils.java"
+      ]
+    },
+    {
+      "project": "Compress",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
+      "source_directory": "Compress_1b",
+      "status": "CATALOG_MISMATCH",
+      "reason": "Catalog source file does not exist: CpioArchiveInputStream.java",
+      "available_sources": [
+        "CpioArchiveOutputStream.java"
+      ]
+    },
+    {
+      "project": "JacksonDatabind",
+      "bug_id": 1,
+      "target_class": "com.fasterxml.jackson.databind.JavaType",
+      "source_directory": "JacksonDatabind_1b",
+      "status": "CATALOG_MISMATCH",
+      "reason": "Catalog source file does not exist: JavaType.java",
+      "available_sources": [
+        "BeanPropertyWriter.java"
+      ]
+    },
+    {
+      "project": "Jsoup",
+      "bug_id": 1,
+      "target_class": "org.jsoup.nodes.Element",
+      "source_directory": "Jsoup_1b",
+      "status": "CATALOG_MISMATCH",
+      "reason": "Catalog source file does not exist: Element.java",
+      "available_sources": [
+        "Document.java"
+      ]
+    },
+    {
+      "project": "Chart",
+      "bug_id": 1,
+      "target_class": "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer",
+      "source": "/workspace/target_benchmark/Chart_1b/AbstractCategoryItemRenderer.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 55
+      },
+      "methods": [
+        {
+          "method": "getPassCount",
+          "signature": "getPassCount()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getPlot",
+          "signature": "getPlot()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setPlot",
+          "signature": "setPlot(CategoryPlot)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getItemLabelGenerator",
+          "signature": "getItemLabelGenerator(int,int,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSeriesItemLabelGenerator",
+          "signature": "getSeriesItemLabelGenerator(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setSeriesItemLabelGenerator",
+          "signature": "setSeriesItemLabelGenerator(int,CategoryItemLabelGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setSeriesItemLabelGenerator",
+          "signature": "setSeriesItemLabelGenerator(int,CategoryItemLabelGenerator,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBaseItemLabelGenerator",
+          "signature": "getBaseItemLabelGenerator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setBaseItemLabelGenerator",
+          "signature": "setBaseItemLabelGenerator(CategoryItemLabelGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setBaseItemLabelGenerator",
+          "signature": "setBaseItemLabelGenerator(CategoryItemLabelGenerator,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getToolTipGenerator",
+          "signature": "getToolTipGenerator(int,int,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSeriesToolTipGenerator",
+          "signature": "getSeriesToolTipGenerator(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setSeriesToolTipGenerator",
+          "signature": "setSeriesToolTipGenerator(int,CategoryToolTipGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setSeriesToolTipGenerator",
+          "signature": "setSeriesToolTipGenerator(int,CategoryToolTipGenerator,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBaseToolTipGenerator",
+          "signature": "getBaseToolTipGenerator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setBaseToolTipGenerator",
+          "signature": "setBaseToolTipGenerator(CategoryToolTipGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setBaseToolTipGenerator",
+          "signature": "setBaseToolTipGenerator(CategoryToolTipGenerator,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getURLGenerator",
+          "signature": "getURLGenerator(int,int,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSeriesURLGenerator",
+          "signature": "getSeriesURLGenerator(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setSeriesURLGenerator",
+          "signature": "setSeriesURLGenerator(int,CategoryURLGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setSeriesURLGenerator",
+          "signature": "setSeriesURLGenerator(int,CategoryURLGenerator,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBaseURLGenerator",
+          "signature": "getBaseURLGenerator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setBaseURLGenerator",
+          "signature": "setBaseURLGenerator(CategoryURLGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setBaseURLGenerator",
+          "signature": "setBaseURLGenerator(CategoryURLGenerator,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "addAnnotation",
+          "signature": "addAnnotation(CategoryAnnotation)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "addAnnotation",
+          "signature": "addAnnotation(CategoryAnnotation,Layer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "removeAnnotation",
+          "signature": "removeAnnotation(CategoryAnnotation)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "removeAnnotations",
+          "signature": "removeAnnotations()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLegendItemLabelGenerator",
+          "signature": "getLegendItemLabelGenerator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setLegendItemLabelGenerator",
+          "signature": "setLegendItemLabelGenerator(CategorySeriesLabelGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLegendItemToolTipGenerator",
+          "signature": "getLegendItemToolTipGenerator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setLegendItemToolTipGenerator",
+          "signature": "setLegendItemToolTipGenerator(CategorySeriesLabelGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLegendItemURLGenerator",
+          "signature": "getLegendItemURLGenerator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setLegendItemURLGenerator",
+          "signature": "setLegendItemURLGenerator(CategorySeriesLabelGenerator)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getRowCount",
+          "signature": "getRowCount()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getColumnCount",
+          "signature": "getColumnCount()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "initialise",
+          "signature": "initialise(Graphics2D,Rectangle2D,CategoryPlot,CategoryDataset,PlotRenderingInfo)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "findRangeBounds",
+          "signature": "findRangeBounds(CategoryDataset)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getItemMiddle",
+          "signature": "getItemMiddle(Comparable,Comparable,CategoryDataset,CategoryAxis,Rectangle2D,RectangleEdge)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawBackground",
+          "signature": "drawBackground(Graphics2D,CategoryPlot,Rectangle2D)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawOutline",
+          "signature": "drawOutline(Graphics2D,CategoryPlot,Rectangle2D)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawDomainLine",
+          "signature": "drawDomainLine(Graphics2D,CategoryPlot,Rectangle2D,double,Paint,Stroke)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawRangeLine",
+          "signature": "drawRangeLine(Graphics2D,CategoryPlot,ValueAxis,Rectangle2D,double,Paint,Stroke)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawDomainMarker",
+          "signature": "drawDomainMarker(Graphics2D,CategoryPlot,CategoryAxis,CategoryMarker,Rectangle2D)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawRangeMarker",
+          "signature": "drawRangeMarker(Graphics2D,CategoryPlot,ValueAxis,Marker,Rectangle2D)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLegendItem",
+          "signature": "getLegendItem(int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "equals",
+          "signature": "equals(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hashCode",
+          "signature": "hashCode()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getDrawingSupplier",
+          "signature": "getDrawingSupplier()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "drawAnnotations",
+          "signature": "drawAnnotations(Graphics2D,Rectangle2D,CategoryAxis,ValueAxis,Layer,PlotRenderingInfo)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "clone",
+          "signature": "clone()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLegendItems",
+          "signature": "getLegendItems()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createHotSpotShape",
+          "signature": "createHotSpotShape(Graphics2D,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,CategoryItemRendererState)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createHotSpotBounds",
+          "signature": "createHotSpotBounds(Graphics2D,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,CategoryItemRendererState,Rectangle2D)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hitTest",
+          "signature": "hitTest(double,double,Graphics2D,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,CategoryItemRendererState)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Cli",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.cli.CommandLine",
+      "source": "/workspace/target_benchmark/Cli_1b/CommandLine.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 14
+      },
+      "methods": [
+        {
+          "method": "hasOption",
+          "signature": "hasOption(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasOption",
+          "signature": "hasOption(char)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionObject",
+          "signature": "getOptionObject(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionObject",
+          "signature": "getOptionObject(char)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionValue",
+          "signature": "getOptionValue(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionValue",
+          "signature": "getOptionValue(char)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionValues",
+          "signature": "getOptionValues(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionValues",
+          "signature": "getOptionValues(char)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionValue",
+          "signature": "getOptionValue(String,String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptionValue",
+          "signature": "getOptionValue(char,String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getArgs",
+          "signature": "getArgs()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getArgList",
+          "signature": "getArgList()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "iterator",
+          "signature": "iterator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getOptions",
+          "signature": "getOptions()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Closure",
+      "bug_id": 1,
+      "target_class": "com.google.javascript.jscomp.RemoveUnusedVars",
+      "source": "/workspace/target_benchmark/Closure_1b/RemoveUnusedVars.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 4
+      },
+      "methods": [
+        {
+          "method": "process",
+          "signature": "process(Node,Node)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "process",
+          "signature": "process(Node,Node,SimpleDefinitionFinder)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "optimize",
+          "signature": "optimize(Scope,Set<Var>)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "applyChanges",
+          "signature": "applyChanges()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Collections",
+      "bug_id": 25,
+      "target_class": "org.apache.commons.collections4.IteratorUtils",
+      "source": "/workspace/target_benchmark/Collections_25b/IteratorUtils.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "NEEDS_SEMANTIC_MODEL": 61,
+        "UNSUPPORTED": 5
+      },
+      "methods": [
+        {
+          "method": "emptyIterator",
+          "signature": "emptyIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "A method without parameters has no pairwise factors"
+        },
+        {
+          "method": "emptyListIterator",
+          "signature": "emptyListIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "A method without parameters has no pairwise factors"
+        },
+        {
+          "method": "emptyOrderedIterator",
+          "signature": "emptyOrderedIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "A method without parameters has no pairwise factors"
+        },
+        {
+          "method": "emptyMapIterator",
+          "signature": "emptyMapIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "A method without parameters has no pairwise factors"
+        },
+        {
+          "method": "emptyOrderedMapIterator",
+          "signature": "emptyOrderedMapIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "A method without parameters has no pairwise factors"
+        },
+        {
+          "method": "singletonIterator",
+          "signature": "singletonIterator(E)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E"
+        },
+        {
+          "method": "singletonListIterator",
+          "signature": "singletonListIterator(E)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E"
+        },
+        {
+          "method": "arrayIterator",
+          "signature": "arrayIterator(E[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E[]"
+        },
+        {
+          "method": "arrayIterator",
+          "signature": "arrayIterator(Object)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "arrayIterator",
+          "signature": "arrayIterator(E[],int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E[]"
+        },
+        {
+          "method": "arrayIterator",
+          "signature": "arrayIterator(Object,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "arrayIterator",
+          "signature": "arrayIterator(E[],int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E[]"
+        },
+        {
+          "method": "arrayIterator",
+          "signature": "arrayIterator(Object,int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "arrayListIterator",
+          "signature": "arrayListIterator(E[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E[]"
+        },
+        {
+          "method": "arrayListIterator",
+          "signature": "arrayListIterator(Object)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "arrayListIterator",
+          "signature": "arrayListIterator(E[],int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E[]"
+        },
+        {
+          "method": "arrayListIterator",
+          "signature": "arrayListIterator(Object,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "arrayListIterator",
+          "signature": "arrayListIterator(E[],int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E[]"
+        },
+        {
+          "method": "arrayListIterator",
+          "signature": "arrayListIterator(Object,int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "boundedIterator",
+          "signature": "boundedIterator(Iterator<?extendsE>,long)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "boundedIterator",
+          "signature": "boundedIterator(Iterator<?extendsE>,long,long)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "unmodifiableIterator",
+          "signature": "unmodifiableIterator(Iterator<E>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "unmodifiableListIterator",
+          "signature": "unmodifiableListIterator(ListIterator<E>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: ListIterator<E>"
+        },
+        {
+          "method": "unmodifiableMapIterator",
+          "signature": "unmodifiableMapIterator(MapIterator<K,V>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: MapIterator<K, V>"
+        },
+        {
+          "method": "chainedIterator",
+          "signature": "chainedIterator(Iterator<?extendsE>,Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "chainedIterator",
+          "signature": "chainedIterator(Iterator<?extendsE>[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>[]"
+        },
+        {
+          "method": "chainedIterator",
+          "signature": "chainedIterator(Collection<Iterator<?extendsE>>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Collection<Iterator<? extends E>>"
+        },
+        {
+          "method": "collatedIterator",
+          "signature": "collatedIterator(Comparator<?superE>,Iterator<?extendsE>,Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Comparator<? super E>"
+        },
+        {
+          "method": "collatedIterator",
+          "signature": "collatedIterator(Comparator<?superE>,Iterator<?extendsE>[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Comparator<? super E>"
+        },
+        {
+          "method": "collatedIterator",
+          "signature": "collatedIterator(Comparator<?superE>,Collection<Iterator<?extendsE>>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Comparator<? super E>"
+        },
+        {
+          "method": "objectGraphIterator",
+          "signature": "objectGraphIterator(E,Transformer<?superE,?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: E"
+        },
+        {
+          "method": "transformedIterator",
+          "signature": "transformedIterator(Iterator<?extendsI>,Transformer<?superI,?extendsO>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends I>"
+        },
+        {
+          "method": "filteredIterator",
+          "signature": "filteredIterator(Iterator<?extendsE>,Predicate<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "filteredListIterator",
+          "signature": "filteredListIterator(ListIterator<?extendsE>,Predicate<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: ListIterator<? extends E>"
+        },
+        {
+          "method": "loopingIterator",
+          "signature": "loopingIterator(Collection<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Collection<? extends E>"
+        },
+        {
+          "method": "loopingListIterator",
+          "signature": "loopingListIterator(List<E>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: List<E>"
+        },
+        {
+          "method": "nodeListIterator",
+          "signature": "nodeListIterator(NodeList)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: NodeList"
+        },
+        {
+          "method": "nodeListIterator",
+          "signature": "nodeListIterator(Node)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Node"
+        },
+        {
+          "method": "peekingIterator",
+          "signature": "peekingIterator(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "pushbackIterator",
+          "signature": "pushbackIterator(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "skippingIterator",
+          "signature": "skippingIterator(Iterator<E>,long)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "zippingIterator",
+          "signature": "zippingIterator(Iterator<?extendsE>,Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "zippingIterator",
+          "signature": "zippingIterator(Iterator<?extendsE>,Iterator<?extendsE>,Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "zippingIterator",
+          "signature": "zippingIterator(Iterator<?extendsE>[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>[]"
+        },
+        {
+          "method": "asIterator",
+          "signature": "asIterator(Enumeration<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Enumeration<? extends E>"
+        },
+        {
+          "method": "asIterator",
+          "signature": "asIterator(Enumeration<?extendsE>,Collection<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Enumeration<? extends E>"
+        },
+        {
+          "method": "asEnumeration",
+          "signature": "asEnumeration(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "asIterable",
+          "signature": "asIterable(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "asMultipleUseIterable",
+          "signature": "asMultipleUseIterable(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "toListIterator",
+          "signature": "toListIterator(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "toArray",
+          "signature": "toArray(Iterator<?>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<?>"
+        },
+        {
+          "method": "toArray",
+          "signature": "toArray(Iterator<?extendsE>,Class<E>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "toList",
+          "signature": "toList(Iterator<?extendsE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "toList",
+          "signature": "toList(Iterator<?extendsE>,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<? extends E>"
+        },
+        {
+          "method": "getIterator",
+          "signature": "getIterator(Object)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Object"
+        },
+        {
+          "method": "apply",
+          "signature": "apply(Iterator<E>,Closure<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "find",
+          "signature": "find(Iterator<E>,Predicate<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "matchesAny",
+          "signature": "matchesAny(Iterator<E>,Predicate<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "matchesAll",
+          "signature": "matchesAll(Iterator<E>,Predicate<?superE>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "isEmpty",
+          "signature": "isEmpty(Iterator<?>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<?>"
+        },
+        {
+          "method": "contains",
+          "signature": "contains(Iterator<E>,Object)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "get",
+          "signature": "get(Iterator<E>,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "size",
+          "signature": "size(Iterator<?>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<?>"
+        },
+        {
+          "method": "toString",
+          "signature": "toString(Iterator<E>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "toString",
+          "signature": "toString(Iterator<E>,Transformer<?superE,String>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        },
+        {
+          "method": "toString",
+          "signature": "toString(Iterator<E>,Transformer<?superE,String>,String,String,String)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Iterator<E>"
+        }
+      ]
+    },
+    {
+      "project": "Csv",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.csv.ExtendedBufferedReader",
+      "source": "/workspace/target_benchmark/Csv_1b/ExtendedBufferedReader.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 3
+      },
+      "methods": [
+        {
+          "method": "read",
+          "signature": "read()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "read",
+          "signature": "read(char[],int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "readLine",
+          "signature": "readLine()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Gson",
+      "bug_id": 1,
+      "target_class": "com.google.gson.TypeInfoFactory",
+      "source": "/workspace/target_benchmark/Gson_1b/TypeInfoFactory.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "NEEDS_SEMANTIC_MODEL": 2
+      },
+      "methods": [
+        {
+          "method": "getTypeInfoForArray",
+          "signature": "getTypeInfoForArray(Type)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Type"
+        },
+        {
+          "method": "getTypeInfoForField",
+          "signature": "getTypeInfoForField(Field,Type)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Field"
+        }
+      ]
+    },
+    {
+      "project": "JacksonCore",
+      "bug_id": 1,
+      "target_class": "com.fasterxml.jackson.core.io.NumberInput",
+      "source": "/workspace/target_benchmark/JacksonCore_1b/NumberInput.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "CANDIDATE": 4,
+        "NEEDS_SEMANTIC_MODEL": 5,
+        "UNSUPPORTED": 4
+      },
+      "methods": [
+        {
+          "method": "parseInt",
+          "signature": "parseInt(char[],int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: char[]"
+        },
+        {
+          "method": "parseInt",
+          "signature": "parseInt(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "parseLong",
+          "signature": "parseLong(char[],int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: char[]"
+        },
+        {
+          "method": "parseLong",
+          "signature": "parseLong(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "inLongRange",
+          "signature": "inLongRange(char[],int,int,boolean)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: char[]"
+        },
+        {
+          "method": "inLongRange",
+          "signature": "inLongRange(String,boolean)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "boolean"
+          ]
+        },
+        {
+          "method": "parseAsInt",
+          "signature": "parseAsInt(String,int)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "int"
+          ]
+        },
+        {
+          "method": "parseAsLong",
+          "signature": "parseAsLong(String,long)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "long"
+          ]
+        },
+        {
+          "method": "parseAsDouble",
+          "signature": "parseAsDouble(String,double)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "double"
+          ]
+        },
+        {
+          "method": "parseDouble",
+          "signature": "parseDouble(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "parseBigDecimal",
+          "signature": "parseBigDecimal(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "parseBigDecimal",
+          "signature": "parseBigDecimal(char[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: char[]"
+        },
+        {
+          "method": "parseBigDecimal",
+          "signature": "parseBigDecimal(char[],int,int)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: char[]"
+        }
+      ]
+    },
+    {
+      "project": "JacksonXml",
+      "bug_id": 1,
+      "target_class": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+      "source": "/workspace/target_benchmark/JacksonXml_1b/FromXmlParser.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 44
+      },
+      "methods": [
+        {
+          "method": "collectDefaults",
+          "signature": "collectDefaults()",
+          "status": "UNSUPPORTED",
+          "reason": "A method without parameters has no pairwise factors"
+        },
+        {
+          "method": "enabledByDefault",
+          "signature": "enabledByDefault()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMask",
+          "signature": "getMask()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "enabledIn",
+          "signature": "enabledIn(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "version",
+          "signature": "version()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getCodec",
+          "signature": "getCodec()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setCodec",
+          "signature": "setCodec(ObjectCodec)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setXMLTextElementName",
+          "signature": "setXMLTextElementName(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "requiresCustomCodec",
+          "signature": "requiresCustomCodec()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "enable",
+          "signature": "enable(Feature)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "disable",
+          "signature": "disable(Feature)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isEnabled",
+          "signature": "isEnabled(Feature)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "configure",
+          "signature": "configure(Feature,boolean)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getFormatFeatures",
+          "signature": "getFormatFeatures()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "overrideFormatFeatures",
+          "signature": "overrideFormatFeatures(int,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getStaxReader",
+          "signature": "getStaxReader()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "addVirtualWrapping",
+          "signature": "addVirtualWrapping(Set<String>)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getCurrentName",
+          "signature": "getCurrentName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "overrideCurrentName",
+          "signature": "overrideCurrentName(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "close",
+          "signature": "close()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isClosed",
+          "signature": "isClosed()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getParsingContext",
+          "signature": "getParsingContext()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getTokenLocation",
+          "signature": "getTokenLocation()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getCurrentLocation",
+          "signature": "getCurrentLocation()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isExpectedStartArrayToken",
+          "signature": "isExpectedStartArrayToken()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "nextToken",
+          "signature": "nextToken()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "nextTextValue",
+          "signature": "nextTextValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getText",
+          "signature": "getText()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValueAsString",
+          "signature": "getValueAsString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValueAsString",
+          "signature": "getValueAsString(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getTextCharacters",
+          "signature": "getTextCharacters()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getTextLength",
+          "signature": "getTextLength()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getTextOffset",
+          "signature": "getTextOffset()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasTextCharacters",
+          "signature": "hasTextCharacters()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getEmbeddedObject",
+          "signature": "getEmbeddedObject()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBinaryValue",
+          "signature": "getBinaryValue(Base64Variant)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBigIntegerValue",
+          "signature": "getBigIntegerValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getDecimalValue",
+          "signature": "getDecimalValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getDoubleValue",
+          "signature": "getDoubleValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getFloatValue",
+          "signature": "getFloatValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getIntValue",
+          "signature": "getIntValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLongValue",
+          "signature": "getLongValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNumberType",
+          "signature": "getNumberType()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNumberValue",
+          "signature": "getNumberValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "JxPath",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+      "source": "/workspace/target_benchmark/JxPath_1b/DOMNodePointer.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "NEEDS_SEMANTIC_MODEL": 4,
+        "UNSUPPORTED": 27
+      },
+      "methods": [
+        {
+          "method": "testNode",
+          "signature": "testNode(NodeTest)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "testNode",
+          "signature": "testNode(Node,NodeTest)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Node"
+        },
+        {
+          "method": "getName",
+          "signature": "getName()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNamespaceURI",
+          "signature": "getNamespaceURI()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "childIterator",
+          "signature": "childIterator(NodeTest,boolean,NodePointer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "attributeIterator",
+          "signature": "attributeIterator(QName)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "namespacePointer",
+          "signature": "namespacePointer(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "namespaceIterator",
+          "signature": "namespaceIterator()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNamespaceURI",
+          "signature": "getNamespaceURI(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getDefaultNamespaceURI",
+          "signature": "getDefaultNamespaceURI()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getBaseValue",
+          "signature": "getBaseValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getImmediateNode",
+          "signature": "getImmediateNode()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isActual",
+          "signature": "isActual()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isCollection",
+          "signature": "isCollection()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLength",
+          "signature": "getLength()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isLeaf",
+          "signature": "isLeaf()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isLanguage",
+          "signature": "isLanguage(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setValue",
+          "signature": "setValue(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createChild",
+          "signature": "createChild(JXPathContext,QName,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createChild",
+          "signature": "createChild(JXPathContext,QName,int,Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createAttribute",
+          "signature": "createAttribute(JXPathContext,QName)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "remove",
+          "signature": "remove()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "asPath",
+          "signature": "asPath()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hashCode",
+          "signature": "hashCode()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "equals",
+          "signature": "equals(Object)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getPrefix",
+          "signature": "getPrefix(Node)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Node"
+        },
+        {
+          "method": "getLocalName",
+          "signature": "getLocalName(Node)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Node"
+        },
+        {
+          "method": "getNamespaceURI",
+          "signature": "getNamespaceURI(Node)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: Node"
+        },
+        {
+          "method": "getValue",
+          "signature": "getValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getPointerByID",
+          "signature": "getPointerByID(JXPathContext,String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "compareChildNodePointers",
+          "signature": "compareChildNodePointers(NodePointer,NodePointer)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Lang",
+      "bug_id": 1,
+      "target_class": "org.apache.commons.lang3.math.NumberUtils",
+      "source": "/workspace/target_benchmark/Lang_1b/NumberUtils.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "CANDIDATE": 19,
+        "NEEDS_SEMANTIC_MODEL": 12,
+        "UNSUPPORTED": 14
+      },
+      "methods": [
+        {
+          "method": "toInt",
+          "signature": "toInt(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "toInt",
+          "signature": "toInt(String,int)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "int"
+          ]
+        },
+        {
+          "method": "toLong",
+          "signature": "toLong(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "toLong",
+          "signature": "toLong(String,long)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "long"
+          ]
+        },
+        {
+          "method": "toFloat",
+          "signature": "toFloat(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "toFloat",
+          "signature": "toFloat(String,float)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "float"
+          ]
+        },
+        {
+          "method": "toDouble",
+          "signature": "toDouble(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "toDouble",
+          "signature": "toDouble(String,double)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "double"
+          ]
+        },
+        {
+          "method": "toByte",
+          "signature": "toByte(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "toByte",
+          "signature": "toByte(String,byte)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "byte"
+          ]
+        },
+        {
+          "method": "toShort",
+          "signature": "toShort(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "toShort",
+          "signature": "toShort(String,short)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 2,
+          "parameter_types": [
+            "String",
+            "short"
+          ]
+        },
+        {
+          "method": "createNumber",
+          "signature": "createNumber(String)",
+          "status": "CANDIDATE",
+          "strategy": "number_utils_numeric_string",
+          "factor_count": 4,
+          "parameter_types": [
+            "String"
+          ]
+        },
+        {
+          "method": "createFloat",
+          "signature": "createFloat(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "createDouble",
+          "signature": "createDouble(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "createInteger",
+          "signature": "createInteger(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "createLong",
+          "signature": "createLong(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "createBigInteger",
+          "signature": "createBigInteger(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "createBigDecimal",
+          "signature": "createBigDecimal(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "min",
+          "signature": "min(long[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: long[]"
+        },
+        {
+          "method": "min",
+          "signature": "min(int[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: int[]"
+        },
+        {
+          "method": "min",
+          "signature": "min(short[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: short[]"
+        },
+        {
+          "method": "min",
+          "signature": "min(byte[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: byte[]"
+        },
+        {
+          "method": "min",
+          "signature": "min(double[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: double[]"
+        },
+        {
+          "method": "min",
+          "signature": "min(float[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: float[]"
+        },
+        {
+          "method": "max",
+          "signature": "max(long[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: long[]"
+        },
+        {
+          "method": "max",
+          "signature": "max(int[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: int[]"
+        },
+        {
+          "method": "max",
+          "signature": "max(short[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: short[]"
+        },
+        {
+          "method": "max",
+          "signature": "max(byte[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: byte[]"
+        },
+        {
+          "method": "max",
+          "signature": "max(double[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: double[]"
+        },
+        {
+          "method": "max",
+          "signature": "max(float[])",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: float[]"
+        },
+        {
+          "method": "min",
+          "signature": "min(long,long,long)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "long",
+            "long",
+            "long"
+          ]
+        },
+        {
+          "method": "min",
+          "signature": "min(int,int,int)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "int",
+            "int",
+            "int"
+          ]
+        },
+        {
+          "method": "min",
+          "signature": "min(short,short,short)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "short",
+            "short",
+            "short"
+          ]
+        },
+        {
+          "method": "min",
+          "signature": "min(byte,byte,byte)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "byte",
+            "byte",
+            "byte"
+          ]
+        },
+        {
+          "method": "min",
+          "signature": "min(double,double,double)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "double",
+            "double",
+            "double"
+          ]
+        },
+        {
+          "method": "min",
+          "signature": "min(float,float,float)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "float",
+            "float",
+            "float"
+          ]
+        },
+        {
+          "method": "max",
+          "signature": "max(long,long,long)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "long",
+            "long",
+            "long"
+          ]
+        },
+        {
+          "method": "max",
+          "signature": "max(int,int,int)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "int",
+            "int",
+            "int"
+          ]
+        },
+        {
+          "method": "max",
+          "signature": "max(short,short,short)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "short",
+            "short",
+            "short"
+          ]
+        },
+        {
+          "method": "max",
+          "signature": "max(byte,byte,byte)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "byte",
+            "byte",
+            "byte"
+          ]
+        },
+        {
+          "method": "max",
+          "signature": "max(double,double,double)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "double",
+            "double",
+            "double"
+          ]
+        },
+        {
+          "method": "max",
+          "signature": "max(float,float,float)",
+          "status": "CANDIDATE",
+          "strategy": "generic_type_domains",
+          "factor_count": 3,
+          "parameter_types": [
+            "float",
+            "float",
+            "float"
+          ]
+        },
+        {
+          "method": "isDigits",
+          "signature": "isDigits(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        },
+        {
+          "method": "isNumber",
+          "signature": "isNumber(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Pairwise generation requires at least two factors"
+        }
+      ]
+    },
+    {
+      "project": "Math",
+      "bug_id": 2,
+      "target_class": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+      "source": "/workspace/target_benchmark/Math_2b/HypergeometricDistribution.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 11
+      },
+      "methods": [
+        {
+          "method": "cumulativeProbability",
+          "signature": "cumulativeProbability(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNumberOfSuccesses",
+          "signature": "getNumberOfSuccesses()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getPopulationSize",
+          "signature": "getPopulationSize()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSampleSize",
+          "signature": "getSampleSize()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "probability",
+          "signature": "probability(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "upperCumulativeProbability",
+          "signature": "upperCumulativeProbability(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNumericalMean",
+          "signature": "getNumericalMean()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getNumericalVariance",
+          "signature": "getNumericalVariance()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSupportLowerBound",
+          "signature": "getSupportLowerBound()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getSupportUpperBound",
+          "signature": "getSupportUpperBound()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isSupportConnected",
+          "signature": "isSupportConnected()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    },
+    {
+      "project": "Mockito",
+      "bug_id": 1,
+      "target_class": "org.mockito.internal.invocation.InvocationMatcher",
+      "source": "/workspace/target_benchmark/Mockito_1b/InvocationMatcher.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "NEEDS_SEMANTIC_MODEL": 1,
+        "UNSUPPORTED": 9
+      },
+      "methods": [
+        {
+          "method": "getMethod",
+          "signature": "getMethod()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getInvocation",
+          "signature": "getInvocation()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getMatchers",
+          "signature": "getMatchers()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "matches",
+          "signature": "matches(Invocation)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasSimilarMethod",
+          "signature": "hasSimilarMethod(Invocation)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "hasSameMethod",
+          "signature": "hasSameMethod(Invocation)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getLocation",
+          "signature": "getLocation()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "captureArgumentsFrom",
+          "signature": "captureArgumentsFrom(Invocation)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "createFrom",
+          "signature": "createFrom(List<Invocation>)",
+          "status": "NEEDS_SEMANTIC_MODEL",
+          "reason": "No generic value domain for reference type: List<Invocation>"
+        }
+      ]
+    },
+    {
+      "project": "Time",
+      "bug_id": 1,
+      "target_class": "org.joda.time.Partial",
+      "source": "/workspace/target_benchmark/Time_1b/Partial.java",
+      "status": "AUDITED",
+      "method_status_counts": {
+        "UNSUPPORTED": 33
+      },
+      "methods": [
+        {
+          "method": "size",
+          "signature": "size()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getChronology",
+          "signature": "getChronology()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getFieldType",
+          "signature": "getFieldType(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getFieldTypes",
+          "signature": "getFieldTypes()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValue",
+          "signature": "getValue(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getValues",
+          "signature": "getValues()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withChronologyRetainFields",
+          "signature": "withChronologyRetainFields(Chronology)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "with",
+          "signature": "with(DateTimeFieldType,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "without",
+          "signature": "without(DateTimeFieldType)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withField",
+          "signature": "withField(DateTimeFieldType,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withFieldAdded",
+          "signature": "withFieldAdded(DurationFieldType,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withFieldAddWrapped",
+          "signature": "withFieldAddWrapped(DurationFieldType,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withPeriodAdded",
+          "signature": "withPeriodAdded(ReadablePeriod,int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "plus",
+          "signature": "plus(ReadablePeriod)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "minus",
+          "signature": "minus(ReadablePeriod)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "property",
+          "signature": "property(DateTimeFieldType)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isMatch",
+          "signature": "isMatch(ReadableInstant)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "isMatch",
+          "signature": "isMatch(ReadablePartial)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getFormatter",
+          "signature": "getFormatter()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toStringList",
+          "signature": "toStringList()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "toString",
+          "signature": "toString(String,Locale)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getField",
+          "signature": "getField()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "getPartial",
+          "signature": "getPartial()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "get",
+          "signature": "get()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "addToCopy",
+          "signature": "addToCopy(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "addWrapFieldToCopy",
+          "signature": "addWrapFieldToCopy(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setCopy",
+          "signature": "setCopy(int)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setCopy",
+          "signature": "setCopy(String,Locale)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "setCopy",
+          "signature": "setCopy(String)",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withMaximumValue",
+          "signature": "withMaximumValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        },
+        {
+          "method": "withMinimumValue",
+          "signature": "withMinimumValue()",
+          "status": "UNSUPPORTED",
+          "reason": "Only public static methods are supported"
+        }
+      ]
+    }
+  ]
+}

@@ -19,7 +19,7 @@ IPO_ROOT = Path(__file__).resolve().parents[1]
 if str(IPO_ROOT) not in sys.path:
     sys.path.insert(0, str(IPO_ROOT))
 
-from analyzer.java_parser import parse_java_file  # noqa: E402
+from analyzer.java_parser import method_signature, parse_java_file  # noqa: E402
 
 
 JAVA_IDENTIFIER = re.compile(r"^[A-Za-z_$][A-Za-z0-9_$]*$")
@@ -245,27 +245,53 @@ def collect_fixed_oracle(
         return parse_oracle_output(output, len(combinations))
 
 
+def select_method(
+    methods: Sequence[Mapping[str, object]],
+    method_name: str = "",
+    signature: str = "",
+) -> Mapping[str, object]:
+    """Select one method by exact signature or an unambiguous legacy name."""
+    if signature:
+        normalized_signature = re.sub(r"\s+", "", signature)
+        matches = [
+            method
+            for method in methods
+            if method_signature(method) == normalized_signature
+        ]
+        selection = "signature {!r}".format(signature)
+    else:
+        matches = [method for method in methods if method.get("name") == method_name]
+        selection = "method name {!r}".format(method_name)
+
+    if len(matches) != 1:
+        raise OracleCollectionError(
+            "Expected one method for {}; found {}".format(selection, len(matches))
+        )
+    return matches[0]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect outcomes from a Defects4J fixed version")
     parser.add_argument("--project", required=True)
     parser.add_argument("--bug", required=True, type=int)
     parser.add_argument("--source-file", required=True, type=Path)
-    parser.add_argument("--method", required=True)
+    method_selection = parser.add_mutually_exclusive_group(required=True)
+    method_selection.add_argument("--method", help="Select an unambiguous method name")
+    method_selection.add_argument(
+        "--signature",
+        help='Select one exact overload, for example "min(int,int,int)"',
+    )
     parser.add_argument("--inputs", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--defects4j", default="defects4j")
     args = parser.parse_args()
 
     metadata = parse_java_file(str(args.source_file))
-    matches = [
-        method
-        for method in metadata["methods"]
-        if method.get("name") == args.method
-    ]
-    if len(matches) != 1:
-        raise OracleCollectionError(
-            "Expected one method named {!r}; found {}".format(args.method, len(matches))
-        )
+    selected_method = select_method(
+        metadata["methods"],
+        method_name=args.method or "",
+        signature=args.signature or "",
+    )
 
     with args.inputs.open("r", encoding="utf-8", newline="") as input_file:
         combinations = list(csv.DictReader(input_file, delimiter="\t"))
@@ -274,7 +300,7 @@ def main() -> None:
         bug_id=args.bug,
         package_name=str(metadata["package"]),
         target_class=str(metadata["class"]),
-        method=matches[0],
+        method=selected_method,
         combinations=combinations,
         defects4j_executable=args.defects4j,
     )

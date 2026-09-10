@@ -1,0 +1,23 @@
+{
+  "input": [
+    "null",
+    "\"\"",
+    "\" \"",
+    "\"a\"",
+    "\"test123\"",
+    "\"!@#\"",
+    "\"0\"",
+    "\"-1\"",
+    "\"1.5\"",
+    "\"9223372036854775807\"",
+    "\"9223372036854775808\"",
+    "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+  ],
+  "defaultValue": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ]
+}

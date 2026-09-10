@@ -317,10 +317,10 @@ flowchart TD
 #### 🚀 การสั่งรัน IPO Batch บนชุด 17 คลาสตัวแทน:
 เมื่อโค้ดของ Member 1 ผ่าน Readiness Gates ข้างต้นเรียบร้อยแล้ว ให้สั่งรัน `run_ipo_batch.py` โดยวนลูปอ่านจาก [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json) หรือโฟลเดอร์ใน `target_benchmark/`:
 ```bash
-# สั่งรันชุดทดสอบ 17 โปรเจกต์ผ่าน Python:
-python Combinatorial_IPO/Code/runner/run_ipo_batch.py --catalog target_benchmark/catalog_17_projects.json
+# รันจาก repository root เมื่อ readiness check ผ่านแล้วเท่านั้น:
+python Combinatorial_IPO/Code/runner/run_ipo_batch.py --target-root target_benchmark --catalog target_benchmark/catalog_17_projects.json --collect-oracles --verify-suites
 ```
-*ระบบจะสร้าง Parameter Model, รัน Horizontal/Vertical Growth, สกัด Fixed Version Oracle และเซฟไฟล์ JUnit 4 ลงใน `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java` โดยอัตโนมัติ*
+*ระบบจะอ่านเฉพาะ source ที่ระบุใน catalog, สร้าง Parameter Model, รัน Horizontal/Vertical Growth และสกัด Fixed Version Oracle แยกต่อ method จากนั้นจึงเซฟ JUnit 4 ที่ผ่าน fixed-version verification ลงใน `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_<method_id>_IPOTest.java` ส่วน catalog mismatch, unsupported signature หรือ method ที่ล้มเหลวจะถูกบันทึกสถานะและข้ามโดยไม่หยุดทั้ง batch*
 
 ---
 

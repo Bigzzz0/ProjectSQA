@@ -33,6 +33,11 @@ TYPE_DOMAINS: Dict[str, Tuple[str, ...]] = {
         '"a"',
         '"test123"',
         '"!@#"',
+        '"0"',
+        '"-1"',
+        '"1.5"',
+        '"9223372036854775807"',
+        '"9223372036854775808"',
         '"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"',
     ),
 }
@@ -50,6 +55,18 @@ JAVA_LANG_TYPES = {
 }
 
 
+class DomainGenerationError(ValueError):
+    """Base error for Java types that cannot use a generic value domain."""
+
+
+class UnsupportedTypeError(DomainGenerationError):
+    """Raised for an unsupported primitive-like Java type."""
+
+
+class NeedsSemanticModelError(DomainGenerationError):
+    """Raised when a reference type needs meaningful constructed values."""
+
+
 def normalize_java_type(parameter_type: str) -> str:
     """Normalize java.lang names while retaining arrays and generic types."""
     normalized = re.sub(r"\s+", " ", parameter_type.strip()).replace("...", "[]")
@@ -61,11 +78,7 @@ def normalize_java_type(parameter_type: str) -> str:
 
 
 def get_domain_for_type(parameter_type: str) -> List[str]:
-    """Return an independent list of Java expressions for a parameter type.
-
-    Unknown reference types receive only ``null`` for now.  A later semantic
-    override module will provide constructors, enum constants, and collections.
-    """
+    """Return values for a supported type without guessing object semantics."""
     normalized = normalize_java_type(parameter_type)
     domain = TYPE_DOMAINS.get(normalized)
     if domain is not None:
@@ -73,8 +86,12 @@ def get_domain_for_type(parameter_type: str) -> List[str]:
 
     # Primitive-looking unknown types cannot safely receive null.
     if re.fullmatch(r"[a-z]+", normalized):
-        raise ValueError("Unsupported primitive Java type: {}".format(parameter_type))
-    return ["null"]
+        raise UnsupportedTypeError(
+            "Unsupported primitive Java type: {}".format(parameter_type)
+        )
+    raise NeedsSemanticModelError(
+        "No generic value domain for reference type: {}".format(parameter_type)
+    )
 
 
 def main() -> None:

@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "outcome": "THROW",
+    "type": "java.lang.NullPointerException",
+    "value_or_message": "",
+    "arguments": {
+      "numberStr": "null",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 2,
+    "outcome": "THROW",
+    "type": "java.lang.NullPointerException",
+    "value_or_message": "",
+    "arguments": {
+      "numberStr": "null",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\" \"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\" \"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"a\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"a\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"test123\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"test123\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"!@#\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"!@#\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"0\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"0\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"-1\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"-1\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"1.5\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"1.5\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"9223372036854775807\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"9223372036854775807\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true",
+    "arguments": {
+      "numberStr": "\"9223372036854775808\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false",
+    "arguments": {
+      "numberStr": "\"9223372036854775808\"",
+      "negative": "false"
+    }
+  },
+  {
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false",
+    "arguments": {
+      "numberStr": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "negative": "true"
+    }
+  },
+  {
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false",
+    "arguments": {
+      "numberStr": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "negative": "false"
+    }
+  }
+]

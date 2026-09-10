@@ -1,0 +1,25 @@
+numberStr	negative
+null	true
+null	false
+""""""	true
+""""""	false
+""" """	true
+""" """	false
+"""a"""	true
+"""a"""	false
+"""test123"""	true
+"""test123"""	false
+"""!@#"""	true
+"""!@#"""	false
+"""0"""	true
+"""0"""	false
+"""-1"""	true
+"""-1"""	false
+"""1.5"""	true
+"""1.5"""	false
+"""9223372036854775807"""	true
+"""9223372036854775807"""	false
+"""9223372036854775808"""	true
+"""9223372036854775808"""	false
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	true
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	false

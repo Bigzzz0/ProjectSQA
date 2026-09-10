@@ -23,11 +23,20 @@ Java source
   -> oracle-backed JUnit 4
 ```
 
-## Current Lang-1 status
+## Current readiness status
 
 ชุด `NumberUtils.createNumber(String)` จำนวน 48 cases ที่อยู่ใน repository ก่อน native IPO implementation เป็น **PICT pilot baseline** ซึ่งผ่านการเก็บ oracle และ fixed-version verification แล้ว และถูกเก็บแยกไว้ใต้ `baselines/pict/Lang_1b/` ห้ามนำชุดนี้ไปรายงานเป็นผล IPO
 
 Native IPO สร้าง abstract combinations 48 แถว ครอบคลุม 194/194 pairs รักษา mandatory seed เก็บ oracle ใหม่ครบ 48 outcomes และผ่าน JUnit 4 บน `Lang-1f` ครบ `OK (48 tests)` แล้ว ชุดส่งมอบอยู่ใน `TestCode/Lang_1b/`
+
+Readiness representatives ผ่าน fixed-version verification แล้ว 4/4 methods ครอบคลุม primitive หลาย parameters, String, floating point, boolean และสอง Defects4J projects:
+
+- `NumberUtils.createNumber(String)`: 48 tests, 194/194 pairs
+- `NumberUtils.min(int,int,int)`: 28 tests, 75/75 pairs
+- `NumberInput.parseAsDouble(String,double)`: 60 tests, 60/60 pairs
+- `NumberInput.inLongRange(String,boolean)`: 24 tests, 24/24 pairs
+
+การตรวจ catalog แบบไม่ generate พบ 13 targets ที่อ่าน source ได้ และ catalog mismatch 4 targets ซึ่งระบบบันทึกตามจริงโดยไม่เดา source ทดแทน รายละเอียดอยู่ใน `Result_Round1/feasibility_audit.json` และผล readiness ล่าสุดอยู่ใน `Result_Round1/readiness_report.json` ทั้งสองไฟล์ยืนยันว่า `generation_performed`/`loop_started` เป็น `false` โดยเมื่อเริ่ม catalog batch ระบบจะสร้าง `Result_Round1/catalog_loop_state.json` ทันทีเพื่อไม่ให้ readiness รายงานสถานะจากค่าคงที่
 
 ## Project structure
 
@@ -61,6 +70,22 @@ docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO/Code && python
 
 Tests ไม่เรียก PICT executable และใช้ temporary directories สำหรับ runner integration
 
+## Audit and readiness checks
+
+ตรวจ 17-target catalog โดยไม่สร้าง combinations, oracle หรือ JUnit:
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/feasibility_audit.py --catalog /workspace/target_benchmark/catalog_17_projects.json --target-root /workspace/target_benchmark --output Result_Round1/feasibility_audit.json --summary-only'
+```
+
+ตรวจ artifacts ของ representative methods และ delivery gates โดยไม่เริ่ม loop:
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/readiness_check.py'
+```
+
+คำสั่ง readiness จะสำเร็จเมื่อทั้ง 4 representatives ผ่าน pair coverage, oracle alignment, timeout/class naming, fixed-version verification และ feasibility audit ครบตาม configuration ใน `Configuration/readiness_representatives.json`
+
 ## Safe native IPO trial
 
 ระบุ project, bug และ exact signature พร้อมเขียนผลลงพื้นที่ทดลองเสมอ:
@@ -75,7 +100,7 @@ docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Cod
 
 ## Delivery gate
 
-ไฟล์ `<Class>_IPOTest.java` จะสร้างได้เมื่อ:
+ไฟล์ `<Class>_<method_id>_IPOTest.java` จะเผยแพร่ลง `TestCode/<Project>_<BugID>b/` ได้เมื่อ:
 
 1. native IPO generation สำเร็จ
 2. independent pair coverage ครบ 100%
@@ -83,13 +108,25 @@ docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Cod
 4. generated JUnit ใช้ JUnit 4 และทุก test มี `@Test(timeout = 4000)`
 5. suite compile และผ่านบน Defects4J fixed version ก่อนนำไปวางเป็นชุดส่งมอบ
 
+เมื่อเขียนลง output หลัก ระบบบังคับใช้ `--verify-suites`; ถ้าไม่ระบุจะบันทึก `VERIFICATION_REQUIRED` และไม่เผยแพร่ JUnit ส่วน method ที่ล้มเหลวจะมีสถานะแยกของตัวเองและไม่หยุด method/target อื่น
+
+## Start the 17-target loop
+
+ให้ผู้ควบคุมการทดลองเป็นผู้สั่งคำสั่งนี้เองหลังตรวจ `readiness_check.py` ผ่าน:
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && python3 Code/runner/run_ipo_batch.py --target-root /workspace/target_benchmark --catalog /workspace/target_benchmark/catalog_17_projects.json --collect-oracles --verify-suites'
+```
+
+คำสั่งนี้จะประมวลผลเฉพาะ source ที่ระบุใน catalog, เก็บ fixed-version oracle และเผยแพร่เฉพาะ suite ที่ verify ผ่าน ทั้ง 4 catalog mismatches จะถูกรายงานและข้ามอย่างปลอดภัยแทนการเลือกคลาสอื่นโดยอัตโนมัติ
+
 Member 1 ไม่รัน buggy version, coverage หรือ Fault Detection Rate ในขั้นนี้ งานดังกล่าวเป็นความรับผิดชอบของ Member 4
 
 ## Current limitations
 
-- ยืนยัน native IPO end-to-end แล้วเฉพาะ `NumberUtils.createNumber(String)`; generic method ที่ไม่มี semantic override ยังเป็นขั้นถัดไป
+- ยืนยัน native IPO end-to-end แล้ว 4 representative methods ตามหัวข้อ Current readiness status; ยังไม่ได้อ้างว่ารองรับทุก signature ใน Defects4J
 - รองรับหลัก ๆ เฉพาะ public static methods ที่มี parameters
 - parser เป็น lightweight regex analyzer
 - constructor, instance method, collection, complex object และ constraints ยังไม่รองรับทั่วไป
-- unsupported targets ต้องถูก skip พร้อมสถานะ ห้ามสร้าง input โดยเดา
-- ห้ามเปิด all-target batch จนกว่า representative methods และ failure isolation จะผ่าน readiness gates ใน `TEAM_WORKFLOW_GUIDE.md`
+- reference type ที่ไม่มี semantic model และ unsupported type ต้องถูก skip พร้อมสถานะ ห้ามแทนค่าเป็น `null` หรือสร้าง input โดยเดา
+- catalog mismatch ต้องบันทึกและข้าม ห้ามเดา source file ทดแทน

@@ -1,0 +1,34 @@
+[
+  {
+    "project": "Lang",
+    "bug_id": 1,
+    "class": "NumberUtils",
+    "signature": "createNumber(String)",
+    "method_id": "createNumber__String",
+    "strategy": "number_utils_numeric_string"
+  },
+  {
+    "project": "Lang",
+    "bug_id": 1,
+    "class": "NumberUtils",
+    "signature": "min(int,int,int)",
+    "method_id": "min__int_int_int",
+    "strategy": "generic_type_domains"
+  },
+  {
+    "project": "JacksonCore",
+    "bug_id": 1,
+    "class": "NumberInput",
+    "signature": "parseAsDouble(String,double)",
+    "method_id": "parseAsDouble__String_double",
+    "strategy": "generic_type_domains"
+  },
+  {
+    "project": "JacksonCore",
+    "bug_id": 1,
+    "class": "NumberInput",
+    "signature": "inLongRange(String,boolean)",
+    "method_id": "inLongRange__String_boolean",
+    "strategy": "generic_type_domains"
+  }
+]

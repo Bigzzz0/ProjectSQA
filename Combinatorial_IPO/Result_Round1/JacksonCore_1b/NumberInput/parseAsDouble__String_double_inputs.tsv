@@ -1,0 +1,61 @@
+input	defaultValue
+null	0.0d
+null	1.0d
+null	-1.0d
+null	Double.NaN
+null	Double.POSITIVE_INFINITY
+""""""	0.0d
+""""""	1.0d
+""""""	-1.0d
+""""""	Double.NaN
+""""""	Double.POSITIVE_INFINITY
+""" """	0.0d
+""" """	1.0d
+""" """	-1.0d
+""" """	Double.NaN
+""" """	Double.POSITIVE_INFINITY
+"""a"""	0.0d
+"""a"""	1.0d
+"""a"""	-1.0d
+"""a"""	Double.NaN
+"""a"""	Double.POSITIVE_INFINITY
+"""test123"""	0.0d
+"""test123"""	1.0d
+"""test123"""	-1.0d
+"""test123"""	Double.NaN
+"""test123"""	Double.POSITIVE_INFINITY
+"""!@#"""	0.0d
+"""!@#"""	1.0d
+"""!@#"""	-1.0d
+"""!@#"""	Double.NaN
+"""!@#"""	Double.POSITIVE_INFINITY
+"""0"""	0.0d
+"""0"""	1.0d
+"""0"""	-1.0d
+"""0"""	Double.NaN
+"""0"""	Double.POSITIVE_INFINITY
+"""-1"""	0.0d
+"""-1"""	1.0d
+"""-1"""	-1.0d
+"""-1"""	Double.NaN
+"""-1"""	Double.POSITIVE_INFINITY
+"""1.5"""	0.0d
+"""1.5"""	1.0d
+"""1.5"""	-1.0d
+"""1.5"""	Double.NaN
+"""1.5"""	Double.POSITIVE_INFINITY
+"""9223372036854775807"""	0.0d
+"""9223372036854775807"""	1.0d
+"""9223372036854775807"""	-1.0d
+"""9223372036854775807"""	Double.NaN
+"""9223372036854775807"""	Double.POSITIVE_INFINITY
+"""9223372036854775808"""	0.0d
+"""9223372036854775808"""	1.0d
+"""9223372036854775808"""	-1.0d
+"""9223372036854775808"""	Double.NaN
+"""9223372036854775808"""	Double.POSITIVE_INFINITY
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	0.0d
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	1.0d
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	-1.0d
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	Double.NaN
+"""aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"""	Double.POSITIVE_INFINITY

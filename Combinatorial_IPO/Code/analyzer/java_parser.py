@@ -10,12 +10,13 @@ import argparse
 import json
 import re
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Mapping
 
 
 PACKAGE_PATTERN = re.compile(r"^\s*package\s+([\w.]+)\s*;", re.MULTILINE)
 CLASS_PATTERN = re.compile(
-    r"\bpublic\s+(?:(?:abstract|final|strictfp)\s+)*class\s+(\w+)"
+    r"^\s*(?:public\s+)?(?:(?:abstract|final|strictfp)\s+)*class\s+(\w+)",
+    re.MULTILINE,
 )
 METHOD_PATTERN = re.compile(
     r"\bpublic\s+"
@@ -109,6 +110,23 @@ def parse_java_file(filepath: str) -> Dict[str, object]:
         "class": class_match.group(1),
         "methods": methods,
     }
+
+
+def method_signature(method: Mapping[str, object]) -> str:
+    """Return a normalized Java-style signature for one parsed method."""
+    name = method.get("name")
+    parameters = method.get("parameters")
+    if not isinstance(name, str) or not isinstance(parameters, list):
+        raise ValueError("Method name and parameters are required")
+
+    parameter_types: List[str] = []
+    for parameter in parameters:
+        if not isinstance(parameter, dict) or not isinstance(
+            parameter.get("type"), str
+        ):
+            raise ValueError("Every method parameter must have a type")
+        parameter_types.append(re.sub(r"\s+", "", parameter["type"]))
+    return "{}({})".format(name, ",".join(parameter_types))
 
 
 def main() -> None:
