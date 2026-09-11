@@ -6,3 +6,4 @@ Chart,1,org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,Gemini 3.
 Cli,1,org.apache.commons.cli.CommandLine,Claude Sonnet 5 (via KKU API),claude-sonnet-5,4172,31098,35270,287.7,2026-09-09 20:48:30
 Cli,1,org.apache.commons.cli.CommandLine,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,3406,3402,10820,43.36,2026-09-09 20:54:02
 Closure,1,com.google.javascript.jscomp.RemoveUnusedVars,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,9936,5849,29600,102.83,2026-09-10 11:19:53
+Closure,1,com.google.javascript.jscomp.RemoveUnusedVars,Claude Sonnet 5 (via KKU API),claude-sonnet-5,14289,41319,55608,381.78,2026-09-11 17:03:52

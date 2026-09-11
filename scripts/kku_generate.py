@@ -261,7 +261,8 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         f"Generate the complete JUnit 4 test class {output_class_name} that achieves maximum line and branch coverage and targets the defect."
     )
 
-    max_tokens_val = 190000
+    # เพดาน max_tokens สูงสุดตามสถาปัตยกรรมของ Gemini & Claude API คือ 65,536 (ห้ามเกิน 65536 มิฉะนั้น Google API จะโยน 400 Bad Request)
+    max_tokens_val = 65536
 
     payload = {
         "model": model_to_use,
@@ -270,7 +271,8 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
             {"role": "user", "content": user_prompt}
         ],
         "temperature": 0.2,
-        "max_tokens": max_tokens_val
+        "max_tokens": max_tokens_val,
+        "stream": True
     }
 
     headers = {
@@ -281,7 +283,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     print(f"\n🚀 กำลังส่ง Request ไปยัง KKU IntelSphere API...")
     print(f"   🤖 Model: {model_to_use} ({ai_display_name})")
     print(f"   🎯 Target Class: {output_class_name}.java")
-    print("   ⏳ กรุณารอสักครู่ (กำลังจับเวลาการสร้าง)...")
+    print("   ⏳ เริ่มต้นสตรีมมิงรับโค้ดแบบ Real-time...", flush=True)
 
     start_time = time.time()
     try:
@@ -289,13 +291,12 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
             f"{API_BASE_URL}/chat/completions",
             headers=headers,
             json=payload,
-            timeout=300
+            stream=True,
+            timeout=(30, 600)
         )
     except Exception as e:
         print(f"❌ เกิดข้อผิดพลาดในการเชื่อมต่อ: {e}")
         return
-
-    elapsed_time = round(time.time() - start_time, 2)
 
     if response.status_code != 200:
         error_msg = response.text
@@ -313,40 +314,76 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
             print("💡 แนะนำ: ลองรัน `python kku_generate.py --list-models` เพื่อดู Model ID/Name ที่ถูกต้องในระบบ")
         return
 
-    res_json = response.json()
-    
-    # 1. ดึงข้อความตอบกลับ
-    choices = res_json.get("choices", [])
-    if not choices:
-        print("❌ ไม่พบ choices ในคำตอบจาก AI")
-        return
-    
-    message_obj = choices[0].get("message", {})
-    raw_content = message_obj.get("content")
-    if not raw_content:
-        raw_content = message_obj.get("text") or message_obj.get("reasoning") or ""
-        
-    java_code = extract_java_code(raw_content)
-    if not java_code.strip():
-        finish_reason = choices[0].get("finish_reason", "")
-        print(f"❌ AI ไม่ได้ส่งเนื้อหาโค้ด Java กลับมา (Content is empty หรือถูกบล็อก)")
-        print(f"   ℹ️ finish_reason: {finish_reason}")
-        print(f"   ℹ️ message: {message_obj}")
+    # อ่านข้อมูลแบบ Real-time Stream เพื่อป้องกัน TCP Connection Aborted / Idle Timeout
+    full_content = []
+    finish_reason = ""
+    usage = {}
+    quota = {}
+    stream_error = None
+
+    print("   📡 กำลังสตรีมรับข้อมูลโค้ดจาก AI...", end="", flush=True)
+    chunk_count = 0
+    for line_bytes in response.iter_lines():
+        if not line_bytes:
+            continue
+        line_str = line_bytes.decode("utf-8", errors="replace").strip()
+        if line_str.startswith("{") and ('"status":' in line_str or '"error":' in line_str):
+            try:
+                err_chunk = json.loads(line_str)
+                if err_chunk.get("status") and err_chunk.get("status") != 200:
+                    stream_error = err_chunk
+                    break
+            except Exception:
+                pass
+        if line_str.startswith("data: "):
+            json_str = line_str[6:].strip()
+            if json_str == "[DONE]":
+                break
+            try:
+                chunk = json.loads(json_str)
+                choices = chunk.get("choices", [])
+                if choices:
+                    delta = choices[0].get("delta", {})
+                    content_piece = delta.get("content", "")
+                    if content_piece:
+                        full_content.append(content_piece)
+                    fr = choices[0].get("finish_reason")
+                    if fr:
+                        finish_reason = fr
+                if "usage" in chunk and chunk["usage"]:
+                    usage = chunk["usage"]
+                if "model_quota" in chunk and chunk["model_quota"]:
+                    quota = chunk["model_quota"]
+                chunk_count += 1
+                if chunk_count % 30 == 0:
+                    print(".", end="", flush=True)
+            except Exception:
+                pass
+
+    if stream_error:
+        print(f"\n❌ Stream Error จากเซิร์ฟเวอร์: {stream_error}")
         return
 
-    # 2. ดึงสถิติ Token และตรวจสอบ finish_reason
-    finish_reason = choices[0].get("finish_reason", "")
-    usage = res_json.get("usage", {})
+    print(" เรียบร้อย!")
+
+    elapsed_time = round(time.time() - start_time, 2)
+    raw_content = "".join(full_content)
+    java_code = extract_java_code(raw_content)
+
+    if not java_code.strip():
+        print(f"❌ AI ไม่ได้ส่งเนื้อหาโค้ด Java กลับมา (Content is empty หรือถูกบล็อก)")
+        print(f"   ℹ️ finish_reason: {finish_reason}")
+        return
+
+    # 2. ดึงสถิติ Token และคำนวณสถิติ
     prompt_tokens = usage.get("prompt_tokens", 0)
-    completion_tokens = usage.get("completion_tokens", 0)
+    completion_tokens = usage.get("completion_tokens", len(raw_content) // 4)
     total_tokens = usage.get("total_tokens", prompt_tokens + completion_tokens)
     
     # คำนวณ Thinking / Reasoning Tokens (สำหรับโมเดลที่มี Chain-of-Thought เช่น Gemini 3.8 Flash)
     reasoning_tokens = usage.get("completion_tokens_details", {}).get("reasoning_tokens", 0)
     if not reasoning_tokens and total_tokens > (prompt_tokens + completion_tokens):
         reasoning_tokens = total_tokens - (prompt_tokens + completion_tokens)
-
-    quota = res_json.get("model_quota", {})
 
     print(f"\n✅ สร้างโค้ดสำเร็จในเวลา {elapsed_time} วินาที!")
     if finish_reason == "length":
