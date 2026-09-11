@@ -7,3 +7,9 @@ Cli,1,org.apache.commons.cli.CommandLine,Claude Sonnet 5 (via KKU API),claude-so
 Cli,1,org.apache.commons.cli.CommandLine,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,3406,3402,10820,43.36,2026-09-09 20:54:02
 Closure,1,com.google.javascript.jscomp.RemoveUnusedVars,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,9936,5849,29600,102.83,2026-09-10 11:19:53
 Closure,1,com.google.javascript.jscomp.RemoveUnusedVars,Claude Sonnet 5 (via KKU API),claude-sonnet-5,14289,41319,55608,381.78,2026-09-11 17:03:52
+Codec,1,org.apache.commons.codec.language.Caverphone,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,3386,5068,9817,35.93,2026-09-11 17:15:09
+Codec,1,org.apache.commons.codec.language.Caverphone,Claude Sonnet 5 (via KKU API),claude-sonnet-5,4772,8893,13665,123.35,2026-09-11 17:17:25
+Codec,1,org.apache.commons.codec.language.Metaphone,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,4982,4709,11935,38.75,2026-09-11 17:20:40
+Codec,1,org.apache.commons.codec.language.Metaphone,Claude Sonnet 5 (via KKU API),claude-sonnet-5,6826,12142,18968,83.02,2026-09-11 17:22:30
+Codec,1,org.apache.commons.codec.language.SoundexUtils,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,2446,2177,6552,23.79,2026-09-11 17:24:09
+Codec,1,org.apache.commons.codec.language.SoundexUtils,Claude Sonnet 5 (via KKU API),claude-sonnet-5,3359,3771,7130,27.93,2026-09-11 17:24:46
