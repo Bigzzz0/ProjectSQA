@@ -13,3 +13,5 @@ Codec,1,org.apache.commons.codec.language.Metaphone,Gemini 3.8 Flash (via KKU AP
 Codec,1,org.apache.commons.codec.language.Metaphone,Claude Sonnet 5 (via KKU API),claude-sonnet-5,6826,12142,18968,83.02,2026-09-11 17:22:30
 Codec,1,org.apache.commons.codec.language.SoundexUtils,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,2446,2177,6552,23.79,2026-09-11 17:24:09
 Codec,1,org.apache.commons.codec.language.SoundexUtils,Claude Sonnet 5 (via KKU API),claude-sonnet-5,3359,3771,7130,27.93,2026-09-11 17:24:46
+Collections,25,org.apache.commons.collections4.IteratorUtils,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,16003,9408,27041,56.0,2026-09-11 17:30:02
+Collections,25,org.apache.commons.collections4.IteratorUtils,Claude Sonnet 5 (via KKU API),claude-sonnet-5,22799,27342,50141,170.43,2026-09-11 17:35:47
