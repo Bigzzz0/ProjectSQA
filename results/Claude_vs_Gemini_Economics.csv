@@ -19,3 +19,5 @@ Compress,1,org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream,Ge
 Compress,1,org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream,Claude Sonnet 5 (via KKU API),claude-sonnet-5,7204,24863,32067,191.12,2026-09-12 09:37:44
 Csv,1,org.apache.commons.csv.ExtendedBufferedReader,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,2335,4524,8319,33.77,2026-09-12 09:43:07
 Csv,1,org.apache.commons.csv.ExtendedBufferedReader,Claude Sonnet 5 (via KKU API),claude-sonnet-5,3091,7904,10995,57.52,2026-09-12 09:44:15
+Gson,1,com.google.gson.TypeInfoFactory,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,2576,3885,17011,75.37,2026-09-12 09:49:11
+Gson,1,com.google.gson.TypeInfoFactory,Claude Sonnet 5 (via KKU API),claude-sonnet-5,3738,9190,12928,72.67,2026-09-12 09:50:34
