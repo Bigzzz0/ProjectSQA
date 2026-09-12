@@ -451,10 +451,10 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     proj_name = "Unknown"
     bug_id = "Unknown"
     if "_" in folder_name:
-        parts = folder_name.replace("b", "").replace("f", "").split("_")
+        parts = folder_name.split("_")
         if len(parts) >= 2:
             proj_name = parts[0]
-            bug_id = parts[1]
+            bug_id = parts[1].rstrip("bfBF")
 
     file_exists = os.path.exists(economics_csv)
     try:

@@ -25,3 +25,5 @@ JacksonCore,1,com.fasterxml.jackson.core.util.TextBuffer,Gemini 3.8 Flash (via K
 JacksonCore,1,com.fasterxml.jackson.core.util.TextBuffer,Claude Sonnet 5 (via KKU API),claude-sonnet-5,8781,14209,22990,98.43,2026-09-12 09:58:19
 JacksonCore,1,com.fasterxml.jackson.core.io.NumberInput,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,3918,6033,13622,66.02,2026-09-12 10:00:19
 JacksonCore,1,com.fasterxml.jackson.core.io.NumberInput,Claude Sonnet 5 (via KKU API),claude-sonnet-5,5094,11665,16759,79.72,2026-09-12 10:01:58
+JacksonDatabind,1,com.fasterxml.jackson.databind.ser.BeanPropertyWriter,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,7085,5756,14359,40.68,2026-09-12 10:08:08
+JacksonDatabind,1,com.fasterxml.jackson.databind.ser.BeanPropertyWriter,Claude Sonnet 5 (via KKU API),claude-sonnet-5,10070,37136,47206,323.12,2026-09-12 10:14:04
