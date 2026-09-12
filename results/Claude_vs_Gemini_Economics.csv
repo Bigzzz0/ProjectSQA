@@ -17,3 +17,5 @@ Collections,25,org.apache.commons.collections4.IteratorUtils,Gemini 3.8 Flash (v
 Collections,25,org.apache.commons.collections4.IteratorUtils,Claude Sonnet 5 (via KKU API),claude-sonnet-5,22799,27342,50141,170.43,2026-09-11 17:35:47
 Compress,1,org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,5043,5927,14158,71.58,2026-09-12 09:34:25
 Compress,1,org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream,Claude Sonnet 5 (via KKU API),claude-sonnet-5,7204,24863,32067,191.12,2026-09-12 09:37:44
+Csv,1,org.apache.commons.csv.ExtendedBufferedReader,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,2335,4524,8319,33.77,2026-09-12 09:43:07
+Csv,1,org.apache.commons.csv.ExtendedBufferedReader,Claude Sonnet 5 (via KKU API),claude-sonnet-5,3091,7904,10995,57.52,2026-09-12 09:44:15
