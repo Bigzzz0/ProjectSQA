@@ -29,3 +29,5 @@ JacksonDatabind,1,com.fasterxml.jackson.databind.ser.BeanPropertyWriter,Gemini 3
 JacksonDatabind,1,com.fasterxml.jackson.databind.ser.BeanPropertyWriter,Claude Sonnet 5 (via KKU API),claude-sonnet-5,10070,37136,47206,323.12,2026-09-12 10:14:04
 JacksonXml,1,com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,8905,4274,17317,50.84,2026-09-12 10:18:35
 JacksonXml,1,com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser,Claude Sonnet 5 (via KKU API),claude-sonnet-5,12781,46956,59737,372.11,2026-09-12 10:25:05
+Jsoup,1,org.jsoup.nodes.Document,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,2234,2979,6904,30.24,2026-09-13 13:04:59
+Jsoup,1,org.jsoup.nodes.Document,Claude Sonnet 5 (via KKU API),claude-sonnet-5,2757,4931,7688,37.24,2026-09-13 13:05:44
