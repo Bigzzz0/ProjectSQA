@@ -39,3 +39,5 @@ Math,2,org.apache.commons.math3.distribution.HypergeometricDistribution,Gemini 3
 Math,2,org.apache.commons.math3.distribution.HypergeometricDistribution,Claude Sonnet 5 (via KKU API),claude-sonnet-5,6514,11077,17591,78.27,2026-09-13 13:38:02
 Mockito,1,org.mockito.internal.invocation.InvocationMatcher,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,3758,3109,8045,24.68,2026-09-13 13:42:07
 Mockito,1,org.mockito.internal.invocation.InvocationMatcher,Claude Sonnet 5 (via KKU API),claude-sonnet-5,5909,15919,21828,131.11,2026-09-13 13:44:52
+Time,1,org.joda.time.Partial,Gemini 3.8 Flash (via KKU API),gemini-3.8-flash,10651,6109,19072,46.69,2026-09-13 13:49:10
+Time,1,org.joda.time.Partial,Claude Sonnet 5 (via KKU API),claude-sonnet-5,14688,17216,31904,110.54,2026-09-13 13:51:55
