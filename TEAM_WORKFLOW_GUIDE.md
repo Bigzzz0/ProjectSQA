@@ -128,16 +128,6 @@ ProjectSQA/
 > 3. **การรายงาน Project-Wide Coverage (หากมี):**  
 >    หากในรายงานหรือการนำเสนอต้องการกล่าวถึง Project-Wide Coverage จะต้องแยกรายงานเป็นตัวชี้วัดเสริม (Secondary Metric) และระบุขอบเขตให้ชัดเจนในบทที่ 5 ว่าค่า Project-wide coverage ย่อมมีค่าต่ำกว่า Target Class Coverage เสมอ เนื่องจากเราไม่ได้กระจายการสร้างชุดทดสอบไปยังคลาสอื่นๆ ที่ไม่เกี่ยวข้องกับ Defect
 
-<<<<<<< Updated upstream
-### 2.2 คลังข้อมูลมาตรฐาน 17 bug targets จาก 17 โปรเจกต์
-
-> **🎯 Single Source of Truth:** ไฟล์คอนฟิกกลาง [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json)  
-> **📦 สถานะคลัง Source Code:** แต่ละโฟลเดอร์มี Java modified sources และ Ground Truth (`defects4j_info.txt`) โดย catalog สร้างจาก metadata เหล่านี้อัตโนมัติ ปัจจุบันมี 17 bug targets และ 22 modified source classes
-
-ทีมเลือก 1 Bug ID ต่อโปรเจกต์ แต่หนึ่งบั๊กอาจมี modified sources และ triggering tests หลายรายการ จึงห้ามลดข้อมูลเหลือคลาสหรือ test เดียวเมื่อประเมิน ground truth ฟิลด์ `target_class`, `simple_name` และ `trigger_test` เป็น primary values สำหรับ backward compatibility ส่วนข้อมูลครบอยู่ใน `modified_sources` และ `trigger_tests` ของ catalog
-
-เพื่อป้องกันตารางคัดลอกแล้วล้าสมัย ให้ดูรายการ class/test ที่เป็นปัจจุบันจาก `catalog_17_projects.json` โดยตรง และสร้างซ้ำได้ด้วย `Combinatorial_IPO/Code/runner/generate_catalog.py`
-=======
 ### 2.2 คลังข้อมูลมาตรฐานและการทดสอบทุกคลาสใน Defects4J (Defects4J Full All-Classes & All-Bugs Master Suite)
 
 > **🎯 ข้อกำหนดคำสั่งจากอาจารย์ประจำวิชา (ผศ.ดร.ชิตสุธา สุ่มเล็ก):**  
