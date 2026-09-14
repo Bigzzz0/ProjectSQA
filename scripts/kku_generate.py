@@ -484,6 +484,8 @@ if __name__ == "__main__":
     parser.add_argument("--ai", choices=["claude", "gemini"], help="เลือก AI ที่ต้องการสร้าง (claude หรือ gemini)")
     parser.add_argument("--model-id", type=str, help="ระบุ Model ID หรือ Model Name เจาะจง")
     parser.add_argument("--source-file", type=str, help="ระบุที่อยู่ไฟล์ Java ซอร์สโค้ดเป้าหมาย")
+    parser.add_argument("--project", type=str, help="ชื่อโปรเจกต์ เช่น Lang, Math, Csv")
+    parser.add_argument("--bug", type=int, help="รหัสบั๊ก เช่น 1, 2, 25")
     args = parser.parse_args()
 
     api_key = get_api_key()
@@ -491,11 +493,24 @@ if __name__ == "__main__":
     if args.list_models:
         list_available_models(api_key)
     elif args.ai:
-        run_test_generation(args.ai, api_key, args.model_id, args.source_file)
+        source = args.source_file
+        if not source and args.project and args.bug:
+            candidate_dir = os.path.join(PROJECT_ROOT, "target_benchmark", f"{args.project}_{args.bug}b")
+            if os.path.exists(candidate_dir):
+                java_files = [f for f in os.listdir(candidate_dir) if f.endswith(".java")]
+                if java_files:
+                    source = os.path.join(candidate_dir, java_files[0])
+                    print(f"🎯 พบคลาสเป้าหมายอัตโนมัติ: {java_files[0]} ({source})")
+            if not source:
+                print(f"⚠️ ไม่พบไฟล์ .java ใน target_benchmark/{args.project}_{args.bug}b/")
+                print(f"💡 กรุณารัน: python scripts/extract_target_classes.py --project {args.project} --bug {args.bug} ก่อน")
+                sys.exit(1)
+
+        run_test_generation(args.ai, api_key, args.model_id, source)
     else:
         print("\nตัวอย่างการใช้งาน:")
-        print("  1. ดูรายชื่อโมเดล: python kku_generate.py --list-models")
-        print("  2. เจนเทสด้วย Claude: python kku_generate.py --ai claude")
-        print("  3. เจนเทสด้วย Gemini: python kku_generate.py --ai gemini")
-        print("  4. ระบุไฟล์ซอร์สโค้ด: python kku_generate.py --ai gemini --source-file target_benchmark/Lang_1b/NumberUtils.java")
-        print("  5. ระบุโมเดลเฉพาะ:  python kku_generate.py --ai claude --model-id 1\n")
+        print("  1. ดูรายชื่อโมเดล: python scripts/kku_generate.py --list-models")
+        print("  2. เจนเทสด้วยระบุโปรเจกต์และบั๊ก: python scripts/kku_generate.py --ai gemini --project Lang --bug 1")
+        print("  3. เจนเทสด้วย Claude: python scripts/kku_generate.py --ai claude --project Math --bug 2")
+        print("  4. ระบุไฟล์ซอร์สโค้ดโดยตรง: python scripts/kku_generate.py --ai gemini --source-file target_benchmark/Lang_1b/NumberUtils.java")
+        print("  5. ระบุโมเดลเฉพาะ:  python scripts/kku_generate.py --ai claude --model-id 1\n")

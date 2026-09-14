@@ -1,127 +1,190 @@
 #!/usr/bin/env python3
 """
-Batch Bug Metadata & Catalog Extractor for Defects4J
-Designed by Member 4 (Infra & Data Lead) for ProjectSQA
+Defects4J Complete All-Bugs Catalog Extractor (All 835+ Active Bugs across 17 Projects)
+Designed by Member 4 (Infrastructure & Data Lead) for ProjectSQA
 
-Extracts metadata, modified classes, triggering tests, and root cause errors
-for ALL active bugs in Defects4J, enabling the entire team to inspect, target,
-and trigger defects for all 856 active bugs across 17 projects.
+Extracts metadata, modified classes, triggering tests, and issue tracker IDs
+for ALL active bugs in Defects4J, enabling the team to target, test, and benchmark
+all classes and bugs across all 17 projects.
 """
 
 import os
 import sys
 import json
+import csv
+import time
 import argparse
-import subprocess
-from typing import List, Dict, Any
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import List, Dict, Any, Optional
+
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPTS_DIR)
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "target_benchmark")
+CATALOG_JSON = os.path.join(OUTPUT_DIR, "all_bugs_catalog.json")
+CATALOG_MD = os.path.join(OUTPUT_DIR, "all_bugs_catalog.md")
 
-sys.path.insert(0, SCRIPTS_DIR)
-import d4j_meta
+ALL_PROJECTS = [
+    "Chart", "Cli", "Closure", "Codec", "Collections",
+    "Compress", "Csv", "Gson", "JacksonCore", "JacksonDatabind",
+    "JacksonXml", "Jsoup", "JxPath", "Lang", "Math", "Mockito", "Time"
+]
 
-def get_bug_info_summary(project: str, bug_id: int) -> Dict[str, Any]:
-    """Extract ground truth info for a specific bug via defects4j info."""
-    code, out, err = d4j_meta.run_cmd(["defects4j", "info", "-p", project, "-b", str(bug_id)], timeout=60)
-    
+D4J_LOCAL_PATH = "/opt/defects4j/framework/projects"
+RAW_BASE_URL = "https://raw.githubusercontent.com/rjust/defects4j/master/framework/projects"
+
+def fetch_url_text(url: str, timeout: int = 15) -> str:
+    """Fetch text from raw URL with timeout and User-Agent."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "ProjectSQA-Extractor"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read().decode("utf-8", errors="replace")
+    except Exception:
+        return ""
+
+def get_project_active_bugs(project: str) -> List[Dict[str, Any]]:
+    """Get list of active bug records for a project."""
+    # 1. Try local Defects4J framework folder if in container
+    local_csv = os.path.join(D4J_LOCAL_PATH, project, "active-bugs.csv")
+    if os.path.exists(local_csv):
+        with open(local_csv, "r", encoding="utf-8", errors="replace") as f:
+            reader = csv.DictReader(f)
+            return list(reader)
+            
+    # 2. Fetch from GitHub raw
+    url = f"{RAW_BASE_URL}/{project}/active-bugs.csv"
+    text = fetch_url_text(url)
+    if text:
+        reader = csv.DictReader(text.splitlines())
+        return list(reader)
+    return []
+
+def get_bug_details(project: str, bug_id: str, row: Dict[str, Any]) -> Dict[str, Any]:
+    """Extract modified classes and trigger tests for a specific bug."""
     modified_classes = []
     trigger_tests = []
-    root_cause = "N/A"
-    bug_report_id = "N/A"
     
-    lines = out.splitlines()
-    in_root_cause = False
-    in_modified = False
+    # 1. Local path check
+    local_mod = os.path.join(D4J_LOCAL_PATH, project, "modified_classes", f"{bug_id}.src")
+    local_trig = os.path.join(D4J_LOCAL_PATH, project, "trigger_tests", str(bug_id))
     
-    for line in lines:
-        line_str = line.strip()
-        if line_str.startswith("Bug report id:"):
-            pass
-        elif "Root cause in triggering tests:" in line_str:
-            in_root_cause = True
-            in_modified = False
-            continue
-        elif "List of modified sources:" in line_str:
-            in_root_cause = False
-            in_modified = True
-            continue
-        elif line_str.startswith("---"):
-            in_root_cause = False
-            in_modified = False
-            continue
+    if os.path.exists(local_mod):
+        with open(local_mod, "r", encoding="utf-8", errors="replace") as f:
+            modified_classes = [line.strip() for line in f if line.strip()]
+    else:
+        mod_url = f"{RAW_BASE_URL}/{project}/modified_classes/{bug_id}.src"
+        mod_text = fetch_url_text(mod_url)
+        if mod_text:
+            modified_classes = [line.strip() for line in mod_text.splitlines() if line.strip()]
             
-        if in_root_cause and line_str:
-            if root_cause == "N/A":
-                root_cause = line_str
-            else:
-                root_cause += " " + line_str
-        elif in_modified and line_str.startswith("-"):
-            cls_name = line_str[1:].strip()
-            if cls_name:
-                modified_classes.append(cls_name)
-                
+    if os.path.exists(local_trig):
+        with open(local_trig, "r", encoding="utf-8", errors="replace") as f:
+            trigger_tests = [line.strip() for line in f if line.strip()]
+    else:
+        trig_url = f"{RAW_BASE_URL}/{project}/trigger_tests/{bug_id}"
+        trig_text = fetch_url_text(trig_url)
+        if trig_text:
+            trigger_tests = [line.strip() for line in trig_text.splitlines() if line.strip()]
+
+    # Extract simple class names
+    simple_names = [cls.split(".")[-1] for cls in modified_classes]
+
     return {
         "project": project,
-        "bug_id": bug_id,
-        "modified_classes": modified_classes,
-        "root_cause": root_cause,
-        "raw_info": out
+        "bug_id": int(bug_id),
+        "target_classes": modified_classes,
+        "simple_names": simple_names,
+        "trigger_tests": trigger_tests,
+        "report_id": row.get("report.id", "N/A"),
+        "report_url": row.get("report.url", "N/A"),
+        "revision_buggy": row.get("revision.id.buggy", "N/A"),
+        "revision_fixed": row.get("revision.id.fixed", "N/A")
     }
 
-def main():
-    parser = argparse.ArgumentParser(description="Defects4J All-Bugs Catalog & Batch Extractor")
-    parser.add_argument("--project", type=str, default=None, help="Target project (e.g. Lang, Math) or all")
-    parser.add_argument("--list-summary", action="store_true", help="List bug count across all 17 projects")
-    parser.add_argument("--catalog", action="store_true", help="Generate all-bugs catalog JSON/MD")
-    parser.add_argument("--max-per-project", type=int, default=None, help="Max bugs to index per project")
-    parser.add_argument("--extract-code", action="store_true", help="Extract Java sources to target_benchmark/")
-    args = parser.parse_args()
-
-    all_projects = d4j_meta.get_all_projects()
+def extract_all_bugs_catalog(projects: Optional[List[str]] = None, max_workers: int = 16) -> List[Dict[str, Any]]:
+    """Extract catalog entries for all active bugs across specified projects."""
+    target_projects = projects if projects else ALL_PROJECTS
+    print(f"🚀 Extracting Complete All-Bugs Catalog for {len(target_projects)} Projects...")
     
-    if args.list_summary:
-        print("=" * 65)
-        print("📊 Defects4J Projects & Active Bugs Overview")
-        print("=" * 65)
-        total_bugs = 0
-        for p in all_projects:
-            bids = d4j_meta.get_active_bugs(p)
-            count = len(bids)
-            total_bugs += count
-            print(f" • {p:<18}: {count:>3} bugs (Bugs: {min(bids) if bids else 0} to {max(bids) if bids else 0})")
-        print("=" * 65)
-        print(f"🌟 Total Active Bugs in Defects4J: {total_bugs} Bugs across {len(all_projects)} Projects")
-        print("=" * 65)
-        return
-
-    projects_to_process = [args.project] if args.project else all_projects
+    all_tasks = []
     catalog = []
     
-    print(f"🚀 Starting bug extraction for projects: {projects_to_process}")
-    for p in projects_to_process:
-        bids = d4j_meta.get_active_bugs(p)
-        if args.max_per_project:
-            bids = bids[:args.max_per_project]
-        print(f"\n>> Processing {p} ({len(bids)} bugs)...")
-        for bid in bids:
-            info = get_bug_info_summary(p, bid)
-            catalog.append(info)
-            print(f"   [{p}-{bid}] Modified: {info['modified_classes']} | Cause: {info['root_cause'][:50]}...")
-            
-            if args.extract_code:
-                out_bug_dir = os.path.join(OUTPUT_DIR, f"{p}_{bid}b")
-                os.makedirs(out_bug_dir, exist_ok=True)
-                with open(os.path.join(out_bug_dir, "defects4j_info.txt"), "w", encoding="utf-8") as f:
-                    f.write(info["raw_info"])
-                    
-    # Save catalog
+    # Collect all (project, bug_id, row) tasks
+    for p in target_projects:
+        bugs = get_project_active_bugs(p)
+        print(f"  • {p:<16}: {len(bugs):>3} active bugs found")
+        for b in bugs:
+            bid = b.get("bug.id")
+            if bid:
+                all_tasks.append((p, bid, b))
+                
+    total_expected = len(all_tasks)
+    print(f"\n📦 Fetching detailed metadata for {total_expected} bugs using {max_workers} concurrent workers...")
+    
+    t0 = time.time()
+    completed = 0
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_bug = {
+            executor.submit(get_bug_details, p, bid, row): (p, bid)
+            for p, bid, row in all_tasks
+        }
+        for future in as_completed(future_to_bug):
+            p, bid = future_to_bug[future]
+            try:
+                res = future.result()
+                catalog.append(res)
+                completed += 1
+                if completed % 100 == 0 or completed == total_expected:
+                    print(f"   [{completed}/{total_expected}] Processed ({int(completed/total_expected*100)}%)...")
+            except Exception as e:
+                print(f"   [!] Error processing {p}-{bid}: {e}")
+                
+    catalog.sort(key=lambda x: (x["project"], x["bug_id"]))
+    elapsed = round(time.time() - t0, 2)
+    print(f"\n✅ All-Bugs metadata extracted in {elapsed}s! Total entries: {len(catalog)}")
+    return catalog
+
+def save_catalog_files(catalog: List[Dict[str, Any]]):
+    """Save catalog to JSON and Markdown format."""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    json_path = os.path.join(OUTPUT_DIR, "all_bugs_catalog.json")
-    with open(json_path, "w", encoding="utf-8") as f:
+    
+    # 1. JSON Catalog
+    with open(CATALOG_JSON, "w", encoding="utf-8") as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
-    print(f"\n✅ Catalog saved to: {json_path} (Total indexed: {len(catalog)} bugs)")
+    print(f"📄 JSON Catalog saved: {CATALOG_JSON}")
+    
+    # 2. Markdown Catalog
+    with open(CATALOG_MD, "w", encoding="utf-8") as f:
+        f.write("# 📚 Defects4J All-Bugs & All-Classes Master Catalog\n\n")
+        f.write(f"**Total Active Bugs:** {len(catalog)} Bugs across 17 Projects  \n")
+        f.write(f"**Dataset Scope:** Full Defects4J Dataset (All Modified Classes Under Test)  \n")
+        f.write(f"**Last Updated:** {time.strftime('%Y-%m-%d %H:%M:%S')}  \n\n")
+        f.write("---\n\n")
+        f.write("| # | Project | Bug ID | Target Modified Classes | Primary Trigger Test | Report ID |\n")
+        f.write("| :-: | :--- | :-: | :--- | :--- | :--- |\n")
+        for i, item in enumerate(catalog, 1):
+            classes_str = "<br>".join([f"`{c}`" for c in item["target_classes"]]) if item["target_classes"] else "-"
+            trig_str = f"`{item['trigger_tests'][0]}`" if item["trigger_tests"] else "-"
+            f.write(f"| {i} | **{item['project']}** | `{item['bug_id']}b` | {classes_str} | {trig_str} | {item['report_id']} |\n")
+    print(f"📄 Markdown Catalog saved: {CATALOG_MD}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Defects4J Complete All-Bugs Catalog Extractor")
+    parser.add_argument("--project", type=str, default=None, help="Specific project (e.g. Lang, Math)")
+    parser.add_argument("--workers", type=int, default=16, help="Concurrent workers")
+    args = parser.parse_args()
+
+    target_projects = [args.project] if args.project else None
+    catalog = extract_all_bugs_catalog(projects=target_projects, max_workers=args.workers)
+    save_catalog_files(catalog)
 
 if __name__ == "__main__":
     main()
+

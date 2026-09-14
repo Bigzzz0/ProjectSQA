@@ -11,7 +11,12 @@
 1. [การเตรียมสภาพแวดล้อมและภาพรวมระบบ (Setup & System Architecture)](#1-การเตรียมสภาพแวดล้อมและภาพรวมระบบ-setup--system-architecture)
 2. [กฎเหล็กกลางที่ทุกคนต้องปฏิบัติตาม (Universal Test Standards)](#2-กฎเหล็กกลางที่ทุกคนต้องปฏิบัติตาม-universal-test-standards)
    - [2.1 ขอบเขตการทดสอบและการวัดผล Coverage (Scope Specification)](#21-ขอบเขตการทดสอบและการวัดผล-coverage-scope-specification-defect-targeted-vs-project-wide)
+<<<<<<< Updated upstream
    - [2.2 คลังข้อมูลมาตรฐาน 17 bug targets จาก 17 โปรเจกต์](#22-คลังข้อมูลมาตรฐาน-17-bug-targets-จาก-17-โปรเจกต์)
+=======
+   - [2.2 คลังข้อมูลมาตรฐานและการทดสอบทุกคลาสใน Defects4J (Defects4J Full All-Classes & All-Bugs Master Suite)](#22-คลังข้อมูลมาตรฐานและการทดสอบทุกคลาสใน-defects4j-defects4j-full-all-classes--all-bugs-master-suite)
+   - [2.3 วิธีการดึง Class เป้าหมาย (.java) และ Defect Metadata สำหรับสมาชิกทุกคน (How to Extract Target Classes for Test Generation)](#23-วิธีการดึง-class-เป้าหมาย-java-และ-defect-metadata-สำหรับสมาชิกทุกคน-how-to-extract-target-classes-for-test-generation)
+>>>>>>> Stashed changes
 3. [Member 1: นายปวริศช์ ประมวล (IPO / Combinatorial Specialist)](#3-member-1-นายปวริศช์-ประมวล-ipo--combinatorial-specialist)
    - [💡 วิธีสร้างระบบ Automated IPO Engine (พิมพ์เขียวสำหรับ Member 1)](#-วิธีสร้างระบบ-automated-ipo-engine-พิมพ์เขียวแบบละเอียดสำหรับ-member-1)
 4. [Member 2: นายแทนคุณ พันธ์นิกุล (MIO / EvoSuite Specialist)](#4-member-2-นายแทนคุณ-พันธ์นิกุล-mio--evosuite-specialist)
@@ -123,6 +128,7 @@ ProjectSQA/
 > 3. **การรายงาน Project-Wide Coverage (หากมี):**  
 >    หากในรายงานหรือการนำเสนอต้องการกล่าวถึง Project-Wide Coverage จะต้องแยกรายงานเป็นตัวชี้วัดเสริม (Secondary Metric) และระบุขอบเขตให้ชัดเจนในบทที่ 5 ว่าค่า Project-wide coverage ย่อมมีค่าต่ำกว่า Target Class Coverage เสมอ เนื่องจากเราไม่ได้กระจายการสร้างชุดทดสอบไปยังคลาสอื่นๆ ที่ไม่เกี่ยวข้องกับ Defect
 
+<<<<<<< Updated upstream
 ### 2.2 คลังข้อมูลมาตรฐาน 17 bug targets จาก 17 โปรเจกต์
 
 > **🎯 Single Source of Truth:** ไฟล์คอนฟิกกลาง [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json)  
@@ -131,6 +137,100 @@ ProjectSQA/
 ทีมเลือก 1 Bug ID ต่อโปรเจกต์ แต่หนึ่งบั๊กอาจมี modified sources และ triggering tests หลายรายการ จึงห้ามลดข้อมูลเหลือคลาสหรือ test เดียวเมื่อประเมิน ground truth ฟิลด์ `target_class`, `simple_name` และ `trigger_test` เป็น primary values สำหรับ backward compatibility ส่วนข้อมูลครบอยู่ใน `modified_sources` และ `trigger_tests` ของ catalog
 
 เพื่อป้องกันตารางคัดลอกแล้วล้าสมัย ให้ดูรายการ class/test ที่เป็นปัจจุบันจาก `catalog_17_projects.json` โดยตรง และสร้างซ้ำได้ด้วย `Combinatorial_IPO/Code/runner/generate_catalog.py`
+=======
+### 2.2 คลังข้อมูลมาตรฐานและการทดสอบทุกคลาสใน Defects4J (Defects4J Full All-Classes & All-Bugs Master Suite)
+
+> **🎯 ข้อกำหนดคำสั่งจากอาจารย์ประจำวิชา (ผศ.ดร.ชิตสุธา สุ่มเล็ก):**  
+> *"ให้ทำทั้งหมดใน Defects4J และเอาทุกคลาส (All Modified Classes Under Test)"* — โครงการนี้จึงไม่จำกัดอยู่เพียงคลาสตัวแทน แต่ขยายผลครอบคลุม **ทุกคลาสเป้าหมาย (`classes.modified`) ของทุกบั๊กใน Defects4J (ครบทั้ง 854 Active Bugs จาก 17 โปรเจกต์)**
+> 
+> **📚 Master Catalog (Single Source of Truth):**  
+> - ไฟล์ดัชนีหลัก: [`target_benchmark/all_bugs_catalog.json`](target_benchmark/all_bugs_catalog.json) (บรรจุครบ 854 บั๊ก พร้อม `modified_classes` และ `trigger_tests` ทั้งหมด)
+> - ตาราง Markdown สำหรับเปิดดูอย่างรวดเร็ว: [`target_benchmark/all_bugs_catalog.md`](target_benchmark/all_bugs_catalog.md)
+> - ซอร์สโค้ดและข้อมูลบั๊กที่สกัดมาแล้ว: อยู่ใน [`target_benchmark/`](target_benchmark/) และสามารถสกัดเพิ่มเติมได้ตลอดเวลาผ่าน `scripts/batch_extract_all_bugs.py`
+
+#### สรุปจำนวน Active Bugs ทั้ง 17 โปรเจกต์ใน Defects4J:
+| # | Project ID | โดเมนของซอฟต์แวร์ | จำนวน Active Bugs | ตัวอย่าง Target Classes ที่สำคัญ |
+| :-: | :--- | :--- | :-: | :--- |
+| 1 | **Chart** | Graphic & Chart Rendering | 26 bugs | `AbstractCategoryItemRenderer`, `XYPlot`, `RendererUtilities` |
+| 2 | **Cli** | Command-line Argument Parser | 39 bugs | `CommandLine`, `Option`, `PosixParser`, `HelpFormatter` |
+| 3 | **Closure** | Compiler AST Optimization | 174 bugs | `RemoveUnusedVars`, `Compiler`, `NodeUtil`, `TypeCheck` |
+| 4 | **Codec** | Phonetic & String Encoding | 18 bugs | `Soundex`, `Caverphone`, `Metaphone`, `Base64` |
+| 5 | **Collections** | Data Structures & Collections | 28 bugs | `IteratorUtils`, `CollectionUtils`, `MultiKey` |
+| 6 | **Compress** | Binary Archive & Compression | 47 bugs | `CpioArchiveOutputStream`, `ZipArchiveInputStream`, `TarUtils` |
+| 7 | **Csv** | Delimited Text Parser & Buffer | 16 bugs | `ExtendedBufferedReader`, `CSVParser`, `CSVFormat` |
+| 8 | **Gson** | JSON Serialization & Reflection | 18 bugs | `TypeInfoFactory`, `Gson`, `JsonPrimitive` |
+| 9 | **JacksonCore** | High-Speed JSON Tokenizer | 26 bugs | `NumberInput`, `TextBuffer`, `JsonParser` |
+| 10 | **JacksonDatabind**| Object Mapping & Introspection | 110 bugs | `BeanPropertyWriter`, `ObjectMapper`, `TypeFactory` |
+| 11 | **JacksonXml** | Streaming XML Data Binding | 6 bugs | `FromXmlParser`, `XmlMapper`, `ToXmlGenerator` |
+| 12 | **Jsoup** | HTML Parsing & DOM Tree | 93 bugs | `Document`, `Element`, `Parser`, `HtmlTreeBuilder` |
+| 13 | **JxPath** | XML XPath Query Engine | 22 bugs | `DOMNodePointer`, `JXPathContext`, `CoreOperation` |
+| 14 | **Lang** | Java Core Utilities & Parsing | 61 bugs | `NumberUtils`, `StringUtils`, `ArrayUtils`, `BooleanUtils` |
+| 15 | **Math** | Numerical & Probability Math | 106 bugs | `HypergeometricDistribution`, `FastMath`, `RealMatrix` |
+| 16 | **Mockito** | Dynamic Mocking Framework | 38 bugs | `InvocationMatcher`, `MockHandler`, `Returns` |
+| 17 | **Time** | Date/Time Calculation Engine | 26 bugs | `Partial`, `DateTime`, `Period`, `Format` |
+| **รวม** | **17 โครงการ** | **ครอบคลุมทุกหมวดหมู่งานวิศวกรรมซอฟต์แวร์** | **854 บั๊ก** | **ทุกคลาสใน `classes.modified` รวมกว่า 1,000+ คลาส** |
+
+### 2.3 วิธีการดึง Class เป้าหมาย (`.java`) และ Defect Metadata สำหรับสมาชิกทุกคน (How to Extract Target Classes for Test Generation)
+
+> **🎯 เครื่องมืออำนวยความสะดวกกลาง (พัฒนาโดย Member 4):**  
+> เพื่อให้ Member 1 (IPO), Member 2 (MIO) และ Member 3 (AI) สามารถดึงซอร์สโค้ดคลาสเป้าหมาย (`.java`) และข้อมูลบั๊ก Ground Truth ของทั้ง 854 บั๊กใน Defects4J ออกมาใช้งานได้อย่างรวดเร็ว โดยไม่ต้องจำคำสั่ง defects4j ที่ซับซ้อน ได้มีการสร้างสคริปต์กลาง [`scripts/extract_target_classes.py`](scripts/extract_target_classes.py) ไว้ให้ใช้งานร่วมกัน
+
+```mermaid
+flowchart TD
+    Catalog["Master Catalog<br/>(all_bugs_catalog.json)"] --> CLI["scripts/extract_target_classes.py"]
+    CLI --> Info["1. ดูข้อมูลคลาส & Trigger Tests<br/>(--info --project X --bug Y)"]
+    CLI --> Extract["2. สกัด .java เข้า target_benchmark/<br/>(--project X --bug Y)"]
+    Extract --> M1["Member 1 (IPO):<br/>อ่าน Method Signature ใน .java<br/>สร้าง Parameter Model"]
+    Extract --> M2["Member 2 (MIO):<br/>ได้ FQCN Class Name<br/>รัน EvoSuite ใน Docker"]
+    Extract --> M3["Member 3 (AI Lead):<br/>รัน kku_generate.py<br/>ส่ง Class + Defect Context ให้ AI"]
+    Extract --> M4["Member 4 (Infra):<br/>รัน run_benchmark.py<br/>วัด Coverage & FDR"]
+```
+
+#### 📌 ขั้นตอนที่ 1: ตรวจสอบรายชื่อบั๊กและสถานะการสกัด (Discovery)
+สมาชิกทุกคนสามารถตรวจดูได้ว่าโปรเจกต์ใดมีบั๊กอะไรบ้าง และคลาสเป้าหมายใดถูกสกัดมาไว้ใน `target_benchmark/` แล้ว:
+```bash
+# 1. ดูภาพรวมความคืบหน้าของทั้ง 17 โปรเจกต์ใน Defects4J (ครบ 854 บั๊ก)
+python scripts/extract_target_classes.py --list
+
+# 2. ดูรายชื่อบั๊กและคลาสเป้าหมายของโปรเจกต์เฉพาะเจาะจง (เช่น Csv หรือ Lang)
+python scripts/extract_target_classes.py --list --project Csv
+```
+
+#### 📌 ขั้นตอนที่ 2: ดูข้อมูล Ground Truth ของบั๊ก (โดยไม่ต้องสกัดไฟล์)
+ก่อนจะเริ่มเขียนเทสหรือ Prompt ให้ดูว่าบั๊กนั้นอยู่ที่คลาสใด และเทสของ Defects4J ตัวเดิมพังเพราะอะไร:
+```bash
+# ดูข้อมูล Target Class, Triggering Tests, และ Stack Trace ของบั๊ก Math-2
+python scripts/extract_target_classes.py --info --project Math --bug 2
+
+# หรือดูของ Lang-3
+python scripts/extract_target_classes.py --info --project Lang --bug 3
+```
+
+#### 📌 ขั้นตอนที่ 3: สกัดไฟล์ซอร์สโค้ด `.java` และ Metadata เข้าสู่ `target_benchmark/`
+เมื่อเลือกบั๊กที่จะทำได้แล้ว ให้สั่งสกัดไฟล์ Java ออกมา:
+```bash
+# 1. สกัดเฉพาะบั๊กเป้าหมายที่ต้องการทำ (เช่น Lang-3):
+python scripts/extract_target_classes.py --project Lang --bug 3
+
+# 2. หรือสกัดทั้งโปรเจกต์ในคราวเดียว (เช่น Csv ทั้ง 16 บั๊ก):
+python scripts/extract_target_classes.py --project Csv
+```
+*(ระบบจะสร้างโฟลเดอร์ `target_benchmark/<Project>_<BugID>b/` บรรจุไฟล์ `<Class>.java`, `defects4j_info.txt`, และ `metadata.json` ให้โดยอัตโนมัติ)*
+
+> **💡 หมายเหตุ:**  
+> - หากรันบนเครื่อง Host (Windows/Mac) คำสั่งนี้จะสั่งคอนเทนเนอร์ `defects4j_sqa` โดยอัตโนมัติ (อย่าลืมเปิด Docker Desktop)  
+> - หรือหากรันอยู่ข้างในคอนเทนเนอร์ Docker อยู่แล้ว ก็สามารถพิมพ์คำสั่งเดียวกันได้ทันที
+
+---
+
+#### 🚀 วิธีนำ Class ที่สกัดได้ไปใช้งานของสมาชิกแต่ละคน:
+
+| สมาชิก | สิ่งที่ได้รับ | คำสั่ง / วิธีการนำไปใช้ต่อ |
+| :--- | :--- | :--- |
+| **Member 1<br/>(IPO Specialist)** | ไฟล์ `.java` ใน `target_benchmark/<Project>_<BugID>b/` | เปิดไฟล์เพื่อดูพารามิเตอร์ของ Method -> สร้าง Parameter Model ใน `Combinatorial_IPO/Models/` -> รันขั้นตอนวิธี IPO |
+| **Member 2<br/>(MIO Specialist)** | Full Class Name (`FQCN`) เช่น `org.apache.commons.math3.distribution.HypergeometricDistribution` | นำ FQCN จากคำสั่ง `--info` ไปสั่งรัน EvoSuite ในคอนเทนเนอร์ Docker:<br/>`docker exec -it defects4j_sqa /workspace/MIO_Algorithm/Code/run_evosuite_mio.sh <Project> <BugID> <FQCN> <Budget>` |
+| **Member 3<br/>(AI Specialist)** | ไฟล์ `.java` + `defects4j_info.txt` | สั่งสร้างเทสผ่าน KKU API อัตโนมัติด้วยคำสั่งสั้น:<br/>`python scripts/kku_generate.py --ai gemini --project <Project> --bug <BugID>`<br/>*(สคริปต์จะดึงไฟล์ .java และ Root Cause บั๊กไปส่งให้ AI เอง)* |
+| **Member 4<br/>(Infra Lead)** | ชุด Test Suite ในโฟลเดอร์ `TestCode/` ของแต่ละคน | รันประเมินผลเปรียบเทียบ Coverage และ FDR:<br/>`docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --all-bugs --resume` |
 
 ---
 
@@ -382,24 +482,25 @@ flowchart TD
 #### รายละเอียดการเขียนสคริปต์อัตโนมัติ (Step-by-Step Implementation Guide):
 
 1. **ส่วนที่ 1: การสแกนเป้าหมายอัตโนมัติ (Target Discovery ผ่าน Single Source of Truth):**
-   - ให้สคริปต์อ่านรายการ Target Classes โดยตรงจาก [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json) ซึ่งมีข้อมูลครบทั้ง 17 โปรเจกต์:
+   - ให้สคริปต์อ่านรายการ Target Classes โดยตรงจาก Master Catalog [`target_benchmark/all_bugs_catalog.json`](target_benchmark/all_bugs_catalog.json) ซึ่งมีข้อมูลครบทั้ง 854 บั๊ก และทุกคลาสใน `classes.modified`:
    ```python
    import json, os
 
    def get_target_classes():
-       catalog_path = "target_benchmark/catalog_17_projects.json"
+       catalog_path = "target_benchmark/all_bugs_catalog.json"
        with open(catalog_path, "r", encoding="utf-8") as f:
            catalog = json.load(f)
        
        targets = []
        for item in catalog:
-           targets.append({
-               "project": item["project"],
-               "bug": str(item["bug_id"]),
-               "class": item["simple_name"],
-               "fqcn": item["target_class"],
-               "dir": item["dir"]
-           })
+           classes = item.get("target_classes") or item.get("modified_classes", [])
+           for fqcn in classes:
+               targets.append({
+                   "project": item["project"],
+                   "bug": str(item["bug_id"]),
+                   "class": fqcn.split(".")[-1],
+                   "fqcn": fqcn,
+               })
        return targets
    ```
 
@@ -483,14 +584,17 @@ flowchart TD
    ```
 
 #### ขั้นที่ 2: สั่งสร้างชุดทดสอบอัตโนมัติด้วยคำสั่งเดียว
-Member 4 ได้เตรียมสคริปต์ Universal Generator [`scripts/kku_generate.py`](scripts/kku_generate.py) ไว้ให้แล้ว เพียงระบุไฟล์ซอร์สโค้ดเป้าหมาย:
+Member 4 ได้เตรียมสคริปต์ Universal Generator [`scripts/kku_generate.py`](scripts/kku_generate.py) ไว้ให้แล้ว เพียงระบุโปรเจกต์และรหัสบั๊ก (หรือระบุไฟล์ซอร์สโค้ดโดยตรง):
 ```bash
-# 1. สร้างชุดทดสอบด้วย Claude Sonnet 5
-python scripts/kku_generate.py --ai claude --source-file target_benchmark/<Project>_<BugID>b/<Class>.java
+# แบบที่ 1: ระบุชื่อ Project และ Bug ID ได้ทันที (สคริปต์หาไฟล์ .java ใน target_benchmark ให้อัตโนมัติ):
+python scripts/kku_generate.py --ai claude --project Math --bug 2
+python scripts/kku_generate.py --ai gemini --project Math --bug 2
 
-# 2. สร้างชุดทดสอบด้วย Gemini 3.8 Flash
-python scripts/kku_generate.py --ai gemini --source-file target_benchmark/<Project>_<BugID>b/<Class>.java
+# แบบที่ 2: ระบุที่อยู่ไฟล์ซอร์สโค้ดเป้าหมายโดยตรง:
+python scripts/kku_generate.py --ai claude --source-file target_benchmark/Math_2b/HypergeometricDistribution.java
+python scripts/kku_generate.py --ai gemini --source-file target_benchmark/Math_2b/HypergeometricDistribution.java
 ```
+*(หากยังไม่มีไฟล์ `.java` ให้รัน `python scripts/extract_target_classes.py --project <Project> --bug <BugID>` ดึงออกมาก่อน)*
 
 #### ขั้นที่ 3: สิ่งที่สคริปต์จะทำให้โดยอัตโนมัติ:
 - อ่าน Package Name และ Class Name จากซอร์สโค้ดต้นทาง
@@ -687,51 +791,57 @@ for item in catalog:
 ## 6. 🧑‍💻 Member 4: นายศิฆรินทร์ อุปจันทร์ (Infra & Data Analysis Lead)
 
 **รหัสนักศึกษา:** 673380292-5  
-**บทบาท:** ดูแลระบบ Infrastructure ทั้งหมด, สกัดคลาสเป้าหมายให้เพื่อน, ควบคุมการรัน Benchmark กลาง, คำนวณสถิติภาพรวม และจัดทำเล่มรายงานฉบับสมบูรณ์
+**บทบาท:** ดูแลระบบ Infrastructure ทั้งหมด, สกัดคลังแค็ตตาล็อกทุกคลาสทุกบั๊กให้เพื่อน, ควบคุมการรัน Benchmark กลาง, คำนวณสถิติภาพรวม และจัดทำเล่มรายงานฉบับสมบูรณ์
 
 ### 📋 สิ่งที่คุณต้องส่งมอบ (Deliverables):
-1. ซอร์สโค้ดเป้าหมายใน `target_benchmark/` สำหรับทุกบั๊กที่ทีมต้องการทดสอบ
+1. แค็ตตาล็อกบั๊กและคลาสเป้าหมายทั้งหมดใน [`target_benchmark/all_bugs_catalog.json`](target_benchmark/all_bugs_catalog.json) (ครบทั้ง 854 บั๊ก)
 2. ตารางผลลัพธ์รวม [`results/benchmark_results.csv`](results/benchmark_results.csv) และ State File `progress.json`
-3. การคำนวณค่าเฉลี่ย Coverage, Fault Detection Rate (FDR %), และแผนภูมิกราฟสรุปผล
+3. การคำนวณค่าเฉลี่ย Coverage, Fault Detection Rate (FDR 5 สถานะ), และแผนภูมิกราฟสรุปผล 4 รูปแบบ
 4. เล่มรายงานฉบับสมบูรณ์ และสไลด์สำหรับนำเสนออาจารย์
 
 ---
 
 ### 🛠️ คู่มือขั้นตอนการทำงานอย่างละเอียด:
 
-#### ขั้นที่ 1: สถานะการสกัด 17 bug targets (17-Project Dataset Extracted)
-Source Code และ Ground Truth ของ 17 bug targets อยู่ใน [`target_benchmark/`](target_benchmark/) โดยมี 22 modified sources ตาม `defects4j_info.txt`:
-- เพื่อนร่วมทีมทุกคนสามารถ `git pull` เพื่อนำโค้ดและข้อมูลบั๊กไปสร้างเทสได้ทันที
-- หากต้องการสกัดใหม่หรืออัปเดตไฟล์ทั้งหมด สามารถสั่งรันผ่าน Docker:
+#### ขั้นที่ 1: สถานะคลังแค็ตตาล็อก All-Bugs & All-Classes (Complete Master Catalog Extracted)
+Member 4 ได้ทำการสกัดและตรวจสอบความสมบูรณ์ของ Catalog ทุกคลาสและทุกบั๊กใน Defects4J เข้าสู่ [`target_benchmark/`](target_benchmark/) เรียบร้อยแล้ว 100%:
+- **`target_benchmark/all_bugs_catalog.json`**: สารบัญ Machine-Readable 854 บั๊ก ระบุ `target_classes`, `simple_names`, `trigger_tests`, `report_id`, และ commit revisions
+- **`target_benchmark/all_bugs_catalog.md`**: ตารางสรุปสำหรับสมาชิกทุกคนเปิดค้นหาบั๊กและคลาสเป้าหมายได้อย่างรวดเร็ว
+- หากต้องการสกัดใหม่หรืออัปเดตข้อมูล สามารถสั่งรันได้ทันที:
 ```bash
-docker exec -it defects4j_sqa bash /workspace/scripts/extract_representative_17.sh
+python scripts/batch_extract_all_bugs.py
 ```
 
 #### ขั้นที่ 2: ตรวจความพร้อมของ Test Suites ทั้ง 4 ชุด
-ก่อนสั่งรัน Runner ตรวจดูว่ามีไฟล์ในโฟลเดอร์ครบ:
-- `Combinatorial_IPO/TestCode/<Class>_IPOTest.java`
-- `MIO_Algorithm/TestCode/<Class>_ESTest.java`
-- `Claude-sonnet_5/TestCode/<Class>ClaudeTest.java`
-- `Gemini-3_8_flash/TestCode/<Class>GeminiTest.java`
+ระบบ Runner ตัวใหม่รองรับการจัดวางไฟล์เทสทั้งแบบแยกโฟลเดอร์ตามบั๊ก (`<Project>_<BugID>b/`) และแบบวางที่ Root ของ `TestCode/` โดยตรวจจับความถูกต้องของ Class Name และ Package Name อัตโนมัติ:
+- `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java` (หรือในโฟลเดอร์ baselines)
+- `MIO_Algorithm/TestCode/<Project>_<BugID>b/<Class>_ESTest.java` (พร้อม `_scaffolding.java`)
+- `Claude-sonnet_5/TestCode/<Project>_<BugID>b/<Class>ClaudeTest.java` (หรือที่ root)
+- `Gemini-3_8_flash/TestCode/<Project>_<BugID>b/<Class>GeminiTest.java` (หรือที่ root)
 
 #### ขั้นที่ 3: สั่งรัน Universal Benchmark Runner
 ```bash
-# รันประเมินเฉพาะบั๊กเดี่ยวที่เพิ่งทำเสร็จ (เช่น Math-2)
-docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Math --bug 2
+# 1. รันวนลูปทุกบั๊ก ทุกคลาสใน Defects4J (All-Bugs & All-Classes Scale) พร้อมระบบ Resume
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --all-bugs --resume
 
-# หรือรันคิวชุดทดลองทั้งหมด พร้อมระบบ Resume ข้ามตัวที่เสร็จแล้ว
-docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --sample-17 --resume
+# 2. รันเฉพาะทุกบั๊กของโปรเจกต์ใดโปรเจกต์หนึ่ง (เช่น ทุกบั๊กของ Lang)
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Lang --resume
+
+# 3. รันประเมินเฉพาะบั๊กเดี่ยว (เช่น Math-2)
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Math --bug 2
 ```
 
 #### ขั้นที่ 4: การวิเคราะห์ข้อมูลและสร้างกราฟสรุป (Data Analysis & Plotting)
 1. **Average Line & Branch Coverage:** คำนวณค่าเฉลี่ย $\mu$ และ $\sigma$ ของทั้ง 4 เทคนิค
 2. **Fault Detection Rate ในระดับ Bug (Bug-Level FDR %):**
    คำนวณสัดส่วนของข้อบกพร่อง (Bugs) ที่ชุดทดสอบของแต่ละเทคนิคสามารถตรวจพบได้จริงเทียบกับจำนวน Bug ทั้งหมดที่ทำการประเมิน:
-   $$FDR_{\text{technique}} = \left(\frac{N_{\text{detected\_bugs}}}{N_{\text{evaluated\_bugs}}}\right) \times 100\% = \left(\frac{\text{จำนวน Bug ที่ตรวจพบ (สถานะ BUG\_DETECTED)}}{\text{จำนวน Bug ทั้งหมดที่ทำการประเมิน (Total Evaluated Bugs)}}\right) \times 100\%$$
-   *ตัวอย่างการคำนวณ:* หากทำการทดลองบนชุดทดสอบ 100 Bugs และเทคนิคสามารถทำให้เกิด Failure บนเวอร์ชันมีบั๊ก และ Pass 100% บนเวอร์ชันแก้แล้ว ได้สำเร็จ 63 Bugs:
-   $$FDR = \frac{63}{100} \times 100 = 63\%$$
-   *(หมายเหตุทางวิชาการ: หน่วยของ FDR ต้องวัดที่ระดับ "Bug" ไม่ใช่ "Test Case" และกรณีที่เกิด `COMPILE_ERROR` หรือ `TIMEOUT` จะถือว่าไม่สามารถตรวจพบบั๊กนั้นได้ โดยยังคงถูกนับเป็นส่วนหนึ่งของตัวหาร $N_{\text{evaluated\_bugs}}$ เสมอเพื่อรักษามาตรฐานความซื่อตรงของงานวิจัย)*
-3. **การพล็อตกราฟ:** ใช้ Python (`matplotlib`) หรือ Excel สร้าง Bar Chart เปรียบเทียบ Coverage และเปรียบเทียบ Cost/Token ของ AI
+   $$FDR_{\text{technique}} = \left(\frac{N_{\text{detected\_bugs}}}{N_{\text{evaluated\_bugs}}}\right) \times 100\% = \left(\frac{\text{จำนวน Bug ที่ได้สถานะ BUG\_DETECTED}}{\text{จำนวน Bug ทั้งหมดที่ทำการประเมิน}}\right) \times 100\%$$
+   *(หมายเหตุทางวิชาการ: กรณีที่เกิด `COMPILE_ERROR` หรือ `TIMEOUT` จะถือว่าไม่สามารถตรวจพบบั๊กนั้นได้ โดยยังคงถูกนับเป็นส่วนหนึ่งของตัวหาร $N_{\text{evaluated\_bugs}}$ เสมอเพื่อรักษามาตรฐานความซื่อตรงของงานวิจัย)*
+3. **การพล็อตกราฟอัตโนมัติ 4 แผนภูมิวิชาการ:** สั่งรันสคริปต์กลาง:
+   ```bash
+   python scripts/plot_results.py
+   ```
+   สคริปต์จะประมวลผล `results/benchmark_results.csv` และสร้างรูปภาพความละเอียดสูง (300 DPI) 4 รูปในโฟลเดอร์ `results/` สำหรับใส่บทที่ 5 ทันที!
 
 ---
 
@@ -741,10 +851,10 @@ docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --sample-1
 
 ```mermaid
 flowchart TD
-    D4J["Defects4J Database<br/>(Dynamic Discovery)"] --> BatchExt["scripts/batch_extract_all_bugs.py<br/>สกัด Target Source & Info ลง target_benchmark/"]
-    BatchExt --> Teammates["เพื่อนร่วมทีม 3 คน<br/>(IPO, MIO, AI) ทยอย Push โค้ดเทส"]
-    Teammates --> AutoBench["scripts/run_benchmark.py --resume<br/>รันประเมินเฉพาะเทสใหม่ต่อเนื่องอัตโนมัติ"]
-    AutoBench --> ResultCSV["results/benchmark_results.csv<br/>(บันทึก 5 สถานะ FDR & Coverage)"]
+    D4J["Defects4J Master Dataset<br/>(854 Active Bugs)"] --> BatchExt["scripts/batch_extract_all_bugs.py<br/>สกัด all_bugs_catalog.json & md"]
+    BatchExt --> Teammates["เพื่อนร่วมทีม 3 คน<br/>(IPO, MIO, AI) ทยอยสร้าง Test Suites"]
+    Teammates --> AutoBench["scripts/run_benchmark.py --all-bugs --resume<br/>รันประเมินต่อเนื่องอัตโนมัติ"]
+    AutoBench --> ResultCSV["results/benchmark_results.csv<br/>(บันทึก 5 สถานะมาตรฐานสากล)"]
     ResultCSV --> Plotter["scripts/plot_results.py<br/>สร้าง 4 แผนภูมิวิชาการอัตโนมัติ"]
     Plotter --> Report["พร้อมประกอบเล่มรายงานบทที่ 5 ทันที!"]
 ```
@@ -752,55 +862,28 @@ flowchart TD
 #### รายละเอียดขั้นตอนการดำเนินงานอัตโนมัติ (Step-by-Step Guide):
 
 1. **ส่วนที่ 1: การสกัดชุดเป้าหมายแบบ Batch อัตโนมัติ (Batch Target Extraction):**
-   - ใช้สคริปต์ [`scripts/batch_extract_all_bugs.py`](scripts/batch_extract_all_bugs.py) สกัด Source Code และ Ground Truth ของบั๊กทั้งหมดที่ทีมวางแผนจะทำการทดลอง:
+   - ใช้สคริปต์ [`scripts/batch_extract_all_bugs.py`](scripts/batch_extract_all_bugs.py) สกัดดัชนี Metadata และข้อมูลบั๊กทั้งหมด:
    ```bash
-   # สกัดชุดทดลองนำร่อง 17 บั๊กหลัก
-   python scripts/batch_extract_all_bugs.py --sample-17 --extract
-   
-   # หรือสกัดบั๊กทั้งหมดของโปรเจกต์ Math รวดเดียว
-   python scripts/batch_extract_all_bugs.py --project Math --extract
+   # สกัดแค็ตตาล็อกทุกบั๊ก ทุกคลาสของ Defects4J
+   python scripts/batch_extract_all_bugs.py
    ```
-   - เมื่อสกัดเสร็จ ให้ Push โฟลเดอร์ `target_benchmark/` ขึ้น GitHub เพื่อให้เพื่อนทั้ง 3 คนดึงไปใช้งาน
 
 2. **ส่วนที่ 2: การเปิดรัน Continuous Benchmark ด้วยระบบ Resume:**
-   - สั่งรัน Runner กลางด้วยออปชัน `--resume` ซึ่งจะอ่านสถานะจาก `results/progress.json` และรันเฉพาะคู่เทสที่ยังไม่ได้ทำหรือเพิ่งถูกเพิ่มเข้ามาใหม่:
+   - สั่งรัน Runner กลางด้วยออปชัน `--resume` ซึ่งจะอ่านสถานะจาก `progress.json` และรันเฉพาะคู่เทสที่ยังไม่ได้ทำหรือเพิ่งถูกเพิ่มเข้ามาใหม่:
    ```bash
-   docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --sample-17 --resume
+   docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --all-bugs --resume
    ```
-   - Member 4 สามารถตั้งเวลารันหรือสั่งรันซ้ำได้ตลอดเวลาโดยไม่ต้องกลัวว่าจะเสียเวลารันงานเก่าซ้ำซ้อน
 
 3. **ส่วนที่ 3: การสร้างแผนภูมิวิชาการ 4 รูปแบบอัตโนมัติ (`scripts/plot_results.py`):**
-   - เขียนสคริปต์ประมวลผลไฟล์ `results/benchmark_results.csv` เพื่อสร้างรูปภาพสำหรับใส่ในบทที่ 5 ของเล่มรายงาน:
-   ```python
-   import pandas as pd
-   import matplotlib.pyplot as plt
-   import seaborn as sns
-
-   def generate_publication_figures():
-       df = pd.read_csv("results/benchmark_results.csv")
-       
-       # รูปที่ 1: เปรียบเทียบ Average Line & Branch Coverage ของ 4 เทคนิค
-       plt.figure(figsize=(10, 6))
-       coverage_summary = df.groupby('technique')[['line_coverage', 'branch_coverage']].mean()
-       coverage_summary.plot(kind='bar', colormap='viridis')
-       plt.title("Comparison of Code Coverage Across Testing Techniques")
-       plt.ylabel("Coverage (%)")
-       plt.tight_layout()
-       plt.savefig("results/figure1_coverage_comparison.png", dpi=300)
-       
-       # รูปที่ 2: สัดส่วน Fault Detection Status (5 ระดับ) ของแต่ละเทคนิค
-       plt.figure(figsize=(12, 6))
-       status_df = pd.crosstab(df['technique'], df['fault_detection_status'], normalize='index') * 100
-       status_df.plot(kind='bar', stacked=True, colormap='tab10')
-       plt.title("Fault Detection Classification Distribution (FDR %)")
-       plt.ylabel("Percentage (%)")
-       plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-       plt.tight_layout()
-       plt.savefig("results/figure2_fdr_distribution.png", dpi=300)
-       print("[+] สร้างแผนภูมิผลลัพธ์ทั้ง 4 รูปแบบสำเร็จใน results/")
-
-   if __name__ == '__main__':
-       generate_publication_figures()
+   - รันสคริปต์ [`scripts/plot_results.py`](scripts/plot_results.py) ซึ่งพัฒนาด้วย Python Standard Library และ Matplotlib:
+   ```bash
+   python scripts/plot_results.py
+   ```
+   - จะได้ไฟล์ผลลัพธ์:
+     - `results/figure1_coverage_comparison.png`: เปรียบเทียบ Line/Branch Coverage ของ 4 เทคนิค
+     - `results/figure2_fdr_distribution.png`: แผนภูมิแท่งซ้อน 5 สถานะ FDR %
+     - `results/figure3_projects_breakdown.png`: เปรียบเทียบ Coverage แยกรายโปรเจกต์
+     - `results/figure4_ai_economics.png`: เปรียบเทียบ Token Usage & Latency ของ Claude vs Gemini
    ```
 
 > **⚠️ ข้อควรจำสำคัญสำหรับ Member 4:**
@@ -909,13 +992,13 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{detected\_bugs}}}{N_{\text{eval
 [x] Milestone 2: สร้าง Universal Benchmark Runner พร้อมระบบจัดหมวดหมู่ 5 สถานะ (Member 4)
 [x] Milestone 3: รันการทดลองนำร่องบน Lang-1 ครบทั้ง 4 เทคนิค (ผลบันทึกใน benchmark_results.csv)
 [x] Milestone 4: พิสูจน์การ Trigger ข้อบกพร่องจริงจนได้สถานะ BUG_DETECTED (Lang-1 Gemini)
-[ ] Milestone 5: สมาชิกทุกคนดึงโค้ดล่าสุด (git pull) และอ่านคู่มือเล่มนี้
-[ ] Milestone 6: Member 1 สกัด Parameter และส่งมอบ Test Suite ของกลุ่มเป้าหมาย (IPO)
-[ ] Milestone 7: Member 2 รัน EvoSuite MIO เก็บสถิติ Mean ± SD ของ Budget ต่างๆ (MIO)
-[ ] Milestone 8: Member 3 รัน KKU GenAI Script สร้าง Test Suite และสรุปตาราง Token Usage (Claude & Gemini)
-[ ] Milestone 9: Member 4 สั่งรัน Universal Benchmark Runner เพื่อประเมินผลเปรียบเทียบ (--resume)
-[ ] Milestone 10: พล็อตกราฟเปรียบเทียบ Line/Branch Coverage, FDR %, และ Token Economics
-[ ] Milestone 11: รวบรวมข้อมูลทั้งหมดประกอบเป็นเล่มรายงานฉบับสมบูรณ์ และจัดทำสไลด์นำเสนอ
+[x] Milestone 5: สกัด All-Bugs & All-Classes Master Catalog ครบ 854 บั๊ก 17 โปรเจกต์ (all_bugs_catalog.json & md) (Member 4)
+[x] Milestone 6: แก้ไข Fallback และพัฒนาระบบค้นหาข้ามโฟลเดอร์รองรับ Multi-Class ใน run_benchmark.py (Member 4)
+[x] Milestone 7: สร้างสคริปต์ Auto-Plotting ผลิต 4 แผนภูมิวิชาการอัตโนมัติ scripts/plot_results.py (Member 4)
+[ ] Milestone 8: เพื่อนร่วมทีม (IPO, MIO, AI) ดึงโค้ดล่าสุด (git pull) และสร้าง Test Suites ตาม All-Bugs Catalog
+[ ] Milestone 9: Member 4 สั่งรัน Universal Benchmark Runner ต่อเนื่อง (run_benchmark.py --all-bugs --resume)
+[ ] Milestone 10: สั่งรัน plot_results.py เพื่ออัปเดต 4 แผนภูมิวิชาการสรุปผลการทดลอง
+[ ] Milestone 11: รวบรวมข้อมูลทั้งหมดประกอบเป็นเล่มรายงานฉบับสมบูรณ์ (Final Report) และจัดทำสไลด์นำเสนอ
 ```
 
 ---

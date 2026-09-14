@@ -97,49 +97,83 @@ def init_csv(csv_path: str):
             writer = csv.writer(f)
             writer.writerow([
                 "Project", "Bug_ID", "Technique", "Target_Classes",
-                "Test_File", "Line_Coverage_%", "Branch_Coverage_%",
-                "Fault_Detected", "Execution_Status", "Timestamp"
+                "Test_Files", "Line_Coverage_%", "Branch_Coverage_%",
+                "Fault_Detection_Status", "Failures_Count", "Execution_Status", "Timestamp"
             ])
 
-def append_csv_result(csv_path: str, row: List[Any]):
-    with open(csv_path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(row)
-
 def find_test_files_for_target(technique: str, project: str, bug_id: int, modified_classes: List[str]) -> List[str]:
-    """Find generated test .java files matching target modified classes."""
+    """
+    Find generated test .java files matching target modified classes across Defects4J.
+    Supports multi-class bugs, specific bug subdirectories, and root test directories.
+    Strictly verifies class name match to prevent cross-project test leakage.
+    """
     base_dir = TECHNIQUE_DIRS.get(technique)
     if not base_dir or not os.path.exists(base_dir):
         return []
     
-    found = []
-    # Search all .java files in test folder
-    for f in glob.glob(os.path.join(base_dir, "**", "*Test*.java"), recursive=True):
-        if "scaffolding" in f:
-            continue
-        fname = os.path.basename(f)
-        # Check if file corresponds to any target class
-        for tc in modified_classes:
-            short_name = tc.split(".")[-1]
-            if short_name.lower() in fname.lower():
-                found.append(f)
-                break
+    # Potential directories where tests for this bug might reside
+    candidate_dirs = [
+        os.path.join(base_dir, f"{project}_{bug_id}b"),
+        os.path.join(base_dir, f"{project}-{bug_id}"),
+        os.path.join(base_dir, f"{project}_{bug_id}"),
+        os.path.join(base_dir, project, str(bug_id)),
+        base_dir
+    ]
     
-    # Fallback: if only 1 test file exists in folder, use it
-    if not found:
-        all_tests = [f for f in glob.glob(os.path.join(base_dir, "*Test*.java")) if "scaffolding" not in f]
-        if len(all_tests) == 1:
-            found = all_tests
+    # Fallback path for IPO PICT reference baseline
+    if technique == "ipo":
+        candidate_dirs.append(os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "baselines", "pict", f"{project}_{bug_id}b", "TestCode"))
+        candidate_dirs.append(os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "Result_Round1", f"{project}_{bug_id}b"))
+
+    found = []
+    found_classes = set()
+    
+    for c_dir in candidate_dirs:
+        if not os.path.exists(c_dir):
+            continue
+        c_dir_base = os.path.basename(c_dir).lower()
+        is_bug_specific_dir = (
+            c_dir_base in [f"{project.lower()}_{bug_id}b", f"{project.lower()}-{bug_id}", f"{project.lower()}_{bug_id}"]
+            or f"{project.lower()}_{bug_id}b" in c_dir.lower()
+            or f"{project.lower()}-{bug_id}" in c_dir.lower()
+        )
+        for f in glob.glob(os.path.join(c_dir, "**", "*Test*.java"), recursive=True):
+            if "scaffolding" in f:
+                continue
+            fname = os.path.basename(f)
             
+            # If the file is in a bug-specific subfolder (e.g. Chart_1b/), accept it
+            if is_bug_specific_dir:
+                pkg = get_class_package(f)
+                if not pkg or any(tc.startswith(pkg) or pkg.startswith(".".join(tc.split(".")[:-1])) or project.lower() in pkg.lower() for tc in modified_classes):
+                    if f not in found:
+                        found.append(f)
+                continue
+
+            # Otherwise (in root test directory), check if filename matches target class or bug id
+            for tc in modified_classes:
+                short_name = tc.split(".")[-1]
+                if short_name.lower() in fname.lower() or f"{project.lower()}_{bug_id}b" in fname.lower() or f"{project.lower()}-{bug_id}" in fname.lower():
+                    pkg = get_class_package(f)
+                    tc_pkg = ".".join(tc.split(".")[:-1])
+                    if not pkg or not tc_pkg or pkg == tc_pkg or tc_pkg.startswith(pkg) or pkg.startswith(tc_pkg) or project.lower() in pkg.lower():
+                        if f not in found:
+                            found.append(f)
+                            found_classes.add(short_name)
+                            
+    # Return found test files. (Never fall back to grabbing unrelated tests)
     return found
 
 def get_class_package(java_file_path: str) -> str:
     """Extract package declaration from a Java file."""
-    with open(java_file_path, "r", encoding="utf-8", errors="replace") as f:
-        for line in f:
-            line = line.strip()
-            if line.startswith("package ") and line.endswith(";"):
-                return line[8:-1].strip()
+    try:
+        with open(java_file_path, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith("package ") and line.endswith(";"):
+                    return line[8:-1].strip()
+    except Exception:
+        pass
     return ""
 
 import tarfile
@@ -265,8 +299,7 @@ def evaluate_technique_on_bug(
             "test_file": "-"
         }
     
-    test_file = test_files[0]
-    test_fname = os.path.basename(test_file)
+    test_fname = ";".join([os.path.basename(tf) for tf in test_files])
     print(f"[{state_key}] Packaging test files: {[os.path.basename(tf) for tf in test_files]}")
     
     # 4. Package External Test Suite into .tar.bz2
@@ -282,10 +315,41 @@ def evaluate_technique_on_bug(
     # Check for compile error or timeout during coverage
     if "timed out" in cov_err.lower():
         print(f"[{state_key}] ⏱️ Test execution TIMED OUT during coverage run!")
-        return {"status": "TIMEOUT", "fault_detected": "TIMEOUT", "line_cov": 0.0, "branch_cov": 0.0, "test_file": test_fname}
-    if "cannot compile" in (cov_out + cov_err).lower() or cov_code != 0 and not os.path.exists(os.path.join(work_buggy, "summary.csv")):
+        res_dict = {
+            "status": "TIMEOUT",
+            "fault_detected": "TIMEOUT",
+            "line_cov": 0.0,
+            "branch_cov": 0.0,
+            "test_file": test_fname,
+            "target_classes": ";".join(modified_classes),
+            "buggy_failures": [],
+            "fixed_failures": []
+        }
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
+            ";".join(modified_classes), test_fname, 0.0, 0.0,
+            "TIMEOUT", 0, "TIMEOUT", time.strftime("%Y-%m-%d %H:%M:%S")
+        ])
+        return res_dict
+
+    if "cannot compile" in (cov_out + cov_err).lower() or (cov_code != 0 and not os.path.exists(os.path.join(work_buggy, "summary.csv"))):
         print(f"[{state_key}] ❌ COMPILE ERROR: Generated test suite failed to compile!")
-        return {"status": "COMPILE_ERROR", "fault_detected": "COMPILE_ERROR", "line_cov": 0.0, "branch_cov": 0.0, "test_file": test_fname}
+        res_dict = {
+            "status": "COMPILE_ERROR",
+            "fault_detected": "COMPILE_ERROR",
+            "line_cov": 0.0,
+            "branch_cov": 0.0,
+            "test_file": test_fname,
+            "target_classes": ";".join(modified_classes),
+            "buggy_failures": [],
+            "fixed_failures": []
+        }
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
+            ";".join(modified_classes), test_fname, 0.0, 0.0,
+            "COMPILE_ERROR", 0, "COMPILE_ERROR", time.strftime("%Y-%m-%d %H:%M:%S")
+        ])
+        return res_dict
         
     summary_csv = os.path.join(work_buggy, "summary.csv")
     cov_metrics = parse_d4j_coverage_summary(summary_csv)
@@ -297,7 +361,23 @@ def evaluate_technique_on_bug(
     print(f"[{state_key}] Running test on Buggy version to verify failure exposure...")
     test_b_code, test_b_out, test_b_err = d4j_meta.run_cmd(["defects4j", "test", "-w", work_buggy, "-s", archive_buggy], timeout=240)
     if "timed out" in test_b_err.lower():
-        return {"status": "TIMEOUT", "fault_detected": "TIMEOUT", "line_cov": line_cov, "branch_cov": branch_cov, "test_file": test_fname}
+        res_dict = {
+            "status": "TIMEOUT",
+            "fault_detected": "TIMEOUT",
+            "line_cov": line_cov,
+            "branch_cov": branch_cov,
+            "test_file": test_fname,
+            "target_classes": ";".join(modified_classes),
+            "buggy_failures": [],
+            "fixed_failures": []
+        }
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
+            ";".join(modified_classes), test_fname, line_cov, branch_cov,
+            "TIMEOUT", 0, "TIMEOUT", time.strftime("%Y-%m-%d %H:%M:%S")
+        ])
+        return res_dict
+
     fail_b_count, fail_b_list = count_failing_tests(work_buggy)
     print(f"[{state_key}] Buggy Failures ({fail_b_count}): {fail_b_list[:2]}")
     
@@ -307,23 +387,44 @@ def evaluate_technique_on_bug(
     print(f"[{state_key}] Running test on Fixed version to verify fix passing...")
     test_f_code, test_f_out, test_f_err = d4j_meta.run_cmd(["defects4j", "test", "-w", work_fixed, "-s", archive_fixed], timeout=240)
     if "timed out" in test_f_err.lower():
-        return {"status": "TIMEOUT", "fault_detected": "TIMEOUT", "line_cov": line_cov, "branch_cov": branch_cov, "test_file": test_fname}
+        res_dict = {
+            "status": "TIMEOUT",
+            "fault_detected": "TIMEOUT",
+            "line_cov": line_cov,
+            "branch_cov": branch_cov,
+            "test_file": test_fname,
+            "target_classes": ";".join(modified_classes),
+            "buggy_failures": fail_b_list,
+            "fixed_failures": []
+        }
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
+            ";".join(modified_classes), test_fname, line_cov, branch_cov,
+            "TIMEOUT", 0, "TIMEOUT", time.strftime("%Y-%m-%d %H:%M:%S")
+        ])
+        return res_dict
+
     fail_f_count, fail_f_list = count_failing_tests(work_fixed)
     print(f"[{state_key}] Fixed Failures ({fail_f_count}): {fail_f_list[:2]}")
     
-    # 8. Classify Fault Detection with Academic Rigor
+    # 8. Classify Fault Detection with Academic Rigor (5 Standard Levels)
+    failures_count = 0
     if fail_b_count > 0 and fail_f_count == 0:
-        fault_detected = f"BUG_DETECTED ({fail_b_count} Triggered)"
+        fault_detected = "BUG_DETECTED"
+        failures_count = fail_b_count
     elif fail_b_count > 0 and fail_f_count > 0:
-        fault_detected = f"FLAKY_OR_REGRESSION ({fail_b_count} b-fail, {fail_f_count} f-fail)"
+        fault_detected = "FLAKY_OR_REGRESSION"
+        failures_count = fail_b_count
     else:
-        fault_detected = "NOT_DETECTED (All passed)"
+        fault_detected = "NOT_DETECTED"
+        failures_count = 0
         
-    print(f"[{state_key}] [RESULT] Status: DONE | Line Cov: {line_cov}% | Branch Cov: {branch_cov}% | Fault: {fault_detected}")
+    print(f"[{state_key}] [RESULT] Status: DONE | Line Cov: {line_cov}% | Branch Cov: {branch_cov}% | Fault: {fault_detected} ({failures_count} Failures)")
     
     res_dict = {
         "status": "DONE",
         "fault_detected": fault_detected,
+        "failures_count": failures_count,
         "line_cov": line_cov,
         "branch_cov": branch_cov,
         "test_file": test_fname,
@@ -337,16 +438,12 @@ def evaluate_technique_on_bug(
     os.makedirs(bug_res_dir, exist_ok=True)
     with open(os.path.join(bug_res_dir, f"{technique}.json"), "w", encoding="utf-8") as jf:
         json.dump(res_dict, jf, indent=2)
-    bug_res_dir = os.path.join(RESULTS_DIR, project, str(bug_id))
-    os.makedirs(bug_res_dir, exist_ok=True)
-    with open(os.path.join(bug_res_dir, f"{technique}.json"), "w", encoding="utf-8") as jf:
-        json.dump(res_dict, jf, indent=2)
         
     # Append CSV
     append_csv_result(csv_path, [
         project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
         ";".join(modified_classes), test_fname, line_cov, branch_cov,
-        fault_detected, "DONE", time.strftime("%Y-%m-%d %H:%M:%S")
+        fault_detected, failures_count, "DONE", time.strftime("%Y-%m-%d %H:%M:%S")
     ])
     
     # Cleanup work dirs if requested
@@ -357,11 +454,11 @@ def evaluate_technique_on_bug(
     return res_dict
 
 def main():
-    parser = argparse.ArgumentParser(description="Universal Benchmark Runner for Defects4J")
+    parser = argparse.ArgumentParser(description="Universal Benchmark Runner for Defects4J (All-Bugs & All-Classes)")
     parser.add_argument("--project", type=str, help="Run specific project (e.g. Lang)")
     parser.add_argument("--bug", type=int, help="Run specific bug ID (e.g. 1)")
     parser.add_argument("--sample-17", action="store_true", help="Run 17 Representative Projects Benchmark")
-    parser.add_argument("--all-bugs", action="store_true", help="Run Exhaustive Benchmark on all active bugs")
+    parser.add_argument("--all-bugs", action="store_true", help="Run Exhaustive Benchmark on all active bugs in Defects4J")
     parser.add_argument("--techniques", type=str, default="ipo,mio,claude,gemini", help="Comma-separated techniques")
     parser.add_argument("--resume", action="store_true", help="Resume from progress.json")
     parser.add_argument("--csv", type=str, default=DEFAULT_CSV, help="Output CSV path")
@@ -377,19 +474,20 @@ def main():
     
     if args.project and args.bug:
         queue = [(args.project, args.bug)]
-    elif args.sample_17 or (not args.all_bugs and not args.project):
+    elif args.sample_17:
         queue = REPRESENTATIVE_17
-    elif args.all_bugs:
+    elif args.project:
+        bugs = d4j_meta.get_active_bugs(args.project)
+        queue = [(args.project, b) for b in bugs]
+    else:
+        # Default: All active bugs across all projects (Defects4J All-Bugs / All-Classes)
         projects = [args.project] if args.project else d4j_meta.get_all_projects()
-        print(f"Discovering all active bugs for {len(projects)} projects...")
+        print(f"Discovering all active bugs across {len(projects)} projects in Defects4J...")
         for p in projects:
             bugs = d4j_meta.get_active_bugs(p)
             print(f"  -> {p}: {len(bugs)} active bugs")
             for b in bugs:
                 queue.append((p, b))
-    elif args.project:
-        bugs = d4j_meta.get_active_bugs(args.project)
-        queue = [(args.project, b) for b in bugs]
 
     print("=" * 65)
     print(f"🚀 ProjectSQA Universal Benchmark Runner")
