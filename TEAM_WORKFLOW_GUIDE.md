@@ -11,12 +11,11 @@
 1. [การเตรียมสภาพแวดล้อมและภาพรวมระบบ (Setup & System Architecture)](#1-การเตรียมสภาพแวดล้อมและภาพรวมระบบ-setup--system-architecture)
 2. [กฎเหล็กกลางที่ทุกคนต้องปฏิบัติตาม (Universal Test Standards)](#2-กฎเหล็กกลางที่ทุกคนต้องปฏิบัติตาม-universal-test-standards)
    - [2.1 ขอบเขตการทดสอบและการวัดผล Coverage (Scope Specification)](#21-ขอบเขตการทดสอบและการวัดผล-coverage-scope-specification-defect-targeted-vs-project-wide)
-<<<<<<< Updated upstream
-   - [2.2 คลังข้อมูลมาตรฐาน 17 bug targets จาก 17 โปรเจกต์](#22-คลังข้อมูลมาตรฐาน-17-bug-targets-จาก-17-โปรเจกต์)
-=======
    - [2.2 คลังข้อมูลมาตรฐานและการทดสอบทุกคลาสใน Defects4J (Defects4J Full All-Classes & All-Bugs Master Suite)](#22-คลังข้อมูลมาตรฐานและการทดสอบทุกคลาสใน-defects4j-defects4j-full-all-classes--all-bugs-master-suite)
+     - [📊 การแจกแจง `classes.modified` เชิงลึก (1,073 Target Class Instances vs. 577 Unique Classes)](#-การแจกแจง-classesmodified-เชิงลึก-1073-target-class-instances-vs-577-unique-classes)
+     - [🎯 กลยุทธ์การดำเนินงาน 3 ระดับ (3-Tier Scalable Execution Strategy)](#-กลยุทธ์การดำเนินงาน-3-ระดับ-3-tier-scalable-execution-strategy)
    - [2.3 วิธีการดึง Class เป้าหมาย (.java) และ Defect Metadata สำหรับสมาชิกทุกคน (How to Extract Target Classes for Test Generation)](#23-วิธีการดึง-class-เป้าหมาย-java-และ-defect-metadata-สำหรับสมาชิกทุกคน-how-to-extract-target-classes-for-test-generation)
->>>>>>> Stashed changes
+     - [🚀 สรุปคำสั่งเรียกใช้งานทีละขั้นตอนสำหรับสมาชิกทุกคน (Quick Invocation Cheat Sheet)](#-สรุปคำสั่งเรียกใช้งานทีละขั้นตอนสำหรับสมาชิกทุกคน-quick-invocation-cheat-sheet)
 3. [Member 1: นายปวริศช์ ประมวล (IPO / Combinatorial Specialist)](#3-member-1-นายปวริศช์-ประมวล-ipo--combinatorial-specialist)
    - [💡 วิธีสร้างระบบ Automated IPO Engine (พิมพ์เขียวสำหรับ Member 1)](#-วิธีสร้างระบบ-automated-ipo-engine-พิมพ์เขียวแบบละเอียดสำหรับ-member-1)
 4. [Member 2: นายแทนคุณ พันธ์นิกุล (MIO / EvoSuite Specialist)](#4-member-2-นายแทนคุณ-พันธ์นิกุล-mio--evosuite-specialist)
@@ -158,7 +157,58 @@ ProjectSQA/
 | 15 | **Math** | Numerical & Probability Math | 106 bugs | `HypergeometricDistribution`, `FastMath`, `RealMatrix` |
 | 16 | **Mockito** | Dynamic Mocking Framework | 38 bugs | `InvocationMatcher`, `MockHandler`, `Returns` |
 | 17 | **Time** | Date/Time Calculation Engine | 26 bugs | `Partial`, `DateTime`, `Period`, `Format` |
-| **รวม** | **17 โครงการ** | **ครอบคลุมทุกหมวดหมู่งานวิศวกรรมซอฟต์แวร์** | **854 บั๊ก** | **ทุกคลาสใน `classes.modified` รวมกว่า 1,000+ คลาส** |
+| **รวม** | **17 โครงการ** | **ครอบคลุมทุกหมวดหมู่งานวิศวกรรมซอฟต์แวร์** | **854 บั๊ก** | **1,073 Target Instances (577 Unique Classes)** |
+
+#### 📊 การแจกแจง `classes.modified` เชิงลึก (1,073 Target Class Instances vs. 577 Unique Classes)
+
+> **❓ คำถามสำคัญเชิงวิจัย SQA:** *"หากเราสร้างชุดทดสอบครอบคลุมเฉพาะ 577 คลาสที่ไม่ซ้ำชื่อกัน จะถือว่าครอบคลุมและตรวจจับบั๊กได้ครบทั้ง 854 บั๊กหรือไม่?"*  
+> **💡 คำตอบคือ "ยังไม่ครอบคลุมครับ" ด้วยเหตุผลทางวิศวกรรมซอฟต์แวร์ 3 ประการ:**
+> 1. **คลาสเดียวกัน แต่เป็นคนละ Commit/Revision ในประวัติศาสตร์:** คลาสชื่อเดียวกัน เช่น `NumberUtils.java` ใน Apache Commons Lang มีการเกิดบั๊กคนละช่วงเวลา โดย **Lang-1** มีบั๊กเรื่องแปลงเลขฐาน 16 (`createNumber("-0x10")`), **Lang-3** มีบั๊กเรื่อง Precision Loss, **Lang-4** มีบั๊กเรื่องตัวเลขขึ้นต้นด้วย 0, และ **Lang-7** มีบั๊กเรื่อง NullPointerException ซอร์สโค้ดและจุดพังอยู่คนละบรรทัดคนละฟังก์ชัน ชุดเทสของ Lang-1 จึงไม่สามารถตรวจจับบั๊กใน Lang-3 หรือ Lang-7 ได้ (จะเกิดผลลัพธ์เป็น `NOT_DETECTED`)
+> 2. **Multi-Class Defect Interactions (127 บั๊ก หรือ 14.9%):** มีบั๊กถึง 127 ตัวที่นักพัฒนาต้องแก้ไขโค้ดพร้อมกันมากกว่า 1 คลาส (เช่น `Csv-13` แก้ทั้ง `CSVFormat` และ `CSVPrinter` หรือ `JacksonDatabind-103` แก้ถึง 16 คลาส) การทดสอบคลาสเดี่ยวๆ จะไม่ตรวจพบบั๊กประเภทนี้
+> 3. **ระเบียบวิธีประเมินผล Bug-Level FDR:** ใน Defects4J การวัดผล Fault Detection Rate คิดบนฐาน $N = 854$ บั๊ก (1,073 target instances) โดย Checkout ซอร์สโค้ดของแต่ละบั๊กออกมารันแยกกัน
+
+##### สรุปตารางเปรียบเทียบ Target Instances vs. Unique Classes รายโครงการ:
+| # | Project ID | โดเมนโปรเจกต์ | จำนวนบั๊ก (Bugs) | `classes.modified` ทั้งหมด | คลาสที่ไม่ซ้ำ (Unique) | ค่าเฉลี่ย คลาส/บั๊ก |
+| :-: | :--- | :--- | :-: | :-: | :-: | :-: |
+| 1 | **Chart** | JFreeChart Graphic Engine | 26 | **28** | 24 | 1.08 |
+| 2 | **Cli** | Apache Commons CLI | 39 | **51** | 19 | 1.31 |
+| 3 | **Closure** | Google Closure Compiler | 174 | **226** | 95 | 1.30 |
+| 4 | **Codec** | Apache Commons Codec | 18 | **28** | 18 | 1.56 |
+| 5 | **Collections**| Apache Commons Collections | 28 | **28** | 19 | 1.00 |
+| 6 | **Compress** | Apache Commons Compress | 47 | **58** | 28 | 1.23 |
+| 7 | **Csv** | Apache Commons CSV | 16 | **17** | 6 | 1.06 |
+| 8 | **Gson** | Google Gson JSON Library | 18 | **21** | 13 | 1.17 |
+| 9 | **JacksonCore**| FasterXML Jackson Core | 26 | **35** | 19 | 1.35 |
+| 10 | **JacksonDatabind**| Jackson Data Binding | 110 | **157** | 95 | 1.43 |
+| 11 | **JacksonXml**| Jackson XML Extension | 6 | **6** | 4 | 1.00 |
+| 12 | **Jsoup** | JSoup HTML Parser | 93 | **126** | 38 | 1.35 |
+| 13 | **JxPath** | Apache Commons JxPath | 22 | **35** | 20 | 1.59 |
+| 14 | **Lang** | Apache Commons Lang | 61 | **61** | 37 | 1.00 |
+| 15 | **Math** | Apache Commons Math | 106 | **119** | 90 | 1.12 |
+| 16 | **Mockito** | Mockito Testing Framework | 38 | **46** | 33 | 1.21 |
+| 17 | **Time** | Joda-Time Date Engine | 26 | **31** | 19 | 1.19 |
+| **รวม**| **17 โครงการ** | **Defects4J Benchmark Suite** | **854 บั๊ก** | **1,073 คลาส** | **577 คลาส** | **1.26** |
+
+---
+
+#### 🎯 กลยุทธ์การดำเนินงาน 3 ระดับ (3-Tier Scalable Execution Strategy)
+
+หากรันครบทุกคลาสทั้ง 4 เทคนิค (4 $\times$ 1,073) จะมีขนาดการทดสอบถึง **4,292 Test Suites!** ซึ่งมีข้อจำกัดทางกายภาพ เช่น โควตา API รายวันของ KKU IntelSphere, เวลาคำนวณของ EvoSuite, และ Object ซับซ้อนใน Closure ทีมจึงกำหนดแผนการส่งมอบ 3 ระดับที่ปฏิบัติได้จริงและได้มาตรฐานวิชาการสูงสุด:
+
+* **🥇 Tier 1: Core Representative Baseline (17 โครงการตัวแทน):**
+  - **สถานะ:** มีไฟล์ทดสอบของทั้ง Gemini, Claude, และ IPO สำหรับ 17 โปรเจกต์ตัวแทนพร้อมแล้วในคลัง
+  - **สิ่งที่ทำ:** สั่งรัน `run_benchmark.py` บันทึกผล Coverage และ FDR ของ 17 คลาสนี้ลงใน `results/benchmark_results.csv` เพื่อเป็น Empirical Baseline หลักในเล่มรายงาน
+* **🥈 Tier 2: Quick Wins Expansion (โครงการขนาดเล็ก-กลาง):**
+  - ขยายผลรันเจนเทสแบบยกล็อตสำหรับโปรเจกต์ที่ซอร์สโค้ดไม่ซับซ้อน ได้แก่:
+    - **Csv:** 16 บั๊ก (17 คลาส)
+    - **Codec:** 18 บั๊ก (28 คลาส)
+    - **Gson:** 18 บั๊ก (21 คลาส)
+    - **Lang:** 61 บั๊ก (61 คลาส)
+  - กลุ่มนี้จะเพิ่มปริมาณข้อมูลทดสอบขึ้นอีกกว่า **120+ บั๊ก (127 คลาส)** ได้อย่างรวดเร็ว
+* **🥉 Tier 3: All-Bugs / All-Classes Automation Scale (854 บั๊ก / 1,073 คลาส):**
+  - ฝ่าย Infra (Member 4) ได้เตรียม Master Catalog ([all_bugs_catalog.json](target_benchmark/all_bugs_catalog.json)) และตัวรัน `scripts/run_benchmark.py --all-bugs --resume` ที่สามารถรันประมวลผลเบื้องหลังได้ต่อเนื่องไม่จำกัดเวลา พร้อมนำตารางแค็ตตาล็อกทั้งหมดไปนำเสนอในภาคผนวกของรายงานวิจัย
+
+---
 
 ### 2.3 วิธีการดึง Class เป้าหมาย (`.java`) และ Defect Metadata สำหรับสมาชิกทุกคน (How to Extract Target Classes for Test Generation)
 
@@ -213,14 +263,90 @@ python scripts/extract_target_classes.py --project Csv
 
 ---
 
-#### 🚀 วิธีนำ Class ที่สกัดได้ไปใช้งานของสมาชิกแต่ละคน:
+#### 🚀 สรุปคำสั่งเรียกใช้งานทีละขั้นตอนสำหรับสมาชิกทุกคน (Quick Invocation Cheat Sheet)
 
-| สมาชิก | สิ่งที่ได้รับ | คำสั่ง / วิธีการนำไปใช้ต่อ |
-| :--- | :--- | :--- |
-| **Member 1<br/>(IPO Specialist)** | ไฟล์ `.java` ใน `target_benchmark/<Project>_<BugID>b/` | เปิดไฟล์เพื่อดูพารามิเตอร์ของ Method -> สร้าง Parameter Model ใน `Combinatorial_IPO/Models/` -> รันขั้นตอนวิธี IPO |
-| **Member 2<br/>(MIO Specialist)** | Full Class Name (`FQCN`) เช่น `org.apache.commons.math3.distribution.HypergeometricDistribution` | นำ FQCN จากคำสั่ง `--info` ไปสั่งรัน EvoSuite ในคอนเทนเนอร์ Docker:<br/>`docker exec -it defects4j_sqa /workspace/MIO_Algorithm/Code/run_evosuite_mio.sh <Project> <BugID> <FQCN> <Budget>` |
-| **Member 3<br/>(AI Specialist)** | ไฟล์ `.java` + `defects4j_info.txt` | สั่งสร้างเทสผ่าน KKU API อัตโนมัติด้วยคำสั่งสั้น:<br/>`python scripts/kku_generate.py --ai gemini --project <Project> --bug <BugID>`<br/>*(สคริปต์จะดึงไฟล์ .java และ Root Cause บั๊กไปส่งให้ AI เอง)* |
-| **Member 4<br/>(Infra Lead)** | ชุด Test Suite ในโฟลเดอร์ `TestCode/` ของแต่ละคน | รันประเมินผลเปรียบเทียบ Coverage และ FDR:<br/>`docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --all-bugs --resume` |
+เพื่อให้สมาชิกทุกคนทำงานได้อย่างราบรื่น ไม่สับสน และมีคำสั่งที่สามารถคัดลอกไปวางใน Terminal ได้ทันที:
+
+---
+
+### 1️⃣ สำหรับ Member 1: นายปวริศช์ ประมวล (IPO / Combinatorial Specialist)
+* **เป้าหมาย:** สกัด Method Signature ของ Target Class -> สร้าง Parameter Factor Model -> รัน IPO Algorithm -> สกัด Fixed Oracle -> วางไฟล์ใน `Combinatorial_IPO/TestCode/`
+```bash
+# ขั้นที่ 1: ตรวจดูว่าบั๊กเป้าหมายแก้ไขที่คลาสใด และเมธอดใด (เช่น Math-2)
+python scripts/extract_target_classes.py --info --project Math --bug 2
+
+# ขั้นที่ 2: ดึงไฟล์ .java ซอร์สโค้ดออกมาเปิดดู
+python scripts/extract_target_classes.py --project Math --bug 2
+# (ไฟล์จะถูกดาวน์โหลดมาไว้ที่: target_benchmark/Math_2b/HypergeometricDistribution.java)
+
+# ขั้นที่ 3: เปิดไฟล์ .java สร้าง Parameter Model ในโฟลเดอร์ Combinatorial_IPO/Models/
+# จากนั้นรันสร้าง Pairwise Combinations และเก็บ Oracle
+python Combinatorial_IPO/Code/runner/start_catalog_loop.py
+
+# ขั้นที่ 4: ตรวจสอบไฟล์ส่งมอบปลายทาง:
+# Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java
+```
+
+---
+
+### 2️⃣ สำหรับ Member 2: นายแทนคุณ พันธ์นิกุล (MIO / EvoSuite Specialist)
+* **เป้าหมาย:** ค้นหาชื่อ Fully Qualified Class Name (`FQCN`) -> รัน EvoSuite ด้วยอัลกอริทึม MIO บน Docker 3 Search Budgets $\times$ 3 Seeds -> สรุป Mean $\pm$ SD -> วาง Best Suite ใน `MIO_Algorithm/TestCode/`
+```bash
+# ขั้นที่ 1: ดึงชื่อเต็ม FQCN ของคลาสเป้าหมาย
+python scripts/extract_target_classes.py --info --project Math --bug 2
+# (ผลลัพธ์จะบอก FQCN ทันที เช่น: org.apache.commons.math3.distribution.HypergeometricDistribution)
+
+# ขั้นที่ 2: สั่งรัน EvoSuite MIO ภายในคอนเทนเนอร์ Docker ได้ด้วยคำสั่งเดียว:
+# รูปแบบ: run_evosuite_mio.sh [Project] [BugID] [TargetClass_FQCN] [BudgetSec]
+docker exec -it defects4j_sqa /workspace/MIO_Algorithm/Code/run_evosuite_mio.sh Math 2 org.apache.commons.math3.distribution.HypergeometricDistribution 60
+
+# ขั้นที่ 3: สำหรับการเก็บสถิติ Mean +- SD (30s, 60s, 120s x seed 101, 102, 103)
+# ให้รันคำสั่งโดยเปลี่ยนค่า -Dsearch_budget และ -seed ตามตารางในหัวข้อ 4
+
+# ขั้นที่ 4: ตรวจสอบไฟล์ส่งมอบปลายทาง:
+# MIO_Algorithm/TestCode/<Class>_ESTest.java (และ _scaffolding.java)
+```
+
+---
+
+### 3️⃣ สำหรับ Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - Claude & Gemini)
+* **เป้าหมาย:** สกัดโค้ดและ Ground Truth -> ยิง KKU IntelSphere API ผ่าน Universal Generator -> ตรวจสอบ Package/Timeout Guard -> วางไฟล์ในโฟลเดอร์ `TestCode/` ของแต่ละโมเดล
+```bash
+# ขั้นที่ 1: สกัดไฟล์ซอร์สโค้ดและข้อมูลบั๊ก (หากยังไม่มีใน target_benchmark)
+python scripts/extract_target_classes.py --project Math --bug 2
+
+# ขั้นที่ 2: เจนเทสด้วย Gemini 3.8 Flash (ใช้ระบุ Project + Bug ID ได้ทันที):
+python scripts/kku_generate.py --ai gemini --project Math --bug 2
+
+# ขั้นที่ 3: เจนเทสด้วย Claude Sonnet 5:
+python scripts/kku_generate.py --ai claude --project Math --bug 2
+
+# ขั้นที่ 4: ตรวจสอบไฟล์เทสที่ระบบสกัดและบันทึกให้อัตโนมัติ:
+# - Gemini: Gemini-3_8_flash/TestCode/<Class>GeminiTest.java
+# - Claude: Claude-sonnet_5/TestCode/<Class>ClaudeTest.java
+# สถิติ Token จะถูกบันทึกลง: results/Claude_vs_Gemini_Economics.csv
+```
+
+---
+
+### 4️⃣ สำหรับ Member 4: นายศิฆรินทร์ อุปจันทร์ (Infra & Data Analysis Lead)
+* **เป้าหมาย:** รัน Universal Benchmark Runner บน Docker -> วัด Line/Branch Coverage และ FDR 5 สถานะ -> พล็อตภาพวิชาการ 300 DPI สำหรับเล่มรายงาน
+```bash
+# ขั้นที่ 1: เปิดคอนเทนเนอร์และสั่งรันเบนช์มาร์กประเมินผลชุดเทสทั้งหมด:
+docker start defects4j_sqa
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --resume
+
+# หรือสั่งรันเฉพาะโปรเจกต์ใดโปรเจกต์หนึ่ง:
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Math --resume
+
+# ขั้นที่ 2: สร้างภาพกราฟิกวิชาการ 4 แผ่นความละเอียด 300 DPI สำหรับบทที่ 5:
+python scripts/plot_results.py
+
+# ขั้นที่ 3: อัปเดตผลลัพธ์ขึ้น GitHub ให้เพื่อนดึงไปเขียนรายงาน:
+git add results/ progress.json
+git commit -m "chore(benchmark): update empirical benchmark results and figures"
+git push origin main
+```
 
 ---
 
