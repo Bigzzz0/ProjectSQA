@@ -167,9 +167,12 @@ def run_test_generation(target_ai, api_keys, model_identifier=None, source_file=
     model_to_use = model_identifier if model_identifier else default_model
     pkg_decl = f"package {package_name};" if package_name else "// No package"
 
+    folder_name = os.path.basename(os.path.dirname(os.path.abspath(source_file)))
     prompt_dir = os.path.join(PROJECT_ROOT, tool_dir, "Prompt")
     os.makedirs(prompt_dir, exist_ok=True)
-    custom_prompt_file = os.path.join(prompt_dir, f"actual_prompt_{base_class}.md")
+    custom_prompt_file = os.path.join(prompt_dir, folder_name, f"actual_prompt_{base_class}.md")
+    if not os.path.exists(custom_prompt_file):
+        custom_prompt_file = os.path.join(prompt_dir, f"actual_prompt_{base_class}.md")
 
     system_prompt = ""
     custom_defect_req = ""
@@ -412,8 +415,8 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         rem_str = f"{rem:,}" if isinstance(rem, int) else str(rem)
         print(f"   💳 Quota เหลือวันนี้ (Token #{used_key_index}): {rem_str} tokens")
 
-    # 3. บันทึกไฟล์ TestCode
-    testcode_dir = os.path.join(PROJECT_ROOT, tool_dir, "TestCode")
+    # 3. บันทึกไฟล์ TestCode (จัดเก็บแยกตามโฟลเดอร์บั๊กเป้าหมายเพื่อความเป็นระเบียบ)
+    testcode_dir = os.path.join(PROJECT_ROOT, tool_dir, "TestCode", folder_name)
     os.makedirs(testcode_dir, exist_ok=True)
     test_file_path = os.path.join(testcode_dir, f"{output_class_name}.java")
     with open(test_file_path, "w", encoding="utf-8") as f:
@@ -421,10 +424,10 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     print(f"   💾 บันทึกไฟล์ Test เรียบร้อยที่: {test_file_path}")
 
     # 4. บันทึก Prompt ที่ใช้
-    prompt_dir = os.path.join(PROJECT_ROOT, tool_dir, "Prompt")
-    os.makedirs(prompt_dir, exist_ok=True)
+    prompt_record_dir = os.path.join(prompt_dir, folder_name)
+    os.makedirs(prompt_record_dir, exist_ok=True)
     target_class_name = os.path.splitext(os.path.basename(source_file))[0]
-    prompt_record_path = os.path.join(prompt_dir, f"actual_prompt_{target_class_name}.md")
+    prompt_record_path = os.path.join(prompt_record_dir, f"actual_prompt_{target_class_name}.md")
     if not os.path.exists(prompt_record_path):
         with open(prompt_record_path, "w", encoding="utf-8") as f:
             f.write(f"# Prompt Record for {output_class_name}\n\n")
@@ -435,7 +438,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     print(f"   📝 บันทึกประวัติ Prompt เรียบร้อยที่: {prompt_record_path}")
 
     # 5. บันทึกสถิติลงใน Result/
-    result_dir = os.path.join(PROJECT_ROOT, tool_dir, "Result")
+    result_dir = os.path.join(PROJECT_ROOT, tool_dir, "Result", folder_name)
     os.makedirs(result_dir, exist_ok=True)
     metrics_path = os.path.join(result_dir, f"generation_metrics_{target_class_name}.md")
     with open(metrics_path, "w", encoding="utf-8") as f:

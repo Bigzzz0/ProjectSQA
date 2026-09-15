@@ -69,11 +69,14 @@ def main():
             continue
 
         base_name = os.path.splitext(os.path.basename(abs_path))[0]
-        test_file = os.path.join(PROJECT_ROOT, "Deepseek-v4_flash", "TestCode", f"{base_name}DeepseekTest.java")
+        folder_name = os.path.basename(os.path.dirname(abs_path))
+        test_file_sub = os.path.join(PROJECT_ROOT, "Deepseek-v4_flash", "TestCode", folder_name, f"{base_name}DeepseekTest.java")
+        test_file_root = os.path.join(PROJECT_ROOT, "Deepseek-v4_flash", "TestCode", f"{base_name}DeepseekTest.java")
+        test_file = test_file_sub if os.path.exists(test_file_sub) else test_file_root
 
         # Check if already generated with non-trivial size
         if os.path.exists(test_file) and os.path.getsize(test_file) > 500:
-            print(f"\n[{idx}/{total_targets}] ⏩ Already generated: {base_name}DeepseekTest.java ({os.path.getsize(test_file)} bytes) -> Skipping")
+            print(f"\n[{idx}/{total_targets}] ⏩ Already generated: {folder_name}/{base_name}DeepseekTest.java ({os.path.getsize(test_file)} bytes) -> Skipping")
             skipped_count += 1
             continue
 
