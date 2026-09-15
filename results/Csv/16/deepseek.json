@@ -1,0 +1,37 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 12,
+  "line_cov": 82.11,
+  "branch_cov": 79.41,
+  "test_file": "CSVParserDeepseekTest.java",
+  "target_classes": "org.apache.commons.csv.CSVParser",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVParserDeepseekTest::testBasicParsing",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testMultipleIterators",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testLineEndings",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testParseStaticMethods",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testGetCurrentLineNumberWithMultiline",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testNullStringParse",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testCaseInsensitiveHeader",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testNullFormat",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testDelimiterVariations",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testManyRecords",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testNullReader",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testCharacterOffset"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVParserDeepseekTest::testBasicParsing",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testMultipleIterators",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testLineEndings",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testParseStaticMethods",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testGetCurrentLineNumberWithMultiline",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testNullStringParse",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testCaseInsensitiveHeader",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testNullFormat",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testDelimiterVariations",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testManyRecords",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testNullReader",
+    "org.apache.commons.csv.CSVParserDeepseekTest::testCharacterOffset"
+  ]
+}

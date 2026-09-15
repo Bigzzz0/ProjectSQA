@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CSVRecordDeepseekTest.java",
+  "target_classes": "org.apache.commons.csv.CSVRecord",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testEmptyMapping",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithNoHeader"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testEmptyMapping"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 93.3,
+  "branch_cov": 77.86,
+  "test_file": "CSVFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testDefaultFormat",
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testToString",
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testDuplicateHeaderElements"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testDefaultFormat",
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testToString"
+  ]
+}

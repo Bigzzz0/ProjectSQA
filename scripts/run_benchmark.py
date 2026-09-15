@@ -145,7 +145,9 @@ def find_test_files_for_target(technique: str, project: str, bug_id: int, modifi
             or f"{project.lower()}_{bug_id}b" in c_dir.lower()
             or f"{project.lower()}-{bug_id}" in c_dir.lower()
         )
-        for f in glob.glob(os.path.join(c_dir, "**", "*Test*.java"), recursive=True):
+        # When checking base_dir fallback, do NOT recurse into other bug subfolders
+        pattern = os.path.join(c_dir, "**", "*Test*.java") if is_bug_specific_dir else os.path.join(c_dir, "*Test*.java")
+        for f in glob.glob(pattern, recursive=is_bug_specific_dir):
             if "scaffolding" in f:
                 continue
             fname = os.path.basename(f)
@@ -169,6 +171,10 @@ def find_test_files_for_target(technique: str, project: str, bug_id: int, modifi
                             found.append(f)
                             found_classes.add(short_name)
                             
+        # If tests were found in the dedicated bug-specific directory, stop searching
+        if is_bug_specific_dir and found:
+            break
+            
     # Return found test files. (Never fall back to grabbing unrelated tests)
     return found
 
