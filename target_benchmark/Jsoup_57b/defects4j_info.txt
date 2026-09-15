@@ -1,0 +1,38 @@
+Summary of configuration for Project: Jsoup
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Jsoup
+       Program: jsoup
+    Build file: /opt/defects4j/framework/projects/Jsoup/Jsoup.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/jsoup.git
+     Commit db: /opt/defects4j/framework/projects/Jsoup/active-bugs.csv
+Number of bugs: 93
+--------------------------------------------------------------------------------
+
+Summary for Bug: Jsoup-57
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+2c58e975ab00eb369ee3dfbba07a4a78a1ef9e19
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2016-10-26 12:58:24 -0700
+--------------------------------------------------------------------------------
+Bug report id:
+759
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/jhy/jsoup/issues/759
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.jsoup.nodes.ElementTest::testChainedRemoveAttributes
+   --> java.util.ConcurrentModificationException
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.jsoup.nodes.Attributes
+--------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-96
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+94cf29c4e3b6a7f37ad9d85ba572409691ed7f23
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-08-29 15:46:22 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-221
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-221
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math.complex.ComplexTest::testMath221
+   --> junit.framework.AssertionFailedError: expected:<org.apache.commons.math.complex.Complex@98b00000> but was:<org.apache.commons.math.complex.Complex@18b00000>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math.complex.Complex
+--------------------------------------------------------------------------------

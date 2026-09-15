@@ -1,0 +1,38 @@
+Summary of configuration for Project: JacksonDatabind
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JacksonDatabind
+       Program: jackson-databind
+    Build file: /opt/defects4j/framework/projects/JacksonDatabind/JacksonDatabind.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/jackson-databind.git
+     Commit db: /opt/defects4j/framework/projects/JacksonDatabind/active-bugs.csv
+Number of bugs: 110
+--------------------------------------------------------------------------------
+
+Summary for Bug: JacksonDatabind-91
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+dfaca81ae7a82b7c3018f265815e98a5138118f7
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2017-11-01 15:36:43 -0700
+--------------------------------------------------------------------------------
+Bug report id:
+1809
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/FasterXML/jackson-databind/issues/1809
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest::testCachedSerialize
+   --> junit.framework.AssertionFailedError: Not using custom key deserializer for input: {"data":{"1st":"onedata","2nd":"twodata"}}; resulted in: {1st=onedata, 2nd=twodata}
+--------------------------------------------------------------------------------
+List of modified sources:
+ - com.fasterxml.jackson.databind.deser.DeserializerCache
+--------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+Summary of configuration for Project: Mockito
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Mockito
+       Program: mockito
+    Build file: /opt/defects4j/framework/projects/Mockito/Mockito.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/mockito.git
+     Commit db: /opt/defects4j/framework/projects/Mockito/active-bugs.csv
+Number of bugs: 38
+--------------------------------------------------------------------------------
+
+Summary for Bug: Mockito-31
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+62b6bdf44baeee172b2b1684835fb995bad2a47d
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2010-11-05 18:33:46 -0200
+--------------------------------------------------------------------------------
+Bug report id:
+225
+--------------------------------------------------------------------------------
+Bug report url:
+https://code.google.com/archive/p/mockito/issues/225
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest::shouldPrintTheParametersWhenCallingAMethodWithArgs
+   --> junit.framework.ComparisonFailure: expected:<... unstubbed withArgs([oompa, lumpa]) method on mock> but was:<... unstubbed withArgs([]) method on mock>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls
+--------------------------------------------------------------------------------

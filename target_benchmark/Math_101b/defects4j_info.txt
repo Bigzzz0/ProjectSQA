@@ -1,0 +1,40 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-101
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+cd5f65c4c7bd17d81ecb3924f444f2078a3ff580
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-03-23 12:22:59 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-198
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-198
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math.complex.ComplexFormatTest::testForgottenImaginaryCharacter
+   --> java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+ - org.apache.commons.math.complex.FrenchComplexFormatTest::testForgottenImaginaryCharacter
+   --> java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math.complex.ComplexFormat
+--------------------------------------------------------------------------------

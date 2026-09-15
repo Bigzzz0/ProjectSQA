@@ -1,0 +1,44 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-37
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+95d15eff45cfcf40871d950c8ffecba2d95d63f9
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2012-01-27 07:00:19 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-722
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-722
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math.complex.ComplexTest::testTanhInf
+   --> junit.framework.AssertionFailedError: expected:<1.0> but was:<NaN>
+ - org.apache.commons.math.complex.ComplexTest::testTan
+   --> junit.framework.AssertionFailedError: expected:<1.0> but was:<NaN>
+ - org.apache.commons.math.complex.ComplexTest::testTanh
+   --> junit.framework.AssertionFailedError: expected:<1.0> but was:<NaN>
+ - org.apache.commons.math.complex.ComplexTest::testTanInf
+   --> junit.framework.AssertionFailedError: expected:<1.0> but was:<NaN>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math.complex.Complex
+--------------------------------------------------------------------------------

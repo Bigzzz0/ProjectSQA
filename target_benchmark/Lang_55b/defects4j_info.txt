@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-55
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+b16235ad108c4fcdb7117493394d26d2f0faeace
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2007-02-06 22:49:50 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-315
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-315
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang.time.StopWatchTest::testLang315
+   --> junit.framework.AssertionFailedError
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang.time.StopWatch
+--------------------------------------------------------------------------------

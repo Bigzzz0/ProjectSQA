@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-29
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+eb79f7c6f37d0d9c4d9252b1020bc19a617a4d23
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2010-05-28 16:33:23 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-624
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-624
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang3.SystemUtilsTest::testJavaVersionAsInt
+   --> junit.framework.AssertionFailedError: expected:<0> but was:<0.0>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang3.SystemUtils
+--------------------------------------------------------------------------------

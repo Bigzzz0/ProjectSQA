@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-54
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+75d931a3264b73caa9cdd7d3373375cc33008ddf
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2007-05-01 23:50:01 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-328
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-328
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang.LocaleUtilsTest::testLang328
+   --> java.lang.IllegalArgumentException: Invalid locale format: fr__POSIX
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang.LocaleUtils
+--------------------------------------------------------------------------------

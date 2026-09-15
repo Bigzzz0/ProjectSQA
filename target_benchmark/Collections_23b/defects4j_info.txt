@@ -1,0 +1,40 @@
+Summary of configuration for Project: Collections
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Collections
+       Program: commons-collections
+    Build file: /opt/defects4j/framework/projects/Collections/Collections.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-collections.git
+     Commit db: /opt/defects4j/framework/projects/Collections/active-bugs.csv
+Number of bugs: 28
+--------------------------------------------------------------------------------
+
+Summary for Bug: Collections-23
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+72784c46f6a7d7644398db5c7ac8bd3822c523d4
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2013-11-11 16:30:14 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+COLLECTIONS-495
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/COLLECTIONS-495
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.collections4.TrieUtilsTest::testUnmodifiableTrie
+   --> junit.framework.AssertionFailedError: UnmodifiableTrie shall not be decorated expected same:<Trie[0]={
+ - org.apache.commons.collections4.trie.UnmodifiableTrieTest::testDecorateFactory
+   --> junit.framework.AssertionFailedError: expected same:<Trie[18]={
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.collections4.trie.UnmodifiableTrie
+--------------------------------------------------------------------------------

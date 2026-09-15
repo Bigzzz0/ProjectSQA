@@ -1,0 +1,42 @@
+Summary of configuration for Project: Closure
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Closure
+       Program: closure-compiler
+    Build file: /opt/defects4j/framework/projects/Closure/Closure.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/closure-compiler.git
+     Commit db: /opt/defects4j/framework/projects/Closure/active-bugs.csv
+Number of bugs: 174
+--------------------------------------------------------------------------------
+
+Summary for Bug: Closure-3
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+d80fcc04239ab8c4cf781273c4f9bc54cf06f479
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2012-12-19 19:55:44 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+864
+--------------------------------------------------------------------------------
+Bug report url:
+https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-864.json
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testDoNotInlineCatchExpression1a
+   --> junit.framework.AssertionFailedError: 
+ - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testDoNotInlineCatchExpression1
+   --> junit.framework.AssertionFailedError: 
+ - com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testDoNotInlineCatchExpression3
+   --> junit.framework.AssertionFailedError: 
+--------------------------------------------------------------------------------
+List of modified sources:
+ - com.google.javascript.jscomp.FlowSensitiveInlineVariables
+--------------------------------------------------------------------------------

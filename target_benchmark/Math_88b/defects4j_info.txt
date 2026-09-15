@@ -1,0 +1,38 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-88
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+ed813abf79e11a2c7ab7f2368acf8f3174db80e5
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2009-06-02 19:37:30 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-272
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-272
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath272
+   --> junit.framework.AssertionFailedError: expected:<1.0> but was:<0.0>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math.optimization.linear.SimplexTableau
+--------------------------------------------------------------------------------

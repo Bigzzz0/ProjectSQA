@@ -1,0 +1,40 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-19
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+8914d7f617f78aae8c85405856283c98d4e43990
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2011-07-03 07:55:33 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-710
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-710
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testUnfinishedEntity
+   --> java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+ - org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testOutOfBounds
+   --> java.lang.StringIndexOutOfBoundsException: String index out of range: 7
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang3.text.translate.NumericEntityUnescaper
+--------------------------------------------------------------------------------

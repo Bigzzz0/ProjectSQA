@@ -30,6 +30,8 @@ import shutil
 import argparse
 import subprocess
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 # ป้องกัน UnicodeEncodeError บน Windows terminal
 if hasattr(sys.stdout, "reconfigure"):
@@ -43,6 +45,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CATALOG_PATH = PROJECT_ROOT / "target_benchmark" / "all_bugs_catalog.json"
 TARGET_BENCHMARK_DIR = PROJECT_ROOT / "target_benchmark"
 CONTAINER_NAME = "defects4j_sqa"
+_CATALOG_CACHE = None
+_PRINT_LOCK = threading.Lock()
+
+def safe_print(*args, **kwargs):
+    with _PRINT_LOCK:
+        print(*args, **kwargs)
 
 def is_inside_container() -> bool:
     """ตรวจสอบว่ารันอยู่ภายใน Docker Container หรือไม่"""
@@ -57,12 +65,16 @@ def is_docker_running() -> bool:
         return False
 
 def load_catalog():
-    """โหลดข้อมูลบั๊กทั้ง 854 ตัวจาก all_bugs_catalog.json แล้วทำเป็น dictionary"""
+    """โหลดข้อมูลบั๊กทั้ง 854 ตัวจาก all_bugs_catalog.json แล้วทำเป็น dictionary (cached)"""
+    global _CATALOG_CACHE
+    if _CATALOG_CACHE is not None:
+        return _CATALOG_CACHE
+
     if not CATALOG_PATH.exists():
-        print(f"❌ ไม่พบไฟล์ Catalog ที่: {CATALOG_PATH}")
-        print("💡 ให้รัน: python scripts/batch_extract_all_bugs.py เพื่อสร้าง Catalog ก่อน")
+        safe_print(f"❌ ไม่พบไฟล์ Catalog ที่: {CATALOG_PATH}")
+        safe_print("💡 ให้รัน: python scripts/batch_extract_all_bugs.py เพื่อสร้าง Catalog ก่อน")
         sys.exit(1)
-    with open(CATALOG_PATH, "r", encoding="utf-8") as f:
+    with open(CATALOG_PATH, "r", encoding="utf-8", errors="replace") as f:
         raw = json.load(f)
     
     # ถ้าเป็น list ให้แปลงเป็น dict keyed by "Project-BugID"
@@ -74,8 +86,10 @@ def load_catalog():
             if "target_classes" in item and "modified_classes" not in item:
                 item["modified_classes"] = item["target_classes"]
             catalog[key] = item
-        return catalog
-    return raw
+        _CATALOG_CACHE = catalog
+        return _CATALOG_CACHE
+    _CATALOG_CACHE = raw
+    return _CATALOG_CACHE
 
 def show_bug_info(project: str, bug_id: int):
     """แสดงข้อมูล Target Classes และ Triggering Tests ของบั๊กที่ระบุ"""
@@ -106,14 +120,15 @@ def show_bug_info(project: str, bug_id: int):
         print(f"    Status: ⏳ ยังไม่ได้สกัดซอร์สโค้ด (สั่งรันสกัดได้ด้วย --project {project} --bug {bug_id})")
     print("=" * 65)
 
-def extract_single_bug(project: str, bug_id: int, force: bool = False) -> bool:
+def extract_single_bug(project: str, bug_id: int, force: bool = False, verbose: bool = True) -> bool:
     """สกัด .java source files และ metadata ของบั๊กเป้าหมาย"""
     dest_dir = TARGET_BENCHMARK_DIR / f"{project}_{bug_id}b"
     
     if dest_dir.exists() and not force:
         java_files = list(dest_dir.glob("*.java"))
         if java_files:
-            print(f"   ⏩ {project}-{bug_id}b สกัดไว้แล้วที่ {dest_dir.name} ({len(java_files)} java files). ข้าม...")
+            if verbose:
+                safe_print(f"   ⏩ {project}-{bug_id}b สกัดไว้แล้วที่ {dest_dir.name} ({len(java_files)} java files). ข้าม...")
             return True
 
     dest_dir.mkdir(parents=True, exist_ok=True)
@@ -132,7 +147,7 @@ def extract_single_bug(project: str, bug_id: int, force: bool = False) -> bool:
         """
         res = subprocess.run(["bash", "-c", cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if res.returncode != 0 and not (dest_dir / "defects4j_info.txt").exists():
-            print(f"   ❌ ล้มเหลวในการ Checkout {project}-{bug_id}b ใน container: {res.stderr}")
+            safe_print(f"   ❌ ล้มเหลวในการ Checkout {project}-{bug_id}b ใน container: {res.stderr}")
             return False
 
         # คัดลอก .java files
@@ -150,7 +165,8 @@ def extract_single_bug(project: str, bug_id: int, force: bool = False) -> bool:
             if src_file.exists():
                 shutil.copy2(src_file, dest_dir / src_file.name)
                 copied += 1
-                print(f"   -> คัดลอก {src_file.name} เข้าสู่ {dest_dir.name}/")
+                if verbose:
+                    safe_print(f"   -> คัดลอก {src_file.name} เข้าสู่ {dest_dir.name}/")
 
         # บันทึก metadata.json
         with open(dest_dir / "metadata.json", "w", encoding="utf-8") as f:
@@ -162,8 +178,8 @@ def extract_single_bug(project: str, bug_id: int, force: bool = False) -> bool:
     else:
         # กำลังรันบน Host (Windows / Mac / Linux)
         if not is_docker_running():
-            print(f"   ❌ Docker Daemon ไม่ได้ทำงานอยู่!")
-            print(f"   💡 กรุณาเปิด Docker Desktop แล้วรัน: docker start {CONTAINER_NAME}")
+            safe_print(f"   ❌ Docker Daemon ไม่ได้ทำงานอยู่!")
+            safe_print(f"   💡 กรุณาเปิด Docker Desktop แล้วรัน: docker start {CONTAINER_NAME}")
             return False
 
         # เรียกผ่าน docker exec
@@ -187,7 +203,7 @@ def extract_single_bug(project: str, bug_id: int, force: bool = False) -> bool:
         docker_cmd += f'rm -rf "{work_dir}"'
 
         exec_cmd = ["docker", "exec", CONTAINER_NAME, "bash", "-c", docker_cmd]
-        res = subprocess.run(exec_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=60)
+        res = subprocess.run(exec_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=120)
         
         # บันทึก metadata.json บน Host
         with open(dest_dir / "metadata.json", "w", encoding="utf-8") as f:
@@ -195,10 +211,11 @@ def extract_single_bug(project: str, bug_id: int, force: bool = False) -> bool:
 
         java_files = list(dest_dir.glob("*.java"))
         if java_files:
-            print(f"   ✅ สกัด {project}-{bug_id}b สำเร็จ: {[f.name for f in java_files]}")
+            if verbose:
+                safe_print(f"   ✅ สกัด {project}-{bug_id}b สำเร็จ: {[f.name for f in java_files]}")
             return True
         else:
-            print(f"   ⚠️ ไม่พบคลาส .java สำหรับ {project}-{bug_id}b (ตรวจสอบ Defects4J)")
+            safe_print(f"   ⚠️ ไม่พบคลาส .java สำหรับ {project}-{bug_id}b (ตรวจสอบ Defects4J)")
             return False
 
 def list_project_bugs(project: str = None):
@@ -207,39 +224,40 @@ def list_project_bugs(project: str = None):
     if project:
         bugs = [v for k, v in catalog.items() if v["project"].lower() == project.lower()]
         if not bugs:
-            print(f"❌ ไม่พบโปรเจกต์ {project} ในระบบ")
+            safe_print(f"❌ ไม่พบโปรเจกต์ {project} ในระบบ")
             return
         bugs = sorted(bugs, key=lambda x: x["bug_id"])
-        print("=" * 70)
-        print(f"📋 รายการ Active Bugs ของโปรเจกต์ {bugs[0]['project']} (ทั้งหมด {len(bugs)} บั๊ก):")
-        print("=" * 70)
+        safe_print("=" * 70)
+        safe_print(f"📋 รายการ Active Bugs ของโปรเจกต์ {bugs[0]['project']} (ทั้งหมด {len(bugs)} บั๊ก):")
+        safe_print("=" * 70)
         for b in bugs:
             dest_dir = TARGET_BENCHMARK_DIR / f"{b['project']}_{b['bug_id']}b"
             has_java = dest_dir.exists() and len(list(dest_dir.glob("*.java"))) > 0
             icon = "✅ สกัดแล้ว" if has_java else "⏳ ยังไม่ได้สกัด"
             classes = b.get("simple_names") or [c.split(".")[-1] for c in b.get("modified_classes", [])]
             classes_str = ", ".join(classes)
-            print(f"  Bug #{b['bug_id']:<3} | {icon:<15} | Classes: {classes_str}")
-        print("=" * 70)
+            safe_print(f"  Bug #{b['bug_id']:<3} | {icon:<15} | Classes: {classes_str}")
+        safe_print("=" * 70)
     else:
         # สรุปทุกโปรเจกต์
-        print("=" * 70)
-        print(f"📋 ภาพรวมทั้ง 17 โปรเจกต์ใน Defects4J (ทั้งหมด {len(catalog)} Active Bugs):")
-        print("=" * 70)
+        safe_print("=" * 70)
+        safe_print(f"📋 ภาพรวมทั้ง 17 โปรเจกต์ใน Defects4J (ทั้งหมด {len(catalog)} Active Bugs):")
+        safe_print("=" * 70)
         projects = {}
         for b in catalog.values():
             p = b["project"]
             projects.setdefault(p, []).append(b)
         for p, b_list in sorted(projects.items()):
             extracted_count = sum(1 for b in b_list if (TARGET_BENCHMARK_DIR / f"{p}_{b['bug_id']}b").exists() and len(list((TARGET_BENCHMARK_DIR / f"{p}_{b['bug_id']}b").glob("*.java"))) > 0)
-            print(f"  • {p:<16} : {len(b_list):>3} bugs | สกัดแล้ว {extracted_count:>3}/{len(b_list)} bugs")
-        print("=" * 70)
+            safe_print(f"  • {p:<16} : {len(b_list):>3} bugs | สกัดแล้ว {extracted_count:>3}/{len(b_list)} bugs")
+        safe_print("=" * 70)
 
 def main():
     parser = argparse.ArgumentParser(description="Defects4J Target Class & Metadata Extractor for ProjectSQA")
     parser.add_argument("--project", type=str, help="ชื่อโปรเจกต์ เช่น Lang, Math, Chart, Csv")
     parser.add_argument("--bug", type=int, help="รหัสบั๊ก เช่น 1, 2, 25")
     parser.add_argument("--all", action="store_true", help="สกัดทั้ง 854 บั๊กใน Defects4J")
+    parser.add_argument("--workers", type=int, default=8 if is_inside_container() else 4, help="จำนวน Workers ที่รันพร้อมกัน")
     parser.add_argument("--info", action="store_true", help="แสดงข้อมูลคลาสเป้าหมายโดยไม่ต้อง checkout")
     parser.add_argument("--list", action="store_true", help="ดูรายการบั๊กและสถานะการสกัด")
     parser.add_argument("--force", action="store_true", help="บังคับสกัดใหม่แม้เคยมีไฟล์อยู่แล้ว")
@@ -253,45 +271,67 @@ def main():
 
     if args.info:
         if not args.project or not args.bug:
-            print("❌ ต้องระบุทั้ง --project และ --bug เช่น: python scripts/extract_target_classes.py --info --project Lang --bug 2")
+            safe_print("❌ ต้องระบุทั้ง --project และ --bug เช่น: python scripts/extract_target_classes.py --info --project Lang --bug 2")
             sys.exit(1)
         show_bug_info(args.project, args.bug)
         return
 
     if args.project and args.bug:
-        print(f"🚀 กำลังสกัด Target Class สำหรับ {args.project}-{args.bug}b...")
+        safe_print(f"🚀 กำลังสกัด Target Class สำหรับ {args.project}-{args.bug}b...")
         extract_single_bug(args.project, args.bug, force=args.force)
         return
 
     if args.project and not args.bug:
         bugs = [v for k, v in catalog.items() if v["project"].lower() == args.project.lower()]
         if not bugs:
-            print(f"❌ ไม่พบโปรเจกต์ {args.project} ในระบบ")
+            safe_print(f"❌ ไม่พบโปรเจกต์ {args.project} ในระบบ")
             sys.exit(1)
-        print(f"🚀 กำลังสกัด Target Classes ทั้งหมดของโปรเจกต์ {args.project} (จำนวน {len(bugs)} บั๊ก)...")
+        sorted_bugs = sorted(bugs, key=lambda x: x["bug_id"])
+        safe_print(f"🚀 กำลังสกัด Target Classes ทั้งหมดของโปรเจกต์ {args.project} ({len(sorted_bugs)} บั๊ก, {args.workers} workers)...")
         success = 0
-        for b in sorted(bugs, key=lambda x: x["bug_id"]):
-            if extract_single_bug(b["project"], b["bug_id"], force=args.force):
-                success += 1
-        print(f"\n🎉 สกัดโปรเจกต์ {args.project} เสร็จสิ้น: สำเร็จ {success}/{len(bugs)} บั๊ก")
+        with ThreadPoolExecutor(max_workers=args.workers) as executor:
+            future_to_bug = {
+                executor.submit(extract_single_bug, b["project"], b["bug_id"], args.force, True): b
+                for b in sorted_bugs
+            }
+            for future in as_completed(future_to_bug):
+                b = future_to_bug[future]
+                try:
+                    if future.result():
+                        success += 1
+                except Exception as e:
+                    safe_print(f"   ❌ Error {b['project']}-{b['bug_id']}: {e}")
+        safe_print(f"\n🎉 สกัดโปรเจกต์ {args.project} เสร็จสิ้น: สำเร็จ {success}/{len(sorted_bugs)} บั๊ก")
         return
 
     if args.all:
-        print(f"🚀 กำลังสกัด Target Classes ทั้ง 854 บั๊กใน Defects4J...")
         total = len(catalog)
+        safe_print(f"🚀 กำลังสกัด Target Classes ทั้ง {total} บั๊กใน Defects4J ด้วย {args.workers} workers...")
         success = 0
-        for i, (k, b) in enumerate(catalog.items(), 1):
-            print(f"[{i}/{total}] {k}...")
-            if extract_single_bug(b["project"], b["bug_id"], force=args.force):
-                success += 1
-        print(f"\n🎉 สกัดเสร็จสิ้นทั้งหมด: สำเร็จ {success}/{total} บั๊ก!")
+        all_bugs = sorted(catalog.values(), key=lambda x: (x["project"], x["bug_id"]))
+        with ThreadPoolExecutor(max_workers=args.workers) as executor:
+            future_to_bug = {
+                executor.submit(extract_single_bug, b["project"], b["bug_id"], args.force, False): b
+                for b in all_bugs
+            }
+            for i, future in enumerate(as_completed(future_to_bug), 1):
+                b = future_to_bug[future]
+                try:
+                    if future.result():
+                        success += 1
+                except Exception as e:
+                    safe_print(f"   ❌ Error {b['project']}-{b['bug_id']}: {e}")
+                if i % 50 == 0 or i == total:
+                    safe_print(f"   📊 ความคืบหน้ารวม: [{i}/{total}] ({int(i/total*100)}%) สกัดสำเร็จ {success} บั๊ก...")
+        safe_print(f"\n🎉 สกัดเสร็จสิ้นทั้งหมด: สำเร็จ {success}/{total} บั๊ก!")
         return
 
     parser.print_help()
-    print("\n💡 คำสั่งตัวอย่างที่ใช้บ่อย:")
-    print("  1. ดูข้อมูลคลาสที่ต้องแก้: python scripts/extract_target_classes.py --info --project Lang --bug 2")
-    print("  2. สกัดคลาสเป้าหมาย Lang-2: python scripts/extract_target_classes.py --project Lang --bug 2")
-    print("  3. สกัดคลาสทั้งโปรเจกต์ Csv: python scripts/extract_target_classes.py --project Csv")
+    safe_print("\n💡 คำสั่งตัวอย่างที่ใช้บ่อย:")
+    safe_print("  1. ดูข้อมูลคลาสที่ต้องแก้: python scripts/extract_target_classes.py --info --project Lang --bug 2")
+    safe_print("  2. สกัดคลาสเป้าหมาย Lang-2: python scripts/extract_target_classes.py --project Lang --bug 2")
+    safe_print("  3. สกัดคลาสทั้งโปรเจกต์ Csv: python scripts/extract_target_classes.py --project Csv")
+    safe_print("  4. สกัดทุกคลาสทั้ง 854 บั๊ก: python scripts/extract_target_classes.py --all --workers 8")
 
 if __name__ == "__main__":
     main()

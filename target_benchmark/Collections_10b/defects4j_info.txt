@@ -1,0 +1,40 @@
+Summary of configuration for Project: Collections
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Collections
+       Program: commons-collections
+    Build file: /opt/defects4j/framework/projects/Collections/Collections.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-collections.git
+     Commit db: /opt/defects4j/framework/projects/Collections/active-bugs.csv
+Number of bugs: 28
+--------------------------------------------------------------------------------
+
+Summary for Bug: Collections-10
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+e6d4f465446e5645f1a68f3d90964a6ade82f59e
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-05-16 08:09:42 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+COLLECTIONS-240
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/COLLECTIONS-240
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.collections.map.TestMultiValueMap::testEmptyMapCompatibility
+   --> java.io.InvalidClassException: org.apache.commons.collections.map.MultiValueMap; class invalid for deserialization
+ - org.apache.commons.collections.map.TestMultiValueMap::testFullMapCompatibility
+   --> java.io.InvalidClassException: org.apache.commons.collections.map.MultiValueMap; class invalid for deserialization
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.collections.map.MultiValueMap
+--------------------------------------------------------------------------------

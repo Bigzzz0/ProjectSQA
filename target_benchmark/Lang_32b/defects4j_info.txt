@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-32
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+1f35e7c99b66b8d46c4ad96558e694a10aa38062
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2010-02-07 03:14:09 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-586
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-586
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang3.builder.HashCodeBuilderTest::testReflectionObjectCycle
+   --> junit.framework.AssertionFailedError: Expected: <null> but was: []
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang3.builder.HashCodeBuilder
+--------------------------------------------------------------------------------

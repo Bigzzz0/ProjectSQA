@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-62
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+d8b6f5b5c6b92adff8965ab634b672e7b333f583
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2006-10-31 21:34:03 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-292
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-292
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang.EntitiesTest::testNumberOverflow
+   --> junit.framework.ComparisonFailure: expected:<[&#12345678;]> but was:<[慎]>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang.Entities
+--------------------------------------------------------------------------------

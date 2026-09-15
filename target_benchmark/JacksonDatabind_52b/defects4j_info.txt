@@ -1,0 +1,39 @@
+Summary of configuration for Project: JacksonDatabind
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JacksonDatabind
+       Program: jackson-databind
+    Build file: /opt/defects4j/framework/projects/JacksonDatabind/JacksonDatabind.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/jackson-databind.git
+     Commit db: /opt/defects4j/framework/projects/JacksonDatabind/active-bugs.csv
+Number of bugs: 110
+--------------------------------------------------------------------------------
+
+Summary for Bug: JacksonDatabind-52
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+ab8a20f6447da482bd0430498b482d06867c9c50
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2016-06-21 22:58:47 -0700
+--------------------------------------------------------------------------------
+Bug report id:
+999
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/FasterXML/jackson-databind/issues/999
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeId999Test::testExternalTypeId
+   --> junit.framework.ComparisonFailure: expected:<foo> but was:<null>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - com.fasterxml.jackson.databind.deser.BeanDeserializerBase
+ - com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler
+--------------------------------------------------------------------------------

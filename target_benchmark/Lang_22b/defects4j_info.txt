@@ -1,0 +1,40 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-22
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+2270d830fda743de1ce8a61e33b9542cb39a0f4b
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2011-01-17 04:30:05 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-662
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-662
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang3.math.FractionTest::testReducedFactory_int_int
+   --> junit.framework.AssertionFailedError: expected:<-1073741824> but was:<-2147483648>
+ - org.apache.commons.lang3.math.FractionTest::testReduce
+   --> junit.framework.AssertionFailedError: expected:<-1073741824> but was:<-2147483648>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang3.math.Fraction
+--------------------------------------------------------------------------------

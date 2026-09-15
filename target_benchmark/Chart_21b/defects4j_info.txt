@@ -1,0 +1,38 @@
+Summary of configuration for Project: Chart
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Chart
+       Program: jfreechart
+    Build file: /opt/defects4j/framework/projects/Chart/Chart.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Svn
+    Repository: file:///opt/defects4j/project_repos/jfreechart/trunk
+     Commit db: /opt/defects4j/framework/projects/Chart/active-bugs.csv
+Number of bugs: 26
+--------------------------------------------------------------------------------
+
+Summary for Bug: Chart-21
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+231
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2007-10-03 06:28:03 -0700 
+--------------------------------------------------------------------------------
+Bug report id:
+UNKNOWN
+--------------------------------------------------------------------------------
+Bug report url:
+UNKNOWN
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.jfree.data.statistics.junit.DefaultBoxAndWhiskerCategoryDatasetTests::testGetRangeBounds
+   --> junit.framework.AssertionFailedError: expected:<Range[8.5,9.6]> but was:<Range[8.6,9.6]>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset
+--------------------------------------------------------------------------------

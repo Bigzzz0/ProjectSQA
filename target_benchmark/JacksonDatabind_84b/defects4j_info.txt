@@ -1,0 +1,38 @@
+Summary of configuration for Project: JacksonDatabind
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JacksonDatabind
+       Program: jackson-databind
+    Build file: /opt/defects4j/framework/projects/JacksonDatabind/JacksonDatabind.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/jackson-databind.git
+     Commit db: /opt/defects4j/framework/projects/JacksonDatabind/active-bugs.csv
+Number of bugs: 110
+--------------------------------------------------------------------------------
+
+Summary for Bug: JacksonDatabind-84
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+1a0326fbc31d3d9f1e5145dc71b937820142d111
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2017-06-08 11:01:29 -0600
+--------------------------------------------------------------------------------
+Bug report id:
+1647
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/FasterXML/jackson-databind/issues/1647
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - com.fasterxml.jackson.databind.type.TestTypeFactoryWithRecursiveTypes::testBasePropertiesIncludedWhenSerializingSubWhenSubTypeLoadedAfterBaseType
+   --> junit.framework.ComparisonFailure: expected:<{"[base":1,"]sub":2}> but was:<{"[]sub":2}>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - com.fasterxml.jackson.databind.type.ResolvedRecursiveType
+--------------------------------------------------------------------------------

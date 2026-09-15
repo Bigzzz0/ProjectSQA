@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-17
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+2c1b5be146585dc8b27aedebca959f92da19094e
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2011-07-14 18:49:51 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-720
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-720
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang3.StringEscapeUtilsTest::testLang720
+   --> junit.framework.ComparisonFailure: expected:<𠮷[A]> but was:<𠮷[?]>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang3.text.translate.CharSequenceTranslator
+--------------------------------------------------------------------------------

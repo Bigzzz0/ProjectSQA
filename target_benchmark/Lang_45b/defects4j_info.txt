@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-45
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+4342bd5d69d122a16c735416039b4b2ca27897ad
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-05-11 05:18:02 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-419
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-419
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang.WordUtilsTest::testAbbreviate
+   --> java.lang.StringIndexOutOfBoundsException: String index out of range: 15
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang.WordUtils
+--------------------------------------------------------------------------------

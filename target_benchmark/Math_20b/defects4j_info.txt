@@ -1,0 +1,38 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-20
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+abe53a537b4d19a878e8de3735393e0c4e85aa7e
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2012-09-21 14:17:37 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-864
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-864
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math3.optimization.direct.CMAESOptimizerTest::testMath864
+   --> junit.framework.AssertionFailedError: Out of bounds (0.5246031767455861 > 0.5)
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math3.optimization.direct.CMAESOptimizer
+--------------------------------------------------------------------------------

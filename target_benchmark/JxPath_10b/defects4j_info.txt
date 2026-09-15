@@ -1,0 +1,38 @@
+Summary of configuration for Project: JxPath
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JxPath
+       Program: commons-jxpath
+    Build file: /opt/defects4j/framework/projects/JxPath/JxPath.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-jxpath.git
+     Commit db: /opt/defects4j/framework/projects/JxPath/active-bugs.csv
+Number of bugs: 22
+--------------------------------------------------------------------------------
+
+Summary for Bug: JxPath-10
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+3b3e58d3d35aaa7e8e35c0856611f4bfc3f291c7
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2007-07-13 19:43:38 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+JXPATH-93
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/JXPATH-93
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.jxpath.ri.compiler.CoreOperationTest::testEmptyNodeSetOperations
+   --> junit.framework.AssertionFailedError: Evaluating </idonotexist >= 0> expected:<false> but was:<true>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression
+--------------------------------------------------------------------------------

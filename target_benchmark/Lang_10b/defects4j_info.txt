@@ -1,0 +1,40 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-10
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+ad72b9f2bf37bd61af18bde67c1622d90a5d8766
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2012-09-27 00:09:15 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-831
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-831
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang3.time.FastDateFormat_ParserTest::testLANG_831
+   --> junit.framework.AssertionFailedError: Parsed dates should be equal expected:<null> but was:<Mon Mar 02 21:00:00 PST 1970>
+ - org.apache.commons.lang3.time.FastDateParserTest::testLANG_831
+   --> junit.framework.AssertionFailedError: Expected FDF failure, but got Mon Mar 02 21:00:00 PST 1970 for [M E,3  Tue] using (\p{IsNd}++)\s*+(Fri|Friday|Mon|Monday|Sat|Saturday|Sun|Sunday|Thu|Thursday|Tue|Tuesday|Wed|Wednesday)
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang3.time.FastDateParser
+--------------------------------------------------------------------------------

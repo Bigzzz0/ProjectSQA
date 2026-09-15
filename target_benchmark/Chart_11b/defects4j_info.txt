@@ -1,0 +1,38 @@
+Summary of configuration for Project: Chart
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Chart
+       Program: jfreechart
+    Build file: /opt/defects4j/framework/projects/Chart/Chart.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Svn
+    Repository: file:///opt/defects4j/project_repos/jfreechart/trunk
+     Commit db: /opt/defects4j/framework/projects/Chart/active-bugs.csv
+Number of bugs: 26
+--------------------------------------------------------------------------------
+
+Summary for Bug: Chart-11
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+1025
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-06-02 00:27:30 -0700 
+--------------------------------------------------------------------------------
+Bug report id:
+868
+--------------------------------------------------------------------------------
+Bug report url:
+https://sourceforge.net/p/jfreechart/bugs/868
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.jfree.chart.util.junit.ShapeUtilitiesTests::testEqualGeneralPaths
+   --> junit.framework.AssertionFailedError
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.jfree.chart.util.ShapeUtilities
+--------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+Summary of configuration for Project: JacksonDatabind
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JacksonDatabind
+       Program: jackson-databind
+    Build file: /opt/defects4j/framework/projects/JacksonDatabind/JacksonDatabind.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/jackson-databind.git
+     Commit db: /opt/defects4j/framework/projects/JacksonDatabind/active-bugs.csv
+Number of bugs: 110
+--------------------------------------------------------------------------------
+
+Summary for Bug: JacksonDatabind-66
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+cd5430a91723ff8cd61928524ec21ab4e14b20f6
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2016-11-02 22:17:18 -0700
+--------------------------------------------------------------------------------
+Bug report id:
+1441
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/FasterXML/jackson-databind/issues/1441
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer::testCustomEnumKeySerializerWithPolymorphic
+   --> com.fasterxml.jackson.databind.exc.InvalidFormatException: Can not deserialize Map key of type com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer$SuperTypeEnum from String "FOO": not a valid representation: No enum constant com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer.SuperTypeEnum.}
+--------------------------------------------------------------------------------
+List of modified sources:
+ - com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer
+--------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-51
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+796b898281af571a510d96487dcd95699ac1e435
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2007-10-27 05:07:45 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-365
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-365
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang.BooleanUtilsTest::test_toBoolean_String
+   --> java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang.BooleanUtils
+--------------------------------------------------------------------------------

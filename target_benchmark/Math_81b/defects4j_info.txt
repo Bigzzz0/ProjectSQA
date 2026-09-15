@@ -1,0 +1,38 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-81
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+c78a0e3b003ac36d57a3c895fc8240ef66546a56
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2009-11-03 22:04:08 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-308
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-308
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math.linear.EigenDecompositionImplTest::testMath308
+   --> java.lang.ArrayIndexOutOfBoundsException: -1
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math.linear.EigenDecompositionImpl
+--------------------------------------------------------------------------------

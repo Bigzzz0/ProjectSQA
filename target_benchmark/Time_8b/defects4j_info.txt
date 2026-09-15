@@ -1,0 +1,38 @@
+Summary of configuration for Project: Time
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Time
+       Program: joda-time
+    Build file: /opt/defects4j/framework/projects/Time/Time.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/joda-time.git
+     Commit db: /opt/defects4j/framework/projects/Time/active-bugs.csv
+Number of bugs: 26
+--------------------------------------------------------------------------------
+
+Summary for Bug: Time-8
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+362ed1787724cda3ded37de2b0aa0f13adf0a66e
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2013-07-20 11:49:21 +0100
+--------------------------------------------------------------------------------
+Bug report id:
+42
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/JodaOrg/joda-time/issues/42
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.joda.time.TestDateTimeZone::testForOffsetHoursMinutes_int_int
+   --> java.lang.IllegalArgumentException: Minutes out of range: -15
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.joda.time.DateTimeZone
+--------------------------------------------------------------------------------

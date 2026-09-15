@@ -1,0 +1,38 @@
+Summary of configuration for Project: JacksonDatabind
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JacksonDatabind
+       Program: jackson-databind
+    Build file: /opt/defects4j/framework/projects/JacksonDatabind/JacksonDatabind.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/jackson-databind.git
+     Commit db: /opt/defects4j/framework/projects/JacksonDatabind/active-bugs.csv
+Number of bugs: 110
+--------------------------------------------------------------------------------
+
+Summary for Bug: JacksonDatabind-32
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+d5a25f4300a93f4c411a7b8364d34122bc0a1b62
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2015-10-28 17:22:05 -0700
+--------------------------------------------------------------------------------
+Bug report id:
+989
+--------------------------------------------------------------------------------
+Bug report url:
+https://github.com/FasterXML/jackson-databind/issues/989
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - com.fasterxml.jackson.databind.deser.TestUntypedDeserialization::testNestedUntyped989
+   --> com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.Object out of END_OBJECT token
+--------------------------------------------------------------------------------
+List of modified sources:
+ - com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer
+--------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+Summary of configuration for Project: Lang
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Lang
+       Program: commons-lang
+    Build file: /opt/defects4j/framework/projects/Lang/Lang.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-lang.git
+     Commit db: /opt/defects4j/framework/projects/Lang/active-bugs.csv
+Number of bugs: 61
+--------------------------------------------------------------------------------
+
+Summary for Bug: Lang-43
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+a38e2e942d622c1a84ed35bedb9aba045db7ab79
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2009-01-09 22:05:14 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+LANG-477
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/LANG-477
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.lang.text.ExtendedMessageFormatTest::testEscapedQuote_LANG_477
+   --> java.lang.OutOfMemoryError: Java heap space
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.lang.text.ExtendedMessageFormat
+--------------------------------------------------------------------------------

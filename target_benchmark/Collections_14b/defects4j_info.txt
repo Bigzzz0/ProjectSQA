@@ -1,0 +1,38 @@
+Summary of configuration for Project: Collections
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Collections
+       Program: commons-collections
+    Build file: /opt/defects4j/framework/projects/Collections/Collections.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-collections.git
+     Commit db: /opt/defects4j/framework/projects/Collections/active-bugs.csv
+Number of bugs: 28
+--------------------------------------------------------------------------------
+
+Summary for Bug: Collections-14
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+0725e476d4cc66e6331bdceb4e29a54a9ce7f462
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-11-04 03:58:37 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+COLLECTIONS-294
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/COLLECTIONS-294
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.collections.map.TestCaseInsensitiveMap::testLocaleIndependence
+   --> junit.framework.AssertionFailedError: en: 1 expected:<value> but was:<null>
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.collections.map.CaseInsensitiveMap
+--------------------------------------------------------------------------------

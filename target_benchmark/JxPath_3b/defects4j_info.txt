@@ -1,0 +1,38 @@
+Summary of configuration for Project: JxPath
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: JxPath
+       Program: commons-jxpath
+    Build file: /opt/defects4j/framework/projects/JxPath/JxPath.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-jxpath.git
+     Commit db: /opt/defects4j/framework/projects/JxPath/active-bugs.csv
+Number of bugs: 22
+--------------------------------------------------------------------------------
+
+Summary for Bug: JxPath-3
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+984778f3c264df5d608eb9697df2a268122ac66f
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2007-01-10 22:54:59 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+JXPATH-68
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/JXPATH-68
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.jxpath.ri.model.beans.BadlyImplementedFactoryTest::testBadFactoryImplementation
+   --> junit.framework.AssertionFailedError
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.jxpath.ri.model.beans.NullPropertyPointer
+--------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+Summary of configuration for Project: Math
+--------------------------------------------------------------------------------
+    Script dir: /opt/defects4j/framework
+      Base dir: /opt/defects4j
+    Major root: /opt/defects4j/major
+      Repo dir: /opt/defects4j/project_repos
+--------------------------------------------------------------------------------
+    Project ID: Math
+       Program: commons-math
+    Build file: /opt/defects4j/framework/projects/Math/Math.build.xml
+--------------------------------------------------------------------------------
+           Vcs: Vcs::Git
+    Repository: /opt/defects4j/project_repos/commons-math.git
+     Commit db: /opt/defects4j/framework/projects/Math/active-bugs.csv
+Number of bugs: 106
+--------------------------------------------------------------------------------
+
+Summary for Bug: Math-95
+--------------------------------------------------------------------------------
+Revision ID (fixed version):
+dbd8ffb54f72f45acc644f1f16709dd549d0cfc9
+--------------------------------------------------------------------------------
+Revision date (fixed version):
+2008-09-26 19:51:13 +0000
+--------------------------------------------------------------------------------
+Bug report id:
+MATH-227
+--------------------------------------------------------------------------------
+Bug report url:
+https://issues.apache.org/jira/browse/MATH-227
+--------------------------------------------------------------------------------
+Root cause in triggering tests:
+ - org.apache.commons.math.distribution.FDistributionTest::testSmallDegreesOfFreedom
+   --> java.lang.IllegalArgumentException: Invalid endpoint parameters:  lowerBound=0.0 initial=-1.0 upperBound=1.7976931348623157E308
+--------------------------------------------------------------------------------
+List of modified sources:
+ - org.apache.commons.math.distribution.FDistributionImpl
+--------------------------------------------------------------------------------
