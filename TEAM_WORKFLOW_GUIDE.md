@@ -20,8 +20,8 @@
    - [💡 วิธีสร้างระบบ Automated IPO Engine (พิมพ์เขียวสำหรับ Member 1)](#-วิธีสร้างระบบ-automated-ipo-engine-พิมพ์เขียวแบบละเอียดสำหรับ-member-1)
 4. [Member 2: นายแทนคุณ พันธ์นิกุล (MIO / EvoSuite Specialist)](#4-member-2-นายแทนคุณ-พันธ์นิกุล-mio--evosuite-specialist)
    - [💡 วิธีสร้างระบบ Automated Batch Runner (พิมพ์เขียวสำหรับ Member 2)](#-วิธีสร้างระบบ-automated-batch-runner-สำหรับ-member-2-mio--evosuite-specialist)
-5. [Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - Claude & Gemini)](#5-member-3-นายธนภูมิ-จันทรา-ai-prompt-engineer---claude--gemini)
-   - [💡 วิธีสร้างระบบ Automated Batch Pipeline (พิมพ์เขียวสำหรับ Member 3)](#-วิธีสร้างระบบ-automated-batch-pipeline-สำหรับ-member-3-claude--gemini-ai)
+5. [Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - DeepSeek & Gemini)](#5-member-3-นายธนภูมิ-จันทรา-ai-prompt-engineer---deepseek--gemini)
+   - [💡 วิธีสร้างระบบ Automated Batch Pipeline (พิมพ์เขียวสำหรับ Member 3)](#-วิธีสร้างระบบ-automated-batch-pipeline-สำหรับ-member-3-deepseek--gemini-ai)
 6. [Member 4: นายศิฆรินทร์ อุปจันทร์ (Infra & Data Analysis Lead)](#6-member-4-นายศิฆรินทร์-อุปจันทร์-infra--data-analysis-lead)
    - [💡 วิธีทำระบบ Automated Continuous Benchmark & Auto-Plotting (สำหรับ Member 4)](#-วิธีทำระบบ-automated-continuous-benchmark--auto-plotting-สำหรับ-member-4)
 7. [ตัวอย่างการทำงานร่วมกันแบบครบวงจร (End-to-End Walkthrough: กรณี Math-2)](#7-ตัวอย่างการทำงานร่วมกันแบบครบวงจร-end-to-end-walkthrough-กรณี-math-2)
@@ -61,9 +61,9 @@ ProjectSQA/
 │   ├── Code/                  # สคริปต์อัตโนมัติ run_evosuite_mio.sh
 │   ├── Result_Round1/         # เก็บสถิติ Mean +- SD (Search Budget 30s, 60s, 120s)
 │   └── TestCode/              # ปลายทางส่งมอบ: <Class>_ESTest.java (Raw Suite ดิบ)
-├── Claude-sonnet_5/           # งานของ Member 3 (AI Lead - Claude)
+├── Deepseek-v4_flash/         # งานของ Member 3 (AI Lead - DeepSeek)
 │   ├── Result/                # บันทึกสถิติ Token Usage และเวลาประมวลผล
-│   └── TestCode/              # ปลายทางส่งมอบ: <Class>ClaudeTest.java
+│   └── TestCode/              # ปลายทางส่งมอบ: <Class>DeepseekTest.java
 ├── Gemini-3_8_flash/          # งานของ Member 3 (AI Lead - Gemini)
 │   ├── Result/                # บันทึกสถิติ Token Usage และเวลาประมวลผล
 │   └── TestCode/              # ปลายทางส่งมอบ: <Class>GeminiTest.java
@@ -103,7 +103,7 @@ ProjectSQA/
    | :--- | :--- | :--- |
    | **IPO** | `<TargetClass>_IPOTest.java` | `public class <TargetClass>_IPOTest` |
    | **MIO** | `<TargetClass>_ESTest.java` | `public class <TargetClass>_ESTest` |
-   | **Claude** | `<TargetClass>ClaudeTest.java` | `public class <TargetClass>ClaudeTest` |
+   | **DeepSeek** | `<TargetClass>DeepseekTest.java` | `public class <TargetClass>DeepseekTest` |
    | **Gemini** | `<TargetClass>GeminiTest.java` | `public class <TargetClass>GeminiTest` |
 5. **ห้ามใช้ External Library ภายนอก:**
    - ห้าม import `org.mockito.*`, `org.assertj.*` หรือ dependencies อื่นที่ไม่ได้อยู่ในโปรเจกต์เป้าหมาย ให้ใช้ Standard Java และ Standard JUnit Assertions เท่านั้น
@@ -120,7 +120,7 @@ ProjectSQA/
 >          ↓
 >    Target Classes (เช่น NumberUtils)
 >          ↓
->    IPO / MIO / Claude / Gemini Test Suites
+>    IPO / MIO / DeepSeek / Gemini Test Suites
 >    ```
 > 2. **Target Class Coverage Scope (ขอบเขตการวัด Coverage):**  
 >    ค่า Line Coverage และ Branch Coverage ที่รายงานในตารางเปรียบเทียบหลักของงานวิจัยนี้ คือ **"Target Class Coverage"** (วัดเฉพาะบน Target Class ผ่าน flag `-c <target_class>` ใน Cobertura) ซึ่งเป็นตัวชี้วัดที่สะท้อนคุณภาพที่แท้จริงของแต่ละเทคนิคได้อย่างเป็นธรรม  
@@ -196,7 +196,7 @@ ProjectSQA/
 หากรันครบทุกคลาสทั้ง 4 เทคนิค (4 $\times$ 1,073) จะมีขนาดการทดสอบถึง **4,292 Test Suites!** ซึ่งมีข้อจำกัดทางกายภาพ เช่น โควตา API รายวันของ KKU IntelSphere, เวลาคำนวณของ EvoSuite, และ Object ซับซ้อนใน Closure ทีมจึงกำหนดแผนการส่งมอบ 3 ระดับที่ปฏิบัติได้จริงและได้มาตรฐานวิชาการสูงสุด:
 
 * **🥇 Tier 1: Core Representative Baseline (17 โครงการตัวแทน):**
-  - **สถานะ:** มีไฟล์ทดสอบของทั้ง Gemini, Claude, และ IPO สำหรับ 17 โปรเจกต์ตัวแทนพร้อมแล้วในคลัง
+  - **สถานะ:** มีไฟล์ทดสอบของทั้ง Gemini, DeepSeek, และ IPO สำหรับ 17 โปรเจกต์ตัวแทนพร้อมแล้วในคลัง
   - **สิ่งที่ทำ:** สั่งรัน `run_benchmark.py` บันทึกผล Coverage และ FDR ของ 17 คลาสนี้ลงใน `results/benchmark_results.csv` เพื่อเป็น Empirical Baseline หลักในเล่มรายงาน
 * **🥈 Tier 2: Quick Wins Expansion (โครงการขนาดเล็ก-กลาง):**
   - ขยายผลรันเจนเทสแบบยกล็อตสำหรับโปรเจกต์ที่ซอร์สโค้ดไม่ซับซ้อน ได้แก่:
@@ -211,6 +211,15 @@ ProjectSQA/
 ---
 
 ### 2.3 วิธีการดึง Class เป้าหมาย (`.java`) และ Defect Metadata สำหรับสมาชิกทุกคน (How to Extract Target Classes for Test Generation)
+
+> [!NOTE]
+> **💡 การทำงานของ Docker กับขนาด Git Repository (Docker On-Demand vs Git Size):**  
+> สมาชิกบางคนอาจสงสัยว่า *"ถ้า Defects4J มีถึง 854 บั๊ก และกว่า 1,000 คลาส หากดึงมาทั้งหมด Git จะบวมจนเต็มความจุและ clone ช้าหรือไม่?"*  
+> คำตอบคือ **ไม่บวมอย่างแน่นอน** ด้วยการออกแบบสถาปัตยกรรมดังนี้:
+> 1. **Defects4J Core & Git History แยกอยู่ใน Docker Container:** ในเครื่อง Host หรือ Git Repository ของเราจะไม่มีไฟล์ Git ประวัติของทั้ง 17 โปรเจกต์เก็บไว้เลย
+> 2. **On-Demand Checkout ใน `/tmp`:** เมื่อสั่งรัน `extract_target_classes.py` หรือ `run_benchmark.py` ระบบ Defects4J จะทำการ checkout ซอร์สโค้ดเฉพาะบั๊กนั้นๆ ลงในโฟลเดอร์ชั่วคราว `/tmp` ใน Container ซึ่งอยู่นอก Git
+> 3. **สกัดเฉพาะ Modified Class:** มีเพียงไฟล์ `.java` เฉพาะคลาสที่แก้ไขและ `defects4j_info.txt` เท่านั้นที่ถูกดึงออกมาใส่ใน `target_benchmark/<Project>_<Bug>b/` (ขนาดรวมเพียงไม่กี่สิบกิโลไบต์ต่อบั๊ก)
+> 4. **ชุดทดสอบที่ Commit ลง Git มีเพียง Test Suites เล็กๆ:** มีเพียงโฟลเดอร์ `TestCode/` และ `Prompt/`, `Result/` เท่านั้น ทำให้ขนาดรวมของโปรเจกต์บน GitHub มีขนาดกะทัดรัด (เพียงไม่กี่สิบ MB) ไม่เปลืองเนื้อที่
 
 > **🎯 เครื่องมืออำนวยความสะดวกกลาง (พัฒนาโดย Member 4):**  
 > เพื่อให้ Member 1 (IPO), Member 2 (MIO) และ Member 3 (AI) สามารถดึงซอร์สโค้ดคลาสเป้าหมาย (`.java`) และข้อมูลบั๊ก Ground Truth ของทั้ง 854 บั๊กใน Defects4J ออกมาใช้งานได้อย่างรวดเร็ว โดยไม่ต้องจำคำสั่ง defects4j ที่ซับซ้อน ได้มีการสร้างสคริปต์กลาง [`scripts/extract_target_classes.py`](scripts/extract_target_classes.py) ไว้ให้ใช้งานร่วมกัน
@@ -309,7 +318,7 @@ docker exec -it defects4j_sqa /workspace/MIO_Algorithm/Code/run_evosuite_mio.sh 
 
 ---
 
-### 3️⃣ สำหรับ Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - Claude & Gemini)
+### 3️⃣ สำหรับ Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - DeepSeek & Gemini)
 * **เป้าหมาย:** สกัดโค้ดและ Ground Truth -> ยิง KKU IntelSphere API ผ่าน Universal Generator -> ตรวจสอบ Package/Timeout Guard -> วางไฟล์ในโฟลเดอร์ `TestCode/` ของแต่ละโมเดล
 ```bash
 # ขั้นที่ 1: สกัดไฟล์ซอร์สโค้ดและข้อมูลบั๊ก (หากยังไม่มีใน target_benchmark)
@@ -318,13 +327,13 @@ python scripts/extract_target_classes.py --project Math --bug 2
 # ขั้นที่ 2: เจนเทสด้วย Gemini 3.8 Flash (ใช้ระบุ Project + Bug ID ได้ทันที):
 python scripts/kku_generate.py --ai gemini --project Math --bug 2
 
-# ขั้นที่ 3: เจนเทสด้วย Claude Sonnet 5:
-python scripts/kku_generate.py --ai claude --project Math --bug 2
+# ขั้นที่ 3: เจนเทสด้วย DeepSeek V4 Flash:
+python scripts/kku_generate.py --ai deepseek --project Math --bug 2
 
 # ขั้นที่ 4: ตรวจสอบไฟล์เทสที่ระบบสกัดและบันทึกให้อัตโนมัติ:
 # - Gemini: Gemini-3_8_flash/TestCode/<Class>GeminiTest.java
-# - Claude: Claude-sonnet_5/TestCode/<Class>ClaudeTest.java
-# สถิติ Token จะถูกบันทึกลง: results/Claude_vs_Gemini_Economics.csv
+# - DeepSeek: Deepseek-v4_flash/TestCode/<Class>DeepseekTest.java
+# สถิติ Token จะถูกบันทึกลง: results/Deepseek_vs_Gemini_Economics.csv
 ```
 
 ---
@@ -676,16 +685,16 @@ flowchart TD
 
 ---
 
-## 5. 🧑‍💻 Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - Claude & Gemini)
+## 5. 🧑‍💻 Member 3: นายธนภูมิ จันทรา (AI Prompt Engineer - DeepSeek & Gemini)
 
 **รหัสนักศึกษา:** 673380272-1  
-**บทบาท:** สั่งการ **Claude Sonnet 5** และ **Gemini 3.8 Flash** ผ่าน **KKU IntelSphere API** (`gen.ai.kku.ac.th`) เพื่อสร้างชุดทดสอบคุณภาพสูง พร้อมบันทึก **Token Usage**, **Cost**, และ **Generation Time**
+**บทบาท:** สั่งการ **DeepSeek V4 Flash** และ **Gemini 3.8 Flash** ผ่าน **KKU IntelSphere API** (`gen.ai.kku.ac.th`) เพื่อสร้างชุดทดสอบคุณภาพสูง พร้อมบันทึก **Token Usage**, **Cost**, และ **Generation Time**
 
 ### 📋 สิ่งที่คุณต้องส่งมอบ (Deliverables ต่อ 1 คลาส):
-1. ไฟล์ Java Test ของ Claude: `Claude-sonnet_5/TestCode/<Class>ClaudeTest.java`
+1. ไฟล์ Java Test ของ DeepSeek: `Deepseek-v4_flash/TestCode/<Class>DeepseekTest.java`
 2. ไฟล์ Java Test ของ Gemini: `Gemini-3_8_flash/TestCode/<Class>GeminiTest.java`
-3. ข้อมูล Token Usage & Latency ใน `Claude-sonnet_5/Result/` และ `Gemini-3_8_flash/Result/`
-4. ตารางวิเคราะห์เปรียบเทียบ Cost-Effectiveness ระหว่าง Claude vs Gemini สำหรับบทที่ 3
+3. ข้อมูล Token Usage & Latency ใน `Deepseek-v4_flash/Result/` และ `Gemini-3_8_flash/Result/`
+4. ตารางวิเคราะห์เปรียบเทียบ Cost-Effectiveness ระหว่าง DeepSeek vs Gemini สำหรับบทที่ 3
 
 ---
 
@@ -694,20 +703,20 @@ flowchart TD
 #### ขั้นที่ 1: ตั้งค่า API Key ของ KKU IntelSphere
 1. เข้าเว็บไซต์: [https://gen.ai.kku.ac.th/](https://gen.ai.kku.ac.th/) ล็อกอินด้วยอีเมล `@kkumail.com` หรือ `@kku.ac.th`
 2. ไปที่เมนู **Settings (การตั้งค่า) -> API Platform** แล้วกด **Generate API Key**
-3. เปิดไฟล์ `.env` ที่โฟลเดอร์ Root (`ProjectSQA/.env`) แล้ววาง Key:
+3. เปิดไฟล์ `.env` ที่โฟลเดอร์ Root (`ProjectSQA/.env`) แล้ววาง Key (รองรับทั้ง Single Key หรือ Multi-Key Pool คั่นด้วยจุลภาค):
    ```env
-   KKU_API_KEY=your_actual_api_key_here
+   KKU_API_KEYS=key1,key2,key3
    ```
 
 #### ขั้นที่ 2: สั่งสร้างชุดทดสอบอัตโนมัติด้วยคำสั่งเดียว
 Member 4 ได้เตรียมสคริปต์ Universal Generator [`scripts/kku_generate.py`](scripts/kku_generate.py) ไว้ให้แล้ว เพียงระบุโปรเจกต์และรหัสบั๊ก (หรือระบุไฟล์ซอร์สโค้ดโดยตรง):
 ```bash
 # แบบที่ 1: ระบุชื่อ Project และ Bug ID ได้ทันที (สคริปต์หาไฟล์ .java ใน target_benchmark ให้อัตโนมัติ):
-python scripts/kku_generate.py --ai claude --project Math --bug 2
+python scripts/kku_generate.py --ai deepseek --project Math --bug 2
 python scripts/kku_generate.py --ai gemini --project Math --bug 2
 
 # แบบที่ 2: ระบุที่อยู่ไฟล์ซอร์สโค้ดเป้าหมายโดยตรง:
-python scripts/kku_generate.py --ai claude --source-file target_benchmark/Math_2b/HypergeometricDistribution.java
+python scripts/kku_generate.py --ai deepseek --source-file target_benchmark/Math_2b/HypergeometricDistribution.java
 python scripts/kku_generate.py --ai gemini --source-file target_benchmark/Math_2b/HypergeometricDistribution.java
 ```
 *(หากยังไม่มีไฟล์ `.java` ให้รัน `python scripts/extract_target_classes.py --project <Project> --bug <BugID>` ดึงออกมาก่อน)*
@@ -721,35 +730,35 @@ python scripts/kku_generate.py --ai gemini --source-file target_benchmark/Math_2
 #### ขั้นที่ 4: การตรวจทานความถูกต้อง (Code Review Sanity Check)
 เปิดดูไฟล์เทสในโฟลเดอร์ `TestCode/`:
 1. ตรวจสอบว่าบรรทัดแรกมี `package <package_name>;`
-2. ชื่อ Class ในโค้ดตรงกับชื่อไฟล์ เช่น `public class HypergeometricDistributionGeminiTest`
+2. ชื่อ Class ในโค้ดตรงกับชื่อไฟล์ เช่น `public class HypergeometricDistributionGeminiTest` หรือ `HypergeometricDistributionDeepseekTest`
 3. ไม่มี Library แปลกปลอมหลุดเข้ามา
 4. **หากต้องการจับบั๊กให้ได้สถานะ `BUG_DETECTED`:** ให้นำข้อมูล Root Cause จาก `defects4j_info.txt` มาเพิ่มเป็น Test Method ตรวจสอบพฤติกรรมของบั๊กโดยเฉพาะ
 
 #### ขั้นที่ 5: สรุปตาราง Token Economics สำหรับบทที่ 3 ของเล่มรายงาน
 ดึงข้อมูลจากไฟล์ JSON ในโฟลเดอร์ `Result/` มากรอกลงตาราง:
-| ข้อมูลตัวชี้วัด (Metrics) | Claude Sonnet 5 | Gemini 3.8 Flash | ผลการเปรียบเทียบ |
+| ข้อมูลตัวชี้วัด (Metrics) | DeepSeek V4 Flash | Gemini 3.8 Flash | ผลการเปรียบเทียบ |
 | :--- | :---: | :---: | :--- |
-| **Input Tokens (Prompt)** | 3,120 tokens | 3,120 tokens | เท่ากัน (ขนาด Source Code) |
-| **Output Tokens (Completion)** | 1,850 tokens | 2,410 tokens | Gemini เจนเทสยาวและละเอียดกว่า |
-| **Generation Latency (วินาที)** | 14.2 วินาที | 4.8 วินาที | Gemini เร็วกว่าประมาณ 3 เท่า |
-| **Line Coverage บน Target Class** | 64.80% | 98.67% | Gemini ครอบคลุม Branch ลึกกว่า |
+| **Input Tokens (Prompt)** | ~3,100 tokens | ~3,100 tokens | เท่ากัน (ขนาด Source Code) |
+| **Output Tokens (Completion)** | ~1,900 tokens | ~2,400 tokens | เจน Test ครอบคลุม Branch |
+| **Daily Quota ต่อ Token** | 1,000,000 tokens | 350,000 tokens | DeepSeek โควตาสูงกว่าเกือบ 3 เท่า |
+| **Generation Latency (วินาที)** | ~10-15 วินาที | ~4-6 วินาที | Gemini ตอบกลับรวดเร็วกว่า |
 
 ---
 
 ### 💡 วิธีสร้างระบบ Automated Batch Pipeline (พิมพ์เขียวสำหรับ Member 3)
 
-> **🎯 เป้าหมาย:** หากต้องรันคำสั่ง `kku_generate.py` ทีละไฟล์สำหรับ 10–20 คลาส x 2 โมเดล (Claude + Gemini) จะต้องพิมพ์คำสั่งถึง 40 ครั้ง!  
+> **🎯 เป้าหมาย:** หากต้องรันคำสั่ง `kku_generate.py` ทีละไฟล์สำหรับ 10–20 คลาส x 2 โมเดล (DeepSeek + Gemini) จะต้องพิมพ์คำสั่งถึง 40 ครั้ง!  
 > ยิ่งไปกว่านั้น: **หากส่งเฉพาะ Source Code เปล่าๆ ให้ AI โดยไม่มีข้อมูลบั๊ก AI จะสร้างเฉพาะเทสกรณีปกติ (Happy Path) ส่งผลให้ได้สถานะ `NOT_DETECTED` เกือบทั้งหมด!**  
 > เพื่อให้ได้ชุดทดสอบที่มี Line/Branch Coverage สูง และสามารถตรวจจับข้อบกพร่องจริงจนได้สถานะ **`BUG_DETECTED`** Member 3 ควรสร้าง **Defect-Aware Batch Pipeline (`scripts/batch_ai_generate.py`)** ที่ดึง Ground Truth จาก `defects4j_info.txt` มาประกอบเป็น Prompt โดยอัตโนมัติ:
 
 ```mermaid
-flowchart TD
+flowcharts TD
     Targets["สแกน target_benchmark/<br/>(พบคู่ *.java และ defects4j_info.txt)"] --> Extract["สกัด Java Source Code<br/>+ สกัด Root Cause จาก defects4j_info.txt"]
     Extract --> PromptEng["ประกอบ Master Prompt อัตโนมัติ<br/>(BVA + Defect Trigger Specification)"]
-    PromptEng --> Dispatcher["ยิง API ไปยัง KKU IntelSphere<br/>(Claude Sonnet 5 & Gemini 3.8 Flash)"]
-    Dispatcher --> RateLimit["Rate Limiter & Retry Guard<br/>(หน่วงเวลา 2.0s ป้องกัน HTTP 429)"]
+    PromptEng --> Dispatcher["ยิง API ไปยัง KKU IntelSphere<br/>(DeepSeek V4 Flash & Gemini 3.8 Flash)"]
+    Dispatcher --> RateLimit["Rate Limiter & Multi-Token Failover<br/>(สลับ Key อัตโนมัติ ป้องกัน Quota หมด)"]
     RateLimit --> Sanitizer["Java Code Sanitizer<br/>(ลบ Markdown, เช็ค package/class)"]
-    Sanitizer --> SaveFiles["บันทึกไฟล์เทสลง TestCode/<br/>(<Class>ClaudeTest / <Class>GeminiTest)"]
+    Sanitizer --> SaveFiles["บันทึกไฟล์เทสลง TestCode/<br/>(<Class>DeepseekTest / <Class>GeminiTest)"]
     Sanitizer --> LogMetrics["รวบรวม Token Usage & Latency<br/>ลง Result/ai_token_summary.csv"]
     SaveFiles --> Out["Test Suites พร้อมส่งให้ Runner!"]
 ```
@@ -805,7 +814,7 @@ The target class has a known defect reported as follows:
    ```
 
 3. **ส่วนที่ 3: ระบบ Batch Dispatcher พร้อม Rate Limiting & Retry:**
-   - วนลูปยิง API ทั้ง Claude และ Gemini พร้อมระบบหน่วงเวลาเพื่อป้องกันโดนระงับสิทธิ์ (HTTP 429 Too Many Requests):
+   - วนลูปยิง API ทั้ง DeepSeek และ Gemini พร้อมระบบหน่วงเวลาเพื่อป้องกันโดนระงับสิทธิ์ (HTTP 429 Too Many Requests):
    ```python
    import time, requests
 
@@ -841,7 +850,7 @@ The target class has a known defect reported as follows:
    ```
 
 4. **ส่วนที่ 4: การ Clean Code และบันทึกไฟล์เทสอัตโนมัติ:**
-   - สกัดเฉพาะโค้ดภาษา Java ออกจากบล็อก Markdown และปรับชื่อคลาสให้ตรงตามมาตรฐานโครงการ (`<Class>ClaudeTest` และ `<Class>GeminiTest`):
+   - สกัดเฉพาะโค้ดภาษา Java ออกจากบล็อก Markdown และปรับชื่อคลาสให้ตรงตามมาตรฐานโครงการ (`<Class>DeepseekTest` และ `<Class>GeminiTest`):
    ```python
    def sanitize_and_save(raw_response, target_class, ai_type, output_dir):
        # สกัดโค้ดระหว่าง ```java ... ```
@@ -859,7 +868,7 @@ The target class has a known defect reported as follows:
    ```
 
 5. **ส่วนที่ 5: การสรุป Token Usage และ Cost ภาพรวม:**
-   - รวบรวมข้อมูล Tokens และ Latency จากทุกการเรียก API เซฟเป็นไฟล์รวม `Claude_vs_Gemini_Economics.csv` เพื่อนำไปพล็อตกราฟและเขียนตารางในรายงานบทที่ 3!
+   - รวบรวมข้อมูล Tokens และ Latency จากทุกการเรียก API เซฟเป็นไฟล์รวม `Deepseek_vs_Gemini_Economics.csv` เพื่อนำไปพล็อตกราฟและเขียนตารางในรายงานบทที่ 3!
 
 > **⚠️ ข้อควรจำสำคัญสำหรับ Member 3:**
 > - การใส่ **Defect Context** ลงใน Prompt เป็น "หัวใจสำคัญ" ที่ทำให้ AI มี Fault Detection Rate (FDR) ชนะ Algorithm ดั้งเดิม
@@ -876,7 +885,7 @@ Get-Content target_benchmark/catalog_17_projects.json | ConvertFrom-Json | ForEa
     $dir = $_.dir
     $src = (Get-ChildItem "target_benchmark/$dir/*.java" | Select-Object -First 1).FullName
     Write-Host ">>> [Member 3] Generating Test for $($_.project)-$($_.bug_id) ($($_.simple_name))..." -ForegroundColor Cyan
-    python scripts/kku_generate.py --ai claude --source-file "$src"
+    python scripts/kku_generate.py --ai deepseek --source-file "$src"
     Start-Sleep -Seconds 2
     python scripts/kku_generate.py --ai gemini --source-file "$src"
     Start-Sleep -Seconds 2
@@ -896,7 +905,7 @@ for item in catalog:
         continue
     src = src_files[0]
     print(f">> [Member 3] Generating for {item['project']}-{item['bug_id']} ({item['simple_name']})...")
-    subprocess.run(["python", "scripts/kku_generate.py", "--ai", "claude", "--source-file", src])
+    subprocess.run(["python", "scripts/kku_generate.py", "--ai", "deepseek", "--source-file", src])
     time.sleep(2)
     subprocess.run(["python", "scripts/kku_generate.py", "--ai", "gemini", "--source-file", src])
     time.sleep(2)
@@ -932,7 +941,7 @@ python scripts/batch_extract_all_bugs.py
 ระบบ Runner ตัวใหม่รองรับการจัดวางไฟล์เทสทั้งแบบแยกโฟลเดอร์ตามบั๊ก (`<Project>_<BugID>b/`) และแบบวางที่ Root ของ `TestCode/` โดยตรวจจับความถูกต้องของ Class Name และ Package Name อัตโนมัติ:
 - `Combinatorial_IPO/TestCode/<Project>_<BugID>b/<Class>_IPOTest.java` (หรือในโฟลเดอร์ baselines)
 - `MIO_Algorithm/TestCode/<Project>_<BugID>b/<Class>_ESTest.java` (พร้อม `_scaffolding.java`)
-- `Claude-sonnet_5/TestCode/<Project>_<BugID>b/<Class>ClaudeTest.java` (หรือที่ root)
+- `Deepseek-v4_flash/TestCode/<Project>_<BugID>b/<Class>DeepseekTest.java` (หรือที่ root)
 - `Gemini-3_8_flash/TestCode/<Project>_<BugID>b/<Class>GeminiTest.java` (หรือที่ root)
 
 #### ขั้นที่ 3: สั่งรัน Universal Benchmark Runner
@@ -999,7 +1008,7 @@ flowchart TD
      - `results/figure1_coverage_comparison.png`: เปรียบเทียบ Line/Branch Coverage ของ 4 เทคนิค
      - `results/figure2_fdr_distribution.png`: แผนภูมิแท่งซ้อน 5 สถานะ FDR %
      - `results/figure3_projects_breakdown.png`: เปรียบเทียบ Coverage แยกรายโปรเจกต์
-     - `results/figure4_ai_economics.png`: เปรียบเทียบ Token Usage & Latency ของ Claude vs Gemini
+     - `results/figure4_ai_economics.png`: เปรียบเทียบ Token Usage & Latency ของ DeepSeek vs Gemini
    ```
 
 > **⚠️ ข้อควรจำสำคัญสำหรับ Member 4:**
@@ -1030,12 +1039,12 @@ sequenceDiagram
     par สมาชิกทำงานคู่ขนานกัน (Parallel Execution)
         M1->>M1: วิเคราะห์ Parameter -> สร้าง Domains -> รัน IPO -> ตรวจ Pair Coverage -> สร้าง Oracle-backed HypergeometricDistribution_IPOTest.java
         M2->>M2: รัน run_evosuite_mio.sh Math 2 -> ได้ HypergeometricDistribution_ESTest.java
-        M3->>M3: รัน kku_generate.py -> ได้ ClaudeTest.java และ GeminiTest.java
+        M3->>M3: รัน kku_generate.py -> ได้ DeepseekTest.java และ GeminiTest.java
     end
     
     M1->>M4: วางไฟล์ใน Combinatorial_IPO/TestCode/
     M2->>M4: วางไฟล์ใน MIO_Algorithm/TestCode/
-    M3->>M4: วางไฟล์ใน Claude/ และ Gemini/ TestCode/
+    M3->>M4: วางไฟล์ใน Deepseek/ และ Gemini/ TestCode/
     
     M4->>M4: รัน python3 scripts/run_benchmark.py --project Math --bug 2
     Note over M4: บันทึก Line Cov, Branch Cov, FDR ลง benchmark_results.csv อัตโนมัติ!
@@ -1094,7 +1103,7 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{detected\_bugs}}}{N_{\text{eval
 | **บทที่ 1** | บทนำ วัตถุประสงค์ และขอบเขตงาน | **Member 4** | ที่มา ความสำคัญ, ขอบเขตงานวิจัย (Defect-Targeted Testing), Research Questions (RQ1: Coverage, RQ2: Bug-Level FDR, RQ3: Efficiency) |
 | **บทที่ 2.1** | Combinatorial Testing & IPO Algorithm | **Member 1** | ทฤษฎีและ implementation ของ IPO/IPOG (Horizontal/Vertical Growth), Microsoft PICT ในฐานะ Reference Baseline, pair-coverage verification และตาราง Full vs Pairwise Reduction % |
 | **บทที่ 2.2** | Search-Based Testing & MIO Algorithm | **Member 2** | ทฤษฎี MIO ใน EvoSuite, ตารางสถิติ Mean ± SD ของ Search Budget (30s/60s/120s) ตามข้อ 1.7 |
-| **บทที่ 3** | Prompt Engineering Architecture | **Member 3** | โครงสร้าง System Prompt, เทคนิค BVA Guardrails, Defect Context Injection, ตาราง Token Usage & Cost ของ Claude vs Gemini |
+| **บทที่ 3** | Prompt Engineering Architecture | **Member 3** | โครงสร้าง System Prompt, เทคนิค BVA Guardrails, Defect Context Injection, ตาราง Token Usage & Cost ของ DeepSeek vs Gemini |
 | **บทที่ 4** | สภาพแวดล้อมระบบและการทดลอง | **Member 4** | สถาปัตยกรรม Docker, ขอบเขต `classes.modified` vs Project-Wide, นิยามสูตรคำนวณ Coverage & Bug-Level FDR 5 สถานะ |
 | **บทที่ 5** | ผลการทดลองและการอภิปรายผล | **ทุกคนร่วมกัน** | ตารางใหญ่เปรียบเทียบ 4 เทคนิค (Target Class Coverage, Bug-Level FDR, Time, Cost), กราฟ 4 ภาพ, การวิเคราะห์จุดเด่น/ข้อจำกัดเชิงประจักษ์ |
 | **บทที่ 6** | สรุปผลและข้อเสนอแนะ | **Member 4** | สรุปภาพรวม แนวทางการประยุกต์ใช้ในอุตสาหกรรม และงานวิจัยในอนาคต |

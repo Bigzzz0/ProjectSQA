@@ -2,7 +2,7 @@
 
 **รายวิชา:** CP353201 Software Quality Assurance (ปีการศึกษา 1/2569)  
 **อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก | **หลักสูตร:** วิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น  
-**หัวข้อโครงการ:** การประเมินประสิทธิภาพเชิงเปรียบเทียบระหว่างขั้นตอนวิธีสร้างกรณีทดสอบอัตโนมัติ (IPO & MIO) และเครื่องมือ Generative AI (Claude & Gemini) บนชุดข้อมูลมาตรฐาน Defects4J
+**หัวข้อโครงการ:** การประเมินประสิทธิภาพเชิงเปรียบเทียบระหว่างขั้นตอนวิธีสร้างกรณีทดสอบอัตโนมัติ (IPO & MIO) และเครื่องมือ Generative AI (DeepSeek & Gemini) บนชุดข้อมูลมาตรฐาน Defects4J
 
 ---
 
@@ -12,7 +12,7 @@
 | :---: | :---: | :--- | :--- | :--- |
 | 1 | 673380278-9 | นายปวริศช์ ประมวล | **Member 1: Algorithm Lead 1**<br>(IPO / Combinatorial Testing) | • วิเคราะห์ Input Space ของ Target Classes<br>• สร้าง Factor/Value-Domain Model และ Pairwise Combinations ด้วย Native IPO<br>• ใช้ PICT เฉพาะ Reference Baseline โดยไม่ถือว่า PICT เท่ากับ IPO<br>• แปลง Combinations เป็น JUnit 4 พร้อม Oracle จาก Defects4J Fixed Version<br>• **Output:** วางชุดที่ตรวจบน Fixed Version แล้วไว้ที่ `Combinatorial_IPO/TestCode/` |
 | 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | **Member 2: Algorithm Lead 2**<br>(MIO / Search-Based Testing) | • สั่งรัน EvoSuite MIO บน Defects4J Classpath<br>• ทดลองปรับ Search Budget (30s, 60s, 120s) และรันซ้ำ 3-5 รอบ<br>• จัดการ EvoSuite Runtime และบันทึกค่าสถิติ Mean / SD<br>• **Output:** วางไฟล์ไว้ที่ `MIO_Algorithm/TestCode/` |
-| 3 | 673380272-1 | นายธนภูมิ จันทรา | **Member 3: AI Prompt Engineer**<br>(Claude Sonnet 5 & Gemini 3.8 Flash) | • ออกแบบ Master Prompt Architecture (CoT, Boundary Analysis)<br>• พัฒนาสคริปต์ยิง KKU IntelSphere API (`kku_generate.py`)<br>• สกัด JUnit 4 Test Code และบันทึก Token Usage / Generation Time<br>• **Output:** วางไฟล์ที่ `Claude-sonnet_5/TestCode/` และ `Gemini-3_8_flash/TestCode/` |
+| 3 | 673380272-1 | นายธนภูมิ จันทรา | **Member 3: AI Prompt Engineer**<br>(DeepSeek V4 Flash & Gemini 3.8 Flash) | • ออกแบบ Master Prompt Architecture (CoT, Boundary Analysis)<br>• พัฒนาสคริปต์ยิง KKU IntelSphere API (`kku_generate.py`)<br>• สกัด JUnit 4 Test Code และบันทึก Token Usage / Generation Time<br>• **Output:** วางไฟล์ที่ `Deepseek-v4_flash/TestCode/` และ `Gemini-3_8_flash/TestCode/` |
 | 4 | 673380292-5 | นายศิฆรินทร์ อุปจันทร์ | **Member 4: Infrastructure & Data Lead**<br>(Defects4J & Repository Manager) | • จัดเตรียม Docker Environment (Multi-JDK, PICT, EvoSuite, Python)<br>• สกัด Target Classes และ Ground Truth บั๊กจาก Defects4J<br>• พัฒนา Universal Runner (`run_benchmark.py`) พร้อมระบบ Resume<br>• ประเมินผล Coverage, Fault Detection Rate และรวบรวมเล่มรายงาน |
 
 ---
@@ -95,10 +95,10 @@ ProjectSQA/
 │   ├── Configuration/                 # คอนฟิก Search Budget (30s, 60s, 120s)
 │   ├── Result_Round1/ & Result_Round2/
 │   └── TestCode/                      # ไฟล์ JUnit 4 (*_ESTest.java)
-├── Claude-sonnet_5/                   # AI Tool 1: Claude Sonnet 5
+├── Deepseek-v4_flash/                 # AI Tool 1: DeepSeek V4 Flash
 │   ├── Prompt/                        # System Prompts & Few-Shot Templates
 │   ├── Result/                        # ข้อมูล Token Usage & เวลาที่ใช้สร้าง
-│   └── TestCode/                      # ไฟล์ JUnit 4 (*_ClaudeTest.java)
+│   └── TestCode/                      # ไฟล์ JUnit 4 (*_DeepseekTest.java)
 └── Gemini-3_8_flash/                  # AI Tool 2: Gemini 3.8 Flash
     ├── Prompt/                        # System Prompts & Few-Shot Templates
     ├── Result/                        # ข้อมูล Token Usage & เวลาที่ใช้สร้าง
@@ -146,7 +146,7 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
 | **IPO (Microsoft PICT)** | - | - | - | - | สร้าง Combinations รวดเร็ว, ทดสอบครอบคลุมเงื่อนไขอินพุต | ต้องอาศัยการวิเคราะห์โมเดลพารามิเตอร์ของแต่ละเมธอด |
 | **MIO (EvoSuite SBST)** | - | - | - | - | ค้นหา Test อัตโนมัติจาก Bytecode โดยไม่ต้องเขียนโมเดล | ใช้เวลาประมวลผลสูง (ขึ้นกับ Search Budget) |
-| **Claude Sonnet 5** | - | - | - | - | ออกแบบกรณีทดสอบครอบคลุม Edge Cases และ Assert ละเอียด | มีค่าใช้จ่าย Token และขึ้นอยู่กับความเสถียรของ API |
+| **DeepSeek V4 Flash** | - | - | - | - | ออกแบบกรณีทดสอบครอบคลุม Edge Cases และ Assert ละเอียด โควตาสูง 1M tokens/วัน | ประมวลผลและสกัด Branch Condition เชิงลึก |
 | **Gemini 3.8 Flash** | - | - | - | - | ประมวลผลและตอบกลับรวดเร็วมาก วิเคราะห์ Control Flow ได้ดี | อาจมี Assertion Flaky ในบางกรณีที่ตรรกะซับซ้อน |
 
 ---

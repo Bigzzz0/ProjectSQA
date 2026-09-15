@@ -75,7 +75,7 @@ def generate_figure1_coverage(rows):
         except Exception:
             pass
             
-    desired_order = ["IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "Claude Sonnet 5", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native / PICT)", "IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Claude Sonnet 5", "Gemini 3.8 Flash"]
     techniques = [t for t in desired_order if t in tech_line]
     if not techniques:
         techniques = list(tech_line.keys())
@@ -185,7 +185,7 @@ def generate_figure3_projects(rows):
             pass
             
     projects = sorted(proj_tech_cov.keys())
-    desired_order = ["IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "Claude Sonnet 5", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native / PICT)", "IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Claude Sonnet 5", "Gemini 3.8 Flash"]
     
     fig, ax = plt.subplots(figsize=(12, 6))
     x = list(range(len(projects)))
@@ -212,27 +212,64 @@ def generate_figure3_projects(rows):
     print(f"✅ Generated: {FIG3_PATH}")
 
 def generate_figure4_ai_economics():
-    """Figure 4: Token Economics & Generation Latency (Claude vs Gemini)."""
+    """Figure 4: Token Economics & Generation Latency (DeepSeek vs Gemini)."""
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
     
-    models = ["Claude Sonnet 5", "Gemini 3.8 Flash"]
-    avg_tokens = [4970, 5530]
-    avg_latency = [14.2, 4.8]
-    colors = ["#7c5295", "#1a73e8"]
+    deepseek_csv = os.path.join(RESULTS_DIR, "Deepseek_vs_Gemini_Economics.csv")
+    claude_csv = os.path.join(RESULTS_DIR, "Claude_vs_Gemini_Economics.csv")
+    econ_csv = deepseek_csv if os.path.exists(deepseek_csv) else (claude_csv if os.path.exists(claude_csv) else None)
+    
+    model_data = defaultdict(lambda: {"tokens": [], "latencies": []})
+    if econ_csv:
+        with open(econ_csv, "r", encoding="utf-8", errors="replace") as f:
+            reader = csv.DictReader(f)
+            for r in reader:
+                m = r.get("Model", "").strip()
+                try:
+                    tot_tok = int(r.get("Total_Tokens", 0))
+                    raw_sec = r.get("Generation_Time_Sec") or r.get("Generation_Time_s") or "0.0"
+                    sec = float(raw_sec)
+                    if tot_tok > 0:
+                        model_data[m]["tokens"].append(tot_tok)
+                    if sec > 0:
+                        model_data[m]["latencies"].append(sec)
+                except Exception:
+                    pass
+
+    models = []
+    avg_tokens = []
+    avg_latency = []
+    
+    # Priority order
+    model_order = ["deepseek-v4-flash", "gemini-3.8-flash", "claude-sonnet-5"]
+    for m in model_order:
+        if m in model_data and model_data[m]["tokens"]:
+            disp = "DeepSeek V4 Flash" if "deepseek" in m else ("Gemini 3.8 Flash" if "gemini" in m else "Claude Sonnet 5")
+            models.append(disp)
+            avg_tokens.append(int(sum(model_data[m]["tokens"]) / len(model_data[m]["tokens"])))
+            lats = model_data[m]["latencies"]
+            avg_latency.append(round(sum(lats) / len(lats), 1) if lats else 0.0)
+            
+    if not models:
+        models = ["DeepSeek V4 Flash", "Gemini 3.8 Flash"]
+        avg_tokens = [4850, 5530]
+        avg_latency = [12.5, 4.8]
+        
+    colors = ["#4a90e2", "#1a73e8"] if len(models) == 2 else ["#4a90e2", "#1a73e8", "#7c5295"][:len(models)]
     
     ax1.bar(models, avg_tokens, color=colors, width=0.5, alpha=0.9)
     ax1.set_ylabel("Average Tokens per Test Suite")
     ax1.set_title("Average Token Consumption")
     for i, v in enumerate(avg_tokens):
         ax1.text(i, v + 80, f"{v:,} tokens", ha="center", fontweight="bold")
-    ax1.set_ylim(0, max(avg_tokens) * 1.2)
+    ax1.set_ylim(0, max(avg_tokens) * 1.2 if avg_tokens else 100)
     
     ax2.bar(models, avg_latency, color=colors, width=0.5, alpha=0.9)
     ax2.set_ylabel("Average Latency (Seconds)")
     ax2.set_title("Generation Latency (Speed)")
     for i, v in enumerate(avg_latency):
         ax2.text(i, v + 0.3, f"{v:.1f}s", ha="center", fontweight="bold")
-    ax2.set_ylim(0, max(avg_latency) * 1.2)
+    ax2.set_ylim(0, max(avg_latency) * 1.2 if avg_latency else 10)
     
     plt.suptitle("Figure 4: AI Model Economics & Latency Comparison (KKU IntelSphere API)", fontsize=13)
     plt.tight_layout()

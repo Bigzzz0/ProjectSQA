@@ -2,6 +2,7 @@
 """
 KKU IntelSphere API - Automated Test Generator for ProjectSQA
 Designed for Member 3 (AI Prompt Engineer) & Member 4 (Infra Lead)
+Supports: DeepSeek V4 Flash & Gemini 3.8 Flash with Multi-Key Token Rotation
 """
 
 import os
@@ -23,20 +24,26 @@ if hasattr(sys.stdout, "reconfigure"):
 API_BASE_URL = "https://gen.ai.kku.ac.th/api/v1"
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-def get_api_key():
-    """ดึง API Key จาก Environment Variable หรือไฟล์ .env หรือถามผู้ใช้"""
-    key = os.environ.get("KKU_API_KEY")
-    if key:
-        return key.strip()
-    
-    # ลองหาจากไฟล์ .env ใน project root
-    env_file = os.path.join(PROJECT_ROOT, ".env")
-    if os.path.exists(env_file):
-        with open(env_file, "r", encoding="utf-8") as f:
-            for line in f:
-                if line.strip().startswith("KKU_API_KEY="):
-                    return line.strip().split("=", 1)[1].strip().strip('"\'')
-    
+def get_api_keys():
+    """ดึงรายการ API Keys ทั้งหมดจาก Environment Variable หรือไฟล์ .env"""
+    keys_str = os.environ.get("KKU_API_KEYS") or os.environ.get("KKU_API_KEY")
+    if not keys_str:
+        env_file = os.path.join(PROJECT_ROOT, ".env")
+        if os.path.exists(env_file):
+            with open(env_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("KKU_API_KEYS="):
+                        keys_str = line.split("=", 1)[1].strip().strip('"\'')
+                        break
+                    elif line.startswith("KKU_API_KEY="):
+                        keys_str = line.split("=", 1)[1].strip().strip('"\'')
+
+    if keys_str:
+        keys = [k.strip() for k in keys_str.split(",") if k.strip()]
+        if keys:
+            return keys
+
     # หากไม่พบ ให้รับค่าจาก prompt
     print("=" * 60)
     print("🔑 ไม่พบ KKU_API_KEY ในระบบ")
@@ -46,12 +53,12 @@ def get_api_key():
     if not key:
         print("❌ ข้อผิดพลาด: ไม่ได้ระบุ API Key")
         sys.exit(1)
-    
-    # บันทึกลง .env อัตโนมัติ (อยู่ใน .gitignore แล้ว ปลอดภัย)
+
+    env_file = os.path.join(PROJECT_ROOT, ".env")
     with open(env_file, "w", encoding="utf-8") as f:
-        f.write(f"KKU_API_KEY={key}\n")
-    print(f"✅ บันทึก API Key ลงใน .env เรียบร้อยแล้ว (ครั้งต่อไปไม่ต้องกรอกใหม่)")
-    return key
+        f.write(f"KKU_API_KEYS={key}\nKKU_API_KEY={key}\n")
+    print("✅ บันทึก API Key ลงใน .env เรียบร้อยแล้ว (ครั้งต่อไปไม่ต้องกรอกใหม่)")
+    return [key]
 
 def list_available_models(api_key):
     """เรียกดูรายชื่อโมเดลทั้งหมดที่ KKU เปิดให้บริการ"""
@@ -64,12 +71,12 @@ def list_available_models(api_key):
             models = data.get("data", [])
             print("\n📋 รายการโมเดลที่ให้บริการใน KKU IntelSphere API:")
             print("-" * 60)
-            print(f"{'ID':<6} | {'Name / Owned By':<30}")
+            print(f"{'ID':<25} | {'Name / Owned By':<30}")
             print("-" * 60)
             for m in models:
                 m_id = m.get("id")
                 m_name = m.get("owned_by") or m.get("name") or "Unknown"
-                print(f"{str(m_id):<6} | {m_name:<30}")
+                print(f"{str(m_id):<25} | {m_name:<30}")
             print("-" * 60)
             return models
         else:
@@ -124,15 +131,15 @@ def extract_defect_context(source_file):
         pass
     return ""
 
-def run_test_generation(target_ai, api_key, model_identifier=None, source_file=None):
-    """ส่ง Prompt ไปยัง KKU API และบันทึกผลลัพธ์อัตโนมัติ"""
+def run_test_generation(target_ai, api_keys, model_identifier=None, source_file=None):
+    """ส่ง Prompt ไปยัง KKU API พร้อมระบบ Multi-Key Token Rotation และบันทึกผลลัพธ์อัตโนมัติ"""
     if not source_file:
         source_file = os.path.join(PROJECT_ROOT, "target_benchmark", "Lang_1b", "NumberUtils.java")
-    
+
     if not os.path.exists(source_file):
         print(f"❌ ไม่พบไฟล์ซอร์สโค้ด: {source_file}")
         sys.exit(1)
-        
+
     with open(source_file, "r", encoding="utf-8", errors="replace") as f:
         target_code = f.read()
 
@@ -145,12 +152,12 @@ def run_test_generation(target_ai, api_key, model_identifier=None, source_file=N
             package_name = line[8:-1].strip()
             break
 
-    # กำหนดค่าตาม AI ที่เลือก
-    if target_ai.lower() == "claude":
-        tool_dir = "Claude-sonnet_5"
-        output_class_name = f"{base_class}ClaudeTest"
-        ai_display_name = "Claude Sonnet 5 (via KKU API)"
-        default_model = "claude-sonnet-5"
+    # กำหนดค่าตาม AI ที่เลือก (เปลี่ยน Claude -> DeepSeek V4 Flash)
+    if target_ai.lower() in ["deepseek", "deepseek-v4-flash", "claude"]:
+        tool_dir = "Deepseek-v4_flash"
+        output_class_name = f"{base_class}DeepseekTest"
+        ai_display_name = "DeepSeek V4 Flash (via KKU API)"
+        default_model = "deepseek-v4-flash"
     else:
         tool_dir = "Gemini-3_8_flash"
         output_class_name = f"{base_class}GeminiTest"
@@ -158,7 +165,6 @@ def run_test_generation(target_ai, api_key, model_identifier=None, source_file=N
         default_model = "gemini-3.8-flash"
 
     model_to_use = model_identifier if model_identifier else default_model
-
     pkg_decl = f"package {package_name};" if package_name else "// No package"
 
     prompt_dir = os.path.join(PROJECT_ROOT, tool_dir, "Prompt")
@@ -261,7 +267,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         f"Generate the complete JUnit 4 test class {output_class_name} that achieves maximum line and branch coverage and targets the defect."
     )
 
-    # เพดาน max_tokens สูงสุดตามสถาปัตยกรรมของ Gemini & Claude API คือ 65,536 (ห้ามเกิน 65536 มิฉะนั้น Google API จะโยน 400 Bad Request)
+    # เพดาน max_tokens สูงสุดตามสถาปัตยกรรมของ Gemini & DeepSeek API คือ 65,536
     max_tokens_val = 65536
 
     payload = {
@@ -275,44 +281,58 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         "stream": True
     }
 
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}"
-    }
-
     print(f"\n🚀 กำลังส่ง Request ไปยัง KKU IntelSphere API...")
     print(f"   🤖 Model: {model_to_use} ({ai_display_name})")
     print(f"   🎯 Target Class: {output_class_name}.java")
-    print("   ⏳ เริ่มต้นสตรีมมิงรับโค้ดแบบ Real-time...", flush=True)
+    print(f"   📦 Token Pool Size: {len(api_keys)} Tokens พร้อมระบบ Auto-Failover")
 
+    response = None
+    used_key_index = 0
+    active_key = None
     start_time = time.time()
-    try:
-        response = requests.post(
-            f"{API_BASE_URL}/chat/completions",
-            headers=headers,
-            json=payload,
-            stream=True,
-            timeout=(30, 600)
-        )
-    except Exception as e:
-        print(f"❌ เกิดข้อผิดพลาดในการเชื่อมต่อ: {e}")
-        return
 
-    if response.status_code != 200:
-        error_msg = response.text
+    # วนลูปสลับ Token อัตโนมัติ (Multi-Key Token Pool Rotation)
+    for idx, key in enumerate(api_keys):
+        used_key_index = idx + 1
+        active_key = key
+        masked_key = key[:8] + "..." + key[-4:] if len(key) > 12 else "Key"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {key}"
+        }
+        print(f"   🔑 ใช้งาน Token #{used_key_index} ({masked_key})...")
+        print("   ⏳ เริ่มต้นสตรีมมิงรับโค้ดแบบ Real-time...", flush=True)
+
         try:
-            err_json = response.json()
-            if "error" in err_json:
-                error_msg = err_json["error"]
-        except Exception:
-            pass
-        print(f"❌ API Error ({response.status_code}): {error_msg}")
-        if "reached daily limit" in str(error_msg).lower():
-            print(f"   ⚠️ โมเดล '{model_to_use}' ชนขีดจำกัดโควต้าประจำวันของระบบ KKU แล้ว (Daily Limit Reached)")
-            print(f"   💡 โควต้าของโมเดลนี้จะรีเซ็ตในวันถัดไป หรือสามารถใช้โมเดล Gemini ทำงานต่อได้ก่อน")
-        else:
-            print("💡 แนะนำ: ลองรัน `python kku_generate.py --list-models` เพื่อดู Model ID/Name ที่ถูกต้องในระบบ")
-        return
+            res = requests.post(
+                f"{API_BASE_URL}/chat/completions",
+                headers=headers,
+                json=payload,
+                stream=True,
+                timeout=(30, 600)
+            )
+            if res.status_code == 200:
+                response = res
+                break
+            elif res.status_code in [403, 429]:
+                print(f"   ⚠️ Token #{used_key_index} ชนโควตาหรือ Rate limit (HTTP {res.status_code}). สลับไปใช้ Token ถัดไปทันที...")
+                continue
+            else:
+                err_text = res.text[:200]
+                print(f"   ⚠️ Token #{used_key_index} ตอบกลับ HTTP {res.status_code}: {err_text}")
+                if "limit" in err_text.lower() or "quota" in err_text.lower():
+                    print(f"   🔄 สลับไปใช้ Token ถัดไป...")
+                    continue
+                else:
+                    response = res
+                    break
+        except Exception as e:
+            print(f"   ⚠️ เกิดข้อผิดพลาดเชื่อมต่อ Token #{used_key_index}: {e}")
+            continue
+
+    if not response or response.status_code != 200:
+        print("❌ ไม่สามารถส่ง Request สำเร็จด้วย Token ใดเลยในระบบ")
+        return False
 
     # อ่านข้อมูลแบบ Real-time Stream เพื่อป้องกัน TCP Connection Aborted / Idle Timeout
     full_content = []
@@ -320,33 +340,28 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     usage = {}
     quota = {}
     stream_error = None
-
-    print("   📡 กำลังสตรีมรับข้อมูลโค้ดจาก AI...", end="", flush=True)
     chunk_count = 0
-    for line_bytes in response.iter_lines():
-        if not line_bytes:
-            continue
-        line_str = line_bytes.decode("utf-8", errors="replace").strip()
-        if line_str.startswith("{") and ('"status":' in line_str or '"error":' in line_str):
-            try:
-                err_chunk = json.loads(line_str)
-                if err_chunk.get("status") and err_chunk.get("status") != 200:
-                    stream_error = err_chunk
-                    break
-            except Exception:
-                pass
-        if line_str.startswith("data: "):
-            json_str = line_str[6:].strip()
-            if json_str == "[DONE]":
+
+    print("   📡 กำลังสตรีมรับข้อมูลโค้ดจาก AI", end="", flush=True)
+    for line in response.iter_lines():
+        if line:
+            line_text = line.decode("utf-8")
+            if not line_text.startswith("data: "):
+                continue
+            data_str = line_text[6:].strip()
+            if data_str == "[DONE]":
                 break
             try:
-                chunk = json.loads(json_str)
+                chunk = json.loads(data_str)
+                if "error" in chunk:
+                    stream_error = chunk["error"]
+                    break
                 choices = chunk.get("choices", [])
                 if choices:
                     delta = choices[0].get("delta", {})
-                    content_piece = delta.get("content", "")
-                    if content_piece:
-                        full_content.append(content_piece)
+                    content_chunk = delta.get("content", "")
+                    if content_chunk:
+                        full_content.append(content_chunk)
                     fr = choices[0].get("finish_reason")
                     if fr:
                         finish_reason = fr
@@ -362,7 +377,7 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
 
     if stream_error:
         print(f"\n❌ Stream Error จากเซิร์ฟเวอร์: {stream_error}")
-        return
+        return False
 
     print(" เรียบร้อย!")
 
@@ -371,16 +386,16 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     java_code = extract_java_code(raw_content)
 
     if not java_code.strip():
-        print(f"❌ AI ไม่ได้ส่งเนื้อหาโค้ด Java กลับมา (Content is empty หรือถูกบล็อก)")
+        print("❌ AI ไม่ได้ส่งเนื้อหาโค้ด Java กลับมา (Content is empty หรือถูกบล็อก)")
         print(f"   ℹ️ finish_reason: {finish_reason}")
-        return
+        return False
 
     # 2. ดึงสถิติ Token และคำนวณสถิติ
     prompt_tokens = usage.get("prompt_tokens", 0)
     completion_tokens = usage.get("completion_tokens", len(raw_content) // 4)
     total_tokens = usage.get("total_tokens", prompt_tokens + completion_tokens)
-    
-    # คำนวณ Thinking / Reasoning Tokens (สำหรับโมเดลที่มี Chain-of-Thought เช่น Gemini 3.8 Flash)
+
+    # คำนวณ Thinking / Reasoning Tokens (สำหรับโมเดลที่มี Chain-of-Thought)
     reasoning_tokens = usage.get("completion_tokens_details", {}).get("reasoning_tokens", 0)
     if not reasoning_tokens and total_tokens > (prompt_tokens + completion_tokens):
         reasoning_tokens = total_tokens - (prompt_tokens + completion_tokens)
@@ -393,7 +408,9 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
     else:
         print(f"   📊 Token Usage -> Input: {prompt_tokens:,} | Output: {completion_tokens:,} | Total: {total_tokens:,}")
     if quota:
-        print(f"   💳 Quota เหลือวันนี้: {quota.get('daily_remaining_tokens', 'N/A')} tokens")
+        rem = quota.get('daily_remaining_tokens', 'N/A')
+        rem_str = f"{rem:,}" if isinstance(rem, int) else str(rem)
+        print(f"   💳 Quota เหลือวันนี้ (Token #{used_key_index}): {rem_str} tokens")
 
     # 3. บันทึกไฟล์ TestCode
     testcode_dir = os.path.join(PROJECT_ROOT, tool_dir, "TestCode")
@@ -425,27 +442,34 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         f.write(f"# 📊 สถิติการใช้งาน AI: {ai_display_name}\n\n")
         f.write(f"* **วัน-เวลาที่ทดลอง:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"* **โมเดลที่ใช้:** `{model_to_use}`\n")
-        f.write(f"* **คลาสเป้าหมาย:** `{package_name}.{base_class}`\n\n")
-        f.write(f"### 1. ข้อมูลประสิทธิภาพ (Empirical Metrics from KKU IntelSphere API)\n")
-        f.write(f"| พารามิเตอร์ | ค่าที่วัดได้จริง | แหล่งที่มาของข้อมูล |\n")
-        f.write(f"| :--- | :---: | :--- |\n")
+        f.write(f"* **คลาสเป้าหมาย:** `{package_name}.{base_class}`\n")
+        f.write(f"* **Token Slot:** Token #{used_key_index}\n\n")
+        f.write("### 1. ข้อมูลประสิทธิภาพ (Empirical Metrics from KKU IntelSphere API)\n")
+        f.write("| พารามิเตอร์ | ค่าที่วัดได้จริง | แหล่งที่มาของข้อมูล |\n")
+        f.write("| :--- | :---: | :--- |\n")
         f.write(f"| **เวลาที่ใช้สร้าง (Generation Time)** | **{elapsed_time} วินาที** | จับเวลาผ่าน Python System Clock |\n")
         f.write(f"| **Input Tokens (Prompt + Source Code)** | **{prompt_tokens:,} tokens** | คืนค่าจาก API (`usage.prompt_tokens`) |\n")
         f.write(f"| **Output Tokens (Generated Test Code)** | **{completion_tokens:,} tokens** | คืนค่าจาก API (`usage.completion_tokens`) |\n")
         if reasoning_tokens > 0:
             f.write(f"| **Reasoning / Thinking Tokens (CoT)** | **{reasoning_tokens:,} tokens** | คำนวณจากกระบวนการคิดวิเคราะห์ภายใน (`total - (input + output)`) |\n")
         f.write(f"| **Total Tokens** | **{total_tokens:,} tokens** | คืนค่าจาก API (`usage.total_tokens`) |\n")
-        f.write(f"| **สถานะการสร้าง** | **สำเร็จ (Code Extracted)** | สกัดบล็อก JUnit 4 เรียบร้อย |\n\n")
+        f.write("| **สถานะการสร้าง** | **สำเร็จ (Code Extracted)** | สกัดบล็อก JUnit 4 เรียบร้อย |\n\n")
         if reasoning_tokens > 0:
             f.write(f"> 💡 **หมายเหตุทางวิชาการ (Token Economics):** โมเดล `{model_to_use}` มีกระบวนการให้เหตุผลภายใน (Internal Chain-of-Thought / Reasoning Process) โดยคิดวิเคราะห์ Boundary Condition เชิงลึกก่อนสร้างโค้ดทดสอบ ทำให้ Total Tokens รวมค่า Thinking Tokens ด้วย\n\n")
         if quota:
-            f.write(f"> **Token Quota ประจำวัน:** ใช้ไปแล้ว {quota.get('daily_usage_tokens', 0):,} / {quota.get('daily_quota_tokens', 0):,} tokens\n")
+            u = quota.get('daily_usage_tokens', 0)
+            q = quota.get('daily_quota_tokens', 0)
+            r = quota.get('daily_remaining_tokens', 0)
+            u_str = f"{u:,}" if isinstance(u, int) else str(u)
+            q_str = f"{q:,}" if isinstance(q, int) else str(q)
+            r_str = f"{r:,}" if isinstance(r, int) else str(r)
+            f.write(f"> **Token Quota ประจำวัน (Token #{used_key_index}):** ใช้ไปแล้ว {u_str} / {q_str} tokens (เหลือ {r_str} tokens)\n")
     print(f"   📊 บันทึกตารางสถิติเรียบร้อยที่: {metrics_path}")
 
-    # 6. บันทึกสถิติรวมลงใน results/Claude_vs_Gemini_Economics.csv ตามระเบียบวิธีวิจัยบทที่ 3
+    # 6. บันทึกสถิติรวมลงใน results/Deepseek_vs_Gemini_Economics.csv ตามระเบียบวิธีวิจัยบทที่ 3
     results_dir = os.path.join(PROJECT_ROOT, "results")
     os.makedirs(results_dir, exist_ok=True)
-    economics_csv = os.path.join(results_dir, "Claude_vs_Gemini_Economics.csv")
+    economics_csv = os.path.join(results_dir, "Deepseek_vs_Gemini_Economics.csv")
 
     folder_name = os.path.basename(os.path.dirname(os.path.abspath(source_file)))
     proj_name = "Unknown"
@@ -477,21 +501,22 @@ Before writing the Java test methods, include an in-line Javadoc/block comment a
         print(f"   ⚠️ ไม่สามารถบันทึก economics CSV: {e}")
 
     print("\n🎉 ทำงานเสร็จสมบูรณ์ 100%! Member 4 สามารถรัน `evaluate_all.sh` ต่อได้เลย")
+    return True
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="KKU IntelSphere API Test Generator")
     parser.add_argument("--list-models", action="store_true", help="แสดงรายชื่อโมเดลทั้งหมดในระบบ KKU API")
-    parser.add_argument("--ai", choices=["claude", "gemini"], help="เลือก AI ที่ต้องการสร้าง (claude หรือ gemini)")
+    parser.add_argument("--ai", choices=["deepseek", "gemini", "claude"], help="เลือก AI ที่ต้องการสร้าง (deepseek หรือ gemini)")
     parser.add_argument("--model-id", type=str, help="ระบุ Model ID หรือ Model Name เจาะจง")
     parser.add_argument("--source-file", type=str, help="ระบุที่อยู่ไฟล์ Java ซอร์สโค้ดเป้าหมาย")
     parser.add_argument("--project", type=str, help="ชื่อโปรเจกต์ เช่น Lang, Math, Csv")
     parser.add_argument("--bug", type=int, help="รหัสบั๊ก เช่น 1, 2, 25")
     args = parser.parse_args()
 
-    api_key = get_api_key()
+    api_keys = get_api_keys()
 
     if args.list_models:
-        list_available_models(api_key)
+        list_available_models(api_keys[0])
     elif args.ai:
         source = args.source_file
         if not source and args.project and args.bug:
@@ -506,11 +531,10 @@ if __name__ == "__main__":
                 print(f"💡 กรุณารัน: python scripts/extract_target_classes.py --project {args.project} --bug {args.bug} ก่อน")
                 sys.exit(1)
 
-        run_test_generation(args.ai, api_key, args.model_id, source)
+        run_test_generation(args.ai, api_keys, args.model_id, source)
     else:
         print("\nตัวอย่างการใช้งาน:")
         print("  1. ดูรายชื่อโมเดล: python scripts/kku_generate.py --list-models")
-        print("  2. เจนเทสด้วยระบุโปรเจกต์และบั๊ก: python scripts/kku_generate.py --ai gemini --project Lang --bug 1")
-        print("  3. เจนเทสด้วย Claude: python scripts/kku_generate.py --ai claude --project Math --bug 2")
-        print("  4. ระบุไฟล์ซอร์สโค้ดโดยตรง: python scripts/kku_generate.py --ai gemini --source-file target_benchmark/Lang_1b/NumberUtils.java")
-        print("  5. ระบุโมเดลเฉพาะ:  python scripts/kku_generate.py --ai claude --model-id 1\n")
+        print("  2. เจนเทสด้วย DeepSeek V4 Flash: python scripts/kku_generate.py --ai deepseek --source-file target_benchmark/Lang_1b/NumberUtils.java")
+        print("  3. เจนเทสด้วย Gemini 3.8 Flash: python scripts/kku_generate.py --ai gemini --source-file target_benchmark/Lang_1b/NumberUtils.java")
+        print("  4. ระบุโปรเจกต์และบั๊ก: python scripts/kku_generate.py --ai deepseek --project Math --bug 2\n")

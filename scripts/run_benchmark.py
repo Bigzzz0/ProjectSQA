@@ -65,14 +65,16 @@ REPRESENTATIVE_17 = [
 TECHNIQUE_DIRS = {
     "ipo": os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "TestCode"),
     "mio": os.path.join(PROJECT_ROOT, "MIO_Algorithm", "TestCode"),
-    "claude": os.path.join(PROJECT_ROOT, "Claude-sonnet_5", "TestCode"),
+    "deepseek": os.path.join(PROJECT_ROOT, "Deepseek-v4_flash", "TestCode"),
+    "claude": os.path.join(PROJECT_ROOT, "Deepseek-v4_flash", "TestCode"),
     "gemini": os.path.join(PROJECT_ROOT, "Gemini-3_8_flash", "TestCode")
 }
 
 TECHNIQUE_NAMES = {
     "ipo": "IPO (Microsoft PICT)",
     "mio": "MIO (EvoSuite SBST)",
-    "claude": "Claude Sonnet 5",
+    "deepseek": "DeepSeek V4 Flash",
+    "claude": "DeepSeek V4 Flash",
     "gemini": "Gemini 3.8 Flash"
 }
 
