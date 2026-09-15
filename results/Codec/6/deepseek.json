@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 100.0,
+  "branch_cov": 96.43,
+  "test_file": "Base64InputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64InputStream",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testReadWithLargeBuffer",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testEncodeSimpleString",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testReadWithOffsetAndLength",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testLargeDataStream",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testEncodeDecodeRoundTrip"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testReadWithLargeBuffer",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testEncodeSimpleString",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testReadWithOffsetAndLength",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testLargeDataStream",
+    "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testEncodeDecodeRoundTrip"
+  ]
+}

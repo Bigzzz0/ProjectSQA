@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 90.12,
+  "branch_cov": 83.33,
+  "test_file": "QuotedPrintableCodecDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+  "buggy_failures": [
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSoftLineBreakDecode",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSoftLineBreakEncode",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testUltimateSoftBreak",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testTrailingSpecial",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testStaticDecodeQuotedPrintableWithCRLFSoftBreak"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeEmptyByteArray",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testStaticEncodeQuotedPrintableCustomPrintable",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testStaticEncodeQuotedPrintableNullPrintable",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSkipNotEncodedCRLF",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeByteArraySignedConversion",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeByteArrayNormal"
+  ]
+}

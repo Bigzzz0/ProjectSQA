@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 97.44,
+  "branch_cov": 100.0,
+  "test_file": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testNewStringNullInput_CODEC229",
+    "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testEqualsRegionMatchesDifferentLength"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testEqualsRegionMatchesDifferentLength"
+  ]
+}

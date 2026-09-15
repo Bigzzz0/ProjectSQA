@@ -1,0 +1,39 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 91.77,
+  "branch_cov": 82.91,
+  "test_file": "Base64DeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64URLSafeStringNull",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testDecodeNullReturnsEmptyArray",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testCodec98NPE",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticDecodeBase64Null",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeNullReturnsEmptyArray",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64Null",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testResetClearsState",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64URLSafeNull",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testHasDataAndAvail",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testToIntegerBytesNegative",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeURLSafeModulus1",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64StringNull",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeMultipleCalls"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64URLSafeStringNull",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testDecodeNullReturnsEmptyArray",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testCodec98NPE",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticDecodeBase64Null",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeNullReturnsEmptyArray",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64Null",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testResetClearsState",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64URLSafeNull",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testHasDataAndAvail",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testToIntegerBytesNegative",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeURLSafeModulus1",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64StringNull",
+    "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeMultipleCalls"
+  ]
+}

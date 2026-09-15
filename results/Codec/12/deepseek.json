@@ -1,0 +1,29 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 96.77,
+  "branch_cov": 92.31,
+  "test_file": "BaseNCodecInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.BaseNCodecInputStream",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipEncodeMode",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipToEnd",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayEncodeBase64",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testAvailable",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testCodec130Base32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipPastEnd",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipNegativeArgument",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadSingleByteDecodeBase32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipBig",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayDecodeBase32"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipEncodeMode",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayEncodeBase64",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testAvailable",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testCodec130Base32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadSingleByteDecodeBase32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayDecodeBase32"
+  ]
+}
