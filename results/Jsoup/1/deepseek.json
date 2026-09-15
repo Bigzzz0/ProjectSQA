@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "DocumentDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentDeepseekTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentDeepseekTest::testNormalise_MultipleTextNodesOrder"
+  ]
+}

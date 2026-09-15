@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 24.1,
+  "branch_cov": 14.42,
+  "test_file": "JacksonDatabind_1b_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_001",
+    "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_002",
+    "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_003",
+    "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_004"
+  ],
+  "fixed_failures": []
+}

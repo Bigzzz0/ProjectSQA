@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 93.43,
+  "branch_cov": 93.65,
+  "test_file": "IteratorUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.collections4.IteratorUtils",
+  "buggy_failures": [
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testCollatedIterator_NullComparator_NaturalOrder_COLLECTIONS566",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testLoopingIterators",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPushbackIteratorNull",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testAsIteratorAndAsEnumeration",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPeekingIteratorNull"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testLoopingIterators",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPushbackIteratorNull",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testAsIteratorAndAsEnumeration",
+    "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPeekingIteratorNull"
+  ]
+}

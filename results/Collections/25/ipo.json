@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 6.1,
+  "branch_cov": 3.17,
+  "test_file": "Collections_25b_IPOTest.java",
+  "target_classes": "org.apache.commons.collections4.IteratorUtils",
+  "buggy_failures": [
+    "org.apache.commons.collections4.Collections_25b_IPOTest::test_collated_iterator_001"
+  ],
+  "fixed_failures": []
+}

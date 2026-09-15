@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 5,
+  "line_cov": 18.75,
+  "branch_cov": 22.73,
+  "test_file": "Gson_1b_IPOTest.java",
+  "target_classes": "com.google.gson.TypeInfoFactory",
+  "buggy_failures": [
+    "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_001",
+    "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_002",
+    "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_003",
+    "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_004",
+    "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_005"
+  ],
+  "fixed_failures": []
+}

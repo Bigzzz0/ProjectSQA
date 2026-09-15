@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "Cli_1b_IPOTest.java",
+  "target_classes": "org.apache.commons.cli.CommandLine",
+  "buggy_failures": [
+    "org.apache.commons.cli.Cli_1b_IPOTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.Cli_1b_IPOTest"
+  ]
+}

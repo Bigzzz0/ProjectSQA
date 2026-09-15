@@ -1,10 +1,19 @@
 {
   "status": "DONE",
-  "fault_detected": "\u274c NO (All passed on buggy)",
-  "line_cov": 23.2,
-  "branch_cov": 16.27,
-  "test_file": "NumberUtils_IPOTest.java",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 7,
+  "line_cov": 32.27,
+  "branch_cov": 23.96,
+  "test_file": "Lang_1b_IPOTest.java;NumberUtils_createNumber__String_IPOTest.java;NumberUtils_min__int_int_int_IPOTest.java;NumberUtils_IPOTest.java",
   "target_classes": "org.apache.commons.lang3.math.NumberUtils",
-  "buggy_failures": [],
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_003",
+    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_005",
+    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_008",
+    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_009",
+    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_010",
+    "org.apache.commons.lang3.math.NumberUtils_IPOTest::test_createNumber_pairwise_001",
+    "org.apache.commons.lang3.math.NumberUtils_createNumber__String_IPOTest::test_createNumber_pairwise_019"
+  ],
   "fixed_failures": []
 }

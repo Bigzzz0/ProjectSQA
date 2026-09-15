@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 13.62,
+  "branch_cov": 15.25,
+  "test_file": "Time_1b_IPOTest.java",
+  "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+  "buggy_failures": [
+    "org.joda.time.Time_1b_IPOTest::test_partial_field_order_003",
+    "org.joda.time.Time_1b_IPOTest::test_partial_field_order_004"
+  ],
+  "fixed_failures": []
+}

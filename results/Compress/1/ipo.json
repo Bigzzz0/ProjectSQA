@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 58.54,
+  "branch_cov": 38.98,
+  "test_file": "Compress_1b_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.cpio.Compress_1b_IPOTest::test_close_finishes_archive_001",
+    "org.apache.commons.compress.archivers.cpio.Compress_1b_IPOTest::test_close_finishes_archive_004",
+    "org.apache.commons.compress.archivers.cpio.Compress_1b_IPOTest::test_close_finishes_archive_005"
+  ],
+  "fixed_failures": []
+}

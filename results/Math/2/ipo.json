@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 6,
+  "line_cov": 24.32,
+  "branch_cov": 19.23,
+  "test_file": "Math_2b_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+  "buggy_failures": [
+    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_004",
+    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_005",
+    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_007",
+    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_010",
+    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_011",
+    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_012"
+  ],
+  "fixed_failures": []
+}

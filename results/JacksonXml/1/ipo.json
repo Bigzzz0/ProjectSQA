@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 29.93,
+  "branch_cov": 21.77,
+  "test_file": "JacksonXml_1b_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_001",
+    "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_002",
+    "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_003",
+    "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_004"
+  ],
+  "fixed_failures": []
+}

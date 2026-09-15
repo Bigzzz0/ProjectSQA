@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "DocumentGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentGeminiTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23",
+    "org.jsoup.nodes.DocumentGeminiTest::testNormaliseTextOrderingWhenLeadingTextOutsideBody"
+  ],
+  "fixed_failures": []
+}

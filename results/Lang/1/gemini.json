@@ -1,12 +1,16 @@
 {
   "status": "DONE",
-  "fault_detected": "\u2705 YES (1 Defects Triggered)",
-  "line_cov": 98.67,
-  "branch_cov": 93.79,
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 92.53,
+  "branch_cov": 75.15,
   "test_file": "NumberUtilsGeminiTest.java",
   "target_classes": "org.apache.commons.lang3.math.NumberUtils",
   "buggy_failures": [
-    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testLang747_Hex32BitOverflowDefect"
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumber",
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testLang747ExposeOverflowInHex"
   ],
-  "fixed_failures": []
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumber"
+  ]
 }

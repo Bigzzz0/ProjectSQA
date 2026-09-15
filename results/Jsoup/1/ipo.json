@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 52.17,
+  "branch_cov": 55.56,
+  "test_file": "Jsoup_1b_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "buggy_failures": [
+    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_001",
+    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_002",
+    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_003",
+    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_004"
+  ],
+  "fixed_failures": []
+}

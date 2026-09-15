@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "TypeInfoFactoryGeminiTest.java",
+  "target_classes": "com.google.gson.TypeInfoFactory",
+  "buggy_failures": [
+    "com.google.gson.TypeInfoFactoryGeminiTest::testGetTypeInfoForField_SubclassInheritedTypeVariable_GSON40",
+    "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
+  ],
+  "fixed_failures": [
+    "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
+  ]
+}

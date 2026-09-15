@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 94.36,
+  "branch_cov": 78.95,
+  "test_file": "RemoveUnusedVarsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral",
+    "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testClosure1_DoNotRemoveFunctionArgsWhenNotRemovingGlobals"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral"
+  ]
+}

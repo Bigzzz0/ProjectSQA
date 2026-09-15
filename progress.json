@@ -1,48 +1,943 @@
 {
   "Lang-1-ipo": {
     "status": "DONE",
-    "fault_detected": "NOT_DETECTED",
-    "failures_count": 0,
-    "line_cov": 23.2,
-    "branch_cov": 16.27,
-    "test_file": "NumberUtils_IPOTest.java",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 7,
+    "line_cov": 32.27,
+    "branch_cov": 23.96,
+    "test_file": "Lang_1b_IPOTest.java;NumberUtils_createNumber__String_IPOTest.java;NumberUtils_min__int_int_int_IPOTest.java;NumberUtils_IPOTest.java",
     "target_classes": "org.apache.commons.lang3.math.NumberUtils",
-    "buggy_failures": [],
+    "buggy_failures": [
+      "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_003",
+      "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_005",
+      "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_008",
+      "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_009",
+      "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_010",
+      "org.apache.commons.lang3.math.NumberUtils_IPOTest::test_createNumber_pairwise_001",
+      "org.apache.commons.lang3.math.NumberUtils_createNumber__String_IPOTest::test_createNumber_pairwise_019"
+    ],
     "fixed_failures": []
   },
   "Lang-1-mio": {
-    "status": "DONE",
-    "fault_detected": "NOT_DETECTED",
-    "failures_count": 0,
-    "line_cov": 22.67,
-    "branch_cov": 14.2,
-    "test_file": "NumberUtils_ESTest.java",
-    "target_classes": "org.apache.commons.lang3.math.NumberUtils",
-    "buggy_failures": [],
-    "fixed_failures": []
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
   },
-  "Lang-1-claude": {
+  "Lang-1-deepseek": {
     "status": "DONE",
-    "fault_detected": "NOT_DETECTED",
-    "failures_count": 0,
-    "line_cov": 64.8,
-    "branch_cov": 56.8,
-    "test_file": "NumberUtilsClaudeTest.java",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 8,
+    "line_cov": 68.27,
+    "branch_cov": 51.78,
+    "test_file": "NumberUtilsDeepseekTest.java",
     "target_classes": "org.apache.commons.lang3.math.NumberUtils",
-    "buggy_failures": [],
-    "fixed_failures": []
+    "buggy_failures": [
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberMultipleSigns",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testLang747",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientificWithoutDecimal",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testHex8DigitsNegative",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZerosAsOctal",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientific",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberHexExactly8Digits",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberTrailingDot"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberMultipleSigns",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientificWithoutDecimal",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZerosAsOctal",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientific",
+      "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberTrailingDot"
+    ]
   },
   "Lang-1-gemini": {
     "status": "DONE",
-    "fault_detected": "BUG_DETECTED",
-    "failures_count": 1,
-    "line_cov": 98.67,
-    "branch_cov": 93.79,
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 92.53,
+    "branch_cov": 75.15,
     "test_file": "NumberUtilsGeminiTest.java",
     "target_classes": "org.apache.commons.lang3.math.NumberUtils",
     "buggy_failures": [
-      "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testLang747_Hex32BitOverflowDefect"
+      "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumber",
+      "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testLang747ExposeOverflowInHex"
     ],
+    "fixed_failures": [
+      "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumber"
+    ]
+  },
+  "Chart-1-ipo": {
+    "status": "CHECKOUT_ERROR",
+    "fault_detected": "NO",
+    "line_cov": 0.0,
+    "branch_cov": 0.0
+  },
+  "Chart-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-1-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-1-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Cli-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Cli_1b_IPOTest.java",
+    "target_classes": "org.apache.commons.cli.CommandLine",
+    "buggy_failures": [
+      "org.apache.commons.cli.Cli_1b_IPOTest"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.cli.Cli_1b_IPOTest"
+    ]
+  },
+  "Cli-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Cli-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CommandLineDeepseekTest.java",
+    "target_classes": "org.apache.commons.cli.CommandLine",
+    "buggy_failures": [
+      "org.apache.commons.cli.CommandLineDeepseekTest"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.cli.CommandLineDeepseekTest"
+    ]
+  },
+  "Cli-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CommandLineGeminiTest.java",
+    "target_classes": "org.apache.commons.cli.CommandLine",
+    "buggy_failures": [
+      "org.apache.commons.cli.CommandLineGeminiTest"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.cli.CommandLineGeminiTest"
+    ]
+  },
+  "Closure-1-ipo": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Closure_1b_IPOTest.java",
+    "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Closure-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "RemoveUnusedVarsDeepseekTest.java",
+    "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Closure-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 94.36,
+    "branch_cov": 78.95,
+    "test_file": "RemoveUnusedVarsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral",
+      "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testClosure1_DoNotRemoveFunctionArgsWhenNotRemovingGlobals"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral"
+    ]
+  },
+  "Codec-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 31.64,
+    "branch_cov": 5.98,
+    "test_file": "Codec_1b_IPOTest.java",
+    "target_classes": "org.apache.commons.codec.language.Caverphone;org.apache.commons.codec.language.Metaphone;org.apache.commons.codec.language.SoundexUtils",
+    "buggy_failures": [
+      "org.apache.commons.codec.language.Codec_1b_IPOTest::test_locale_independent_encoding_006",
+      "org.apache.commons.codec.language.Codec_1b_IPOTest::test_locale_independent_encoding_007"
+    ],
+    "fixed_failures": []
+  },
+  "Codec-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Codec-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 38,
+    "line_cov": 92.19,
+    "branch_cov": 83.15,
+    "test_file": "CaverphoneDeepseekTest.java;MetaphoneDeepseekTest.java;SoundexUtilsDeepseekTest.java",
+    "target_classes": "org.apache.commons.codec.language.Caverphone;org.apache.commons.codec.language.Metaphone;org.apache.commons.codec.language.SoundexUtils",
+    "buggy_failures": [
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_CEReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_InternalY",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testLocaleIndependence_Turkish",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_LReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_3GH3Replacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_LongString",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_RReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_WReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_Final3",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalE",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalL",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalR",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalW",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testSpecialCharacters",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testCHBeginningConsonant",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testDuplicateC",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testCombinations",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testRepeatedPatterns",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testEncodeObjectNull",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testVWYBeforeVowel",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testHEnd",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testDT",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testOnlyVowels",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testWhitespace",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testCHNotBeginning",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testLocaleIndependence_Turkish",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testX",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testZ",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testInitialWH",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testSilentLetters",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testOnlyConsonants",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testHAfterCSPTG",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testComplexWords",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testInitialX",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testIsMetaphoneEqualTrue",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testVWYNotBeforeVowel",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testNumbers",
+      "org.apache.commons.codec.language.SoundexUtilsDeepseekTest::testCleanLocaleIndependence_Turkish"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_CEReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_InternalY",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_LReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_3GH3Replacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_LongString",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_RReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_WReplacement",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_Final3",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalE",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalL",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalR",
+      "org.apache.commons.codec.language.CaverphoneDeepseekTest::testCaverphone_FinalW",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testSpecialCharacters",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testCHBeginningConsonant",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testDuplicateC",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testCombinations",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testRepeatedPatterns",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testEncodeObjectNull",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testVWYBeforeVowel",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testHEnd",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testDT",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testOnlyVowels",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testWhitespace",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testCHNotBeginning",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testX",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testZ",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testInitialWH",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testSilentLetters",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testOnlyConsonants",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testHAfterCSPTG",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testComplexWords",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testInitialX",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testIsMetaphoneEqualTrue",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testVWYNotBeforeVowel",
+      "org.apache.commons.codec.language.MetaphoneDeepseekTest::testNumbers"
+    ]
+  },
+  "Codec-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 21,
+    "line_cov": 94.14,
+    "branch_cov": 83.15,
+    "test_file": "CaverphoneGeminiTest.java;MetaphoneGeminiTest.java;SoundexUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.language.Caverphone;org.apache.commons.codec.language.Metaphone;org.apache.commons.codec.language.SoundexUtils",
+    "buggy_failures": [
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testKnownCanonicalWords",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndGReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testDigraphAndConsonantReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testLocaleIndependence_Turkish",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testIsCaverphoneEqualSymmetryAndLogic",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testLocaleIndependence_Azerbaijani",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testWHLRReplacements",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testMaxCodeLengthLimits",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testDTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testTTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testCTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testSTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testBTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testLocaleIndependence_Turkish",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testWYTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testHTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testPTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testGTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testInitialPrefixTransformations",
+      "org.apache.commons.codec.language.SoundexUtilsGeminiTest::testCleanLocaleIndependence_Turkish"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testKnownCanonicalWords",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndGReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testDigraphAndConsonantReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testIsCaverphoneEqualSymmetryAndLogic",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testWHLRReplacements",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testMaxCodeLengthLimits",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testDTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testTTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testCTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testSTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testBTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testWYTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testHTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testPTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testGTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testInitialPrefixTransformations"
+    ]
+  },
+  "Collections-25-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 6.1,
+    "branch_cov": 3.17,
+    "test_file": "Collections_25b_IPOTest.java",
+    "target_classes": "org.apache.commons.collections4.IteratorUtils",
+    "buggy_failures": [
+      "org.apache.commons.collections4.Collections_25b_IPOTest::test_collated_iterator_001"
+    ],
+    "fixed_failures": []
+  },
+  "Collections-25-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-25-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "IteratorUtilsDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.IteratorUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-25-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 93.43,
+    "branch_cov": 93.65,
+    "test_file": "IteratorUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.collections4.IteratorUtils",
+    "buggy_failures": [
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testCollatedIterator_NullComparator_NaturalOrder_COLLECTIONS566",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testLoopingIterators",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPushbackIteratorNull",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testAsIteratorAndAsEnumeration",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPeekingIteratorNull"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testLoopingIterators",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPushbackIteratorNull",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testAsIteratorAndAsEnumeration",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPeekingIteratorNull"
+    ]
+  },
+  "Compress-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 3,
+    "line_cov": 58.54,
+    "branch_cov": 38.98,
+    "test_file": "Compress_1b_IPOTest.java",
+    "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+    "buggy_failures": [
+      "org.apache.commons.compress.archivers.cpio.Compress_1b_IPOTest::test_close_finishes_archive_001",
+      "org.apache.commons.compress.archivers.cpio.Compress_1b_IPOTest::test_close_finishes_archive_004",
+      "org.apache.commons.compress.archivers.cpio.Compress_1b_IPOTest::test_close_finishes_archive_005"
+    ],
+    "fixed_failures": []
+  },
+  "Compress-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Compress-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CpioArchiveOutputStreamDeepseekTest.java",
+    "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Compress-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CpioArchiveOutputStreamGeminiTest.java",
+    "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 45.95,
+    "branch_cov": 22.73,
+    "test_file": "Csv_1b_IPOTest.java",
+    "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+    "buggy_failures": [
+      "org.apache.commons.csv.Csv_1b_IPOTest::test_line_counter_001",
+      "org.apache.commons.csv.Csv_1b_IPOTest::test_line_counter_007"
+    ],
+    "fixed_failures": []
+  },
+  "Csv-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Csv-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedBufferedReaderDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 95.45,
+    "test_file": "ExtendedBufferedReaderGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+    "buggy_failures": [
+      "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCRLF_CSV75",
+      "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCarriageReturn_CSV75"
+    ],
+    "fixed_failures": []
+  },
+  "Gson-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 5,
+    "line_cov": 18.75,
+    "branch_cov": 22.73,
+    "test_file": "Gson_1b_IPOTest.java",
+    "target_classes": "com.google.gson.TypeInfoFactory",
+    "buggy_failures": [
+      "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_001",
+      "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_002",
+      "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_003",
+      "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_004",
+      "com.google.gson.Gson_1b_IPOTest::test_inherited_type_variables_005"
+    ],
+    "fixed_failures": []
+  },
+  "Gson-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Gson-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 9,
+    "line_cov": 89.58,
+    "branch_cov": 81.82,
+    "test_file": "TypeInfoFactoryDeepseekTest.java",
+    "target_classes": "com.google.gson.TypeInfoFactory",
+    "buggy_failures": [
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardWithUpperBound",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_TypeVariableInListOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_SubclassInheritedTypeVariable_GSON40",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForArray_NullType",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardField",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_GenericArrayOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_MultipleTypeVariablesOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_MapWithTypeVariableOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_NullTypeDefiningF"
+    ],
+    "fixed_failures": [
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardWithUpperBound",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForArray_NullType",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardField",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_NullTypeDefiningF"
+    ]
+  },
+  "Gson-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "TypeInfoFactoryGeminiTest.java",
+    "target_classes": "com.google.gson.TypeInfoFactory",
+    "buggy_failures": [
+      "com.google.gson.TypeInfoFactoryGeminiTest::testGetTypeInfoForField_SubclassInheritedTypeVariable_GSON40",
+      "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
+    ],
+    "fixed_failures": [
+      "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
+    ]
+  },
+  "JacksonCore-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 7,
+    "line_cov": 16.83,
+    "branch_cov": 10.92,
+    "test_file": "JacksonCore_1b_IPOTest.java;NumberInput_inLongRange__String_boolean_IPOTest.java;NumberInput_parseAsDouble__String_double_IPOTest.java",
+    "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
+    "buggy_failures": [
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_001",
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_002",
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_003",
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_004",
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_005",
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_006",
+      "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_007"
+    ],
+    "fixed_failures": []
+  },
+  "JacksonCore-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "JacksonCore-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 11,
+    "line_cov": 81.91,
+    "branch_cov": 68.91,
+    "test_file": "NumberInputDeepseekTest.java;TextBufferDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
+    "buggy_failures": [
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseAsLong_Overflow",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseBigDecimal_NegativeInfinity_DescriptiveMessage_Issue98",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_WithWhitespace",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseBigDecimalCharArray_NaN_DescriptiveMessage_Issue98",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseBigDecimal_NaN_DescriptiveMessage_Issue98",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseAsInt_Overflow",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_SignOnly",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseBigDecimal_Infinity_DescriptiveMessage_Issue98",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_NonDigitCharacters",
+      "com.fasterxml.jackson.core.util.TextBufferDeepseekTest::testFinishCurrentSegment",
+      "com.fasterxml.jackson.core.util.TextBufferDeepseekTest::testContentsAsDecimalWithNaN"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseAsLong_Overflow",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_WithWhitespace",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseAsInt_Overflow",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_SignOnly",
+      "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_NonDigitCharacters",
+      "com.fasterxml.jackson.core.util.TextBufferDeepseekTest::testFinishCurrentSegment"
+    ]
+  },
+  "JacksonCore-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 95.98,
+    "branch_cov": 87.39,
+    "test_file": "NumberInputGeminiTest.java;TextBufferGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
+    "buggy_failures": [
+      "com.fasterxml.jackson.core.io.NumberInputGeminiTest::testParseBigDecimal_NaN_DescriptiveMessage_Issue98",
+      "com.fasterxml.jackson.core.io.NumberInputGeminiTest::testParseBigDecimal_Infinities_DescriptiveMessage_Issue98",
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testManualSegmentManipulation",
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimal_NegativeInfinity_DescriptiveMessage",
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testInitializationAndReleaseWithRecycler",
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimal_Infinity_DescriptiveMessage",
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimal_NaN_DescriptiveMessage_Issue98"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testManualSegmentManipulation",
+      "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testInitializationAndReleaseWithRecycler"
+    ]
+  },
+  "JacksonDatabind-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 24.1,
+    "branch_cov": 14.42,
+    "test_file": "JacksonDatabind_1b_IPOTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_001",
+      "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_002",
+      "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_003",
+      "com.fasterxml.jackson.databind.ser.JacksonDatabind_1b_IPOTest::test_null_array_column_004"
+    ],
+    "fixed_failures": []
+  },
+  "JacksonDatabind-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "JacksonDatabind-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanPropertyWriterDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonDatabind-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanPropertyWriterGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 29.93,
+    "branch_cov": 21.77,
+    "test_file": "JacksonXml_1b_IPOTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_001",
+      "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_002",
+      "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_003",
+      "com.fasterxml.jackson.dataformat.xml.deser.JacksonXml_1b_IPOTest::test_nested_unwrapped_empty_list_004"
+    ],
+    "fixed_failures": []
+  },
+  "JacksonXml-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "JacksonXml-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FromXmlParserDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 70.41,
+    "branch_cov": 62.59,
+    "test_file": "FromXmlParserGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
+    ]
+  },
+  "Jsoup-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 52.17,
+    "branch_cov": 55.56,
+    "test_file": "Jsoup_1b_IPOTest.java",
+    "target_classes": "org.jsoup.nodes.Document",
+    "buggy_failures": [
+      "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_001",
+      "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_002",
+      "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_003",
+      "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_004"
+    ],
+    "fixed_failures": []
+  },
+  "Jsoup-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Jsoup-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "DocumentDeepseekTest.java",
+    "target_classes": "org.jsoup.nodes.Document",
+    "buggy_failures": [
+      "org.jsoup.nodes.DocumentDeepseekTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23"
+    ],
+    "fixed_failures": [
+      "org.jsoup.nodes.DocumentDeepseekTest::testNormalise_MultipleTextNodesOrder"
+    ]
+  },
+  "Jsoup-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "DocumentGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Document",
+    "buggy_failures": [
+      "org.jsoup.nodes.DocumentGeminiTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23",
+      "org.jsoup.nodes.DocumentGeminiTest::testNormaliseTextOrderingWhenLeadingTextOutsideBody"
+    ],
+    "fixed_failures": []
+  },
+  "JxPath-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 11.25,
+    "branch_cov": 6.12,
+    "test_file": "JxPath_1b_IPOTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "JxPath-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java;JDOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Math-2-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 6,
+    "line_cov": 24.32,
+    "branch_cov": 19.23,
+    "test_file": "Math_2b_IPOTest.java",
+    "target_classes": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+    "buggy_failures": [
+      "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_004",
+      "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_005",
+      "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_007",
+      "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_010",
+      "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_011",
+      "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_012"
+    ],
+    "fixed_failures": []
+  },
+  "Math-2-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Math-2-deepseek": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "HypergeometricDistributionDeepseekTest.java",
+    "target_classes": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+    "buggy_failures": [
+      "org.apache.commons.math3.distribution.HypergeometricDistributionDeepseekTest::testMath1021_IntegerOverflowInNumericalMean"
+    ],
+    "fixed_failures": []
+  },
+  "Math-2-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "HypergeometricDistributionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+    "buggy_failures": [
+      "org.apache.commons.math3.distribution.HypergeometricDistributionGeminiTest::testMath1021_IntegerOverflowInNumericalMean"
+    ],
+    "fixed_failures": []
+  },
+  "Mockito-1-ipo": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Mockito_1b_IPOTest.java",
+    "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Mockito-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Mockito-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "InvocationMatcherDeepseekTest.java",
+    "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Mockito-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "InvocationMatcherGeminiTest.java",
+    "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-1-ipo": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 13.62,
+    "branch_cov": 15.25,
+    "test_file": "Time_1b_IPOTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [
+      "org.joda.time.Time_1b_IPOTest::test_partial_field_order_003",
+      "org.joda.time.Time_1b_IPOTest::test_partial_field_order_004"
+    ],
+    "fixed_failures": []
+  },
+  "Time-1-mio": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialDeepseekTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialGeminiTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [],
     "fixed_failures": []
   }
 }

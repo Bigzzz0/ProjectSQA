@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 45.95,
+  "branch_cov": 22.73,
+  "test_file": "Csv_1b_IPOTest.java",
+  "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+  "buggy_failures": [
+    "org.apache.commons.csv.Csv_1b_IPOTest::test_line_counter_001",
+    "org.apache.commons.csv.Csv_1b_IPOTest::test_line_counter_007"
+  ],
+  "fixed_failures": []
+}

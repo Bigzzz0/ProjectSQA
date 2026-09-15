@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 31.64,
+  "branch_cov": 5.98,
+  "test_file": "Codec_1b_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.language.Caverphone;org.apache.commons.codec.language.Metaphone;org.apache.commons.codec.language.SoundexUtils",
+  "buggy_failures": [
+    "org.apache.commons.codec.language.Codec_1b_IPOTest::test_locale_independent_encoding_006",
+    "org.apache.commons.codec.language.Codec_1b_IPOTest::test_locale_independent_encoding_007"
+  ],
+  "fixed_failures": []
+}

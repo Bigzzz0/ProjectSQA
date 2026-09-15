@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 95.45,
+  "test_file": "ExtendedBufferedReaderGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+  "buggy_failures": [
+    "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCRLF_CSV75",
+    "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCarriageReturn_CSV75"
+  ],
+  "fixed_failures": []
+}

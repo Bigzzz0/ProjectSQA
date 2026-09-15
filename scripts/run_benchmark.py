@@ -103,6 +103,12 @@ def init_csv(csv_path: str):
                 "Fault_Detection_Status", "Failures_Count", "Execution_Status", "Timestamp"
             ])
 
+def append_csv_result(csv_path: str, row: List[Any]):
+    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+    with open(csv_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(row)
+
 def find_test_files_for_target(technique: str, project: str, bug_id: int, modified_classes: List[str]) -> List[str]:
     """
     Find generated test .java files matching target modified classes across Defects4J.
@@ -461,7 +467,7 @@ def main():
     parser.add_argument("--bug", type=int, help="Run specific bug ID (e.g. 1)")
     parser.add_argument("--sample-17", action="store_true", help="Run 17 Representative Projects Benchmark")
     parser.add_argument("--all-bugs", action="store_true", help="Run Exhaustive Benchmark on all active bugs in Defects4J")
-    parser.add_argument("--techniques", type=str, default="ipo,mio,claude,gemini", help="Comma-separated techniques")
+    parser.add_argument("--techniques", type=str, default="ipo,mio,deepseek,gemini", help="Comma-separated techniques")
     parser.add_argument("--resume", action="store_true", help="Resume from progress.json")
     parser.add_argument("--csv", type=str, default=DEFAULT_CSV, help="Output CSV path")
     parser.add_argument("--no-clean", action="store_true", help="Do not delete /tmp folders after evaluation")

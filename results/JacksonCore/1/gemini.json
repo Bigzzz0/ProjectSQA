@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 95.98,
+  "branch_cov": 87.39,
+  "test_file": "NumberInputGeminiTest.java;TextBufferGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.io.NumberInputGeminiTest::testParseBigDecimal_NaN_DescriptiveMessage_Issue98",
+    "com.fasterxml.jackson.core.io.NumberInputGeminiTest::testParseBigDecimal_Infinities_DescriptiveMessage_Issue98",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testManualSegmentManipulation",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimal_NegativeInfinity_DescriptiveMessage",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testInitializationAndReleaseWithRecycler",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimal_Infinity_DescriptiveMessage",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimal_NaN_DescriptiveMessage_Issue98"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testManualSegmentManipulation",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testInitializationAndReleaseWithRecycler"
+  ]
+}
