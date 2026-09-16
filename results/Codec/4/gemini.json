@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 98.7,
+  "branch_cov": 94.3,
+  "test_file": "Base64GeminiTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDefaultConstructorMustNotChunk",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeToStringAndDecodeString",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testBinaryEncoderInterfaceDefaultInstance",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testObjectEncoderInterfaceDefaultInstance"
+  ],
+  "fixed_failures": []
+}

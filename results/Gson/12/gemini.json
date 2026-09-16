@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.02,
+  "branch_cov": 87.21,
+  "test_file": "JsonTreeReaderGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_rootPrimitiveAndArray",
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting",
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_filledJsonObject",
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_emptyJsonObject"
+  ],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting"
+  ]
+}

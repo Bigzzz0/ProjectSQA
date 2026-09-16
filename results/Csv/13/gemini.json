@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 98.7,
+  "branch_cov": 91.35,
+  "test_file": "CSVFormatGeminiTest.java;CSVPrinterGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat;org.apache.commons.csv.CSVPrinter",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVFormatGeminiTest::testMySqlNullFormatting",
+    "org.apache.commons.csv.CSVFormatGeminiTest::testMySqlNullStringDefault",
+    "org.apache.commons.csv.CSVPrinterGeminiTest::testMySqlNullOutput",
+    "org.apache.commons.csv.CSVPrinterGeminiTest::testMySqlNullStringDefault"
+  ],
+  "fixed_failures": []
+}

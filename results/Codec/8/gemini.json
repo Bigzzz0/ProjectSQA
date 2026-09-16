@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 99.23,
+  "branch_cov": 93.55,
+  "test_file": "Base64GeminiTest.java;Base64InputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64;org.apache.commons.codec.binary.Base64InputStream",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingDoesNotDoubleAppendSeparator",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDiscardWhitespace",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDecodeGarbageAndNoiseIgnored",
+    "org.apache.commons.codec.binary.Base64InputStreamGeminiTest::testCodec105WithDefaults"
+  ],
+  "fixed_failures": []
+}

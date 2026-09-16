@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CoreOperationCompareGeminiTest.java;CoreOperationEqualGeminiTest.java;CoreOperationNotEqualGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare;org.apache.commons.jxpath.ri.compiler.CoreOperationEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testInitialContextReset",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testNanEquality_DefectTarget",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationEqualGeminiTest::testDefectNanViaJXPathContextEvaluation",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testInitialContextReset",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanAgainstNumber",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanDistinctInstancesNotEqual"
+  ]
+}

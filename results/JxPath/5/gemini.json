@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 94.41,
+  "branch_cov": 90.0,
+  "test_file": "NodePointerGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.NodePointer",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testUnionOfVariableAndNodeDefect",
+    "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testLocaleInheritanceAndLanguageMatching"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testLocaleInheritanceAndLanguageMatching"
+  ]
+}

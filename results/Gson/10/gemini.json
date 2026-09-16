@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 96.58,
+  "branch_cov": 94.83,
+  "test_file": "ReflectiveTypeAdapterFactoryGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryGeminiTest::testPrimitiveFieldAnnotationTakesPrecedenceOverDefault"
+  ],
+  "fixed_failures": []
+}

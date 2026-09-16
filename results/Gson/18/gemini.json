@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 96.02,
+  "branch_cov": 83.67,
+  "test_file": "$Gson$TypesGeminiTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "buggy_failures": [
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testIssue1107_WildcardSupertypeResolutionDirect",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testIssue1107_WildcardCollectionElementTypeResolution"
+  ],
+  "fixed_failures": []
+}

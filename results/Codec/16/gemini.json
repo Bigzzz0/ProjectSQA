@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 98.19,
+  "branch_cov": 92.0,
+  "test_file": "Base32GeminiTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base32",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base32GeminiTest::testCodec200IsInAlphabetWOnHex",
+    "org.apache.commons.codec.binary.Base32GeminiTest::testCodec200HexCustomPadW"
+  ],
+  "fixed_failures": []
+}

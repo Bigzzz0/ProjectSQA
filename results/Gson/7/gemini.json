@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 85.09,
+  "branch_cov": 73.77,
+  "test_file": "JsonReaderGeminiTest.java",
+  "target_classes": "com.google.gson.stream.JsonReader",
+  "buggy_failures": [
+    "com.google.gson.stream.JsonReaderGeminiTest::testPromotedUnquotedNameToLong",
+    "com.google.gson.stream.JsonReaderGeminiTest::testPromotedUnquotedNameToInt",
+    "com.google.gson.stream.JsonReaderGeminiTest::testNextStringFromVariousTokens",
+    "com.google.gson.stream.JsonReaderGeminiTest::testLenientSeparatorsAndUnquotedTokens"
+  ],
+  "fixed_failures": [
+    "com.google.gson.stream.JsonReaderGeminiTest::testNextStringFromVariousTokens",
+    "com.google.gson.stream.JsonReaderGeminiTest::testLenientSeparatorsAndUnquotedTokens"
+  ]
+}

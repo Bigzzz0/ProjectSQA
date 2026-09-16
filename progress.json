@@ -335,5 +335,3824 @@
     "target_classes": "org.apache.commons.codec.binary.StringUtils",
     "buggy_failures": [],
     "fixed_failures": []
+  },
+  "Csv-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedBufferedReaderDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 95.45,
+    "test_file": "ExtendedBufferedReaderGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+    "buggy_failures": [
+      "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCRLF_CSV75",
+      "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCarriageReturn_CSV75"
+    ],
+    "fixed_failures": []
+  },
+  "Csv-2-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CSVRecordDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVRecord",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testGetStringInconsistentRecordMultipleOutOfBounds",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testMappingWithNegativeIndex",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testGetStringInconsistentRecord"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testMappingWithNegativeIndex"
+    ]
+  },
+  "Csv-2-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CSVRecordGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVRecord",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVRecordGeminiTest::testGetStringInconsistentRecord"
+    ],
+    "fixed_failures": []
+  },
+  "Csv-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "LexerDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.Lexer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-3-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "LexerGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.Lexer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVParserDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-4-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVParserGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-5-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVPrinterDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVPrinter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-5-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVPrinterGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVPrinter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-6-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CSVRecordDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVRecord",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithNullMapping",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithShortRecord",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithShortRecord",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithNullMapping"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithNullMapping",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithShortRecord",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithShortRecord",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithNullMapping"
+    ]
+  },
+  "Csv-6-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CSVRecordGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVRecord",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVRecordGeminiTest::testPutInWithShortRecord",
+      "org.apache.commons.csv.CSVRecordGeminiTest::testToMapWithShortRecord"
+    ],
+    "fixed_failures": []
+  },
+  "Csv-7-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVParserDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-7-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVParserGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-8-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 93.3,
+    "branch_cov": 77.86,
+    "test_file": "CSVFormatDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testDefaultFormat",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testToString",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testDuplicateHeaderElements"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testDefaultFormat",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testToString"
+    ]
+  },
+  "Csv-8-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVFormatGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-9-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CSVRecordDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVRecord",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testEmptyMapping",
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithNoHeader"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVRecordDeepseekTest::testEmptyMapping"
+    ]
+  },
+  "Csv-9-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CSVRecordGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVRecord",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVRecordGeminiTest::testToMapWithNoHeader"
+    ],
+    "fixed_failures": []
+  },
+  "Csv-10-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVPrinterDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVPrinter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-10-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVPrinterGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVPrinter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-11-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVParserDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-11-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVParserGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-12-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVFormatDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-12-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 96.74,
+    "branch_cov": 97.14,
+    "test_file": "CSVFormatGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testFormatAndParseAndPrintOperations",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testExcelFormatAllowMissingColumnNamesDefect"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testFormatAndParseAndPrintOperations"
+    ]
+  },
+  "Csv-13-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 37,
+    "line_cov": 87.01,
+    "branch_cov": 78.55,
+    "test_file": "CSVFormatDeepseekTest.java;CSVPrinterDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat;org.apache.commons.csv.CSVPrinter",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testToString",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testMySqlNullInMiddle",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testMySqlNullOutput",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testMySqlFormat",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testMySqlNullStringDefault",
+      "org.apache.commons.csv.CSVFormatDeepseekTest::testMySqlNullStringValue",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testConstructorWithHeaderComments",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalLeadingNonAlphaNum",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsObjectArray",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintCommentWithLineBreak",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testNullValueWithBackslashNNullString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsIterableOfSimpleObjects",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteAll",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteNonNumericNumber",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteNonNumericString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithEscapeCharacter",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testClose",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalLeadingSpace",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsIterableOfIterables",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordWithIterable",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsResultSet",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testNullValueWithCustomNullString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteModeNone",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalLeadingCommentChar",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordVarargs",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testNullValueDefaultNullString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintMultipleValuesWithNulls",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalEmptyFirstValue",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintCommentWithCRLF",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithEscapeDelimiterAndNewline",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsIterableOfObjectArrays",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalNonEmptyNoSpecialChars",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalContainsQuote",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithEscapeCarriageReturn",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalContainsDelimiter",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintNestedObjectArray",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintComment"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testConstructorWithHeaderComments",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalLeadingNonAlphaNum",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsObjectArray",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintCommentWithLineBreak",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testNullValueWithBackslashNNullString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsIterableOfSimpleObjects",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteAll",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteNonNumericNumber",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteNonNumericString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithEscapeCharacter",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testClose",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalLeadingSpace",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsIterableOfIterables",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordWithIterable",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsResultSet",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testNullValueWithCustomNullString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteModeNone",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalLeadingCommentChar",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordVarargs",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testNullValueDefaultNullString",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintMultipleValuesWithNulls",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalEmptyFirstValue",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintCommentWithCRLF",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithEscapeDelimiterAndNewline",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintRecordsIterableOfObjectArrays",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalNonEmptyNoSpecialChars",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalContainsQuote",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithEscapeCarriageReturn",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalContainsDelimiter",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintNestedObjectArray",
+      "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintComment"
+    ]
+  },
+  "Csv-13-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 98.7,
+    "branch_cov": 91.35,
+    "test_file": "CSVFormatGeminiTest.java;CSVPrinterGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat;org.apache.commons.csv.CSVPrinter",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testMySqlNullFormatting",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testMySqlNullStringDefault",
+      "org.apache.commons.csv.CSVPrinterGeminiTest::testMySqlNullOutput",
+      "org.apache.commons.csv.CSVPrinterGeminiTest::testMySqlNullStringDefault"
+    ],
+    "fixed_failures": []
+  },
+  "Csv-14-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVFormatDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-14-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 95.51,
+    "branch_cov": 81.62,
+    "test_file": "CSVFormatGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeNullSingleBackslash",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testPrintQuoteModeNoneWithEscape",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeNullDoubleBackslash",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeBackslashDoubleChar",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeBackslashSingleChar"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testPrintQuoteModeNoneWithEscape"
+    ]
+  },
+  "Csv-15-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CSVFormatDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Csv-15-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 98.24,
+    "branch_cov": 87.64,
+    "test_file": "CSVFormatGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVFormat",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testPrintNullValuesWithVariousModes",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testQuoteModeNoneWithEscape",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testDontQuoteUnicodeFirstCharInMinimal",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testDontQuoteEuroFirstChar",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testPrintEmptyRecordAndMinimalQuotes"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVFormatGeminiTest::testPrintNullValuesWithVariousModes",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testQuoteModeNoneWithEscape",
+      "org.apache.commons.csv.CSVFormatGeminiTest::testPrintEmptyRecordAndMinimalQuotes"
+    ]
+  },
+  "Csv-16-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 12,
+    "line_cov": 82.11,
+    "branch_cov": 79.41,
+    "test_file": "CSVParserDeepseekTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVParserDeepseekTest::testBasicParsing",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testMultipleIterators",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testLineEndings",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testParseStaticMethods",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testGetCurrentLineNumberWithMultiline",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testNullStringParse",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testCaseInsensitiveHeader",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testNullFormat",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testDelimiterVariations",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testManyRecords",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testNullReader",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testCharacterOffset"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVParserDeepseekTest::testBasicParsing",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testMultipleIterators",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testLineEndings",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testParseStaticMethods",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testGetCurrentLineNumberWithMultiline",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testNullStringParse",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testCaseInsensitiveHeader",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testNullFormat",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testDelimiterVariations",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testManyRecords",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testNullReader",
+      "org.apache.commons.csv.CSVParserDeepseekTest::testCharacterOffset"
+    ]
+  },
+  "Csv-16-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 96.75,
+    "branch_cov": 83.82,
+    "test_file": "CSVParserGeminiTest.java",
+    "target_classes": "org.apache.commons.csv.CSVParser",
+    "buggy_failures": [
+      "org.apache.commons.csv.CSVParserGeminiTest::testCurrentLineNumberMultiLine",
+      "org.apache.commons.csv.CSVParserGeminiTest::testDuplicateEmptyHeaderNamesAllowedWhenConfigured",
+      "org.apache.commons.csv.CSVParserGeminiTest::testHeaderCaseInsensitive"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.csv.CSVParserGeminiTest::testCurrentLineNumberMultiLine",
+      "org.apache.commons.csv.CSVParserGeminiTest::testDuplicateEmptyHeaderNamesAllowedWhenConfigured",
+      "org.apache.commons.csv.CSVParserGeminiTest::testHeaderCaseInsensitive"
+    ]
+  },
+  "Codec-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 21,
+    "line_cov": 94.14,
+    "branch_cov": 83.15,
+    "test_file": "CaverphoneGeminiTest.java;MetaphoneGeminiTest.java;SoundexUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.language.Caverphone;org.apache.commons.codec.language.Metaphone;org.apache.commons.codec.language.SoundexUtils",
+    "buggy_failures": [
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testKnownCanonicalWords",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndGReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testDigraphAndConsonantReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testLocaleIndependence_Turkish",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testIsCaverphoneEqualSymmetryAndLogic",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testLocaleIndependence_Azerbaijani",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testWHLRReplacements",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testMaxCodeLengthLimits",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testDTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testTTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testCTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testSTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testBTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testLocaleIndependence_Turkish",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testWYTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testHTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testPTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testGTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testInitialPrefixTransformations",
+      "org.apache.commons.codec.language.SoundexUtilsGeminiTest::testCleanLocaleIndependence_Turkish"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testKnownCanonicalWords",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndGReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testDigraphAndConsonantReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testIsCaverphoneEqualSymmetryAndLogic",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testWHLRReplacements",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testMaxCodeLengthLimits",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testDTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testTTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testCTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testSTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testBTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testWYTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testHTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testPTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testGTransformations",
+      "org.apache.commons.codec.language.MetaphoneGeminiTest::testInitialPrefixTransformations"
+    ]
+  },
+  "Codec-2-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Base64GeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Codec-3-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 20,
+    "line_cov": 75.94,
+    "branch_cov": 60.0,
+    "test_file": "DoubleMetaphoneGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.language.DoubleMetaphone",
+    "buggy_failures": [
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterDVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterWVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testBasicConsonantsSingleAndDouble",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterRVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterMVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterTVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterGAndGHVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterHVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterCVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testBasicVowelAndSilentStarts",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterJVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testAngierAlternateEncodingDefect",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testNonAlphabeticCharactersIgnored",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterXVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterLVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterPAndPH",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterSVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterZVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterCHVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testIsDoubleMetaphoneEqual"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterDVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterWVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testBasicConsonantsSingleAndDouble",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterRVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterMVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterTVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterGAndGHVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterHVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterCVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testBasicVowelAndSilentStarts",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterJVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testNonAlphabeticCharactersIgnored",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterXVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterLVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterPAndPH",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterSVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterZVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterCHVariations",
+      "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testIsDoubleMetaphoneEqual"
+    ]
+  },
+  "Codec-4-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 98.7,
+    "branch_cov": 94.3,
+    "test_file": "Base64GeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.Base64GeminiTest::testDefaultConstructorMustNotChunk",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeToStringAndDecodeString",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testBinaryEncoderInterfaceDefaultInstance",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testObjectEncoderInterfaceDefaultInstance"
+    ],
+    "fixed_failures": []
+  },
+  "Codec-5-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Base64GeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Codec-6-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Base64InputStreamGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64InputStream",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Codec-7-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 3,
+    "line_cov": 99.57,
+    "branch_cov": 91.98,
+    "test_file": "Base64GeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.Base64GeminiTest::testDefectEncodeBase64StringNoTrailingChunkSeparator",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testDefectRfc4648VectorsEncodeString",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testDefectRfc4648Section10SingleCharEncode"
+    ],
+    "fixed_failures": []
+  },
+  "Codec-8-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 99.23,
+    "branch_cov": 93.55,
+    "test_file": "Base64GeminiTest.java;Base64InputStreamGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64;org.apache.commons.codec.binary.Base64InputStream",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingDoesNotDoubleAppendSeparator",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testDiscardWhitespace",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testDecodeGarbageAndNoiseIgnored",
+      "org.apache.commons.codec.binary.Base64InputStreamGeminiTest::testCodec105WithDefaults"
+    ],
+    "fixed_failures": []
+  },
+  "Codec-9-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 99.09,
+    "branch_cov": 90.79,
+    "test_file": "Base64GeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base64",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingAndLineBreakBehavior",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testCodec112",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeWhenAlreadyEof"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingAndLineBreakBehavior",
+      "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeWhenAlreadyEof"
+    ]
+  },
+  "Codec-10-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 8,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CaverphoneGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.language.Caverphone",
+    "buggy_failures": [
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testEncodeValidStringAsObject",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndWHLRules",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testCoreEncodingExamples",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testSpecialPrefixReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testPhoneticRulesCoverage",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYRules",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testEndMbDefect",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testEndMbWord"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testEncodeValidStringAsObject",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndWHLRules",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testCoreEncodingExamples",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testSpecialPrefixReplacements",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testPhoneticRulesCoverage",
+      "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYRules"
+    ]
+  },
+  "Codec-11-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "QuotedPrintableCodecGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+    "buggy_failures": [
+      "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testSkipNotEncodedCRLFDefect",
+      "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testSoftLineBreakDecodeDefect"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testEqualSignIsEscaped",
+      "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testEmptyInputsReturnEmpty"
+    ]
+  },
+  "Codec-12-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BaseNCodecInputStreamGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.BaseNCodecInputStream",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Codec-13-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DoubleMetaphoneGeminiTest.java;StringUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.CharSequenceUtils;org.apache.commons.codec.binary.StringUtils;org.apache.commons.codec.language.DoubleMetaphone",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Codec-14-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "LangGeminiTest.java;PhoneticEngineGeminiTest.java;RuleGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.language.bm.Lang;org.apache.commons.codec.language.bm.PhoneticEngine;org.apache.commons.codec.language.bm.Rule;src.main.resources.org.apache.commons.codec.language.bm.ash_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.gen_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.sep_lang.txt",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Codec-15-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Codec-16-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 98.19,
+    "branch_cov": 92.0,
+    "test_file": "Base32GeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.Base32",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.Base32GeminiTest::testCodec200IsInAlphabetWOnHex",
+      "org.apache.commons.codec.binary.Base32GeminiTest::testCodec200HexCustomPadW"
+    ],
+    "fixed_failures": []
+  },
+  "Codec-17-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "StringUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.StringUtils",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringNullInput_CODEC229",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringInvalidCharset",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testEqualsEmptySequences",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testGetBytesUncheckedInvalidCharset"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringInvalidCharset",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testEqualsEmptySequences",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testGetBytesUncheckedInvalidCharset"
+    ]
+  },
+  "Codec-18-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "StringUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.codec.binary.StringUtils",
+    "buggy_failures": [
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringUnsupportedEncodingThrowsIllegalStateException",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testEqualsBothNonStringDifferentLengths",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testEqualsCS2_DefectTarget",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testEqualsCS1_DefectTarget",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testGetBytesUncheckedUnsupportedEncodingThrowsIllegalStateException"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringUnsupportedEncodingThrowsIllegalStateException",
+      "org.apache.commons.codec.binary.StringUtilsGeminiTest::testGetBytesUncheckedUnsupportedEncodingThrowsIllegalStateException"
+    ]
+  },
+  "Gson-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 9,
+    "line_cov": 89.58,
+    "branch_cov": 81.82,
+    "test_file": "TypeInfoFactoryDeepseekTest.java",
+    "target_classes": "com.google.gson.TypeInfoFactory",
+    "buggy_failures": [
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardWithUpperBound",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_TypeVariableInListOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_SubclassInheritedTypeVariable_GSON40",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForArray_NullType",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardField",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_GenericArrayOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_MultipleTypeVariablesOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_MapWithTypeVariableOnSubclass",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_NullTypeDefiningF"
+    ],
+    "fixed_failures": [
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardWithUpperBound",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForArray_NullType",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardField",
+      "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_NullTypeDefiningF"
+    ]
+  },
+  "Gson-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "TypeInfoFactoryGeminiTest.java",
+    "target_classes": "com.google.gson.TypeInfoFactory",
+    "buggy_failures": [
+      "com.google.gson.TypeInfoFactoryGeminiTest::testGetTypeInfoForField_SubclassInheritedTypeVariable_GSON40",
+      "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
+    ],
+    "fixed_failures": [
+      "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
+    ]
+  },
+  "Gson-2-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 59,
+    "line_cov": 60.99,
+    "branch_cov": 46.81,
+    "test_file": "TypeAdaptersDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanRoundtrip",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringBuilder",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCharacter",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocaleLanguageCountry",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testInetAddressNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementReadInvalidToken",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testInetAddress",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testClassAdapterNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanStringSupport",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURINull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURLNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURI",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURL",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigIntegerNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanAsString",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigDecimal",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testUUIDNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWriteJsonNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testFloat",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocaleLanguageOnly",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testShort",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testByteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testByte",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLong",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testUUID",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNumberNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCharacterLengthMismatch",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigInteger",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWritePrimitiveBoolean",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementTypeMismatch_StringToObject",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNumberInvalidToken",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementTypeMismatch_NumberToObject",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURIInvalidSyntax",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCalendarWriteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigDecimalInvalid",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCharacterNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWriteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBitSetNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocaleNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBitSetWriteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringBuffer",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCalendarNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigDecimalNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNullValuesForAllNumeric",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringBuilderNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURLStringNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWritePrimitiveNumber",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testClassAdapterNonNullFails",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testDouble",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWritePrimitiveString",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocale",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testInteger",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNumber",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testString",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonSyntaxExceptionFromNumberFormat",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURIStringNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringCoercesBoolean"
+    ],
+    "fixed_failures": [
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanRoundtrip",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringBuilder",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCharacter",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocaleLanguageCountry",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testInetAddressNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementReadInvalidToken",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testInetAddress",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testClassAdapterNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanStringSupport",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURINull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURLNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURI",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURL",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigIntegerNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanAsString",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigDecimal",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testUUIDNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWriteJsonNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testFloat",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocaleLanguageOnly",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testShort",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testByteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testByte",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLong",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testUUID",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNumberNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCharacterLengthMismatch",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigInteger",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWritePrimitiveBoolean",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNumberInvalidToken",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURIInvalidSyntax",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCalendarWriteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigDecimalInvalid",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCharacterNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWriteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBitSetNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocaleNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBitSetWriteNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringBuffer",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testCalendarNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBigDecimalNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNullValuesForAllNumeric",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringBuilderNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURLStringNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWritePrimitiveNumber",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testClassAdapterNonNullFails",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testDouble",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonElementWritePrimitiveString",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testLocale",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testInteger",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testNumber",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testString",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testBooleanNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testJsonSyntaxExceptionFromNumberFormat",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURIStringNull",
+      "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringCoercesBoolean"
+    ]
+  },
+  "Gson-2-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeAdaptersGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ConstructorConstructorDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.ConstructorConstructor",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-3-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 97.67,
+    "branch_cov": 96.88,
+    "test_file": "ConstructorConstructorGeminiTest.java",
+    "target_classes": "com.google.gson.internal.ConstructorConstructor",
+    "buggy_failures": [
+      "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentNavigableMapConstruction",
+      "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentMapConstruction"
+    ],
+    "fixed_failures": []
+  },
+  "Gson-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonReaderDeepseekTest.java;JsonWriterDeepseekTest.java",
+    "target_classes": "com.google.gson.stream.JsonReader;com.google.gson.stream.JsonWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-4-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonReaderGeminiTest.java;JsonWriterGeminiTest.java",
+    "target_classes": "com.google.gson.stream.JsonReader;com.google.gson.stream.JsonWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-5-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 98.67,
+    "branch_cov": 86.52,
+    "test_file": "ISO8601UtilsDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.util.ISO8601Utils",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithTimeOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithPositiveOffsetHoursOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithNegativeOffsetHoursOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithNegativeOffsetHoursOnlyAndMillis",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testFormatDateWithMillisAndNegativeOffset"
+    ],
+    "fixed_failures": [
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithTimeOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithPositiveOffsetHoursOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithNegativeOffsetHoursOnly",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testParseDateWithNegativeOffsetHoursOnlyAndMillis",
+      "com.google.gson.internal.bind.util.ISO8601UtilsDeepseekTest::testFormatDateWithMillisAndNegativeOffset"
+    ]
+  },
+  "Gson-5-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 98.0,
+    "branch_cov": 83.15,
+    "test_file": "ISO8601UtilsGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.util.ISO8601Utils",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.util.ISO8601UtilsGeminiTest::testParseDateWithNegativeTwoDigitTimezoneWithoutMinutes",
+      "com.google.gson.internal.bind.util.ISO8601UtilsGeminiTest::testParseDateWithTwoDigitTimezoneWithoutMinutes"
+    ],
+    "fixed_failures": [
+      "com.google.gson.internal.bind.util.ISO8601UtilsGeminiTest::testParseDateWithNegativeTwoDigitTimezoneWithoutMinutes",
+      "com.google.gson.internal.bind.util.ISO8601UtilsGeminiTest::testParseDateWithTwoDigitTimezoneWithoutMinutes"
+    ]
+  },
+  "Gson-6-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonAdapterAnnotationTypeAdapterFactoryDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-6-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "JsonAdapterAnnotationTypeAdapterFactoryGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugDeserialize",
+      "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testGetTypeAdapterReturnsNullWhenFactoryReturnsNullDirectly",
+      "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugSerialize",
+      "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testCreateReturnsNullWhenFactoryReturnsNullDirectly"
+    ],
+    "fixed_failures": []
+  },
+  "Gson-7-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonReaderDeepseekTest.java",
+    "target_classes": "com.google.gson.stream.JsonReader",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-7-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 85.09,
+    "branch_cov": 73.77,
+    "test_file": "JsonReaderGeminiTest.java",
+    "target_classes": "com.google.gson.stream.JsonReader",
+    "buggy_failures": [
+      "com.google.gson.stream.JsonReaderGeminiTest::testPromotedUnquotedNameToLong",
+      "com.google.gson.stream.JsonReaderGeminiTest::testPromotedUnquotedNameToInt",
+      "com.google.gson.stream.JsonReaderGeminiTest::testNextStringFromVariousTokens",
+      "com.google.gson.stream.JsonReaderGeminiTest::testLenientSeparatorsAndUnquotedTokens"
+    ],
+    "fixed_failures": [
+      "com.google.gson.stream.JsonReaderGeminiTest::testNextStringFromVariousTokens",
+      "com.google.gson.stream.JsonReaderGeminiTest::testLenientSeparatorsAndUnquotedTokens"
+    ]
+  },
+  "Gson-8-deepseek": {
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnsafeAllocatorDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.UnsafeAllocator",
+    "buggy_failures": [],
+    "fixed_failures": [
+      "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testNewInstancePrimitiveClass",
+      "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testInterfaceInstantiation",
+      "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testAbstractClassInstantiation"
+    ]
+  },
+  "Gson-8-gemini": {
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnsafeAllocatorGeminiTest.java",
+    "target_classes": "com.google.gson.internal.UnsafeAllocator",
+    "buggy_failures": [],
+    "fixed_failures": [
+      "com.google.gson.internal.UnsafeAllocatorGeminiTest::testInstantiateStandardClassBypassesConstructor"
+    ]
+  },
+  "Gson-9-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonTreeWriterDeepseekTest.java;JsonWriterDeepseekTest.java;TypeAdaptersDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.JsonTreeWriter;com.google.gson.internal.bind.TypeAdapters;com.google.gson.stream.JsonWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-9-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonTreeWriterGeminiTest.java;JsonWriterGeminiTest.java;TypeAdaptersGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.JsonTreeWriter;com.google.gson.internal.bind.TypeAdapters;com.google.gson.stream.JsonWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-10-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ReflectiveTypeAdapterFactoryDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-10-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 96.58,
+    "branch_cov": 94.83,
+    "test_file": "ReflectiveTypeAdapterFactoryGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryGeminiTest::testPrimitiveFieldAnnotationTakesPrecedenceOverDefault"
+    ],
+    "fixed_failures": []
+  },
+  "Gson-11-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeAdaptersDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-11-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeAdaptersGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-12-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 9,
+    "line_cov": 92.26,
+    "branch_cov": 83.72,
+    "test_file": "JsonTreeReaderDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnEmptyObjectDirectly",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnNestedObject",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnFilledObjectAfterBegin",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyArray",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testLargeNestingToTriggerStackResize",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_filledJsonObject",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testPathSimple",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testHasNext",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyJsonObject"
+    ],
+    "fixed_failures": [
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnNestedObject",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnFilledObjectAfterBegin",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyArray",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testLargeNestingToTriggerStackResize",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_filledJsonObject",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testPathSimple",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testHasNext",
+      "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyJsonObject"
+    ]
+  },
+  "Gson-12-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 97.02,
+    "branch_cov": 87.21,
+    "test_file": "JsonTreeReaderGeminiTest.java",
+    "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+    "buggy_failures": [
+      "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_rootPrimitiveAndArray",
+      "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting",
+      "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_filledJsonObject",
+      "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_emptyJsonObject"
+    ],
+    "fixed_failures": [
+      "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting"
+    ]
+  },
+  "Gson-13-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonReaderDeepseekTest.java",
+    "target_classes": "com.google.gson.stream.JsonReader",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-13-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonReaderGeminiTest.java",
+    "target_classes": "com.google.gson.stream.JsonReader",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-14-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "$Gson$TypesDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.$Gson$Types",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-14-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 95.06,
+    "branch_cov": 85.26,
+    "test_file": "$Gson$TypesGeminiTest.java",
+    "target_classes": "com.google.gson.internal.$Gson$Types",
+    "buggy_failures": [
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testDoubleSupertype",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testSubSupertype",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testDoubleSubtype",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testSuperSubtype",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
+    ],
+    "fixed_failures": [
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
+    ]
+  },
+  "Gson-15-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonWriterDeepseekTest.java",
+    "target_classes": "com.google.gson.stream.JsonWriter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-15-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 98.48,
+    "branch_cov": 93.48,
+    "test_file": "JsonWriterGeminiTest.java",
+    "target_classes": "com.google.gson.stream.JsonWriter",
+    "buggy_failures": [
+      "com.google.gson.stream.JsonWriterGeminiTest::testNonFiniteDoublesWhenLenient",
+      "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
+      "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
+    ],
+    "fixed_failures": [
+      "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
+      "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
+    ]
+  },
+  "Gson-16-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "$Gson$TypesDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.$Gson$Types",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-16-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "$Gson$TypesGeminiTest.java",
+    "target_classes": "com.google.gson.internal.$Gson$Types",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-17-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DefaultDateTypeAdapterDeepseekTest.java",
+    "target_classes": "com.google.gson.DefaultDateTypeAdapter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-17-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 98.18,
+    "branch_cov": 93.75,
+    "test_file": "DefaultDateTypeAdapterGeminiTest.java",
+    "target_classes": "com.google.gson.DefaultDateTypeAdapter",
+    "buggy_failures": [
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedNumberToken",
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken",
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValueSqlDate",
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValue",
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValueTimestamp"
+    ],
+    "fixed_failures": [
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
+      "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken"
+    ]
+  },
+  "Gson-18-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "$Gson$TypesDeepseekTest.java",
+    "target_classes": "com.google.gson.internal.$Gson$Types",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Gson-18-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 96.02,
+    "branch_cov": 83.67,
+    "test_file": "$Gson$TypesGeminiTest.java",
+    "target_classes": "com.google.gson.internal.$Gson$Types",
+    "buggy_failures": [
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testIssue1107_WildcardSupertypeResolutionDirect",
+      "com.google.gson.internal.$Gson$TypesGeminiTest::testIssue1107_WildcardCollectionElementTypeResolution"
+    ],
+    "fixed_failures": []
+  },
+  "JacksonXml-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FromXmlParserDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 70.41,
+    "branch_cov": 62.59,
+    "test_file": "FromXmlParserGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
+    ]
+  },
+  "JacksonXml-2-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "XmlTokenStreamDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStream",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-2-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 64.12,
+    "branch_cov": 74.32,
+    "test_file": "XmlTokenStreamGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStream",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testLocationsAndCloseAndToString",
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testDefectMixedContentTextBeforeChildTag",
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementAndDelayedReplay",
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementReplayEnd"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testLocationsAndCloseAndToString",
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementAndDelayedReplay",
+      "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementReplayEnd"
+    ]
+  },
+  "JacksonXml-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FromXmlParserDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-3-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 60.68,
+    "branch_cov": 52.32,
+    "test_file": "FromXmlParserGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testHandleEOFThrowsExceptionWhenUnclosed",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testXmlAttributesWithNextTextValue",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testAddVirtualWrapping",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetValueAsString",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testCurrentNameAndOverrideCurrentName",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetBinaryValueCorruptBase64ThrowsException"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testHandleEOFThrowsExceptionWhenUnclosed",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testAddVirtualWrapping",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetValueAsString",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testCurrentNameAndOverrideCurrentName",
+      "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetBinaryValueCorruptBase64ThrowsException"
+    ]
+  },
+  "JacksonXml-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "XmlSerializerProviderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-4-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 67.23,
+    "branch_cov": 56.9,
+    "test_file": "XmlSerializerProviderGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testDynamicRootNameWithNamespaceAndNullValue",
+      "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testDynamicRootNameWithNullValue"
+    ],
+    "fixed_failures": []
+  },
+  "JacksonXml-5-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "XmlSerializerProviderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-5-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 93.75,
+    "branch_cov": 87.5,
+    "test_file": "XmlSerializerProviderGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyDoesNotShareRootNameLookupInstance",
+      "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyWithDefect282AnnotationIndependence"
+    ],
+    "fixed_failures": []
+  },
+  "JacksonXml-6-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ToXmlGeneratorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonXml-6-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 18,
+    "line_cov": 38.35,
+    "branch_cov": 29.73,
+    "test_file": "ToXmlGeneratorGeminiTest.java",
+    "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator",
+    "buggy_failures": [
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testNestedElementsAndFieldNames",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testPrimitivesUnwrapped",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testAttributesAndCData",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testPrettyPrinterPaths",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testPrimitiveTypesStandardAndAttributes",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testWrappedValueLifecycle",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testUnwrappedElements",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testAutoCloseOpenJsonContent",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testBinaryStreamWithZeroBytesDefectTarget",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testInitGeneratorXml10Declaration",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testInitGeneratorXml11Declaration",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testFlushPassedToStreamFeature",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testArraysAndObjects",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testWriteRawMethodsOnNativeWriter",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testReportUnimplementedStax2OnEmulatedWriter",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testBigDecimalAsPlain",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testWriteBinaryVariations",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testBinaryStreamSerializationDefectTarget"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testNestedElementsAndFieldNames",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testPrimitivesUnwrapped",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testAttributesAndCData",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testPrettyPrinterPaths",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testPrimitiveTypesStandardAndAttributes",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testWrappedValueLifecycle",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testUnwrappedElements",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testAutoCloseOpenJsonContent",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testInitGeneratorXml10Declaration",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testInitGeneratorXml11Declaration",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testFlushPassedToStreamFeature",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testArraysAndObjects",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testWriteRawMethodsOnNativeWriter",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testReportUnimplementedStax2OnEmulatedWriter",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testBigDecimalAsPlain",
+      "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGeneratorGeminiTest::testWriteBinaryVariations"
+    ]
+  },
+  "JxPath-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java;JDOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-2-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExpressionDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.Expression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-2-gemini": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "ExpressionGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.Expression",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.compiler.ExpressionGeminiTest::testNodeSetReturn_DefectTarget"
+    ],
+    "fixed_failures": []
+  },
+  "JxPath-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NullPropertyPointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.beans.NullPropertyPointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-3-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NullPropertyPointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.beans.NullPropertyPointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-4-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java;JDOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-5-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.NodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-5-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 94.41,
+    "branch_cov": 90.0,
+    "test_file": "NodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.NodePointer",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testUnionOfVariableAndNodeDefect",
+      "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testLocaleInheritanceAndLanguageMatching"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testLocaleInheritanceAndLanguageMatching"
+    ]
+  },
+  "JxPath-6-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationCompareDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-6-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationCompareGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-7-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationGreaterThanDeepseekTest.java;CoreOperationGreaterThanOrEqualDeepseekTest.java;CoreOperationLessThanDeepseekTest.java;CoreOperationLessThanOrEqualDeepseekTest.java;CoreOperationRelationalExpressionDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThan;org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-7-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationGreaterThanGeminiTest.java;CoreOperationGreaterThanOrEqualGeminiTest.java;CoreOperationLessThanGeminiTest.java;CoreOperationLessThanOrEqualGeminiTest.java;CoreOperationRelationalExpressionGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThan;org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-8-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationRelationalExpressionDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-8-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationRelationalExpressionGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-9-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationCompareDeepseekTest.java;CoreOperationEqualDeepseekTest.java;CoreOperationNotEqualDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare;org.apache.commons.jxpath.ri.compiler.CoreOperationEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-9-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CoreOperationCompareGeminiTest.java;CoreOperationEqualGeminiTest.java;CoreOperationNotEqualGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare;org.apache.commons.jxpath.ri.compiler.CoreOperationEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testInitialContextReset",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testNanEquality_DefectTarget",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationEqualGeminiTest::testDefectNanViaJXPathContextEvaluation",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testInitialContextReset",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanAgainstNumber",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation",
+      "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanDistinctInstancesNotEqual"
+    ]
+  },
+  "JxPath-10-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationRelationalExpressionDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-10-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationRelationalExpressionGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-11-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMAttributeIteratorDeepseekTest.java;JDOMAttributeIteratorDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-11-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMAttributeIteratorGeminiTest.java;JDOMAttributeIteratorGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-12-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-12-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-13-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java;NamespaceResolverDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.NamespaceResolver;org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-13-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 25,
+    "line_cov": 11.84,
+    "branch_cov": 9.9,
+    "test_file": "DOMNodePointerGeminiTest.java;NamespaceResolverGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.NamespaceResolver;org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.NamespaceResolverGeminiTest::testDefectChildResolverParentPrefixLookupWhenParentHasNullPointer",
+      "org.apache.commons.jxpath.ri.NamespaceResolverGeminiTest::testDefectExternalXMLNamespacePrefixResolutionWithNullPointer",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateChildWithoutFactoryThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateChildWithFailingFactoryThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetValueAndStringValueFormatting",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testIterators",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testBasicPropertiesAndState",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testLanguageHandling",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetNameVariations",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testSetValueOnElement",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetPointerByID",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetPrefixAndLocalNameFallbackLogic",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testEqualsAndHashCodeContract",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateAttributeWithoutPrefix",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testTestNodeEvaluations",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateChildWithSuccessfulFactory",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testNamespaceURILookup",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateAttributeWithUnknownPrefixThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testRemoveRootThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testRemoveChildNodeSuccess",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateAttributeWithContextRegisteredNamespacePrefix",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testEqualStringsBoundaryConditions",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCompareChildNodePointers",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testAsPathVariations",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testSetValueOnTextAndCData"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.jxpath.ri.NamespaceResolverGeminiTest::testGetPrefixParentDelegation",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateChildWithoutFactoryThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateChildWithFailingFactoryThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetValueAndStringValueFormatting",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testIterators",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testBasicPropertiesAndState",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testLanguageHandling",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetNameVariations",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testSetValueOnElement",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetPointerByID",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testGetPrefixAndLocalNameFallbackLogic",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testEqualsAndHashCodeContract",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateAttributeWithoutPrefix",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testTestNodeEvaluations",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateChildWithSuccessfulFactory",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testNamespaceURILookup",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateAttributeWithUnknownPrefixThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testRemoveRootThrowsException",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testRemoveChildNodeSuccess",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCreateAttributeWithContextRegisteredNamespacePrefix",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testEqualStringsBoundaryConditions",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCompareChildNodePointers",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testAsPathVariations",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testSetValueOnTextAndCData"
+    ]
+  },
+  "JxPath-14-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreFunctionDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreFunction",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-14-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreFunctionGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreFunction",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-15-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnionContextDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.axes.UnionContext",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-15-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnionContextGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.axes.UnionContext",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-16-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-16-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java;JDOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-17-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMAttributeIteratorDeepseekTest.java;JDOMAttributeIteratorDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-17-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 21,
+    "line_cov": 41.59,
+    "branch_cov": 36.05,
+    "test_file": "DOMAttributeIteratorGeminiTest.java;JDOMAttributeIteratorGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testIteratorContractAndNodePointerIntegrity",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNonElementNodeParentHasNoAttributes",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testExactNamespacedAttributeLookup",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testGetNodePointerWhenPositionIsZeroAutomaticallyProbesFirst",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testSingleUnprefixedAttributeFound",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testSingleUnprefixedAttributeNotFound",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testXmlnsAttributesAreExcludedFromWildcardIteration",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNamespacedAttributeFallbackReturnsNullWhenNotFoundInMap",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testDefectAxisAttributeWildcardWithNamespacedAndUnnamespacedAttributes",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNamespacedAttributeFallbackWhenAttributeNodeNSIsNull",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testSetPositionBoundariesAndNegativeIndices",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testGetNodePointerThrowsExceptionWhenPositionOutOfBounds",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testWildcardUnprefixedAttributesIteration",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNamespacedAttributesWithDifferentPrefixesMatchingSameNamespaceURI",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testElementWithZeroAttributes",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testPrefixSpecifiedButNamespaceUnresolvableFallsBackToLocalName",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testAttributeWithMismatchedNamespaceURIReturnsEmpty",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testUndefinedPrefixNamespaceReturnsEmpty",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testDefectWildcardMustMatchAttributesAcrossAllNamespaces",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testEmptyElementWildcardAttributes",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testNonExistentAttributeName"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testIteratorContractAndNodePointerIntegrity",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNonElementNodeParentHasNoAttributes",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testExactNamespacedAttributeLookup",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testGetNodePointerWhenPositionIsZeroAutomaticallyProbesFirst",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testSingleUnprefixedAttributeFound",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testSingleUnprefixedAttributeNotFound",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testXmlnsAttributesAreExcludedFromWildcardIteration",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNamespacedAttributeFallbackReturnsNullWhenNotFoundInMap",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testDefectAxisAttributeWildcardWithNamespacedAndUnnamespacedAttributes",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNamespacedAttributeFallbackWhenAttributeNodeNSIsNull",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testSetPositionBoundariesAndNegativeIndices",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testGetNodePointerThrowsExceptionWhenPositionOutOfBounds",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testWildcardUnprefixedAttributesIteration",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testNamespacedAttributesWithDifferentPrefixesMatchingSameNamespaceURI",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testElementWithZeroAttributes",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testPrefixSpecifiedButNamespaceUnresolvableFallsBackToLocalName",
+      "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIteratorGeminiTest::testAttributeWithMismatchedNamespaceURIReturnsEmpty",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testUndefinedPrefixNamespaceReturnsEmpty",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testEmptyElementWildcardAttributes",
+      "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testNonExistentAttributeName"
+    ]
+  },
+  "JxPath-18-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AttributeContextDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.axes.AttributeContext",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-18-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AttributeContextGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.axes.AttributeContext",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-19-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-19-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java;JDOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-20-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoreOperationRelationalExpressionDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-20-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "JxPath-21-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PropertyPointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.beans.PropertyPointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JxPath-21-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 92.86,
+    "branch_cov": 84.62,
+    "test_file": "PropertyPointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.beans.PropertyPointer",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
+      "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testGetLengthWhenBaseValueIsNullDefect",
+      "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testNullPropertyIterationDefect",
+      "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
+      "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
+    ]
+  },
+  "JxPath-22-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 20,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerDeepseekTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "buggy_failures": [
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetValue",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeTypeTest",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeNull",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeProcessingInstruction",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetPointerByID",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testNamespaceResolver",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetName",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testCreateAttributeAndRemove",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathNamespaceWithoutPrefixUsesNode",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetNamespaceURI",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testSetValueTextAndElement",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testIsLeafAndIsLanguage",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testBasicGettersAndConstructors",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testChildAndAttributeIterators",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeNameTest",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testInnerEmptyNamespaceAsPathDefect",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testCompareChildNodePointers",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testEqualsAndHashCode",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathBasic",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathPositions"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetValue",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeTypeTest",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeNull",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeProcessingInstruction",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetPointerByID",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testNamespaceResolver",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetName",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testCreateAttributeAndRemove",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathNamespaceWithoutPrefixUsesNode",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testGetNamespaceURI",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testSetValueTextAndElement",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testIsLeafAndIsLanguage",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testBasicGettersAndConstructors",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testChildAndAttributeIterators",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testTestNodeNameTest",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testInnerEmptyNamespaceAsPathDefect",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testCompareChildNodePointers",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testEqualsAndHashCode",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathBasic",
+      "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathPositions"
+    ]
+  },
+  "JxPath-22-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DOMNodePointerGeminiTest.java",
+    "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialDeepseekTest.java;UnsupportedDurationFieldDeepseekTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-1-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialGeminiTest.java;UnsupportedDurationFieldGeminiTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-2-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialDeepseekTest.java;UnsupportedDurationFieldDeepseekTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-2-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialGeminiTest.java;UnsupportedDurationFieldGeminiTest.java",
+    "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MutableDateTimeDeepseekTest.java",
+    "target_classes": "org.joda.time.MutableDateTime",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-3-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MutableDateTimeGeminiTest.java",
+    "target_classes": "org.joda.time.MutableDateTime",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialDeepseekTest.java",
+    "target_classes": "org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-4-gemini": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PartialGeminiTest.java",
+    "target_classes": "org.joda.time.Partial",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-5-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeriodDeepseekTest.java",
+    "target_classes": "org.joda.time.Period",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-5-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 99.29,
+    "branch_cov": 95.16,
+    "test_file": "PeriodGeminiTest.java",
+    "target_classes": "org.joda.time.Period",
+    "buggy_failures": [
+      "org.joda.time.PeriodGeminiTest::testDefectNormalizedStandard_periodType_monthsWeeks",
+      "org.joda.time.PeriodGeminiTest::testWithers",
+      "org.joda.time.PeriodGeminiTest::testDefectNormalizedStandard_periodType_months2"
+    ],
+    "fixed_failures": [
+      "org.joda.time.PeriodGeminiTest::testWithers"
+    ]
+  },
+  "Time-6-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "GJChronologyDeepseekTest.java",
+    "target_classes": "org.joda.time.chrono.GJChronology",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-6-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-7-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeFormatterDeepseekTest.java",
+    "target_classes": "org.joda.time.format.DateTimeFormatter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-7-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-8-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeZoneDeepseekTest.java",
+    "target_classes": "org.joda.time.DateTimeZone",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-8-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-9-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeZoneDeepseekTest.java",
+    "target_classes": "org.joda.time.DateTimeZone",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-9-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-10-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BaseSingleFieldPeriodDeepseekTest.java",
+    "target_classes": "org.joda.time.base.BaseSingleFieldPeriod",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-10-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-11-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ZoneInfoCompilerDeepseekTest.java",
+    "target_classes": "org.joda.time.tz.ZoneInfoCompiler",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-11-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-12-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "LocalDateDeepseekTest.java;LocalDateTimeDeepseekTest.java",
+    "target_classes": "org.joda.time.LocalDate;org.joda.time.LocalDateTime",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-12-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-13-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeriodFormatterBuilderDeepseekTest.java",
+    "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-13-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-14-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BasicMonthOfYearDateTimeFieldDeepseekTest.java",
+    "target_classes": "org.joda.time.chrono.BasicMonthOfYearDateTimeField",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-14-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-15-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FieldUtilsDeepseekTest.java",
+    "target_classes": "org.joda.time.field.FieldUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-15-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-16-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeFormatterDeepseekTest.java",
+    "target_classes": "org.joda.time.format.DateTimeFormatter",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-16-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-17-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeZoneDeepseekTest.java",
+    "target_classes": "org.joda.time.DateTimeZone",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-17-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-18-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "GJChronologyDeepseekTest.java",
+    "target_classes": "org.joda.time.chrono.GJChronology",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-18-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-19-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 82.51,
+    "branch_cov": 69.75,
+    "test_file": "DateTimeZoneDeepseekTest.java",
+    "target_classes": "org.joda.time.DateTimeZone",
+    "buggy_failures": [
+      "org.joda.time.DateTimeZoneDeepseekTest::testDateTimeCreation_london_cutover",
+      "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstSpringForward",
+      "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
+      "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
+      "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
+    ],
+    "fixed_failures": [
+      "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstSpringForward",
+      "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
+      "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
+      "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
+    ]
+  },
+  "Time-19-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-20-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 18,
+    "line_cov": 53.82,
+    "branch_cov": 42.28,
+    "test_file": "DateTimeFormatterBuilderDeepseekTest.java",
+    "target_classes": "org.joda.time.format.DateTimeFormatterBuilder",
+    "buggy_failures": [
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testMatchingParserOrdering",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToFormatterWithOnlyPrinter",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testCanBuildMethods",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendParserArrayWithNullMiddleElementThrows",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParseTimeZoneOffsetWithZeroText",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneNameWithoutLookup",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParseTimeZoneOffsetWithZero",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneOffsetFiveArg",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneOffsetFourArg",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testPrinterOnlyFormatter",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToParserThrowsWhenNoParser",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneShortNameWithoutLookup",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testPrintParseZoneDawsonCreek",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToPrinterThrowsWhenNoPrinter",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testPrintWithNullZone",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToFormatterWithOnlyParser",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParseTimeZoneIdWithUnderscore",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParserOnlyFormatter"
+    ],
+    "fixed_failures": [
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testMatchingParserOrdering",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToFormatterWithOnlyPrinter",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testCanBuildMethods",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendParserArrayWithNullMiddleElementThrows",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParseTimeZoneOffsetWithZeroText",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneNameWithoutLookup",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParseTimeZoneOffsetWithZero",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneOffsetFiveArg",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneOffsetFourArg",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testPrinterOnlyFormatter",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToParserThrowsWhenNoParser",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testAppendTimeZoneShortNameWithoutLookup",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToPrinterThrowsWhenNoPrinter",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testPrintWithNullZone",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToFormatterWithOnlyParser",
+      "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParserOnlyFormatter"
+    ]
+  },
+  "Time-20-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-22-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BasePeriodDeepseekTest.java",
+    "target_classes": "org.joda.time.base.BasePeriod",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-22-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-23-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeZoneDeepseekTest.java",
+    "target_classes": "org.joda.time.DateTimeZone",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-23-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-24-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeParserBucketDeepseekTest.java",
+    "target_classes": "org.joda.time.format.DateTimeParserBucket",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-24-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-25-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeZoneDeepseekTest.java",
+    "target_classes": "org.joda.time.DateTimeZone",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-25-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-26-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeZoneDeepseekTest.java;LenientDateTimeFieldDeepseekTest.java;ZonedChronologyDeepseekTest.java",
+    "target_classes": "org.joda.time.chrono.ZonedChronology;org.joda.time.DateTimeZone;org.joda.time.field.LenientDateTimeField",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-26-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Time-27-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeriodFormatterBuilderDeepseekTest.java",
+    "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Time-27-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-1-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 87.98,
+    "branch_cov": 75.8,
+    "test_file": "Flat3MapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.map.Flat3Map",
+    "buggy_failures": [
+      "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods",
+      "org.apache.commons.collections.map.Flat3MapDeepseekTest::testMapIteratorSetValueOnThirdEntryDoesNotModifyEarlier",
+      "org.apache.commons.collections.map.Flat3MapDeepseekTest::testMapIteratorSetValueOnSecondEntryDoesNotModifyFirst",
+      "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorSetValueOnSecondEntryDoesNotModifyFirst",
+      "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorSetValueOnThirdEntryDoesNotModifyEarlier"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods"
+    ]
+  },
+  "Collections-1-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-2-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedPropertiesDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.ExtendedProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-2-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-3-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 35,
+    "line_cov": 80.24,
+    "branch_cov": 74.18,
+    "test_file": "CollectionUtilsDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.CollectionUtils",
+    "buggy_failures": [
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexOutOfBoundsEnumeration",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testPredicatedCollectionNullPredicate",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testFilterNullPredicate",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexOutOfBoundsMap",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testFilterNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testCollectNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testAddIgnoreNullWithNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSubtractWithDuplicates",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testUnmodifiableCollectionNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testForAllDoNullClosure",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexNegative",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSynchronizedCollectionNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllResultIsNewCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTypedCollectionNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllEmptyRemove",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testDisjunctionWithDuplicates",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexInvalidType",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSizeIsEmptyNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectRejectedNullPredicate",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexOutOfBoundsIterator",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTypedCollectionNullType",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllWithNullElements",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTransformNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testPredicatedCollectionNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexMap",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllAllElementsRemoved",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testForAllDoNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTransformedCollectionNullTransformer",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllDefect",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllNoOverlap",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTransformedCollectionNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSizeNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectRejectedNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllWithDuplicatesInRemove"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexOutOfBoundsEnumeration",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testPredicatedCollectionNullPredicate",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testFilterNullPredicate",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexOutOfBoundsMap",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testFilterNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testCollectNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testAddIgnoreNullWithNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSubtractWithDuplicates",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testUnmodifiableCollectionNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testForAllDoNullClosure",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexNegative",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSynchronizedCollectionNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTypedCollectionNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testDisjunctionWithDuplicates",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testRemoveAllNullRemove",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexInvalidType",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSizeIsEmptyNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectRejectedNullPredicate",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexOutOfBoundsIterator",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTypedCollectionNullType",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTransformNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testPredicatedCollectionNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testIndexMap",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testForAllDoNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTransformedCollectionNullTransformer",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testTransformedCollectionNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSizeNull",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectRejectedNullCollection",
+      "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectNullCollection"
+    ]
+  },
+  "Collections-3-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MultiValueMapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-4-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-5-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 95.12,
+    "branch_cov": 100.0,
+    "test_file": "SetUniqueListDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+    "buggy_failures": [
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testAddAllMiddleWithExistingDuplicatesInColl",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetNormalUniqueObject",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testIntCollectionAddAll"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetNormalUniqueObject"
+    ]
+  },
+  "Collections-5-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-6-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "Flat3MapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.map.Flat3Map",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-6-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-7-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedPropertiesDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.ExtendedProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-7-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-8-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnboundedFifoBufferDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-8-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-9-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedPropertiesDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.ExtendedProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-9-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-10-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 92.44,
+    "branch_cov": 87.5,
+    "test_file": "MultiValueMapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+    "buggy_failures": [
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testFactoryReturningNonEmptyCollection",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationCompatibility",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationNonEmptyMap",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testPutNewKey",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testDecorateNullClass",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationEmptyMap"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testFactoryReturningNonEmptyCollection",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testPutNewKey",
+      "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testDecorateNullClass"
+    ]
+  },
+  "Collections-10-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-11-deepseek": {
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "MultiKeyDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.keyvalue.MultiKey",
+    "buggy_failures": [
+      "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationWithThreeKeys",
+      "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testSerializationWithComplexObjects",
+      "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationWithNullKeys",
+      "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerialization"
+    ],
+    "fixed_failures": []
+  },
+  "Collections-11-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-12-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedPropertiesDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.ExtendedProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-12-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-13-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExtendedPropertiesDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.ExtendedProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-13-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-14-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "CaseInsensitiveMapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.map.CaseInsensitiveMap",
+    "buggy_failures": [
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS",
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceTurkishI"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
+      "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS"
+    ]
+  },
+  "Collections-14-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-15-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "SetUniqueListDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+    "buggy_failures": [
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetAndAddInteraction",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidIndices",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetMethodNormalNoDuplicate",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListMaintainsUniqueness"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidIndices",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListMaintainsUniqueness"
+    ]
+  },
+  "Collections-15-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-16-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "SetUniqueListDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+    "buggy_failures": [
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetDuplicateEdgeCase",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testListIteratorPreviousAndRemove"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetDuplicateEdgeCase",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testListIteratorPreviousAndRemove",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListAddUpdatesParentSet",
+      "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListRemoveUpdatesParentSet"
+    ]
+  },
+  "Collections-16-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-17-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EqualPredicateDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.functors.EqualPredicate",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-17-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-18-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ListOrderedSetDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.set.ListOrderedSet",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-18-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-19-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SetUniqueListDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-19-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-20-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 86.35,
+    "branch_cov": 77.27,
+    "test_file": "TreeListDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections.list.TreeList",
+    "buggy_failures": [
+      "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
+      "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
+      "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
+    ]
+  },
+  "Collections-20-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-21-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 91.74,
+    "branch_cov": 97.37,
+    "test_file": "SetUniqueListDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.list.SetUniqueList",
+    "buggy_failures": [
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListIsUnmodifiable",
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+      "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
+    ]
+  },
+  "Collections-21-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-22-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ListOrderedMapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.map.ListOrderedMap",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-22-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-23-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnmodifiableTrieDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.trie.UnmodifiableTrie",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-23-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-24-deepseek": {
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "UnmodifiableBoundedCollectionDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-24-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-25-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "IteratorUtilsDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.IteratorUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-25-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 93.43,
+    "branch_cov": 93.65,
+    "test_file": "IteratorUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.collections4.IteratorUtils",
+    "buggy_failures": [
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testCollatedIterator_NullComparator_NaturalOrder_COLLECTIONS566",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testLoopingIterators",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPushbackIteratorNull",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testAsIteratorAndAsEnumeration",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPeekingIteratorNull"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testLoopingIterators",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPushbackIteratorNull",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testAsIteratorAndAsEnumeration",
+      "org.apache.commons.collections4.IteratorUtilsGeminiTest::testPeekingIteratorNull"
+    ]
+  },
+  "Collections-26-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "MultiKeyDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.keyvalue.MultiKey",
+    "buggy_failures": [
+      "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationOfDerivedClassWithNullKeys",
+      "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationOfDerivedClass",
+      "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testGetKeysReturnsClone"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testGetKeysReturnsClone"
+    ]
+  },
+  "Collections-26-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-27-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MultiValueMapDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.map.MultiValueMap",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-27-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Collections-28-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractPatriciaTrieDeepseekTest.java",
+    "target_classes": "org.apache.commons.collections4.trie.AbstractPatriciaTrie",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Collections-28-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-1-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-1-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-2-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DatasetUtilitiesDeepseekTest.java",
+    "target_classes": "org.jfree.data.general.DatasetUtilities",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-2-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TimeSeriesDeepseekTest.java",
+    "target_classes": "org.jfree.data.time.TimeSeries",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-3-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-4-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "XYPlotDeepseekTest.java",
+    "target_classes": "org.jfree.chart.plot.XYPlot",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-4-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-5-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "XYSeriesDeepseekTest.java",
+    "target_classes": "org.jfree.data.xy.XYSeries",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-5-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-6-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ShapeListDeepseekTest.java",
+    "target_classes": "org.jfree.chart.util.ShapeList",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-6-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-7-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TimePeriodValuesDeepseekTest.java",
+    "target_classes": "org.jfree.data.time.TimePeriodValues",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-7-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-8-deepseek": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 95.06,
+    "branch_cov": 88.24,
+    "test_file": "WeekDeepseekTest.java",
+    "target_classes": "org.jfree.data.time.Week",
+    "buggy_failures": [
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekZero",
+      "org.jfree.data.time.WeekDeepseekTest::testDefectJanuaryBoundary",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekNegative",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekInConstructorWithYearObject",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54InConstructorWithYearObject",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54"
+    ],
+    "fixed_failures": [
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekZero",
+      "org.jfree.data.time.WeekDeepseekTest::testDefectJanuaryBoundary",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekNegative",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekInConstructorWithYearObject",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54InConstructorWithYearObject",
+      "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54"
+    ]
+  },
+  "Chart-8-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-9-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TimeSeriesDeepseekTest.java",
+    "target_classes": "org.jfree.data.time.TimeSeries",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Chart-9-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-10-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-10-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-11-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-11-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-12-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-12-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-13-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-13-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-14-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-14-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-15-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-15-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-16-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-16-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-17-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-17-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-18-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-18-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-19-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-19-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-20-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-20-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-21-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-21-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-22-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-22-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-23-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-23-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-24-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-24-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-25-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-25-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-26-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Chart-26-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
   }
 }

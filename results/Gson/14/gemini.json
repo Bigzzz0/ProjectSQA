@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 95.06,
+  "branch_cov": 85.26,
+  "test_file": "$Gson$TypesGeminiTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "buggy_failures": [
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testDoubleSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testSubSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testDoubleSubtype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testSuperSubtype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
+  ],
+  "fixed_failures": [
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
+  ]
+}

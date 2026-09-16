@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 98.48,
+  "branch_cov": 93.48,
+  "test_file": "JsonWriterGeminiTest.java",
+  "target_classes": "com.google.gson.stream.JsonWriter",
+  "buggy_failures": [
+    "com.google.gson.stream.JsonWriterGeminiTest::testNonFiniteDoublesWhenLenient",
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
+  ],
+  "fixed_failures": [
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
+  ]
+}

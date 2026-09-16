@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 95.06,
+  "branch_cov": 88.24,
+  "test_file": "WeekDeepseekTest.java",
+  "target_classes": "org.jfree.data.time.Week",
+  "buggy_failures": [
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekZero",
+    "org.jfree.data.time.WeekDeepseekTest::testDefectJanuaryBoundary",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekNegative",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekInConstructorWithYearObject",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54InConstructorWithYearObject",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekZero",
+    "org.jfree.data.time.WeekDeepseekTest::testDefectJanuaryBoundary",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekNegative",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeekInConstructorWithYearObject",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54InConstructorWithYearObject",
+    "org.jfree.data.time.WeekDeepseekTest::testInvalidWeek54"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 98.18,
+  "branch_cov": 93.75,
+  "test_file": "DefaultDateTypeAdapterGeminiTest.java",
+  "target_classes": "com.google.gson.DefaultDateTypeAdapter",
+  "buggy_failures": [
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedNumberToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValueSqlDate",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValue",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValueTimestamp"
+  ],
+  "fixed_failures": [
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken"
+  ]
+}

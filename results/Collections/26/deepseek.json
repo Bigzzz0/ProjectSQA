@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "MultiKeyDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections4.keyvalue.MultiKey",
+  "buggy_failures": [
+    "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationOfDerivedClassWithNullKeys",
+    "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationOfDerivedClass",
+    "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testGetKeysReturnsClone"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.keyvalue.MultiKeyDeepseekTest::testGetKeysReturnsClone"
+  ]
+}

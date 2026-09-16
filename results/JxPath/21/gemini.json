@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 92.86,
+  "branch_cov": 84.62,
+  "test_file": "PropertyPointerGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.beans.PropertyPointer",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testGetLengthWhenBaseValueIsNullDefect",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testNullPropertyIterationDefect",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
+  ]
+}

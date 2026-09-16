@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 64.12,
+  "branch_cov": 74.32,
+  "test_file": "XmlTokenStreamGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStream",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testLocationsAndCloseAndToString",
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testDefectMixedContentTextBeforeChildTag",
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementAndDelayedReplay",
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementReplayEnd"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testLocationsAndCloseAndToString",
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementAndDelayedReplay",
+    "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementReplayEnd"
+  ]
+}
