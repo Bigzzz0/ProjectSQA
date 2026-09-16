@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CaseInsensitiveMapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.map.CaseInsensitiveMap",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceTurkishI"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 91.74,
+  "branch_cov": 97.37,
+  "test_file": "SetUniqueListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections4.list.SetUniqueList",
+  "buggy_failures": [
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListIsUnmodifiable",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
+  ]
+}

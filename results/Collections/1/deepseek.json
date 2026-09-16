@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 87.98,
+  "branch_cov": 75.8,
+  "test_file": "Flat3MapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.map.Flat3Map",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testMapIteratorSetValueOnThirdEntryDoesNotModifyEarlier",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testMapIteratorSetValueOnSecondEntryDoesNotModifyFirst",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorSetValueOnSecondEntryDoesNotModifyFirst",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorSetValueOnThirdEntryDoesNotModifyEarlier"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 93.75,
+  "branch_cov": 87.5,
+  "test_file": "XmlSerializerProviderGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyDoesNotShareRootNameLookupInstance",
+    "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyWithDefect282AnnotationIndependence"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 60.68,
+  "branch_cov": 52.32,
+  "test_file": "FromXmlParserGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testHandleEOFThrowsExceptionWhenUnclosed",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testXmlAttributesWithNextTextValue",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testAddVirtualWrapping",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetValueAsString",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testCurrentNameAndOverrideCurrentName",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetBinaryValueCorruptBase64ThrowsException"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testHandleEOFThrowsExceptionWhenUnclosed",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testAddVirtualWrapping",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetValueAsString",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testCurrentNameAndOverrideCurrentName",
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetBinaryValueCorruptBase64ThrowsException"
+  ]
+}

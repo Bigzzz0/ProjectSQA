@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 86.35,
+  "branch_cov": 77.27,
+  "test_file": "TreeListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.list.TreeList",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
+  ]
+}

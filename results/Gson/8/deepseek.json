@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "UnsafeAllocatorDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.UnsafeAllocator",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testNewInstancePrimitiveClass",
+    "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testInterfaceInstantiation",
+    "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testAbstractClassInstantiation"
+  ]
+}

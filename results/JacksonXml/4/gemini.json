@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 67.23,
+  "branch_cov": 56.9,
+  "test_file": "XmlSerializerProviderGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testDynamicRootNameWithNamespaceAndNullValue",
+    "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testDynamicRootNameWithNullValue"
+  ],
+  "fixed_failures": []
+}

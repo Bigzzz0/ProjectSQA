@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CaverphoneGeminiTest.java",
+  "target_classes": "org.apache.commons.codec.language.Caverphone",
+  "buggy_failures": [
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testEncodeValidStringAsObject",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndWHLRules",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testCoreEncodingExamples",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testSpecialPrefixReplacements",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testPhoneticRulesCoverage",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYRules",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testEndMbDefect",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testEndMbWord"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testEncodeValidStringAsObject",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testGhAndWHLRules",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testCoreEncodingExamples",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testSpecialPrefixReplacements",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testPhoneticRulesCoverage",
+    "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYRules"
+  ]
+}

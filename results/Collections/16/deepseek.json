@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "SetUniqueListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetDuplicateEdgeCase",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testListIteratorPreviousAndRemove"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetDuplicateEdgeCase",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testListIteratorPreviousAndRemove",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListAddUpdatesParentSet",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListRemoveUpdatesParentSet"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 99.57,
+  "branch_cov": 91.98,
+  "test_file": "Base64GeminiTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDefectEncodeBase64StringNoTrailingChunkSeparator",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDefectRfc4648VectorsEncodeString",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDefectRfc4648Section10SingleCharEncode"
+  ],
+  "fixed_failures": []
+}

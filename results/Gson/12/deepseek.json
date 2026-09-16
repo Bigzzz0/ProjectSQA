@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 9,
+  "line_cov": 92.26,
+  "branch_cov": 83.72,
+  "test_file": "JsonTreeReaderDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnEmptyObjectDirectly",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnNestedObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnFilledObjectAfterBegin",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyArray",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testLargeNestingToTriggerStackResize",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_filledJsonObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testPathSimple",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testHasNext",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyJsonObject"
+  ],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnNestedObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnFilledObjectAfterBegin",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyArray",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testLargeNestingToTriggerStackResize",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_filledJsonObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testPathSimple",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testHasNext",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyJsonObject"
+  ]
+}

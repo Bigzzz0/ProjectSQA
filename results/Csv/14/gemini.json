@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 95.51,
+  "branch_cov": 81.62,
+  "test_file": "CSVFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeNullSingleBackslash",
+    "org.apache.commons.csv.CSVFormatGeminiTest::testPrintQuoteModeNoneWithEscape",
+    "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeNullDoubleBackslash",
+    "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeBackslashDoubleChar",
+    "org.apache.commons.csv.CSVFormatGeminiTest::testDefectEscapeBackslashSingleChar"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormatGeminiTest::testPrintQuoteModeNoneWithEscape"
+  ]
+}

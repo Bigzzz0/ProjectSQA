@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 82.51,
+  "branch_cov": 69.75,
+  "test_file": "DateTimeZoneDeepseekTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZoneDeepseekTest::testDateTimeCreation_london_cutover",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstSpringForward",
+    "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
+  ],
+  "fixed_failures": [
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstSpringForward",
+    "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
+  ]
+}

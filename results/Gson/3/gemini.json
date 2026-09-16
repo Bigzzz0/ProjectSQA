@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.67,
+  "branch_cov": 96.88,
+  "test_file": "ConstructorConstructorGeminiTest.java",
+  "target_classes": "com.google.gson.internal.ConstructorConstructor",
+  "buggy_failures": [
+    "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentNavigableMapConstruction",
+    "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentMapConstruction"
+  ],
+  "fixed_failures": []
+}

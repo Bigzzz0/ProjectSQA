@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "JsonAdapterAnnotationTypeAdapterFactoryGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugDeserialize",
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testGetTypeAdapterReturnsNullWhenFactoryReturnsNullDirectly",
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugSerialize",
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testCreateReturnsNullWhenFactoryReturnsNullDirectly"
+  ],
+  "fixed_failures": []
+}

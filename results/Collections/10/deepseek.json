@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 92.44,
+  "branch_cov": 87.5,
+  "test_file": "MultiValueMapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testFactoryReturningNonEmptyCollection",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationCompatibility",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationNonEmptyMap",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testPutNewKey",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testDecorateNullClass",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationEmptyMap"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testFactoryReturningNonEmptyCollection",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testPutNewKey",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testDecorateNullClass"
+  ]
+}
