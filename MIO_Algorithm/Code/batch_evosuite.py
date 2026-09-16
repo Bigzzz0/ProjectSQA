@@ -235,6 +235,9 @@ def run_single_experiment(project: str, bug_id: int, target_class: str, budget: 
     
     cmd_script = f"""
     set -e
+    export LC_ALL=C.UTF-8
+    export LANG=C.UTF-8
+    export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
     mkdir -p "{container_report_dir}" "{container_out_dir}"
     if [ ! -f "{work_dir}/.defects4j.config" ]; then
         rm -rf "{work_dir}"
