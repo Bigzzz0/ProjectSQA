@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.csv.CSVParser,LINE;BRANCH,0.5769230769230769,184,108

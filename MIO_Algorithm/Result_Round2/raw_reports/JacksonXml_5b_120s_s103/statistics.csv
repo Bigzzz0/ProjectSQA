@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider,LINE;BRANCH,0.6476608187134503,149,79

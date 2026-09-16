@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.csv.Lexer,LINE;BRANCH,0.9758064516129032,100,97

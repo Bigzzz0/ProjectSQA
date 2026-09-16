@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser,LINE;BRANCH,0.025226851631906504,508,14
