@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.codec.binary.BaseNCodecInputStream,LINE;BRANCH,0.9141705069124424,59,52

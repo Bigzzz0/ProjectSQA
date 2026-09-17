@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.codec.language.Soundex,LINE;BRANCH,0.9880952380952381,93,92

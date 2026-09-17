@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.codec.binary.Base64,LINE;BRANCH,0.9524060414471374,414,310
+org.apache.commons.codec.binary.Base64,LINE;BRANCH,0.976923076923077,414,399
+org.apache.commons.codec.binary.Base64InputStream,LINE;BRANCH,0.9721362229102167,73,66
