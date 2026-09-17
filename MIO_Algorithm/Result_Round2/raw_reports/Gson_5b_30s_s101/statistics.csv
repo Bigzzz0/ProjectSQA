@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.gson.internal.bind.util.ISO8601Utils,LINE;BRANCH,0.7270929000353232,244,183

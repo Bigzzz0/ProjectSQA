@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.gson.internal.bind.JsonTreeReader,LINE;BRANCH,0.901010101010101,264,235

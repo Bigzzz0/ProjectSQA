@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory,LINE;BRANCH,0.6589439655172413,180,122

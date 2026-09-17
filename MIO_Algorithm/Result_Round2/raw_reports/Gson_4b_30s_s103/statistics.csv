@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.gson.stream.JsonReader,LINE;BRANCH,0.6053559124397095,1346,636
+com.google.gson.stream.JsonWriter,LINE;BRANCH,0.9224023581429625,292,267

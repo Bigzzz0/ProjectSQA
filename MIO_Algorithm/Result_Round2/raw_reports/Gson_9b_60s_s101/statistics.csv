@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.gson.internal.bind.JsonTreeWriter,LINE;BRANCH,0.9260724331926864,151,135
+com.google.gson.internal.bind.TypeAdapters,LINE;BRANCH,0.2296264931360314,679,147
+com.google.gson.stream.JsonWriter,LINE;BRANCH,0.9202316602316603,286,263
