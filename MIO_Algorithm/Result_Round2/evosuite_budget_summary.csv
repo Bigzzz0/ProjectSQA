@@ -145,3 +145,4 @@ Codec,8,org.apache.commons.codec.binary.Base64InputStream,120,97.37,0.28,97.37,0
 Codec,9,org.apache.commons.codec.binary.Base64,30,95.71,0.0,95.71,0.0,0.0,0.0,43.05,101
 Codec,9,org.apache.commons.codec.binary.Base64,60,96.11,0.75,96.11,0.75,0.0,0.0,74.58,103
 Codec,9,org.apache.commons.codec.binary.Base64,120,96.14,0.14,96.14,0.14,0.0,0.0,134.85,101
+Codec,7,org.apache.commons.codec.binary.Base64,120,99.0,0.25,99.0,0.25,0.0,0.0,134.97,101

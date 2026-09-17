@@ -5715,6 +5715,50 @@
           "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Codec_7b_60s_s103"
         }
       ]
+    },
+    "120s": {
+      "mean_coverage": 99.0,
+      "sd_coverage": 0.25,
+      "mean_duration": 134.97,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 99.25,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 430,
+          "covered_goals": 288,
+          "duration": 133.15,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Codec_7b_120s_s101"
+        },
+        {
+          "coverage": 98.76,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 430,
+          "covered_goals": 161,
+          "duration": 132.92,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Codec_7b_120s_s102"
+        },
+        {
+          "coverage": 99.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 430,
+          "covered_goals": 240,
+          "duration": 138.84,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Codec_7b_120s_s103"
+        }
+      ]
     }
   },
   "Codec_18_StringUtils": {
