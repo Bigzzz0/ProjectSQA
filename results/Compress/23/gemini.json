@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 91.26,
+  "branch_cov": 91.18,
+  "test_file": "CodersGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.Coders",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderNonDefaultDictionarySizeSignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeProperty1SignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeExceedsMax"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderNonDefaultDictionarySizeSignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeProperty1SignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeExceedsMax"
+  ]
+}

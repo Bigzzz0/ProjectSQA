@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 94.35,
+  "branch_cov": 84.48,
+  "test_file": "KeyedObjects2DGeminiTest.java",
+  "target_classes": "org.jfree.data.KeyedObjects2D",
+  "buggy_failures": [
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveColumnSparseDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testSerialization",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveColumnByIndexSparseDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveObjectColumnCleanedUpDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveRowByUnknownKeyDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testEqualsAndHashCode"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.KeyedObjects2DGeminiTest::testSerialization",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testEqualsAndHashCode"
+  ]
+}

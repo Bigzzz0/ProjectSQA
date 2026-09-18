@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 97.2,
+  "branch_cov": 92.98,
+  "test_file": "CpioArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamGeminiTest::testReadOldBinaryFormatLittleEndian",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamGeminiTest::testCpioUnarchiveCreatedByRedlineRpm"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamGeminiTest::testReadOldBinaryFormatLittleEndian",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamGeminiTest::testCpioUnarchiveCreatedByRedlineRpm"
+  ]
+}

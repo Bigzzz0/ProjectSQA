@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 87.73,
+  "branch_cov": 75.14,
+  "test_file": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberExpOnly",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberHexUpperX",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberHexUpperXNegative",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDecimalNoQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberNegativeHex",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberExpOnly",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDecimalNoQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 20.0,
+  "branch_cov": 23.77,
+  "test_file": "BZip2CompressorInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamGeminiTest::testReadOffsetAtBufferLengthWithZeroLength",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamGeminiTest::readOfLength0ShouldReturn0",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamGeminiTest::readOfLength0WithNonZeroOffsetShouldReturn0"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 98.17,
+  "branch_cov": 100.0,
+  "test_file": "SetUniqueListGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testSubListBehavior",
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testSetCollections444"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testSubListBehavior"
+  ]
+}

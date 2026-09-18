@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "BitInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.utils.BitInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianMaxOverflowAt62Bits",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testBigEndianMaxOverflowAt62Bits",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testReadBitsStreamEndsPrematurelyReturnsNegativeOne",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testBigEndianBitCacheOverflowRevealsDefect",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianBitCacheOverflowRevealsDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianMaxOverflowAt62Bits",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testReadBitsStreamEndsPrematurelyReturnsNegativeOne"
+  ]
+}

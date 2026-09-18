@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 35.65,
+  "branch_cov": 26.4,
+  "test_file": "SevenZFileGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZFile",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadEntriesOfSize0ReturnsEOF"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadWithoutGetNextEntryThrowsIllegalStateException",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadBufferWithoutGetNextEntryThrowsIllegalStateException"
+  ]
+}

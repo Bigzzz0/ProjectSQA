@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 87.5,
+  "branch_cov": 85.71,
+  "test_file": "SerializationUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.SerializationUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.SerializationUtilsDeepseekTest::testClonePrimitiveTypeClass"
+  ],
+  "fixed_failures": []
+}

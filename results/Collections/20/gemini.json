@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.81,
+  "branch_cov": 87.01,
+  "test_file": "TreeListGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.list.TreeList",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 86.76,
+  "branch_cov": 76.16,
+  "test_file": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_BigDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_Long",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber_TrailingDot",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_AllZeroesMantissaAndExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_ExponentWithLeadingPlusSign",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_InvalidTrailingDot",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_WithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_TooLargeForFloatWithQualifier"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_BigDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_Long",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_AllZeroesMantissaAndExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_ExponentWithLeadingPlusSign",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_InvalidTrailingDot",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_WithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_TooLargeForFloatWithQualifier"
+  ]
+}

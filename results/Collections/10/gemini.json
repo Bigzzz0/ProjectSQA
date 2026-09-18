@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 93.28,
+  "branch_cov": 93.75,
+  "test_file": "MultiValueMapGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.MultiValueMapGeminiTest::testFullMapSerializationDefectTarget",
+    "org.apache.commons.collections.map.MultiValueMapGeminiTest::testEmptyMapSerializationDefectTarget"
+  ],
+  "fixed_failures": []
+}

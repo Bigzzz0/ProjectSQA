@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 91.67,
+  "test_file": "X5455_ExtendedTimestampGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestamp",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testAccessJavaTimeNegativeOverflowThrowsException",
+    "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testCreateJavaTimeNegativeOverflowThrowsException",
+    "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testModifyJavaTimeNegativeOverflowThrowsException"
+  ],
+  "fixed_failures": []
+}

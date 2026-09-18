@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 92.54,
+  "branch_cov": 80.94,
+  "test_file": "PeriodFormatterBuilderGeminiTest.java",
+  "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+  "buggy_failures": [
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testDigitsBoundariesAndSignedRejection",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testCompositeHierarchyDecomposition",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testSeparatorLeadingWithoutFieldsBefore"
+  ],
+  "fixed_failures": [
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testDigitsBoundariesAndSignedRejection",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testCompositeHierarchyDecomposition",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testSeparatorLeadingWithoutFieldsBefore"
+  ]
+}

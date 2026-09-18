@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 93.75,
+  "branch_cov": 88.28,
+  "test_file": "TimeSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testBug1832432_cloneEmptySeries",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeletionMethods",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testRemoveAgedItemsByTimestamp"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeletionMethods",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testRemoveAgedItemsByTimestamp"
+  ]
+}

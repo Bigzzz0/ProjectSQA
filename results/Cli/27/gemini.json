@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "OptionGroupGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.OptionGroup",
+  "buggy_failures": [
+    "org.apache.commons.cli.OptionGroupGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.OptionGroupGeminiTest"
+  ]
+}

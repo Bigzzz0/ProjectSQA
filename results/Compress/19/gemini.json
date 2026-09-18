@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 90.0,
+  "test_file": "Zip64ExtendedInformationExtraFieldGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldGeminiTest::testReparseCentralDirectoryDataWithExcessData"
+  ],
+  "fixed_failures": []
+}

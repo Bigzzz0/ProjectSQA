@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 97.06,
+  "branch_cov": 100.0,
+  "test_file": "UnmodifiableTrieGeminiTest.java",
+  "target_classes": "org.apache.commons.collections4.trie.UnmodifiableTrie",
+  "buggy_failures": [
+    "org.apache.commons.collections4.trie.UnmodifiableTrieGeminiTest::testCoreDelegationReads",
+    "org.apache.commons.collections4.trie.UnmodifiableTrieGeminiTest::testDecorateFactoryDoesNotDoubleWrap"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.trie.UnmodifiableTrieGeminiTest::testCoreDelegationReads"
+  ]
+}

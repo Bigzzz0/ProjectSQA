@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 90.54,
+  "branch_cov": 78.73,
+  "test_file": "ExtendedPropertiesGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "buggy_failures": [
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesTokenizer",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testIncludeInstanceIsolationDefect",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesReaderDirect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesTokenizer",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesReaderDirect"
+  ]
+}

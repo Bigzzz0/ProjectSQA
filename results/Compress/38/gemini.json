@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 86.84,
+  "branch_cov": 54.55,
+  "test_file": "TarArchiveEntryGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveEntry",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testOldGnuFormatHeaderParsing",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testLinkTypeClassifications",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testHeaderEvaluationFormats",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testNormalizeFileNameWindowsDriveLetters",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testPaxHeaderEndingInSlashNotADirectory",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testGnuLongLinkAndNameEndingInSlashNotADirectory"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testOldGnuFormatHeaderParsing",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testLinkTypeClassifications",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testHeaderEvaluationFormats",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testNormalizeFileNameWindowsDriveLetters",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testGnuLongLinkAndNameEndingInSlashNotADirectory"
+  ]
+}

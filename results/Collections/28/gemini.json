@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 78.49,
+  "branch_cov": 65.68,
+  "test_file": "AbstractPatriciaTrieGeminiTest.java",
+  "target_classes": "org.apache.commons.collections4.trie.AbstractPatriciaTrie",
+  "buggy_failures": [
+    "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testPrefixMapClear_DefectTarget",
+    "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testPrefixMapIteratorRemoveSingleAndMultiple",
+    "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testEmptyStringAsRootKey"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testPrefixMapIteratorRemoveSingleAndMultiple",
+    "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testEmptyStringAsRootKey"
+  ]
+}

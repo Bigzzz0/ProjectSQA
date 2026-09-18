@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 82.48,
+  "branch_cov": 73.94,
+  "test_file": "Flat3MapGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.map.Flat3Map",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testRemoveNonDelegateAllSizes",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testEntryIteratorSetValue2",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testEntryIteratorSetValue3",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testNullKeyOperations",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testMapIteratorSetValue2",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testMapIteratorSetValue3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testRemoveNonDelegateAllSizes",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testNullKeyOperations"
+  ]
+}

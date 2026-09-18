@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.86,
+  "branch_cov": 33.33,
+  "test_file": "UnboundedFifoBufferGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

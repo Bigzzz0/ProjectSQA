@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 84.55,
+  "branch_cov": 72.22,
+  "test_file": "TarArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadWithoutCurrentEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testInvalidHeaderThrowsWrappedIOException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testAvailableBoundaryIntegerMax",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testPaxHeadersAllStandardFields",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::shouldReadBigGid",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::shouldReadBigUid",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testTruncatedArchiveDuringEntryRead"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadWithoutCurrentEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testInvalidHeaderThrowsWrappedIOException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testAvailableBoundaryIntegerMax",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testPaxHeadersAllStandardFields",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testTruncatedArchiveDuringEntryRead"
+  ]
+}

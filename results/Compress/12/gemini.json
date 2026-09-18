@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 93.85,
+  "branch_cov": 90.0,
+  "test_file": "TarArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testCOMPRESS178DefectTarget",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadUnexpectedEOFThrowsIOException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGNUSparseHitEOFDuringSparseRead"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testCOMPRESS178DefectTarget",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadUnexpectedEOFThrowsIOException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGNUSparseHitEOFDuringSparseRead"
+  ]
+}

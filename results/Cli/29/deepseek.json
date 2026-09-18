@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "UtilDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.Util",
+  "buggy_failures": [
+    "org.apache.commons.cli.UtilDeepseekTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.UtilDeepseekTest"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 12,
+  "line_cov": 4.69,
+  "branch_cov": 2.64,
+  "test_file": "SevenZFileDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZFile",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadByteArray",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadWithoutGetNextEntry",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetEntriesReturnsIterable",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testMatchesShortSignature",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testToString",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testMatchesNullSignature",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testCloseMultipleTimes",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadBufWithoutGetNextEntry",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadByteArrayOffsetLen",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetNextEntryReturnsNullAtEnd",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetNextEntryReturnsEntry",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadBufOffLenWithoutGetNextEntry"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadByteArray",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadWithoutGetNextEntry",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetEntriesReturnsIterable",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testMatchesShortSignature",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testToString",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testMatchesNullSignature",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testCloseMultipleTimes",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadBufWithoutGetNextEntry",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadByteArrayOffsetLen",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetNextEntryReturnsNullAtEnd",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetNextEntryReturnsEntry",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadBufOffLenWithoutGetNextEntry"
+  ]
+}

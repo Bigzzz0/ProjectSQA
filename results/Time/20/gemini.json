@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 61.37,
+  "branch_cov": 48.22,
+  "test_file": "DateTimeFormatterBuilderGeminiTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatterBuilder",
+  "buggy_failures": [
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::test_printParseZoneDawsonCreek",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetWithFractionsAndNoSeparators",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetFormattingAndParsing",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTextFieldsLongAndShort",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToPrinterThrowsWhenParserOnly",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToParserThrowsWhenPrinterOnly"
+  ],
+  "fixed_failures": [
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetWithFractionsAndNoSeparators",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetFormattingAndParsing",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTextFieldsLongAndShort",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToPrinterThrowsWhenParserOnly",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToParserThrowsWhenPrinterOnly"
+  ]
+}

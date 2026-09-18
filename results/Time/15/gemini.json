@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 94.29,
+  "test_file": "FieldUtilsGeminiTest.java",
+  "target_classes": "org.joda.time.field.FieldUtils",
+  "buggy_failures": [
+    "org.joda.time.field.FieldUtilsGeminiTest::testDefectSafeMultiplyLongIntMinValueNegation"
+  ],
+  "fixed_failures": []
+}

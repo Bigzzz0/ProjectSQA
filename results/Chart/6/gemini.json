@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ShapeListGeminiTest.java",
+  "target_classes": "org.jfree.chart.util.ShapeList",
+  "buggy_failures": [
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsWithLine2DShapesRevealingDefect",
+    "org.jfree.chart.util.ShapeListGeminiTest::testSerializationWithNonObjectEqualsShapes",
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsWithEllipseAndGeneralPath",
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsDifferentLengthsAndElements",
+    "org.jfree.chart.util.ShapeListGeminiTest::testGetShapeNegativeIndexThrowsException"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsDifferentLengthsAndElements",
+    "org.jfree.chart.util.ShapeListGeminiTest::testGetShapeNegativeIndexThrowsException"
+  ]
+}

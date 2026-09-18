@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 90.38,
+  "branch_cov": 93.75,
+  "test_file": "RandomStringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmallWithNonZeroStart",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsEmptyArray",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsEmptyString",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmall_ShouldThrowIllegalArgument"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmallWithNonZeroStart",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmall_ShouldThrowIllegalArgument"
+  ]
+}

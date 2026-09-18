@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 83.82,
+  "branch_cov": 68.33,
+  "test_file": "ZipArchiveEntryDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testFileConstructorFile",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testEqualsWithNullName",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testCopyConstructor",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveExtraField",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testEqualsForStringConstructorDifferentNames",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraFields"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testFileConstructorFile",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testEqualsWithNullName",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testCopyConstructor",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveExtraField",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraFields"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "HelpFormatterGeminiTest.java;OptionBuilderGeminiTest.java;OptionGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter;org.apache.commons.cli.Option;org.apache.commons.cli.OptionBuilder",
+  "buggy_failures": [
+    "org.apache.commons.cli.HelpFormatterGeminiTest",
+    "org.apache.commons.cli.OptionBuilderGeminiTest",
+    "org.apache.commons.cli.OptionGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.HelpFormatterGeminiTest",
+    "org.apache.commons.cli.OptionBuilderGeminiTest",
+    "org.apache.commons.cli.OptionGeminiTest"
+  ]
+}

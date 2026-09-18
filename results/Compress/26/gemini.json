@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "IOUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.utils.IOUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.IOUtilsGeminiTest::testSkipUsingSkipAndRead",
+    "org.apache.commons.compress.utils.IOUtilsGeminiTest::testSkipUsingRead"
+  ],
+  "fixed_failures": []
+}

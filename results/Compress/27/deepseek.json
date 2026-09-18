@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 79.78,
+  "branch_cov": 77.59,
+  "test_file": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumStoredGreaterThanUnsigned",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryTooBigThrows",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalValidMax",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNullTerminated",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalSpaceThenNUL"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumStoredGreaterThanUnsigned",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryTooBigThrows",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalValidMax",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNullTerminated",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalLeadingSpacesOnly"
+  ]
+}

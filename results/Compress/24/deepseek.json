@@ -1,0 +1,34 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 85.56,
+  "branch_cov": 80.51,
+  "test_file": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalMultipleTrailing",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatLongOctalOrBinaryBytesBinaryPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseBinaryLongLengthTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalDefectTargetWithSpaces",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNormal",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalDefectTarget",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringOverflow",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalWithTrailingNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumValid",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryOctalPath",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringLarge"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalMultipleTrailing",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatLongOctalOrBinaryBytesBinaryPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseBinaryLongLengthTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalDefectTargetWithSpaces",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNormal",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringOverflow",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalWithTrailingNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumValid",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryOctalPath",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringLarge"
+  ]
+}

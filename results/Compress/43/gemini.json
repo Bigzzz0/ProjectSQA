@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 53.66,
+  "branch_cov": 47.0,
+  "test_file": "ZipArchiveOutputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStreamGeminiTest::testDefectDoesntWriteDataDescriptorWhenAddingRawEntries"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStreamGeminiTest::testDefectDoesntWriteDataDescriptorWhenAddingRawEntries"
+  ]
+}

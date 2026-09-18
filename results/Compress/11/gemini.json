@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 92.75,
+  "branch_cov": 95.65,
+  "test_file": "ArchiveStreamFactoryGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ArchiveStreamFactory",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testCreateArchiveInputStreamByNameAllFormats",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testAutoDetectEmptyStreamThrowsArchiveException",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testShortTextFilesAreNoTARs",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testArbitraryBinaryNonArchiveThrowsArchiveException",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testCreateArchiveInputStreamCaseInsensitive"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testCreateArchiveInputStreamByNameAllFormats",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testCreateArchiveInputStreamCaseInsensitive"
+  ]
+}

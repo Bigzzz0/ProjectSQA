@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "GrayPaintScaleGeminiTest.java",
+  "target_classes": "org.jfree.chart.renderer.GrayPaintScale",
+  "buggy_failures": [
+    "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingBelowLowerBoundDefect",
+    "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingAboveUpperBoundDefect",
+    "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingExtremes"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 77.64,
+  "branch_cov": 63.16,
+  "test_file": "TarArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testOldGnuSparsePrematureEOF",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadWithoutCurrentEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSparseHeadersInPax",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGlobalPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSurvivesBlankLinesInPaxHeader",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testTruncatedEntryDataThrowsIOException"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testOldGnuSparsePrematureEOF",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadWithoutCurrentEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSparseHeadersInPax",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGlobalPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSurvivesBlankLinesInPaxHeader",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testTruncatedEntryDataThrowsIOException"
+  ]
+}

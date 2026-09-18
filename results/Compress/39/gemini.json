@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 87.1,
+  "branch_cov": 97.22,
+  "test_file": "ArchiveUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ArchiveUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testIsEqualOffsetBounds",
+    "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testSanitizeShortensStringDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testIsEqualOffsetBounds"
+  ]
+}

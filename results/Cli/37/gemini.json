@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 97.33,
+  "branch_cov": 86.71,
+  "test_file": "DefaultParserGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.DefaultParser",
+  "buggy_failures": [
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionMatching",
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionWithEqualSign",
+    "org.apache.commons.cli.DefaultParserGeminiTest::testCli265ShortOptionWithoutValue"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionMatching",
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionWithEqualSign"
+  ]
+}

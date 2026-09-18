@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 97.22,
+  "branch_cov": 86.96,
+  "test_file": "MinMaxCategoryRendererGeminiTest.java",
+  "target_classes": "org.jfree.chart.renderer.category.MinMaxCategoryRenderer",
+  "buggy_failures": [
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererGeminiTest::testEqualsDefect_GroupStroke",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererGeminiTest::testEqualsDefect_PlotLines",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererGeminiTest::testEqualsDefect_GroupPaint"
+  ],
+  "fixed_failures": []
+}
