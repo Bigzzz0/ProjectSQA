@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jfree.chart.renderer.category.StatisticalBarRenderer,LINE;BRANCH,0.2246868138964226,263,63

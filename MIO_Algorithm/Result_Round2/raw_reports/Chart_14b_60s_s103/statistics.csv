@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jfree.chart.plot.CategoryPlot,LINE;BRANCH,0.767177939029606,1887,1455
+org.jfree.chart.plot.XYPlot,LINE;BRANCH,0.6645977126949734,2443,1187

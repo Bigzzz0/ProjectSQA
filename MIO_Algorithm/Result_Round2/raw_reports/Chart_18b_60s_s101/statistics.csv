@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jfree.data.DefaultKeyedValues,LINE;BRANCH,0.9800286234712464,185,183
+org.jfree.data.DefaultKeyedValues2D,LINE;BRANCH,0.9758141762452108,231,220

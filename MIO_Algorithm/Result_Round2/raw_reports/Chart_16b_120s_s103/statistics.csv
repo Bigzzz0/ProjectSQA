@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jfree.data.category.DefaultIntervalCategoryDataset,LINE;BRANCH,0.9810723714862557,325,312

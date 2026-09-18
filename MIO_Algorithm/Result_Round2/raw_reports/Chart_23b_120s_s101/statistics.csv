@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jfree.chart.renderer.category.MinMaxCategoryRenderer,LINE;BRANCH,0.3991169237648111,205,81

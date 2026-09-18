@@ -1474,5 +1474,3757 @@
         }
       ]
     }
+  },
+  "Chart_1_AbstractCategoryItemRenderer": {
+    "30s": {
+      "mean_coverage": 53.94,
+      "sd_coverage": 1.9,
+      "mean_duration": 85.27,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 56.03,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 465,
+          "duration": 94.0,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_30s_s101"
+        },
+        {
+          "coverage": 53.48,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 456,
+          "duration": 83.31,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_30s_s102"
+        },
+        {
+          "coverage": 52.31,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 437,
+          "duration": 78.51,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 54.81,
+      "sd_coverage": 1.67,
+      "mean_duration": 115.12,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 53.15,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 444,
+          "duration": 116.06,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_60s_s101"
+        },
+        {
+          "coverage": 54.79,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 464,
+          "duration": 112.53,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_60s_s102"
+        },
+        {
+          "coverage": 56.48,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 471,
+          "duration": 116.78,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 58.83,
+      "sd_coverage": 2.05,
+      "mean_duration": 169.43,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 61.12,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 369,
+          "duration": 130.45,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_120s_s101"
+        },
+        {
+          "coverage": 58.22,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 490,
+          "duration": 187.18,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_120s_s102"
+        },
+        {
+          "coverage": 57.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 848,
+          "covered_goals": 475,
+          "duration": 190.65,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_1b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_14_CategoryPlot": {
+    "30s": {
+      "mean_coverage": 71.19,
+      "sd_coverage": 4.44,
+      "mean_duration": 100.18,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 66.77,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1293,
+          "duration": 131.59,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_30s_s101"
+        },
+        {
+          "coverage": 75.64,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1435,
+          "duration": 128.47,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_30s_s102"
+        },
+        {
+          "coverage": 71.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1076,
+          "duration": 40.47,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 77.6,
+      "sd_coverage": 0.9,
+      "mean_duration": 158.44,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 78.52,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1504,
+          "duration": 165.27,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_60s_s101"
+        },
+        {
+          "coverage": 77.55,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1465,
+          "duration": 156.37,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_60s_s102"
+        },
+        {
+          "coverage": 76.72,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1455,
+          "duration": 153.69,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 81.2,
+      "sd_coverage": 2.07,
+      "mean_duration": 167.58,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 80.31,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 973,
+          "duration": 131.73,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_120s_s101"
+        },
+        {
+          "coverage": 83.56,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 965,
+          "duration": 130.54,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_120s_s102"
+        },
+        {
+          "coverage": 79.72,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1510,
+          "duration": 240.46,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_2_DatasetUtilities": {
+    "30s": {
+      "mean_coverage": 81.46,
+      "sd_coverage": 0.74,
+      "mean_duration": 56.29,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 81.23,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 719,
+          "duration": 50.56,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_30s_s101"
+        },
+        {
+          "coverage": 80.86,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 1096,
+          "duration": 80.66,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_30s_s102"
+        },
+        {
+          "coverage": 82.29,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 743,
+          "duration": 37.65,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 83.25,
+      "sd_coverage": 0.81,
+      "mean_duration": 96.61,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 84.17,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 743,
+          "duration": 67.92,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_60s_s101"
+        },
+        {
+          "coverage": 82.95,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 1108,
+          "duration": 111.11,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_60s_s102"
+        },
+        {
+          "coverage": 82.64,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 1082,
+          "duration": 110.81,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 88.98,
+      "sd_coverage": 1.57,
+      "mean_duration": 157.48,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 89.95,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 733,
+          "duration": 127.96,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_120s_s101"
+        },
+        {
+          "coverage": 87.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 1168,
+          "duration": 172.8,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_120s_s102"
+        },
+        {
+          "coverage": 89.82,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1361,
+          "covered_goals": 1192,
+          "duration": 171.68,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_2b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_14_XYPlot": {
+    "30s": {
+      "mean_coverage": 71.19,
+      "sd_coverage": 4.44,
+      "mean_duration": 103.4,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 66.77,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1293,
+          "duration": 140.51,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_30s_s101"
+        },
+        {
+          "coverage": 75.64,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1435,
+          "duration": 130.32,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_30s_s102"
+        },
+        {
+          "coverage": 71.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1076,
+          "duration": 39.36,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 77.6,
+      "sd_coverage": 0.9,
+      "mean_duration": 104.3,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 78.52,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1504,
+          "duration": 173.02,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_60s_s101"
+        },
+        {
+          "coverage": 77.55,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1465,
+          "duration": 70.09,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_60s_s102"
+        },
+        {
+          "coverage": 76.72,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1455,
+          "duration": 69.78,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 81.2,
+      "sd_coverage": 2.07,
+      "mean_duration": 218.33,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 80.31,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 973,
+          "duration": 228.43,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_120s_s101"
+        },
+        {
+          "coverage": 83.56,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 965,
+          "duration": 133.75,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_120s_s102"
+        },
+        {
+          "coverage": 79.72,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1887,
+          "covered_goals": 1510,
+          "duration": 292.81,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_14b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_3_TimeSeries": {
+    "30s": {
+      "mean_coverage": 88.62,
+      "sd_coverage": 0.55,
+      "mean_duration": 59.93,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 87.99,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 527,
+          "duration": 64.34,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_30s_s101"
+        },
+        {
+          "coverage": 88.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 523,
+          "duration": 55.61,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_30s_s102"
+        },
+        {
+          "coverage": 89.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 527,
+          "duration": 59.85,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 91.83,
+      "sd_coverage": 1.87,
+      "mean_duration": 86.91,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 93.98,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 552,
+          "duration": 87.25,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_60s_s101"
+        },
+        {
+          "coverage": 90.87,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 539,
+          "duration": 86.8,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_60s_s102"
+        },
+        {
+          "coverage": 90.64,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 527,
+          "duration": 86.69,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 96.61,
+      "sd_coverage": 1.04,
+      "mean_duration": 141.87,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 95.51,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 561,
+          "duration": 148.94,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_120s_s101"
+        },
+        {
+          "coverage": 96.73,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 576,
+          "duration": 147.89,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_120s_s102"
+        },
+        {
+          "coverage": 97.58,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 599,
+          "covered_goals": 343,
+          "duration": 128.78,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_3b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_15_PiePlot": {
+    "30s": {
+      "mean_coverage": 61.68,
+      "sd_coverage": 6.94,
+      "mean_duration": 102.59,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 59.82,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 739,
+          "duration": 112.99,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_30s_s101"
+        },
+        {
+          "coverage": 69.36,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 853,
+          "duration": 97.25,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_30s_s102"
+        },
+        {
+          "coverage": 55.86,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 678,
+          "duration": 97.53,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 65.13,
+      "sd_coverage": 6.53,
+      "mean_duration": 134.48,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 61.03,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 747,
+          "duration": 137.82,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_60s_s101"
+        },
+        {
+          "coverage": 61.69,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 675,
+          "duration": 135.73,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_60s_s102"
+        },
+        {
+          "coverage": 72.66,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 860,
+          "duration": 129.89,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 68.54,
+      "sd_coverage": 7.54,
+      "mean_duration": 199.76,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 62.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 760,
+          "duration": 202.14,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_120s_s101"
+        },
+        {
+          "coverage": 65.65,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 800,
+          "duration": 200.62,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_120s_s102"
+        },
+        {
+          "coverage": 77.1,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1217,
+          "covered_goals": 931,
+          "duration": 196.51,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_15b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_4_XYPlot": {
+    "30s": {
+      "mean_coverage": 54.81,
+      "sd_coverage": 7.14,
+      "mean_duration": 105.83,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 47.35,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1372,
+          "duration": 140.4,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_30s_s101"
+        },
+        {
+          "coverage": 61.59,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1784,
+          "duration": 135.42,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_30s_s102"
+        },
+        {
+          "coverage": 55.5,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 979,
+          "duration": 41.67,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 61.94,
+      "sd_coverage": 2.25,
+      "mean_duration": 166.03,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 64.48,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1869,
+          "duration": 160.41,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_60s_s101"
+        },
+        {
+          "coverage": 60.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1746,
+          "duration": 169.61,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_60s_s102"
+        },
+        {
+          "coverage": 61.12,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1780,
+          "duration": 168.06,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 69.13,
+      "sd_coverage": 1.28,
+      "mean_duration": 132.86,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 70.06,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1458,
+          "duration": 131.67,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_120s_s101"
+        },
+        {
+          "coverage": 67.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1375,
+          "duration": 135.57,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_120s_s102"
+        },
+        {
+          "coverage": 69.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 2879,
+          "covered_goals": 1441,
+          "duration": 131.34,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_4b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_16_DefaultIntervalCategoryDataset": {
+    "30s": {
+      "mean_coverage": 94.74,
+      "sd_coverage": 1.67,
+      "mean_duration": 57.99,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 92.89,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 294,
+          "duration": 62.08,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_30s_s101"
+        },
+        {
+          "coverage": 96.12,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 302,
+          "duration": 57.48,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_30s_s102"
+        },
+        {
+          "coverage": 95.22,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 300,
+          "duration": 54.4,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 95.2,
+      "sd_coverage": 2.06,
+      "mean_duration": 87.04,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 92.89,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 299,
+          "duration": 85.13,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_60s_s101"
+        },
+        {
+          "coverage": 96.85,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 313,
+          "duration": 90.74,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_60s_s102"
+        },
+        {
+          "coverage": 95.85,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 297,
+          "duration": 85.26,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 97.9,
+      "sd_coverage": 0.36,
+      "mean_duration": 145.57,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 98.11,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 306,
+          "duration": 143.89,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_120s_s101"
+        },
+        {
+          "coverage": 97.48,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 312,
+          "duration": 145.49,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_120s_s102"
+        },
+        {
+          "coverage": 98.11,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 325,
+          "covered_goals": 312,
+          "duration": 147.33,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_16b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_5_XYSeries": {
+    "30s": {
+      "mean_coverage": 98.58,
+      "sd_coverage": 0.45,
+      "mean_duration": 51.25,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 98.06,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 206,
+          "duration": 48.15,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_30s_s101"
+        },
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 270,
+          "duration": 54.68,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_30s_s102"
+        },
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 268,
+          "duration": 50.91,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 98.32,
+      "sd_coverage": 0.9,
+      "mean_duration": 72.79,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 97.28,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 236,
+          "duration": 68.03,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_60s_s101"
+        },
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 271,
+          "duration": 82.57,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_60s_s102"
+        },
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 156,
+          "duration": 67.76,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 98.84,
+      "sd_coverage": 0.0,
+      "mean_duration": 133.51,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 231,
+          "duration": 127.52,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_120s_s101"
+        },
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 270,
+          "duration": 143.21,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_120s_s102"
+        },
+        {
+          "coverage": 98.84,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 275,
+          "covered_goals": 145,
+          "duration": 129.79,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_5b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_17_TimeSeries": {
+    "30s": {
+      "mean_coverage": 91.49,
+      "sd_coverage": 0.54,
+      "mean_duration": 48.45,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 92.1,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 407,
+          "duration": 66.72,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_30s_s101"
+        },
+        {
+          "coverage": 91.11,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 255,
+          "duration": 38.53,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_30s_s102"
+        },
+        {
+          "coverage": 91.25,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 333,
+          "duration": 40.11,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 93.33,
+      "sd_coverage": 1.42,
+      "mean_duration": 87.25,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 91.94,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 402,
+          "duration": 86.68,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_60s_s101"
+        },
+        {
+          "coverage": 93.27,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 405,
+          "duration": 87.07,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_60s_s102"
+        },
+        {
+          "coverage": 94.78,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 412,
+          "duration": 87.99,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 93.89,
+      "sd_coverage": 1.17,
+      "mean_duration": 142.01,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 95.11,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 418,
+          "duration": 149.35,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_120s_s101"
+        },
+        {
+          "coverage": 93.78,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 175,
+          "duration": 129.46,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_120s_s102"
+        },
+        {
+          "coverage": 92.77,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 440,
+          "covered_goals": 402,
+          "duration": 147.21,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_17b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_6_ShapeList": {
+    "30s": {
+      "mean_coverage": 47.16,
+      "sd_coverage": 0.0,
+      "mean_duration": 45.43,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 51.95,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_30s_s101"
+        },
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 42.68,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_30s_s102"
+        },
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 41.66,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 47.16,
+      "sd_coverage": 0.0,
+      "mean_duration": 69.39,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 69.37,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_60s_s101"
+        },
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 69.31,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_60s_s102"
+        },
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 69.49,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 47.16,
+      "sd_coverage": 0.0,
+      "mean_duration": 128.25,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 128.82,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_120s_s101"
+        },
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 128.08,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_120s_s102"
+        },
+        {
+          "coverage": 47.16,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 46,
+          "covered_goals": 21,
+          "duration": 127.85,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_6b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_18_DefaultKeyedValues": {
+    "30s": {
+      "mean_coverage": 98.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 45.55,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 52.0,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_30s_s101"
+        },
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 182,
+          "duration": 42.7,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_30s_s102"
+        },
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 180,
+          "duration": 41.96,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 98.4,
+      "sd_coverage": 0.7,
+      "mean_duration": 74.78,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 75.39,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_60s_s101"
+        },
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 73.88,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_60s_s102"
+        },
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 75.08,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 99.21,
+      "sd_coverage": 0.0,
+      "mean_duration": 132.56,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 185,
+          "duration": 133.28,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_120s_s101"
+        },
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 185,
+          "duration": 132.04,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_120s_s102"
+        },
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 185,
+          "duration": 132.37,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_7_TimePeriodValues": {
+    "30s": {
+      "mean_coverage": 98.05,
+      "sd_coverage": 2.29,
+      "mean_duration": 52.32,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 232,
+          "duration": 57.8,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_30s_s101"
+        },
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 231,
+          "duration": 50.11,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_30s_s102"
+        },
+        {
+          "coverage": 95.41,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 220,
+          "duration": 49.04,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 99.37,
+      "sd_coverage": 0.0,
+      "mean_duration": 80.32,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 232,
+          "duration": 82.49,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_60s_s101"
+        },
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 232,
+          "duration": 80.23,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_60s_s102"
+        },
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 222,
+          "duration": 78.23,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 99.37,
+      "sd_coverage": 0.0,
+      "mean_duration": 138.48,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 226,
+          "duration": 136.89,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_120s_s101"
+        },
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 232,
+          "duration": 136.96,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_120s_s102"
+        },
+        {
+          "coverage": 99.37,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 233,
+          "covered_goals": 225,
+          "duration": 141.59,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_7b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_18_DefaultKeyedValues2D": {
+    "30s": {
+      "mean_coverage": 98.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 40.97,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 36.25,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_30s_s101"
+        },
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 182,
+          "duration": 43.08,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_30s_s102"
+        },
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 180,
+          "duration": 43.58,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 98.4,
+      "sd_coverage": 0.7,
+      "mean_duration": 73.09,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 73.32,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_60s_s101"
+        },
+        {
+          "coverage": 98.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 73.16,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_60s_s102"
+        },
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 183,
+          "duration": 72.78,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 99.21,
+      "sd_coverage": 0.0,
+      "mean_duration": 133.78,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 185,
+          "duration": 133.49,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_120s_s101"
+        },
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 185,
+          "duration": 134.46,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_120s_s102"
+        },
+        {
+          "coverage": 99.21,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 185,
+          "covered_goals": 185,
+          "duration": 133.39,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_18b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_8_Week": {
+    "30s": {
+      "mean_coverage": 89.06,
+      "sd_coverage": 0.53,
+      "mean_duration": 59.35,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 88.76,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 218,
+          "duration": 75.1,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_30s_s101"
+        },
+        {
+          "coverage": 88.76,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 207,
+          "duration": 47.58,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_30s_s102"
+        },
+        {
+          "coverage": 89.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 219,
+          "duration": 55.38,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 89.97,
+      "sd_coverage": 0.53,
+      "mean_duration": 84.89,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 90.58,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 222,
+          "duration": 93.6,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_60s_s101"
+        },
+        {
+          "coverage": 89.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 207,
+          "duration": 78.6,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_60s_s102"
+        },
+        {
+          "coverage": 89.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 207,
+          "duration": 82.47,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 89.97,
+      "sd_coverage": 0.53,
+      "mean_duration": 144.62,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 90.58,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 220,
+          "duration": 154.17,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_120s_s101"
+        },
+        {
+          "coverage": 89.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 207,
+          "duration": 137.91,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_120s_s102"
+        },
+        {
+          "coverage": 89.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 245,
+          "covered_goals": 217,
+          "duration": 141.78,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_8b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_19_CategoryPlot": {
+    "30s": {
+      "mean_coverage": 69.96,
+      "sd_coverage": 8.14,
+      "mean_duration": 102.55,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 60.58,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 1096,
+          "duration": 135.4,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_30s_s101"
+        },
+        {
+          "coverage": 75.17,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 926,
+          "duration": 41.85,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_30s_s102"
+        },
+        {
+          "coverage": 74.13,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 1302,
+          "duration": 130.41,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 74.74,
+      "sd_coverage": 3.53,
+      "mean_duration": 130.57,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 77.48,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 1402,
+          "duration": 166.45,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_60s_s101"
+        },
+        {
+          "coverage": 75.98,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 888,
+          "duration": 72.89,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_60s_s102"
+        },
+        {
+          "coverage": 70.76,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 1294,
+          "duration": 152.37,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 79.25,
+      "sd_coverage": 0.75,
+      "mean_duration": 189.25,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 78.4,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 1411,
+          "duration": 219.94,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_120s_s101"
+        },
+        {
+          "coverage": 79.83,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 847,
+          "duration": 133.86,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_120s_s102"
+        },
+        {
+          "coverage": 79.51,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 1803,
+          "covered_goals": 1443,
+          "duration": 213.96,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_19b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_9_TimeSeries": {
+    "30s": {
+      "mean_coverage": 93.22,
+      "sd_coverage": 1.43,
+      "mean_duration": 56.64,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 94.62,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 211,
+          "duration": 49.83,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_30s_s101"
+        },
+        {
+          "coverage": 93.27,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 407,
+          "duration": 61.54,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_30s_s102"
+        },
+        {
+          "coverage": 91.76,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 402,
+          "duration": 58.54,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 94.17,
+      "sd_coverage": 1.67,
+      "mean_duration": 84.42,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 94.79,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 178,
+          "duration": 69.49,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_60s_s101"
+        },
+        {
+          "coverage": 95.45,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 416,
+          "duration": 95.03,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_60s_s102"
+        },
+        {
+          "coverage": 92.28,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 409,
+          "duration": 88.75,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 93.61,
+      "sd_coverage": 2.06,
+      "mean_duration": 142.09,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 94.46,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 217,
+          "duration": 128.7,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_120s_s101"
+        },
+        {
+          "coverage": 95.12,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 404,
+          "duration": 147.0,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_120s_s102"
+        },
+        {
+          "coverage": 91.26,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 441,
+          "covered_goals": 406,
+          "duration": 150.56,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_9b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_10_StandardToolTipTagFragmentGenerator": {
+    "30s": {
+      "mean_coverage": 100.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 10.49,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 19.1,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_30s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 6.48,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_30s_s102"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 5.88,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 100.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 5.87,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 5.58,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_60s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 6.03,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_60s_s102"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 5.99,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 100.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 6.03,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 5.96,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_120s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 6.1,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_120s_s102"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 5,
+          "covered_goals": 5,
+          "duration": 6.03,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_10b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_11_ShapeUtilities": {
+    "30s": {
+      "mean_coverage": 92.96,
+      "sd_coverage": 3.42,
+      "mean_duration": 53.69,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 94.75,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 302,
+          "duration": 60.67,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_30s_s101"
+        },
+        {
+          "coverage": 95.11,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 299,
+          "duration": 50.27,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_30s_s102"
+        },
+        {
+          "coverage": 89.01,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 286,
+          "duration": 50.12,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 96.44,
+      "sd_coverage": 0.0,
+      "mean_duration": 84.41,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 96.44,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 304,
+          "duration": 87.87,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_60s_s101"
+        },
+        {
+          "coverage": 96.44,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 308,
+          "duration": 81.66,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_60s_s102"
+        },
+        {
+          "coverage": 96.44,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 305,
+          "duration": 83.71,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 96.44,
+      "sd_coverage": 0.0,
+      "mean_duration": 138.17,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 96.44,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 303,
+          "duration": 142.59,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_120s_s101"
+        },
+        {
+          "coverage": 96.44,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 270,
+          "duration": 128.38,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_120s_s102"
+        },
+        {
+          "coverage": 96.44,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 319,
+          "covered_goals": 306,
+          "duration": 143.55,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_11b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_20_ValueMarker": {
+    "30s": {
+      "mean_coverage": 93.88,
+      "sd_coverage": 0.0,
+      "mean_duration": 49.63,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 54.91,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_30s_s101"
+        },
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 47.52,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_30s_s102"
+        },
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 31,
+          "duration": 46.46,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 93.88,
+      "sd_coverage": 0.0,
+      "mean_duration": 78.51,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 76.21,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_60s_s101"
+        },
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 78.27,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_60s_s102"
+        },
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 81.06,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 93.88,
+      "sd_coverage": 0.0,
+      "mean_duration": 146.6,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 163.03,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_120s_s101"
+        },
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 33,
+          "duration": 142.24,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_120s_s102"
+        },
+        {
+          "coverage": 93.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 35,
+          "covered_goals": 31,
+          "duration": 134.54,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_20b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_12_MultiplePiePlot": {
+    "30s": {
+      "mean_coverage": 81.94,
+      "sd_coverage": 15.22,
+      "mean_duration": 58.13,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 64.4,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 185,
+          "duration": 66.41,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_30s_s101"
+        },
+        {
+          "coverage": 89.8,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 259,
+          "duration": 60.49,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_30s_s102"
+        },
+        {
+          "coverage": 91.63,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 146,
+          "duration": 47.49,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 78.8,
+      "sd_coverage": 13.16,
+      "mean_duration": 91.34,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 63.61,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 183,
+          "duration": 91.84,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_60s_s101"
+        },
+        {
+          "coverage": 86.4,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 247,
+          "duration": 90.08,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_60s_s102"
+        },
+        {
+          "coverage": 86.4,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 252,
+          "duration": 92.09,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 83.25,
+      "sd_coverage": 17.27,
+      "mean_duration": 149.6,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 63.61,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 181,
+          "duration": 146.16,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_120s_s101"
+        },
+        {
+          "coverage": 96.07,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 275,
+          "duration": 152.21,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_120s_s102"
+        },
+        {
+          "coverage": 90.06,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 286,
+          "covered_goals": 250,
+          "duration": 150.42,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_12b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_21_DefaultBoxAndWhiskerCategoryDataset": {
+    "30s": {
+      "mean_coverage": 80.6,
+      "sd_coverage": 3.95,
+      "mean_duration": 57.9,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 77.45,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 197,
+          "duration": 68.57,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_30s_s101"
+        },
+        {
+          "coverage": 85.03,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 203,
+          "duration": 53.03,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_30s_s102"
+        },
+        {
+          "coverage": 79.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 199,
+          "duration": 52.09,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 88.41,
+      "sd_coverage": 5.91,
+      "mean_duration": 84.35,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 84.68,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 207,
+          "duration": 84.0,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_60s_s101"
+        },
+        {
+          "coverage": 95.22,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 219,
+          "duration": 87.18,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_60s_s102"
+        },
+        {
+          "coverage": 85.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 198,
+          "duration": 81.86,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 98.29,
+      "sd_coverage": 1.96,
+      "mean_duration": 139.52,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 96.15,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 166,
+          "duration": 128.36,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_120s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 236,
+          "duration": 143.93,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_120s_s102"
+        },
+        {
+          "coverage": 98.72,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 239,
+          "covered_goals": 230,
+          "duration": 146.26,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_21b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_13_BorderArrangement": {
+    "30s": {
+      "mean_coverage": 90.45,
+      "sd_coverage": 9.87,
+      "mean_duration": 49.32,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 97.95,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 348,
+          "duration": 59.32,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_30s_s101"
+        },
+        {
+          "coverage": 79.27,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 213,
+          "duration": 38.04,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_30s_s102"
+        },
+        {
+          "coverage": 94.13,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 335,
+          "duration": 50.59,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 95.42,
+      "sd_coverage": 2.91,
+      "mean_duration": 76.96,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 97.95,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 344,
+          "duration": 82.81,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_60s_s101"
+        },
+        {
+          "coverage": 96.07,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 269,
+          "duration": 68.99,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_60s_s102"
+        },
+        {
+          "coverage": 92.24,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 317,
+          "duration": 79.08,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 96.52,
+      "sd_coverage": 1.07,
+      "mean_duration": 137.29,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 97.51,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 342,
+          "duration": 141.62,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_120s_s101"
+        },
+        {
+          "coverage": 96.67,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 257,
+          "duration": 129.59,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_120s_s102"
+        },
+        {
+          "coverage": 95.38,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 351,
+          "covered_goals": 332,
+          "duration": 140.65,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_13b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_22_KeyedObjects2D": {
+    "30s": {
+      "mean_coverage": 94.22,
+      "sd_coverage": 1.1,
+      "mean_duration": 44.21,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 94.22,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 175,
+          "duration": 50.47,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_30s_s101"
+        },
+        {
+          "coverage": 93.12,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 182,
+          "duration": 41.43,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_30s_s102"
+        },
+        {
+          "coverage": 95.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 188,
+          "duration": 40.73,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 94.95,
+      "sd_coverage": 0.64,
+      "mean_duration": 71.75,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 95.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 185,
+          "duration": 71.07,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_60s_s101"
+        },
+        {
+          "coverage": 94.22,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 184,
+          "duration": 72.92,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_60s_s102"
+        },
+        {
+          "coverage": 95.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 186,
+          "duration": 71.25,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 94.95,
+      "sd_coverage": 0.64,
+      "mean_duration": 132.2,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 95.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 185,
+          "duration": 131.67,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_120s_s101"
+        },
+        {
+          "coverage": 95.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 182,
+          "duration": 134.02,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_120s_s102"
+        },
+        {
+          "coverage": 94.22,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 196,
+          "covered_goals": 184,
+          "duration": 130.91,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_22b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_23_MinMaxCategoryRenderer": {
+    "30s": {
+      "mean_coverage": 43.85,
+      "sd_coverage": 9.53,
+      "mean_duration": 56.94,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 36.92,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 75,
+          "duration": 61.28,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_30s_s101"
+        },
+        {
+          "coverage": 54.71,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 112,
+          "duration": 53.73,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_30s_s102"
+        },
+        {
+          "coverage": 39.91,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 83,
+          "duration": 55.81,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 40.5,
+      "sd_coverage": 0.54,
+      "mean_duration": 84.5,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 40.62,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 85,
+          "duration": 85.17,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_60s_s101"
+        },
+        {
+          "coverage": 40.97,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 84,
+          "duration": 84.4,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_60s_s102"
+        },
+        {
+          "coverage": 39.91,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 83,
+          "duration": 83.93,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 41.0,
+      "sd_coverage": 1.96,
+      "mean_duration": 141.97,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 39.91,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 81,
+          "duration": 142.53,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_120s_s101"
+        },
+        {
+          "coverage": 43.26,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 88,
+          "duration": 141.26,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_120s_s102"
+        },
+        {
+          "coverage": 39.82,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 205,
+          "covered_goals": 84,
+          "duration": 142.11,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_23b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_24_GrayPaintScale": {
+    "30s": {
+      "mean_coverage": 100.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 41.79,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 48.81,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_30s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 38.33,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_30s_s102"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 38.23,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 100.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 68.22,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 68.23,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_60s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 68.23,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_60s_s102"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 68.2,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 100.0,
+      "sd_coverage": 0.0,
+      "mean_duration": 128.21,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 128.1,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_120s_s101"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 128.23,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_120s_s102"
+        },
+        {
+          "coverage": 100.0,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 40,
+          "covered_goals": 40,
+          "duration": 128.31,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_24b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_25_StatisticalBarRenderer": {
+    "30s": {
+      "mean_coverage": 23.32,
+      "sd_coverage": 0.0,
+      "mean_duration": 53.98,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 65,
+          "duration": 59.05,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_30s_s101"
+        },
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 63,
+          "duration": 53.43,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_30s_s102"
+        },
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 65,
+          "duration": 49.47,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 23.04,
+      "sd_coverage": 0.49,
+      "mean_duration": 78.76,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 65,
+          "duration": 78.54,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_60s_s101"
+        },
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 63,
+          "duration": 78.36,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_60s_s102"
+        },
+        {
+          "coverage": 22.47,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 63,
+          "duration": 79.37,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 23.32,
+      "sd_coverage": 0.0,
+      "mean_duration": 137.79,
+      "best_seed": 101,
+      "runs": [
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 65,
+          "duration": 138.1,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_120s_s101"
+        },
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 63,
+          "duration": 137.65,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_120s_s102"
+        },
+        {
+          "coverage": 23.32,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 263,
+          "covered_goals": 65,
+          "duration": 137.62,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_25b_120s_s103"
+        }
+      ]
+    }
+  },
+  "Chart_26_Axis": {
+    "30s": {
+      "mean_coverage": 75.11,
+      "sd_coverage": 4.6,
+      "mean_duration": 64.75,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 71.66,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 317,
+          "duration": 47.47,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_30s_s101"
+        },
+        {
+          "coverage": 73.35,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 357,
+          "duration": 74.14,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_30s_s102"
+        },
+        {
+          "coverage": 80.33,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 385,
+          "duration": 72.65,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_30s_s103"
+        }
+      ]
+    },
+    "60s": {
+      "mean_coverage": 84.12,
+      "sd_coverage": 1.65,
+      "mean_duration": 107.97,
+      "best_seed": 103,
+      "runs": [
+        {
+          "coverage": 82.88,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 417,
+          "duration": 106.6,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_60s_s101"
+        },
+        {
+          "coverage": 83.48,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 423,
+          "duration": 109.11,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_60s_s102"
+        },
+        {
+          "coverage": 85.99,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 393,
+          "duration": 108.2,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_60s_s103"
+        }
+      ]
+    },
+    "120s": {
+      "mean_coverage": 85.76,
+      "sd_coverage": 5.16,
+      "mean_duration": 167.25,
+      "best_seed": 102,
+      "runs": [
+        {
+          "coverage": 79.92,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 393,
+          "duration": 165.34,
+          "success": true,
+          "seed": 101,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_120s_s101"
+        },
+        {
+          "coverage": 89.72,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 451,
+          "duration": 169.6,
+          "success": true,
+          "seed": 102,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_120s_s102"
+        },
+        {
+          "coverage": 87.63,
+          "line_coverage": 0.0,
+          "branch_coverage": 0.0,
+          "mutation_score": 0.0,
+          "total_goals": 506,
+          "covered_goals": 441,
+          "duration": 166.8,
+          "success": true,
+          "seed": 103,
+          "report_dir": "C:\\Users\\tanku\\Documents\\GitHub\\claude-code-main\\ProjectSQA\\MIO_Algorithm\\Result_Round2\\raw_reports\\Chart_26b_120s_s103"
+        }
+      ]
+    }
   }
 }

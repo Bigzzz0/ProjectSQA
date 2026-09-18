@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,LINE;BRANCH,0.850254817646122,239,203
