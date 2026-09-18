@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.jxpath.ri.compiler.CoreOperationCompare,LINE;BRANCH,0.8920194943649101,116,103

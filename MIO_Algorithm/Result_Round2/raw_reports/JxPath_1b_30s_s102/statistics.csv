@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.jxpath.ri.model.dom.DOMNodePointer,LINE;BRANCH,0.7423090843286283,685,510
+org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer,LINE;BRANCH,0.5582402177050262,702,388

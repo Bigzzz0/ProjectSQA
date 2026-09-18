@@ -1,0 +1,6 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThan,LINE;BRANCH,0.9166666666666667,10,9
+org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual,LINE;BRANCH,0.9166666666666667,10,9
+org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan,LINE;BRANCH,0.9166666666666667,10,9
+org.apache.commons.jxpath.ri.compiler.CoreOperationLessThanOrEqual,LINE;BRANCH,0.9166666666666667,10,9
+org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression,LINE;BRANCH,1.0,7,7

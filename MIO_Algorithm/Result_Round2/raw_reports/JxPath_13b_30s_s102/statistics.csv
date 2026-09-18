@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.jxpath.ri.NamespaceResolver,LINE;BRANCH,0.8420329670329669,87,73
+org.apache.commons.jxpath.ri.model.dom.DOMNodePointer,LINE;BRANCH,0.7781394894388091,673,526
