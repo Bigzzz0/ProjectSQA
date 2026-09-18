@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Collection;
+import org.jfree.data.general.SeriesException;
 
 /**
  * Advanced white-box test suite for TimeSeries.

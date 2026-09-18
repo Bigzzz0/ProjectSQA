@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 95.94,
+  "branch_cov": 90.52,
+  "test_file": "ShapeUtilitiesGeminiTest.java",
+  "target_classes": "org.jfree.chart.util.ShapeUtilities",
+  "buggy_failures": [
+    "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentSegmentTypes",
+    "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentPoints",
+    "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentLengths"
+  ],
+  "fixed_failures": []
+}

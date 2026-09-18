@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.67,
+  "branch_cov": 97.5,
+  "test_file": "XYSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.xy.XYSeries",
+  "buggy_failures": [
+    "org.jfree.data.xy.XYSeriesGeminiTest::testBug1955483WithMultipleDuplicates",
+    "org.jfree.data.xy.XYSeriesGeminiTest::testBug1955483"
+  ],
+  "fixed_failures": []
+}

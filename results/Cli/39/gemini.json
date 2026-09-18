@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "TypeHandlerGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "buggy_failures": [
+    "org.apache.commons.cli.TypeHandlerGeminiTest::testDefectExistingFilePatternFileNotExistThrowsParseException",
+    "org.apache.commons.cli.TypeHandlerGeminiTest::testDefectExistingFilePatternReturnsFileInputStream"
+  ],
+  "fixed_failures": []
+}

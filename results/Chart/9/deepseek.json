@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 89.27,
+  "branch_cov": 83.59,
+  "test_file": "TimeSeriesDeepseekTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesDeepseekTest::testGetTimePeriodsUniqueToOtherSeries",
+    "org.jfree.data.time.TimeSeriesDeepseekTest::testConstructorNullTimePeriodClass",
+    "org.jfree.data.time.TimeSeriesDeepseekTest::testCreateCopyWithPeriodsNotInSeries"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeriesDeepseekTest::testGetTimePeriodsUniqueToOtherSeries",
+    "org.jfree.data.time.TimeSeriesDeepseekTest::testConstructorNullTimePeriodClass",
+    "org.jfree.data.time.TimeSeriesDeepseekTest::testCreateCopyWithPeriodsNotInSeries"
+  ]
+}

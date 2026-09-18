@@ -1,0 +1,38 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 90.62,
+  "branch_cov": 90.62,
+  "test_file": "CompressorStreamFactoryDeepseekTest.java;DeflateCompressorInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.CompressorStreamFactory;org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamDeflate",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testAutoDetectSnappyFramedSignature",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedInputStreamSnappyRaw",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamBzip2",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testAutoDetectGzipSignature",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamPack200",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testAutoDetectZSignature",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamGzip",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedInputStreamDeflate",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamXz",
+    "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testAvailable",
+    "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testDetectionOfDeflateStream",
+    "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testSkipNegative"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamDeflate",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testAutoDetectSnappyFramedSignature",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedInputStreamSnappyRaw",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamBzip2",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testAutoDetectGzipSignature",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamPack200",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testAutoDetectZSignature",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamGzip",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedInputStreamDeflate",
+    "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamXz",
+    "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testAvailable",
+    "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testSkipNegative"
+  ]
+}

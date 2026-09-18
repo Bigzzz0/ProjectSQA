@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 90.77,
+  "branch_cov": 85.29,
+  "test_file": "SevenZOutputFileDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFileDeepseekTest::testWriteWithoutPutArchiveEntry"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFileDeepseekTest::testWriteWithoutPutArchiveEntry"
+  ]
+}

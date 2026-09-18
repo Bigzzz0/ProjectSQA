@@ -1,0 +1,32 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 97.62,
+  "branch_cov": 100.0,
+  "test_file": "TypeHandlerDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "buggy_failures": [
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testTypeHandlerConstructorIsPrivate",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateClassNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateFileNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithFileClassAndNullString",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateNumberNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithNullStringAndNumberClass",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithNonExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueStringClassExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithObjectClassAndNullString"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testTypeHandlerConstructorIsPrivate",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateClassNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateFileNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithFileClassAndNullString",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateNumberNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithNullStringAndNumberClass",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithNonExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueStringClassExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithObjectClassAndNullString"
+  ]
+}

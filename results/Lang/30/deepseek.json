@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 47.6,
+  "branch_cov": 46.07,
+  "test_file": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringCharArrayWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringStringWithSupplementaryChars"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAnyBut_StringStringWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringCharArrayWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringStringWithSupplementaryChars"
+  ]
+}

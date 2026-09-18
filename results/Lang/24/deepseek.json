@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 86.7,
+  "branch_cov": 67.7,
+  "test_file": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber_LANG664",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumberEdgeCases"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumberEdgeCases"
+  ]
+}

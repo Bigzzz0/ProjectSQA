@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 68.47,
+  "branch_cov": 53.22,
+  "test_file": "XYPlotGeminiTest.java",
+  "target_classes": "org.jfree.chart.plot.XYPlot",
+  "buggy_failures": [
+    "org.jfree.chart.plot.XYPlotGeminiTest::testReplaceDatasetWithNullRendererTriggersAutoRange",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testGetDataRangeWithNullRendererDefect",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testCompleteDrawExecutionWithEmptyAndPopulatedData",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testDatasetToAxesMapping"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.plot.XYPlotGeminiTest::testGetDataRangeWithNullRendererDefect",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testCompleteDrawExecutionWithEmptyAndPopulatedData",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testDatasetToAxesMapping"
+  ]
+}

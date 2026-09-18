@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ChecksumCalculatingInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ChecksumCalculatingInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testConstructorNullChecksum",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testConstructorBothNull",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testReadByteArrayWithOffset",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testConstructorNullInputStream"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testReadByteArrayWithOffset"
+  ]
+}

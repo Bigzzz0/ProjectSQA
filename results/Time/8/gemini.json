@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 85.07,
+  "branch_cov": 70.79,
+  "test_file": "DateTimeZoneGeminiTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZoneGeminiTest::testDefect_forOffsetHoursMinutes_negativeMinutesWithNegativeHours",
+    "org.joda.time.DateTimeZoneGeminiTest::testIsStandardOffset",
+    "org.joda.time.DateTimeZoneGeminiTest::testDefect_forOffsetHoursMinutes_negativeMinutesWithZeroHours",
+    "org.joda.time.DateTimeZoneGeminiTest::testGetMillisKeepLocal"
+  ],
+  "fixed_failures": [
+    "org.joda.time.DateTimeZoneGeminiTest::testIsStandardOffset",
+    "org.joda.time.DateTimeZoneGeminiTest::testGetMillisKeepLocal"
+  ]
+}

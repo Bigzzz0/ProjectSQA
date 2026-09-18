@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 98.78,
+  "branch_cov": 98.77,
+  "test_file": "CollectionUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.CollectionUtils",
+  "buggy_failures": [
+    "org.apache.commons.collections.CollectionUtilsGeminiTest::testRemoveAllDefectRevealed"
+  ],
+  "fixed_failures": []
+}

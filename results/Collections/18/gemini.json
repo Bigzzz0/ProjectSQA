@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ListOrderedSetGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.set.ListOrderedSet",
+  "buggy_failures": [
+    "org.apache.commons.collections.set.ListOrderedSetGeminiTest::testFactoryDecorateListWithDuplicates"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.set.ListOrderedSetGeminiTest::testFactoryDecorateListWithDuplicates"
+  ]
+}

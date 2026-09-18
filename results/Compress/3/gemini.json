@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 96.43,
+  "test_file": "TarArchiveOutputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveOutputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseIdempotency",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCustomBlockAndRecordSizes",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseWithoutCloseArchiveEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWithoutCloseArchiveEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeAcrossMultipleWritesThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWritesTwoZeroRecords"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseIdempotency",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCustomBlockAndRecordSizes",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseArchiveEntryBeforeSpecifiedBytesWrittenThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeAcrossMultipleWritesThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWritesTwoZeroRecords"
+  ]
+}

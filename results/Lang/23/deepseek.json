@@ -1,0 +1,39 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 80.24,
+  "branch_cov": 60.61,
+  "test_file": "ExtendedMessageFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.text.ExtendedMessageFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testWhitespaceInPattern",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testEqualsAndHashCodeWithDifferentRegistries",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testGetQuotedStringWithoutEscaping",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testFormatNotFoundFallsThrough",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testPatternWithCustomFormatAndStyle",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testConstructorWithDefaultLocale",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testConstructorWithLocale",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testContainsElementsAllNullReturnsFalse",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testEscapedQuotes",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testUnterminatedQuotedString",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testPatternWithCustomFormat",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testMultipleFormatElements",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testReadArgumentIndexWithWhitespace"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testWhitespaceInPattern",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testEqualsAndHashCodeWithDifferentRegistries",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testGetQuotedStringWithoutEscaping",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testFormatNotFoundFallsThrough",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testPatternWithCustomFormatAndStyle",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testConstructorWithDefaultLocale",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testConstructorWithLocale",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testContainsElementsAllNullReturnsFalse",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testEscapedQuotes",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testUnterminatedQuotedString",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testPatternWithCustomFormat",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testMultipleFormatElements",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testReadArgumentIndexWithWhitespace"
+  ]
+}

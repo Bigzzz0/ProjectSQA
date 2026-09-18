@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 94.74,
+  "branch_cov": 87.63,
+  "test_file": "TimeSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDefectCreateCopyMaxYCache",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDefectCreateCopyIndexMinYCache"
+  ],
+  "fixed_failures": []
+}

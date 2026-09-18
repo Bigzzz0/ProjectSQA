@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 98.15,
+  "branch_cov": 85.29,
+  "test_file": "WeekGeminiTest.java",
+  "target_classes": "org.jfree.data.time.Week",
+  "buggy_failures": [
+    "org.jfree.data.time.WeekGeminiTest::testConstructor"
+  ],
+  "fixed_failures": []
+}

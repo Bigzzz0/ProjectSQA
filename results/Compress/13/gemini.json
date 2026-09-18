@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 79.5,
+  "branch_cov": 69.23,
+  "test_file": "ZipArchiveEntryGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testSetExtraAndCentralDirectoryMerging",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testSetExtraFieldsReplacesAll",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testWinzipBackSlashWorkaroundInZipFile",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testRemoveNonExistingExtraFieldThrowsException",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testEqualsAndHashCodeExhaustiveBranches",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testCopyConstructors",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testWinzipBackSlashWorkaroundInZipArchiveInputStream",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testAddAsFirstExtraFieldAndReordering"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testSetExtraAndCentralDirectoryMerging",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testSetExtraFieldsReplacesAll",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testRemoveNonExistingExtraFieldThrowsException",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testEqualsAndHashCodeExhaustiveBranches",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testCopyConstructors",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testAddAsFirstExtraFieldAndReordering"
+  ]
+}

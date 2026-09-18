@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 94.81,
+  "branch_cov": 89.84,
+  "test_file": "TimeSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testBug1864222CreateCopyEmptySubRangeBetweenPoints",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeleteAndClear"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeleteAndClear"
+  ]
+}

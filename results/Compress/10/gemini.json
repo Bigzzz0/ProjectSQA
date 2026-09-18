@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 89.47,
+  "branch_cov": 64.6,
+  "test_file": "ZipFileGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipFile",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipFileGeminiTest::testReadEntryWithUnicodeExtraFieldMutatedHashCode"
+  ],
+  "fixed_failures": []
+}

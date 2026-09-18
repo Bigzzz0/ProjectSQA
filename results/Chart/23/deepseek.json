@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 37.5,
+  "branch_cov": 26.09,
+  "test_file": "MinMaxCategoryRendererDeepseekTest.java",
+  "target_classes": "org.jfree.chart.renderer.category.MinMaxCategoryRenderer",
+  "buggy_failures": [
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentMinIcon",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentGroupStroke",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentObjectIcon",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentGroupPaint",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentPlotLines",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentMaxIcon"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentMinIcon",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentObjectIcon",
+    "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentMaxIcon"
+  ]
+}

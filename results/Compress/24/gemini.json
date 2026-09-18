@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 92.78,
+  "branch_cov": 92.37,
+  "test_file": "TarUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseBinaryBigIntegerExceedsLongMax",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalDefectMaxOctalWithoutTrailingSpaceOrNul"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalMissingTrailingSpaceOrNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseBinaryBigIntegerExceedsLongMax"
+  ]
+}

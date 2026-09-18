@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 84.84,
+  "branch_cov": 65.91,
+  "test_file": "UnixStatDeepseekTest.java;ZipArchiveEntryDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.UnixStat;org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplicationWithPerms",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplication",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_WhenMultipleTypeFlagsSet",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraInvalidData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraBytes",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetCentralDirectoryExtra"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplicationWithPerms",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplication",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_WhenMultipleTypeFlagsSet",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraInvalidData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraBytes",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetCentralDirectoryExtra"
+  ]
+}

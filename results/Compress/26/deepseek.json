@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 88.89,
+  "branch_cov": 88.89,
+  "test_file": "IOUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.utils.IOUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.IOUtilsDeepseekTest::testSkipWithPartialZeroSkipStream",
+    "org.apache.commons.compress.utils.IOUtilsDeepseekTest::testSkipWithZeroSkipStream"
+  ],
+  "fixed_failures": []
+}

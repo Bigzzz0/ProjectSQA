@@ -1,0 +1,37 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 12,
+  "line_cov": 87.96,
+  "branch_cov": 73.68,
+  "test_file": "FastDateFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatLongStringBuffer",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testYearTwoDigits",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatObjectDate",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatObjectLong",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testLang645",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatDate",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatLong",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatDateStringBuffer",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testWeekInMonth",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testNegativeYear",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testYearFourDigits",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testWeekInYear"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatLongStringBuffer",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testYearTwoDigits",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatObjectDate",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatObjectLong",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testLang645",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatDate",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatLong",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testFormatDateStringBuffer",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testWeekInMonth",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testNegativeYear",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testYearFourDigits",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testWeekInYear"
+  ]
+}

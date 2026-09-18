@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 92.45,
+  "branch_cov": 80.32,
+  "test_file": "FractionDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.Fraction",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testReducedFactoryWithMinValueNumerator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testReduceWithMinValueNumerator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testGetFractionMinValueDenominator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testReduceWithMinValueNumeratorAndEvenDenominator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testGetReducedFractionWithMinValueNumeratorAndEvenDenominator"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testGetFractionMinValueDenominator"
+  ]
+}

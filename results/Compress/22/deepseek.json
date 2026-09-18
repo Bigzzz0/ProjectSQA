@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 11.55,
+  "branch_cov": 12.45,
+  "test_file": "BZip2CompressorInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInputWithDecompressFlag",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadByteArrayNegativeOffset",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadAfterCloseThrows",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInput"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInputWithDecompressFlag",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadByteArrayNegativeOffset",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadAfterCloseThrows",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInput"
+  ]
+}

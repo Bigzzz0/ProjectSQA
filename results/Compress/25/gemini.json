@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 56.86,
+  "branch_cov": 43.65,
+  "test_file": "ZipArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSkipWithinEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testReadingMultipleConsecutiveStoredEntries",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testUnicodeExtraFieldResolution",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testReadingOfFirstStoredEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSplitZipThrowsUnsupportedZipFeatureException",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSingleSegmentSplitMarkerIsSkipped"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testUnicodeExtraFieldResolution",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSplitZipThrowsUnsupportedZipFeatureException"
+  ]
+}

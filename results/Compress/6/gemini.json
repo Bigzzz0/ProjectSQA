@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 99.26,
+  "branch_cov": 98.33,
+  "test_file": "ZipArchiveEntryGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testNotEqualsFailureCondition"
+  ],
+  "fixed_failures": []
+}

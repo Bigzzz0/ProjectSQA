@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 94.33,
+  "branch_cov": 82.0,
+  "test_file": "SystemUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.SystemUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testJavaVersionAsInt",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testIsJavaVersionMatchRealVersion",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntNull",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntArrayDefaultLimit"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testIsJavaVersionMatchRealVersion",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntArrayDefaultLimit"
+  ]
+}

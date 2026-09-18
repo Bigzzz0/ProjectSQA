@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 100.0,
+  "branch_cov": 94.12,
+  "test_file": "SoundexGeminiTest.java",
+  "target_classes": "org.apache.commons.codec.language.Soundex",
+  "buggy_failures": [
+    "org.apache.commons.codec.language.SoundexGeminiTest::testCharacterBeforeUpperAThrowsIllegalArgumentException",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testAdjacentConsonantsSameGroupCodedOnce",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testNonLetterAndCleanHandling",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleSameCodeGroupSeparatedByHW",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testShortStringsPadding",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleEx1",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testDifferenceCalculation"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.language.SoundexGeminiTest::testCharacterBeforeUpperAThrowsIllegalArgumentException",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testAdjacentConsonantsSameGroupCodedOnce",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testNonLetterAndCleanHandling",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleSameCodeGroupSeparatedByHW",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testShortStringsPadding",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testDifferenceCalculation"
+  ]
+}

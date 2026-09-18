@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 95.03,
+  "branch_cov": 89.36,
+  "test_file": "ZipArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testRead7ZipMultiVolumeArchiveForStreamDefect",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testDataDescriptorFlagProcessing"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testDataDescriptorFlagProcessing"
+  ]
+}

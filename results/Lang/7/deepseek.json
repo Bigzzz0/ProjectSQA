@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 82.89,
+  "branch_cov": 70.22,
+  "test_file": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberAllZeros",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingPlus",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDoubleMinus",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidWithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidBigDecimal"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberAllZeros",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingPlus",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidWithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidBigDecimal"
+  ]
+}

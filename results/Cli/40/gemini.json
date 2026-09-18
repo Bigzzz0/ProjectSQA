@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "TypeHandlerGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "buggy_failures": [
+    "org.apache.commons.cli.TypeHandlerGeminiTest::testCreateValueInteger_failure"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.TypeHandlerGeminiTest::testCreateValueUnregisteredClassReturnsNull"
+  ]
+}

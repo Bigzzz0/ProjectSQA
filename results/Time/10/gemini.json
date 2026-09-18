@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 98.59,
+  "branch_cov": 100.0,
+  "test_file": "BaseSingleFieldPeriodGeminiTest.java",
+  "target_classes": "org.joda.time.base.BaseSingleFieldPeriod",
+  "buggy_failures": [
+    "org.joda.time.base.BaseSingleFieldPeriodGeminiTest::testBetween_ReadablePartial_MonthDay_LeapYear_Defect",
+    "org.joda.time.base.BaseSingleFieldPeriodGeminiTest::testBetween_ReadablePartial_MonthDay_LeapYearToLeapYear"
+  ],
+  "fixed_failures": []
+}

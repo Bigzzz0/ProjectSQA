@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CharSequenceTranslatorDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.CharSequenceTranslator",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testTranslateWithSupplementaryAndAscii",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testLang720DefectSupplementaryCharacterWithConsumedZero",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testLang720DefectSupplementaryCharacterWithMixedConsumption"
+  ],
+  "fixed_failures": []
+}

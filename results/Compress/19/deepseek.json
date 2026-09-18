@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 91.67,
+  "test_file": "Zip64ExtendedInformationExtraFieldDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataWithExcessData",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataExcessDataDifferentFlags",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataNullRawData"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataWithExcessData",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataExcessDataDifferentFlags",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataNullRawData"
+  ]
+}

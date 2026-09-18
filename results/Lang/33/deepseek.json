@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 83.22,
+  "branch_cov": 70.83,
+  "test_file": "ClassUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.ClassUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testToClassWithNullElements",
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPublicMethodPackagePrivateDeclaringClass",
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPackageNameString"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPublicMethodPackagePrivateDeclaringClass",
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPackageNameString"
+  ]
+}

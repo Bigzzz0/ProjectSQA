@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 87.46,
+  "branch_cov": 77.16,
+  "test_file": "DateTimeZoneGeminiTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZoneGeminiTest::testForTimeZone_Unrecognized",
+    "org.joda.time.DateTimeZoneGeminiTest::testDefect_DateTimeCreation_london_overlap",
+    "org.joda.time.DateTimeZoneGeminiTest::testForTimeZone_Conversions",
+    "org.joda.time.DateTimeZoneGeminiTest::testDefect_getOffsetFromLocal_overlapLondon"
+  ],
+  "fixed_failures": [
+    "org.joda.time.DateTimeZoneGeminiTest::testForTimeZone_Unrecognized",
+    "org.joda.time.DateTimeZoneGeminiTest::testForTimeZone_Conversions"
+  ]
+}

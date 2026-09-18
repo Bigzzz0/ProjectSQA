@@ -1,0 +1,41 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 15,
+  "line_cov": 85.0,
+  "branch_cov": 78.85,
+  "test_file": "ZipArchiveEntryDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testBackslashInNameWithUnicode",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraInvalidDataThrowsRuntimeException",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipEntryNullExtra",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraByteArrayInvalid",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testEqualsNameNull",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraFieldsWithUnparseable",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveExtraFieldThrowsWhenNotPresent",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveUnparseableExtraFieldData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testAddAsFirstExtraFieldUnparseable",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testBackslashInNameViaZipEntryConstructor",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testGetUnparseableExtraFieldData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testExtraFieldsNullWithUnparseable",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testBackslashInNameShouldBeNormalized",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testAddExtraFieldUnparseable"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraInvalidDataThrowsRuntimeException",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipEntryNullExtra",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraByteArrayInvalid",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testEqualsNameNull",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraFieldsWithUnparseable",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveExtraFieldThrowsWhenNotPresent",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveUnparseableExtraFieldData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testAddAsFirstExtraFieldUnparseable",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testBackslashInNameViaZipEntryConstructor",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testGetUnparseableExtraFieldData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testExtraFieldsNullWithUnparseable",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testAddExtraFieldUnparseable"
+  ]
+}

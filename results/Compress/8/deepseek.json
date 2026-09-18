@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 100.0,
+  "branch_cov": 94.74,
+  "test_file": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOutOfBounds",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalInvalidLengthOne",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNegativeOffset",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringZero",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalInvalidLengthZero",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalMissingTrailingSpace",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalInvalidLengthOneWithNull"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNegativeOffset",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringZero",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNullBreak"
+  ]
+}

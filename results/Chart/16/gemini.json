@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 9,
+  "line_cov": 97.87,
+  "branch_cov": 93.75,
+  "test_file": "DefaultIntervalCategoryDatasetGeminiTest.java",
+  "target_classes": "org.jfree.data.category.DefaultIntervalCategoryDataset",
+  "buggy_failures": [
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetColumnIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetRowIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testNullStartsOrEnds",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetCloneDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetRowCountDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetSeriesIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetCategoryIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetColumnCountDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetSetCategoryKeysDefect"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testNullStartsOrEnds"
+  ]
+}

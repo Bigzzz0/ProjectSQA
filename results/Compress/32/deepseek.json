@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 68.18,
+  "branch_cov": 53.97,
+  "test_file": "TarArchiveInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testRead_NormalEntry",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testSkip_MoreThanAvailable",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testReadWithoutEntry",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testLongNameData_NullEntry",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testBigGid"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testRead_NormalEntry",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testSkip_MoreThanAvailable",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testReadWithoutEntry",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testLongNameData_NullEntry"
+  ]
+}
