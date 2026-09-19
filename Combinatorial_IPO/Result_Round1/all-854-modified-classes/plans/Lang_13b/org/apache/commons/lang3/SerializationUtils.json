@@ -1,0 +1,156 @@
+{
+  "audit_hash": "57eebf81dbcf24a0e4e33e483151b68419761ce8cbb62985561aa82062c03062",
+  "bug_id": 13,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "SerializationUtils",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "SerializationUtils()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "T"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "T"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "<T extends Serializable> T",
+      "signature": "clone(T)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "serialize",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Serializable"
+        },
+        {
+          "name": "outputStream",
+          "type": "OutputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "serialize(Serializable,OutputStream)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "serialize",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Serializable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "serialize(Serializable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "deserialize",
+      "parameters": [
+        {
+          "name": "inputStream",
+          "type": "InputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "deserialize(InputStream)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "deserialize",
+      "parameters": [
+        {
+          "name": "objectData",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "deserialize(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "57eebf81dbcf24a0e4e33e483151b68419761ce8cbb62985561aa82062c03062",
+  "missing_adapters": [
+    "T",
+    "entry_point_evidence"
+  ],
+  "project": "Lang",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new SerializationUtils()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "SerializationUtils()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e3905732777c85126d8bb26a994af1ee9783aebd4405bc6b48bcd5e19f06892e",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang3.SerializationUtils",
+  "trigger_tests": [
+    "org.apache.commons.lang3.SerializationUtilsTest::testPrimitiveTypeClassSerialization"
+  ]
+}

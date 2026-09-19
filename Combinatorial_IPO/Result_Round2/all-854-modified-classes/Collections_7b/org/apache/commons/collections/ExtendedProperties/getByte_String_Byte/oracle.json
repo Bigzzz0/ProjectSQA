@@ -1,0 +1,442 @@
+[
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"\""
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\" \""
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"a\""
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"test123\""
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"!@#\""
+    },
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"0\""
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"-1\""
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"1.5\""
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"9223372036854775807\""
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"9223372036854775808\""
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 0",
+      "key": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"\""
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\" \""
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"a\""
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"test123\""
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"!@#\""
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"0\""
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"-1\""
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"1.5\""
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"9223372036854775807\""
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"9223372036854775808\""
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) 1",
+      "key": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"\""
+    },
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\" \""
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"a\""
+    },
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"test123\""
+    },
+    "id": 26,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"!@#\""
+    },
+    "id": 27,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"0\""
+    },
+    "id": 28,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"-1\""
+    },
+    "id": 29,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"1.5\""
+    },
+    "id": 30,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"9223372036854775807\""
+    },
+    "id": 31,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"9223372036854775808\""
+    },
+    "id": 32,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "(byte) -1",
+      "key": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 33,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"\""
+    },
+    "id": 34,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\" \""
+    },
+    "id": 35,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"a\""
+    },
+    "id": 36,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"test123\""
+    },
+    "id": 37,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"!@#\""
+    },
+    "id": 38,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"0\""
+    },
+    "id": 39,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"-1\""
+    },
+    "id": 40,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"1.5\""
+    },
+    "id": 41,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"9223372036854775807\""
+    },
+    "id": 42,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"9223372036854775808\""
+    },
+    "id": 43,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  },
+  {
+    "arguments": {
+      "defaultValue": "Byte.MAX_VALUE",
+      "key": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 44,
+    "outcome": "RETURN",
+    "type": "java.lang.Byte",
+    "value_or_message": "127"
+  }
+]

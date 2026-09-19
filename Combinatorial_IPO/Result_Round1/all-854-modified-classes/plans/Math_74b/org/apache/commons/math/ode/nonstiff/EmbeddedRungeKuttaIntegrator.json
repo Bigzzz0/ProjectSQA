@@ -1,0 +1,287 @@
+{
+  "audit_hash": "65513baaf6d6b305cdba12a117ae6b586cabb7b61f4e0394b27ab324c7e6db70",
+  "bug_id": 74,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 10
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "EmbeddedRungeKuttaIntegrator",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "fsal",
+          "type": "boolean"
+        },
+        {
+          "name": "c",
+          "type": "double[]"
+        },
+        {
+          "name": "a",
+          "type": "double[][]"
+        },
+        {
+          "name": "b",
+          "type": "double[]"
+        },
+        {
+          "name": "prototype",
+          "type": "RungeKuttaStepInterpolator"
+        },
+        {
+          "name": "minStep",
+          "type": "double"
+        },
+        {
+          "name": "maxStep",
+          "type": "double"
+        },
+        {
+          "name": "scalAbsoluteTolerance",
+          "type": "double"
+        },
+        {
+          "name": "scalRelativeTolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "EmbeddedRungeKuttaIntegrator(String,boolean,double[],double[][],double[],RungeKuttaStepInterpolator,double,double,double,double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "EmbeddedRungeKuttaIntegrator",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "fsal",
+          "type": "boolean"
+        },
+        {
+          "name": "c",
+          "type": "double[]"
+        },
+        {
+          "name": "a",
+          "type": "double[][]"
+        },
+        {
+          "name": "b",
+          "type": "double[]"
+        },
+        {
+          "name": "prototype",
+          "type": "RungeKuttaStepInterpolator"
+        },
+        {
+          "name": "minStep",
+          "type": "double"
+        },
+        {
+          "name": "maxStep",
+          "type": "double"
+        },
+        {
+          "name": "vecAbsoluteTolerance",
+          "type": "double[]"
+        },
+        {
+          "name": "vecRelativeTolerance",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "EmbeddedRungeKuttaIntegrator(String,boolean,double[],double[][],double[],RungeKuttaStepInterpolator,double,double,double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOrder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getOrder()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSafety",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "getSafety()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSafety",
+      "parameters": [
+        {
+          "name": "safety",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSafety(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMinReduction",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "getMinReduction()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setMinReduction",
+      "parameters": [
+        {
+          "name": "minReduction",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setMinReduction(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMaxGrowth",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "getMaxGrowth()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setMaxGrowth",
+      "parameters": [
+        {
+          "name": "maxGrowth",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setMaxGrowth(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "estimateError",
+      "parameters": [
+        {
+          "name": "yDotK",
+          "type": "double[][]"
+        },
+        {
+          "name": "y0",
+          "type": "double[]"
+        },
+        {
+          "name": "y1",
+          "type": "double[]"
+        },
+        {
+          "name": "h",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "estimateError(double[][],double[],double[],double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "65513baaf6d6b305cdba12a117ae6b586cabb7b61f4e0394b27ab324c7e6db70",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "cb160244585b6aeaf14d393c6ba0a9e3da02ae6c7967a00217e29587792b898b",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator",
+  "trigger_tests": [
+    "org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegratorTest::polynomial"
+  ]
+}

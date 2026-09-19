@@ -1,0 +1,29 @@
+{
+  "audit_hash": "9af0e6028d1812376bb3cefe84db306af9ecbab775d6f7bcf7b86ff64b661cbc",
+  "bug_id": 92,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 4,
+      "expected_pair_count": 4,
+      "model_hash": "41230000e41b08ad6457c6a58431e48fcbde0937f962368629e091f573a6123b",
+      "oracle_hash": "7adf5819db8876aa00d9415bd40d0548b6798b130a711042199ef58d5ee1bc9a",
+      "oracle_sha256": "28487c84f98f83d45472f201d6bd996a4bc7bd3b761ad50d54512b6109de6970",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 4,
+      "reused_oracle": false,
+      "signature": "preserveAttributeCase()",
+      "suite_hash": "d0122744e5cafbbe7b4c54b07f6b9966b5cbd726f3700f3c113ebee49df1560e"
+    }
+  ],
+  "project": "Jsoup",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "664c0a40dcdaf23793ffc6edf9c32f9039f34a5df42a4d52376cbc8bc4e4d348",
+  "suite_path": "TestCode/all-modified-classes/Jsoup_92b/org/jsoup/parser/ParseSettings_IPOTest.java",
+  "suite_sha256": "7391ca100e830590a91c789c15b4ab85baa8592e7b07f6d57a1ebece413bec14",
+  "target_class": "org.jsoup.parser.ParseSettings",
+  "test_class": "ParseSettings_IPOTest",
+  "verification_result": "OK (4 tests)"
+}

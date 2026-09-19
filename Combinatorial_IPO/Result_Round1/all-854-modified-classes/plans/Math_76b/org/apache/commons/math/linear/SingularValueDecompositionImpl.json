@@ -1,0 +1,66 @@
+{
+  "audit_hash": "b9663fd0409d362adaf8b472ee377c44252a1729f9e29948acc0b0216c726c92",
+  "bug_id": 76,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCovariance",
+      "parameters": [
+        {
+          "name": "minSingularValue",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "getCovariance(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getSolver",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "DecompositionSolver",
+      "signature": "getSolver()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "b9663fd0409d362adaf8b472ee377c44252a1729f9e29948acc0b0216c726c92",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c8a904aea56b2d10db01c6fed69cb65cb75e39d3cc0a63c19aa3a8aac86fea03",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+  "trigger_tests": [
+    "org.apache.commons.math.linear.SingularValueSolverTest::testMath320A",
+    "org.apache.commons.math.linear.SingularValueSolverTest::testMath320B"
+  ]
+}

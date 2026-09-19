@@ -1,0 +1,60 @@
+{
+  "audit_hash": "21f04f83178aa674d06a9554926de292b4328cf6616acabe8ada96690b780346",
+  "bug_id": 19,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "filterCandidate",
+      "parameters": [
+        {
+          "name": "mocks",
+          "type": "Collection<Object>"
+        },
+        {
+          "name": "fieldToBeInjected",
+          "type": "Field"
+        },
+        {
+          "name": "fields",
+          "type": "List<Field>"
+        },
+        {
+          "name": "instance",
+          "type": "Object"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "OngoingInjecter",
+      "signature": "filterCandidate(Collection<Object>,Field,List<Field>,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "21f04f83178aa674d06a9554926de292b4328cf6616acabe8ada96690b780346",
+  "missing_adapters": [
+    "public_entry_point"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c6ee5544e26ea75f76cdd24b5719f94ce632d5e8e674bd612090519ada391bab",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.mockito.internal.configuration.injection.filter.MockCandidateFilter",
+  "trigger_tests": [
+    "org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest::shouldInsertFieldWithCorrectNameWhenMultipleTypesAvailable"
+  ]
+}

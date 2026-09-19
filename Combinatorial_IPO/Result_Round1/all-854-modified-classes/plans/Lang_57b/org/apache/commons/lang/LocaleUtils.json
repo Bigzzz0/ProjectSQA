@@ -1,0 +1,242 @@
+{
+  "audit_hash": "823557e1930a4f936aa64a716a3e4f6f98aa0d584b8cbaaca18949be07a43509",
+  "bug_id": 57,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 4,
+    "NEEDS_ENTRY_POINT": 4,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "LocaleUtils",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "LocaleUtils()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:Locale"
+      ],
+      "name": "toLocale",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        }
+      ],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "Locale",
+      "signature": "toLocale(String)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "localeLookupList",
+      "parameters": [
+        {
+          "name": "locale",
+          "type": "Locale"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "localeLookupList(Locale)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "localeLookupList",
+      "parameters": [
+        {
+          "name": "locale",
+          "type": "Locale"
+        },
+        {
+          "name": "defaultLocale",
+          "type": "Locale"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "localeLookupList(Locale,Locale)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:List"
+      ],
+      "name": "availableLocaleList",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "List",
+      "signature": "availableLocaleList()",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:Set"
+      ],
+      "name": "availableLocaleSet",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "Set",
+      "signature": "availableLocaleSet()",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "isAvailableLocale",
+      "parameters": [
+        {
+          "name": "locale",
+          "type": "Locale"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "recommended_test_type": "example_based",
+      "return_type": "boolean",
+      "signature": "isAvailableLocale(Locale)",
+      "static": true,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "languagesByCountry",
+      "parameters": [
+        {
+          "name": "countryCode",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "languagesByCountry(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "countriesByLanguage",
+      "parameters": [
+        {
+          "name": "languageCode",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "countriesByLanguage(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "823557e1930a4f936aa64a716a3e4f6f98aa0d584b8cbaaca18949be07a43509",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer",
+    "object_observer:List",
+    "object_observer:Locale",
+    "object_observer:Set"
+  ],
+  "project": "Lang",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new LocaleUtils()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "LocaleUtils()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "421fe92d659330e526d9f1a9468123ff44a7d03c24ca8203a496214817c4047f",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang.LocaleUtils",
+  "trigger_tests": [
+    "org.apache.commons.lang.LocaleUtilsTest::testAvailableLocaleSet",
+    "org.apache.commons.lang.LocaleUtilsTest::testIsAvailableLocale",
+    "org.apache.commons.lang.LocaleUtilsTest::testAvailableLocaleList",
+    "org.apache.commons.lang.LocaleUtilsTest::testCountriesByLanguage",
+    "org.apache.commons.lang.LocaleUtilsTest::testLocaleLookupList_LocaleLocale",
+    "org.apache.commons.lang.LocaleUtilsTest::testLanguagesByCountry",
+    "org.apache.commons.lang.LocaleUtilsTest::testToLocale_1Part",
+    "org.apache.commons.lang.LocaleUtilsTest::testToLocale_2Part",
+    "org.apache.commons.lang.LocaleUtilsTest::testToLocale_3Part",
+    "org.apache.commons.lang.LocaleUtilsTest::testLocaleLookupList_Locale",
+    "org.apache.commons.lang.LocaleUtilsTest::testConstructor"
+  ]
+}

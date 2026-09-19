@@ -1,0 +1,125 @@
+{
+  "audit_hash": "7bc3b38e540ad6d7a69866a299a8b3783a9e8bb20e2daf87d33209becdb0bc83",
+  "bug_id": 157,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "RenamePrototypes",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "aggressiveRenaming",
+          "type": "boolean"
+        },
+        {
+          "name": "reservedCharacters",
+          "type": "char[]"
+        },
+        {
+          "name": "prevUsedRenameMap",
+          "type": "VariableMap"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "RenamePrototypes(AbstractCompiler,boolean,char[],VariableMap)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reusePrototypeNames",
+      "parameters": [
+        {
+          "name": "properties",
+          "type": "Set<Property>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reusePrototypeNames(Set<Property>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPropertyMap",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "VariableMap",
+      "signature": "getPropertyMap()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "7bc3b38e540ad6d7a69866a299a8b3783a9e8bb20e2daf87d33209becdb0bc83",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "5608eca454322bceea6401c153b00cbbd109e446c4ba726be1245e47ee6d551c",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.RenamePrototypes",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.CodePrinterTest::testObjectLit2",
+    "com.google.javascript.jscomp.CodePrinterTest::testObjectLit3",
+    "com.google.javascript.jscomp.CodePrinterTest::testGetter",
+    "com.google.javascript.jscomp.CodePrinterTest::testSetter",
+    "com.google.javascript.jscomp.FunctionNamesTest::testFunctionsNamesAndIds",
+    "com.google.javascript.jscomp.RenamePropertiesTest::testPrototypePropertiesAsObjLitKeys2",
+    "com.google.javascript.jscomp.RenamePropertiesTest::testPrototypePropertiesAsObjLitKeys3",
+    "com.google.javascript.jscomp.SimpleDefinitionFinderTest::testDefineNumber",
+    "com.google.javascript.jscomp.parsing.IRFactoryTest::testObjectLiteral6",
+    "com.google.javascript.jscomp.parsing.IRFactoryTest::testObjectLiteral7",
+    "com.google.javascript.jscomp.parsing.IRFactoryTest::testObjectLiteral8",
+    "com.google.javascript.jscomp.parsing.ParserTest::testObjectLiteralDoc1"
+  ]
+}

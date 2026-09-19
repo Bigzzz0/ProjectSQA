@@ -1,0 +1,1454 @@
+[
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "0",
+      "str": "\"\"",
+      "upper": "0"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "1",
+      "str": "\" \"",
+      "upper": "1"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "-1",
+      "str": "\"a\"",
+      "upper": "-1"
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"test123\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"!@#\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 5,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -2147483648, length 3"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "0",
+      "str": "\" \"",
+      "upper": "-1"
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "1",
+      "str": "\"\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "-1",
+      "str": "\"test123\"",
+      "upper": "0"
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"a\"",
+      "upper": "1"
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"0\"",
+      "upper": "0"
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "1",
+      "str": "\"test123\"",
+      "upper": "-1"
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "-1",
+      "str": "\"\"",
+      "upper": "1"
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\" \"",
+      "upper": "0"
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"-1\"",
+      "upper": "1"
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "1"
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "ttest123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "1",
+      "str": "\"a\"",
+      "upper": "0"
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "-1",
+      "str": "\" \"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"\"",
+      "upper": "-1"
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"1.5\"",
+      "upper": "-1"
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "0"
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "1",
+      "str": "\"0\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "-1",
+      "str": "\"-1\"",
+      "upper": "-1"
+    },
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"1.5\"",
+      "upper": "1"
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "1"
+    },
+    "id": 26,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "1",
+      "str": "\"!@#\"",
+      "upper": "-1"
+    },
+    "id": 27,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "-1",
+      "str": "\"1.5\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 28,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -1, length 3"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"-1\"",
+      "upper": "0"
+    },
+    "id": 29,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\" \"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 30,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 31,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "1",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 32,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "-1",
+      "str": "\"!@#\"",
+      "upper": "1"
+    },
+    "id": 33,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"0\"",
+      "upper": "-1"
+    },
+    "id": 34,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"a\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 35,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 36,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "1",
+      "str": "\"-1\"",
+      "upper": "0"
+    },
+    "id": 37,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "-1",
+      "str": "\"0\"",
+      "upper": "1"
+    },
+    "id": 38,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"!@#\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 39,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"test123\"",
+      "upper": "-1"
+    },
+    "id": 40,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 41,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "1",
+      "str": "\"9223372036854775808\"",
+      "upper": "1"
+    },
+    "id": 42,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "99223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "-1",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "-1"
+    },
+    "id": 43,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 44,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\" \"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 45,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 46,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "1",
+      "str": "\"9223372036854775807\"",
+      "upper": "1"
+    },
+    "id": 47,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "99223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "-1",
+      "str": "\"\"",
+      "upper": "-1"
+    },
+    "id": 48,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 49,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\" \"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 50,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -2147483648, length 1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 51,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "1",
+      "str": "\"\"",
+      "upper": "1"
+    },
+    "id": 52,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "-1",
+      "str": "\"9223372036854775807\"",
+      "upper": "-1"
+    },
+    "id": 53,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"9223372036854775808\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 54,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\" \"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 55,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -2147483648, length 1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"\"",
+      "upper": "0"
+    },
+    "id": 56,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\"\"",
+      "upper": "0"
+    },
+    "id": 57,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\"\"",
+      "upper": "0"
+    },
+    "id": 58,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\" \"",
+      "upper": "0"
+    },
+    "id": 59,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\" \"",
+      "upper": "0"
+    },
+    "id": 60,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\" \"",
+      "upper": "0"
+    },
+    "id": 61,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 62,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "0"
+    },
+    "id": 63,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "0"
+    },
+    "id": 64,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "0"
+    },
+    "id": 65,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "0"
+    },
+    "id": 66,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"a\"",
+      "upper": "0"
+    },
+    "id": 67,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 68,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "0"
+    },
+    "id": 69,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "0"
+    },
+    "id": 70,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "0"
+    },
+    "id": 71,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "0"
+    },
+    "id": 72,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"test123\"",
+      "upper": "0"
+    },
+    "id": 73,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 74,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 75,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 76,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "0"
+    },
+    "id": 77,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "0"
+    },
+    "id": 78,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"!@#\"",
+      "upper": "0"
+    },
+    "id": 79,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 80,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "0"
+    },
+    "id": 81,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "0"
+    },
+    "id": 82,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "0"
+    },
+    "id": 83,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "0"
+    },
+    "id": 84,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"0\"",
+      "upper": "0"
+    },
+    "id": 85,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 86,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 87,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "0"
+    },
+    "id": 88,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "0"
+    },
+    "id": 89,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "0"
+    },
+    "id": 90,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"-1\"",
+      "upper": "0"
+    },
+    "id": 91,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 92,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 93,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 94,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775807\"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 95,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"9223372036854775808\"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 96,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "lower": "0",
+      "str": "\"1.5\"",
+      "upper": "0"
+    },
+    "id": 97,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "Integer.MAX_VALUE",
+      "str": "\"9223372036854775807\"",
+      "upper": "Integer.MAX_VALUE"
+    },
+    "id": 98,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"9223372036854775807\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 99,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -2147483648, length 19"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 100,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 101,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 102,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 103,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 104,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\"9223372036854775807\"",
+      "upper": "0"
+    },
+    "id": 105,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "-1",
+      "str": "\"9223372036854775808\"",
+      "upper": "-1"
+    },
+    "id": 106,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"9223372036854775808\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 107,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -2147483648, length 19"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 108,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 109,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 110,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 111,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 112,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\"9223372036854775808\"",
+      "upper": "0"
+    },
+    "id": 113,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"\"",
+      "lower": "1",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "1"
+    },
+    "id": 114,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\" \"",
+      "lower": "Integer.MIN_VALUE",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "Integer.MIN_VALUE"
+    },
+    "id": 115,
+    "outcome": "THROW",
+    "type": "java.lang.StringIndexOutOfBoundsException",
+    "value_or_message": "begin 0, end -2147483648, length 32"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"a\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 116,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"test123\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 117,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"!@#\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 118,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"0\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 119,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"-1\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 120,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "appendToEnd": "\"1.5\"",
+      "lower": "0",
+      "str": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "upper": "0"
+    },
+    "id": 121,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  }
+]

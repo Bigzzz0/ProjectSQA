@@ -1,0 +1,22 @@
+{
+  "lineNumber": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ],
+  "receiver__fileName": [
+    "\"\"",
+    "\" \"",
+    "\"a\"",
+    "\"test123\"",
+    "\"!@#\"",
+    "\"0\"",
+    "\"-1\"",
+    "\"1.5\"",
+    "\"9223372036854775807\"",
+    "\"9223372036854775808\"",
+    "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+  ]
+}

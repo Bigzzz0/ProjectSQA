@@ -1,0 +1,352 @@
+{
+  "audit_hash": "8705715e2fb213ad910b456976c9a77ce89a18d79d8f4c5c0a31332da5be296a",
+  "bug_id": 52,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 14
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DataUtil",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DataUtil()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "load",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "File"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "load(File,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "load",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "load(InputStream,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "load",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "parser",
+          "type": "Parser"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "load(InputStream,String,String,Parser)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "crossStreams",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "out",
+          "type": "OutputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "crossStreams(InputStream,OutputStream)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "parseByteData",
+      "parameters": [
+        {
+          "name": "byteData",
+          "type": "ByteBuffer"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "parser",
+          "type": "Parser"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "Document",
+      "signature": "parseByteData(ByteBuffer,String,String,Parser)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readToByteBuffer",
+      "parameters": [
+        {
+          "name": "inStream",
+          "type": "InputStream"
+        },
+        {
+          "name": "maxSize",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ByteBuffer",
+      "signature": "readToByteBuffer(InputStream,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readToByteBuffer",
+      "parameters": [
+        {
+          "name": "inStream",
+          "type": "InputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ByteBuffer",
+      "signature": "readToByteBuffer(InputStream)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readFileToByteBuffer",
+      "parameters": [
+        {
+          "name": "file",
+          "type": "File"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ByteBuffer",
+      "signature": "readFileToByteBuffer(File)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "emptyByteBuffer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ByteBuffer",
+      "signature": "emptyByteBuffer()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCharsetFromContentType",
+      "parameters": [
+        {
+          "name": "contentType",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getCharsetFromContentType(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "validateCharset",
+      "parameters": [
+        {
+          "name": "cs",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "validateCharset(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mimeBoundary",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "mimeBoundary()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "detectCharsetFromBom",
+      "parameters": [
+        {
+          "name": "byteData",
+          "type": "ByteBuffer"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "detectCharsetFromBom(ByteBuffer,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "8705715e2fb213ad910b456976c9a77ce89a18d79d8f4c5c0a31332da5be296a",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "9859862d0137948f07bc18b0303321f3d31ffa133606346d1fa9ca69e4aed531",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.jsoup.helper.DataUtil",
+  "trigger_tests": [
+    "org.jsoup.nodes.DocumentTest::testMetaCharsetUpdateXmlNoCharset",
+    "org.jsoup.nodes.DocumentTest::testMetaCharsetUpdateXmlIso8859",
+    "org.jsoup.nodes.DocumentTest::testMetaCharsetUpdateXmlUtf8",
+    "org.jsoup.nodes.DocumentTest::testMetaCharsetUpdateXmlDisabledNoChanges",
+    "org.jsoup.parser.XmlTreeBuilderTest::handlesXmlDeclarationAsDeclaration",
+    "org.jsoup.parser.XmlTreeBuilderTest::testDetectCharsetEncodingDeclaration",
+    "org.jsoup.parser.XmlTreeBuilderTest::testParseDeclarationAttributes"
+  ]
+}

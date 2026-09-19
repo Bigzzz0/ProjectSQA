@@ -1,0 +1,29 @@
+{
+  "audit_hash": "976ad793440522f61e3e16c2f4703041deadf79cfbc01a438e108cd894cb9428",
+  "bug_id": 13,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 165,
+      "expected_pair_count": 165,
+      "model_hash": "334571f61cc546750e8a8ea5afdd512d046073cf26d5c050004efe2c6245b153",
+      "oracle_hash": "cfdb56992aeb4ad60bbddfd1dc1dfcbd1f28460036998bdb874ea85c57c1e696",
+      "oracle_sha256": "87afc203a75c0675586dbe0e664f61d8d8335a3248af613c5b52cf9b4c02003a",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 121,
+      "reused_oracle": false,
+      "signature": "isDoubleMetaphoneEqual(String,String,boolean)",
+      "suite_hash": "b0865b379b870521ab5b0b39856a98e6e9286d4dfed8503f9587a9de15f36862"
+    }
+  ],
+  "project": "Codec",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "169533986ef563a9771932bdfbc21e4aeb289d8851e766234b25c02f1e64c85b",
+  "suite_path": "TestCode/all-modified-classes/Codec_13b/org/apache/commons/codec/language/DoubleMetaphone_IPOTest.java",
+  "suite_sha256": "06620975d95581658b309133aa32b5d95715ccf1a7a3c85f59328831d626ccbd",
+  "target_class": "org.apache.commons.codec.language.DoubleMetaphone",
+  "test_class": "DoubleMetaphone_IPOTest",
+  "verification_result": "OK (121 tests)"
+}

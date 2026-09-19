@@ -1,0 +1,171 @@
+{
+  "audit_hash": "4cb27a0bb0422cca2ecaed6256eaae56c82f88f1158f33b9d9684d196156ed39",
+  "bug_id": 58,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "Whitelist"
+      ],
+      "name": "Cleaner",
+      "parameters": [
+        {
+          "name": "whitelist",
+          "type": "Whitelist"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "Cleaner(Whitelist)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clean",
+      "parameters": [
+        {
+          "name": "dirtyDocument",
+          "type": "Document"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "clean(Document)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Document"
+      ],
+      "name": "isValid",
+      "parameters": [
+        {
+          "name": "dirtyDocument",
+          "type": "Document"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "boolean",
+      "signature": "isValid(Document)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "isValidBodyHtml",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "boolean",
+      "signature": "isValidBodyHtml(String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "copySafeNodes",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "Element"
+        },
+        {
+          "name": "dest",
+          "type": "Element"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "copySafeNodes(Element,Element)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createSafeElement",
+      "parameters": [
+        {
+          "name": "sourceEl",
+          "type": "Element"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ElementMeta",
+      "signature": "createSafeElement(Element)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "4cb27a0bb0422cca2ecaed6256eaae56c82f88f1158f33b9d9684d196156ed39",
+  "missing_adapters": [
+    "Document",
+    "Whitelist",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4d0559d6b1dc438dba47303f14c4c9f76d0836bc69fb04cd8bc2cf9d462a46ff",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jsoup.safety.Cleaner",
+  "trigger_tests": [
+    "org.jsoup.safety.CleanerTest::testIsValidBodyHtml",
+    "org.jsoup.safety.CleanerTest::testIsValidDocument"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "audit_hash": "697ac9f811c3e2d1a8f74e94800bae6b2fbbd15f5b984dfd93954523487ec4cd",
+  "bug_id": 15,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 25,
+      "expected_pair_count": 25,
+      "model_hash": "c22cd032bbe95c88c7619bf02f8512790cd8f4a19060b9ab06d75737d9e38396",
+      "oracle_hash": "4d770d2ca69a7210488f3895a886cebb807e654e3e3a634740feb3c9d8850818",
+      "oracle_sha256": "e832d386a10c1cf6464dc3abc83a89c1fb01e3354ff23839b0bf6c3b78ee1c03",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 25,
+      "reused_oracle": false,
+      "signature": "pow(double,double)",
+      "suite_hash": "cb5868763b0fb424bcd198d91e6229914a8450c467e4f7ef4a4fd483555b436d"
+    }
+  ],
+  "project": "Math",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "df12633fdafeec967110aefc581166a920540495f537d923b19ea9027a39c71a",
+  "suite_path": "TestCode/all-modified-classes/Math_15b/org/apache/commons/math3/util/FastMath_IPOTest.java",
+  "suite_sha256": "cc779d4d71aad49383502e79980b1c76956b1623388bb78877eab6eb2ff7387e",
+  "target_class": "org.apache.commons.math3.util.FastMath",
+  "test_class": "FastMath_IPOTest",
+  "verification_result": "OK (25 tests)"
+}

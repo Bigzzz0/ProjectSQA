@@ -1,0 +1,83 @@
+{
+  "audit_hash": "191c503e4fccfd23a44396b5473fc8be1f2d29efcc0e24ed4ae5ad62b0b06012",
+  "bug_id": 28,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "InlineCostEstimator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "InlineCostEstimator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCost",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getCost(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCost",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "Node"
+        },
+        {
+          "name": "costThreshhold",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getCost(Node,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "191c503e4fccfd23a44396b5473fc8be1f2d29efcc0e24ed4ae5ad62b0b06012",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6dafcf0ec63af4fdfd17a22ab6897927d84ee68cbdd3fe42ea103bd2802b083e",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.InlineCostEstimator",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.InlineCostEstimatorTest::testCost",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testIssue728"
+  ]
+}

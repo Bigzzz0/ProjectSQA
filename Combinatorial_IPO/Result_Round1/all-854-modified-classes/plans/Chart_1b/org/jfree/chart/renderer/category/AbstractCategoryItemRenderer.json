@@ -1,0 +1,1790 @@
+{
+  "audit_hash": "42a1735380d500991d6fb2e36746d9e44f304ec149d3053fef145cfb333e6135",
+  "bug_id": 1,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 65
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "AbstractCategoryItemRenderer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "AbstractCategoryItemRenderer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPassCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getPassCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPlot",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryPlot",
+      "signature": "getPlot()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPlot",
+      "parameters": [
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setPlot(CategoryPlot)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryItemLabelGenerator",
+      "signature": "getItemLabelGenerator(int,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSeriesItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryItemLabelGenerator",
+      "signature": "getSeriesItemLabelGenerator(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "generator",
+          "type": "CategoryItemLabelGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesItemLabelGenerator(int,CategoryItemLabelGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "generator",
+          "type": "CategoryItemLabelGenerator"
+        },
+        {
+          "name": "notify",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesItemLabelGenerator(int,CategoryItemLabelGenerator,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getBaseItemLabelGenerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryItemLabelGenerator",
+      "signature": "getBaseItemLabelGenerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBaseItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategoryItemLabelGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBaseItemLabelGenerator(CategoryItemLabelGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBaseItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategoryItemLabelGenerator"
+        },
+        {
+          "name": "notify",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBaseItemLabelGenerator(CategoryItemLabelGenerator,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getToolTipGenerator",
+      "parameters": [
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryToolTipGenerator",
+      "signature": "getToolTipGenerator(int,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSeriesToolTipGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryToolTipGenerator",
+      "signature": "getSeriesToolTipGenerator(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesToolTipGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "generator",
+          "type": "CategoryToolTipGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesToolTipGenerator(int,CategoryToolTipGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesToolTipGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "generator",
+          "type": "CategoryToolTipGenerator"
+        },
+        {
+          "name": "notify",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesToolTipGenerator(int,CategoryToolTipGenerator,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getBaseToolTipGenerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryToolTipGenerator",
+      "signature": "getBaseToolTipGenerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBaseToolTipGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategoryToolTipGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBaseToolTipGenerator(CategoryToolTipGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBaseToolTipGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategoryToolTipGenerator"
+        },
+        {
+          "name": "notify",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBaseToolTipGenerator(CategoryToolTipGenerator,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getURLGenerator",
+      "parameters": [
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryURLGenerator",
+      "signature": "getURLGenerator(int,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSeriesURLGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryURLGenerator",
+      "signature": "getSeriesURLGenerator(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesURLGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "generator",
+          "type": "CategoryURLGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesURLGenerator(int,CategoryURLGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesURLGenerator",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "generator",
+          "type": "CategoryURLGenerator"
+        },
+        {
+          "name": "notify",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesURLGenerator(int,CategoryURLGenerator,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getBaseURLGenerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryURLGenerator",
+      "signature": "getBaseURLGenerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBaseURLGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategoryURLGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBaseURLGenerator(CategoryURLGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBaseURLGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategoryURLGenerator"
+        },
+        {
+          "name": "notify",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBaseURLGenerator(CategoryURLGenerator,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAnnotation",
+      "parameters": [
+        {
+          "name": "annotation",
+          "type": "CategoryAnnotation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addAnnotation(CategoryAnnotation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAnnotation",
+      "parameters": [
+        {
+          "name": "annotation",
+          "type": "CategoryAnnotation"
+        },
+        {
+          "name": "layer",
+          "type": "Layer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addAnnotation(CategoryAnnotation,Layer)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeAnnotation",
+      "parameters": [
+        {
+          "name": "annotation",
+          "type": "CategoryAnnotation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "removeAnnotation(CategoryAnnotation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeAnnotations",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "removeAnnotations()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLegendItemLabelGenerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategorySeriesLabelGenerator",
+      "signature": "getLegendItemLabelGenerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setLegendItemLabelGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategorySeriesLabelGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setLegendItemLabelGenerator(CategorySeriesLabelGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLegendItemToolTipGenerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategorySeriesLabelGenerator",
+      "signature": "getLegendItemToolTipGenerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setLegendItemToolTipGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategorySeriesLabelGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setLegendItemToolTipGenerator(CategorySeriesLabelGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLegendItemURLGenerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategorySeriesLabelGenerator",
+      "signature": "getLegendItemURLGenerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setLegendItemURLGenerator",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "CategorySeriesLabelGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setLegendItemURLGenerator(CategorySeriesLabelGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getRowCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getColumnCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getColumnCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createState",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "PlotRenderingInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryItemRendererState",
+      "signature": "createState(PlotRenderingInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "initialise",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "info",
+          "type": "PlotRenderingInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryItemRendererState",
+      "signature": "initialise(Graphics2D,Rectangle2D,CategoryPlot,CategoryDataset,PlotRenderingInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(CategoryDataset)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(CategoryDataset,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getItemMiddle",
+      "parameters": [
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "axis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "area",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "edge",
+          "type": "RectangleEdge"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "getItemMiddle(Comparable,Comparable,CategoryDataset,CategoryAxis,Rectangle2D,RectangleEdge)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawBackground",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawBackground(Graphics2D,CategoryPlot,Rectangle2D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawOutline",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawOutline(Graphics2D,CategoryPlot,Rectangle2D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawDomainLine",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "value",
+          "type": "double"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        },
+        {
+          "name": "stroke",
+          "type": "Stroke"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawDomainLine(Graphics2D,CategoryPlot,Rectangle2D,double,Paint,Stroke)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawRangeLine",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "axis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "value",
+          "type": "double"
+        },
+        {
+          "name": "paint",
+          "type": "Paint"
+        },
+        {
+          "name": "stroke",
+          "type": "Stroke"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawRangeLine(Graphics2D,CategoryPlot,ValueAxis,Rectangle2D,double,Paint,Stroke)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawDomainMarker",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "axis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "marker",
+          "type": "CategoryMarker"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawDomainMarker(Graphics2D,CategoryPlot,CategoryAxis,CategoryMarker,Rectangle2D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawRangeMarker",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "axis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "marker",
+          "type": "Marker"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawRangeMarker(Graphics2D,CategoryPlot,ValueAxis,Marker,Rectangle2D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "calculateDomainMarkerTextAnchorPoint",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "orientation",
+          "type": "PlotOrientation"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "markerArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "markerOffset",
+          "type": "RectangleInsets"
+        },
+        {
+          "name": "labelOffsetType",
+          "type": "LengthAdjustmentType"
+        },
+        {
+          "name": "anchor",
+          "type": "RectangleAnchor"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Point2D",
+      "signature": "calculateDomainMarkerTextAnchorPoint(Graphics2D,PlotOrientation,Rectangle2D,Rectangle2D,RectangleInsets,LengthAdjustmentType,RectangleAnchor)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "calculateRangeMarkerTextAnchorPoint",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "orientation",
+          "type": "PlotOrientation"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "markerArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "markerOffset",
+          "type": "RectangleInsets"
+        },
+        {
+          "name": "labelOffsetType",
+          "type": "LengthAdjustmentType"
+        },
+        {
+          "name": "anchor",
+          "type": "RectangleAnchor"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Point2D",
+      "signature": "calculateRangeMarkerTextAnchorPoint(Graphics2D,PlotOrientation,Rectangle2D,Rectangle2D,RectangleInsets,LengthAdjustmentType,RectangleAnchor)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLegendItem",
+      "parameters": [
+        {
+          "name": "datasetIndex",
+          "type": "int"
+        },
+        {
+          "name": "series",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "LegendItem",
+      "signature": "getLegendItem(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDrawingSupplier",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DrawingSupplier",
+      "signature": "getDrawingSupplier()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateCrosshairValues",
+      "parameters": [
+        {
+          "name": "crosshairState",
+          "type": "CategoryCrosshairState"
+        },
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "value",
+          "type": "double"
+        },
+        {
+          "name": "datasetIndex",
+          "type": "int"
+        },
+        {
+          "name": "transX",
+          "type": "double"
+        },
+        {
+          "name": "transY",
+          "type": "double"
+        },
+        {
+          "name": "orientation",
+          "type": "PlotOrientation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "updateCrosshairValues(CategoryCrosshairState,Comparable,Comparable,double,int,double,double,PlotOrientation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawItemLabel",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "orientation",
+          "type": "PlotOrientation"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        },
+        {
+          "name": "x",
+          "type": "double"
+        },
+        {
+          "name": "y",
+          "type": "double"
+        },
+        {
+          "name": "negative",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawItemLabel(Graphics2D,PlotOrientation,CategoryDataset,int,int,boolean,double,double,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawAnnotations",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "layer",
+          "type": "Layer"
+        },
+        {
+          "name": "info",
+          "type": "PlotRenderingInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawAnnotations(Graphics2D,Rectangle2D,CategoryAxis,ValueAxis,Layer,PlotRenderingInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "clone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDomainAxis",
+      "parameters": [
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryAxis",
+      "signature": "getDomainAxis(CategoryPlot,CategoryDataset)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRangeAxis",
+      "parameters": [
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ValueAxis",
+      "signature": "getRangeAxis(CategoryPlot,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getLegendItems",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "LegendItemCollection",
+      "signature": "getLegendItems()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addEntity",
+      "parameters": [
+        {
+          "name": "entities",
+          "type": "EntityCollection"
+        },
+        {
+          "name": "hotspot",
+          "type": "Shape"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addEntity(EntityCollection,Shape,CategoryDataset,int,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addEntity",
+      "parameters": [
+        {
+          "name": "entities",
+          "type": "EntityCollection"
+        },
+        {
+          "name": "hotspot",
+          "type": "Shape"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        },
+        {
+          "name": "entityX",
+          "type": "double"
+        },
+        {
+          "name": "entityY",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addEntity(EntityCollection,Shape,CategoryDataset,int,int,boolean,double,double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createHotSpotShape",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Shape",
+      "signature": "createHotSpotShape(Graphics2D,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,CategoryItemRendererState)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createHotSpotBounds",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        },
+        {
+          "name": "result",
+          "type": "Rectangle2D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Rectangle2D",
+      "signature": "createHotSpotBounds(Graphics2D,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,CategoryItemRendererState,Rectangle2D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hitTest",
+      "parameters": [
+        {
+          "name": "xx",
+          "type": "double"
+        },
+        {
+          "name": "yy",
+          "type": "double"
+        },
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "boolean"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hitTest(double,double,Graphics2D,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,CategoryItemRendererState)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "42a1735380d500991d6fb2e36746d9e44f304ec149d3053fef145cfb333e6135",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Chart",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "f6062af192d39b6d56b4775f2d2649e066d3bc21a0ce7171b83cff6fed6d1a2e",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer",
+  "trigger_tests": [
+    "org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660"
+  ]
+}

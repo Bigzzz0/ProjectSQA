@@ -1,0 +1,29 @@
+{
+  "audit_hash": "374d8667da137612c1718c6669696e34cc1bfbeb51db6b67e54c700efd1e8415",
+  "bug_id": 39,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 48,
+      "expected_pair_count": 48,
+      "model_hash": "897f6d13f6b472835b76a6fdb4189b2f7e7d2a68eb8c1460ec975804748d957c",
+      "oracle_hash": "d007a168f6e9114b0ef9d6d6d842355fc5d4d10c53fa2e4e733bdafe1cd2f052",
+      "oracle_sha256": "f2a4a093301a2b1753c2fd26c5331e706e8d0f730f24208c55ed11ff01b12e8d",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 22,
+      "reused_oracle": false,
+      "signature": "replaceEach(String,String[],String[])",
+      "suite_hash": "34903f4a06a7867d9c06c76a4af5e9e3d16e622925b49e086f91da6696cce8bb"
+    }
+  ],
+  "project": "Lang",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "84c560773208c43001b8a63b9fa88eac563d5a756d71f7ae6c805111e43fdc4a",
+  "suite_path": "TestCode/all-modified-classes/Lang_39b/org/apache/commons/lang3/StringUtils_IPOTest.java",
+  "suite_sha256": "2c024b2b8a717033f3343c9eb1782e68fd726742a61972eb8b36a572ef42844c",
+  "target_class": "org.apache.commons.lang3.StringUtils",
+  "test_class": "StringUtils_IPOTest",
+  "verification_result": "OK (22 tests)"
+}

@@ -1,0 +1,71 @@
+{
+  "audit_hash": "d3b85bfd2789ef916537b083c643def792b4bee803d0672e6c10258af0ae5957",
+  "bug_id": 5,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "InlineObjectLiterals",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "safeNameIdSupplier",
+          "type": "Supplier<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "InlineObjectLiterals(AbstractCompiler,Supplier<String>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "d3b85bfd2789ef916537b083c643def792b4bee803d0672e6c10258af0ae5957",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "1e544cb34e6a1009ee2fda5da2a5aa5f762d95638b9da4f622845e2b5eba64c9",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.InlineObjectLiterals",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.InlineObjectLiteralsTest::testNoInlineDeletedProperties"
+  ]
+}

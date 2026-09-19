@@ -1,0 +1,376 @@
+{
+  "audit_hash": "86dc09fbc7b203cf18f31f2131fa1979627b8294c948604137cf49f2f9eae358",
+  "bug_id": 38,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 14
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BOBYQAOptimizer",
+      "parameters": [
+        {
+          "name": "numberOfInterpolationPoints",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BOBYQAOptimizer(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BOBYQAOptimizer",
+      "parameters": [
+        {
+          "name": "numberOfInterpolationPoints",
+          "type": "int"
+        },
+        {
+          "name": "initialTrustRegionRadius",
+          "type": "double"
+        },
+        {
+          "name": "stoppingTrustRegionRadius",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BOBYQAOptimizer(int,double,double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "doOptimize",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealPointValuePair",
+      "signature": "doOptimize()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "bobyqa",
+      "parameters": [
+        {
+          "name": "lowerBound",
+          "type": "double[]"
+        },
+        {
+          "name": "upperBound",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "bobyqa(double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "bobyqb",
+      "parameters": [
+        {
+          "name": "lowerBound",
+          "type": "double[]"
+        },
+        {
+          "name": "upperBound",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "bobyqb(double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "altmov",
+      "parameters": [
+        {
+          "name": "knew",
+          "type": "int"
+        },
+        {
+          "name": "adelt",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "altmov(int,double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "prelim",
+      "parameters": [
+        {
+          "name": "lowerBound",
+          "type": "double[]"
+        },
+        {
+          "name": "upperBound",
+          "type": "double[]"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "prelim(double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "trsbox",
+      "parameters": [
+        {
+          "name": "delta",
+          "type": "double"
+        },
+        {
+          "name": "gnew",
+          "type": "ArrayRealVector"
+        },
+        {
+          "name": "xbdi",
+          "type": "ArrayRealVector"
+        },
+        {
+          "name": "s",
+          "type": "ArrayRealVector"
+        },
+        {
+          "name": "hs",
+          "type": "ArrayRealVector"
+        },
+        {
+          "name": "hred",
+          "type": "ArrayRealVector"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "trsbox(double,ArrayRealVector,ArrayRealVector,ArrayRealVector,ArrayRealVector,ArrayRealVector)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "update",
+      "parameters": [
+        {
+          "name": "beta",
+          "type": "double"
+        },
+        {
+          "name": "denom",
+          "type": "double"
+        },
+        {
+          "name": "knew",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "update(double,double,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setup",
+      "parameters": [
+        {
+          "name": "lowerBound",
+          "type": "double[]"
+        },
+        {
+          "name": "upperBound",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setup(double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fillNewArray",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "value",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "fillNewArray(int,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "caller",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "caller(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "printState",
+      "parameters": [
+        {
+          "name": "s",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "printState(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "printMethod",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "printMethod()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "86dc09fbc7b203cf18f31f2131fa1979627b8294c948604137cf49f2f9eae358",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__numberOfInterpolationPoints": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new BOBYQAOptimizer({receiver__numberOfInterpolationPoints})",
+    "factor_domains": {
+      "receiver__numberOfInterpolationPoints": [
+        "0",
+        "1",
+        "-1",
+        "Integer.MAX_VALUE",
+        "Integer.MIN_VALUE"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "BOBYQAOptimizer(int)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c9407f5a882d83b6a089aab81a4e4efcd9312b685984e8a01d076417e06217f2",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.optimization.direct.BOBYQAOptimizer",
+  "trigger_tests": [
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerTest::testConstrainedRosenWithMoreInterpolationPoints"
+  ]
+}

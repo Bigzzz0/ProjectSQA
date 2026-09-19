@@ -1,0 +1,132 @@
+{
+  "audit_hash": "cb5d6fc64bedd710413d8586b89116013891d8368ad4b8ca592cd9cf82834656",
+  "bug_id": 34,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "NumberSerializer",
+      "parameters": [
+        {
+          "name": "rawType",
+          "type": "Class<? extends Number>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "NumberSerializer(Class<?extendsNumber>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "serialize",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Number"
+        },
+        {
+          "name": "g",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "serialize(Number,JsonGenerator,SerializerProvider)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSchema",
+      "parameters": [
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "typeHint",
+          "type": "Type"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonNode",
+      "signature": "getSchema(SerializerProvider,Type)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "JsonFormatVisitorWrapper",
+        "JavaType"
+      ],
+      "name": "acceptJsonFormatVisitor",
+      "parameters": [
+        {
+          "name": "visitor",
+          "type": "JsonFormatVisitorWrapper"
+        },
+        {
+          "name": "typeHint",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "acceptJsonFormatVisitor(JsonFormatVisitorWrapper,JavaType)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "cb5d6fc64bedd710413d8586b89116013891d8368ad4b8ca592cd9cf82834656",
+  "missing_adapters": [
+    "JavaType",
+    "JsonFormatVisitorWrapper",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "156828d3427ecea6278fe73afcf3eb639fdec00aa39da978de26591b6fab2de3",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.ser.std.NumberSerializer",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.jsonschema.NewSchemaTest::testSimpleNumbers"
+  ]
+}

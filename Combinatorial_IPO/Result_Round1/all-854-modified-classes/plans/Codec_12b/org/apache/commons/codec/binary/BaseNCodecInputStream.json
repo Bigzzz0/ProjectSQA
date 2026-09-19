@@ -1,0 +1,185 @@
+{
+  "audit_hash": "bdbc5bf16ed72c80493d6c1d677edae8f59a1ddacb73b6e54b8a9406c1961046",
+  "bug_id": 12,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BaseNCodecInputStream",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "baseNCodec",
+          "type": "BaseNCodec"
+        },
+        {
+          "name": "doEncode",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BaseNCodecInputStream(InputStream,BaseNCodec,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "read",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "read()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "read",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "len",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "read(byte[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "markSupported",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "markSupported()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "skip",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "long"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "long",
+      "signature": "skip(long)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "available",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "int",
+      "signature": "available()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "bdbc5bf16ed72c80493d6c1d677edae8f59a1ddacb73b6e54b8a9406c1961046",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Codec",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "fdf1bfe94b4f02cbf812c294f7059542b029e75c3dab0a1721291941d7431eda",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.codec.binary.BaseNCodecInputStream",
+  "trigger_tests": [
+    "org.apache.commons.codec.binary.Base32InputStreamTest::testSkipToEnd",
+    "org.apache.commons.codec.binary.Base32InputStreamTest::testCodec130",
+    "org.apache.commons.codec.binary.Base32InputStreamTest::testSkipWrongArgument",
+    "org.apache.commons.codec.binary.Base32InputStreamTest::testAvailable",
+    "org.apache.commons.codec.binary.Base32InputStreamTest::testSkipPastEnd",
+    "org.apache.commons.codec.binary.Base32InputStreamTest::testSkipBig",
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testSkipToEnd",
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testCodec130",
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testSkipWrongArgument",
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testAvailable",
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testSkipPastEnd",
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testSkipBig"
+  ]
+}

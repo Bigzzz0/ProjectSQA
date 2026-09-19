@@ -1,0 +1,69 @@
+{
+  "audit_hash": "15c11f5d59269b88e8276f38319a26bfec48443fa61283eaf2746ca297383bc9",
+  "bug_id": 9,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CoreOperationEqual",
+      "parameters": [
+        {
+          "name": "arg1",
+          "type": "Expression"
+        },
+        {
+          "name": "arg2",
+          "type": "Expression"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CoreOperationEqual(Expression,Expression)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getSymbol",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "String",
+      "signature": "getSymbol()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "15c11f5d59269b88e8276f38319a26bfec48443fa61283eaf2746ca297383bc9",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "JxPath",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6a7828322a130a9cd227b4e9bc9ddb115e247242b411ad06478f15e202c8ca77",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.jxpath.ri.compiler.CoreOperationEqual",
+  "trigger_tests": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationTest::testNan"
+  ]
+}

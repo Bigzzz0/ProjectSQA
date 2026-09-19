@@ -1,0 +1,253 @@
+{
+  "audit_hash": "598ba820b653911efc4a761676d706b39edb9a1899e2ba3f4d09ef596961eb0e",
+  "bug_id": 64,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 10
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "LevenbergMarquardtOptimizer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "LevenbergMarquardtOptimizer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setInitialStepBoundFactor",
+      "parameters": [
+        {
+          "name": "initialStepBoundFactor",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setInitialStepBoundFactor(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setCostRelativeTolerance",
+      "parameters": [
+        {
+          "name": "costRelativeTolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setCostRelativeTolerance(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setParRelativeTolerance",
+      "parameters": [
+        {
+          "name": "parRelativeTolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setParRelativeTolerance(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setOrthoTolerance",
+      "parameters": [
+        {
+          "name": "orthoTolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setOrthoTolerance(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setQRRankingThreshold",
+      "parameters": [
+        {
+          "name": "threshold",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setQRRankingThreshold(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "determineLMParameter",
+      "parameters": [
+        {
+          "name": "qy",
+          "type": "double[]"
+        },
+        {
+          "name": "delta",
+          "type": "double"
+        },
+        {
+          "name": "diag",
+          "type": "double[]"
+        },
+        {
+          "name": "work1",
+          "type": "double[]"
+        },
+        {
+          "name": "work2",
+          "type": "double[]"
+        },
+        {
+          "name": "work3",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "determineLMParameter(double[],double,double[],double[],double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "determineLMDirection",
+      "parameters": [
+        {
+          "name": "qy",
+          "type": "double[]"
+        },
+        {
+          "name": "diag",
+          "type": "double[]"
+        },
+        {
+          "name": "lmDiag",
+          "type": "double[]"
+        },
+        {
+          "name": "work",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "determineLMDirection(double[],double[],double[],double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "qrDecomposition",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "qrDecomposition()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "qTy",
+      "parameters": [
+        {
+          "name": "y",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "qTy(double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "598ba820b653911efc4a761676d706b39edb9a1899e2ba3f4d09ef596961eb0e",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new LevenbergMarquardtOptimizer()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "LevenbergMarquardtOptimizer()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "9ccf731f331c17ff40bc29d1b677e739ef8bed066e5011f8accfb3eee4983366",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "trigger_tests": [
+    "org.apache.commons.math.optimization.general.MinpackTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.MinpackTest::testMinpackFreudensteinRoth"
+  ]
+}

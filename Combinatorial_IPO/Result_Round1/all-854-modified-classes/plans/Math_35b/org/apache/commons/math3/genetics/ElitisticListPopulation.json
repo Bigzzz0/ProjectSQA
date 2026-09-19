@@ -1,0 +1,174 @@
+{
+  "audit_hash": "ab4f5ef55c0804e769b7dcfd5aa148f98d5e55f0b2fa5a40e5984ecdf88241f2",
+  "bug_id": 35,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "List<Chromosome>"
+      ],
+      "name": "ElitisticListPopulation",
+      "parameters": [
+        {
+          "name": "chromosomes",
+          "type": "List<Chromosome>"
+        },
+        {
+          "name": "populationLimit",
+          "type": "int"
+        },
+        {
+          "name": "elitismRate",
+          "type": "double"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "ElitisticListPopulation(List<Chromosome>,int,double)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "ElitisticListPopulation",
+      "parameters": [
+        {
+          "name": "populationLimit",
+          "type": "int"
+        },
+        {
+          "name": "elitismRate",
+          "type": "double"
+        }
+      ],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "ElitisticListPopulation(int,double)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nextGeneration",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Population",
+      "signature": "nextGeneration()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setElitismRate",
+      "parameters": [
+        {
+          "name": "elitismRate",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setElitismRate(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getElitismRate",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "getElitismRate()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "ab4f5ef55c0804e769b7dcfd5aa148f98d5e55f0b2fa5a40e5984ecdf88241f2",
+  "missing_adapters": [
+    "List<Chromosome>",
+    "entry_point_evidence",
+    "object_observer"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__elitismRate": "generic",
+      "receiver__populationLimit": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new ElitisticListPopulation({receiver__populationLimit}, {receiver__elitismRate})",
+    "factor_domains": {
+      "receiver__elitismRate": [
+        "0.0d",
+        "1.0d",
+        "-1.0d",
+        "Double.NaN",
+        "Double.POSITIVE_INFINITY"
+      ],
+      "receiver__populationLimit": [
+        "0",
+        "1",
+        "-1",
+        "Integer.MAX_VALUE",
+        "Integer.MIN_VALUE"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "ElitisticListPopulation(int,double)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c2b006ecfbc13bb9dd1d4e5b712d004ef3ecd39ad4eb6ed0341afd1da7abbf39",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math3.genetics.ElitisticListPopulation",
+  "trigger_tests": [
+    "org.apache.commons.math3.genetics.ElitisticListPopulationTest::testChromosomeListConstructorTooLow",
+    "org.apache.commons.math3.genetics.ElitisticListPopulationTest::testConstructorTooHigh",
+    "org.apache.commons.math3.genetics.ElitisticListPopulationTest::testConstructorTooLow",
+    "org.apache.commons.math3.genetics.ElitisticListPopulationTest::testChromosomeListConstructorTooHigh"
+  ]
+}

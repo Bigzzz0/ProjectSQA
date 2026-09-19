@@ -1,0 +1,31 @@
+{
+  "begin": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ],
+  "length": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ],
+  "mean": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ],
+  "values": [
+    "new double[] {}",
+    "new double[] {1}"
+  ],
+  "weights": [
+    "new double[] {}",
+    "new double[] {1}"
+  ]
+}

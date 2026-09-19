@@ -1,0 +1,410 @@
+{
+  "audit_hash": "70637d398afa05bd67835488771f5e1017f898642981c16bd1eeef2278c80c74",
+  "bug_id": 39,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 13,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ArchiveUtils",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ArchiveUtils()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [
+        {
+          "name": "entry",
+          "type": "ArchiveEntry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString(ArchiveEntry)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "matchAsciiBuffer",
+      "parameters": [
+        {
+          "name": "expected",
+          "type": "String"
+        },
+        {
+          "name": "buffer",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "matchAsciiBuffer(String,byte[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "matchAsciiBuffer",
+      "parameters": [
+        {
+          "name": "expected",
+          "type": "String"
+        },
+        {
+          "name": "buffer",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "matchAsciiBuffer(String,byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toAsciiBytes",
+      "parameters": [
+        {
+          "name": "inputString",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "toAsciiBytes(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toAsciiString",
+      "parameters": [
+        {
+          "name": "inputBytes",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toAsciiString(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toAsciiString",
+      "parameters": [
+        {
+          "name": "inputBytes",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toAsciiString(byte[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEqual",
+      "parameters": [
+        {
+          "name": "buffer1",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset1",
+          "type": "int"
+        },
+        {
+          "name": "length1",
+          "type": "int"
+        },
+        {
+          "name": "buffer2",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset2",
+          "type": "int"
+        },
+        {
+          "name": "length2",
+          "type": "int"
+        },
+        {
+          "name": "ignoreTrailingNulls",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEqual(byte[],int,int,byte[],int,int,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEqual",
+      "parameters": [
+        {
+          "name": "buffer1",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset1",
+          "type": "int"
+        },
+        {
+          "name": "length1",
+          "type": "int"
+        },
+        {
+          "name": "buffer2",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset2",
+          "type": "int"
+        },
+        {
+          "name": "length2",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEqual(byte[],int,int,byte[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEqual",
+      "parameters": [
+        {
+          "name": "buffer1",
+          "type": "byte[]"
+        },
+        {
+          "name": "buffer2",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEqual(byte[],byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEqual",
+      "parameters": [
+        {
+          "name": "buffer1",
+          "type": "byte[]"
+        },
+        {
+          "name": "buffer2",
+          "type": "byte[]"
+        },
+        {
+          "name": "ignoreTrailingNulls",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEqual(byte[],byte[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEqualWithNull",
+      "parameters": [
+        {
+          "name": "buffer1",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset1",
+          "type": "int"
+        },
+        {
+          "name": "length1",
+          "type": "int"
+        },
+        {
+          "name": "buffer2",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset2",
+          "type": "int"
+        },
+        {
+          "name": "length2",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEqualWithNull(byte[],int,int,byte[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isArrayZero",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "byte[]"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isArrayZero(byte[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "sanitize",
+      "parameters": [
+        {
+          "name": "s",
+          "type": "String"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "recommended_test_type": "example_based",
+      "return_type": "String",
+      "signature": "sanitize(String)",
+      "static": true,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "70637d398afa05bd67835488771f5e1017f898642981c16bd1eeef2278c80c74",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Compress",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b86f5d1fe77574b367e2382a38f841115bf51ce2a5af97581771dead1dc45aa9",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.compress.utils.ArchiveUtils",
+  "trigger_tests": [
+    "org.apache.commons.compress.ArchiveUtilsTest::sanitizeShortensString"
+  ]
+}

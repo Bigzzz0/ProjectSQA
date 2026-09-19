@@ -1,0 +1,107 @@
+{
+  "audit_hash": "1b62d67986f5869fc6541d01458d9df1b2b304125108761ebccaa3dcd900fca8",
+  "bug_id": 9,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "escape",
+      "parameters": [
+        {
+          "name": "string",
+          "type": "String"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "escape(String,Document.OutputSettings)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "escape",
+      "parameters": [
+        {
+          "name": "string",
+          "type": "String"
+        },
+        {
+          "name": "encoder",
+          "type": "CharsetEncoder"
+        },
+        {
+          "name": "escapeMode",
+          "type": "EscapeMode"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "escape(String,CharsetEncoder,EscapeMode)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "unescape",
+      "parameters": [
+        {
+          "name": "string",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "String",
+      "signature": "unescape(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "1b62d67986f5869fc6541d01458d9df1b2b304125108761ebccaa3dcd900fca8",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Entities()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "5b3c18220839d61ef54a16bc0e4ee4a1041e90a2e4ccd0713e2457f9636c6ed3",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.jsoup.nodes.Entities",
+  "trigger_tests": [
+    "org.jsoup.nodes.EntitiesTest::unescape"
+  ]
+}

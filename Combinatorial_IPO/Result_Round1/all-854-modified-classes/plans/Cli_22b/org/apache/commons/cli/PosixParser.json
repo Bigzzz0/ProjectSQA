@@ -1,0 +1,25 @@
+{
+  "audit_hash": "ca033de64db26a65454a5c0e74bbd9af794425c5bec13e6765ba9b5212c97277",
+  "bug_id": 22,
+  "callable_status_counts": {},
+  "callables": [],
+  "input_hash": "ca033de64db26a65454a5c0e74bbd9af794425c5bec13e6765ba9b5212c97277",
+  "missing_adapters": [],
+  "project": "Cli",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new PosixParser()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "9a21ffb8d39cc01a4ac21367bb74938104861cbb307f029eb547fc32ae94783d",
+  "status": "NOT_PAIRWISE_APPLICABLE",
+  "target_class": "org.apache.commons.cli.PosixParser",
+  "trigger_tests": [
+    "org.apache.commons.cli.ApplicationTest::testGroovy",
+    "org.apache.commons.cli.PosixParserTest::testStopAtExpectedArg"
+  ]
+}

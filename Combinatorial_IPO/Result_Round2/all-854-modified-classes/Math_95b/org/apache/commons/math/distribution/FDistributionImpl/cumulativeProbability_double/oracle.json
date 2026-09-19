@@ -1,0 +1,310 @@
+[
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "0.0d",
+      "receiver__numeratorDegreesOfFreedom": "0.0d",
+      "x": "0.0d"
+    },
+    "id": 1,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "0.0d",
+      "receiver__numeratorDegreesOfFreedom": "1.0d",
+      "x": "1.0d"
+    },
+    "id": 2,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "0.0d",
+      "receiver__numeratorDegreesOfFreedom": "-1.0d",
+      "x": "-1.0d"
+    },
+    "id": 3,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "0.0d",
+      "receiver__numeratorDegreesOfFreedom": "Double.NaN",
+      "x": "Double.NaN"
+    },
+    "id": 4,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "0.0d",
+      "receiver__numeratorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "x": "Double.POSITIVE_INFINITY"
+    },
+    "id": 5,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "1.0d",
+      "receiver__numeratorDegreesOfFreedom": "0.0d",
+      "x": "1.0d"
+    },
+    "id": 6,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "1.0d",
+      "receiver__numeratorDegreesOfFreedom": "1.0d",
+      "x": "0.0d"
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "1.0d",
+      "receiver__numeratorDegreesOfFreedom": "-1.0d",
+      "x": "Double.NaN"
+    },
+    "id": 8,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "1.0d",
+      "receiver__numeratorDegreesOfFreedom": "Double.NaN",
+      "x": "-1.0d"
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "1.0d",
+      "receiver__numeratorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "x": "0.0d"
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "-1.0d",
+      "receiver__numeratorDegreesOfFreedom": "0.0d",
+      "x": "-1.0d"
+    },
+    "id": 11,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "-1.0d",
+      "receiver__numeratorDegreesOfFreedom": "1.0d",
+      "x": "Double.NaN"
+    },
+    "id": 12,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "-1.0d",
+      "receiver__numeratorDegreesOfFreedom": "-1.0d",
+      "x": "0.0d"
+    },
+    "id": 13,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "-1.0d",
+      "receiver__numeratorDegreesOfFreedom": "Double.NaN",
+      "x": "1.0d"
+    },
+    "id": 14,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "-1.0d",
+      "receiver__numeratorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "x": "1.0d"
+    },
+    "id": 15,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.NaN",
+      "receiver__numeratorDegreesOfFreedom": "0.0d",
+      "x": "Double.NaN"
+    },
+    "id": 16,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.NaN",
+      "receiver__numeratorDegreesOfFreedom": "1.0d",
+      "x": "-1.0d"
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.NaN",
+      "receiver__numeratorDegreesOfFreedom": "-1.0d",
+      "x": "1.0d"
+    },
+    "id": 18,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.NaN",
+      "receiver__numeratorDegreesOfFreedom": "Double.NaN",
+      "x": "0.0d"
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.NaN",
+      "receiver__numeratorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "x": "-1.0d"
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "receiver__numeratorDegreesOfFreedom": "0.0d",
+      "x": "Double.POSITIVE_INFINITY"
+    },
+    "id": 21,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "receiver__numeratorDegreesOfFreedom": "1.0d",
+      "x": "0.0d"
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "receiver__numeratorDegreesOfFreedom": "-1.0d",
+      "x": "1.0d"
+    },
+    "id": 23,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "receiver__numeratorDegreesOfFreedom": "Double.NaN",
+      "x": "-1.0d"
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "receiver__numeratorDegreesOfFreedom": "Double.POSITIVE_INFINITY",
+      "x": "Double.NaN"
+    },
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "1.0d",
+      "receiver__numeratorDegreesOfFreedom": "1.0d",
+      "x": "Double.POSITIVE_INFINITY"
+    },
+    "id": 26,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN"
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "-1.0d",
+      "receiver__numeratorDegreesOfFreedom": "-1.0d",
+      "x": "Double.POSITIVE_INFINITY"
+    },
+    "id": 27,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "degrees of freedom must be positive."
+  },
+  {
+    "arguments": {
+      "receiver__denominatorDegreesOfFreedom": "Double.NaN",
+      "receiver__numeratorDegreesOfFreedom": "Double.NaN",
+      "x": "Double.POSITIVE_INFINITY"
+    },
+    "id": 28,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "NaN"
+  }
+]

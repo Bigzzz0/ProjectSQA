@@ -1,0 +1,1700 @@
+{
+  "audit_hash": "f4cc8cf72a0fdb4f98054fb78ad26739c7038af752214d0a174b121ff10536bb",
+  "bug_id": 47,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 77
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nopInstance",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AnnotationIntrospector",
+      "signature": "nopInstance()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "pair",
+      "parameters": [
+        {
+          "name": "a1",
+          "type": "AnnotationIntrospector"
+        },
+        {
+          "name": "a2",
+          "type": "AnnotationIntrospector"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AnnotationIntrospector",
+      "signature": "pair(AnnotationIntrospector,AnnotationIntrospector)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "allIntrospectors",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection<AnnotationIntrospector>",
+      "signature": "allIntrospectors()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "allIntrospectors",
+      "parameters": [
+        {
+          "name": "result",
+          "type": "Collection<AnnotationIntrospector>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection<AnnotationIntrospector>",
+      "signature": "allIntrospectors(Collection<AnnotationIntrospector>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "version",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Version",
+      "signature": "version()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isAnnotationBundle",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isAnnotationBundle(Annotation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findObjectIdInfo",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ObjectIdInfo",
+      "signature": "findObjectIdInfo(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findObjectReferenceInfo",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        },
+        {
+          "name": "objectIdInfo",
+          "type": "ObjectIdInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ObjectIdInfo",
+      "signature": "findObjectReferenceInfo(Annotated,ObjectIdInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRootName",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PropertyName",
+      "signature": "findRootName(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertiesToIgnore",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "Annotated"
+        },
+        {
+          "name": "forSerialization",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "findPropertiesToIgnore(Annotated,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertiesToIgnore",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "findPropertiesToIgnore(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findIgnoreUnknownProperties",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean",
+      "signature": "findIgnoreUnknownProperties(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isIgnorableType",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean",
+      "signature": "isIgnorableType(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findFilterId",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findFilterId(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findNamingStrategy",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findNamingStrategy(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findClassDescription",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "findClassDescription(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findAutoDetectVisibility",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        },
+        {
+          "name": "checker",
+          "type": "VisibilityChecker<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "VisibilityChecker<?>",
+      "signature": "findAutoDetectVisibility(AnnotatedClass,VisibilityChecker<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findTypeResolver",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TypeResolverBuilder<?>",
+      "signature": "findTypeResolver(MapperConfig<?>,AnnotatedClass,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyTypeResolver",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "am",
+          "type": "AnnotatedMember"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TypeResolverBuilder<?>",
+      "signature": "findPropertyTypeResolver(MapperConfig<?>,AnnotatedMember,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyContentTypeResolver",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "am",
+          "type": "AnnotatedMember"
+        },
+        {
+          "name": "containerType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TypeResolverBuilder<?>",
+      "signature": "findPropertyContentTypeResolver(MapperConfig<?>,AnnotatedMember,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSubtypes",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<NamedType>",
+      "signature": "findSubtypes(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findTypeName",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "findTypeName(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isTypeId",
+      "parameters": [
+        {
+          "name": "member",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean",
+      "signature": "isTypeId(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findReferenceType",
+      "parameters": [
+        {
+          "name": "member",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ReferenceProperty",
+      "signature": "findReferenceType(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findUnwrappingNameTransformer",
+      "parameters": [
+        {
+          "name": "member",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NameTransformer",
+      "signature": "findUnwrappingNameTransformer(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasIgnoreMarker",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasIgnoreMarker(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findInjectableValueId",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findInjectableValueId(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasRequiredMarker",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean",
+      "signature": "hasRequiredMarker(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findViews",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>[]",
+      "signature": "findViews(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findFormat",
+      "parameters": [
+        {
+          "name": "memberOrClass",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonFormat.Value",
+      "signature": "findFormat(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findWrapperName",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PropertyName",
+      "signature": "findWrapperName(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyDefaultValue",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "findPropertyDefaultValue(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyDescription",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "findPropertyDescription(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyIndex",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Integer",
+      "signature": "findPropertyIndex(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findImplicitPropertyName",
+      "parameters": [
+        {
+          "name": "member",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "findImplicitPropertyName(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyAccess",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonProperty.Access",
+      "signature": "findPropertyAccess(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "resolveSetterConflict",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "setter1",
+          "type": "AnnotatedMethod"
+        },
+        {
+          "name": "setter2",
+          "type": "AnnotatedMethod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AnnotatedMethod",
+      "signature": "resolveSetterConflict(MapperConfig<?>,AnnotatedMethod,AnnotatedMethod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findSerializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findKeySerializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findKeySerializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findContentSerializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findContentSerializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findNullSerializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findNullSerializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationTyping",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonSerialize.Typing",
+      "signature": "findSerializationTyping(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationConverter",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findSerializationConverter(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationContentConverter",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findSerializationContentConverter(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationInclusion",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        },
+        {
+          "name": "defValue",
+          "type": "JsonInclude.Include"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonInclude.Include",
+      "signature": "findSerializationInclusion(Annotated,JsonInclude.Include)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationInclusionForContent",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        },
+        {
+          "name": "defValue",
+          "type": "JsonInclude.Include"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonInclude.Include",
+      "signature": "findSerializationInclusionForContent(Annotated,JsonInclude.Include)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPropertyInclusion",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonInclude.Value",
+      "signature": "findPropertyInclusion(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationType",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findSerializationType(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationKeyType",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findSerializationKeyType(Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationContentType",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findSerializationContentType(Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "MapperConfig<?>",
+        "Annotated",
+        "JavaType"
+      ],
+      "name": "refineSerializationType",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "a",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "JavaType",
+      "signature": "refineSerializationType(MapperConfig<?>,Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationPropertyOrder",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "findSerializationPropertyOrder(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializationSortAlphabetically",
+      "parameters": [
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean",
+      "signature": "findSerializationSortAlphabetically(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findAndAddVirtualProperties",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        },
+        {
+          "name": "properties",
+          "type": "List<BeanPropertyWriter>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "findAndAddVirtualProperties(MapperConfig<?>,AnnotatedClass,List<BeanPropertyWriter>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findNameForSerialization",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PropertyName",
+      "signature": "findNameForSerialization(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasAsValueAnnotation",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "AnnotatedMethod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasAsValueAnnotation(AnnotatedMethod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findEnumValue",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Enum<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "findEnumValue(Enum<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findEnumValues",
+      "parameters": [
+        {
+          "name": "enumType",
+          "type": "Class<?>"
+        },
+        {
+          "name": "enumValues",
+          "type": "Enum<?>[]"
+        },
+        {
+          "name": "names",
+          "type": "String[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "findEnumValues(Class<?>,Enum<?>[],String[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeserializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findDeserializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findKeyDeserializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findKeyDeserializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findContentDeserializer",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findContentDeserializer(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeserializationConverter",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findDeserializationConverter(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeserializationContentConverter",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "AnnotatedMember"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findDeserializationContentConverter(AnnotatedMember)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "refineDeserializationType",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "MapperConfig<?>"
+        },
+        {
+          "name": "a",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "refineDeserializationType(MapperConfig<?>,Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeserializationType",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findDeserializationType(Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeserializationKeyType",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseKeyType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findDeserializationKeyType(Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeserializationContentType",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "Annotated"
+        },
+        {
+          "name": "baseContentType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findDeserializationContentType(Annotated,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findValueInstantiator",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findValueInstantiator(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPOJOBuilder",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "findPOJOBuilder(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findPOJOBuilderConfig",
+      "parameters": [
+        {
+          "name": "ac",
+          "type": "AnnotatedClass"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonPOJOBuilder.Value",
+      "signature": "findPOJOBuilderConfig(AnnotatedClass)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findNameForDeserialization",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PropertyName",
+      "signature": "findNameForDeserialization(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasAnySetterAnnotation",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "AnnotatedMethod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasAnySetterAnnotation(AnnotatedMethod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasAnyGetterAnnotation",
+      "parameters": [
+        {
+          "name": "am",
+          "type": "AnnotatedMethod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasAnyGetterAnnotation(AnnotatedMethod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasCreatorAnnotation",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasCreatorAnnotation(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findCreatorBinding",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonCreator.Mode",
+      "signature": "findCreatorBinding(Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_findAnnotation",
+      "parameters": [
+        {
+          "name": "annotated",
+          "type": "Annotated"
+        },
+        {
+          "name": "annoClass",
+          "type": "Class<A>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<A extends Annotation> A",
+      "signature": "_findAnnotation(Annotated,Class<A>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_hasAnnotation",
+      "parameters": [
+        {
+          "name": "annotated",
+          "type": "Annotated"
+        },
+        {
+          "name": "annoClass",
+          "type": "Class<? extends Annotation>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "_hasAnnotation(Annotated,Class<?extendsAnnotation>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_hasOneOf",
+      "parameters": [
+        {
+          "name": "annotated",
+          "type": "Annotated"
+        },
+        {
+          "name": "annoClasses",
+          "type": "Class<? extends Annotation>[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "_hasOneOf(Annotated,Class<?extendsAnnotation>[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "f4cc8cf72a0fdb4f98054fb78ad26739c7038af752214d0a174b121ff10536bb",
+  "missing_adapters": [
+    "Annotated",
+    "JavaType",
+    "MapperConfig<?>",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ff3bcfd17887e0dfe1815b65d1826ff1c4db496e73cfdb64a24944e35b872724",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.AnnotationIntrospector",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.ser.TestJsonSerialize::testBrokenAnnotation",
+    "com.fasterxml.jackson.databind.ser.TestJsonSerializeAs::testSpecializedAsIntermediate"
+  ]
+}

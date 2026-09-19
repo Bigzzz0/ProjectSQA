@@ -1,0 +1,165 @@
+{
+  "audit_hash": "76eb2e73da3c4b63c6357d7d94a82db48131760929f14c643fea59baa79a5097",
+  "bug_id": 82,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "SimplexSolver",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "SimplexSolver()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "SimplexSolver",
+      "parameters": [
+        {
+          "name": "epsilon",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "SimplexSolver(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPivotColumn",
+      "parameters": [
+        {
+          "name": "tableau",
+          "type": "SimplexTableau"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Integer",
+      "signature": "getPivotColumn(SimplexTableau)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "getPivotRow",
+      "parameters": [
+        {
+          "name": "col",
+          "type": "int"
+        },
+        {
+          "name": "tableau",
+          "type": "SimplexTableau"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "Integer",
+      "signature": "getPivotRow(int,SimplexTableau)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isPhase1Solved",
+      "parameters": [
+        {
+          "name": "tableau",
+          "type": "SimplexTableau"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isPhase1Solved(SimplexTableau)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isOptimal",
+      "parameters": [
+        {
+          "name": "tableau",
+          "type": "SimplexTableau"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isOptimal(SimplexTableau)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "76eb2e73da3c4b63c6357d7d94a82db48131760929f14c643fea59baa79a5097",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new SimplexSolver()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "SimplexSolver()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a0eacc7d5b3532a46ce331f3df04aa8324ba0c17227a3320cec9b472f0c816a3",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.optimization.linear.SimplexSolver",
+  "trigger_tests": [
+    "org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath288"
+  ]
+}

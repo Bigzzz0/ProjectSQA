@@ -1,0 +1,29 @@
+{
+  "audit_hash": "b34c3fe18865c86516fc0f7a54c1f75df12a22582d39d0551205606bbe95cb34",
+  "bug_id": 93,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 25,
+      "expected_pair_count": 25,
+      "model_hash": "363601830551eefa5b551fa54566984331226bcd3135376812dfaa0f8d7518b4",
+      "oracle_hash": "badc5f37b11aa12200a16299e720c8c5fb0486f5279d1b064e54661b9396b3fa",
+      "oracle_sha256": "faddd49c6f4317cb2fd24fbe0dfcc68046dd79137c67458d45ef1ee532042b29",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 25,
+      "reused_oracle": false,
+      "signature": "log(double,double)",
+      "suite_hash": "b2011de71077073adb04e224adb376aef6b6f397b9ada96e59d88b17425fdebc"
+    }
+  ],
+  "project": "Math",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "f0117a0f28def18429dd768791b9c34c7b19c32a1e8c6a6a8c43eea9fa8b677d",
+  "suite_path": "TestCode/all-modified-classes/Math_93b/org/apache/commons/math/util/MathUtils_IPOTest.java",
+  "suite_sha256": "f789bd1058139d00bd3cfffe1d52624473186efe1ca12e0c4ac2c34207848f9c",
+  "target_class": "org.apache.commons.math.util.MathUtils",
+  "test_class": "MathUtils_IPOTest",
+  "verification_result": "OK (25 tests)"
+}

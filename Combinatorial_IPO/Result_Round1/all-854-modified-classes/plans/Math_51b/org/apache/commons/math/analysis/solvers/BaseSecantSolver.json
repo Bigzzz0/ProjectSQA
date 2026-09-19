@@ -1,0 +1,256 @@
+{
+  "audit_hash": "59d217b90b7a6d84a2dfdd9c98ede0bf13267e647d7132beeb6af7f5f9da2c10",
+  "bug_id": 51,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BaseSecantSolver",
+      "parameters": [
+        {
+          "name": "absoluteAccuracy",
+          "type": "double"
+        },
+        {
+          "name": "method",
+          "type": "Method"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BaseSecantSolver(double,Method)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BaseSecantSolver",
+      "parameters": [
+        {
+          "name": "relativeAccuracy",
+          "type": "double"
+        },
+        {
+          "name": "absoluteAccuracy",
+          "type": "double"
+        },
+        {
+          "name": "method",
+          "type": "Method"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BaseSecantSolver(double,double,Method)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BaseSecantSolver",
+      "parameters": [
+        {
+          "name": "relativeAccuracy",
+          "type": "double"
+        },
+        {
+          "name": "absoluteAccuracy",
+          "type": "double"
+        },
+        {
+          "name": "functionValueAccuracy",
+          "type": "double"
+        },
+        {
+          "name": "method",
+          "type": "Method"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BaseSecantSolver(double,double,double,Method)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "solve",
+      "parameters": [
+        {
+          "name": "maxEval",
+          "type": "int"
+        },
+        {
+          "name": "f",
+          "type": "UnivariateRealFunction"
+        },
+        {
+          "name": "min",
+          "type": "double"
+        },
+        {
+          "name": "max",
+          "type": "double"
+        },
+        {
+          "name": "allowedSolution",
+          "type": "AllowedSolution"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "solve(int,UnivariateRealFunction,double,double,AllowedSolution)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "solve",
+      "parameters": [
+        {
+          "name": "maxEval",
+          "type": "int"
+        },
+        {
+          "name": "f",
+          "type": "UnivariateRealFunction"
+        },
+        {
+          "name": "min",
+          "type": "double"
+        },
+        {
+          "name": "max",
+          "type": "double"
+        },
+        {
+          "name": "startValue",
+          "type": "double"
+        },
+        {
+          "name": "allowedSolution",
+          "type": "AllowedSolution"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "solve(int,UnivariateRealFunction,double,double,double,AllowedSolution)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "solve",
+      "parameters": [
+        {
+          "name": "maxEval",
+          "type": "int"
+        },
+        {
+          "name": "f",
+          "type": "UnivariateRealFunction"
+        },
+        {
+          "name": "min",
+          "type": "double"
+        },
+        {
+          "name": "max",
+          "type": "double"
+        },
+        {
+          "name": "startValue",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "solve(int,UnivariateRealFunction,double,double,double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "doSolve",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "double",
+      "signature": "doSolve()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "59d217b90b7a6d84a2dfdd9c98ede0bf13267e647d7132beeb6af7f5f9da2c10",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "36c0cd845b4f3ca7587f7edbc34d84d060b07f76c5a06ec20e499adbdc45761f",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "trigger_tests": [
+    "org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest::testIssue631"
+  ]
+}

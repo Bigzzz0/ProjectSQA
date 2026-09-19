@@ -1,0 +1,210 @@
+{
+  "audit_hash": "69f8259f299f1212c19818e1b931e37533d55fe53bbcb3bef23beeb9cea085a4",
+  "bug_id": 151,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 9
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CommandLineRunner",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "String[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CommandLineRunner(String[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CommandLineRunner",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "String[]"
+        },
+        {
+          "name": "out",
+          "type": "PrintStream"
+        },
+        {
+          "name": "err",
+          "type": "PrintStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CommandLineRunner(String[],PrintStream,PrintStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "initConfigFromFlags",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "String[]"
+        },
+        {
+          "name": "err",
+          "type": "PrintStream"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "initConfigFromFlags(String[],PrintStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createOptions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CompilerOptions",
+      "signature": "createOptions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createCompiler",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Compiler",
+      "signature": "createCompiler()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createExterns",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<JSSourceFile>",
+      "signature": "createExterns()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDefaultExterns",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<JSSourceFile>",
+      "signature": "getDefaultExterns()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldRunCompiler",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldRunCompiler()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "main",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "String[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "main(String[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "69f8259f299f1212c19818e1b931e37533d55fe53bbcb3bef23beeb9cea085a4",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__args": "array"
+    },
+    "cleanup_required": false,
+    "expression_template": "new CommandLineRunner({receiver__args})",
+    "factor_domains": {
+      "receiver__args": [
+        "new String[] {}",
+        "new String[] {\"value\"}"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "CommandLineRunner(String[])"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "5bbb0db02c8301199a634fb41175db2042d23e00bce7eb40138a46b7721d523c",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.CommandLineRunner",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.CommandLineRunnerTest::testVersionFlag"
+  ]
+}

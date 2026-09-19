@@ -1,0 +1,42 @@
+[
+  {
+    "arguments": {
+      "p1": "new int[] {}",
+      "p2": "new int[] {}"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "p1": "new int[] {}",
+      "p2": "new int[] {1}"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "p1": "new int[] {1}",
+      "p2": "new int[] {}"
+    },
+    "id": 3,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index 0 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "p1": "new int[] {1}",
+      "p2": "new int[] {1}"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  }
+]

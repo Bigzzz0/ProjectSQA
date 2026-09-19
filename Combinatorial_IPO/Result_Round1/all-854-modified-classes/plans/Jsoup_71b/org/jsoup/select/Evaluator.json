@@ -1,0 +1,63 @@
+{
+  "audit_hash": "535ba4c841e6ee4939375fac597a5a741f0880d0e612dba412aaf1b437e897ab",
+  "bug_id": 71,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Evaluator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Evaluator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "matches",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "Element"
+        },
+        {
+          "name": "element",
+          "type": "Element"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "matches(Element,Element)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "535ba4c841e6ee4939375fac597a5a741f0880d0e612dba412aaf1b437e897ab",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "63fa176e275a0bf7377ddb8df75d3151b8500f0ad3812f9eb1a3be0ec3246e64",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.jsoup.select.Evaluator",
+  "trigger_tests": [
+    "org.jsoup.select.SelectorTest::splitOnBr",
+    "org.jsoup.select.SelectorTest::textAsElements"
+  ]
+}

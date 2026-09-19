@@ -1,0 +1,120 @@
+{
+  "audit_hash": "1a08a020573ed946a7b5513df6ae3cd1ea717386b138c1c7380d0ae0d11c2bd1",
+  "bug_id": 163,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "AnalyzePrototypeProperties",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "moduleGraph",
+          "type": "JSModuleGraph"
+        },
+        {
+          "name": "canModifyExterns",
+          "type": "boolean"
+        },
+        {
+          "name": "anchorUnusedVars",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "AnalyzePrototypeProperties(AbstractCompiler,JSModuleGraph,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externRoot",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAllNameInfo",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection<NameInfo>",
+      "signature": "getAllNameInfo()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNameInfoForName",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "SymbolType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NameInfo",
+      "signature": "getNameInfoForName(String,SymbolType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "1a08a020573ed946a7b5513df6ae3cd1ea717386b138c1c7380d0ae0d11c2bd1",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "366d73def2e995cb0a63fc319be39e73d24afee6b90313fd25648f20b137f4fa",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.AnalyzePrototypeProperties",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.CrossModuleMethodMotionTest::testIssue600b",
+    "com.google.javascript.jscomp.CrossModuleMethodMotionTest::testIssue600e",
+    "com.google.javascript.jscomp.CrossModuleMethodMotionTest::testIssue600"
+  ]
+}

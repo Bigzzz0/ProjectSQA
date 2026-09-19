@@ -1,0 +1,29 @@
+{
+  "audit_hash": "9f71a10d3ffd71bb99ca34c9a331e2ebcfba5b74750445917ac5bd0daa24cd9b",
+  "bug_id": 6,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 69,
+      "expected_pair_count": 69,
+      "model_hash": "eac1b9c4194bf2337804b25b937da689cfcc6c9774b1dca5cd37b6bf5617d279",
+      "oracle_hash": "79476b382144c5e5a86d6f2ee920da258317e481dcaf8a3fd8a7c6fa2d508378",
+      "oracle_sha256": "f803d4d2ca4a512a02e085d4a75b324ad83d015d5bbf6384944b4c0d6d8d34df",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 25,
+      "reused_oracle": false,
+      "signature": "read(byte[],int,int)",
+      "suite_hash": "a7483e4cecedb22f74ebb510e49ee6573212b46508ba04c9e585f42d73ab6a87"
+    }
+  ],
+  "project": "Codec",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "2ce8921c829501726b9ab2e2adaed2cd954960c06eaf14582a69b8feb7559f23",
+  "suite_path": "TestCode/all-modified-classes/Codec_6b/org/apache/commons/codec/binary/Base64InputStream_IPOTest.java",
+  "suite_sha256": "ae457d996840ec683aaaf9e3c7032442edd9c7795d78c0910a580923b2189186",
+  "target_class": "org.apache.commons.codec.binary.Base64InputStream",
+  "test_class": "Base64InputStream_IPOTest",
+  "verification_result": "OK (25 tests)"
+}

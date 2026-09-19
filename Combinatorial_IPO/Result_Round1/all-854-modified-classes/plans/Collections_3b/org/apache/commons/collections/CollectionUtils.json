@@ -1,0 +1,1166 @@
+{
+  "audit_hash": "f680dbd4b1bc8b46188907531365d696d42ff2e06a533f56fccfbe8ec7ad0857",
+  "bug_id": 3,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 46
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CollectionUtils",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CollectionUtils()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "union",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "union(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "intersection",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "intersection(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "disjunction",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "disjunction(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subtract",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "subtract(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsAny",
+      "parameters": [
+        {
+          "name": "coll1",
+          "type": "Collection"
+        },
+        {
+          "name": "coll2",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsAny(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCardinalityMap",
+      "parameters": [
+        {
+          "name": "coll",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Map",
+      "signature": "getCardinalityMap(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSubCollection",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSubCollection(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isProperSubCollection",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isProperSubCollection(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEqualCollection",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "Collection"
+        },
+        {
+          "name": "b",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEqualCollection(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cardinality",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "coll",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "cardinality(Object,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "find",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "find(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "forAllDo",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "closure",
+          "type": "Closure"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "forAllDo(Collection,Closure)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "filter",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "filter(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "transform",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "transformer",
+          "type": "Transformer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "transform(Collection,Transformer)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "countMatches",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "countMatches(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "exists",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "exists(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "select",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "select(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "select",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        },
+        {
+          "name": "outputCollection",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "select(Collection,Predicate,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "selectRejected",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "selectRejected(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "selectRejected",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        },
+        {
+          "name": "outputCollection",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "selectRejected(Collection,Predicate,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "collect",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "transformer",
+          "type": "Transformer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "collect(Collection,Transformer)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "collect",
+      "parameters": [
+        {
+          "name": "inputIterator",
+          "type": "Iterator"
+        },
+        {
+          "name": "transformer",
+          "type": "Transformer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "collect(Iterator,Transformer)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "collect",
+      "parameters": [
+        {
+          "name": "inputCollection",
+          "type": "Collection"
+        },
+        {
+          "name": "transformer",
+          "type": "Transformer"
+        },
+        {
+          "name": "outputCollection",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "collect(Collection,Transformer,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "collect",
+      "parameters": [
+        {
+          "name": "inputIterator",
+          "type": "Iterator"
+        },
+        {
+          "name": "transformer",
+          "type": "Transformer"
+        },
+        {
+          "name": "outputCollection",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "collect(Iterator,Transformer,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addIgnoreNull",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "object",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "addIgnoreNull(Collection,Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "iterator",
+          "type": "Iterator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addAll(Collection,Iterator)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "enumeration",
+          "type": "Enumeration"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addAll(Collection,Enumeration)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "elements",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addAll(Collection,Object[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "index",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "idx",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "index(Object,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "index",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "index(Object,Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "index",
+      "parameters": [
+        {
+          "name": "iterator",
+          "type": "Iterator"
+        },
+        {
+          "name": "idx",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "index(Iterator,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "get",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "get(Object,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object"
+      ],
+      "name": "size",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "size(Object)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sizeIsEmpty",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "sizeIsEmpty(Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "coll",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isNotEmpty",
+      "parameters": [
+        {
+          "name": "coll",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isNotEmpty(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverseArray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverseArray(Object[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFreq",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "freqMap",
+          "type": "Map"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getFreq(Object,Map)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFull",
+      "parameters": [
+        {
+          "name": "coll",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFull(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "maxSize",
+      "parameters": [
+        {
+          "name": "coll",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "maxSize(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "retainAll",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "retain",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "retainAll(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Collection"
+      ],
+      "name": "removeAll",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "remove",
+          "type": "Collection"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Collection",
+      "signature": "removeAll(Collection,Collection)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "synchronizedCollection",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "synchronizedCollection(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "unmodifiableCollection",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "unmodifiableCollection(Collection)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "predicatedCollection",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "predicatedCollection(Collection,Predicate)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "typedCollection",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "type",
+          "type": "Class"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "typedCollection(Collection,Class)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "transformedCollection",
+      "parameters": [
+        {
+          "name": "collection",
+          "type": "Collection"
+        },
+        {
+          "name": "transformer",
+          "type": "Transformer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection",
+      "signature": "transformedCollection(Collection,Transformer)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "f680dbd4b1bc8b46188907531365d696d42ff2e06a533f56fccfbe8ec7ad0857",
+  "missing_adapters": [
+    "Collection",
+    "Object",
+    "entry_point_evidence"
+  ],
+  "project": "Collections",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new CollectionUtils()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "CollectionUtils()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "206a69108ee98f6b79d118181d175d981041a69101517f67b27a839a4cfb8810",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.collections.CollectionUtils",
+  "trigger_tests": [
+    "org.apache.commons.collections.TestCollectionUtils::testRemoveAll"
+  ]
+}

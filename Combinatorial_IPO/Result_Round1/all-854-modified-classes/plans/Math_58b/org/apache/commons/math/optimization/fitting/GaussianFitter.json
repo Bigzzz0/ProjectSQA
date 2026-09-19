@@ -1,0 +1,100 @@
+{
+  "audit_hash": "a3806dd288839dd57c27e1110ec2cd5415a202f2ca0c2508a333b829a21e8f4f",
+  "bug_id": 58,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "DifferentiableMultivariateVectorialOptimizer"
+      ],
+      "name": "GaussianFitter",
+      "parameters": [
+        {
+          "name": "optimizer",
+          "type": "DifferentiableMultivariateVectorialOptimizer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "GaussianFitter(DifferentiableMultivariateVectorialOptimizer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fit",
+      "parameters": [
+        {
+          "name": "initialGuess",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "fit(double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "fit",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "double[]",
+      "signature": "fit()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "a3806dd288839dd57c27e1110ec2cd5415a202f2ca0c2508a333b829a21e8f4f",
+  "missing_adapters": [
+    "DifferentiableMultivariateVectorialOptimizer",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "baface7ceb91b38447f02cb94ac1e3ff235e34f64847e19ea0610cd3a75bf298",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.optimization.fitting.GaussianFitter",
+  "trigger_tests": [
+    "org.apache.commons.math.optimization.fitting.GaussianFitterTest::testMath519"
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "audit_hash": "3049dd5fdb6aff3a18a459fe266a1554387faf4a094b04f711122e391fb7c2a7",
+  "bug_id": 165,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 11
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "RecordType",
+      "parameters": [
+        {
+          "name": "registry",
+          "type": "JSTypeRegistry"
+        },
+        {
+          "name": "properties",
+          "type": "Map<String, RecordProperty>"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": null,
+      "signature": "RecordType(JSTypeRegistry,Map<String,RecordProperty>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "RecordType",
+      "parameters": [
+        {
+          "name": "registry",
+          "type": "JSTypeRegistry"
+        },
+        {
+          "name": "properties",
+          "type": "Map<String, RecordProperty>"
+        },
+        {
+          "name": "declared",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": null,
+      "signature": "RecordType(JSTypeRegistry,Map<String,RecordProperty>,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "isSynthetic",
+      "parameters": [],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "isSynthetic()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEquivalentTo",
+      "parameters": [
+        {
+          "name": "other",
+          "type": "JSType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEquivalentTo(JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getImplicitPrototype",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ObjectType",
+      "signature": "getImplicitPrototype()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "defineProperty",
+      "parameters": [
+        {
+          "name": "propertyName",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "JSType"
+        },
+        {
+          "name": "inferred",
+          "type": "boolean"
+        },
+        {
+          "name": "propertyNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "defineProperty(String,JSType,boolean,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "getGreatestSubtypeHelper",
+      "parameters": [
+        {
+          "name": "that",
+          "type": "JSType"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "JSType",
+      "signature": "getGreatestSubtypeHelper(JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toMaybeRecordType",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RecordType",
+      "signature": "toMaybeRecordType()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSubtype",
+      "parameters": [
+        {
+          "name": "that",
+          "type": "JSType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSubtype(JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSubtype",
+      "parameters": [
+        {
+          "name": "typeA",
+          "type": "ObjectType"
+        },
+        {
+          "name": "typeB",
+          "type": "RecordType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSubtype(ObjectType,RecordType)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "resolveInternal",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "ErrorReporter"
+        },
+        {
+          "name": "scope",
+          "type": "StaticScope<JSType>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "resolveInternal(ErrorReporter,StaticScope<JSType>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "3049dd5fdb6aff3a18a459fe266a1554387faf4a094b04f711122e391fb7c2a7",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c1e660a4ff4f727c66e86c9fec236221c938773518a2e4af455bce143c7578ff",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.rhino.jstype.RecordType",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.TypeCheckTest::testIssue725"
+  ]
+}

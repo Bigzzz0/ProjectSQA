@@ -1,0 +1,240 @@
+{
+  "audit_hash": "84072235b85ca750cb9a19511e2e8f0330799999758bbd083dc27a42f11cc12e",
+  "bug_id": 5,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "date",
+          "type": "Date"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "format(Date)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "date",
+          "type": "Date"
+        },
+        {
+          "name": "millis",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "format(Date,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "date",
+          "type": "Date"
+        },
+        {
+          "name": "millis",
+          "type": "boolean"
+        },
+        {
+          "name": "tz",
+          "type": "TimeZone"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "format(Date,boolean,TimeZone)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "ParsePosition"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Date",
+      "signature": "parse(String,ParsePosition)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkOffset",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "expected",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "checkOffset(String,int,char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseInt",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "beginIndex",
+          "type": "int"
+        },
+        {
+          "name": "endIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "parseInt(String,int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "padInt",
+      "parameters": [
+        {
+          "name": "buffer",
+          "type": "StringBuilder"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "padInt(StringBuilder,int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOfNonDigit",
+      "parameters": [
+        {
+          "name": "string",
+          "type": "String"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOfNonDigit(String,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "84072235b85ca750cb9a19511e2e8f0330799999758bbd083dc27a42f11cc12e",
+  "missing_adapters": [
+    "ParsePosition",
+    "entry_point_evidence"
+  ],
+  "project": "Gson",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new ISO8601Utils()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ad6975abb94172e65be4b3b45f861ae6d1afe947976ca7e43f6ecf28fe89d873",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.google.gson.internal.bind.util.ISO8601Utils",
+  "trigger_tests": [
+    "com.google.gson.DefaultDateTypeAdapterTest::testDateDeserializationISO8601"
+  ]
+}

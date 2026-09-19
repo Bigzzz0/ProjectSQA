@@ -1,0 +1,306 @@
+{
+  "audit_hash": "68368843c2529757f42dee40c74b17589427a9e2aabd99185239dc4b1bc345e5",
+  "bug_id": 26,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 10
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ZonedChronology",
+      "parameters": [
+        {
+          "name": "base",
+          "type": "Chronology"
+        },
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ZonedChronology(Chronology,DateTimeZone)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Chronology",
+        "DateTimeZone"
+      ],
+      "name": "getInstance",
+      "parameters": [
+        {
+          "name": "base",
+          "type": "Chronology"
+        },
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "ZonedChronology",
+      "signature": "getInstance(Chronology,DateTimeZone)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "useTimeArithmetic",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "DurationField"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "useTimeArithmetic(DurationField)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getZone",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "DateTimeZone",
+      "signature": "getZone()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withUTC",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Chronology",
+      "signature": "withUTC()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withZone",
+      "parameters": [
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Chronology",
+      "signature": "withZone(DateTimeZone)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "localToUTC",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "localToUTC(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "assemble",
+      "parameters": [
+        {
+          "name": "fields",
+          "type": "Fields"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "assemble(Fields)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "convertField",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "DurationField"
+        },
+        {
+          "name": "converted",
+          "type": "HashMap<Object, Object>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DurationField",
+      "signature": "convertField(DurationField,HashMap<Object,Object>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "convertField",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "DateTimeField"
+        },
+        {
+          "name": "converted",
+          "type": "HashMap<Object, Object>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DateTimeField",
+      "signature": "convertField(DateTimeField,HashMap<Object,Object>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "68368843c2529757f42dee40c74b17589427a9e2aabd99185239dc4b1bc345e5",
+  "missing_adapters": [
+    "Chronology",
+    "DateTimeZone",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Time",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "47dc696a4e717a15ef1fa2ea1eae5019000ee33147662c9b2789057e271be66a",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.joda.time.chrono.ZonedChronology",
+  "trigger_tests": [
+    "org.joda.time.TestDateTimeZoneCutover::testWithSecondOfMinuteInDstChange",
+    "org.joda.time.TestDateTimeZoneCutover::testWithMinuteOfHourInDstChange",
+    "org.joda.time.TestDateTimeZoneCutover::testWithMinuteOfHourInDstChange_mockZone",
+    "org.joda.time.TestDateTimeZoneCutover::testBug2182444_usCentral",
+    "org.joda.time.TestDateTimeZoneCutover::testWithMillisOfSecondInDstChange_Paris_summer",
+    "org.joda.time.TestDateTimeZoneCutover::testWithHourOfDayInDstChange",
+    "org.joda.time.TestDateTimeZoneCutover::testWithMillisOfSecondInDstChange_NewYork_winter",
+    "org.joda.time.TestDateTimeZoneCutover::testBug2182444_ausNSW"
+  ]
+}

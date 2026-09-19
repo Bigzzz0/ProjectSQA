@@ -1,0 +1,107 @@
+{
+  "audit_hash": "e1193382442d9a3d4b8003e7ab786a482992254f47b95e8439cfe83c8479ab47",
+  "bug_id": 11,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "NodePointer",
+        "QName"
+      ],
+      "name": "JDOMAttributeIterator",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "NodePointer"
+        },
+        {
+          "name": "name",
+          "type": "QName"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "JDOMAttributeIterator(NodePointer,QName)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNodePointer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NodePointer",
+      "signature": "getNodePointer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPosition",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getPosition()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPosition",
+      "parameters": [
+        {
+          "name": "position",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "setPosition(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "e1193382442d9a3d4b8003e7ab786a482992254f47b95e8439cfe83c8479ab47",
+  "missing_adapters": [
+    "NodePointer",
+    "QName",
+    "entry_point_evidence"
+  ],
+  "project": "JxPath",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4e9fb292d13dbce29826e7e1ff04b1c95be97c1c20a24cc8ae681f719b386f03",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+  "trigger_tests": [
+    "org.apache.commons.jxpath.ri.model.dom.DOMModelTest::testNamespaceMapping",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMModelTest::testNamespaceMapping"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "covered_pair_count": 22,
+  "expected_pair_count": 22,
+  "model_hash": "cc91fd269fa7e09d17a46368716e86cd40ac7649e4cda4c0e448905ff157b306",
+  "oracle_hash": "7f11ae7f0aa2e9e7f9fd3e1da062c2650d2ee931d50dbeb214c1e7aba475cd19",
+  "oracle_sha256": "58e35f4775edd8eb2efb4711f48aa261a202087e4fe905492af81f18b1f66f06",
+  "pair_coverage_percent": 100.0,
+  "pairwise_count": 22,
+  "reused_oracle": false,
+  "signature": "containsAny(String,char[])",
+  "suite_hash": "fcafba9ae3b4c2814b4d08a18e29ab07d50436a5bc8a7a4c1c3bff3fd86f3330"
+}

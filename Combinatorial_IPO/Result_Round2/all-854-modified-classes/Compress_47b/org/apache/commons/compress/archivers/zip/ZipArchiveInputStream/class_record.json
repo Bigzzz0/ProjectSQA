@@ -1,0 +1,29 @@
+{
+  "audit_hash": "497f17f51fa52fb9d96744f598118b890026fd3b4872931d6d559227a08a672d",
+  "bug_id": 47,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 69,
+      "expected_pair_count": 69,
+      "model_hash": "337cdcb2aac7c41b417f227e4dcf51d8c7721366dff472ebb0e57b9b79d3367b",
+      "oracle_hash": "0dd4551be479a892e9885a6723219200cb056348e17207500eeea6f346899207",
+      "oracle_sha256": "faf83215ecff0ade8d570b8085cade71046fdb47ffe88ffe2e3055ede0b4489b",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 25,
+      "reused_oracle": false,
+      "signature": "read(byte[],int,int)",
+      "suite_hash": "8155392dfd244c223e20f3f97cdeba43511a219bb1cd9f50b2f36deb13e8c682"
+    }
+  ],
+  "project": "Compress",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "14a413c32808b7a47c2754c820bc0b7d6f15188d213963870bba10732b576255",
+  "suite_path": "TestCode/all-modified-classes/Compress_47b/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream_IPOTest.java",
+  "suite_sha256": "9b2a001b066a84becb8878d490286847b1496d400ce40c1730c5b678956eaba0",
+  "target_class": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "test_class": "ZipArchiveInputStream_IPOTest",
+  "verification_result": "OK (25 tests)"
+}

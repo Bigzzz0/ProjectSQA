@@ -1,0 +1,370 @@
+{
+  "audit_hash": "70f0f80480be4aed519d4293a0f9cd8e5afa435d6b87ca6ab704c62fa6f4171a",
+  "bug_id": 8,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 16
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setDefaultCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setDefaultCreator(AnnotatedWithParams)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addStringCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "explicit",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addStringCreator(AnnotatedWithParams,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addIntCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "explicit",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addIntCreator(AnnotatedWithParams,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addLongCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "explicit",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addLongCreator(AnnotatedWithParams,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addDoubleCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "explicit",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addDoubleCreator(AnnotatedWithParams,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addBooleanCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "explicit",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addBooleanCreator(AnnotatedWithParams,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addIncompeteParameter",
+      "parameters": [
+        {
+          "name": "parameter",
+          "type": "AnnotatedParameter"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addIncompeteParameter(AnnotatedParameter)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addStringCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addStringCreator(AnnotatedWithParams)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addIntCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addIntCreator(AnnotatedWithParams)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addLongCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addLongCreator(AnnotatedWithParams)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addDoubleCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addDoubleCreator(AnnotatedWithParams)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addBooleanCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addBooleanCreator(AnnotatedWithParams)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addDelegatingCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "injectables",
+          "type": "CreatorProperty[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addDelegatingCreator(AnnotatedWithParams,CreatorProperty[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addPropertyCreator",
+      "parameters": [
+        {
+          "name": "creator",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "properties",
+          "type": "CreatorProperty[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addPropertyCreator(AnnotatedWithParams,CreatorProperty[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "verifyNonDup",
+      "parameters": [
+        {
+          "name": "newOne",
+          "type": "AnnotatedWithParams"
+        },
+        {
+          "name": "typeIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AnnotatedWithParams",
+      "signature": "verifyNonDup(AnnotatedWithParams,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasDefaultCreator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasDefaultCreator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "70f0f80480be4aed519d4293a0f9cd8e5afa435d6b87ca6ab704c62fa6f4171a",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "41434126343be73bf4777b411d3dc72c86412c82d14afc69ac0d80c5c10f5489",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.deser.impl.CreatorCollector",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.deser.TestJdkTypes::testStringBuilder"
+  ]
+}

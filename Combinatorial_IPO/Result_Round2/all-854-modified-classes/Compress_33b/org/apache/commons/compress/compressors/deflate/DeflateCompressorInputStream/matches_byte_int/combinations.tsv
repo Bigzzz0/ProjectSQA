@@ -1,0 +1,11 @@
+length	signature
+0	new byte[] {}
+0	new byte[] {1}
+1	new byte[] {}
+1	new byte[] {1}
+-1	new byte[] {}
+-1	new byte[] {1}
+Integer.MAX_VALUE	new byte[] {}
+Integer.MAX_VALUE	new byte[] {1}
+Integer.MIN_VALUE	new byte[] {}
+Integer.MIN_VALUE	new byte[] {1}

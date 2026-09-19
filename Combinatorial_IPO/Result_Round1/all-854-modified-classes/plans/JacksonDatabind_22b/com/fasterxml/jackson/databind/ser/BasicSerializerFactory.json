@@ -1,0 +1,325 @@
+{
+  "audit_hash": "967b37b648c2b24ccf06434c475bef0c5d7fad23b0ec9cd1aea7ed70489f4086",
+  "bug_id": 22,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 13
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasicSerializerFactory",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "SerializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasicSerializerFactory(SerializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFactoryConfig",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SerializerFactoryConfig",
+      "signature": "getFactoryConfig()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withConfig",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "SerializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SerializerFactory",
+      "signature": "withConfig(SerializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withAdditionalSerializers",
+      "parameters": [
+        {
+          "name": "additional",
+          "type": "Serializers"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SerializerFactory",
+      "signature": "withAdditionalSerializers(Serializers)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withAdditionalKeySerializers",
+      "parameters": [
+        {
+          "name": "additional",
+          "type": "Serializers"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SerializerFactory",
+      "signature": "withAdditionalKeySerializers(Serializers)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withSerializerModifier",
+      "parameters": [
+        {
+          "name": "modifier",
+          "type": "BeanSerializerModifier"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SerializerFactory",
+      "signature": "withSerializerModifier(BeanSerializerModifier)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "customSerializers",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Iterable<Serializers>",
+      "signature": "customSerializers()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findSerializerByAddonType",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "SerializationConfig"
+        },
+        {
+          "name": "javaType",
+          "type": "JavaType"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        },
+        {
+          "name": "staticTyping",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonSerializer<?>",
+      "signature": "findSerializerByAddonType(SerializationConfig,JavaType,BeanDescription,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "buildIndexedListSerializer",
+      "parameters": [
+        {
+          "name": "elemType",
+          "type": "JavaType"
+        },
+        {
+          "name": "staticTyping",
+          "type": "boolean"
+        },
+        {
+          "name": "vts",
+          "type": "TypeSerializer"
+        },
+        {
+          "name": "valueSerializer",
+          "type": "JsonSerializer<Object>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ContainerSerializer<?>",
+      "signature": "buildIndexedListSerializer(JavaType,boolean,TypeSerializer,JsonSerializer<Object>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "buildCollectionSerializer",
+      "parameters": [
+        {
+          "name": "elemType",
+          "type": "JavaType"
+        },
+        {
+          "name": "staticTyping",
+          "type": "boolean"
+        },
+        {
+          "name": "vts",
+          "type": "TypeSerializer"
+        },
+        {
+          "name": "valueSerializer",
+          "type": "JsonSerializer<Object>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ContainerSerializer<?>",
+      "signature": "buildCollectionSerializer(JavaType,boolean,TypeSerializer,JsonSerializer<Object>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "buildEnumSetSerializer",
+      "parameters": [
+        {
+          "name": "enumType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonSerializer<?>",
+      "signature": "buildEnumSetSerializer(JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "buildIteratorSerializer",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "SerializationConfig"
+        },
+        {
+          "name": "type",
+          "type": "JavaType"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        },
+        {
+          "name": "staticTyping",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonSerializer<?>",
+      "signature": "buildIteratorSerializer(SerializationConfig,JavaType,BeanDescription,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findFilterId",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "SerializationConfig"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "findFilterId(SerializationConfig,BeanDescription)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "967b37b648c2b24ccf06434c475bef0c5d7fad23b0ec9cd1aea7ed70489f4086",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "3f63da1e50e0b9e58a7ce8ddbd721298758af58269dec979abea88b3283e4220",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.ser.BasicSerializerFactory",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.ser.TestJsonValue::testJsonValueWithCustomOverride"
+  ]
+}

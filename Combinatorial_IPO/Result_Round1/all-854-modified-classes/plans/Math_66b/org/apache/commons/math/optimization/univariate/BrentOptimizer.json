@@ -1,0 +1,57 @@
+{
+  "audit_hash": "850b4f00841b07536989154eaba365d958cd54c289ba8b8427f30bf7ecb1f42d",
+  "bug_id": 66,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "BrentOptimizer",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "BrentOptimizer()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "850b4f00841b07536989154eaba365d958cd54c289ba8b8427f30bf7ecb1f42d",
+  "missing_adapters": [
+    "object_observer"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new BrentOptimizer()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "BrentOptimizer()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b6e1d16c8b8c46a7907721327fdbd20b76ec52adab89ef807aa7474d0ed54ce4",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.optimization.univariate.BrentOptimizer",
+  "trigger_tests": [
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testSinMin",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testQuinticMinStatistics",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin"
+  ]
+}

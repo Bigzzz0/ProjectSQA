@@ -1,0 +1,194 @@
+{
+  "audit_hash": "60f746df5c3a31f609d4f6b7b39d52941a13444b8ad30e44fddac393acec104b",
+  "bug_id": 7,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "PatternBuilder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "PatternBuilder()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "PatternBuilder",
+      "parameters": [
+        {
+          "name": "gbuilder",
+          "type": "GroupBuilder"
+        },
+        {
+          "name": "obuilder",
+          "type": "DefaultOptionBuilder"
+        },
+        {
+          "name": "abuilder",
+          "type": "ArgumentBuilder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "PatternBuilder(GroupBuilder,DefaultOptionBuilder,ArgumentBuilder)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:Option"
+      ],
+      "name": "create",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "Option",
+      "signature": "create()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reset",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PatternBuilder",
+      "signature": "reset()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createOption",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "char"
+        },
+        {
+          "name": "required",
+          "type": "boolean"
+        },
+        {
+          "name": "opt",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "createOption(char,boolean,char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "state_observer"
+      ],
+      "name": "withPattern",
+      "parameters": [
+        {
+          "name": "pattern",
+          "type": "String"
+        }
+      ],
+      "reason": "Void/stateful action needs a deterministic state observer",
+      "return_type": "void",
+      "signature": "withPattern(String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "validator",
+      "parameters": [
+        {
+          "name": "c",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Validator",
+      "signature": "validator(char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "60f746df5c3a31f609d4f6b7b39d52941a13444b8ad30e44fddac393acec104b",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer:Option",
+    "state_observer"
+  ],
+  "project": "Cli",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new PatternBuilder()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "PatternBuilder()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c017e327baf82185b7bde6d0b648a135ba3a3804b1add436b865b187cbeb93ad",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.cli2.builder.PatternBuilder",
+  "trigger_tests": [
+    "org.apache.commons.cli2.bug.Bug27575Test::testRequiredOptions"
+  ]
+}

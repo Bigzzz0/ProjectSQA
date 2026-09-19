@@ -1,0 +1,67 @@
+{
+  "audit_hash": "637fdfe6be16ce22d729bbec98b16d5228405a11db2b8493d4d55d8134da2392",
+  "bug_id": 78,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BeanDeserializerFactory",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BeanDeserializerFactory(DeserializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "constructBeanDeserializerBuilder",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BeanDeserializerBuilder",
+      "signature": "constructBeanDeserializerBuilder(DeserializationContext,BeanDescription)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "637fdfe6be16ce22d729bbec98b16d5228405a11db2b8493d4d55d8134da2392",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6499f621ce9239b1ca0da20b09768660be567492b95fb1caef02f66914c73327",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.interop.IllegalTypesCheckTest::testIssue1599"
+  ]
+}

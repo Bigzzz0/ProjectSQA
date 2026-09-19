@@ -1,0 +1,345 @@
+{
+  "audit_hash": "938471d2b4e897bdd5d27e055030d1ed846cc1adc17c06ecdbad5694b16a4eac",
+  "bug_id": 38,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 11
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MapType",
+      "parameters": [
+        {
+          "name": "mapType",
+          "type": "Class<?>"
+        },
+        {
+          "name": "bindings",
+          "type": "TypeBindings"
+        },
+        {
+          "name": "superClass",
+          "type": "JavaType"
+        },
+        {
+          "name": "superInts",
+          "type": "JavaType[]"
+        },
+        {
+          "name": "keyT",
+          "type": "JavaType"
+        },
+        {
+          "name": "valueT",
+          "type": "JavaType"
+        },
+        {
+          "name": "valueHandler",
+          "type": "Object"
+        },
+        {
+          "name": "typeHandler",
+          "type": "Object"
+        },
+        {
+          "name": "asStatic",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MapType(Class<?>,TypeBindings,JavaType,JavaType[],JavaType,JavaType,Object,Object,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MapType",
+      "parameters": [
+        {
+          "name": "base",
+          "type": "TypeBase"
+        },
+        {
+          "name": "keyT",
+          "type": "JavaType"
+        },
+        {
+          "name": "valueT",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MapType(TypeBase,JavaType,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Class<?>",
+        "TypeBindings",
+        "JavaType",
+        "JavaType[]"
+      ],
+      "name": "construct",
+      "parameters": [
+        {
+          "name": "rawType",
+          "type": "Class<?>"
+        },
+        {
+          "name": "bindings",
+          "type": "TypeBindings"
+        },
+        {
+          "name": "superClass",
+          "type": "JavaType"
+        },
+        {
+          "name": "superInts",
+          "type": "JavaType[]"
+        },
+        {
+          "name": "keyT",
+          "type": "JavaType"
+        },
+        {
+          "name": "valueT",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "MapType",
+      "signature": "construct(Class<?>,TypeBindings,JavaType,JavaType[],JavaType,JavaType)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_narrow",
+      "parameters": [
+        {
+          "name": "subclass",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "_narrow(Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withTypeHandler",
+      "parameters": [
+        {
+          "name": "h",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MapType",
+      "signature": "withTypeHandler(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withValueHandler",
+      "parameters": [
+        {
+          "name": "h",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MapType",
+      "signature": "withValueHandler(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withContentValueHandler",
+      "parameters": [
+        {
+          "name": "h",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MapType",
+      "signature": "withContentValueHandler(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withStaticTyping",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MapType",
+      "signature": "withStaticTyping()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withContentType",
+      "parameters": [
+        {
+          "name": "contentType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "withContentType(JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withKeyType",
+      "parameters": [
+        {
+          "name": "keyType",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MapType",
+      "signature": "withKeyType(JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "refine",
+      "parameters": [
+        {
+          "name": "rawType",
+          "type": "Class<?>"
+        },
+        {
+          "name": "bindings",
+          "type": "TypeBindings"
+        },
+        {
+          "name": "superClass",
+          "type": "JavaType"
+        },
+        {
+          "name": "superInterfaces",
+          "type": "JavaType[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "refine(Class<?>,TypeBindings,JavaType,JavaType[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withKeyValueHandler",
+      "parameters": [
+        {
+          "name": "h",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MapType",
+      "signature": "withKeyValueHandler(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "938471d2b4e897bdd5d27e055030d1ed846cc1adc17c06ecdbad5694b16a4eac",
+  "missing_adapters": [
+    "Class<?>",
+    "JavaType",
+    "JavaType[]",
+    "TypeBindings",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a0babbb83d08707f8b952de3f8edd54bdd9cefb4fa43d9bcdcc051414846cff8",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.type.MapType",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test::testExplicitMapType",
+    "com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test::testExplicitCollectionType",
+    "com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test::testPOJOSubType"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "audit_hash": "516c2c5d626c3a5958d315efcb594910da0e5f6fefbb3043b17ff6957416486e",
+  "bug_id": 19,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "CharSequence",
+        "Writer"
+      ],
+      "name": "translate",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "CharSequence"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "out",
+          "type": "Writer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "translate(CharSequence,int,Writer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "516c2c5d626c3a5958d315efcb594910da0e5f6fefbb3043b17ff6957416486e",
+  "missing_adapters": [
+    "CharSequence",
+    "Writer"
+  ],
+  "project": "Lang",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new NumericEntityUnescaper()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c276bf0d04149001b880da39f74e03909e9e3d420545b20a96d293d90b55513b",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "trigger_tests": [
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testUnfinishedEntity",
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testOutOfBounds"
+  ]
+}

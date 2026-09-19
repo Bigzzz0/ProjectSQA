@@ -1,0 +1,112 @@
+[
+  {
+    "arguments": {
+      "alpha": "0.0d",
+      "expected": "new double[] {}",
+      "observed": "new long[] {}"
+    },
+    "id": 1,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: 0.0"
+  },
+  {
+    "arguments": {
+      "alpha": "0.0d",
+      "expected": "new double[] {1}",
+      "observed": "new long[] {1}"
+    },
+    "id": 2,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: 0.0"
+  },
+  {
+    "arguments": {
+      "alpha": "1.0d",
+      "expected": "new double[] {}",
+      "observed": "new long[] {1}"
+    },
+    "id": 3,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: 1.0"
+  },
+  {
+    "arguments": {
+      "alpha": "1.0d",
+      "expected": "new double[] {1}",
+      "observed": "new long[] {}"
+    },
+    "id": 4,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: 1.0"
+  },
+  {
+    "arguments": {
+      "alpha": "-1.0d",
+      "expected": "new double[] {}",
+      "observed": "new long[] {}"
+    },
+    "id": 5,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: -1.0"
+  },
+  {
+    "arguments": {
+      "alpha": "-1.0d",
+      "expected": "new double[] {1}",
+      "observed": "new long[] {1}"
+    },
+    "id": 6,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: -1.0"
+  },
+  {
+    "arguments": {
+      "alpha": "Double.NaN",
+      "expected": "new double[] {}",
+      "observed": "new long[] {}"
+    },
+    "id": 7,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "alpha must be positive"
+  },
+  {
+    "arguments": {
+      "alpha": "Double.NaN",
+      "expected": "new double[] {1}",
+      "observed": "new long[] {1}"
+    },
+    "id": 8,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "alpha must be positive"
+  },
+  {
+    "arguments": {
+      "alpha": "Double.POSITIVE_INFINITY",
+      "expected": "new double[] {}",
+      "observed": "new long[] {}"
+    },
+    "id": 9,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: Infinity"
+  },
+  {
+    "arguments": {
+      "alpha": "Double.POSITIVE_INFINITY",
+      "expected": "new double[] {1}",
+      "observed": "new long[] {1}"
+    },
+    "id": 10,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "bad significance level: Infinity"
+  }
+]

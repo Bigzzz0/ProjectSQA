@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from collections import Counter
 from pathlib import Path
-from typing import Dict, List, Mapping
+from typing import Dict, List
 
 
 CODE_ROOT = Path(__file__).resolve().parents[1]
@@ -16,80 +17,18 @@ PROJECT_ROOT = IPO_ROOT.parent
 if str(CODE_ROOT) not in sys.path:
     sys.path.insert(0, str(CODE_ROOT))
 
-from analyzer.java_parser import method_signature, parse_java_file  # noqa: E402
-from domain.semantic_overrides import find_semantic_override  # noqa: E402
-from domain.value_generator import (  # noqa: E402
-    NeedsSemanticModelError,
-    UnsupportedTypeError,
-    get_domain_for_type,
-)
+from analyzer.class_planner import build_class_plan  # noqa: E402
+from analyzer.java_parser import parse_java_file  # noqa: E402
 from runner.catalog import load_catalog, resolve_catalog_targets  # noqa: E402
-
-
-def _audit_method(
-    fully_qualified_class: str, method: Mapping[str, object]
-) -> Dict[str, object]:
-    record: Dict[str, object] = {
-        "method": method.get("name"),
-        "signature": method_signature(method),
-    }
-    if method.get("static") is not True:
-        record.update(
-            status="UNSUPPORTED",
-            reason="Only public static methods are supported",
-        )
-        return record
-
-    parameters = method.get("parameters")
-    if not isinstance(parameters, list) or not parameters:
-        record.update(
-            status="UNSUPPORTED",
-            reason="A method without parameters has no pairwise factors",
-        )
-        return record
-
-    semantic_override = find_semantic_override(fully_qualified_class, method)
-    try:
-        domains = (
-            semantic_override.factor_domains
-            if semantic_override
-            else {
-                str(parameter["name"]): get_domain_for_type(
-                    str(parameter["type"])
-                )
-                for parameter in parameters
-            }
-        )
-    except NeedsSemanticModelError as exc:
-        record.update(status="NEEDS_SEMANTIC_MODEL", reason=str(exc))
-        return record
-    except UnsupportedTypeError as exc:
-        record.update(status="UNSUPPORTED", reason=str(exc))
-        return record
-
-    if len(domains) < 2:
-        record.update(
-            status="UNSUPPORTED",
-            reason="Pairwise generation requires at least two factors",
-        )
-        return record
-
-    record.update(
-        status="CANDIDATE",
-        strategy=(
-            semantic_override.name if semantic_override else "generic_type_domains"
-        ),
-        factor_count=len(domains),
-        parameter_types=[str(parameter["type"]) for parameter in parameters],
-    )
-    return record
 
 
 def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
     """Return a non-generating feasibility report for every catalog entry."""
     catalog_targets = load_catalog(catalog_path)
     resolved_targets, issues = resolve_catalog_targets(catalog_path, target_root)
-    targets: List[Dict[str, object]] = list(issues)
+    targets: List[Dict[str, object]] = [
+        dict(issue, status="DATA_ERROR") for issue in issues
+    ]
 
     for resolved in resolved_targets:
         target = resolved.target
@@ -102,7 +41,7 @@ def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
                     "bug_id": target.bug_id,
                     "target_class": resolved.target_class,
                     "source": str(resolved.source_file),
-                    "status": "ANALYZE_ERROR",
+                    "status": "ANALYSIS_ERROR",
                     "reason": str(exc),
                 }
             )
@@ -121,43 +60,40 @@ def audit_catalog(catalog_path: Path, target_root: Path) -> Dict[str, object]:
                     "target_class": resolved.target_class,
                     "actual_class": actual_class,
                     "source": str(resolved.source_file),
-                    "status": "CATALOG_MISMATCH",
+                    "status": "DATA_ERROR",
                     "reason": "Parsed class does not match catalog target_class",
                 }
             )
             continue
 
-        methods = [
-            _audit_method(actual_class, method)
-            for method in metadata.get("methods", [])
-            if isinstance(method, dict)
-        ]
-        method_counts = Counter(str(method["status"]) for method in methods)
-        targets.append(
-            {
-                "project": target.project,
-                "bug_id": target.bug_id,
-                "target_class": resolved.target_class,
-                "source": str(resolved.source_file),
-                "status": "AUDITED",
-                "method_status_counts": dict(sorted(method_counts.items())),
-                "methods": methods,
-            }
+        plan = build_class_plan(
+            metadata=metadata,
+            project=target.project,
+            bug_id=target.bug_id,
+            target_class=resolved.target_class,
+            trigger_tests=target.trigger_tests,
+            source_presence=resolved.source_presence,
+            source_sha256=hashlib.sha256(resolved.source_file.read_bytes()).hexdigest(),
         )
+        plan["source"] = str(resolved.source_file)
+        targets.append(plan)
 
     target_counts = Counter(str(target["status"]) for target in targets)
-    method_counts: Counter = Counter()
+    callable_counts: Counter = Counter()
     for target in targets:
-        method_counts.update(target.get("method_status_counts", {}))
+        callable_counts.update(target.get("callable_status_counts", {}))
+    expected_source_count = sum(len(target.modified_sources) for target in catalog_targets)
     return {
         "catalog": str(catalog_path),
         "target_root": str(target_root),
         "generation_performed": False,
-        "target_count": len(catalog_targets),
+        "target_count": expected_source_count,
         "bug_target_count": len(catalog_targets),
         "source_target_count": len(targets),
+        "inventory_complete": len(targets) == expected_source_count,
         "target_status_counts": dict(sorted(target_counts.items())),
-        "method_status_counts": dict(sorted(method_counts.items())),
+        "callable_status_counts": dict(sorted(callable_counts.items())),
+        "method_status_counts": dict(sorted(callable_counts.items())),
         "targets": targets,
     }
 
@@ -196,7 +132,7 @@ def main() -> None:
                     "bug_target_count": report["bug_target_count"],
                     "source_target_count": report["source_target_count"],
                     "target_status_counts": report["target_status_counts"],
-                    "method_status_counts": report["method_status_counts"],
+                    "callable_status_counts": report["callable_status_counts"],
                 },
                 indent=2,
             )

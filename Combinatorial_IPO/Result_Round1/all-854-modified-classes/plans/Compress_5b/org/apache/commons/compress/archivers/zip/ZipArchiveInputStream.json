@@ -1,0 +1,359 @@
+{
+  "audit_hash": "32d3a262975b35bc2404bc9d979757d8a9c58aa05fb89a0f9affec532f1c2287",
+  "bug_id": 5,
+  "callable_status_counts": {
+    "AUTO_READY": 1,
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 9
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ZipArchiveInputStream",
+      "parameters": [
+        {
+          "name": "inputStream",
+          "type": "InputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ZipArchiveInputStream(InputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ZipArchiveInputStream",
+      "parameters": [
+        {
+          "name": "inputStream",
+          "type": "InputStream"
+        },
+        {
+          "name": "encoding",
+          "type": "String"
+        },
+        {
+          "name": "useUnicodeExtraFields",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ZipArchiveInputStream(InputStream,String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNextZipEntry",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipArchiveEntry",
+      "signature": "getNextZipEntry()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:ArchiveEntry"
+      ],
+      "name": "getNextEntry",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "ArchiveEntry",
+      "signature": "getNextEntry()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "buffer": "array",
+        "length": "generic",
+        "receiver__inputStream": "input_stream",
+        "start": "generic"
+      },
+      "cleanup_required": true,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "factor_domains": {
+        "buffer": [
+          "new byte[] {}",
+          "new byte[] {1}"
+        ],
+        "length": [
+          "0",
+          "1",
+          "-1",
+          "Integer.MAX_VALUE",
+          "Integer.MIN_VALUE"
+        ],
+        "receiver__inputStream": [
+          "new java.io.ByteArrayInputStream(new byte[] {})",
+          "new java.io.ByteArrayInputStream(new byte[] {1})"
+        ],
+        "start": [
+          "0",
+          "1",
+          "-1",
+          "Integer.MAX_VALUE",
+          "Integer.MIN_VALUE"
+        ]
+      },
+      "factor_names": [
+        "receiver__inputStream",
+        "buffer",
+        "start",
+        "length"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "read",
+      "observer": "scalar_string_value",
+      "parameters": [
+        {
+          "name": "buffer",
+          "type": "byte[]"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__inputStream": "input_stream"
+        },
+        "cleanup_required": true,
+        "expression_template": "new ZipArchiveInputStream({receiver__inputStream})",
+        "factor_domains": {
+          "receiver__inputStream": [
+            "new java.io.ByteArrayInputStream(new byte[] {})",
+            "new java.io.ByteArrayInputStream(new byte[] {1})"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "ZipArchiveInputStream(InputStream)"
+      },
+      "return_type": "int",
+      "signature": "read(byte[],int,int)",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "state_observer"
+      ],
+      "name": "close",
+      "parameters": [],
+      "reason": "Void/stateful action needs a deterministic state observer",
+      "return_type": "void",
+      "signature": "close()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "skip",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "skip(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "matches",
+      "parameters": [
+        {
+          "name": "signature",
+          "type": "byte[]"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "matches(byte[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checksig",
+      "parameters": [
+        {
+          "name": "signature",
+          "type": "byte[]"
+        },
+        {
+          "name": "expected",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "checksig(byte[],byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "closeEntry",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "closeEntry()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fill",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "fill()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readFully",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "readFully(byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "32d3a262975b35bc2404bc9d979757d8a9c58aa05fb89a0f9affec532f1c2287",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer:ArchiveEntry",
+    "state_observer"
+  ],
+  "project": "Compress",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__inputStream": "input_stream"
+    },
+    "cleanup_required": true,
+    "expression_template": "new ZipArchiveInputStream({receiver__inputStream})",
+    "factor_domains": {
+      "receiver__inputStream": [
+        "new java.io.ByteArrayInputStream(new byte[] {})",
+        "new java.io.ByteArrayInputStream(new byte[] {1})"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "ZipArchiveInputStream(InputStream)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "948bb283189880a27af0e93d0eb9d4fffc2c158b3dc9f3bd9db57c8920ed2925",
+  "status": "AUTO_READY",
+  "target_class": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "trigger_tests": [
+    "org.apache.commons.compress.archivers.zip.Maven221MultiVolumeTest::testRead7ZipMultiVolumeArchiveForStream"
+  ]
+}

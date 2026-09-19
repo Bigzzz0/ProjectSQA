@@ -1,0 +1,110 @@
+{
+  "audit_hash": "47c3856589484e33ff99eeb20b781f7fbf0883881c7bd61aff42633e25921069",
+  "bug_id": 91,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "UncheckedIOException",
+      "parameters": [
+        {
+          "name": "cause",
+          "type": "IOException"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "UncheckedIOException(IOException)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "UncheckedIOException",
+      "parameters": [
+        {
+          "name": "message",
+          "type": "String"
+        }
+      ],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "UncheckedIOException(String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ioException",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "IOException",
+      "signature": "ioException()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "47c3856589484e33ff99eeb20b781f7fbf0883881c7bd61aff42633e25921069",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__message": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new UncheckedIOException({receiver__message})",
+    "factor_domains": {
+      "receiver__message": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "UncheckedIOException(String)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ef842a8249921f9339b73570ff5a40973e50c24fa4686020d4964c9eba159f34",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jsoup.UncheckedIOException",
+  "trigger_tests": [
+    "org.jsoup.integration.ConnectTest::testBinaryThrowsExceptionWhenTypeIgnored",
+    "org.jsoup.integration.ConnectTest::testBinaryResultThrows",
+    "org.jsoup.integration.ParseTest::testBinaryThrowsException"
+  ]
+}

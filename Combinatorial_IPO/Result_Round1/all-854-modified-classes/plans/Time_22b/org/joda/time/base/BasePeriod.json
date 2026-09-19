@@ -1,0 +1,863 @@
+{
+  "audit_hash": "7f6e80a24038b61dca9e8c5f49ceb57b25ae083dc7fbdce2b0c8e990f7f5d4ca",
+  "bug_id": 22,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 30
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "years",
+          "type": "int"
+        },
+        {
+          "name": "months",
+          "type": "int"
+        },
+        {
+          "name": "weeks",
+          "type": "int"
+        },
+        {
+          "name": "days",
+          "type": "int"
+        },
+        {
+          "name": "hours",
+          "type": "int"
+        },
+        {
+          "name": "minutes",
+          "type": "int"
+        },
+        {
+          "name": "seconds",
+          "type": "int"
+        },
+        {
+          "name": "millis",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(int,int,int,int,int,int,int,int,PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "startInstant",
+          "type": "long"
+        },
+        {
+          "name": "endInstant",
+          "type": "long"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        },
+        {
+          "name": "chrono",
+          "type": "Chronology"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(long,long,PeriodType,Chronology)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "startInstant",
+          "type": "ReadableInstant"
+        },
+        {
+          "name": "endInstant",
+          "type": "ReadableInstant"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(ReadableInstant,ReadableInstant,PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "start",
+          "type": "ReadablePartial"
+        },
+        {
+          "name": "end",
+          "type": "ReadablePartial"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(ReadablePartial,ReadablePartial,PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "startInstant",
+          "type": "ReadableInstant"
+        },
+        {
+          "name": "duration",
+          "type": "ReadableDuration"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(ReadableInstant,ReadableDuration,PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "duration",
+          "type": "ReadableDuration"
+        },
+        {
+          "name": "endInstant",
+          "type": "ReadableInstant"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(ReadableDuration,ReadableInstant,PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "duration",
+          "type": "long"
+        }
+      ],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "BasePeriod(long)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "duration",
+          "type": "long"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        },
+        {
+          "name": "chrono",
+          "type": "Chronology"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(long,PeriodType,Chronology)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "period",
+          "type": "Object"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        },
+        {
+          "name": "chrono",
+          "type": "Chronology"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(Object,PeriodType,Chronology)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasePeriod",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "int[]"
+        },
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasePeriod(int[],PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkPeriodType",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "PeriodType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PeriodType",
+      "signature": "checkPeriodType(PeriodType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getPeriodType",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "PeriodType",
+      "signature": "getPeriodType()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "size",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "size()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFieldType",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DurationFieldType",
+      "signature": "getFieldType(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getValue",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getValue(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toDurationFrom",
+      "parameters": [
+        {
+          "name": "startInstant",
+          "type": "ReadableInstant"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Duration",
+      "signature": "toDurationFrom(ReadableInstant)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toDurationTo",
+      "parameters": [
+        {
+          "name": "endInstant",
+          "type": "ReadableInstant"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Duration",
+      "signature": "toDurationTo(ReadableInstant)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkAndUpdate",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "DurationFieldType"
+        },
+        {
+          "name": "values",
+          "type": "int[]"
+        },
+        {
+          "name": "newValue",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "checkAndUpdate(DurationFieldType,int[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPeriod",
+      "parameters": [
+        {
+          "name": "period",
+          "type": "ReadablePeriod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setPeriod(ReadablePeriod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPeriodInternal",
+      "parameters": [
+        {
+          "name": "period",
+          "type": "ReadablePeriod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setPeriodInternal(ReadablePeriod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPeriod",
+      "parameters": [
+        {
+          "name": "years",
+          "type": "int"
+        },
+        {
+          "name": "months",
+          "type": "int"
+        },
+        {
+          "name": "weeks",
+          "type": "int"
+        },
+        {
+          "name": "days",
+          "type": "int"
+        },
+        {
+          "name": "hours",
+          "type": "int"
+        },
+        {
+          "name": "minutes",
+          "type": "int"
+        },
+        {
+          "name": "seconds",
+          "type": "int"
+        },
+        {
+          "name": "millis",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setPeriod(int,int,int,int,int,int,int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPeriodInternal",
+      "parameters": [
+        {
+          "name": "years",
+          "type": "int"
+        },
+        {
+          "name": "months",
+          "type": "int"
+        },
+        {
+          "name": "weeks",
+          "type": "int"
+        },
+        {
+          "name": "days",
+          "type": "int"
+        },
+        {
+          "name": "hours",
+          "type": "int"
+        },
+        {
+          "name": "minutes",
+          "type": "int"
+        },
+        {
+          "name": "seconds",
+          "type": "int"
+        },
+        {
+          "name": "millis",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setPeriodInternal(int,int,int,int,int,int,int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setField",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "DurationFieldType"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setField(DurationFieldType,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setFieldInto",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "int[]"
+        },
+        {
+          "name": "field",
+          "type": "DurationFieldType"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setFieldInto(int[],DurationFieldType,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addField",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "DurationFieldType"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addField(DurationFieldType,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addFieldInto",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "int[]"
+        },
+        {
+          "name": "field",
+          "type": "DurationFieldType"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addFieldInto(int[],DurationFieldType,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mergePeriod",
+      "parameters": [
+        {
+          "name": "period",
+          "type": "ReadablePeriod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "mergePeriod(ReadablePeriod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mergePeriodInto",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "int[]"
+        },
+        {
+          "name": "period",
+          "type": "ReadablePeriod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "mergePeriodInto(int[],ReadablePeriod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addPeriod",
+      "parameters": [
+        {
+          "name": "period",
+          "type": "ReadablePeriod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addPeriod(ReadablePeriod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addPeriodInto",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "int[]"
+        },
+        {
+          "name": "period",
+          "type": "ReadablePeriod"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "addPeriodInto(int[],ReadablePeriod)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setValue",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setValue(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setValues",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setValues(int[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "7f6e80a24038b61dca9e8c5f49ceb57b25ae083dc7fbdce2b0c8e990f7f5d4ca",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer",
+    "receiver_factory"
+  ],
+  "project": "Time",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "23951677ec114885490804227a60e101f1744d83116ed779aa2e8bf05e8db12a",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.joda.time.base.BasePeriod",
+  "trigger_tests": [
+    "org.joda.time.TestDuration_Basics::testToPeriod_fixedZone",
+    "org.joda.time.TestPeriod_Constructors::testConstructor_long_fixedZone"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "b": [
+    "new byte[] {}",
+    "new byte[] {1}"
+  ],
+  "len": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ],
+  "offset": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ],
+  "receiver__in": [
+    "new java.io.ByteArrayInputStream(new byte[] {})",
+    "new java.io.ByteArrayInputStream(new byte[] {1})"
+  ]
+}

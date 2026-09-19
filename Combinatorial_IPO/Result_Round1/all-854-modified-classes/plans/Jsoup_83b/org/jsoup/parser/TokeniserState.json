@@ -1,0 +1,196 @@
+{
+  "audit_hash": "7557e86479e06c9069a4233b725ce1f7237df1e90b7c3ab717f7a9f288d12002",
+  "bug_id": 83,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "read",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Tokeniser"
+        },
+        {
+          "name": "r",
+          "type": "CharacterReader"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "read(Tokeniser,CharacterReader)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleDataEndTag",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Tokeniser"
+        },
+        {
+          "name": "r",
+          "type": "CharacterReader"
+        },
+        {
+          "name": "elseTransition",
+          "type": "TokeniserState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "handleDataEndTag(Tokeniser,CharacterReader,TokeniserState)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readData",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Tokeniser"
+        },
+        {
+          "name": "r",
+          "type": "CharacterReader"
+        },
+        {
+          "name": "current",
+          "type": "TokeniserState"
+        },
+        {
+          "name": "advance",
+          "type": "TokeniserState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "readData(Tokeniser,CharacterReader,TokeniserState,TokeniserState)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readCharRef",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Tokeniser"
+        },
+        {
+          "name": "advance",
+          "type": "TokeniserState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "readCharRef(Tokeniser,TokeniserState)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readEndTag",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Tokeniser"
+        },
+        {
+          "name": "r",
+          "type": "CharacterReader"
+        },
+        {
+          "name": "a",
+          "type": "TokeniserState"
+        },
+        {
+          "name": "b",
+          "type": "TokeniserState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "readEndTag(Tokeniser,CharacterReader,TokeniserState,TokeniserState)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleDataDoubleEscapeTag",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Tokeniser"
+        },
+        {
+          "name": "r",
+          "type": "CharacterReader"
+        },
+        {
+          "name": "primary",
+          "type": "TokeniserState"
+        },
+        {
+          "name": "fallback",
+          "type": "TokeniserState"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "handleDataDoubleEscapeTag(Tokeniser,CharacterReader,TokeniserState,TokeniserState)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "7557e86479e06c9069a4233b725ce1f7237df1e90b7c3ab717f7a9f288d12002",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c60d9fb3bb255d13bfe9d7461d01c9b583bb519ed051f15aee5728a17632a0de",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.jsoup.parser.TokeniserState",
+  "trigger_tests": [
+    "org.jsoup.parser.HtmlParserTest::parsesQuiteRoughAttributes",
+    "org.jsoup.parser.TokeniserStateTest::handlesLessInTagThanAsNewTag"
+  ]
+}

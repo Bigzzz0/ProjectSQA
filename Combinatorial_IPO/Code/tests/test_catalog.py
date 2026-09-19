@@ -93,3 +93,20 @@ class CatalogTests(unittest.TestCase):
 
             with self.assertRaisesRegex(ValueError, "Duplicate"):
                 load_catalog(catalog)
+
+    def test_package_relative_fixed_source_is_preferred(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            target_directory = root / "targets" / "Demo_1b"
+            fixed = target_directory / "sources" / "fixed" / "example" / "Sample.java"
+            fixed.parent.mkdir(parents=True)
+            fixed.write_text("package example; public class Sample {}", encoding="utf-8")
+            catalog = root / "catalog.json"
+            catalog.write_text(json.dumps([_entry(modified_resources=["data.txt"])]), encoding="utf-8")
+
+            resolved, issues = resolve_catalog_targets(catalog, root / "targets")
+
+            self.assertEqual([], issues)
+            self.assertEqual(fixed, resolved[0].source_file)
+            self.assertEqual("ADDED_IN_FIXED", resolved[0].source_presence)
+            self.assertEqual(("data.txt",), resolved[0].target.modified_resources)

@@ -1,0 +1,42 @@
+[
+  {
+    "arguments": {
+      "receiver__attribute": "true",
+      "receiver__tag": "true"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true"
+  },
+  {
+    "arguments": {
+      "receiver__attribute": "true",
+      "receiver__tag": "false"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true"
+  },
+  {
+    "arguments": {
+      "receiver__attribute": "false",
+      "receiver__tag": "true"
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "receiver__attribute": "false",
+      "receiver__tag": "false"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  }
+]

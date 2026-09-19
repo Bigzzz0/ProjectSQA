@@ -1,0 +1,299 @@
+{
+  "audit_hash": "d21a80b0387c628e4ca1242daf6ec7eb7539a88157d3c9e4f923dcf3eda92c4e",
+  "bug_id": 7,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 12
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ChainableReverseAbstractInterpreter",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "typeRegistry",
+          "type": "JSTypeRegistry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ChainableReverseAbstractInterpreter(CodingConvention,JSTypeRegistry)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "append",
+      "parameters": [
+        {
+          "name": "lastLink",
+          "type": "ChainableReverseAbstractInterpreter"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ChainableReverseAbstractInterpreter",
+      "signature": "append(ChainableReverseAbstractInterpreter)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFirst",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ChainableReverseAbstractInterpreter",
+      "signature": "getFirst()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "firstPreciserScopeKnowingConditionOutcome",
+      "parameters": [
+        {
+          "name": "condition",
+          "type": "Node"
+        },
+        {
+          "name": "blindScope",
+          "type": "FlowScope"
+        },
+        {
+          "name": "outcome",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FlowScope",
+      "signature": "firstPreciserScopeKnowingConditionOutcome(Node,FlowScope,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nextPreciserScopeKnowingConditionOutcome",
+      "parameters": [
+        {
+          "name": "condition",
+          "type": "Node"
+        },
+        {
+          "name": "blindScope",
+          "type": "FlowScope"
+        },
+        {
+          "name": "outcome",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FlowScope",
+      "signature": "nextPreciserScopeKnowingConditionOutcome(Node,FlowScope,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getTypeIfRefinable",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "scope",
+          "type": "FlowScope"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "getTypeIfRefinable(Node,FlowScope)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "declareNameInScope",
+      "parameters": [
+        {
+          "name": "scope",
+          "type": "FlowScope"
+        },
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "type",
+          "type": "JSType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "declareNameInScope(FlowScope,Node,JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRestrictedWithoutUndefined",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "JSType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "getRestrictedWithoutUndefined(JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRestrictedWithoutNull",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "JSType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "getRestrictedWithoutNull(JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRestrictedByTypeOfResult",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "JSType"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "resultEqualsValue",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "getRestrictedByTypeOfResult(JSType,String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNativeType",
+      "parameters": [
+        {
+          "name": "typeId",
+          "type": "JSTypeNative"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "getNativeType(JSTypeNative)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNativeTypeForTypeOf",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSType",
+      "signature": "getNativeTypeForTypeOf(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "d21a80b0387c628e4ca1242daf6ec7eb7539a88157d3c9e4f923dcf3eda92c4e",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e12fa8256ce28a892b96606a0846af535f56782a44eee8f750ae4361bdf1f512",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.ClosureReverseAbstractInterpreterTest::testGoogIsFunction2",
+    "com.google.javascript.jscomp.SemanticReverseAbstractInterpreterTest::testTypeof3"
+  ]
+}

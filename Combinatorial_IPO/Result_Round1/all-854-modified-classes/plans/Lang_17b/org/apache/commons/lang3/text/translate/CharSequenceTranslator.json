@@ -1,0 +1,144 @@
+{
+  "audit_hash": "7956b13b52f254a9345eb93f8bd56054e96dcfbdd5f1cc5c6074c817f7b1f73d",
+  "bug_id": 17,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "translate",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "CharSequence"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "out",
+          "type": "Writer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "translate(CharSequence,int,Writer)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "translate",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "CharSequence"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "translate(CharSequence)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "CharSequence",
+        "Writer"
+      ],
+      "name": "translate",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "CharSequence"
+        },
+        {
+          "name": "out",
+          "type": "Writer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "translate(CharSequence,Writer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "with",
+      "parameters": [
+        {
+          "name": "translators",
+          "type": "CharSequenceTranslator[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CharSequenceTranslator",
+      "signature": "with(CharSequenceTranslator[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hex",
+      "parameters": [
+        {
+          "name": "codepoint",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "hex(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "7956b13b52f254a9345eb93f8bd56054e96dcfbdd5f1cc5c6074c817f7b1f73d",
+  "missing_adapters": [
+    "CharSequence",
+    "Writer",
+    "entry_point_evidence"
+  ],
+  "project": "Lang",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e10c49074084efdce9867cce111f1331091db7a36f1537823a6880d537eb8cd3",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang3.text.translate.CharSequenceTranslator",
+  "trigger_tests": [
+    "org.apache.commons.lang3.StringEscapeUtilsTest::testLang720"
+  ]
+}

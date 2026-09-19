@@ -1,0 +1,302 @@
+[
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "0",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "0"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {1})",
+      "start": "1"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "-1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "-1"
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MAX_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MAX_VALUE"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MIN_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MIN_VALUE"
+    },
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {1}",
+      "length": "0",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {1})",
+      "start": "-1"
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {1}",
+      "length": "1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "0"
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {1}",
+      "length": "-1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {1})",
+      "start": "Integer.MAX_VALUE"
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {1}",
+      "length": "Integer.MAX_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {1})",
+      "start": "Integer.MIN_VALUE"
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {1}",
+      "length": "Integer.MIN_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {1})",
+      "start": "0"
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "-1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "0"
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MAX_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "0"
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {1}",
+      "length": "0",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "1"
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "-1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "1"
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MAX_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "1"
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MIN_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "1"
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "-1"
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MAX_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "-1"
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MIN_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "-1"
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "0",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MAX_VALUE"
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MAX_VALUE"
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "Integer.MIN_VALUE",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MAX_VALUE"
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "0",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MIN_VALUE"
+    },
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MIN_VALUE"
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "buffer": "new byte[] {}",
+      "length": "-1",
+      "receiver__inputStream": "new java.io.ByteArrayInputStream(new byte[] {})",
+      "start": "Integer.MIN_VALUE"
+    },
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.Integer",
+    "value_or_message": "-1"
+  }
+]

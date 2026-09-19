@@ -50,12 +50,12 @@ public class Sample {
             self.assertEqual(1, report["source_target_count"])
             self.assertEqual(
                 {
-                    "CANDIDATE": 1,
-                    "NEEDS_SEMANTIC_MODEL": 1,
-                    "UNSUPPORTED": 1,
+                    "AUTO_READY": 2,
+                    "NEEDS_ADAPTER": 1,
                 },
-                report["method_status_counts"],
+                report["callable_status_counts"],
             )
+            self.assertTrue(report["inventory_complete"])
             self.assertFalse((root / "Models").exists())
             self.assertFalse((root / "Result_Round1").exists())
             self.assertFalse((root / "TestCode").exists())

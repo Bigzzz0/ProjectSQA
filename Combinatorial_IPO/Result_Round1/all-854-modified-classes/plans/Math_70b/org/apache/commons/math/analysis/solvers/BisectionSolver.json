@@ -1,0 +1,75 @@
+{
+  "audit_hash": "6de653f98a53f8d6a63811cea7d9ae0f3ba36ac94dd06ad4ab12d286c0887826",
+  "bug_id": 70,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BisectionSolver",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "UnivariateRealFunction"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BisectionSolver(UnivariateRealFunction)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BisectionSolver",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BisectionSolver()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "6de653f98a53f8d6a63811cea7d9ae0f3ba36ac94dd06ad4ab12d286c0887826",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new BisectionSolver()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "BisectionSolver()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "1dd07af77e0b8631490d4630ffa918e297951fc99debea050b7c908ebf1ee444",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.analysis.solvers.BisectionSolver",
+  "trigger_tests": [
+    "org.apache.commons.math.analysis.solvers.BisectionSolverTest::testMath369"
+  ]
+}

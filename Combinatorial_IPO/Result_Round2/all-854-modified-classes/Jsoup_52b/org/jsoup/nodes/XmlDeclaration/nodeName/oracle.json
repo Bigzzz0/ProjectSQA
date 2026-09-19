@@ -1,0 +1,1333 @@
+[
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\" \""
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"\""
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"test123\""
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"a\""
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"0\""
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"-1\""
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"\""
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 26,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 27,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 28,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 29,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"\""
+    },
+    "id": 30,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 31,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 32,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 33,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 34,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 35,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 36,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 37,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 38,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\" \""
+    },
+    "id": 39,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 40,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 41,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 42,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 43,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 44,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 45,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 46,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 47,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"a\""
+    },
+    "id": 48,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 49,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 50,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 51,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 52,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 53,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 54,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 55,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 56,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"test123\""
+    },
+    "id": 57,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 58,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 59,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 60,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 61,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 62,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 63,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 64,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 65,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"!@#\""
+    },
+    "id": 66,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 67,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 68,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 69,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 70,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 71,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 72,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 73,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 74,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"0\""
+    },
+    "id": 75,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 76,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 77,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 78,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 79,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 80,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 81,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 82,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 83,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"-1\""
+    },
+    "id": 84,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 85,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 86,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 87,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 88,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 89,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 90,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 91,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 92,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"1.5\""
+    },
+    "id": 93,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 94,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 95,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 96,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 97,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 98,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 99,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 100,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 101,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775807\""
+    },
+    "id": 102,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 103,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 104,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 105,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 106,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 107,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 108,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 109,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 110,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"9223372036854775808\""
+    },
+    "id": 111,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"\"",
+      "receiver__isProcessingInstruction": "false",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 112,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\" \"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 113,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"a\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 114,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"test123\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 115,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"!@#\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 116,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"0\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 117,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"-1\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 118,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"1.5\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 119,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775807\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 120,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  },
+  {
+    "arguments": {
+      "receiver__baseUri": "\"9223372036854775808\"",
+      "receiver__isProcessingInstruction": "true",
+      "receiver__name": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 121,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "#declaration"
+  }
+]

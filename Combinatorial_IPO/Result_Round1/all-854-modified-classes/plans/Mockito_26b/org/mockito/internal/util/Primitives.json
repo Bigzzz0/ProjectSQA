@@ -1,0 +1,112 @@
+{
+  "audit_hash": "3b8fc9ba9d898b859deed13e504cf3bbac3bee021e682937f9b160cb34ac317e",
+  "bug_id": 26,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "primitiveTypeOf",
+      "parameters": [
+        {
+          "name": "clazz",
+          "type": "Class<T>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> Class<T>",
+      "signature": "primitiveTypeOf(Class<T>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isPrimitiveWrapper",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isPrimitiveWrapper(Class<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "primitiveWrapperOf",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Class<T>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T",
+      "signature": "primitiveWrapperOf(Class<T>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "primitiveValueOrNullFor",
+      "parameters": [
+        {
+          "name": "primitiveType",
+          "type": "Class<T>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T",
+      "signature": "primitiveValueOrNullFor(Class<T>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "3b8fc9ba9d898b859deed13e504cf3bbac3bee021e682937f9b160cb34ac317e",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Primitives()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e5002c2e00901d4c9f8e3748ed0ff07d2f5b21f5726a1c68f6e7fb74faf900a9",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.mockito.internal.util.Primitives",
+  "trigger_tests": [
+    "org.mockito.internal.progress.HandyReturnValuesTest::should_default_values_for_primitive",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesTest::should_return_primitive",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsMocksTest::should_return_the_usual_default_values_for_primitives",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest::should_return_the_usual_default_values_for_primitives"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "audit_hash": "b7ff4a2e9f2609bb5afb032d3846e6fc79b09b6fc8f58ba01332b7a4d1329ccb",
+  "bug_id": 108,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ScopedAliases",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "preprocessorSymbolTable",
+          "type": "PreprocessorSymbolTable"
+        },
+        {
+          "name": "transformationHandler",
+          "type": "AliasTransformationHandler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ScopedAliases(AbstractCompiler,PreprocessorSymbolTable,AliasTransformationHandler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hotSwapScript",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "Node"
+        },
+        {
+          "name": "originalRoot",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "hotSwapScript(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "b7ff4a2e9f2609bb5afb032d3846e6fc79b09b6fc8f58ba01332b7a4d1329ccb",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "f5efd402157cf26ae0655381d18ecf88500ca33fe39a2576d0c0707bacf5bf7e",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.ScopedAliases",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.ScopedAliasesTest::testIssue1144"
+  ]
+}

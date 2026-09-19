@@ -1,0 +1,629 @@
+{
+  "audit_hash": "4338cb11512d74fb6e263b31990ba71494957a6ef788b186aa2bba75b4dd3e83",
+  "bug_id": 156,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 22
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CollapseProperties",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "collapsePropertiesOnExternTypes",
+          "type": "boolean"
+        },
+        {
+          "name": "inlineAliases",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CollapseProperties(AbstractCompiler,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inlineAliases",
+      "parameters": [
+        {
+          "name": "namespace",
+          "type": "GlobalNamespace"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "inlineAliases(GlobalNamespace)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inlineAliasIfPossible",
+      "parameters": [
+        {
+          "name": "alias",
+          "type": "Ref"
+        },
+        {
+          "name": "namespace",
+          "type": "GlobalNamespace"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "inlineAliasIfPossible(Ref,GlobalNamespace)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkNamespaces",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "checkNamespaces()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "warnAboutNamespaceAliasing",
+      "parameters": [
+        {
+          "name": "nameObj",
+          "type": "Name"
+        },
+        {
+          "name": "ref",
+          "type": "Ref"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "warnAboutNamespaceAliasing(Name,Ref)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "warnAboutNamespaceRedefinition",
+      "parameters": [
+        {
+          "name": "nameObj",
+          "type": "Name"
+        },
+        {
+          "name": "ref",
+          "type": "Ref"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "warnAboutNamespaceRedefinition(Name,Ref)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flattenReferencesToCollapsibleDescendantNames",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flattenReferencesToCollapsibleDescendantNames(Name,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flattenReferencesTo",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flattenReferencesTo(Name,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flattenPrefixes",
+      "parameters": [
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "depth",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flattenPrefixes(String,Name,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flattenNameRefAtDepth",
+      "parameters": [
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "depth",
+          "type": "int"
+        },
+        {
+          "name": "originalName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flattenNameRefAtDepth(String,Node,int,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flattenNameRef",
+      "parameters": [
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        },
+        {
+          "name": "originalName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flattenNameRef(String,Node,Node,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "collapseDeclarationOfNameAndDescendants",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "collapseDeclarationOfNameAndDescendants(Name,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateSimpleDeclaration",
+      "parameters": [
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "refName",
+          "type": "Name"
+        },
+        {
+          "name": "ref",
+          "type": "Ref"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "updateSimpleDeclaration(String,Name,Ref)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "updateObjLitOrFunctionDeclaration",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "canCollapseChildNames",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "updateObjLitOrFunctionDeclaration(Name,String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "updateObjLitOrFunctionDeclarationAtAssignNode",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "canCollapseChildNames",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "updateObjLitOrFunctionDeclarationAtAssignNode(Name,String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkForHosedThisReferences",
+      "parameters": [
+        {
+          "name": "function",
+          "type": "Node"
+        },
+        {
+          "name": "docInfo",
+          "type": "JSDocInfo"
+        },
+        {
+          "name": "name",
+          "type": "Name"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "checkForHosedThisReferences(Node,JSDocInfo,Name)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "updateObjLitOrFunctionDeclarationAtVarNode",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "canCollapseChildNames",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "updateObjLitOrFunctionDeclarationAtVarNode(Name,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "updateFunctionDeclarationAtFunctionNode",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "canCollapseChildNames",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "updateFunctionDeclarationAtFunctionNode(Name,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "declareVarsForObjLitValues",
+      "parameters": [
+        {
+          "name": "objlitName",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "objlit",
+          "type": "Node"
+        },
+        {
+          "name": "varNode",
+          "type": "Node"
+        },
+        {
+          "name": "nameToAddAfter",
+          "type": "Node"
+        },
+        {
+          "name": "varParent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "declareVarsForObjLitValues(Name,String,Node,Node,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addStubsForUndeclaredProperties",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Name"
+        },
+        {
+          "name": "alias",
+          "type": "String"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        },
+        {
+          "name": "addAfter",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "addStubsForUndeclaredProperties(Name,String,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "appendPropForAlias",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "String"
+        },
+        {
+          "name": "prop",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "appendPropForAlias(String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "4338cb11512d74fb6e263b31990ba71494957a6ef788b186aa2bba75b4dd3e83",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4a905b4c6d0b63f674a8a04cefb3bb61fb3e8dce06b27a3ad801ec98f7658d98",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.CollapseProperties",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.CollapsePropertiesTest::testAliasedTopLevelEnum",
+    "com.google.javascript.jscomp.CollapsePropertiesTest::testIssue389"
+  ]
+}

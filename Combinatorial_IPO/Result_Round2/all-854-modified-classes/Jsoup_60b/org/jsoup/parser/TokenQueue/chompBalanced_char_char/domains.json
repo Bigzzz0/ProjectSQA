@@ -1,0 +1,29 @@
+{
+  "close": [
+    "'\\0'",
+    "'a'",
+    "'0'",
+    "Character.MIN_VALUE",
+    "Character.MAX_VALUE"
+  ],
+  "open": [
+    "'\\0'",
+    "'a'",
+    "'0'",
+    "Character.MIN_VALUE",
+    "Character.MAX_VALUE"
+  ],
+  "receiver__data": [
+    "\"\"",
+    "\" \"",
+    "\"a\"",
+    "\"test123\"",
+    "\"!@#\"",
+    "\"0\"",
+    "\"-1\"",
+    "\"1.5\"",
+    "\"9223372036854775807\"",
+    "\"9223372036854775808\"",
+    "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+  ]
+}

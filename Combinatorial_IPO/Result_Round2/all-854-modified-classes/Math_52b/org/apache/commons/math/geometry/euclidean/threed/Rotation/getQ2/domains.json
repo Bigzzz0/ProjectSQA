@@ -1,0 +1,34 @@
+{
+  "receiver__needsNormalization": [
+    "true",
+    "false"
+  ],
+  "receiver__q0": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ],
+  "receiver__q1": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ],
+  "receiver__q2": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ],
+  "receiver__q3": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ]
+}

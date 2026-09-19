@@ -1,0 +1,61 @@
+{
+  "audit_hash": "165194b1fd7aec259517457eed0d44412ba25e0a9dabb928aa93b5f131f6ca7b",
+  "bug_id": 21,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getRootMatrix",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "RealMatrix",
+      "signature": "getRootMatrix()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRank",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getRank()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "165194b1fd7aec259517457eed0d44412ba25e0a9dabb928aa93b5f131f6ca7b",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "503f6a9d05fb842548f9405224cc5b23504681ad68548e0fc551311ba2bfb767",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math3.linear.RectangularCholeskyDecomposition",
+  "trigger_tests": [
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest::testMath789",
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest::testFullRank"
+  ]
+}

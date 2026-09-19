@@ -1,0 +1,18 @@
+{
+  "audit_hash": "2a92208359be817466ab7684aa74263f7847a5adca77d8b02884c98b09e1f1a3",
+  "bug_id": 42,
+  "callable_status_counts": {},
+  "callables": [],
+  "input_hash": "2a92208359be817466ab7684aa74263f7847a5adca77d8b02884c98b09e1f1a3",
+  "missing_adapters": [],
+  "project": "Compress",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a845f61786f55bf5d5f076a63946dbe62a726d28dbeb1bc771ed4ad4baf68a3c",
+  "status": "NOT_PAIRWISE_APPLICABLE",
+  "target_class": "org.apache.commons.compress.archivers.zip.UnixStat",
+  "trigger_tests": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::isUnixSymlinkIsFalseIfMoreThanOneFlagIsSet"
+  ]
+}

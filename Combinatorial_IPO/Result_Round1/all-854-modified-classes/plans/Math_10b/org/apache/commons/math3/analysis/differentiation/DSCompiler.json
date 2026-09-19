@@ -1,0 +1,1539 @@
+{
+  "audit_hash": "fc390c22dede4eff2e37863da7a7aa4a7ec14631687853af587a66f21039c0ad",
+  "bug_id": 10,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 43
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DSCompiler",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        },
+        {
+          "name": "valueCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "derivativeCompiler",
+          "type": "DSCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DSCompiler(int,int,DSCompiler,DSCompiler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCompiler",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DSCompiler",
+      "signature": "getCompiler(int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compileSizes",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        },
+        {
+          "name": "valueCompiler",
+          "type": "DSCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[][]",
+      "signature": "compileSizes(int,int,DSCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compileDerivativesIndirection",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        },
+        {
+          "name": "valueCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "derivativeCompiler",
+          "type": "DSCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[][]",
+      "signature": "compileDerivativesIndirection(int,int,DSCompiler,DSCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compileLowerIndirection",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        },
+        {
+          "name": "valueCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "derivativeCompiler",
+          "type": "DSCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "compileLowerIndirection(int,int,DSCompiler,DSCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compileMultiplicationIndirection",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        },
+        {
+          "name": "valueCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "derivativeCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "lowerIndirection",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[][][]",
+      "signature": "compileMultiplicationIndirection(int,int,DSCompiler,DSCompiler,int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compileCompositionIndirection",
+      "parameters": [
+        {
+          "name": "parameters",
+          "type": "int"
+        },
+        {
+          "name": "order",
+          "type": "int"
+        },
+        {
+          "name": "valueCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "derivativeCompiler",
+          "type": "DSCompiler"
+        },
+        {
+          "name": "sizes",
+          "type": "int[][]"
+        },
+        {
+          "name": "derivativesIndirection",
+          "type": "int[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[][][]",
+      "signature": "compileCompositionIndirection(int,int,DSCompiler,DSCompiler,int[][],int[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "convertIndex",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "srcP",
+          "type": "int"
+        },
+        {
+          "name": "srcDerivativesIndirection",
+          "type": "int[][]"
+        },
+        {
+          "name": "destP",
+          "type": "int"
+        },
+        {
+          "name": "destO",
+          "type": "int"
+        },
+        {
+          "name": "destSizes",
+          "type": "int[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "convertIndex(int,int,int[][],int,int,int[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPartialDerivativeOrders",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "getPartialDerivativeOrders(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFreeParameters",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getFreeParameters()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOrder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getOrder()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSize",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getSize()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "linearCombination",
+      "parameters": [
+        {
+          "name": "a1",
+          "type": "double"
+        },
+        {
+          "name": "c1",
+          "type": "double[]"
+        },
+        {
+          "name": "offset1",
+          "type": "int"
+        },
+        {
+          "name": "a2",
+          "type": "double"
+        },
+        {
+          "name": "c2",
+          "type": "double[]"
+        },
+        {
+          "name": "offset2",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "linearCombination(double,double[],int,double,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "linearCombination",
+      "parameters": [
+        {
+          "name": "a1",
+          "type": "double"
+        },
+        {
+          "name": "c1",
+          "type": "double[]"
+        },
+        {
+          "name": "offset1",
+          "type": "int"
+        },
+        {
+          "name": "a2",
+          "type": "double"
+        },
+        {
+          "name": "c2",
+          "type": "double[]"
+        },
+        {
+          "name": "offset2",
+          "type": "int"
+        },
+        {
+          "name": "a3",
+          "type": "double"
+        },
+        {
+          "name": "c3",
+          "type": "double[]"
+        },
+        {
+          "name": "offset3",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "linearCombination(double,double[],int,double,double[],int,double,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "linearCombination",
+      "parameters": [
+        {
+          "name": "a1",
+          "type": "double"
+        },
+        {
+          "name": "c1",
+          "type": "double[]"
+        },
+        {
+          "name": "offset1",
+          "type": "int"
+        },
+        {
+          "name": "a2",
+          "type": "double"
+        },
+        {
+          "name": "c2",
+          "type": "double[]"
+        },
+        {
+          "name": "offset2",
+          "type": "int"
+        },
+        {
+          "name": "a3",
+          "type": "double"
+        },
+        {
+          "name": "c3",
+          "type": "double[]"
+        },
+        {
+          "name": "offset3",
+          "type": "int"
+        },
+        {
+          "name": "a4",
+          "type": "double"
+        },
+        {
+          "name": "c4",
+          "type": "double[]"
+        },
+        {
+          "name": "offset4",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "linearCombination(double,double[],int,double,double[],int,double,double[],int,double,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "lhs",
+          "type": "double[]"
+        },
+        {
+          "name": "lhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "rhs",
+          "type": "double[]"
+        },
+        {
+          "name": "rhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "add(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subtract",
+      "parameters": [
+        {
+          "name": "lhs",
+          "type": "double[]"
+        },
+        {
+          "name": "lhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "rhs",
+          "type": "double[]"
+        },
+        {
+          "name": "rhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "subtract(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "multiply",
+      "parameters": [
+        {
+          "name": "lhs",
+          "type": "double[]"
+        },
+        {
+          "name": "lhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "rhs",
+          "type": "double[]"
+        },
+        {
+          "name": "rhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "multiply(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "divide",
+      "parameters": [
+        {
+          "name": "lhs",
+          "type": "double[]"
+        },
+        {
+          "name": "lhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "rhs",
+          "type": "double[]"
+        },
+        {
+          "name": "rhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "divide(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remainder",
+      "parameters": [
+        {
+          "name": "lhs",
+          "type": "double[]"
+        },
+        {
+          "name": "lhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "rhs",
+          "type": "double[]"
+        },
+        {
+          "name": "rhsOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "remainder(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "pow",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "p",
+          "type": "double"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "pow(double[],int,double,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "pow",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "pow(double[],int,int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "pow",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "double[]"
+        },
+        {
+          "name": "xOffset",
+          "type": "int"
+        },
+        {
+          "name": "y",
+          "type": "double[]"
+        },
+        {
+          "name": "yOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "pow(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "rootN",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "rootN(double[],int,int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "exp",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "exp(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "expm1",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "expm1(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "log",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "log(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "log1p",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "log1p(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "log10",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "log10(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cos",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cos(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sin",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "sin(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tan",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "tan(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "acos",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "acos(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "asin",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "asin(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "atan",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "atan(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "atan2",
+      "parameters": [
+        {
+          "name": "y",
+          "type": "double[]"
+        },
+        {
+          "name": "yOffset",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "double[]"
+        },
+        {
+          "name": "xOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "void",
+      "signature": "atan2(double[],int,double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cosh",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cosh(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sinh",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "sinh(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tanh",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "tanh(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "acosh",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "acosh(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "asinh",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "asinh(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "atanh",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "atanh(double[],int,double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compose",
+      "parameters": [
+        {
+          "name": "operand",
+          "type": "double[]"
+        },
+        {
+          "name": "operandOffset",
+          "type": "int"
+        },
+        {
+          "name": "f",
+          "type": "double[]"
+        },
+        {
+          "name": "result",
+          "type": "double[]"
+        },
+        {
+          "name": "resultOffset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "compose(double[],int,double[],double[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "taylor",
+      "parameters": [
+        {
+          "name": "ds",
+          "type": "double[]"
+        },
+        {
+          "name": "dsOffset",
+          "type": "int"
+        },
+        {
+          "name": "delta",
+          "type": "double []"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "taylor(double[],int,double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "fc390c22dede4eff2e37863da7a7aa4a7ec14631687853af587a66f21039c0ad",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "07bf9c8dbfce60b43a563f931d4e12bb51e79854b57fa217759dd1e7c5387fbd",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math3.analysis.differentiation.DSCompiler",
+  "trigger_tests": [
+    "org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest::testAtan2SpecialCases"
+  ]
+}

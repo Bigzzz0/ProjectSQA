@@ -15,27 +15,71 @@ from typing import Dict, List, Mapping
 
 PACKAGE_PATTERN = re.compile(r"^\s*package\s+([\w.]+)\s*;", re.MULTILINE)
 CLASS_PATTERN = re.compile(
-    r"^\s*(?:public\s+)?(?:(?:abstract|final|strictfp)\s+)*class\s+(\w+)",
+    r"^[ \t]*(?:(?:public|protected|private)[ \t]+)?"
+    r"(?P<modifiers>(?:(?:abstract|final|strictfp|static)[ \t]+)*)"
+    r"(?P<kind>class|interface|enum)[ \t]+(?P<name>\w+)",
     re.MULTILINE,
 )
 METHOD_PATTERN = re.compile(
-    r"\bpublic\s+"
-    r"(?P<modifiers>(?:(?:static|final|synchronized|native|abstract|strictfp|default)\s+)*)"
-    r"(?P<return_type>[\w.$<>?,\[\]\s]+?)\s+"
-    r"(?P<name>\w+)\s*"
-    r"\((?P<parameters>[^()]*)\)\s*"
-    r"(?:throws\s+[^\{;]+)?[\{;]",
+    r"^[ \t]*(?:(?P<visibility>public|protected|private)[ \t]+)?"
+    r"(?P<modifiers>(?:(?:static|final|synchronized|native|abstract|strictfp|default)[ \t]+)*)"
+    r"(?P<return_type>[\w.$<>?,\[\] \t]+?)[ \t]+"
+    r"(?P<name>\w+)[ \t]*"
+    r"\((?P<parameters>[^()]*)\)[ \t]*"
+    r"(?:throws[ \t]+[^\{;]+)?[\{;]",
     re.MULTILINE,
 )
 
 
 def _remove_comments(source: str) -> str:
-    """Remove comments while preserving Java string and character literals."""
+    """Blank comments while preserving offsets, lines, and Java literals."""
     pattern = re.compile(
         r'("(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\')|//[^\r\n]*|/\*.*?\*/',
         re.DOTALL,
     )
-    return pattern.sub(lambda match: match.group(1) or "", source)
+    def replace(match: re.Match[str]) -> str:
+        if match.group(1):
+            return match.group(1)
+        return "".join("\n" if char == "\n" else "\r" if char == "\r" else " " for char in match.group(0))
+
+    return pattern.sub(replace, source)
+
+
+def _declaration_span(source: str, start: int, declaration_end: int) -> Dict[str, int]:
+    """Return stable offsets/lines for a declaration, including its brace body."""
+    end = declaration_end
+    opening = source.rfind("{", start, declaration_end)
+    semicolon = source.rfind(";", start, declaration_end)
+    if opening >= 0 and opening > semicolon:
+        depth = 0
+        quote = ""
+        escaped = False
+        for index in range(opening, len(source)):
+            character = source[index]
+            if quote:
+                if escaped:
+                    escaped = False
+                elif character == "\\":
+                    escaped = True
+                elif character == quote:
+                    quote = ""
+                continue
+            if character in {'"', "'"}:
+                quote = character
+                continue
+            if character == "{":
+                depth += 1
+            elif character == "}":
+                depth -= 1
+                if depth == 0:
+                    end = index + 1
+                    break
+    return {
+        "start_offset": start,
+        "end_offset": end,
+        "start_line": source.count("\n", 0, start) + 1,
+        "end_line": source.count("\n", 0, end) + 1,
+    }
 
 
 def _split_parameters(parameters: str) -> List[str]:
@@ -59,6 +103,32 @@ def _split_parameters(parameters: str) -> List[str]:
     return parts
 
 
+def _brace_depths(source: str) -> List[int]:
+    """Return the Java brace depth at every offset in one linear pass."""
+    depths: List[int] = [0] * (len(source) + 1)
+    depth = 0
+    quote = ""
+    escaped = False
+    for offset, character in enumerate(source):
+        depths[offset] = depth
+        if quote:
+            if escaped:
+                escaped = False
+            elif character == "\\":
+                escaped = True
+            elif character == quote:
+                quote = ""
+            continue
+        if character in {'"', "'"}:
+            quote = character
+        elif character == "{":
+            depth += 1
+        elif character == "}":
+            depth -= 1
+    depths[len(source)] = depth
+    return depths
+
+
 def _parse_parameter(parameter: str) -> Dict[str, str]:
     """Convert one Java parameter declaration into its type and name."""
     without_annotations = re.sub(r"@\w+(?:\([^)]*\))?\s*", "", parameter)
@@ -75,7 +145,7 @@ def _parse_parameter(parameter: str) -> Dict[str, str]:
 
 
 def parse_java_file(filepath: str) -> Dict[str, object]:
-    """Return package, class, and public method metadata from a Java file."""
+    """Return top-level type, constructors, and callable method metadata."""
     path = Path(filepath)
     source = _remove_comments(path.read_text(encoding="utf-8", errors="ignore"))
 
@@ -84,8 +154,16 @@ def parse_java_file(filepath: str) -> Dict[str, object]:
     if not class_match:
         raise ValueError("No public class declaration found in {}".format(path))
 
+    class_name = class_match.group("name")
+    brace_depths = _brace_depths(source)
     methods: List[Dict[str, object]] = []
     for match in METHOD_PATTERN.finditer(source):
+        if brace_depths[match.start()] != 1:
+            continue
+        if match.group("name") == class_name:
+            # Constructors are parsed separately so they cannot masquerade as
+            # methods with an empty return type.
+            continue
         raw_parameters = match.group("parameters").strip()
         try:
             parameters = [
@@ -95,19 +173,66 @@ def parse_java_file(filepath: str) -> Dict[str, object]:
             continue
 
         modifiers = match.group("modifiers").split()
-        methods.append(
-            {
+        record = {
                 "name": match.group("name"),
                 "return_type": " ".join(match.group("return_type").split()),
                 "static": "static" in modifiers,
+                "visibility": match.group("visibility") or "package",
+                "kind": "method",
                 "parameters": parameters,
             }
-        )
+        record.update(_declaration_span(source, match.start(), match.end()))
+        methods.append(record)
+
+    constructor_pattern = re.compile(
+        r"^[ \t]*(?:(?P<visibility>public|protected|private)[ \t]+)?"
+        r"(?P<modifiers>(?:(?:final|synchronized|strictfp)[ \t]+)*)"
+        + re.escape(class_name)
+        + r"[ \t]*\((?P<parameters>[^()]*)\)[ \t]*(?:throws[ \t]+[^\{;]+)?[\{;]",
+        re.MULTILINE,
+    )
+    constructors: List[Dict[str, object]] = []
+    for match in constructor_pattern.finditer(source):
+        if brace_depths[match.start()] != 1:
+            continue
+        try:
+            parameters = [
+                _parse_parameter(item)
+                for item in _split_parameters(match.group("parameters").strip())
+            ]
+        except ValueError:
+            continue
+        record = {
+                "name": class_name,
+                "return_type": None,
+                "static": False,
+                "visibility": match.group("visibility") or "package",
+                "kind": "constructor",
+                "parameters": parameters,
+            }
+        record.update(_declaration_span(source, match.start(), match.end()))
+        constructors.append(record)
+
+    broad_constructor_pattern = re.compile(
+        r"^[ \t]*(?:(?:public|protected|private)[ \t]+)?"
+        + re.escape(class_name)
+        + r"[ \t\r\n]*\(",
+        re.MULTILINE,
+    )
+    declared_constructor_count = sum(
+        1
+        for match in broad_constructor_pattern.finditer(source)
+        if brace_depths[match.start()] == 1
+    )
 
     return {
         "source_file": str(path),
         "package": package_match.group(1) if package_match else "",
-        "class": class_match.group(1),
+        "class": class_name,
+        "type_kind": class_match.group("kind"),
+        "abstract": "abstract" in class_match.group("modifiers").split(),
+        "constructors": constructors,
+        "declared_constructor_count": declared_constructor_count,
         "methods": methods,
     }
 

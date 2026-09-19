@@ -1,0 +1,75 @@
+{
+  "audit_hash": "6699ba3126377ba97200d90dc071a9c4c8d333136922594ec732791c59f5db1f",
+  "bug_id": 72,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BrentSolver",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "UnivariateRealFunction"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BrentSolver(UnivariateRealFunction)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BrentSolver",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BrentSolver()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "6699ba3126377ba97200d90dc071a9c4c8d333136922594ec732791c59f5db1f",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new BrentSolver()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "BrentSolver()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d9866c3f3b88feebc0cdafa090623668795aabacca88d4a59fffdf75077e33c7",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.analysis.solvers.BrentSolver",
+  "trigger_tests": [
+    "org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints"
+  ]
+}

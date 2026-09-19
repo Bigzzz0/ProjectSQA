@@ -1,0 +1,19 @@
+{
+  "audit_hash": "f6b676a03bc3619085e3eedd3b9d34e28f44d72f0478613b792a956d7eaa9785",
+  "bug_id": 169,
+  "callable_status_counts": {},
+  "callables": [],
+  "input_hash": "f6b676a03bc3619085e3eedd3b9d34e28f44d72f0478613b792a956d7eaa9785",
+  "missing_adapters": [],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "ADDED_IN_FIXED",
+  "source_sha256": "23347817a683fad106a79526947509f1bfefe86d6a67c9423cdcbd0a6566f3d6",
+  "status": "NOT_PAIRWISE_APPLICABLE",
+  "target_class": "com.google.javascript.rhino.jstype.EquivalenceMethod",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.TypeCheckTest::testIssue791",
+    "com.google.javascript.rhino.jstype.RecordTypeTest::testSubtypeWithUnknowns2"
+  ]
+}

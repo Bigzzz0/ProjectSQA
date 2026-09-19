@@ -1,0 +1,222 @@
+[
+  {
+    "arguments": {
+      "cs": "\"\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\" \"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\" \"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"a\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"a\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"test123\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"test123\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"!@#\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"!@#\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"0\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"0\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"-1\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"-1\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"1.5\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"1.5\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"9223372036854775807\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"9223372036854775807\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"9223372036854775808\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"9223372036854775808\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "searchChars": "new char[] {}"
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "cs": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+      "searchChars": "new char[] {1}"
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  }
+]

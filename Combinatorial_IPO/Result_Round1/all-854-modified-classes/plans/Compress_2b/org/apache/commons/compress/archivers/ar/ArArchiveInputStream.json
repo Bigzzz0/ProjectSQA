@@ -1,0 +1,287 @@
+{
+  "audit_hash": "3b22602b24f27990bb159ada6d69b3a76f2ac04e03f603cfcc122dea15e08a30",
+  "bug_id": 2,
+  "callable_status_counts": {
+    "AUTO_READY": 1,
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 3,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ArArchiveInputStream",
+      "parameters": [
+        {
+          "name": "pInput",
+          "type": "InputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ArArchiveInputStream(InputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:ArArchiveEntry"
+      ],
+      "name": "getNextArEntry",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "ArArchiveEntry",
+      "signature": "getNextArEntry()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:ArchiveEntry"
+      ],
+      "name": "getNextEntry",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "ArchiveEntry",
+      "signature": "getNextEntry()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "state_observer"
+      ],
+      "name": "close",
+      "parameters": [],
+      "reason": "Void/stateful action needs a deterministic state observer",
+      "return_type": "void",
+      "signature": "close()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "name": "read",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__pInput": "input_stream"
+        },
+        "cleanup_required": true,
+        "expression_template": "new ArArchiveInputStream({receiver__pInput})",
+        "factor_domains": {
+          "receiver__pInput": [
+            "new java.io.ByteArrayInputStream(new byte[] {})",
+            "new java.io.ByteArrayInputStream(new byte[] {1})"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "ArArchiveInputStream(InputStream)"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "int",
+      "signature": "read()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "read",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "read(byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "b": "array",
+        "len": "generic",
+        "off": "generic",
+        "receiver__pInput": "input_stream"
+      },
+      "cleanup_required": true,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "factor_domains": {
+        "b": [
+          "new byte[] {}",
+          "new byte[] {1}"
+        ],
+        "len": [
+          "0",
+          "1",
+          "-1",
+          "Integer.MAX_VALUE",
+          "Integer.MIN_VALUE"
+        ],
+        "off": [
+          "0",
+          "1",
+          "-1",
+          "Integer.MAX_VALUE",
+          "Integer.MIN_VALUE"
+        ],
+        "receiver__pInput": [
+          "new java.io.ByteArrayInputStream(new byte[] {})",
+          "new java.io.ByteArrayInputStream(new byte[] {1})"
+        ]
+      },
+      "factor_names": [
+        "receiver__pInput",
+        "b",
+        "off",
+        "len"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "read",
+      "observer": "scalar_string_value",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "byte[]"
+        },
+        {
+          "name": "off",
+          "type": "int"
+        },
+        {
+          "name": "len",
+          "type": "int"
+        }
+      ],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__pInput": "input_stream"
+        },
+        "cleanup_required": true,
+        "expression_template": "new ArArchiveInputStream({receiver__pInput})",
+        "factor_domains": {
+          "receiver__pInput": [
+            "new java.io.ByteArrayInputStream(new byte[] {})",
+            "new java.io.ByteArrayInputStream(new byte[] {1})"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "ArArchiveInputStream(InputStream)"
+      },
+      "return_type": "int",
+      "signature": "read(byte[],int,int)",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "matches",
+      "parameters": [
+        {
+          "name": "signature",
+          "type": "byte[]"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "matches(byte[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "3b22602b24f27990bb159ada6d69b3a76f2ac04e03f603cfcc122dea15e08a30",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer:ArArchiveEntry",
+    "object_observer:ArchiveEntry",
+    "state_observer"
+  ],
+  "project": "Compress",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__pInput": "input_stream"
+    },
+    "cleanup_required": true,
+    "expression_template": "new ArArchiveInputStream({receiver__pInput})",
+    "factor_domains": {
+      "receiver__pInput": [
+        "new java.io.ByteArrayInputStream(new byte[] {})",
+        "new java.io.ByteArrayInputStream(new byte[] {1})"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "ArArchiveInputStream(InputStream)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "40544d4fbb2a82eb6e6739a8e8780cf349a0b046c31fa8eade1e3afd638e1fd5",
+  "status": "AUTO_READY",
+  "target_class": "org.apache.commons.compress.archivers.ar.ArArchiveInputStream",
+  "trigger_tests": [
+    "org.apache.commons.compress.archivers.ArTestCase::testArDelete"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "audit_hash": "0b8e18cb66ad9702f1f8a04e4f057bee50e2fb5ed287206c891e8d75135752ad",
+  "bug_id": 15,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Collection<Object>",
+        "Field",
+        "Object"
+      ],
+      "name": "filterCandidate",
+      "parameters": [
+        {
+          "name": "mocks",
+          "type": "Collection<Object>"
+        },
+        {
+          "name": "field",
+          "type": "Field"
+        },
+        {
+          "name": "fieldInstance",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "OngoingInjecter",
+      "signature": "filterCandidate(Collection<Object>,Field,Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "0b8e18cb66ad9702f1f8a04e4f057bee50e2fb5ed287206c891e8d75135752ad",
+  "missing_adapters": [
+    "Collection<Object>",
+    "Field",
+    "Object"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new FinalMockCandidateFilter()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "0db0803e280cda63ad19bf38bfd8f5b70ab1e9f55f1b4b0915f02d4e986bd776",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.configuration.injection.FinalMockCandidateFilter",
+  "trigger_tests": [
+    "org.mockitousage.bugs.InjectMocksShouldTryPropertySettersFirstBeforeFieldAccessTest::shouldInjectUsingPropertySetterIfAvailable"
+  ]
+}

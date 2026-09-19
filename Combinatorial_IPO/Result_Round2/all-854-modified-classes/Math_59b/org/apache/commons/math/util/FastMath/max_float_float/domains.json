@@ -1,0 +1,16 @@
+{
+  "a": [
+    "0.0f",
+    "1.0f",
+    "-1.0f",
+    "Float.NaN",
+    "Float.POSITIVE_INFINITY"
+  ],
+  "b": [
+    "0.0f",
+    "1.0f",
+    "-1.0f",
+    "Float.NaN",
+    "Float.POSITIVE_INFINITY"
+  ]
+}
