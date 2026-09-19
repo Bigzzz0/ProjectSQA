@@ -33,7 +33,7 @@
   - [ ] `JacksonCore` (26 บั๊ก)
   - [ ] `Time` (26 บั๊ก)
   - [ ] `Collections` (28 บั๊ก)
-- [ ] [Phase 3: กลุ่มโปรเจกต์ขนาดใหญ่ (Heavy Duty: ~6–8 ชม.)](#-phase-3-heavy-duty-โปรเจกต์ขนาดใหญ่-รวม-185-บั๊ก)
+- [ ] [Phase 3: กลุ่มโปรเจกต์ขนาดใหญ่ (Heavy Duty - 3 Terminals: ~6 ชม.)](#-phase-3-heavy-duty-โปรเจกต์ขนาดใหญ่-รวม-185-บั๊ก)
   - [ ] `Mockito` (38 บั๊ก)
   - [ ] `Cli` (39 บั๊ก)
   - [ ] `Compress` (47 บั๊ก)
@@ -193,15 +193,23 @@ git push origin main
 
 ## 🟠 Phase 3: Heavy Duty (โปรเจกต์ขนาดใหญ่ รวม 185 บั๊ก)
 
-### 10. [ ] Mockito (38 บั๊ก) - แบ่ง 2 เทอร์มินัล (~2 ชม.)
+> [!TIP]
+> **วิธีเปิด 3 หน้าต่างบน Windows Terminal (Triple-Pane):**
+> 1. หน้าต่าง 1 + 2: กด **`Alt + Shift + D`** เพื่อแบ่งครึ่งซ้าย-ขวา
+> 2. หน้าต่าง 3: คลิกที่หน้าต่างขวา แล้วกด **`Alt + Shift + -`** (แบ่งล่าง) หรือกด **`Alt + Shift + D`** ซ้ำเพื่อแบ่ง 3 ช่องแนวตั้งตามความถนัด
+
+### 10. [ ] Mockito (38 บั๊ก) - แบ่ง 3 เทอร์มินัล (~1.2–1.5 ชม.)
 ```powershell
-# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 19
-python MIO_Algorithm/Code/batch_evosuite.py --project Mockito --start-bug 1 --end-bug 19
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 13
+python MIO_Algorithm/Code/batch_evosuite.py --project Mockito --start-bug 1 --end-bug 13
 
-# [Terminal 2 - ขวา]: บั๊ก 20 ถึง 38
-python MIO_Algorithm/Code/batch_evosuite.py --project Mockito --start-bug 20 --end-bug 38
+# [Terminal 2 - กลาง]: บั๊ก 14 ถึง 26
+python MIO_Algorithm/Code/batch_evosuite.py --project Mockito --start-bug 14 --end-bug 26
 
-# เมื่อทั้ง 2 เทอร์มินัลรันเสร็จ สั่ง Commit:
+# [Terminal 3 - ขวา]: บั๊ก 27 ถึง 38
+python MIO_Algorithm/Code/batch_evosuite.py --project Mockito --start-bug 27 --end-bug 38
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
 git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Mockito_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Mockito (bugs 1-38)"
 git push origin main
@@ -209,15 +217,18 @@ git push origin main
 
 ---
 
-### 11. [ ] Cli (39 บั๊ก: 1–40 ข้าม 6) - แบ่ง 2 เทอร์มินัล (~2 ชม.)
+### 11. [ ] Cli (39 บั๊ก: 1–40 ข้าม 6) - แบ่ง 3 เทอร์มินัล (~1.2–1.5 ชม.)
 ```powershell
-# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 20
-python MIO_Algorithm/Code/batch_evosuite.py --project Cli --start-bug 1 --end-bug 20
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 13
+python MIO_Algorithm/Code/batch_evosuite.py --project Cli --start-bug 1 --end-bug 13
 
-# [Terminal 2 - ขวา]: บั๊ก 21 ถึง 40
-python MIO_Algorithm/Code/batch_evosuite.py --project Cli --start-bug 21 --end-bug 40
+# [Terminal 2 - กลาง]: บั๊ก 14 ถึง 26
+python MIO_Algorithm/Code/batch_evosuite.py --project Cli --start-bug 14 --end-bug 26
 
-# เมื่อทั้ง 2 เทอร์มินัลรันเสร็จ สั่ง Commit:
+# [Terminal 3 - ขวา]: บั๊ก 27 ถึง 40
+python MIO_Algorithm/Code/batch_evosuite.py --project Cli --start-bug 27 --end-bug 40
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
 git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Cli_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Cli (bugs 1-40)"
 git push origin main
@@ -225,15 +236,18 @@ git push origin main
 
 ---
 
-### 12. [ ] Compress (47 บั๊ก) - แบ่ง 2 เทอร์มินัล (~2.5 ชม.)
+### 12. [ ] Compress (47 บั๊ก) - แบ่ง 3 เทอร์มินัล (~1.5–1.8 ชม.)
 ```powershell
-# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 24
-python MIO_Algorithm/Code/batch_evosuite.py --project Compress --start-bug 1 --end-bug 24
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 16
+python MIO_Algorithm/Code/batch_evosuite.py --project Compress --start-bug 1 --end-bug 16
 
-# [Terminal 2 - ขวา]: บั๊ก 25 ถึง 47
-python MIO_Algorithm/Code/batch_evosuite.py --project Compress --start-bug 25 --end-bug 47
+# [Terminal 2 - กลาง]: บั๊ก 17 ถึง 32
+python MIO_Algorithm/Code/batch_evosuite.py --project Compress --start-bug 17 --end-bug 32
 
-# เมื่อทั้ง 2 เทอร์มินัลรันเสร็จ สั่ง Commit:
+# [Terminal 3 - ขวา]: บั๊ก 33 ถึง 47
+python MIO_Algorithm/Code/batch_evosuite.py --project Compress --start-bug 33 --end-bug 47
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
 git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Compress_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Compress (bugs 1-47)"
 git push origin main
@@ -241,15 +255,18 @@ git push origin main
 
 ---
 
-### 13. [ ] Lang (61 บั๊ก: 1–65) - แบ่ง 2 เทอร์มินัล (~3 ชม.)
+### 13. [ ] Lang (61 บั๊ก: 1–65) - แบ่ง 3 เทอร์มินัล (~2–2.2 ชม.)
 ```powershell
-# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 32
-python MIO_Algorithm/Code/batch_evosuite.py --project Lang --start-bug 1 --end-bug 32
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 22
+python MIO_Algorithm/Code/batch_evosuite.py --project Lang --start-bug 1 --end-bug 22
 
-# [Terminal 2 - ขวา]: บั๊ก 33 ถึง 65
-python MIO_Algorithm/Code/batch_evosuite.py --project Lang --start-bug 33 --end-bug 65
+# [Terminal 2 - กลาง]: บั๊ก 23 ถึง 44
+python MIO_Algorithm/Code/batch_evosuite.py --project Lang --start-bug 23 --end-bug 44
 
-# เมื่อทั้ง 2 เทอร์มินัลรันเสร็จ สั่ง Commit:
+# [Terminal 3 - ขวา]: บั๊ก 45 ถึง 65
+python MIO_Algorithm/Code/batch_evosuite.py --project Lang --start-bug 45 --end-bug 65
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
 git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Lang_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Lang (bugs 1-65)"
 git push origin main

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.tz.ZoneInfoCompiler,LINE;BRANCH,0.5267558528428093,620,327

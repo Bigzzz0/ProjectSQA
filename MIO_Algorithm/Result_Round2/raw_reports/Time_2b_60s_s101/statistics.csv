@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.field.UnsupportedDurationField,LINE;BRANCH,0.9167862266857962,75,64
+org.joda.time.Partial,LINE;BRANCH,0.9923470880889669,389,279

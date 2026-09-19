@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.chrono.GJChronology,LINE;BRANCH,0.7091228176803974,534,350

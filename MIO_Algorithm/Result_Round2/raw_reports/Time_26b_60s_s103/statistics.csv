@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.chrono.ZonedChronology,LINE;BRANCH,0.9559228650137741,352,330
+org.joda.time.DateTimeZone,LINE;BRANCH,0.8224756292739706,490,401
+org.joda.time.field.LenientDateTimeField,LINE;BRANCH,1.0,24,22

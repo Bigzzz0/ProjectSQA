@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.base.BasePeriod,LINE;BRANCH,0.9650247413405308,249,245

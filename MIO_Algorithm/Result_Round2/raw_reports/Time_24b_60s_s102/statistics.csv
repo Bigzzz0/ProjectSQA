@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.format.DateTimeParserBucket,LINE;BRANCH,0.945357329160146,223,213

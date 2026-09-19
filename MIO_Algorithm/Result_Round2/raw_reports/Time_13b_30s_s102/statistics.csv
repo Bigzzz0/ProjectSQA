@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.joda.time.format.PeriodFormatterBuilder,LINE;BRANCH,0.8366129074417754,1241,736
