@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections4.collection.UnmodifiableBoundedCollection,LINE;BRANCH,0.6243478260869566,48,30

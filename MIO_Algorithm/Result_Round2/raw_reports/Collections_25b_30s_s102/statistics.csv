@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections4.IteratorUtils,LINE;BRANCH,0.5423192077383694,375,207

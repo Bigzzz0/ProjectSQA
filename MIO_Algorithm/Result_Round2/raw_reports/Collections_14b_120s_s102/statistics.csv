@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections.map.CaseInsensitiveMap,LINE;BRANCH,0.8611111111111112,27,19

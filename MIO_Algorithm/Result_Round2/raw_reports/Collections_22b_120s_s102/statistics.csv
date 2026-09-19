@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections4.map.ListOrderedMap,LINE;BRANCH,0.887323631200639,309,273

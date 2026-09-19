@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections.map.MultiValueMap,LINE;BRANCH,0.9113256113256113,181,167

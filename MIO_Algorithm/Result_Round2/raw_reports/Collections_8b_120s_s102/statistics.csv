@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections.buffer.UnboundedFifoBuffer,LINE;BRANCH,0.8337912087912087,123,89

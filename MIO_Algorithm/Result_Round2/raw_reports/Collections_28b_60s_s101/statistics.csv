@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections4.trie.AbstractPatriciaTrie,LINE;BRANCH,0.4881852667148624,1424,698

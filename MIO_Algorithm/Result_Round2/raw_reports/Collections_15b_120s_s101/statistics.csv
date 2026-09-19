@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.collections.list.SetUniqueList,LINE;BRANCH,1.0,137,128
