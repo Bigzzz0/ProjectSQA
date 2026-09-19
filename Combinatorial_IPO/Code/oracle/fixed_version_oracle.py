@@ -14,6 +14,11 @@ import tempfile
 from pathlib import Path
 from typing import Dict, List, Mapping, Sequence
 
+try:
+    from domain.invocation import factor_names, render_invocation
+except ModuleNotFoundError:
+    from ..domain.invocation import factor_names, render_invocation
+
 
 IPO_ROOT = Path(__file__).resolve().parents[1]
 if str(IPO_ROOT) not in sys.path:
@@ -75,8 +80,6 @@ def generate_collector_source(
     return_type = method.get("return_type")
     if not isinstance(method_name, str) or not JAVA_IDENTIFIER.fullmatch(method_name):
         raise ValueError("A valid method name is required")
-    if method.get("static") is not True:
-        raise ValueError("Oracle collection currently supports static methods only")
     if not isinstance(parameters, list) or not isinstance(return_type, str):
         raise ValueError("Method parameters and return type are required")
 
@@ -87,11 +90,11 @@ def generate_collector_source(
         parameter_names.append(parameter["name"])
 
     calls: List[str] = []
+    expected_factors = set(factor_names(method))
     for index, combination in enumerate(combinations, start=1):
-        if set(combination) != set(parameter_names):
-            raise ValueError("Oracle combination does not match method parameters")
-        arguments = ", ".join(combination[name] for name in parameter_names)
-        invocation = "{}.{}({})".format(target_class, method_name, arguments)
+        if set(combination) != expected_factors:
+            raise ValueError("Oracle combination does not match callable factors")
+        invocation = render_invocation(target_class, method, combination)
         if return_type == "void":
             body = "{};\n            emitReturn({}, null, \"\");".format(
                 invocation, index
@@ -115,17 +118,18 @@ import java.util.Base64;
 
 public class {collector_class} {{
     private static String encode(String value) {{
-        return Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8));
+        String encoded = Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8));
+        return encoded.isEmpty() ? "=" : encoded;
     }}
 
     private static void emitReturn(int id, Object value, String text) {{
         String type = value == null ? "null" : value.getClass().getName();
-        System.out.println(id + "\\tRETURN\\t" + type + "\\t" + encode(text));
+        System.out.println(id + "\tRETURN\t" + type + "\t" + encode(text));
     }}
 
     private static void emitThrow(int id, Throwable error) {{
         String message = error.getMessage() == null ? "" : error.getMessage();
-        System.out.println(id + "\\tTHROW\\t" + error.getClass().getName() + "\\t" + encode(message));
+        System.out.println(id + "\tTHROW\t" + error.getClass().getName() + "\t" + encode(message));
     }}
 
     public static void main(String[] args) {{

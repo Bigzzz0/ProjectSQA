@@ -1,0 +1,228 @@
+{
+  "audit_hash": "d9db0b1df58bf1725db78b56ab224d3cbfc7572ccd44ce13da98f81ea0d9d946",
+  "bug_id": 102,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withFormat",
+      "parameters": [
+        {
+          "name": "timestamp",
+          "type": "Boolean"
+        },
+        {
+          "name": "customFormat",
+          "type": "DateFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DateTimeSerializerBase<T>",
+      "signature": "withFormat(Boolean,DateFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "SerializerProvider",
+        "BeanProperty"
+      ],
+      "name": "createContextual",
+      "parameters": [
+        {
+          "name": "serializers",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "property",
+          "type": "BeanProperty"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "JsonSerializer<?>",
+      "signature": "createContextual(SerializerProvider,BeanProperty)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "serializers",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "value",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(SerializerProvider,T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_timestamp",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "_timestamp(T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSchema",
+      "parameters": [
+        {
+          "name": "serializers",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "typeHint",
+          "type": "Type"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonNode",
+      "signature": "getSchema(SerializerProvider,Type)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "acceptJsonFormatVisitor",
+      "parameters": [
+        {
+          "name": "visitor",
+          "type": "JsonFormatVisitorWrapper"
+        },
+        {
+          "name": "typeHint",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "acceptJsonFormatVisitor(JsonFormatVisitorWrapper,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_acceptJsonFormatVisitor",
+      "parameters": [
+        {
+          "name": "visitor",
+          "type": "JsonFormatVisitorWrapper"
+        },
+        {
+          "name": "typeHint",
+          "type": "JavaType"
+        },
+        {
+          "name": "asNumber",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "_acceptJsonFormatVisitor(JsonFormatVisitorWrapper,JavaType,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_serializeAsString",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Date"
+        },
+        {
+          "name": "g",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "_serializeAsString(Date,JsonGenerator,SerializerProvider)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "d9db0b1df58bf1725db78b56ab224d3cbfc7572ccd44ce13da98f81ea0d9d946",
+  "missing_adapters": [
+    "BeanProperty",
+    "SerializerProvider",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "938ec02f797fc94ca29874fca515082f16213d9174b33eb437767ed2659eb380",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.ser.jdk.SqlDateSerializationTest::testSqlDateConfigOverride"
+  ]
+}

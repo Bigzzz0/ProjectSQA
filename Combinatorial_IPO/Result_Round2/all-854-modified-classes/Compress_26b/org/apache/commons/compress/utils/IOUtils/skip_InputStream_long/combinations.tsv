@@ -1,0 +1,11 @@
+input	numToSkip
+new java.io.ByteArrayInputStream(new byte[] {})	0L
+new java.io.ByteArrayInputStream(new byte[] {})	1L
+new java.io.ByteArrayInputStream(new byte[] {})	-1L
+new java.io.ByteArrayInputStream(new byte[] {})	Long.MAX_VALUE
+new java.io.ByteArrayInputStream(new byte[] {})	Long.MIN_VALUE
+new java.io.ByteArrayInputStream(new byte[] {1})	0L
+new java.io.ByteArrayInputStream(new byte[] {1})	1L
+new java.io.ByteArrayInputStream(new byte[] {1})	-1L
+new java.io.ByteArrayInputStream(new byte[] {1})	Long.MAX_VALUE
+new java.io.ByteArrayInputStream(new byte[] {1})	Long.MIN_VALUE

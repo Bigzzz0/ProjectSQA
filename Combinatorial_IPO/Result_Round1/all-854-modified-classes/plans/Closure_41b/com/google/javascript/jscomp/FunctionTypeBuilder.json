@@ -1,0 +1,501 @@
+{
+  "audit_hash": "4c86c68d4c3c12fa39666317975d915c92f309def4be8facea51cd0870e9fabb",
+  "bug_id": 41,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 21
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "FunctionTypeBuilder",
+      "parameters": [
+        {
+          "name": "fnName",
+          "type": "String"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "errorRoot",
+          "type": "Node"
+        },
+        {
+          "name": "sourceName",
+          "type": "String"
+        },
+        {
+          "name": "scope",
+          "type": "Scope"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "FunctionTypeBuilder(String,AbstractCompiler,Node,String,Scope)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setContents",
+      "parameters": [
+        {
+          "name": "contents",
+          "type": "FunctionContents"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "setContents(FunctionContents)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "inferFromOverriddenFunction",
+      "parameters": [
+        {
+          "name": "oldType",
+          "type": "FunctionType"
+        },
+        {
+          "name": "paramsParent",
+          "type": "Node"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferFromOverriddenFunction(FunctionType,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inferReturnType",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferReturnType(JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inferInheritance",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferInheritance(JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inferThisType",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        },
+        {
+          "name": "type",
+          "type": "JSType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferThisType(JSDocInfo,JSType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inferThisType",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferThisType(JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inferParameterTypes",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferParameterTypes(JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "inferParameterTypes",
+      "parameters": [
+        {
+          "name": "argsParent",
+          "type": "Node"
+        },
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferParameterTypes(Node,JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isOptionalParameter",
+      "parameters": [
+        {
+          "name": "param",
+          "type": "Node"
+        },
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isOptionalParameter(Node,JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isVarArgsParameter",
+      "parameters": [
+        {
+          "name": "param",
+          "type": "Node"
+        },
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isVarArgsParameter(Node,JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inferTemplateTypeName",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionTypeBuilder",
+      "signature": "inferTemplateTypeName(JSDocInfo)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addParameter",
+      "parameters": [
+        {
+          "name": "builder",
+          "type": "FunctionParamBuilder"
+        },
+        {
+          "name": "paramType",
+          "type": "JSType"
+        },
+        {
+          "name": "warnedAboutArgList",
+          "type": "boolean"
+        },
+        {
+          "name": "isOptional",
+          "type": "boolean"
+        },
+        {
+          "name": "isVarArgs",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "addParameter(FunctionParamBuilder,JSType,boolean,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "buildAndRegister",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionType",
+      "signature": "buildAndRegister()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "maybeSetBaseType",
+      "parameters": [
+        {
+          "name": "fnType",
+          "type": "FunctionType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "maybeSetBaseType(FunctionType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOrCreateConstructor",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FunctionType",
+      "signature": "getOrCreateConstructor()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reportWarning",
+      "parameters": [
+        {
+          "name": "warning",
+          "type": "DiagnosticType"
+        },
+        {
+          "name": "args",
+          "type": "String []"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reportWarning(DiagnosticType,String[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reportError",
+      "parameters": [
+        {
+          "name": "error",
+          "type": "DiagnosticType"
+        },
+        {
+          "name": "args",
+          "type": "String []"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reportError(DiagnosticType,String[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunctionTypeDeclaration",
+      "parameters": [
+        {
+          "name": "info",
+          "type": "JSDocInfo"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunctionTypeDeclaration(JSDocInfo)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getScopeDeclaredIn",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Scope",
+      "signature": "getScopeDeclaredIn()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasMoreTagsToResolve",
+      "parameters": [
+        {
+          "name": "objectType",
+          "type": "ObjectType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasMoreTagsToResolve(ObjectType)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "4c86c68d4c3c12fa39666317975d915c92f309def4be8facea51cd0870e9fabb",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "037a47303eb0af23496ba6edac83dac9c39e34fc54d0f4db2364ac63e7533845",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.FunctionTypeBuilder",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.LooseTypeCheckTest::testMethodInference6",
+    "com.google.javascript.jscomp.TypeCheckTest::testIssue368",
+    "com.google.javascript.jscomp.TypeCheckTest::testMethodInference6"
+  ]
+}

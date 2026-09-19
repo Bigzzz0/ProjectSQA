@@ -1,0 +1,4301 @@
+{
+  "audit_hash": "cf1dd9e2ca6e54d8fec11db9cde45e31bb4165ac81d268420fdc2ad105920d4e",
+  "bug_id": 35,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 172
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ArrayUtils",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ArrayUtils()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString(Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object"
+        },
+        {
+          "name": "stringIfNull",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString(Object,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEquals",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "Object"
+        },
+        {
+          "name": "array2",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEquals(Object,Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toMap",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Map<Object, Object>",
+      "signature": "toMap(Object[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T[]",
+      "signature": "clone(T[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "clone(long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "clone(int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "clone(short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "clone(char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "clone(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "clone(double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "clone(float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "clone(boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T[]",
+      "signature": "subarray(T[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "subarray(long[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "subarray(int[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "subarray(short[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "subarray(char[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "subarray(byte[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "subarray(double[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "subarray(float[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subarray",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "startIndexInclusive",
+          "type": "int"
+        },
+        {
+          "name": "endIndexExclusive",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "subarray(boolean[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "Object[]"
+        },
+        {
+          "name": "array2",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(Object[],Object[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "long[]"
+        },
+        {
+          "name": "array2",
+          "type": "long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(long[],long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "int[]"
+        },
+        {
+          "name": "array2",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(int[],int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "short[]"
+        },
+        {
+          "name": "array2",
+          "type": "short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(short[],short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "char[]"
+        },
+        {
+          "name": "array2",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(char[],char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "byte[]"
+        },
+        {
+          "name": "array2",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(byte[],byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "double[]"
+        },
+        {
+          "name": "array2",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(double[],double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "float[]"
+        },
+        {
+          "name": "array2",
+          "type": "float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(float[],float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameLength",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "boolean[]"
+        },
+        {
+          "name": "array2",
+          "type": "boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameLength(boolean[],boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLength",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getLength(Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSameType",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "Object"
+        },
+        {
+          "name": "array2",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSameType(Object,Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(Object[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reverse(boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        },
+        {
+          "name": "objectToFind",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(Object[],Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        },
+        {
+          "name": "objectToFind",
+          "type": "Object"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(Object[],Object,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        },
+        {
+          "name": "objectToFind",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(Object[],Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        },
+        {
+          "name": "objectToFind",
+          "type": "Object"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(Object[],Object,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object[]"
+        },
+        {
+          "name": "objectToFind",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(Object[],Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(long[],long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "long"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(long[],long,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(long[],long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "long"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(long[],long,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(long[],long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(int[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "int"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(int[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(int[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "int"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(int[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(int[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(short[],short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "short"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(short[],short,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(short[],short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "short"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(short[],short,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(short[],short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(char[],char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "char"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(char[],char,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(char[],char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "char"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(char[],char,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(char[],char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(byte[],byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "byte"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(byte[],byte,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(byte[],byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "byte"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(byte[],byte,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(byte[],byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "tolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(double[],double,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(double[],double,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        },
+        {
+          "name": "tolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(double[],double,int,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "tolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(double[],double,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(double[],double,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        },
+        {
+          "name": "tolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(double[],double,int,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "double"
+        },
+        {
+          "name": "tolerance",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(double[],double,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(float[],float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "float"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(float[],float,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(float[],float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "float"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(float[],float,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(float[],float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(boolean[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "indexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "boolean"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "indexOf(boolean[],boolean,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(boolean[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lastIndexOf",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "boolean"
+        },
+        {
+          "name": "startIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lastIndexOf(boolean[],boolean,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "valueToFind",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(boolean[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Character[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "toPrimitive(Character[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Character[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "toPrimitive(Character[],char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Character[]",
+      "signature": "toObject(char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "toPrimitive(Long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Long[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "toPrimitive(Long[],long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Long[]",
+      "signature": "toObject(long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Integer[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "toPrimitive(Integer[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Integer[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "toPrimitive(Integer[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Integer[]",
+      "signature": "toObject(int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "toPrimitive(Short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Short[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "toPrimitive(Short[],short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Short[]",
+      "signature": "toObject(short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "toPrimitive(Byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Byte[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "toPrimitive(Byte[],byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Byte[]",
+      "signature": "toObject(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "toPrimitive(Double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Double[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "toPrimitive(Double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Double[]",
+      "signature": "toObject(double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "toPrimitive(Float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Float[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "toPrimitive(Float[],float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Float[]",
+      "signature": "toObject(float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "toPrimitive(Boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toPrimitive",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Boolean[]"
+        },
+        {
+          "name": "valueForNull",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "toPrimitive(Boolean[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toObject",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean[]",
+      "signature": "toObject(boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> boolean",
+      "signature": "isEmpty(T[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty(boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "T[]"
+        },
+        {
+          "name": "array2",
+          "type": "T[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T[]",
+      "signature": "addAll(T[],T[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "boolean[]"
+        },
+        {
+          "name": "array2",
+          "type": "boolean[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "addAll(boolean[],boolean[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "char[]"
+        },
+        {
+          "name": "array2",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "addAll(char[],char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "byte[]"
+        },
+        {
+          "name": "array2",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "addAll(byte[],byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "short[]"
+        },
+        {
+          "name": "array2",
+          "type": "short[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "addAll(short[],short[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "int[]"
+        },
+        {
+          "name": "array2",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "addAll(int[],int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "long[]"
+        },
+        {
+          "name": "array2",
+          "type": "long[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "addAll(long[],long[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "float[]"
+        },
+        {
+          "name": "array2",
+          "type": "float[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "addAll(float[],float[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addAll",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "double[]"
+        },
+        {
+          "name": "array2",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "addAll(double[],double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "T[]",
+        "T"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        },
+        {
+          "name": "element",
+          "type": "T"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "<T> T[]",
+      "signature": "add(T[],T)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "element",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "add(boolean[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "element",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "add(byte[],byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "element",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "add(char[],char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "element",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "add(double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "element",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "add(float[],float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "element",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "add(int[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "element",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "add(long[],long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "element",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "add(short[],short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "copyArrayGrow1",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object"
+        },
+        {
+          "name": "newArrayComponentType",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "copyArrayGrow1(Object,Class<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "T[]",
+        "T"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "T"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "<T> T[]",
+      "signature": "add(T[],int,T)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "add(boolean[],int,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "add(char[],int,char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "add(byte[],int,byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "add(short[],int,short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "add(int[],int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "add(long[],int,long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "add(float[],int,float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "add(double[],int,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "element",
+          "type": "Object"
+        },
+        {
+          "name": "clss",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "add(Object,int,Object,Class<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T[]",
+      "signature": "remove(T[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "T[]"
+        },
+        {
+          "name": "element",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T[]",
+      "signature": "removeElement(T[],Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "remove(boolean[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "boolean[]"
+        },
+        {
+          "name": "element",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean[]",
+      "signature": "removeElement(boolean[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "remove(byte[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "byte[]"
+        },
+        {
+          "name": "element",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "removeElement(byte[],byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "remove(char[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "char[]"
+        },
+        {
+          "name": "element",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char[]",
+      "signature": "removeElement(char[],char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "remove(double[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "double[]"
+        },
+        {
+          "name": "element",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "removeElement(double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "remove(float[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "float[]"
+        },
+        {
+          "name": "element",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float[]",
+      "signature": "removeElement(float[],float)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "remove(int[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "int[]"
+        },
+        {
+          "name": "element",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "removeElement(int[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "remove(long[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "long[]"
+        },
+        {
+          "name": "element",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long[]",
+      "signature": "removeElement(long[],long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "remove(short[],int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeElement",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "short[]"
+        },
+        {
+          "name": "element",
+          "type": "short"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "short[]",
+      "signature": "removeElement(short[],short)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "remove",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "remove(Object,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "cf1dd9e2ca6e54d8fec11db9cde45e31bb4165ac81d268420fdc2ad105920d4e",
+  "missing_adapters": [
+    "T",
+    "T[]",
+    "entry_point_evidence"
+  ],
+  "project": "Lang",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new ArrayUtils()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "ArrayUtils()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d51883a2faaa35ecb6ce4abf7135e9b115464922a51d60ce5c50bb1ec0580185",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang3.ArrayUtils",
+  "trigger_tests": [
+    "org.apache.commons.lang3.ArrayUtilsAddTest::testLANG571"
+  ]
+}

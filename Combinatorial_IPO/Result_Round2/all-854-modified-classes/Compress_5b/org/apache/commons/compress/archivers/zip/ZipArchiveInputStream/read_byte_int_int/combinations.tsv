@@ -1,0 +1,26 @@
+buffer	length	receiver__inputStream	start
+new byte[] {}	0	new java.io.ByteArrayInputStream(new byte[] {})	0
+new byte[] {}	1	new java.io.ByteArrayInputStream(new byte[] {1})	1
+new byte[] {}	-1	new java.io.ByteArrayInputStream(new byte[] {})	-1
+new byte[] {}	Integer.MAX_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MAX_VALUE
+new byte[] {}	Integer.MIN_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MIN_VALUE
+new byte[] {1}	0	new java.io.ByteArrayInputStream(new byte[] {1})	-1
+new byte[] {1}	1	new java.io.ByteArrayInputStream(new byte[] {})	0
+new byte[] {1}	-1	new java.io.ByteArrayInputStream(new byte[] {1})	Integer.MAX_VALUE
+new byte[] {1}	Integer.MAX_VALUE	new java.io.ByteArrayInputStream(new byte[] {1})	Integer.MIN_VALUE
+new byte[] {1}	Integer.MIN_VALUE	new java.io.ByteArrayInputStream(new byte[] {1})	0
+new byte[] {}	-1	new java.io.ByteArrayInputStream(new byte[] {})	0
+new byte[] {}	Integer.MAX_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	0
+new byte[] {1}	0	new java.io.ByteArrayInputStream(new byte[] {})	1
+new byte[] {}	-1	new java.io.ByteArrayInputStream(new byte[] {})	1
+new byte[] {}	Integer.MAX_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	1
+new byte[] {}	Integer.MIN_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	1
+new byte[] {}	1	new java.io.ByteArrayInputStream(new byte[] {})	-1
+new byte[] {}	Integer.MAX_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	-1
+new byte[] {}	Integer.MIN_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	-1
+new byte[] {}	0	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MAX_VALUE
+new byte[] {}	1	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MAX_VALUE
+new byte[] {}	Integer.MIN_VALUE	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MAX_VALUE
+new byte[] {}	0	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MIN_VALUE
+new byte[] {}	1	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MIN_VALUE
+new byte[] {}	-1	new java.io.ByteArrayInputStream(new byte[] {})	Integer.MIN_VALUE

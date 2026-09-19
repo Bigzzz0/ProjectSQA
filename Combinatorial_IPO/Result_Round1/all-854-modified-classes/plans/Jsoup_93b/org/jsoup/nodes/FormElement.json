@@ -1,0 +1,147 @@
+{
+  "audit_hash": "4f4802d6f4f57b9e6db831b96d9d4ce31d9dfc276b15741b3f7b68b632d5a914",
+  "bug_id": 93,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "FormElement",
+      "parameters": [
+        {
+          "name": "tag",
+          "type": "Tag"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "attributes",
+          "type": "Attributes"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "FormElement(Tag,String,Attributes)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "elements",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Elements",
+      "signature": "elements()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addElement",
+      "parameters": [
+        {
+          "name": "element",
+          "type": "Element"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FormElement",
+      "signature": "addElement(Element)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeChild",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "removeChild(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "submit",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Connection",
+      "signature": "submit()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "formData",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "List<Connection.KeyVal>",
+      "signature": "formData()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "4f4802d6f4f57b9e6db831b96d9d4ce31d9dfc276b15741b3f7b68b632d5a914",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "faf1702c1ef22a8f2a2bdaeaf1cf7701286bb961457c10db949bad0f201cc6cb",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jsoup.nodes.FormElement",
+  "trigger_tests": [
+    "org.jsoup.nodes.FormElementTest::createsFormData"
+  ]
+}

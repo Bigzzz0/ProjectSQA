@@ -1,0 +1,511 @@
+{
+  "audit_hash": "35e72d7d07d8559d74d7ff9d8537f0ee1cbcfc0a01f743d99def314087a396c2",
+  "bug_id": 3,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 27
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Tag",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Tag(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getName",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getName()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "valueOf",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "valueOf(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "canContain",
+      "parameters": [
+        {
+          "name": "child",
+          "type": "Tag"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "canContain(Tag)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isBlock",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isBlock()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "canContainBlock",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "canContainBlock()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isInline",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isInline()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isData",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isData()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmpty",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmpty()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "preserveWhitespace",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "preserveWhitespace()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getImplicitParent",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "getImplicitParent()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "requiresSpecificParent",
+      "parameters": [],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "requiresSpecificParent()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "isValidParent",
+      "parameters": [
+        {
+          "name": "child",
+          "type": "Tag"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "isValidParent(Tag)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "isValidAncestor",
+      "parameters": [
+        {
+          "name": "child",
+          "type": "Tag"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "isValidAncestor(Tag)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "o",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createBlock",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "createBlock(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createInline",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "createInline(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "register",
+      "parameters": [
+        {
+          "name": "tag",
+          "type": "Tag"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "register(Tag)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setContainInlineOnly",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "setContainInlineOnly()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setContainDataOnly",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "setContainDataOnly()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setEmpty",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "setEmpty()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setOptionalClosing",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "setOptionalClosing()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPreserveWhitespace",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "setPreserveWhitespace()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setAncestor",
+      "parameters": [
+        {
+          "name": "tagNames",
+          "type": "String[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Tag",
+      "signature": "setAncestor(String[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "setParent",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "Tag",
+      "signature": "setParent(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "35e72d7d07d8559d74d7ff9d8537f0ee1cbcfc0a01f743d99def314087a396c2",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "f15d26b1aeeea0a000f086c544ef0a201ee1bca048555294cf4da8f7820e708d",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.jsoup.parser.Tag",
+  "trigger_tests": [
+    "org.jsoup.nodes.ElementTest::testAppendRowToTable",
+    "org.jsoup.nodes.ElementTest::testPrependRowToTable",
+    "org.jsoup.parser.ParserTest::handlesNestedImplicitTable"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "actual_class": "com.google.gson.internal.ParameterizedTypeImpl",
+  "audit_hash": "874378d1b6ac9e8afd668258fafcc868ac60e5d78750ad29f82ca724bcfe02d4",
+  "bug_id": 16,
+  "project": "Gson",
+  "reason": "Parsed class does not match catalog target_class",
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "status": "DATA_ERROR",
+  "target_class": "com.google.gson.internal.$Gson$Types"
+}

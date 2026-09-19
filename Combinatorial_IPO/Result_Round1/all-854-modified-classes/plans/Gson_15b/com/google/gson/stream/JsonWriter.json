@@ -1,0 +1,649 @@
+{
+  "audit_hash": "152c110f5d9d94a18b17d850f3046dcf6c2d821258ca4cf97a6877659644570c",
+  "bug_id": 15,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 5,
+    "NEEDS_ENTRY_POINT": 27
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "Writer"
+      ],
+      "name": "JsonWriter",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "Writer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "JsonWriter(Writer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setIndent",
+      "parameters": [
+        {
+          "name": "indent",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setIndent(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "setLenient",
+      "parameters": [
+        {
+          "name": "lenient",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "void",
+      "signature": "setLenient(boolean)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLenient",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLenient()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setHtmlSafe",
+      "parameters": [
+        {
+          "name": "htmlSafe",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setHtmlSafe(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isHtmlSafe",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isHtmlSafe()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSerializeNulls",
+      "parameters": [
+        {
+          "name": "serializeNulls",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSerializeNulls(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSerializeNulls",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "getSerializeNulls()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "beginArray",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "JsonWriter",
+      "signature": "beginArray()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "endArray",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "JsonWriter",
+      "signature": "endArray()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "beginObject",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "beginObject()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "endObject",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "endObject()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "open",
+      "parameters": [
+        {
+          "name": "empty",
+          "type": "int"
+        },
+        {
+          "name": "openBracket",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "open(int,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "push",
+      "parameters": [
+        {
+          "name": "newTop",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "push(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "peek",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "peek()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "replaceTop",
+      "parameters": [
+        {
+          "name": "topOfStack",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "replaceTop(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "name",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "name(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeDeferredName",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeDeferredName()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "value(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "jsonValue",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "jsonValue(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nullValue",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "nullValue()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "value(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "value(Boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "double"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "JsonWriter",
+      "signature": "value(double)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "value(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Number"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonWriter",
+      "signature": "value(Number)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flush",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flush()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "close",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "close()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "string",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "string(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newline",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "newline()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "beforeName",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "beforeName()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "beforeValue",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "beforeValue()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "152c110f5d9d94a18b17d850f3046dcf6c2d821258ca4cf97a6877659644570c",
+  "missing_adapters": [
+    "Writer",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Gson",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "3815df4d84b04ef8ca0d16af58ebdc458a6a472de7353ca18db9513bd5e83b6b",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.google.gson.stream.JsonWriter",
+  "trigger_tests": [
+    "com.google.gson.stream.JsonWriterTest::testNonFiniteDoublesWhenLenient"
+  ]
+}

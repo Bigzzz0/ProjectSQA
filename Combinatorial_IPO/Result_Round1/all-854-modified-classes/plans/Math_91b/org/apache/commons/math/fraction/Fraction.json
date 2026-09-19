@@ -1,0 +1,445 @@
+{
+  "audit_hash": "e793f0ce2432734ec23ee029922fc3815ff8f2f81644912a513c1792837a0f07",
+  "bug_id": 91,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 18,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Fraction",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Fraction(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Fraction",
+      "parameters": [
+        {
+          "name": "num",
+          "type": "int"
+        },
+        {
+          "name": "den",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Fraction(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "abs",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "abs()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Fraction"
+      ],
+      "name": "compareTo",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "Fraction"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "compareTo(Fraction)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "doubleValue",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__value": "generic"
+        },
+        "cleanup_required": false,
+        "expression_template": "new Fraction({receiver__value})",
+        "factor_domains": {
+          "receiver__value": [
+            "0.0d",
+            "1.0d",
+            "-1.0d",
+            "Double.NaN",
+            "Double.POSITIVE_INFINITY"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "Fraction(double)"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "double",
+      "signature": "doubleValue()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "other",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "floatValue",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "float",
+      "signature": "floatValue()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDenominator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getDenominator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNumerator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getNumerator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "intValue",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "intValue()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "longValue",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "longValue()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "negate",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "negate()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reciprocal",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "reciprocal()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "add",
+      "parameters": [
+        {
+          "name": "fraction",
+          "type": "Fraction"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "add(Fraction)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "subtract",
+      "parameters": [
+        {
+          "name": "fraction",
+          "type": "Fraction"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "subtract(Fraction)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addSub",
+      "parameters": [
+        {
+          "name": "fraction",
+          "type": "Fraction"
+        },
+        {
+          "name": "isAdd",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "addSub(Fraction,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "multiply",
+      "parameters": [
+        {
+          "name": "fraction",
+          "type": "Fraction"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "multiply(Fraction)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "divide",
+      "parameters": [
+        {
+          "name": "fraction",
+          "type": "Fraction"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "divide(Fraction)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getReducedFraction",
+      "parameters": [
+        {
+          "name": "numerator",
+          "type": "int"
+        },
+        {
+          "name": "denominator",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Fraction",
+      "signature": "getReducedFraction(int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "e793f0ce2432734ec23ee029922fc3815ff8f2f81644912a513c1792837a0f07",
+  "missing_adapters": [
+    "Fraction",
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__value": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new Fraction({receiver__value})",
+    "factor_domains": {
+      "receiver__value": [
+        "0.0d",
+        "1.0d",
+        "-1.0d",
+        "Double.NaN",
+        "Double.POSITIVE_INFINITY"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "Fraction(double)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "02f020b23a529fcbb8e3589e9ae2d19016c1ac014d4bb98146a85d79c20adfd4",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.fraction.Fraction",
+  "trigger_tests": [
+    "org.apache.commons.math.fraction.FractionTest::testCompareTo"
+  ]
+}

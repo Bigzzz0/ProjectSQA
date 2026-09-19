@@ -1,0 +1,16 @@
+{
+  "base": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ],
+  "x": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ]
+}

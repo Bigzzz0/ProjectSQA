@@ -1,0 +1,780 @@
+{
+  "audit_hash": "53fe887a9a842cebbaa1754ab64411471772ee5e094189f62679e0251370c72a",
+  "bug_id": 8,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 38
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "CSVFormat",
+      "parameters": [
+        {
+          "name": "delimiter",
+          "type": "char"
+        },
+        {
+          "name": "quoteChar",
+          "type": "Character"
+        },
+        {
+          "name": "quotePolicy",
+          "type": "Quote"
+        },
+        {
+          "name": "commentStart",
+          "type": "Character"
+        },
+        {
+          "name": "escape",
+          "type": "Character"
+        },
+        {
+          "name": "ignoreSurroundingSpaces",
+          "type": "boolean"
+        },
+        {
+          "name": "ignoreEmptyLines",
+          "type": "boolean"
+        },
+        {
+          "name": "recordSeparator",
+          "type": "String"
+        },
+        {
+          "name": "nullString",
+          "type": "String"
+        },
+        {
+          "name": "header",
+          "type": "String[]"
+        },
+        {
+          "name": "skipHeaderRecord",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": null,
+      "signature": "CSVFormat(char,Character,Quote,Character,Character,boolean,boolean,String,String,String[],boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLineBreak",
+      "parameters": [
+        {
+          "name": "c",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLineBreak(char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLineBreak",
+      "parameters": [
+        {
+          "name": "c",
+          "type": "Character"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLineBreak(Character)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newFormat",
+      "parameters": [
+        {
+          "name": "delimiter",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "newFormat(char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "format(Object[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCommentStart",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Character",
+      "signature": "getCommentStart()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDelimiter",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char",
+      "signature": "getDelimiter()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getEscape",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Character",
+      "signature": "getEscape()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getHeader",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "getHeader()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getIgnoreEmptyLines",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "getIgnoreEmptyLines()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getIgnoreSurroundingSpaces",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "getIgnoreSurroundingSpaces()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNullString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getNullString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getQuoteChar",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Character",
+      "signature": "getQuoteChar()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getQuotePolicy",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Quote",
+      "signature": "getQuotePolicy()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRecordSeparator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getRecordSeparator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSkipHeaderRecord",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "getSkipHeaderRecord()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCommentingEnabled",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCommentingEnabled()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEscaping",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEscaping()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isNullHandling",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isNullHandling()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isQuoting",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isQuoting()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "Reader"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVParser",
+      "signature": "parse(Reader)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "validate",
+      "parameters": [],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "validate()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withCommentStart",
+      "parameters": [
+        {
+          "name": "commentStart",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withCommentStart(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withCommentStart",
+      "parameters": [
+        {
+          "name": "commentStart",
+          "type": "Character"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withCommentStart(Character)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withDelimiter",
+      "parameters": [
+        {
+          "name": "delimiter",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withDelimiter(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withEscape",
+      "parameters": [
+        {
+          "name": "escape",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withEscape(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withEscape",
+      "parameters": [
+        {
+          "name": "escape",
+          "type": "Character"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withEscape(Character)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "withHeader",
+      "parameters": [
+        {
+          "name": "header",
+          "type": "String[]"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "CSVFormat",
+      "signature": "withHeader(String[])",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withIgnoreEmptyLines",
+      "parameters": [
+        {
+          "name": "ignoreEmptyLines",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withIgnoreEmptyLines(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withIgnoreSurroundingSpaces",
+      "parameters": [
+        {
+          "name": "ignoreSurroundingSpaces",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withIgnoreSurroundingSpaces(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withNullString",
+      "parameters": [
+        {
+          "name": "nullString",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withNullString(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withQuoteChar",
+      "parameters": [
+        {
+          "name": "quoteChar",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withQuoteChar(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withQuoteChar",
+      "parameters": [
+        {
+          "name": "quoteChar",
+          "type": "Character"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withQuoteChar(Character)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withQuotePolicy",
+      "parameters": [
+        {
+          "name": "quotePolicy",
+          "type": "Quote"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withQuotePolicy(Quote)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withRecordSeparator",
+      "parameters": [
+        {
+          "name": "recordSeparator",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withRecordSeparator(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withRecordSeparator",
+      "parameters": [
+        {
+          "name": "recordSeparator",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withRecordSeparator(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withSkipHeaderRecord",
+      "parameters": [
+        {
+          "name": "skipHeaderRecord",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CSVFormat",
+      "signature": "withSkipHeaderRecord(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "53fe887a9a842cebbaa1754ab64411471772ee5e094189f62679e0251370c72a",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point",
+    "receiver_factory"
+  ],
+  "project": "Csv",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "0a2517d713a7df5e58885ea404bea68f75efbf3e79659d9b9ddc9c39a776da1d",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.csv.CSVFormat",
+  "trigger_tests": [
+    "org.apache.commons.csv.CSVFormatTest::testDuplicateHeaderElements"
+  ]
+}

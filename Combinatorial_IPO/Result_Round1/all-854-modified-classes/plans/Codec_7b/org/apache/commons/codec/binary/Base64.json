@@ -1,0 +1,904 @@
+{
+  "audit_hash": "8dcb08ed8f30dc360699447028ba75514dc4a932d861cf69d97fe435030844e1",
+  "bug_id": 7,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 36,
+    "NOT_PAIRWISE_APPLICABLE": 3
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64",
+      "parameters": [
+        {
+          "name": "urlSafe",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64",
+      "parameters": [
+        {
+          "name": "lineLength",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64",
+      "parameters": [
+        {
+          "name": "lineLength",
+          "type": "int"
+        },
+        {
+          "name": "lineSeparator",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64(int,byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64",
+      "parameters": [
+        {
+          "name": "lineLength",
+          "type": "int"
+        },
+        {
+          "name": "lineSeparator",
+          "type": "byte[]"
+        },
+        {
+          "name": "urlSafe",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64(int,byte[],boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isUrlSafe",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isUrlSafe()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasData",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasData()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "avail",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "avail()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "resizeBuffer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "resizeBuffer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readResults",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "byte[]"
+        },
+        {
+          "name": "bPos",
+          "type": "int"
+        },
+        {
+          "name": "bAvail",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "readResults(byte[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setInitialBuffer",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "byte[]"
+        },
+        {
+          "name": "outPos",
+          "type": "int"
+        },
+        {
+          "name": "outAvail",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setInitialBuffer(byte[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "byte[]"
+        },
+        {
+          "name": "inPos",
+          "type": "int"
+        },
+        {
+          "name": "inAvail",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "encode(byte[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decode",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "byte[]"
+        },
+        {
+          "name": "inPos",
+          "type": "int"
+        },
+        {
+          "name": "inAvail",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "decode(byte[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isBase64",
+      "parameters": [
+        {
+          "name": "octet",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isBase64(byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isArrayByteBase64",
+      "parameters": [
+        {
+          "name": "arrayOctet",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isArrayByteBase64(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsBase64Byte",
+      "parameters": [
+        {
+          "name": "arrayOctet",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsBase64Byte(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeBase64",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeBase64(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "encodeBase64String",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "recommended_test_type": "example_based",
+      "return_type": "String",
+      "signature": "encodeBase64String(byte[])",
+      "static": true,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeBase64URLSafe",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeBase64URLSafe(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "encodeBase64URLSafeString",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "recommended_test_type": "example_based",
+      "return_type": "String",
+      "signature": "encodeBase64URLSafeString(byte[])",
+      "static": true,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeBase64Chunked",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeBase64Chunked(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decode",
+      "parameters": [
+        {
+          "name": "pObject",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "decode(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decode",
+      "parameters": [
+        {
+          "name": "pArray",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "decode(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decode",
+      "parameters": [
+        {
+          "name": "pArray",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "decode(byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeBase64",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        },
+        {
+          "name": "isChunked",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeBase64(byte[],boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeBase64",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        },
+        {
+          "name": "isChunked",
+          "type": "boolean"
+        },
+        {
+          "name": "urlSafe",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeBase64(byte[],boolean,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeBase64",
+      "parameters": [
+        {
+          "name": "binaryData",
+          "type": "byte[]"
+        },
+        {
+          "name": "isChunked",
+          "type": "boolean"
+        },
+        {
+          "name": "urlSafe",
+          "type": "boolean"
+        },
+        {
+          "name": "maxResultSize",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeBase64(byte[],boolean,boolean,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decodeBase64",
+      "parameters": [
+        {
+          "name": "base64String",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "decodeBase64(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decodeBase64",
+      "parameters": [
+        {
+          "name": "base64Data",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "decodeBase64(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "discardWhitespace",
+      "parameters": [
+        {
+          "name": "data",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "discardWhitespace(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isWhiteSpace",
+      "parameters": [
+        {
+          "name": "byteToCheck",
+          "type": "byte"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isWhiteSpace(byte)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "pObject",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "encode(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "encodeToString",
+      "parameters": [
+        {
+          "name": "pArray",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {},
+        "cleanup_required": false,
+        "expression_template": "new Base64()",
+        "factor_domains": {},
+        "kind": "zero_arg_constructor",
+        "signature": "Base64()"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "String",
+      "signature": "encodeToString(byte[])",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "pArray",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encode(byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getEncodeLength",
+      "parameters": [
+        {
+          "name": "pArray",
+          "type": "byte[]"
+        },
+        {
+          "name": "chunkSize",
+          "type": "int"
+        },
+        {
+          "name": "chunkSeparator",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "getEncodeLength(byte[],int,byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "decodeInteger",
+      "parameters": [
+        {
+          "name": "pArray",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BigInteger",
+      "signature": "decodeInteger(byte[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encodeInteger",
+      "parameters": [
+        {
+          "name": "bigInt",
+          "type": "BigInteger"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "encodeInteger(BigInteger)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toIntegerBytes",
+      "parameters": [
+        {
+          "name": "bigInt",
+          "type": "BigInteger"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "toIntegerBytes(BigInteger)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reset",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reset()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "8dcb08ed8f30dc360699447028ba75514dc4a932d861cf69d97fe435030844e1",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Codec",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Base64()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "Base64()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a90e5d65b4372543dbfb3619759573436412aed91427a3f47f76e9842fcdcf20",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.codec.binary.Base64",
+  "trigger_tests": [
+    "org.apache.commons.codec.binary.Base64Test::testByteToStringVariations",
+    "org.apache.commons.codec.binary.Base64Test::testRfc4648Section10Encode"
+  ]
+}

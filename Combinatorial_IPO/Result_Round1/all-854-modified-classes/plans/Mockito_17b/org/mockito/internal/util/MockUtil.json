@@ -1,0 +1,218 @@
+{
+  "audit_hash": "43767cf0d804140846b4d918f46b38676acf39836e6e01226663079e5c8ceded",
+  "bug_id": 17,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 8
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MockUtil",
+      "parameters": [
+        {
+          "name": "creationValidator",
+          "type": "CreationValidator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MockUtil(CreationValidator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MockUtil",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MockUtil()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Class<T>",
+        "MockSettingsImpl"
+      ],
+      "name": "createMock",
+      "parameters": [
+        {
+          "name": "classToMock",
+          "type": "Class<T>"
+        },
+        {
+          "name": "settings",
+          "type": "MockSettingsImpl"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "<T> T",
+      "signature": "createMock(Class<T>,MockSettingsImpl)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "resetMock",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> void",
+      "signature": "resetMock(T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMockHandler",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> MockHandlerInterface<T>",
+      "signature": "getMockHandler(T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isMockitoMock",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> boolean",
+      "signature": "isMockitoMock(T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isMock",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isMock(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInterceptor",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> MethodInterceptorFilter",
+      "signature": "getInterceptor(T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMockName",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MockName",
+      "signature": "getMockName(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "43767cf0d804140846b4d918f46b38676acf39836e6e01226663079e5c8ceded",
+  "missing_adapters": [
+    "Class<T>",
+    "MockSettingsImpl",
+    "entry_point_evidence"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new MockUtil()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "MockUtil()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "7de24e2a687eb13ccfef5304ead01d20dbbb08a5198e83f8bfc91428f3d7bfe4",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.util.MockUtil",
+  "trigger_tests": [
+    "org.mockitousage.basicapi.MocksSerializationTest::shouldBeSerializeAndHaveExtraInterfaces"
+  ]
+}

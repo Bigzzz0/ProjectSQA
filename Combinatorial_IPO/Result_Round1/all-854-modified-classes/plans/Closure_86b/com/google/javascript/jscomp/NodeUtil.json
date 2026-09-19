@@ -1,0 +1,2858 @@
+{
+  "audit_hash": "14acebe090ff5d09ac6161b7cab98e528acea2390a997f9467ec5e3ece45f7cb",
+  "bug_id": 86,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 129
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "NodeUtil",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "NodeUtil()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getExpressionBooleanValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TernaryValue",
+      "signature": "getExpressionBooleanValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getBooleanValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TernaryValue",
+      "signature": "getBooleanValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStringValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getStringValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNumberValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Double",
+      "signature": "getNumberValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFunctionName",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getFunctionName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNearestFunctionName",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getNearestFunctionName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isImmutableValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isImmutableValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLiteralValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "includeFunctions",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLiteralValue(Node,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isValidDefineValue",
+      "parameters": [
+        {
+          "name": "val",
+          "type": "Node"
+        },
+        {
+          "name": "defines",
+          "type": "Set<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isValidDefineValue(Node,Set<String>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmptyBlock",
+      "parameters": [
+        {
+          "name": "block",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmptyBlock(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSimpleOperator",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSimpleOperator(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSimpleOperatorType",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSimpleOperatorType(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newExpr",
+      "parameters": [
+        {
+          "name": "child",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newExpr(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mayEffectMutableState",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "mayEffectMutableState(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mayEffectMutableState",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "mayEffectMutableState(Node,AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mayHaveSideEffects",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "mayHaveSideEffects(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mayHaveSideEffects",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "mayHaveSideEffects(Node,AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkForStateChangeHelper",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "checkForNewObjects",
+          "type": "boolean"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "checkForStateChangeHelper(Node,boolean,AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "constructorCallHasSideEffects",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "constructorCallHasSideEffects(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "constructorCallHasSideEffects",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "constructorCallHasSideEffects(Node,AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "functionCallHasSideEffects",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "functionCallHasSideEffects(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "functionCallHasSideEffects",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "functionCallHasSideEffects(Node,AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "callHasLocalResult",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "callHasLocalResult(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nodeTypeMayHaveSideEffects",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "nodeTypeMayHaveSideEffects(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nodeTypeMayHaveSideEffects",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "nodeTypeMayHaveSideEffects(Node,AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "canBeSideEffected",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "canBeSideEffected(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "canBeSideEffected",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "knownConstants",
+          "type": "Set<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "canBeSideEffected(Node,Set<String>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "precedence",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "precedence(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isAssociative",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isAssociative(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCommutative",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCommutative(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isAssignmentOp",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isAssignmentOp(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOpFromAssignmentOp",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getOpFromAssignmentOp(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isExpressionNode",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isExpressionNode(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsFunction",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsFunction(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "referencesThis",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "referencesThis(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isGet",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isGet(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isGetProp",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isGetProp(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isName",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isNew",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isNew(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isVar",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isVar(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isVarDeclaration",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isVarDeclaration(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAssignedValue",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getAssignedValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isString",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isString(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isExprAssign",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isExprAssign(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isAssign",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isAssign(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isExprCall",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isExprCall(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isForIn",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isForIn(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLoopStructure",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLoopStructure(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLoopCodeBlock",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getLoopCodeBlock(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isWithinLoop",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isWithinLoop(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isControlStructure",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isControlStructure(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isControlStructureCodeBlock",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "Node"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isControlStructureCodeBlock(Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getConditionExpression",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getConditionExpression(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isStatementBlock",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isStatementBlock(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isStatement",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isStatement(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSwitchCase",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSwitchCase(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isReferenceName",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isReferenceName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLabelName",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLabelName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isTryFinallyNode",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "Node"
+        },
+        {
+          "name": "child",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isTryFinallyNode(Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeChild",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "Node"
+        },
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "removeChild(Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryMergeBlock",
+      "parameters": [
+        {
+          "name": "block",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "tryMergeBlock(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCall",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCall(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCallOrNew",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCallOrNew(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunction",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunction(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFunctionBody",
+      "parameters": [
+        {
+          "name": "fn",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getFunctionBody(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isThis",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isThis(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsCall",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsCall(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunctionDeclaration",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunctionDeclaration(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isHoistedFunctionDeclaration",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isHoistedFunctionDeclaration(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunctionExpression",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunctionExpression(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmptyFunctionExpression",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmptyFunctionExpression(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isVarArgsFunction",
+      "parameters": [
+        {
+          "name": "function",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isVarArgsFunction(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isObjectCallMethod",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "methodName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isObjectCallMethod(Node,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunctionObjectCall",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunctionObjectCall(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunctionObjectApply",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunctionObjectApply(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isFunctionObjectCallOrApply",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isFunctionObjectCallOrApply(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSimpleFunctionObjectCall",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSimpleFunctionObjectCall(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLhs",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLhs(Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isObjectLitKey",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isObjectLitKey(Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isGetOrSetKey",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isGetOrSetKey(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "opToStr",
+      "parameters": [
+        {
+          "name": "operator",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "opToStr(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "opToStrNoFail",
+      "parameters": [
+        {
+          "name": "operator",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "opToStrNoFail(int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsType",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsType(Node,int,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsType",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsType(Node,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "redeclareVarsInsideBranch",
+      "parameters": [
+        {
+          "name": "branch",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "redeclareVarsInsideBranch(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "copyNameAnnotations",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "Node"
+        },
+        {
+          "name": "destination",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "copyNameAnnotations(Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAddingRoot",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getAddingRoot(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newFunctionNode",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "type": "List<Node>"
+        },
+        {
+          "name": "body",
+          "type": "Node"
+        },
+        {
+          "name": "lineno",
+          "type": "int"
+        },
+        {
+          "name": "charno",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newFunctionNode(String,List<Node>,Node,int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newQualifiedNameNode",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "lineno",
+          "type": "int"
+        },
+        {
+          "name": "charno",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newQualifiedNameNode(CodingConvention,String,int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newQualifiedNameNode",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "basisNode",
+          "type": "Node"
+        },
+        {
+          "name": "originalName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newQualifiedNameNode(CodingConvention,String,Node,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRootOfQualifiedName",
+      "parameters": [
+        {
+          "name": "qName",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getRootOfQualifiedName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setDebugInformation",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "basisNode",
+          "type": "Node"
+        },
+        {
+          "name": "originalName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setDebugInformation(Node,Node,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newName",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "lineno",
+          "type": "int"
+        },
+        {
+          "name": "charno",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newName(CodingConvention,String,int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newName",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "basisNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newName(CodingConvention,String,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newName",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "basisNode",
+          "type": "Node"
+        },
+        {
+          "name": "originalName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newName(CodingConvention,String,Node,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isLatin",
+      "parameters": [
+        {
+          "name": "s",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isLatin(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isValidPropertyName",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isValidPropertyName(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getVarsDeclaredInBranch",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Collection<Node>",
+      "signature": "getVarsDeclaredInBranch(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isPrototypePropertyDeclaration",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isPrototypePropertyDeclaration(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isPrototypeProperty",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isPrototypeProperty(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPrototypeClassName",
+      "parameters": [
+        {
+          "name": "qName",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getPrototypeClassName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPrototypePropertyName",
+      "parameters": [
+        {
+          "name": "qName",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getPrototypePropertyName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newUndefinedNode",
+      "parameters": [
+        {
+          "name": "srcReferenceNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newUndefinedNode(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newVarNode",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newVarNode(String,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNodeTypeReferenceCount",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getNodeTypeReferenceCount(Node,int,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isNameReferenced",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isNameReferenced(Node,String,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isNameReferenced",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isNameReferenced(Node,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNameReferenceCount",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getNameReferenceCount(Node,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "has",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "pred",
+          "type": "Predicate<Node>"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "has(Node,Predicate<Node>,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCount",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "pred",
+          "type": "Predicate<Node>"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getCount(Node,Predicate<Node>,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "visitPreOrder",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "vistor",
+          "type": "Visitor"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "visitPreOrder(Node,Visitor,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "visitPostOrder",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "vistor",
+          "type": "Visitor"
+        },
+        {
+          "name": "traverseChildrenPred",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "visitPostOrder(Node,Visitor,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasFinally",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasFinally(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCatchBlock",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getCatchBlock(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasCatchHandler",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasCatchHandler(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFnParameters",
+      "parameters": [
+        {
+          "name": "fnNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getFnParameters(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isConstantName",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isConstantName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isConstantByConvention",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isConstantByConvention(CodingConvention,Node,Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInfoForNameNode",
+      "parameters": [
+        {
+          "name": "nameNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSDocInfo",
+      "signature": "getInfoForNameNode(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFunctionInfo",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSDocInfo",
+      "signature": "getFunctionInfo(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSourceName",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getSourceName(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "newCallNode",
+      "parameters": [
+        {
+          "name": "callTarget",
+          "type": "Node"
+        },
+        {
+          "name": "parameters",
+          "type": "Node[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "newCallNode(Node,Node[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "evaluatesToLocalValue",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "evaluatesToLocalValue(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "evaluatesToLocalValue",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Node"
+        },
+        {
+          "name": "locals",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "evaluatesToLocalValue(Node,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getNthSibling",
+      "parameters": [
+        {
+          "name": "first",
+          "type": "Node"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getNthSibling(Node,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getArgumentForFunction",
+      "parameters": [
+        {
+          "name": "function",
+          "type": "Node"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getArgumentForFunction(Node,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getArgumentForCallOrNew",
+      "parameters": [
+        {
+          "name": "call",
+          "type": "Node"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getArgumentForCallOrNew(Node,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isToStringMethodCall",
+      "parameters": [
+        {
+          "name": "call",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isToStringMethodCall(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "14acebe090ff5d09ac6161b7cab98e528acea2390a997f9467ec5e3ece45f7cb",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b67084a4886d3821db2995557887aa245bceb0c6af996739edbda6ce1baeda4a",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.NodeUtil",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.NodeUtilTest::testLocalValue1",
+    "com.google.javascript.jscomp.PureFunctionIdentifierTest::testLocalizedSideEffects8",
+    "com.google.javascript.jscomp.PureFunctionIdentifierTest::testLocalizedSideEffects9",
+    "com.google.javascript.jscomp.PureFunctionIdentifierTest::testAnnotationInExterns_new4",
+    "com.google.javascript.jscomp.PureFunctionIdentifierTest::testAnnotationInExterns_new6",
+    "com.google.javascript.jscomp.PureFunctionIdentifierTest::testIssue303b",
+    "com.google.javascript.jscomp.PureFunctionIdentifierTest::testIssue303"
+  ]
+}

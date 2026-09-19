@@ -1,0 +1,731 @@
+{
+  "audit_hash": "c35e10c5d6812800ef92433b82fd07225e2d13d7f7a71e1c691f8351d4bbaf96",
+  "bug_id": 29,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 31
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "TarArchiveOutputStream",
+      "parameters": [
+        {
+          "name": "os",
+          "type": "OutputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "TarArchiveOutputStream(OutputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "TarArchiveOutputStream",
+      "parameters": [
+        {
+          "name": "os",
+          "type": "OutputStream"
+        },
+        {
+          "name": "encoding",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "TarArchiveOutputStream(OutputStream,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "TarArchiveOutputStream",
+      "parameters": [
+        {
+          "name": "os",
+          "type": "OutputStream"
+        },
+        {
+          "name": "blockSize",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "TarArchiveOutputStream(OutputStream,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "TarArchiveOutputStream",
+      "parameters": [
+        {
+          "name": "os",
+          "type": "OutputStream"
+        },
+        {
+          "name": "blockSize",
+          "type": "int"
+        },
+        {
+          "name": "encoding",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "TarArchiveOutputStream(OutputStream,int,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "TarArchiveOutputStream",
+      "parameters": [
+        {
+          "name": "os",
+          "type": "OutputStream"
+        },
+        {
+          "name": "blockSize",
+          "type": "int"
+        },
+        {
+          "name": "recordSize",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "TarArchiveOutputStream(OutputStream,int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "OutputStream"
+      ],
+      "name": "TarArchiveOutputStream",
+      "parameters": [
+        {
+          "name": "os",
+          "type": "OutputStream"
+        },
+        {
+          "name": "blockSize",
+          "type": "int"
+        },
+        {
+          "name": "recordSize",
+          "type": "int"
+        },
+        {
+          "name": "encoding",
+          "type": "String"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "TarArchiveOutputStream(OutputStream,int,int,String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setLongFileMode",
+      "parameters": [
+        {
+          "name": "longFileMode",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setLongFileMode(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setBigNumberMode",
+      "parameters": [
+        {
+          "name": "bigNumberMode",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setBigNumberMode(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setAddPaxHeadersForNonAsciiNames",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setAddPaxHeadersForNonAsciiNames(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getBytesWritten",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "getBytesWritten()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "finish",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "finish()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "close",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "close()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRecordSize",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getRecordSize()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "putArchiveEntry",
+      "parameters": [
+        {
+          "name": "archiveEntry",
+          "type": "ArchiveEntry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "putArchiveEntry(ArchiveEntry)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "closeArchiveEntry",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "closeArchiveEntry()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "write",
+      "parameters": [
+        {
+          "name": "wBuf",
+          "type": "byte[]"
+        },
+        {
+          "name": "wOffset",
+          "type": "int"
+        },
+        {
+          "name": "numToWrite",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "write(byte[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writePaxHeaders",
+      "parameters": [
+        {
+          "name": "entry",
+          "type": "TarArchiveEntry"
+        },
+        {
+          "name": "entryName",
+          "type": "String"
+        },
+        {
+          "name": "headers",
+          "type": "Map<String, String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writePaxHeaders(TarArchiveEntry,String,Map<String,String>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "stripTo7Bits",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "stripTo7Bits(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldBeReplaced",
+      "parameters": [
+        {
+          "name": "c",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldBeReplaced(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeEOFRecord",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeEOFRecord()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flush",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flush()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeRecord",
+      "parameters": [
+        {
+          "name": "record",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeRecord(byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeRecord",
+      "parameters": [
+        {
+          "name": "buf",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeRecord(byte[],int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "padAsNeeded",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "padAsNeeded()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addPaxHeadersForBigNumbers",
+      "parameters": [
+        {
+          "name": "paxHeaders",
+          "type": "Map<String, String>"
+        },
+        {
+          "name": "entry",
+          "type": "TarArchiveEntry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addPaxHeadersForBigNumbers(Map<String,String>,TarArchiveEntry)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addPaxHeaderForBigNumber",
+      "parameters": [
+        {
+          "name": "paxHeaders",
+          "type": "Map<String, String>"
+        },
+        {
+          "name": "header",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "long"
+        },
+        {
+          "name": "maxValue",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addPaxHeaderForBigNumber(Map<String,String>,String,long,long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "failForBigNumbers",
+      "parameters": [
+        {
+          "name": "entry",
+          "type": "TarArchiveEntry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "failForBigNumbers(TarArchiveEntry)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "failForBigNumber",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "long"
+        },
+        {
+          "name": "maxValue",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "failForBigNumber(String,long,long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "failForBigNumberWithPosixMessage",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "long"
+        },
+        {
+          "name": "maxValue",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "failForBigNumberWithPosixMessage(String,long,long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "failForBigNumber",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "long"
+        },
+        {
+          "name": "maxValue",
+          "type": "long"
+        },
+        {
+          "name": "additionalMsg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "failForBigNumber(String,long,long,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "transferModTime",
+      "parameters": [
+        {
+          "name": "from",
+          "type": "TarArchiveEntry"
+        },
+        {
+          "name": "to",
+          "type": "TarArchiveEntry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "transferModTime(TarArchiveEntry,TarArchiveEntry)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "c35e10c5d6812800ef92433b82fd07225e2d13d7f7a71e1c691f8351d4bbaf96",
+  "missing_adapters": [
+    "OutputStream",
+    "entry_point_evidence"
+  ],
+  "project": "Compress",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "39f9220b970268d7460db68af6b6f17b92163212de7a86493ba0e1d20df5f534",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.compress.archivers.tar.TarArchiveOutputStream",
+  "trigger_tests": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryTest::testEncodingInputStream",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryTest::testEncodingInputStreamAutodetect",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactoryTest::testEncodingOutputStream"
+  ]
+}

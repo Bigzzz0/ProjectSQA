@@ -1,0 +1,376 @@
+{
+  "audit_hash": "d2b1cbe72ac82116b72964ad824b473ff3e2df9666e577cb59dde9f4955a2b6c",
+  "bug_id": 50,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 14
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "optimizeSubtree",
+      "parameters": [
+        {
+          "name": "subtree",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "optimizeSubtree(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldKnownMethods",
+      "parameters": [
+        {
+          "name": "subtree",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldKnownMethods(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldKnownStringMethods",
+      "parameters": [
+        {
+          "name": "subtree",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldKnownStringMethods(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldKnownNumericMethods",
+      "parameters": [
+        {
+          "name": "subtree",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldKnownNumericMethods(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringToLowerCase",
+      "parameters": [
+        {
+          "name": "subtree",
+          "type": "Node"
+        },
+        {
+          "name": "stringNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringToLowerCase(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringToUpperCase",
+      "parameters": [
+        {
+          "name": "subtree",
+          "type": "Node"
+        },
+        {
+          "name": "stringNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringToUpperCase(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "normalizeNumericString",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "normalizeNumericString(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldParseNumber",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "functionName",
+          "type": "String"
+        },
+        {
+          "name": "firstArg",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldParseNumber(Node,String,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringIndexOf",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "functionName",
+          "type": "String"
+        },
+        {
+          "name": "lstringNode",
+          "type": "Node"
+        },
+        {
+          "name": "firstArg",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringIndexOf(Node,String,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "tryFoldArrayJoin",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "Node",
+      "signature": "tryFoldArrayJoin(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringSubstr",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "stringNode",
+          "type": "Node"
+        },
+        {
+          "name": "arg1",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringSubstr(Node,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringSubstring",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "stringNode",
+          "type": "Node"
+        },
+        {
+          "name": "arg1",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringSubstring(Node,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringCharAt",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "stringNode",
+          "type": "Node"
+        },
+        {
+          "name": "arg1",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringCharAt(Node,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tryFoldStringCharCodeAt",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "stringNode",
+          "type": "Node"
+        },
+        {
+          "name": "arg1",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "tryFoldStringCharCodeAt(Node,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "d2b1cbe72ac82116b72964ad824b473ff3e2df9666e577cb59dde9f4955a2b6c",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new PeepholeReplaceKnownMethods()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "56ece014e58eb9cf40a9c2035068c60759e023ed443b65289b7db129cd0fccd1",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.PeepholeReplaceKnownMethods",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsTest::testStringJoinAdd",
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsTest::testNoStringJoin"
+  ]
+}

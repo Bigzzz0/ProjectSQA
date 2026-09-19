@@ -1,0 +1,115 @@
+{
+  "audit_hash": "6d10b58177a60e33823f844aed83b62ebb74a6d2b80baa18fbc09208a526141e",
+  "bug_id": 40,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "ByteOrder"
+      ],
+      "name": "BitInputStream",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "byteOrder",
+          "type": "ByteOrder"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "BitInputStream(InputStream,ByteOrder)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "close",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "close()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clearBitCache",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "clearBitCache()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "readBits",
+      "parameters": [
+        {
+          "name": "count",
+          "type": "int"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "long",
+      "signature": "readBits(int)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "6d10b58177a60e33823f844aed83b62ebb74a6d2b80baa18fbc09208a526141e",
+  "missing_adapters": [
+    "ByteOrder",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Compress",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "fc9f5802e95460ec8a5557dc8515f75c9f3f45f5082454988117c5f2d4bb9a53",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.compress.utils.BitInputStream",
+  "trigger_tests": [
+    "org.apache.commons.compress.utils.BitInputStreamTest::littleEndianWithOverflow",
+    "org.apache.commons.compress.utils.BitInputStreamTest::bigEndianWithOverflow"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "audit_hash": "660d8a2a22d093b0e11ef24b732b13359d38d783f9fa9e34272fdefb90c40bad",
+  "bug_id": 29,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Same",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Same(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "matches",
+      "parameters": [
+        {
+          "name": "actual",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "matches(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Description"
+      ],
+      "name": "describeTo",
+      "parameters": [
+        {
+          "name": "description",
+          "type": "Description"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "describeTo(Description)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "appendQuoting",
+      "parameters": [
+        {
+          "name": "description",
+          "type": "Description"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "appendQuoting(Description)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "660d8a2a22d093b0e11ef24b732b13359d38d783f9fa9e34272fdefb90c40bad",
+  "missing_adapters": [
+    "Description",
+    "entry_point_evidence"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "7cb9e40e2e8dc62b23ce5071a4a1d732140219da81c369bfa68712973e25f12a",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.matchers.Same",
+  "trigger_tests": [
+    "org.mockitousage.bugs.NPEWithCertainMatchersTest::shouldNotThrowNPEWhenNullPassedToSame"
+  ]
+}

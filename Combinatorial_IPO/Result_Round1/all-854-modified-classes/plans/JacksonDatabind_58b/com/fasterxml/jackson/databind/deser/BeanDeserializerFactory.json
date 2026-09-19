@@ -1,0 +1,67 @@
+{
+  "audit_hash": "a30b2a2b607d2c4032bf535ac1f32f9a450a6a603e0141c7fb9cf77d68931793",
+  "bug_id": 58,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BeanDeserializerFactory",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BeanDeserializerFactory(DeserializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "constructBeanDeserializerBuilder",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BeanDeserializerBuilder",
+      "signature": "constructBeanDeserializerBuilder(DeserializationContext,BeanDescription)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "a30b2a2b607d2c4032bf535ac1f32f9a450a6a603e0141c7fb9cf77d68931793",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "3d3650092d64fe8c641b782a3643ece946595457b0acc0b2d4d7367a3b6392dc",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.misc.AccessFixTest::testCauseOfThrowableIgnoral"
+  ]
+}

@@ -1,0 +1,543 @@
+{
+  "audit_hash": "b020a4f67740104b520ec24678ae0026f4428166ffdcc7dbb93e5b5d17ecb541",
+  "bug_id": 22,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 7,
+    "NEEDS_ENTRY_POINT": 12,
+    "NOT_PAIRWISE_APPLICABLE": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "KeyedObjects2D",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "KeyedObjects2D()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "getRowCount",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {},
+        "cleanup_required": false,
+        "expression_template": "new KeyedObjects2D()",
+        "factor_domains": {},
+        "kind": "zero_arg_constructor",
+        "signature": "KeyedObjects2D()"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "int",
+      "signature": "getRowCount()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "getColumnCount",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {},
+        "cleanup_required": false,
+        "expression_template": "new KeyedObjects2D()",
+        "factor_domains": {},
+        "kind": "zero_arg_constructor",
+        "signature": "KeyedObjects2D()"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "int",
+      "signature": "getColumnCount()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getObject",
+      "parameters": [
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "getObject(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowKey",
+      "parameters": [
+        {
+          "name": "row",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparable",
+      "signature": "getRowKey(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowIndex",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getRowIndex(Comparable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowKeys",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getRowKeys()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getColumnKey",
+      "parameters": [
+        {
+          "name": "column",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparable",
+      "signature": "getColumnKey(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getColumnIndex",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getColumnIndex(Comparable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getColumnKeys",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getColumnKeys()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "getObject",
+      "parameters": [
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Object",
+      "signature": "getObject(Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object",
+        "Comparable"
+      ],
+      "name": "addObject",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "Object"
+        },
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "addObject(Object,Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object",
+        "Comparable"
+      ],
+      "name": "setObject",
+      "parameters": [
+        {
+          "name": "object",
+          "type": "Object"
+        },
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "setObject(Object,Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "removeObject",
+      "parameters": [
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "removeObject(Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeRow",
+      "parameters": [
+        {
+          "name": "rowIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "removeRow(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "removeRow",
+      "parameters": [
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "removeRow(Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeColumn",
+      "parameters": [
+        {
+          "name": "columnIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "removeColumn(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "removeColumn",
+      "parameters": [
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "removeColumn(Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "clone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "b020a4f67740104b520ec24678ae0026f4428166ffdcc7dbb93e5b5d17ecb541",
+  "missing_adapters": [
+    "Comparable",
+    "Object",
+    "entry_point_evidence",
+    "object_observer"
+  ],
+  "project": "Chart",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new KeyedObjects2D()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "KeyedObjects2D()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "74e9a7401ac5ac53d20c03cb5c2c989d53261e1881c294b1620dd8e85e29921c",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jfree.data.KeyedObjects2D",
+  "trigger_tests": [
+    "org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByKey",
+    "org.jfree.data.junit.KeyedObjects2DTests::testRemoveValue",
+    "org.jfree.data.junit.KeyedObjects2DTests::testGetValueByKey",
+    "org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByIndex",
+    "org.jfree.data.junit.KeyedObjects2DTests::testSetObject",
+    "org.jfree.data.junit.KeyedObjects2DTests::testRemoveRowByKey"
+  ]
+}

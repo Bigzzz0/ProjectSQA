@@ -1,0 +1,10 @@
+{
+  "audit_hash": "5c9a4b6f3e1ccb30b90b73a84bcdfc39d50cff1da34b457fb193207bf3e087a7",
+  "bug_id": 106,
+  "project": "Closure",
+  "reason": "No public class declaration found in /tmp/ipo_parse_954_i4hx/JSDocInfoBuilder.java",
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "status": "ANALYSIS_ERROR",
+  "target_class": "com.google.javascript.rhino.JSDocInfoBuilder"
+}

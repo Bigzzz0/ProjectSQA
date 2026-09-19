@@ -1,0 +1,178 @@
+{
+  "audit_hash": "e4ad728f820986007949698bc97ee535b6ac6067355a9ee032a260779d7e6e81",
+  "bug_id": 111,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withResolved",
+      "parameters": [
+        {
+          "name": "typeDeser",
+          "type": "TypeDeserializer"
+        },
+        {
+          "name": "valueDeser",
+          "type": "JsonDeserializer<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AtomicReferenceDeserializer",
+      "signature": "withResolved(TypeDeserializer,JsonDeserializer<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "DeserializationContext"
+      ],
+      "name": "getNullValue",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "AtomicReference<Object>",
+      "signature": "getNullValue(DeserializationContext)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getEmptyValue",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "getEmptyValue(DeserializationContext)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "referenceValue",
+      "parameters": [
+        {
+          "name": "contents",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AtomicReference<Object>",
+      "signature": "referenceValue(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getReferenced",
+      "parameters": [
+        {
+          "name": "reference",
+          "type": "AtomicReference<Object>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "getReferenced(AtomicReference<Object>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateReference",
+      "parameters": [
+        {
+          "name": "reference",
+          "type": "AtomicReference<Object>"
+        },
+        {
+          "name": "contents",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "AtomicReference<Object>",
+      "signature": "updateReference(AtomicReference<Object>,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "supportsUpdate",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializationConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Boolean",
+      "signature": "supportsUpdate(DeserializationConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "e4ad728f820986007949698bc97ee535b6ac6067355a9ee032a260779d7e6e81",
+  "missing_adapters": [
+    "DeserializationContext",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "573c17ee34d7421268e60b7dc8d9bcd2720d7baa8590b4861675db7d177a6627",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest::testNullWithinNested"
+  ]
+}

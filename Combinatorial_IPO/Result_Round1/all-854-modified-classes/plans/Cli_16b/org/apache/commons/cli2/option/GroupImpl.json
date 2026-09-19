@@ -1,0 +1,413 @@
+{
+  "audit_hash": "edc3c9e3c68164d4896a711e1b1748b4a8bd40ece991b1e5a3049ee73dba83e2",
+  "bug_id": 16,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 18
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "List"
+      ],
+      "name": "GroupImpl",
+      "parameters": [
+        {
+          "name": "options",
+          "type": "List"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        },
+        {
+          "name": "minimum",
+          "type": "int"
+        },
+        {
+          "name": "maximum",
+          "type": "int"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "GroupImpl(List,String,String,int,int)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "canProcess",
+      "parameters": [
+        {
+          "name": "commandLine",
+          "type": "WriteableCommandLine"
+        },
+        {
+          "name": "arg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "canProcess(WriteableCommandLine,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPrefixes",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Set",
+      "signature": "getPrefixes()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getTriggers",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Set",
+      "signature": "getTriggers()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPreferredName",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getPreferredName()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDescription",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getDescription()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "appendUsage",
+      "parameters": [
+        {
+          "name": "buffer",
+          "type": "StringBuffer"
+        },
+        {
+          "name": "helpSettings",
+          "type": "Set"
+        },
+        {
+          "name": "comp",
+          "type": "Comparator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "appendUsage(StringBuffer,Set,Comparator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "appendUsage",
+      "parameters": [
+        {
+          "name": "buffer",
+          "type": "StringBuffer"
+        },
+        {
+          "name": "helpSettings",
+          "type": "Set"
+        },
+        {
+          "name": "comp",
+          "type": "Comparator"
+        },
+        {
+          "name": "separator",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "appendUsage(StringBuffer,Set,Comparator,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "helpLines",
+      "parameters": [
+        {
+          "name": "depth",
+          "type": "int"
+        },
+        {
+          "name": "helpSettings",
+          "type": "Set"
+        },
+        {
+          "name": "comp",
+          "type": "Comparator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "helpLines(int,Set,Comparator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOptions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getOptions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAnonymous",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getAnonymous()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findOption",
+      "parameters": [
+        {
+          "name": "trigger",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Option",
+      "signature": "findOption(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMinimum",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getMinimum()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMaximum",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getMaximum()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isRequired",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isRequired()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "defaults",
+      "parameters": [
+        {
+          "name": "commandLine",
+          "type": "WriteableCommandLine"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "defaults(WriteableCommandLine)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ReverseStringComparator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "private",
+      "signature": "ReverseStringComparator()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparator",
+      "signature": "getInstance()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compare",
+      "parameters": [
+        {
+          "name": "o1",
+          "type": "Object"
+        },
+        {
+          "name": "o2",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "compare(Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "edc3c9e3c68164d4896a711e1b1748b4a8bd40ece991b1e5a3049ee73dba83e2",
+  "missing_adapters": [
+    "List",
+    "entry_point_evidence"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "7db5df0300ae578167b823f2a50840de26ff2aac644c3bd6538bcd1ccd6570ea",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.cli2.option.GroupImpl",
+  "trigger_tests": [
+    "org.apache.commons.cli2.bug.BugCLI123Test::testMultipleChildOptions",
+    "org.apache.commons.cli2.bug.BugCLI123Test::testParentOptionAndChildOption",
+    "org.apache.commons.cli2.bug.BugCLI123Test::testSingleChildOption",
+    "org.apache.commons.cli2.commandline.DefaultingCommandLineTest::testGetOptions_Order",
+    "org.apache.commons.cli2.commandline.PreferencesCommandLineTest::testGetOptions_Order",
+    "org.apache.commons.cli2.commandline.PropertiesCommandLineTest::testGetOptions_Order",
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImplTest::testGetOptions_Order"
+  ]
+}

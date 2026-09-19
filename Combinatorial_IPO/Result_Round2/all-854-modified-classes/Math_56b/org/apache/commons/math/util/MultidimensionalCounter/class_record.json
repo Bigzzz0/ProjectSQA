@@ -1,0 +1,29 @@
+{
+  "audit_hash": "11aa3d7736777920dffa9bb07378b23747fbe406f16879044fdb890426f42b4e",
+  "bug_id": 56,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 4,
+      "expected_pair_count": 4,
+      "model_hash": "3247a526e705338a088a02dd2f89ae358c376fa8b80dfe0a6fa5771ef2f58ca2",
+      "oracle_hash": "ecb61f7dbbda6b4c73b1b6b9c04849f27d88c6915d8dd8698e7fb65f54682e5e",
+      "oracle_sha256": "afa7a5b7affc4b018a987144527afc8dcc8d86bb12c3592502b4dba2474243bb",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 4,
+      "reused_oracle": false,
+      "signature": "getCount(int[])",
+      "suite_hash": "3394bce4c3ad0a25085900a035ff7d64db087be2c68e0f1acd384c776c39e0bd"
+    }
+  ],
+  "project": "Math",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "020a2d362938ddf5a912e1c0cce2aa45b0ebab64e72129039d0b17244d5a0df2",
+  "suite_path": "TestCode/all-modified-classes/Math_56b/org/apache/commons/math/util/MultidimensionalCounter_IPOTest.java",
+  "suite_sha256": "5eb8cca086cc929a00757096818d8dabd52518d907c07a6ad0e1a36cd09069b3",
+  "target_class": "org.apache.commons.math.util.MultidimensionalCounter",
+  "test_class": "MultidimensionalCounter_IPOTest",
+  "verification_result": "OK (4 tests)"
+}

@@ -1,0 +1,24 @@
+{
+  "audit_hash": "af42f4724a4b7fbec31c4f996a8df1aae3b426579f72352824ad1599fc6bf5fd",
+  "bug_id": 19,
+  "callable_status_counts": {},
+  "callables": [],
+  "input_hash": "af42f4724a4b7fbec31c4f996a8df1aae3b426579f72352824ad1599fc6bf5fd",
+  "missing_adapters": [],
+  "project": "Cli",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new PosixParser()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a54acd8a5f1b15fe4d8e6c33b0a86984fbe799cf206cbda954aa3b332dd8c949",
+  "status": "NOT_PAIRWISE_APPLICABLE",
+  "target_class": "org.apache.commons.cli.PosixParser",
+  "trigger_tests": [
+    "org.apache.commons.cli.PosixParserTest::testUnrecognizedOption2"
+  ]
+}

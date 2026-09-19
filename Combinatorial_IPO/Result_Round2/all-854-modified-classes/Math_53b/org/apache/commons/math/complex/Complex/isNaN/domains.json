@@ -1,0 +1,16 @@
+{
+  "receiver__imaginary": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ],
+  "receiver__real": [
+    "0.0d",
+    "1.0d",
+    "-1.0d",
+    "Double.NaN",
+    "Double.POSITIVE_INFINITY"
+  ]
+}

@@ -4,6 +4,88 @@
 
 คู่มือแม่บทของทีมอยู่ที่ [`TEAM_WORKFLOW_GUIDE.md`](../TEAM_WORKFLOW_GUIDE.md) ส่วนนี้อธิบายการใช้งาน implementation ปัจจุบันของ Member 1
 
+## All-modified-class automation (ผู้ใช้เป็นผู้รัน)
+
+workflow นี้อ่าน `target_benchmark/all_bugs_catalog.json` แบบ read-only, checkout buggy/fixed source ใน temporary directories และเผยแพร่เฉพาะ Native IPO suites ที่ผ่าน fixed-version verification แล้ว ห้ามใช้คำสั่ง extraction แบบ `--force` หรือแก้ master catalog เพื่อรองรับ IPO
+
+### 1. Host setup และ regression tests
+
+รันจาก PowerShell ที่ root ของ `ProjectSQA`:
+
+```powershell
+$repo = (Resolve-Path '.').Path
+$ipo = Join-Path $repo 'Combinatorial_IPO'
+$py = 'C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+$env:PYTHONPATH = Join-Path $ipo 'Code'
+
+& $py -m unittest discover -s (Join-Path $ipo 'Code\tests') -p 'test_*.py' -v
+```
+
+### 2. สร้าง IPO-local snapshot และ experiment lock
+
+สองคำสั่งนี้ไม่เขียนกลับ shared master catalog:
+
+```powershell
+& $py (Join-Path $ipo 'Code\runner\catalog_snapshot.py') `
+  --input (Join-Path $repo 'target_benchmark\all_bugs_catalog.json') `
+  --output (Join-Path $ipo 'Configuration\catalogs\all-modified-classes.normalized.json')
+
+& $py (Join-Path $ipo 'Code\runner\all_class_experiment.py') `
+  --catalog (Join-Path $ipo 'Configuration\catalogs\all-modified-classes.normalized.json') `
+  --experiment-id all-854-modified-classes `
+  --output (Join-Path $ipo 'Configuration\experiments\all-854-modified-classes.json')
+```
+
+รัน snapshot ซ้ำได้ ผล `catalog_sha256` ต้องเหมือนเดิมหาก master catalog ไม่เปลี่ยน
+
+### 3. Docker preflight และ audit-only
+
+ตัวอย่างใช้ container `sqa-defects4j` และ repository mount ที่ `/workspace`:
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && PYTHONPATH=Code python3 Code/runner/all_class_pipeline.py --mode preflight --summary-only'
+
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && PYTHONPATH=Code python3 Code/runner/all_class_pipeline.py --mode audit --workers 4 --resume --summary-only'
+```
+
+ผล audit อยู่ที่:
+
+- `Result_Round1/all-854-modified-classes/audit_manifest.json`
+- `Result_Round1/all-854-modified-classes/routing_manifest.json`
+- class plans ใต้ `Result_Round1/all-854-modified-classes/plans/`
+
+ทุก modified Java class instance ต้องปรากฏหนึ่งครั้งใน `audit_manifest.json` ส่วน `routing_manifest.json` ส่งต่อ `NEEDS_ADAPTER`, `NEEDS_ENTRY_POINT`, `NOT_PAIRWISE_APPLICABLE`, `DATA_ERROR` และ `ANALYSIS_ERROR` โดยไม่สร้าง JUnit ปลอม
+
+### 4. Canary ก่อน full generation
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && PYTHONPATH=Code python3 Code/runner/all_class_pipeline.py --mode canary --resume --summary-only'
+```
+
+Canary เป็น deterministic union ของ class แรกต่อ project, source-presence state และ adapter family ห้ามเริ่ม full generation หาก canary ยังมี `GENERATION_OR_VERIFICATION_ERROR`
+
+### 5. Full generation ทีละ project
+
+```powershell
+$projects = @('Chart','Cli','Closure','Codec','Collections','Compress','Csv','Gson','JacksonCore','JacksonDatabind','JacksonXml','Jsoup','JxPath','Lang','Math','Mockito','Time')
+foreach ($project in $projects) {
+  docker exec sqa-defects4j sh -lc "cd /workspace/Combinatorial_IPO && PYTHONPATH=Code python3 Code/runner/all_class_pipeline.py --mode generate --project $project --resume --summary-only"
+  if ($LASTEXITCODE -ne 0) { throw "IPO generation stopped at $project" }
+}
+```
+
+จำกัดการแก้ปัญหาเฉพาะ Bug ID ได้ด้วย `--project Lang --bug 1`; ใช้ `--resume` ทุกครั้งที่รันต่อ งานที่ hashes และ suite checksum ตรงจะไม่ถูกทำซ้ำ
+
+### 6. Validate publication
+
+```powershell
+docker exec sqa-defects4j sh -lc 'cd /workspace/Combinatorial_IPO && PYTHONPATH=Code python3 Code/runner/all_class_pipeline.py --mode validate --summary-only'
+```
+
+Member 4 ต้องอ่านเฉพาะ `TestCode/all-modified-classes/verified_suites_manifest.json` ซึ่งมีเพียง `FIXED_VERIFIED`, `generation_backend=native_ipo` และ pair coverage 100% ห้าม fallback ไป PICT, Round1 หรือ scan Java files ที่ไม่มี manifest entry
+
+หากคำสั่งล้มเหลว ให้ส่งกลับมาเฉพาะ JSON summary และ `class_record.json` ของ class ที่ผิดพลาด ไม่ต้องส่ง Docker log ทั้งหมด สถานะ `NEEDS_*` และ `NOT_PAIRWISE_APPLICABLE` เป็น routing outcome ไม่ใช่ automation crash
+
 ## Academic distinction
 
 - **IPO (In-Parameter-Order)** คือ algorithm ที่โครงการ implement เองใน `Code/algorithm/ipo.py` โดยมี initial construction, Horizontal Growth และ Vertical Growth

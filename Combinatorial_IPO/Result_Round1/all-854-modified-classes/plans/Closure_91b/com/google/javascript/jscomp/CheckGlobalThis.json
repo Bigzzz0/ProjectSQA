@@ -1,0 +1,156 @@
+{
+  "audit_hash": "f7d53fb89d7bfda03aad6c05e5c3ffe40fda266ade7faf3eb85b086d54690244",
+  "bug_id": 91,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CheckGlobalThis",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "level",
+          "type": "CheckLevel"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CheckGlobalThis(AbstractCompiler,CheckLevel)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "NodeTraversal",
+        "Node"
+      ],
+      "name": "shouldTraverse",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "boolean",
+      "signature": "shouldTraverse(NodeTraversal,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "visit",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "visit(NodeTraversal,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldReportThis",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldReportThis(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFunctionJsDocInfo",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSDocInfo",
+      "signature": "getFunctionJsDocInfo(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "f7d53fb89d7bfda03aad6c05e5c3ffe40fda266ade7faf3eb85b086d54690244",
+  "missing_adapters": [
+    "Node",
+    "NodeTraversal",
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b2615725e9b138f41eb6a88c22ff0b3d4e1175a4105e5f771b4f78054faaad57",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.google.javascript.jscomp.CheckGlobalThis",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.CheckGlobalThisTest::testLendsAnnotation3"
+  ]
+}

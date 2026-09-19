@@ -1,0 +1,731 @@
+{
+  "audit_hash": "2e86ec2f395ac52dced91129b31f50e5a5c296f6b7ed46a53df053319870799e",
+  "bug_id": 89,
+  "callable_status_counts": {
+    "AUTO_READY": 3,
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 16
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Attribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Attribute(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Attribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "val",
+          "type": "String"
+        },
+        {
+          "name": "parent",
+          "type": "Attributes"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Attribute(String,String,Attributes)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "receiver__key": "generic",
+        "receiver__value": "generic"
+      },
+      "cleanup_required": false,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "factor_domains": {
+        "receiver__key": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ],
+        "receiver__value": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ]
+      },
+      "factor_names": [
+        "receiver__key",
+        "receiver__value"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "getKey",
+      "observer": "scalar_string_value",
+      "parameters": [],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__key": "generic",
+          "receiver__value": "generic"
+        },
+        "cleanup_required": false,
+        "expression_template": "new Attribute({receiver__key}, {receiver__value})",
+        "factor_domains": {
+          "receiver__key": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ],
+          "receiver__value": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "Attribute(String,String)"
+      },
+      "return_type": "String",
+      "signature": "getKey()",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "state_observer"
+      ],
+      "name": "setKey",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "reason": "Void/stateful action needs a deterministic state observer",
+      "return_type": "void",
+      "signature": "setKey(String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "receiver__key": "generic",
+        "receiver__value": "generic"
+      },
+      "cleanup_required": false,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "factor_domains": {
+        "receiver__key": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ],
+        "receiver__value": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ]
+      },
+      "factor_names": [
+        "receiver__key",
+        "receiver__value"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "getValue",
+      "observer": "scalar_string_value",
+      "parameters": [],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__key": "generic",
+          "receiver__value": "generic"
+        },
+        "cleanup_required": false,
+        "expression_template": "new Attribute({receiver__key}, {receiver__value})",
+        "factor_domains": {
+          "receiver__key": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ],
+          "receiver__value": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "Attribute(String,String)"
+      },
+      "return_type": "String",
+      "signature": "getValue()",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "receiver__key": "generic",
+        "receiver__value": "generic",
+        "val": "generic"
+      },
+      "cleanup_required": false,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "factor_domains": {
+        "receiver__key": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ],
+        "receiver__value": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ],
+        "val": [
+          "\"\"",
+          "\" \"",
+          "\"a\"",
+          "\"test123\"",
+          "\"!@#\"",
+          "\"0\"",
+          "\"-1\"",
+          "\"1.5\"",
+          "\"9223372036854775807\"",
+          "\"9223372036854775808\"",
+          "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+        ]
+      },
+      "factor_names": [
+        "receiver__key",
+        "receiver__value",
+        "val"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "setValue",
+      "observer": "scalar_string_value",
+      "parameters": [
+        {
+          "name": "val",
+          "type": "String"
+        }
+      ],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__key": "generic",
+          "receiver__value": "generic"
+        },
+        "cleanup_required": false,
+        "expression_template": "new Attribute({receiver__key}, {receiver__value})",
+        "factor_domains": {
+          "receiver__key": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ],
+          "receiver__value": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "Attribute(String,String)"
+      },
+      "return_type": "String",
+      "signature": "setValue(String)",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "html",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "html()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "html",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "val",
+          "type": "String"
+        },
+        {
+          "name": "accum",
+          "type": "Appendable"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "html(String,String,Appendable,Document.OutputSettings)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "html",
+      "parameters": [
+        {
+          "name": "accum",
+          "type": "Appendable"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "html(Appendable,Document.OutputSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createFromEncoded",
+      "parameters": [
+        {
+          "name": "unencodedKey",
+          "type": "String"
+        },
+        {
+          "name": "encodedValue",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Attribute",
+      "signature": "createFromEncoded(String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDataAttribute",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDataAttribute()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDataAttribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDataAttribute(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldCollapseAttribute",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldCollapseAttribute(Document.OutputSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldCollapseAttribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "val",
+          "type": "String"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldCollapseAttribute(String,String,Document.OutputSettings)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isBooleanAttribute",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isBooleanAttribute()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isBooleanAttribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isBooleanAttribute(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "o",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Attribute",
+      "signature": "clone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "2e86ec2f395ac52dced91129b31f50e5a5c296f6b7ed46a53df053319870799e",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "state_observer"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__key": "generic",
+      "receiver__value": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new Attribute({receiver__key}, {receiver__value})",
+    "factor_domains": {
+      "receiver__key": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ],
+      "receiver__value": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "Attribute(String,String)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b4bd9a1ff585b6aaf05417694265ecd43221d0e77c421d0f9907212992488a9b",
+  "status": "AUTO_READY",
+  "target_class": "org.jsoup.nodes.Attribute",
+  "trigger_tests": [
+    "org.jsoup.nodes.AttributeTest::settersOnOrphanAttribute"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "audit_hash": "f6fd1293a9b0a4f45c213e9a7dfa63550a32b8124087878069a5c985b9d0de06",
+  "bug_id": 1,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "TypeInfoFactory",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "TypeInfoFactory()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getTypeInfoForArray",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Type"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TypeInfoArray",
+      "signature": "getTypeInfoForArray(Type)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getTypeInfoForField",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "Field"
+        },
+        {
+          "name": "typeDefiningF",
+          "type": "Type"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "TypeInfo",
+      "signature": "getTypeInfoForField(Field,Type)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "getActualType",
+      "parameters": [
+        {
+          "name": "typeToEvaluate",
+          "type": "Type"
+        },
+        {
+          "name": "parentType",
+          "type": "Type"
+        },
+        {
+          "name": "rawParentClass",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "Type",
+      "signature": "getActualType(Type,Type,Class<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "extractTypeForHierarchy",
+      "parameters": [
+        {
+          "name": "parentType",
+          "type": "Type"
+        },
+        {
+          "name": "typeToEvaluate",
+          "type": "TypeVariable<?>"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "Type",
+      "signature": "extractTypeForHierarchy(Type,TypeVariable<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "extractRealTypes",
+      "parameters": [
+        {
+          "name": "actualTypeArguments",
+          "type": "Type[]"
+        },
+        {
+          "name": "parentType",
+          "type": "Type"
+        },
+        {
+          "name": "rawParentClass",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Type[]",
+      "signature": "extractRealTypes(Type[],Type,Class<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getIndex",
+      "parameters": [
+        {
+          "name": "types",
+          "type": "TypeVariable<?>[]"
+        },
+        {
+          "name": "type",
+          "type": "TypeVariable<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getIndex(TypeVariable<?>[],TypeVariable<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "f6fd1293a9b0a4f45c213e9a7dfa63550a32b8124087878069a5c985b9d0de06",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Gson",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "53426632a38460714bc5d02460c41a9b83bc8318115e2cd9119fe7a39dd6db22",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.gson.TypeInfoFactory",
+  "trigger_tests": [
+    "com.google.gson.functional.TypeVariableTest::testSingle"
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "audit_hash": "adcdebfd60bf1f766b4eae9d39ff83f6fbf0b4541a3689f9d0aec730600275ad",
+  "bug_id": 9,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 8
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ProcessCommonJSModules",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "filenamePrefix",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ProcessCommonJSModules(AbstractCompiler,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ProcessCommonJSModules",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "filenamePrefix",
+          "type": "String"
+        },
+        {
+          "name": "reportDependencies",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ProcessCommonJSModules(AbstractCompiler,String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "guessCJSModuleName",
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "String",
+      "signature": "guessCJSModuleName(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getModule",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JSModule",
+      "signature": "getModule()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toModuleName",
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toModuleName(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toModuleName",
+      "parameters": [
+        {
+          "name": "requiredFilename",
+          "type": "String"
+        },
+        {
+          "name": "currentFilename",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toModuleName(String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "normalizeSourceName",
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "String",
+      "signature": "normalizeSourceName(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "adcdebfd60bf1f766b4eae9d39ff83f6fbf0b4541a3689f9d0aec730600275ad",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "2c1aa6079abc46926a98ee12ab0df3414d6661d9d2ddc5a60ab9052d351dd3b3",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.ProcessCommonJSModules",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.ProcessCommonJSModulesTest::testGuessModuleName"
+  ]
+}

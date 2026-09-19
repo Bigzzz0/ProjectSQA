@@ -1,0 +1,209 @@
+{
+  "audit_hash": "6c898277f7d08d7129b8bc4a2cc7b1e8d35ed0e0404cfe92191c244d3903cc55",
+  "bug_id": 28,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flatten",
+      "parameters": [
+        {
+          "name": "opts",
+          "type": "Options"
+        },
+        {
+          "name": "arguments",
+          "type": "String[]"
+        },
+        {
+          "name": "stopAtNonOption",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "flatten(Options,String[],boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "options",
+          "type": "Options"
+        },
+        {
+          "name": "arguments",
+          "type": "String[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CommandLine",
+      "signature": "parse(Options,String[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "options",
+          "type": "Options"
+        },
+        {
+          "name": "arguments",
+          "type": "String[]"
+        },
+        {
+          "name": "properties",
+          "type": "Properties"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CommandLine",
+      "signature": "parse(Options,String[],Properties)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "options",
+          "type": "Options"
+        },
+        {
+          "name": "arguments",
+          "type": "String[]"
+        },
+        {
+          "name": "stopAtNonOption",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CommandLine",
+      "signature": "parse(Options,String[],boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkRequiredOptions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "checkRequiredOptions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "processArgs",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "Option"
+        },
+        {
+          "name": "iter",
+          "type": "ListIterator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "processArgs(Option,ListIterator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "processOption",
+      "parameters": [
+        {
+          "name": "arg",
+          "type": "String"
+        },
+        {
+          "name": "iter",
+          "type": "ListIterator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "processOption(String,ListIterator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "6c898277f7d08d7129b8bc4a2cc7b1e8d35ed0e0404cfe92191c244d3903cc55",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "40f5515cccb73448639f6c3f08fd80d83f19cc7f32b40006ee648d07d657885d",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.cli.Parser",
+  "trigger_tests": [
+    "org.apache.commons.cli.ValueTest::testPropertyOptionFlags"
+  ]
+}

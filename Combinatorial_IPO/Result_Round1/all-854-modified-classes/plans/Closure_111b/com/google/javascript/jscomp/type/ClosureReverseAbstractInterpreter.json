@@ -1,0 +1,182 @@
+{
+  "audit_hash": "54baba10be4dcca7b06d32469dcec0a43409d638a257726feb0f669eebd5eb0a",
+  "bug_id": 111,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ClosureReverseAbstractInterpreter",
+      "parameters": [
+        {
+          "name": "convention",
+          "type": "CodingConvention"
+        },
+        {
+          "name": "typeRegistry",
+          "type": "JSTypeRegistry"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ClosureReverseAbstractInterpreter(CodingConvention,JSTypeRegistry)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "RestrictByTrueTypeOfResultVisitor",
+      "parameters": [],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "new",
+      "signature": "RestrictByTrueTypeOfResultVisitor()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "RestrictByFalseTypeOfResultVisitor",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "new",
+      "signature": "RestrictByFalseTypeOfResultVisitor()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "RestrictByTrueTypeOfResultVisitor",
+      "parameters": [],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "new",
+      "signature": "RestrictByTrueTypeOfResultVisitor()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "RestrictByFalseTypeOfResultVisitor",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "new",
+      "signature": "RestrictByFalseTypeOfResultVisitor()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPreciserScopeKnowingConditionOutcome",
+      "parameters": [
+        {
+          "name": "condition",
+          "type": "Node"
+        },
+        {
+          "name": "blindScope",
+          "type": "FlowScope"
+        },
+        {
+          "name": "outcome",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FlowScope",
+      "signature": "getPreciserScopeKnowingConditionOutcome(Node,FlowScope,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "restrictParameter",
+      "parameters": [
+        {
+          "name": "parameter",
+          "type": "Node"
+        },
+        {
+          "name": "type",
+          "type": "JSType"
+        },
+        {
+          "name": "blindScope",
+          "type": "FlowScope"
+        },
+        {
+          "name": "restriction",
+          "type": "Function<TypeRestriction, JSType>"
+        },
+        {
+          "name": "outcome",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "FlowScope",
+      "signature": "restrictParameter(Node,JSType,FlowScope,Function<TypeRestriction,JSType>,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "54baba10be4dcca7b06d32469dcec0a43409d638a257726feb0f669eebd5eb0a",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "f9aac5f3011375182ffb6281a0a7f9e86b6b499fcf1e3c0c00a46d69e7d2edd6",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.ClosureReverseAbstractInterpreterTest::testGoogIsArray2"
+  ]
+}

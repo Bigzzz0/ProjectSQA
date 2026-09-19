@@ -1,0 +1,377 @@
+{
+  "audit_hash": "0ec653513cd2a9b37b099bd98e4d0787485f6ea6484e88f63a6e6dc2359df51e",
+  "bug_id": 9,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 15
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Line",
+      "parameters": [
+        {
+          "name": "p1",
+          "type": "Vector3D"
+        },
+        {
+          "name": "p2",
+          "type": "Vector3D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Line(Vector3D,Vector3D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Line",
+      "parameters": [
+        {
+          "name": "line",
+          "type": "Line"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Line(Line)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reset",
+      "parameters": [
+        {
+          "name": "p1",
+          "type": "Vector3D"
+        },
+        {
+          "name": "p2",
+          "type": "Vector3D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reset(Vector3D,Vector3D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "revert",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "Line",
+      "signature": "revert()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getDirection",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "Vector3D",
+      "signature": "getDirection()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOrigin",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Vector3D",
+      "signature": "getOrigin()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAbscissa",
+      "parameters": [
+        {
+          "name": "point",
+          "type": "Vector3D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "getAbscissa(Vector3D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "pointAt",
+      "parameters": [
+        {
+          "name": "abscissa",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Vector3D",
+      "signature": "pointAt(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toSubSpace",
+      "parameters": [
+        {
+          "name": "point",
+          "type": "Vector<Euclidean3D>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Vector1D",
+      "signature": "toSubSpace(Vector<Euclidean3D>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toSpace",
+      "parameters": [
+        {
+          "name": "point",
+          "type": "Vector<Euclidean1D>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Vector3D",
+      "signature": "toSpace(Vector<Euclidean1D>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSimilarTo",
+      "parameters": [
+        {
+          "name": "line",
+          "type": "Line"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSimilarTo(Line)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "Vector3D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(Vector3D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "distance",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "Vector3D"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "distance(Vector3D)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "distance",
+      "parameters": [
+        {
+          "name": "line",
+          "type": "Line"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "distance(Line)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "closestPoint",
+      "parameters": [
+        {
+          "name": "line",
+          "type": "Line"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Vector3D",
+      "signature": "closestPoint(Line)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "intersection",
+      "parameters": [
+        {
+          "name": "line",
+          "type": "Line"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Vector3D",
+      "signature": "intersection(Line)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wholeLine",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SubLine",
+      "signature": "wholeLine()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "0ec653513cd2a9b37b099bd98e4d0787485f6ea6484e88f63a6e6dc2359df51e",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c89b23b07417c83311253c928ab9ddd3c7ca2984f85508fbcfbcd4dc590fe7c6",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+  "trigger_tests": [
+    "org.apache.commons.math3.geometry.euclidean.threed.LineTest::testRevert"
+  ]
+}

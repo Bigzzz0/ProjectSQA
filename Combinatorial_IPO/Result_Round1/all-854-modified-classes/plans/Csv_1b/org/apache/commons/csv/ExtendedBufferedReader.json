@@ -1,0 +1,187 @@
+{
+  "audit_hash": "5f26cb09a475395e3350f83333b426d8522d4d13495e9da3ee2189587b890303",
+  "bug_id": 1,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 6,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ExtendedBufferedReader",
+      "parameters": [
+        {
+          "name": "r",
+          "type": "Reader"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ExtendedBufferedReader(Reader)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "name": "read",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__r": "reader"
+        },
+        "cleanup_required": true,
+        "expression_template": "new ExtendedBufferedReader({receiver__r})",
+        "factor_domains": {
+          "receiver__r": [
+            "new java.io.StringReader(\"\")",
+            "new java.io.StringReader(\"a\")",
+            "new java.io.StringReader(\"a\\nb\")"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "ExtendedBufferedReader(Reader)"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "int",
+      "signature": "read()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readAgain",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "readAgain()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "read",
+      "parameters": [
+        {
+          "name": "buf",
+          "type": "char[]"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "read(char[],int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readLine",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "readLine()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lookAhead",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "lookAhead()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "getLineNumber",
+      "parameters": [],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "int",
+      "signature": "getLineNumber()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "5f26cb09a475395e3350f83333b426d8522d4d13495e9da3ee2189587b890303",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Csv",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__r": "reader"
+    },
+    "cleanup_required": true,
+    "expression_template": "new ExtendedBufferedReader({receiver__r})",
+    "factor_domains": {
+      "receiver__r": [
+        "new java.io.StringReader(\"\")",
+        "new java.io.StringReader(\"a\")",
+        "new java.io.StringReader(\"a\\nb\")"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "ExtendedBufferedReader(Reader)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b09b4e6ae43f1914f8e53e0bad7ba5f9483dc9b3e7ae8889c1d9d40c0de19508",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.csv.ExtendedBufferedReader",
+  "trigger_tests": [
+    "org.apache.commons.csv.CSVParserTest::testGetLineNumberWithCR"
+  ]
+}

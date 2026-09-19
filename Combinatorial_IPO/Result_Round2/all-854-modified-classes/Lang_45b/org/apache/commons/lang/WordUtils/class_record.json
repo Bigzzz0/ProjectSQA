@@ -1,0 +1,29 @@
+{
+  "audit_hash": "0a2822b01d601c46040efe9bf3426e7a416e3c6823941a32f1b01c43dce6e467",
+  "bug_id": 45,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 366,
+      "expected_pair_count": 366,
+      "model_hash": "0ccc9db61c23dda0bd8e2cd80c70ebd3c7b2b47b6c6d955e28d3cbaf3cd72804",
+      "oracle_hash": "c734707f26d12d02a21ab5460b32da21f0a4ee290679ab1189f9757dc331d56f",
+      "oracle_sha256": "40e87e70a7574e80b310a9e88fe63037f559e256ccbfec87e29a5506c1c3a96b",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 121,
+      "reused_oracle": false,
+      "signature": "abbreviate(String,int,int,String)",
+      "suite_hash": "9ffa754babe04a4e4325689106ed95bec19a4367601096970d7b7b5fcde4ab30"
+    }
+  ],
+  "project": "Lang",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "cd07dbd2ae680fb809dfed848843d2f1422a50c1afc8e168f746df0c2fde83a2",
+  "suite_path": "TestCode/all-modified-classes/Lang_45b/org/apache/commons/lang/WordUtils_IPOTest.java",
+  "suite_sha256": "711b61b37460d6c7bc8d39ed08cc63b3e8c35a11ad0b94e243d5e7da11d39cd9",
+  "target_class": "org.apache.commons.lang.WordUtils",
+  "test_class": "WordUtils_IPOTest",
+  "verification_result": "OK (121 tests)"
+}

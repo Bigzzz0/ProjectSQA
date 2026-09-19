@@ -1,0 +1,204 @@
+{
+  "audit_hash": "96c2963acd7db38d68372320f7e79037adeabd76358c139b13ee7ba3e1b235dd",
+  "bug_id": 4,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "StringArrayDeserializer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "StringArrayDeserializer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "StringArrayDeserializer",
+      "parameters": [
+        {
+          "name": "deser",
+          "type": "JsonDeserializer<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "StringArrayDeserializer(JsonDeserializer<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "JsonParser",
+        "DeserializationContext"
+      ],
+      "name": "deserialize",
+      "parameters": [
+        {
+          "name": "jp",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "String[]",
+      "signature": "deserialize(JsonParser,DeserializationContext)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "JsonParser",
+        "DeserializationContext"
+      ],
+      "name": "_deserializeCustom",
+      "parameters": [
+        {
+          "name": "jp",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "String[]",
+      "signature": "_deserializeCustom(JsonParser,DeserializationContext)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "deserializeWithType",
+      "parameters": [
+        {
+          "name": "jp",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "typeDeserializer",
+          "type": "TypeDeserializer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "deserializeWithType(JsonParser,DeserializationContext,TypeDeserializer)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleNonArray",
+      "parameters": [
+        {
+          "name": "jp",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "handleNonArray(JsonParser,DeserializationContext)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createContextual",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "property",
+          "type": "BeanProperty"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonDeserializer<?>",
+      "signature": "createContextual(DeserializationContext,BeanProperty)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "96c2963acd7db38d68372320f7e79037adeabd76358c139b13ee7ba3e1b235dd",
+  "missing_adapters": [
+    "DeserializationContext",
+    "JsonParser",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new StringArrayDeserializer()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "StringArrayDeserializer()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a139f795ddc9e4bc18f4ac82d842a1966ba360abcd9a5b0fc0a854cd3948a068",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.deser.TestCollectionDeserialization::testArrayIndexForExceptions"
+  ]
+}

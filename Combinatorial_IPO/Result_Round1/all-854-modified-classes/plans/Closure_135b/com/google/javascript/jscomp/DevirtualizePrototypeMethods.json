@@ -1,0 +1,278 @@
+{
+  "audit_hash": "718788aa821fb26734820e839025aa0aef9f8835b22b4f6b3dddc87a40c26a23",
+  "bug_id": 135,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 11
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DevirtualizePrototypeMethods",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DevirtualizePrototypeMethods(AbstractCompiler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCall",
+      "parameters": [
+        {
+          "name": "site",
+          "type": "UseSite"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCall(UseSite)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isPrototypeMethodDefinition",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isPrototypeMethodDefinition(Node)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRewrittenMethodName",
+      "parameters": [
+        {
+          "name": "orginalMethodName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getRewrittenMethodName(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "rewriteDefinitionIfEligible",
+      "parameters": [
+        {
+          "name": "defSite",
+          "type": "DefinitionSite"
+        },
+        {
+          "name": "defFinder",
+          "type": "SimpleDefinitionFinder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "rewriteDefinitionIfEligible(DefinitionSite,SimpleDefinitionFinder)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEligibleDefinition",
+      "parameters": [
+        {
+          "name": "defFinder",
+          "type": "SimpleDefinitionFinder"
+        },
+        {
+          "name": "definitionSite",
+          "type": "DefinitionSite"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEligibleDefinition(SimpleDefinitionFinder,DefinitionSite)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "rewriteCallSites",
+      "parameters": [
+        {
+          "name": "defFinder",
+          "type": "SimpleDefinitionFinder"
+        },
+        {
+          "name": "definition",
+          "type": "Definition"
+        },
+        {
+          "name": "newMethodName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "rewriteCallSites(SimpleDefinitionFinder,Definition,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "rewriteDefinition",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "newMethodName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "rewriteDefinition(Node,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fixFunctionType",
+      "parameters": [
+        {
+          "name": "functionNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "fixFunctionType(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "replaceReferencesToThis",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "replaceReferencesToThis(Node,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "718788aa821fb26734820e839025aa0aef9f8835b22b4f6b3dddc87a40c26a23",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "9133bafd06ef8a5f72fb317a28ef9c5ef68e467f236039c3e92e46ac32f1fb02",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.DevirtualizePrototypeMethods",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.DevirtualizePrototypeMethodsTest::testRewritePrototypeMethods2",
+    "com.google.javascript.jscomp.TypeCheckTest::testGoodExtends9"
+  ]
+}

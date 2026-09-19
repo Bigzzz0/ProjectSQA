@@ -1,0 +1,791 @@
+{
+  "audit_hash": "2c85fa931dcb2ac1f44267eb3c68487d82ba48598fb4ca64c60604798b6e11ce",
+  "bug_id": 16,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 8,
+    "NEEDS_ENTRY_POINT": 24
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DefaultIntervalCategoryDataset",
+      "parameters": [
+        {
+          "name": "starts",
+          "type": "double[][]"
+        },
+        {
+          "name": "ends",
+          "type": "double[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DefaultIntervalCategoryDataset(double[][],double[][])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DefaultIntervalCategoryDataset",
+      "parameters": [
+        {
+          "name": "starts",
+          "type": "Number[][]"
+        },
+        {
+          "name": "ends",
+          "type": "Number[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DefaultIntervalCategoryDataset(Number[][],Number[][])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DefaultIntervalCategoryDataset",
+      "parameters": [
+        {
+          "name": "seriesNames",
+          "type": "String[]"
+        },
+        {
+          "name": "starts",
+          "type": "Number[][]"
+        },
+        {
+          "name": "ends",
+          "type": "Number[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DefaultIntervalCategoryDataset(String[],Number[][],Number[][])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "Comparable[]",
+        "Number[][]"
+      ],
+      "name": "DefaultIntervalCategoryDataset",
+      "parameters": [
+        {
+          "name": "seriesKeys",
+          "type": "Comparable[]"
+        },
+        {
+          "name": "categoryKeys",
+          "type": "Comparable[]"
+        },
+        {
+          "name": "starts",
+          "type": "Number[][]"
+        },
+        {
+          "name": "ends",
+          "type": "Number[][]"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "DefaultIntervalCategoryDataset(Comparable[],Comparable[],Number[][],Number[][])",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSeriesCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getSeriesCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "getSeriesIndex",
+      "parameters": [
+        {
+          "name": "seriesKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "getSeriesIndex(Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSeriesKey",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparable",
+      "signature": "getSeriesKey(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSeriesKeys",
+      "parameters": [
+        {
+          "name": "seriesKeys",
+          "type": "Comparable[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSeriesKeys(Comparable[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCategoryCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getCategoryCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getColumnKeys",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getColumnKeys()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable[]"
+      ],
+      "name": "setCategoryKeys",
+      "parameters": [
+        {
+          "name": "categoryKeys",
+          "type": "Comparable[]"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "setCategoryKeys(Comparable[])",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "Comparable"
+        },
+        {
+          "name": "category",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "getValue(Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "getValue(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStartValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "Comparable"
+        },
+        {
+          "name": "category",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "getStartValue(Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStartValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "getStartValue(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getEndValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "Comparable"
+        },
+        {
+          "name": "category",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "getEndValue(Comparable,Comparable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getEndValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "getEndValue(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setStartValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "Comparable"
+        },
+        {
+          "name": "value",
+          "type": "Number"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setStartValue(int,Comparable,Number)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setEndValue",
+      "parameters": [
+        {
+          "name": "series",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "type": "Comparable"
+        },
+        {
+          "name": "value",
+          "type": "Number"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setEndValue(int,Comparable,Number)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "getCategoryIndex",
+      "parameters": [
+        {
+          "name": "category",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "getCategoryIndex(Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "generateKeys",
+      "parameters": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "prefix",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparable[]",
+      "signature": "generateKeys(int,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getColumnKey",
+      "parameters": [
+        {
+          "name": "column",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparable",
+      "signature": "getColumnKey(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "getColumnIndex",
+      "parameters": [
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "getColumnIndex(Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Comparable"
+      ],
+      "name": "getRowIndex",
+      "parameters": [
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "getRowIndex(Comparable)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowKeys",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getRowKeys()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowKey",
+      "parameters": [
+        {
+          "name": "row",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Comparable",
+      "signature": "getRowKey(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "getColumnCount",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "int",
+      "signature": "getColumnCount()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRowCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getRowCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "clone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equal",
+      "parameters": [
+        {
+          "name": "array1",
+          "type": "Number[][]"
+        },
+        {
+          "name": "array2",
+          "type": "Number[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equal(Number[][],Number[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [
+        {
+          "name": "array",
+          "type": "Number[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number[][]",
+      "signature": "clone(Number[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "2c85fa931dcb2ac1f44267eb3c68487d82ba48598fb4ca64c60604798b6e11ce",
+  "missing_adapters": [
+    "Comparable",
+    "Comparable[]",
+    "Number[][]",
+    "Object",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Chart",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6204812319d2177c97e89b8f27b91ba998260f93c2c6fdc3a0c73c2913fadd3f",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jfree.data.category.DefaultIntervalCategoryDataset",
+  "trigger_tests": [
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetCategoryIndex",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testSetCategoryKeys",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetSeriesIndex",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetRowCount",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetRowIndex",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetColumnCount",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetColumnIndex",
+    "org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testCloning2"
+  ]
+}

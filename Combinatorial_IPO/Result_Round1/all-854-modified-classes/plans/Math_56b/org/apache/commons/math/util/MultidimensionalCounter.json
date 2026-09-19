@@ -1,0 +1,270 @@
+{
+  "audit_hash": "11aa3d7736777920dffa9bb07378b23747fbe406f16879044fdb890426f42b4e",
+  "bug_id": 56,
+  "callable_status_counts": {
+    "AUTO_READY": 1,
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 2,
+    "NOT_PAIRWISE_APPLICABLE": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "MultidimensionalCounter",
+      "parameters": [
+        {
+          "name": "size",
+          "type": "int []"
+        }
+      ],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "MultidimensionalCounter(int[])",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:Iterator"
+      ],
+      "name": "iterator",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "Iterator",
+      "signature": "iterator()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "getDimension",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__size": "array"
+        },
+        "cleanup_required": false,
+        "expression_template": "new MultidimensionalCounter({receiver__size})",
+        "factor_domains": {
+          "receiver__size": [
+            "new int[] {}",
+            "new int[] {1}"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "MultidimensionalCounter(int[])"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "int",
+      "signature": "getDimension()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:int[]"
+      ],
+      "name": "getCounts",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "int[]",
+      "signature": "getCounts(int)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "c": "array",
+        "receiver__size": "array"
+      },
+      "cleanup_required": false,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "factor_domains": {
+        "c": [
+          "new int[] {}",
+          "new int[] {1}"
+        ],
+        "receiver__size": [
+          "new int[] {}",
+          "new int[] {1}"
+        ]
+      },
+      "factor_names": [
+        "receiver__size",
+        "c"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "getCount",
+      "observer": "scalar_string_value",
+      "parameters": [
+        {
+          "name": "c",
+          "type": "int []"
+        }
+      ],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__size": "array"
+        },
+        "cleanup_required": false,
+        "expression_template": "new MultidimensionalCounter({receiver__size})",
+        "factor_domains": {
+          "receiver__size": [
+            "new int[] {}",
+            "new int[] {1}"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "MultidimensionalCounter(int[])"
+      },
+      "return_type": "int",
+      "signature": "getCount(int[])",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "getSize",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__size": "array"
+        },
+        "cleanup_required": false,
+        "expression_template": "new MultidimensionalCounter({receiver__size})",
+        "factor_domains": {
+          "receiver__size": [
+            "new int[] {}",
+            "new int[] {1}"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "MultidimensionalCounter(int[])"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "int",
+      "signature": "getSize()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSizes",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "getSizes()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "11aa3d7736777920dffa9bb07378b23747fbe406f16879044fdb890426f42b4e",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer",
+    "object_observer:Iterator",
+    "object_observer:int[]"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__size": "array"
+    },
+    "cleanup_required": false,
+    "expression_template": "new MultidimensionalCounter({receiver__size})",
+    "factor_domains": {
+      "receiver__size": [
+        "new int[] {}",
+        "new int[] {1}"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "MultidimensionalCounter(int[])"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "2376f392a3bae823e945553d16bf1b71d3ec19527917efe98a0b06b280655715",
+  "status": "AUTO_READY",
+  "target_class": "org.apache.commons.math.util.MultidimensionalCounter",
+  "trigger_tests": [
+    "org.apache.commons.math.util.MultidimensionalCounterTest::testIterationConsistency"
+  ]
+}

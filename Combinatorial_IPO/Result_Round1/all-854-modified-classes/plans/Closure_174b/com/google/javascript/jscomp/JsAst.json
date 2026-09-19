@@ -1,0 +1,156 @@
+{
+  "audit_hash": "ff801f67e27b8ff1d1104c0169e4e6cf122f5e02f9a6bc1c826fb2c14c0ddee3",
+  "bug_id": 174,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsAst",
+      "parameters": [
+        {
+          "name": "sourceFile",
+          "type": "SourceFile"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsAst(SourceFile)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAstRoot",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "getAstRoot(AbstractCompiler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clearAst",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "clearAst()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInputId",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "InputId",
+      "signature": "getInputId()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getSourceFile",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SourceFile",
+      "signature": "getSourceFile()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSourceFile",
+      "parameters": [
+        {
+          "name": "file",
+          "type": "SourceFile"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSourceFile(SourceFile)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "parse(AbstractCompiler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "ff801f67e27b8ff1d1104c0169e4e6cf122f5e02f9a6bc1c826fb2c14c0ddee3",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d84ee69e0f9d245458125f1a127a8a4e2e39c47bce5feff9d1c7193c881a6387",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.JsAst",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.ScopedAliasesTest::testIssue1103a",
+    "com.google.javascript.jscomp.ScopedAliasesTest::testIssue1103b",
+    "com.google.javascript.jscomp.ScopedAliasesTest::testIssue1103c"
+  ]
+}

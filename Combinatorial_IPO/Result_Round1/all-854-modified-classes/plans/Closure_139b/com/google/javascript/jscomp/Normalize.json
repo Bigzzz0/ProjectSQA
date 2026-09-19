@@ -1,0 +1,113 @@
+{
+  "audit_hash": "fe8cd0e4cd4f7183f356489e45d49d4273c5dff7fae4581081f2e0f3a9434f14",
+  "bug_id": 139,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Normalize",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "assertOnChange",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Normalize(AbstractCompiler,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reportCodeChange",
+      "parameters": [
+        {
+          "name": "changeDescription",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reportCodeChange(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "removeDuplicateDeclarations",
+      "parameters": [
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "removeDuplicateDeclarations(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "fe8cd0e4cd4f7183f356489e45d49d4273c5dff7fae4581081f2e0f3a9434f14",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "830f9a24a28e32849808b1da502583581d6866b9cb034f8192b03e5c3066e831",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.Normalize",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.NormalizeTest::testNormalizeFunctionDeclarations",
+    "com.google.javascript.jscomp.NormalizeTest::testRemoveDuplicateVarDeclarations3",
+    "com.google.javascript.jscomp.NormalizeTest::testMoveFunctions2"
+  ]
+}

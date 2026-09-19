@@ -1,0 +1,1608 @@
+{
+  "audit_hash": "b9cdccd86481408af0e5a844ef6dfd19f80e7c1d6c942dd353ab602435e9c26c",
+  "bug_id": 4,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 71
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkedExceptionInvalid",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "checkedExceptionInvalid(Throwable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotStubWithNullThrowable",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotStubWithNullThrowable()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "unfinishedStubbing",
+      "parameters": [
+        {
+          "name": "location",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "unfinishedStubbing(Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "incorrectUseOfApi",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "incorrectUseOfApi()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "missingMethodInvocation",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "missingMethodInvocation()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "unfinishedVerificationException",
+      "parameters": [
+        {
+          "name": "location",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "unfinishedVerificationException(Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "notAMockPassedToVerify",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Class"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "notAMockPassedToVerify(Class)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nullPassedToVerify",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "nullPassedToVerify()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "notAMockPassedToWhenMethod",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "notAMockPassedToWhenMethod()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nullPassedToWhenMethod",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "nullPassedToWhenMethod()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mocksHaveToBePassedToVerifyNoMoreInteractions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "mocksHaveToBePassedToVerifyNoMoreInteractions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "notAMockPassedToVerifyNoMoreInteractions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "notAMockPassedToVerifyNoMoreInteractions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nullPassedToVerifyNoMoreInteractions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "nullPassedToVerifyNoMoreInteractions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "notAMockPassedWhenCreatingInOrder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "notAMockPassedWhenCreatingInOrder()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nullPassedWhenCreatingInOrder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "nullPassedWhenCreatingInOrder()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mocksHaveToBePassedWhenCreatingInOrder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "mocksHaveToBePassedWhenCreatingInOrder()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inOrderRequiresFamiliarMock",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "inOrderRequiresFamiliarMock()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "invalidUseOfMatchers",
+      "parameters": [
+        {
+          "name": "expectedMatchersCount",
+          "type": "int"
+        },
+        {
+          "name": "recordedMatchers",
+          "type": "List<LocalizedMatcher>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "invalidUseOfMatchers(int,List<LocalizedMatcher>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "incorrectUseOfAdditionalMatchers",
+      "parameters": [
+        {
+          "name": "additionalMatcherName",
+          "type": "String"
+        },
+        {
+          "name": "expectedSubMatchersCount",
+          "type": "int"
+        },
+        {
+          "name": "matcherStack",
+          "type": "Collection<LocalizedMatcher>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "incorrectUseOfAdditionalMatchers(String,int,Collection<LocalizedMatcher>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "stubPassedToVerify",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "stubPassedToVerify()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reportNoSubMatchersFound",
+      "parameters": [
+        {
+          "name": "additionalMatcherName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reportNoSubMatchersFound(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "locationsOf",
+      "parameters": [
+        {
+          "name": "matchers",
+          "type": "Collection<LocalizedMatcher>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "locationsOf(Collection<LocalizedMatcher>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "argumentsAreDifferent",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "String"
+        },
+        {
+          "name": "actual",
+          "type": "String"
+        },
+        {
+          "name": "actualLocation",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "argumentsAreDifferent(String,String,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wantedButNotInvoked",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "wantedButNotInvoked(DescribedInvocation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wantedButNotInvoked",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "invocations",
+          "type": "List<? extends DescribedInvocation>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "wantedButNotInvoked(DescribedInvocation,List<?extendsDescribedInvocation>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createWantedButNotInvokedMessage",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "createWantedButNotInvokedMessage(DescribedInvocation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wantedButNotInvokedInOrder",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "previous",
+          "type": "DescribedInvocation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "wantedButNotInvokedInOrder(DescribedInvocation,DescribedInvocation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tooManyActualInvocations",
+      "parameters": [
+        {
+          "name": "wantedCount",
+          "type": "int"
+        },
+        {
+          "name": "actualCount",
+          "type": "int"
+        },
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "firstUndesired",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "tooManyActualInvocations(int,int,DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createTooManyInvocationsMessage",
+      "parameters": [
+        {
+          "name": "wantedCount",
+          "type": "int"
+        },
+        {
+          "name": "actualCount",
+          "type": "int"
+        },
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "firstUndesired",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "createTooManyInvocationsMessage(int,int,DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "neverWantedButInvoked",
+      "parameters": [
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "firstUndesired",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "neverWantedButInvoked(DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tooManyActualInvocationsInOrder",
+      "parameters": [
+        {
+          "name": "wantedCount",
+          "type": "int"
+        },
+        {
+          "name": "actualCount",
+          "type": "int"
+        },
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "firstUndesired",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "tooManyActualInvocationsInOrder(int,int,DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createTooLittleInvocationsMessage",
+      "parameters": [
+        {
+          "name": "discrepancy",
+          "type": "org.mockito.internal.reporting.Discrepancy"
+        },
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "lastActualInvocation",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "createTooLittleInvocationsMessage(org.mockito.internal.reporting.Discrepancy,DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tooLittleActualInvocations",
+      "parameters": [
+        {
+          "name": "discrepancy",
+          "type": "org.mockito.internal.reporting.Discrepancy"
+        },
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "lastActualLocation",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "tooLittleActualInvocations(org.mockito.internal.reporting.Discrepancy,DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "tooLittleActualInvocationsInOrder",
+      "parameters": [
+        {
+          "name": "discrepancy",
+          "type": "org.mockito.internal.reporting.Discrepancy"
+        },
+        {
+          "name": "wanted",
+          "type": "DescribedInvocation"
+        },
+        {
+          "name": "lastActualLocation",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "tooLittleActualInvocationsInOrder(org.mockito.internal.reporting.Discrepancy,DescribedInvocation,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Invocation",
+        "List<VerificationAwareInvocation>"
+      ],
+      "name": "noMoreInteractionsWanted",
+      "parameters": [
+        {
+          "name": "undesired",
+          "type": "Invocation"
+        },
+        {
+          "name": "invocations",
+          "type": "List<VerificationAwareInvocation>"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "noMoreInteractionsWanted(Invocation,List<VerificationAwareInvocation>)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Invocation"
+      ],
+      "name": "noMoreInteractionsWantedInOrder",
+      "parameters": [
+        {
+          "name": "undesired",
+          "type": "Invocation"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "noMoreInteractionsWantedInOrder(Invocation)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotMockFinalClass",
+      "parameters": [
+        {
+          "name": "clazz",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotMockFinalClass(Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotStubVoidMethodWithAReturnValue",
+      "parameters": [
+        {
+          "name": "methodName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotStubVoidMethodWithAReturnValue(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "onlyVoidMethodsCanBeSetToDoNothing",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "onlyVoidMethodsCanBeSetToDoNothing()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wrongTypeOfReturnValue",
+      "parameters": [
+        {
+          "name": "expectedType",
+          "type": "String"
+        },
+        {
+          "name": "actualType",
+          "type": "String"
+        },
+        {
+          "name": "methodName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "wrongTypeOfReturnValue(String,String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wantedAtMostX",
+      "parameters": [
+        {
+          "name": "maxNumberOfInvocations",
+          "type": "int"
+        },
+        {
+          "name": "foundSize",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "wantedAtMostX(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "misplacedArgumentMatcher",
+      "parameters": [
+        {
+          "name": "lastMatchers",
+          "type": "List<LocalizedMatcher>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "misplacedArgumentMatcher(List<LocalizedMatcher>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "smartNullPointerException",
+      "parameters": [
+        {
+          "name": "invocation",
+          "type": "String"
+        },
+        {
+          "name": "location",
+          "type": "Location"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "smartNullPointerException(String,Location)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "noArgumentValueWasCaptured",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "noArgumentValueWasCaptured()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "extraInterfacesDoesNotAcceptNullParameters",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "extraInterfacesDoesNotAcceptNullParameters()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "extraInterfacesAcceptsOnlyInterfaces",
+      "parameters": [
+        {
+          "name": "wrongType",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "extraInterfacesAcceptsOnlyInterfaces(Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "extraInterfacesCannotContainMockedType",
+      "parameters": [
+        {
+          "name": "wrongType",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "extraInterfacesCannotContainMockedType(Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "extraInterfacesRequiresAtLeastOneInterface",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "extraInterfacesRequiresAtLeastOneInterface()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mockedTypeIsInconsistentWithSpiedInstanceType",
+      "parameters": [
+        {
+          "name": "mockedType",
+          "type": "Class<?>"
+        },
+        {
+          "name": "spiedInstance",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "mockedTypeIsInconsistentWithSpiedInstanceType(Class<?>,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotCallAbstractRealMethod",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotCallAbstractRealMethod()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotVerifyToString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotVerifyToString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "moreThanOneAnnotationNotAllowed",
+      "parameters": [
+        {
+          "name": "fieldName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "moreThanOneAnnotationNotAllowed(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "unsupportedCombinationOfAnnotations",
+      "parameters": [
+        {
+          "name": "undesiredAnnotationOne",
+          "type": "String"
+        },
+        {
+          "name": "undesiredAnnotationTwo",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "unsupportedCombinationOfAnnotations(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotInitializeForSpyAnnotation",
+      "parameters": [
+        {
+          "name": "fieldName",
+          "type": "String"
+        },
+        {
+          "name": "details",
+          "type": "Exception"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotInitializeForSpyAnnotation(String,Exception)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cannotInitializeForInjectMocksAnnotation",
+      "parameters": [
+        {
+          "name": "fieldName",
+          "type": "String"
+        },
+        {
+          "name": "details",
+          "type": "Exception"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "cannotInitializeForInjectMocksAnnotation(String,Exception)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "atMostAndNeverShouldNotBeUsedWithTimeout",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "atMostAndNeverShouldNotBeUsedWithTimeout()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fieldInitialisationThrewException",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "Field"
+        },
+        {
+          "name": "details",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "fieldInitialisationThrewException(Field,Throwable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "invocationListenerDoesNotAcceptNullParameters",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "invocationListenerDoesNotAcceptNullParameters()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "invocationListenersRequiresAtLeastOneListener",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "invocationListenersRequiresAtLeastOneListener()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "invocationListenerThrewException",
+      "parameters": [
+        {
+          "name": "listener",
+          "type": "InvocationListener"
+        },
+        {
+          "name": "listenerThrowable",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "invocationListenerThrewException(InvocationListener,Throwable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Field",
+        "Object",
+        "Exception"
+      ],
+      "name": "cannotInjectDependency",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "Field"
+        },
+        {
+          "name": "matchingMock",
+          "type": "Object"
+        },
+        {
+          "name": "details",
+          "type": "Exception"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "cannotInjectDependency(Field,Object,Exception)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "exceptionCauseMessageIfAvailable",
+      "parameters": [
+        {
+          "name": "details",
+          "type": "Exception"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "String",
+      "signature": "exceptionCauseMessageIfAvailable(Exception)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mockedTypeIsInconsistentWithDelegatedInstanceType",
+      "parameters": [
+        {
+          "name": "mockedType",
+          "type": "Class"
+        },
+        {
+          "name": "delegatedInstance",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "mockedTypeIsInconsistentWithDelegatedInstanceType(Class,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "spyAndDelegateAreMutuallyExclusive",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "spyAndDelegateAreMutuallyExclusive()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "invalidArgumentRangeAtIdentityAnswerCreationTime",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "invalidArgumentRangeAtIdentityAnswerCreationTime()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "invalidArgumentPositionRangeAtInvocationTime",
+      "parameters": [
+        {
+          "name": "invocation",
+          "type": "InvocationOnMock"
+        },
+        {
+          "name": "willReturnLastParameter",
+          "type": "boolean"
+        },
+        {
+          "name": "argumentIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "invalidArgumentPositionRangeAtInvocationTime(InvocationOnMock,boolean,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "possibleArgumentTypesOf",
+      "parameters": [
+        {
+          "name": "invocation",
+          "type": "InvocationOnMock"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StringBuilder",
+      "signature": "possibleArgumentTypesOf(InvocationOnMock)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wrongTypeOfArgumentToReturn",
+      "parameters": [
+        {
+          "name": "invocation",
+          "type": "InvocationOnMock"
+        },
+        {
+          "name": "expectedType",
+          "type": "String"
+        },
+        {
+          "name": "actualType",
+          "type": "Class"
+        },
+        {
+          "name": "argumentIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "wrongTypeOfArgumentToReturn(InvocationOnMock,String,Class,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "defaultAnswerDoesNotAcceptNullParameter",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "defaultAnswerDoesNotAcceptNullParameter()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "serializableWontWorkForObjectsThatDontImplementSerializable",
+      "parameters": [
+        {
+          "name": "classToMock",
+          "type": "Class"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "serializableWontWorkForObjectsThatDontImplementSerializable(Class)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "delegatedMethodHasWrongReturnType",
+      "parameters": [
+        {
+          "name": "mockMethod",
+          "type": "Method"
+        },
+        {
+          "name": "delegateMethod",
+          "type": "Method"
+        },
+        {
+          "name": "mock",
+          "type": "Object"
+        },
+        {
+          "name": "delegate",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "delegatedMethodHasWrongReturnType(Method,Method,Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "delegatedMethodDoesNotExistOnDelegate",
+      "parameters": [
+        {
+          "name": "mockMethod",
+          "type": "Method"
+        },
+        {
+          "name": "mock",
+          "type": "Object"
+        },
+        {
+          "name": "delegate",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "delegatedMethodDoesNotExistOnDelegate(Method,Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "usingConstructorWithFancySerializable",
+      "parameters": [
+        {
+          "name": "mode",
+          "type": "SerializableMode"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "usingConstructorWithFancySerializable(SerializableMode)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "safelyGetMockName",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MockName",
+      "signature": "safelyGetMockName(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "b9cdccd86481408af0e5a844ef6dfd19f80e7c1d6c942dd353ab602435e9c26c",
+  "missing_adapters": [
+    "Exception",
+    "Field",
+    "Invocation",
+    "List<VerificationAwareInvocation>",
+    "Object",
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Reporter()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "200524318986c9a4a32b4e73f39cb0a45bd5b91e05e3c56643b6662569f0a529",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.exceptions.Reporter",
+  "trigger_tests": [
+    "org.mockito.exceptions.ReporterTest::can_use_print_mock_name_even_when_mock_bogus_default_answer_and_when_reporting_no_more_interaction_wanted_in_order",
+    "org.mockito.exceptions.ReporterTest::can_use_print_mock_name_even_when_mock_bogus_default_answer_and_when_reporting_injection_failure",
+    "org.mockito.exceptions.ReporterTest::can_use_mock_name_even_when_mock_bogus_default_answer_and_when_reporting_no_more_interaction_wanted",
+    "org.mockitousage.bugs.ClassCastExOnVerifyZeroInteractionsTest::should_not_throw_a_ClassCastException"
+  ]
+}

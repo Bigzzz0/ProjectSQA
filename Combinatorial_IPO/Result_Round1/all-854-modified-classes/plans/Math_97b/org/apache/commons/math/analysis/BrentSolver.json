@@ -1,0 +1,82 @@
+{
+  "audit_hash": "a8e0df595453e268de77696925f14ff47492b1568e8d46dfee562ac7eefb8377",
+  "bug_id": 97,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "UnivariateRealFunction"
+      ],
+      "name": "BrentSolver",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "UnivariateRealFunction"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "BrentSolver(UnivariateRealFunction)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "solve",
+      "parameters": [
+        {
+          "name": "min",
+          "type": "double"
+        },
+        {
+          "name": "max",
+          "type": "double"
+        }
+      ],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "double",
+      "signature": "solve(double,double)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "a8e0df595453e268de77696925f14ff47492b1568e8d46dfee562ac7eefb8377",
+  "missing_adapters": [
+    "UnivariateRealFunction",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "28381cd9d745f280af2fbb67d15d0731b5169d974b71bacb7361380e7d3de5b6",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.analysis.BrentSolver",
+  "trigger_tests": [
+    "org.apache.commons.math.analysis.BrentSolverTest::testRootEndpoints"
+  ]
+}

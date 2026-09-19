@@ -1,0 +1,476 @@
+{
+  "audit_hash": "4411fd3a7ffa73c7f9f70706a38776d6dd4d1b85f0541e6a3525c122889fede3",
+  "bug_id": 85,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 19
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Attribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Attribute(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "Attributes"
+      ],
+      "name": "Attribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "val",
+          "type": "String"
+        },
+        {
+          "name": "parent",
+          "type": "Attributes"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "Attribute(String,String,Attributes)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getKey",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getKey()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setKey",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setKey(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getValue",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getValue()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setValue",
+      "parameters": [
+        {
+          "name": "val",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "setValue(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "html",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "html()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "html",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "val",
+          "type": "String"
+        },
+        {
+          "name": "accum",
+          "type": "Appendable"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "html(String,String,Appendable,Document.OutputSettings)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "html",
+      "parameters": [
+        {
+          "name": "accum",
+          "type": "Appendable"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "html(Appendable,Document.OutputSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createFromEncoded",
+      "parameters": [
+        {
+          "name": "unencodedKey",
+          "type": "String"
+        },
+        {
+          "name": "encodedValue",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Attribute",
+      "signature": "createFromEncoded(String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDataAttribute",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDataAttribute()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDataAttribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDataAttribute(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldCollapseAttribute",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldCollapseAttribute(Document.OutputSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldCollapseAttribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        },
+        {
+          "name": "val",
+          "type": "String"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldCollapseAttribute(String,String,Document.OutputSettings)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isBooleanAttribute",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isBooleanAttribute()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isBooleanAttribute",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isBooleanAttribute(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "o",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Attribute",
+      "signature": "clone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "4411fd3a7ffa73c7f9f70706a38776d6dd4d1b85f0541e6a3525c122889fede3",
+  "missing_adapters": [
+    "Attributes",
+    "entry_point_evidence"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__key": "generic",
+      "receiver__value": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new Attribute({receiver__key}, {receiver__value})",
+    "factor_domains": {
+      "receiver__key": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ],
+      "receiver__value": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "Attribute(String,String)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b2fa7a7e9dab16545ad89df67fa912932ab7f581b70e38d03a34db8958357344",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jsoup.nodes.Attribute",
+  "trigger_tests": [
+    "org.jsoup.nodes.AttributeTest::validatesKeysNotEmpty"
+  ]
+}

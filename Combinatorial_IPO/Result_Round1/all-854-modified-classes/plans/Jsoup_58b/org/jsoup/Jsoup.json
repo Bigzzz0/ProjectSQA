@@ -1,0 +1,470 @@
+{
+  "audit_hash": "9e65818f8aae3a0ac6f750ff3174b592a29a422b25924fb9deef0c22abcdac28",
+  "bug_id": 58,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 15
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Jsoup",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Jsoup()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "html",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "html",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "parser",
+          "type": "Parser"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(String,String,Parser)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "html",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "connect",
+      "parameters": [
+        {
+          "name": "url",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Connection",
+      "signature": "connect(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "File"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(File,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "File"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(File,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(InputStream,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "charsetName",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "parser",
+          "type": "Parser"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(InputStream,String,String,Parser)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseBodyFragment",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parseBodyFragment(String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseBodyFragment",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parseBodyFragment(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "url",
+          "type": "URL"
+        },
+        {
+          "name": "timeoutMillis",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Document",
+      "signature": "parse(URL,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clean",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "whitelist",
+          "type": "Whitelist"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "clean(String,String,Whitelist)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clean",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        },
+        {
+          "name": "whitelist",
+          "type": "Whitelist"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "clean(String,Whitelist)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clean",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        },
+        {
+          "name": "whitelist",
+          "type": "Whitelist"
+        },
+        {
+          "name": "outputSettings",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "clean(String,String,Whitelist,Document.OutputSettings)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Whitelist"
+      ],
+      "name": "isValid",
+      "parameters": [
+        {
+          "name": "bodyHtml",
+          "type": "String"
+        },
+        {
+          "name": "whitelist",
+          "type": "Whitelist"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "boolean",
+      "signature": "isValid(String,Whitelist)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "9e65818f8aae3a0ac6f750ff3174b592a29a422b25924fb9deef0c22abcdac28",
+  "missing_adapters": [
+    "Whitelist",
+    "entry_point_evidence"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "0e04c77c3b05a918588f1bf1b1d3510ca9c6ec1c1ebcd930d0f9517af13fefa5",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jsoup.Jsoup",
+  "trigger_tests": [
+    "org.jsoup.safety.CleanerTest::testIsValidBodyHtml",
+    "org.jsoup.safety.CleanerTest::testIsValidDocument"
+  ]
+}

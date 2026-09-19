@@ -1,0 +1,200 @@
+{
+  "audit_hash": "72b0baec6dd003efb2dbea0beb47f010bd1113c26ebbf8af14b2429bd71fa81f",
+  "bug_id": 3,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "FlowSensitiveInlineVariables",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "FlowSensitiveInlineVariables(AbstractCompiler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "NodeTraversal"
+      ],
+      "name": "enterScope",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "enterScope(NodeTraversal)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "exitScope",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "exitScope(NodeTraversal)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "visit",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "visit(NodeTraversal,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkRightOf",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "expressionRoot",
+          "type": "Node"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "checkRightOf(Node,Node,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkLeftOf",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "expressionRoot",
+          "type": "Node"
+        },
+        {
+          "name": "predicate",
+          "type": "Predicate<Node>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "checkLeftOf(Node,Node,Predicate<Node>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "72b0baec6dd003efb2dbea0beb47f010bd1113c26ebbf8af14b2429bd71fa81f",
+  "missing_adapters": [
+    "NodeTraversal",
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b16c015fdbcb46b460223616707fab7cd6b80383c06aa75c8d900905ab445604",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testDoNotInlineCatchExpression1a",
+    "com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testDoNotInlineCatchExpression1",
+    "com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testDoNotInlineCatchExpression3"
+  ]
+}

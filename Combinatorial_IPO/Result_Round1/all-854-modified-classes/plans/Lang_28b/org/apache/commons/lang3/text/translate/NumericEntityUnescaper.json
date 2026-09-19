@@ -1,0 +1,68 @@
+{
+  "audit_hash": "a67bc58c02ddc2fdff0e3380536cbcafda777f81b3b927621a965f02c630078c",
+  "bug_id": 28,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "CharSequence",
+        "Writer"
+      ],
+      "name": "translate",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "CharSequence"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "out",
+          "type": "Writer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "translate(CharSequence,int,Writer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "a67bc58c02ddc2fdff0e3380536cbcafda777f81b3b927621a965f02c630078c",
+  "missing_adapters": [
+    "CharSequence",
+    "Writer"
+  ],
+  "project": "Lang",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new NumericEntityUnescaper()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "734065b03765baadd13057a4157c9691505e9dace973f8481e0d207b021b5ebb",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "trigger_tests": [
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testSupplementaryUnescaping"
+  ]
+}

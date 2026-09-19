@@ -1,0 +1,101 @@
+{
+  "audit_hash": "72b8b3adbb7cbb5e6a1e6d5926898d878015ab4542e9133f5936a3590c470ee1",
+  "bug_id": 62,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCachable",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCachable()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "DeserializationContext",
+        "BeanProperty"
+      ],
+      "name": "createContextual",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "property",
+          "type": "BeanProperty"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "CollectionDeserializer",
+      "signature": "createContextual(DeserializationContext,BeanProperty)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getContentType",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "getContentType()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getContentDeserializer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonDeserializer<Object>",
+      "signature": "getContentDeserializer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "72b8b3adbb7cbb5e6a1e6d5926898d878015ab4542e9133f5936a3590c470ee1",
+  "missing_adapters": [
+    "BeanProperty",
+    "DeserializationContext",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ae6ac94f0bfc2e1e3c474143852e75ee81ead6ba350d799ade4084667a92365c",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.deser.std.CollectionDeserializer",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.creators.ArrayDelegatorCreatorForCollectionTest::testUnmodifiable"
+  ]
+}

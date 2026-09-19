@@ -1,0 +1,191 @@
+{
+  "audit_hash": "2d549b75a404f812953c6999fb2785233eed7951c02fb64a5c0db8dbb76dae9f",
+  "bug_id": 39,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createValue",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        },
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "createValue(String,Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Class<?>"
+      ],
+      "name": "createValue",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        },
+        {
+          "name": "clazz",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Object",
+      "signature": "createValue(String,Class<?>)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createObject",
+      "parameters": [
+        {
+          "name": "classname",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "createObject(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createNumber",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "createNumber(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createClass",
+      "parameters": [
+        {
+          "name": "classname",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>",
+      "signature": "createClass(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createURL",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "URL",
+      "signature": "createURL(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:FileInputStream"
+      ],
+      "name": "openFile",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        }
+      ],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "FileInputStream",
+      "signature": "openFile(String)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "2d549b75a404f812953c6999fb2785233eed7951c02fb64a5c0db8dbb76dae9f",
+  "missing_adapters": [
+    "Class<?>",
+    "entry_point_evidence",
+    "object_observer:FileInputStream"
+  ],
+  "project": "Cli",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new TypeHandler()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d6a200facf22fdea262338a0807127c40f887fb0899d9a7b8dd6699517c405ae",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.cli.TypeHandler",
+  "trigger_tests": [
+    "org.apache.commons.cli.PatternOptionBuilderTest::testExistingFilePattern",
+    "org.apache.commons.cli.PatternOptionBuilderTest::testExistingFilePatternFileNotExist"
+  ]
+}

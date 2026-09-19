@@ -1,0 +1,211 @@
+{
+  "audit_hash": "7507408faf8a98407cd4799ef07139301477748bc8b1789dbf91877a6b5798aa",
+  "bug_id": 14,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CaseInsensitiveMap",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CaseInsensitiveMap()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CaseInsensitiveMap",
+      "parameters": [
+        {
+          "name": "initialCapacity",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CaseInsensitiveMap(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CaseInsensitiveMap",
+      "parameters": [
+        {
+          "name": "initialCapacity",
+          "type": "int"
+        },
+        {
+          "name": "loadFactor",
+          "type": "float"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CaseInsensitiveMap(int,float)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CaseInsensitiveMap",
+      "parameters": [
+        {
+          "name": "map",
+          "type": "Map"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CaseInsensitiveMap(Map)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object"
+      ],
+      "name": "convertKey",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Object",
+      "signature": "convertKey(Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "clone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "clone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeObject",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "ObjectOutputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeObject(ObjectOutputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readObject",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "ObjectInputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "readObject(ObjectInputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "7507408faf8a98407cd4799ef07139301477748bc8b1789dbf91877a6b5798aa",
+  "missing_adapters": [
+    "Object",
+    "entry_point_evidence"
+  ],
+  "project": "Collections",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new CaseInsensitiveMap()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "CaseInsensitiveMap()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6ac0ca64b1ccc29b1bdf4a0edd592d888224a5dbedac4de9a71f06644f5b2076",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.collections.map.CaseInsensitiveMap",
+  "trigger_tests": [
+    "org.apache.commons.collections.map.TestCaseInsensitiveMap::testLocaleIndependence"
+  ]
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "arguments": {
+      "x": "0.0d",
+      "y": "0.0d"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true"
+  },
+  {
+    "arguments": {
+      "x": "0.0d",
+      "y": "1.0d"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "0.0d",
+      "y": "-1.0d"
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "0.0d",
+      "y": "Double.NaN"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "0.0d",
+      "y": "Double.POSITIVE_INFINITY"
+    },
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "1.0d",
+      "y": "0.0d"
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "1.0d",
+      "y": "1.0d"
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true"
+  },
+  {
+    "arguments": {
+      "x": "1.0d",
+      "y": "-1.0d"
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "1.0d",
+      "y": "Double.NaN"
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "1.0d",
+      "y": "Double.POSITIVE_INFINITY"
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "-1.0d",
+      "y": "0.0d"
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "-1.0d",
+      "y": "1.0d"
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "-1.0d",
+      "y": "-1.0d"
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true"
+  },
+  {
+    "arguments": {
+      "x": "-1.0d",
+      "y": "Double.NaN"
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "-1.0d",
+      "y": "Double.POSITIVE_INFINITY"
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.NaN",
+      "y": "0.0d"
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.NaN",
+      "y": "1.0d"
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.NaN",
+      "y": "-1.0d"
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.NaN",
+      "y": "Double.NaN"
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.NaN",
+      "y": "Double.POSITIVE_INFINITY"
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.POSITIVE_INFINITY",
+      "y": "0.0d"
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.POSITIVE_INFINITY",
+      "y": "1.0d"
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.POSITIVE_INFINITY",
+      "y": "-1.0d"
+    },
+    "id": 23,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.POSITIVE_INFINITY",
+      "y": "Double.NaN"
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "false"
+  },
+  {
+    "arguments": {
+      "x": "Double.POSITIVE_INFINITY",
+      "y": "Double.POSITIVE_INFINITY"
+    },
+    "id": 25,
+    "outcome": "RETURN",
+    "type": "java.lang.Boolean",
+    "value_or_message": "true"
+  }
+]

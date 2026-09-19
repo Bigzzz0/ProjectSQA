@@ -1,0 +1,282 @@
+{
+  "audit_hash": "1a71aa316170481efa72b96088fcd829e64a5a244f49cd6aa110df7ffe82b633",
+  "bug_id": 8,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 4,
+    "NEEDS_ENTRY_POINT": 9
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Type"
+      ],
+      "name": "registerTypeVariablesOn",
+      "parameters": [
+        {
+          "name": "classType",
+          "type": "Type"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "registerTypeVariablesOn(Type)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "registerTypeParametersOn",
+      "parameters": [
+        {
+          "name": "typeParameters",
+          "type": "TypeVariable[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "registerTypeParametersOn(TypeVariable[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "registerTypeVariableIfNotPresent",
+      "parameters": [
+        {
+          "name": "typeVariable",
+          "type": "TypeVariable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "registerTypeVariableIfNotPresent(TypeVariable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "boundsOf",
+      "parameters": [
+        {
+          "name": "typeParameter",
+          "type": "TypeVariable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BoundedType",
+      "signature": "boundsOf(TypeVariable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "boundsOf",
+      "parameters": [
+        {
+          "name": "wildCard",
+          "type": "WildcardType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BoundedType",
+      "signature": "boundsOf(WildcardType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "rawType",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "Class<?>",
+      "signature": "rawType()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "extraInterfaces",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<Type>",
+      "signature": "extraInterfaces()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "rawExtraInterfaces",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<?>[]",
+      "signature": "rawExtraInterfaces()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hasRawExtraInterfaces",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "hasRawExtraInterfaces()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "actualTypeArguments",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Map<TypeVariable, Type>",
+      "signature": "actualTypeArguments()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getActualTypeArgumentFor",
+      "parameters": [
+        {
+          "name": "typeParameter",
+          "type": "TypeVariable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Type",
+      "signature": "getActualTypeArgumentFor(TypeVariable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Method"
+      ],
+      "name": "resolveGenericReturnType",
+      "parameters": [
+        {
+          "name": "method",
+          "type": "Method"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "GenericMetadataSupport",
+      "signature": "resolveGenericReturnType(Method)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Type"
+      ],
+      "name": "inferFrom",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Type"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "GenericMetadataSupport",
+      "signature": "inferFrom(Type)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "1a71aa316170481efa72b96088fcd829e64a5a244f49cd6aa110df7ffe82b633",
+  "missing_adapters": [
+    "Method",
+    "Type",
+    "entry_point_evidence",
+    "receiver_factory"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "f1f465f1717291ba46c99481725d86a11d8186731d7f15ea8d08e285b8b28fe7",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.util.reflection.GenericMetadataSupport",
+  "trigger_tests": [
+    "org.mockito.internal.util.reflection.GenericMetadataSupportTest::typeVariable_of_self_type"
+  ]
+}

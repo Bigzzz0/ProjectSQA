@@ -1,0 +1,240 @@
+{
+  "audit_hash": "99d8180497d1ba87d6a2ddd0207e7a36a2f268be8f118889c96f9e36b7d4f89a",
+  "bug_id": 20,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 10
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CoreOperationRelationalExpression",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "Expression[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CoreOperationRelationalExpression(Expression[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "computeValue",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "EvalContext"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "computeValue(EvalContext)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getPrecedence",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getPrecedence()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSymmetric",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSymmetric()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "evaluateCompare",
+      "parameters": [
+        {
+          "name": "compare",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "evaluateCompare(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "compute",
+      "parameters": [
+        {
+          "name": "left",
+          "type": "Object"
+        },
+        {
+          "name": "right",
+          "type": "Object"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "compute(Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reduce",
+      "parameters": [
+        {
+          "name": "o",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "reduce(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "containsMatch",
+      "parameters": [
+        {
+          "name": "it",
+          "type": "Iterator"
+        },
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "containsMatch(Iterator,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "containsMatch",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Object"
+        },
+        {
+          "name": "it",
+          "type": "Iterator"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "containsMatch(Object,Iterator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMatch",
+      "parameters": [
+        {
+          "name": "lit",
+          "type": "Iterator"
+        },
+        {
+          "name": "rit",
+          "type": "Iterator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "findMatch(Iterator,Iterator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "99d8180497d1ba87d6a2ddd0207e7a36a2f268be8f118889c96f9e36b7d4f89a",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "JxPath",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "274a555cc50f09560be46e1ed1ecdf4d057e409e5128f5fe5bc0f7ad980ba04a",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "trigger_tests": [
+    "org.apache.commons.jxpath.ri.compiler.JXPath149Test::testComplexOperationWithVariables"
+  ]
+}

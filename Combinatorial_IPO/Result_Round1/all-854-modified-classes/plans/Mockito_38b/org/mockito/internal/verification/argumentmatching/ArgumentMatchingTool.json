@@ -1,0 +1,117 @@
+{
+  "audit_hash": "f346875f0b33f5482caf05f10ea098c06c4a663991a86bc85dcdae4531a55fc4",
+  "bug_id": 38,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "List<Matcher>",
+        "Object[]"
+      ],
+      "name": "getSuspiciouslyNotMatchingArgsIndexes",
+      "parameters": [
+        {
+          "name": "matchers",
+          "type": "List<Matcher>"
+        },
+        {
+          "name": "arguments",
+          "type": "Object[]"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Integer[]",
+      "signature": "getSuspiciouslyNotMatchingArgsIndexes(List<Matcher>,Object[])",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "safelyMatches",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "Matcher"
+        },
+        {
+          "name": "arg",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "safelyMatches(Matcher,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "toStringEquals",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "Matcher"
+        },
+        {
+          "name": "arg",
+          "type": "Object"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "toStringEquals(Matcher,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "f346875f0b33f5482caf05f10ea098c06c4a663991a86bc85dcdae4531a55fc4",
+  "missing_adapters": [
+    "List<Matcher>",
+    "Object[]",
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new ArgumentMatchingTool()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "688314c364ecfa4c5d578c7de66916695312ba1ff271a419a9c6d1ae1ad346ca",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool",
+  "trigger_tests": [
+    "org.mockito.internal.verification.argumentmatching.ArgumentMatchingToolTest::shouldWorkFineWhenGivenArgIsNull",
+    "org.mockitousage.bugs.ActualInvocationHasNullArgumentNPEBugTest::shouldAllowPassingNullArgument"
+  ]
+}

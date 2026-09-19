@@ -1,0 +1,52 @@
+{
+  "audit_hash": "b18568807b5b414c9e31d93f023412a9c43b0c5e9ae4153607708588803f322d",
+  "bug_id": 4,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flatten",
+      "parameters": [
+        {
+          "name": "opts",
+          "type": "Options"
+        },
+        {
+          "name": "arguments",
+          "type": "String[]"
+        },
+        {
+          "name": "stopAtNonOption",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "flatten(Options,String[],boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "b18568807b5b414c9e31d93f023412a9c43b0c5e9ae4153607708588803f322d",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "9de65742f41da61146f3aa9bb1f5aa1a6a19131eaed2929319e1d6ad61dba88a",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.cli.Parser",
+  "trigger_tests": [
+    "org.apache.commons.cli.OptionsTest::testMissingOptionsException",
+    "org.apache.commons.cli.OptionsTest::testMissingOptionException"
+  ]
+}

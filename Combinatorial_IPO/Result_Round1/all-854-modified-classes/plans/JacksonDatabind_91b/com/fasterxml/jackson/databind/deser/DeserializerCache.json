@@ -1,0 +1,116 @@
+{
+  "audit_hash": "5ba87477ecffd0e96d9e9a5dd6f497ffa0849dfc3ef0c5a899f2f429c5b2579b",
+  "bug_id": 91,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DeserializerCache",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DeserializerCache()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeReplace",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "writeReplace()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cachedDeserializersCount",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "cachedDeserializersCount()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flushCachedDeserializers",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "flushCachedDeserializers()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "_hasCustomHandlers",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "boolean",
+      "signature": "_hasCustomHandlers(JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "5ba87477ecffd0e96d9e9a5dd6f497ffa0849dfc3ef0c5a899f2f429c5b2579b",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new DeserializerCache()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "DeserializerCache()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "8eeac354f9978a36884aad0ca8099b2e698bc8ad3b3b323cf9a265a2804634f6",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.deser.DeserializerCache",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest::testCachedSerialize"
+  ]
+}

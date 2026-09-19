@@ -1,0 +1,92 @@
+{
+  "audit_hash": "3ee0a8f304efc2ceda5b93f599eeab870a7171b76e2e7918add8bbb251d20a8b",
+  "bug_id": 4,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "CharSequence[][]"
+      ],
+      "name": "LookupTranslator",
+      "parameters": [
+        {
+          "name": "lookup",
+          "type": "CharSequence[][]"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": null,
+      "signature": "LookupTranslator(CharSequence[][])",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "CharSequence",
+        "Writer"
+      ],
+      "name": "translate",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "CharSequence"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "out",
+          "type": "Writer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "int",
+      "signature": "translate(CharSequence,int,Writer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "3ee0a8f304efc2ceda5b93f599eeab870a7171b76e2e7918add8bbb251d20a8b",
+  "missing_adapters": [
+    "CharSequence",
+    "CharSequence[][]",
+    "Writer"
+  ],
+  "project": "Lang",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "01724dbf336abe1d411fc67f265419496284c5712d32237443954d5ff1c61d8f",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang3.text.translate.LookupTranslator",
+  "trigger_tests": [
+    "org.apache.commons.lang3.text.translate.LookupTranslatorTest::testLang882"
+  ]
+}

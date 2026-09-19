@@ -1,0 +1,909 @@
+{
+  "audit_hash": "13146a545808379d98644ce6417a40a2fbbc3387a7b0d2adca7fa25fe64f618a",
+  "bug_id": 6,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 37
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "CMAESOptimizer",
+      "parameters": [
+        {
+          "name": "maxIterations",
+          "type": "int"
+        },
+        {
+          "name": "stopFitness",
+          "type": "double"
+        },
+        {
+          "name": "isActiveCMA",
+          "type": "boolean"
+        },
+        {
+          "name": "diagonalOnly",
+          "type": "int"
+        },
+        {
+          "name": "checkFeasableCount",
+          "type": "int"
+        },
+        {
+          "name": "random",
+          "type": "RandomGenerator"
+        },
+        {
+          "name": "generateStatistics",
+          "type": "boolean"
+        },
+        {
+          "name": "checker",
+          "type": "ConvergenceChecker<PointValuePair>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "CMAESOptimizer(int,double,boolean,int,int,RandomGenerator,boolean,ConvergenceChecker<PointValuePair>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStatisticsSigmaHistory",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<Double>",
+      "signature": "getStatisticsSigmaHistory()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStatisticsMeanHistory",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<RealMatrix>",
+      "signature": "getStatisticsMeanHistory()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStatisticsFitnessHistory",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<Double>",
+      "signature": "getStatisticsFitnessHistory()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getStatisticsDHistory",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<RealMatrix>",
+      "signature": "getStatisticsDHistory()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "receiver_factory"
+      ],
+      "name": "doOptimize",
+      "parameters": [],
+      "reason": "Instance method needs a deterministic receiver factory",
+      "return_type": "PointValuePair",
+      "signature": "doOptimize()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseOptimizationData",
+      "parameters": [
+        {
+          "name": "optData",
+          "type": "OptimizationData[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "parseOptimizationData(OptimizationData[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "checkParameters",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "checkParameters()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "initializeCMA",
+      "parameters": [
+        {
+          "name": "guess",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "initializeCMA(double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateEvolutionPaths",
+      "parameters": [
+        {
+          "name": "zmean",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "xold",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "updateEvolutionPaths(RealMatrix,RealMatrix)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateCovarianceDiagonalOnly",
+      "parameters": [
+        {
+          "name": "hsig",
+          "type": "boolean"
+        },
+        {
+          "name": "bestArz",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "updateCovarianceDiagonalOnly(boolean,RealMatrix)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateCovariance",
+      "parameters": [
+        {
+          "name": "hsig",
+          "type": "boolean"
+        },
+        {
+          "name": "bestArx",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "arz",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "arindex",
+          "type": "int[]"
+        },
+        {
+          "name": "xold",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "updateCovariance(boolean,RealMatrix,RealMatrix,int[],RealMatrix)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "updateBD",
+      "parameters": [
+        {
+          "name": "negccov",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "updateBD(double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "push",
+      "parameters": [
+        {
+          "name": "vals",
+          "type": "double[]"
+        },
+        {
+          "name": "val",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "push(double[],double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sortedIndices",
+      "parameters": [
+        {
+          "name": "doubles",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "sortedIndices(double[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "log",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "log(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "sqrt",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "RealMatrix",
+      "signature": "sqrt(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "square",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "square(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "times",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "n",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "times(RealMatrix,RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "divide",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "n",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "divide(RealMatrix,RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "selectColumns",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "cols",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "selectColumns(RealMatrix,int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "triu",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "triu(RealMatrix,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sumRows",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "sumRows(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "diag",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "diag(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "copyColumn",
+      "parameters": [
+        {
+          "name": "m1",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "col1",
+          "type": "int"
+        },
+        {
+          "name": "m2",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "col2",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "copyColumn(RealMatrix,int,RealMatrix,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ones",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "m",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "ones(int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "eye",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "m",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "eye(int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "zeros",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "m",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "zeros(int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "repmat",
+      "parameters": [
+        {
+          "name": "mat",
+          "type": "RealMatrix"
+        },
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "m",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "repmat(RealMatrix,int,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sequence",
+      "parameters": [
+        {
+          "name": "start",
+          "type": "double"
+        },
+        {
+          "name": "end",
+          "type": "double"
+        },
+        {
+          "name": "step",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "sequence(double,double,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "max",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "max(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "min",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "RealMatrix"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "min(RealMatrix)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "max",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "max(double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "min",
+      "parameters": [
+        {
+          "name": "m",
+          "type": "double[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "min(double[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inverse",
+      "parameters": [
+        {
+          "name": "indices",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "inverse(int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reverse",
+      "parameters": [
+        {
+          "name": "indices",
+          "type": "int[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int[]",
+      "signature": "reverse(int[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "randn",
+      "parameters": [
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double[]",
+      "signature": "randn(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "randn1",
+      "parameters": [
+        {
+          "name": "size",
+          "type": "int"
+        },
+        {
+          "name": "popSize",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "RealMatrix",
+      "signature": "randn1(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "13146a545808379d98644ce6417a40a2fbbc3387a7b0d2adca7fa25fe64f618a",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point",
+    "receiver_factory"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a8c4b8f1115b311ec00ecb8a7089843a4fccd6ced23def30318660f2036a972f",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizer",
+  "trigger_tests": [
+    "org.apache.commons.math3.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizerTest::testTrivial",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testConstrainedRosen",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testElliRotated",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testEllipse",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testTwoAxes",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testCigar",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testRosen",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testRastrigin",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testDiagonalRosen",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testSsDiffPow",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testMaximize",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testAckley",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testCigTab",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testDiffPow",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testSphere",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testTablet",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest::testCigarWithBoundaries",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizerTest::testSumSinc",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest::testMaximize1",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest::testMaximize2",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest::testMinimize1",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest::testMinimize2",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerNelderMeadTest::testMaximize1",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerNelderMeadTest::testMaximize2",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerNelderMeadTest::testMinimize1",
+    "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizerNelderMeadTest::testMinimize2",
+    "org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizerTest::testGetIterations",
+    "org.apache.commons.math3.optim.nonlinear.vector.jacobian.LevenbergMarquardtOptimizerTest::testGetIterations"
+  ]
+}

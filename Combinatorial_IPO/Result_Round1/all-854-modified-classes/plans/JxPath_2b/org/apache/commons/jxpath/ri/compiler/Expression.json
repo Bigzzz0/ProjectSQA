@@ -1,0 +1,145 @@
+{
+  "audit_hash": "bce0422eab416c4072a63cc32d4d3f5f1e6927807bb8ffae608824c91e561649",
+  "bug_id": 2,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isContextDependent",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isContextDependent()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "computeContextDependent",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "computeContextDependent()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "computeValue",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "EvalContext"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "computeValue(EvalContext)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "compute",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "EvalContext"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "compute(EvalContext)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "EvalContext"
+      ],
+      "name": "iterate",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "EvalContext"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Iterator",
+      "signature": "iterate(EvalContext)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "EvalContext"
+      ],
+      "name": "iteratePointers",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "EvalContext"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Iterator",
+      "signature": "iteratePointers(EvalContext)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "bce0422eab416c4072a63cc32d4d3f5f1e6927807bb8ffae608824c91e561649",
+  "missing_adapters": [
+    "EvalContext",
+    "entry_point_evidence"
+  ],
+  "project": "JxPath",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "11ca7bba56ac8a4f9db5879ce81ac0c183226571a07f2ad7d831258bba36d7d7",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.jxpath.ri.compiler.Expression",
+  "trigger_tests": [
+    "org.apache.commons.jxpath.ri.compiler.ExtensionFunctionTest::testNodeSetReturn"
+  ]
+}

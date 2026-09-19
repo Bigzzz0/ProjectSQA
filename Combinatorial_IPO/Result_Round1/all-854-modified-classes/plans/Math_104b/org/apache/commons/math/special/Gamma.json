@@ -1,0 +1,58 @@
+{
+  "audit_hash": "d5180b14685ae9d7092dacd789c8904b413092b550e6e3d20266467ca4c8ed97",
+  "bug_id": 104,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Gamma",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Gamma()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "logGamma",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "logGamma(double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "d5180b14685ae9d7092dacd789c8904b413092b550e6e3d20266467ca4c8ed97",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "5232aa9d4d122912e043060916247dab1b72c79934afef3f19d78d9c50569205",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.special.Gamma",
+  "trigger_tests": [
+    "org.apache.commons.math.special.GammaTest::testRegularizedGammaPositivePositive"
+  ]
+}

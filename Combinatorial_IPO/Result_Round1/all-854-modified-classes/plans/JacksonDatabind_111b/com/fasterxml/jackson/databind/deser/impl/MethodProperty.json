@@ -1,0 +1,325 @@
+{
+  "audit_hash": "6683dc081842492af3b8244e0a1c68c70fb9fc57257f4a2f1ead0e1387a2b075",
+  "bug_id": 111,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 12
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MethodProperty",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "MethodProperty"
+        },
+        {
+          "name": "deser",
+          "type": "JsonDeserializer<?>"
+        },
+        {
+          "name": "nva",
+          "type": "NullValueProvider"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MethodProperty(MethodProperty,JsonDeserializer<?>,NullValueProvider)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MethodProperty",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "MethodProperty"
+        },
+        {
+          "name": "newName",
+          "type": "PropertyName"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MethodProperty(MethodProperty,PropertyName)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MethodProperty",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "MethodProperty"
+        },
+        {
+          "name": "m",
+          "type": "Method"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MethodProperty(MethodProperty,Method)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withName",
+      "parameters": [
+        {
+          "name": "newName",
+          "type": "PropertyName"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SettableBeanProperty",
+      "signature": "withName(PropertyName)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "JsonDeserializer<?>"
+      ],
+      "name": "withValueDeserializer",
+      "parameters": [
+        {
+          "name": "deser",
+          "type": "JsonDeserializer<?>"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "SettableBeanProperty",
+      "signature": "withValueDeserializer(JsonDeserializer<?>)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withNullProvider",
+      "parameters": [
+        {
+          "name": "nva",
+          "type": "NullValueProvider"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "SettableBeanProperty",
+      "signature": "withNullProvider(NullValueProvider)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fixAccess",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializationConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "fixAccess(DeserializationConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAnnotation",
+      "parameters": [
+        {
+          "name": "acls",
+          "type": "Class<A>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<A extends Annotation> A",
+      "signature": "getAnnotation(Class<A>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "deserializeAndSet",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "instance",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "deserializeAndSet(JsonParser,DeserializationContext,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "deserializeSetAndReturn",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "instance",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "deserializeSetAndReturn(JsonParser,DeserializationContext,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "set",
+      "parameters": [
+        {
+          "name": "instance",
+          "type": "Object"
+        },
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "set(Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setAndReturn",
+      "parameters": [
+        {
+          "name": "instance",
+          "type": "Object"
+        },
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "setAndReturn(Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readResolve",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "readResolve()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "6683dc081842492af3b8244e0a1c68c70fb9fc57257f4a2f1ead0e1387a2b075",
+  "missing_adapters": [
+    "JsonDeserializer<?>",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d802edf696bf24e13bfce9d499be6e4d7cee5ba1234b2940267be1e993db9033",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.deser.impl.MethodProperty",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest::testNullWithinNested"
+  ]
+}

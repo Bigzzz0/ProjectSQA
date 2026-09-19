@@ -1,0 +1,586 @@
+{
+  "audit_hash": "e5c45e8d54c1a5e5935d052acb36c153c3d77cf07662f9fb2f5da09be52b6087",
+  "bug_id": 103,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 19,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "msg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "rootCause",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(String,Throwable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "loc",
+          "type": "JsonLocation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(String,JsonLocation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "loc",
+          "type": "JsonLocation"
+        },
+        {
+          "name": "rootCause",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(String,JsonLocation,Throwable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "processor",
+          "type": "Closeable"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(Closeable,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "processor",
+          "type": "Closeable"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "problem",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(Closeable,String,Throwable)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "JsonMappingException",
+      "parameters": [
+        {
+          "name": "processor",
+          "type": "Closeable"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "loc",
+          "type": "JsonLocation"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "JsonMappingException(Closeable,String,JsonLocation)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "JsonParser"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(JsonParser,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "JsonParser"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "problem",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(JsonParser,String,Throwable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "g",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(JsonGenerator,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "g",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "problem",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(JsonGenerator,String,Throwable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(DeserializationContext,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "t",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(DeserializationContext,String,Throwable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(SerializerProvider,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "from",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "problem",
+          "type": "Throwable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "from(SerializerProvider,String,Throwable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "IOException"
+      ],
+      "name": "fromUnexpectedIOE",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "IOException"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "JsonMappingException",
+      "signature": "fromUnexpectedIOE(IOException)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wrapWithPath",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "Throwable"
+        },
+        {
+          "name": "refFrom",
+          "type": "Object"
+        },
+        {
+          "name": "refFieldName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "wrapWithPath(Throwable,Object,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "wrapWithPath",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "Throwable"
+        },
+        {
+          "name": "refFrom",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonMappingException",
+      "signature": "wrapWithPath(Throwable,Object,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getProcessor",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "getProcessor()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLocalizedMessage",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getLocalizedMessage()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "name": "getMessage",
+      "parameters": [],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__msg": "generic"
+        },
+        "cleanup_required": false,
+        "expression_template": "new JsonMappingException({receiver__msg})",
+        "factor_domains": {
+          "receiver__msg": [
+            "\"\"",
+            "\" \"",
+            "\"a\"",
+            "\"test123\"",
+            "\"!@#\"",
+            "\"0\"",
+            "\"-1\"",
+            "\"1.5\"",
+            "\"9223372036854775807\"",
+            "\"9223372036854775808\"",
+            "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "JsonMappingException(String)"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "String",
+      "signature": "getMessage()",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "e5c45e8d54c1a5e5935d052acb36c153c3d77cf07662f9fb2f5da09be52b6087",
+  "missing_adapters": [
+    "IOException",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__msg": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new JsonMappingException({receiver__msg})",
+    "factor_domains": {
+      "receiver__msg": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "JsonMappingException(String)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "96bca04e184774a5f1bfeaf0ddd087beb5caf2c2b63d23368598548166a5a058",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.JsonMappingException",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.exc.BasicExceptionTest::testLocationAddition"
+  ]
+}

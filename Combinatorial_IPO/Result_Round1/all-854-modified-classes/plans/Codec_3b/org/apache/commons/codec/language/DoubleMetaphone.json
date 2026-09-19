@@ -1,0 +1,1264 @@
+{
+  "audit_hash": "8a0ab5fc2d64722be9f930d5b123e3bd50a32b82d2a8e1b37402c0d895d1244e",
+  "bug_id": 3,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 44
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DoubleMetaphone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DoubleMetaphone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "doubleMetaphone",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "doubleMetaphone(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "doubleMetaphone",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "alternate",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "doubleMetaphone(String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "encode(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "encode(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDoubleMetaphoneEqual",
+      "parameters": [
+        {
+          "name": "value1",
+          "type": "String"
+        },
+        {
+          "name": "value2",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDoubleMetaphoneEqual(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDoubleMetaphoneEqual",
+      "parameters": [
+        {
+          "name": "value1",
+          "type": "String"
+        },
+        {
+          "name": "value2",
+          "type": "String"
+        },
+        {
+          "name": "alternate",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDoubleMetaphoneEqual(String,String,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMaxCodeLen",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getMaxCodeLen()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setMaxCodeLen",
+      "parameters": [
+        {
+          "name": "maxCodeLen",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setMaxCodeLen(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleAEIOUY",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleAEIOUY(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleC",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleC(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleCC",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleCC(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleCH",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleCH(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleD",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleD(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "handleG",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "slavoGermanic",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "int",
+      "signature": "handleG(String,DoubleMetaphoneResult,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleGH",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleGH(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleH",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleH(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleJ",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "slavoGermanic",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleJ(String,DoubleMetaphoneResult,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleL",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleL(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleP",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleP(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleR",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "slavoGermanic",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleR(String,DoubleMetaphoneResult,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleS",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "slavoGermanic",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleS(String,DoubleMetaphoneResult,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleSC",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleSC(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleT",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleT(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleW",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleW(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleX",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleX(String,DoubleMetaphoneResult,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleZ",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "result",
+          "type": "DoubleMetaphoneResult"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "slavoGermanic",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "handleZ(String,DoubleMetaphoneResult,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "conditionC0",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "conditionC0(String,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "conditionCH0",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "conditionCH0(String,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "conditionCH1",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "conditionCH1(String,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "conditionL0",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "conditionL0(String,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "conditionM0",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "conditionM0(String,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSlavoGermanic",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSlavoGermanic(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isVowel",
+      "parameters": [
+        {
+          "name": "ch",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isVowel(char)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSilentStart",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSilentStart(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "cleanInput",
+      "parameters": [
+        {
+          "name": "input",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "cleanInput(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "charAt",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char",
+      "signature": "charAt(String,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria1",
+          "type": "String"
+        },
+        {
+          "name": "criteria2",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria1",
+          "type": "String"
+        },
+        {
+          "name": "criteria2",
+          "type": "String"
+        },
+        {
+          "name": "criteria3",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria1",
+          "type": "String"
+        },
+        {
+          "name": "criteria2",
+          "type": "String"
+        },
+        {
+          "name": "criteria3",
+          "type": "String"
+        },
+        {
+          "name": "criteria4",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String,String,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria1",
+          "type": "String"
+        },
+        {
+          "name": "criteria2",
+          "type": "String"
+        },
+        {
+          "name": "criteria3",
+          "type": "String"
+        },
+        {
+          "name": "criteria4",
+          "type": "String"
+        },
+        {
+          "name": "criteria5",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String,String,String,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria1",
+          "type": "String"
+        },
+        {
+          "name": "criteria2",
+          "type": "String"
+        },
+        {
+          "name": "criteria3",
+          "type": "String"
+        },
+        {
+          "name": "criteria4",
+          "type": "String"
+        },
+        {
+          "name": "criteria5",
+          "type": "String"
+        },
+        {
+          "name": "criteria6",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String,String,String,String,String,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "contains",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "length",
+          "type": "int"
+        },
+        {
+          "name": "criteria",
+          "type": "String[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "contains(String,int,int,String[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "8a0ab5fc2d64722be9f930d5b123e3bd50a32b82d2a8e1b37402c0d895d1244e",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Codec",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new DoubleMetaphone()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "DoubleMetaphone()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "74602c6df7188127392348212240a580df0b5a00ef92bb7c47ac3f2917c72e00",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.codec.language.DoubleMetaphone",
+  "trigger_tests": [
+    "org.apache.commons.codec.language.DoubleMetaphone2Test::testDoubleMetaphoneAlternate"
+  ]
+}

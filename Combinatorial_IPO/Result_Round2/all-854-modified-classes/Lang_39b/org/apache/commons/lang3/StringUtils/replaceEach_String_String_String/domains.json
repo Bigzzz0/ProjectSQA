@@ -1,0 +1,23 @@
+{
+  "replacementList": [
+    "new String[] {}",
+    "new String[] {\"value\"}"
+  ],
+  "searchList": [
+    "new String[] {}",
+    "new String[] {\"value\"}"
+  ],
+  "text": [
+    "\"\"",
+    "\" \"",
+    "\"a\"",
+    "\"test123\"",
+    "\"!@#\"",
+    "\"0\"",
+    "\"-1\"",
+    "\"1.5\"",
+    "\"9223372036854775807\"",
+    "\"9223372036854775808\"",
+    "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+  ]
+}

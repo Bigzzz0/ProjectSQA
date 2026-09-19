@@ -1,0 +1,341 @@
+{
+  "audit_hash": "cf794fada2cbd7a6a28d415ed7e381d562030fda5663a71ece8be73b75b5d4a7",
+  "bug_id": 63,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 10
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DurationFormatUtils",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DurationFormatUtils()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatDurationHMS",
+      "parameters": [
+        {
+          "name": "durationMillis",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatDurationHMS(long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatDurationISO",
+      "parameters": [
+        {
+          "name": "durationMillis",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatDurationISO(long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatDuration",
+      "parameters": [
+        {
+          "name": "durationMillis",
+          "type": "long"
+        },
+        {
+          "name": "format",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatDuration(long,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatDuration",
+      "parameters": [
+        {
+          "name": "durationMillis",
+          "type": "long"
+        },
+        {
+          "name": "format",
+          "type": "String"
+        },
+        {
+          "name": "padWithZeros",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatDuration(long,String,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatDurationWords",
+      "parameters": [
+        {
+          "name": "durationMillis",
+          "type": "long"
+        },
+        {
+          "name": "suppressLeadingZeroElements",
+          "type": "boolean"
+        },
+        {
+          "name": "suppressTrailingZeroElements",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatDurationWords(long,boolean,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatPeriodISO",
+      "parameters": [
+        {
+          "name": "startMillis",
+          "type": "long"
+        },
+        {
+          "name": "endMillis",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatPeriodISO(long,long)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatPeriod",
+      "parameters": [
+        {
+          "name": "startMillis",
+          "type": "long"
+        },
+        {
+          "name": "endMillis",
+          "type": "long"
+        },
+        {
+          "name": "format",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatPeriod(long,long,String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "TimeZone"
+      ],
+      "name": "formatPeriod",
+      "parameters": [
+        {
+          "name": "startMillis",
+          "type": "long"
+        },
+        {
+          "name": "endMillis",
+          "type": "long"
+        },
+        {
+          "name": "format",
+          "type": "String"
+        },
+        {
+          "name": "padWithZeros",
+          "type": "boolean"
+        },
+        {
+          "name": "timezone",
+          "type": "TimeZone"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "String",
+      "signature": "formatPeriod(long,long,String,boolean,TimeZone)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "tokens",
+          "type": "Token[]"
+        },
+        {
+          "name": "years",
+          "type": "int"
+        },
+        {
+          "name": "months",
+          "type": "int"
+        },
+        {
+          "name": "days",
+          "type": "int"
+        },
+        {
+          "name": "hours",
+          "type": "int"
+        },
+        {
+          "name": "minutes",
+          "type": "int"
+        },
+        {
+          "name": "seconds",
+          "type": "int"
+        },
+        {
+          "name": "milliseconds",
+          "type": "int"
+        },
+        {
+          "name": "padWithZeros",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "format(Token[],int,int,int,int,int,int,int,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "lexx",
+      "parameters": [
+        {
+          "name": "format",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Token[]",
+      "signature": "lexx(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "cf794fada2cbd7a6a28d415ed7e381d562030fda5663a71ece8be73b75b5d4a7",
+  "missing_adapters": [
+    "TimeZone",
+    "entry_point_evidence"
+  ],
+  "project": "Lang",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new DurationFormatUtils()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "DurationFormatUtils()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "175e41af73a66098774c4460842768d1d50db2a646b3d5c049b085e7429db499",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.lang.time.DurationFormatUtils",
+  "trigger_tests": [
+    "org.apache.commons.lang.time.DurationFormatUtilsTest::testJiraLang281"
+  ]
+}

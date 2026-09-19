@@ -1,0 +1,10 @@
+{
+  "receiver__attribute": [
+    "true",
+    "false"
+  ],
+  "receiver__tag": [
+    "true",
+    "false"
+  ]
+}

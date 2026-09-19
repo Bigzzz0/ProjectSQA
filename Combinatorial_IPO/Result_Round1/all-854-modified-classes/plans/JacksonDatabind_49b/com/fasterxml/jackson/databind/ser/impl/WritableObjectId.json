@@ -1,0 +1,126 @@
+{
+  "audit_hash": "19b6da383fc301231dabe18382dd2c4c9b63e285dd3021793adb5b5c886da98f",
+  "bug_id": 49,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "WritableObjectId",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "ObjectIdGenerator<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "WritableObjectId(ObjectIdGenerator<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeAsId",
+      "parameters": [
+        {
+          "name": "gen",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "w",
+          "type": "ObjectIdWriter"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "writeAsId(JsonGenerator,SerializerProvider,ObjectIdWriter)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object"
+      ],
+      "name": "generateId",
+      "parameters": [
+        {
+          "name": "forPojo",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Object",
+      "signature": "generateId(Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeAsField",
+      "parameters": [
+        {
+          "name": "gen",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "w",
+          "type": "ObjectIdWriter"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeAsField(JsonGenerator,SerializerProvider,ObjectIdWriter)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "19b6da383fc301231dabe18382dd2c4c9b63e285dd3021793adb5b5c886da98f",
+  "missing_adapters": [
+    "Object",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "b4f8d112958d414c9efb886068d29ffe267635b0ed6b772e63c9f0c117b02570",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.ser.impl.WritableObjectId",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.objectid.AlwaysAsReferenceFirstTest::testIssue1255"
+  ]
+}

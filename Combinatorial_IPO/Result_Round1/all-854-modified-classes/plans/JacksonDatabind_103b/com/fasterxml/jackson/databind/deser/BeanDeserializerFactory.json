@@ -1,0 +1,87 @@
+{
+  "audit_hash": "fd55e633cf5775e8c8ee26a2ba768f65bf63244650d8278846b64b84a39ec2c6",
+  "bug_id": 103,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BeanDeserializerFactory",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BeanDeserializerFactory(DeserializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "constructBeanDeserializerBuilder",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BeanDeserializerBuilder",
+      "signature": "constructBeanDeserializerBuilder(DeserializationContext,BeanDescription)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_isSetterlessType",
+      "parameters": [
+        {
+          "name": "rawType",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "_isSetterlessType(Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "fd55e633cf5775e8c8ee26a2ba768f65bf63244650d8278846b64b84a39ec2c6",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a2c4f4c19be32ab313000dbdd0c7959fed8bb08e2fa55e05ee25c330f4e6b415",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.exc.BasicExceptionTest::testLocationAddition"
+  ]
+}

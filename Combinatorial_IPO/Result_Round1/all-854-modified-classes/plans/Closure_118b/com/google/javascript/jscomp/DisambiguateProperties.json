@@ -1,0 +1,274 @@
+{
+  "audit_hash": "816dcf63b8517101cc7aed91e75b4b07a14125609734b39fb001b07818be1480",
+  "bug_id": 118,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 11
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DisambiguateProperties",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "typeSystem",
+          "type": "TypeSystem<T>"
+        },
+        {
+          "name": "propertiesToErrorFor",
+          "type": "Map<String, CheckLevel>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DisambiguateProperties(AbstractCompiler,TypeSystem<T>,Map<String,CheckLevel>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "forJSTypeSystem",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "propertiesToErrorFor",
+          "type": "Map<String, CheckLevel>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DisambiguateProperties<JSType>",
+      "signature": "forJSTypeSystem(AbstractCompiler,Map<String,CheckLevel>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "forConcreteTypeSystem",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "tt",
+          "type": "TightenTypes"
+        },
+        {
+          "name": "propertiesToErrorFor",
+          "type": "Map<String, CheckLevel>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DisambiguateProperties<ConcreteType>",
+      "signature": "forConcreteTypeSystem(AbstractCompiler,TightenTypes,Map<String,CheckLevel>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "recordInvalidationError",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "JSType"
+        },
+        {
+          "name": "error",
+          "type": "JSError"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "recordInvalidationError(JSType,JSError)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addInvalidatingType",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "JSType"
+        },
+        {
+          "name": "error",
+          "type": "JSError"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addInvalidatingType(JSType,JSError)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getProperty",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Property",
+      "signature": "getProperty(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getTypeWithProperty",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "T",
+      "signature": "getTypeWithProperty(String,T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "renameProperties",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "renameProperties()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "buildPropNames",
+      "parameters": [
+        {
+          "name": "types",
+          "type": "UnionFind<T>"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Map<T, String>",
+      "signature": "buildPropNames(UnionFind<T>,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRenamedTypesForTesting",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Multimap<String, Collection<T>>",
+      "signature": "getRenamedTypesForTesting()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "816dcf63b8517101cc7aed91e75b4b07a14125609734b39fb001b07818be1480",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "fddb02a9daff2db687c88f98da6bc62c81d2c38a5fe3b558cfd1b3339522147b",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.DisambiguateProperties",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.DisambiguatePropertiesTest::testOneType4",
+    "com.google.javascript.jscomp.DisambiguatePropertiesTest::testTwoTypes4"
+  ]
+}

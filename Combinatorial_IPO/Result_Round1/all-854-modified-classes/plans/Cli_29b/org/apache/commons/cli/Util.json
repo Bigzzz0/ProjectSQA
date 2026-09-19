@@ -1,0 +1,24 @@
+{
+  "audit_hash": "dcd3b970aeff9d5b25a3b408e65160c613be36e990bfeca80341784930f69ff3",
+  "bug_id": 29,
+  "callable_status_counts": {},
+  "callables": [],
+  "input_hash": "dcd3b970aeff9d5b25a3b408e65160c613be36e990bfeca80341784930f69ff3",
+  "missing_adapters": [],
+  "project": "Cli",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Util()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ea0bbe3ecfdc72b8d26b9c6d7f8b4df8d10f4cde28710b4eef6cddb1a9b3b467",
+  "status": "NOT_PAIRWISE_APPLICABLE",
+  "target_class": "org.apache.commons.cli.Util",
+  "trigger_tests": [
+    "org.apache.commons.cli.UtilTest::testStripLeadingAndTrailingQuotes"
+  ]
+}

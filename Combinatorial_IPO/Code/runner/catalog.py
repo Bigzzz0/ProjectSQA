@@ -17,6 +17,7 @@ class CatalogTarget:
     simple_name: str
     modified_sources: Tuple[str, ...]
     trigger_tests: Tuple[str, ...]
+    modified_resources: Tuple[str, ...] = ()
 
     @property
     def target_key(self) -> str:
@@ -29,6 +30,7 @@ class ResolvedCatalogTarget:
     target_class: str
     target_directory: Path
     source_file: Path
+    source_presence: str = "LEGACY_SINGLE_VERSION"
 
 
 def _non_empty_strings(entry: dict, key: str, index: int) -> Tuple[str, ...]:
@@ -48,9 +50,24 @@ def _non_empty_strings(entry: dict, key: str, index: int) -> Tuple[str, ...]:
     return tuple(value)
 
 
+def _optional_strings(entry: dict, key: str, index: int) -> Tuple[str, ...]:
+    value = entry.get(key, [])
+    if not isinstance(value, list) or any(
+        not isinstance(item, str) or not item for item in value
+    ):
+        raise ValueError("Catalog entry {} has an invalid {}".format(index, key))
+    if len(set(value)) != len(value):
+        raise ValueError("Catalog entry {} has duplicate {}".format(index, key))
+    return tuple(value)
+
+
 def load_catalog(catalog_path: Path) -> List[CatalogTarget]:
     """Read a catalog and reject malformed or duplicate bug targets."""
     raw_entries = json.loads(catalog_path.read_text(encoding="utf-8"))
+    if isinstance(raw_entries, dict):
+        if raw_entries.get("kind") != "ipo_all_modified_classes_catalog_snapshot":
+            raise ValueError("Unsupported catalog object")
+        raw_entries = raw_entries.get("entries")
     if not isinstance(raw_entries, list):
         raise ValueError("Catalog root must be a list")
 
@@ -107,6 +124,7 @@ def load_catalog(catalog_path: Path) -> List[CatalogTarget]:
             target_class=entry["target_class"],
             simple_name=entry["simple_name"],
             modified_sources=modified_sources,
+            modified_resources=_optional_strings(entry, "modified_resources", index),
             trigger_tests=trigger_tests,
         )
         identity = (target.project, target.bug_id)
@@ -147,7 +165,10 @@ def resolve_catalog_targets(
 
         for target_class in target.modified_sources:
             simple_name = target_class.rsplit(".", 1)[-1]
-            source_file = directory / "{}.java".format(simple_name)
+            relative_source = Path(*target_class.split(".")).with_suffix(".java")
+            buggy_source = directory / "sources" / "buggy" / relative_source
+            fixed_source = directory / "sources" / "fixed" / relative_source
+            legacy_source = directory / "{}.java".format(simple_name)
             issue_base = {
                 "project": target.project,
                 "bug_id": target.bug_id,
@@ -155,20 +176,35 @@ def resolve_catalog_targets(
                 "source_directory": target.directory,
                 "status": "CATALOG_MISMATCH",
             }
-            if not source_file.is_file():
-                available = sorted(path.name for path in directory.glob("*.java"))
+            if fixed_source.is_file():
+                source_file = fixed_source
+                source_presence = (
+                    "PRESENT_IN_BOTH" if buggy_source.is_file() else "ADDED_IN_FIXED"
+                )
+            elif buggy_source.is_file():
+                source_file = buggy_source
+                source_presence = "DELETED_IN_FIXED"
+            elif legacy_source.is_file():
+                source_file = legacy_source
+                source_presence = "LEGACY_SINGLE_VERSION"
+            else:
+                available = sorted(
+                    str(path.relative_to(directory)) for path in directory.rglob("*.java")
+                )
                 issues.append(
                     dict(
                         issue_base,
                         reason="Modified source file does not exist: {}".format(
-                            source_file.name
+                            relative_source
                         ),
                         available_sources=available,
                     )
                 )
                 continue
             resolved.append(
-                ResolvedCatalogTarget(target, target_class, directory, source_file)
+                ResolvedCatalogTarget(
+                    target, target_class, directory, source_file, source_presence
+                )
             )
 
     return resolved, issues

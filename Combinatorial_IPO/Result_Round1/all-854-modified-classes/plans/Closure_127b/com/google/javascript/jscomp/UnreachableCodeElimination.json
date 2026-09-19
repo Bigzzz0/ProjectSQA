@@ -1,0 +1,76 @@
+{
+  "audit_hash": "e9f75feadf6b7e58ea2bc1c27f5848d1a165ce6fcfd382d89d4bbb2efe060bce",
+  "bug_id": 127,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "UnreachableCodeElimination",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "removeNoOpStatements",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "UnreachableCodeElimination(AbstractCompiler,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "toplevel",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "e9f75feadf6b7e58ea2bc1c27f5848d1a165ce6fcfd382d89d4bbb2efe060bce",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "248261723e7e4f2f506e96997a04810f9ae05322181b484542431b90d781795e",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationTest::testIssue4177428_return",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationTest::testDontRemoveBreakInTryFinally",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationTest::testIssue4177428_continue",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationTest::testDontRemoveBreakInTryFinallySwitch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationTest::testIssue4177428a",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationTest::testIssue4177428c"
+  ]
+}

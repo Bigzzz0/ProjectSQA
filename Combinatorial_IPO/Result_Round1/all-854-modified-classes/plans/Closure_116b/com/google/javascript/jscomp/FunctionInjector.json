@@ -1,0 +1,563 @@
+{
+  "audit_hash": "6b4f6c945d1da7a3edd847d42cf3ad8d712cda6a5ea9be6c8709c73e61679af6",
+  "bug_id": 116,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 19
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "FunctionInjector",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "safeNameIdSupplier",
+          "type": "Supplier<String>"
+        },
+        {
+          "name": "allowDecomposition",
+          "type": "boolean"
+        },
+        {
+          "name": "assumeStrictThis",
+          "type": "boolean"
+        },
+        {
+          "name": "assumeMinimumCapture",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "FunctionInjector(AbstractCompiler,Supplier<String>,boolean,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "doesFunctionMeetMinimumRequirements",
+      "parameters": [
+        {
+          "name": "fnName",
+          "type": "String"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "doesFunctionMeetMinimumRequirements(String,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "canInlineReferenceToFunction",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "needAliases",
+          "type": "Set<String>"
+        },
+        {
+          "name": "mode",
+          "type": "InliningMode"
+        },
+        {
+          "name": "referencesThis",
+          "type": "boolean"
+        },
+        {
+          "name": "containsFunctions",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CanInlineResult",
+      "signature": "canInlineReferenceToFunction(NodeTraversal,Node,Node,Set<String>,InliningMode,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isSupportedCallType",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isSupportedCallType(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inline",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnName",
+          "type": "String"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "mode",
+          "type": "InliningMode"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "inline(Node,String,Node,InliningMode)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inlineReturnValue",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "inlineReturnValue(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "classifyCallSite",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CallSiteType",
+      "signature": "classifyCallSite(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDecomposer",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ExpressionDecomposer",
+      "signature": "getDecomposer()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "maybePrepareCall",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "maybePrepareCall(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inlineFunction",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Node",
+      "signature": "inlineFunction(Node,Node,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDirectCallNodeReplacementPossible",
+      "parameters": [
+        {
+          "name": "fnNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDirectCallNodeReplacementPossible(Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "canInlineReferenceAsStatementBlock",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "namesToAlias",
+          "type": "Set<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CanInlineResult",
+      "signature": "canInlineReferenceAsStatementBlock(NodeTraversal,Node,Node,Set<String>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "callMeetsBlockInliningRequirements",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "namesToAlias",
+          "type": "Set<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "callMeetsBlockInliningRequirements(NodeTraversal,Node,Node,Set<String>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "canInlineReferenceDirectly",
+      "parameters": [
+        {
+          "name": "callNode",
+          "type": "Node"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "CanInlineResult",
+      "signature": "canInlineReferenceDirectly(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inliningLowersCost",
+      "parameters": [
+        {
+          "name": "fnModule",
+          "type": "JSModule"
+        },
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "refs",
+          "type": "Collection<? extends Reference>"
+        },
+        {
+          "name": "namesToAlias",
+          "type": "Set<String>"
+        },
+        {
+          "name": "isRemovable",
+          "type": "boolean"
+        },
+        {
+          "name": "referencesThis",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "inliningLowersCost(JSModule,Node,Collection<?extendsReference>,Set<String>,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "doesLowerCost",
+      "parameters": [
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "callCost",
+          "type": "int"
+        },
+        {
+          "name": "directInlines",
+          "type": "int"
+        },
+        {
+          "name": "costDeltaDirect",
+          "type": "int"
+        },
+        {
+          "name": "blockInlines",
+          "type": "int"
+        },
+        {
+          "name": "costDeltaBlock",
+          "type": "int"
+        },
+        {
+          "name": "removable",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "doesLowerCost(Node,int,int,int,int,int,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "estimateCallCost",
+      "parameters": [
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "referencesThis",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "estimateCallCost(Node,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "inlineCostDelta",
+      "parameters": [
+        {
+          "name": "fnNode",
+          "type": "Node"
+        },
+        {
+          "name": "namesToAlias",
+          "type": "Set<String>"
+        },
+        {
+          "name": "mode",
+          "type": "InliningMode"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "inlineCostDelta(Node,Set<String>,InliningMode)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setKnownConstants",
+      "parameters": [
+        {
+          "name": "knownConstants",
+          "type": "Set<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setKnownConstants(Set<String>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "6b4f6c945d1da7a3edd847d42cf3ad8d712cda6a5ea9be6c8709c73e61679af6",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6ebcd825b6146f28d57a219b3a8a99c5891703565a8de51a3426182e99cbc0ad",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.FunctionInjector",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.FunctionInjectorTest::testIssue1101a",
+    "com.google.javascript.jscomp.FunctionInjectorTest::testIssue1101b",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testBug4944818",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testDoubleInlining2",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testIssue1101",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testInlineIfParametersModified8",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testInlineIfParametersModified9",
+    "com.google.javascript.jscomp.InlineFunctionsTest::testInlineFunctions6"
+  ]
+}

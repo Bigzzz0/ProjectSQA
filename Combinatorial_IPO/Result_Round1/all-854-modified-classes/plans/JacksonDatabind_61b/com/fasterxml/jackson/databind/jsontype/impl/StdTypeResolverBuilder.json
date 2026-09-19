@@ -1,0 +1,189 @@
+{
+  "audit_hash": "2dd20ee3bc28326802e453b17df9a04bb299fc27927ee9e8eed9e5ab954953c6",
+  "bug_id": 61,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "StdTypeResolverBuilder",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "StdTypeResolverBuilder()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "noTypeInfoBuilder",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StdTypeResolverBuilder",
+      "signature": "noTypeInfoBuilder()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "JsonTypeInfo.As"
+      ],
+      "name": "inclusion",
+      "parameters": [
+        {
+          "name": "includeAs",
+          "type": "JsonTypeInfo.As"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "StdTypeResolverBuilder",
+      "signature": "inclusion(JsonTypeInfo.As)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:StdTypeResolverBuilder"
+      ],
+      "name": "typeProperty",
+      "parameters": [
+        {
+          "name": "typeIdPropName",
+          "type": "String"
+        }
+      ],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "StdTypeResolverBuilder",
+      "signature": "typeProperty(String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "defaultImpl",
+      "parameters": [
+        {
+          "name": "defaultImpl",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StdTypeResolverBuilder",
+      "signature": "defaultImpl(Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "typeIdVisibility",
+      "parameters": [
+        {
+          "name": "isVisible",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StdTypeResolverBuilder",
+      "signature": "typeIdVisibility(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getTypeProperty",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getTypeProperty()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isTypeIdVisible",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isTypeIdVisible()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "2dd20ee3bc28326802e453b17df9a04bb299fc27927ee9e8eed9e5ab954953c6",
+  "missing_adapters": [
+    "JsonTypeInfo.As",
+    "entry_point_evidence",
+    "object_observer",
+    "object_observer:StdTypeResolverBuilder"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new StdTypeResolverBuilder()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "StdTypeResolverBuilder()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "6c706fa69225855578b1c3114becc5286598e5bb585d5b0e6181f8e55b802bd3",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.jsontype.DefaultTypingWithPrimitivesTest::testDefaultTypingWithLong"
+  ]
+}

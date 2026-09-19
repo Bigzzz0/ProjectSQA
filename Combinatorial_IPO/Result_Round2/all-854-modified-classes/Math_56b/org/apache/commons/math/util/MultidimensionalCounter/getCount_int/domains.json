@@ -1,0 +1,10 @@
+{
+  "c": [
+    "new int[] {}",
+    "new int[] {1}"
+  ],
+  "receiver__size": [
+    "new int[] {}",
+    "new int[] {1}"
+  ]
+}

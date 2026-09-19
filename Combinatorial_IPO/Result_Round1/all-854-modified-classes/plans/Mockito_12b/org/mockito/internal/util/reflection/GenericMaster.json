@@ -1,0 +1,67 @@
+{
+  "audit_hash": "77c3da403af811d6e7685f65c424131d082a9c06f75318362f47f6c2d8b12d3f",
+  "bug_id": 12,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Field"
+      ],
+      "name": "getGenericType",
+      "parameters": [
+        {
+          "name": "field",
+          "type": "Field"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Class",
+      "signature": "getGenericType(Field)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "77c3da403af811d6e7685f65c424131d082a9c06f75318362f47f6c2d8b12d3f",
+  "missing_adapters": [
+    "Field"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new GenericMaster()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d0721ed2ff4bccc985a2227516099de4fe3255f4d9ccc7797d0ec3730bdca691",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.util.reflection.GenericMaster",
+  "trigger_tests": [
+    "org.mockito.internal.util.reflection.GenericMasterTest::shouldDealWithNestedGenerics",
+    "org.mockitousage.annotation.CaptorAnnotationBasicTest::shouldUseAnnotatedCaptor",
+    "org.mockitousage.annotation.CaptorAnnotationBasicTest::shouldUseCaptorInOrdinaryWay",
+    "org.mockitousage.annotation.CaptorAnnotationBasicTest::shouldCaptureGenericList",
+    "org.mockitousage.annotation.CaptorAnnotationBasicTest::shouldUseGenericlessAnnotatedCaptor",
+    "org.mockitousage.annotation.CaptorAnnotationTest::shouldScreamWhenWrongTypeForCaptor",
+    "org.mockitousage.annotation.CaptorAnnotationTest::testNormalUsage",
+    "org.mockitousage.annotation.CaptorAnnotationTest::shouldScreamWhenMoreThanOneMockitoAnnotaton",
+    "org.mockitousage.annotation.CaptorAnnotationTest::shouldScreamWhenInitializingCaptorsForNullClass",
+    "org.mockitousage.annotation.CaptorAnnotationTest::shouldLookForAnnotatedCaptorsInSuperClasses"
+  ]
+}

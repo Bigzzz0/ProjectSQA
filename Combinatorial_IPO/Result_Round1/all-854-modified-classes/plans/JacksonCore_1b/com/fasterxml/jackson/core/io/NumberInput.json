@@ -1,0 +1,119 @@
+{
+  "audit_hash": "2abaf8c2376dfcf65ab6bc2f4e921890853a9f05e166d8b35310d4ca41d4bf94",
+  "bug_id": 1,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseDouble",
+      "parameters": [
+        {
+          "name": "numStr",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "parseDouble(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "name": "parseBigDecimal",
+      "parameters": [
+        {
+          "name": "numStr",
+          "type": "String"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "recommended_test_type": "example_based",
+      "return_type": "BigDecimal",
+      "signature": "parseBigDecimal(String)",
+      "static": true,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseBigDecimal",
+      "parameters": [
+        {
+          "name": "buffer",
+          "type": "char[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "BigDecimal",
+      "signature": "parseBigDecimal(char[])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "_badBigDecimal",
+      "parameters": [
+        {
+          "name": "str",
+          "type": "String"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "NumberFormatException",
+      "signature": "_badBigDecimal(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "2abaf8c2376dfcf65ab6bc2f4e921890853a9f05e166d8b35310d4ca41d4bf94",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "JacksonCore",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new NumberInput()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "3cd025e914432e58605ac0ee504eac0ecb1de91a06fa79bd3c75e57bb4758f41",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.core.io.NumberInput",
+  "trigger_tests": [
+    "com.fasterxml.jackson.core.json.TestParserNonStandard::testAllowNaN"
+  ]
+}

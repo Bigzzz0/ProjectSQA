@@ -1,0 +1,48 @@
+{
+  "audit_hash": "3e4fb8183bb2723ec5fd9fdc939300ff772bb0e026bc164a4d6ef97b642c6cf4",
+  "bug_id": 10,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "SerializerProvider"
+      ],
+      "name": "resolve",
+      "parameters": [
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "resolve(SerializerProvider)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "3e4fb8183bb2723ec5fd9fdc939300ff772bb0e026bc164a4d6ef97b642c6cf4",
+  "missing_adapters": [
+    "SerializerProvider"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "7d9d8d2d6a1d413276c70e0acf0d2c12395d1413329351b355ef8db31151df22",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.ser.AnyGetterWriter",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.ser.TestAnyGetter::testIssue705"
+  ]
+}

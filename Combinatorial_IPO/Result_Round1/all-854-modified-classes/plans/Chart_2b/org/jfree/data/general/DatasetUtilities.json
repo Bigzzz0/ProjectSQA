@@ -1,0 +1,1295 @@
+{
+  "audit_hash": "d4d963314375fc1ca35f1283544484d901afcc4736220599717dd7d40823ad90",
+  "bug_id": 2,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 50
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "DatasetUtilities",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "DatasetUtilities()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "calculatePieDatasetTotal",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "PieDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "calculatePieDatasetTotal(PieDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createPieDatasetForRow",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PieDataset",
+      "signature": "createPieDatasetForRow(CategoryDataset,Comparable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createPieDatasetForRow",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PieDataset",
+      "signature": "createPieDatasetForRow(CategoryDataset,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createPieDatasetForColumn",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "columnKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PieDataset",
+      "signature": "createPieDatasetForColumn(CategoryDataset,Comparable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createPieDatasetForColumn",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PieDataset",
+      "signature": "createPieDatasetForColumn(CategoryDataset,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createConsolidatedPieDataset",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "PieDataset"
+        },
+        {
+          "name": "key",
+          "type": "Comparable"
+        },
+        {
+          "name": "minimumPercent",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PieDataset",
+      "signature": "createConsolidatedPieDataset(PieDataset,Comparable,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createConsolidatedPieDataset",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "PieDataset"
+        },
+        {
+          "name": "key",
+          "type": "Comparable"
+        },
+        {
+          "name": "minimumPercent",
+          "type": "double"
+        },
+        {
+          "name": "minItems",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "PieDataset",
+      "signature": "createConsolidatedPieDataset(PieDataset,Comparable,double,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createCategoryDataset",
+      "parameters": [
+        {
+          "name": "rowKeyPrefix",
+          "type": "String"
+        },
+        {
+          "name": "columnKeyPrefix",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "double[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryDataset",
+      "signature": "createCategoryDataset(String,String,double[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createCategoryDataset",
+      "parameters": [
+        {
+          "name": "rowKeyPrefix",
+          "type": "String"
+        },
+        {
+          "name": "columnKeyPrefix",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "Number[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryDataset",
+      "signature": "createCategoryDataset(String,String,Number[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createCategoryDataset",
+      "parameters": [
+        {
+          "name": "rowKeys",
+          "type": "Comparable[]"
+        },
+        {
+          "name": "columnKeys",
+          "type": "Comparable[]"
+        },
+        {
+          "name": "data",
+          "type": "double[][]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryDataset",
+      "signature": "createCategoryDataset(Comparable[],Comparable[],double[][])",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createCategoryDataset",
+      "parameters": [
+        {
+          "name": "rowKey",
+          "type": "Comparable"
+        },
+        {
+          "name": "rowData",
+          "type": "KeyedValues"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CategoryDataset",
+      "signature": "createCategoryDataset(Comparable,KeyedValues)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sampleFunction2D",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "Function2D"
+        },
+        {
+          "name": "start",
+          "type": "double"
+        },
+        {
+          "name": "end",
+          "type": "double"
+        },
+        {
+          "name": "samples",
+          "type": "int"
+        },
+        {
+          "name": "seriesKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "XYDataset",
+      "signature": "sampleFunction2D(Function2D,double,double,int,Comparable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "sampleFunction2DToSeries",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "Function2D"
+        },
+        {
+          "name": "start",
+          "type": "double"
+        },
+        {
+          "name": "end",
+          "type": "double"
+        },
+        {
+          "name": "samples",
+          "type": "int"
+        },
+        {
+          "name": "seriesKey",
+          "type": "Comparable"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "XYSeries",
+      "signature": "sampleFunction2DToSeries(Function2D,double,double,int,Comparable)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmptyOrNull",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "PieDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmptyOrNull(PieDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmptyOrNull",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmptyOrNull(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isEmptyOrNull",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isEmptyOrNull(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDomainBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findDomainBounds(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDomainBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findDomainBounds(XYDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDomainBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "visibleSeriesKeys",
+          "type": "List"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findDomainBounds(XYDataset,List,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateDomainBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateDomainBounds(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "XYDataset"
+      ],
+      "name": "iterateDomainBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Range",
+      "signature": "iterateDomainBounds(XYDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(CategoryDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "visibleSeriesKeys",
+          "type": "List"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(CategoryDataset,List,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(XYDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "visibleSeriesKeys",
+          "type": "List"
+        },
+        {
+          "name": "xRange",
+          "type": "Range"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findRangeBounds(XYDataset,List,Range,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateCategoryRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateCategoryRangeBounds(CategoryDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateRangeBounds(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateRangeBounds(CategoryDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateToFindRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "visibleSeriesKeys",
+          "type": "List"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateToFindRangeBounds(CategoryDataset,List,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateXYRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateXYRangeBounds(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateRangeBounds(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "XYDataset"
+      ],
+      "name": "iterateRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Range",
+      "signature": "iterateRangeBounds(XYDataset,boolean)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateToFindDomainBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "visibleSeriesKeys",
+          "type": "List"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateToFindDomainBounds(XYDataset,List,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "iterateToFindRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        },
+        {
+          "name": "visibleSeriesKeys",
+          "type": "List"
+        },
+        {
+          "name": "xRange",
+          "type": "Range"
+        },
+        {
+          "name": "includeInterval",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "iterateToFindRangeBounds(XYDataset,List,Range,boolean)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMinimumDomainValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMinimumDomainValue(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMaximumDomainValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMaximumDomainValue(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMinimumRangeValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMinimumRangeValue(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMinimumRangeValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMinimumRangeValue(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMaximumRangeValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMaximumRangeValue(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMaximumRangeValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "XYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMaximumRangeValue(XYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findStackedRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findStackedRangeBounds(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findStackedRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "base",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findStackedRangeBounds(CategoryDataset,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findStackedRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "map",
+          "type": "KeyToGroupMap"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findStackedRangeBounds(CategoryDataset,KeyToGroupMap)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMinimumStackedRangeValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMinimumStackedRangeValue(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findMaximumStackedRangeValue",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "findMaximumStackedRangeValue(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findStackedRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "TableXYDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findStackedRangeBounds(TableXYDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findStackedRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "TableXYDataset"
+        },
+        {
+          "name": "base",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findStackedRangeBounds(TableXYDataset,double)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "calculateStackTotal",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "TableXYDataset"
+        },
+        {
+          "name": "item",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "double",
+      "signature": "calculateStackTotal(TableXYDataset,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findCumulativeRangeBounds",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Range",
+      "signature": "findCumulativeRangeBounds(CategoryDataset)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "d4d963314375fc1ca35f1283544484d901afcc4736220599717dd7d40823ad90",
+  "missing_adapters": [
+    "XYDataset",
+    "entry_point_evidence"
+  ],
+  "project": "Chart",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e627db80540897cfe621208361d85cb5ff8adff3d78f269a1c6e422a64b38b68",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jfree.data.general.DatasetUtilities",
+  "trigger_tests": [
+    "org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2",
+    "org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3"
+  ]
+}

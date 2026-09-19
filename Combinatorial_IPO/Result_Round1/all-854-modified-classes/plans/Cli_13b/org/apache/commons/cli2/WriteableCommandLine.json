@@ -1,0 +1,209 @@
+{
+  "audit_hash": "1066931b3e09adda4a32437b8a33ef68cb9192773716eaa72e561094e19f3029",
+  "bug_id": 13,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 8
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addOption",
+      "parameters": [
+        {
+          "name": "option",
+          "type": "Option"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addOption(Option)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addValue",
+      "parameters": [
+        {
+          "name": "option",
+          "type": "Option"
+        },
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addValue(Option,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "getUndefaultedValues",
+      "parameters": [
+        {
+          "name": "option",
+          "type": "Option"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "List",
+      "signature": "getUndefaultedValues(Option)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setDefaultValues",
+      "parameters": [
+        {
+          "name": "option",
+          "type": "Option"
+        },
+        {
+          "name": "defaultValues",
+          "type": "List"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setDefaultValues(Option,List)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addSwitch",
+      "parameters": [
+        {
+          "name": "option",
+          "type": "Option"
+        },
+        {
+          "name": "value",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addSwitch(Option,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setDefaultSwitch",
+      "parameters": [
+        {
+          "name": "option",
+          "type": "Option"
+        },
+        {
+          "name": "defaultSwitch",
+          "type": "Boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setDefaultSwitch(Option,Boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addProperty",
+      "parameters": [
+        {
+          "name": "property",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "addProperty(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "looksLikeOption",
+      "parameters": [
+        {
+          "name": "argument",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "looksLikeOption(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "1066931b3e09adda4a32437b8a33ef68cb9192773716eaa72e561094e19f3029",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e7f563985a3228176e10dad4eb919808a6fa4dcb14bb4873ba7c80ea41fdc399",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.cli2.WriteableCommandLine",
+  "trigger_tests": [
+    "org.apache.commons.cli2.bug.BugLoopingOptionLookAlikeTest::testLoopingOptionLookAlike2"
+  ]
+}

@@ -1,0 +1,244 @@
+[
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"\""
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\" \""
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {}",
+      "text": "\" \""
+    },
+    "id": 3,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": " "
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"\""
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": ""
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"a\""
+    },
+    "id": 5,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"a\""
+    },
+    "id": 6,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "a"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"test123\""
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"test123\""
+    },
+    "id": 8,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "test123"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"!@#\""
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"!@#\""
+    },
+    "id": 10,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "!@#"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"0\""
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"0\""
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"-1\""
+    },
+    "id": 13,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"-1\""
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "-1"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"1.5\""
+    },
+    "id": 15,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"1.5\""
+    },
+    "id": 16,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "1.5"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"9223372036854775807\""
+    },
+    "id": 17,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"9223372036854775807\""
+    },
+    "id": 18,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775807"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"9223372036854775808\""
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"9223372036854775808\""
+    },
+    "id": 20,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "9223372036854775808"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {}",
+      "searchList": "new String[] {}",
+      "text": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "arguments": {
+      "replacementList": "new String[] {\"value\"}",
+      "searchList": "new String[] {\"value\"}",
+      "text": "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.String",
+    "value_or_message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }
+]

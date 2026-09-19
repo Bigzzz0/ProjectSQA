@@ -1,0 +1,265 @@
+{
+  "audit_hash": "95f4c55004948d98c4ee9882e6a35853f6806b28aab643dfb1b92c8abcd520f1",
+  "bug_id": 56,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "DocumentType",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "publicId",
+          "type": "String"
+        },
+        {
+          "name": "systemId",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "DocumentType(String,String,String,String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "DocumentType",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "pubSysKey",
+          "type": "String"
+        },
+        {
+          "name": "publicId",
+          "type": "String"
+        },
+        {
+          "name": "systemId",
+          "type": "String"
+        },
+        {
+          "name": "baseUri",
+          "type": "String"
+        }
+      ],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "DocumentType(String,String,String,String,String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "nodeName",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "nodeName()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "outerHtmlHead",
+      "parameters": [
+        {
+          "name": "accum",
+          "type": "Appendable"
+        },
+        {
+          "name": "depth",
+          "type": "int"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "void",
+      "signature": "outerHtmlHead(Appendable,int,Document.OutputSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "outerHtmlTail",
+      "parameters": [
+        {
+          "name": "accum",
+          "type": "Appendable"
+        },
+        {
+          "name": "depth",
+          "type": "int"
+        },
+        {
+          "name": "out",
+          "type": "Document.OutputSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "outerHtmlTail(Appendable,int,Document.OutputSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "has",
+      "parameters": [
+        {
+          "name": "attribute",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "has(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "95f4c55004948d98c4ee9882e6a35853f6806b28aab643dfb1b92c8abcd520f1",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer",
+    "public_entry_point"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__baseUri": "generic",
+      "receiver__name": "generic",
+      "receiver__publicId": "generic",
+      "receiver__systemId": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new DocumentType({receiver__name}, {receiver__publicId}, {receiver__systemId}, {receiver__baseUri})",
+    "factor_domains": {
+      "receiver__baseUri": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ],
+      "receiver__name": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ],
+      "receiver__publicId": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ],
+      "receiver__systemId": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "DocumentType(String,String,String,String)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "1ff33e05fa12b470bdb4cea6ebff68709fda606d8fa2262c966533d496450251",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jsoup.nodes.DocumentType",
+  "trigger_tests": [
+    "org.jsoup.nodes.DocumentTypeTest::testRoundTrip"
+  ]
+}

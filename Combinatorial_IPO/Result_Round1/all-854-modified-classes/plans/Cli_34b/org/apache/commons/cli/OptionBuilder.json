@@ -1,0 +1,94 @@
+{
+  "audit_hash": "4d6921b3ed7f711bd4e97b0bc5e8db236cae6641ec6fabc573638f4ffa90af0d",
+  "bug_id": 34,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "create",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Option",
+      "signature": "create(char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "create",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Option",
+      "signature": "create()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "create",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Option",
+      "signature": "create(String)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "4d6921b3ed7f711bd4e97b0bc5e8db236cae6641ec6fabc573638f4ffa90af0d",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "23c19d666fc66f557f265fe592bd54fd09720fa88981b3878b387c725c17d41f",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.cli.OptionBuilder",
+  "trigger_tests": [
+    "org.apache.commons.cli.CommandLineTest::testGetParsedOptionValue",
+    "org.apache.commons.cli.OptionBuilderTest::testTwoCompleteOptions"
+  ]
+}

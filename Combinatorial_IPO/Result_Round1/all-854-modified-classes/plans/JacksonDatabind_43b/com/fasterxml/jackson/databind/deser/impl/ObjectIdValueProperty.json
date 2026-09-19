@@ -1,0 +1,222 @@
+{
+  "audit_hash": "42d6bfe8b87d067a18263769834afc1d95c2b6a563fdd150958381ce0887f25c",
+  "bug_id": 43,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ObjectIdValueProperty",
+      "parameters": [
+        {
+          "name": "src",
+          "type": "ObjectIdValueProperty"
+        },
+        {
+          "name": "newName",
+          "type": "PropertyName"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ObjectIdValueProperty(ObjectIdValueProperty,PropertyName)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withName",
+      "parameters": [
+        {
+          "name": "newName",
+          "type": "PropertyName"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ObjectIdValueProperty",
+      "signature": "withName(PropertyName)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withValueDeserializer",
+      "parameters": [
+        {
+          "name": "deser",
+          "type": "JsonDeserializer<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ObjectIdValueProperty",
+      "signature": "withValueDeserializer(JsonDeserializer<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAnnotation",
+      "parameters": [
+        {
+          "name": "acls",
+          "type": "Class<A>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<A extends Annotation> A",
+      "signature": "getAnnotation(Class<A>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "deserializeAndSet",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "instance",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "deserializeAndSet(JsonParser,DeserializationContext,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "JsonParser",
+        "DeserializationContext",
+        "Object"
+      ],
+      "name": "deserializeSetAndReturn",
+      "parameters": [
+        {
+          "name": "p",
+          "type": "JsonParser"
+        },
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "instance",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Object",
+      "signature": "deserializeSetAndReturn(JsonParser,DeserializationContext,Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "set",
+      "parameters": [
+        {
+          "name": "instance",
+          "type": "Object"
+        },
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "set(Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setAndReturn",
+      "parameters": [
+        {
+          "name": "instance",
+          "type": "Object"
+        },
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "setAndReturn(Object,Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "42d6bfe8b87d067a18263769834afc1d95c2b6a563fdd150958381ce0887f25c",
+  "missing_adapters": [
+    "DeserializationContext",
+    "JsonParser",
+    "Object",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "971350fec6cf0e8c5e7c0f805f20b57ac39bb9768e218b0f43c55e0210ae705c",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.objectid.TestObjectIdSerialization::testNullStringPropertyId"
+  ]
+}

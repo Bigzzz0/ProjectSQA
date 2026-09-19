@@ -1,0 +1,132 @@
+{
+  "audit_hash": "4db0e635b05a8910f53ada6a4bae937d125972484e2cd685e3762731ba319d29",
+  "bug_id": 31,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Option",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "String"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Option(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Option",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "String"
+        },
+        {
+          "name": "hasArg",
+          "type": "boolean"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Option(String,boolean,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getValue",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getValue(int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "4db0e635b05a8910f53ada6a4bae937d125972484e2cd685e3762731ba319d29",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Cli",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__description": "generic",
+      "receiver__opt": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new Option({receiver__opt}, {receiver__description})",
+    "factor_domains": {
+      "receiver__description": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ],
+      "receiver__opt": [
+        "\"\"",
+        "\" \"",
+        "\"a\"",
+        "\"test123\"",
+        "\"!@#\"",
+        "\"0\"",
+        "\"-1\"",
+        "\"1.5\"",
+        "\"9223372036854775807\"",
+        "\"9223372036854775808\"",
+        "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "Option(String,String)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "5918d2c0a4a927102067befe7f247294f3c227cf1d56d712a661408618f9766e",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.cli.Option",
+  "trigger_tests": [
+    "org.apache.commons.cli.HelpFormatterTest::testDefaultArgName"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "audit_hash": "de4bcd760a5e76d93dc732e613a555894bf930c2f42f750423c09e439cfd7fdb",
+  "bug_id": 7,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 22,
+      "expected_pair_count": 22,
+      "model_hash": "26a8f47faee940a141a472ea0273f4c7a4d93834fd60c3f84916f0f59b2c0e1b",
+      "oracle_hash": "b7fcb636debe701c2c585fdb323793632ba397a0a981175bac8c3c084ab9eadd",
+      "oracle_sha256": "ecb17b3fa8c2596eb462d4ea5c48a2c67b71d067ed3fe8323b55a53581a1bbac",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 22,
+      "reused_oracle": false,
+      "signature": "getBoolean(String,Boolean)",
+      "suite_hash": "084abf7e90f1818c404886b803c1e0284f495a636d2a6af97afc0446c3cb9cc2"
+    },
+    {
+      "covered_pair_count": 44,
+      "expected_pair_count": 44,
+      "model_hash": "59dfb39538354fe135e7675d60f21c3820233b87d9f087abf4a34a36510bce92",
+      "oracle_hash": "b18edc4cf24286ffc94d7d306bed0336ead10afd413888a9b28b5c8d2d7b8226",
+      "oracle_sha256": "ea0716fdea5eff89ff253f44ff6b67011e04da36ef3d970fbd3a2d4234bb1ec5",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 44,
+      "reused_oracle": false,
+      "signature": "getByte(String,Byte)",
+      "suite_hash": "96678a87d73791141a3ca30402117f654be070455f332d333f0a102358179819"
+    },
+    {
+      "covered_pair_count": 44,
+      "expected_pair_count": 44,
+      "model_hash": "ca04dd9aecfbe099be5434966f1173aa971e8c6762748ef841baf5ffdd7669d7",
+      "oracle_hash": "ff15dedee2cc97c1c45bbed94c89b0de6f0167114d4f428308fba83e68bdfbbf",
+      "oracle_sha256": "4eb19e4dd53442ed431bbff32f060258d97913a63dedc8440111d283cd3e1538",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 44,
+      "reused_oracle": false,
+      "signature": "getShort(String,Short)",
+      "suite_hash": "e1a3826b18e50b92510c53e5f38bf263d60431cbe47115b4eb88c7a44c85c348"
+    },
+    {
+      "covered_pair_count": 44,
+      "expected_pair_count": 44,
+      "model_hash": "4651a4100b5ac85d62fbc9b7aea979ba4256c33266b78513649fddf8d2e8fcba",
+      "oracle_hash": "b7dd39b8451418fefd58c1b6f581daa1e209cf5e1a3488f1cfdae9cfd491ab12",
+      "oracle_sha256": "dd7fbb49eb968e2b424624e63744b18041ed00032edee6476c0568d7a0e74b30",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 44,
+      "reused_oracle": false,
+      "signature": "getInteger(String,Integer)",
+      "suite_hash": "4fdec505bb8e6990a61468cc3209ea2b64a393b2ac5be17763123876e318e56c"
+    },
+    {
+      "covered_pair_count": 44,
+      "expected_pair_count": 44,
+      "model_hash": "5d1cd4380364cb36803e026e50c0e2b22954f8ca259d043d744f977906cd8933",
+      "oracle_hash": "782d3f6a5a51e1e44b11d52aff7fca237052c5a2e312bff715dac7977fb89002",
+      "oracle_sha256": "4024e8e539eb6887889e63a56f312baf1b97e12ab7e8cbee2fa6634615fde032",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 44,
+      "reused_oracle": false,
+      "signature": "getLong(String,Long)",
+      "suite_hash": "d7120588532529d6668cac7e67487abcbeb21858527b7e56ab33775175c16d75"
+    },
+    {
+      "covered_pair_count": 44,
+      "expected_pair_count": 44,
+      "model_hash": "5f56736bcc895f0a49d4f861fadb1d832732f7654756fdb4173b4286e1f7a871",
+      "oracle_hash": "b40f4162a65357367ac38a3b5ab0f44c5a0c13245b484aa022fd3c450a18be79",
+      "oracle_sha256": "25bdd50ff24dc09fe006f0261edcff776d966f2ae797a2273662d0851554120b",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 44,
+      "reused_oracle": false,
+      "signature": "getFloat(String,Float)",
+      "suite_hash": "5e1134bcfef2aad847fcf071a7f3d352e5c1e17d7733efa877483feacb4cc8f8"
+    },
+    {
+      "covered_pair_count": 44,
+      "expected_pair_count": 44,
+      "model_hash": "c41900eb110024e0f47a9046f6a0f2a2963136722c4ef5e578159531b2e2fae4",
+      "oracle_hash": "bbe5c8b9142a2f8ae3a650e4ece3da2bee1322a9e92a2e4e7095b759358ba65f",
+      "oracle_sha256": "d68047b2b548c5d4974a38ec8a4687c01294315998b92e5e73063bd0caf6be6a",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 44,
+      "reused_oracle": false,
+      "signature": "getDouble(String,Double)",
+      "suite_hash": "7636d1dc2df6c769e32ac5c82dd727c05072fd07f8633e4a09a64c230bbd951e"
+    }
+  ],
+  "project": "Collections",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "ca8ebf6082e90b934c326986462615b1a5e7e274691f03ec78e7704700626f23",
+  "suite_path": "TestCode/all-modified-classes/Collections_7b/org/apache/commons/collections/ExtendedProperties_IPOTest.java",
+  "suite_sha256": "dcda5c8531a2c266eda4452361d2ae5ea48d6688e7a577428e5d9f1d210250c4",
+  "target_class": "org.apache.commons.collections.ExtendedProperties",
+  "test_class": "ExtendedProperties_IPOTest",
+  "verification_result": "OK (286 tests)"
+}

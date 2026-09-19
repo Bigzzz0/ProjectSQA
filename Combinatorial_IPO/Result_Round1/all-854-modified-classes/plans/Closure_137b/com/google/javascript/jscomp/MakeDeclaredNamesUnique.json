@@ -1,0 +1,233 @@
+{
+  "audit_hash": "99031be3bd0b848bc0f267a62da18ecc487f1ad7e1fe8dfb767b84ed6bb3bae0",
+  "bug_id": 137,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 9
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MakeDeclaredNamesUnique",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MakeDeclaredNamesUnique()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MakeDeclaredNamesUnique",
+      "parameters": [
+        {
+          "name": "renamer",
+          "type": "Renamer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MakeDeclaredNamesUnique(Renamer)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getContextualRenameInverter",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "CompilerPass",
+      "signature": "getContextualRenameInverter(AbstractCompiler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "enterScope",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "enterScope(NodeTraversal)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "exitScope",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "exitScope(NodeTraversal)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "shouldTraverse",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "shouldTraverse(NodeTraversal,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "visit",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "NodeTraversal"
+        },
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "visit(NodeTraversal,Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getReplacementName",
+      "parameters": [
+        {
+          "name": "oldName",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getReplacementName(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "findDeclaredNames",
+      "parameters": [
+        {
+          "name": "n",
+          "type": "Node"
+        },
+        {
+          "name": "parent",
+          "type": "Node"
+        },
+        {
+          "name": "renamer",
+          "type": "Renamer"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "findDeclaredNames(Node,Node,Renamer)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "99031be3bd0b848bc0f267a62da18ecc487f1ad7e1fe8dfb767b84ed6bb3bae0",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new MakeDeclaredNamesUnique()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "MakeDeclaredNamesUnique()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d5e0e535685079a77bef06a87d7738baf9e9c401e64c8d5baf733e7339e562da",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.MakeDeclaredNamesUnique",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueTest::testOnlyInversion3",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueTest::testOnlyInversion4",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueTest::testArguments",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueTest::testMakeLocalNamesUniqueWithContext1",
+    "com.google.javascript.jscomp.NormalizeTest::testRemoveDuplicateVarDeclarations2"
+  ]
+}

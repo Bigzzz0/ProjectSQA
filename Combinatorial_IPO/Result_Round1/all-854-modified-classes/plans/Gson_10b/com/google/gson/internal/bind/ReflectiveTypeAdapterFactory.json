@@ -1,0 +1,197 @@
+{
+  "audit_hash": "c915ea2a272d6f342700ae0d45566125addb912f3a6132b61c85e169a83a0672",
+  "bug_id": 10,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ReflectiveTypeAdapterFactory",
+      "parameters": [
+        {
+          "name": "constructorConstructor",
+          "type": "ConstructorConstructor"
+        },
+        {
+          "name": "fieldNamingPolicy",
+          "type": "FieldNamingStrategy"
+        },
+        {
+          "name": "excluder",
+          "type": "Excluder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ReflectiveTypeAdapterFactory(ConstructorConstructor,FieldNamingStrategy,Excluder)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "excludeField",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "Field"
+        },
+        {
+          "name": "serialize",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "excludeField(Field,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "excludeField",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "Field"
+        },
+        {
+          "name": "serialize",
+          "type": "boolean"
+        },
+        {
+          "name": "excluder",
+          "type": "Excluder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "excludeField(Field,boolean,Excluder)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFieldNames",
+      "parameters": [
+        {
+          "name": "f",
+          "type": "Field"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List<String>",
+      "signature": "getFieldNames(Field)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "public_entry_point"
+      ],
+      "name": "createBoundField",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Gson"
+        },
+        {
+          "name": "field",
+          "type": "Field"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "fieldType",
+          "type": "TypeToken<?>"
+        },
+        {
+          "name": "serialize",
+          "type": "boolean"
+        },
+        {
+          "name": "deserialize",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Non-public changed callable requires a defect-related public entry point",
+      "return_type": "ReflectiveTypeAdapterFactory.BoundField",
+      "signature": "createBoundField(Gson,Field,String,TypeToken<?>,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getBoundFields",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Gson"
+        },
+        {
+          "name": "type",
+          "type": "TypeToken<?>"
+        },
+        {
+          "name": "raw",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Map<String, BoundField>",
+      "signature": "getBoundFields(Gson,TypeToken<?>,Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "c915ea2a272d6f342700ae0d45566125addb912f3a6132b61c85e169a83a0672",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "public_entry_point"
+  ],
+  "project": "Gson",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4a6c4c34d6444b72687d79c638570d0d7fc6c4ea387aaf8e070e6eef59eb4cde",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+  "trigger_tests": [
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest::testPrimitiveFieldAnnotationTakesPrecedenceOverDefault"
+  ]
+}

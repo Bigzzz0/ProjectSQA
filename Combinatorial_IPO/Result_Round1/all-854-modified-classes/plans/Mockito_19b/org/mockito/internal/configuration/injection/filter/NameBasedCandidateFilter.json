@@ -1,0 +1,88 @@
+{
+  "audit_hash": "32ca2da6b7ce2d9ad01ccf1fff19aea51144b259f6c9f4b1f5c44c162fe312ac",
+  "bug_id": 19,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "NameBasedCandidateFilter",
+      "parameters": [
+        {
+          "name": "next",
+          "type": "MockCandidateFilter"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "NameBasedCandidateFilter(MockCandidateFilter)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Collection<Object>",
+        "Field",
+        "List<Field>",
+        "Object"
+      ],
+      "name": "filterCandidate",
+      "parameters": [
+        {
+          "name": "mocks",
+          "type": "Collection<Object>"
+        },
+        {
+          "name": "field",
+          "type": "Field"
+        },
+        {
+          "name": "fields",
+          "type": "List<Field>"
+        },
+        {
+          "name": "fieldInstance",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "OngoingInjecter",
+      "signature": "filterCandidate(Collection<Object>,Field,List<Field>,Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "32ca2da6b7ce2d9ad01ccf1fff19aea51144b259f6c9f4b1f5c44c162fe312ac",
+  "missing_adapters": [
+    "Collection<Object>",
+    "Field",
+    "List<Field>",
+    "Object",
+    "entry_point_evidence"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d265e5d881afa46c504ea422db202f80003838e424d7f8521271cd9291c75cfa",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.configuration.injection.filter.NameBasedCandidateFilter",
+  "trigger_tests": [
+    "org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest::shouldInsertFieldWithCorrectNameWhenMultipleTypesAvailable"
+  ]
+}

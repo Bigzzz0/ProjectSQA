@@ -1,0 +1,75 @@
+{
+  "audit_hash": "b824d28cf45637effde17a4363c188afff253d0b1a925fb0ee05092d629e0e13",
+  "bug_id": 29,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "InlineObjectLiterals",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        },
+        {
+          "name": "safeNameIdSupplier",
+          "type": "Supplier<String>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "InlineObjectLiterals(AbstractCompiler,Supplier<String>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "b824d28cf45637effde17a4363c188afff253d0b1a925fb0ee05092d629e0e13",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "c6056c428e7b9b7ee00cb9b8efee9ab8a77d7fdcf813c7a62a3d115e2f02310e",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.InlineObjectLiterals",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.InlineObjectLiteralsTest::testObject10",
+    "com.google.javascript.jscomp.InlineObjectLiteralsTest::testObject12",
+    "com.google.javascript.jscomp.InlineObjectLiteralsTest::testObject22",
+    "com.google.javascript.jscomp.InlineObjectLiteralsTest::testIssue724",
+    "com.google.javascript.jscomp.IntegrationTest::testIssue724"
+  ]
+}

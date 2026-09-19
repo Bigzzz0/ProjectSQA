@@ -1,0 +1,201 @@
+{
+  "audit_hash": "9af0e6028d1812376bb3cefe84db306af9ecbab775d6f7bcf7b86ff64b661cbc",
+  "bug_id": 92,
+  "callable_status_counts": {
+    "AUTO_READY": 1,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ParseSettings",
+      "parameters": [
+        {
+          "name": "tag",
+          "type": "boolean"
+        },
+        {
+          "name": "attribute",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ParseSettings(boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "preserveTagCase",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "preserveTagCase()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "receiver__attribute": "generic",
+        "receiver__tag": "generic"
+      },
+      "cleanup_required": false,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "factor_domains": {
+        "receiver__attribute": [
+          "true",
+          "false"
+        ],
+        "receiver__tag": [
+          "true",
+          "false"
+        ]
+      },
+      "factor_names": [
+        "receiver__tag",
+        "receiver__attribute"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "preserveAttributeCase",
+      "observer": "scalar_string_value",
+      "parameters": [],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__attribute": "generic",
+          "receiver__tag": "generic"
+        },
+        "cleanup_required": false,
+        "expression_template": "new ParseSettings({receiver__tag}, {receiver__attribute})",
+        "factor_domains": {
+          "receiver__attribute": [
+            "true",
+            "false"
+          ],
+          "receiver__tag": [
+            "true",
+            "false"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "ParseSettings(boolean,boolean)"
+      },
+      "return_type": "boolean",
+      "signature": "preserveAttributeCase()",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "normalizeTag",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "normalizeTag(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "normalizeAttribute",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "normalizeAttribute(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "normalizeAttributes",
+      "parameters": [
+        {
+          "name": "attributes",
+          "type": "Attributes"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Attributes",
+      "signature": "normalizeAttributes(Attributes)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "9af0e6028d1812376bb3cefe84db306af9ecbab775d6f7bcf7b86ff64b661cbc",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__attribute": "generic",
+      "receiver__tag": "generic"
+    },
+    "cleanup_required": false,
+    "expression_template": "new ParseSettings({receiver__tag}, {receiver__attribute})",
+    "factor_domains": {
+      "receiver__attribute": [
+        "true",
+        "false"
+      ],
+      "receiver__tag": [
+        "true",
+        "false"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "ParseSettings(boolean,boolean)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "3ec622e7e29a366de5d2817edaf5951f29658f1519dd00ef50bb9150817aaf0f",
+  "status": "AUTO_READY",
+  "target_class": "org.jsoup.parser.ParseSettings",
+  "trigger_tests": [
+    "org.jsoup.parser.HtmlParserTest::retainsAttributesOfDifferentCaseIfSensitive",
+    "org.jsoup.parser.HtmlParserTest::dropsDuplicateAttributes",
+    "org.jsoup.parser.XmlTreeBuilderTest::dropsDuplicateAttributes"
+  ]
+}

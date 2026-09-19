@@ -1,0 +1,13 @@
+{
+  "input": [
+    "new java.io.ByteArrayInputStream(new byte[] {})",
+    "new java.io.ByteArrayInputStream(new byte[] {1})"
+  ],
+  "numToSkip": [
+    "0L",
+    "1L",
+    "-1L",
+    "Long.MAX_VALUE",
+    "Long.MIN_VALUE"
+  ]
+}

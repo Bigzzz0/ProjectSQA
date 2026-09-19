@@ -1,0 +1,108 @@
+{
+  "audit_hash": "2251706454c177b4c0bed7b9ac76e46ae37968052071788f2c58718251c8271c",
+  "bug_id": 10,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Options"
+      ],
+      "name": "setOptions",
+      "parameters": [
+        {
+          "name": "options",
+          "type": "Options"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "setOptions(Options)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getOptions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Options",
+      "signature": "getOptions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRequiredOptions",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "List",
+      "signature": "getRequiredOptions()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "flatten",
+      "parameters": [
+        {
+          "name": "opts",
+          "type": "Options"
+        },
+        {
+          "name": "arguments",
+          "type": "String[]"
+        },
+        {
+          "name": "stopAtNonOption",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String[]",
+      "signature": "flatten(Options,String[],boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "2251706454c177b4c0bed7b9ac76e46ae37968052071788f2c58718251c8271c",
+  "missing_adapters": [
+    "Options",
+    "entry_point_evidence"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "e28d09923bba296f85d0301ee4d1f77a8feaf758c0477608d45d0da051064d74",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.cli.Parser",
+  "trigger_tests": [
+    "org.apache.commons.cli.ParseRequiredTest::testReuseOptionsTwice"
+  ]
+}

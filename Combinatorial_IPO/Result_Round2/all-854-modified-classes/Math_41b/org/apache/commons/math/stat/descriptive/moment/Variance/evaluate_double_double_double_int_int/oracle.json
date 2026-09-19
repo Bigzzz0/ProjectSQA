@@ -1,0 +1,366 @@
+[
+  {
+    "arguments": {
+      "begin": "0",
+      "length": "0",
+      "mean": "0.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 1,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "0",
+      "length": "1",
+      "mean": "1.0d",
+      "values": "new double[] {1}",
+      "weights": "new double[] {1}"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Double",
+    "value_or_message": "0.0"
+  },
+  {
+    "arguments": {
+      "begin": "0",
+      "length": "-1",
+      "mean": "-1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {1}"
+    },
+    "id": 3,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.DimensionMismatchException",
+    "value_or_message": "1 != 0"
+  },
+  {
+    "arguments": {
+      "begin": "0",
+      "length": "Integer.MAX_VALUE",
+      "mean": "Double.NaN",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 4,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index 0 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "0",
+      "length": "Integer.MIN_VALUE",
+      "mean": "Double.POSITIVE_INFINITY",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 5,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "1",
+      "length": "0",
+      "mean": "1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 6,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "1",
+      "length": "1",
+      "mean": "0.0d",
+      "values": "new double[] {1}",
+      "weights": "new double[] {}"
+    },
+    "id": 7,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.DimensionMismatchException",
+    "value_or_message": "0 != 1"
+  },
+  {
+    "arguments": {
+      "begin": "1",
+      "length": "-1",
+      "mean": "Double.NaN",
+      "values": "new double[] {1}",
+      "weights": "new double[] {1}"
+    },
+    "id": 8,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "1",
+      "length": "Integer.MAX_VALUE",
+      "mean": "-1.0d",
+      "values": "new double[] {1}",
+      "weights": "new double[] {}"
+    },
+    "id": 9,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.DimensionMismatchException",
+    "value_or_message": "0 != 1"
+  },
+  {
+    "arguments": {
+      "begin": "1",
+      "length": "Integer.MIN_VALUE",
+      "mean": "0.0d",
+      "values": "new double[] {1}",
+      "weights": "new double[] {1}"
+    },
+    "id": 10,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "-1",
+      "length": "0",
+      "mean": "-1.0d",
+      "values": "new double[] {1}",
+      "weights": "new double[] {1}"
+    },
+    "id": 11,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "-1",
+      "length": "1",
+      "mean": "Double.NaN",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 12,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index -1 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "-1",
+      "length": "-1",
+      "mean": "0.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 13,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "-1",
+      "length": "Integer.MAX_VALUE",
+      "mean": "1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {1}"
+    },
+    "id": 14,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.DimensionMismatchException",
+    "value_or_message": "1 != 0"
+  },
+  {
+    "arguments": {
+      "begin": "-1",
+      "length": "Integer.MIN_VALUE",
+      "mean": "1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 15,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index -1 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MAX_VALUE",
+      "length": "0",
+      "mean": "Double.NaN",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 16,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MAX_VALUE",
+      "length": "1",
+      "mean": "-1.0d",
+      "values": "new double[] {1}",
+      "weights": "new double[] {1}"
+    },
+    "id": 17,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MAX_VALUE",
+      "length": "-1",
+      "mean": "1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 18,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MAX_VALUE",
+      "length": "Integer.MAX_VALUE",
+      "mean": "0.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 19,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MAX_VALUE",
+      "length": "Integer.MIN_VALUE",
+      "mean": "-1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 20,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MIN_VALUE",
+      "length": "0",
+      "mean": "Double.POSITIVE_INFINITY",
+      "values": "new double[] {1}",
+      "weights": "new double[] {1}"
+    },
+    "id": 21,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MIN_VALUE",
+      "length": "1",
+      "mean": "0.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 22,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index -2147483648 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MIN_VALUE",
+      "length": "-1",
+      "mean": "1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 23,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index -2147483648 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MIN_VALUE",
+      "length": "Integer.MAX_VALUE",
+      "mean": "-1.0d",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 24,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index -2147483648 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MIN_VALUE",
+      "length": "Integer.MIN_VALUE",
+      "mean": "Double.NaN",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 25,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index -2147483648 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "1",
+      "length": "1",
+      "mean": "Double.POSITIVE_INFINITY",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 26,
+    "outcome": "THROW",
+    "type": "java.lang.ArrayIndexOutOfBoundsException",
+    "value_or_message": "Index 1 out of bounds for length 0"
+  },
+  {
+    "arguments": {
+      "begin": "-1",
+      "length": "-1",
+      "mean": "Double.POSITIVE_INFINITY",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 27,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  },
+  {
+    "arguments": {
+      "begin": "Integer.MAX_VALUE",
+      "length": "Integer.MAX_VALUE",
+      "mean": "Double.POSITIVE_INFINITY",
+      "values": "new double[] {}",
+      "weights": "new double[] {}"
+    },
+    "id": 28,
+    "outcome": "THROW",
+    "type": "org.apache.commons.math.exception.MathIllegalArgumentException",
+    "value_or_message": "weigth array must contain at least one non-zero value"
+  }
+]

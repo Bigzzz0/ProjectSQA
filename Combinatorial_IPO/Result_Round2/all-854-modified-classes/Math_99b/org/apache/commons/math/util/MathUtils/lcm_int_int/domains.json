@@ -1,0 +1,16 @@
+{
+  "a": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ],
+  "b": [
+    "0",
+    "1",
+    "-1",
+    "Integer.MAX_VALUE",
+    "Integer.MIN_VALUE"
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "audit_hash": "8277a2face64e7e33a571b693a5ee970959177510e5f543511ef56a81bf3fe3f",
+  "bug_id": 23,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 5,
+    "NEEDS_ENTRY_POINT": 13
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "MinMaxCategoryRenderer",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "MinMaxCategoryRenderer()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDrawLines",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDrawLines()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "state_observer"
+      ],
+      "name": "setDrawLines",
+      "parameters": [
+        {
+          "name": "draw",
+          "type": "boolean"
+        }
+      ],
+      "reason": "Void/stateful action needs a deterministic state observer",
+      "return_type": "void",
+      "signature": "setDrawLines(boolean)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getGroupPaint",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Paint",
+      "signature": "getGroupPaint()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Paint"
+      ],
+      "name": "setGroupPaint",
+      "parameters": [
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "setGroupPaint(Paint)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getGroupStroke",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Stroke",
+      "signature": "getGroupStroke()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Stroke"
+      ],
+      "name": "setGroupStroke",
+      "parameters": [
+        {
+          "name": "stroke",
+          "type": "Stroke"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "setGroupStroke(Stroke)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getObjectIcon",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Icon",
+      "signature": "getObjectIcon()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setObjectIcon",
+      "parameters": [
+        {
+          "name": "icon",
+          "type": "Icon"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setObjectIcon(Icon)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMaxIcon",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Icon",
+      "signature": "getMaxIcon()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setMaxIcon",
+      "parameters": [
+        {
+          "name": "icon",
+          "type": "Icon"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setMaxIcon(Icon)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMinIcon",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Icon",
+      "signature": "getMinIcon()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setMinIcon",
+      "parameters": [
+        {
+          "name": "icon",
+          "type": "Icon"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setMinIcon(Icon)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawItem",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataset",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "pass",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawItem(Graphics2D,CategoryItemRendererState,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getIcon",
+      "parameters": [
+        {
+          "name": "shape",
+          "type": "Shape"
+        },
+        {
+          "name": "fillPaint",
+          "type": "Paint"
+        },
+        {
+          "name": "outlinePaint",
+          "type": "Paint"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Icon",
+      "signature": "getIcon(Shape,Paint,Paint)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getIcon",
+      "parameters": [
+        {
+          "name": "shape",
+          "type": "Shape"
+        },
+        {
+          "name": "fill",
+          "type": "boolean"
+        },
+        {
+          "name": "outline",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Icon",
+      "signature": "getIcon(Shape,boolean,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeObject",
+      "parameters": [
+        {
+          "name": "stream",
+          "type": "ObjectOutputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeObject(ObjectOutputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "8277a2face64e7e33a571b693a5ee970959177510e5f543511ef56a81bf3fe3f",
+  "missing_adapters": [
+    "Object",
+    "Paint",
+    "Stroke",
+    "entry_point_evidence",
+    "object_observer",
+    "state_observer"
+  ],
+  "project": "Chart",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new MinMaxCategoryRenderer()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "MinMaxCategoryRenderer()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ac626bde514294b53e286afcd6a76c24da1989f9b334c9565823ae988a6808e5",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jfree.chart.renderer.category.MinMaxCategoryRenderer",
+  "trigger_tests": [
+    "org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests::testEquals"
+  ]
+}

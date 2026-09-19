@@ -1,0 +1,115 @@
+{
+  "audit_hash": "4e683bb875d04d1372c1277f8fb4b312887bf35b86a444a454ed50b5c1c73cbb",
+  "bug_id": 35,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 4
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Token"
+        },
+        {
+          "name": "tb",
+          "type": "HtmlTreeBuilder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "process(Token,HtmlTreeBuilder)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isWhitespace",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Token"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isWhitespace(Token)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleRcData",
+      "parameters": [
+        {
+          "name": "startTag",
+          "type": "Token.StartTag"
+        },
+        {
+          "name": "tb",
+          "type": "HtmlTreeBuilder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "handleRcData(Token.StartTag,HtmlTreeBuilder)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handleRawtext",
+      "parameters": [
+        {
+          "name": "startTag",
+          "type": "Token.StartTag"
+        },
+        {
+          "name": "tb",
+          "type": "HtmlTreeBuilder"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "handleRawtext(Token.StartTag,HtmlTreeBuilder)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "4e683bb875d04d1372c1277f8fb4b312887bf35b86a444a454ed50b5c1c73cbb",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Jsoup",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "296ab9a71d656bd149341cdcc80b65edd5bde131b68437b1542f40a4a11fd7c2",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.jsoup.parser.HtmlTreeBuilderState",
+  "trigger_tests": [
+    "org.jsoup.parser.HtmlParserTest::handlesUnclosedAnchors"
+  ]
+}

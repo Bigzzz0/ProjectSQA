@@ -1,0 +1,137 @@
+{
+  "audit_hash": "a1f15d2727bb280b1ef51cc2f592a66b6e8e941bf6927f26af8dedd1301b60bf",
+  "bug_id": 15,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 6
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "StdSerializer",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Class<T>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "StdSerializer(Class<T>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "StdSerializer",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "StdSerializer(JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "StdSerializer",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Class<?>"
+        },
+        {
+          "name": "dummy",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "StdSerializer(Class<?>,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "handledType",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<T>",
+      "signature": "handledType()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createObjectNode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ObjectNode",
+      "signature": "createObjectNode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isDefaultSerializer",
+      "parameters": [
+        {
+          "name": "serializer",
+          "type": "JsonSerializer<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isDefaultSerializer(JsonSerializer<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "a1f15d2727bb280b1ef51cc2f592a66b6e8e941bf6927f26af8dedd1301b60bf",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "dfa9d0abba11219d091b9f37cedd2ea6176c2ecf8efbc38b13cb22b06606cff8",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.ser.std.StdSerializer",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.convert.TestConvertingSerializer::testIssue731"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "audit_hash": "24bd1dd502cd029843cbef812c281c513421af8182833f79bd3e734564869b79",
+  "bug_id": 80,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "StdSubtypeResolver",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "StdSubtypeResolver()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "registerSubtypes",
+      "parameters": [
+        {
+          "name": "types",
+          "type": "NamedType[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "registerSubtypes(NamedType[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "registerSubtypes",
+      "parameters": [
+        {
+          "name": "classes",
+          "type": "Class<?>[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "registerSubtypes(Class<?>[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "24bd1dd502cd029843cbef812c281c513421af8182833f79bd3e734564869b79",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new StdSubtypeResolver()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "StdSubtypeResolver()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "1ad9ccd47d477c8697b393bc73de75a6636accb70aea7d1b4a5e4702f5f380e3",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.jsontype.TestTypeNames::testBaseTypeId1616"
+  ]
+}

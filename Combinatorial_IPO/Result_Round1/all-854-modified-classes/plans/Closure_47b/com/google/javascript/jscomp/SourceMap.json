@@ -1,0 +1,244 @@
+{
+  "audit_hash": "4e547f2334b5acc4ce978db9a20d10c299193f27fd93be5300436380f9d447ba",
+  "bug_id": 47,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "SourceMap",
+      "parameters": [
+        {
+          "name": "generator",
+          "type": "SourceMapGenerator"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "SourceMap(SourceMapGenerator)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Node",
+        "FilePosition"
+      ],
+      "name": "addMapping",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "Node"
+        },
+        {
+          "name": "outputStartPosition",
+          "type": "FilePosition"
+        },
+        {
+          "name": "outputEndPosition",
+          "type": "FilePosition"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "addMapping(Node,FilePosition,FilePosition)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "fixupSourceLocation",
+      "parameters": [
+        {
+          "name": "sourceFile",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "fixupSourceLocation(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Appendable"
+      ],
+      "name": "appendTo",
+      "parameters": [
+        {
+          "name": "out",
+          "type": "Appendable"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "appendTo(Appendable,String)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "reset",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "reset()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setStartingPosition",
+      "parameters": [
+        {
+          "name": "offsetLine",
+          "type": "int"
+        },
+        {
+          "name": "offsetIndex",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setStartingPosition(int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setWrapperPrefix",
+      "parameters": [
+        {
+          "name": "prefix",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setWrapperPrefix(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "validate",
+      "parameters": [
+        {
+          "name": "validate",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "validate(boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setPrefixMappings",
+      "parameters": [
+        {
+          "name": "sourceMapLocationMappings",
+          "type": "List<LocationMapping>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setPrefixMappings(List<LocationMapping>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "4e547f2334b5acc4ce978db9a20d10c299193f27fd93be5300436380f9d447ba",
+  "missing_adapters": [
+    "Appendable",
+    "FilePosition",
+    "Node",
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "aa98551a97370fcd29896b35da845e0e801cdd229cfe6f75eff8b165f7846628",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.google.javascript.jscomp.SourceMap",
+  "trigger_tests": [
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testParseSourceMetaMap",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testGoldenOutput0a",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testMultilineMapping",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testMultiFunctionMapping",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testLiteralMappingsGoldenOutput",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testMultilineMapping2",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testBasicMappingGoldenOutput",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testSourceMapMerging",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testLiteralMappings",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testBasicMapping1",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testBasicMapping2",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testGoldenOutput1",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testGoldenOutput2",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testGoldenOutput3",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testGoldenOutput4",
+    "com.google.debugging.sourcemap.SourceMapGeneratorV3Test::testGoldenOutput5"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "audit_hash": "2b9f3ab51a69e9fed25e0bfada1510e8359e59c98817bed2f7cdc1903f1e69ee",
+  "bug_id": 26,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "create",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "char"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Option",
+      "signature": "create(char)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "create",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Option",
+      "signature": "create()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:Option"
+      ],
+      "name": "create",
+      "parameters": [
+        {
+          "name": "opt",
+          "type": "String"
+        }
+      ],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "Option",
+      "signature": "create(String)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "2b9f3ab51a69e9fed25e0bfada1510e8359e59c98817bed2f7cdc1903f1e69ee",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer:Option"
+  ],
+  "project": "Cli",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "46a926de4c485a0e72b0ba213ea08626e02af797bcf1304e1e7ec83e989629d1",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.cli.OptionBuilder",
+  "trigger_tests": [
+    "org.apache.commons.cli.OptionBuilderTest::testBuilderIsResettedAlways"
+  ]
+}

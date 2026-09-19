@@ -1,0 +1,251 @@
+{
+  "audit_hash": "0308b25ba0b436d65aa9206607680a71b2b030a94460141b0e62f5d4c7e61b93",
+  "bug_id": 8,
+  "callable_status_counts": {
+    "AUTO_READY": 1,
+    "NEEDS_ENTRY_POINT": 5
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64InputStream",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64InputStream(InputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64InputStream",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "doEncode",
+          "type": "boolean"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64InputStream(InputStream,boolean)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Base64InputStream",
+      "parameters": [
+        {
+          "name": "in",
+          "type": "InputStream"
+        },
+        {
+          "name": "doEncode",
+          "type": "boolean"
+        },
+        {
+          "name": "lineLength",
+          "type": "int"
+        },
+        {
+          "name": "lineSeparator",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Base64InputStream(InputStream,boolean,int,byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "read",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "read()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "adapters": {
+        "b": "array",
+        "len": "generic",
+        "offset": "generic",
+        "receiver__in": "input_stream"
+      },
+      "cleanup_required": true,
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "factor_domains": {
+        "b": [
+          "new byte[] {}",
+          "new byte[] {1}"
+        ],
+        "len": [
+          "0",
+          "1",
+          "-1",
+          "Integer.MAX_VALUE",
+          "Integer.MIN_VALUE"
+        ],
+        "offset": [
+          "0",
+          "1",
+          "-1",
+          "Integer.MAX_VALUE",
+          "Integer.MIN_VALUE"
+        ],
+        "receiver__in": [
+          "new java.io.ByteArrayInputStream(new byte[] {})",
+          "new java.io.ByteArrayInputStream(new byte[] {1})"
+        ]
+      },
+      "factor_names": [
+        "receiver__in",
+        "b",
+        "offset",
+        "len"
+      ],
+      "invocation_kind": "instance",
+      "kind": "method",
+      "name": "read",
+      "observer": "scalar_string_value",
+      "parameters": [
+        {
+          "name": "b",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset",
+          "type": "int"
+        },
+        {
+          "name": "len",
+          "type": "int"
+        }
+      ],
+      "receiver_strategy": {
+        "adapters": {
+          "receiver__in": "input_stream"
+        },
+        "cleanup_required": true,
+        "expression_template": "new Base64InputStream({receiver__in})",
+        "factor_domains": {
+          "receiver__in": [
+            "new java.io.ByteArrayInputStream(new byte[] {})",
+            "new java.io.ByteArrayInputStream(new byte[] {1})"
+          ]
+        },
+        "kind": "factorized_constructor",
+        "signature": "Base64InputStream(InputStream)"
+      },
+      "return_type": "int",
+      "signature": "read(byte[],int,int)",
+      "static": false,
+      "status": "AUTO_READY",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "markSupported",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "markSupported()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "0308b25ba0b436d65aa9206607680a71b2b030a94460141b0e62f5d4c7e61b93",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Codec",
+  "receiver_strategy": {
+    "adapters": {
+      "receiver__in": "input_stream"
+    },
+    "cleanup_required": true,
+    "expression_template": "new Base64InputStream({receiver__in})",
+    "factor_domains": {
+      "receiver__in": [
+        "new java.io.ByteArrayInputStream(new byte[] {})",
+        "new java.io.ByteArrayInputStream(new byte[] {1})"
+      ]
+    },
+    "kind": "factorized_constructor",
+    "signature": "Base64InputStream(InputStream)"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4f0f87154f1bef6d37ae175019d4ec3e927e9ac8a27761208a72bac6067432b9",
+  "status": "AUTO_READY",
+  "target_class": "org.apache.commons.codec.binary.Base64InputStream",
+  "trigger_tests": [
+    "org.apache.commons.codec.binary.Base64InputStreamTest::testCodec105"
+  ]
+}

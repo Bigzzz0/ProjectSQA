@@ -1,0 +1,639 @@
+{
+  "audit_hash": "c5fb85cc4492e2b7191ce80d6ea39f6190451d411214dd01f4a982abda7c2d9d",
+  "bug_id": 101,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 27
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ComplexFormat",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ComplexFormat()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ComplexFormat",
+      "parameters": [
+        {
+          "name": "format",
+          "type": "NumberFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ComplexFormat(NumberFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ComplexFormat",
+      "parameters": [
+        {
+          "name": "realFormat",
+          "type": "NumberFormat"
+        },
+        {
+          "name": "imaginaryFormat",
+          "type": "NumberFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ComplexFormat(NumberFormat,NumberFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ComplexFormat",
+      "parameters": [
+        {
+          "name": "imaginaryCharacter",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ComplexFormat(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ComplexFormat",
+      "parameters": [
+        {
+          "name": "imaginaryCharacter",
+          "type": "String"
+        },
+        {
+          "name": "format",
+          "type": "NumberFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ComplexFormat(String,NumberFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ComplexFormat",
+      "parameters": [
+        {
+          "name": "imaginaryCharacter",
+          "type": "String"
+        },
+        {
+          "name": "realFormat",
+          "type": "NumberFormat"
+        },
+        {
+          "name": "imaginaryFormat",
+          "type": "NumberFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ComplexFormat(String,NumberFormat,NumberFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatComplex",
+      "parameters": [
+        {
+          "name": "c",
+          "type": "Complex"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "formatComplex(Complex)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "complex",
+          "type": "Complex"
+        },
+        {
+          "name": "toAppendTo",
+          "type": "StringBuffer"
+        },
+        {
+          "name": "pos",
+          "type": "FieldPosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StringBuffer",
+      "signature": "format(Complex,StringBuffer,FieldPosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "format",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "toAppendTo",
+          "type": "StringBuffer"
+        },
+        {
+          "name": "pos",
+          "type": "FieldPosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StringBuffer",
+      "signature": "format(Object,StringBuffer,FieldPosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "formatDouble",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "double"
+        },
+        {
+          "name": "format",
+          "type": "NumberFormat"
+        },
+        {
+          "name": "toAppendTo",
+          "type": "StringBuffer"
+        },
+        {
+          "name": "pos",
+          "type": "FieldPosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "StringBuffer",
+      "signature": "formatDouble(double,NumberFormat,StringBuffer,FieldPosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getAvailableLocales",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Locale[]",
+      "signature": "getAvailableLocales()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDefaultNumberFormat",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NumberFormat",
+      "signature": "getDefaultNumberFormat()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDefaultNumberFormat",
+      "parameters": [
+        {
+          "name": "locale",
+          "type": "Locale"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NumberFormat",
+      "signature": "getDefaultNumberFormat(Locale)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getImaginaryCharacter",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getImaginaryCharacter()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getImaginaryFormat",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NumberFormat",
+      "signature": "getImaginaryFormat()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ComplexFormat",
+      "signature": "getInstance()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [
+        {
+          "name": "locale",
+          "type": "Locale"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ComplexFormat",
+      "signature": "getInstance(Locale)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRealFormat",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "NumberFormat",
+      "signature": "getRealFormat()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Complex",
+      "signature": "parse(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "ParsePosition"
+      ],
+      "name": "parse",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "Complex",
+      "signature": "parse(String,ParsePosition)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseAndIgnoreWhitespace",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "parseAndIgnoreWhitespace(String,ParsePosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseNextCharacter",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "char",
+      "signature": "parseNextCharacter(String,ParsePosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseNumber",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "double"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "parseNumber(String,double,ParsePosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseNumber",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "format",
+          "type": "NumberFormat"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Number",
+      "signature": "parseNumber(String,NumberFormat,ParsePosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "parseObject",
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "pos",
+          "type": "ParsePosition"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "parseObject(String,ParsePosition)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setImaginaryCharacter",
+      "parameters": [
+        {
+          "name": "imaginaryCharacter",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setImaginaryCharacter(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setImaginaryFormat",
+      "parameters": [
+        {
+          "name": "imaginaryFormat",
+          "type": "NumberFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setImaginaryFormat(NumberFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setRealFormat",
+      "parameters": [
+        {
+          "name": "realFormat",
+          "type": "NumberFormat"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setRealFormat(NumberFormat)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "c5fb85cc4492e2b7191ce80d6ea39f6190451d411214dd01f4a982abda7c2d9d",
+  "missing_adapters": [
+    "ParsePosition",
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new ComplexFormat()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "ComplexFormat()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "0ba9c8dde5f55a1688745a66e113fb7fe8e6d2a62030816ed3f23dc6c432949f",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.math.complex.ComplexFormat",
+  "trigger_tests": [
+    "org.apache.commons.math.complex.ComplexFormatTest::testForgottenImaginaryCharacter",
+    "org.apache.commons.math.complex.FrenchComplexFormatTest::testForgottenImaginaryCharacter"
+  ]
+}

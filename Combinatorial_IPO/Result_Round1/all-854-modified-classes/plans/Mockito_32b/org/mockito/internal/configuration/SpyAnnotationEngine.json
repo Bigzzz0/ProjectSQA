@@ -1,0 +1,114 @@
+{
+  "audit_hash": "5b26e28a1863fed6ec3803f86838c1f03215b6cb40db1398b785c10bf45de210",
+  "bug_id": 32,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "createMockFor",
+      "parameters": [
+        {
+          "name": "annotation",
+          "type": "Annotation"
+        },
+        {
+          "name": "field",
+          "type": "Field"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "createMockFor(Annotation,Field)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Class<?>",
+        "Object"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "Class<?>"
+        },
+        {
+          "name": "testClass",
+          "type": "Object"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "process(Class<?>,Object)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "assertNoAnnotations",
+      "parameters": [
+        {
+          "name": "annotation",
+          "type": "Class"
+        },
+        {
+          "name": "field",
+          "type": "Field"
+        },
+        {
+          "name": "undesiredAnnotations",
+          "type": "Class []"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "assertNoAnnotations(Class,Field,Class[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "5b26e28a1863fed6ec3803f86838c1f03215b6cb40db1398b785c10bf45de210",
+  "missing_adapters": [
+    "Class<?>",
+    "Object",
+    "entry_point_evidence"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new SpyAnnotationEngine()",
+    "factor_domains": {},
+    "kind": "implicit_zero_arg_constructor"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "18929d1bbf41b6576b5020a1b367120cb8ef6d395ff40a05997f1de39eb9cc2e",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.configuration.SpyAnnotationEngine",
+  "trigger_tests": [
+    "org.mockitousage.bugs.SpyShouldHaveNiceNameTest::shouldPrintNiceName"
+  ]
+}

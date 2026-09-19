@@ -1,0 +1,200 @@
+{
+  "audit_hash": "69091cc96bb240308e2d5eb77611c36e2f88bbd2d6ff9634bce4a4191fca41a5",
+  "bug_id": 88,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ClassNameIdResolver",
+      "parameters": [
+        {
+          "name": "baseType",
+          "type": "JavaType"
+        },
+        {
+          "name": "typeFactory",
+          "type": "TypeFactory"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ClassNameIdResolver(JavaType,TypeFactory)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMechanism",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JsonTypeInfo.Id",
+      "signature": "getMechanism()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "registerSubtype",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Class<?>"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "registerSubtype(Class<?>,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "idFromValue",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "idFromValue(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "idFromValueAndType",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "Object"
+        },
+        {
+          "name": "type",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "idFromValueAndType(Object,Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "typeFromId",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "DatabindContext"
+        },
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "typeFromId(DatabindContext,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "DatabindContext"
+      ],
+      "name": "_typeFromId",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String"
+        },
+        {
+          "name": "ctxt",
+          "type": "DatabindContext"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "JavaType",
+      "signature": "_typeFromId(String,DatabindContext)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDescForKnownTypeIds",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "getDescForKnownTypeIds()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "69091cc96bb240308e2d5eb77611c36e2f88bbd2d6ff9634bce4a4191fca41a5",
+  "missing_adapters": [
+    "DatabindContext",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "42843d0ad2c56c6dfcbb633b7813d5f826cd7811c4f0c5fe8c3de09699ff6640",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.jsontype.impl.ClassNameIdResolver",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.jsontype.GenericTypeId1735Test::testNestedTypeCheck1735"
+  ]
+}

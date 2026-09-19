@@ -1,0 +1,69 @@
+{
+  "audit_hash": "06a6db38c8a83633cec3500f2227b30d8309cb994a26dd8f4599e6a937dceadf",
+  "bug_id": 143,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "RemoveConstantExpressions",
+      "parameters": [
+        {
+          "name": "compiler",
+          "type": "AbstractCompiler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "RemoveConstantExpressions(AbstractCompiler)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "process",
+      "parameters": [
+        {
+          "name": "externs",
+          "type": "Node"
+        },
+        {
+          "name": "root",
+          "type": "Node"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "process(Node,Node)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "06a6db38c8a83633cec3500f2227b30d8309cb994a26dd8f4599e6a937dceadf",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Closure",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a75cf40eaa237e22994065279f9414d5a53dd984aa925ef95e3ea65ff5d4e07c",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.google.javascript.jscomp.RemoveConstantExpressions",
+  "trigger_tests": [
+    "com.google.javascript.jscomp.CommandLineRunnerTest::testDefineFlag3",
+    "com.google.javascript.jscomp.RemoveConstantExpressionsTest::testCall1",
+    "com.google.javascript.jscomp.RemoveConstantExpressionsTest::testNew1"
+  ]
+}

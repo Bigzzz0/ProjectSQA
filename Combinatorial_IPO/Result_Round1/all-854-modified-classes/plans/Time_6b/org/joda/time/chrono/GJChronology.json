@@ -1,0 +1,557 @@
+{
+  "audit_hash": "ec99b8ca29956c74fa5d80e7d7ead68809b687f95050b4db62e77d028533b68c",
+  "bug_id": 6,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 2,
+    "NEEDS_ENTRY_POINT": 22
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "GJChronology",
+      "parameters": [
+        {
+          "name": "julian",
+          "type": "JulianChronology"
+        },
+        {
+          "name": "gregorian",
+          "type": "GregorianChronology"
+        },
+        {
+          "name": "cutoverInstant",
+          "type": "Instant"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "GJChronology(JulianChronology,GregorianChronology,Instant)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "GJChronology",
+      "parameters": [
+        {
+          "name": "base",
+          "type": "Chronology"
+        },
+        {
+          "name": "julian",
+          "type": "JulianChronology"
+        },
+        {
+          "name": "gregorian",
+          "type": "GregorianChronology"
+        },
+        {
+          "name": "cutoverInstant",
+          "type": "Instant"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "GJChronology(Chronology,JulianChronology,GregorianChronology,Instant)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "convertByYear",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        },
+        {
+          "name": "from",
+          "type": "Chronology"
+        },
+        {
+          "name": "to",
+          "type": "Chronology"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "convertByYear(long,Chronology,Chronology)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "convertByWeekyear",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        },
+        {
+          "name": "from",
+          "type": "Chronology"
+        },
+        {
+          "name": "to",
+          "type": "Chronology"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "convertByWeekyear(long,Chronology,Chronology)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:GJChronology"
+      ],
+      "name": "getInstanceUTC",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "GJChronology",
+      "signature": "getInstanceUTC()",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "GJChronology",
+      "signature": "getInstance()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "GJChronology",
+      "signature": "getInstance(DateTimeZone)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        },
+        {
+          "name": "gregorianCutover",
+          "type": "ReadableInstant"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "GJChronology",
+      "signature": "getInstance(DateTimeZone,ReadableInstant)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        },
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "DateTimeZone",
+        "ReadableInstant"
+      ],
+      "name": "getInstance",
+      "parameters": [
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        },
+        {
+          "name": "gregorianCutover",
+          "type": "ReadableInstant"
+        },
+        {
+          "name": "minDaysInFirstWeek",
+          "type": "int"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "GJChronology",
+      "signature": "getInstance(DateTimeZone,ReadableInstant,int)",
+      "static": true,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getInstance",
+      "parameters": [
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        },
+        {
+          "name": "gregorianCutover",
+          "type": "long"
+        },
+        {
+          "name": "minDaysInFirstWeek",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "GJChronology",
+      "signature": "getInstance(DateTimeZone,long,int)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "readResolve",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "readResolve()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getZone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DateTimeZone",
+      "signature": "getZone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withUTC",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Chronology",
+      "signature": "withUTC()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withZone",
+      "parameters": [
+        {
+          "name": "zone",
+          "type": "DateTimeZone"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Chronology",
+      "signature": "withZone(DateTimeZone)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getGregorianCutover",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Instant",
+      "signature": "getGregorianCutover()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getMinimumDaysInFirstWeek",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "getMinimumDaysInFirstWeek()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "hashCode",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "hashCode()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "assemble",
+      "parameters": [
+        {
+          "name": "fields",
+          "type": "Fields"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "assemble(Fields)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "julianToGregorianByYear",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "julianToGregorianByYear(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "gregorianToJulianByYear",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "gregorianToJulianByYear(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "julianToGregorianByWeekyear",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "julianToGregorianByWeekyear(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "gregorianToJulianByWeekyear",
+      "parameters": [
+        {
+          "name": "instant",
+          "type": "long"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "long",
+      "signature": "gregorianToJulianByWeekyear(long)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "package"
+    }
+  ],
+  "input_hash": "ec99b8ca29956c74fa5d80e7d7ead68809b687f95050b4db62e77d028533b68c",
+  "missing_adapters": [
+    "DateTimeZone",
+    "ReadableInstant",
+    "entry_point_evidence",
+    "object_observer:GJChronology"
+  ],
+  "project": "Time",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "09779f2f514afdad9f6ef99468a023a86fb08e9bc7a362bbc82a39fdb98ee159",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.joda.time.chrono.GJChronology",
+  "trigger_tests": [
+    "org.joda.time.chrono.TestGJDate::test_cutoverPreZero",
+    "org.joda.time.chrono.TestGJDate::test_plusWeekyears_positiveToNegative_crossCutover",
+    "org.joda.time.chrono.TestGJDate::test_plusYears_positiveToZero_crossCutover",
+    "org.joda.time.chrono.TestGJDate::test_plusYears_positiveToNegative_crossCutover",
+    "org.joda.time.chrono.TestGJDate::test_plusWeekyears_positiveToZero_crossCutover"
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "audit_hash": "ce0628495eeaf9bf7416246575b14cb308d84aaa342327e9ebc082b086903220",
+  "bug_id": 19,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 16
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Zip64ExtendedInformationExtraField",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Zip64ExtendedInformationExtraField()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Zip64ExtendedInformationExtraField",
+      "parameters": [
+        {
+          "name": "size",
+          "type": "ZipEightByteInteger"
+        },
+        {
+          "name": "compressedSize",
+          "type": "ZipEightByteInteger"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Zip64ExtendedInformationExtraField(ZipEightByteInteger,ZipEightByteInteger)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Zip64ExtendedInformationExtraField",
+      "parameters": [
+        {
+          "name": "size",
+          "type": "ZipEightByteInteger"
+        },
+        {
+          "name": "compressedSize",
+          "type": "ZipEightByteInteger"
+        },
+        {
+          "name": "relativeHeaderOffset",
+          "type": "ZipEightByteInteger"
+        },
+        {
+          "name": "diskStart",
+          "type": "ZipLong"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Zip64ExtendedInformationExtraField(ZipEightByteInteger,ZipEightByteInteger,ZipEightByteInteger,ZipLong)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getHeaderId",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipShort",
+      "signature": "getHeaderId()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLocalFileDataLength",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipShort",
+      "signature": "getLocalFileDataLength()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCentralDirectoryLength",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipShort",
+      "signature": "getCentralDirectoryLength()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getLocalFileDataData",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "getLocalFileDataData()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCentralDirectoryData",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "byte[]",
+      "signature": "getCentralDirectoryData()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "object_observer:ZipEightByteInteger"
+      ],
+      "name": "getSize",
+      "parameters": [],
+      "reason": "Return value needs a stable observer instead of arbitrary toString",
+      "return_type": "ZipEightByteInteger",
+      "signature": "getSize()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setSize",
+      "parameters": [
+        {
+          "name": "size",
+          "type": "ZipEightByteInteger"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setSize(ZipEightByteInteger)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getCompressedSize",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipEightByteInteger",
+      "signature": "getCompressedSize()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setCompressedSize",
+      "parameters": [
+        {
+          "name": "compressedSize",
+          "type": "ZipEightByteInteger"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setCompressedSize(ZipEightByteInteger)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getRelativeHeaderOffset",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipEightByteInteger",
+      "signature": "getRelativeHeaderOffset()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setRelativeHeaderOffset",
+      "parameters": [
+        {
+          "name": "rho",
+          "type": "ZipEightByteInteger"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setRelativeHeaderOffset(ZipEightByteInteger)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getDiskStartNumber",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ZipLong",
+      "signature": "getDiskStartNumber()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setDiskStartNumber",
+      "parameters": [
+        {
+          "name": "ds",
+          "type": "ZipLong"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setDiskStartNumber(ZipLong)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "addSizes",
+      "parameters": [
+        {
+          "name": "data",
+          "type": "byte[]"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "int",
+      "signature": "addSizes(byte[])",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "ce0628495eeaf9bf7416246575b14cb308d84aaa342327e9ebc082b086903220",
+  "missing_adapters": [
+    "entry_point_evidence",
+    "object_observer:ZipEightByteInteger"
+  ],
+  "project": "Compress",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Zip64ExtendedInformationExtraField()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "Zip64ExtendedInformationExtraField()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a7105ecb0cf344043406803aa172646870293f566e3749691c5b672d1f15e68b",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField",
+  "trigger_tests": [
+    "org.apache.commons.compress.archivers.zip.ZipFileTest::testExcessDataInZip64ExtraField"
+  ]
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "arguments": {
+      "k": "0",
+      "n": "0"
+    },
+    "id": 1,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "0",
+      "n": "1"
+    },
+    "id": 2,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "0",
+      "n": "-1"
+    },
+    "id": 3,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "0",
+      "n": "Integer.MAX_VALUE"
+    },
+    "id": 4,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "0",
+      "n": "Integer.MIN_VALUE"
+    },
+    "id": 5,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "1",
+      "n": "0"
+    },
+    "id": 6,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "1",
+      "n": "1"
+    },
+    "id": 7,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "1",
+      "n": "-1"
+    },
+    "id": 8,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "1",
+      "n": "Integer.MAX_VALUE"
+    },
+    "id": 9,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "2147483647"
+  },
+  {
+    "arguments": {
+      "k": "1",
+      "n": "Integer.MIN_VALUE"
+    },
+    "id": 10,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "-1",
+      "n": "0"
+    },
+    "id": 11,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "0"
+  },
+  {
+    "arguments": {
+      "k": "-1",
+      "n": "1"
+    },
+    "id": 12,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "-1",
+      "n": "-1"
+    },
+    "id": 13,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= 0 for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "-1",
+      "n": "Integer.MAX_VALUE"
+    },
+    "id": 14,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "-1",
+      "n": "Integer.MIN_VALUE"
+    },
+    "id": 15,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MAX_VALUE",
+      "n": "0"
+    },
+    "id": 16,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MAX_VALUE",
+      "n": "1"
+    },
+    "id": 17,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MAX_VALUE",
+      "n": "-1"
+    },
+    "id": 18,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MAX_VALUE",
+      "n": "Integer.MAX_VALUE"
+    },
+    "id": 19,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MAX_VALUE",
+      "n": "Integer.MIN_VALUE"
+    },
+    "id": 20,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= k for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MIN_VALUE",
+      "n": "0"
+    },
+    "id": 21,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MIN_VALUE",
+      "n": "1"
+    },
+    "id": 22,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MIN_VALUE",
+      "n": "-1"
+    },
+    "id": 23,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= 0 for binomial coefficient (n,k)"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MIN_VALUE",
+      "n": "Integer.MAX_VALUE"
+    },
+    "id": 24,
+    "outcome": "RETURN",
+    "type": "java.lang.Long",
+    "value_or_message": "1"
+  },
+  {
+    "arguments": {
+      "k": "Integer.MIN_VALUE",
+      "n": "Integer.MIN_VALUE"
+    },
+    "id": 25,
+    "outcome": "THROW",
+    "type": "java.lang.IllegalArgumentException",
+    "value_or_message": "must have n >= 0 for binomial coefficient (n,k)"
+  }
+]

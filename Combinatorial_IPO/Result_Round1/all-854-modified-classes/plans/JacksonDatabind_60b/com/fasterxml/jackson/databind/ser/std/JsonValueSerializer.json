@@ -1,0 +1,132 @@
+{
+  "audit_hash": "00ee77c7caa6ddff9e17c8b6742408893005c524f570a4bc395f693c7e4da962",
+  "bug_id": 60,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 3
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_notNullClass",
+      "parameters": [
+        {
+          "name": "cls",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Class<Object>",
+      "signature": "_notNullClass(Class<?>)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "serialize",
+      "parameters": [
+        {
+          "name": "bean",
+          "type": "Object"
+        },
+        {
+          "name": "gen",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "prov",
+          "type": "SerializerProvider"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "serialize(Object,JsonGenerator,SerializerProvider)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Object",
+        "JsonGenerator",
+        "SerializerProvider",
+        "TypeSerializer"
+      ],
+      "name": "serializeWithType",
+      "parameters": [
+        {
+          "name": "bean",
+          "type": "Object"
+        },
+        {
+          "name": "gen",
+          "type": "JsonGenerator"
+        },
+        {
+          "name": "provider",
+          "type": "SerializerProvider"
+        },
+        {
+          "name": "typeSer0",
+          "type": "TypeSerializer"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "serializeWithType(Object,JsonGenerator,SerializerProvider,TypeSerializer)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "toString",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "toString()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "00ee77c7caa6ddff9e17c8b6742408893005c524f570a4bc395f693c7e4da962",
+  "missing_adapters": [
+    "JsonGenerator",
+    "Object",
+    "SerializerProvider",
+    "TypeSerializer",
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "99b9315fb5f1895445f9bae14edadabf9c4d4361e7459b028f7dee4325015ce8",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "com.fasterxml.jackson.databind.ser.std.JsonValueSerializer",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.jsontype.TestDefaultWithCreators::testWithCreatorAndJsonValue",
+    "com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdTest::testWithAsValue"
+  ]
+}

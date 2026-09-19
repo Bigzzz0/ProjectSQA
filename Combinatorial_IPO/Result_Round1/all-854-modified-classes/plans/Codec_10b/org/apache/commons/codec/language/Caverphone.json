@@ -1,0 +1,141 @@
+{
+  "audit_hash": "462ab1ee463e74e0de18d2bb813e6c807d9d4bf1acdf491355c725cfd1f1e8b2",
+  "bug_id": 10,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 4,
+    "NOT_PAIRWISE_APPLICABLE": 1
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "Caverphone",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "Caverphone()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "name": "caverphone",
+      "parameters": [
+        {
+          "name": "txt",
+          "type": "String"
+        }
+      ],
+      "reason": "Pairwise IPO requires at least two meaningful factors",
+      "receiver_strategy": {
+        "adapters": {},
+        "cleanup_required": false,
+        "expression_template": "new Caverphone()",
+        "factor_domains": {},
+        "kind": "zero_arg_constructor",
+        "signature": "Caverphone()"
+      },
+      "recommended_test_type": "example_based",
+      "return_type": "String",
+      "signature": "caverphone(String)",
+      "static": false,
+      "status": "NOT_PAIRWISE_APPLICABLE",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "pObject",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Object",
+      "signature": "encode(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "encode",
+      "parameters": [
+        {
+          "name": "pString",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "encode(String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "isCaverphoneEqual",
+      "parameters": [
+        {
+          "name": "str1",
+          "type": "String"
+        },
+        {
+          "name": "str2",
+          "type": "String"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "isCaverphoneEqual(String,String)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "462ab1ee463e74e0de18d2bb813e6c807d9d4bf1acdf491355c725cfd1f1e8b2",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Codec",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new Caverphone()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "Caverphone()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "d41c72f2e299945330d7048c955d5474f5b11b7676206f3b894ce9f00124667f",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.codec.language.Caverphone",
+  "trigger_tests": [
+    "org.apache.commons.codec.language.CaverphoneTest::testEndMb"
+  ]
+}

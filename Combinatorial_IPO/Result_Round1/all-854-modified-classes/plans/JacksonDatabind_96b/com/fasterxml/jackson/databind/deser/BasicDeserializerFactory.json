@@ -1,0 +1,314 @@
+{
+  "audit_hash": "b50e8e675b32589625baf234c3f1873f9a6d08a635caf6fd1edc6e8f7776bb2f",
+  "bug_id": 96,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 13
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "BasicDeserializerFactory",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "BasicDeserializerFactory(DeserializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getFactoryConfig",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactoryConfig",
+      "signature": "getFactoryConfig()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withConfig",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializerFactoryConfig"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactory",
+      "signature": "withConfig(DeserializerFactoryConfig)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withAdditionalDeserializers",
+      "parameters": [
+        {
+          "name": "additional",
+          "type": "Deserializers"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactory",
+      "signature": "withAdditionalDeserializers(Deserializers)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withAdditionalKeyDeserializers",
+      "parameters": [
+        {
+          "name": "additional",
+          "type": "KeyDeserializers"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactory",
+      "signature": "withAdditionalKeyDeserializers(KeyDeserializers)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withDeserializerModifier",
+      "parameters": [
+        {
+          "name": "modifier",
+          "type": "BeanDeserializerModifier"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactory",
+      "signature": "withDeserializerModifier(BeanDeserializerModifier)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withAbstractTypeResolver",
+      "parameters": [
+        {
+          "name": "resolver",
+          "type": "AbstractTypeResolver"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactory",
+      "signature": "withAbstractTypeResolver(AbstractTypeResolver)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "withValueInstantiators",
+      "parameters": [
+        {
+          "name": "instantiators",
+          "type": "ValueInstantiators"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "DeserializerFactory",
+      "signature": "withValueInstantiators(ValueInstantiators)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "mapAbstractType",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializationConfig"
+        },
+        {
+          "name": "type",
+          "type": "JavaType"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "mapAbstractType(DeserializationConfig,JavaType)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_findCreatorsFromProperties",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Map<AnnotatedWithParams,BeanPropertyDefinition[]>",
+      "signature": "_findCreatorsFromProperties(DeserializationContext,BeanDescription)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_checkImplicitlyNamedConstructors",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "beanDesc",
+          "type": "BeanDescription"
+        },
+        {
+          "name": "vchecker",
+          "type": "VisibilityChecker<?>"
+        },
+        {
+          "name": "intr",
+          "type": "AnnotationIntrospector"
+        },
+        {
+          "name": "creators",
+          "type": "CreatorCollector"
+        },
+        {
+          "name": "implicitCtors",
+          "type": "List<AnnotatedWithParams>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "_checkImplicitlyNamedConstructors(DeserializationContext,BeanDescription,VisibilityChecker<?>,AnnotationIntrospector,CreatorCollector,List<AnnotatedWithParams>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_findRemappedType",
+      "parameters": [
+        {
+          "name": "config",
+          "type": "DeserializationConfig"
+        },
+        {
+          "name": "rawType",
+          "type": "Class<?>"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "JavaType",
+      "signature": "_findRemappedType(DeserializationConfig,Class<?>)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "_hasCreatorAnnotation",
+      "parameters": [
+        {
+          "name": "ctxt",
+          "type": "DeserializationContext"
+        },
+        {
+          "name": "ann",
+          "type": "Annotated"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "_hasCreatorAnnotation(DeserializationContext,Annotated)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "protected"
+    }
+  ],
+  "input_hash": "b50e8e675b32589625baf234c3f1873f9a6d08a635caf6fd1edc6e8f7776bb2f",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "JacksonDatabind",
+  "receiver_strategy": null,
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "a7d15ec24a008a6dfd1ae19ad381f1073c70c1284bf8361bbde4b6f992a697dd",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory",
+  "trigger_tests": [
+    "com.fasterxml.jackson.databind.deser.creators.CreatorWithNamingStrategyTest::testSnakeCaseWithOneArg"
+  ]
+}

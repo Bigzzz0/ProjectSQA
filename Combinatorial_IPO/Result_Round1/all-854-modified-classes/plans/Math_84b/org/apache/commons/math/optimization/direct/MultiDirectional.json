@@ -1,0 +1,80 @@
+{
+  "audit_hash": "3e6cdd66eeca266fc20cfe132f6f83106d7a5fb61f12cb23cf6b37bbd1d97e71",
+  "bug_id": 84,
+  "callable_status_counts": {
+    "NEEDS_ENTRY_POINT": 2
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MultiDirectional",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MultiDirectional()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "AMBIGUOUS",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "MultiDirectional",
+      "parameters": [
+        {
+          "name": "khi",
+          "type": "double"
+        },
+        {
+          "name": "gamma",
+          "type": "double"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "MultiDirectional(double,double)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    }
+  ],
+  "input_hash": "3e6cdd66eeca266fc20cfe132f6f83106d7a5fb61f12cb23cf6b37bbd1d97e71",
+  "missing_adapters": [
+    "entry_point_evidence"
+  ],
+  "project": "Math",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new MultiDirectional()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "MultiDirectional()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "ce8ef1e26ab12ada8818a1f23b7618a628641641a1800208e7e7c9fc02dfc8bb",
+  "status": "NEEDS_ENTRY_POINT",
+  "target_class": "org.apache.commons.math.optimization.direct.MultiDirectional",
+  "trigger_tests": [
+    "org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMinimizeMaximize",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMath283"
+  ]
+}

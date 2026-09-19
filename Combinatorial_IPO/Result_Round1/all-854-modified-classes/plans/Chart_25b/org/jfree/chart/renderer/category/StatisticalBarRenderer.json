@@ -1,0 +1,354 @@
+{
+  "audit_hash": "907a6c1c504e1728a8b06495a0d8afe2676e8842f722c3a00adadde028f5b3bb",
+  "bug_id": 25,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 3,
+    "NEEDS_ENTRY_POINT": 7
+  },
+  "callables": [
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "TRIGGER_TEST_CALL"
+        }
+      ],
+      "kind": "constructor",
+      "missing_adapters": [
+        "object_observer"
+      ],
+      "name": "StatisticalBarRenderer",
+      "parameters": [],
+      "reason": "Constructor result needs a stable object observer or invariant",
+      "return_type": null,
+      "signature": "StatisticalBarRenderer()",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getErrorIndicatorPaint",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Paint",
+      "signature": "getErrorIndicatorPaint()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setErrorIndicatorPaint",
+      "parameters": [
+        {
+          "name": "paint",
+          "type": "Paint"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setErrorIndicatorPaint(Paint)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getErrorIndicatorStroke",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "Stroke",
+      "signature": "getErrorIndicatorStroke()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "setErrorIndicatorStroke",
+      "parameters": [
+        {
+          "name": "stroke",
+          "type": "Stroke"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "setErrorIndicatorStroke(Stroke)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "drawItem",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "data",
+          "type": "CategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "pass",
+          "type": "int"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "drawItem(Graphics2D,CategoryItemRendererState,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,int)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Graphics2D",
+        "CategoryItemRendererState",
+        "Rectangle2D",
+        "CategoryPlot",
+        "CategoryAxis",
+        "ValueAxis",
+        "StatisticalCategoryDataset"
+      ],
+      "name": "drawHorizontalItem",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataset",
+          "type": "StatisticalCategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "drawHorizontalItem(Graphics2D,CategoryItemRendererState,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,StatisticalCategoryDataset,int,int)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "Graphics2D",
+        "CategoryItemRendererState",
+        "Rectangle2D",
+        "CategoryPlot",
+        "CategoryAxis",
+        "ValueAxis",
+        "StatisticalCategoryDataset"
+      ],
+      "name": "drawVerticalItem",
+      "parameters": [
+        {
+          "name": "g2",
+          "type": "Graphics2D"
+        },
+        {
+          "name": "state",
+          "type": "CategoryItemRendererState"
+        },
+        {
+          "name": "dataArea",
+          "type": "Rectangle2D"
+        },
+        {
+          "name": "plot",
+          "type": "CategoryPlot"
+        },
+        {
+          "name": "domainAxis",
+          "type": "CategoryAxis"
+        },
+        {
+          "name": "rangeAxis",
+          "type": "ValueAxis"
+        },
+        {
+          "name": "dataset",
+          "type": "StatisticalCategoryDataset"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "void",
+      "signature": "drawVerticalItem(Graphics2D,CategoryItemRendererState,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,StatisticalCategoryDataset,int,int)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "protected"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "equals",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "boolean",
+      "signature": "equals(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "writeObject",
+      "parameters": [
+        {
+          "name": "stream",
+          "type": "ObjectOutputStream"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "writeObject(ObjectOutputStream)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "907a6c1c504e1728a8b06495a0d8afe2676e8842f722c3a00adadde028f5b3bb",
+  "missing_adapters": [
+    "CategoryAxis",
+    "CategoryItemRendererState",
+    "CategoryPlot",
+    "Graphics2D",
+    "Rectangle2D",
+    "StatisticalCategoryDataset",
+    "ValueAxis",
+    "entry_point_evidence",
+    "object_observer"
+  ],
+  "project": "Chart",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new StatisticalBarRenderer()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "StatisticalBarRenderer()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4ca855593ac9bebe7a876b636b64176daa045e44efa367f0cba5dbfc867138a2",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.jfree.chart.renderer.category.StatisticalBarRenderer",
+  "trigger_tests": [
+    "org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullMeanVertical",
+    "org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullDeviationVertical",
+    "org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullMeanHorizontal",
+    "org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullDeviationHorizontal"
+  ]
+}

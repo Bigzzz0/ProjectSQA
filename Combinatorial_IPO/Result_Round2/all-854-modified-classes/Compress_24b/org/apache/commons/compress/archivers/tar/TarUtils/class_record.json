@@ -1,0 +1,29 @@
+{
+  "audit_hash": "5ff26b173b83c88f78e1b28387111331170f419214541f07f01ecdca2aa9690c",
+  "bug_id": 24,
+  "generation_backend": "native_ipo",
+  "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+  "methods": [
+    {
+      "covered_pair_count": 45,
+      "expected_pair_count": 45,
+      "model_hash": "00df7d12a0b4fc0a1ed4497411d116bdd107e3e457330f29066440d846094ab3",
+      "oracle_hash": "7c50366bc32f4c704f171cebe84327eec88559dd1e3a69404b0d56dde22a5fdb",
+      "oracle_sha256": "dbd548d0ad43d6b5b7339afc1b5072a2a11da30eabcb875cb21b35f2dd5db5a6",
+      "pair_coverage_percent": 100.0,
+      "pairwise_count": 25,
+      "reused_oracle": false,
+      "signature": "parseOctal(byte[],int,int)",
+      "suite_hash": "9adab78a6b8b2ffa3ad0edada1dd0c5f4b2babba82684289844130733e7cd9fc"
+    }
+  ],
+  "project": "Compress",
+  "status": "FIXED_VERIFIED",
+  "strength": 2,
+  "suite_hash": "3b69374f51e2d82d1006224f426eb21db84dd67ae92d1f60fb10becc8e561e6d",
+  "suite_path": "TestCode/all-modified-classes/Compress_24b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+  "suite_sha256": "b13908dd1be6191939db0c1451d0e00f17a391346ea9e20ea1ec537c0e178745",
+  "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "test_class": "TarUtils_IPOTest",
+  "verification_result": "OK (25 tests)"
+}

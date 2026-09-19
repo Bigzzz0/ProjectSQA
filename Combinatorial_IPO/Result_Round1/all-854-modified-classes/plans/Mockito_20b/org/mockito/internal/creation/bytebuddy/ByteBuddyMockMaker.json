@@ -1,0 +1,232 @@
+{
+  "audit_hash": "0154f720d6daa7fd530b89f97c21a759ee47d7c41d56bf0b2d52e583bc7346a8",
+  "bug_id": 20,
+  "callable_status_counts": {
+    "NEEDS_ADAPTER": 1,
+    "NEEDS_ENTRY_POINT": 8
+  },
+  "callables": [
+    {
+      "evidence": [],
+      "kind": "constructor",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ByteBuddyMockMaker",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": null,
+      "signature": "ByteBuddyMockMaker()",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [
+        {
+          "confidence": "HIGH",
+          "kind": "SOURCE_DIFF"
+        }
+      ],
+      "kind": "method",
+      "missing_adapters": [
+        "MockCreationSettings<T>",
+        "MockHandler"
+      ],
+      "name": "createMock",
+      "parameters": [
+        {
+          "name": "settings",
+          "type": "MockCreationSettings<T>"
+        },
+        {
+          "name": "handler",
+          "type": "MockHandler"
+        }
+      ],
+      "reason": "One or more parameter types need semantic factories",
+      "return_type": "<T> T",
+      "signature": "createMock(MockCreationSettings<T>,MockHandler)",
+      "static": false,
+      "status": "NEEDS_ADAPTER",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "ensureMockIsAssignableToMockedType",
+      "parameters": [
+        {
+          "name": "settings",
+          "type": "MockCreationSettings<T>"
+        },
+        {
+          "name": "mock",
+          "type": "T"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "<T> T",
+      "signature": "ensureMockIsAssignableToMockedType(MockCreationSettings<T>,T)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "describeClass",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Class"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "describeClass(Class)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "describeClass",
+      "parameters": [
+        {
+          "name": "instance",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "String",
+      "signature": "describeClass(Object)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "getHandler",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "Object"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "MockHandler",
+      "signature": "getHandler(Object)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "resetMock",
+      "parameters": [
+        {
+          "name": "mock",
+          "type": "Object"
+        },
+        {
+          "name": "newHandler",
+          "type": "MockHandler"
+        },
+        {
+          "name": "settings",
+          "type": "MockCreationSettings"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "void",
+      "signature": "resetMock(Object,MockHandler,MockCreationSettings)",
+      "static": false,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "public"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "initializeClassInstantiator",
+      "parameters": [],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "ClassInstantiator",
+      "signature": "initializeClassInstantiator()",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    },
+    {
+      "evidence": [],
+      "kind": "method",
+      "missing_adapters": [
+        "entry_point_evidence"
+      ],
+      "name": "asInternalMockHandler",
+      "parameters": [
+        {
+          "name": "handler",
+          "type": "MockHandler"
+        }
+      ],
+      "reason": "No unambiguous diff or triggering-test evidence selects this callable",
+      "return_type": "InternalMockHandler",
+      "signature": "asInternalMockHandler(MockHandler)",
+      "static": true,
+      "status": "NEEDS_ENTRY_POINT",
+      "visibility": "private"
+    }
+  ],
+  "input_hash": "0154f720d6daa7fd530b89f97c21a759ee47d7c41d56bf0b2d52e583bc7346a8",
+  "missing_adapters": [
+    "MockCreationSettings<T>",
+    "MockHandler",
+    "entry_point_evidence"
+  ],
+  "project": "Mockito",
+  "receiver_strategy": {
+    "adapters": {},
+    "cleanup_required": false,
+    "expression_template": "new ByteBuddyMockMaker()",
+    "factor_domains": {},
+    "kind": "zero_arg_constructor",
+    "signature": "ByteBuddyMockMaker()"
+  },
+  "schema_version": 2,
+  "source_presence": "PRESENT_IN_BOTH",
+  "source_sha256": "4fd90f21c543cac157277844df15f79e0d739339faf3107da6db385d172ba51e",
+  "status": "NEEDS_ADAPTER",
+  "target_class": "org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker",
+  "trigger_tests": [
+    "org.mockitousage.annotation.SpyAnnotationTest::should_spy_inner_class",
+    "org.mockitousage.annotation.SpyAnnotationTest::should_report_when_constructor_is_explosive",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::can_spy_abstract_classes",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::exception_message_when_constructor_not_found",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::can_create_mock_with_constructor",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::can_mock_inner_classes",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::mocking_inner_classes_with_wrong_outer_instance",
+    "org.mockitousage.constructor.CreatingMocksWithConstructorTest::can_mock_abstract_classes"
+  ]
+}

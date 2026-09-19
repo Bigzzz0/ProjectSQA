@@ -10,6 +10,8 @@ import sys
 from pathlib import Path
 from typing import List, Mapping, Optional, Sequence, Tuple
 
+from domain.invocation import factor_names, render_invocation
+
 
 IPO_ROOT = Path(__file__).resolve().parents[1]
 if str(IPO_ROOT) not in sys.path:
@@ -37,13 +39,13 @@ def _java_string_literal(value: str) -> str:
 
 def _render_test_method(
     class_name: str,
-    method_name: str,
-    parameter_names: Sequence[str],
+    method: Mapping[str, object],
     combination: Mapping[str, str],
     index: int,
     oracle: Optional[Mapping[str, object]] = None,
 ) -> str:
-    expected_keys = set(parameter_names)
+    method_name = str(method.get("name"))
+    expected_keys = set(factor_names(method))
     actual_keys = set(combination)
     if actual_keys != expected_keys:
         raise ValueError(
@@ -52,12 +54,11 @@ def _render_test_method(
             )
         )
 
-    arguments = ", ".join(combination[name] for name in parameter_names)
     details = ", ".join(
         "{}={}".format(name, _comment_value(combination[name]))
-        for name in parameter_names
+        for name in factor_names(method)
     )
-    invocation = "{}.{}({})".format(class_name, method_name, arguments)
+    invocation = render_invocation(class_name, method, combination)
     if oracle is None:
         body = "{};".format(invocation)
     else:
@@ -116,7 +117,7 @@ def _validate_method(method: Mapping[str, object]) -> Tuple[str, List[str]]:
     if not isinstance(method_name, str):
         raise ValueError("Method name is required")
     _require_java_identifier(method_name, "method name")
-    if method.get("static") is not True:
+    if method.get("static") is not True and not isinstance(method.get("receiver_strategy"), dict):
         raise ValueError("Instance methods require a constructor strategy")
 
     raw_parameters = method.get("parameters")
@@ -174,14 +175,7 @@ def synthesize_junit_suite(
             ):
                 raise ValueError("Oracle arguments do not match combination order")
             rendered_methods.append(
-                _render_test_method(
-                    class_name,
-                    method_name,
-                    parameter_names,
-                    combination,
-                    next_test_index,
-                    oracle,
-                )
+                _render_test_method(class_name, method, combination, next_test_index, oracle)
             )
             next_test_index += 1
 
