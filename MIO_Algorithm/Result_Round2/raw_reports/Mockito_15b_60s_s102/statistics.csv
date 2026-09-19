@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.configuration.injection.FinalMockCandidateFilter,LINE;BRANCH,0.5844155844155844,18,10

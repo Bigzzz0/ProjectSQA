@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.MockHandler,LINE;BRANCH,0.6566176470588235,57,38

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.configuration.SpyAnnotationEngine,LINE;BRANCH,0.44565217391304346,37,17

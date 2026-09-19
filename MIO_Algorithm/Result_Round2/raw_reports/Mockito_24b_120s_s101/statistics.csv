@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues,LINE;BRANCH,0.49324324324324326,81,39

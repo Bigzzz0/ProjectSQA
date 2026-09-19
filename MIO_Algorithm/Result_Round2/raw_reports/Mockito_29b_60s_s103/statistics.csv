@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.matchers.Same,LINE;BRANCH,0.9041666666666667,23,21

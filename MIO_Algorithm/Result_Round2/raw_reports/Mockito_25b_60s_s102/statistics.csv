@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs,LINE;BRANCH,0.20454545454545453,33,8

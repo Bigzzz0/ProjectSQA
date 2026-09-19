@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.invocation.InvocationMatcher,LINE;BRANCH,0.4744186046511628,88,23

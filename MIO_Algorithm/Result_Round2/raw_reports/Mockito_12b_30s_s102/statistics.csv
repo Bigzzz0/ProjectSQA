@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.util.reflection.GenericMaster,LINE;BRANCH,0.26666666666666666,11,4

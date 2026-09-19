@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.mockito.internal.configuration.DefaultInjectionEngine,LINE;BRANCH,0.2917771883289125,42,13
