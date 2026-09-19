@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.core.io.NumberInput,LINE;BRANCH,0.9399469143994692,258,242
+com.fasterxml.jackson.core.util.TextBuffer,LINE;BRANCH,0.9651162790697674,387,371

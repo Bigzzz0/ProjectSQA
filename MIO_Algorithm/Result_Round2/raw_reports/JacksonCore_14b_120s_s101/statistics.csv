@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.core.io.IOContext,LINE;BRANCH,1.0,107,106
+com.fasterxml.jackson.core.io.IOContext,LINE;BRANCH,1.0,107,106
+com.fasterxml.jackson.core.io.IOContext,LINE;BRANCH,1.0,107,106

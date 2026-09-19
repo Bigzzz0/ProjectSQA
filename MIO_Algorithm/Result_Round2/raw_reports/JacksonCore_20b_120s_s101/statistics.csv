@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.core.JsonGenerator,LINE;BRANCH,0.5642281105990783,416,238
+com.fasterxml.jackson.core.JsonGenerator,LINE;BRANCH,0.5692204301075269,416,242

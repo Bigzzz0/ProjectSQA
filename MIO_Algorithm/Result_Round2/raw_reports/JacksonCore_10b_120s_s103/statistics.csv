@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer,LINE;BRANCH,0.8575724439584472,760,482
