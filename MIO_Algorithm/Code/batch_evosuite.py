@@ -115,12 +115,16 @@ def save_progress(progress: Dict[str, Any]):
         json.dump(progress, f, indent=2, ensure_ascii=False)
 
 def ensure_container_running():
-    """Ensure defects4j_sqa container is running."""
+    """Ensure defects4j_sqa container is running and prerequisites are met."""
     code, out, _ = run_cmd(["docker", "inspect", "-f", "{{.State.Running}}", CONTAINER_NAME])
     if code != 0 or out != "true":
         print(f">> Starting Docker container {CONTAINER_NAME}...")
         run_cmd(["docker", "start", CONTAINER_NAME])
         time.sleep(2)
+    # Ensure Defects4J junit-4.12.jar compatibility symlink exists for Ant dependencies
+    run_cmd(["docker", "exec", CONTAINER_NAME, "bash", "-c", 
+             "[ -f /opt/defects4j/framework/projects/lib/junit-4.12.jar ] || ln -sf /opt/defects4j/framework/projects/lib/junit-4.12-hamcrest-1.3.jar /opt/defects4j/framework/projects/lib/junit-4.12.jar"])
+
 
 def ensure_d4j_repo(project: str):
     """Ensure project repository exists in Defects4J container."""
@@ -239,20 +243,34 @@ def run_single_experiment(project: str, bug_id: int, target_class: str, budget: 
     export LANG=C.UTF-8
     export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
     mkdir -p "{container_report_dir}" "{container_out_dir}"
+    [ -f /opt/defects4j/framework/projects/lib/junit-4.12.jar ] || ln -sf /opt/defects4j/framework/projects/lib/junit-4.12-hamcrest-1.3.jar /opt/defects4j/framework/projects/lib/junit-4.12.jar
     if [ ! -f "{work_dir}/.defects4j.config" ]; then
         rm -rf "{work_dir}"
         defects4j checkout -p "{project}" -v "{bug_id}b" -w "{work_dir}"
     fi
     cd "{work_dir}"
+    if [ -d "{work_dir}/target/lib/junit/jars" ] && [ -z "$(ls -A '{work_dir}/target/lib/junit/jars' 2>/dev/null)" ]; then
+        rm -rf "{work_dir}/target"
+    fi
     defects4j compile
-    CP=$(defects4j export -p cp.compile)
+    RAW_CP=$(defects4j export -p cp.compile)
+    VALID_CP=""
+    for elem in $(echo "$RAW_CP" | tr ':' ' '); do
+        if [ -e "$elem" ]; then
+            if [ -z "$VALID_CP" ]; then
+                VALID_CP="$elem"
+            else
+                VALID_CP="${{VALID_CP}}:${{elem}}"
+            fi
+        fi
+    done
     
     export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
     export PATH=$JAVA_HOME/bin:$PATH
     
     $JAVA_HOME/bin/java -jar /workspace/MIO_Algorithm/Code/evosuite-1.0.6.jar \\
       -class "{target_class}" \\
-      -projectCP "$CP" \\
+      -projectCP "$VALID_CP" \\
       -Dalgorithm=MIO \\
       -Dcriterion=LINE:BRANCH \\
       -Dsearch_budget={budget} \\
@@ -303,6 +321,7 @@ def process_target(entry: Dict[str, Any], force: bool = False):
     print(f"🚀 Processing: {project}-{bug_id}b | Target: {target_class}")
     print("=" * 65)
     
+    ensure_container_running()
     ensure_d4j_repo(project)
     progress = load_progress()
     simple_name = entry.get("simple_name", target_class.split(".")[-1])
@@ -440,6 +459,7 @@ def main():
             print(f" • {t['project']}-{t['bug_id']}b: {t['target_class']}")
         return
 
+    ensure_container_running()
     print(f"Starting MIO Batch Execution for {len(targets)} target(s)...")
     for t in targets:
         process_target(t, force=args.force)
