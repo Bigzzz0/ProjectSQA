@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.compress.archivers.tar.TarArchiveOutputStream,LINE;BRANCH,0.7444444444444445,126,93

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.compress.archivers.ArchiveStreamFactory,LINE;BRANCH,0.8709528214616096,116,101

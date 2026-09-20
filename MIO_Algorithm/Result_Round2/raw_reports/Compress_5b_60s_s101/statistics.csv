@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.compress.archivers.zip.ZipArchiveInputStream,LINE;BRANCH,0.325446628673881,258,85

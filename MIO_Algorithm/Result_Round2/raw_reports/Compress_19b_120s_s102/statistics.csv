@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField,LINE;BRANCH,0.9812567421790723,175,169

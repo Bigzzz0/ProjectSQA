@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream,LINE;BRANCH,0.8906093906093906,245,216
+org.apache.commons.compress.archivers.tar.TarArchiveOutputStream,LINE;BRANCH,0.6378378378378378,132,82
+org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream,LINE;BRANCH,0.823370125851042,447,389
+org.apache.commons.compress.changes.ChangeSetPerformer,LINE;BRANCH,0.16253101736972705,114,20
