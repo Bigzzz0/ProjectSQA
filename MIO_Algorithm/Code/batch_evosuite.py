@@ -236,6 +236,7 @@ def run_single_experiment(project: str, bug_id: int, target_class: str, budget: 
     os.makedirs(local_report_dir, exist_ok=True)
     
     work_dir = f"/tmp/{project}_{bug_id}_buggy"
+    safe_target_class = target_class.replace('$', '\\$')
     
     cmd_script = f"""
     set -e
@@ -269,7 +270,7 @@ def run_single_experiment(project: str, bug_id: int, target_class: str, budget: 
     export PATH=$JAVA_HOME/bin:$PATH
     
     $JAVA_HOME/bin/java -jar /workspace/MIO_Algorithm/Code/evosuite-1.0.6.jar \\
-      -class "{target_class}" \\
+      -class "{safe_target_class}" \\
       -projectCP "$VALID_CP" \\
       -Dalgorithm=MIO \\
       -Dcriterion=LINE:BRANCH \\
@@ -300,7 +301,12 @@ def run_single_experiment(project: str, bug_id: int, target_class: str, budget: 
     metrics["report_dir"] = local_report_dir
     
     if not metrics["success"]:
-        print(f"\n  ❌ [ERROR] Execution failed for {project}-{bug_id}b (budget={budget}s, seed={seed})! Exit code: {code}")
+        diag = ""
+        if "Lost connection with clients" in stderr or "SIGSEGV" in stderr:
+            diag = " [Diagnosis: JVM crashed during reflection/Unsafe execution]"
+        elif "NullPointerException" in stderr and "AbstractTestSuiteChromosome.mutate" in stderr:
+            diag = " [Diagnosis: EvoSuite MIO chromosome mutate NPE bug]"
+        print(f"\n  ❌ [ERROR] Execution failed for {project}-{bug_id}b (budget={budget}s, seed={seed})! Exit code: {code}{diag}")
         if stderr:
             lines = stderr.strip().split("\n")
             print("     [STDERR] " + "\n     ".join(lines[-8:]))

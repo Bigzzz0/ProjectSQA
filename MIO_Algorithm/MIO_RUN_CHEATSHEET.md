@@ -38,7 +38,7 @@
   - [ ] `Cli` (39 บั๊ก)
   - [ ] `Compress` (47 บั๊ก)
   - [ ] `Lang` (61 บั๊ก)
-- [ ] [Phase 4: กลุ่มโปรเจกต์ยักษ์ใหญ่ (Mega Projects Marathon: รันข้ามคืน)](#-phase-4-mega-projects-โปรเจกต์ยักษ์ใหญ่-รวม-483-บั๊ก)
+- [ ] [Phase 4: กลุ่มโปรเจกต์ยักษ์ใหญ่ (Mega Projects - 3 Terminals: รันข้ามคืน)](#-phase-4-mega-projects-โปรเจกต์ยักษ์ใหญ่-รวม-483-บั๊ก---แบ่ง-3-เทอร์มินัล-รันคู่ขนาน)
   - [ ] `Jsoup` (93 บั๊ก)
   - [ ] `Math` (106 บั๊ก)
   - [ ] `JacksonDatabind` (110 บั๊ก)
@@ -274,96 +274,78 @@ git push origin main
 
 ---
 
-## 🔴 Phase 4: Mega Projects (โปรเจกต์ยักษ์ใหญ่ รวม 483 บั๊ก)
+## 🔴 Phase 4: Mega Projects (โปรเจกต์ยักษ์ใหญ่ รวม 483 บั๊ก - แบ่ง 3 เทอร์มินัล รันคู่ขนาน)
 
-### 14. [ ] Jsoup (93 บั๊ก) - แบ่ง 2 รอบ x 2 เทอร์มินัล
+### 14. [ ] Jsoup (93 บั๊ก) - แบ่ง 3 เทอร์มินัล (~2.5–3 ชม.)
 ```powershell
-# --- [รอบที่ 1: บั๊ก 1 ถึง 46] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 1 --end-bug 23
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 24 --end-bug 46
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 31
+python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 1 --end-bug 31
 
-# --- [รอบที่ 2: บั๊ก 47 ถึง 93] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 47 --end-bug 70
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 71 --end-bug 93
+# [Terminal 2 - กลาง]: บั๊ก 32 ถึง 62
+python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 32 --end-bug 62
 
-# เมื่อรันครบทั้งโปรเจกต์ สั่ง Commit:
-git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Jsoup_*
+# [Terminal 3 - ขวา]: บั๊ก 63 ถึง 93
+python MIO_Algorithm/Code/batch_evosuite.py --project Jsoup --start-bug 63 --end-bug 93
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
+git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Jsoup_* MIO_Algorithm/Result_Round2/raw_reports/Jsoup_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Jsoup (bugs 1-93)"
 git push origin main
 ```
 
 ---
 
-### 15. [ ] Math (106 บั๊ก) - แบ่ง 2 รอบ x 2 เทอร์มินัล
+### 15. [ ] Math (106 บั๊ก) - แบ่ง 3 เทอร์มินัล (~3–3.5 ชม.)
 ```powershell
-# --- [รอบที่ 1: บั๊ก 1 ถึง 53] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 1 --end-bug 26
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 27 --end-bug 53
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 35
+python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 1 --end-bug 35
 
-# --- [รอบที่ 2: บั๊ก 54 ถึง 106] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 54 --end-bug 80
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 81 --end-bug 106
+# [Terminal 2 - กลาง]: บั๊ก 36 ถึง 70
+python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 36 --end-bug 70
 
-# เมื่อรันครบทั้งโปรเจกต์ สั่ง Commit:
-git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Math_*
+# [Terminal 3 - ขวา]: บั๊ก 71 ถึง 106
+python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 71 --end-bug 106
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
+git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Math_* MIO_Algorithm/Result_Round2/raw_reports/Math_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Math (bugs 1-106)"
 git push origin main
 ```
 
 ---
 
-### 16. [ ] JacksonDatabind (110 บั๊ก: 1–112) - แบ่ง 2 รอบ x 2 เทอร์มินัล
+### 16. [ ] JacksonDatabind (110 บั๊ก: 1–112) - แบ่ง 3 เทอร์มินัล (~3.5 ชม.)
 ```powershell
-# --- [รอบที่ 1: บั๊ก 1 ถึง 56] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 1 --end-bug 28
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 29 --end-bug 56
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 37
+python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 1 --end-bug 37
 
-# --- [รอบที่ 2: บั๊ก 57 ถึง 112] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 57 --end-bug 84
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 85 --end-bug 112
+# [Terminal 2 - กลาง]: บั๊ก 38 ถึง 74
+python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 38 --end-bug 74
 
-# เมื่อรันครบทั้งโปรเจกต์ สั่ง Commit:
-git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/JacksonDatabind_*
+# [Terminal 3 - ขวา]: บั๊ก 75 ถึง 112
+python MIO_Algorithm/Code/batch_evosuite.py --project JacksonDatabind --start-bug 75 --end-bug 112
+
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
+git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/JacksonDatabind_* MIO_Algorithm/Result_Round2/raw_reports/JacksonDatabind_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for JacksonDatabind (bugs 1-112)"
 git push origin main
 ```
 
 ---
 
-### 17. [ ] Closure (174 บั๊ก: 1–176) - แบ่ง 3 รอบ x 2 เทอร์มินัล (หรือเปิดปล่อยรันข้ามคืน)
+### 17. [ ] Closure (174 บั๊ก: 1–176) - แบ่ง 3 เทอร์มินัล (รันข้ามคืน ~5–6 ชม.)
 ```powershell
-# --- [รอบที่ 1: บั๊ก 1 ถึง 60] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 1 --end-bug 30
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 31 --end-bug 60
+# [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 58
+python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 1 --end-bug 58
 
-# --- [รอบที่ 2: บั๊ก 61 ถึง 120] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 61 --end-bug 90
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 91 --end-bug 120
+# [Terminal 2 - กลาง]: บั๊ก 59 ถึง 116
+python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 59 --end-bug 116
 
-# --- [รอบที่ 3: บั๊ก 121 ถึง 176] ---
-# Terminal 1:
-python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 121 --end-bug 148
-# Terminal 2:
-python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 149 --end-bug 176
+# [Terminal 3 - ขวา]: บั๊ก 117 ถึง 176
+python MIO_Algorithm/Code/batch_evosuite.py --project Closure --start-bug 117 --end-bug 176
 
-# เมื่อรันครบทั้งโปรเจกต์ สั่ง Commit:
-git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Closure_*
+# เมื่อทั้ง 3 เทอร์มินัลรันเสร็จ สั่ง Commit:
+git add MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv MIO_Algorithm/progress_mio.json MIO_Algorithm/TestCode/Closure_* MIO_Algorithm/Result_Round2/raw_reports/Closure_*
 git commit -m "feat(mio): complete EvoSuite MIO generation for Closure (bugs 1-176)"
 git push origin main
 ```
