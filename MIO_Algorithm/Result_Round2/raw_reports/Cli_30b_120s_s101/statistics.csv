@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli.DefaultParser,LINE;BRANCH,0.6296442687747035,349,221
+org.apache.commons.cli.Parser,LINE;BRANCH,0.8013861138861139,181,144
+org.apache.commons.cli.DefaultParser,LINE;BRANCH,0.8269433465085638,349,235
+org.apache.commons.cli.Parser,LINE;BRANCH,0.8287962037962038,181,147

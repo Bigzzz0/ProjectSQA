@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli.PosixParser,LINE;BRANCH,0.9502840909090908,108,102

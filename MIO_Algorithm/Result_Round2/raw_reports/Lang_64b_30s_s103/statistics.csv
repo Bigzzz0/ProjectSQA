@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang.enums.ValuedEnum,LINE;BRANCH,0.17424242424242425,29,5

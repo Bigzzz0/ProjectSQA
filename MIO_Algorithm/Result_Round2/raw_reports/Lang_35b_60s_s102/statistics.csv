@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang3.ArrayUtils,LINE;BRANCH,0.9944862155388472,1800,1776

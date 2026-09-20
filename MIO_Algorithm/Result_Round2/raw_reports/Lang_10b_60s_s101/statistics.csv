@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang3.time.FastDateParser,LINE;BRANCH,0.8071830985915494,605,485

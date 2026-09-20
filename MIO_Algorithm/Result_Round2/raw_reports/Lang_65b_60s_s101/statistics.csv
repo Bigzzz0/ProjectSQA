@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang.time.DateUtils,LINE;BRANCH,0.9781519861830743,373,351

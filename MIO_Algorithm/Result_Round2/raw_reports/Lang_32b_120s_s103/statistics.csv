@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang3.builder.HashCodeBuilder,LINE;BRANCH,0.9282094594594594,256,231

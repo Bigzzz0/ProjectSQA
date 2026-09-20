@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang3.RandomStringUtils,LINE;BRANCH,0.9659451659451659,118,104

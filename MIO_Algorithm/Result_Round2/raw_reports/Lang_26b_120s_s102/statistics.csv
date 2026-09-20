@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.lang3.time.FastDateFormat,LINE;BRANCH,0.8750445500445501,899,768
