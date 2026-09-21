@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.stat.descriptive.moment.Variance,LINE;BRANCH,0.9491525423728814,182,90

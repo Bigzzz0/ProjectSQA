@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.stat.inference.ChiSquareTestImpl,LINE;BRANCH,0.989247311827957,204,169

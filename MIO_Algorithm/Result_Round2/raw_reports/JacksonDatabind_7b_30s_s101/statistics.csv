@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.util.TokenBuffer,LINE;BRANCH,0.7151369512158375,1048,495

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.complex.ComplexFormat,LINE;BRANCH,0.9584730338154995,216,208

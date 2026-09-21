@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jsoup.helper.W3CDom,LINE;BRANCH,0.9514802631578947,108,99

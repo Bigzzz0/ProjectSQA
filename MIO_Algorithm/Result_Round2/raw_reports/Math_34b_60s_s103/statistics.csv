@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math3.genetics.ListPopulation,LINE;BRANCH,0.9182758620689655,79,68

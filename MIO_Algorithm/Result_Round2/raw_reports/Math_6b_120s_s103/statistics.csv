@@ -1,0 +1,8 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math3.optim.BaseOptimizer,LINE;BRANCH,0.8911764705882352,47,42
+org.apache.commons.math3.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer,LINE;BRANCH,0.2982456140350877,159,46
+org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizer,LINE;BRANCH,0.10864835349462365,721,81
+org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizer,LINE;BRANCH,0.30227272727272725,154,37
+org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizer,LINE;BRANCH,0.5593495934959349,71,40
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizer,LINE;BRANCH,0.22004608294930875,90,18
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.LevenbergMarquardtOptimizer,LINE;BRANCH,0.049656460793901555,589,33

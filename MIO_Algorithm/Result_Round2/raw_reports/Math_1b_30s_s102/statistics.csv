@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math3.fraction.BigFraction,LINE;BRANCH,0.9478009182247655,359,299
+org.apache.commons.math3.fraction.BigFraction,LINE;BRANCH,0.9345265819415796,359,333
+org.apache.commons.math3.fraction.Fraction,LINE;BRANCH,0.9822994987468672,282,272

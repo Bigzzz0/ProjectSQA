@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.distribution.NormalDistributionImpl,LINE;BRANCH,0.8547826086956521,71,56

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jsoup.nodes.FormElement,LINE;BRANCH,0.4642857142857143,68,33

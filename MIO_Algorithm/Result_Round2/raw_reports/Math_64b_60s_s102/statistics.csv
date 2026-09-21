@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,LINE;BRANCH,0.9849401010617158,548,537

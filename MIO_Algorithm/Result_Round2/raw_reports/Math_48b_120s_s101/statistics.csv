@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.analysis.solvers.BaseSecantSolver,LINE;BRANCH,0.9555531167690957,135,120

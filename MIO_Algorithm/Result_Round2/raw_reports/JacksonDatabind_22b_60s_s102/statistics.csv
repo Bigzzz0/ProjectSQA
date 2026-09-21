@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.ser.BasicSerializerFactory,LINE;BRANCH,0.3699358407581219,599,136

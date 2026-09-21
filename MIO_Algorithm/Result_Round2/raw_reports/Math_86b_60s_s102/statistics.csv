@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.linear.CholeskyDecompositionImpl,LINE;BRANCH,0.3933110367892977,180,62

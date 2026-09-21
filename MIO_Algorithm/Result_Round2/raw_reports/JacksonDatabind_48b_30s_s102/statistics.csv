@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.DeserializationConfig,LINE;BRANCH,0.9161979064762278,421,388
+com.fasterxml.jackson.databind.SerializationConfig,LINE;BRANCH,0.9348350679872419,457,414

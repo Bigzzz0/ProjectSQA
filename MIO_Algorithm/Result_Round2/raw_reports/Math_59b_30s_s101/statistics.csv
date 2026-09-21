@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.util.FastMath,LINE;BRANCH,0.7989043770467574,2190,1736

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.optimization.fitting.GaussianFitter,LINE;BRANCH,0.9056331246990852,160,146

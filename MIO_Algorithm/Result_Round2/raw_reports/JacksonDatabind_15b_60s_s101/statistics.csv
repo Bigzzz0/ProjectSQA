@@ -1,0 +1,6 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.JavaType,LINE;BRANCH,0.8514015535292131,110,93
+com.fasterxml.jackson.databind.ser.BeanSerializerFactory,LINE;BRANCH,0.5708299034647908,410,231
+com.fasterxml.jackson.databind.ser.std.BeanSerializerBase,LINE;BRANCH,0.2943969610636277,545,162
+com.fasterxml.jackson.databind.ser.std.StdDelegatingSerializer,LINE;BRANCH,0.9484848484848485,85,82
+com.fasterxml.jackson.databind.ser.std.StdSerializer,LINE;BRANCH,0.6924075275794939,136,95

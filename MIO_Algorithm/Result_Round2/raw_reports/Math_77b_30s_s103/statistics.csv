@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.linear.ArrayRealVector,LINE;BRANCH,0.9931818181818182,630,623
+org.apache.commons.math.linear.OpenMapRealVector,LINE;BRANCH,1.0,570,561

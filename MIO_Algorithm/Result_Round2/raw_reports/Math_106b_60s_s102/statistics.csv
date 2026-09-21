@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.fraction.ProperFractionFormat,LINE;BRANCH,0.789872408293461,79,53

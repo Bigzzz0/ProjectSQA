@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,LINE;BRANCH,1.0,190,110
+org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,LINE;BRANCH,0.9500244379276637,190,171
+org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator,LINE;BRANCH,0.9565653190778483,114,106

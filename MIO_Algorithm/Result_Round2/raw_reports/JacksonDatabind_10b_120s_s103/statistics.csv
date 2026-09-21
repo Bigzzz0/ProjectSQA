@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.ser.AnyGetterWriter,LINE;BRANCH,0.23809523809523808,41,13
+com.fasterxml.jackson.databind.ser.BeanSerializerFactory,LINE;BRANCH,0.5857968578921906,406,221

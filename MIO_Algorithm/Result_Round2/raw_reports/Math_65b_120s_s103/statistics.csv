@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,LINE;BRANCH,0.9541666666666666,136,130

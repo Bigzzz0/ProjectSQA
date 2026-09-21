@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jsoup.nodes.Attributes,LINE;BRANCH,0.8316362026437291,260,216
+org.jsoup.parser.HtmlTreeBuilder,LINE;BRANCH,0.8796686176260053,628,546
+org.jsoup.parser.ParseSettings,LINE;BRANCH,1.0,24,22
+org.jsoup.parser.XmlTreeBuilder,LINE;BRANCH,0.9030303030303031,111,99

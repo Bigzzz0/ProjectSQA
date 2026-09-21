@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.geometry.euclidean.threed.Rotation,LINE;BRANCH,0.9632167033684038,500,406

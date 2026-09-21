@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math3.optimization.fitting.HarmonicFitter,LINE;BRANCH,0.9790558510638299,126,125

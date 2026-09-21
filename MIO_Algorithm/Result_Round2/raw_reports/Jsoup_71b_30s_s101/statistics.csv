@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jsoup.select.Evaluator,LINE;BRANCH,0.974137704227946,390,374
+org.jsoup.select.QueryParser,LINE;BRANCH,0.8379088018204627,378,307

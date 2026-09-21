@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,LINE;BRANCH,0.9565217391304348,73,70

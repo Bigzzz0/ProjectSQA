@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jsoup.nodes.Entities,LINE;BRANCH,0.5714285714285714,108,60
+org.jsoup.parser.Tokeniser,LINE;BRANCH,0.8625914315569487,208,136

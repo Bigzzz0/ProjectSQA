@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator,LINE;BRANCH,0.9565653190778483,114,109

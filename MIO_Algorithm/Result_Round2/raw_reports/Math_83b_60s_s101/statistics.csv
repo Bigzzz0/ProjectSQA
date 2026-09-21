@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math.optimization.linear.SimplexTableau,LINE;BRANCH,0.9597202397944619,268,254

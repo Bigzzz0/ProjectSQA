@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.jsoup.safety.Whitelist,LINE;BRANCH,0.8817167316364749,236,211

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.math3.analysis.differentiation.DSCompiler,LINE;BRANCH,0.9094141488577745,847,622

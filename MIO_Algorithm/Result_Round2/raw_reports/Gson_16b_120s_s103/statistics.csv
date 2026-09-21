@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.gson.internal.$Gson$Types,LINE;BRANCH,0.7206868900232745,454,326
+com.google.gson.internal.$Gson$Types,LINE;BRANCH,0.6823622601654638,454,313
