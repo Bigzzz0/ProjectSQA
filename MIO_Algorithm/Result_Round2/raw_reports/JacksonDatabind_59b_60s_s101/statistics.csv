@@ -1,3 +1,5 @@
 TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
 com.fasterxml.jackson.databind.JavaType,LINE;BRANCH,0.981999357119897,112,106
 com.fasterxml.jackson.databind.type.CollectionLikeType,LINE;BRANCH,0.9886363636363636,102,100
+com.fasterxml.jackson.databind.type.MapLikeType,LINE;BRANCH,0.9903846153846154,125,124
+com.fasterxml.jackson.databind.type.TypeFactory,LINE;BRANCH,0.8376017779993353,626,512

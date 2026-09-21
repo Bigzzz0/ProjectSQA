@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli.GnuParser,LINE;BRANCH,0.9505882352941176,42,39

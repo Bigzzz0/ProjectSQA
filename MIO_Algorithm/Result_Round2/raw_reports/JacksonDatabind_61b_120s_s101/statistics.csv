@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.ObjectMapper,LINE;BRANCH,0.754851309065532,1066,799

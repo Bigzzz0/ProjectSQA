@@ -109,3 +109,4 @@ done
   * ขยายผลรันกับ Target Classes ในชุด Benchmark
   * `Result_Round2/budget_comparison.md` (ตาราง Mean ± SD ตามข้อ 1.7)
   * สรุปจุดเด่น/ข้อจำกัดของ MIO ในเชิง Search-Based Testing
+  * 📋 **รายงานการวิเคราะห์ข้อผิดพลาดและการประกันคุณภาพ (ฉบับส่งอาจารย์):** [MIO_FAILURE_ANALYSIS_REPORT.md](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md)

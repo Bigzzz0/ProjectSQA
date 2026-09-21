@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector,LINE;BRANCH,0.4433395755305868,806,357
+com.fasterxml.jackson.databind.introspect.ObjectIdInfo,LINE;BRANCH,1.0,45,44
+com.fasterxml.jackson.databind.ser.std.BeanSerializerBase,LINE;BRANCH,0.3078817733990148,568,81

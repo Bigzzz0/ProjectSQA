@@ -1,2 +1,3 @@
 TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
 com.fasterxml.jackson.databind.type.TypeFactory,LINE;BRANCH,0.8153285283271874,543,427
+com.fasterxml.jackson.databind.type.TypeFactory,LINE;BRANCH,0.7320510671583418,543,397

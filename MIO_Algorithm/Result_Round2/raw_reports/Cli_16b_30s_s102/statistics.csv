@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli2.Option,LINE;BRANCH,1.0,0,0
+org.apache.commons.cli2.commandline.WriteableCommandLineImpl,LINE;BRANCH,0.9861111111111112,170,166
+org.apache.commons.cli2.option.GroupImpl,LINE;BRANCH,0.7986384929060089,346,274
+org.apache.commons.cli2.option.OptionImpl,LINE;BRANCH,0.9666666666666667,101,96

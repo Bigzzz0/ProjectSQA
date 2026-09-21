@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli2.builder.PatternBuilder,LINE;BRANCH,0.9251700680272108,215,194

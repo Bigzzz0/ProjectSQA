@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli.HelpFormatter,LINE;BRANCH,0.9561356719274576,360,341

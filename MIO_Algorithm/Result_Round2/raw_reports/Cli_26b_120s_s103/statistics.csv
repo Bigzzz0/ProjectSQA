@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli.OptionBuilder,LINE;BRANCH,0.9830508474576272,80,78

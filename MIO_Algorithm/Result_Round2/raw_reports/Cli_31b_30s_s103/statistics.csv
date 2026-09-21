@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+org.apache.commons.cli.HelpFormatter,LINE;BRANCH,0.939927146024707,359,341
+org.apache.commons.cli.Option,LINE;BRANCH,0.9869150246305418,228,224
+org.apache.commons.cli.OptionBuilder,LINE;BRANCH,0.9836065573770492,82,80

@@ -4,6 +4,10 @@
 **โครงการ:** CP353201 Software Quality Assurance (KKU CS)  
 **เป้าหมาย:** สรุปคำสั่ง Ready-to-Copy สำหรับเปิด **2 เทอร์มินัลรันคู่ขนานกัน (Dual-Terminal Parallel Run)** ครบทั้ง 17 โปรเจกต์ (854 บั๊ก) พร้อมคำสั่ง Git Commit อัตโนมัติทีละโปรเจกต์
 
+> [!IMPORTANT]
+> 📑 **รายงานการวิเคราะห์และตรวจสอบข้อผิดพลาด (Failure & QA Audit Report ฉบับส่งอาจารย์):**  
+> สามารถดูรายละเอียดเชิงลึกของข้อผิดพลาดที่ไม่สามารถแก้ได้ (Mockito JCenter Sunset, Gson-3/8) และประวัติการตรวจสอบ True Green ได้ที่ [MIO_FAILURE_ANALYSIS_REPORT.md](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md)
+
 ---
 
 ## 🖥️ วิธีตั้งค่าเปิด 2 เทอร์มินัลคู่ขนาน (Dual-Terminal Setup)
@@ -298,7 +302,7 @@ git push origin main
 ### 15. [ ] Math (106 บั๊ก) - แบ่ง 3 เทอร์มินัล (~3–3.5 ชม.)
 ```powershell
 # [Terminal 1 - ซ้าย]: บั๊ก 1 ถึง 35
-python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 1 --end-bug 35
+  python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 1 --end-bug 35
 
 # [Terminal 2 - กลาง]: บั๊ก 36 ถึง 70
 python MIO_Algorithm/Code/batch_evosuite.py --project Math --start-bug 36 --end-bug 70

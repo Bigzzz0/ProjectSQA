@@ -1,2 +1,3 @@
 TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
 org.apache.commons.cli2.option.GroupImpl,LINE;BRANCH,0.8436625888855188,346,290
+org.apache.commons.cli2.option.GroupImpl,LINE;BRANCH,0.8383715835945136,346,291
