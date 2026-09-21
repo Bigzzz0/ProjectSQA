@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 97.95,
+  "branch_cov": 95.97,
+  "test_file": "DateUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.time.DateUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.DateUtilsGeminiTest::testTruncateLang59",
+    "org.apache.commons.lang.time.DateUtilsGeminiTest::testRoundAndTruncate_AmPm"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.DateUtilsGeminiTest::testRoundAndTruncate_AmPm"
+  ]
+}

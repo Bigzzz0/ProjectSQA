@@ -1,0 +1,35 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 95.38,
+  "branch_cov": 70.71,
+  "test_file": "ElementDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementDeepseekTest::testFirstLastElementSibling",
+    "org.jsoup.nodes.ElementDeepseekTest::testClonesClassnames",
+    "org.jsoup.nodes.ElementDeepseekTest::testOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testWrap",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByAttributeValueNot",
+    "org.jsoup.nodes.ElementDeepseekTest::testPrependChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsContainingOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testPreserveWhitespace",
+    "org.jsoup.nodes.ElementDeepseekTest::testAppendChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testEmptyClassName",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByIndexLessThan"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementDeepseekTest::testFirstLastElementSibling",
+    "org.jsoup.nodes.ElementDeepseekTest::testClonesClassnames",
+    "org.jsoup.nodes.ElementDeepseekTest::testOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testWrap",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByAttributeValueNot",
+    "org.jsoup.nodes.ElementDeepseekTest::testPrependChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsContainingOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testPreserveWhitespace",
+    "org.jsoup.nodes.ElementDeepseekTest::testAppendChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testEmptyClassName",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByIndexLessThan"
+  ]
+}

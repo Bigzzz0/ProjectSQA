@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 93.14,
+  "branch_cov": 100.0,
+  "test_file": "StringEscapeUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.StringEscapeUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testEscapeJavaScriptScriptTagDefect",
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testUnescapeJavaIncompleteUnicodeAtEof"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testUnescapeJavaIncompleteUnicodeAtEof"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 69.05,
+  "branch_cov": 63.77,
+  "test_file": "MathUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsDeepseekTest::testHashDoubleArrayNull",
+    "org.apache.commons.math.util.MathUtilsDeepseekTest::testNormalizeAngle",
+    "org.apache.commons.math.util.MathUtilsDeepseekTest::testBinomialCoefficientBoundaries"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.util.MathUtilsDeepseekTest::testHashDoubleArrayNull",
+    "org.apache.commons.math.util.MathUtilsDeepseekTest::testNormalizeAngle",
+    "org.apache.commons.math.util.MathUtilsDeepseekTest::testBinomialCoefficientBoundaries"
+  ]
+}

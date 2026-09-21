@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.84,
+  "branch_cov": 73.91,
+  "test_file": "CMAESOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

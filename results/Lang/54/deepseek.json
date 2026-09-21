@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 94.94,
+  "branch_cov": 89.06,
+  "test_file": "LocaleUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.LocaleUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testToLocaleEmptyCountryWithVariant",
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupListWithVariant",
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testToLocaleEmptyCountryWithVariant2"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupListWithVariant",
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testToLocaleEmptyCountryWithVariant2"
+  ]
+}

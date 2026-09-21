@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.73,
+  "branch_cov": 81.82,
+  "test_file": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::loadInputStreamWithBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithNullCharsetAndBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithSpecifiedCharsetAndBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithSpaces"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::loadInputStreamWithBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithNullCharsetAndBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithSpaces"
+  ]
+}

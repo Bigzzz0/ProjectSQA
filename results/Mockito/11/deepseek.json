@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 33.33,
+  "test_file": "DelegatingMethodDeepseekTest.java",
+  "target_classes": "org.mockito.internal.creation.DelegatingMethod",
+  "buggy_failures": [
+    "org.mockito.internal.creation.DelegatingMethodDeepseekTest::equals_should_return_true_when_equal",
+    "org.mockito.internal.creation.DelegatingMethodDeepseekTest::testIsAbstract_abstractMethod",
+    "org.mockito.internal.creation.DelegatingMethodDeepseekTest::equals_should_return_true_when_self"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.creation.DelegatingMethodDeepseekTest::testIsAbstract_abstractMethod"
+  ]
+}

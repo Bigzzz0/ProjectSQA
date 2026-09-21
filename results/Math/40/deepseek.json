@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 95.24,
+  "branch_cov": 83.33,
+  "test_file": "BracketingNthOrderBrentSolverDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testSolverWorksWithPolynomialOfHighOrder",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testNullAllowedSolution",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testExactRootAtMax",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testExactRootAtMin",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testAllAllowedSolutions"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testSolverWorksWithPolynomialOfHighOrder",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testNullAllowedSolution",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testExactRootAtMax",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testExactRootAtMin",
+    "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testAllAllowedSolutions"
+  ]
+}

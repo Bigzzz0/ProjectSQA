@@ -113,6 +113,8 @@ def main():
 
     deepseek_quota_exhausted = False
     gemini_quota_exhausted = False
+    gemini_consecutive_fails = 0
+    deepseek_consecutive_fails = 0
 
     projects = ORDERED_PROJECTS
     if args.start_project:
@@ -128,7 +130,7 @@ def main():
 
     for p_idx, project in enumerate(projects, 1):
         if deepseek_quota_exhausted and gemini_quota_exhausted:
-            print("\n🛑 ALL TOKEN QUOTAS EXHAUSTED across all 3 keys for both Gemini and DeepSeek!")
+            print(f"\n🛑 ALL TOKEN QUOTAS EXHAUSTED across all {len(api_keys)} keys for both Gemini and DeepSeek!")
             break
 
         target_files = get_target_files_for_project(project)
@@ -172,10 +174,14 @@ def main():
                     if ok:
                         total_generated["gemini"] += 1
                         project_new_tests += 1
+                        gemini_consecutive_fails = 0
                         print(f"      ✅ [GEMINI] Saved {folder_name}/{base_name}GeminiTest.java")
                     else:
-                        print(f"      ⚠️ [GEMINI] Failed or quota exhausted across all keys")
-                        # Check if quota failure by testing a small ping or consecutive fail
+                        gemini_consecutive_fails += 1
+                        print(f"      ⚠️ [GEMINI] Failed or quota exhausted across all {len(api_keys)} keys (fail count: {gemini_consecutive_fails})")
+                        if gemini_consecutive_fails >= 2:
+                            gemini_quota_exhausted = True
+                            print(f"      🛑 [GEMINI] Quota exhausted across all {len(api_keys)} keys. Disabling Gemini for remaining queue.")
                     time.sleep(2.0)
 
             # -------------------------------------------------------------
@@ -205,9 +211,14 @@ def main():
                     if ok:
                         total_generated["deepseek"] += 1
                         project_new_tests += 1
+                        deepseek_consecutive_fails = 0
                         print(f"      ✅ [DEEPSEEK] Saved {folder_name}/{base_name}DeepseekTest.java")
                     else:
-                        print(f"      ⚠️ [DEEPSEEK] Failed or quota exhausted across all keys")
+                        deepseek_consecutive_fails += 1
+                        print(f"      ⚠️ [DEEPSEEK] Failed or quota exhausted across all {len(api_keys)} keys (fail count: {deepseek_consecutive_fails})")
+                        if deepseek_consecutive_fails >= 2:
+                            deepseek_quota_exhausted = True
+                            print(f"      🛑 [DEEPSEEK] Quota exhausted across all {len(api_keys)} keys. Disabling DeepSeek for remaining queue.")
                     time.sleep(2.0)
 
         # After finishing a project (if any new tests were produced and eval is not skipped)

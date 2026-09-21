@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 92.92,
+  "branch_cov": 72.92,
+  "test_file": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamWithUnsupportedCharset",
+    "org.jsoup.helper.DataUtilDeepseekTest::testValidateCharsetWithQuotesAndSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testGetCharsetFromContentTypeWithExtraSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamNotFullyRead",
+    "org.jsoup.helper.DataUtilDeepseekTest::testFallbackToUtfIfCantEncode"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamWithUnsupportedCharset",
+    "org.jsoup.helper.DataUtilDeepseekTest::testValidateCharsetWithQuotesAndSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testGetCharsetFromContentTypeWithExtraSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamNotFullyRead",
+    "org.jsoup.helper.DataUtilDeepseekTest::testFallbackToUtfIfCantEncode"
+  ]
+}

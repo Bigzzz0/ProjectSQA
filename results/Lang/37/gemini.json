@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 99.89,
+  "branch_cov": 96.52,
+  "test_file": "ArrayUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testJira567"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testJira567"
+  ]
+}

@@ -26,7 +26,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def get_api_keys():
     """ดึงรายการ API Keys ทั้งหมดจาก Environment Variable หรือไฟล์ .env"""
-    keys_str = os.environ.get("KKU_API_KEYS") or os.environ.get("KKU_API_KEY")
+    keys_str = os.environ.get("KKU_API_KEYS")
     if not keys_str:
         env_file = os.path.join(PROJECT_ROOT, ".env")
         if os.path.exists(env_file):
@@ -36,8 +36,11 @@ def get_api_keys():
                     if line.startswith("KKU_API_KEYS="):
                         keys_str = line.split("=", 1)[1].strip().strip('"\'')
                         break
-                    elif line.startswith("KKU_API_KEY="):
+                    elif line.startswith("KKU_API_KEY=") and not keys_str:
                         keys_str = line.split("=", 1)[1].strip().strip('"\'')
+
+    if not keys_str:
+        keys_str = os.environ.get("KKU_API_KEY")
 
     if keys_str:
         keys = [k.strip() for k in keys_str.split(",") if k.strip()]

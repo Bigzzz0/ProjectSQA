@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 99.25,
+  "branch_cov": 96.3,
+  "test_file": "SingularValueDecompositionImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealVector",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testGetRank",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testAllZeroMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSingular",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverNonSingular",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testRankDeficientMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testMath320A"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealVector",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testGetRank",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testAllZeroMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverNonSingular",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testRankDeficientMatrix"
+  ]
+}

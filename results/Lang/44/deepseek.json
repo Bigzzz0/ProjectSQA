@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 85.79,
+  "branch_cov": 69.91,
+  "test_file": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberDoubleUnderflow",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testIsNumberBoundary",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberFloatUnderflow",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberBigDecimal",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberWithExponent"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberDoubleUnderflow",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testIsNumberBoundary",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberFloatUnderflow",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberBigDecimal",
+    "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberWithExponent"
+  ]
+}

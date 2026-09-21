@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 93.75,
+  "branch_cov": 92.86,
+  "test_file": "SerializationUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.SerializationUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.SerializationUtilsGeminiTest::testPrimitiveTypeClassSerialization",
+    "org.apache.commons.lang3.SerializationUtilsGeminiTest::testPrimitiveTypeArrayClassSerialization"
+  ],
+  "fixed_failures": []
+}

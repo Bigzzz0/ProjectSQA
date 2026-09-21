@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 95.77,
+  "branch_cov": 94.44,
+  "test_file": "SimpleRegressionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.regression.SimpleRegression",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSlopeConfidenceIntervalInsufficientData",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSlopeWithTinySumXX",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSSENonNegativeWithExactBugData",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSignificanceInsufficientData"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSlopeConfidenceIntervalInsufficientData",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSlopeWithTinySumXX",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSignificanceInsufficientData"
+  ]
+}

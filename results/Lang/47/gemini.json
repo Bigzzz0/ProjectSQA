@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 86.78,
+  "branch_cov": 77.85,
+  "test_file": "StrBuilderGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.text.StrBuilder",
+  "buggy_failures": [
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testLang412Left",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAllInsertVariants",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAsWriter",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testLang412Right",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchAndContains",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAllInsertVariants",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAsWriter",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchAndContains",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode"
+  ]
+}

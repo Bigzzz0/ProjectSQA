@@ -1,0 +1,36 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 12,
+  "line_cov": 64.4,
+  "branch_cov": 49.0,
+  "test_file": "FastMathDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.util.FastMath",
+  "buggy_failures": [
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testPowBoundaries",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testTanBoundaries",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testUlp",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testPowIntExponent",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testScalb",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testFloorCeilRint",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testMath904",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testHyperbolic",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testPowBasic",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testSinhCoshTanhBoundaries",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testNextAfter",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testExpBoundaries"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testPowBoundaries",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testTanBoundaries",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testUlp",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testPowIntExponent",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testScalb",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testFloorCeilRint",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testHyperbolic",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testPowBasic",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testSinhCoshTanhBoundaries",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testNextAfter",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testExpBoundaries"
+  ]
+}

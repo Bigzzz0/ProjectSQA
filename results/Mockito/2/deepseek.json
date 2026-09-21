@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 100.0,
+  "branch_cov": 50.0,
+  "test_file": "TimerDeepseekTest.java",
+  "target_classes": "org.mockito.internal.util.Timer",
+  "buggy_failures": [
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldFailValidation",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsAssertionErrorWhenNotStarted",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingReturnsFalseImmediatelyForZeroDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsWhenStartNeverCalled",
+    "org.mockito.internal.util.TimerDeepseekTest::testTimerWithZeroDurationAndDelayedStart",
+    "org.mockito.internal.util.TimerDeepseekTest::testLargeNegativeDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldThrowException"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldFailValidation",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldBeHandled",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsAssertionErrorWhenNotStarted",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingReturnsFalseImmediatelyForZeroDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsWhenStartNeverCalled",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingAfterElapsedOnNegativeDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testTimerWithZeroDurationAndDelayedStart",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationBehaviorOverTime",
+    "org.mockito.internal.util.TimerDeepseekTest::testLargeNegativeDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testMinLongDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldThrowException"
+  ]
+}

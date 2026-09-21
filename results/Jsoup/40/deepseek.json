@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "DocumentTypeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::publicIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlAllBlank",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlyPublicId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlySystemId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::systemIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::constructorAllowsBlankName"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::publicIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlyPublicId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlySystemId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::systemIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::constructorRejectsNullName"
+  ]
+}

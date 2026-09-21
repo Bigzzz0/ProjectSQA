@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 6,
+  "line_cov": 99.6,
+  "branch_cov": 94.81,
+  "test_file": "DurationFormatUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.time.DurationFormatUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.DurationFormatUtilsGeminiTest::testFormatPeriodTokenOmissionBranches",
+    "org.apache.commons.lang.time.DurationFormatUtilsGeminiTest::testFormatDurationZero",
+    "org.apache.commons.lang.time.DurationFormatUtilsGeminiTest::testFormatDurationWordsSuppressLeadingAndTrailing",
+    "org.apache.commons.lang.time.DurationFormatUtilsGeminiTest::testLexxLiteralHandling",
+    "org.apache.commons.lang.time.DurationFormatUtilsGeminiTest::testFormatDurationSimplePaddedAndUnpadded",
+    "org.apache.commons.lang.time.DurationFormatUtilsGeminiTest::testJiraLang281"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 90.65,
+  "branch_cov": 95.0,
+  "test_file": "NodeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Node",
+  "buggy_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtml",
+    "org.jsoup.nodes.NodeDeepseekTest::testParentlessToStringWithBaseUri",
+    "org.jsoup.nodes.NodeDeepseekTest::testToString",
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtmlWithIndent",
+    "org.jsoup.nodes.NodeDeepseekTest::testParentlessToStringMethod",
+    "org.jsoup.nodes.NodeDeepseekTest::testSetParentNodeWithExistingParent",
+    "org.jsoup.nodes.NodeDeepseekTest::testParentlessToString",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveNoParent"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testSetParentNodeWithExistingParent",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveNoParent"
+  ]
+}

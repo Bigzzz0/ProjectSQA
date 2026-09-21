@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "LocaleUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.LocaleUtils",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

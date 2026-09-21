@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.3,
+  "branch_cov": 91.86,
+  "test_file": "ChiSquareTestImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTestWithAlpha",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testConstructorWithDistribution",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTwoWayTableAllZero",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testDefaultConstructor"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTestWithAlpha",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testConstructorWithDistribution",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTwoWayTableAllZero",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareLargeTestStatisticDefect",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testDefaultConstructor"
+  ]
+}

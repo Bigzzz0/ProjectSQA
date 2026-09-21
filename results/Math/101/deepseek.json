@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 97.9,
+  "branch_cov": 96.15,
+  "test_file": "ComplexFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.complex.ComplexFormat",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParseNumberWithSpecialFallback",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParseMissingImaginaryCharacterWithMinus",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParseOnlyRealWithSign",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testForgottenImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParsePositionReturnsNullOnError",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParsePositions"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParseNumberWithSpecialFallback",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParseOnlyRealWithSign",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParsePositionReturnsNullOnError",
+    "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParsePositions"
+  ]
+}

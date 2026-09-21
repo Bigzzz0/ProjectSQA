@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 4,
+  "line_cov": 94.23,
+  "branch_cov": 95.83,
+  "test_file": "RandomStringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testLANG805WithLettersNumbersFalse",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testEmptyCharArrayThrowsIllegalArgumentException",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testLANG805WithLettersNumbersTrue",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testEmptyStringThrowsIllegalArgumentException"
+  ],
+  "fixed_failures": []
+}

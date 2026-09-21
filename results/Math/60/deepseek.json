@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 87.23,
+  "branch_cov": 77.78,
+  "test_file": "NormalDistributionImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityNegativeInfinity",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityAtNegativeInfinity",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testInverseCumulativeProbabilityNaN",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityPositiveInfinity",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testMultipleInstances"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testInverseCumulativeProbabilityNaN",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testMultipleInstances"
+  ]
+}

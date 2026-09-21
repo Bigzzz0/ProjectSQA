@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "RectangularCholeskyDecompositionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.linear.RectangularCholeskyDecomposition",
+  "buggy_failures": [
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testMath789RankDeficientWithZeroDiagonal",
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testRankDeficientMatrix",
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testZeroMatrix"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testMath789RankDeficientWithZeroDiagonal",
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testRankDeficientMatrix",
+    "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testZeroMatrix"
+  ]
+}

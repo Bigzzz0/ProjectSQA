@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 82.94,
+  "branch_cov": 75.7,
+  "test_file": "TypeUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.reflect.TypeUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableGenericArrayTypeToGenericArrayType",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableTypeVariable",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testNormalizeUpperBounds",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testDefectGetTypeArgumentsInheritanceHierarchy"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableGenericArrayTypeToGenericArrayType",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableTypeVariable",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testNormalizeUpperBounds",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testDefectGetTypeArgumentsInheritanceHierarchy"
+  ]
+}

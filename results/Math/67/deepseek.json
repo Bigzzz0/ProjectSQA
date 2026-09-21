@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 76.34,
+  "branch_cov": 85.29,
+  "test_file": "MultiStartUnivariateRealOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testNaNHandlingDefect",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testConstructorState",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testManyStartsWithFailures",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testQuinticMinDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testNaNHandlingDefect",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testConstructorState",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testManyStartsWithFailures",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testQuinticMinDefect"
+  ]
+}

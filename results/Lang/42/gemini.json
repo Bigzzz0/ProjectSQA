@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 98.07,
+  "branch_cov": 96.88,
+  "test_file": "EntitiesGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.Entities",
+  "buggy_failures": [
+    "org.apache.commons.lang.EntitiesGeminiTest::testUnescapeMalformedAmpersands",
+    "org.apache.commons.lang.EntitiesGeminiTest::testEscapeHtmlHighUnicode"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.EntitiesGeminiTest::testUnescapeMalformedAmpersands"
+  ]
+}

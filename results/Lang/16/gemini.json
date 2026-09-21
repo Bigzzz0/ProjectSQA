@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 94.93,
+  "branch_cov": 83.8,
+  "test_file": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberHexUppercaseXDefect",
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointTypes"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointTypes"
+  ]
+}

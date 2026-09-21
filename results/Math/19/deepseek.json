@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 93.21,
+  "branch_cov": 83.82,
+  "test_file": "CMAESOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerDeepseekTest::testNullStartPoint",
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerDeepseekTest::testBoundaryRangeTooLarge"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerDeepseekTest::testNullStartPoint"
+  ]
+}

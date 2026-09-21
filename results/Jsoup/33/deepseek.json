@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 59.29,
+  "branch_cov": 48.02,
+  "test_file": "HtmlTreeBuilderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.HtmlTreeBuilder",
+  "buggy_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testParseFragmentWithContext",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testActiveFormattingElementsMarker",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::handlesKnownEmptyBlocks",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testReplaceOnStackAndActiveFormatting",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testSelfClosingKnownEmptyTag"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testParseFragmentWithContext",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testActiveFormattingElementsMarker",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::handlesKnownEmptyBlocks",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testReplaceOnStackAndActiveFormatting",
+    "org.jsoup.parser.HtmlTreeBuilderDeepseekTest::testSelfClosingKnownEmptyTag"
+  ]
+}

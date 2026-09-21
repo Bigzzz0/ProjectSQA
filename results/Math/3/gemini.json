@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 97.39,
+  "branch_cov": 90.6,
+  "test_file": "MathArraysGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.util.MathArrays",
+  "buggy_failures": [
+    "org.apache.commons.math3.util.MathArraysGeminiTest::testLinearCombinationWithSingleElementArray"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 89.47,
+  "branch_cov": 80.0,
+  "test_file": "ProperFractionFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.fraction.ProperFractionFormat",
+  "buggy_failures": [
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testParseInvalidMinusInNumerator",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testFormatWholeOnly",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testFormatIntegerMax",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testParseDoubleMinus",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testParseInvalidMinusInDenominator",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testEqualsAndHashCode"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testFormatWholeOnly",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testFormatIntegerMax",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testParseDoubleMinus",
+    "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testEqualsAndHashCode"
+  ]
+}

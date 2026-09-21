@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 84.11,
+  "branch_cov": 75.93,
+  "test_file": "BrentSolverDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BrentSolver",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testConstructorDefault",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testMaxIterationsExceeded",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveBracketingIntervalQuadratic",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialAtEndpoint",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testFunctionEvaluationException",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialGuess"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testConstructorDefault",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testMaxIterationsExceeded",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveBracketingIntervalQuadratic",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialAtEndpoint",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testFunctionEvaluationException",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialGuess"
+  ]
+}

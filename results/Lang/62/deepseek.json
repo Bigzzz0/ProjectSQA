@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 98.76,
+  "branch_cov": 98.89,
+  "test_file": "EntitiesDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.Entities",
+  "buggy_failures": [
+    "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowString",
+    "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowWriter",
+    "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowHexString"
+  ],
+  "fixed_failures": []
+}

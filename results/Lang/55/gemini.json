@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "StopWatchGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.time.StopWatch",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.StopWatchGeminiTest::testLang315"
+  ],
+  "fixed_failures": []
+}

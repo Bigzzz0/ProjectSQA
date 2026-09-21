@@ -1,0 +1,36 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 95.38,
+  "branch_cov": 85.91,
+  "test_file": "DateUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.time.DateUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddDays",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testIsSameDayDifferentDay",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundMonth",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundAmPmBoundary",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddYears",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testTruncateLang59",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSemiMonth",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSemiMonthDay16",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddMonths",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testIsSameLocalTime"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddDays",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundMinute",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testIsSameDayDifferentDay",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSecond",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundMonth",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundAmPmBoundary",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddYears",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testTruncateLang59",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSecondDST",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSemiMonth",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSemiMonthDay16",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddMonths",
+    "org.apache.commons.lang.time.DateUtilsDeepseekTest::testIsSameLocalTime"
+  ]
+}

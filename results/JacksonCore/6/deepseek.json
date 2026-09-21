@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 100.0,
+  "branch_cov": 95.16,
+  "test_file": "JsonPointerDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.JsonPointer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testZeroIndexInNestedPath",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexLeadingZero",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexMultiDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexSingleDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexZero",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIZeroIndexDefect",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testEmptyPointer",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testInvalidStartEmptyString"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testZeroIndexInNestedPath",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexMultiDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexSingleDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexZero",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIZeroIndexDefect",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testEmptyPointer",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testInvalidStartEmptyString"
+  ]
+}

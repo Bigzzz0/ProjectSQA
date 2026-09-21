@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 88.98,
+  "branch_cov": 85.9,
+  "test_file": "StringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplittingMethods",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSupplementarySurrogatePairsInSearch"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplittingMethods",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSupplementarySurrogatePairsInSearch"
+  ]
+}

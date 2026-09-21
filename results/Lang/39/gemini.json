@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 85.44,
+  "branch_cov": 83.48,
+  "test_file": "StringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testDefectReplaceEachRepeatedlyWithNullElements",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testDefectReplaceEachWithNullSearchElements",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testDefectReplaceEachWithNullReplacementElements",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplitting",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testTrimAndStripOperations",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testStartsWithAndEndsWith"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testDefectReplaceEachWithNullReplacementElements",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplitting",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testTrimAndStripOperations",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testStartsWithAndEndsWith"
+  ]
+}

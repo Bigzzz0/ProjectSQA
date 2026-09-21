@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 95.5,
+  "branch_cov": 87.07,
+  "test_file": "FastDateFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::test_changeDefault_Locale_DateInstance",
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::test_changeDefault_Locale_DateTimeInstance",
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testCalendarTimeZoneForcing"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testCalendarTimeZoneForcing"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 75.3,
+  "branch_cov": 47.47,
+  "test_file": "ExtendedMessageFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.text.ExtendedMessageFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testInvalidPatternUnterminatedQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testNullPattern",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testRegistryWithNullFactory",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithWhitespaceInFormatElement"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testInvalidPatternUnterminatedQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testNullPattern",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testRegistryWithNullFactory",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithWhitespaceInFormatElement"
+  ]
+}

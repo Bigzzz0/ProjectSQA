@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 91.4,
+  "branch_cov": 99.07,
+  "test_file": "StringEscapeUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.StringEscapeUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testEscapeJavaWithSlash",
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testEscapeJavaWithMultipleSlashes"
+  ],
+  "fixed_failures": []
+}

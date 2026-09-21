@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 79.93,
+  "branch_cov": 75.23,
+  "test_file": "StringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.StringUtilsGeminiTest::testAnyAllNoneSearches",
+    "org.apache.commons.lang.StringUtilsGeminiTest::testSplitOperations",
+    "org.apache.commons.lang.StringUtilsGeminiTest::testContainsIgnoreCase_DefectTurkishLocale",
+    "org.apache.commons.lang.StringUtilsGeminiTest::testIndexOfAndLastIndexOf",
+    "org.apache.commons.lang.StringUtilsGeminiTest::testContainsIgnoreCase_DefectGermanSharpS"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.StringUtilsGeminiTest::testAnyAllNoneSearches",
+    "org.apache.commons.lang.StringUtilsGeminiTest::testSplitOperations",
+    "org.apache.commons.lang.StringUtilsGeminiTest::testIndexOfAndLastIndexOf"
+  ]
+}

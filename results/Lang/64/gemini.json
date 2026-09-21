@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ValuedEnumGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.enums.ValuedEnum",
+  "buggy_failures": [
+    "org.apache.commons.lang.enums.ValuedEnumGeminiTest::testCompareTo_otherEnumType",
+    "org.apache.commons.lang.enums.ValuedEnumGeminiTest::testCompareTo_otherEnumTypeDifferentValues"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,36 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 58.46,
+  "branch_cov": 48.67,
+  "test_file": "HtmlTreeBuilderStateDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.HtmlTreeBuilderState",
+  "buggy_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testAfterAfterFrameset",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagPWithoutOpenP",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testAdoptionAgency",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testTableFostering",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testPreWithMultipleLeadingNewlines",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testPrePreservesSubsequentNewlines",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagForm",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testBeforeHtmlToBody",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyStartTagButton",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testPreWithOnlyNewline",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testOnlyWhitespace",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInitialStateDoctype",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagBr"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testAfterAfterFrameset",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagPWithoutOpenP",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testAdoptionAgency",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testTableFostering",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagForm",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testBeforeHtmlToBody",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyStartTagButton",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testOnlyWhitespace",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInitialStateDoctype",
+    "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagBr"
+  ]
+}

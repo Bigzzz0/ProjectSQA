@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 95.61,
+  "branch_cov": 74.24,
+  "test_file": "CharacterReaderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::constructorWithSmallBuffer",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeTagName",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToEnd",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToNonexistentEndWhenAtAnd",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::containsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToSequenceAtEnd",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToEndWhenOvershot"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::constructorWithSmallBuffer",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeTagName",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::containsIgnoreCase"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 97.44,
+  "branch_cov": 83.33,
+  "test_file": "CharacterReaderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testBoundaryEmptyString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterThenDigitSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testUnconsumeAtZero",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnySortedEmptySearch",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConstructorNullInput",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testMatchesLetterWithNonAscii"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testBoundaryEmptyString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterThenDigitSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testUnconsumeAtZero",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnySortedEmptySearch",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConstructorNullInput"
+  ]
+}

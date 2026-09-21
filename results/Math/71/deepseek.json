@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 98.98,
+  "branch_cov": 93.88,
+  "test_file": "EmbeddedRungeKuttaIntegratorDeepseekTest.java;RungeKuttaIntegratorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator;org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator",
+  "buggy_failures": [
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testResetStateEventContinues",
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testEventExactlyAtStartIsNotSkipped",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testMissedEndEvent",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullEquations",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testStepRejectionNearStart",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY0"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testResetStateEventContinues",
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testEventExactlyAtStartIsNotSkipped",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testMissedEndEvent",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullEquations",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testStepRejectionNearStart",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY0"
+  ]
+}

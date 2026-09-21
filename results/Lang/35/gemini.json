@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 91.6,
+  "branch_cov": 78.04,
+  "test_file": "ArrayUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testLANG571AddNullArrayAndElementWithIndex",
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testLANG571AddNullArrayAndElement",
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testAddAllIncompatibleTypes"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testAddAllIncompatibleTypes"
+  ]
+}

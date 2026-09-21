@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "NumericEntityUnescaperGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testOutOfBoundsDefect",
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testUnfinishedEntityWithoutSemicolonDefect",
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testOutOfBoundsExactEnd"
+  ],
+  "fixed_failures": []
+}

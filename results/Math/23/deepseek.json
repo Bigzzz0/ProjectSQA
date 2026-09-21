@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.52,
+  "branch_cov": 90.54,
+  "test_file": "BrentOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.univariate.BrentOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.univariate.BrentOptimizerDeepseekTest::testMinimizeWithStartRight",
+    "org.apache.commons.math3.optimization.univariate.BrentOptimizerDeepseekTest::testKeepInitIfBest"
+  ],
+  "fixed_failures": []
+}

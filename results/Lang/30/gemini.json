@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 12,
+  "line_cov": 86.88,
+  "branch_cov": 81.42,
+  "test_file": "StringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAny_StringStringWithSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsNone_StringWithSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsNone_CharArrayWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsNone_StringWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAndLastIndexOf",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsNone_CharArrayWithSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAny_StringCharArrayWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAny_StringCharArrayWithSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testTrimAndStrip",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAny_StringWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAnyBut_StringStringWithSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAnyBut_StringCharArrayWithSupplementaryChars_RevealsDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsNone_CharArrayWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsNone_StringWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAndLastIndexOf",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAny_StringCharArrayWithBadSupplementaryChars_RevealsDefect",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testTrimAndStrip",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAny_StringWithBadSupplementaryChars_RevealsDefect"
+  ]
+}

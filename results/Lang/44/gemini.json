@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 96.84,
+  "branch_cov": 88.43,
+  "test_file": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testLang457_createNumber_L",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testLang457_createNumber_l",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testIsNumber_StandardIntegersAndDecimals"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testIsNumber_StandardIntegersAndDecimals"
+  ]
+}

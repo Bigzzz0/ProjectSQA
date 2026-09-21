@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 94.04,
+  "branch_cov": 83.49,
+  "test_file": "DateUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.time.DateUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.DateUtilsGeminiTest::testLANG677_isSameLocalTimeDifferentAmPm"
+  ],
+  "fixed_failures": []
+}

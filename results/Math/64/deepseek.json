@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 95.32,
+  "branch_cov": 83.5,
+  "test_file": "LevenbergMarquardtOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testWithNonnullChecker",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackFreudensteinRoth",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testConvergenceByCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallParRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallOrthoTolerance"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testWithNonnullChecker",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackFreudensteinRoth",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testConvergenceByCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallParRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallOrthoTolerance"
+  ]
+}

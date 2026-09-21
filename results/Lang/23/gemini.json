@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 94.61,
+  "branch_cov": 82.83,
+  "test_file": "ExtendedMessageFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.text.ExtendedMessageFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testEqualsHashcodeTargetingDefect",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testEqualsAndHashCodeWithNullRegistry",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testQuotesAndEscapedQuotesInPattern",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testFormatDescriptionWithQuotedString",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testMultipleFormatElementsAndSpacing",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testCustomRegistryWithArguments",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testUnterminatedQuotedString"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testEqualsHashcodeTargetingDefect",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testQuotesAndEscapedQuotesInPattern",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testFormatDescriptionWithQuotedString",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testMultipleFormatElementsAndSpacing",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testCustomRegistryWithArguments",
+    "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testUnterminatedQuotedString"
+  ]
+}

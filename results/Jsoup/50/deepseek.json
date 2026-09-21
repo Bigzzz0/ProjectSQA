@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 85.56,
+  "branch_cov": 90.0,
+  "test_file": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithBOMAndDifferentMetaCharset",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataInvalidCharsetName",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithNullCharsetAndMetaCharset"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithEmptyByteBuffer",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataInvalidCharsetName"
+  ]
+}

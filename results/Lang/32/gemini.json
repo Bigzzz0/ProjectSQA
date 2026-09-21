@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.95,
+  "branch_cov": 97.67,
+  "test_file": "HashCodeBuilderGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.builder.HashCodeBuilder",
+  "buggy_failures": [
+    "org.apache.commons.lang3.builder.HashCodeBuilderGeminiTest::testReflectionObjectCycle",
+    "org.apache.commons.lang3.builder.HashCodeBuilderGeminiTest::testReflectionCycleDirectSelfReference"
+  ],
+  "fixed_failures": []
+}

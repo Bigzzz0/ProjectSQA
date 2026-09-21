@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 92.51,
+  "branch_cov": 82.33,
+  "test_file": "FastDateFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testChangeDefaultLocaleDateInstanceAfterCache",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatWithCalendarAndForcedTimeZone",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testChangeDefaultLocaleDateTimeInstance",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceInvalidStyle",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testEscapedQuoteInLiteral",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceDefault"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testChangeDefaultLocaleDateInstanceAfterCache",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatWithCalendarAndForcedTimeZone",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceInvalidStyle",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testEscapedQuoteInLiteral"
+  ]
+}

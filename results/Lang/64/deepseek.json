@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ValuedEnumDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.enums.ValuedEnum",
+  "buggy_failures": [
+    "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareToBoundaryValues",
+    "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareTo_otherEnumType"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareToBoundaryValues"
+  ]
+}

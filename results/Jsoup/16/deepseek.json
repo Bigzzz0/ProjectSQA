@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "DocumentTypeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadWithSpecialCharacters",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadPublicBlankSystemBlank",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadSystemOnly_ShouldHaveOpeningQuote",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testConstructorValidationThrowsExceptionOnBlankName",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadBothIds",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testNullArguments"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadPublicBlankSystemBlank",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testConstructorValidationThrowsExceptionOnBlankName",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testNullArguments"
+  ]
+}

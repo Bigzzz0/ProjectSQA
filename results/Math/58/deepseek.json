@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 81.25,
+  "branch_cov": 56.9,
+  "test_file": "GaussianFitterDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.fitting.GaussianFitter",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testFitWithNegativeSigmaGuess",
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testInterpolateXAtYZeroStep"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testFitWithNegativeSigmaGuess",
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testInterpolateXAtYZeroStep"
+  ]
+}

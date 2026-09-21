@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 80.34,
+  "branch_cov": 69.15,
+  "test_file": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::supportsXmlCharsetDeclarationUtf16",
+    "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithExtraSpaces"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::supportsXmlCharsetDeclarationUtf16",
+    "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithExtraSpaces"
+  ]
+}

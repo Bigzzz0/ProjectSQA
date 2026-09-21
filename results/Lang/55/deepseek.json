@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 98.25,
+  "branch_cov": 92.31,
+  "test_file": "StopWatchDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.time.StopWatch",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.StopWatchDeepseekTest::testLang315DoubleSplit"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.StopWatchDeepseekTest::testLang315DoubleSplit"
+  ]
+}

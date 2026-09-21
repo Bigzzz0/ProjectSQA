@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.35,
+  "branch_cov": 90.59,
+  "test_file": "ComplexDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.complex.Complex",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.complex.ComplexDeepseekTest::testReciprocalZero"
+  ]
+}

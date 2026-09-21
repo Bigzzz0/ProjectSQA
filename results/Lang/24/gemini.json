@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 97.87,
+  "branch_cov": 92.98,
+  "test_file": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointNoQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumberLang664HexUpperCase",
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumberTypeQualifiers"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointNoQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumberLang664HexUpperCase"
+  ]
+}

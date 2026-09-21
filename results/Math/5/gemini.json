@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.81,
+  "branch_cov": 82.35,
+  "test_file": "ComplexGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.complex.Complex",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.complex.ComplexGeminiTest::testReciprocalZero"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 70.82,
+  "branch_cov": 49.39,
+  "test_file": "FastMathDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.util.FastMath",
+  "buggy_failures": [
+    "org.apache.commons.math.util.FastMathDeepseekTest::testSinCosTan",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testPow",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testLog10",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testMaxFloat",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testNextUp",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testNextAfter"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.util.FastMathDeepseekTest::testSinCosTan",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testPow",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testLog10",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testNextUp",
+    "org.apache.commons.math.util.FastMathDeepseekTest::testNextAfter"
+  ]
+}

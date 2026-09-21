@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 92.21,
+  "branch_cov": 81.25,
+  "test_file": "NodeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Node",
+  "buggy_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtml",
+    "org.jsoup.nodes.NodeDeepseekTest::testSetBaseUriNull",
+    "org.jsoup.nodes.NodeDeepseekTest::testAbsHandlesRelativeQuery",
+    "org.jsoup.nodes.NodeDeepseekTest::testHasAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveAttrNullKey"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtml",
+    "org.jsoup.nodes.NodeDeepseekTest::testSetBaseUriNull",
+    "org.jsoup.nodes.NodeDeepseekTest::testHasAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveAttrNullKey"
+  ]
+}

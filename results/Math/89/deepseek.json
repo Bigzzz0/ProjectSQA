@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 90.74,
+  "branch_cov": 87.5,
+  "test_file": "FrequencyDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.Frequency",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testAddNonComparableAfterValidAdd",
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testAddNonComparable",
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testGetCumFreqWithCustomComparator",
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testCharacterAndIntegerDistinct",
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testAddNonComparableViaDeprecated"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testGetCumFreqWithCustomComparator",
+    "org.apache.commons.math.stat.FrequencyDeepseekTest::testCharacterAndIntegerDistinct"
+  ]
+}

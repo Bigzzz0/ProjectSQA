@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 89.15,
+  "branch_cov": 81.58,
+  "test_file": "OpenMapRealVectorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.linear.OpenMapRealVector",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testExtremeDoubleValues",
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testGetDistanceDimensionMismatch",
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testConcurrentModificationSparseIteratorFailFast",
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testDefaultConstructor"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testExtremeDoubleValues",
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testGetDistanceDimensionMismatch",
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testConcurrentModificationSparseIteratorFailFast",
+    "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testDefaultConstructor"
+  ]
+}

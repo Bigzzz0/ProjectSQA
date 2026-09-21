@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 95.69,
+  "branch_cov": 88.6,
+  "test_file": "FastDateFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.FastDateFormatGeminiTest::testLang538",
+    "org.apache.commons.lang3.time.FastDateFormatGeminiTest::testLang538BufferVariant"
+  ],
+  "fixed_failures": []
+}

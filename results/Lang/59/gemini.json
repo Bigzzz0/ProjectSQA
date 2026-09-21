@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 85.21,
+  "branch_cov": 67.89,
+  "test_file": "StrBuilderGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.text.StrBuilder",
+  "buggy_failures": [
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAppendStringAndSubstrings",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testLang299_appendFixedWidthPadRight_truncateWhenWidthLessThanStringLength",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testLang299_appendFixedWidthPadRight_intOverloadTruncate",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchMethods",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testDeleteAndTrimOperations"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAppendStringAndSubstrings",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchMethods",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testDeleteAndTrimOperations"
+  ]
+}

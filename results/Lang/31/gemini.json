@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 92.78,
+  "branch_cov": 90.43,
+  "test_file": "StringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplitByWholeSeparator",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAnyCharArrayWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfChar",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAnyAndContainsAny",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAnyAndLastIndexOfAnyStrings",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAnyStringWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testStripAccents"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplitByWholeSeparator",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfChar",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAnyAndContainsAny",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testIndexOfAnyAndLastIndexOfAnyStrings",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testStripAccents"
+  ]
+}

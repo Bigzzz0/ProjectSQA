@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 93.37,
+  "branch_cov": 81.82,
+  "test_file": "ExtendedMessageFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.text.ExtendedMessageFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testUnterminatedFormatElementAtStart",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testCustomFormatWithWhitespace",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testRegistryWithNullFormatReturned",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEqualsAndHashCodeContract",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEscapedQuoteWithFormatElement",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEscapedQuote_LANG_477",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testUnterminatedQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testFormatDescriptionWithQuotedSection"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testUnterminatedFormatElementAtStart",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testCustomFormatWithWhitespace",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testRegistryWithNullFormatReturned",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEqualsAndHashCodeContract",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEscapedQuote_LANG_477",
+    "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testFormatDescriptionWithQuotedSection"
+  ]
+}

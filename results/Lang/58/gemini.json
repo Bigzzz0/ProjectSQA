@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.math.NumberUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testCreateNumberBasicTypes",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testIsNumber",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testCreateNumberExtremeDecimals"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testCreateNumberBasicTypes",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testIsNumber",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testCreateNumberExtremeDecimals"
+  ]
+}

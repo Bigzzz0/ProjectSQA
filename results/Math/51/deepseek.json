@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 87.32,
+  "branch_cov": 60.0,
+  "test_file": "BaseSecantSolverDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithStartValueOutsideInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithNegativeMaxEval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMinEqualsMax",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithInvertedInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMaxEvalZero"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithStartValueOutsideInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithNegativeMaxEval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMinEqualsMax",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithInvertedInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMaxEvalZero"
+  ]
+}

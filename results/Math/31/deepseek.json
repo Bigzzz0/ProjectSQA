@@ -1,0 +1,36 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 9,
+  "line_cov": 71.19,
+  "branch_cov": 46.67,
+  "test_file": "ContinuedFractionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.util.ContinuedFraction",
+  "buggy_failures": [
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateInfinityDivergence",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateWithEpsilonAndMaxIterations",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateImmediateConvergence",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateWithEpsilon",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateWithMaxIterations",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateScalingSuccess",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateDefaultEpsilon",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateZeroInitial",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNegativeX"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNaNDivergenceWithMaxIterations",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNaNDivergenceFull",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateInfinityDivergence",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNaNDivergenceWithEpsilon",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateWithEpsilonAndMaxIterations",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateImmediateConvergence",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNaNDivergence",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateWithEpsilon",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateWithMaxIterations",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateScalingSuccess",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateDefaultEpsilon",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateScaleZero",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateZeroInitial",
+    "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNegativeX"
+  ]
+}
