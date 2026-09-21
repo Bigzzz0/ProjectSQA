@@ -2112,3 +2112,15 @@ JacksonDatabind,61,com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverB
 Cli,24,org.apache.commons.cli.HelpFormatter,60,95.04,1.29,95.04,1.29,0.0,0.0,89.49,101
 Cli,34,org.apache.commons.cli.Option,60,98.68,0.0,98.68,0.0,0.0,0.0,77.46,101
 JacksonDatabind,23,com.fasterxml.jackson.databind.ser.std.NumberSerializers,120,86.46,0.0,86.46,0.0,0.0,0.0,140.48,101
+JacksonDatabind,79,com.fasterxml.jackson.databind.ser.std.BeanSerializerBase,120,47.38,0.29,47.38,0.29,0.0,0.0,145.72,103
+JacksonDatabind,61,com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder,60,66.43,11.29,66.43,11.29,0.0,0.0,98.76,102
+JacksonDatabind,80,com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver,30,20.13,5.08,20.13,5.08,0.0,0.0,55.33,101
+Cli,24,org.apache.commons.cli.HelpFormatter,120,95.9,1.41,95.9,1.41,0.0,0.0,152.82,102
+JacksonDatabind,25,com.fasterxml.jackson.databind.deser.BasicDeserializerFactory,30,29.34,5.75,29.34,5.75,0.0,0.0,74.42,103
+Cli,34,org.apache.commons.cli.Option,120,98.68,0.0,98.68,0.0,0.0,0.0,139.55,101
+JacksonDatabind,80,com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver,60,23.21,0.58,23.21,0.58,0.0,0.0,81.85,101
+Cli,34,org.apache.commons.cli.OptionBuilder,30,98.68,0.0,98.68,0.0,0.0,0.0,40.34,101
+JacksonDatabind,61,com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder,120,73.48,4.07,73.48,4.07,0.0,0.0,138.6,103
+JacksonDatabind,25,com.fasterxml.jackson.databind.deser.BasicDeserializerFactory,60,34.13,5.13,34.13,5.13,0.0,0.0,98.26,103
+JacksonDatabind,62,com.fasterxml.jackson.databind.deser.std.CollectionDeserializer,30,49.08,2.74,49.08,2.74,0.0,0.0,51.45,102
+Cli,34,org.apache.commons.cli.OptionBuilder,60,98.68,0.0,98.68,0.0,0.0,0.0,71.07,101

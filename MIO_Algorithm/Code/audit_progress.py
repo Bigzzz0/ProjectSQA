@@ -2,37 +2,45 @@ import os
 import glob
 import json
 
-d4j_bugs = {
-    'Chart': 26, 'Cli': 39, 'Closure': 174, 'Codec': 18, 'Collections': 28,
-    'Compress': 47, 'Csv': 16, 'Gson': 18, 'JacksonCore': 26, 'JacksonDatabind': 110,
-    'JacksonXml': 6, 'Jsoup': 93, 'JxPath': 22, 'Lang': 61, 'Math': 106,
-    'Mockito': 38, 'Time': 26
-}
-
+cat_file = 'target_benchmark/all_bugs_catalog.json'
 test_code_dir = 'MIO_Algorithm/TestCode'
 progress_file = 'MIO_Algorithm/progress_mio.json'
+
+with open(cat_file, 'r', encoding='utf-8') as f:
+    catalog = json.load(f)
 
 with open(progress_file, 'r', encoding='utf-8') as f:
     progress_data = json.load(f)
 
+projects_map = {}
+for item in catalog:
+    p = item['project']
+    bid = item['bug_id']
+    if p not in projects_map:
+        projects_map[p] = []
+    projects_map[p].append(bid)
+
 results = {}
-for project, total in sorted(d4j_bugs.items()):
+for p in sorted(projects_map.keys()):
+    all_bids = sorted(projects_map[p])
     valid_bugs = set()
-    for b in range(1, total + 1):
-        key = f"{project}_{b}b"
-        # Check progress_data
+    for b in all_bids:
+        key = f"{p}_{b}b"
         if key in progress_data and progress_data[key].get("completed", False):
             valid_bugs.add(b)
             continue
-        # Also check disk directly
         pattern = os.path.join(test_code_dir, key, "**", "*_ESTest.java")
         files = glob.glob(pattern, recursive=True)
         if files:
             valid_bugs.add(b)
-    
-    missing = [b for b in range(1, total + 1) if b not in valid_bugs]
-    results[project] = {
-        'total': total,
+            continue
+        direct = os.path.join(test_code_dir, key, "*_ESTest.java")
+        if glob.glob(direct):
+            valid_bugs.add(b)
+
+    missing = [b for b in all_bids if b not in valid_bugs]
+    results[p] = {
+        'total': len(all_bids),
         'completed': len(valid_bugs),
         'missing_count': len(missing),
         'missing_bugs': missing
