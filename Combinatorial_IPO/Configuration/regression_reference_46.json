@@ -1,0 +1,1580 @@
+{
+  "description": "Regression reference snapshot of 46 verified suites before class-level expansion",
+  "total_suites": 46,
+  "records": [
+    {
+      "audit_hash": "0a95d0cacdd7bb039187cbc59d421ed4a95c8905b5abb3c867a7935e922f0693",
+      "bug_id": 56,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 55,
+          "expected_pair_count": 55,
+          "model_hash": "2827d79e5a26e682b9d8d07d9a05729a8283a4e99d6cdbe58a66e610c16da6f0",
+          "oracle_hash": "ad86ea08cc2ea0a2d413da32105ecbd999582274e90d912284a03a5feec41b0b",
+          "oracle_sha256": "f63ce7d2cb1c23c1c02c1d0f8e3c77aa20fa0319b30cff5bfc93ca63c9c15733",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 55,
+          "reused_oracle": false,
+          "signature": "getLine(int)",
+          "suite_hash": "98599314866a92536003b7e0c5b1fb84f9cc771bb72cfcdfcc735b5bb63aa094"
+        }
+      ],
+      "project": "Closure",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "57d21e943534d4df90895f8cd46c3dc4a04505879c1de44e70e4b875f5b4f926",
+      "suite_path": "TestCode/all-modified-classes/Closure_56b/com/google/javascript/jscomp/SourceFile_IPOTest.java",
+      "suite_sha256": "15ca813fe2d14c56701d29a60a8cecca33c8fee723aa02939a4446cf78d7a2e1",
+      "target_class": "com.google.javascript.jscomp.SourceFile",
+      "test_class": "SourceFile_IPOTest",
+      "verification_result": "OK (55 tests)"
+    },
+    {
+      "audit_hash": "9f71a10d3ffd71bb99ca34c9a331e2ebcfba5b74750445917ac5bd0daa24cd9b",
+      "bug_id": 6,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 69,
+          "expected_pair_count": 69,
+          "model_hash": "eac1b9c4194bf2337804b25b937da689cfcc6c9774b1dca5cd37b6bf5617d279",
+          "oracle_hash": "79476b382144c5e5a86d6f2ee920da258317e481dcaf8a3fd8a7c6fa2d508378",
+          "oracle_sha256": "f803d4d2ca4a512a02e085d4a75b324ad83d015d5bbf6384944b4c0d6d8d34df",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "read(byte[],int,int)",
+          "suite_hash": "a7483e4cecedb22f74ebb510e49ee6573212b46508ba04c9e585f42d73ab6a87"
+        }
+      ],
+      "project": "Codec",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "2ce8921c829501726b9ab2e2adaed2cd954960c06eaf14582a69b8feb7559f23",
+      "suite_path": "TestCode/all-modified-classes/Codec_6b/org/apache/commons/codec/binary/Base64InputStream_IPOTest.java",
+      "suite_sha256": "ae457d996840ec683aaaf9e3c7032442edd9c7795d78c0910a580923b2189186",
+      "target_class": "org.apache.commons.codec.binary.Base64InputStream",
+      "test_class": "Base64InputStream_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "0308b25ba0b436d65aa9206607680a71b2b030a94460141b0e62f5d4c7e61b93",
+      "bug_id": 8,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 69,
+          "expected_pair_count": 69,
+          "model_hash": "8b66ca3b7d329a699e7df648db4b7187e403da9bb9cbf9c643332e3b964b8421",
+          "oracle_hash": "aaeec83d698513f58534840600d2dda4243a4ec16cf631bd1779d4d4f2df9f10",
+          "oracle_sha256": "f803d4d2ca4a512a02e085d4a75b324ad83d015d5bbf6384944b4c0d6d8d34df",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "read(byte[],int,int)",
+          "suite_hash": "0e14434dccddda530ed16467eaf33c498142f2cdc656bcafab33e2a7dca7b4bb"
+        }
+      ],
+      "project": "Codec",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "0c43abef4e5d1d27f3a0c9a3e1db957ec569b46bf1706262c9c707fc1d323363",
+      "suite_path": "TestCode/all-modified-classes/Codec_8b/org/apache/commons/codec/binary/Base64InputStream_IPOTest.java",
+      "suite_sha256": "ae457d996840ec683aaaf9e3c7032442edd9c7795d78c0910a580923b2189186",
+      "target_class": "org.apache.commons.codec.binary.Base64InputStream",
+      "test_class": "Base64InputStream_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "976ad793440522f61e3e16c2f4703041deadf79cfbc01a438e108cd894cb9428",
+      "bug_id": 13,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 165,
+          "expected_pair_count": 165,
+          "model_hash": "334571f61cc546750e8a8ea5afdd512d046073cf26d5c050004efe2c6245b153",
+          "oracle_hash": "cfdb56992aeb4ad60bbddfd1dc1dfcbd1f28460036998bdb874ea85c57c1e696",
+          "oracle_sha256": "87afc203a75c0675586dbe0e664f61d8d8335a3248af613c5b52cf9b4c02003a",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "isDoubleMetaphoneEqual(String,String,boolean)",
+          "suite_hash": "b0865b379b870521ab5b0b39856a98e6e9286d4dfed8503f9587a9de15f36862"
+        }
+      ],
+      "project": "Codec",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "169533986ef563a9771932bdfbc21e4aeb289d8851e766234b25c02f1e64c85b",
+      "suite_path": "TestCode/all-modified-classes/Codec_13b/org/apache/commons/codec/language/DoubleMetaphone_IPOTest.java",
+      "suite_sha256": "06620975d95581658b309133aa32b5d95715ccf1a7a3c85f59328831d626ccbd",
+      "target_class": "org.apache.commons.codec.language.DoubleMetaphone",
+      "test_class": "DoubleMetaphone_IPOTest",
+      "verification_result": "OK (121 tests)"
+    },
+    {
+      "audit_hash": "de4bcd760a5e76d93dc732e613a555894bf930c2f42f750423c09e439cfd7fdb",
+      "bug_id": 7,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 22,
+          "expected_pair_count": 22,
+          "model_hash": "26a8f47faee940a141a472ea0273f4c7a4d93834fd60c3f84916f0f59b2c0e1b",
+          "oracle_hash": "b7fcb636debe701c2c585fdb323793632ba397a0a981175bac8c3c084ab9eadd",
+          "oracle_sha256": "ecb17b3fa8c2596eb462d4ea5c48a2c67b71d067ed3fe8323b55a53581a1bbac",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 22,
+          "reused_oracle": false,
+          "signature": "getBoolean(String,Boolean)",
+          "suite_hash": "084abf7e90f1818c404886b803c1e0284f495a636d2a6af97afc0446c3cb9cc2"
+        },
+        {
+          "covered_pair_count": 44,
+          "expected_pair_count": 44,
+          "model_hash": "59dfb39538354fe135e7675d60f21c3820233b87d9f087abf4a34a36510bce92",
+          "oracle_hash": "b18edc4cf24286ffc94d7d306bed0336ead10afd413888a9b28b5c8d2d7b8226",
+          "oracle_sha256": "ea0716fdea5eff89ff253f44ff6b67011e04da36ef3d970fbd3a2d4234bb1ec5",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 44,
+          "reused_oracle": false,
+          "signature": "getByte(String,Byte)",
+          "suite_hash": "96678a87d73791141a3ca30402117f654be070455f332d333f0a102358179819"
+        },
+        {
+          "covered_pair_count": 44,
+          "expected_pair_count": 44,
+          "model_hash": "ca04dd9aecfbe099be5434966f1173aa971e8c6762748ef841baf5ffdd7669d7",
+          "oracle_hash": "ff15dedee2cc97c1c45bbed94c89b0de6f0167114d4f428308fba83e68bdfbbf",
+          "oracle_sha256": "4eb19e4dd53442ed431bbff32f060258d97913a63dedc8440111d283cd3e1538",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 44,
+          "reused_oracle": false,
+          "signature": "getShort(String,Short)",
+          "suite_hash": "e1a3826b18e50b92510c53e5f38bf263d60431cbe47115b4eb88c7a44c85c348"
+        },
+        {
+          "covered_pair_count": 44,
+          "expected_pair_count": 44,
+          "model_hash": "4651a4100b5ac85d62fbc9b7aea979ba4256c33266b78513649fddf8d2e8fcba",
+          "oracle_hash": "b7dd39b8451418fefd58c1b6f581daa1e209cf5e1a3488f1cfdae9cfd491ab12",
+          "oracle_sha256": "dd7fbb49eb968e2b424624e63744b18041ed00032edee6476c0568d7a0e74b30",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 44,
+          "reused_oracle": false,
+          "signature": "getInteger(String,Integer)",
+          "suite_hash": "4fdec505bb8e6990a61468cc3209ea2b64a393b2ac5be17763123876e318e56c"
+        },
+        {
+          "covered_pair_count": 44,
+          "expected_pair_count": 44,
+          "model_hash": "5d1cd4380364cb36803e026e50c0e2b22954f8ca259d043d744f977906cd8933",
+          "oracle_hash": "782d3f6a5a51e1e44b11d52aff7fca237052c5a2e312bff715dac7977fb89002",
+          "oracle_sha256": "4024e8e539eb6887889e63a56f312baf1b97e12ab7e8cbee2fa6634615fde032",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 44,
+          "reused_oracle": false,
+          "signature": "getLong(String,Long)",
+          "suite_hash": "d7120588532529d6668cac7e67487abcbeb21858527b7e56ab33775175c16d75"
+        },
+        {
+          "covered_pair_count": 44,
+          "expected_pair_count": 44,
+          "model_hash": "5f56736bcc895f0a49d4f861fadb1d832732f7654756fdb4173b4286e1f7a871",
+          "oracle_hash": "b40f4162a65357367ac38a3b5ab0f44c5a0c13245b484aa022fd3c450a18be79",
+          "oracle_sha256": "25bdd50ff24dc09fe006f0261edcff776d966f2ae797a2273662d0851554120b",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 44,
+          "reused_oracle": false,
+          "signature": "getFloat(String,Float)",
+          "suite_hash": "5e1134bcfef2aad847fcf071a7f3d352e5c1e17d7733efa877483feacb4cc8f8"
+        },
+        {
+          "covered_pair_count": 44,
+          "expected_pair_count": 44,
+          "model_hash": "c41900eb110024e0f47a9046f6a0f2a2963136722c4ef5e578159531b2e2fae4",
+          "oracle_hash": "bbe5c8b9142a2f8ae3a650e4ece3da2bee1322a9e92a2e4e7095b759358ba65f",
+          "oracle_sha256": "d68047b2b548c5d4974a38ec8a4687c01294315998b92e5e73063bd0caf6be6a",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 44,
+          "reused_oracle": false,
+          "signature": "getDouble(String,Double)",
+          "suite_hash": "7636d1dc2df6c769e32ac5c82dd727c05072fd07f8633e4a09a64c230bbd951e"
+        }
+      ],
+      "project": "Collections",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "ca8ebf6082e90b934c326986462615b1a5e7e274691f03ec78e7704700626f23",
+      "suite_path": "TestCode/all-modified-classes/Collections_7b/org/apache/commons/collections/ExtendedProperties_IPOTest.java",
+      "suite_sha256": "dcda5c8531a2c266eda4452361d2ae5ea48d6688e7a577428e5d9f1d210250c4",
+      "target_class": "org.apache.commons.collections.ExtendedProperties",
+      "test_class": "ExtendedProperties_IPOTest",
+      "verification_result": "OK (286 tests)"
+    },
+    {
+      "audit_hash": "3b22602b24f27990bb159ada6d69b3a76f2ac04e03f603cfcc122dea15e08a30",
+      "bug_id": 2,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 69,
+          "expected_pair_count": 69,
+          "model_hash": "08d915e936a2d31014929e3380371d93be3a96967f7690577fa5f9d0df2e9455",
+          "oracle_hash": "0edbff9f5525dddd4a467bad73a03112d51f7bd89af46322ba403d0ef8eb0e71",
+          "oracle_sha256": "f198d621b85ec5f892420c8369a8cad3856d3b029a8299e87ae5435aff03e6a5",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "read(byte[],int,int)",
+          "suite_hash": "ae0996f160a65668ff7704d8caf11659175b670fc5ee372ebfaa9cc4f6a2f1d9"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "f632741f3cfbd5d399d58a36e79fa2cfb0f7c483484ffa83107f62e0a18b28ad",
+      "suite_path": "TestCode/all-modified-classes/Compress_2b/org/apache/commons/compress/archivers/ar/ArArchiveInputStream_IPOTest.java",
+      "suite_sha256": "39e62e631fa25ba29ff71163d1d053c297c6c89e1363e4b7f07a034ca9460efa",
+      "target_class": "org.apache.commons.compress.archivers.ar.ArArchiveInputStream",
+      "test_class": "ArArchiveInputStream_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "32d3a262975b35bc2404bc9d979757d8a9c58aa05fb89a0f9affec532f1c2287",
+      "bug_id": 5,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 69,
+          "expected_pair_count": 69,
+          "model_hash": "3f766d7d82df02784d9635e4e6fffe1e4583fc2bc34712a59163368465443424",
+          "oracle_hash": "75e8847dc17b3a8b80c70b727f17169b98b05a76afb34e271e6c7ec732a321cb",
+          "oracle_sha256": "04bafd84bb9f4a5273cb67243e4855163417a04dd5a057c1aa1af11e314b5430",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "read(byte[],int,int)",
+          "suite_hash": "97640352aecccfa02577c88ebd90194f28dd8c1445c243bc1f71060ab4afb82d"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "69c45b381978e531487dd6bdf2fa385a7c9d95a3830b53d5b9117fce13b9dbf9",
+      "suite_path": "TestCode/all-modified-classes/Compress_5b/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream_IPOTest.java",
+      "suite_sha256": "5079332d82186360fe80f4c9d1e5907919348e9a3ad7b8a0bbae62b8fe4f0e1b",
+      "target_class": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+      "test_class": "ZipArchiveInputStream_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "bc98222731409793e43f9b8d537cf73d34ffce882b5eaaa9f6e9ebe675e1d1b2",
+      "bug_id": 7,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "3c7915e025ea66be6a46d36b9d2dc863c6d9b1b6ba7d9cf50fd0860a2c83f9a3",
+          "oracle_hash": "635a4894a3c054a17ce21482bc8d38bd2ef1436f5ab48e1f6e1ee3f18a18f2a4",
+          "oracle_sha256": "5602368a4f9faff82d3c187a7e633a050071e9400e10afc04c846ce44baa7af7",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseName(byte[],int,int)",
+          "suite_hash": "6e288a4a40bbc9052eba6ee8a1554b2a35dd777e1908a6e9844956ac90fc8e04"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "503916e12e9ca0b7869f9085613de0e329c85c01f85ba3023edbff4b9657f791",
+      "suite_path": "TestCode/all-modified-classes/Compress_7b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "b5effdda0207fe9cc2a1014c0313870a52173afe57df99852e920dd4b983ef3d",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "90546894d7996c4fbebd21eb880a9726fd702ecdd4f9f841fc33c22caa03a83b",
+      "bug_id": 8,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "3b9bbf16baed0079673e77d0da3ce42b536a525a556dc7db513fec81641f57c5",
+          "oracle_hash": "5a62cc5bd0d5a853d0cbedb493ca6c1cc1428f5d19c4f8da288079ec622d18f3",
+          "oracle_sha256": "ba7375c8b016c9b56b1a43be0fa62b1df3d94b6c2e1ac0cf744f8ae641469505",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseOctal(byte[],int,int)",
+          "suite_hash": "e0b17c05beb0587e7490e9836b83c8a237d98453036d8ab7c20a31deb63f5211"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "61076807e45d3d4ef991a0f26023dd2d3473544e1432c142b3aca3a5ca96c862",
+      "suite_path": "TestCode/all-modified-classes/Compress_8b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "fa6dcf2e765efa1841a2c0947cc474c8ab5decaa9cc4651d8f657bdf4adebe9a",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "48b57a8b4c3bd03716a999551eb7674db6764b5e373f1c50618eb1238f84093e",
+      "bug_id": 14,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "c94c4bf1b68fa94d37fc0b3abd7fdae0dea7b24bb401a94b4f5e2f48364329d2",
+          "oracle_hash": "dad8bc017e277173169c4508cde389169788a6ae866a267095d861311d8a1709",
+          "oracle_sha256": "dbd548d0ad43d6b5b7339afc1b5072a2a11da30eabcb875cb21b35f2dd5db5a6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseOctal(byte[],int,int)",
+          "suite_hash": "5bfae88c16a1884ca557b9c3126984fc2bf1919046f727e327860b60f01fdd2b"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "589cfd2e8a8964ac38736ce7ae3bd1b8a73576166eea4712259701b8e3a893af",
+      "suite_path": "TestCode/all-modified-classes/Compress_14b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "b13908dd1be6191939db0c1451d0e00f17a391346ea9e20ea1ec537c0e178745",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "b8da0232edd586f052b7e498ba87147f6ce968978dc943979e3016ee931c36ac",
+      "bug_id": 17,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "52cc3e2a9a01a4c31885dcbfc4ff6876c0ea1e23be6241f157fb4b0ee2be6663",
+          "oracle_hash": "7d82f229226108d0d8cb968070d83d7c6b0d433b9ca578b581f85fa89b60b5ac",
+          "oracle_sha256": "dbd548d0ad43d6b5b7339afc1b5072a2a11da30eabcb875cb21b35f2dd5db5a6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseOctal(byte[],int,int)",
+          "suite_hash": "db88a598298f2bde6974aca0a030d4b26973e648486bd1685044d0691a385559"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "ba68cfaa1166ff618264aa40b5a77ae49f84a9cd36f0e203479af8b650ac58a5",
+      "suite_path": "TestCode/all-modified-classes/Compress_17b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "b13908dd1be6191939db0c1451d0e00f17a391346ea9e20ea1ec537c0e178745",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "5ff26b173b83c88f78e1b28387111331170f419214541f07f01ecdca2aa9690c",
+      "bug_id": 24,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "00df7d12a0b4fc0a1ed4497411d116bdd107e3e457330f29066440d846094ab3",
+          "oracle_hash": "7c50366bc32f4c704f171cebe84327eec88559dd1e3a69404b0d56dde22a5fdb",
+          "oracle_sha256": "dbd548d0ad43d6b5b7339afc1b5072a2a11da30eabcb875cb21b35f2dd5db5a6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseOctal(byte[],int,int)",
+          "suite_hash": "9adab78a6b8b2ffa3ad0edada1dd0c5f4b2babba82684289844130733e7cd9fc"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "3b69374f51e2d82d1006224f426eb21db84dd67ae92d1f60fb10becc8e561e6d",
+      "suite_path": "TestCode/all-modified-classes/Compress_24b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "b13908dd1be6191939db0c1451d0e00f17a391346ea9e20ea1ec537c0e178745",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "c5a741d955fa2eb3f4bb53ab3af325283dc718af6ae9f452e4c3b31bcba6d567",
+      "bug_id": 26,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 10,
+          "expected_pair_count": 10,
+          "model_hash": "b46945463db1dccfb351e190bbfa1516e1ea8bfb34e7de0ca192bebcdcc945a5",
+          "oracle_hash": "b0cc83ea8f929e121be1bf60e9ec89910a886b869d719bbd2231220b1d890f8f",
+          "oracle_sha256": "ce020693678a0675e66c10aa51979d44e58854f3d791a64d3f549250cbd9cd18",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 10,
+          "reused_oracle": false,
+          "signature": "skip(InputStream,long)",
+          "suite_hash": "0fa0480dccf01bb7abb2e3631a34d0d5853596670512b8601438a5600b42cb31"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "d936387ee82cba5aa7da77eb259eef723648ef3ab3bd2d336f9ed67a49e9b511",
+      "suite_path": "TestCode/all-modified-classes/Compress_26b/org/apache/commons/compress/utils/IOUtils_IPOTest.java",
+      "suite_sha256": "cf5926c93758a3170e7fce50f9011b3b07ce22f2fe9a48379ae2fc874ff29576",
+      "target_class": "org.apache.commons.compress.utils.IOUtils",
+      "test_class": "IOUtils_IPOTest",
+      "verification_result": "OK (10 tests)"
+    },
+    {
+      "audit_hash": "100259b29f21b1cd1f1d5dd5d4d56079b44a344fd69b1e7e9d7676d0385afc4f",
+      "bug_id": 27,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "4b99206aec1447bf9f950fffa5e224c58ff9d8bfedf3ed55c79fb838052d6eae",
+          "oracle_hash": "ee1546412df8fa1a4fd5e26d06d5910654b201e5b944eef4365db10ffa27891e",
+          "oracle_sha256": "dbd548d0ad43d6b5b7339afc1b5072a2a11da30eabcb875cb21b35f2dd5db5a6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseOctal(byte[],int,int)",
+          "suite_hash": "806f48f10a0f5de01e1253c46427da92f142767b42d8ee9c4fe6e201e2bd6cc1"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "fb2ade2fc39572e3e2c135b672d5e7945ea19a1bd976c5fb93df8be5ec849127",
+      "suite_path": "TestCode/all-modified-classes/Compress_27b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "b13908dd1be6191939db0c1451d0e00f17a391346ea9e20ea1ec537c0e178745",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "561b50b9a897f20735c2cc94d6a1bb355bef1e6e9091502afa24211cfc013513",
+      "bug_id": 28,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 69,
+          "expected_pair_count": 69,
+          "model_hash": "8c63935c8f2b745ea26f30543cae8641a3d13ba4973bc2ff7c300861c9c17c6b",
+          "oracle_hash": "c1d4958e1f32a09e76c5c1d97895caa7c3d10df8d9d5f8ae8fe5b3c1a665120c",
+          "oracle_sha256": "81b8e035e16a1c5904e0c5cceb89771a446edf0ed760caca6cdba7a4d47ded74",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "read(byte[],int,int)",
+          "suite_hash": "8ccec78346a6280b7271f72959d4aac4ca292510584755d34505b53781a2a665"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "5442ea83e636f0b7ed4d3b8ce940316bd1be9c4c2df61b9c74e7d5709cede7ee",
+      "suite_path": "TestCode/all-modified-classes/Compress_28b/org/apache/commons/compress/archivers/tar/TarArchiveInputStream_IPOTest.java",
+      "suite_sha256": "ddad3b96730404eadc1ad5296d8ce20035dd896dbebe41ad142fef8d10e24e83",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+      "test_class": "TarArchiveInputStream_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "0d550ca71ab84644e52f17340d35e7421eee56ad28f168f3788a078ae44f3cdc",
+      "bug_id": 31,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 45,
+          "expected_pair_count": 45,
+          "model_hash": "9de7205904b192e7604b2dac467818e751f91639b3b7b1fbd00f6123e55b0fb1",
+          "oracle_hash": "c1e6e4203176d9fe31c845dc26f046e4b8c20db1bb7f599f9d15fe7c9a275759",
+          "oracle_sha256": "dbd548d0ad43d6b5b7339afc1b5072a2a11da30eabcb875cb21b35f2dd5db5a6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "parseOctal(byte[],int,int)",
+          "suite_hash": "4b79e199fadb73a92f3d09a4e0ab778d6d9b90845d0f3b5594058d4b9748df81"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "c14659e766b164048cfc3017f29e682b24a9ef68b73a2cdee423a6562d1c2d0a",
+      "suite_path": "TestCode/all-modified-classes/Compress_31b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "b13908dd1be6191939db0c1451d0e00f17a391346ea9e20ea1ec537c0e178745",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "92c49c098f0bcddb0b846ca969003f78bab3eb865deee2091574b83d5d11766c",
+      "bug_id": 33,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 10,
+          "expected_pair_count": 10,
+          "model_hash": "91ade7cc76e78a2d297a68b5cc38c3ac9479371f35b4397fa79d4cd8ac6e68c0",
+          "oracle_hash": "76b784057c0d62164a5761250663c321aad79a7307c8a7245756161db9ca8612",
+          "oracle_sha256": "046137cfc52db0e4297d51e1857b47d0c3454d67a7f29760c126287a8326c138",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 10,
+          "reused_oracle": false,
+          "signature": "matches(byte[],int)",
+          "suite_hash": "02b48fefa464d1da8e8aa740e49c10fe2be4d2d851db5754d07881aa69ac1b11"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "4ab9c4cc6ce5563ae254d2f36be7da5c489fa293f7143972e2337c2cde724f53",
+      "suite_path": "TestCode/all-modified-classes/Compress_33b/org/apache/commons/compress/compressors/deflate/DeflateCompressorInputStream_IPOTest.java",
+      "suite_sha256": "64b091b3b868d8a62def5ded66b86ae7ac096ff36c0c773700671a89a11d9e92",
+      "target_class": "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStream",
+      "test_class": "DeflateCompressorInputStream_IPOTest",
+      "verification_result": "OK (10 tests)"
+    },
+    {
+      "audit_hash": "ad0b5dca3c965448e8f4c1be546d1085213a04ad86b08c9bafbe2e3f7a039a5b",
+      "bug_id": 45,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 105,
+          "expected_pair_count": 105,
+          "model_hash": "656e36e77aba7c4f20865e740d03f465bbe7045ddd4677fb0a49f50c1357a7a3",
+          "oracle_hash": "2641340b929910a22a8b6448aafce301dc4e3c0ca4902e0b81b543adf8e7470b",
+          "oracle_sha256": "acb430db6cc1e8d65a252087a6371bd80f30c4c70745c53b578b84b786019ed4",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 29,
+          "reused_oracle": false,
+          "signature": "formatLongOctalOrBinaryBytes(long,byte[],int,int)",
+          "suite_hash": "319029b57d9c4d1fbc3f27925c0efccc1720d802e0f2b0b08611359ec2553db6"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "c69c84a69f2f4e751a71e61c5e08c12c5f312a1a71456b58cf080405924f5a0e",
+      "suite_path": "TestCode/all-modified-classes/Compress_45b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java",
+      "suite_sha256": "c6b68a11a974ef80916de765ceb86d5444607f12f557c7fa892054fba48c8160",
+      "target_class": "org.apache.commons.compress.archivers.tar.TarUtils",
+      "test_class": "TarUtils_IPOTest",
+      "verification_result": "OK (29 tests)"
+    },
+    {
+      "audit_hash": "497f17f51fa52fb9d96744f598118b890026fd3b4872931d6d559227a08a672d",
+      "bug_id": 47,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 69,
+          "expected_pair_count": 69,
+          "model_hash": "337cdcb2aac7c41b417f227e4dcf51d8c7721366dff472ebb0e57b9b79d3367b",
+          "oracle_hash": "0dd4551be479a892e9885a6723219200cb056348e17207500eeea6f346899207",
+          "oracle_sha256": "faf83215ecff0ade8d570b8085cade71046fdb47ffe88ffe2e3055ede0b4489b",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "read(byte[],int,int)",
+          "suite_hash": "8155392dfd244c223e20f3f97cdeba43511a219bb1cd9f50b2f36deb13e8c682"
+        }
+      ],
+      "project": "Compress",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "14a413c32808b7a47c2754c820bc0b7d6f15188d213963870bba10732b576255",
+      "suite_path": "TestCode/all-modified-classes/Compress_47b/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream_IPOTest.java",
+      "suite_sha256": "9b2a001b066a84becb8878d490286847b1496d400ce40c1730c5b678956eaba0",
+      "target_class": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+      "test_class": "ZipArchiveInputStream_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "f480da2434eaf6362e24c04b7284885fc2f4d6ca2ca249ae5edb30ea2b21ec9b",
+      "bug_id": 28,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 22,
+          "expected_pair_count": 22,
+          "model_hash": "d47d5254e393528bc07f1290b158d729f1a903e7000f227d4fd91ba6474222de",
+          "oracle_hash": "1993444328adecaca440028d45076d04e781219d3f032d1702d240b88179c6c7",
+          "oracle_sha256": "ca0a52be9a947977519a14d470cfcae0990859bf30463df53d3c6f51c404d047",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 22,
+          "reused_oracle": false,
+          "signature": "unescapeEntities(String,boolean)",
+          "suite_hash": "6fb9c06a82c6327e31d6ad1b513eadbf66182e7ebc705ba0a64e94012af0e885"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "268ceb539562ce0a92abec4a024bc4080e05cb4f254540704a307dd34e1f3ed5",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_28b/org/jsoup/parser/Parser_IPOTest.java",
+      "suite_sha256": "d46691763838ee28598bc313aa2779c2aae9fee0478e7978c0fc1b751736daa8",
+      "target_class": "org.jsoup.parser.Parser",
+      "test_class": "Parser_IPOTest",
+      "verification_result": "OK (22 tests)"
+    },
+    {
+      "audit_hash": "c4c2f5ed53f6e5eeca8d4c7b43033963ef95d5f7137db5e39b47d9b4b159ca92",
+      "bug_id": 52,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 165,
+          "expected_pair_count": 165,
+          "model_hash": "1b10c5343eb5f27aa03db92a180ce4181c5818548f3445daea1788a4a6a86a24",
+          "oracle_hash": "eecd6b50721e1d90544fb8f8ec7aa6f2431b59fa69bfb7ad5a4f45f10722a084",
+          "oracle_sha256": "9aa1167276f42623d90e3a66601aa5e24f06b455817462697f1d32ef762abacc",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "nodeName()",
+          "suite_hash": "131b99c3ed5550d4fbd21ddd54acadb4ccf812cb1fe8a3e483de58bdb445ee72"
+        },
+        {
+          "covered_pair_count": 165,
+          "expected_pair_count": 165,
+          "model_hash": "815b35f068dd5363a281a2fedb6c48e780a514ee4d37a09215fc305a3767dee6",
+          "oracle_hash": "4b5c9da60de07c8f57926accd6d1d3d855c25db776b9dd27551f63db879a6fe4",
+          "oracle_sha256": "5b2c5cc6f6323f787a3a804610f00233ac7ce69782f99de492581bde81c02882",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "name()",
+          "suite_hash": "7f677cdf00217b466d08136428f88035bd2c567d20463115d8af34c44af6014e"
+        },
+        {
+          "covered_pair_count": 165,
+          "expected_pair_count": 165,
+          "model_hash": "140c2a17ea107465076480a74e959f8ab8a6fdd730879b06f323c0bd61f05727",
+          "oracle_hash": "a28652bf451b7568b28c406edde11f2ab302e25cadf4e747e61d597a4dfa4aad",
+          "oracle_sha256": "5ee77e2806566a4c1187861362eabcc9c38f0e7e60e8a0ec0db2603b46bdda67",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "getWholeDeclaration()",
+          "suite_hash": "44e3dc5bef017240aa6a1e41e2471b3962a3f8da107fb236efcb61577e147660"
+        },
+        {
+          "covered_pair_count": 165,
+          "expected_pair_count": 165,
+          "model_hash": "5b8e7b6d86f7402436d517e943d0d2eedd6df8c31aa58926016c6ba3cbb86f5a",
+          "oracle_hash": "42f6896eeed46e8e3bbbeeb80af6195ac4ad7b91b2afbf97a34df29cfe9e96cd",
+          "oracle_sha256": "a7818d244ec1c78358ddd19620a5b39f929682054636ae8d68d4cf5624700de1",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "toString()",
+          "suite_hash": "a8793eb35fb8c6174f3663c655662f42f8513df7160d15ef5c25dd4f031e0da7"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "02bffcde361fa426adbc9e0db471ec4ffb1021b14c3043b19570585f070a30f8",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_52b/org/jsoup/nodes/XmlDeclaration_IPOTest.java",
+      "suite_sha256": "c901f383acbb91525ee030d2cb6ca9c3f1fdb382ac0a20808ef5942fa42b219e",
+      "target_class": "org.jsoup.nodes.XmlDeclaration",
+      "test_class": "XmlDeclaration_IPOTest",
+      "verification_result": "OK (484 tests)"
+    },
+    {
+      "audit_hash": "31447f20f66f4cc166789fd12ebe151c7af6d94c66d250e835279e0728ecea7e",
+      "bug_id": 53,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 135,
+          "expected_pair_count": 135,
+          "model_hash": "a279d0964391478a0addda17641b2e653f0920656bdbf7a59450b1fb1abbc061",
+          "oracle_hash": "57c1ad65cf72a36b1577d9a441ed51ada71a6c49ae187ab2942a29fb6e498d7d",
+          "oracle_sha256": "bb3c3d6aa4b7d15d854b727fa705b4fd0fb73b104c3b06aef8277924f5cecac6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 55,
+          "reused_oracle": false,
+          "signature": "chompBalanced(char,char)",
+          "suite_hash": "404bbe60564007468dec67f2735079dbcec8134b440f0e390871cee82f5c9009"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "0db587c248ced711d8e60d2a33782646a98cc93f1a46f14a68db8a8c37d6d620",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_53b/org/jsoup/parser/TokenQueue_IPOTest.java",
+      "suite_sha256": "5cace23e758ddaf95620f74eb93f16beaf81be265b09475fe0d6b4b44868260d",
+      "target_class": "org.jsoup.parser.TokenQueue",
+      "test_class": "TokenQueue_IPOTest",
+      "verification_result": "OK (55 tests)"
+    },
+    {
+      "audit_hash": "aefa7bef780c3e627e7b96ac98d01abf2f3b79ae2191536e9e5650705f6ef4ee",
+      "bug_id": 60,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 135,
+          "expected_pair_count": 135,
+          "model_hash": "0e9022f6012aaf4c2e4faed3b3f4e2f85a97df7ef3289b99508aeea1dc029312",
+          "oracle_hash": "ad3b847bacf4b00fe63201eb45f7051be1dd18687e355573d591e59a1577f505",
+          "oracle_sha256": "a02219f4316aa7c8edda0150a4bf1446ab0c88503f6df4301bafe5025664b9d2",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 55,
+          "reused_oracle": false,
+          "signature": "chompBalanced(char,char)",
+          "suite_hash": "a006e7d3a7dc785296aff43c1a117cf922d9191e3a4344ab8c40fbf2f0c81eb8"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "9f3ec4f169a3a4cccb4bc5b0c8414ae42a5e85dafb4191d8760f4242ff70ebba",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_60b/org/jsoup/parser/TokenQueue_IPOTest.java",
+      "suite_sha256": "5923f4d6b0cf1b038816316dc5f6a9eac42f3d6342b2c8c20093a3f26f4eab02",
+      "target_class": "org.jsoup.parser.TokenQueue",
+      "test_class": "TokenQueue_IPOTest",
+      "verification_result": "OK (55 tests)"
+    },
+    {
+      "audit_hash": "0b1c85a136573cf39f60cce8e4ee725f20a145e330b99bd7bb203217935a547e",
+      "bug_id": 61,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "5b52f39683480e57ecbb75ef69a2a31de4d2136abcf06125cd544263b66ce650",
+          "oracle_hash": "037ca796368dbbc62ad15e7f7392499dc014b72efcadc184326d547eb62447a9",
+          "oracle_sha256": "d5fc4455a705abc524bddd9c59b5108810938d6e01140b07baa34384f42e53a8",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "hasClass(String)",
+          "suite_hash": "e42eed83395ef5870246da1a4cb6ecfeb8ea53cfcaaa78c8f465088553e94eb3"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "9aab1abf2fb93353e3f5684e4ff9460fd3a4f51b761dd452e1030dd069e894fc",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_61b/org/jsoup/nodes/Element_IPOTest.java",
+      "suite_sha256": "79dac335dcc9c3e3c27ff9fa2a02da54587d98175ab201b7a0e3b2ac212bc7b7",
+      "target_class": "org.jsoup.nodes.Element",
+      "test_class": "Element_IPOTest",
+      "verification_result": "OK (121 tests)"
+    },
+    {
+      "audit_hash": "880304739971f459365d339a2493414f7f2747d9bae5a1df44c82f2ac164082e",
+      "bug_id": 88,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "384f354176e61837fb7b421337626540f27cabadac90bb4d412e45648cb779a6",
+          "oracle_hash": "191c22abf7e12d458f43181be6f721c39fc87a3a0d99e3252a3a5666a806accc",
+          "oracle_sha256": "01cfbfe1e2f65f6ec8ac93e2eaf2c470b4948dc2d47295add313aa0dc5a4d4b8",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "getKey()",
+          "suite_hash": "a7216328a08e9b4bea219f60b341f296494601fa38d08149ec0d8ba9f304b269"
+        },
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "79938e43f0874d4433c0a287d431c8fb06f4a250a0e0b02476302de9af6a9553",
+          "oracle_hash": "2613240bb8e26352c1c6d0c374a083993afc23b2502af8d8c8a2aecc7558a832",
+          "oracle_sha256": "18d74ec9ef6cfcc9f25686a1d35a0548833b93a1e8d8b2ac6a9c161d5c69c543",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "getValue()",
+          "suite_hash": "e5838d62c9c5e7e9031326c6371dd3e88138d7edf7344d3723e7abfde143165f"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "35d1c5a98e2b16fbd393e1ae8934d89bace72d0de2f15674f83264151dedaa87",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_88b/org/jsoup/nodes/Attribute_IPOTest.java",
+      "suite_sha256": "eaf745218841b19067019251af007440f04ccb1a620a721ae23fe2110a4778f3",
+      "target_class": "org.jsoup.nodes.Attribute",
+      "test_class": "Attribute_IPOTest",
+      "verification_result": "OK (242 tests)"
+    },
+    {
+      "audit_hash": "2e86ec2f395ac52dced91129b31f50e5a5c296f6b7ed46a53df053319870799e",
+      "bug_id": 89,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "4e1ec20756d77bf37e27fe0edcf00bc6f547a3927513d1e050b0fb1bcc2f03ce",
+          "oracle_hash": "6beb55dda005b6249d29e5d62eddf7c5b3cca2f9b9586e1590a04e0c6ef5db5d",
+          "oracle_sha256": "01cfbfe1e2f65f6ec8ac93e2eaf2c470b4948dc2d47295add313aa0dc5a4d4b8",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "getKey()",
+          "suite_hash": "1aeeee8e8f3dbefc45bdd264ca741b42ac139af785c4e679df047434e901f64b"
+        },
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "491e4739cd2ae11c585bd340edab5bcf0f111b597108ee728713862e7da5e55c",
+          "oracle_hash": "94cbcd5d3e1e928503f05ca5f3987f78d39d4b9bd506054ba9a1c00faacb1094",
+          "oracle_sha256": "18d74ec9ef6cfcc9f25686a1d35a0548833b93a1e8d8b2ac6a9c161d5c69c543",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "getValue()",
+          "suite_hash": "e9009eaf65b32312c26f5641ff763a5861b72043ad000d35e27159415f0fd686"
+        },
+        {
+          "covered_pair_count": 363,
+          "expected_pair_count": 363,
+          "model_hash": "20101265480ff39069d75b8f532304b3cd7c43e3a21aa7bc8595f258b073e00d",
+          "oracle_hash": "a0ef48e6e4b51ae9ef11596d5b18aeb248bd2d2c31b32762bb348dd3bd733276",
+          "oracle_sha256": "ffd956134e1a9719f3ed6b96ba17fda55b9864a64f2fe3dc4c990b03b3791b1e",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 137,
+          "reused_oracle": false,
+          "signature": "setValue(String)",
+          "suite_hash": "f2ea320b9345bb66bba6a0acb6894ceac743ed9f316ba586448be966b6c41015"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "d6cf7bdd1600dbc6cce14e64a49f460e283710ae6d1902a9a6a3a773e347ad99",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_89b/org/jsoup/nodes/Attribute_IPOTest.java",
+      "suite_sha256": "8cea420d60e0bab8e9d014f5df8ed4bdeafbc62c242e7bef4a1075920c10a7f9",
+      "target_class": "org.jsoup.nodes.Attribute",
+      "test_class": "Attribute_IPOTest",
+      "verification_result": "OK (379 tests)"
+    },
+    {
+      "audit_hash": "9af0e6028d1812376bb3cefe84db306af9ecbab775d6f7bcf7b86ff64b661cbc",
+      "bug_id": 92,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 4,
+          "expected_pair_count": 4,
+          "model_hash": "41230000e41b08ad6457c6a58431e48fcbde0937f962368629e091f573a6123b",
+          "oracle_hash": "7adf5819db8876aa00d9415bd40d0548b6798b130a711042199ef58d5ee1bc9a",
+          "oracle_sha256": "28487c84f98f83d45472f201d6bd996a4bc7bd3b761ad50d54512b6109de6970",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 4,
+          "reused_oracle": false,
+          "signature": "preserveAttributeCase()",
+          "suite_hash": "d0122744e5cafbbe7b4c54b07f6b9966b5cbd726f3700f3c113ebee49df1560e"
+        }
+      ],
+      "project": "Jsoup",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "664c0a40dcdaf23793ffc6edf9c32f9039f34a5df42a4d52376cbc8bc4e4d348",
+      "suite_path": "TestCode/all-modified-classes/Jsoup_92b/org/jsoup/parser/ParseSettings_IPOTest.java",
+      "suite_sha256": "7391ca100e830590a91c789c15b4ab85baa8592e7b07f6d57a1ebece413bec14",
+      "target_class": "org.jsoup.parser.ParseSettings",
+      "test_class": "ParseSettings_IPOTest",
+      "verification_result": "OK (4 tests)"
+    },
+    {
+      "audit_hash": "ceb4a8838c08d3a1a52e931743b526e94cd642bb012c2fd858153ea16f01953e",
+      "bug_id": 30,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 22,
+          "expected_pair_count": 22,
+          "model_hash": "cc91fd269fa7e09d17a46368716e86cd40ac7649e4cda4c0e448905ff157b306",
+          "oracle_hash": "7f11ae7f0aa2e9e7f9fd3e1da062c2650d2ee931d50dbeb214c1e7aba475cd19",
+          "oracle_sha256": "58e35f4775edd8eb2efb4711f48aa261a202087e4fe905492af81f18b1f66f06",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 22,
+          "reused_oracle": false,
+          "signature": "containsAny(String,char[])",
+          "suite_hash": "fcafba9ae3b4c2814b4d08a18e29ab07d50436a5bc8a7a4c1c3bff3fd86f3330"
+        },
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "b3bb9c5b3b2677a7ce72d499497b0cefe3104f91bb4913bc0dcfc474a94eb88a",
+          "oracle_hash": "1d2fe81a60fea1425feeb323a96139134abdd2a589a62a11ec0ad3274b390ef3",
+          "oracle_sha256": "1d6b797865529203075b986b14752a2fcd84195e13d9107553bd9412ac000c66",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "containsAny(String,String)",
+          "suite_hash": "10b5a4a7ce1adfae758771382661223bce87bc43ab67c4a752e9c9845f43f1e0"
+        },
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "23bd308ee6afd4d57eb8c7787fc9ee1e0e0ff1b0cc4a75664e7d1985a65a38d9",
+          "oracle_hash": "860ce1e0b4e84be567ee3fbf53ac80de45caaf463d4ed5b9a031b633a16f1d66",
+          "oracle_sha256": "1c464262e44ce2f15451026cb447f635a6f8fa42a53eb21d30bb0b2cae870847",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "indexOfAnyBut(String,String)",
+          "suite_hash": "3c6cb30c0273b5028985966c655b50cea36868d9225105d26e624828b6761571"
+        }
+      ],
+      "project": "Lang",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "bc3d90a527cd73ff5905f0e821446841b00c90eb38028e4a20c60fff33074c33",
+      "suite_path": "TestCode/all-modified-classes/Lang_30b/org/apache/commons/lang3/StringUtils_IPOTest.java",
+      "suite_sha256": "069aaea39f6cc8d6a0818c4e58c693bc41b8c9d64efc737ffec72f9cf6e6bb4f",
+      "target_class": "org.apache.commons.lang3.StringUtils",
+      "test_class": "StringUtils_IPOTest",
+      "verification_result": "OK (264 tests)"
+    },
+    {
+      "audit_hash": "374d8667da137612c1718c6669696e34cc1bfbeb51db6b67e54c700efd1e8415",
+      "bug_id": 39,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 48,
+          "expected_pair_count": 48,
+          "model_hash": "897f6d13f6b472835b76a6fdb4189b2f7e7d2a68eb8c1460ec975804748d957c",
+          "oracle_hash": "d007a168f6e9114b0ef9d6d6d842355fc5d4d10c53fa2e4e733bdafe1cd2f052",
+          "oracle_sha256": "f2a4a093301a2b1753c2fd26c5331e706e8d0f730f24208c55ed11ff01b12e8d",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 22,
+          "reused_oracle": false,
+          "signature": "replaceEach(String,String[],String[])",
+          "suite_hash": "34903f4a06a7867d9c06c76a4af5e9e3d16e622925b49e086f91da6696cce8bb"
+        }
+      ],
+      "project": "Lang",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "84c560773208c43001b8a63b9fa88eac563d5a756d71f7ae6c805111e43fdc4a",
+      "suite_path": "TestCode/all-modified-classes/Lang_39b/org/apache/commons/lang3/StringUtils_IPOTest.java",
+      "suite_sha256": "2c024b2b8a717033f3343c9eb1782e68fd726742a61972eb8b36a572ef42844c",
+      "target_class": "org.apache.commons.lang3.StringUtils",
+      "test_class": "StringUtils_IPOTest",
+      "verification_result": "OK (22 tests)"
+    },
+    {
+      "audit_hash": "fd5a8944de6a2eab66618b23ede3975e3bc8e90ad6db56a8e452c886c4844e50",
+      "bug_id": 40,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 121,
+          "expected_pair_count": 121,
+          "model_hash": "fb5d9edadd1f0b51faa064c1dd793f8a4cb20c9554d49fbc0597b7a38fbd9594",
+          "oracle_hash": "73d6cddaf601d9532c4abfa46b48951f53cc9ea8ebd51b2214582b79b519de36",
+          "oracle_sha256": "7e6ca7dd25de257d18080c5d001e02679f4ea5db9a4832880500f859250eb690",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "containsIgnoreCase(String,String)",
+          "suite_hash": "82659d4693f7fb9c92a25c937d85ffebefd60b2f1df5ac30007e07ad5c877cf0"
+        }
+      ],
+      "project": "Lang",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "ecc5f8fd5b0fbb3974e9c3629324e113126a6087c94a13262eedb0963d069717",
+      "suite_path": "TestCode/all-modified-classes/Lang_40b/org/apache/commons/lang/StringUtils_IPOTest.java",
+      "suite_sha256": "8d33943f1c0bff090cb0d52706af983c6844b72e839594c1cb1711aec52483ed",
+      "target_class": "org.apache.commons.lang.StringUtils",
+      "test_class": "StringUtils_IPOTest",
+      "verification_result": "OK (121 tests)"
+    },
+    {
+      "audit_hash": "0a2822b01d601c46040efe9bf3426e7a416e3c6823941a32f1b01c43dce6e467",
+      "bug_id": 45,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 366,
+          "expected_pair_count": 366,
+          "model_hash": "0ccc9db61c23dda0bd8e2cd80c70ebd3c7b2b47b6c6d955e28d3cbaf3cd72804",
+          "oracle_hash": "c734707f26d12d02a21ab5460b32da21f0a4ee290679ab1189f9757dc331d56f",
+          "oracle_sha256": "40e87e70a7574e80b310a9e88fe63037f559e256ccbfec87e29a5506c1c3a96b",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 121,
+          "reused_oracle": false,
+          "signature": "abbreviate(String,int,int,String)",
+          "suite_hash": "9ffa754babe04a4e4325689106ed95bec19a4367601096970d7b7b5fcde4ab30"
+        }
+      ],
+      "project": "Lang",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "cd07dbd2ae680fb809dfed848843d2f1422a50c1afc8e168f746df0c2fde83a2",
+      "suite_path": "TestCode/all-modified-classes/Lang_45b/org/apache/commons/lang/WordUtils_IPOTest.java",
+      "suite_sha256": "711b61b37460d6c7bc8d39ed08cc63b3e8c35a11ad0b94e243d5e7da11d39cd9",
+      "target_class": "org.apache.commons.lang.WordUtils",
+      "test_class": "WordUtils_IPOTest",
+      "verification_result": "OK (121 tests)"
+    },
+    {
+      "audit_hash": "0d707ad3b568eed199aa8cc301960bd4070de47c4620c4046a19249b909acf4f",
+      "bug_id": 60,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "4ea290c1ffffb7f5280544115a03f259da813f1de8a0420545c6135ecaa56183",
+          "oracle_hash": "504f19833e36c99d8503c73107cc2cee625497849ccd18f6ad1633cb01f3ac29",
+          "oracle_sha256": "6427044d977da6e17e19095cae9e589aae2f97f415602d88e898fa1f7b1feed3",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "indexOf(char,int)",
+          "suite_hash": "caf2ab2cc9b53dfef87404734fc060ea2bbabeb49a8b4cb2b8b5b921e4bd2ebe"
+        }
+      ],
+      "project": "Lang",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "bc4902182bd06f28f0c06a694c8b9724cd30a06c1ca0335ee91165290100d4f2",
+      "suite_path": "TestCode/all-modified-classes/Lang_60b/org/apache/commons/lang/text/StrBuilder_IPOTest.java",
+      "suite_sha256": "2873a207a0258bf1ac82e6980b69cfbad7fc3e70ae9ef4a5164b0a8c3a2c5c98",
+      "target_class": "org.apache.commons.lang.text.StrBuilder",
+      "test_class": "StrBuilder_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "fd86d4302e5cdf3ede6e678a43dea00fdf7c285706f92bf660100f17f84bac53",
+      "bug_id": 61,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 55,
+          "expected_pair_count": 55,
+          "model_hash": "d4ee7a08181967ceb47d5c19f66a372a8288bd3de97e92c47495328357d27923",
+          "oracle_hash": "ec25238033fa332a44e73401df1b330f42c618f938c0e4f6a5aaeac9c424d409",
+          "oracle_sha256": "417762376b4d6c611ab2489ec010b1fd6691bf81ef7cdcaadaf89c8a93205cec",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 55,
+          "reused_oracle": false,
+          "signature": "indexOf(String,int)",
+          "suite_hash": "2c29c2b4c2a7c50ac1a19bb8b135c7d5b2257dcfa8d90e43bc3e11a0caa4a13f"
+        }
+      ],
+      "project": "Lang",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "559df02cd7e0dd4d456654e75013cf93630619b7ba7e1c9d1ef5efc9ca22d7d0",
+      "suite_path": "TestCode/all-modified-classes/Lang_61b/org/apache/commons/lang/text/StrBuilder_IPOTest.java",
+      "suite_sha256": "fd032ea8282f093abffeeded4518a5625c24045e486399e6855e92b0c95ca19e",
+      "target_class": "org.apache.commons.lang.text.StrBuilder",
+      "test_class": "StrBuilder_IPOTest",
+      "verification_result": "OK (55 tests)"
+    },
+    {
+      "audit_hash": "697ac9f811c3e2d1a8f74e94800bae6b2fbbd15f5b984dfd93954523487ec4cd",
+      "bug_id": 15,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "c22cd032bbe95c88c7619bf02f8512790cd8f4a19060b9ab06d75737d9e38396",
+          "oracle_hash": "4d770d2ca69a7210488f3895a886cebb807e654e3e3a634740feb3c9d8850818",
+          "oracle_sha256": "e832d386a10c1cf6464dc3abc83a89c1fb01e3354ff23839b0bf6c3b78ee1c03",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "pow(double,double)",
+          "suite_hash": "cb5868763b0fb424bcd198d91e6229914a8450c467e4f7ef4a4fd483555b436d"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "df12633fdafeec967110aefc581166a920540495f537d923b19ea9027a39c71a",
+      "suite_path": "TestCode/all-modified-classes/Math_15b/org/apache/commons/math3/util/FastMath_IPOTest.java",
+      "suite_sha256": "cc779d4d71aad49383502e79980b1c76956b1623388bb78877eab6eb2ff7387e",
+      "target_class": "org.apache.commons.math3.util.FastMath",
+      "test_class": "FastMath_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "db32a51e0265c71d145db7af37e11bd31ae158a427a9291ecd8a4a79b1446bd2",
+      "bug_id": 41,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 139,
+          "expected_pair_count": 139,
+          "model_hash": "681f6b551a87eb190d9b2618e61594967a6abfd8907dc97ee6ef296c250ff113",
+          "oracle_hash": "90ef9b9311750f89920c770600191c05bd7f1a06352268a4c4300a3e3422e479",
+          "oracle_sha256": "d10a2820537e1813fe24140910eb4a640c5703991099993b61f4f0604680a462",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 28,
+          "reused_oracle": false,
+          "signature": "evaluate(double[],double[],double,int,int)",
+          "suite_hash": "8b5f080ac3559a3b60b44b1016efe4609998226ce6f429323d1859b83f83accf"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "142705d95aef9d83690b1e07ab94d4d79aa58793d63e0953ff449dafd7e4ac28",
+      "suite_path": "TestCode/all-modified-classes/Math_41b/org/apache/commons/math/stat/descriptive/moment/Variance_IPOTest.java",
+      "suite_sha256": "7a72037424370f59d98eb19353919b8a04fa14ea7179afd99e752611c8f97d6b",
+      "target_class": "org.apache.commons.math.stat.descriptive.moment.Variance",
+      "test_class": "Variance_IPOTest",
+      "verification_result": "OK (28 tests)"
+    },
+    {
+      "audit_hash": "2d04df0621a14fc3c368917ad0a722bf30822ccba3c2341d6322df8c3e36b7d2",
+      "bug_id": 52,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 190,
+          "expected_pair_count": 190,
+          "model_hash": "b38bc8b5c4268e6ca9aeede1b4a288594e62704b074b3a45006ba1ad63fa13ce",
+          "oracle_hash": "cd30a73f2ff767e0f0ab717cf4da85f4e037cfb6eaed71218cc80a700b214436",
+          "oracle_sha256": "4df0c6d781699f34bb6023d6f2764dbee24cc051526fee9cb040c13e93ef7028",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 32,
+          "reused_oracle": false,
+          "signature": "getQ0()",
+          "suite_hash": "93ee0a2cadb57c920c20174bd00566ce0c254032c78e324bca684c85bcadcdd4"
+        },
+        {
+          "covered_pair_count": 190,
+          "expected_pair_count": 190,
+          "model_hash": "c22a04a10d20081802db815e57b8d458c6fce37e136660fded9a08a85730357f",
+          "oracle_hash": "a0611be1bb4bbd831baff409a57420d9528835ac344050063ebc6948c5604717",
+          "oracle_sha256": "0f17c50f6d34f7df1fa5cd487d945a9bd00c0b5265d3fb4072a8e053e1406390",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 32,
+          "reused_oracle": false,
+          "signature": "getQ1()",
+          "suite_hash": "8542a2cf0ce421af67298cd35af3310e8fdea0c465d075cc56f4cef4e8891386"
+        },
+        {
+          "covered_pair_count": 190,
+          "expected_pair_count": 190,
+          "model_hash": "1ccbcf3f00b85e38c394a4d7ce85343148a9eb4f2dbc182dc6c7e282be855192",
+          "oracle_hash": "be00d71c352e97225d5d914df647237378dd2356993261d53168c4f7fd611694",
+          "oracle_sha256": "ae99e6d7e502123d9eb3e28be2beab5970f3ddd0be2fb6d6b72b6320de917ef3",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 32,
+          "reused_oracle": false,
+          "signature": "getQ2()",
+          "suite_hash": "65f62187e886ed91e032d590075060c7b748edcb981317543613a28eac961e57"
+        },
+        {
+          "covered_pair_count": 190,
+          "expected_pair_count": 190,
+          "model_hash": "d29ffc1ae53800ff696d7abc4d657ad4bfc81283e6499c44f8e12e319dc22257",
+          "oracle_hash": "4aa49f8345af8c076eb36319a65b90431d304b472c9297e17cb48d7c6d27827f",
+          "oracle_sha256": "f6bcd30e0176d47297ab9e50a53a88ce69225d5bf1b37ea0d12af403e442b278",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 32,
+          "reused_oracle": false,
+          "signature": "getQ3()",
+          "suite_hash": "8422542b932cf2d87247f6d4781940cfac0ba5bb61e3a40a65d86591a7000db5"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "8fe256f0f359eb3eddd1d4c8ab1c987c7a0c54d9451a8fc9bab57c94a31228f9",
+      "suite_path": "TestCode/all-modified-classes/Math_52b/org/apache/commons/math/geometry/euclidean/threed/Rotation_IPOTest.java",
+      "suite_sha256": "aac972325dc2cfe1acc508150d2157f7e73045e159a620e79e3cb9d56b468b47",
+      "target_class": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+      "test_class": "Rotation_IPOTest",
+      "verification_result": "OK (128 tests)"
+    },
+    {
+      "audit_hash": "a39fead1ae0a5fa857a205330fc6f106aadffc17a009087a20a88bc47f0f689a",
+      "bug_id": 53,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "162a455f49f5329118dc939150c4a7331484c9004c322b28f3f8489960eaf421",
+          "oracle_hash": "4525fa08f7f9b8c2c21c03bcc2fbda39ed32730f014308a9cb4ca269407331e6",
+          "oracle_sha256": "a1328fef4ba9bbb8464e964520e5c7287bfbdaac035422921e6e3af218d6a690",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "getImaginary()",
+          "suite_hash": "3a5c9d754ac1c93e76a89e543f79dc7eb04411653c228f11379814cee868c64b"
+        },
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "26fbb2f46a329e9afb0ca817669ebf47a584135efd9bdb4ecc255772e31f0b72",
+          "oracle_hash": "f382fa2c7ad946b83a037e75d40e999635dec7c4303d6cb71dd3f3d2c9d7ef66",
+          "oracle_sha256": "a0e26d2834954d9a5b0c1a5d5b4a324c5ce3c73d0e39dbd681165e7370e85cf9",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "getReal()",
+          "suite_hash": "43f87fea130e9f2dcf431500b039055594d29d56c1f942a79e6c2d46bf90a12a"
+        },
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "1d42e723054deed6c5cd1b9bf14f8672f5ab55e2f6ea508c6b8494a4ccc29cb8",
+          "oracle_hash": "63a676fd2b825247cfc8ad7a6ca1721e8d9615ab98b78176820eabaa74039f67",
+          "oracle_sha256": "5169de2a7f4af467c871369ee3115f63ce9607cdb74f16e3a5b0ee30f7937525",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "isNaN()",
+          "suite_hash": "8a275c614d846791c0b6889078fedcff0f6c3bbed2af09deab1c65204c37f276"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "4e458ca90d70199eb9dba44b28d7ab3bc39ed4d3f6b9cd651c512a9e92afec13",
+      "suite_path": "TestCode/all-modified-classes/Math_53b/org/apache/commons/math/complex/Complex_IPOTest.java",
+      "suite_sha256": "498288bb8c051779028b4935c682247e989b93ba4053b7488a764a3cdcb25458",
+      "target_class": "org.apache.commons.math.complex.Complex",
+      "test_class": "Complex_IPOTest",
+      "verification_result": "OK (75 tests)"
+    },
+    {
+      "audit_hash": "11aa3d7736777920dffa9bb07378b23747fbe406f16879044fdb890426f42b4e",
+      "bug_id": 56,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 4,
+          "expected_pair_count": 4,
+          "model_hash": "3247a526e705338a088a02dd2f89ae358c376fa8b80dfe0a6fa5771ef2f58ca2",
+          "oracle_hash": "ecb61f7dbbda6b4c73b1b6b9c04849f27d88c6915d8dd8698e7fb65f54682e5e",
+          "oracle_sha256": "afa7a5b7affc4b018a987144527afc8dcc8d86bb12c3592502b4dba2474243bb",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 4,
+          "reused_oracle": false,
+          "signature": "getCount(int[])",
+          "suite_hash": "3394bce4c3ad0a25085900a035ff7d64db087be2c68e0f1acd384c776c39e0bd"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "020a2d362938ddf5a912e1c0cce2aa45b0ebab64e72129039d0b17244d5a0df2",
+      "suite_path": "TestCode/all-modified-classes/Math_56b/org/apache/commons/math/util/MultidimensionalCounter_IPOTest.java",
+      "suite_sha256": "5eb8cca086cc929a00757096818d8dabd52518d907c07a6ad0e1a36cd09069b3",
+      "target_class": "org.apache.commons.math.util.MultidimensionalCounter",
+      "test_class": "MultidimensionalCounter_IPOTest",
+      "verification_result": "OK (4 tests)"
+    },
+    {
+      "audit_hash": "bebb0b3196cada4f2ca92ceec62af367d88c7e782e3d8ea1c31dcbe17f819a2a",
+      "bug_id": 59,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "616d86aed0e8f899540bef55a53feb2a1c74c0b70d63a5a64e5194de4b7ee94a",
+          "oracle_hash": "da0119f2896240476ea7c729cf53681ba0166eedb7319952534336f436522596",
+          "oracle_sha256": "afc64fc153ea2db373af611cd4e115490ba3cfaa1d0f0472ebfb338ba63c1bc6",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "max(float,float)",
+          "suite_hash": "6de3797b02eb948ae594a7f1265f2534e3bfda51f036f2261be08e6492897243"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "d9b6abd981031691ee7e75c1cc75dc7316e3663d00ff283713b59c1daceac7fb",
+      "suite_path": "TestCode/all-modified-classes/Math_59b/org/apache/commons/math/util/FastMath_IPOTest.java",
+      "suite_sha256": "bd4655d1f6a47ccdc276a054b091c925330dc5f69f6c018046c4ab681d583da8",
+      "target_class": "org.apache.commons.math.util.FastMath",
+      "test_class": "FastMath_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "366d8bb5576c05805e245394baf19a95c2206a3c54ae2f0ea2089ff5a359c4af",
+      "bug_id": 63,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "ae9512b0184ca7dbc39eed20480f29baba84283f73ec946565437bf2eb775d75",
+          "oracle_hash": "8ce9a7ea7fc1c328531f0dcfe20cb8eafb8a58c27ad5b7b3d28161515555ee8b",
+          "oracle_sha256": "947775b95e6e1ed4385b79c74dbb625350aac297d274e581709da111e4018ce3",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "equals(double,double)",
+          "suite_hash": "7734a02ff022f84d2954b1aedf95ff18904fdda59736fe179ea16de67a89bba6"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "58ec23b9bb175cedb19b5213c4224e5af41a136f0077ab310ad5ac509fc23efd",
+      "suite_path": "TestCode/all-modified-classes/Math_63b/org/apache/commons/math/util/MathUtils_IPOTest.java",
+      "suite_sha256": "e6b3d0e3b06a85e4fa96120d88d075da4a2594dbc3ffcee7a4830fc448ea4a7f",
+      "target_class": "org.apache.commons.math.util.MathUtils",
+      "test_class": "MathUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "43b7129d19c1381aee35972c45fa201f96705f3a1191b01a6478c7fa88566008",
+      "bug_id": 79,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 4,
+          "expected_pair_count": 4,
+          "model_hash": "acaa3a81dca1adbce223493879562c3c52f2175da8eadbf2f9b84e6edc32f736",
+          "oracle_hash": "8989f4eeff0e5fbd40ba5ee880092d848c4a8631815b3b690863f3708ecc57f5",
+          "oracle_sha256": "03fdc5686aa0bc2e2abc68c32002ee405fa838f5995e2383f0ccb24480041106",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 4,
+          "reused_oracle": false,
+          "signature": "distance(int[],int[])",
+          "suite_hash": "95bd1b5555ec747dd2e0287e89f8b54ee5d0238f77bd3c5d3ee75b6a6361cdc3"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "692435b67ac48fc58d4e37bd7db00a267d1faae3abe0189e85de9dae3c152b43",
+      "suite_path": "TestCode/all-modified-classes/Math_79b/org/apache/commons/math/util/MathUtils_IPOTest.java",
+      "suite_sha256": "6ab2db2382c59d2f1e222fbd35f61fee1582822b2866d8dd1033e9f60094dd71",
+      "target_class": "org.apache.commons.math.util.MathUtils",
+      "test_class": "MathUtils_IPOTest",
+      "verification_result": "OK (4 tests)"
+    },
+    {
+      "audit_hash": "b34c3fe18865c86516fc0f7a54c1f75df12a22582d39d0551205606bbe95cb34",
+      "bug_id": 93,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "363601830551eefa5b551fa54566984331226bcd3135376812dfaa0f8d7518b4",
+          "oracle_hash": "badc5f37b11aa12200a16299e720c8c5fb0486f5279d1b064e54661b9396b3fa",
+          "oracle_sha256": "faddd49c6f4317cb2fd24fbe0dfcc68046dd79137c67458d45ef1ee532042b29",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "log(double,double)",
+          "suite_hash": "b2011de71077073adb04e224adb376aef6b6f397b9ada96e59d88b17425fdebc"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "f0117a0f28def18429dd768791b9c34c7b19c32a1e8c6a6a8c43eea9fa8b677d",
+      "suite_path": "TestCode/all-modified-classes/Math_93b/org/apache/commons/math/util/MathUtils_IPOTest.java",
+      "suite_sha256": "f789bd1058139d00bd3cfffe1d52624473186efe1ca12e0c4ac2c34207848f9c",
+      "target_class": "org.apache.commons.math.util.MathUtils",
+      "test_class": "MathUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "d525d415d68bc7093804cf200c39621b3ccb7d3ef05101892c8570617f2513b3",
+      "bug_id": 94,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "3e360e2fe0de407b032646daec518ea7f1f0626e3285bff0b853643193e03be4",
+          "oracle_hash": "4818317fe5e9df5a0f0fa1058ea7ab7359dbc1c3fe5a3556d0febb3fd541e4a3",
+          "oracle_sha256": "c9a2bf8f1b4c2013e40ea4e41f98a8826f401abd08f3462704a187d9d908f385",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "gcd(int,int)",
+          "suite_hash": "b61a79d72d31eaa7d1359afca216a8bcf9bad20b2014f1062f6d910dac61504e"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "ea2be0f43d557dead8bff63590d9617d19a25252930bf347b5515ad03cf18328",
+      "suite_path": "TestCode/all-modified-classes/Math_94b/org/apache/commons/math/util/MathUtils_IPOTest.java",
+      "suite_sha256": "38588c73ddfdfa37b9aab2924c5fc3a89c76735f3ecde162265ac8471598e629",
+      "target_class": "org.apache.commons.math.util.MathUtils",
+      "test_class": "MathUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    },
+    {
+      "audit_hash": "6f2709801904e532b5a4151bdf720c93a6ef25af210266db59801b533bd987bb",
+      "bug_id": 95,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 75,
+          "expected_pair_count": 75,
+          "model_hash": "dc430cb9a11fda600c7fdf1d0854aff9cb781f1833a91ae35b3be7f655cfe3ae",
+          "oracle_hash": "219540586da106d531353145e6c54ddf7a9a9330f8b64aa923c6b5a799a1a36e",
+          "oracle_sha256": "ae2f84da4e9e18c83fda39d0e5ce6eadc0da924aafc5d885148fdbec5f650b32",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 28,
+          "reused_oracle": false,
+          "signature": "cumulativeProbability(double)",
+          "suite_hash": "35cd02a1abf99f45d8e1476d09512f599aca4b68ca930e385fc17740466b0305"
+        },
+        {
+          "covered_pair_count": 75,
+          "expected_pair_count": 75,
+          "model_hash": "7dfea0bba609c22ee9698463514118d794aa01f0f157178f2dcef0cd30962576",
+          "oracle_hash": "15c2e38658bfad8cda8dbb7a94a2df85e60c8ffec7e9ac6e1cb03d6286b5772f",
+          "oracle_sha256": "ca2dae5135bb8dc16ce1010418908a1a22e6c77d5ca6d5c316db66666045d488",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 28,
+          "reused_oracle": false,
+          "signature": "getInitialDomain(double)",
+          "suite_hash": "8abb6197d79516a852508dece0aff74d3def62685bcd2346ef8adf8b23ee4aac"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "725d4b7634807501c37d89a202686628195341135f272cdde62ba478ec04650e",
+      "suite_path": "TestCode/all-modified-classes/Math_95b/org/apache/commons/math/distribution/FDistributionImpl_IPOTest.java",
+      "suite_sha256": "5a7b1d02acbcc7fb8e581f704136b9bc22da0bc92300775e2f9a2591b73fb86a",
+      "target_class": "org.apache.commons.math.distribution.FDistributionImpl",
+      "test_class": "FDistributionImpl_IPOTest",
+      "verification_result": "OK (56 tests)"
+    },
+    {
+      "audit_hash": "be1415e0198f121cb9ed33c56a8f9057fc43f15e9a3cd0fd97e43ee1624f26c7",
+      "bug_id": 102,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 24,
+          "expected_pair_count": 24,
+          "model_hash": "9f8adb9caa5cfcb78b7c0ea979a2122d8d6e90bc28b6d31d62984f36cd7eaca0",
+          "oracle_hash": "15946e9ec7631908bc43b6f82b32167fb131e061f7e9ad9136b2b7abd2d966c2",
+          "oracle_sha256": "4567173134c4e31375e6c3a501cde61718df41c3e612e2ae71ed1b619f91b1d9",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 10,
+          "reused_oracle": false,
+          "signature": "chiSquareTest(double[],long[],double)",
+          "suite_hash": "1e624c05b218bf5d09e718eae048a44000a4e4b81e24a031eb59bf66daae21e2"
+        }
+      ],
+      "project": "Math",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "3c51e6fc2ca55d6478ad0d18b108aa5b8034162e73fe0bd89653f84c1916ea1e",
+      "suite_path": "TestCode/all-modified-classes/Math_102b/org/apache/commons/math/stat/inference/ChiSquareTestImpl_IPOTest.java",
+      "suite_sha256": "8ab9a6e856cfd9fac2344df90a3ffe986c6a9751e4ade7125a97ed7dd5bc6d33",
+      "target_class": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+      "test_class": "ChiSquareTestImpl_IPOTest",
+      "verification_result": "OK (10 tests)"
+    },
+    {
+      "audit_hash": "dab810e5bf08919ded5309097a07e57c49f0dc33d6ccd6805bdb68653741569d",
+      "bug_id": 15,
+      "generation_backend": "native_ipo",
+      "generation_toolchain_hash": "f4a2cc02b220e0bc38af067e6f52305c6b06da1c536e9b10cbd05d0a85bebaa8",
+      "methods": [
+        {
+          "covered_pair_count": 25,
+          "expected_pair_count": 25,
+          "model_hash": "d72473d14ce6773be82723b8ec9eb55de9ec67c5d117a0c50b2efd553fe3d303",
+          "oracle_hash": "7d769630d1799843ff3e5182adee66cac3a2371ea1a5e6cc4d9a66bf7b8b7096",
+          "oracle_sha256": "13daaec676324aa775dd97eb39862c8b6b88a8480f44e80ed6fe71b6b70fbdb0",
+          "pair_coverage_percent": 100.0,
+          "pairwise_count": 25,
+          "reused_oracle": false,
+          "signature": "safeMultiply(long,int)",
+          "suite_hash": "e1a02af8cbe8559385ef684235dbf0f24c310a68cba2ada8cb73f53891c70be2"
+        }
+      ],
+      "project": "Time",
+      "status": "FIXED_VERIFIED",
+      "strength": 2,
+      "suite_hash": "e32624cc23fc09f02519677a27125ed4f9936e789db67dca389469fe01ca2e51",
+      "suite_path": "TestCode/all-modified-classes/Time_15b/org/joda/time/field/FieldUtils_IPOTest.java",
+      "suite_sha256": "51a1b073bc2ea160fd5019c9581a8d6243f39847981e77536d10f7c0edaa9dd1",
+      "target_class": "org.joda.time.field.FieldUtils",
+      "test_class": "FieldUtils_IPOTest",
+      "verification_result": "OK (25 tests)"
+    }
+  ]
+}
