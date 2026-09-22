@@ -23,8 +23,8 @@ class NewFactorPair:
     new_value: str
 
 
-def _validate_domains(factor_domains: Mapping[str, Sequence[str]]) -> None:
-    if not factor_domains:
+def _validate_domains(factor_domains: Mapping[str, Sequence[str]], allow_empty: bool = False) -> None:
+    if not allow_empty and not factor_domains:
         raise ValueError("At least one factor domain is required")
 
     for factor, values in factor_domains.items():
@@ -38,6 +38,8 @@ def _validate_domains(factor_domains: Mapping[str, Sequence[str]]) -> None:
             raise ValueError(
                 "Domain for {!r} contains duplicate values".format(factor)
             )
+
+
 
 
 def initial_construction(
@@ -328,11 +330,16 @@ def generate_pairwise(
     factor_domains: Mapping[str, Sequence[str]],
     seed_combinations: Sequence[Mapping[str, str]] = (),
     valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
+    allow_empty: bool = False,
 ) -> List[Dict[str, str]]:
     """Generate a deterministic 2-way covering array using native IPO."""
-    _validate_domains(factor_domains)
+    _validate_domains(factor_domains, allow_empty=allow_empty)
     factors = list(factor_domains)
+    if not factors:
+        return [{}]
     valid_rows = _normalize_valid_combinations(factor_domains, valid_combinations)
+
+
 
     if len(factors) == 1:
         only_factor = factors[0]

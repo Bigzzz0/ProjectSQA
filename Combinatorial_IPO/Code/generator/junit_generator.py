@@ -84,6 +84,7 @@ def _render_test_method(
         elif outcome == "THROW":
             if not re.fullmatch(r"[A-Za-z_$][A-Za-z0-9_.$]*", outcome_type):
                 raise ValueError("Invalid oracle exception type: {!r}".format(outcome_type))
+            clean_exception_type = re.sub(r"\$\d+", "", outcome_type)
             body = (
                 "try {{\n"
                 "    {invocation};\n"
@@ -93,8 +94,9 @@ def _render_test_method(
                 "}}"
             ).format(
                 invocation=invocation,
-                exception_type=outcome_type,
+                exception_type=clean_exception_type,
             )
+
         else:
             raise ValueError("Unsupported oracle outcome: {!r}".format(outcome))
 

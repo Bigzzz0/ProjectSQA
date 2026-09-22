@@ -234,7 +234,121 @@ def parse_java_file(filepath: str) -> Dict[str, object]:
         "constructors": constructors,
         "declared_constructor_count": declared_constructor_count,
         "methods": methods,
+        "fields": [],
+        "enum_constants": [],
+        "extends": "",
+        "implements": [],
+        "nested_types": [],
     }
+
+
+def _ensure_ast_parser_compiled(force: bool = False) -> Path | None:
+    code_dir = Path(__file__).resolve().parents[1]
+    class_file = code_dir / "analyzer" / "JavaAstParser.class"
+    java_file = code_dir / "analyzer" / "JavaAstParser.java"
+    if class_file.exists() and not force:
+        return code_dir
+    if java_file.exists():
+        try:
+            import subprocess
+            # Try compiling with release 11 for broad compatibility across JDK versions
+            res = subprocess.run(
+                ["javac", "--release", "11", "-d", str(code_dir), str(java_file)],
+                capture_output=True,
+                check=False,
+            )
+            if res.returncode != 0:
+                # Fallback to plain javac if --release 11 not recognized
+                res = subprocess.run(
+                    ["javac", "-d", str(code_dir), str(java_file)],
+                    capture_output=True,
+                    check=False,
+                )
+            if res.returncode == 0 and class_file.exists():
+                return code_dir
+        except Exception:
+            pass
+    return None
+
+
+def parse_java_ast(path: str | Path) -> Dict[str, object] | None:
+    """Parse Java file into AST representation via Java Compiler Tree API."""
+    import subprocess
+    code_dir = _ensure_ast_parser_compiled()
+    if not code_dir:
+        return None
+    file_path = Path(path).resolve()
+    if not file_path.exists():
+        return None
+    try:
+        res = subprocess.run(
+            ["java", "-cp", str(code_dir), "analyzer.JavaAstParser", str(file_path)],
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=30,
+        )
+        if "UnsupportedClassVersionError" in res.stderr:
+            code_dir = _ensure_ast_parser_compiled(force=True)
+            if code_dir:
+                res = subprocess.run(
+                    ["java", "-cp", str(code_dir), "analyzer.JavaAstParser", str(file_path)],
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                    timeout=30,
+                )
+        if res.returncode == 0 and res.stdout.strip().startswith("{"):
+            data = json.loads(res.stdout)
+            if "types" in data:
+                return data
+    except Exception:
+        pass
+    return None
+
+
+def parse_java_file_ast_preferred(
+    file_path: str | Path, target_class: str | None = None
+) -> Dict[str, object]:
+    """Parse Java file with JavaAstParser, falling back to regex parser."""
+    path = Path(file_path)
+    ast_data = parse_java_ast(path)
+    if ast_data and ast_data.get("types"):
+        types = ast_data["types"]
+        selected_type = None
+        if target_class:
+            simple_target = target_class.rsplit(".", 1)[-1].replace("$", ".")
+            for t in types:
+                if t.get("name") == simple_target or t.get("fqcn") == target_class:
+                    selected_type = t
+                    break
+        if not selected_type and types:
+            selected_type = types[0]
+
+        if selected_type:
+            constructors = selected_type.get("constructors", [])
+            methods = selected_type.get("methods", [])
+            return {
+                "source_file": str(path),
+                "package": ast_data.get("package", ""),
+                "class": selected_type.get("name", ""),
+                "fqcn": selected_type.get("fqcn", ""),
+                "type_kind": selected_type.get("kind", "class"),
+                "abstract": bool(selected_type.get("abstract")),
+                "visibility": selected_type.get("visibility", "public"),
+                "static": bool(selected_type.get("static")),
+                "constructors": constructors,
+                "declared_constructor_count": len(constructors),
+                "methods": methods,
+                "fields": selected_type.get("fields", []),
+                "enum_constants": selected_type.get("enum_constants", []),
+                "extends": selected_type.get("extends", ""),
+                "implements": selected_type.get("implements", []),
+                "nested_types": selected_type.get("nested_types", []),
+            }
+
+    # Fallback to regex parser
+    return parse_java_file(path)
 
 
 def method_signature(method: Mapping[str, object]) -> str:
@@ -258,8 +372,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Extract public Java method metadata")
     parser.add_argument("java_file", help="Path to a Java source file")
     args = parser.parse_args()
-    print(json.dumps(parse_java_file(args.java_file), indent=2))
+    print(json.dumps(parse_java_file_ast_preferred(args.java_file), indent=2))
 
 
 if __name__ == "__main__":
     main()
+

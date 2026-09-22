@@ -56,6 +56,28 @@ public class Sample {
             },
         )
 
+    def test_intra_class_call_chain_selects_public_caller(self) -> None:
+        buggy = """package example;
+public class Sample {
+  private static int helper(int a, int b) { return a; }
+  public static int publicEntry(int a, int b) { return helper(a, b); }
+  public static int untouched(int a, int b) { return 0; }
+}
+"""
+        fixed = buggy.replace("return a", "return a + b")
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            evidence = select_callable_evidence(
+                self._parse(root, "Fixed.java", fixed),
+                fixed,
+                self._parse(root, "Buggy.java", buggy),
+                buggy,
+            )
+        self.assertIn("publicEntry(int,int)", evidence)
+        self.assertTrue(any(item["kind"] == "CALL_CHAIN" for item in evidence["publicEntry(int,int)"]))
+        self.assertNotIn("untouched(int,int)", evidence)
+
 
 if __name__ == "__main__":
+
     unittest.main()

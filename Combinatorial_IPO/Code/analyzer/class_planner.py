@@ -43,56 +43,30 @@ def _parameter_model(parameters: Sequence[Mapping[str, object]]) -> Dict[str, ob
         return {"domains": {}, "adapters": {}, "cleanup_required": False, "missing": missing}
 
 
+from domain.construction_planner import plan_receiver
+
+
 def _receiver_strategy(
     metadata: Mapping[str, object], target_class: str
 ) -> Optional[Dict[str, object]]:
-    if metadata.get("type_kind") != "class":
+    plan = plan_receiver(metadata, target_class)
+    if plan is None:
         return None
-    if metadata.get("abstract"):
-        return None
-    constructors = [
-        item
-        for item in metadata.get("constructors", [])
-        if isinstance(item, dict) and item.get("visibility") in {"public", "protected", "package"}
-    ]
-    simple_name = target_class.rsplit(".", 1)[-1]
-    if not constructors and not metadata.get("declared_constructor_count"):
-        return {
-            "kind": "implicit_zero_arg_constructor",
-            "expression_template": "new {}()".format(simple_name),
-            "factor_domains": {},
-            "adapters": {},
-            "cleanup_required": False,
-        }
-    for constructor in sorted(constructors, key=method_signature):
-        parameters = constructor.get("parameters", [])
-        if not isinstance(parameters, list):
-            continue
-        model = _parameter_model(parameters)
-        if model["missing"]:
-            continue
-        factor_domains = {
-            "receiver__{}".format(name): values
-            for name, values in model["domains"].items()
-        }
-        arguments = ", ".join(
-            "{receiver__%s}" % parameter["name"] for parameter in parameters
-        )
-        return {
-            "kind": "zero_arg_constructor" if not parameters else "factorized_constructor",
-            "signature": method_signature(constructor),
-            "expression_template": "new {}({})".format(simple_name, arguments),
-            "factor_domains": factor_domains,
-            "adapters": {
-                "receiver__{}".format(name): adapter
-                for name, adapter in model["adapters"].items()
-            },
-            "cleanup_required": model["cleanup_required"],
-        }
-    return None
+    return {
+        "kind": plan.kind if plan.kind != "constructor" else (
+            "implicit_zero_arg_constructor" if plan.provenance == "implicit_zero_arg"
+            else ("zero_arg_constructor" if not plan.factor_domains else "factorized_constructor")
+        ),
+        "expression_template": plan.expression,
+        "factor_domains": dict(plan.factor_domains),
+        "adapters": dict(plan.adapters),
+        "cleanup_required": plan.cleanup_required,
+        "provenance": plan.provenance,
+    }
 
 
 def _has_unambiguous_evidence(records: Sequence[Mapping[str, object]]) -> bool:
+
     return any(record.get("confidence") != "AMBIGUOUS" for record in records)
 
 

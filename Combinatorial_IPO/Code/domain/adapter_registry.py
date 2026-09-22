@@ -96,6 +96,104 @@ def _semantic_domain(java_type: str) -> Optional[AdapterDomain]:
             "collection",
             ("java.util.Collections.emptyList()", "java.util.Collections.singletonList({})".format(value)),
         )
+    if simple in {"OutputStream", "ByteArrayOutputStream"}:
+        return AdapterDomain(
+            "output_stream",
+            (
+                "new java.io.ByteArrayOutputStream()",
+                "new java.io.ByteArrayOutputStream(32)",
+            ),
+            cleanup_required=True,
+        )
+    if simple in {"Writer", "StringWriter"}:
+        return AdapterDomain(
+            "writer",
+            (
+                'new java.io.StringWriter()',
+                'new java.io.StringWriter(16)',
+            ),
+            cleanup_required=True,
+        )
+    if simple in {"CharSequence"}:
+        return AdapterDomain(
+            "char_sequence",
+            ('""', '"a"', '"test"'),
+        )
+    if simple in {"Date", "java.util.Date"}:
+        return AdapterDomain(
+            "date",
+            ("new java.util.Date(0L)", "new java.util.Date(1000000000000L)"),
+        )
+    if simple in {"TimeZone", "java.util.TimeZone"}:
+        return AdapterDomain(
+            "timezone",
+            ('java.util.TimeZone.getTimeZone("UTC")', 'java.util.TimeZone.getTimeZone("GMT")'),
+        )
+    if simple in {"Calendar", "java.util.Calendar"}:
+        return AdapterDomain(
+            "calendar",
+            ('java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))',),
+        )
+    if simple in {"File", "java.io.File"}:
+        return AdapterDomain(
+            "file",
+            ('new java.io.File("temp.txt")', 'new java.io.File(".")'),
+        )
+    if simple in {"Object", "java.lang.Object"}:
+        return AdapterDomain(
+            "object",
+            ('new Object()', '"sample_str"', 'Integer.valueOf(1)'),
+        )
+    if simple.startswith("Class") or compact.startswith("Class<"):
+        return AdapterDomain(
+            "class_literal",
+            ("String.class", "Object.class", "Integer.class"),
+        )
+    if simple in {"DateTimeZone", "org.joda.time.DateTimeZone"}:
+        return AdapterDomain(
+            "date_time_zone",
+            ("org.joda.time.DateTimeZone.UTC",),
+        )
+    if simple in {"Complex", "org.apache.commons.math.complex.Complex"}:
+        return AdapterDomain(
+            "complex",
+            ("new org.apache.commons.math.complex.Complex(1.0, 2.0)", "org.apache.commons.math.complex.Complex.ZERO"),
+        )
+    if simple in {"Fraction", "org.apache.commons.math.fraction.Fraction"}:
+        return AdapterDomain(
+            "fraction",
+            ("new org.apache.commons.math.fraction.Fraction(1, 2)", "org.apache.commons.math.fraction.Fraction.ONE"),
+        )
+    if simple in {"Attributes", "org.jsoup.nodes.Attributes"}:
+        return AdapterDomain(
+            "attributes",
+            ("new org.jsoup.nodes.Attributes()",),
+        )
+    if simple in {"Tag", "org.jsoup.parser.Tag"}:
+        return AdapterDomain(
+            "tag",
+            ('org.jsoup.parser.Tag.valueOf("p")', 'org.jsoup.parser.Tag.valueOf("div")'),
+        )
+    if simple in {"Node", "org.jsoup.nodes.Node", "Element", "org.jsoup.nodes.Element"}:
+        return AdapterDomain(
+            "jsoup_node",
+            ('new org.jsoup.nodes.Element("p")', 'new org.jsoup.nodes.Element("div")'),
+        )
+    if compact in {"List", "java.util.List", "Collection", "java.util.Collection", "List<?>", "Collection<?>", "List<Object>", "Collection<Object>"}:
+        return AdapterDomain(
+            "collection_generic",
+            ("java.util.Collections.emptyList()", 'java.util.Arrays.asList("a", "b")'),
+        )
+    if compact in {"Set", "java.util.Set", "Set<?>", "Set<String>", "Set<Object>"}:
+        return AdapterDomain(
+            "set_generic",
+            ("java.util.Collections.emptySet()", 'java.util.Collections.singleton("a")'),
+        )
+    if compact in {"Map", "java.util.Map", "Map<?,?>", "Map<String,String>", "Map<String,Object>", "Map<Object,Object>"}:
+        return AdapterDomain(
+            "map_generic",
+            ("java.util.Collections.emptyMap()", 'java.util.Collections.singletonMap("key", "val")'),
+        )
     iterator_match = re.match(r"(?:java\.util\.)?Iterator<(String|Integer)>", compact)
     if iterator_match:
         value = '"value"' if iterator_match.group(1) == "String" else "1"
@@ -107,6 +205,7 @@ def _semantic_domain(java_type: str) -> Optional[AdapterDomain]:
             ),
         )
     return None
+
 
 
 def resolve_adapter_domain(java_type: str) -> AdapterDomain:
@@ -134,13 +233,28 @@ def stable_observer_for_type(java_type: object) -> Optional[str]:
     if not isinstance(java_type, str):
         return None
     normalized = normalize_java_type(java_type)
+    if normalized.endswith("[]"):
+        return "array_string_value"
     scalar = {
         "byte", "short", "int", "long", "float", "double", "boolean", "char",
         "Byte", "Short", "Integer", "Long", "Float", "Double", "Boolean", "Character",
-        "String", "java.lang.String", "BigInteger", "java.math.BigInteger",
-        "BigDecimal", "java.math.BigDecimal",
+        "String", "java.lang.String", "CharSequence", "BigInteger", "java.math.BigInteger",
+        "BigDecimal", "java.math.BigDecimal", "Number", "java.lang.Number",
     }
-    return "scalar_string_value" if normalized in scalar else None
+    if normalized in scalar:
+        return "scalar_string_value"
+    simple = normalized.rsplit(".", 1)[-1]
+    if simple in {"List", "Collection", "Set", "ArrayList", "HashSet"}:
+        return "collection_size"
+    if simple in {"Map", "HashMap"}:
+        return "map_size"
+    if simple in {"Complex", "Fraction"}:
+        return "deterministic_to_string"
+    if simple in {"Date"}:
+        return "date_time_millis"
+    return None
+
+
 
 
 def domains_for_parameters(parameters: List[Mapping[str, object]]) -> Tuple[Dict[str, List[str]], Dict[str, str], bool]:

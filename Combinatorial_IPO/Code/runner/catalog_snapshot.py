@@ -15,7 +15,8 @@ SNAPSHOT_SCHEMA_VERSION = 1
 
 
 def file_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    content = path.read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(content).hexdigest()
 
 
 def _normalizer_sha256() -> str:

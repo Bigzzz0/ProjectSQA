@@ -5,18 +5,21 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 from typing import Dict, List
 
-from runner.catalog import CatalogTarget, load_catalog
-
-
 CODE_ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = CODE_ROOT.parent.parent
+if str(CODE_ROOT) not in sys.path:
+    sys.path.insert(0, str(CODE_ROOT))
+
+from runner.catalog import CatalogTarget, load_catalog
 AUDIT_INPUTS = (
     CODE_ROOT / "analyzer" / "java_parser.py",
     CODE_ROOT / "analyzer" / "defect_evidence.py",
     CODE_ROOT / "analyzer" / "class_planner.py",
+    CODE_ROOT / "domain" / "construction_planner.py",
     CODE_ROOT / "domain" / "adapter_registry.py",
     CODE_ROOT / "runner" / "temporary_sources.py",
     CODE_ROOT / "runner" / "all_class_pipeline.py",
@@ -35,7 +38,7 @@ def _files_fingerprint(paths: tuple[Path, ...]) -> str:
     digest = hashlib.sha256()
     for path in paths:
         digest.update(path.name.encode("utf-8"))
-        digest.update(path.read_bytes())
+        digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
     return digest.hexdigest()
 
 

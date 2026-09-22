@@ -71,12 +71,24 @@ def select_callable_evidence(
     buggy_by_signature = {method_signature(item): item for item in buggy_callables}
     name_counts = Counter(str(item.get("name")) for item in fixed_callables)
 
+    # Intra-class call chain analysis:
+    # If a private/helper method was changed, identify public callables that call it.
+    changed_helper_names: Set[str] = set()
+    for item in fixed_callables + buggy_callables:
+        sig = method_signature(item)
+        if _overlaps(item, fixed_changed) or _overlaps(buggy_by_signature.get(sig, {}), buggy_changed):
+            if item.get("visibility") not in {"public", "protected"}:
+                changed_helper_names.add(str(item.get("name", "")))
+
+    fixed_lines = fixed_source.splitlines()
+
     for item in fixed_callables:
         signature = method_signature(item)
         records: List[Dict[str, object]] = []
-        if _overlaps(item, fixed_changed) or _overlaps(
+        is_direct_diff = _overlaps(item, fixed_changed) or _overlaps(
             buggy_by_signature.get(signature, {}), buggy_changed
-        ):
+        )
+        if is_direct_diff:
             records.append({"kind": "SOURCE_DIFF", "confidence": "HIGH"})
         name = str(item.get("name", ""))
         if name and _trigger_mentions(name, trigger_test_sources):
@@ -86,6 +98,26 @@ def select_callable_evidence(
                     "confidence": "HIGH" if name_counts[name] == 1 else "AMBIGUOUS",
                 }
             )
+
+        # Check if this callable calls any changed private helper
+        start = item.get("start_line")
+        end = item.get("end_line")
+        if isinstance(start, int) and isinstance(end, int) and start <= end <= len(fixed_lines):
+            method_body = "\n".join(fixed_lines[start - 1:end])
+            for helper_name in changed_helper_names:
+                if helper_name and helper_name != name:
+                    call_pattern = re.compile(r"(?<![\w$])" + re.escape(helper_name) + r"\s*\(")
+                    if call_pattern.search(method_body):
+                        records.append({
+                            "kind": "CALL_CHAIN",
+                            "confidence": "HIGH",
+                            "callee": helper_name,
+                        })
+                        break
+
         if records:
             evidence[signature] = records
+
     return evidence
+
+

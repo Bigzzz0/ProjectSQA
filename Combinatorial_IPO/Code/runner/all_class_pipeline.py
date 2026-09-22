@@ -26,7 +26,7 @@ if str(CODE_ROOT) not in sys.path:
 from algorithm.ipo import generate_pairwise  # noqa: E402
 from analyzer.class_planner import build_class_plan  # noqa: E402
 from analyzer.defect_evidence import select_callable_evidence  # noqa: E402
-from analyzer.java_parser import parse_java_file  # noqa: E402
+from analyzer.java_parser import parse_java_file, parse_java_file_ast_preferred  # noqa: E402
 from generator.junit_generator import synthesize_junit_suite  # noqa: E402
 from oracle.fixed_version_oracle import OracleCollectionError, collect_fixed_oracle  # noqa: E402
 from oracle.verify_suite import verify_suite  # noqa: E402
@@ -38,7 +38,7 @@ from verification.pair_coverage import verify_pair_coverage  # noqa: E402
 
 
 ROUTED_STATUSES = {"NEEDS_ADAPTER", "NEEDS_ENTRY_POINT", "NOT_PAIRWISE_APPLICABLE", "DATA_ERROR", "ANALYSIS_ERROR"}
-PUBLISH_ROOT_NAME = "all-modified-classes"
+PUBLISH_ROOT_NAME = ""
 
 
 def _canonical_hash(value: object) -> str:
@@ -66,17 +66,18 @@ def _atomic_json(path: Path, value: object) -> None:
     os.replace(temporary, path)
 
 
-def _parse_text(source: str, suffix: str) -> Mapping[str, object]:
+def _parse_text(source: str, suffix: str, target_class: str = "") -> Mapping[str, object]:
     with tempfile.TemporaryDirectory(prefix="ipo_parse_") as name:
         path = Path(name) / suffix
         path.write_text(source, encoding="utf-8")
-        return parse_java_file(str(path))
+        return parse_java_file_ast_preferred(str(path), target_class=target_class)
 
 
 def audit_class(
     target: CatalogTarget,
     target_class: str,
     bundle: Mapping[str, object],
+    require_evidence: bool = False,
 ) -> Dict[str, object]:
     class_sources = bundle["classes"][target_class]
     presence = str(class_sources["source_presence"])
@@ -89,20 +90,20 @@ def audit_class(
         }
     selected_source = str(class_sources["fixed_source"] or class_sources["buggy_source"])
     try:
-        selected = _parse_text(selected_source, target_class.rsplit(".", 1)[-1] + ".java")
+        selected = _parse_text(selected_source, target_class.rsplit(".", 1)[-1] + ".java", target_class=target_class)
         buggy = (
-            _parse_text(str(class_sources["buggy_source"]), "Buggy.java")
+            _parse_text(str(class_sources["buggy_source"]), "Buggy.java", target_class=target_class)
             if class_sources["buggy_source"] else None
         )
-    except ValueError as exc:
+    except (ValueError, Exception) as exc:
         return {
             "schema_version": 2, "project": target.project, "bug_id": target.bug_id,
             "target_class": target_class, "source_presence": presence,
             "status": "ANALYSIS_ERROR", "reason": str(exc),
             "audit_hash": _canonical_hash([target.project, target.bug_id, target_class, str(exc)]),
         }
-    actual = "{}.{}".format(selected["package"], selected["class"]) if selected["package"] else selected["class"]
-    if actual != target_class:
+    actual = selected.get("fqcn") or ("{}.{}".format(selected["package"], selected["class"]) if selected["package"] else selected["class"])
+    if actual != target_class and actual.replace("$", ".") != target_class.replace("$", "."):
         return {
             "schema_version": 2, "project": target.project, "bug_id": target.bug_id,
             "target_class": target_class, "actual_class": actual,
@@ -121,7 +122,7 @@ def audit_class(
         selected, target.project, target.bug_id, target_class,
         target.trigger_tests, presence,
         hashlib.sha256(selected_source.encode("utf-8")).hexdigest(),
-        evidence, True,
+        evidence, require_evidence,
     )
     if presence == "DELETED_IN_FIXED":
         plan["status"] = "NOT_PAIRWISE_APPLICABLE"
@@ -132,8 +133,8 @@ def audit_class(
     return plan
 
 
-def select_canary(records: Sequence[Mapping[str, object]]) -> List[Mapping[str, object]]:
-    """Select a deterministic union by project, source presence, and adapter family."""
+def select_canary(records: Sequence[Mapping[str, object]], target_count: int | None = None) -> List[Mapping[str, object]]:
+    """Select a deterministic union by project, source presence, and adapter family, optionally filling up to target_count."""
     ready = sorted(
         (record for record in records if record.get("status") == "AUTO_READY"),
         key=lambda item: (str(item["project"]), int(item["bug_id"]), str(item["target_class"])),
@@ -142,6 +143,8 @@ def select_canary(records: Sequence[Mapping[str, object]]) -> List[Mapping[str, 
     covered_projects = set()
     covered_presence = set()
     covered_adapters = set()
+    covered_receivers = set()
+
     for record in ready:
         identity = (record["project"], record["bug_id"], record["target_class"])
         adapters = {
@@ -150,9 +153,11 @@ def select_canary(records: Sequence[Mapping[str, object]]) -> List[Mapping[str, 
             if callable_plan.get("status") == "AUTO_READY"
             for adapter in callable_plan.get("adapters", {}).values()
         }
+        receiver_kind = str((record.get("receiver_strategy") or {}).get("kind", "static"))
         adds = (
             record["project"] not in covered_projects
             or record.get("source_presence") not in covered_presence
+            or receiver_kind not in covered_receivers
             or bool(adapters - covered_adapters)
         )
         if adds:
@@ -160,7 +165,30 @@ def select_canary(records: Sequence[Mapping[str, object]]) -> List[Mapping[str, 
             covered_projects.add(record["project"])
             covered_presence.add(record.get("source_presence"))
             covered_adapters.update(adapters)
-    return list(selected.values())
+            covered_receivers.add(receiver_kind)
+
+    if target_count is not None and len(selected) < target_count and len(selected) < len(ready):
+        by_project: Dict[str, List[Mapping[str, object]]] = {}
+        for record in ready:
+            identity = (record["project"], record["bug_id"], record["target_class"])
+            if identity not in selected:
+                by_project.setdefault(str(record["project"]), []).append(record)
+        projects = sorted(by_project.keys())
+        idx = 0
+        while len(selected) < target_count and any(by_project.values()):
+            proj = projects[idx % len(projects)]
+            if by_project[proj]:
+                rec = by_project[proj].pop(0)
+                selected[(rec["project"], rec["bug_id"], rec["target_class"])] = rec
+            idx += 1
+
+    chosen = sorted(
+        selected.values(),
+        key=lambda item: (str(item["project"]), int(item["bug_id"]), str(item["target_class"])),
+    )
+    if target_count is not None:
+        return chosen[:target_count]
+    return chosen
 
 
 def _write_tsv(path: Path, factors: Sequence[str], rows: Sequence[Mapping[str, str]]) -> None:
@@ -211,7 +239,11 @@ def _generation_toolchain_hash() -> str:
 def _publish_paths(output_root: Path, plan: Mapping[str, object]) -> tuple[Path, str]:
     package_parts = str(plan["target_class"]).split(".")
     class_name = package_parts.pop()
-    relative = Path(PUBLISH_ROOT_NAME) / "{}_{}b".format(plan["project"], plan["bug_id"]) / Path(*package_parts) / "{}_IPOTest.java".format(class_name)
+    target_folder = "{}_{}b".format(plan["project"], plan["bug_id"])
+    if PUBLISH_ROOT_NAME:
+        relative = Path(PUBLISH_ROOT_NAME) / target_folder / Path(*package_parts) / "{}_IPOTest.java".format(class_name)
+    else:
+        relative = Path(target_folder) / Path(*package_parts) / "{}_IPOTest.java".format(class_name)
     return output_root / "TestCode" / relative, class_name
 
 
@@ -221,6 +253,7 @@ def generate_class(
     experiment_id: str,
     defects4j_executable: str,
     resume: bool = False,
+    verbose: bool = False,
 ) -> Dict[str, object]:
     ready = [item for item in plan.get("callables", []) if item.get("status") == "AUTO_READY"]
     identity = {key: plan[key] for key in ("project", "bug_id", "target_class", "audit_hash")}
@@ -229,20 +262,25 @@ def generate_class(
     target_key = "{}_{}b".format(plan["project"], plan["bug_id"])
     class_name = str(plan["target_class"]).rsplit(".", 1)[-1]
     package_name = str(plan["target_class"]).rsplit(".", 1)[0] if "." in str(plan["target_class"]) else ""
-    class_root = output_root / "Result_Round2" / experiment_id / target_key / Path(*str(plan["target_class"]).split("."))
+    class_root = output_root / "Results" / "cache" / experiment_id / target_key / Path(*str(plan["target_class"]).split("."))
     method_cases = []
     method_records = []
+    failed_methods = []
     suite_hash_inputs = []
-    try:
-        for callable_plan in ready:
+
+    for c_idx, callable_plan in enumerate(ready, start=1):
+        method_sig = str(callable_plan["signature"])
+        method_id = re.sub(r"[^A-Za-z0-9_]+", "_", method_sig).strip("_")
+        method_root = class_root / method_id
+        if verbose:
+            print(f"\n      [{c_idx}/{len(ready)}] {method_sig}", file=sys.stderr, flush=True, end="")
+        try:
             domains = callable_plan["factor_domains"]
-            rows = generate_pairwise(domains)
-            coverage = verify_pair_coverage(domains, rows)
+            rows = generate_pairwise(domains, allow_empty=True)
+            coverage = verify_pair_coverage(domains, rows, allow_empty=True)
             if not coverage.complete:
                 raise ValueError("Native IPO output misses {} required pairs".format(len(coverage.missing_pairs)))
             hashes = _stage_hashes(plan, callable_plan, rows)
-            method_id = re.sub(r"[^A-Za-z0-9_]+", "_", str(callable_plan["signature"])).strip("_")
-            method_root = class_root / method_id
             _atomic_json(method_root / "domains.json", domains)
             _write_tsv(method_root / "combinations.tsv", list(domains), rows)
             oracle_path = method_root / "oracle.json"
@@ -258,6 +296,8 @@ def generate_class(
                     outcomes = json.loads(oracle_path.read_text(encoding="utf-8"))
                     reused_oracle = True
             if outcomes is None:
+                if verbose:
+                    print(" -> collecting oracle", file=sys.stderr, flush=True, end="")
                 outcomes = collect_fixed_oracle(
                     project=str(plan["project"]), bug_id=int(plan["bug_id"]),
                     package_name=package_name, target_class=class_name,
@@ -267,6 +307,8 @@ def generate_class(
                 for outcome, arguments in zip(outcomes, rows):
                     outcome["arguments"] = dict(arguments)
                 _atomic_json(oracle_path, outcomes)
+            elif verbose:
+                print(" -> cached oracle", file=sys.stderr, flush=True, end="")
             method_cases.append((callable_plan, rows, outcomes))
             method_record = {
                 "signature": callable_plan["signature"], **hashes,
@@ -279,6 +321,26 @@ def generate_class(
             method_records.append(method_record)
             _atomic_json(method_record_path, method_record)
             suite_hash_inputs.append(hashes["suite_hash"])
+            if verbose:
+                print(f" ({len(rows)} pairs OK)", file=sys.stderr, flush=True, end="")
+        except (ValueError, OSError, OracleCollectionError, Exception) as exc:
+            failed_methods.append({"signature": method_sig, "error": str(exc)})
+            _atomic_json(method_root / "method_error.json", {"signature": method_sig, "error": str(exc)})
+            if verbose:
+                print(f" [SKIP: {str(exc)[:40]}]", file=sys.stderr, flush=True, end="")
+
+    if not method_cases:
+        record = {
+            **identity,
+            "status": "GENERATION_OR_VERIFICATION_ERROR",
+            "error": "All {} candidate callables failed oracle collection".format(len(ready)),
+            "methods": method_records,
+            "failed_methods": failed_methods,
+        }
+        _atomic_json(class_root / "class_record.json", record)
+        return record
+
+    try:
         suite_hash = _canonical_hash(suite_hash_inputs)
         test_class = "{}_IPOTest".format(class_name)
         suite = synthesize_junit_suite(package_name, class_name, method_cases, test_class_name=test_class)
@@ -300,13 +362,22 @@ def generate_class(
             **identity, "status": "FIXED_VERIFIED", "generation_backend": "native_ipo",
             "strength": 2, "suite_hash": suite_hash,
             "generation_toolchain_hash": _generation_toolchain_hash(),
-            "suite_path": str(destination.relative_to(output_root)),
+            "suite_path": str(destination.relative_to(output_root)).replace("\\", "/"),
             "suite_sha256": file_sha256(destination), "test_class": test_class,
             "methods": method_records,
+            "failed_methods": failed_methods,
+            "total_candidates": len(ready),
+            "verified_method_count": len(method_cases),
             "verification_result": next((line.strip() for line in reversed(output.splitlines()) if line.strip()), "PASSED"),
         }
-    except (ValueError, OSError, OracleCollectionError) as exc:
-        record = {**identity, "status": "GENERATION_OR_VERIFICATION_ERROR", "error": str(exc), "methods": method_records}
+    except (ValueError, OSError, OracleCollectionError, Exception) as exc:
+        record = {
+            **identity,
+            "status": "GENERATION_OR_VERIFICATION_ERROR",
+            "error": str(exc),
+            "methods": method_records,
+            "failed_methods": failed_methods,
+        }
     _atomic_json(class_root / "class_record.json", record)
     return record
 
@@ -365,16 +436,18 @@ def _routing_manifest(experiment_id: str, records: Sequence[Mapping[str, object]
 def run_audit(
     catalog_path: Path, experiment_path: Path, output_root: Path,
     defects4j: str, project: str | None, bug: int | None, resume: bool,
-    workers: int = 1,
+    workers: int = 1, require_evidence: bool = False,
 ) -> Dict[str, object]:
     experiment = json.loads(experiment_path.read_text(encoding="utf-8"))
     current = build_all_class_manifest(catalog_path, str(experiment["experiment_id"]))
     if current != experiment:
         raise ValueError("Experiment manifest does not match catalog and planner inputs")
-    root = output_root / "Result_Round1" / str(experiment["experiment_id"])
-    plans_root = root / "plans"
+    root = output_root / "Results"
+    plans_root = root / "plans" / str(experiment["experiment_id"])
     experiment_hash = _canonical_hash(current)
-    previous_manifest_path = root / "audit_manifest.json"
+    inventory_path = root / "inventory.json"
+    audit_path = root / "audit_manifest.json"
+    previous_manifest_path = inventory_path if inventory_path.is_file() else audit_path
     previous_experiment_hash = None
     previous_records: Dict[tuple, Mapping[str, object]] = {}
     if resume and previous_manifest_path.is_file():
@@ -412,7 +485,7 @@ def run_audit(
             ) as bundle:
                 for target_class in target.modified_sources:
                     destination = plans_root / target.target_key / Path(*target_class.split(".")).with_suffix(".json")
-                    plan = audit_class(target, target_class, bundle)
+                    plan = audit_class(target, target_class, bundle, require_evidence=require_evidence)
                     _atomic_json(destination, plan)
                     target_records.append(plan)
         except SourceCheckoutError as exc:
@@ -446,16 +519,22 @@ def run_audit(
         "expected_class_instance_count": expected_count,
         "inventory_complete": len(records) == expected_count == sum(counts.values()), "records": records,
     }
-    _atomic_json(root / "audit_manifest.json", manifest)
+    _atomic_json(inventory_path, manifest)
+    _atomic_json(audit_path, manifest)
     _atomic_json(root / "routing_manifest.json", _routing_manifest(str(experiment["experiment_id"]), records))
     return manifest
 
 
 def _load_audit(output_root: Path, experiment_id: str) -> Dict[str, object]:
-    path = output_root / "Result_Round1" / experiment_id / "audit_manifest.json"
-    if not path.is_file():
-        raise ValueError("Audit manifest is missing: {}".format(path))
-    return json.loads(path.read_text(encoding="utf-8"))
+    candidates = [
+        output_root / "Results" / "inventory.json",
+        output_root / "Results" / "audit_manifest.json",
+        output_root / "Result_Round1" / experiment_id / "audit_manifest.json",
+    ]
+    for path in candidates:
+        if path.is_file():
+            return json.loads(path.read_text(encoding="utf-8"))
+    raise ValueError("Audit/inventory manifest is missing: searched {}".format([str(p) for p in candidates]))
 
 
 def run_generation(
@@ -469,8 +548,8 @@ def run_generation(
         and (bug is None or record["bug_id"] == bug)
     ]
     if mode == "canary":
-        records = list(select_canary(records))
-    publish_manifest_path = output_root / "TestCode" / PUBLISH_ROOT_NAME / "verified_suites_manifest.json"
+        records = list(select_canary(records, target_count=40))
+    publish_manifest_path = output_root / "Results" / "verified_suites_manifest.json"
     existing: MutableMapping[tuple, Mapping[str, object]] = {}
     if publish_manifest_path.is_file():
         previous = json.loads(publish_manifest_path.read_text(encoding="utf-8"))
@@ -478,7 +557,7 @@ def run_generation(
             (item["project"], item["bug_id"], item["target_class"]): item
             for item in previous.get("records", [])
         }
-    generation_manifest_path = output_root / "Result_Round2" / experiment_id / "generation_manifest.json"
+    generation_manifest_path = output_root / "Results" / "generation_manifest.json"
     accumulated: MutableMapping[tuple, Mapping[str, object]] = {}
     if generation_manifest_path.is_file():
         previous_generation = json.loads(generation_manifest_path.read_text(encoding="utf-8"))
@@ -495,8 +574,23 @@ def run_generation(
             key: item for key, item in accumulated.items()
             if key in plan_hashes and item.get("audit_hash") == plan_hashes[key]
         }
+    total_records = len(records)
+    print(
+        f"\n=== Starting Native IPO Generation ({mode.upper()}) ===",
+        file=sys.stderr, flush=True,
+    )
+    print(
+        f"Total classes to consider: {total_records} | Already verified in manifest: {len(existing)}",
+        file=sys.stderr, flush=True,
+    )
+    print("-" * 75, file=sys.stderr, flush=True)
+
     generated = []
-    for plan in records:
+    for idx, plan in enumerate(records, start=1):
+        target_key = f"{plan['project']}_{plan['bug_id']}b"
+        target_cls = str(plan["target_class"])
+        pct = (idx / total_records) * 100.0
+
         key = (plan["project"], plan["bug_id"], plan["target_class"])
         previous = existing.get(key)
         if (
@@ -506,16 +600,48 @@ def run_generation(
         ):
             suite = output_root / str(previous.get("suite_path", ""))
             if suite.is_file() and file_sha256(suite) == previous.get("suite_sha256"):
+                print(
+                    f"[{idx:>3}/{total_records}] ({pct:5.1f}%) {target_key:<14} {target_cls:<45} -> [SKIP (Already Verified)]",
+                    file=sys.stderr, flush=True,
+                )
                 generated.append(previous)
                 accumulated[key] = previous
                 continue
-        record = generate_class(plan, output_root, experiment_id, defects4j, resume=resume)
-        generated.append(record)
-        accumulated[key] = record
-        if record.get("status") == "FIXED_VERIFIED":
+
+        if plan.get("status") != "AUTO_READY":
+            print(
+                f"[{idx:>3}/{total_records}] ({pct:5.1f}%) {target_key:<14} {target_cls:<45} -> [SKIP ({plan.get('status')})]",
+                file=sys.stderr, flush=True,
+            )
+            record = {key: plan[key] for key in ("project", "bug_id", "target_class", "audit_hash")}
+            record["status"] = "SKIPPED_NOT_READY"
+            generated.append(record)
+            accumulated[key] = record
+            continue
+
+        print(
+            f"[{idx:>3}/{total_records}] ({pct:5.1f}%) {target_key:<14} {target_cls:<45} ...",
+            file=sys.stderr, flush=True, end="",
+        )
+        record = generate_class(plan, output_root, experiment_id, defects4j, resume=resume, verbose=True)
+        status = record.get("status", "UNKNOWN")
+        v_count = record.get("verified_method_count", 0)
+        tot_c = record.get("total_candidates", 0)
+
+        if status == "FIXED_VERIFIED":
             existing[key] = record
+            print(
+                f"\n      => [OK] FIXED_VERIFIED ({v_count}/{tot_c} methods passed | Total verified: {len(existing)})",
+                file=sys.stderr, flush=True,
+            )
         else:
             existing.pop(key, None)
+            err = record.get("error", "Generation or Verification Failed")
+            print(
+                f"\n      => [FAIL] {status} ({err[:60]})",
+                file=sys.stderr, flush=True,
+            )
+
         verified_manifest = {
             "schema_version": 1, "experiment_id": experiment_id,
             "generation_backend": "native_ipo", "strength": 2,
@@ -532,14 +658,21 @@ def run_generation(
         "filters": {"project": project, "bug_id": bug},
         "class_instance_count": len(all_records), "processed_this_run": len(generated),
         "status_counts": dict(sorted(counts.items())),
-        "records": all_records, "verified_manifest": str(publish_manifest_path.relative_to(output_root)),
+        "records": all_records, "verified_manifest": str(publish_manifest_path.relative_to(output_root)).replace("\\", "/"),
     }
     _atomic_json(generation_manifest_path, manifest)
     return manifest
 
 
 def validate_verified_manifest(output_root: Path) -> Dict[str, object]:
-    path = output_root / "TestCode" / PUBLISH_ROOT_NAME / "verified_suites_manifest.json"
+    candidates = [
+        output_root / "Results" / "verified_suites_manifest.json",
+        output_root / "TestCode" / "verified_suites_manifest.json",
+        output_root / "TestCode" / "all-modified-classes" / "verified_suites_manifest.json",
+    ]
+    path = next((p for p in candidates if p.is_file()), None)
+    if not path:
+        return {"valid": False, "verified_suite_count": 0, "issues": ["verified_suites_manifest.json not found"]}
     manifest = json.loads(path.read_text(encoding="utf-8"))
     issues = []
     identities = set()
@@ -559,6 +692,36 @@ def validate_verified_manifest(output_root: Path) -> Dict[str, object]:
     return {"valid": not issues, "verified_suite_count": len(identities), "issues": issues}
 
 
+def show_summary(output_root: Path) -> Dict[str, object]:
+    summary: Dict[str, object] = {}
+    inv_path = output_root / "Results" / "inventory.json"
+    if not inv_path.is_file():
+        inv_path = output_root / "Results" / "audit_manifest.json"
+    if inv_path.is_file():
+        inv = json.loads(inv_path.read_text(encoding="utf-8"))
+        summary["inventory"] = {
+            "class_instance_count": inv.get("class_instance_count"),
+            "status_counts": inv.get("status_counts"),
+        }
+    gen_path = output_root / "Results" / "generation_manifest.json"
+    if gen_path.is_file():
+        gen = json.loads(gen_path.read_text(encoding="utf-8"))
+        summary["generation"] = {
+            "class_instance_count": gen.get("class_instance_count"),
+            "processed_this_run": gen.get("processed_this_run"),
+            "status_counts": gen.get("status_counts"),
+        }
+    ver_path = output_root / "Results" / "verified_suites_manifest.json"
+    if ver_path.is_file():
+        ver = json.loads(ver_path.read_text(encoding="utf-8"))
+        summary["verified_suites"] = {
+            "verified_count": len(ver.get("records", [])),
+        }
+    val = validate_verified_manifest(output_root)
+    summary["validation"] = val
+    return summary
+
+
 def preflight(catalog: Path, experiment: Path, defects4j: str) -> Dict[str, object]:
     checks = {
         "catalog_exists": catalog.is_file(), "experiment_exists": experiment.is_file(),
@@ -574,7 +737,7 @@ def preflight(catalog: Path, experiment: Path, defects4j: str) -> Dict[str, obje
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--mode", required=True, choices=("preflight", "audit", "canary", "generate", "validate"))
+    parser.add_argument("--mode", required=True, choices=("preflight", "audit", "inventory", "plan", "canary", "generate", "validate", "summary"))
     parser.add_argument("--catalog", type=Path, default=IPO_ROOT / "Configuration" / "catalogs" / "all-modified-classes.normalized.json")
     parser.add_argument("--experiment", type=Path, default=IPO_ROOT / "Configuration" / "experiments" / "all-854-modified-classes.json")
     parser.add_argument("--output-root", type=Path, default=IPO_ROOT)
@@ -590,15 +753,19 @@ def main() -> None:
         experiment_id = str(json.loads(args.experiment.read_text(encoding="utf-8"))["experiment_id"])
     if args.mode == "preflight":
         result = preflight(args.catalog, args.experiment, args.defects4j)
-    elif args.mode == "audit":
+    elif args.mode in {"audit", "inventory", "plan"}:
         result = run_audit(
             args.catalog, args.experiment, args.output_root, args.defects4j,
             args.project, args.bug, args.resume, args.workers,
         )
     elif args.mode in {"canary", "generate"}:
         result = run_generation(args.output_root, experiment_id, args.defects4j, args.mode, args.project, args.bug, args.resume)
-    else:
+    elif args.mode == "validate":
         result = validate_verified_manifest(args.output_root)
+    elif args.mode == "summary":
+        result = show_summary(args.output_root)
+    else:
+        raise ValueError("Unknown mode: {}".format(args.mode))
     if args.summary_only and "records" in result:
         result = {key: result[key] for key in result if key not in {"records"}}
     print(json.dumps(result, indent=2, ensure_ascii=False))

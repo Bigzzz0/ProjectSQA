@@ -39,8 +39,8 @@ class PairCoverageReport:
         )
 
 
-def _validate_domains(factor_domains: Mapping[str, Sequence[str]]) -> None:
-    if not factor_domains:
+def _validate_domains(factor_domains: Mapping[str, Sequence[str]], allow_empty: bool = False) -> None:
+    if not allow_empty and not factor_domains:
         raise ValueError("At least one factor domain is required")
 
     for factor, values in factor_domains.items():
@@ -59,9 +59,10 @@ def _validate_domains(factor_domains: Mapping[str, Sequence[str]]) -> None:
 def expected_pairs(
     factor_domains: Mapping[str, Sequence[str]],
     valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
+    allow_empty: bool = False,
 ) -> Set[InteractionPair]:
     """Return every required 2-way interaction for the supplied domains."""
-    _validate_domains(factor_domains)
+    _validate_domains(factor_domains, allow_empty=allow_empty)
     factors = list(factor_domains)
     pairs: Set[InteractionPair] = set()
 
@@ -132,9 +133,10 @@ def verify_pair_coverage(
     factor_domains: Mapping[str, Sequence[str]],
     combinations: Sequence[Mapping[str, str]],
     valid_combinations: Optional[Sequence[Mapping[str, str]]] = None,
+    allow_empty: bool = False,
 ) -> PairCoverageReport:
     """Validate rows and report their coverage of all required value pairs."""
-    required = expected_pairs(factor_domains, valid_combinations)
+    required = expected_pairs(factor_domains, valid_combinations, allow_empty=allow_empty)
     observed = _observed_pairs(factor_domains, combinations)
     if valid_combinations is not None:
         valid_keys = {

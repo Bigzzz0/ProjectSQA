@@ -92,3 +92,39 @@ public abstract class Sample {
             metadata = parse_java_file(str(source_file))
 
             self.assertTrue(metadata["abstract"])
+
+    def test_ast_parser_extracts_overloads_enums_and_nested_types(self) -> None:
+        source = """package example;
+import java.util.List;
+
+public class ComplexSample<T> {
+    public enum Mode { FAST, SLOW }
+
+    public static class NestedHelper {
+        public int compute() { return 42; }
+    }
+
+    public ComplexSample(int x) {}
+    public ComplexSample(int x, String y) throws IllegalArgumentException {}
+
+    public void process(int val) {}
+    public void process(double val) {}
+    public List<String> format(Mode mode, T item) { return null; }
+}
+"""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            source_file = Path(temporary_directory) / "ComplexSample.java"
+            source_file.write_text(source, encoding="utf-8")
+            from analyzer.java_parser import parse_java_file_ast_preferred
+            metadata = parse_java_file_ast_preferred(str(source_file))
+
+            self.assertEqual("ComplexSample", metadata["class"])
+            method_names = [m["name"] for m in metadata["methods"]]
+            self.assertIn("process", method_names)
+            process_methods = [m for m in metadata["methods"] if m["name"] == "process"]
+            self.assertEqual(2, len(process_methods))
+            self.assertEqual(2, len(metadata["constructors"]))
+            ctor_throws = [c.get("throws", []) for c in metadata["constructors"]]
+            self.assertTrue(any("IllegalArgumentException" in th for th in ctor_throws))
+            self.assertEqual(2, len(metadata.get("nested_types", [])))
+

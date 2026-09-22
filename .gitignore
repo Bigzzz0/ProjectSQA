@@ -18,11 +18,16 @@ tmp/
 *.lck
 __pycache__/
 *.pyc
+*.class
 
 # Environment variables & API Keys
 .env
 .env.local
 !.env.example
 *.key
+
+# Combinatorial IPO caches and per-class plan scratch
+Combinatorial_IPO/Results/cache/
+Combinatorial_IPO/Results/plans/
 
 

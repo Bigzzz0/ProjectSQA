@@ -232,4 +232,194 @@ public class ZipArchiveInputStream_IPOTest {
         assertEquals("-1", String.valueOf(actual));
     }
 
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_026() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {}), value=0L
+        Object actual = (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(0L);
+        assertNotNull(actual);
+        assertEquals("java.lang.Long", actual.getClass().getName());
+        assertEquals("0", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_027() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {}), value=1L
+        Object actual = (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(1L);
+        assertNotNull(actual);
+        assertEquals("java.lang.Long", actual.getClass().getName());
+        assertEquals("0", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_028() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {}), value=-1L
+        try {
+            (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(-1L);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_029() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {}), value=Long.MAX_VALUE
+        Object actual = (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(Long.MAX_VALUE);
+        assertNotNull(actual);
+        assertEquals("java.lang.Long", actual.getClass().getName());
+        assertEquals("0", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_030() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {}), value=Long.MIN_VALUE
+        try {
+            (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(Long.MIN_VALUE);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_031() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {1}), value=0L
+        Object actual = (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(0L);
+        assertNotNull(actual);
+        assertEquals("java.lang.Long", actual.getClass().getName());
+        assertEquals("0", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_032() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {1}), value=1L
+        Object actual = (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(1L);
+        assertNotNull(actual);
+        assertEquals("java.lang.Long", actual.getClass().getName());
+        assertEquals("0", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_033() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {1}), value=-1L
+        try {
+            (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(-1L);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_034() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {1}), value=Long.MAX_VALUE
+        Object actual = (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(Long.MAX_VALUE);
+        assertNotNull(actual);
+        assertEquals("java.lang.Long", actual.getClass().getName());
+        assertEquals("0", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_skip_pairwise_035() throws Exception {
+        // Combination: receiver__inputStream=new java.io.ByteArrayInputStream(new byte[] {1}), value=Long.MIN_VALUE
+        try {
+            (new ZipArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(Long.MIN_VALUE);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_036() throws Exception {
+        // Combination: signature=new byte[] {}, length=0
+        Object actual = ZipArchiveInputStream.matches(new byte[] {}, 0);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_037() throws Exception {
+        // Combination: signature=new byte[] {1}, length=0
+        Object actual = ZipArchiveInputStream.matches(new byte[] {1}, 0);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_038() throws Exception {
+        // Combination: signature=new byte[] {}, length=1
+        Object actual = ZipArchiveInputStream.matches(new byte[] {}, 1);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_039() throws Exception {
+        // Combination: signature=new byte[] {1}, length=1
+        Object actual = ZipArchiveInputStream.matches(new byte[] {1}, 1);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_040() throws Exception {
+        // Combination: signature=new byte[] {}, length=-1
+        Object actual = ZipArchiveInputStream.matches(new byte[] {}, -1);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_041() throws Exception {
+        // Combination: signature=new byte[] {1}, length=-1
+        Object actual = ZipArchiveInputStream.matches(new byte[] {1}, -1);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_042() throws Exception {
+        // Combination: signature=new byte[] {}, length=Integer.MAX_VALUE
+        try {
+            ZipArchiveInputStream.matches(new byte[] {}, Integer.MAX_VALUE);
+            fail("Expected java.lang.ArrayIndexOutOfBoundsException");
+        } catch (java.lang.ArrayIndexOutOfBoundsException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_043() throws Exception {
+        // Combination: signature=new byte[] {1}, length=Integer.MAX_VALUE
+        Object actual = ZipArchiveInputStream.matches(new byte[] {1}, Integer.MAX_VALUE);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_044() throws Exception {
+        // Combination: signature=new byte[] {}, length=Integer.MIN_VALUE
+        Object actual = ZipArchiveInputStream.matches(new byte[] {}, Integer.MIN_VALUE);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_matches_pairwise_045() throws Exception {
+        // Combination: signature=new byte[] {1}, length=Integer.MIN_VALUE
+        Object actual = ZipArchiveInputStream.matches(new byte[] {1}, Integer.MIN_VALUE);
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
 }

@@ -48,9 +48,13 @@ def _run(
             timeout=timeout_seconds,
             check=False,
         )
-    except (OSError, subprocess.TimeoutExpired) as exc:
+    except subprocess.TimeoutExpired as exc:
         raise OracleCollectionError(
-            "Command could not run: {}".format(" ".join(command))
+            "Command timed out after {}s: {}".format(timeout_seconds, " ".join(command))
+        ) from exc
+    except OSError as exc:
+        raise OracleCollectionError(
+            "Command execution failed with OSError ({}): {}".format(exc, " ".join(command))
         ) from exc
     if completed.returncode != 0:
         detail = completed.stderr.strip() or completed.stdout.strip()
@@ -60,6 +64,7 @@ def _run(
             )
         )
     return completed.stdout.strip()
+
 
 
 def collector_class_name(target_class: str) -> str:
@@ -127,9 +132,18 @@ public class {collector_class} {{
         System.out.println(id + "\tRETURN\t" + type + "\t" + encode(text));
     }}
 
+    private static Class<?> getPublicExceptionType(Throwable error) {{
+        Class<?> current = error.getClass();
+        while (current != null && (current.isAnonymousClass() || current.isLocalClass() || !java.lang.reflect.Modifier.isPublic(current.getModifiers()))) {{
+            current = current.getSuperclass();
+        }}
+        return current != null ? current : Exception.class;
+    }}
+
     private static void emitThrow(int id, Throwable error) {{
         String message = error.getMessage() == null ? "" : error.getMessage();
-        System.out.println(id + "\tTHROW\t" + error.getClass().getName() + "\t" + encode(message));
+        Class<?> pubType = getPublicExceptionType(error);
+        System.out.println(id + "\tTHROW\t" + pubType.getName() + "\t" + encode(message));
     }}
 
     public static void main(String[] args) {{
@@ -137,6 +151,7 @@ public class {collector_class} {{
     }}
 }}
 """.format(
+
         package_line=package_line,
         collector_class=class_name,
         calls="\n".join(calls),
@@ -246,7 +261,14 @@ def collect_fixed_oracle(
             [java_executable, "-cp", runtime_cp, fully_qualified_collector],
             temp_root,
         )
+        output2 = _run(
+            [java_executable, "-cp", runtime_cp, fully_qualified_collector],
+            temp_root,
+        )
+        if output != output2:
+            raise OracleCollectionError("Non-deterministic oracle output observed across independent runs")
         return parse_oracle_output(output, len(combinations))
+
 
 
 def select_method(
