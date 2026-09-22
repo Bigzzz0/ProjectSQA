@@ -38,8 +38,8 @@
 
 ```mermaid
 pie title ภาพรวมผลการทำงานของบั๊กใน Defects4J Benchmark (MIO Algorithm)
-    "รันสำเร็จสมบูรณ์ (100% True Pass)" : 706
-    "กำลังประมวลผล (In Progress - JacksonDatabind/Closure)" : 129
+    "รันสำเร็จสมบูรณ์ (100% True Pass)" : 725
+    "กำลังประมวลผล (In Progress - JacksonDatabind/Closure)" : 110
     "ข้อจำกัดภายนอก (Upstream Tool Limitations - Mockito/Gson/Math)" : 19
 ```
 
