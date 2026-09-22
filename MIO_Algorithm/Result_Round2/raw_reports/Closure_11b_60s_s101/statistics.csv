@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.TypeCheck,LINE;BRANCH,0.1677509746588694,1746,116

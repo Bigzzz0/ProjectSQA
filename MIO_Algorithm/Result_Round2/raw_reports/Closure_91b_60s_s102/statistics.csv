@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CheckGlobalThis,LINE;BRANCH,0.2819402985074627,117,21

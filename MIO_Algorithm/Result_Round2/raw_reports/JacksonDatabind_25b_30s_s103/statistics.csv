@@ -1,2 +1,5 @@
 TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
 com.fasterxml.jackson.databind.deser.BasicDeserializerFactory,LINE;BRANCH,0.353668999394388,1388,314
+com.fasterxml.jackson.databind.deser.DeserializerCache,LINE;BRANCH,0.5823456947453379,310,187
+com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase,LINE;BRANCH,0.5757968865826538,109,66
+com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver,LINE;BRANCH,1.0,27,27

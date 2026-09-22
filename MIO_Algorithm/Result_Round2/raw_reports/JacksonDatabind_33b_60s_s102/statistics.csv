@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector,LINE;BRANCH,0.4662592962293505,670,322

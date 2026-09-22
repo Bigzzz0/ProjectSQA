@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.ProcessClosurePrimitives,LINE;BRANCH,0.17470389170896783,676,115

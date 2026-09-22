@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.InlineObjectLiterals,LINE;BRANCH,0.030410884844116057,303,10

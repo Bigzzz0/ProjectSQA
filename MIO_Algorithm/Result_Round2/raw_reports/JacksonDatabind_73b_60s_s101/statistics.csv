@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder,LINE;BRANCH,0.12004896433324191,889,104

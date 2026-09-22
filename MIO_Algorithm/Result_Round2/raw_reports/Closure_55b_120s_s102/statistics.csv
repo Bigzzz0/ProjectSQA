@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.FunctionRewriter,LINE;BRANCH,0.5051818805765271,249,130

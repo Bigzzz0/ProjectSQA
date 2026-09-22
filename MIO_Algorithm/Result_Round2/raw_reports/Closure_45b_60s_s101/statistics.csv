@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.RemoveUnusedVars,LINE;BRANCH,0.12158969310448145,688,90

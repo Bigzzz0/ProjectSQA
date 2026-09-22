@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.node.TreeTraversingParser,LINE;BRANCH,0.9506678809957498,230,217

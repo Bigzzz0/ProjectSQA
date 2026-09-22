@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer,LINE;BRANCH,0.7896825396825397,273,215

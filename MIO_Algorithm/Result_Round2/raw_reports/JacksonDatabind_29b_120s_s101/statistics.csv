@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler,LINE;BRANCH,0.2850776308223117,215,65

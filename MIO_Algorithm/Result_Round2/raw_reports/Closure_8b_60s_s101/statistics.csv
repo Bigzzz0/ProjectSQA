@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CollapseVariableDeclarations,LINE;BRANCH,0.24024913212170718,142,36

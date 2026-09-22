@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CoalesceVariableNames,LINE;BRANCH,0.059149184149184145,311,19

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.PeepholeOptimizationsPass,LINE;BRANCH,0.802641056422569,134,110

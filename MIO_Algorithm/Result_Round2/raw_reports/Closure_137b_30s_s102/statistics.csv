@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.MakeDeclaredNamesUnique,LINE;BRANCH,0.565850302696753,275,161
+com.google.javascript.jscomp.NodeUtil,LINE;BRANCH,0.589754426165719,2224,888
+com.google.javascript.jscomp.Normalize,LINE;BRANCH,0.332441184245308,350,121

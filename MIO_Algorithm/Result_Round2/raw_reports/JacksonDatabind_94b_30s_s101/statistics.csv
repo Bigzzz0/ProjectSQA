@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidator,LINE;BRANCH,0.43137254901960786,35,8

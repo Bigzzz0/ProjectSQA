@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.node.POJONode,LINE;BRANCH,0.9499687304565353,80,73

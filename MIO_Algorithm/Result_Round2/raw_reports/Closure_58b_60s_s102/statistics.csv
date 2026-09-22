@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.LiveVariablesAnalysis,LINE;BRANCH,0.4316116690578671,184,31

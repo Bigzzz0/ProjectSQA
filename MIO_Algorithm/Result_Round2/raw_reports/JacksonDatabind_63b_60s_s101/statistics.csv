@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.JsonMappingException,LINE;BRANCH,0.9498301945044767,205,190

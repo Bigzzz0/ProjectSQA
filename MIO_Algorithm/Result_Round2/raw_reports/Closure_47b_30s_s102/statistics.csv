@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.debugging.sourcemap.SourceMapConsumerV3,LINE;BRANCH,0.08119747899159664,450,43
+com.google.javascript.jscomp.SourceMap,LINE;BRANCH,0.04225806451612903,112,5

@@ -51,9 +51,10 @@ print(f"{'PROJECT':16} | {'COMPLETED':10} | {'TOTAL':6} | {'PERCENT':8} | {'MISS
 print("=========================================================================================")
 for p, data in results.items():
     pct = (data['completed'] / data['total']) * 100
-    missing_str = str(data['missing_bugs'][:15]) + ("..." if len(data['missing_bugs']) > 15 else "")
+    missing_str = str(data['missing_bugs']) if data['missing_bugs'] else "None (100%)"
     print(f"{p:16} | {data['completed']:6}     | {data['total']:5}  | {pct:6.1f}%  | {missing_str}")
 print("=========================================================================================")
 total_bugs = sum(d['total'] for d in results.values())
 total_done = sum(d['completed'] for d in results.values())
-print(f"TOTAL: {total_done}/{total_bugs} ({(total_done/total_bugs)*100:.1f}%)")
+print(f"TOTAL COMPLETED : {total_done}/{total_bugs} ({(total_done/total_bugs)*100:.1f}%)")
+print(f"TOTAL REMAINING : {total_bugs - total_done}/{total_bugs} ({((total_bugs - total_done)/total_bugs)*100:.1f}%)")

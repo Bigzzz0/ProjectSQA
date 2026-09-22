@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.ClosureCodingConvention,LINE;BRANCH,0.33405797101449275,253,88

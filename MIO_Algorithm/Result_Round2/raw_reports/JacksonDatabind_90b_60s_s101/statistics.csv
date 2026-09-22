@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.deser.ValueInstantiator,LINE;BRANCH,0.7631720430107527,122,68
+com.fasterxml.jackson.databind.deser.std.StdValueInstantiator,LINE;BRANCH,0.6635220125786163,252,160

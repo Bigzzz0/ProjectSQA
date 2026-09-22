@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.ControlFlowAnalysis,LINE;BRANCH,0.5122480816257694,815,312
