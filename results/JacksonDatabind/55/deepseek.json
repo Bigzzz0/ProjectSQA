@@ -1,0 +1,33 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 91.8,
+  "branch_cov": 91.89,
+  "test_file": "StdKeySerializersDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.StdKeySerializers",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testStringKeySerializer",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testEnumKeyWithJsonProperty",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeToString",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeDate",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeEnum",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicReadResolve",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeSecondCall",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeClass",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testStringKeySerializer",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeToString",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeDate",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeEnum",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicReadResolve",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeSecondCall",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeClass",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testGetFallbackKeySerializerEnumType",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
+  ]
+}

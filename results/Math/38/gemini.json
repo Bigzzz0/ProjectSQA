@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 91.17,
+  "branch_cov": 87.5,
+  "test_file": "BOBYQAOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.direct.BOBYQAOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testSphereMinimization2D",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testConstrainedRosenWithMoreInterpolationPoints",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testSphereMinimization2D",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
+  ]
+}

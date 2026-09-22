@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 98.08,
+  "test_file": "ComplexFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.math.complex.ComplexFormat",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testForgottenImaginaryCharacterParsePosition",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testForgottenImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
+  ]
+}

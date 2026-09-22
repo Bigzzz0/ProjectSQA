@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.5,
+  "branch_cov": 95.83,
+  "test_file": "DiscreteDistributionGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.DiscreteDistribution",
+  "buggy_failures": [
+    "org.apache.commons.math3.distribution.DiscreteDistributionGeminiTest::testIssue942ArrayStoreException",
+    "org.apache.commons.math3.distribution.DiscreteDistributionGeminiTest::testConstructorNaNProbability"
+  ],
+  "fixed_failures": []
+}

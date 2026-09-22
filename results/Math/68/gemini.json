@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 96.39,
+  "branch_cov": 85.2,
+  "test_file": "LevenbergMarquardtOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testVectorialConvergenceCheckerIntegration"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 98.27,
+  "branch_cov": 98.65,
+  "test_file": "MathUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficientLargeDefect"
+  ],
+  "fixed_failures": []
+}

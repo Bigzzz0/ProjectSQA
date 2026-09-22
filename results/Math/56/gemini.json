@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 98.67,
+  "branch_cov": 97.06,
+  "test_file": "MultidimensionalCounterGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MultidimensionalCounter",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testIterationConsistency",
+    "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectSingleDimensionGetCounts",
+    "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectGetCountsLastDimension"
+  ],
+  "fixed_failures": []
+}

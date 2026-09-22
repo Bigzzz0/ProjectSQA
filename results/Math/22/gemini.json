@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "FDistributionGeminiTest.java;UniformRealDistributionGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.FDistribution;org.apache.commons.math3.distribution.UniformRealDistribution",
+  "buggy_failures": [
+    "org.apache.commons.math3.distribution.FDistributionGeminiTest::testIsSupportLowerBoundInclusive",
+    "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval",
+    "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testIsSupportUpperBoundInclusive"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval"
+  ]
+}

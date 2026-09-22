@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 97.0,
+  "branch_cov": 92.31,
+  "test_file": "ArrayRealVectorGeminiTest.java;OpenMapRealVectorGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.ArrayRealVector;org.apache.commons.math.linear.OpenMapRealVector",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testDefectTargetLInfNormAccumulationBug",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testDefectTargetLInfNormNegativeValues",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfNormWithNegativeValues",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfNormPositiveSumVersusMax"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis"
+  ]
+}

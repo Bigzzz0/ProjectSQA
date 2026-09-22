@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 79.17,
+  "branch_cov": 77.78,
+  "test_file": "KMeansPlusPlusClustererGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testSmallDistances",
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testKGreaterThanPointsSizeThrowsException"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testKGreaterThanPointsSizeThrowsException"
+  ]
+}

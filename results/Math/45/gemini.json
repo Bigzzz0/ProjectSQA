@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "OpenMapRealMatrixGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.OpenMapRealMatrix",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.OpenMapRealMatrixGeminiTest::testMath679"
+  ],
+  "fixed_failures": []
+}

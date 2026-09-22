@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 7.1,
+  "branch_cov": 9.78,
+  "test_file": "SimplexTableauGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testMath286Defect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testSolutionBasicRowHandlingAndCollision",
+    "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testMath286Defect"
+  ]
+}

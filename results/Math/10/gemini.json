@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 95.1,
+  "test_file": "DSCompilerGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.analysis.differentiation.DSCompiler",
+  "buggy_failures": [
+    "org.apache.commons.math3.analysis.differentiation.DSCompilerGeminiTest::testAtan2SpecialCasesZeroZero"
+  ],
+  "fixed_failures": []
+}

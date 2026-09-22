@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.71,
+  "branch_cov": 94.7,
+  "test_file": "SelectorGeminiTest.java",
+  "target_classes": "org.jsoup.select.Selector",
+  "buggy_failures": [
+    "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
+    "org.jsoup.select.SelectorGeminiTest::testByAttributeRegexWithMultipleAlternations",
+    "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators",
+    "org.jsoup.select.SelectorGeminiTest::testByAttributeRegexCombined"
+  ],
+  "fixed_failures": [
+    "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
+    "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators"
+  ]
+}

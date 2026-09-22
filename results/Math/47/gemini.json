@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 96.52,
+  "branch_cov": 85.92,
+  "test_file": "ComplexGeminiTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexGeminiTest::testAtanIDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.complex.ComplexGeminiTest::testAtanIDefect",
+    "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZeroDefect"
+  ]
+}

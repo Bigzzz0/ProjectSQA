@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "EmbeddedRungeKuttaIntegratorGeminiTest.java",
+  "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator",
+  "buggy_failures": [
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStepBackward",
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStep"
+  ],
+  "fixed_failures": []
+}

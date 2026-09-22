@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "PearsonsCorrelationGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.correlation.PearsonsCorrelation",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.correlation.PearsonsCorrelationGeminiTest::testPValueNearZero",
+    "org.apache.commons.math.stat.correlation.PearsonsCorrelationGeminiTest::testPValueNearZeroNegativeCorrelation"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 98.65,
+  "test_file": "BrentOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.univariate.BrentOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
+  ]
+}

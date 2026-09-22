@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 96.65,
+  "branch_cov": 97.05,
+  "test_file": "MathUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testLcmOneIntegerMinValueDefect",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testSubAndCheckLong",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testLcmIntegerMinValueOneDefect",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testLcmIntegerMinValuePowerOfTwoDefect",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdIntegerMinValueZeroDefect",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdZeroIntegerMinValueDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testSubAndCheckLong"
+  ]
+}

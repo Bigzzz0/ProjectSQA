@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 89.36,
+  "branch_cov": 78.1,
+  "test_file": "DfpGeminiTest.java",
+  "target_classes": "org.apache.commons.math.dfp.Dfp",
+  "buggy_failures": [
+    "org.apache.commons.math.dfp.DfpGeminiTest::testIssue567ZeroToDouble",
+    "org.apache.commons.math.dfp.DfpGeminiTest::testTruncationAndRoundingModes",
+    "org.apache.commons.math.dfp.DfpGeminiTest::testIssue567NegativeZeroToDouble",
+    "org.apache.commons.math.dfp.DfpGeminiTest::testRoundAllModes"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.dfp.DfpGeminiTest::testTruncationAndRoundingModes",
+    "org.apache.commons.math.dfp.DfpGeminiTest::testRoundAllModes"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 97.22,
+  "branch_cov": 79.6,
+  "test_file": "FastMathGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.FastMath",
+  "buggy_failures": [
+    "org.apache.commons.math.util.FastMathGeminiTest::testMaxFloatDefect",
+    "org.apache.commons.math.util.FastMathGeminiTest::testLogAndLog10",
+    "org.apache.commons.math.util.FastMathGeminiTest::testNextAfterAndNextUp"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.util.FastMathGeminiTest::testLogAndLog10",
+    "org.apache.commons.math.util.FastMathGeminiTest::testNextAfterAndNextUp"
+  ]
+}

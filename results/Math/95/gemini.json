@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "FDistributionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorOne",
+    "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorTwo",
+    "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomAsymmetric"
+  ],
+  "fixed_failures": []
+}

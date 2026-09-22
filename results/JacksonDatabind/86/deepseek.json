@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 92.86,
+  "test_file": "ResolvedRecursiveTypeDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
+  ]
+}

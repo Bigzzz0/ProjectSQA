@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 97.89,
+  "branch_cov": 94.12,
+  "test_file": "ComplexGeminiTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexGeminiTest::testMath221"
+  ],
+  "fixed_failures": []
+}

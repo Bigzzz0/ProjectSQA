@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "NormalDistributionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValuesFarFromMean",
+    "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValues"
+  ],
+  "fixed_failures": []
+}

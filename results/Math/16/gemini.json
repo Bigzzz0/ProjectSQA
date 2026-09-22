@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 88.27,
+  "branch_cov": 72.91,
+  "test_file": "FastMathGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.util.FastMath",
+  "buggy_failures": [
+    "org.apache.commons.math3.util.FastMathGeminiTest::testMath905LargePositive",
+    "org.apache.commons.math3.util.FastMathGeminiTest::testRoundingAndFloorCeil",
+    "org.apache.commons.math3.util.FastMathGeminiTest::testMath905LargeNegative"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.util.FastMathGeminiTest::testRoundingAndFloorCeil"
+  ]
+}

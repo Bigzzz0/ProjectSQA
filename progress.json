@@ -8097,11 +8097,14 @@
     "fixed_failures": []
   },
   "Math-6-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BaseOptimizerGeminiTest.java;CMAESOptimizerGeminiTest.java;GaussNewtonOptimizerGeminiTest.java;LevenbergMarquardtOptimizerGeminiTest.java;NonLinearConjugateGradientOptimizerGeminiTest.java;PowellOptimizerGeminiTest.java;SimplexOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optim.BaseOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizer;org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizer;org.apache.commons.math3.optim.nonlinear.vector.jacobian.LevenbergMarquardtOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-7-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8114,11 +8117,14 @@
     "fixed_failures": []
   },
   "Math-7-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractIntegratorGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.ode.AbstractIntegrator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-8-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8131,11 +8137,18 @@
     "fixed_failures": []
   },
   "Math-8-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 97.5,
+    "branch_cov": 95.83,
+    "test_file": "DiscreteDistributionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.distribution.DiscreteDistribution",
+    "buggy_failures": [
+      "org.apache.commons.math3.distribution.DiscreteDistributionGeminiTest::testIssue942ArrayStoreException",
+      "org.apache.commons.math3.distribution.DiscreteDistributionGeminiTest::testConstructorNaNProbability"
+    ],
+    "fixed_failures": []
   },
   "Math-9-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8148,11 +8161,14 @@
     "fixed_failures": []
   },
   "Math-9-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "LineGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-10-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8165,11 +8181,17 @@
     "fixed_failures": []
   },
   "Math-10-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 95.1,
+    "test_file": "DSCompilerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.analysis.differentiation.DSCompiler",
+    "buggy_failures": [
+      "org.apache.commons.math3.analysis.differentiation.DSCompilerGeminiTest::testAtan2SpecialCasesZeroZero"
+    ],
+    "fixed_failures": []
   },
   "Math-11-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8182,11 +8204,14 @@
     "fixed_failures": []
   },
   "Math-11-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MultivariateNormalDistributionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.distribution.MultivariateNormalDistribution",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-12-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8199,11 +8224,17 @@
     "fixed_failures": []
   },
   "Math-12-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "BitsStreamGeneratorGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.random.BitsStreamGenerator",
+    "buggy_failures": [
+      "org.apache.commons.math3.random.BitsStreamGeneratorGeminiTest::testDefectNextGaussianPreservedOnSerialization"
+    ],
+    "fixed_failures": []
   },
   "Math-13-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8216,11 +8247,15 @@
     "fixed_failures": []
   },
   "Math-13-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractLeastSquaresOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-14-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8233,11 +8268,14 @@
     "fixed_failures": []
   },
   "Math-14-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractLeastSquaresOptimizerGeminiTest.java;WeightGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer;org.apache.commons.math3.optim.nonlinear.vector.Weight",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-15-deepseek": {
     "status": "DONE",
@@ -8276,11 +8314,14 @@
     ]
   },
   "Math-15-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FastMathGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.util.FastMath",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-16-deepseek": {
     "status": "DONE",
@@ -8304,11 +8345,21 @@
     ]
   },
   "Math-16-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 88.27,
+    "branch_cov": 72.91,
+    "test_file": "FastMathGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.util.FastMath",
+    "buggy_failures": [
+      "org.apache.commons.math3.util.FastMathGeminiTest::testMath905LargePositive",
+      "org.apache.commons.math3.util.FastMathGeminiTest::testRoundingAndFloorCeil",
+      "org.apache.commons.math3.util.FastMathGeminiTest::testMath905LargeNegative"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math3.util.FastMathGeminiTest::testRoundingAndFloorCeil"
+    ]
   },
   "Math-17-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8321,11 +8372,14 @@
     "fixed_failures": []
   },
   "Math-17-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DfpGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.dfp.Dfp",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-18-deepseek": {
     "status": "DONE",
@@ -8339,11 +8393,19 @@
     "fixed_failures": []
   },
   "Math-18-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 95.1,
+    "branch_cov": 87.32,
+    "test_file": "CMAESOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
+    ]
   },
   "Math-19-deepseek": {
     "status": "DONE",
@@ -8362,11 +8424,14 @@
     ]
   },
   "Math-19-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CMAESOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-20-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8379,11 +8444,18 @@
     "fixed_failures": []
   },
   "Math-20-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 93.8,
+    "branch_cov": 86.94,
+    "test_file": "CMAESOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testBoundaryConstraintLowerBoundIntegrity",
+      "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testMath864"
+    ],
+    "fixed_failures": []
   },
   "Math-21-deepseek": {
     "status": "DONE",
@@ -8405,11 +8477,14 @@
     ]
   },
   "Math-21-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "RectangularCholeskyDecompositionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.linear.RectangularCholeskyDecomposition",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-22-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8422,11 +8497,21 @@
     "fixed_failures": []
   },
   "Math-22-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "FDistributionGeminiTest.java;UniformRealDistributionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.distribution.FDistribution;org.apache.commons.math3.distribution.UniformRealDistribution",
+    "buggy_failures": [
+      "org.apache.commons.math3.distribution.FDistributionGeminiTest::testIsSupportLowerBoundInclusive",
+      "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval",
+      "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testIsSupportUpperBoundInclusive"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval"
+    ]
   },
   "Math-23-deepseek": {
     "status": "DONE",
@@ -8443,11 +8528,18 @@
     "fixed_failures": []
   },
   "Math-23-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 98.35,
+    "branch_cov": 95.95,
+    "test_file": "BrentOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.univariate.BrentOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBestMinimization",
+      "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBestMaximization"
+    ],
+    "fixed_failures": []
   },
   "Math-24-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8460,11 +8552,19 @@
     "fixed_failures": []
   },
   "Math-24-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 98.65,
+    "test_file": "BrentOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.univariate.BrentOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
+    ]
   },
   "Math-25-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8477,11 +8577,22 @@
     "fixed_failures": []
   },
   "Math-25-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 98.94,
+    "branch_cov": 89.29,
+    "test_file": "HarmonicFitterGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.fitting.HarmonicFitter",
+    "buggy_failures": [
+      "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
+      "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testMath844"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testParameterGuesserConstantYObservations",
+      "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
+      "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testGuesserClonesObservationsDefensively"
+    ]
   },
   "Math-26-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8494,11 +8605,14 @@
     "fixed_failures": []
   },
   "Math-26-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FractionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.fraction.Fraction",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-27-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8511,11 +8625,14 @@
     "fixed_failures": []
   },
   "Math-27-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FractionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.fraction.Fraction",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-28-deepseek": {
     "status": "DONE",
@@ -8545,11 +8662,15 @@
     ]
   },
   "Math-28-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 100.0,
+    "branch_cov": 95.83,
+    "test_file": "SimplexSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.linear.SimplexSolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-29-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8562,11 +8683,14 @@
     "fixed_failures": []
   },
   "Math-29-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "OpenMapRealVectorGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.linear.OpenMapRealVector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-30-deepseek": {
     "status": "DONE",
@@ -8585,11 +8709,17 @@
     ]
   },
   "Math-30-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "MannWhitneyUTestGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.stat.inference.MannWhitneyUTest",
+    "buggy_failures": [
+      "org.apache.commons.math3.stat.inference.MannWhitneyUTestGeminiTest::testBigDataSetIntegerOverflowDefect"
+    ],
+    "fixed_failures": []
   },
   "Math-31-deepseek": {
     "status": "DONE",
@@ -8628,11 +8758,19 @@
     ]
   },
   "Math-31-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 98.31,
+    "branch_cov": 83.33,
+    "test_file": "ContinuedFractionGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.util.ContinuedFraction",
+    "buggy_failures": [
+      "org.apache.commons.math3.util.ContinuedFractionGeminiTest::testDirectHNInfinityThrowsConvergenceException"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math3.util.ContinuedFractionGeminiTest::testScalingBranchWithBGreaterThanA"
+    ]
   },
   "Math-32-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8645,11 +8783,14 @@
     "fixed_failures": []
   },
   "Math-32-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PolygonsSetGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-33-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8662,11 +8803,14 @@
     "fixed_failures": []
   },
   "Math-33-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SimplexTableauGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.optimization.linear.SimplexTableau",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-34-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8679,11 +8823,14 @@
     "fixed_failures": []
   },
   "Math-34-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ListPopulationGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.genetics.ListPopulation",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-35-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8696,11 +8843,14 @@
     "fixed_failures": []
   },
   "Math-35-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ElitisticListPopulationGeminiTest.java",
+    "target_classes": "org.apache.commons.math3.genetics.ElitisticListPopulation",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-36-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8713,11 +8863,14 @@
     "fixed_failures": []
   },
   "Math-36-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BigFractionGeminiTest.java",
+    "target_classes": "org.apache.commons.math.fraction.BigFraction",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-37-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8730,11 +8883,14 @@
     "fixed_failures": []
   },
   "Math-37-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ComplexGeminiTest.java",
+    "target_classes": "org.apache.commons.math.complex.Complex",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-38-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8747,11 +8903,26 @@
     "fixed_failures": []
   },
   "Math-38-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 91.17,
+    "branch_cov": 87.5,
+    "test_file": "BOBYQAOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.direct.BOBYQAOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testSphereMinimization2D",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testConstrainedRosenWithMoreInterpolationPoints",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testSphereMinimization2D",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
+      "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
+    ]
   },
   "Math-39-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8764,11 +8935,18 @@
     "fixed_failures": []
   },
   "Math-39-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "EmbeddedRungeKuttaIntegratorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator",
+    "buggy_failures": [
+      "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStepBackward",
+      "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStep"
+    ],
+    "fixed_failures": []
   },
   "Math-40-deepseek": {
     "status": "DONE",
@@ -8796,11 +8974,14 @@
     ]
   },
   "Math-40-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BracketingNthOrderBrentSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-41-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8813,11 +8994,21 @@
     "fixed_failures": []
   },
   "Math-41-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 97.32,
+    "branch_cov": 82.61,
+    "test_file": "VarianceGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+    "buggy_failures": [
+      "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateWeightedSingleAndEmpty",
+      "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateArraySegmentWeightedWithPrecomputedMean",
+      "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateArraySegmentWeighted"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateWeightedSingleAndEmpty"
+    ]
   },
   "Math-42-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8830,11 +9021,15 @@
     "fixed_failures": []
   },
   "Math-42-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 98.36,
+    "branch_cov": 93.33,
+    "test_file": "SimplexTableauGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-43-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8847,11 +9042,14 @@
     "fixed_failures": []
   },
   "Math-43-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SummaryStatisticsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.descriptive.SummaryStatistics",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-44-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8864,11 +9062,14 @@
     "fixed_failures": []
   },
   "Math-44-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractIntegratorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.ode.AbstractIntegrator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-45-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8881,11 +9082,17 @@
     "fixed_failures": []
   },
   "Math-45-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "OpenMapRealMatrixGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.OpenMapRealMatrix",
+    "buggy_failures": [
+      "org.apache.commons.math.linear.OpenMapRealMatrixGeminiTest::testMath679"
+    ],
+    "fixed_failures": []
   },
   "Math-46-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8898,11 +9105,24 @@
     "fixed_failures": []
   },
   "Math-46-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 99.01,
+    "branch_cov": 97.97,
+    "test_file": "ComplexGeminiTest.java",
+    "target_classes": "org.apache.commons.math.complex.Complex",
+    "buggy_failures": [
+      "org.apache.commons.math.complex.ComplexGeminiTest::testAtanI",
+      "org.apache.commons.math.complex.ComplexGeminiTest::testAtanNegativeI",
+      "org.apache.commons.math.complex.ComplexGeminiTest::testDivideDoubleZero",
+      "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZero"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.complex.ComplexGeminiTest::testAtanNegativeI",
+      "org.apache.commons.math.complex.ComplexGeminiTest::testDivideDoubleZero",
+      "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZero"
+    ]
   },
   "Math-47-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8915,11 +9135,20 @@
     "fixed_failures": []
   },
   "Math-47-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 96.52,
+    "branch_cov": 85.92,
+    "test_file": "ComplexGeminiTest.java",
+    "target_classes": "org.apache.commons.math.complex.Complex",
+    "buggy_failures": [
+      "org.apache.commons.math.complex.ComplexGeminiTest::testAtanIDefect"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.complex.ComplexGeminiTest::testAtanIDefect",
+      "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZeroDefect"
+    ]
   },
   "Math-48-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8932,11 +9161,17 @@
     "fixed_failures": []
   },
   "Math-48-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 90.41,
+    "branch_cov": 63.04,
+    "test_file": "BaseSecantSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+    "buggy_failures": [
+      "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631RegulaFalsiConvergenceFailure"
+    ],
+    "fixed_failures": []
   },
   "Math-49-deepseek": {
     "status": "DONE",
@@ -8960,11 +9195,14 @@
     ]
   },
   "Math-49-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "OpenMapRealVectorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.OpenMapRealVector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-50-deepseek": {
     "status": "COMPILE_ERROR",
@@ -8977,11 +9215,17 @@
     "fixed_failures": []
   },
   "Math-50-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 85.33,
+    "branch_cov": 60.42,
+    "test_file": "BaseSecantSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+    "buggy_failures": [
+      "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631"
+    ],
+    "fixed_failures": []
   },
   "Math-51-deepseek": {
     "status": "DONE",
@@ -9007,11 +9251,21 @@
     ]
   },
   "Math-51-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 94.37,
+    "branch_cov": 73.33,
+    "test_file": "BaseSecantSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+    "buggy_failures": [
+      "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testInitialMinIsExactRoot",
+      "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testInitialMinIsExactRoot",
+      "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631"
+    ]
   },
   "Math-52-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9024,11 +9278,21 @@
     "fixed_failures": []
   },
   "Math-52-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 96.46,
+    "branch_cov": 86.07,
+    "test_file": "RotationGeminiTest.java",
+    "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+    "buggy_failures": [
+      "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
+      "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
+      "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
+    ]
   },
   "Math-53-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9041,11 +9305,14 @@
     "fixed_failures": []
   },
   "Math-53-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ComplexGeminiTest.java",
+    "target_classes": "org.apache.commons.math.complex.Complex",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-54-deepseek": {
     "status": "DONE",
@@ -9117,11 +9384,23 @@
     ]
   },
   "Math-54-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 89.36,
+    "branch_cov": 78.1,
+    "test_file": "DfpGeminiTest.java",
+    "target_classes": "org.apache.commons.math.dfp.Dfp",
+    "buggy_failures": [
+      "org.apache.commons.math.dfp.DfpGeminiTest::testIssue567ZeroToDouble",
+      "org.apache.commons.math.dfp.DfpGeminiTest::testTruncationAndRoundingModes",
+      "org.apache.commons.math.dfp.DfpGeminiTest::testIssue567NegativeZeroToDouble",
+      "org.apache.commons.math.dfp.DfpGeminiTest::testRoundAllModes"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.dfp.DfpGeminiTest::testTruncationAndRoundingModes",
+      "org.apache.commons.math.dfp.DfpGeminiTest::testRoundAllModes"
+    ]
   },
   "Math-55-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9134,11 +9413,17 @@
     "fixed_failures": []
   },
   "Math-55-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 95.83,
+    "test_file": "Vector3DGeminiTest.java",
+    "target_classes": "org.apache.commons.math.geometry.Vector3D",
+    "buggy_failures": [
+      "org.apache.commons.math.geometry.Vector3DGeminiTest::testCrossProductCancellation"
+    ],
+    "fixed_failures": []
   },
   "Math-56-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9151,11 +9436,19 @@
     "fixed_failures": []
   },
   "Math-56-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 3,
+    "line_cov": 98.67,
+    "branch_cov": 97.06,
+    "test_file": "MultidimensionalCounterGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MultidimensionalCounter",
+    "buggy_failures": [
+      "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testIterationConsistency",
+      "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectSingleDimensionGetCounts",
+      "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectGetCountsLastDimension"
+    ],
+    "fixed_failures": []
   },
   "Math-57-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9168,11 +9461,20 @@
     "fixed_failures": []
   },
   "Math-57-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 79.17,
+    "branch_cov": 77.78,
+    "test_file": "KMeansPlusPlusClustererGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer",
+    "buggy_failures": [
+      "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testSmallDistances",
+      "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testKGreaterThanPointsSizeThrowsException"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testKGreaterThanPointsSizeThrowsException"
+    ]
   },
   "Math-58-deepseek": {
     "status": "DONE",
@@ -9192,11 +9494,14 @@
     ]
   },
   "Math-58-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "GaussianFitterGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.fitting.GaussianFitter",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-59-deepseek": {
     "status": "DONE",
@@ -9223,11 +9528,22 @@
     ]
   },
   "Math-59-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 97.22,
+    "branch_cov": 79.6,
+    "test_file": "FastMathGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.FastMath",
+    "buggy_failures": [
+      "org.apache.commons.math.util.FastMathGeminiTest::testMaxFloatDefect",
+      "org.apache.commons.math.util.FastMathGeminiTest::testLogAndLog10",
+      "org.apache.commons.math.util.FastMathGeminiTest::testNextAfterAndNextUp"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.util.FastMathGeminiTest::testLogAndLog10",
+      "org.apache.commons.math.util.FastMathGeminiTest::testNextAfterAndNextUp"
+    ]
   },
   "Math-60-deepseek": {
     "status": "DONE",
@@ -9250,11 +9566,21 @@
     ]
   },
   "Math-60-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 87.23,
+    "branch_cov": 77.78,
+    "test_file": "NormalDistributionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+    "buggy_failures": [
+      "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValues",
+      "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testInverseCumulativeProbabilityStandard",
+      "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValuesWithCustomDistribution"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testInverseCumulativeProbabilityStandard"
+    ]
   },
   "Math-61-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9267,11 +9593,23 @@
     "fixed_failures": []
   },
   "Math-61-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "PoissonDistributionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.distribution.PoissonDistributionImpl",
+    "buggy_failures": [
+      "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
+      "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testMeanZeroTargetingDefect",
+      "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testMean",
+      "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
+      "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
+    ]
   },
   "Math-62-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9284,11 +9622,14 @@
     "fixed_failures": []
   },
   "Math-62-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MultiStartUnivariateRealOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-63-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9301,11 +9642,14 @@
     "fixed_failures": []
   },
   "Math-63-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MathUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MathUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-64-deepseek": {
     "status": "DONE",
@@ -9335,11 +9679,14 @@
     ]
   },
   "Math-64-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "LevenbergMarquardtOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-65-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9352,11 +9699,15 @@
     "fixed_failures": []
   },
   "Math-65-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "AbstractLeastSquaresOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-66-deepseek": {
     "status": "DONE",
@@ -9384,11 +9735,29 @@
     ]
   },
   "Math-66-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 100.0,
+    "branch_cov": 96.55,
+    "test_file": "BrentOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.univariate.BrentOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResetAccuraciesToDefaults",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResultClearedBeforeOptimization",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testQuinticMinDefect",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testMaximizationHistoryAssignmentBranches",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testSinMinDefect"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResetAccuraciesToDefaults",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResultClearedBeforeOptimization",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testQuinticMinDefect",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testMaximizationHistoryAssignmentBranches",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testConstructorDefaultState",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testSinMinDefect",
+      "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testDoOptimizeThrowsUnsupportedOperationException"
+    ]
   },
   "Math-67-deepseek": {
     "status": "DONE",
@@ -9412,11 +9781,14 @@
     ]
   },
   "Math-67-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MultiStartUnivariateRealOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-68-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9429,11 +9801,24 @@
     "fixed_failures": []
   },
   "Math-68-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 96.39,
+    "branch_cov": 85.2,
+    "test_file": "LevenbergMarquardtOptimizerGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+    "buggy_failures": [
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth",
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testVectorialConvergenceCheckerIntegration"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
+      "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth"
+    ]
   },
   "Math-69-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9446,11 +9831,18 @@
     "fixed_failures": []
   },
   "Math-69-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "PearsonsCorrelationGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.correlation.PearsonsCorrelation",
+    "buggy_failures": [
+      "org.apache.commons.math.stat.correlation.PearsonsCorrelationGeminiTest::testPValueNearZero",
+      "org.apache.commons.math.stat.correlation.PearsonsCorrelationGeminiTest::testPValueNearZeroNegativeCorrelation"
+    ],
+    "fixed_failures": []
   },
   "Math-70-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9463,11 +9855,21 @@
     "fixed_failures": []
   },
   "Math-70-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "BisectionSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BisectionSolver",
+    "buggy_failures": [
+      "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testMath369Quadratic",
+      "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testIntervalAlreadyWithinTolerance",
+      "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testMath369"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testIntervalAlreadyWithinTolerance"
+    ]
   },
   "Math-71-deepseek": {
     "status": "DONE",
@@ -9497,11 +9899,14 @@
     ]
   },
   "Math-71-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EmbeddedRungeKuttaIntegratorGeminiTest.java;RungeKuttaIntegratorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator;org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-72-deepseek": {
     "status": "DONE",
@@ -9529,11 +9934,14 @@
     ]
   },
   "Math-72-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BrentSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BrentSolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-73-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9546,11 +9954,14 @@
     "fixed_failures": []
   },
   "Math-73-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BrentSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.BrentSolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-74-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9563,11 +9974,14 @@
     "fixed_failures": []
   },
   "Math-74-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EmbeddedRungeKuttaIntegratorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-75-deepseek": {
     "status": "DONE",
@@ -9593,11 +10007,21 @@
     ]
   },
   "Math-75-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 95.52,
+    "branch_cov": 85.42,
+    "test_file": "FrequencyGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.Frequency",
+    "buggy_failures": [
+      "org.apache.commons.math.stat.FrequencyGeminiTest::testSerializationIntegrity",
+      "org.apache.commons.math.stat.FrequencyGeminiTest::testDefectTargetedGetPctObjectCall",
+      "org.apache.commons.math.stat.FrequencyGeminiTest::testDefectTargetedIntegerObjectPct"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.stat.FrequencyGeminiTest::testSerializationIntegrity"
+    ]
   },
   "Math-76-deepseek": {
     "status": "DONE",
@@ -9627,11 +10051,19 @@
     ]
   },
   "Math-76-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 99.25,
+    "branch_cov": 96.3,
+    "test_file": "SingularValueDecompositionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+    "buggy_failures": [
+      "org.apache.commons.math.linear.SingularValueDecompositionImplGeminiTest::testZeroMatrixRank"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.linear.SingularValueDecompositionImplGeminiTest::testZeroMatrixRank"
+    ]
   },
   "Math-77-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9644,11 +10076,27 @@
     "fixed_failures": []
   },
   "Math-77-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 97.0,
+    "branch_cov": 92.31,
+    "test_file": "ArrayRealVectorGeminiTest.java;OpenMapRealVectorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.ArrayRealVector;org.apache.commons.math.linear.OpenMapRealVector",
+    "buggy_failures": [
+      "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testDefectTargetLInfNormAccumulationBug",
+      "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testDefectTargetLInfNormNegativeValues",
+      "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
+      "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
+      "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis",
+      "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfNormWithNegativeValues",
+      "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfNormPositiveSumVersusMax"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
+      "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
+      "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis"
+    ]
   },
   "Math-78-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9661,11 +10109,15 @@
     "fixed_failures": []
   },
   "Math-78-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 91.11,
+    "branch_cov": 82.0,
+    "test_file": "EventStateGeminiTest.java",
+    "target_classes": "org.apache.commons.math.ode.events.EventState",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-79-deepseek": {
     "status": "DONE",
@@ -9687,11 +10139,19 @@
     ]
   },
   "Math-79-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 99.05,
+    "branch_cov": 96.23,
+    "test_file": "MathUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MathUtils",
+    "buggy_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficient"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficient"
+    ]
   },
   "Math-80-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9704,11 +10164,14 @@
     "fixed_failures": []
   },
   "Math-80-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EigenDecompositionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.EigenDecompositionImpl",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-81-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9721,11 +10184,15 @@
     "fixed_failures": []
   },
   "Math-81-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "NOT_DETECTED",
+    "failures_count": 0,
+    "line_cov": 79.27,
+    "branch_cov": 67.15,
+    "test_file": "EigenDecompositionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.EigenDecompositionImpl",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-82-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9738,11 +10205,21 @@
     "fixed_failures": []
   },
   "Math-82-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 96.67,
+    "branch_cov": 94.44,
+    "test_file": "SimplexSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.linear.SimplexSolver",
+    "buggy_failures": [
+      "org.apache.commons.math.optimization.linear.SimplexSolverGeminiTest::testTwoPhaseWithEqualityConstraint",
+      "org.apache.commons.math.optimization.linear.SimplexSolverGeminiTest::testNegativeVariablesAllowed"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.optimization.linear.SimplexSolverGeminiTest::testTwoPhaseWithEqualityConstraint",
+      "org.apache.commons.math.optimization.linear.SimplexSolverGeminiTest::testNegativeVariablesAllowed"
+    ]
   },
   "Math-83-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9755,11 +10232,20 @@
     "fixed_failures": []
   },
   "Math-83-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 7.1,
+    "branch_cov": 9.78,
+    "test_file": "SimplexTableauGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+    "buggy_failures": [
+      "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testMath286Defect"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testSolutionBasicRowHandlingAndCollision",
+      "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testMath286Defect"
+    ]
   },
   "Math-84-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9772,11 +10258,28 @@
     "fixed_failures": []
   },
   "Math-84-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "MultiDirectionalGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.direct.MultiDirectional",
+    "buggy_failures": [
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testCustomSimplexConfiguration",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMaxEvaluationsExceeded",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMinimizeMaximize",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testHighDimensionalSphere",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testRosenbrockValley",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMath283",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testOneDimensionalOptimization"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMaxEvaluationsExceeded",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMinimizeMaximize",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testRosenbrockValley",
+      "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMath283"
+    ]
   },
   "Math-85-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9789,11 +10292,14 @@
     "fixed_failures": []
   },
   "Math-85-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnivariateRealSolverUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-86-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9806,11 +10312,14 @@
     "fixed_failures": []
   },
   "Math-86-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CholeskyDecompositionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.CholeskyDecompositionImpl",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-87-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9823,11 +10332,14 @@
     "fixed_failures": []
   },
   "Math-87-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SimplexTableauGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-88-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9840,11 +10352,14 @@
     "fixed_failures": []
   },
   "Math-88-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SimplexTableauGeminiTest.java",
+    "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-89-deepseek": {
     "status": "DONE",
@@ -9867,11 +10382,14 @@
     ]
   },
   "Math-89-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FrequencyGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.Frequency",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-90-deepseek": {
     "status": "DONE",
@@ -9895,11 +10413,17 @@
     ]
   },
   "Math-90-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 97.17,
+    "branch_cov": 90.62,
+    "test_file": "FrequencyGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.Frequency",
+    "buggy_failures": [
+      "org.apache.commons.math.stat.FrequencyGeminiTest::testAddNonComparable"
+    ],
+    "fixed_failures": []
   },
   "Math-91-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9912,11 +10436,17 @@
     "fixed_failures": []
   },
   "Math-91-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 98.16,
+    "branch_cov": 95.56,
+    "test_file": "FractionGeminiTest.java",
+    "target_classes": "org.apache.commons.math.fraction.Fraction",
+    "buggy_failures": [
+      "org.apache.commons.math.fraction.FractionGeminiTest::testCompareToPrecisionDefect"
+    ],
+    "fixed_failures": []
   },
   "Math-92-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9929,11 +10459,17 @@
     "fixed_failures": []
   },
   "Math-92-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 98.27,
+    "branch_cov": 98.65,
+    "test_file": "MathUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MathUtils",
+    "buggy_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficientLargeDefect"
+    ],
+    "fixed_failures": []
   },
   "Math-93-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9946,11 +10482,22 @@
     "fixed_failures": []
   },
   "Math-93-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 97.79,
+    "branch_cov": 98.16,
+    "test_file": "MathUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MathUtils",
+    "buggy_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testNormalizeAngle",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testFactorialDoubleDefectAt17",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testNextAfter"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testNormalizeAngle",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testNextAfter"
+    ]
   },
   "Math-94-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9963,11 +10510,18 @@
     "fixed_failures": []
   },
   "Math-94-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 98.67,
+    "branch_cov": 98.14,
+    "test_file": "MathUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MathUtils",
+    "buggy_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdIntegerOverflowBug",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdOverflow2Pow31"
+    ],
+    "fixed_failures": []
   },
   "Math-95-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9980,11 +10534,19 @@
     "fixed_failures": []
   },
   "Math-95-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "FDistributionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+    "buggy_failures": [
+      "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorOne",
+      "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorTwo",
+      "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomAsymmetric"
+    ],
+    "fixed_failures": []
   },
   "Math-96-deepseek": {
     "status": "COMPILE_ERROR",
@@ -9997,11 +10559,17 @@
     "fixed_failures": []
   },
   "Math-96-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 97.89,
+    "branch_cov": 94.12,
+    "test_file": "ComplexGeminiTest.java",
+    "target_classes": "org.apache.commons.math.complex.Complex",
+    "buggy_failures": [
+      "org.apache.commons.math.complex.ComplexGeminiTest::testMath221"
+    ],
+    "fixed_failures": []
   },
   "Math-97-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10014,11 +10582,14 @@
     "fixed_failures": []
   },
   "Math-97-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BrentSolverGeminiTest.java",
+    "target_classes": "org.apache.commons.math.analysis.BrentSolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-98-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10031,11 +10602,14 @@
     "fixed_failures": []
   },
   "Math-98-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BigMatrixImplGeminiTest.java;RealMatrixImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.linear.BigMatrixImpl;org.apache.commons.math.linear.RealMatrixImpl",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-99-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10048,11 +10622,24 @@
     "fixed_failures": []
   },
   "Math-99-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 96.65,
+    "branch_cov": 97.05,
+    "test_file": "MathUtilsGeminiTest.java",
+    "target_classes": "org.apache.commons.math.util.MathUtils",
+    "buggy_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testLcmOneIntegerMinValueDefect",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testSubAndCheckLong",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testLcmIntegerMinValueOneDefect",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testLcmIntegerMinValuePowerOfTwoDefect",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdIntegerMinValueZeroDefect",
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdZeroIntegerMinValueDefect"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.util.MathUtilsGeminiTest::testSubAndCheckLong"
+    ]
   },
   "Math-100-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10065,11 +10652,14 @@
     "fixed_failures": []
   },
   "Math-100-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractEstimatorGeminiTest.java",
+    "target_classes": "org.apache.commons.math.estimation.AbstractEstimator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-101-deepseek": {
     "status": "DONE",
@@ -10095,11 +10685,23 @@
     ]
   },
   "Math-101-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 98.08,
+    "test_file": "ComplexFormatGeminiTest.java",
+    "target_classes": "org.apache.commons.math.complex.ComplexFormat",
+    "buggy_failures": [
+      "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
+      "org.apache.commons.math.complex.ComplexFormatGeminiTest::testForgottenImaginaryCharacterParsePosition",
+      "org.apache.commons.math.complex.ComplexFormatGeminiTest::testForgottenImaginaryCharacter",
+      "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
+      "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
+    ]
   },
   "Math-102-deepseek": {
     "status": "DONE",
@@ -10124,11 +10726,19 @@
     ]
   },
   "Math-102-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 96.51,
+    "test_file": "ChiSquareTestImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+    "buggy_failures": [
+      "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingUnequalTotals",
+      "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingIdenticalProportions",
+      "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareTestRescalingPValue"
+    ],
+    "fixed_failures": []
   },
   "Math-103-deepseek": {
     "status": "DONE",
@@ -10145,11 +10755,18 @@
     "fixed_failures": []
   },
   "Math-103-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "NormalDistributionImplGeminiTest.java",
+    "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+    "buggy_failures": [
+      "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValuesFarFromMean",
+      "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValues"
+    ],
+    "fixed_failures": []
   },
   "Math-104-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10162,11 +10779,17 @@
     "fixed_failures": []
   },
   "Math-104-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "GammaGeminiTest.java",
+    "target_classes": "org.apache.commons.math.special.Gamma",
+    "buggy_failures": [
+      "org.apache.commons.math.special.GammaGeminiTest::testRegularizedGammaPositivePositiveBug"
+    ],
+    "fixed_failures": []
   },
   "Math-105-deepseek": {
     "status": "DONE",
@@ -10189,11 +10812,14 @@
     ]
   },
   "Math-105-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SimpleRegressionGeminiTest.java",
+    "target_classes": "org.apache.commons.math.stat.regression.SimpleRegression",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Math-106-deepseek": {
     "status": "DONE",
@@ -10219,11 +10845,26 @@
     ]
   },
   "Math-106-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 98.25,
+    "branch_cov": 93.33,
+    "test_file": "ProperFractionFormatGeminiTest.java",
+    "target_classes": "org.apache.commons.math.fraction.ProperFractionFormat",
+    "buggy_failures": [
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusDenominator",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusWithNegativeWhole",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusWithParsePosition",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusNumerator",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusBothNumeratorAndDenominator"
+    ],
+    "fixed_failures": [
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
+      "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash"
+    ]
   },
   "Jsoup-1-deepseek": {
     "status": "DONE",
@@ -10265,11 +10906,26 @@
     "fixed_failures": []
   },
   "Jsoup-2-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 98.77,
+    "branch_cov": 94.19,
+    "test_file": "ParserGeminiTest.java",
+    "target_classes": "org.jsoup.parser.Parser",
+    "buggy_failures": [
+      "org.jsoup.parser.ParserGeminiTest::testAttributeEdgeCases",
+      "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
+      "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
+      "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterDataTag",
+      "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
+    ],
+    "fixed_failures": [
+      "org.jsoup.parser.ParserGeminiTest::testAttributeEdgeCases",
+      "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
+      "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
+      "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
+    ]
   },
   "Jsoup-3-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10282,11 +10938,39 @@
     "fixed_failures": []
   },
   "Jsoup-3-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 11,
+    "line_cov": 93.42,
+    "branch_cov": 88.44,
+    "test_file": "ElementGeminiTest.java;ParserGeminiTest.java;TagGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Element;org.jsoup.parser.Parser;org.jsoup.parser.Tag",
+    "buggy_failures": [
+      "org.jsoup.nodes.ElementGeminiTest::testEqualsAndHashCodeContract",
+      "org.jsoup.nodes.ElementGeminiTest::testPrependRowToTableDefect",
+      "org.jsoup.nodes.ElementGeminiTest::testAppendRowToTableDefect",
+      "org.jsoup.nodes.ElementGeminiTest::testDomQueryMethods",
+      "org.jsoup.nodes.ElementGeminiTest::testOuterHtmlVoidElements",
+      "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+      "org.jsoup.parser.ParserGeminiTest::testHandlesNestedImplicitTableDefect",
+      "org.jsoup.parser.ParserGeminiTest::testUnclosedAndMismatchedEndTags",
+      "org.jsoup.parser.ParserGeminiTest::testNestedTableImplicitRowDirect",
+      "org.jsoup.parser.ParserGeminiTest::testAttributeWithCorruptChar",
+      "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot"
+    ],
+    "fixed_failures": [
+      "org.jsoup.nodes.ElementGeminiTest::testEqualsAndHashCodeContract",
+      "org.jsoup.nodes.ElementGeminiTest::testDomQueryMethods",
+      "org.jsoup.nodes.ElementGeminiTest::testOuterHtmlVoidElements",
+      "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+      "org.jsoup.parser.ParserGeminiTest::testHandlesNestedImplicitTableDefect",
+      "org.jsoup.parser.ParserGeminiTest::testUnclosedAndMismatchedEndTags",
+      "org.jsoup.parser.ParserGeminiTest::testNestedTableImplicitRowDirect",
+      "org.jsoup.parser.ParserGeminiTest::testAttributeWithCorruptChar",
+      "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot",
+      "org.jsoup.parser.TagGeminiTest::testMultiAncestorResolution",
+      "org.jsoup.parser.TagGeminiTest::testHtmlTagIsValidParentForAny"
+    ]
   },
   "Jsoup-4-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10299,11 +10983,14 @@
     "fixed_failures": []
   },
   "Jsoup-4-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EntitiesGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Entities",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-5-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10316,11 +11003,14 @@
     "fixed_failures": []
   },
   "Jsoup-5-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ParserGeminiTest.java",
+    "target_classes": "org.jsoup.parser.Parser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-6-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10333,11 +11023,14 @@
     "fixed_failures": []
   },
   "Jsoup-6-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EntitiesGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Entities",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-7-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10350,11 +11043,14 @@
     "fixed_failures": []
   },
   "Jsoup-7-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DocumentGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Document",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-8-deepseek": {
     "status": "DONE",
@@ -10380,11 +11076,14 @@
     ]
   },
   "Jsoup-8-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Node",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-9-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10397,11 +11096,14 @@
     "fixed_failures": []
   },
   "Jsoup-9-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EntitiesGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Entities",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-10-deepseek": {
     "status": "DONE",
@@ -10428,11 +11130,14 @@
     ]
   },
   "Jsoup-10-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeGeminiTest.java",
+    "target_classes": "org.jsoup.nodes.Node",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Jsoup-11-deepseek": {
     "status": "COMPILE_ERROR",
@@ -10445,11 +11150,28 @@
     "fixed_failures": []
   },
   "Jsoup-11-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 93.43,
+    "branch_cov": 84.17,
+    "test_file": "SelectorGeminiTest.java",
+    "target_classes": "org.jsoup.select.Selector",
+    "buggy_failures": [
+      "org.jsoup.select.SelectorGeminiTest::testDefectPseudoHasDescendants",
+      "org.jsoup.select.SelectorGeminiTest::testDefectNotAllSelector",
+      "org.jsoup.select.SelectorGeminiTest::testDefectNotAttributeSelector",
+      "org.jsoup.select.SelectorGeminiTest::testTextAndRegexPseudoSelectors",
+      "org.jsoup.select.SelectorGeminiTest::testAttributeOperators",
+      "org.jsoup.select.SelectorGeminiTest::testDefectNotClassSelector",
+      "org.jsoup.select.SelectorGeminiTest::testInvalidAttributeSelectorThrowsException"
+    ],
+    "fixed_failures": [
+      "org.jsoup.select.SelectorGeminiTest::testDefectNotAllSelector",
+      "org.jsoup.select.SelectorGeminiTest::testTextAndRegexPseudoSelectors",
+      "org.jsoup.select.SelectorGeminiTest::testAttributeOperators",
+      "org.jsoup.select.SelectorGeminiTest::testInvalidAttributeSelectorThrowsException"
+    ]
   },
   "Jsoup-12-deepseek": {
     "status": "DONE",
@@ -10505,11 +11227,23 @@
     ]
   },
   "Jsoup-12-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 97.71,
+    "branch_cov": 94.7,
+    "test_file": "SelectorGeminiTest.java",
+    "target_classes": "org.jsoup.select.Selector",
+    "buggy_failures": [
+      "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
+      "org.jsoup.select.SelectorGeminiTest::testByAttributeRegexWithMultipleAlternations",
+      "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators",
+      "org.jsoup.select.SelectorGeminiTest::testByAttributeRegexCombined"
+    ],
+    "fixed_failures": [
+      "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
+      "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators"
+    ]
   },
   "Jsoup-13-deepseek": {
     "status": "COMPILE_ERROR",
@@ -14073,11 +14807,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-28-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonNodeDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-28-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14087,11 +14824,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-29-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExternalTypeHandlerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-29-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14101,11 +14841,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-30-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ObjectMapperDeepseekTest.java;TokenBufferDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ObjectMapper;com.fasterxml.jackson.databind.util.TokenBuffer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-30-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14115,11 +14858,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-31-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TokenBufferDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.util.TokenBuffer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-31-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14129,11 +14875,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-32-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UntypedObjectDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-32-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14143,11 +14892,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-33-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JacksonAnnotationIntrospectorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-33-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14157,11 +14909,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-34-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NumberSerializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-34-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14171,11 +14926,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-35-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AsWrapperTypeDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.AsWrapperTypeDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-35-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14185,11 +14943,24 @@
     "test_file": "-"
   },
   "JacksonDatabind-36-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 90.16,
+    "branch_cov": 72.31,
+    "test_file": "StdDateFormatDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseWithPositionISO8601Failure",
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseEmptyString",
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseAsISO8601WithLenientFalseFailure",
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseISO8601TimeLenCases"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseWithPositionISO8601Failure",
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseEmptyString",
+      "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseISO8601TimeLenCases"
+    ]
   },
   "JacksonDatabind-36-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14199,11 +14970,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-37-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SimpleTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.SimpleType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-37-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14213,11 +14987,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-38-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CollectionTypeDeepseekTest.java;MapTypeDeepseekTest.java;SimpleTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.CollectionType;com.fasterxml.jackson.databind.type.MapType;com.fasterxml.jackson.databind.type.SimpleType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-38-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14227,11 +15004,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-39-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NullifyingDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-39-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14241,11 +15021,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-40-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NumberDeserializersDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.NumberDeserializers",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-40-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14255,11 +15038,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-41-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.TypeFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-41-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14269,11 +15055,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-42-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FromStringDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.FromStringDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-42-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14283,11 +15072,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-43-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ObjectIdValuePropertyDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-43-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14297,11 +15089,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-44-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SimpleTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.SimpleType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-44-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14311,11 +15106,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-45-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeSerializerBaseDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-45-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14325,11 +15123,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-46-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ReferenceTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.ReferenceType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-46-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14339,11 +15140,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-47-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AnnotationIntrospectorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.AnnotationIntrospector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-47-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14353,11 +15157,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-48-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DeserializationConfigDeepseekTest.java;SerializationConfigDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.DeserializationConfig;com.fasterxml.jackson.databind.SerializationConfig",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-48-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14367,11 +15174,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-49-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "WritableObjectIdDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.impl.WritableObjectId",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-49-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14381,11 +15191,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-50-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-50-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14395,11 +15208,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-51-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeDeserializerBaseDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-51-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14409,11 +15225,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-52-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanDeserializerBaseDeepseekTest.java;ExternalTypeHandlerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerBase;com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-52-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14423,11 +15242,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-53-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeBindingsDeepseekTest.java;TypeFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.TypeBindings;com.fasterxml.jackson.databind.type.TypeFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-53-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14437,11 +15259,21 @@
     "test_file": "-"
   },
   "JacksonDatabind-54-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 75.26,
+    "branch_cov": 65.67,
+    "test_file": "PropertyBuilderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
+      "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
+      "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
+    ]
   },
   "JacksonDatabind-54-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14451,11 +15283,37 @@
     "test_file": "-"
   },
   "JacksonDatabind-55-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 10,
+    "line_cov": 91.8,
+    "branch_cov": 91.89,
+    "test_file": "StdKeySerializersDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.StdKeySerializers",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testStringKeySerializer",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testEnumKeyWithJsonProperty",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeToString",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeDate",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeEnum",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicReadResolve",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeSecondCall",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeClass",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testStringKeySerializer",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeToString",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeDate",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeEnum",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicReadResolve",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeSecondCall",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeClass",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testGetFallbackKeySerializerEnumType",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
+      "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
+    ]
   },
   "JacksonDatabind-55-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14465,11 +15323,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-56-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FromStringDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.FromStringDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-56-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14479,11 +15340,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-57-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ObjectReaderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ObjectReader",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-57-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14493,11 +15357,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-58-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-58-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14507,11 +15374,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-59-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CollectionLikeTypeDeepseekTest.java;JavaTypeDeepseekTest.java;MapLikeTypeDeepseekTest.java;TypeFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.JavaType;com.fasterxml.jackson.databind.type.CollectionLikeType;com.fasterxml.jackson.databind.type.MapLikeType;com.fasterxml.jackson.databind.type.TypeFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-59-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14521,11 +15391,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-60-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonValueSerializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.JsonValueSerializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-60-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14535,11 +15408,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-61-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ObjectMapperDeepseekTest.java;StdTypeResolverBuilderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ObjectMapper;com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-61-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14549,11 +15425,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-62-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CollectionDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.CollectionDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-62-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14563,11 +15442,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-63-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsonMappingExceptionDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.JsonMappingException",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-63-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14577,11 +15459,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-64-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PropertyBuilderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-64-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14591,11 +15476,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-66-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StdKeyDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-66-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14605,11 +15493,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-67-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BasicDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-67-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14619,11 +15510,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-68-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanDeserializerBaseDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-68-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14633,11 +15527,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-69-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CreatorCollectorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.CreatorCollector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-69-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14647,11 +15544,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-70-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanPropertyMapDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMap",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-70-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14661,11 +15561,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-71-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StdKeyDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-71-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14675,11 +15578,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-72-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "InnerClassPropertyDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.InnerClassProperty",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-72-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14689,11 +15595,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-73-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "POJOPropertiesCollectorDeepseekTest.java;POJOPropertyBuilderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector;com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-73-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14703,11 +15612,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-74-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AsPropertyTypeDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-74-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14717,11 +15629,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-75-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "EnumSerializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.EnumSerializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-75-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14731,11 +15646,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-76-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BuilderBasedDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BuilderBasedDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-76-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14745,11 +15663,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-77-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-77-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14759,11 +15680,27 @@
     "test_file": "-"
   },
   "JacksonDatabind-78-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 10.65,
+    "branch_cov": 8.1,
+    "test_file": "BeanDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testSerialization",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeForProxyThrows",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testBuildBeanDeserializerWithErrorThrowingDeserializer",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCreateBeanDeserializerForDangerousType",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testBuildThrowableDeserializer"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testSerialization",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeForProxyThrows",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testBuildBeanDeserializerWithErrorThrowingDeserializer",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCreateBeanDeserializerForDangerousType",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testBuildThrowableDeserializer"
+    ]
   },
   "JacksonDatabind-78-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14773,11 +15710,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-79-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanSerializerBaseDeepseekTest.java;JacksonAnnotationIntrospectorDeepseekTest.java;ObjectIdInfoDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;com.fasterxml.jackson.databind.introspect.ObjectIdInfo;com.fasterxml.jackson.databind.ser.std.BeanSerializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-79-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14787,11 +15727,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-80-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StdSubtypeResolverDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-80-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14801,11 +15744,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-81-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JacksonAnnotationIntrospectorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-81-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14815,11 +15761,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-82-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BeanDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-82-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14829,11 +15778,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-83-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FromStringDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.FromStringDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-83-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14843,11 +15795,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-84-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ResolvedRecursiveTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-84-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14857,11 +15812,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-85-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeSerializerBaseDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-85-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14871,11 +15829,21 @@
     "test_file": "-"
   },
   "JacksonDatabind-86-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 92.86,
+    "test_file": "ResolvedRecursiveTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
+      "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
+      "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
+    ]
   },
   "JacksonDatabind-86-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14885,11 +15853,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-87-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StdDateFormatDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-87-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14899,11 +15870,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-88-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ClassNameIdResolverDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.ClassNameIdResolver",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-88-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14913,11 +15887,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-90-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StdValueInstantiatorDeepseekTest.java;ValueInstantiatorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.ValueInstantiator;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-90-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14927,11 +15904,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-91-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DeserializerCacheDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.DeserializerCache",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-91-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14941,11 +15921,23 @@
     "test_file": "-"
   },
   "JacksonDatabind-92-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 9.04,
+    "branch_cov": 4.41,
+    "test_file": "BeanDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
+    ]
   },
   "JacksonDatabind-92-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14955,11 +15947,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-93-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SubTypeValidatorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-93-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14969,11 +15964,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-94-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SubTypeValidatorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-94-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14983,11 +15981,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-95-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeFactoryDeepseekTest.java;TypeParserDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.TypeFactory;com.fasterxml.jackson.databind.type.TypeParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-95-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -14997,11 +15998,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-96-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BasicDeserializerFactoryDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-96-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15011,11 +16015,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-97-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "POJONodeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.node.POJONode",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-97-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15025,11 +16032,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-98-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExternalTypeHandlerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-98-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15039,11 +16049,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-99-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ReferenceTypeDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.type.ReferenceType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-99-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15053,11 +16066,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-100-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TreeTraversingParserDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.node.TreeTraversingParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-100-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15067,11 +16083,33 @@
     "test_file": "-"
   },
   "JacksonDatabind-101-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 9,
+    "line_cov": 25.92,
+    "branch_cov": 24.5,
+    "test_file": "BeanDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializer",
+    "buggy_failures": [
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeWithUnresolvedForwardReference",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeOtherWithStringToken",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testIssue2088MultipleUnwrappedFieldsAfterCreator",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testIssue2088UnwrappedFieldsAfterLastCreatorProp",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeWithNullTokenAndCustomCodec",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeOtherWithNullToken",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testUnwrappingDeserializerRecursionDetection",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testIssue2088UnwrappedFieldsOnlyBeforeCreatorProp",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testIssue2088WithoutUnwrappedProperties"
+    ],
+    "fixed_failures": [
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeWithUnresolvedForwardReference",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeOtherWithStringToken",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testIssue2088MultipleUnwrappedFieldsAfterCreator",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testIssue2088UnwrappedFieldsAfterLastCreatorProp",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeWithNullTokenAndCustomCodec",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeOtherWithNullToken",
+      "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testUnwrappingDeserializerRecursionDetection"
+    ]
   },
   "JacksonDatabind-101-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15081,11 +16119,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-102-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DateTimeSerializerBaseDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-102-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15095,11 +16136,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-103-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "BasicBeanDescriptionDeepseekTest.java;BasicDeserializerFactoryDeepseekTest.java;BeanDeserializerFactoryDeepseekTest.java;ClassUtilDeepseekTest.java;DatabindContextDeepseekTest.java;DefaultSerializerProviderDeepseekTest.java;DeserializationContextDeepseekTest.java;DeserializerCacheDeepseekTest.java;JsonMappingExceptionDeepseekTest.java;PropertyBuilderDeepseekTest.java;SerializerProviderDeepseekTest.java;SettableAnyPropertyDeepseekTest.java;SettableBeanPropertyDeepseekTest.java;StdDeserializerDeepseekTest.java;StdKeyDeserializerDeepseekTest.java;StdValueInstantiatorDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.DatabindContext;com.fasterxml.jackson.databind.DeserializationContext;com.fasterxml.jackson.databind.JsonMappingException;com.fasterxml.jackson.databind.SerializerProvider;com.fasterxml.jackson.databind.deser.BasicDeserializerFactory;com.fasterxml.jackson.databind.deser.BeanDeserializerFactory;com.fasterxml.jackson.databind.deser.DeserializerCache;com.fasterxml.jackson.databind.deser.SettableAnyProperty;com.fasterxml.jackson.databind.deser.SettableBeanProperty;com.fasterxml.jackson.databind.deser.std.StdDeserializer;com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator;com.fasterxml.jackson.databind.introspect.BasicBeanDescription;com.fasterxml.jackson.databind.ser.DefaultSerializerProvider;com.fasterxml.jackson.databind.ser.PropertyBuilder;com.fasterxml.jackson.databind.util.ClassUtil",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-103-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15109,11 +16153,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-104-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StdDateFormatDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-104-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15123,11 +16170,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-105-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JdkDeserializersDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.JdkDeserializers",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-105-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15137,11 +16187,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-106-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TreeTraversingParserDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.node.TreeTraversingParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-106-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15151,11 +16204,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-107-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeDeserializerBaseDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-107-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15165,11 +16221,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-108-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ObjectReaderDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ObjectReader",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-108-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15179,11 +16238,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-109-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NumberSerializerDeepseekTest.java;NumberSerializersDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializer;com.fasterxml.jackson.databind.ser.std.NumberSerializers",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-109-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15193,11 +16255,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-110-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JavaUtilCollectionsDeserializersDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.impl.JavaUtilCollectionsDeserializers",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-110-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15207,11 +16272,14 @@
     "test_file": "-"
   },
   "JacksonDatabind-111-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AtomicReferenceDeserializerDeepseekTest.java;CreatorPropertyDeepseekTest.java;FieldPropertyDeepseekTest.java;MethodPropertyDeepseekTest.java;ObjectIdReferencePropertyDeepseekTest.java;ObjectIdValuePropertyDeepseekTest.java;SetterlessPropertyDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.CreatorProperty;com.fasterxml.jackson.databind.deser.impl.FieldProperty;com.fasterxml.jackson.databind.deser.impl.MethodProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty;com.fasterxml.jackson.databind.deser.impl.SetterlessProperty;com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "JacksonDatabind-111-gemini": {
     "status": "WAITING_FOR_TESTS",
@@ -15221,13 +16289,664 @@
     "test_file": "-"
   },
   "JacksonDatabind-112-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "StringCollectionDeserializerDeepseekTest.java",
+    "target_classes": "com.fasterxml.jackson.databind.deser.std.StringCollectionDeserializer",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "JacksonDatabind-112-gemini": {
     "status": "WAITING_FOR_TESTS",
     "fault_detected": "-",
     "line_cov": "-",
     "branch_cov": "-",
     "test_file": "-"
   },
-  "JacksonDatabind-112-gemini": {
+  "Closure-1-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "RemoveUnusedVarsDeepseekTest.java",
+    "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Closure-1-gemini": {
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 94.36,
+    "branch_cov": 78.95,
+    "test_file": "RemoveUnusedVarsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral",
+      "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testClosure1_DoNotRemoveFunctionArgsWhenNotRemovingGlobals"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral"
+    ]
+  },
+  "Closure-2-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeCheckDeepseekTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Closure-2-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-3-deepseek": {
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FlowSensitiveInlineVariablesDeepseekTest.java",
+    "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+    "buggy_failures": [],
+    "fixed_failures": []
+  },
+  "Closure-3-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-4-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-4-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-5-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-5-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-6-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-6-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-7-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-7-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-8-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-8-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-9-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-9-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-10-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-10-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-11-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-11-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-12-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-12-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-13-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-13-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-14-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-14-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-15-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-15-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-16-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-16-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-17-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-17-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-18-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-18-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-19-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-19-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-20-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-20-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-21-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-21-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-22-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-22-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-23-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-23-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-24-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-24-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-25-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-25-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-26-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-26-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-27-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-27-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-28-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-28-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-29-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-29-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-30-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-30-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-31-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-31-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-32-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-32-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-33-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-33-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-34-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-34-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-35-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-35-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-36-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-36-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-37-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-37-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-38-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-38-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-39-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-39-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-40-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-40-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-41-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-41-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-42-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-42-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-43-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-43-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-44-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-44-gemini": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-45-deepseek": {
+    "status": "WAITING_FOR_TESTS",
+    "fault_detected": "-",
+    "line_cov": "-",
+    "branch_cov": "-",
+    "test_file": "-"
+  },
+  "Closure-45-gemini": {
     "status": "WAITING_FOR_TESTS",
     "fault_detected": "-",
     "line_cov": "-",

@@ -1,0 +1,35 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 93.42,
+  "branch_cov": 88.44,
+  "test_file": "ElementGeminiTest.java;ParserGeminiTest.java;TagGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element;org.jsoup.parser.Parser;org.jsoup.parser.Tag",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testEqualsAndHashCodeContract",
+    "org.jsoup.nodes.ElementGeminiTest::testPrependRowToTableDefect",
+    "org.jsoup.nodes.ElementGeminiTest::testAppendRowToTableDefect",
+    "org.jsoup.nodes.ElementGeminiTest::testDomQueryMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testOuterHtmlVoidElements",
+    "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesNestedImplicitTableDefect",
+    "org.jsoup.parser.ParserGeminiTest::testUnclosedAndMismatchedEndTags",
+    "org.jsoup.parser.ParserGeminiTest::testNestedTableImplicitRowDirect",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeWithCorruptChar",
+    "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testEqualsAndHashCodeContract",
+    "org.jsoup.nodes.ElementGeminiTest::testDomQueryMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testOuterHtmlVoidElements",
+    "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesNestedImplicitTableDefect",
+    "org.jsoup.parser.ParserGeminiTest::testUnclosedAndMismatchedEndTags",
+    "org.jsoup.parser.ParserGeminiTest::testNestedTableImplicitRowDirect",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeWithCorruptChar",
+    "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot",
+    "org.jsoup.parser.TagGeminiTest::testMultiAncestorResolution",
+    "org.jsoup.parser.TagGeminiTest::testHtmlTagIsValidParentForAny"
+  ]
+}

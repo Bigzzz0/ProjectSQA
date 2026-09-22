@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 96.46,
+  "branch_cov": 86.07,
+  "test_file": "RotationGeminiTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "buggy_failures": [
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
+  ]
+}

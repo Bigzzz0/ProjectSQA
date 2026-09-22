@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "PoissonDistributionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.distribution.PoissonDistributionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testMeanZeroTargetingDefect",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testMean",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
+  ]
+}

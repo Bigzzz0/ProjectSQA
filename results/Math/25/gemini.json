@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 98.94,
+  "branch_cov": 89.29,
+  "test_file": "HarmonicFitterGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.fitting.HarmonicFitter",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testMath844"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testParameterGuesserConstantYObservations",
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testGuesserClonesObservationsDefensively"
+  ]
+}

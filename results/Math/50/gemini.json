@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 85.33,
+  "branch_cov": 60.42,
+  "test_file": "BaseSecantSolverGeminiTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631"
+  ],
+  "fixed_failures": []
+}

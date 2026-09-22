@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 95.83,
+  "test_file": "Vector3DGeminiTest.java",
+  "target_classes": "org.apache.commons.math.geometry.Vector3D",
+  "buggy_failures": [
+    "org.apache.commons.math.geometry.Vector3DGeminiTest::testCrossProductCancellation"
+  ],
+  "fixed_failures": []
+}

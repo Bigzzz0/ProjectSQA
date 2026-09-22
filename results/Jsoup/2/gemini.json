@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 98.77,
+  "branch_cov": 94.19,
+  "test_file": "ParserGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Parser",
+  "buggy_failures": [
+    "org.jsoup.parser.ParserGeminiTest::testAttributeEdgeCases",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterDataTag",
+    "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.ParserGeminiTest::testAttributeEdgeCases",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
+    "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
+  ]
+}

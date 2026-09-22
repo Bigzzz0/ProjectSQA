@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 99.25,
+  "branch_cov": 96.3,
+  "test_file": "SingularValueDecompositionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.SingularValueDecompositionImplGeminiTest::testZeroMatrixRank"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.SingularValueDecompositionImplGeminiTest::testZeroMatrixRank"
+  ]
+}

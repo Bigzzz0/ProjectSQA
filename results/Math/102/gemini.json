@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 96.51,
+  "test_file": "ChiSquareTestImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingUnequalTotals",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingIdenticalProportions",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareTestRescalingPValue"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 98.67,
+  "branch_cov": 98.14,
+  "test_file": "MathUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdIntegerOverflowBug",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdOverflow2Pow31"
+  ],
+  "fixed_failures": []
+}

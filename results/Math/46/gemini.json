@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 99.01,
+  "branch_cov": 97.97,
+  "test_file": "ComplexGeminiTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexGeminiTest::testAtanI",
+    "org.apache.commons.math.complex.ComplexGeminiTest::testAtanNegativeI",
+    "org.apache.commons.math.complex.ComplexGeminiTest::testDivideDoubleZero",
+    "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZero"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.complex.ComplexGeminiTest::testAtanNegativeI",
+    "org.apache.commons.math.complex.ComplexGeminiTest::testDivideDoubleZero",
+    "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZero"
+  ]
+}

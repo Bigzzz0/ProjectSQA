@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 93.43,
+  "branch_cov": 84.17,
+  "test_file": "SelectorGeminiTest.java",
+  "target_classes": "org.jsoup.select.Selector",
+  "buggy_failures": [
+    "org.jsoup.select.SelectorGeminiTest::testDefectPseudoHasDescendants",
+    "org.jsoup.select.SelectorGeminiTest::testDefectNotAllSelector",
+    "org.jsoup.select.SelectorGeminiTest::testDefectNotAttributeSelector",
+    "org.jsoup.select.SelectorGeminiTest::testTextAndRegexPseudoSelectors",
+    "org.jsoup.select.SelectorGeminiTest::testAttributeOperators",
+    "org.jsoup.select.SelectorGeminiTest::testDefectNotClassSelector",
+    "org.jsoup.select.SelectorGeminiTest::testInvalidAttributeSelectorThrowsException"
+  ],
+  "fixed_failures": [
+    "org.jsoup.select.SelectorGeminiTest::testDefectNotAllSelector",
+    "org.jsoup.select.SelectorGeminiTest::testTextAndRegexPseudoSelectors",
+    "org.jsoup.select.SelectorGeminiTest::testAttributeOperators",
+    "org.jsoup.select.SelectorGeminiTest::testInvalidAttributeSelectorThrowsException"
+  ]
+}

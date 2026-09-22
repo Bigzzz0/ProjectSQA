@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 75.26,
+  "branch_cov": 65.67,
+  "test_file": "PropertyBuilderDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
+  ]
+}

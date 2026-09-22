@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 9.04,
+  "branch_cov": 4.41,
+  "test_file": "BeanDeserializerFactoryDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
+  ]
+}

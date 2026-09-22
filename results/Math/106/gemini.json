@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 98.25,
+  "branch_cov": 93.33,
+  "test_file": "ProperFractionFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.math.fraction.ProperFractionFormat",
+  "buggy_failures": [
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusDenominator",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusWithNegativeWhole",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusWithParsePosition",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusNumerator",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusBothNumeratorAndDenominator"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash"
+  ]
+}

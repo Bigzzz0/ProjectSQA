@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 98.16,
+  "branch_cov": 95.56,
+  "test_file": "FractionGeminiTest.java",
+  "target_classes": "org.apache.commons.math.fraction.Fraction",
+  "buggy_failures": [
+    "org.apache.commons.math.fraction.FractionGeminiTest::testCompareToPrecisionDefect"
+  ],
+  "fixed_failures": []
+}

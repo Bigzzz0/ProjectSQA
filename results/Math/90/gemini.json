@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 97.17,
+  "branch_cov": 90.62,
+  "test_file": "FrequencyGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.Frequency",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.FrequencyGeminiTest::testAddNonComparable"
+  ],
+  "fixed_failures": []
+}

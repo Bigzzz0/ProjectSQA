@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "GammaGeminiTest.java",
+  "target_classes": "org.apache.commons.math.special.Gamma",
+  "buggy_failures": [
+    "org.apache.commons.math.special.GammaGeminiTest::testRegularizedGammaPositivePositiveBug"
+  ],
+  "fixed_failures": []
+}

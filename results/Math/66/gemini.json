@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 100.0,
+  "branch_cov": 96.55,
+  "test_file": "BrentOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.univariate.BrentOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResetAccuraciesToDefaults",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResultClearedBeforeOptimization",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testQuinticMinDefect",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testMaximizationHistoryAssignmentBranches",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testSinMinDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResetAccuraciesToDefaults",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testResultClearedBeforeOptimization",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testQuinticMinDefect",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testMaximizationHistoryAssignmentBranches",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testConstructorDefaultState",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testSinMinDefect",
+    "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testDoOptimizeThrowsUnsupportedOperationException"
+  ]
+}

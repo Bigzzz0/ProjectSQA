@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 95.1,
+  "branch_cov": 87.32,
+  "test_file": "CMAESOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 93.8,
+  "branch_cov": 86.94,
+  "test_file": "CMAESOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testBoundaryConstraintLowerBoundIntegrity",
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testMath864"
+  ],
+  "fixed_failures": []
+}

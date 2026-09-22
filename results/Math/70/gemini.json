@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "BisectionSolverGeminiTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BisectionSolver",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testMath369Quadratic",
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testIntervalAlreadyWithinTolerance",
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testMath369"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testIntervalAlreadyWithinTolerance"
+  ]
+}
