@@ -1,5 +1,0 @@
-null_column	value	mapper_reuse
-first	bar	fresh
-first	text	shared_style
-second	bar	shared_style
-second	text	fresh

@@ -1,5 +1,0 @@
-c	receiver__size
-new int[] {}	new int[] {}
-new int[] {}	new int[] {1}
-new int[] {1}	new int[] {}
-new int[] {1}	new int[] {1}

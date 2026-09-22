@@ -1,5 +1,0 @@
-arguments	matcher	capture_count
-empty	any_vararg	once
-empty	captor	twice
-two	any_vararg	twice
-two	captor	once

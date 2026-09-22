@@ -1,6 +1,0 @@
-remove_globals	program	preserve_names
-keep	global	off
-keep	function	on
-remove	global	on
-remove	function	off
-keep	function	off
