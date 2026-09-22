@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CheckSideEffects,LINE;BRANCH,0.6061567164179105,147,92

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,LINE;BRANCH,0.6508233532934131,327,210

@@ -1,0 +1,11 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.DatabindContext,LINE;BRANCH,0.6101973684210527,124,70
+com.fasterxml.jackson.databind.DeserializationContext,LINE;BRANCH,0.43313821138211384,580,258
+com.fasterxml.jackson.databind.JsonMappingException,LINE;BRANCH,0.9268077601410935,210,192
+com.fasterxml.jackson.databind.SerializerProvider,LINE;BRANCH,0.7790378006872851,462,357
+com.fasterxml.jackson.databind.deser.BasicDeserializerFactory,LINE;BRANCH,0.08065904038364279,1501,124
+com.fasterxml.jackson.databind.deser.BeanDeserializerFactory,LINE;BRANCH,0.34808807538963393,573,200
+com.fasterxml.jackson.databind.deser.DeserializerCache,LINE;BRANCH,0.5666851134477033,308,182
+com.fasterxml.jackson.databind.deser.SettableAnyProperty,LINE;BRANCH,0.5227272727272727,107,50
+com.fasterxml.jackson.databind.deser.SettableBeanProperty,LINE;BRANCH,0.5296634895934643,304,162
+com.fasterxml.jackson.databind.deser.std.StdDeserializer,LINE;BRANCH,0.3435555116033755,779,207
