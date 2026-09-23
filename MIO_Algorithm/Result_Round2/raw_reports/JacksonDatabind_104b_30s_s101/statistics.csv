@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.util.StdDateFormat,LINE;BRANCH,0.8286059629331184,403,332

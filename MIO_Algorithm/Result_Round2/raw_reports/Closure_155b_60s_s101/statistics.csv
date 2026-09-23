@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.InlineVariables,LINE;BRANCH,0.08235785953177258,490,41
+com.google.javascript.jscomp.ReferenceCollectingCallback,LINE;BRANCH,0.6303071928071928,358,222
+com.google.javascript.jscomp.Scope,LINE;BRANCH,0.8078481945467944,212,160

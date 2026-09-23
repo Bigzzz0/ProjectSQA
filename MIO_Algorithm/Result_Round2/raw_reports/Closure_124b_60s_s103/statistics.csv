@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.ExploitAssigns,LINE;BRANCH,0.32341954022988506,167,54

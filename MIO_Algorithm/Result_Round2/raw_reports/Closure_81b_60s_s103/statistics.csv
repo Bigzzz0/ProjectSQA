@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.parsing.IRFactory,LINE;BRANCH,0.2779765334616627,1125,313

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,LINE;BRANCH,0.12112152553329025,806,100

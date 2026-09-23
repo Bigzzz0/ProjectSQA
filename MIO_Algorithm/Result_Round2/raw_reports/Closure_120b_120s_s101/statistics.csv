@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.ReferenceCollectingCallback,LINE;BRANCH,0.4826930772308924,400,116

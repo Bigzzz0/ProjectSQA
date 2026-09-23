@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.PeepholeFoldConstants,LINE;BRANCH,0.2737893826603504,1647,464

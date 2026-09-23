@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.DeadAssignmentsElimination,LINE;BRANCH,0.10215643274853801,296,30

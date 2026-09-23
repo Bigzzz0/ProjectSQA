@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.AbstractCommandLineRunner,LINE;BRANCH,0.3498783096098532,844,313
+com.google.javascript.jscomp.CommandLineRunner,LINE;BRANCH,0.5758399209486166,224,152
+com.google.javascript.jscomp.Compiler,LINE;BRANCH,0.4451139975381676,1084,496
+com.google.javascript.jscomp.CompilerOptions,LINE;BRANCH,0.9901960784313726,256,255

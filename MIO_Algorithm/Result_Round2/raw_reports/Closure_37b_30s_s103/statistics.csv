@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.NodeTraversal,LINE;BRANCH,0.6876943508681006,363,239
+com.google.javascript.jscomp.parsing.IRFactory,LINE;BRANCH,0.09704551124416408,1161,118

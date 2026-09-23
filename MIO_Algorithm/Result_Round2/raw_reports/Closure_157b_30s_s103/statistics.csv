@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CodeGenerator,LINE;BRANCH,0.13027001127115825,1279,165
+com.google.javascript.jscomp.parsing.IRFactory,LINE;BRANCH,0.1035432460320774,1159,124
+com.google.javascript.jscomp.RenamePrototypes,LINE;BRANCH,0.492,270,135

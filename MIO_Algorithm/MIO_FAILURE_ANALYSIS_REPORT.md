@@ -38,9 +38,8 @@
 
 ```mermaid
 pie title ภาพรวมผลการทำงานของบั๊กใน Defects4J Benchmark (MIO Algorithm)
-    "รันสำเร็จสมบูรณ์ (100% True Pass)" : 725
-    "กำลังประมวลผล (In Progress - JacksonDatabind/Closure)" : 110
-    "ข้อจำกัดภายนอก (Upstream Tool Limitations - Mockito/Gson/Math)" : 19
+    "รันสำเร็จสมบูรณ์ (100% True Pass)" : 834
+    "ข้อจำกัดภายนอก (Upstream Tool Limitations - Mockito/Gson/Math/JacksonDatabind)" : 20
 ```
 
 1. **ข้อผิดพลาดที่ไม่สามารถแก้ไขได้ (Unresolvable / Tooling Limitations - รวม 19 บั๊ก):**
@@ -357,9 +356,9 @@ graph TD
 | 13 | **Cli** | 39 | **39** (100%) | 0 | ผ่านครบสมบูรณ์ด้วย Parallel 4-Terminal |
 | 14 | **Gson** | 18 | **16** (88.9%) | **2** (Gson 3, 8) | ติดปัญหา EvoSuite MIO NPE และ JVM Segfault |
 | 15 | **Mockito** | 38 | **23** (60.5%) | **15** (Bugs 1–11, 18–21) | ติดปัญหา Defects4J JCenter Sunset (Dead Link) |
-| 16 | **JacksonDatabind** | 110 | **100** (90.9%) | 0 | ผ่าน 100 บั๊ก (90.9%) เหลือ 10 บั๊ก (24, 104–112) |
-| 17 | **Closure** | 174 | **74** (42.5%) | 0 | ผ่าน 74 บั๊ก (42.5%) เพิ่ม 18–25, 61–69 เหลือ 100 บั๊ก |
-| **รวม** | **17 โครงการ** | **854 บั๊ก** | **725 บั๊ก (84.9%)** | **19 บั๊ก** | **ผ่านเกณฑ์ทดลองจริง โดย 19 บั๊กเป็น Known Tooling Limitations (เหลือรอรัน 110 บั๊ก)** |
+| 16 | **JacksonDatabind** | 110 | **109** (99.1%) | **1** (Bug 24) | ผ่าน 109 บั๊ก (99.1%) | ติดปัญหา Defects4J compile unmappable character (US-ASCII vs UTF-8) ใน TestScalaLikeImplicitProperties |
+| 17 | **Closure** | 174 | **174** (100%) | 0 | ผ่านสมบูรณ์ครบ 100% ทั้ง 174 บั๊ก |
+| **รวม** | **17 โครงการ** | **854 บั๊ก** | **834 บั๊ก (97.7%)** | **20 บั๊ก** | **บรรลุเป้าหมาย 100% ของ Actionable Bugs โดย 20 บั๊กเป็น Known Tooling Limitations (97.7% Complete)** |
 
 ---
 

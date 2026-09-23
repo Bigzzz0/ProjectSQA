@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CheckAccessControls,LINE;BRANCH,0.15893137768465165,479,77

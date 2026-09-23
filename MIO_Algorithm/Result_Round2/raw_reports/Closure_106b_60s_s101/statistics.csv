@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.GlobalNamespace,LINE;BRANCH,0.39734858503041526,780,307
+com.google.javascript.rhino.JSDocInfoBuilder,LINE;BRANCH,0.9857927208920587,385,375

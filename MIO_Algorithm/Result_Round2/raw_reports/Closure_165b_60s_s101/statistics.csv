@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.rhino.jstype.JSTypeRegistry,LINE;BRANCH,0.7999749141156878,828,672
+com.google.javascript.rhino.jstype.ObjectType,LINE;BRANCH,0.9383757135443694,217,200
+com.google.javascript.rhino.jstype.RecordType,LINE;BRANCH,0.8228228228228228,173,142
+com.google.javascript.rhino.jstype.RecordTypeBuilder,LINE;BRANCH,1.0,28,28

@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.parsing.JsDocInfoParser,LINE;BRANCH,0.23985128627700297,1990,451

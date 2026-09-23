@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.NameAnalyzer,LINE;BRANCH,0.26992495740674316,1209,263

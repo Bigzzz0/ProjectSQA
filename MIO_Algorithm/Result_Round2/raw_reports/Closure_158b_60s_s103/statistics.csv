@@ -1,0 +1,4 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.AbstractCommandLineRunner,LINE;BRANCH,0.4025211489748124,953,395
+com.google.javascript.jscomp.CommandLineRunner,LINE;BRANCH,0.5379150702426565,276,171
+com.google.javascript.jscomp.DiagnosticGroups,LINE;BRANCH,1.0,25,25

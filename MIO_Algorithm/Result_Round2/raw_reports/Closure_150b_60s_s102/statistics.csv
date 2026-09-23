@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.TypedScopeCreator,LINE;BRANCH,0.1347457627118644,1189,159

@@ -1,0 +1,3 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.CodeGenerator,LINE;BRANCH,0.10456209654109258,1419,149
+com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,LINE;BRANCH,0.06325430323814549,493,32

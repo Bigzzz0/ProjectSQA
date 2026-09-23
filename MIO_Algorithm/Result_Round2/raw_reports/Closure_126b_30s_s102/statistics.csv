@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.MinimizeExitPoints,LINE;BRANCH,0.23265460030165913,180,41

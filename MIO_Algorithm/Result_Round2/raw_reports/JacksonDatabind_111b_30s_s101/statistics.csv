@@ -1,0 +1,8 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.fasterxml.jackson.databind.deser.CreatorProperty,LINE;BRANCH,0.8790450928381963,94,84
+com.fasterxml.jackson.databind.deser.impl.FieldProperty,LINE;BRANCH,0.041666666666666664,112,3
+com.fasterxml.jackson.databind.deser.impl.MethodProperty,LINE;BRANCH,0.05263157894736842,111,4
+com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty,LINE;BRANCH,0.14147286821705427,67,9
+com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty,LINE;BRANCH,0.7647058823529411,51,37
+com.fasterxml.jackson.databind.deser.impl.SetterlessProperty,LINE;BRANCH,0.07894736842105263,62,3
+com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer,LINE;BRANCH,1.0,18,16

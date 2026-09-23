@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.ScopedAliases,LINE;BRANCH,0.16311178386312555,427,71

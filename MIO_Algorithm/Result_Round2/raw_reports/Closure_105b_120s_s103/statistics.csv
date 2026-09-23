@@ -1,0 +1,2 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.FoldConstants,LINE;BRANCH,0.1923154288240495,1903,373

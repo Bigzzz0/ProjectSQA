@@ -1,0 +1,5 @@
+TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
+com.google.javascript.jscomp.FunctionTypeBuilder,LINE;BRANCH,0.5072289829183878,381,199
+com.google.javascript.jscomp.TypedScopeCreator,LINE;BRANCH,0.21553846006884186,1126,227
+com.google.javascript.rhino.jstype.FunctionBuilder,LINE;BRANCH,1.0,56,56
+com.google.javascript.rhino.jstype.FunctionType,LINE;BRANCH,0.8739519407688154,605,525

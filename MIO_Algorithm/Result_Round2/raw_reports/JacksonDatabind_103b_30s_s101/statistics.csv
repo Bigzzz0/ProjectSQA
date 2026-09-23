@@ -9,3 +9,9 @@ com.fasterxml.jackson.databind.deser.DeserializerCache,LINE;BRANCH,0.56668511344
 com.fasterxml.jackson.databind.deser.SettableAnyProperty,LINE;BRANCH,0.5227272727272727,107,50
 com.fasterxml.jackson.databind.deser.SettableBeanProperty,LINE;BRANCH,0.5296634895934643,304,162
 com.fasterxml.jackson.databind.deser.std.StdDeserializer,LINE;BRANCH,0.3435555116033755,779,207
+com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer,LINE;BRANCH,0.7447712418300654,305,218
+com.fasterxml.jackson.databind.deser.std.StdValueInstantiator,LINE;BRANCH,0.7019764412730773,271,187
+com.fasterxml.jackson.databind.introspect.BasicBeanDescription,LINE;BRANCH,0.45035532994923855,447,210
+com.fasterxml.jackson.databind.ser.DefaultSerializerProvider,LINE;BRANCH,0.5083732057416268,337,108
+com.fasterxml.jackson.databind.ser.PropertyBuilder,LINE;BRANCH,0.03070175438596491,194,8
+com.fasterxml.jackson.databind.util.ClassUtil,LINE;BRANCH,0.760831990871258,694,367
