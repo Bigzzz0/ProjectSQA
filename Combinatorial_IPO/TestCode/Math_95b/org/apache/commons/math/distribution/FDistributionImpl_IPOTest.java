@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for FDistributionImpl.
  */
 public class FDistributionImpl_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_cumulativeProbability_pairwise_001() throws Exception {
         // Combination: receiver__numeratorDegreesOfFreedom=0.0d, receiver__denominatorDegreesOfFreedom=0.0d, x=0.0d
@@ -79,7 +93,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).cumulativeProbability(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -99,7 +113,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, 1.0d)).cumulativeProbability(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -108,7 +122,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, 1.0d)).cumulativeProbability(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -183,7 +197,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.NaN)).cumulativeProbability(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -203,7 +217,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).cumulativeProbability(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -212,7 +226,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.NaN)).cumulativeProbability(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -232,7 +246,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.POSITIVE_INFINITY)).cumulativeProbability(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -252,7 +266,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.POSITIVE_INFINITY)).cumulativeProbability(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -261,7 +275,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).cumulativeProbability(Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -270,7 +284,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).cumulativeProbability(Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -290,7 +304,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).cumulativeProbability(Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -310,7 +324,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).getDomainLowerBound(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -330,7 +344,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).getDomainLowerBound(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -339,7 +353,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).getDomainLowerBound(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -414,7 +428,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, 1.0d)).getDomainLowerBound(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -434,7 +448,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.NaN)).getDomainLowerBound(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -443,7 +457,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.POSITIVE_INFINITY)).getDomainLowerBound(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -551,7 +565,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.POSITIVE_INFINITY)).getDomainLowerBound(Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -560,7 +574,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, 1.0d)).getDomainLowerBound(1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -580,7 +594,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.NaN)).getDomainLowerBound(Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -600,7 +614,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).getDomainUpperBound(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -620,7 +634,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).getDomainUpperBound(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -629,7 +643,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).getDomainUpperBound(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -704,7 +718,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, 1.0d)).getDomainUpperBound(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -724,7 +738,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.NaN)).getDomainUpperBound(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -733,7 +747,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.POSITIVE_INFINITY)).getDomainUpperBound(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.POSITIVE_INFINITY)).getDomainUpperBound(Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, 1.0d)).getDomainUpperBound(1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -870,7 +884,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.NaN)).getDomainUpperBound(Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.7976931348623157E308", String.valueOf(actual));
+        assertEquals("1.7976931348623157E308", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -890,7 +904,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).getInitialDomain(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -910,7 +924,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).getInitialDomain(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -919,7 +933,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).getInitialDomain(0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -994,7 +1008,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, 1.0d)).getInitialDomain(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1014,7 +1028,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.NaN)).getInitialDomain(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1023,7 +1037,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.POSITIVE_INFINITY)).getInitialDomain(-1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1131,7 +1145,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.POSITIVE_INFINITY)).getInitialDomain(Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1140,7 +1154,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, 1.0d)).getInitialDomain(1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1160,7 +1174,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.NaN)).getInitialDomain(Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1235,7 +1249,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1255,7 +1269,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, 1.0d)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1264,7 +1278,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, 1.0d)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1339,7 +1353,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.NaN)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1359,7 +1373,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1368,7 +1382,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.NaN)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1388,7 +1402,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.POSITIVE_INFINITY)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1408,7 +1422,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.POSITIVE_INFINITY)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1417,7 +1431,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).getNumeratorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1492,7 +1506,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, 1.0d)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1512,7 +1526,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, 1.0d)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1521,7 +1535,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, 1.0d)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1596,7 +1610,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.NaN)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1616,7 +1630,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.NaN)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1625,7 +1639,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.NaN)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1645,7 +1659,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(1.0d, Double.POSITIVE_INFINITY)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1665,7 +1679,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.NaN, Double.POSITIVE_INFINITY)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1674,7 +1688,7 @@ public class FDistributionImpl_IPOTest {
         Object actual = (new FDistributionImpl(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY)).getDenominatorDegreesOfFreedom();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
 }

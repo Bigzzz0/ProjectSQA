@@ -22,9 +22,9 @@ TERMINAL_STATUSES = {
 }
 
 
-def _parameter_model(parameters: Sequence[Mapping[str, object]]) -> Dict[str, object]:
+def _parameter_model(parameters: Sequence[Mapping[str, object]], target_class: str = "") -> Dict[str, object]:
     try:
-        domains, adapters, cleanup = domains_for_parameters(list(parameters))
+        domains, adapters, cleanup = domains_for_parameters(list(parameters), target_class=target_class)
         return {
             "domains": domains,
             "adapters": adapters,
@@ -35,7 +35,7 @@ def _parameter_model(parameters: Sequence[Mapping[str, object]]) -> Dict[str, ob
         missing: List[str] = []
         for parameter in parameters:
             try:
-                domains_for_parameters([parameter])
+                domains_for_parameters([parameter], target_class=target_class)
             except NeedsSemanticModelError:
                 value = str(parameter.get("type", ""))
                 if value and value not in missing:
@@ -75,6 +75,7 @@ def plan_callable(
     receiver_strategy: Optional[Mapping[str, object]],
     evidence: Sequence[Mapping[str, object]],
     require_evidence: bool,
+    target_class: str = "",
 ) -> Dict[str, object]:
     parameters = callable_metadata.get("parameters", [])
     record: Dict[str, object] = {
@@ -101,10 +102,17 @@ def plan_callable(
             missing_adapters=["public_entry_point"],
         )
         return record
+    if record["name"] in {"hashCode", "identityHashCode"}:
+        record.update(
+            status="NOT_PAIRWISE_APPLICABLE",
+            reason="Method hashCode is identity-dependent and non-deterministic across JVM processes",
+            recommended_test_type="example_based",
+        )
+        return record
     if not isinstance(parameters, list):
         record.update(status="ANALYSIS_ERROR", reason="Invalid parameter metadata")
         return record
-    parameter_model = _parameter_model(parameters)
+    parameter_model = _parameter_model(parameters, target_class=target_class)
     if parameter_model["missing"]:
         record.update(
             status="NEEDS_ADAPTER",
@@ -193,6 +201,7 @@ def build_class_plan(
             receiver,
             evidence_map.get(method_signature(item), []),
             require_evidence,
+            target_class=target_class,
         )
         for item in callables
     ]

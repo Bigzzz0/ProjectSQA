@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for DoubleMetaphone.
  */
 public class DoubleMetaphone_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_doubleMetaphone_pairwise_001() throws Exception {
         // Combination: value="", alternate=true
@@ -25,7 +39,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("A", String.valueOf(actual));
+        assertEquals("A", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -34,7 +48,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("TST", String.valueOf(actual));
+        assertEquals("TST", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -43,7 +57,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -52,7 +66,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -61,7 +75,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -70,7 +84,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -79,7 +93,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -88,7 +102,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -97,7 +111,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("A", String.valueOf(actual));
+        assertEquals("A", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -118,7 +132,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("a", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("A", String.valueOf(actual));
+        assertEquals("A", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -127,7 +141,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("test123", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("TST", String.valueOf(actual));
+        assertEquals("TST", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -136,7 +150,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("!@#", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -145,7 +159,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("0", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -154,7 +168,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("-1", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -163,7 +177,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("1.5", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -172,7 +186,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("9223372036854775807", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -181,7 +195,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("9223372036854775808", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -190,7 +204,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).doubleMetaphone("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("A", String.valueOf(actual));
+        assertEquals("A", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -199,7 +213,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -208,7 +222,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -217,7 +231,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -226,7 +240,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -235,7 +249,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -244,7 +258,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -253,7 +267,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -262,7 +276,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -271,7 +285,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -280,7 +294,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -289,7 +303,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -298,7 +312,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -307,7 +321,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -316,7 +330,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -325,7 +339,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -334,7 +348,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -343,7 +357,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -352,7 +366,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -361,7 +375,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -370,7 +384,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -379,7 +393,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -388,7 +402,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -397,7 +411,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -406,7 +420,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -415,7 +429,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -424,7 +438,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -433,7 +447,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -442,7 +456,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -451,7 +465,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -460,7 +474,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -469,7 +483,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -478,7 +492,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -487,7 +501,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -496,7 +510,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -505,7 +519,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -514,7 +528,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -523,7 +537,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -532,7 +546,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -541,7 +555,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -550,7 +564,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -559,7 +573,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -568,7 +582,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -577,7 +591,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -586,7 +600,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -595,7 +609,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -604,7 +618,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -613,7 +627,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -622,7 +636,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -631,7 +645,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -640,7 +654,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -649,7 +663,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -658,7 +672,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -667,7 +681,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -676,7 +690,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -685,7 +699,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -694,7 +708,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -703,7 +717,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -712,7 +726,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -721,7 +735,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -730,7 +744,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -739,7 +753,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -748,7 +762,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -757,7 +771,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -766,7 +780,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -775,7 +789,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -784,7 +798,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -793,7 +807,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -802,7 +816,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -811,7 +825,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -820,7 +834,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -829,7 +843,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -838,7 +852,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -847,7 +861,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -856,7 +870,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -865,7 +879,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -874,7 +888,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -883,7 +897,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -892,7 +906,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -901,7 +915,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -910,7 +924,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -919,7 +933,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -928,7 +942,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -937,7 +951,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -946,7 +960,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -955,7 +969,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -964,7 +978,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -973,7 +987,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -982,7 +996,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -991,7 +1005,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1000,7 +1014,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1009,7 +1023,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1018,7 +1032,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1027,7 +1041,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1036,7 +1050,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1045,7 +1059,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1054,7 +1068,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1063,7 +1077,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1072,7 +1086,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1081,7 +1095,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1090,7 +1104,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1099,7 +1113,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1108,7 +1122,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1117,7 +1131,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1126,7 +1140,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1135,7 +1149,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1144,7 +1158,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1153,7 +1167,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1162,7 +1176,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1171,7 +1185,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1180,7 +1194,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1189,7 +1203,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1198,7 +1212,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1207,7 +1221,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1216,7 +1230,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1225,7 +1239,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1234,7 +1248,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1243,7 +1257,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1252,7 +1266,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1261,7 +1275,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1270,7 +1284,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1279,7 +1293,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1288,7 +1302,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1297,7 +1311,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1306,7 +1320,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1315,7 +1329,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1324,7 +1338,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1333,7 +1347,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1342,7 +1356,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1351,7 +1365,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1360,7 +1374,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1369,7 +1383,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1378,7 +1392,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1387,7 +1401,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1396,7 +1410,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1405,7 +1419,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "test123", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1414,7 +1428,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "a", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1423,7 +1437,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "0", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1432,7 +1446,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "!@#", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1441,7 +1455,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "1.5", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1450,7 +1464,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "-1", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1459,7 +1473,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "9223372036854775808", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1468,7 +1482,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "9223372036854775807", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1477,7 +1491,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1486,7 +1500,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1495,7 +1509,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1504,7 +1518,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1513,7 +1527,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1522,7 +1536,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1531,7 +1545,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1540,7 +1554,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1549,7 +1563,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1558,7 +1572,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1567,7 +1581,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1576,7 +1590,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1585,7 +1599,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1594,7 +1608,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1603,7 +1617,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1612,7 +1626,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1621,7 +1635,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1630,7 +1644,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1639,7 +1653,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1648,7 +1662,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1657,7 +1671,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1666,7 +1680,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1675,7 +1689,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1684,7 +1698,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1693,7 +1707,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1702,7 +1716,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1711,7 +1725,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1720,7 +1734,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1729,7 +1743,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1738,7 +1752,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1747,7 +1761,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1756,7 +1770,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1765,7 +1779,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1774,7 +1788,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1783,7 +1797,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1792,7 +1806,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1801,7 +1815,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1810,7 +1824,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1819,7 +1833,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1828,7 +1842,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1837,7 +1851,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1846,7 +1860,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1855,7 +1869,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1864,7 +1878,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1873,7 +1887,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1882,7 +1896,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1891,7 +1905,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1900,7 +1914,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1909,7 +1923,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1918,7 +1932,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1927,7 +1941,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1936,7 +1950,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1945,7 +1959,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1954,7 +1968,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1963,7 +1977,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1972,7 +1986,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1981,7 +1995,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1990,7 +2004,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1999,7 +2013,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2008,7 +2022,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2017,7 +2031,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2026,7 +2040,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2035,7 +2049,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2044,7 +2058,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2053,7 +2067,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2062,7 +2076,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2071,7 +2085,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2080,7 +2094,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2089,7 +2103,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2098,7 +2112,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2107,7 +2121,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2116,7 +2130,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2125,7 +2139,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2134,7 +2148,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2143,7 +2157,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2152,7 +2166,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2161,7 +2175,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2170,7 +2184,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2179,7 +2193,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2188,7 +2202,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2197,7 +2211,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2206,7 +2220,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2215,7 +2229,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2224,7 +2238,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2233,7 +2247,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2242,7 +2256,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2251,7 +2265,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2260,7 +2274,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2269,7 +2283,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2278,7 +2292,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2287,7 +2301,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2296,7 +2310,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2305,7 +2319,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2314,7 +2328,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2323,7 +2337,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2332,7 +2346,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2341,7 +2355,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2350,7 +2364,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2359,7 +2373,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2368,7 +2382,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).isDoubleMetaphoneEqual("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2377,7 +2391,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2386,7 +2400,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt(" ", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2395,7 +2409,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("a", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2404,7 +2418,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("test123", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("t", String.valueOf(actual));
+        assertEquals("t", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2413,7 +2427,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("!@#", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("!", String.valueOf(actual));
+        assertEquals("!", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2422,7 +2436,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("0", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2431,7 +2445,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("-1", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("-", String.valueOf(actual));
+        assertEquals("-", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2440,7 +2454,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("1.5", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2449,7 +2463,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775807", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("9", String.valueOf(actual));
+        assertEquals("9", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2458,7 +2472,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775808", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("9", String.valueOf(actual));
+        assertEquals("9", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2467,7 +2481,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2476,7 +2490,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2485,7 +2499,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt(" ", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2494,7 +2508,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("a", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2503,7 +2517,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("test123", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("e", String.valueOf(actual));
+        assertEquals("e", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2512,7 +2526,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("!@#", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("@", String.valueOf(actual));
+        assertEquals("@", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2521,7 +2535,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("0", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2530,7 +2544,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("-1", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2539,7 +2553,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("1.5", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals(".", String.valueOf(actual));
+        assertEquals(".", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2548,7 +2562,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775807", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2557,7 +2571,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775808", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2566,7 +2580,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2575,7 +2589,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2584,7 +2598,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt(" ", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2593,7 +2607,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("a", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2602,7 +2616,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("test123", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2611,7 +2625,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("!@#", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2620,7 +2634,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("0", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2629,7 +2643,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("-1", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2638,7 +2652,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("1.5", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2647,7 +2661,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775807", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2656,7 +2670,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775808", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2665,7 +2679,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2674,7 +2688,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2683,7 +2697,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt(" ", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2692,7 +2706,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("a", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2701,7 +2715,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("test123", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2710,7 +2724,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("!@#", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2719,7 +2733,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("0", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2728,7 +2742,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("-1", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2737,7 +2751,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("1.5", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2746,7 +2760,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775807", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2755,7 +2769,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775808", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2764,7 +2778,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2773,7 +2787,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2782,7 +2796,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt(" ", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2791,7 +2805,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("a", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2800,7 +2814,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("test123", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2809,7 +2823,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("!@#", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2818,7 +2832,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("0", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2827,7 +2841,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("-1", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2836,7 +2850,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("1.5", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2845,7 +2859,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775807", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2854,7 +2868,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("9223372036854775808", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2863,7 +2877,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = (new DoubleMetaphone()).charAt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Character", actual.getClass().getName());
-        assertEquals("\u0000", String.valueOf(actual));
+        assertEquals("\u0000", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2872,7 +2886,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("", 0, 0, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2881,7 +2895,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains(" ", 1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2890,7 +2904,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("a", -1, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2910,7 +2924,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("!@#", Integer.MIN_VALUE, Integer.MIN_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2919,7 +2933,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("a", 1, 0, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2928,7 +2942,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("test123", 0, 1, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2937,7 +2951,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("", Integer.MAX_VALUE, -1, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2946,7 +2960,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains(" ", -1, Integer.MAX_VALUE, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2977,7 +2991,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("1.5", 0, Integer.MAX_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3019,7 +3033,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, 0, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3028,7 +3042,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("", -1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3037,7 +3051,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("test123", -1, Integer.MIN_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3046,7 +3060,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains(" ", Integer.MAX_VALUE, 0, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3077,7 +3091,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("-1", Integer.MIN_VALUE, 0, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3086,7 +3100,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("0", Integer.MIN_VALUE, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3095,7 +3109,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains(" ", Integer.MIN_VALUE, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3104,7 +3118,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("", Integer.MIN_VALUE, Integer.MAX_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3135,7 +3149,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("a", 0, Integer.MAX_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3144,7 +3158,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("a", Integer.MIN_VALUE, Integer.MIN_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3153,7 +3167,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("test123", 1, 0, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3162,7 +3176,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("test123", Integer.MIN_VALUE, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3171,7 +3185,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("!@#", 0, 0, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3180,7 +3194,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("!@#", 1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3189,7 +3203,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("!@#", -1, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3209,7 +3223,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("0", -1, 0, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3229,7 +3243,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("-1", 1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3238,7 +3252,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("-1", -1, Integer.MAX_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3247,7 +3261,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("1.5", 1, 0, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3256,7 +3270,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("1.5", -1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3265,7 +3279,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("1.5", Integer.MAX_VALUE, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3274,7 +3288,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("1.5", Integer.MIN_VALUE, Integer.MIN_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3283,7 +3297,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775807", 0, 0, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3292,7 +3306,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775807", -1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3301,7 +3315,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775807", Integer.MAX_VALUE, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3310,7 +3324,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3319,7 +3333,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775808", 0, 0, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3328,7 +3342,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775808", -1, 1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3337,7 +3351,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775808", Integer.MAX_VALUE, -1, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3346,7 +3360,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("9223372036854775808", Integer.MIN_VALUE, Integer.MAX_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3355,7 +3369,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 1, new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3386,7 +3400,7 @@ public class DoubleMetaphone_IPOTest {
         Object actual = DoubleMetaphone.contains("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE, new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
 }

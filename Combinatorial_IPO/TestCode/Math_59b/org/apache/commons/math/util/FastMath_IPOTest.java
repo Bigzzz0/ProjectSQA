@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for FastMath.
  */
 public class FastMath_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_pow_pairwise_001() throws Exception {
         // Combination: x=0.0d, y=0.0d
         Object actual = FastMath.pow(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -175,7 +189,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -184,7 +198,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -193,7 +207,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -202,7 +216,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -211,7 +225,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -220,7 +234,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -229,7 +243,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.pow(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -238,7 +252,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -247,7 +261,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5707963267948966", String.valueOf(actual));
+        assertEquals("1.5707963267948966", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -256,7 +270,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.5707963267948966", String.valueOf(actual));
+        assertEquals("-1.5707963267948966", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -265,7 +279,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -274,7 +288,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5707963267948966", String.valueOf(actual));
+        assertEquals("1.5707963267948966", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -283,7 +297,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -292,7 +306,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.7853981633974483", String.valueOf(actual));
+        assertEquals("0.7853981633974483", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -301,7 +315,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.7853981633974483", String.valueOf(actual));
+        assertEquals("-0.7853981633974483", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -310,7 +324,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -319,7 +333,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5707963267948966", String.valueOf(actual));
+        assertEquals("1.5707963267948966", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -328,7 +342,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("3.141592653589793", String.valueOf(actual));
+        assertEquals("3.141592653589793", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -337,7 +351,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("2.356194490192345", String.valueOf(actual));
+        assertEquals("2.356194490192345", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-2.356194490192345", String.valueOf(actual));
+        assertEquals("-2.356194490192345", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -355,7 +369,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -364,7 +378,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5707963267948966", String.valueOf(actual));
+        assertEquals("1.5707963267948966", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -373,7 +387,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -382,7 +396,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -391,7 +405,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -400,7 +414,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -409,7 +423,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -418,7 +432,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -427,7 +441,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -436,7 +450,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -445,7 +459,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -454,7 +468,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.atan2(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.7853981633974483", String.valueOf(actual));
+        assertEquals("0.7853981633974483", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -463,7 +477,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -472,7 +486,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -481,7 +495,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-4.9E-324", String.valueOf(actual));
+        assertEquals("-4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -490,7 +504,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -499,7 +513,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -508,7 +522,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.9999999999999999", String.valueOf(actual));
+        assertEquals("0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -517,7 +531,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0000000000000002", String.valueOf(actual));
+        assertEquals("1.0000000000000002", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -526,7 +540,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.9999999999999999", String.valueOf(actual));
+        assertEquals("0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -535,7 +549,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.9999999999999999", String.valueOf(actual));
+        assertEquals("0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -544,7 +558,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0000000000000002", String.valueOf(actual));
+        assertEquals("1.0000000000000002", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -553,7 +567,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -562,7 +576,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -571,7 +585,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0000000000000002", String.valueOf(actual));
+        assertEquals("-1.0000000000000002", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -580,7 +594,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -589,7 +603,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -598,7 +612,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -607,7 +621,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -616,7 +630,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -625,7 +639,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -634,7 +648,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -643,7 +657,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -652,7 +666,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -661,7 +675,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -670,7 +684,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -679,7 +693,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.nextAfter(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -688,7 +702,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -697,7 +711,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -706,7 +720,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -715,7 +729,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -724,7 +738,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -733,7 +747,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -742,7 +756,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -751,7 +765,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -760,7 +774,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -769,7 +783,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -778,7 +792,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -787,7 +801,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -796,7 +810,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -805,7 +819,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -814,7 +828,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -823,7 +837,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -922,7 +936,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -931,7 +945,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -940,7 +954,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -949,7 +963,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -958,7 +972,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -967,7 +981,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -976,7 +990,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -985,7 +999,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -994,7 +1008,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1003,7 +1017,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1012,7 +1026,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1021,7 +1035,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1030,7 +1044,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1039,7 +1053,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1048,7 +1062,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1057,7 +1071,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MAX_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1066,7 +1080,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1075,7 +1089,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MAX_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1084,7 +1098,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MAX_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1093,7 +1107,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1102,7 +1116,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MIN_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1111,7 +1125,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MIN_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1120,7 +1134,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MIN_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1129,7 +1143,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Long.MIN_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1138,7 +1152,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1147,7 +1161,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1156,7 +1170,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1165,7 +1179,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1174,7 +1188,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1183,7 +1197,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1192,7 +1206,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1201,7 +1215,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1210,7 +1224,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1219,7 +1233,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1228,7 +1242,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1237,7 +1251,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1246,7 +1260,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1255,7 +1269,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1264,7 +1278,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1273,7 +1287,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.NaN, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1282,7 +1296,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.NaN, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1291,7 +1305,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1300,7 +1314,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.NaN, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1309,7 +1323,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.NaN, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1318,7 +1332,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.POSITIVE_INFINITY, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1327,7 +1341,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.POSITIVE_INFINITY, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1336,7 +1350,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.POSITIVE_INFINITY, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1345,7 +1359,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.POSITIVE_INFINITY, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1354,7 +1368,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1363,7 +1377,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1372,7 +1386,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1381,7 +1395,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1390,7 +1404,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1399,7 +1413,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1408,7 +1422,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1417,7 +1431,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1426,7 +1440,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1435,7 +1449,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1444,7 +1458,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1453,7 +1467,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1462,7 +1476,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1471,7 +1485,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1480,7 +1494,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1489,7 +1503,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1498,7 +1512,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1507,7 +1521,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1516,7 +1530,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1525,7 +1539,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1534,7 +1548,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1543,7 +1557,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1552,7 +1566,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1561,7 +1575,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1570,7 +1584,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1579,7 +1593,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.min(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1588,7 +1602,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1597,7 +1611,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1606,7 +1620,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1615,7 +1629,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1624,7 +1638,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1633,7 +1647,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1642,7 +1656,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1651,7 +1665,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1660,7 +1674,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1669,7 +1683,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1678,7 +1692,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1687,7 +1701,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1696,7 +1710,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1705,7 +1719,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1714,7 +1728,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1723,7 +1737,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1732,7 +1746,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1741,7 +1755,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1750,7 +1764,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1759,7 +1773,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1768,7 +1782,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1777,7 +1791,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1786,7 +1800,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1795,7 +1809,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1804,7 +1818,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1813,7 +1827,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1822,7 +1836,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1831,7 +1845,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1840,7 +1854,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1849,7 +1863,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1858,7 +1872,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1867,7 +1881,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1876,7 +1890,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1885,7 +1899,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1894,7 +1908,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1903,7 +1917,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1912,7 +1926,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1921,7 +1935,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1930,7 +1944,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1939,7 +1953,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1948,7 +1962,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1957,7 +1971,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MAX_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1966,7 +1980,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1975,7 +1989,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MAX_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1984,7 +1998,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MAX_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1993,7 +2007,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2002,7 +2016,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MIN_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2011,7 +2025,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MIN_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2020,7 +2034,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MIN_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2029,7 +2043,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Long.MIN_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2038,7 +2052,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2047,7 +2061,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2056,7 +2070,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2065,7 +2079,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2074,7 +2088,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2083,7 +2097,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2092,7 +2106,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2101,7 +2115,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2110,7 +2124,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2119,7 +2133,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2128,7 +2142,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2137,7 +2151,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2146,7 +2160,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2155,7 +2169,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2164,7 +2178,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2173,7 +2187,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.NaN, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2182,7 +2196,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.NaN, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2191,7 +2205,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2200,7 +2214,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.NaN, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2209,7 +2223,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.NaN, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2218,7 +2232,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.POSITIVE_INFINITY, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2227,7 +2241,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.POSITIVE_INFINITY, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2236,7 +2250,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.POSITIVE_INFINITY, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2245,7 +2259,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.POSITIVE_INFINITY, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2254,7 +2268,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2263,7 +2277,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2272,7 +2286,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2281,7 +2295,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2290,7 +2304,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2299,7 +2313,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2308,7 +2322,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2317,7 +2331,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2326,7 +2340,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2335,7 +2349,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2344,7 +2358,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2353,7 +2367,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2362,7 +2376,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2371,7 +2385,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2380,7 +2394,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2389,7 +2403,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2398,7 +2412,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2407,7 +2421,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2416,7 +2430,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2425,7 +2439,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2434,7 +2448,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2443,7 +2457,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2452,7 +2466,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2461,7 +2475,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2470,7 +2484,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2479,7 +2493,7 @@ public class FastMath_IPOTest {
         Object actual = FastMath.max(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
 }

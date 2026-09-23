@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for WordUtils.
  */
 public class WordUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_wrap_pairwise_001() throws Exception {
         // Combination: str="", wrapLength=0
         Object actual = WordUtils.wrap("", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -175,7 +189,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -184,7 +198,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -193,7 +207,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -202,7 +216,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -211,7 +225,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -220,7 +234,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -229,7 +243,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -238,7 +252,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -247,7 +261,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -256,7 +270,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -265,7 +279,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -274,7 +288,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -283,7 +297,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -292,7 +306,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -301,7 +315,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -310,7 +324,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -319,7 +333,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -328,7 +342,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -337,7 +351,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -355,7 +369,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -364,7 +378,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -373,7 +387,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -382,7 +396,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -391,7 +405,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -400,7 +414,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -409,7 +423,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -418,7 +432,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -427,7 +441,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -436,7 +450,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -445,7 +459,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -454,7 +468,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -463,7 +477,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -472,7 +486,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -481,7 +495,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -490,7 +504,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -499,7 +513,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -508,7 +522,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -517,7 +531,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1, "", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -526,7 +540,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", -1, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -535,7 +549,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MAX_VALUE, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -544,7 +558,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MIN_VALUE, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -553,7 +567,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -562,7 +576,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -571,7 +585,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -580,7 +594,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -589,7 +603,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -598,7 +612,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -607,7 +621,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 1, " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -616,7 +630,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 0, " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -625,7 +639,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", Integer.MAX_VALUE, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -634,7 +648,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", -1, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -643,7 +657,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", 0, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -652,7 +666,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", Integer.MIN_VALUE, " ", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -661,7 +675,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 1, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -670,7 +684,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 1, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -679,7 +693,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 1, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -688,7 +702,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 1, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -697,7 +711,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1, " ", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -706,7 +720,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", -1, "a", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -715,7 +729,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", Integer.MAX_VALUE, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -724,7 +738,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", 0, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -733,7 +747,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", 1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("taeasata1a2a3", String.valueOf(actual));
+        assertEquals("taeasata1a2a3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -742,7 +756,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", 1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!a@a#", String.valueOf(actual));
+        assertEquals("!a@a#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -751,7 +765,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -760,7 +774,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", Integer.MIN_VALUE, "a", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -769,7 +783,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", -1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1a.a5", String.valueOf(actual));
+        assertEquals("1a.a5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -778,7 +792,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", -1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9a2a2a3a3a7a2a0a3a6a8a5a4a7a7a5a8a0a7", String.valueOf(actual));
+        assertEquals("9a2a2a3a3a7a2a0a3a6a8a5a4a7a7a5a8a0a7", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -787,7 +801,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", -1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9a2a2a3a3a7a2a0a3a6a8a5a4a7a7a5a8a0a8", String.valueOf(actual));
+        assertEquals("9a2a2a3a3a7a2a0a3a6a8a5a4a7a7a5a8a0a8", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -796,7 +810,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, "a", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -805,7 +819,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", Integer.MAX_VALUE, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -814,7 +828,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", -1, "test123", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -823,7 +837,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", 1, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", 0, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("ttest123etest123stest123ttest1231test1232test1233", String.valueOf(actual));
+        assertEquals("ttest123etest123stest123ttest1231test1232test1233", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", -1, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!test123@test123#", String.valueOf(actual));
+        assertEquals("!test123@test123#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", -1, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", -1, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-test1231", String.valueOf(actual));
+        assertEquals("-test1231", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", Integer.MIN_VALUE, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1test123.test1235", String.valueOf(actual));
+        assertEquals("1test123.test1235", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", Integer.MAX_VALUE, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", Integer.MAX_VALUE, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, "test123", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", Integer.MIN_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 0, "!@#", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -922,7 +936,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", 1, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -931,7 +945,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", -1, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("t!@#e!@#s!@#t!@#1!@#2!@#3", String.valueOf(actual));
+        assertEquals("t!@#e!@#s!@#t!@#1!@#2!@#3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -940,7 +954,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MAX_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -949,7 +963,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", Integer.MAX_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -958,7 +972,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", Integer.MAX_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -967,7 +981,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", Integer.MAX_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -976,7 +990,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", Integer.MIN_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9!@#2!@#2!@#3!@#3!@#7!@#2!@#0!@#3!@#6!@#8!@#5!@#4!@#7!@#7!@#5!@#8!@#0!@#7", String.valueOf(actual));
+        assertEquals("9!@#2!@#2!@#3!@#3!@#7!@#2!@#0!@#3!@#6!@#8!@#5!@#4!@#7!@#7!@#5!@#8!@#0!@#7", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -985,7 +999,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", Integer.MIN_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9!@#2!@#2!@#3!@#3!@#7!@#2!@#0!@#3!@#6!@#8!@#5!@#4!@#7!@#7!@#5!@#8!@#0!@#8", String.valueOf(actual));
+        assertEquals("9!@#2!@#2!@#3!@#3!@#7!@#2!@#0!@#3!@#6!@#8!@#5!@#4!@#7!@#7!@#5!@#8!@#0!@#8", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -994,7 +1008,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, "!@#", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a", String.valueOf(actual));
+        assertEquals("a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a!@#a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1003,7 +1017,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1012,7 +1026,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", Integer.MIN_VALUE, "0", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1021,7 +1035,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", 1, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1030,7 +1044,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", -1, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("t0e0s0t010203", String.valueOf(actual));
+        assertEquals("t0e0s0t010203", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1039,7 +1053,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MAX_VALUE, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1048,7 +1062,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1057,7 +1071,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-01", String.valueOf(actual));
+        assertEquals("-01", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1066,7 +1080,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("10.05", String.valueOf(actual));
+        assertEquals("10.05", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1075,7 +1089,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9020203030702000306080504070705080007", String.valueOf(actual));
+        assertEquals("9020203030702000306080504070705080007", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1084,7 +1098,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9020203030702000306080504070705080008", String.valueOf(actual));
+        assertEquals("9020203030702000306080504070705080008", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1093,7 +1107,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "0", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a", String.valueOf(actual));
+        assertEquals("a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1102,7 +1116,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1111,7 +1125,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1, "-1", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1120,7 +1134,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", Integer.MIN_VALUE, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1129,7 +1143,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", -1, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("t-1e-1s-1t-11-12-13", String.valueOf(actual));
+        assertEquals("t-1e-1s-1t-11-12-13", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1138,7 +1152,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MAX_VALUE, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1147,7 +1161,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1156,7 +1170,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("--11", String.valueOf(actual));
+        assertEquals("--11", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1165,7 +1179,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1-1.-15", String.valueOf(actual));
+        assertEquals("1-1.-15", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1174,7 +1188,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9-12-12-13-13-17-12-10-13-16-18-15-14-17-17-15-18-10-17", String.valueOf(actual));
+        assertEquals("9-12-12-13-13-17-12-10-13-16-18-15-14-17-17-15-18-10-17", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1183,7 +1197,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9-12-12-13-13-17-12-10-13-16-18-15-14-17-17-15-18-10-18", String.valueOf(actual));
+        assertEquals("9-12-12-13-13-17-12-10-13-16-18-15-14-17-17-15-18-10-18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1192,7 +1206,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "-1", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a", String.valueOf(actual));
+        assertEquals("a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a-1a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1201,7 +1215,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1210,7 +1224,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1, "1.5", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1219,7 +1233,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", -1, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1228,7 +1242,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MIN_VALUE, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("t1.5e1.5s1.5t1.511.521.53", String.valueOf(actual));
+        assertEquals("t1.5e1.5s1.5t1.511.521.53", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1237,7 +1251,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MAX_VALUE, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1246,7 +1260,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1255,7 +1269,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1.51", String.valueOf(actual));
+        assertEquals("-1.51", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1264,7 +1278,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("11.5.1.55", String.valueOf(actual));
+        assertEquals("11.5.1.55", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1273,7 +1287,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("91.521.521.531.531.571.521.501.531.561.581.551.541.571.571.551.581.501.57", String.valueOf(actual));
+        assertEquals("91.521.521.531.531.571.521.501.531.561.581.551.541.571.571.551.581.501.57", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1282,7 +1296,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("91.521.521.531.531.571.521.501.531.561.581.551.541.571.571.551.581.501.58", String.valueOf(actual));
+        assertEquals("91.521.521.531.531.571.521.501.531.561.581.551.541.571.571.551.581.501.58", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1291,7 +1305,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "1.5", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a", String.valueOf(actual));
+        assertEquals("a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a1.5a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1300,7 +1314,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1309,7 +1323,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1, "9223372036854775807", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1318,7 +1332,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", -1, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1327,7 +1341,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MAX_VALUE, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1336,7 +1350,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MIN_VALUE, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!9223372036854775807@9223372036854775807#", String.valueOf(actual));
+        assertEquals("!9223372036854775807@9223372036854775807#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1345,7 +1359,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1354,7 +1368,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-92233720368547758071", String.valueOf(actual));
+        assertEquals("-92233720368547758071", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1363,7 +1377,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("19223372036854775807.92233720368547758075", String.valueOf(actual));
+        assertEquals("19223372036854775807.92233720368547758075", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1372,7 +1386,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9922337203685477580729223372036854775807292233720368547758073922337203685477580739223372036854775807792233720368547758072922337203685477580709223372036854775807392233720368547758076922337203685477580789223372036854775807592233720368547758074922337203685477580779223372036854775807792233720368547758075922337203685477580789223372036854775807092233720368547758077", String.valueOf(actual));
+        assertEquals("9922337203685477580729223372036854775807292233720368547758073922337203685477580739223372036854775807792233720368547758072922337203685477580709223372036854775807392233720368547758076922337203685477580789223372036854775807592233720368547758074922337203685477580779223372036854775807792233720368547758075922337203685477580789223372036854775807092233720368547758077", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1381,7 +1395,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9922337203685477580729223372036854775807292233720368547758073922337203685477580739223372036854775807792233720368547758072922337203685477580709223372036854775807392233720368547758076922337203685477580789223372036854775807592233720368547758074922337203685477580779223372036854775807792233720368547758075922337203685477580789223372036854775807092233720368547758078", String.valueOf(actual));
+        assertEquals("9922337203685477580729223372036854775807292233720368547758073922337203685477580739223372036854775807792233720368547758072922337203685477580709223372036854775807392233720368547758076922337203685477580789223372036854775807592233720368547758074922337203685477580779223372036854775807792233720368547758075922337203685477580789223372036854775807092233720368547758078", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1390,7 +1404,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "9223372036854775807", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a", String.valueOf(actual));
+        assertEquals("a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a9223372036854775807a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1399,7 +1413,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1408,7 +1422,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1, "9223372036854775808", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1417,7 +1431,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", -1, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1426,7 +1440,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MAX_VALUE, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1435,7 +1449,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MIN_VALUE, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!9223372036854775808@9223372036854775808#", String.valueOf(actual));
+        assertEquals("!9223372036854775808@9223372036854775808#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1444,7 +1458,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1453,7 +1467,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-92233720368547758081", String.valueOf(actual));
+        assertEquals("-92233720368547758081", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1462,7 +1476,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("19223372036854775808.92233720368547758085", String.valueOf(actual));
+        assertEquals("19223372036854775808.92233720368547758085", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1471,7 +1485,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9922337203685477580829223372036854775808292233720368547758083922337203685477580839223372036854775808792233720368547758082922337203685477580809223372036854775808392233720368547758086922337203685477580889223372036854775808592233720368547758084922337203685477580879223372036854775808792233720368547758085922337203685477580889223372036854775808092233720368547758087", String.valueOf(actual));
+        assertEquals("9922337203685477580829223372036854775808292233720368547758083922337203685477580839223372036854775808792233720368547758082922337203685477580809223372036854775808392233720368547758086922337203685477580889223372036854775808592233720368547758084922337203685477580879223372036854775808792233720368547758085922337203685477580889223372036854775808092233720368547758087", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1480,7 +1494,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9922337203685477580829223372036854775808292233720368547758083922337203685477580839223372036854775808792233720368547758082922337203685477580809223372036854775808392233720368547758086922337203685477580889223372036854775808592233720368547758084922337203685477580879223372036854775808792233720368547758085922337203685477580889223372036854775808092233720368547758088", String.valueOf(actual));
+        assertEquals("9922337203685477580829223372036854775808292233720368547758083922337203685477580839223372036854775808792233720368547758082922337203685477580809223372036854775808392233720368547758086922337203685477580889223372036854775808592233720368547758084922337203685477580879223372036854775808792233720368547758085922337203685477580889223372036854775808092233720368547758088", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1489,7 +1503,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "9223372036854775808", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a", String.valueOf(actual));
+        assertEquals("a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a9223372036854775808a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1498,7 +1512,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1507,7 +1521,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap(" ", 1, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", false);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1516,7 +1530,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("a", -1, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1525,7 +1539,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("test123", Integer.MAX_VALUE, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1534,7 +1548,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("!@#", Integer.MIN_VALUE, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#", String.valueOf(actual));
+        assertEquals("!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1543,7 +1557,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("0", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1552,7 +1566,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("-1", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", String.valueOf(actual));
+        assertEquals("-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1561,7 +1575,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("1.5", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5", String.valueOf(actual));
+        assertEquals("1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1570,7 +1584,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775807", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa4aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7", String.valueOf(actual));
+        assertEquals("9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa4aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1579,7 +1593,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("9223372036854775808", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa4aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8", String.valueOf(actual));
+        assertEquals("9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa4aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1588,7 +1602,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.wrap("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", true);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1597,7 +1611,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1606,7 +1620,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize(" ", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1615,7 +1629,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("a", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1624,7 +1638,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("test123", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1633,7 +1647,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("!@#", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1642,7 +1656,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("0", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1651,7 +1665,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("-1", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1660,7 +1674,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("1.5", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1669,7 +1683,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("9223372036854775807", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1678,7 +1692,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("9223372036854775808", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1687,7 +1701,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1696,7 +1710,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1705,7 +1719,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize(" ", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1714,7 +1728,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("a", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("A", String.valueOf(actual));
+        assertEquals("A", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1723,7 +1737,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("test123", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("Test123", String.valueOf(actual));
+        assertEquals("Test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1732,7 +1746,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("!@#", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1741,7 +1755,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("0", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1750,7 +1764,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("-1", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1759,7 +1773,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("1.5", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1768,7 +1782,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("9223372036854775807", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1777,7 +1791,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("9223372036854775808", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1786,7 +1800,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalize("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1795,7 +1809,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1804,7 +1818,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully(" ", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1813,7 +1827,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("a", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1822,7 +1836,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("test123", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1831,7 +1845,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("!@#", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1840,7 +1854,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("0", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1849,7 +1863,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("-1", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1858,7 +1872,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("1.5", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1867,7 +1881,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("9223372036854775807", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1876,7 +1890,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("9223372036854775808", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1885,7 +1899,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1894,7 +1908,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1903,7 +1917,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully(" ", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1912,7 +1926,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("a", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("A", String.valueOf(actual));
+        assertEquals("A", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1921,7 +1935,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("test123", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("Test123", String.valueOf(actual));
+        assertEquals("Test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1930,7 +1944,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("!@#", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1939,7 +1953,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("0", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1948,7 +1962,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("-1", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1957,7 +1971,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("1.5", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1966,7 +1980,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("9223372036854775807", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1975,7 +1989,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("9223372036854775808", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1984,7 +1998,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.capitalizeFully("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1993,7 +2007,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2002,7 +2016,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize(" ", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2011,7 +2025,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("a", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2020,7 +2034,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("test123", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2029,7 +2043,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("!@#", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2038,7 +2052,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("0", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2047,7 +2061,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("-1", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2056,7 +2070,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("1.5", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2065,7 +2079,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("9223372036854775807", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2074,7 +2088,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("9223372036854775808", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2083,7 +2097,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2092,7 +2106,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2101,7 +2115,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize(" ", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2110,7 +2124,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("a", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2119,7 +2133,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("test123", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2128,7 +2142,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("!@#", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2137,7 +2151,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("0", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2146,7 +2160,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("-1", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2155,7 +2169,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("1.5", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2164,7 +2178,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("9223372036854775807", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2173,7 +2187,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("9223372036854775808", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2182,7 +2196,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.uncapitalize("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2191,7 +2205,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2200,7 +2214,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials(" ", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2209,7 +2223,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("a", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2218,7 +2232,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("test123", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2227,7 +2241,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("!@#", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2236,7 +2250,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("0", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2245,7 +2259,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("-1", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2254,7 +2268,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("1.5", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2263,7 +2277,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("9223372036854775807", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2272,7 +2286,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("9223372036854775808", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2281,7 +2295,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2290,7 +2304,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2299,7 +2313,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials(" ", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2308,7 +2322,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("a", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2317,7 +2331,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("test123", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("t", String.valueOf(actual));
+        assertEquals("t", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2326,7 +2340,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("!@#", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!", String.valueOf(actual));
+        assertEquals("!", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2335,7 +2349,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("0", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2344,7 +2358,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("-1", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-", String.valueOf(actual));
+        assertEquals("-", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2353,7 +2367,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("1.5", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2362,7 +2376,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("9223372036854775807", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9", String.valueOf(actual));
+        assertEquals("9", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2371,7 +2385,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("9223372036854775808", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9", String.valueOf(actual));
+        assertEquals("9", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2380,7 +2394,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.initials("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2389,7 +2403,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", 0, 0, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2398,7 +2412,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", 1, 1, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2407,7 +2421,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", -1, -1, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2416,7 +2430,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", Integer.MAX_VALUE, Integer.MAX_VALUE, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2436,7 +2450,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", 0, -1, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2445,7 +2459,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", 1, Integer.MAX_VALUE, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2454,7 +2468,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", -1, 0, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2463,7 +2477,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", Integer.MAX_VALUE, 1, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2472,7 +2486,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", Integer.MIN_VALUE, 0, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2481,7 +2495,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, Integer.MAX_VALUE, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2490,7 +2504,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 1, -1, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2499,7 +2513,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", -1, 1, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2508,7 +2522,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", Integer.MAX_VALUE, 0, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2517,7 +2531,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", Integer.MIN_VALUE, 1, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-a", String.valueOf(actual));
+        assertEquals("-a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2526,7 +2540,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, 1, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("ttest123", String.valueOf(actual));
+        assertEquals("ttest123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2535,7 +2549,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 1, 0, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2544,7 +2558,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", -1, Integer.MAX_VALUE, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2553,7 +2567,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", Integer.MAX_VALUE, -1, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2562,7 +2576,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", Integer.MIN_VALUE, -1, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2571,7 +2585,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, 0, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2580,7 +2594,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 1, Integer.MIN_VALUE, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2589,7 +2603,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", -1, -1, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2598,7 +2612,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", Integer.MAX_VALUE, 1, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2607,7 +2621,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", Integer.MIN_VALUE, Integer.MAX_VALUE, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2616,7 +2630,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, 1, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2625,7 +2639,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 1, -1, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2645,7 +2659,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", Integer.MAX_VALUE, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2654,7 +2668,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", Integer.MIN_VALUE, Integer.MAX_VALUE, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2663,7 +2677,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, Integer.MIN_VALUE, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2672,7 +2686,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 1, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1-1", String.valueOf(actual));
+        assertEquals("1-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2681,7 +2695,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", -1, 1, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!-1", String.valueOf(actual));
+        assertEquals("!-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2690,7 +2704,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", Integer.MAX_VALUE, -1, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2699,7 +2713,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", Integer.MIN_VALUE, Integer.MAX_VALUE, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2708,7 +2722,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, Integer.MAX_VALUE, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2717,7 +2731,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 1, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1.5", String.valueOf(actual));
+        assertEquals("-1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2726,7 +2740,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", -1, 1, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2735,7 +2749,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", Integer.MAX_VALUE, Integer.MIN_VALUE, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2744,7 +2758,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", Integer.MIN_VALUE, -1, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2753,7 +2767,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2762,7 +2776,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 1, 1, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("99223372036854775807", String.valueOf(actual));
+        assertEquals("99223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2771,7 +2785,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2780,7 +2794,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", Integer.MAX_VALUE, Integer.MIN_VALUE, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2789,7 +2803,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", Integer.MIN_VALUE, Integer.MAX_VALUE, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2798,7 +2812,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2807,7 +2821,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 1, 1, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("99223372036854775808", String.valueOf(actual));
+        assertEquals("99223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2816,7 +2830,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", -1, -1, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2825,7 +2839,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2845,7 +2859,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2854,7 +2868,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", 1, 1, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2863,7 +2877,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", -1, -1, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2872,7 +2886,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2892,7 +2906,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", 0, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2901,7 +2915,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", 0, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2910,7 +2924,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("", 0, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2919,7 +2933,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", 0, 0, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2928,7 +2942,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", 0, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2937,7 +2951,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate(" ", 0, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2946,7 +2960,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, Integer.MIN_VALUE, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2955,7 +2969,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2964,7 +2978,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2973,7 +2987,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2982,7 +2996,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2991,7 +3005,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("a", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3000,7 +3014,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, Integer.MIN_VALUE, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3009,7 +3023,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3018,7 +3032,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3027,7 +3041,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3036,7 +3050,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3045,7 +3059,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("test123", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3054,7 +3068,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, Integer.MAX_VALUE, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3063,7 +3077,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, Integer.MIN_VALUE, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3072,7 +3086,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, Integer.MIN_VALUE, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3081,7 +3095,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3090,7 +3104,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3099,7 +3113,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("!@#", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3108,7 +3122,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, Integer.MAX_VALUE, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3117,7 +3131,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, 0, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3126,7 +3140,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, 0, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3135,7 +3149,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3144,7 +3158,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3153,7 +3167,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("0", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3162,7 +3176,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, Integer.MAX_VALUE, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3171,7 +3185,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, Integer.MIN_VALUE, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3180,7 +3194,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, 0, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3189,7 +3203,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3198,7 +3212,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3207,7 +3221,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("-1", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3216,7 +3230,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, 0, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3225,7 +3239,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, 0, " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3234,7 +3248,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, 0, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3243,7 +3257,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, 0, "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3252,7 +3266,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, 0, "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3261,7 +3275,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("1.5", 0, 0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3270,7 +3284,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3290,7 +3304,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3299,7 +3313,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3308,7 +3322,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3317,7 +3331,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3326,7 +3340,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3335,7 +3349,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775807", 0, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3344,7 +3358,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", -1, -1, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3364,7 +3378,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3373,7 +3387,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3382,7 +3396,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3391,7 +3405,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3400,7 +3414,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3409,7 +3423,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("9223372036854775808", 0, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3418,7 +3432,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1, 1, "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3438,7 +3452,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3447,7 +3461,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3456,7 +3470,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3465,7 +3479,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3474,7 +3488,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3483,7 +3497,7 @@ public class WordUtils_IPOTest {
         Object actual = WordUtils.abbreviate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0, "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
 }

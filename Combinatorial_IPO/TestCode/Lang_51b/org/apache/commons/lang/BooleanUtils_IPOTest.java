@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for BooleanUtils.
  */
 public class BooleanUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_toBooleanDefaultIfNull_pairwise_001() throws Exception {
         // Combination: bool=true, valueIfNull=true
         Object actual = BooleanUtils.toBooleanDefaultIfNull(true, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanDefaultIfNull(true, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanDefaultIfNull(false, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanDefaultIfNull(false, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(1, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(-1, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(Integer.MAX_VALUE, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(Integer.MIN_VALUE, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -147,7 +161,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(-1, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -200,7 +214,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -253,7 +267,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(Integer.MIN_VALUE, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -339,7 +353,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -348,7 +362,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(1, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -357,7 +371,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(-1, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -366,7 +380,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(Integer.MAX_VALUE, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -375,7 +389,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -417,7 +431,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(-1, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -459,7 +473,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -501,7 +515,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(0, 0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -510,7 +524,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, 1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -519,7 +533,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(-1, -1, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -528,7 +542,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -537,7 +551,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(Integer.MIN_VALUE, Integer.MIN_VALUE, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -579,7 +593,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, -1, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -588,7 +602,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, 0, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -608,7 +622,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(-1, Integer.MAX_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -672,7 +686,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(Integer.MAX_VALUE, 1, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -704,7 +718,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(Integer.MIN_VALUE, 0, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -713,7 +727,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, 1, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -722,7 +736,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(-1, -1, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -742,7 +756,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, Integer.MIN_VALUE, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -817,7 +831,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(0, 0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -826,7 +840,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, 1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -835,7 +849,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(-1, -1, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -844,7 +858,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(1, -1, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -906,7 +920,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(-1, Integer.MAX_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -959,7 +973,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(Integer.MAX_VALUE, 1, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -979,7 +993,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -988,7 +1002,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -997,7 +1011,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1006,7 +1020,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1015,7 +1029,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1024,7 +1038,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1033,7 +1047,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1042,7 +1056,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1051,7 +1065,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, -1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1060,7 +1074,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1069,7 +1083,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1078,7 +1092,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1087,7 +1101,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1096,7 +1110,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1105,7 +1119,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1114,7 +1128,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1123,7 +1137,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1132,7 +1146,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1141,7 +1155,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1150,7 +1164,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1159,7 +1173,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1168,7 +1182,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1177,7 +1191,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1186,7 +1200,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1195,7 +1209,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1204,7 +1218,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1213,7 +1227,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1222,7 +1236,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1231,7 +1245,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1240,7 +1254,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1249,7 +1263,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, -1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1258,7 +1272,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, Integer.MAX_VALUE, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1267,7 +1281,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, 0, -1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1276,7 +1290,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, 1, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1285,7 +1299,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, 1, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1294,7 +1308,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1303,7 +1317,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1312,7 +1326,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1321,7 +1335,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1330,7 +1344,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1339,7 +1353,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1348,7 +1362,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1357,7 +1371,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1366,7 +1380,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1375,7 +1389,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1384,7 +1398,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1393,7 +1407,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(false, Integer.MIN_VALUE, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1402,7 +1416,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 0, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1411,7 +1425,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, 1, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1420,7 +1434,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, -1, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1429,7 +1443,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MAX_VALUE, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1438,7 +1452,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1447,7 +1461,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1456,7 +1470,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toInteger(true, Integer.MIN_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1465,7 +1479,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1474,7 +1488,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1483,7 +1497,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1492,7 +1506,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1501,7 +1515,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1510,7 +1524,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1519,7 +1533,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1528,7 +1542,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, -1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1537,7 +1551,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1546,7 +1560,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1555,7 +1569,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1564,7 +1578,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1573,7 +1587,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1582,7 +1596,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1591,7 +1605,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1600,7 +1614,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1609,7 +1623,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1618,7 +1632,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 1, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1627,7 +1641,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, -1, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1636,7 +1650,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1645,7 +1659,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, -1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1654,7 +1668,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, Integer.MAX_VALUE, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1663,7 +1677,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, 0, -1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1672,7 +1686,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(false, 1, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1681,7 +1695,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 1, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1690,7 +1704,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, -1, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1699,7 +1713,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, Integer.MAX_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1708,7 +1722,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 0, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1717,7 +1731,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, Integer.MAX_VALUE, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1726,7 +1740,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 0, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1735,7 +1749,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, 1, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1744,7 +1758,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toIntegerObject(true, -1, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1753,7 +1767,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("", "", "", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1762,7 +1776,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(" ", " ", "", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1771,7 +1785,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("a", "a", "", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1780,7 +1794,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("test123", "test123", "", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1789,7 +1803,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("!@#", "!@#", "", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1798,7 +1812,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("0", "0", "", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1807,7 +1821,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("-1", "-1", "", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1816,7 +1830,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("1.5", "1.5", "", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1825,7 +1839,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("9223372036854775807", "9223372036854775807", "", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1834,7 +1848,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("9223372036854775808", "9223372036854775808", "", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1843,7 +1857,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1852,7 +1866,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject(" ", "a", " ", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1971,7 +1985,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("a", "test123", "a", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2090,7 +2104,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("test123", " ", "test123", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2209,7 +2223,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("!@#", "9223372036854775807", "!@#", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2328,7 +2342,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2447,7 +2461,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("-1", "", "-1", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2566,7 +2580,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("1.5", "9223372036854775808", "1.5", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2685,7 +2699,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("9223372036854775807", "!@#", "9223372036854775807", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2804,7 +2818,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("9223372036854775808", "-1", "9223372036854775808", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2923,7 +2937,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3258,7 +3272,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("", "-1", "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3278,7 +3292,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("", "1.5", "", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3287,7 +3301,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBooleanObject("", "1.5", "", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3341,7 +3355,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("", "", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3350,7 +3364,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(" ", " ", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3359,7 +3373,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("a", "a", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3368,7 +3382,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("test123", "test123", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3377,7 +3391,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("!@#", "!@#", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3386,7 +3400,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("0", "0", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3395,7 +3409,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("-1", "-1", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3404,7 +3418,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("1.5", "1.5", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3413,7 +3427,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("9223372036854775807", "9223372036854775807", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3422,7 +3436,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("9223372036854775808", "9223372036854775808", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3431,7 +3445,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3451,7 +3465,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(" ", "", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3581,7 +3595,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("a", "", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3711,7 +3725,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("test123", "", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3841,7 +3855,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("!@#", "", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3971,7 +3985,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("0", "", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4101,7 +4115,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("-1", "", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4231,7 +4245,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("1.5", "", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4361,7 +4375,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("9223372036854775807", "0", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4491,7 +4505,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("9223372036854775808", "0", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4621,7 +4635,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4630,7 +4644,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("9223372036854775808", "1.5", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4639,7 +4653,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("test123", "9223372036854775807", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4648,7 +4662,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("!@#", "9223372036854775807", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4657,7 +4671,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("0", "9223372036854775807", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4666,7 +4680,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("-1", "9223372036854775807", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4675,7 +4689,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("1.5", "9223372036854775807", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4684,7 +4698,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("a", "9223372036854775808", "a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4693,7 +4707,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("!@#", "9223372036854775808", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4702,7 +4716,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("0", "9223372036854775808", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4711,7 +4725,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("-1", "9223372036854775808", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4720,7 +4734,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("1.5", "9223372036854775808", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4729,7 +4743,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4738,7 +4752,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4747,7 +4761,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4756,7 +4770,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4765,7 +4779,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toBoolean("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4774,7 +4788,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4783,7 +4797,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", " ", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4792,7 +4806,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "a", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4801,7 +4815,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "test123", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4810,7 +4824,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "!@#", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4819,7 +4833,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "0", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4828,7 +4842,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "-1", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4837,7 +4851,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "1.5", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4846,7 +4860,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "9223372036854775807", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4855,7 +4869,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "9223372036854775808", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4864,7 +4878,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4873,7 +4887,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "a", "", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4882,7 +4896,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "test123", " ", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4891,7 +4905,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "", "a", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4900,7 +4914,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, " ", "test123", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4909,7 +4923,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "-1", "!@#", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4918,7 +4932,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "1.5", "0", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4927,7 +4941,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "!@#", "-1", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4936,7 +4950,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "0", "1.5", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4945,7 +4959,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4954,7 +4968,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "", "9223372036854775808", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4963,7 +4977,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4972,7 +4986,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "a", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4981,7 +4995,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "test123", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4990,7 +5004,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "!@#", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4999,7 +5013,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "0", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5008,7 +5022,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "-1", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5017,7 +5031,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "1.5", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5026,7 +5040,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "9223372036854775807", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5035,7 +5049,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5044,7 +5058,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "a", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5053,7 +5067,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "test123", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5062,7 +5076,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "!@#", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5071,7 +5085,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "0", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5080,7 +5094,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "-1", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5089,7 +5103,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "1.5", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5098,7 +5112,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "9223372036854775807", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5107,7 +5121,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "9223372036854775808", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5116,7 +5130,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5125,7 +5139,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5134,7 +5148,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", " ", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5143,7 +5157,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "!@#", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5152,7 +5166,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "0", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5161,7 +5175,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5170,7 +5184,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "1.5", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5179,7 +5193,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "9223372036854775807", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5188,7 +5202,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "9223372036854775808", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5197,7 +5211,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5206,7 +5220,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5215,7 +5229,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", " ", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5224,7 +5238,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "!@#", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5233,7 +5247,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "0", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5242,7 +5256,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "-1", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5251,7 +5265,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5260,7 +5274,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "9223372036854775807", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5269,7 +5283,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "9223372036854775808", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5278,7 +5292,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5287,7 +5301,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5296,7 +5310,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", " ", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5305,7 +5319,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "a", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5314,7 +5328,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "test123", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5323,7 +5337,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "-1", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5332,7 +5346,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "1.5", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5341,7 +5355,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "9223372036854775807", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5350,7 +5364,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "9223372036854775808", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5359,7 +5373,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5368,7 +5382,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5377,7 +5391,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", " ", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5386,7 +5400,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "a", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5395,7 +5409,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "test123", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5404,7 +5418,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "-1", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5413,7 +5427,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "1.5", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5422,7 +5436,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "9223372036854775807", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5431,7 +5445,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "9223372036854775808", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5440,7 +5454,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5449,7 +5463,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5458,7 +5472,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", " ", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5467,7 +5481,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5476,7 +5490,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "test123", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5485,7 +5499,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "!@#", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5494,7 +5508,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "0", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5503,7 +5517,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "9223372036854775807", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5512,7 +5526,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "9223372036854775808", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5521,7 +5535,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5530,7 +5544,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5539,7 +5553,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", " ", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5548,7 +5562,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "a", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5557,7 +5571,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5566,7 +5580,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "!@#", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5575,7 +5589,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "0", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5584,7 +5598,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "9223372036854775807", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5593,7 +5607,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "9223372036854775808", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5602,7 +5616,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5611,7 +5625,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5620,7 +5634,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5629,7 +5643,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "a", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5638,7 +5652,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "test123", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5647,7 +5661,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "!@#", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5656,7 +5670,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "0", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5665,7 +5679,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "-1", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5674,7 +5688,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "1.5", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5683,7 +5697,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5692,7 +5706,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5701,7 +5715,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", " ", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5710,7 +5724,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "a", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5719,7 +5733,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "test123", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5728,7 +5742,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "!@#", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5737,7 +5751,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "0", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5746,7 +5760,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "-1", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5755,7 +5769,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "1.5", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5764,7 +5778,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5773,7 +5787,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "9223372036854775808", "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5782,7 +5796,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5791,7 +5805,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5800,7 +5814,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5809,7 +5823,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5818,7 +5832,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5827,7 +5841,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5836,7 +5850,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5845,7 +5859,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5854,7 +5868,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5863,7 +5877,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "1.5", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5872,7 +5886,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "test123", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5881,7 +5895,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "9223372036854775807", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5890,7 +5904,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "9223372036854775808", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5899,7 +5913,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "a", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5908,7 +5922,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "9223372036854775807", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5917,7 +5931,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "9223372036854775808", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5926,7 +5940,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "-1", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5935,7 +5949,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "1.5", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5944,7 +5958,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", " ", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5953,7 +5967,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "-1", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5962,7 +5976,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "1.5", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5971,7 +5985,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5980,7 +5994,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5989,7 +6003,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5998,7 +6012,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6007,7 +6021,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6016,7 +6030,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6025,7 +6039,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6034,7 +6048,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6043,7 +6057,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6052,7 +6066,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6061,7 +6075,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6070,7 +6084,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6079,7 +6093,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6088,7 +6102,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6097,7 +6111,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, " ", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6106,7 +6120,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6115,7 +6129,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "test123", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6124,7 +6138,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "a", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6133,7 +6147,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "0", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6142,7 +6156,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "!@#", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6151,7 +6165,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "1.5", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6160,7 +6174,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "-1", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6169,7 +6183,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "9223372036854775808", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6178,7 +6192,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "9223372036854775807", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6187,7 +6201,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6196,7 +6210,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6205,7 +6219,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6214,7 +6228,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6223,7 +6237,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6232,7 +6246,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6241,7 +6255,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6250,7 +6264,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6259,7 +6273,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6268,7 +6282,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6277,7 +6291,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6286,7 +6300,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6295,7 +6309,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6304,7 +6318,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6313,7 +6327,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6322,7 +6336,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6331,7 +6345,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6340,7 +6354,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6349,7 +6363,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6358,7 +6372,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6367,7 +6381,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6376,7 +6390,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6385,7 +6399,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6394,7 +6408,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6403,7 +6417,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6412,7 +6426,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6421,7 +6435,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6430,7 +6444,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6439,7 +6453,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6448,7 +6462,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6457,7 +6471,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6466,7 +6480,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6475,7 +6489,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6484,7 +6498,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6493,7 +6507,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6502,7 +6516,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6511,7 +6525,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6520,7 +6534,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6529,7 +6543,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6538,7 +6552,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6547,7 +6561,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6556,7 +6570,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6565,7 +6579,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6574,7 +6588,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6583,7 +6597,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6592,7 +6606,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6601,7 +6615,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6610,7 +6624,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6619,7 +6633,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6628,7 +6642,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6637,7 +6651,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6646,7 +6660,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6655,7 +6669,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6664,7 +6678,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6673,7 +6687,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6682,7 +6696,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6691,7 +6705,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6700,7 +6714,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6709,7 +6723,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6718,7 +6732,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6727,7 +6741,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6736,7 +6750,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6745,7 +6759,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6754,7 +6768,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6763,7 +6777,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6772,7 +6786,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6781,7 +6795,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6790,7 +6804,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6799,7 +6813,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6808,7 +6822,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6817,7 +6831,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6826,7 +6840,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6835,7 +6849,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6844,7 +6858,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6853,7 +6867,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6862,7 +6876,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6871,7 +6885,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6880,7 +6894,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6889,7 +6903,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6898,7 +6912,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6907,7 +6921,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6916,7 +6930,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6925,7 +6939,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6934,7 +6948,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6943,7 +6957,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6952,7 +6966,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6961,7 +6975,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6970,7 +6984,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6979,7 +6993,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6988,7 +7002,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6997,7 +7011,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(false, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7006,7 +7020,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7015,7 +7029,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7024,7 +7038,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7033,7 +7047,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7042,7 +7056,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7051,7 +7065,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7060,7 +7074,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7069,7 +7083,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7078,7 +7092,7 @@ public class BooleanUtils_IPOTest {
         Object actual = BooleanUtils.toString(true, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
 }

@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for TarUtils.
  */
 public class TarUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_parseOctal_pairwise_001() throws Exception {
         // Combination: buffer=new byte[] {}, offset=0, length=0
@@ -46,7 +60,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseOctal(new byte[] {}, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -154,7 +168,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseOctal(new byte[] {}, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -284,7 +298,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -337,7 +351,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {1}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {1}, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u0001", String.valueOf(actual));
+        assertEquals("\u0001", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -443,7 +457,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {}, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -474,7 +488,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -483,7 +497,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {}, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -503,7 +517,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.parseName(new byte[] {1}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -545,7 +559,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -565,7 +579,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("a", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -585,7 +599,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("!@#", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -594,7 +608,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes(" ", new byte[] {1}, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -614,7 +628,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("test123", new byte[] {1}, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -634,7 +648,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("0", new byte[] {1}, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -643,7 +657,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("", new byte[] {}, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -663,7 +677,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("", new byte[] {}, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -672,7 +686,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes(" ", new byte[] {}, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483646", String.valueOf(actual));
+        assertEquals("2147483646", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -692,7 +706,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes(" ", new byte[] {}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -701,7 +715,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("a", new byte[] {}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -721,7 +735,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("a", new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -730,7 +744,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("test123", new byte[] {}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -750,7 +764,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("test123", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -759,7 +773,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("!@#", new byte[] {1}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -779,7 +793,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("!@#", new byte[] {}, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -799,7 +813,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("0", new byte[] {}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -819,7 +833,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("0", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -839,7 +853,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("-1", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("-1", new byte[] {}, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -879,7 +893,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("-1", new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -888,7 +902,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("1.5", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -908,7 +922,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("1.5", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -928,7 +942,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("1.5", new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -937,7 +951,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("9223372036854775807", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -957,7 +971,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("9223372036854775807", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -977,7 +991,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("9223372036854775807", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -986,7 +1000,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("9223372036854775808", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1006,7 +1020,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("9223372036854775808", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1026,7 +1040,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("9223372036854775808", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1035,7 +1049,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1055,7 +1069,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1075,7 +1089,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1084,7 +1098,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("!@#", new byte[] {}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1093,7 +1107,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("", new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1102,7 +1116,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes(" ", new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1111,7 +1125,7 @@ public class TarUtils_IPOTest {
         Object actual = TarUtils.formatNameBytes("a", new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)

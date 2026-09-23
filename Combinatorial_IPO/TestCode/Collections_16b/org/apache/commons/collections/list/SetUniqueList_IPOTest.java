@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for SetUniqueList.
  */
 public class SetUniqueList_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_asSet_pairwise_001() throws Exception {
         // Combination: receiver__list=java.util.Collections.emptyList(), receiver__set=java.util.Collections.emptySet()
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).asSet();
         assertNotNull(actual);
         assertEquals("org.apache.commons.collections.set.UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).asSet();
         assertNotNull(actual);
         assertEquals("org.apache.commons.collections.set.UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[a]", String.valueOf(actual));
+        assertEquals("[a]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).asSet();
         assertNotNull(actual);
         assertEquals("org.apache.commons.collections.set.UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).asSet();
         assertNotNull(actual);
         assertEquals("org.apache.commons.collections.set.UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[a]", String.valueOf(actual));
+        assertEquals("[a]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -115,7 +129,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).addAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -124,7 +138,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).addAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -155,7 +169,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).addAll(0, java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -164,7 +178,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).addAll(1, java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -173,7 +187,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).addAll(-1, java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -182,7 +196,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).addAll(Integer.MAX_VALUE, java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -191,7 +205,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).addAll(Integer.MIN_VALUE, java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -255,7 +269,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).addAll(0, java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -264,7 +278,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).remove(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -273,7 +287,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).remove(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -282,7 +296,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).remove("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -291,7 +305,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).remove("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -300,7 +314,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).remove(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -309,7 +323,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).remove(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -318,7 +332,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).removeAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -327,7 +341,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).removeAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -358,7 +372,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).retainAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -378,7 +392,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).retainAll(java.util.Arrays.asList("a", "b"));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -387,7 +401,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).retainAll(java.util.Arrays.asList("a", "b"));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -396,7 +410,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).contains(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -405,7 +419,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).contains(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -414,7 +428,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).contains("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -423,7 +437,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).contains("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -432,7 +446,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).contains(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -441,7 +455,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).contains(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -450,7 +464,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).containsAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -459,7 +473,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).containsAll(java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -468,7 +482,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).containsAll(java.util.Arrays.asList("a", "b"));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -477,7 +491,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).containsAll(java.util.Arrays.asList("a", "b"));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -486,7 +500,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).subList(0, 0);
         assertNotNull(actual);
         assertEquals("org.apache.commons.collections.list.SetUniqueList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -495,7 +509,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).subList(0, 1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.collections.list.SetUniqueList", actual.getClass().getName());
-        assertEquals("[a]", String.valueOf(actual));
+        assertEquals("[a]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -757,7 +771,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).createSetBasedOnList(java.util.Collections.emptySet(), java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.util.HashSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -766,7 +780,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.singleton("a"))).createSetBasedOnList(java.util.Collections.singleton("a"), java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.util.HashSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -775,7 +789,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.singleton("a"))).createSetBasedOnList(java.util.Collections.emptySet(), java.util.Arrays.asList("a", "b"));
         assertNotNull(actual);
         assertEquals("java.util.HashSet", actual.getClass().getName());
-        assertEquals("[a, b]", String.valueOf(actual));
+        assertEquals("[a, b]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -784,7 +798,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).createSetBasedOnList(java.util.Collections.singleton("a"), java.util.Arrays.asList("a", "b"));
         assertNotNull(actual);
         assertEquals("java.util.HashSet", actual.getClass().getName());
-        assertEquals("[a, b]", String.valueOf(actual));
+        assertEquals("[a, b]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -793,7 +807,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Arrays.asList("a", "b"), java.util.Collections.emptySet())).createSetBasedOnList(java.util.Collections.emptySet(), java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.util.HashSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -802,7 +816,7 @@ public class SetUniqueList_IPOTest {
         Object actual = (new SetUniqueList(java.util.Collections.emptyList(), java.util.Collections.emptySet())).createSetBasedOnList(java.util.Collections.singleton("a"), java.util.Collections.emptyList());
         assertNotNull(actual);
         assertEquals("java.util.HashSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
 }

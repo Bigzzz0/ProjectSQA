@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for CpioArchiveInputStream.
  */
 public class CpioArchiveInputStream_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_skip_pairwise_001() throws Exception {
         // Combination: receiver__in=new java.io.ByteArrayInputStream(new byte[] {}), n=0L
         Object actual = (new CpioArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = (new CpioArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = (new CpioArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = (new CpioArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -71,7 +85,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = (new CpioArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {}))).skip(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -80,7 +94,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = (new CpioArchiveInputStream(new java.io.ByteArrayInputStream(new byte[] {1}))).skip(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -111,7 +125,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {}, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -120,7 +134,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {1}, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -129,7 +143,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {}, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -138,7 +152,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {1}, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -147,7 +161,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {}, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -156,7 +170,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {1}, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -187,7 +201,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {}, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -196,7 +210,7 @@ public class CpioArchiveInputStream_IPOTest {
         Object actual = CpioArchiveInputStream.matches(new byte[] {1}, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
 }

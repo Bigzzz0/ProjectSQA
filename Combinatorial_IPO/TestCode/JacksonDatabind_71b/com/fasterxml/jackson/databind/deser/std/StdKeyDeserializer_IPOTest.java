@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for StdKeyDeserializer.
  */
 public class StdKeyDeserializer_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test__parseInt_pairwise_001() throws Exception {
         // Combination: receiver__kind=0, receiver__cls=String.class, key=""
@@ -178,7 +192,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseInt("0");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -187,7 +201,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, Object.class))._parseInt("0");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -196,7 +210,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Integer.class))._parseInt("0");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -205,7 +219,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseInt("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -214,7 +228,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseInt("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -223,7 +237,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, Integer.class))._parseInt("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -408,7 +422,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, String.class))._parseInt("0");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -417,7 +431,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, String.class))._parseInt("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -448,7 +462,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseInt("0");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -457,7 +471,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseInt("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -763,7 +777,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseLong("0");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -772,7 +786,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, Object.class))._parseLong("0");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -781,7 +795,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Integer.class))._parseLong("0");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -790,7 +804,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseLong("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -799,7 +813,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseLong("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -808,7 +822,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, Integer.class))._parseLong("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseLong("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseLong("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, Integer.class))._parseLong("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -987,7 +1001,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, String.class))._parseLong("0");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -996,7 +1010,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, String.class))._parseLong("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1027,7 +1041,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseLong("0");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1036,7 +1050,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseLong("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1056,7 +1070,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseLong("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1142,7 +1156,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, String.class))._parseLong("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1338,7 +1352,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseDouble("0");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1347,7 +1361,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, Object.class))._parseDouble("0");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1356,7 +1370,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Integer.class))._parseDouble("0");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1365,7 +1379,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseDouble("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1374,7 +1388,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseDouble("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1383,7 +1397,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, Integer.class))._parseDouble("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1392,7 +1406,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseDouble("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1401,7 +1415,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseDouble("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1410,7 +1424,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, Integer.class))._parseDouble("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1419,7 +1433,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseDouble("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1428,7 +1442,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseDouble("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1437,7 +1451,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, Integer.class))._parseDouble("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1446,7 +1460,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(0, String.class))._parseDouble("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1455,7 +1469,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(1, Object.class))._parseDouble("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1464,7 +1478,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, Integer.class))._parseDouble("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1550,7 +1564,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, String.class))._parseDouble("0");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1559,7 +1573,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(-1, String.class))._parseDouble("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1590,7 +1604,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseDouble("0");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1599,7 +1613,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseDouble("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1608,7 +1622,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseDouble("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1617,7 +1631,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseDouble("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1626,7 +1640,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MAX_VALUE, String.class))._parseDouble("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1690,7 +1704,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, String.class))._parseDouble("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1699,7 +1713,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, String.class))._parseDouble("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1708,7 +1722,7 @@ public class StdKeyDeserializer_IPOTest {
         Object actual = (new StdKeyDeserializer(Integer.MIN_VALUE, String.class))._parseDouble("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)

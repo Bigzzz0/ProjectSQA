@@ -867,7 +867,7 @@
   },
   "input_fingerprints": {
     "selected_catalog_sha256": "1606c540757066c27a09dc3692d3c180c5895a03eafba8b7bbeab05ef74ef44f",
-    "audit_toolchain_sha256": "7bd217ef778f380353f749125ee370bc99ec6d6d4fcb61396261e82916943649",
-    "generation_toolchain_sha256": "6b7073d609717710cded117dd043a08dfe02dac038eed14aa87570c7b70646c5"
+    "audit_toolchain_sha256": "b9253bd112faee63b50db78af1a11f51ef59362f6078a1787e24a16ebee26714",
+    "generation_toolchain_sha256": "25dfe7c39be4ba98ebe2ef0de0ef6daecd9041934f04cd25f310c28858f73c41"
   }
 }

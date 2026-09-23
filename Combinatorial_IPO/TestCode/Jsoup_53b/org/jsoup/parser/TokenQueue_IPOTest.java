@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for TokenQueue.
  */
 public class TokenQueue_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_matches_pairwise_001() throws Exception {
         // Combination: receiver__data="", seq=""
         Object actual = (new TokenQueue("")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -175,7 +189,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -184,7 +198,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -193,7 +207,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -202,7 +216,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -211,7 +225,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -220,7 +234,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -229,7 +243,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -238,7 +252,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -247,7 +261,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -256,7 +270,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -265,7 +279,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -274,7 +288,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -283,7 +297,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -292,7 +306,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -301,7 +315,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -310,7 +324,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -319,7 +333,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -328,7 +342,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -337,7 +351,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -355,7 +369,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -364,7 +378,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -373,7 +387,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -382,7 +396,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -391,7 +405,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -400,7 +414,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -409,7 +423,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -418,7 +432,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -427,7 +441,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -436,7 +450,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -445,7 +459,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -454,7 +468,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -463,7 +477,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -472,7 +486,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -481,7 +495,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -490,7 +504,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -499,7 +513,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -508,7 +522,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -517,7 +531,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -526,7 +540,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -535,7 +549,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -544,7 +558,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -553,7 +567,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -562,7 +576,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -571,7 +585,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -580,7 +594,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -589,7 +603,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -598,7 +612,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -607,7 +621,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -616,7 +630,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -625,7 +639,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -634,7 +648,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -643,7 +657,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -652,7 +666,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -661,7 +675,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -670,7 +684,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -679,7 +693,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -688,7 +702,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -697,7 +711,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -706,7 +720,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -715,7 +729,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -724,7 +738,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -733,7 +747,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -742,7 +756,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -751,7 +765,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -760,7 +774,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -769,7 +783,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -778,7 +792,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -787,7 +801,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -796,7 +810,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -805,7 +819,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -814,7 +828,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -823,7 +837,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -922,7 +936,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -931,7 +945,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -940,7 +954,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -949,7 +963,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -958,7 +972,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -967,7 +981,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -976,7 +990,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -985,7 +999,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -994,7 +1008,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1003,7 +1017,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1012,7 +1026,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1021,7 +1035,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1030,7 +1044,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1039,7 +1053,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1048,7 +1062,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1057,7 +1071,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1066,7 +1080,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1075,7 +1089,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1084,7 +1098,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1093,7 +1107,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matches("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1102,7 +1116,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1111,7 +1125,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1120,7 +1134,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1129,7 +1143,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1138,7 +1152,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1147,7 +1161,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1156,7 +1170,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1165,7 +1179,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1174,7 +1188,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1183,7 +1197,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1192,7 +1206,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1201,7 +1215,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1210,7 +1224,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1219,7 +1233,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1228,7 +1242,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1237,7 +1251,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1246,7 +1260,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1255,7 +1269,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1264,7 +1278,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1273,7 +1287,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1282,7 +1296,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1291,7 +1305,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1300,7 +1314,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1309,7 +1323,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1318,7 +1332,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1327,7 +1341,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1336,7 +1350,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1345,7 +1359,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1354,7 +1368,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1363,7 +1377,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1372,7 +1386,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1381,7 +1395,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1390,7 +1404,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1399,7 +1413,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1408,7 +1422,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1417,7 +1431,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1426,7 +1440,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1435,7 +1449,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1444,7 +1458,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1453,7 +1467,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1462,7 +1476,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1471,7 +1485,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1480,7 +1494,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1489,7 +1503,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1498,7 +1512,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1507,7 +1521,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1516,7 +1530,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1525,7 +1539,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1534,7 +1548,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1543,7 +1557,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1552,7 +1566,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1561,7 +1575,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1570,7 +1584,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1579,7 +1593,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1588,7 +1602,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1597,7 +1611,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1606,7 +1620,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1615,7 +1629,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1624,7 +1638,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1633,7 +1647,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1642,7 +1656,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1651,7 +1665,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1660,7 +1674,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1669,7 +1683,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1678,7 +1692,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1687,7 +1701,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1696,7 +1710,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1705,7 +1719,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1714,7 +1728,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1723,7 +1737,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1732,7 +1746,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1741,7 +1755,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1750,7 +1764,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1759,7 +1773,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1768,7 +1782,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1777,7 +1791,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1786,7 +1800,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1795,7 +1809,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1804,7 +1818,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1813,7 +1827,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1822,7 +1836,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1831,7 +1845,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1840,7 +1854,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1849,7 +1863,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1858,7 +1872,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1867,7 +1881,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1876,7 +1890,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1885,7 +1899,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1894,7 +1908,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1903,7 +1917,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1912,7 +1926,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1921,7 +1935,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1930,7 +1944,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1939,7 +1953,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1948,7 +1962,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1957,7 +1971,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1966,7 +1980,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1975,7 +1989,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1984,7 +1998,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1993,7 +2007,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2002,7 +2016,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2011,7 +2025,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2020,7 +2034,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2029,7 +2043,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2038,7 +2052,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2047,7 +2061,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2056,7 +2070,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2065,7 +2079,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2074,7 +2088,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2083,7 +2097,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2092,7 +2106,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2101,7 +2115,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2110,7 +2124,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2119,7 +2133,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2128,7 +2142,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2137,7 +2151,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2146,7 +2160,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2155,7 +2169,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2164,7 +2178,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2173,7 +2187,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2182,7 +2196,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesCS("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2191,7 +2205,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2200,7 +2214,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2209,7 +2223,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2218,7 +2232,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2227,7 +2241,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2236,7 +2250,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2245,7 +2259,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2254,7 +2268,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2263,7 +2277,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2272,7 +2286,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2281,7 +2295,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2290,7 +2304,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2299,7 +2313,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2308,7 +2322,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2317,7 +2331,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2326,7 +2340,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2335,7 +2349,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2344,7 +2358,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2353,7 +2367,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2362,7 +2376,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2371,7 +2385,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2380,7 +2394,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2389,7 +2403,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2398,7 +2412,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2407,7 +2421,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2416,7 +2430,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2425,7 +2439,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2434,7 +2448,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2443,7 +2457,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2452,7 +2466,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2461,7 +2475,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2470,7 +2484,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2479,7 +2493,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2488,7 +2502,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2497,7 +2511,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2506,7 +2520,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2515,7 +2529,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2524,7 +2538,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2533,7 +2547,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2542,7 +2556,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2551,7 +2565,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2560,7 +2574,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2569,7 +2583,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesAny(new char[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2578,7 +2592,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchesAny(new char[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2587,7 +2601,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2596,7 +2610,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2605,7 +2619,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2614,7 +2628,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2623,7 +2637,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2632,7 +2646,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2641,7 +2655,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2650,7 +2664,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2659,7 +2673,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2668,7 +2682,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2677,7 +2691,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2686,7 +2700,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2695,7 +2709,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2704,7 +2718,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2713,7 +2727,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2722,7 +2736,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2731,7 +2745,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2740,7 +2754,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2749,7 +2763,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2758,7 +2772,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2767,7 +2781,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2776,7 +2790,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2785,7 +2799,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2794,7 +2808,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2803,7 +2817,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2812,7 +2826,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2821,7 +2835,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2830,7 +2844,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2839,7 +2853,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2848,7 +2862,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2857,7 +2871,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2866,7 +2880,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2875,7 +2889,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2884,7 +2898,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2893,7 +2907,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2902,7 +2916,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2911,7 +2925,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2920,7 +2934,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2929,7 +2943,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2938,7 +2952,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2947,7 +2961,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2956,7 +2970,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2965,7 +2979,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2974,7 +2988,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2983,7 +2997,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2992,7 +3006,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3001,7 +3015,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3010,7 +3024,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3019,7 +3033,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3028,7 +3042,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3037,7 +3051,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3046,7 +3060,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3055,7 +3069,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3064,7 +3078,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3073,7 +3087,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3082,7 +3096,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3091,7 +3105,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3100,7 +3114,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3109,7 +3123,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3118,7 +3132,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3127,7 +3141,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3136,7 +3150,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3145,7 +3159,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3154,7 +3168,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3163,7 +3177,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3172,7 +3186,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3181,7 +3195,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3190,7 +3204,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3199,7 +3213,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3208,7 +3222,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3217,7 +3231,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3226,7 +3240,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3235,7 +3249,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3244,7 +3258,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3253,7 +3267,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3262,7 +3276,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3271,7 +3285,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3280,7 +3294,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3289,7 +3303,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3298,7 +3312,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3307,7 +3321,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3316,7 +3330,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3325,7 +3339,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3334,7 +3348,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3343,7 +3357,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3352,7 +3366,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3361,7 +3375,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3370,7 +3384,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3379,7 +3393,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3388,7 +3402,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3397,7 +3411,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3406,7 +3420,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3415,7 +3429,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3424,7 +3438,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3433,7 +3447,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3442,7 +3456,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3451,7 +3465,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3460,7 +3474,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3469,7 +3483,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3478,7 +3492,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3487,7 +3501,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3496,7 +3510,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3505,7 +3519,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3514,7 +3528,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3523,7 +3537,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3532,7 +3546,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3541,7 +3555,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3550,7 +3564,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3559,7 +3573,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3568,7 +3582,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3577,7 +3591,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3586,7 +3600,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp(" ");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3595,7 +3609,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("a");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3604,7 +3618,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("test123");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3613,7 +3627,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3622,7 +3636,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("0");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3631,7 +3645,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("-1");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3640,7 +3654,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3649,7 +3663,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3658,7 +3672,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3667,7 +3681,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).matchChomp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3676,7 +3690,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3685,7 +3699,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3694,7 +3708,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3703,7 +3717,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3712,7 +3726,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3721,7 +3735,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3730,7 +3744,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3739,7 +3753,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3748,7 +3762,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3757,7 +3771,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3766,7 +3780,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3775,7 +3789,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3784,7 +3798,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3793,7 +3807,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3802,7 +3816,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3811,7 +3825,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3820,7 +3834,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3829,7 +3843,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3838,7 +3852,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3847,7 +3861,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3856,7 +3870,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3865,7 +3879,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3874,7 +3888,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3883,7 +3897,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3892,7 +3906,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3901,7 +3915,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3910,7 +3924,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3919,7 +3933,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3928,7 +3942,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3937,7 +3951,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3946,7 +3960,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3955,7 +3969,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3964,7 +3978,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3973,7 +3987,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3982,7 +3996,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3991,7 +4005,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4000,7 +4014,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4009,7 +4023,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4018,7 +4032,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4027,7 +4041,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4036,7 +4050,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4045,7 +4059,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4054,7 +4068,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4063,7 +4077,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4072,7 +4086,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4081,7 +4095,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4090,7 +4104,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4099,7 +4113,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4108,7 +4122,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4117,7 +4131,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4126,7 +4140,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4135,7 +4149,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4144,7 +4158,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4153,7 +4167,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4162,7 +4176,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4171,7 +4185,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4180,7 +4194,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4189,7 +4203,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4198,7 +4212,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4207,7 +4221,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4216,7 +4230,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4225,7 +4239,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4234,7 +4248,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4243,7 +4257,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4252,7 +4266,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4261,7 +4275,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4270,7 +4284,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4279,7 +4293,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4288,7 +4302,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4297,7 +4311,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4306,7 +4320,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4315,7 +4329,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4324,7 +4338,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4333,7 +4347,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4342,7 +4356,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4351,7 +4365,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4360,7 +4374,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4369,7 +4383,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4378,7 +4392,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4387,7 +4401,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4396,7 +4410,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4405,7 +4419,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4414,7 +4428,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4423,7 +4437,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4432,7 +4446,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4441,7 +4455,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4450,7 +4464,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4459,7 +4473,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4468,7 +4482,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4477,7 +4491,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4486,7 +4500,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4495,7 +4509,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4504,7 +4518,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4513,7 +4527,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4522,7 +4536,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4531,7 +4545,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4540,7 +4554,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4549,7 +4563,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4558,7 +4572,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4567,7 +4581,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4576,7 +4590,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4585,7 +4599,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4594,7 +4608,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4603,7 +4617,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4612,7 +4626,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4621,7 +4635,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4630,7 +4644,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4639,7 +4653,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4648,7 +4662,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4657,7 +4671,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4666,7 +4680,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4675,7 +4689,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4684,7 +4698,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4693,7 +4707,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4702,7 +4716,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4711,7 +4725,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4720,7 +4734,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4729,7 +4743,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4738,7 +4752,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4747,7 +4761,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4756,7 +4770,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4776,7 +4790,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4785,7 +4799,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4794,7 +4808,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4803,7 +4817,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4812,7 +4826,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4821,7 +4835,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4830,7 +4844,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4839,7 +4853,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4848,7 +4862,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4857,7 +4871,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4877,7 +4891,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4886,7 +4900,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4895,7 +4909,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4904,7 +4918,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4913,7 +4927,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4922,7 +4936,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4931,7 +4945,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4940,7 +4954,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4949,7 +4963,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4958,7 +4972,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4978,7 +4992,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4987,7 +5001,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4996,7 +5010,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5005,7 +5019,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5014,7 +5028,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5023,7 +5037,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5032,7 +5046,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5041,7 +5055,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5050,7 +5064,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5059,7 +5073,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5079,7 +5093,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5088,7 +5102,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5097,7 +5111,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5106,7 +5120,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5115,7 +5129,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5124,7 +5138,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5133,7 +5147,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5142,7 +5156,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5151,7 +5165,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5160,7 +5174,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5180,7 +5194,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5189,7 +5203,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5198,7 +5212,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5207,7 +5221,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5216,7 +5230,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5225,7 +5239,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5234,7 +5248,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5243,7 +5257,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5252,7 +5266,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5261,7 +5275,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5281,7 +5295,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5290,7 +5304,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5299,7 +5313,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5308,7 +5322,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5317,7 +5331,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5326,7 +5340,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5335,7 +5349,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5344,7 +5358,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5353,7 +5367,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5362,7 +5376,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5382,7 +5396,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5391,7 +5405,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5400,7 +5414,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5409,7 +5423,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5418,7 +5432,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5427,7 +5441,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5436,7 +5450,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5445,7 +5459,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5454,7 +5468,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5463,7 +5477,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5483,7 +5497,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5492,7 +5506,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5501,7 +5515,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5510,7 +5524,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5519,7 +5533,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5528,7 +5542,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5537,7 +5551,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5546,7 +5560,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5555,7 +5569,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5564,7 +5578,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5584,7 +5598,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5593,7 +5607,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5602,7 +5616,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5611,7 +5625,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5620,7 +5634,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5629,7 +5643,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5638,7 +5652,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5647,7 +5661,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5656,7 +5670,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5665,7 +5679,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5685,7 +5699,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5694,7 +5708,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5703,7 +5717,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5712,7 +5726,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5721,7 +5735,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5730,7 +5744,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5739,7 +5753,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5748,7 +5762,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5757,7 +5771,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5766,7 +5780,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5786,7 +5800,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5795,7 +5809,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5804,7 +5818,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5813,7 +5827,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5822,7 +5836,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5831,7 +5845,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5840,7 +5854,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5849,7 +5863,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5858,7 +5872,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5867,7 +5881,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5876,7 +5890,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5885,7 +5899,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5894,7 +5908,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5903,7 +5917,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5912,7 +5926,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5921,7 +5935,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5930,7 +5944,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5939,7 +5953,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5948,7 +5962,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5957,7 +5971,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5966,7 +5980,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5975,7 +5989,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5984,7 +5998,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5993,7 +6007,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6002,7 +6016,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6011,7 +6025,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6020,7 +6034,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6029,7 +6043,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6038,7 +6052,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6047,7 +6061,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6056,7 +6070,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToAny(new String[] {});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6065,7 +6079,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).consumeToAny(new String[] {"value"});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6074,7 +6088,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6083,7 +6097,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6092,7 +6106,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6101,7 +6115,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6110,7 +6124,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6119,7 +6133,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6128,7 +6142,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6137,7 +6151,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6146,7 +6160,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6155,7 +6169,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6164,7 +6178,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6173,7 +6187,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6182,7 +6196,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6191,7 +6205,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6200,7 +6214,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6209,7 +6223,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6218,7 +6232,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6227,7 +6241,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6236,7 +6250,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6245,7 +6259,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6254,7 +6268,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6263,7 +6277,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6272,7 +6286,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6281,7 +6295,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6290,7 +6304,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6299,7 +6313,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6308,7 +6322,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6317,7 +6331,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6326,7 +6340,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6335,7 +6349,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6344,7 +6358,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6353,7 +6367,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6362,7 +6376,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6371,7 +6385,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6380,7 +6394,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6389,7 +6403,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6398,7 +6412,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6407,7 +6421,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6416,7 +6430,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6425,7 +6439,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6434,7 +6448,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6443,7 +6457,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6452,7 +6466,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6461,7 +6475,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6470,7 +6484,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6479,7 +6493,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6488,7 +6502,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6497,7 +6511,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6506,7 +6520,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6515,7 +6529,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6524,7 +6538,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6533,7 +6547,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6542,7 +6556,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6551,7 +6565,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6560,7 +6574,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6569,7 +6583,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6578,7 +6592,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6587,7 +6601,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6596,7 +6610,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6605,7 +6619,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6614,7 +6628,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6623,7 +6637,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6632,7 +6646,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6641,7 +6655,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6650,7 +6664,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6659,7 +6673,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6668,7 +6682,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6677,7 +6691,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6686,7 +6700,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6695,7 +6709,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6704,7 +6718,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6713,7 +6727,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6722,7 +6736,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6731,7 +6745,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6740,7 +6754,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6749,7 +6763,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6758,7 +6772,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6767,7 +6781,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6776,7 +6790,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6785,7 +6799,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6794,7 +6808,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6803,7 +6817,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6812,7 +6826,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6821,7 +6835,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6830,7 +6844,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6839,7 +6853,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6848,7 +6862,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6857,7 +6871,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6866,7 +6880,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6875,7 +6889,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6884,7 +6898,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6893,7 +6907,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6902,7 +6916,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6911,7 +6925,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6920,7 +6934,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6929,7 +6943,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6938,7 +6952,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6947,7 +6961,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6956,7 +6970,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6965,7 +6979,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6974,7 +6988,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6983,7 +6997,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6992,7 +7006,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7001,7 +7015,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7010,7 +7024,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7019,7 +7033,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7028,7 +7042,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7037,7 +7051,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7046,7 +7060,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7055,7 +7069,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7064,7 +7078,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7073,7 +7087,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7082,7 +7096,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7091,7 +7105,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7100,7 +7114,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7109,7 +7123,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7118,7 +7132,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7127,7 +7141,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7136,7 +7150,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7145,7 +7159,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7154,7 +7168,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompTo("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7174,7 +7188,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7183,7 +7197,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7192,7 +7206,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7201,7 +7215,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7210,7 +7224,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7219,7 +7233,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7228,7 +7242,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7237,7 +7251,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7246,7 +7260,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7255,7 +7269,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7275,7 +7289,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7284,7 +7298,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7293,7 +7307,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7302,7 +7316,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7311,7 +7325,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7320,7 +7334,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7329,7 +7343,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7338,7 +7352,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7347,7 +7361,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7356,7 +7370,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7376,7 +7390,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7385,7 +7399,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7394,7 +7408,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7403,7 +7417,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7412,7 +7426,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7421,7 +7435,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7430,7 +7444,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7439,7 +7453,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7448,7 +7462,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7457,7 +7471,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7477,7 +7491,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7486,7 +7500,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7495,7 +7509,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7504,7 +7518,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7513,7 +7527,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7522,7 +7536,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7531,7 +7545,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7540,7 +7554,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7549,7 +7563,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7558,7 +7572,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7578,7 +7592,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7587,7 +7601,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7596,7 +7610,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7605,7 +7619,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7614,7 +7628,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7623,7 +7637,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7632,7 +7646,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7641,7 +7655,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7650,7 +7664,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7659,7 +7673,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7679,7 +7693,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7688,7 +7702,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7697,7 +7711,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7706,7 +7720,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7715,7 +7729,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7724,7 +7738,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7733,7 +7747,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7742,7 +7756,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7751,7 +7765,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7760,7 +7774,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7780,7 +7794,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7789,7 +7803,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7798,7 +7812,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7807,7 +7821,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7816,7 +7830,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7825,7 +7839,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7834,7 +7848,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7843,7 +7857,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7852,7 +7866,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7861,7 +7875,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7881,7 +7895,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7890,7 +7904,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7899,7 +7913,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7908,7 +7922,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7917,7 +7931,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7926,7 +7940,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7935,7 +7949,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7944,7 +7958,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7953,7 +7967,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7962,7 +7976,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7982,7 +7996,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7991,7 +8005,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8000,7 +8014,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8009,7 +8023,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8018,7 +8032,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8027,7 +8041,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8036,7 +8050,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8045,7 +8059,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8054,7 +8068,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8063,7 +8077,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8083,7 +8097,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8092,7 +8106,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8101,7 +8115,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8110,7 +8124,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8119,7 +8133,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372", String.valueOf(actual));
+        assertEquals("9223372", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8128,7 +8142,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8137,7 +8151,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8146,7 +8160,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8155,7 +8169,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8164,7 +8178,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8184,7 +8198,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8193,7 +8207,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8202,7 +8216,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8211,7 +8225,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8220,7 +8234,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8229,7 +8243,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8238,7 +8252,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8247,7 +8261,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8256,7 +8270,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8265,7 +8279,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompToIgnoreCase("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8274,7 +8288,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8283,7 +8297,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompBalanced('a', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8292,7 +8306,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompBalanced('0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8301,7 +8315,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompBalanced(Character.MIN_VALUE, '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8310,7 +8324,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompBalanced(Character.MAX_VALUE, '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8319,7 +8333,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompBalanced('\0', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8328,7 +8342,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8337,7 +8351,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompBalanced('0', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8346,7 +8360,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompBalanced(Character.MIN_VALUE, 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8355,7 +8369,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompBalanced(Character.MAX_VALUE, 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8364,7 +8378,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompBalanced('\0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8373,7 +8387,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompBalanced('a', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8382,7 +8396,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8391,7 +8405,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompBalanced(Character.MIN_VALUE, '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8400,7 +8414,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompBalanced(Character.MAX_VALUE, '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8409,7 +8423,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompBalanced('\0', Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8418,7 +8432,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompBalanced('a', Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8427,7 +8441,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompBalanced('0', Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8436,7 +8450,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8445,7 +8459,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompBalanced(Character.MAX_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8454,7 +8468,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompBalanced('\0', Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8463,7 +8477,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompBalanced('a', Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8472,7 +8486,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompBalanced('0', Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8481,7 +8495,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompBalanced(Character.MIN_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8490,7 +8504,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8499,7 +8513,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue(" ")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8508,7 +8522,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("a")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8517,7 +8531,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("test123")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8526,7 +8540,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8535,7 +8549,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8544,7 +8558,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("!@#")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8553,7 +8567,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8562,7 +8576,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8571,7 +8585,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("0")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8580,7 +8594,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8589,7 +8603,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8598,7 +8612,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("-1")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8607,7 +8621,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8616,7 +8630,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8625,7 +8639,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("1.5")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8634,7 +8648,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8643,7 +8657,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8652,7 +8666,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8661,7 +8675,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8670,7 +8684,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775807")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8679,7 +8693,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8688,7 +8702,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8697,7 +8711,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8706,7 +8720,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8715,7 +8729,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("9223372036854775808")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8724,7 +8738,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompBalanced('\0', '\0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8733,7 +8747,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompBalanced('a', 'a');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8742,7 +8756,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompBalanced('0', '0');
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8751,7 +8765,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompBalanced(Character.MIN_VALUE, Character.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8760,7 +8774,7 @@ public class TokenQueue_IPOTest {
         Object actual = (new TokenQueue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).chompBalanced(Character.MAX_VALUE, Character.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
 }

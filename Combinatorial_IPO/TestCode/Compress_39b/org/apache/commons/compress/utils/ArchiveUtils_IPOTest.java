@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for ArchiveUtils.
  */
 public class ArchiveUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_matchAsciiBuffer_pairwise_001() throws Exception {
         // Combination: expected="", buffer=new byte[] {}, offset=0, length=0
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -33,7 +47,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("a", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -53,7 +67,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -62,7 +76,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("0", new byte[] {}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -71,7 +85,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("-1", new byte[] {}, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -80,7 +94,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("1.5", new byte[] {}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -89,7 +103,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775807", new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -98,7 +112,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775808", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -107,7 +121,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -116,7 +130,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {1}, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -125,7 +139,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer(" ", new byte[] {1}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -145,7 +159,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("test123", new byte[] {1}, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -154,7 +168,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {1}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -163,7 +177,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("0", new byte[] {1}, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -172,7 +186,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("-1", new byte[] {1}, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -225,7 +239,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("a", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -234,7 +248,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("test123", new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -287,7 +301,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {}, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -296,7 +310,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer(" ", new byte[] {}, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -305,7 +319,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {}, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -314,7 +328,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("0", new byte[] {}, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -323,7 +337,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("-1", new byte[] {}, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -332,7 +346,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("1.5", new byte[] {}, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -341,7 +355,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775807", new byte[] {}, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -350,7 +364,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775808", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -359,7 +373,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -368,7 +382,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {}, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -465,7 +479,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -474,7 +488,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer(" ", new byte[] {}, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -483,7 +497,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("a", new byte[] {}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -492,7 +506,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("test123", new byte[] {}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -501,7 +515,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("-1", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -510,7 +524,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("1.5", new byte[] {}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -519,7 +533,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775807", new byte[] {}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -528,7 +542,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775808", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -537,7 +551,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -546,7 +560,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -555,7 +569,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {}, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -564,7 +578,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer(" ", new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -573,7 +587,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("a", new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -582,7 +596,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -591,7 +605,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer(" ", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -600,7 +614,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("a", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -609,7 +623,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("test123", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -618,7 +632,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -627,7 +641,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("0", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -636,7 +650,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("-1", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -645,7 +659,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("1.5", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -654,7 +668,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775807", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -663,7 +677,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775808", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -672,7 +686,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -681,7 +695,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -690,7 +704,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer(" ", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -699,7 +713,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("a", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -708,7 +722,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("test123", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -717,7 +731,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("!@#", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -726,7 +740,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("0", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -735,7 +749,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("-1", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -744,7 +758,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("1.5", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -753,7 +767,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775807", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -762,7 +776,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("9223372036854775808", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -771,7 +785,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.matchAsciiBuffer("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -780,7 +794,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.toAsciiString(new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -833,7 +847,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.toAsciiString(new byte[] {1}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -842,7 +856,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.toAsciiString(new byte[] {1}, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u0001", String.valueOf(actual));
+        assertEquals("\u0001", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1049,7 +1063,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, 0, new byte[] {}, 0, 0, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1069,7 +1083,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, -1, -1, new byte[] {}, -1, -1, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1089,7 +1103,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, Integer.MIN_VALUE, 0, new byte[] {1}, Integer.MIN_VALUE, Integer.MIN_VALUE, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1109,7 +1123,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, -1, new byte[] {1}, Integer.MIN_VALUE, -1, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1129,7 +1143,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 1, Integer.MIN_VALUE, new byte[] {}, -1, Integer.MIN_VALUE, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1138,7 +1152,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, -1, Integer.MIN_VALUE, new byte[] {1}, 0, 0, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1345,7 +1359,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, 0, 0, new byte[] {}, 1, 0, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1354,7 +1368,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, 1, 0, new byte[] {}, -1, 0, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1363,7 +1377,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MAX_VALUE, 0, new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1383,7 +1397,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MIN_VALUE, 0, new byte[] {}, -1, 0, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1403,7 +1417,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MAX_VALUE, 0, new byte[] {}, Integer.MIN_VALUE, 0, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1412,7 +1426,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, 0, new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1432,7 +1446,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, -1, 1, new byte[] {}, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1441,7 +1455,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, Integer.MAX_VALUE, 0, new byte[] {1}, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1450,7 +1464,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MIN_VALUE, -1, new byte[] {}, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1459,7 +1473,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, 0, -1, new byte[] {1}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1468,7 +1482,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MAX_VALUE, Integer.MAX_VALUE, new byte[] {}, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1488,7 +1502,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, -1, Integer.MIN_VALUE, new byte[] {}, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1497,7 +1511,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, 1, Integer.MIN_VALUE, new byte[] {1}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1506,7 +1520,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 1, 1, new byte[] {}, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1515,7 +1529,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, -1, Integer.MAX_VALUE, new byte[] {}, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1524,7 +1538,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE, new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1533,7 +1547,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, 0, new byte[] {}, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1542,7 +1556,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MAX_VALUE, -1, new byte[] {}, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1551,7 +1565,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 1, 0, new byte[] {1}, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1560,7 +1574,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, -1, new byte[] {}, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1569,7 +1583,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, Integer.MAX_VALUE, new byte[] {}, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1578,7 +1592,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE, new byte[] {}, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1609,7 +1623,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, Integer.MIN_VALUE, new byte[] {}, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1618,7 +1632,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, -1, 0, new byte[] {}, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1627,7 +1641,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MIN_VALUE, 1, new byte[] {}, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1636,7 +1650,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, -1, new byte[] {}, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1645,7 +1659,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 1, -1, new byte[] {}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1654,7 +1668,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, -1, -1, new byte[] {1}, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1663,7 +1677,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MAX_VALUE, 1, new byte[] {}, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1672,7 +1686,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MIN_VALUE, 0, new byte[] {}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1681,7 +1695,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE, new byte[] {1}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1690,7 +1704,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, Integer.MAX_VALUE, new byte[] {}, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1699,7 +1713,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, 0, 0, new byte[] {}, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1708,7 +1722,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1717,7 +1731,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1726,7 +1740,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1735,7 +1749,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1744,7 +1758,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, new byte[] {}, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1753,7 +1767,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {}, new byte[] {1}, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1762,7 +1776,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, new byte[] {}, false);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1771,7 +1785,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqual(new byte[] {1}, new byte[] {1}, true);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1780,7 +1794,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {}, 0, 0, new byte[] {}, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1833,7 +1847,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {1}, 0, -1, new byte[] {1}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1875,7 +1889,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {1}, 1, Integer.MIN_VALUE, new byte[] {1}, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1950,7 +1964,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {}, 0, -1, new byte[] {}, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2058,7 +2072,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {}, -1, -1, new byte[] {1}, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2078,7 +2092,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {}, Integer.MIN_VALUE, 0, new byte[] {}, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2087,7 +2101,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isEqualWithNull(new byte[] {}, Integer.MIN_VALUE, Integer.MIN_VALUE, new byte[] {1}, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2118,7 +2132,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {}, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2138,7 +2152,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {}, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2158,7 +2172,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {}, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2167,7 +2181,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {1}, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2176,7 +2190,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {1}, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2185,7 +2199,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {1}, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2194,7 +2208,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {1}, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2203,7 +2217,7 @@ public class ArchiveUtils_IPOTest {
         Object actual = ArchiveUtils.isArrayZero(new byte[] {1}, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
 }

@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for FastDatePrinter.
  */
 public class FastDatePrinter_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_parseToken_pairwise_001() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, pattern="", indexRef=new int[] {}
@@ -167,7 +181,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).parseToken("test123", new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("e", String.valueOf(actual));
+        assertEquals("e", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -198,7 +212,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).parseToken("-1", new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("'1", String.valueOf(actual));
+        assertEquals("'1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -207,7 +221,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).parseToken("1.5", new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("'.5", String.valueOf(actual));
+        assertEquals("'.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -216,7 +230,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).parseToken("9223372036854775807", new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("'223372036854775807", String.valueOf(actual));
+        assertEquals("'223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -225,7 +239,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).parseToken("9223372036854775808", new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("'223372036854775808", String.valueOf(actual));
+        assertEquals("'223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -234,7 +248,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).parseToken("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1332,7 +1346,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1341,7 +1355,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1350,7 +1364,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u5348\u524d", String.valueOf(actual));
+        assertEquals("\u5348\u524d", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1359,7 +1373,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1368,7 +1382,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1388,7 +1402,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("PM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1408,7 +1422,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1428,7 +1442,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1437,7 +1451,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1446,7 +1460,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1455,7 +1469,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1464,7 +1478,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1473,7 +1487,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1482,7 +1496,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1491,7 +1505,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1500,7 +1514,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1509,7 +1523,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1518,7 +1532,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("PM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1549,7 +1563,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1558,7 +1572,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1567,7 +1581,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1576,7 +1590,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1585,7 +1599,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1594,7 +1608,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1603,7 +1617,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1612,7 +1626,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1621,7 +1635,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1630,7 +1644,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1639,7 +1653,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1648,7 +1662,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1657,7 +1671,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1666,7 +1680,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1675,7 +1689,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1684,7 +1698,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1693,7 +1707,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1702,7 +1716,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1711,7 +1725,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1720,7 +1734,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1729,7 +1743,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1738,7 +1752,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1747,7 +1761,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1756,7 +1770,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1765,7 +1779,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1774,7 +1788,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1783,7 +1797,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1792,7 +1806,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1801,7 +1815,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1810,7 +1824,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u5348\u5f8c", String.valueOf(actual));
+        assertEquals("\u5348\u5f8c", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1819,7 +1833,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1828,7 +1842,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("PM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1837,7 +1851,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1846,7 +1860,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1855,7 +1869,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u5348\u524d", String.valueOf(actual));
+        assertEquals("\u5348\u524d", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1864,7 +1878,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1873,7 +1887,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1893,7 +1907,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1902,7 +1916,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1911,7 +1925,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1920,7 +1934,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1951,7 +1965,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1960,7 +1974,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1969,7 +1983,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1978,7 +1992,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1987,7 +2001,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1996,7 +2010,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2005,7 +2019,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2014,7 +2028,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2023,7 +2037,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2032,7 +2046,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2041,7 +2055,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2050,7 +2064,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2059,7 +2073,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2068,7 +2082,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2077,7 +2091,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2086,7 +2100,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2095,7 +2109,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2104,7 +2118,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2113,7 +2127,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2122,7 +2136,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("AM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2131,7 +2145,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u5348\u524d", String.valueOf(actual));
+        assertEquals("\u5348\u524d", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2140,7 +2154,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2149,7 +2163,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2158,7 +2172,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u5348\u5f8c", String.valueOf(actual));
+        assertEquals("\u5348\u524d", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2167,7 +2181,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2176,7 +2190,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2185,7 +2199,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2194,7 +2208,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2203,7 +2217,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2212,7 +2226,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2254,7 +2268,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2263,7 +2277,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2272,7 +2286,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2281,7 +2295,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2290,7 +2304,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2299,7 +2313,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2308,7 +2322,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2317,7 +2331,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2326,7 +2340,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2335,7 +2349,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2344,7 +2358,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2353,7 +2367,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2362,7 +2376,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2371,7 +2385,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2380,7 +2394,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2389,7 +2403,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2398,7 +2412,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2407,7 +2421,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2416,7 +2430,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2425,7 +2439,7 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("PM", String.valueOf(actual));
+        assertEquals("AM", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2434,38 +2448,1452 @@ public class FastDatePrinter_IPOTest {
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")));
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\u5348\u5f8c", String.valueOf(actual));
+        assertEquals("\u5348\u524d", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_243() throws Exception {
+    public void test_format_pairwise_243() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=0L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_244() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_245() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u5f8c", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_246() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_247() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_248() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, millis=0L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(0L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_249() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=1L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(1L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_250() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=-1L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_251() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).format(Long.MAX_VALUE, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_252() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("test")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(Long.MIN_VALUE, new java.lang.StringBuffer("test"));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_253() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_254() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_255() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=0L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(0L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_256() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_257() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_258() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_259() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_260() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_261() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=0L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(0L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_262() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_263() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_264() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_265() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_266() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("PM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_267() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=0L, buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(0L, new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_268() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=1L, buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(1L, new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_269() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=-1L, buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L, new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_270() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, millis=0L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(0L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_271() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_272() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_273() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_274() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=0L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(0L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_275() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_276() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_277() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, millis=0L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(0L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_278() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_279() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_280() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_281() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, millis=1L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(1L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_282() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_283() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_284() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_285() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, millis=0L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(0L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_286() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_287() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_288() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_289() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=0L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_290() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, millis=1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_291() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_292() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_293() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=0L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(0L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_294() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, millis=1L, buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(1L, new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_295() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, millis=-1L, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(-1L, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u5f8c", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_296() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MAX_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MAX_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_297() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, millis=Long.MIN_VALUE, buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(Long.MIN_VALUE, new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("PM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_298() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_299() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_300() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(new java.util.Date(0L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_301() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_302() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_303() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_304() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_305() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_306() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_307() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_308() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u524d", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_309() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_310() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_311() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_312() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_313() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_314() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_315() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_316() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_317() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_318() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_319() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_320() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_321() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_322() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_323() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_324() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_325() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_326() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_327() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_328() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_329() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, date=new java.util.Date(1000000000000L), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(new java.util.Date(1000000000000L), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_330() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, date=new java.util.Date(0L), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(new java.util.Date(0L), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u524d", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_331() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_332() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_333() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_334() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_335() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_336() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_337() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_338() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_339() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_340() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_341() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_342() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u524d", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_343() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_344() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_345() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_346() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_347() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_348() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_349() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_350() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_351() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_352() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_353() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_354() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_355() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_356() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_357() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_358() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_359() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_360() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_361() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_362() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_format_pairwise_363() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).format(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u524d", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_364() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_365() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_366() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_367() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_368() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_369() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_370() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_371() throws Exception {
+        // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_372() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_373() throws Exception {
+        // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals(" ", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_374() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_375() throws Exception {
+        // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u524d", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_376() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_377() throws Exception {
+        // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        try {
+            (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_378() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_379() throws Exception {
+        // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("!@#", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_380() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_381() throws Exception {
+        // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("0", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_382() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_383() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_384() throws Exception {
+        // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("-1", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_385() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_386() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_387() throws Exception {
+        // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("1.5", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_388() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_389() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_390() throws Exception {
+        // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775807", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_391() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_392() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("test9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_393() throws Exception {
+        // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("9223372036854775808", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_394() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("AM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_395() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("test")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer("test"));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("testAM", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_applyRules_pairwise_396() throws Exception {
+        // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, calendar=java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), buf=new java.lang.StringBuffer("")
+        Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).applyRules(java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")), new java.lang.StringBuffer(""));
+        assertNotNull(actual);
+        assertEquals("java.lang.StringBuffer", actual.getClass().getName());
+        assertEquals("\u5348\u524d", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getPattern_pairwise_397() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_244() throws Exception {
+    public void test_getPattern_pairwise_398() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_245() throws Exception {
+    public void test_getPattern_pairwise_399() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_246() throws Exception {
+    public void test_getPattern_pairwise_400() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
@@ -2476,97 +3904,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_247() throws Exception {
+    public void test_getPattern_pairwise_401() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_248() throws Exception {
+    public void test_getPattern_pairwise_402() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_249() throws Exception {
+    public void test_getPattern_pairwise_403() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_250() throws Exception {
+    public void test_getPattern_pairwise_404() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_251() throws Exception {
+    public void test_getPattern_pairwise_405() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_252() throws Exception {
+    public void test_getPattern_pairwise_406() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_253() throws Exception {
+    public void test_getPattern_pairwise_407() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_254() throws Exception {
+    public void test_getPattern_pairwise_408() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_255() throws Exception {
+    public void test_getPattern_pairwise_409() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_256() throws Exception {
+    public void test_getPattern_pairwise_410() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_257() throws Exception {
+    public void test_getPattern_pairwise_411() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
@@ -2577,97 +4005,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_258() throws Exception {
+    public void test_getPattern_pairwise_412() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_259() throws Exception {
+    public void test_getPattern_pairwise_413() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_260() throws Exception {
+    public void test_getPattern_pairwise_414() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_261() throws Exception {
+    public void test_getPattern_pairwise_415() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_262() throws Exception {
+    public void test_getPattern_pairwise_416() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_263() throws Exception {
+    public void test_getPattern_pairwise_417() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_264() throws Exception {
+    public void test_getPattern_pairwise_418() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_265() throws Exception {
+    public void test_getPattern_pairwise_419() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_266() throws Exception {
+    public void test_getPattern_pairwise_420() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_267() throws Exception {
+    public void test_getPattern_pairwise_421() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_268() throws Exception {
+    public void test_getPattern_pairwise_422() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
@@ -2678,97 +4106,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_269() throws Exception {
+    public void test_getPattern_pairwise_423() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_270() throws Exception {
+    public void test_getPattern_pairwise_424() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_271() throws Exception {
+    public void test_getPattern_pairwise_425() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_272() throws Exception {
+    public void test_getPattern_pairwise_426() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_273() throws Exception {
+    public void test_getPattern_pairwise_427() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_274() throws Exception {
+    public void test_getPattern_pairwise_428() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getPattern_pairwise_275() throws Exception {
+    public void test_getPattern_pairwise_429() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_276() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_430() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_277() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_431() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_278() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_432() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_279() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_433() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
@@ -2779,97 +4207,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_280() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_434() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3", String.valueOf(actual));
+        assertEquals("3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_281() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_435() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_282() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_436() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_283() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_437() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3", String.valueOf(actual));
+        assertEquals("3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_284() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_438() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("19", String.valueOf(actual));
+        assertEquals("19", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_285() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_439() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("19", String.valueOf(actual));
+        assertEquals("19", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_286() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_440() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_287() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_441() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_288() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_442() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_289() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_443() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_290() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_444() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
@@ -2880,97 +4308,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_291() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_445() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3", String.valueOf(actual));
+        assertEquals("3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_292() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_446() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_293() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_447() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_294() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_448() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3", String.valueOf(actual));
+        assertEquals("3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_295() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_449() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("19", String.valueOf(actual));
+        assertEquals("19", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_296() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_450() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("19", String.valueOf(actual));
+        assertEquals("19", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_297() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_451() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_298() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_452() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_299() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_453() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_300() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_454() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_301() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_455() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
@@ -2981,115 +4409,115 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_302() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_456() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3", String.valueOf(actual));
+        assertEquals("3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_303() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_457() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_304() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_458() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_305() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_459() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3", String.valueOf(actual));
+        assertEquals("3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_306() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_460() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("19", String.valueOf(actual));
+        assertEquals("19", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_307() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_461() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("19", String.valueOf(actual));
+        assertEquals("19", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_getMaxLengthEstimate_pairwise_308() throws Exception {
+    public void test_getMaxLengthEstimate_pairwise_462() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getMaxLengthEstimate();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_309() throws Exception {
+    public void test_equals_pairwise_463() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_310() throws Exception {
+    public void test_equals_pairwise_464() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj=new Object()
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_311() throws Exception {
+    public void test_equals_pairwise_465() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=new Object()
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_312() throws Exception {
+    public void test_equals_pairwise_466() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj="sample_str"
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_313() throws Exception {
+    public void test_equals_pairwise_467() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_314() throws Exception {
+    public void test_equals_pairwise_468() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN, obj="sample_str"
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).equals("sample_str");
@@ -3100,16 +4528,16 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_315() throws Exception {
+    public void test_equals_pairwise_469() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_316() throws Exception {
+    public void test_equals_pairwise_470() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, obj=Integer.valueOf(1)
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).equals(Integer.valueOf(1));
@@ -3120,34 +4548,34 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_317() throws Exception {
+    public void test_equals_pairwise_471() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_318() throws Exception {
+    public void test_equals_pairwise_472() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_319() throws Exception {
+    public void test_equals_pairwise_473() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_320() throws Exception {
+    public void test_equals_pairwise_474() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
@@ -3158,223 +4586,223 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_321() throws Exception {
+    public void test_equals_pairwise_475() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_322() throws Exception {
+    public void test_equals_pairwise_476() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_323() throws Exception {
+    public void test_equals_pairwise_477() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_324() throws Exception {
+    public void test_equals_pairwise_478() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_325() throws Exception {
+    public void test_equals_pairwise_479() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_326() throws Exception {
+    public void test_equals_pairwise_480() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_327() throws Exception {
+    public void test_equals_pairwise_481() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_328() throws Exception {
+    public void test_equals_pairwise_482() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_329() throws Exception {
+    public void test_equals_pairwise_483() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_330() throws Exception {
+    public void test_equals_pairwise_484() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_331() throws Exception {
+    public void test_equals_pairwise_485() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_332() throws Exception {
+    public void test_equals_pairwise_486() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_333() throws Exception {
+    public void test_equals_pairwise_487() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_334() throws Exception {
+    public void test_equals_pairwise_488() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_335() throws Exception {
+    public void test_equals_pairwise_489() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_336() throws Exception {
+    public void test_equals_pairwise_490() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_337() throws Exception {
+    public void test_equals_pairwise_491() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_338() throws Exception {
+    public void test_equals_pairwise_492() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_339() throws Exception {
+    public void test_equals_pairwise_493() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT, obj=new Object()
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_340() throws Exception {
+    public void test_equals_pairwise_494() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US, obj="sample_str"
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_equals_pairwise_341() throws Exception {
+    public void test_equals_pairwise_495() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN, obj=Integer.valueOf(1)
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_342() throws Exception {
+    public void test_hashCode_pairwise_496() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_343() throws Exception {
+    public void test_hashCode_pairwise_497() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("32", String.valueOf(actual));
+        assertEquals("32", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_344() throws Exception {
+    public void test_hashCode_pairwise_498() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("97", String.valueOf(actual));
+        assertEquals("97", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_345() throws Exception {
+    public void test_hashCode_pairwise_499() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
@@ -3385,97 +4813,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_346() throws Exception {
+    public void test_hashCode_pairwise_500() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("33732", String.valueOf(actual));
+        assertEquals("33732", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_347() throws Exception {
+    public void test_hashCode_pairwise_501() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("48", String.valueOf(actual));
+        assertEquals("48", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_348() throws Exception {
+    public void test_hashCode_pairwise_502() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1444", String.valueOf(actual));
+        assertEquals("1444", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_349() throws Exception {
+    public void test_hashCode_pairwise_503() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("48568", String.valueOf(actual));
+        assertEquals("48568", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_350() throws Exception {
+    public void test_hashCode_pairwise_504() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773151198", String.valueOf(actual));
+        assertEquals("-1773151198", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_351() throws Exception {
+    public void test_hashCode_pairwise_505() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773151197", String.valueOf(actual));
+        assertEquals("-1773151197", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_352() throws Exception {
+    public void test_hashCode_pairwise_506() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-474938880", String.valueOf(actual));
+        assertEquals("-474938880", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_353() throws Exception {
+    public void test_hashCode_pairwise_507() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234943", String.valueOf(actual));
+        assertEquals("-848234943", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_354() throws Exception {
+    public void test_hashCode_pairwise_508() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234911", String.valueOf(actual));
+        assertEquals("-848234911", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_355() throws Exception {
+    public void test_hashCode_pairwise_509() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234846", String.valueOf(actual));
+        assertEquals("-848234846", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_356() throws Exception {
+    public void test_hashCode_pairwise_510() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
@@ -3486,97 +4914,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_357() throws Exception {
+    public void test_hashCode_pairwise_511() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848201211", String.valueOf(actual));
+        assertEquals("-848201211", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_358() throws Exception {
+    public void test_hashCode_pairwise_512() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234895", String.valueOf(actual));
+        assertEquals("-848234895", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_359() throws Exception {
+    public void test_hashCode_pairwise_513() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848233499", String.valueOf(actual));
+        assertEquals("-848233499", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_360() throws Exception {
+    public void test_hashCode_pairwise_514() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848186375", String.valueOf(actual));
+        assertEquals("-848186375", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_361() throws Exception {
+    public void test_hashCode_pairwise_515() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1673581155", String.valueOf(actual));
+        assertEquals("1673581155", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_362() throws Exception {
+    public void test_hashCode_pairwise_516() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1673581156", String.valueOf(actual));
+        assertEquals("1673581156", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_363() throws Exception {
+    public void test_hashCode_pairwise_517() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1323173823", String.valueOf(actual));
+        assertEquals("-1323173823", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_364() throws Exception {
+    public void test_hashCode_pairwise_518() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112741", String.valueOf(actual));
+        assertEquals("-135112741", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_365() throws Exception {
+    public void test_hashCode_pairwise_519() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112709", String.valueOf(actual));
+        assertEquals("-135112709", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_366() throws Exception {
+    public void test_hashCode_pairwise_520() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112644", String.valueOf(actual));
+        assertEquals("-135112644", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_367() throws Exception {
+    public void test_hashCode_pairwise_521() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
@@ -3587,97 +5015,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_368() throws Exception {
+    public void test_hashCode_pairwise_522() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135079009", String.valueOf(actual));
+        assertEquals("-135079009", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_369() throws Exception {
+    public void test_hashCode_pairwise_523() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112693", String.valueOf(actual));
+        assertEquals("-135112693", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_370() throws Exception {
+    public void test_hashCode_pairwise_524() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135111297", String.valueOf(actual));
+        assertEquals("-135111297", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_371() throws Exception {
+    public void test_hashCode_pairwise_525() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135064173", String.valueOf(actual));
+        assertEquals("-135064173", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_372() throws Exception {
+    public void test_hashCode_pairwise_526() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1908263939", String.valueOf(actual));
+        assertEquals("-1908263939", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_373() throws Exception {
+    public void test_hashCode_pairwise_527() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1908263938", String.valueOf(actual));
+        assertEquals("-1908263938", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_hashCode_pairwise_374() throws Exception {
+    public void test_hashCode_pairwise_528() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-610051621", String.valueOf(actual));
+        assertEquals("-610051621", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_375() throws Exception {
+    public void test_toString_pairwise_529() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_376() throws Exception {
+    public void test_toString_pairwise_530() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[ ,,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[ ,,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_377() throws Exception {
+    public void test_toString_pairwise_531() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[a,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[a,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_378() throws Exception {
+    public void test_toString_pairwise_532() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
@@ -3688,97 +5116,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_379() throws Exception {
+    public void test_toString_pairwise_533() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[!@#,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[!@#,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_380() throws Exception {
+    public void test_toString_pairwise_534() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[0,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[0,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_381() throws Exception {
+    public void test_toString_pairwise_535() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[-1,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[-1,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_382() throws Exception {
+    public void test_toString_pairwise_536() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[1.5,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[1.5,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_383() throws Exception {
+    public void test_toString_pairwise_537() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[9223372036854775807,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[9223372036854775807,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_384() throws Exception {
+    public void test_toString_pairwise_538() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[9223372036854775808,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[9223372036854775808,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_385() throws Exception {
+    public void test_toString_pairwise_539() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_386() throws Exception {
+    public void test_toString_pairwise_540() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_387() throws Exception {
+    public void test_toString_pairwise_541() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[ ,en_US,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[ ,en_US,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_388() throws Exception {
+    public void test_toString_pairwise_542() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[a,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[a,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_389() throws Exception {
+    public void test_toString_pairwise_543() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
@@ -3789,97 +5217,97 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_390() throws Exception {
+    public void test_toString_pairwise_544() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[!@#,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[!@#,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_391() throws Exception {
+    public void test_toString_pairwise_545() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[0,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[0,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_392() throws Exception {
+    public void test_toString_pairwise_546() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[-1,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[-1,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_393() throws Exception {
+    public void test_toString_pairwise_547() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[1.5,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[1.5,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_394() throws Exception {
+    public void test_toString_pairwise_548() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[9223372036854775807,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[9223372036854775807,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_395() throws Exception {
+    public void test_toString_pairwise_549() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[9223372036854775808,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[9223372036854775808,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_396() throws Exception {
+    public void test_toString_pairwise_550() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.US
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_397() throws Exception {
+    public void test_toString_pairwise_551() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_398() throws Exception {
+    public void test_toString_pairwise_552() throws Exception {
         // Combination: receiver__pattern=" ", receiver__timeZone=java.util.TimeZone.getTimeZone("GMT"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[ ,ja_JP,GMT]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[ ,ja_JP,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_399() throws Exception {
+    public void test_toString_pairwise_553() throws Exception {
         // Combination: receiver__pattern="a", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[a,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[a,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_400() throws Exception {
+    public void test_toString_pairwise_554() throws Exception {
         // Combination: receiver__pattern="test123", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         try {
             (new FastDatePrinter("test123", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
@@ -3890,66 +5318,66 @@ public class FastDatePrinter_IPOTest {
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_401() throws Exception {
+    public void test_toString_pairwise_555() throws Exception {
         // Combination: receiver__pattern="!@#", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[!@#,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[!@#,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_402() throws Exception {
+    public void test_toString_pairwise_556() throws Exception {
         // Combination: receiver__pattern="0", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[0,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[0,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_403() throws Exception {
+    public void test_toString_pairwise_557() throws Exception {
         // Combination: receiver__pattern="-1", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[-1,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[-1,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_404() throws Exception {
+    public void test_toString_pairwise_558() throws Exception {
         // Combination: receiver__pattern="1.5", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[1.5,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[1.5,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_405() throws Exception {
+    public void test_toString_pairwise_559() throws Exception {
         // Combination: receiver__pattern="9223372036854775807", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[9223372036854775807,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[9223372036854775807,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_406() throws Exception {
+    public void test_toString_pairwise_560() throws Exception {
         // Combination: receiver__pattern="9223372036854775808", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[9223372036854775808,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[9223372036854775808,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
-    public void test_toString_pairwise_407() throws Exception {
+    public void test_toString_pairwise_561() throws Exception {
         // Combination: receiver__pattern="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.JAPAN
         Object actual = (new FastDatePrinter("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDatePrinter[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDatePrinter[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,ja_JP,UTC]", formatValue(actual));
     }
 
 }

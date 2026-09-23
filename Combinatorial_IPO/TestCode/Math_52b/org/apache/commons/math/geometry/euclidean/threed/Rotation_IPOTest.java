@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for Rotation.
  */
 public class Rotation_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_getQ0_pairwise_001() throws Exception {
         // Combination: receiver__q0=0.0d, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=0.0d, receiver__needsNormalization=true
         Object actual = (new Rotation(0.0d, 0.0d, 0.0d, 0.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, 1.0d, 1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, -1.0d, -1.0d, -1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.NaN, Double.NaN, Double.NaN, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 1.0d, -1.0d, Double.NaN, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 0.0d, Double.NaN, -1.0d, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.NaN, 0.0d, 1.0d, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, 1.0d, 0.0d, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 1.0d, Double.NaN, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 0.0d, Double.POSITIVE_INFINITY, 0.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, -1.0d, 1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 1.0d, Double.NaN, Double.POSITIVE_INFINITY, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 1.0d, 0.0d, -1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 1.0d, 0.0d, 0.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, -1.0d, Double.NaN, 1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, -1.0d, 0.0d, Double.NaN, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, -1.0d, -1.0d, Double.POSITIVE_INFINITY, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -175,7 +189,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, 1.0d, -1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -184,7 +198,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.NaN, -1.0d, 0.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -193,7 +207,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.NaN, Double.NaN, 0.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -202,7 +216,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 1.0d, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -211,7 +225,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -220,7 +234,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.POSITIVE_INFINITY, 1.0d, Double.NaN, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -229,7 +243,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.POSITIVE_INFINITY, -1.0d, 0.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -238,7 +252,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.NaN, -1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -247,7 +261,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, Double.POSITIVE_INFINITY, -1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -256,7 +270,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, Double.POSITIVE_INFINITY, Double.NaN, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -265,7 +279,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -274,7 +288,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, 1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -283,7 +297,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, -1.0d, true)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -292,7 +306,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, 1.0d, Double.POSITIVE_INFINITY, false)).getQ0();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -301,7 +315,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 0.0d, 0.0d, 0.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -310,7 +324,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, 1.0d, 1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -319,7 +333,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, -1.0d, -1.0d, -1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -328,7 +342,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.NaN, Double.NaN, Double.NaN, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -337,7 +351,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 1.0d, -1.0d, Double.NaN, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -355,7 +369,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 0.0d, Double.NaN, -1.0d, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -364,7 +378,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.NaN, 0.0d, 1.0d, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -373,7 +387,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, 1.0d, 0.0d, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -382,7 +396,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 1.0d, Double.NaN, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -391,7 +405,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 0.0d, Double.POSITIVE_INFINITY, 0.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -400,7 +414,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, -1.0d, 1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -409,7 +423,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 1.0d, Double.NaN, Double.POSITIVE_INFINITY, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -418,7 +432,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 1.0d, 0.0d, -1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -427,7 +441,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 1.0d, 0.0d, 0.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -436,7 +450,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, -1.0d, Double.NaN, 1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -445,7 +459,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, -1.0d, 0.0d, Double.NaN, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -454,7 +468,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, -1.0d, -1.0d, Double.POSITIVE_INFINITY, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -463,7 +477,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, 1.0d, -1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -472,7 +486,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.NaN, -1.0d, 0.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -481,7 +495,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.NaN, Double.NaN, 0.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -490,7 +504,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 1.0d, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -499,7 +513,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -508,7 +522,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.POSITIVE_INFINITY, 1.0d, Double.NaN, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -517,7 +531,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.POSITIVE_INFINITY, -1.0d, 0.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -526,7 +540,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.NaN, -1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -535,7 +549,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, Double.POSITIVE_INFINITY, -1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -544,7 +558,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, Double.POSITIVE_INFINITY, Double.NaN, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -553,7 +567,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -562,7 +576,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, 1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -571,7 +585,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, -1.0d, true)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -580,7 +594,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, 1.0d, Double.POSITIVE_INFINITY, false)).getQ1();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -589,7 +603,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 0.0d, 0.0d, 0.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -598,7 +612,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, 1.0d, 1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -607,7 +621,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, -1.0d, -1.0d, -1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -616,7 +630,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.NaN, Double.NaN, Double.NaN, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -625,7 +639,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -634,7 +648,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 1.0d, -1.0d, Double.NaN, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -643,7 +657,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 0.0d, Double.NaN, -1.0d, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -652,7 +666,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.NaN, 0.0d, 1.0d, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -661,7 +675,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, 1.0d, 0.0d, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -670,7 +684,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 1.0d, Double.NaN, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -679,7 +693,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 0.0d, Double.POSITIVE_INFINITY, 0.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -688,7 +702,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, -1.0d, 1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -697,7 +711,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 1.0d, Double.NaN, Double.POSITIVE_INFINITY, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -706,7 +720,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 1.0d, 0.0d, -1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -715,7 +729,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 1.0d, 0.0d, 0.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -724,7 +738,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, -1.0d, Double.NaN, 1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -733,7 +747,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, -1.0d, 0.0d, Double.NaN, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -742,7 +756,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, -1.0d, -1.0d, Double.POSITIVE_INFINITY, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -751,7 +765,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, 1.0d, -1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -760,7 +774,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.NaN, -1.0d, 0.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -769,7 +783,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.NaN, Double.NaN, 0.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -778,7 +792,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 1.0d, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -787,7 +801,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -796,7 +810,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.POSITIVE_INFINITY, 1.0d, Double.NaN, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -805,7 +819,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.POSITIVE_INFINITY, -1.0d, 0.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -814,7 +828,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.NaN, -1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -823,7 +837,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, Double.POSITIVE_INFINITY, -1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, Double.POSITIVE_INFINITY, Double.NaN, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, 1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, -1.0d, true)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, 1.0d, Double.POSITIVE_INFINITY, false)).getQ2();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 0.0d, 0.0d, 0.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, 1.0d, 1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, -1.0d, -1.0d, -1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.NaN, Double.NaN, Double.NaN, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -922,7 +936,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, 1.0d, -1.0d, Double.NaN, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -931,7 +945,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 0.0d, Double.NaN, -1.0d, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -940,7 +954,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.NaN, 0.0d, 1.0d, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -949,7 +963,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, 1.0d, 0.0d, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -958,7 +972,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 1.0d, Double.NaN, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -967,7 +981,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 0.0d, Double.POSITIVE_INFINITY, 0.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -976,7 +990,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, -1.0d, 1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -985,7 +999,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, 1.0d, Double.NaN, Double.POSITIVE_INFINITY, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -994,7 +1008,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 1.0d, 0.0d, -1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1003,7 +1017,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 1.0d, 0.0d, 0.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1012,7 +1026,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, -1.0d, Double.NaN, 1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1021,7 +1035,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, -1.0d, 0.0d, Double.NaN, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1030,7 +1044,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, -1.0d, -1.0d, Double.POSITIVE_INFINITY, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1039,7 +1053,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, 1.0d, -1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1048,7 +1062,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.NaN, -1.0d, 0.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1057,7 +1071,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.NaN, Double.NaN, 0.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1066,7 +1080,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 1.0d, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1075,7 +1089,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1084,7 +1098,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(-1.0d, Double.POSITIVE_INFINITY, 1.0d, Double.NaN, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1093,7 +1107,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, Double.POSITIVE_INFINITY, -1.0d, 0.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1102,7 +1116,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.NaN, -1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1111,7 +1125,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(1.0d, 1.0d, Double.POSITIVE_INFINITY, -1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1120,7 +1134,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, -1.0d, Double.POSITIVE_INFINITY, Double.NaN, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1129,7 +1143,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(0.0d, Double.NaN, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1138,7 +1152,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, 1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1147,7 +1161,7 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, -1.0d, true)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1156,7 +1170,583 @@ public class Rotation_IPOTest {
         Object actual = (new Rotation(Double.NaN, 0.0d, 1.0d, Double.POSITIVE_INFINITY, false)).getQ3();
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_129() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, 0.0d, 0.0d, 0.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_130() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=1.0d, receiver__q2=1.0d, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, 1.0d, 1.0d, 1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("2.0943951023931953", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_131() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=-1.0d, receiver__q2=-1.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, -1.0d, -1.0d, -1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("2.0943951023931953", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_132() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=Double.NaN, receiver__q2=Double.NaN, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, Double.NaN, Double.NaN, Double.NaN, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_133() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_134() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=1.0d, receiver__q2=-1.0d, receiver__q3=Double.NaN, receiver__needsNormalization=false
+        Object actual = (new Rotation(0.0d, 1.0d, -1.0d, Double.NaN, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("3.141592653589793", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_135() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=0.0d, receiver__q2=Double.NaN, receiver__q3=-1.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(1.0d, 0.0d, Double.NaN, -1.0d, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_136() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=Double.NaN, receiver__q2=0.0d, receiver__q3=1.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(-1.0d, Double.NaN, 0.0d, 1.0d, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_137() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=-1.0d, receiver__q2=1.0d, receiver__q3=0.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(Double.NaN, -1.0d, 1.0d, 0.0d, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_138() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=0.0d, receiver__q2=1.0d, receiver__q3=Double.NaN, receiver__needsNormalization=false
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 1.0d, Double.NaN, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_139() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=0.0d, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, 0.0d, Double.POSITIVE_INFINITY, 0.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("3.141592653589793", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_140() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=0.0d, receiver__q2=-1.0d, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, 0.0d, -1.0d, 1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_141() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=1.0d, receiver__q2=Double.NaN, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, 1.0d, Double.NaN, Double.POSITIVE_INFINITY, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_142() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=1.0d, receiver__q2=0.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, 1.0d, 0.0d, -1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_143() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=1.0d, receiver__q2=0.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 1.0d, 0.0d, 0.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_144() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=-1.0d, receiver__q2=Double.NaN, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, -1.0d, Double.NaN, 1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_145() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=-1.0d, receiver__q2=0.0d, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, -1.0d, 0.0d, Double.NaN, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_146() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=-1.0d, receiver__q2=-1.0d, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, -1.0d, -1.0d, Double.POSITIVE_INFINITY, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_147() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.NaN, receiver__q2=1.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, Double.NaN, 1.0d, -1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_148() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=Double.NaN, receiver__q2=-1.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, Double.NaN, -1.0d, 0.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_149() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=Double.NaN, receiver__q2=Double.NaN, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.NaN, Double.NaN, 0.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_150() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=1.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 1.0d, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("3.141592653589793", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_151() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=0.0d, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("3.141592653589793", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_152() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=1.0d, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, Double.POSITIVE_INFINITY, 1.0d, Double.NaN, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_153() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=-1.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, Double.POSITIVE_INFINITY, -1.0d, 0.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_154() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=Double.NaN, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.NaN, -1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_155() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=1.0d, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, 1.0d, Double.POSITIVE_INFINITY, -1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("3.141592653589793", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_156() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=-1.0d, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, -1.0d, Double.POSITIVE_INFINITY, Double.NaN, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_157() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.NaN, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, Double.NaN, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_158() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, 1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_159() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, -1.0d, true)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getAngle_pairwise_160() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=0.0d, receiver__q2=1.0d, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=false
+        Object actual = (new Rotation(Double.NaN, 0.0d, 1.0d, Double.POSITIVE_INFINITY, false)).getAngle();
+        assertNotNull(actual);
+        assertEquals("java.lang.Double", actual.getClass().getName());
+        assertEquals("NaN", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_161() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, 0.0d, 0.0d, 0.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_162() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=1.0d, receiver__q2=1.0d, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, 1.0d, 1.0d, 1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[0.0, 1.0, 0.0], [0.0, 0.0, 1.0], [1.0, 0.0, 0.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_163() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=-1.0d, receiver__q2=-1.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, -1.0d, -1.0d, -1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[0.0, 1.0, 0.0], [0.0, 0.0, 1.0], [1.0, 0.0, 0.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_164() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=Double.NaN, receiver__q2=Double.NaN, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, Double.NaN, Double.NaN, Double.NaN, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_165() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_166() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=1.0d, receiver__q2=-1.0d, receiver__q3=Double.NaN, receiver__needsNormalization=false
+        Object actual = (new Rotation(0.0d, 1.0d, -1.0d, Double.NaN, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[1.0, NaN, NaN], [NaN, 1.0, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_167() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=0.0d, receiver__q2=Double.NaN, receiver__q3=-1.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(1.0d, 0.0d, Double.NaN, -1.0d, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[1.0, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, 3.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_168() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=Double.NaN, receiver__q2=0.0d, receiver__q3=1.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(-1.0d, Double.NaN, 0.0d, 1.0d, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, 1.0, NaN], [NaN, NaN, 3.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_169() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=-1.0d, receiver__q2=1.0d, receiver__q3=0.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(Double.NaN, -1.0d, 1.0d, 0.0d, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_170() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=0.0d, receiver__q2=1.0d, receiver__q3=Double.NaN, receiver__needsNormalization=false
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 1.0d, Double.NaN, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[Infinity, NaN, NaN], [NaN, Infinity, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_171() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=0.0d, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, 0.0d, Double.POSITIVE_INFINITY, 0.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[-1.0, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, -1.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_172() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=0.0d, receiver__q2=-1.0d, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, 0.0d, -1.0d, 1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_173() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=1.0d, receiver__q2=Double.NaN, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, 1.0d, Double.NaN, Double.POSITIVE_INFINITY, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_174() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=1.0d, receiver__q2=0.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, 1.0d, 0.0d, -1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_175() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=1.0d, receiver__q2=0.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 1.0d, 0.0d, 0.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_176() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=-1.0d, receiver__q2=Double.NaN, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, -1.0d, Double.NaN, 1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_177() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=-1.0d, receiver__q2=0.0d, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, -1.0d, 0.0d, Double.NaN, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_178() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=-1.0d, receiver__q2=-1.0d, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, -1.0d, -1.0d, Double.POSITIVE_INFINITY, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_179() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.NaN, receiver__q2=1.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, Double.NaN, 1.0d, -1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_180() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=Double.NaN, receiver__q2=-1.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, Double.NaN, -1.0d, 0.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_181() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=Double.NaN, receiver__q2=Double.NaN, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, Double.NaN, Double.NaN, 0.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_182() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=1.0d, receiver__needsNormalization=false
+        Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 1.0d, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[Infinity, Infinity, NaN], [Infinity, Infinity, NaN], [NaN, NaN, 1.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_183() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=0.0d, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, -1.0, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_184() throws Exception {
+        // Combination: receiver__q0=-1.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=1.0d, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(-1.0d, Double.POSITIVE_INFINITY, 1.0d, Double.NaN, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_185() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=-1.0d, receiver__q3=0.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, Double.POSITIVE_INFINITY, -1.0d, 0.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_186() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.POSITIVE_INFINITY, receiver__q2=Double.NaN, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, Double.POSITIVE_INFINITY, Double.NaN, -1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_187() throws Exception {
+        // Combination: receiver__q0=1.0d, receiver__q1=1.0d, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(1.0d, 1.0d, Double.POSITIVE_INFINITY, -1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[-1.0, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, -1.0]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_188() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=-1.0d, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=Double.NaN, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.NaN, -1.0d, Double.POSITIVE_INFINITY, Double.NaN, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_189() throws Exception {
+        // Combination: receiver__q0=0.0d, receiver__q1=Double.NaN, receiver__q2=Double.POSITIVE_INFINITY, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=true
+        Object actual = (new Rotation(0.0d, Double.NaN, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_190() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, 1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_191() throws Exception {
+        // Combination: receiver__q0=Double.POSITIVE_INFINITY, receiver__q1=0.0d, receiver__q2=0.0d, receiver__q3=-1.0d, receiver__needsNormalization=true
+        Object actual = (new Rotation(Double.POSITIVE_INFINITY, 0.0d, 0.0d, -1.0d, true)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_getMatrix_pairwise_192() throws Exception {
+        // Combination: receiver__q0=Double.NaN, receiver__q1=0.0d, receiver__q2=1.0d, receiver__q3=Double.POSITIVE_INFINITY, receiver__needsNormalization=false
+        Object actual = (new Rotation(Double.NaN, 0.0d, 1.0d, Double.POSITIVE_INFINITY, false)).getMatrix();
+        assertNotNull(actual);
+        assertEquals("[[D", actual.getClass().getName());
+        assertEquals("[[NaN, NaN, NaN], [NaN, NaN, NaN], [NaN, NaN, NaN]]", formatValue(actual));
     }
 
 }

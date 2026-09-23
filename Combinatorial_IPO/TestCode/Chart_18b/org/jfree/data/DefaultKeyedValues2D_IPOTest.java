@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for DefaultKeyedValues2D.
  */
 public class DefaultKeyedValues2D_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_getValue_pairwise_001() throws Exception {
         // Combination: row=0, column=0
@@ -278,6 +292,50 @@ public class DefaultKeyedValues2D_IPOTest {
             (new DefaultKeyedValues2D()).getValue(Integer.MIN_VALUE, Integer.MIN_VALUE);
             fail("Expected java.lang.IndexOutOfBoundsException");
         } catch (java.lang.IndexOutOfBoundsException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_getValue_pairwise_026() throws Exception {
+        // Combination: rowKey="sample_str", columnKey="sample_str"
+        try {
+            (new DefaultKeyedValues2D()).getValue("sample_str", "sample_str");
+            fail("Expected org.jfree.data.UnknownKeyException");
+        } catch (org.jfree.data.UnknownKeyException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_getValue_pairwise_027() throws Exception {
+        // Combination: rowKey=Integer.valueOf(1), columnKey="sample_str"
+        try {
+            (new DefaultKeyedValues2D()).getValue(Integer.valueOf(1), "sample_str");
+            fail("Expected org.jfree.data.UnknownKeyException");
+        } catch (org.jfree.data.UnknownKeyException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_getValue_pairwise_028() throws Exception {
+        // Combination: rowKey="sample_str", columnKey=Integer.valueOf(1)
+        try {
+            (new DefaultKeyedValues2D()).getValue("sample_str", Integer.valueOf(1));
+            fail("Expected org.jfree.data.UnknownKeyException");
+        } catch (org.jfree.data.UnknownKeyException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_getValue_pairwise_029() throws Exception {
+        // Combination: rowKey=Integer.valueOf(1), columnKey=Integer.valueOf(1)
+        try {
+            (new DefaultKeyedValues2D()).getValue(Integer.valueOf(1), Integer.valueOf(1));
+            fail("Expected org.jfree.data.UnknownKeyException");
+        } catch (org.jfree.data.UnknownKeyException expected) {
             // Expected outcome recorded from the fixed version.
         }
     }

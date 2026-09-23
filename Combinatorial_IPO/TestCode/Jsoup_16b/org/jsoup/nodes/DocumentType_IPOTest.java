@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for DocumentType.
  */
 public class DocumentType_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_nodeName_pairwise_001() throws Exception {
         // Combination: receiver__name="", receiver__publicId="", receiver__systemId="", receiver__baseUri=""
@@ -24,7 +38,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", " ", " ", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -33,7 +47,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "a", "a", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -42,7 +56,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "test123", "test123", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -51,7 +65,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "!@#", "!@#", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -60,7 +74,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "0", "0", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -69,7 +83,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "-1", "-1", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -78,7 +92,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "1.5", "1.5", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -87,7 +101,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "9223372036854775807", "9223372036854775807", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -96,7 +110,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "9223372036854775808", "9223372036854775808", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -105,7 +119,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -125,7 +139,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "", "test123", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -134,7 +148,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "test123", "", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -143,7 +157,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "a", " ", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -152,7 +166,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "0", "-1", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -161,7 +175,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "!@#", "1.5", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -170,7 +184,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "1.5", "!@#", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -179,7 +193,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "-1", "0", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -188,7 +202,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -197,7 +211,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "9223372036854775807", "", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -206,7 +220,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", "9223372036854775807", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -226,7 +240,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "test123", "a", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -235,7 +249,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "", " ", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -244,7 +258,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", " ", "", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -253,7 +267,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "-1", "1.5", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -262,7 +276,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "1.5", "-1", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -271,7 +285,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "!@#", "0", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -280,7 +294,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "0", "!@#", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -289,7 +303,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -298,7 +312,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -307,7 +321,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", " ", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -327,7 +341,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "a", "", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -336,7 +350,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", " ", "test123", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -345,7 +359,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "", "a", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -354,7 +368,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "1.5", "0", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -363,7 +377,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "-1", "!@#", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -372,7 +386,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "0", "1.5", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -381,7 +395,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "!@#", "-1", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -390,7 +404,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "", "!@#", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -399,7 +413,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -408,7 +422,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", "", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -428,7 +442,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "0", "9223372036854775808", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -437,7 +451,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -446,7 +460,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "1.5", "", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -455,7 +469,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "", " ", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -464,7 +478,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", " ", "a", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -473,7 +487,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "a", "test123", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -482,7 +496,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "test123", "!@#", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -491,7 +505,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", " ", "0", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -500,7 +514,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", " ", "-1", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -509,7 +523,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", "1.5", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -529,7 +543,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "!@#", "", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -538,7 +552,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "1.5", "9223372036854775807", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -547,7 +561,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "-1", "9223372036854775808", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -556,7 +570,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", " ", "a", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -565,7 +579,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "", " ", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -574,7 +588,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "test123", "0", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -583,7 +597,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "a", "test123", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -592,7 +606,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "a", "-1", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -601,7 +615,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "a", "!@#", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -610,7 +624,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", "0", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -630,7 +644,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -639,7 +653,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "!@#", "9223372036854775808", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -648,7 +662,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "0", "9223372036854775807", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -657,7 +671,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "a", "test123", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -666,7 +680,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "test123", "-1", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -675,7 +689,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "", " ", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -684,7 +698,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", " ", "a", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -693,7 +707,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "test123", "1.5", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -702,7 +716,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "test123", "0", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -711,7 +725,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", "!@#", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -731,7 +745,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "-1", "9223372036854775807", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -740,7 +754,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "0", "", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -749,7 +763,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -758,7 +772,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "test123", "9223372036854775807", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -767,7 +781,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "a", "test123", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -776,7 +790,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", " ", "a", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -785,7 +799,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "", " ", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -794,7 +808,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "!@#", " ", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -803,7 +817,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "!@#", "a", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -812,7 +826,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", "test123", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "9223372036854775808", "0", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "", "1.5", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", " ", "9223372036854775808", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "a", "9223372036854775807", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "!@#", "", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "0", "a", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "-1", " ", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5", "a", "9223372036854775807")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -933,7 +947,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "9223372036854775807", "1.5", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -942,7 +956,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "", "0", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -951,7 +965,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -960,7 +974,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -969,7 +983,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "a", "9223372036854775808", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -978,7 +992,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "test123", "", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -987,7 +1001,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "!@#", "9223372036854775807", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -996,7 +1010,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "-1", "test123", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1005,7 +1019,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "0", " ", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1014,7 +1028,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", "a", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1034,7 +1048,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "", "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1043,7 +1057,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "9223372036854775807", "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1052,7 +1066,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "9223372036854775808", " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1061,7 +1075,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", " ", "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1070,7 +1084,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1079,7 +1093,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "test123", "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1088,7 +1102,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "!@#", "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1097,7 +1111,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775807", "1.5", "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1106,7 +1120,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "0", "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1115,7 +1129,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1124,7 +1138,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "1.5", " ", "9223372036854775808")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1133,7 +1147,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "9223372036854775807", "0", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1142,7 +1156,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "9223372036854775807", "test123", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1151,7 +1165,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "9223372036854775807", "", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1160,7 +1174,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "9223372036854775807", "-1", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1169,7 +1183,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "9223372036854775807", "9223372036854775808", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1178,7 +1192,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "9223372036854775808", "!@#", "a")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1187,7 +1201,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "9223372036854775808", "a", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1196,7 +1210,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "9223372036854775808", "1.5", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1205,7 +1219,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "9223372036854775808", "9223372036854775807", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1214,7 +1228,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "9223372036854775808", "test123", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1223,7 +1237,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1232,7 +1246,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", "!@#")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1241,7 +1255,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", "0")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1250,7 +1264,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", "-1")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1259,7 +1273,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1279,7 +1293,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType(" ", " ", "!@#", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1310,7 +1324,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("test123", "", "-1", "1.5")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1319,7 +1333,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", "-1", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1339,7 +1353,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("a", "", "1.5", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1348,7 +1362,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("9223372036854775808", "", "1.5", "")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1379,7 +1393,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", "9223372036854775808", " ")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1399,7 +1413,7 @@ public class DocumentType_IPOTest {
         Object actual = (new DocumentType("1.5", "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).nodeName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("#doctype", String.valueOf(actual));
+        assertEquals("#doctype", formatValue(actual));
     }
 
 }

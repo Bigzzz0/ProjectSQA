@@ -95,6 +95,37 @@ class ConstructionPlannerTests(unittest.TestCase):
         self.assertEqual("builder", plan.kind)
         self.assertEqual("Config.builder().build()", plan.expression)
 
+    def test_plan_receiver_abstract_class_with_static_factory(self) -> None:
+        metadata = {
+            "type_kind": "class",
+            "abstract": True,
+            "constructors": [{"name": "DateTimeZone", "visibility": "protected", "parameters": [{"name": "id", "type": "String"}]}],
+            "methods": [
+                {
+                    "name": "getDefault",
+                    "visibility": "public",
+                    "static": True,
+                    "return_type": "DateTimeZone",
+                    "parameters": [],
+                }
+            ],
+        }
+        plan = plan_receiver(metadata, "org.joda.time.DateTimeZone")
+        self.assertIsNotNone(plan)
+        self.assertIn("getDefault()", plan.expression)
+
+    def test_plan_receiver_abstract_axis_uses_number_axis(self) -> None:
+        metadata = {
+            "type_kind": "class",
+            "abstract": True,
+            "constructors": [],
+            "methods": [],
+        }
+        plan = plan_receiver(metadata, "org.jfree.chart.axis.Axis")
+        self.assertIsNotNone(plan)
+        self.assertEqual("concrete_subtype", plan.kind)
+        self.assertEqual("new org.jfree.chart.axis.NumberAxis()", plan.expression)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for UnivariateRealSolverUtils.
  */
 public class UnivariateRealSolverUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_midpoint_pairwise_001() throws Exception {
         // Combination: a=0.0d, b=0.0d
         Object actual = UnivariateRealSolverUtils.midpoint(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -175,7 +189,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -184,7 +198,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -193,7 +207,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -202,7 +216,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -211,7 +225,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -220,7 +234,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -229,7 +243,7 @@ public class UnivariateRealSolverUtils_IPOTest {
         Object actual = UnivariateRealSolverUtils.midpoint(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
 }

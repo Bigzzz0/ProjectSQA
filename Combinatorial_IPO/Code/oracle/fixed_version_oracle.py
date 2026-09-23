@@ -105,7 +105,7 @@ def generate_collector_source(
                 invocation, index
             )
         else:
-            body = "Object result = {};\n            emitReturn({}, result, String.valueOf(result));".format(
+            body = "Object result = {};\n            emitReturn({}, result, formatValue(result));".format(
                 invocation, index
             )
         calls.append(
@@ -119,12 +119,25 @@ def generate_collector_source(
     package_line = "package {};\n\n".format(package_name) if package_name else ""
     class_name = collector_class_name(target_class)
     return """{package_line}import java.nio.charset.StandardCharsets;
-import java.util.Base64;
 
 public class {collector_class} {{
     private static String encode(String value) {{
-        String encoded = Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8));
+        String encoded = java.util.Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8));
         return encoded.isEmpty() ? "=" : encoded;
+    }}
+
+    private static String formatValue(Object value) {{
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
     }}
 
     private static void emitReturn(int id, Object value, String text) {{

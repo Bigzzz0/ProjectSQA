@@ -50,7 +50,7 @@ def _canonical_hash(value: object) -> str:
 def _code_hash(paths: Sequence[Path]) -> str:
     digest = hashlib.sha256()
     for path in paths:
-        digest.update(str(path.relative_to(CODE_ROOT)).encode("utf-8"))
+        digest.update(path.relative_to(CODE_ROOT).as_posix().encode("utf-8"))
         digest.update(path.read_bytes())
     return digest.hexdigest()
 
@@ -450,14 +450,13 @@ def run_audit(
     previous_manifest_path = inventory_path if inventory_path.is_file() else audit_path
     previous_experiment_hash = None
     previous_records: Dict[tuple, Mapping[str, object]] = {}
-    if resume and previous_manifest_path.is_file():
+    if previous_manifest_path.is_file():
         previous_manifest = json.loads(previous_manifest_path.read_text(encoding="utf-8"))
         previous_experiment_hash = previous_manifest.get("experiment_hash")
-        if previous_experiment_hash == experiment_hash:
-            previous_records = {
-                (item["project"], item["bug_id"], item["target_class"]): item
-                for item in previous_manifest.get("records", [])
-            }
+        previous_records = {
+            (item["project"], item["bug_id"], item["target_class"]): item
+            for item in previous_manifest.get("records", [])
+        }
     records: List[Dict[str, object]] = []
     pending: List[CatalogTarget] = []
     for target in load_catalog(catalog_path):
@@ -466,7 +465,7 @@ def run_audit(
         if bug is not None and target.bug_id != bug:
             continue
         reusable = []
-        if resume and previous_experiment_hash == experiment_hash:
+        if resume:
             for target_class in target.modified_sources:
                 destination = plans_root / target.target_key / Path(*target_class.split(".")).with_suffix(".json")
                 if destination.is_file():
@@ -476,7 +475,22 @@ def run_audit(
             continue
         pending.append(target)
 
+    if records:
+        print(
+            f"Audit: Fast-loaded {len(records)} existing class plans from disk cache.",
+            file=sys.stderr, flush=True,
+        )
+    if pending:
+        print(
+            f"Audit: {len(pending)} bug targets require checkout & audit. Processing...",
+            file=sys.stderr, flush=True,
+        )
+
     def process_target(target: CatalogTarget) -> List[Dict[str, object]]:
+        print(
+            f"  -> Auditing {target.target_key} ({', '.join(target.modified_sources)})...",
+            file=sys.stderr, flush=True,
+        )
         target_records: List[Dict[str, object]] = []
         try:
             with checkout_bug_sources(
@@ -593,13 +607,14 @@ def run_generation(
 
         key = (plan["project"], plan["bug_id"], plan["target_class"])
         previous = existing.get(key)
-        if (
-            resume and previous
-            and previous.get("audit_hash") == plan.get("audit_hash")
-            and previous.get("generation_toolchain_hash") == _generation_toolchain_hash()
-        ):
+        if resume and previous and previous.get("status") == "FIXED_VERIFIED":
             suite = output_root / str(previous.get("suite_path", ""))
-            if suite.is_file() and file_sha256(suite) == previous.get("suite_sha256"):
+            if (
+                previous.get("generation_toolchain_hash") == _generation_toolchain_hash()
+                and previous.get("audit_hash") == plan.get("audit_hash")
+                and suite.is_file()
+                and file_sha256(suite) == previous.get("suite_sha256")
+            ):
                 print(
                     f"[{idx:>3}/{total_records}] ({pct:5.1f}%) {target_key:<14} {target_cls:<45} -> [SKIP (Already Verified)]",
                     file=sys.stderr, flush=True,
@@ -607,13 +622,15 @@ def run_generation(
                 generated.append(previous)
                 accumulated[key] = previous
                 continue
+            else:
+                existing.pop(key, None)
 
         if plan.get("status") != "AUTO_READY":
             print(
                 f"[{idx:>3}/{total_records}] ({pct:5.1f}%) {target_key:<14} {target_cls:<45} -> [SKIP ({plan.get('status')})]",
                 file=sys.stderr, flush=True,
             )
-            record = {key: plan[key] for key in ("project", "bug_id", "target_class", "audit_hash")}
+            record = {k: plan[k] for k in ("project", "bug_id", "target_class", "audit_hash") if k in plan}
             record["status"] = "SKIPPED_NOT_READY"
             generated.append(record)
             accumulated[key] = record
@@ -628,6 +645,9 @@ def run_generation(
         v_count = record.get("verified_method_count", 0)
         tot_c = record.get("total_candidates", 0)
 
+        generated.append(record)
+        accumulated[key] = record
+
         if status == "FIXED_VERIFIED":
             existing[key] = record
             print(
@@ -641,6 +661,13 @@ def run_generation(
                 f"\n      => [FAIL] {status} ({err[:60]})",
                 file=sys.stderr, flush=True,
             )
+            failures_log_path = output_root / "Results" / "logs" / "failures.log"
+            try:
+                failures_log_path.parent.mkdir(parents=True, exist_ok=True)
+                with failures_log_path.open("a", encoding="utf-8") as f_log:
+                    f_log.write(f"[{target_key}] {target_cls} -> {status}\n{err}\n{'-'*60}\n")
+            except Exception:
+                pass
 
         verified_manifest = {
             "schema_version": 1, "experiment_id": experiment_id,
@@ -648,6 +675,21 @@ def run_generation(
             "records": sorted(existing.values(), key=lambda item: (item["project"], item["bug_id"], item["target_class"])),
         }
         _atomic_json(publish_manifest_path, verified_manifest)
+
+        all_records = sorted(
+            accumulated.values(),
+            key=lambda item: (str(item["project"]), int(item["bug_id"]), str(item["target_class"])),
+        )
+        counts = Counter(str(item["status"]) for item in all_records)
+        manifest = {
+            "schema_version": 1, "experiment_id": experiment_id, "mode": mode.upper(),
+            "filters": {"project": project, "bug_id": bug},
+            "class_instance_count": len(all_records), "processed_this_run": len(generated),
+            "status_counts": dict(sorted(counts.items())),
+            "records": all_records, "verified_manifest": str(publish_manifest_path.relative_to(output_root)).replace("\\", "/"),
+        }
+        _atomic_json(generation_manifest_path, manifest)
+
     all_records = sorted(
         accumulated.values(),
         key=lambda item: (str(item["project"]), int(item["bug_id"]), str(item["target_class"])),
@@ -660,6 +702,32 @@ def run_generation(
         "status_counts": dict(sorted(counts.items())),
         "records": all_records, "verified_manifest": str(publish_manifest_path.relative_to(output_root)).replace("\\", "/"),
     }
+    if mode == "canary":
+        canary_failures = [
+            item for item in generated
+            if item.get("status") != "FIXED_VERIFIED"
+        ]
+        manifest["canary_passed"] = len(canary_failures) == 0
+        manifest["canary_failures"] = [
+            {
+                "project": item.get("project"),
+                "bug_id": item.get("bug_id"),
+                "target_class": item.get("target_class"),
+                "status": item.get("status"),
+                "error": item.get("error", ""),
+            }
+            for item in canary_failures
+        ]
+        if canary_failures:
+            print(
+                f"\n[ERROR] Canary gate failed: {len(canary_failures)} target(s) failed generation/verification.",
+                file=sys.stderr, flush=True,
+            )
+            for fail in canary_failures:
+                print(
+                    f"  - {fail.get('project')}_{fail.get('bug_id')}b {fail.get('target_class')}: {fail.get('status')} ({str(fail.get('error', ''))[:80]})",
+                    file=sys.stderr, flush=True,
+                )
     _atomic_json(generation_manifest_path, manifest)
     return manifest
 
@@ -769,7 +837,11 @@ def main() -> None:
     if args.summary_only and "records" in result:
         result = {key: result[key] for key in result if key not in {"records"}}
     print(json.dumps(result, indent=2, ensure_ascii=False))
-    if result.get("ready") is False or result.get("valid") is False:
+    if (
+        result.get("ready") is False
+        or result.get("valid") is False
+        or (args.mode == "canary" and not result.get("canary_passed", False))
+    ):
         raise SystemExit(1)
 
 

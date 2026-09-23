@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for Partial.
  */
 public class Partial_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_toString_pairwise_001() throws Exception {
         // Combination: pattern="", locale=java.util.Locale.ROOT
@@ -24,7 +38,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString(" ", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -33,7 +47,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("a", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\ufffd", String.valueOf(actual));
+        assertEquals("\ufffd", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -53,7 +67,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("!@#", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -62,7 +76,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("0", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -71,7 +85,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("-1", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -80,7 +94,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("1.5", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -89,7 +103,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("9223372036854775807", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -98,7 +112,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("9223372036854775808", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -107,7 +121,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.Locale.ROOT);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\ufffd", String.valueOf(actual));
+        assertEquals("\ufffd", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -127,7 +141,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString(" ", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -136,7 +150,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("a", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\ufffd", String.valueOf(actual));
+        assertEquals("\ufffd", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -156,7 +170,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("!@#", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -165,7 +179,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("0", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -174,7 +188,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("-1", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -183,7 +197,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("1.5", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -192,7 +206,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("9223372036854775807", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -201,7 +215,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("9223372036854775808", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -210,7 +224,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.Locale.US);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\ufffd", String.valueOf(actual));
+        assertEquals("\ufffd", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -230,7 +244,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString(" ", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -239,7 +253,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("a", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\ufffd", String.valueOf(actual));
+        assertEquals("\ufffd", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -259,7 +273,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("!@#", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -268,7 +282,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("0", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -277,7 +291,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("-1", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -286,7 +300,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("1.5", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -295,7 +309,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("9223372036854775807", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -304,7 +318,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("9223372036854775808", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -313,7 +327,7 @@ public class Partial_IPOTest {
         Object actual = (new Partial()).toString("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.Locale.JAPAN);
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("\ufffd", String.valueOf(actual));
+        assertEquals("\ufffd", formatValue(actual));
     }
 
 }

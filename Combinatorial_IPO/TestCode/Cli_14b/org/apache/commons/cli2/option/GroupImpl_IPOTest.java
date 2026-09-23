@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for GroupImpl.
  */
 public class GroupImpl_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_getPrefixes_pairwise_001() throws Exception {
         // Combination: receiver__options=java.util.Collections.emptyList(), receiver__name="", receiver__description="", receiver__minimum=0, receiver__maximum=0
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -33,7 +47,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -42,7 +56,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -51,7 +65,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -71,7 +85,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -124,7 +138,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -133,7 +147,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -142,7 +156,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -151,7 +165,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -160,7 +174,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -180,7 +194,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -189,7 +203,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -198,7 +212,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -207,7 +221,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -249,7 +263,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -258,7 +272,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -278,7 +292,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -287,7 +301,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -296,7 +310,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -305,7 +319,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -325,7 +339,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -334,7 +348,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -343,7 +357,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -363,7 +377,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -383,7 +397,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -392,7 +406,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -412,7 +426,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -421,7 +435,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -430,7 +444,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -439,7 +453,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -448,7 +462,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -468,7 +482,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -477,7 +491,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -486,7 +500,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -495,7 +509,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -515,7 +529,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -524,7 +538,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -533,7 +547,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -542,7 +556,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -551,7 +565,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -560,7 +574,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -569,7 +583,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -578,7 +592,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -587,7 +601,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -596,7 +610,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -605,7 +619,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -614,7 +628,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -623,7 +637,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -632,7 +646,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -641,7 +655,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -650,7 +664,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -659,7 +673,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -668,7 +682,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -677,7 +691,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -686,7 +700,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -695,7 +709,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -704,7 +718,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -713,7 +727,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -722,7 +736,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -731,7 +745,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -740,7 +754,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -749,7 +763,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -758,7 +772,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -767,7 +781,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -776,7 +790,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -785,7 +799,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -794,7 +808,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -803,7 +817,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -812,7 +826,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -821,7 +835,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -830,7 +844,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -839,7 +853,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -848,7 +862,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -857,7 +871,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -866,7 +880,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -875,7 +889,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -884,7 +898,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -893,7 +907,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -902,7 +916,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -911,7 +925,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -920,7 +934,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -929,7 +943,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -938,7 +952,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -947,7 +961,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -956,7 +970,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -965,7 +979,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -974,7 +988,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -983,7 +997,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -992,7 +1006,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1001,7 +1015,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1010,7 +1024,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1019,7 +1033,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1028,7 +1042,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1037,7 +1051,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1046,7 +1060,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1055,7 +1069,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1064,7 +1078,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1073,7 +1087,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1082,7 +1096,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1091,7 +1105,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1100,7 +1114,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1109,7 +1123,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1118,7 +1132,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1127,7 +1141,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getPrefixes();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1136,7 +1150,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1156,7 +1170,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1165,7 +1179,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1174,7 +1188,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1194,7 +1208,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1247,7 +1261,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1256,7 +1270,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1265,7 +1279,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1274,7 +1288,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1283,7 +1297,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1303,7 +1317,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1312,7 +1326,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1321,7 +1335,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1330,7 +1344,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1372,7 +1386,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1381,7 +1395,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1401,7 +1415,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1410,7 +1424,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1419,7 +1433,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1428,7 +1442,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1448,7 +1462,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1457,7 +1471,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1466,7 +1480,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1486,7 +1500,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1506,7 +1520,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1515,7 +1529,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1535,7 +1549,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1544,7 +1558,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1553,7 +1567,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1562,7 +1576,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1571,7 +1585,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1591,7 +1605,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1600,7 +1614,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1609,7 +1623,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1618,7 +1632,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1638,7 +1652,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1647,7 +1661,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1656,7 +1670,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1665,7 +1679,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1674,7 +1688,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1683,7 +1697,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1692,7 +1706,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1701,7 +1715,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1710,7 +1724,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1719,7 +1733,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1728,7 +1742,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1737,7 +1751,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1746,7 +1760,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1755,7 +1769,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1764,7 +1778,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1773,7 +1787,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1782,7 +1796,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1791,7 +1805,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1800,7 +1814,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1809,7 +1823,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1818,7 +1832,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1827,7 +1841,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1836,7 +1850,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1845,7 +1859,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1854,7 +1868,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1863,7 +1877,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1872,7 +1886,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1881,7 +1895,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1890,7 +1904,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1899,7 +1913,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1908,7 +1922,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1917,7 +1931,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1926,7 +1940,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1935,7 +1949,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1944,7 +1958,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1953,7 +1967,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1962,7 +1976,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1971,7 +1985,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1980,7 +1994,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1989,7 +2003,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1998,7 +2012,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2007,7 +2021,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2016,7 +2030,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2025,7 +2039,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2034,7 +2048,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2043,7 +2057,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2052,7 +2066,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2061,7 +2075,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2070,7 +2084,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2079,7 +2093,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2088,7 +2102,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2097,7 +2111,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2106,7 +2120,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2115,7 +2129,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2124,7 +2138,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2133,7 +2147,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2142,7 +2156,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2151,7 +2165,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2160,7 +2174,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2169,7 +2183,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2178,7 +2192,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2187,7 +2201,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2196,7 +2210,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2205,7 +2219,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2214,7 +2228,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2223,7 +2237,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2232,7 +2246,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2241,7 +2255,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2250,7 +2264,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getTriggers();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableSet", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2259,7 +2273,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2279,7 +2293,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2288,7 +2302,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2297,7 +2311,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2317,7 +2331,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2370,7 +2384,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2379,7 +2393,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2388,7 +2402,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2397,7 +2411,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2406,7 +2420,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2426,7 +2440,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2435,7 +2449,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2444,7 +2458,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2453,7 +2467,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2495,7 +2509,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2504,7 +2518,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2524,7 +2538,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2533,7 +2547,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2542,7 +2556,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2551,7 +2565,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2571,7 +2585,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2580,7 +2594,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2589,7 +2603,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2609,7 +2623,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2629,7 +2643,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2638,7 +2652,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2658,7 +2672,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2667,7 +2681,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2676,7 +2690,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2685,7 +2699,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2694,7 +2708,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2714,7 +2728,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2723,7 +2737,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2732,7 +2746,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2741,7 +2755,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2761,7 +2775,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2770,7 +2784,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2779,7 +2793,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2788,7 +2802,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2797,7 +2811,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2806,7 +2820,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2815,7 +2829,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2824,7 +2838,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2833,7 +2847,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2842,7 +2856,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2851,7 +2865,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2860,7 +2874,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2869,7 +2883,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2878,7 +2892,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2887,7 +2901,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2896,7 +2910,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2905,7 +2919,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2914,7 +2928,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2923,7 +2937,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2932,7 +2946,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2941,7 +2955,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2950,7 +2964,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2959,7 +2973,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2968,7 +2982,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2977,7 +2991,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2986,7 +3000,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2995,7 +3009,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3004,7 +3018,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3013,7 +3027,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3022,7 +3036,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3031,7 +3045,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3040,7 +3054,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3049,7 +3063,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3058,7 +3072,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3067,7 +3081,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3076,7 +3090,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3085,7 +3099,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3094,7 +3108,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3103,7 +3117,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3112,7 +3126,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3121,7 +3135,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3130,7 +3144,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3139,7 +3153,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3148,7 +3162,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3157,7 +3171,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3166,7 +3180,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3175,7 +3189,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3184,7 +3198,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3193,7 +3207,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3202,7 +3216,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3211,7 +3225,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3220,7 +3234,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3229,7 +3243,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3238,7 +3252,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3247,7 +3261,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3256,7 +3270,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3265,7 +3279,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3274,7 +3288,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3283,7 +3297,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3292,7 +3306,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3301,7 +3315,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3310,7 +3324,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3319,7 +3333,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3328,7 +3342,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3337,7 +3351,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3346,7 +3360,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3355,7 +3369,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3364,7 +3378,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3373,7 +3387,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getPreferredName();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3382,7 +3396,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3402,7 +3416,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3411,7 +3425,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3420,7 +3434,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3440,7 +3454,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3493,7 +3507,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3502,7 +3516,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3511,7 +3525,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3520,7 +3534,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3529,7 +3543,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3549,7 +3563,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3558,7 +3572,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3567,7 +3581,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3576,7 +3590,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3618,7 +3632,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3627,7 +3641,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3647,7 +3661,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3656,7 +3670,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3665,7 +3679,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3674,7 +3688,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3694,7 +3708,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3703,7 +3717,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3712,7 +3726,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3732,7 +3746,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3752,7 +3766,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3761,7 +3775,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3781,7 +3795,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3790,7 +3804,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3799,7 +3813,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3808,7 +3822,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3817,7 +3831,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3837,7 +3851,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3846,7 +3860,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3855,7 +3869,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3864,7 +3878,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3884,7 +3898,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3893,7 +3907,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3902,7 +3916,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3911,7 +3925,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3920,7 +3934,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3929,7 +3943,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3938,7 +3952,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3947,7 +3961,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3956,7 +3970,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3965,7 +3979,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3974,7 +3988,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3983,7 +3997,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3992,7 +4006,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4001,7 +4015,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4010,7 +4024,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4019,7 +4033,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4028,7 +4042,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4037,7 +4051,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4046,7 +4060,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4055,7 +4069,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4064,7 +4078,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4073,7 +4087,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4082,7 +4096,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4091,7 +4105,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4100,7 +4114,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4109,7 +4123,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4118,7 +4132,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4127,7 +4141,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4136,7 +4150,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4145,7 +4159,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4154,7 +4168,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4163,7 +4177,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4172,7 +4186,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4181,7 +4195,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4190,7 +4204,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4199,7 +4213,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4208,7 +4222,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4217,7 +4231,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4226,7 +4240,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4235,7 +4249,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4244,7 +4258,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4253,7 +4267,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4262,7 +4276,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4271,7 +4285,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4280,7 +4294,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4289,7 +4303,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4298,7 +4312,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4307,7 +4321,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4316,7 +4330,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4325,7 +4339,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4334,7 +4348,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4343,7 +4357,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4352,7 +4366,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4361,7 +4375,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4370,7 +4384,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4379,7 +4393,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4388,7 +4402,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4397,7 +4411,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4406,7 +4420,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4415,7 +4429,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4424,7 +4438,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4433,7 +4447,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4442,7 +4456,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4451,7 +4465,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4460,7 +4474,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4469,7 +4483,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4478,7 +4492,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4487,7 +4501,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4496,7 +4510,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getDescription();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4505,7 +4519,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4525,7 +4539,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4534,7 +4548,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4543,7 +4557,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4563,7 +4577,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4616,7 +4630,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4625,7 +4639,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4634,7 +4648,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4643,7 +4657,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4652,7 +4666,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4672,7 +4686,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4681,7 +4695,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4690,7 +4704,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4699,7 +4713,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4741,7 +4755,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4750,7 +4764,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4770,7 +4784,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4779,7 +4793,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4788,7 +4802,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4797,7 +4811,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4817,7 +4831,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4826,7 +4840,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4835,7 +4849,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4855,7 +4869,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4875,7 +4889,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4884,7 +4898,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4904,7 +4918,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4913,7 +4927,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4922,7 +4936,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4931,7 +4945,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4940,7 +4954,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4960,7 +4974,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4969,7 +4983,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4978,7 +4992,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4987,7 +5001,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5007,7 +5021,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5016,7 +5030,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5025,7 +5039,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5034,7 +5048,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5043,7 +5057,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5052,7 +5066,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5061,7 +5075,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5070,7 +5084,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5079,7 +5093,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5088,7 +5102,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5097,7 +5111,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5106,7 +5120,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5115,7 +5129,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5124,7 +5138,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5133,7 +5147,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5142,7 +5156,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5151,7 +5165,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5160,7 +5174,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5169,7 +5183,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5178,7 +5192,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5187,7 +5201,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5196,7 +5210,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5205,7 +5219,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5214,7 +5228,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5223,7 +5237,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5232,7 +5246,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5241,7 +5255,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5250,7 +5264,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5259,7 +5273,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5268,7 +5282,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5277,7 +5291,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5286,7 +5300,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5295,7 +5309,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5304,7 +5318,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5313,7 +5327,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5322,7 +5336,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5331,7 +5345,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5340,7 +5354,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5349,7 +5363,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5358,7 +5372,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5367,7 +5381,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5376,7 +5390,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5385,7 +5399,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5394,7 +5408,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5403,7 +5417,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5412,7 +5426,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5421,7 +5435,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5430,7 +5444,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5439,7 +5453,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5448,7 +5462,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5457,7 +5471,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5466,7 +5480,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5475,7 +5489,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5484,7 +5498,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5493,7 +5507,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5502,7 +5516,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5511,7 +5525,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5520,7 +5534,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5529,7 +5543,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5538,7 +5552,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5547,7 +5561,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5556,7 +5570,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5565,7 +5579,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5574,7 +5588,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5583,7 +5597,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5592,7 +5606,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5601,7 +5615,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5610,7 +5624,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5619,7 +5633,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getOptions();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5628,7 +5642,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5648,7 +5662,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5657,7 +5671,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5666,7 +5680,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5686,7 +5700,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5739,7 +5753,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5748,7 +5762,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5757,7 +5771,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5766,7 +5780,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5775,7 +5789,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5795,7 +5809,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5804,7 +5818,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5813,7 +5827,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5822,7 +5836,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5864,7 +5878,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5873,7 +5887,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5893,7 +5907,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5902,7 +5916,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5911,7 +5925,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5920,7 +5934,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5940,7 +5954,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5949,7 +5963,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5958,7 +5972,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5978,7 +5992,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5998,7 +6012,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6007,7 +6021,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6027,7 +6041,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6036,7 +6050,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6045,7 +6059,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6054,7 +6068,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6063,7 +6077,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6083,7 +6097,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6092,7 +6106,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6101,7 +6115,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6110,7 +6124,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6130,7 +6144,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6139,7 +6153,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6148,7 +6162,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6157,7 +6171,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6166,7 +6180,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6175,7 +6189,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6184,7 +6198,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6193,7 +6207,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6202,7 +6216,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6211,7 +6225,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6220,7 +6234,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6229,7 +6243,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6238,7 +6252,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6247,7 +6261,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6256,7 +6270,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6265,7 +6279,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6274,7 +6288,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6283,7 +6297,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6292,7 +6306,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6301,7 +6315,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6310,7 +6324,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6319,7 +6333,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6328,7 +6342,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6337,7 +6351,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6346,7 +6360,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6355,7 +6369,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6364,7 +6378,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6373,7 +6387,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6382,7 +6396,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6391,7 +6405,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6400,7 +6414,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6409,7 +6423,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6418,7 +6432,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6427,7 +6441,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6436,7 +6450,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6445,7 +6459,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6454,7 +6468,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6463,7 +6477,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6472,7 +6486,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6481,7 +6495,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6490,7 +6504,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6499,7 +6513,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6508,7 +6522,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6517,7 +6531,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6526,7 +6540,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6535,7 +6549,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6544,7 +6558,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6553,7 +6567,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6562,7 +6576,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6571,7 +6585,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6580,7 +6594,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6589,7 +6603,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6598,7 +6612,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6607,7 +6621,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6616,7 +6630,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6625,7 +6639,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6634,7 +6648,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6643,7 +6657,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6652,7 +6666,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6661,7 +6675,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6670,7 +6684,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6679,7 +6693,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6688,7 +6702,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6697,7 +6711,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6706,7 +6720,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6715,7 +6729,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6724,7 +6738,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6733,7 +6747,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6742,7 +6756,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getAnonymous();
         assertNotNull(actual);
         assertEquals("java.util.Collections$UnmodifiableRandomAccessList", actual.getClass().getName());
-        assertEquals("[]", String.valueOf(actual));
+        assertEquals("[]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6751,7 +6765,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6771,7 +6785,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6780,7 +6794,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6789,7 +6803,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6809,7 +6823,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6862,7 +6876,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6871,7 +6885,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6880,7 +6894,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6889,7 +6903,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6898,7 +6912,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6918,7 +6932,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6927,7 +6941,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6936,7 +6950,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6945,7 +6959,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6987,7 +7001,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6996,7 +7010,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7016,7 +7030,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7025,7 +7039,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7034,7 +7048,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7043,7 +7057,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7063,7 +7077,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7072,7 +7086,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7081,7 +7095,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7101,7 +7115,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7121,7 +7135,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7130,7 +7144,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7150,7 +7164,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7159,7 +7173,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7168,7 +7182,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7177,7 +7191,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7186,7 +7200,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7206,7 +7220,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7215,7 +7229,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7224,7 +7238,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7233,7 +7247,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7253,7 +7267,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7262,7 +7276,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7271,7 +7285,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7280,7 +7294,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7289,7 +7303,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7298,7 +7312,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7307,7 +7321,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7316,7 +7330,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7325,7 +7339,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7334,7 +7348,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7343,7 +7357,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7352,7 +7366,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7361,7 +7375,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7370,7 +7384,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7379,7 +7393,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7388,7 +7402,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7397,7 +7411,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7406,7 +7420,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7415,7 +7429,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7424,7 +7438,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7433,7 +7447,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7442,7 +7456,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7451,7 +7465,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7460,7 +7474,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7469,7 +7483,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7478,7 +7492,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7487,7 +7501,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7496,7 +7510,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7505,7 +7519,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7514,7 +7528,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7523,7 +7537,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7532,7 +7546,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7541,7 +7555,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7550,7 +7564,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7559,7 +7573,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7568,7 +7582,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7577,7 +7591,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7586,7 +7600,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7595,7 +7609,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7604,7 +7618,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7613,7 +7627,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7622,7 +7636,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7631,7 +7645,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7640,7 +7654,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7649,7 +7663,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7658,7 +7672,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7667,7 +7681,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7676,7 +7690,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7685,7 +7699,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7694,7 +7708,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7703,7 +7717,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7712,7 +7726,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7721,7 +7735,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7730,7 +7744,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7739,7 +7753,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7748,7 +7762,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7757,7 +7771,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7766,7 +7780,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7775,7 +7789,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7784,7 +7798,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7793,7 +7807,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7802,7 +7816,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7811,7 +7825,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7820,7 +7834,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7829,7 +7843,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7838,7 +7852,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7847,7 +7861,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7856,7 +7870,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7865,7 +7879,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getMinimum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7874,7 +7888,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7894,7 +7908,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7903,7 +7917,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7912,7 +7926,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7932,7 +7946,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7985,7 +7999,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7994,7 +8008,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8003,7 +8017,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8012,7 +8026,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8021,7 +8035,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8041,7 +8055,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8050,7 +8064,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8059,7 +8073,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8068,7 +8082,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8110,7 +8124,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8119,7 +8133,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8139,7 +8153,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8148,7 +8162,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8157,7 +8171,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8166,7 +8180,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8186,7 +8200,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8195,7 +8209,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8204,7 +8218,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8224,7 +8238,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8244,7 +8258,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8253,7 +8267,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8273,7 +8287,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8282,7 +8296,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8291,7 +8305,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8300,7 +8314,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8309,7 +8323,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8329,7 +8343,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8338,7 +8352,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8347,7 +8361,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8356,7 +8370,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8376,7 +8390,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8385,7 +8399,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8394,7 +8408,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8403,7 +8417,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8412,7 +8426,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8421,7 +8435,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8430,7 +8444,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8439,7 +8453,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8448,7 +8462,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8457,7 +8471,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8466,7 +8480,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8475,7 +8489,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8484,7 +8498,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8493,7 +8507,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8502,7 +8516,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8511,7 +8525,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8520,7 +8534,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8529,7 +8543,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8538,7 +8552,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8547,7 +8561,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8556,7 +8570,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8565,7 +8579,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8574,7 +8588,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8583,7 +8597,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8592,7 +8606,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8601,7 +8615,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8610,7 +8624,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8619,7 +8633,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8628,7 +8642,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8637,7 +8651,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8646,7 +8660,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8655,7 +8669,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8664,7 +8678,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8673,7 +8687,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8682,7 +8696,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8691,7 +8705,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8700,7 +8714,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8709,7 +8723,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8718,7 +8732,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8727,7 +8741,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8736,7 +8750,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8745,7 +8759,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8754,7 +8768,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8763,7 +8777,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8772,7 +8786,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8781,7 +8795,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8790,7 +8804,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8799,7 +8813,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8808,7 +8822,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8817,7 +8831,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8826,7 +8840,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8835,7 +8849,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8844,7 +8858,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8853,7 +8867,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8862,7 +8876,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8871,7 +8885,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8880,7 +8894,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8889,7 +8903,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8898,7 +8912,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8907,7 +8921,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8916,7 +8930,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8925,7 +8939,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8934,7 +8948,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8943,7 +8957,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8952,7 +8966,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8961,7 +8975,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8970,7 +8984,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8979,7 +8993,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8988,7 +9002,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).getMaximum();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8997,7 +9011,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9017,7 +9031,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "", -1, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9026,7 +9040,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "", Integer.MAX_VALUE, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9035,7 +9049,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "", Integer.MIN_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9055,7 +9069,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", " ", 0, 1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9108,7 +9122,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "a", Integer.MAX_VALUE, 1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9117,7 +9131,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "a", 0, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9126,7 +9140,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "a", 1, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9135,7 +9149,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "a", 1, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9144,7 +9158,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "test123", Integer.MAX_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9164,7 +9178,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "test123", 1, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9173,7 +9187,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "test123", 0, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9182,7 +9196,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "test123", -1, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9191,7 +9205,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "!@#", Integer.MIN_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9233,7 +9247,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "!@#", Integer.MAX_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9242,7 +9256,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9262,7 +9276,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "0", 1, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9271,7 +9285,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "0", -1, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9280,7 +9294,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "0", Integer.MAX_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9289,7 +9303,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9309,7 +9323,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "-1", Integer.MIN_VALUE, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9318,7 +9332,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "-1", -1, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9327,7 +9341,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1", Integer.MAX_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9347,7 +9361,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "1.5", 1, 1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9367,7 +9381,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "1.5", Integer.MIN_VALUE, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9376,7 +9390,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "1.5", Integer.MAX_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9396,7 +9410,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775807", 1, 1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9405,7 +9419,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775807", -1, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9414,7 +9428,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775807", Integer.MAX_VALUE, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9423,7 +9437,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775807", Integer.MIN_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9432,7 +9446,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9452,7 +9466,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "9223372036854775808", -1, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9461,7 +9475,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775808", Integer.MAX_VALUE, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9470,7 +9484,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775808", Integer.MIN_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9479,7 +9493,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9499,7 +9513,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1, -1)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9508,7 +9522,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9517,7 +9531,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE, Integer.MIN_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9526,7 +9540,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", " ", Integer.MIN_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9535,7 +9549,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "a", Integer.MIN_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9544,7 +9558,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123", Integer.MIN_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9553,7 +9567,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "!@#", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9562,7 +9576,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9571,7 +9585,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9580,7 +9594,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775807", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9589,7 +9603,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9598,7 +9612,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "!@#", Integer.MIN_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9607,7 +9621,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9616,7 +9630,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9625,7 +9639,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775807", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9634,7 +9648,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9643,7 +9657,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), " ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9652,7 +9666,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "!@#", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9661,7 +9675,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9670,7 +9684,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9679,7 +9693,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "1.5", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9688,7 +9702,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9697,7 +9711,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9706,7 +9720,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "!@#", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9715,7 +9729,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9724,7 +9738,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9733,7 +9747,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "1.5", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9742,7 +9756,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "9223372036854775807", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9751,7 +9765,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9760,7 +9774,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", " ", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9769,7 +9783,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "a", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9778,7 +9792,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "test123", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9787,7 +9801,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "1.5", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9796,7 +9810,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "!@#", "9223372036854775807", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9805,7 +9819,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9814,7 +9828,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "a", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9823,7 +9837,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "test123", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9832,7 +9846,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "1.5", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9841,7 +9855,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "0", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9850,7 +9864,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "", Integer.MAX_VALUE, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9859,7 +9873,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", " ", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9868,7 +9882,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "test123", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9877,7 +9891,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "1.5", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9886,7 +9900,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "9223372036854775807", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9895,7 +9909,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9904,7 +9918,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9913,7 +9927,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", " ", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9922,7 +9936,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "a", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9931,7 +9945,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "1.5", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9940,7 +9954,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9949,7 +9963,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9958,7 +9972,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "", 0, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9967,7 +9981,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "a", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9976,7 +9990,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "test123", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9985,7 +9999,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9994,7 +10008,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10003,7 +10017,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10012,7 +10026,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "", 0, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10021,7 +10035,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", " ", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10030,7 +10044,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "test123", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10039,7 +10053,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "!@#", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10048,7 +10062,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "-1", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10057,7 +10071,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "9223372036854775808", "9223372036854775808", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10066,7 +10080,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "", 0, Integer.MAX_VALUE)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10075,7 +10089,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10084,7 +10098,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10093,7 +10107,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10102,7 +10116,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10111,7 +10125,7 @@ public class GroupImpl_IPOTest {
         Object actual = (new GroupImpl(java.util.Collections.emptyList(), "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807", 0, 0)).isRequired();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
 }

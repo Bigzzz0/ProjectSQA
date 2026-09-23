@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for NumberUtils.
  */
 public class NumberUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_stringToInt_pairwise_001() throws Exception {
         // Combination: str="", defaultValue=0
         Object actual = NumberUtils.stringToInt("", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt(" ", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("a", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("test123", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("!@#", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("0", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("-1", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("1.5", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775807", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775808", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt(" ", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("a", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("test123", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("!@#", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("0", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("-1", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -175,7 +189,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("1.5", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -184,7 +198,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775807", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -193,7 +207,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775808", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -202,7 +216,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -211,7 +225,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -220,7 +234,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt(" ", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -229,7 +243,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("a", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -238,7 +252,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("test123", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -247,7 +261,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("!@#", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -256,7 +270,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("0", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -265,7 +279,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("-1", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -274,7 +288,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("1.5", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -283,7 +297,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775807", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -292,7 +306,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775808", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -301,7 +315,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -310,7 +324,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -319,7 +333,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt(" ", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -328,7 +342,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("a", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -337,7 +351,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("test123", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("!@#", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -355,7 +369,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("0", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -364,7 +378,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("-1", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -373,7 +387,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("1.5", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -382,7 +396,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775807", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -391,7 +405,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775808", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -400,7 +414,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -409,7 +423,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -418,7 +432,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt(" ", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -427,7 +441,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("a", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -436,7 +450,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("test123", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -445,7 +459,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("!@#", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -454,7 +468,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("0", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -463,7 +477,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("-1", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -472,7 +486,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("1.5", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -481,7 +495,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775807", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -490,7 +504,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("9223372036854775808", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -499,7 +513,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.stringToInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -508,7 +522,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -517,7 +531,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt(" ", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -526,7 +540,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("a", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -535,7 +549,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("test123", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -544,7 +558,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("!@#", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -553,7 +567,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("0", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -562,7 +576,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("-1", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -571,7 +585,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("1.5", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -580,7 +594,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775807", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -589,7 +603,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775808", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -598,7 +612,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -607,7 +621,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -616,7 +630,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt(" ", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -625,7 +639,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("a", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -634,7 +648,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("test123", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -643,7 +657,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("!@#", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -652,7 +666,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("0", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -661,7 +675,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("-1", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -670,7 +684,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("1.5", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -679,7 +693,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775807", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -688,7 +702,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775808", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -697,7 +711,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -706,7 +720,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -715,7 +729,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt(" ", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -724,7 +738,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("a", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -733,7 +747,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("test123", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -742,7 +756,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("!@#", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -751,7 +765,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("0", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -760,7 +774,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("-1", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -769,7 +783,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("1.5", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -778,7 +792,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775807", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -787,7 +801,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775808", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -796,7 +810,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -805,7 +819,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -814,7 +828,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt(" ", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -823,7 +837,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("a", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("test123", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -841,7 +855,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("!@#", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -850,7 +864,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("0", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -859,7 +873,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("-1", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -868,7 +882,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("1.5", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775807", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775808", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt(" ", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -922,7 +936,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("a", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -931,7 +945,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("test123", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -940,7 +954,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("!@#", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -949,7 +963,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("0", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -958,7 +972,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("-1", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -967,7 +981,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("1.5", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -976,7 +990,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775807", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -985,7 +999,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("9223372036854775808", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -994,7 +1008,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toInt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1003,7 +1017,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1012,7 +1026,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong(" ", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1021,7 +1035,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("a", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1030,7 +1044,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("test123", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1039,7 +1053,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("!@#", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1048,7 +1062,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("0", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1057,7 +1071,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("-1", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1066,7 +1080,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("1.5", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1075,7 +1089,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775807", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1084,7 +1098,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775808", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1093,7 +1107,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1102,7 +1116,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1111,7 +1125,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong(" ", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1120,7 +1134,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("a", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1129,7 +1143,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("test123", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1138,7 +1152,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("!@#", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1147,7 +1161,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("0", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1156,7 +1170,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("-1", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1165,7 +1179,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("1.5", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1174,7 +1188,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775807", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1183,7 +1197,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775808", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1192,7 +1206,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1201,7 +1215,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1210,7 +1224,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong(" ", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1219,7 +1233,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("a", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1228,7 +1242,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("test123", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1237,7 +1251,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("!@#", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1246,7 +1260,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("0", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1255,7 +1269,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("-1", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1264,7 +1278,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("1.5", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1273,7 +1287,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775807", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1282,7 +1296,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775808", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1291,7 +1305,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1300,7 +1314,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1309,7 +1323,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong(" ", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1318,7 +1332,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("a", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1327,7 +1341,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("test123", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1336,7 +1350,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("!@#", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1345,7 +1359,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("0", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1354,7 +1368,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("-1", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1363,7 +1377,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("1.5", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1372,7 +1386,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775807", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1381,7 +1395,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775808", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1390,7 +1404,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1399,7 +1413,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1408,7 +1422,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong(" ", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1417,7 +1431,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("a", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1426,7 +1440,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("test123", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1435,7 +1449,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("!@#", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1444,7 +1458,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("0", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1453,7 +1467,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("-1", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1462,7 +1476,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("1.5", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1471,7 +1485,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775807", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1480,7 +1494,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("9223372036854775808", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1489,7 +1503,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toLong("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1498,7 +1512,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1507,7 +1521,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat(" ", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1516,7 +1530,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("a", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1525,7 +1539,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("test123", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1534,7 +1548,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("!@#", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1543,7 +1557,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("0", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1552,7 +1566,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("-1", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1561,7 +1575,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("1.5", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1570,7 +1584,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775807", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1579,7 +1593,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775808", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1588,7 +1602,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1597,7 +1611,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1606,7 +1620,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat(" ", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1615,7 +1629,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("a", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1624,7 +1638,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("test123", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1633,7 +1647,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("!@#", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1642,7 +1656,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("0", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1651,7 +1665,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("-1", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1660,7 +1674,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("1.5", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1669,7 +1683,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775807", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1678,7 +1692,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775808", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1687,7 +1701,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1696,7 +1710,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1705,7 +1719,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat(" ", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1714,7 +1728,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("a", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1723,7 +1737,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("test123", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1732,7 +1746,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("!@#", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1741,7 +1755,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("0", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1750,7 +1764,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("-1", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1759,7 +1773,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("1.5", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1768,7 +1782,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775807", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1777,7 +1791,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775808", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1786,7 +1800,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1795,7 +1809,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1804,7 +1818,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat(" ", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1813,7 +1827,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("a", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1822,7 +1836,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("test123", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1831,7 +1845,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("!@#", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1840,7 +1854,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("0", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1849,7 +1863,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("-1", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1858,7 +1872,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("1.5", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1867,7 +1881,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775807", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1876,7 +1890,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775808", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1885,7 +1899,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1894,7 +1908,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1903,7 +1917,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat(" ", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1912,7 +1926,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("a", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1921,7 +1935,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("test123", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1930,7 +1944,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("!@#", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1939,7 +1953,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("0", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1948,7 +1962,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("-1", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1957,7 +1971,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("1.5", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1966,7 +1980,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775807", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1975,7 +1989,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("9223372036854775808", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("9.223372E18", String.valueOf(actual));
+        assertEquals("9.223372E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1984,7 +1998,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toFloat("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1993,7 +2007,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2002,7 +2016,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble(" ", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2011,7 +2025,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("a", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2020,7 +2034,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("test123", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2029,7 +2043,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("!@#", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2038,7 +2052,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("0", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2047,7 +2061,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("-1", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2056,7 +2070,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("1.5", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2065,7 +2079,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775807", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2074,7 +2088,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775808", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2083,7 +2097,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2092,7 +2106,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2101,7 +2115,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble(" ", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2110,7 +2124,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("a", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2119,7 +2133,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("test123", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2128,7 +2142,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("!@#", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2137,7 +2151,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("0", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2146,7 +2160,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("-1", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2155,7 +2169,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("1.5", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2164,7 +2178,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775807", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2173,7 +2187,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775808", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2182,7 +2196,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2191,7 +2205,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2200,7 +2214,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble(" ", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2209,7 +2223,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("a", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2218,7 +2232,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("test123", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2227,7 +2241,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("!@#", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2236,7 +2250,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("0", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2245,7 +2259,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("-1", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2254,7 +2268,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("1.5", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2263,7 +2277,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775807", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2272,7 +2286,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775808", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2281,7 +2295,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2290,7 +2304,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2299,7 +2313,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble(" ", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2308,7 +2322,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("a", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2317,7 +2331,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("test123", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2326,7 +2340,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("!@#", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2335,7 +2349,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("0", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2344,7 +2358,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("-1", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2353,7 +2367,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("1.5", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2362,7 +2376,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775807", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2371,7 +2385,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775808", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2380,7 +2394,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2389,7 +2403,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2398,7 +2412,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble(" ", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2407,7 +2421,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("a", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2416,7 +2430,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("test123", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2425,7 +2439,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("!@#", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2434,7 +2448,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("0", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2443,7 +2457,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("-1", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2452,7 +2466,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("1.5", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2461,7 +2475,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775807", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2470,7 +2484,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("9223372036854775808", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("9.223372036854776E18", String.valueOf(actual));
+        assertEquals("9.223372036854776E18", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2479,7 +2493,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.toDouble("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2488,7 +2502,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new byte[] {}, new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2497,7 +2511,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new byte[] {}, new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2506,7 +2520,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new byte[] {1}, new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2515,7 +2529,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new byte[] {1}, new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2524,7 +2538,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new short[] {}, new short[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2533,7 +2547,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new short[] {}, new short[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2542,7 +2556,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new short[] {1}, new short[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2551,7 +2565,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new short[] {1}, new short[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2560,7 +2574,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new int[] {}, new int[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2569,7 +2583,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new int[] {}, new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2578,7 +2592,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new int[] {1}, new int[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2587,7 +2601,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new int[] {1}, new int[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2596,7 +2610,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new long[] {}, new long[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2605,7 +2619,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new long[] {}, new long[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2614,7 +2628,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new long[] {1}, new long[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2623,7 +2637,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new long[] {1}, new long[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2632,7 +2646,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new float[] {}, new float[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2641,7 +2655,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new float[] {}, new float[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2650,7 +2664,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new float[] {1}, new float[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2659,7 +2673,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new float[] {1}, new float[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2668,7 +2682,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new double[] {}, new double[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2677,7 +2691,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new double[] {}, new double[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2686,7 +2700,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new double[] {1}, new double[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2695,7 +2709,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.equals(new double[] {1}, new double[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2704,7 +2718,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0L, 0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2713,7 +2727,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0L, 1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2722,7 +2736,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0L, -1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2731,7 +2745,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0L, Long.MAX_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2740,7 +2754,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0L, Long.MIN_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2749,7 +2763,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1L, 0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2758,7 +2772,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1L, 1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2767,7 +2781,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1L, -1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2776,7 +2790,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1L, Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2785,7 +2799,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1L, Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2794,7 +2808,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1L, 0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2803,7 +2817,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1L, 1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2812,7 +2826,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1L, -1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2821,7 +2835,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1L, Long.MAX_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2830,7 +2844,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1L, Long.MIN_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2839,7 +2853,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MAX_VALUE, 0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2848,7 +2862,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MAX_VALUE, 1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2857,7 +2871,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MAX_VALUE, -1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2866,7 +2880,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MAX_VALUE, Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2875,7 +2889,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MAX_VALUE, Long.MIN_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2884,7 +2898,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MIN_VALUE, 0L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2893,7 +2907,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MIN_VALUE, 1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2902,7 +2916,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MIN_VALUE, -1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2911,7 +2925,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MIN_VALUE, Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2920,7 +2934,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MIN_VALUE, Long.MIN_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2929,7 +2943,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1L, 1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2938,7 +2952,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1L, -1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2947,7 +2961,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Long.MAX_VALUE, Long.MAX_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2956,7 +2970,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2965,7 +2979,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2974,7 +2988,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2983,7 +2997,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2992,7 +3006,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3001,7 +3015,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3010,7 +3024,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3019,7 +3033,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1, -1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3028,7 +3042,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3037,7 +3051,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3046,7 +3060,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3055,7 +3069,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3064,7 +3078,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3073,7 +3087,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3082,7 +3096,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3091,7 +3105,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3100,7 +3114,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MAX_VALUE, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3109,7 +3123,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MAX_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3118,7 +3132,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MAX_VALUE, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3127,7 +3141,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MAX_VALUE, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3136,7 +3150,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MIN_VALUE, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3145,7 +3159,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MIN_VALUE, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3154,7 +3168,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MIN_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3163,7 +3177,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MIN_VALUE, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3172,7 +3186,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3181,7 +3195,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3190,7 +3204,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3199,7 +3213,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3208,7 +3222,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 0, (short) 0, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3217,7 +3231,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 0, (short) 1, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3226,7 +3240,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 0, (short) -1, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3235,7 +3249,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 0, Short.MAX_VALUE, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3244,7 +3258,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 0, Short.MIN_VALUE, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3253,7 +3267,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 1, (short) 0, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3262,7 +3276,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 1, (short) 1, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3271,7 +3285,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 1, (short) -1, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3280,7 +3294,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 1, Short.MAX_VALUE, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3289,7 +3303,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 1, Short.MIN_VALUE, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3298,7 +3312,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) -1, (short) 0, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3307,7 +3321,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) -1, (short) 1, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3316,7 +3330,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) -1, (short) -1, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3325,7 +3339,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) -1, Short.MAX_VALUE, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3334,7 +3348,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) -1, Short.MIN_VALUE, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3343,7 +3357,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MAX_VALUE, (short) 0, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3352,7 +3366,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MAX_VALUE, (short) 1, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3361,7 +3375,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MAX_VALUE, (short) -1, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3370,7 +3384,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MAX_VALUE, Short.MAX_VALUE, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3379,7 +3393,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MAX_VALUE, Short.MIN_VALUE, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3388,7 +3402,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MIN_VALUE, (short) 0, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3397,7 +3411,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MIN_VALUE, (short) 1, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3406,7 +3420,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MIN_VALUE, (short) -1, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3415,7 +3429,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MIN_VALUE, Short.MAX_VALUE, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3424,7 +3438,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MIN_VALUE, Short.MIN_VALUE, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3433,7 +3447,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) 1, (short) 1, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3442,7 +3456,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((short) -1, (short) -1, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3451,7 +3465,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Short.MAX_VALUE, Short.MAX_VALUE, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-32768", String.valueOf(actual));
+        assertEquals("-32768", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3460,7 +3474,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 0, (byte) 0, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3469,7 +3483,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 0, (byte) 1, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3478,7 +3492,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 0, (byte) -1, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3487,7 +3501,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 0, Byte.MAX_VALUE, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3496,7 +3510,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 0, Byte.MIN_VALUE, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3505,7 +3519,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 1, (byte) 0, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3514,7 +3528,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 1, (byte) 1, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3523,7 +3537,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 1, (byte) -1, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3532,7 +3546,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 1, Byte.MAX_VALUE, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3541,7 +3555,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 1, Byte.MIN_VALUE, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3550,7 +3564,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) -1, (byte) 0, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3559,7 +3573,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) -1, (byte) 1, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3568,7 +3582,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) -1, (byte) -1, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3577,7 +3591,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) -1, Byte.MAX_VALUE, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3586,7 +3600,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) -1, Byte.MIN_VALUE, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3595,7 +3609,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MAX_VALUE, (byte) 0, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3604,7 +3618,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MAX_VALUE, (byte) 1, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3613,7 +3627,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MAX_VALUE, (byte) -1, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3622,7 +3636,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MAX_VALUE, Byte.MAX_VALUE, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3631,7 +3645,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MAX_VALUE, Byte.MIN_VALUE, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3640,7 +3654,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MIN_VALUE, (byte) 0, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3649,7 +3663,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MIN_VALUE, (byte) 1, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3658,7 +3672,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MIN_VALUE, (byte) -1, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3667,7 +3681,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MIN_VALUE, Byte.MAX_VALUE, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3676,7 +3690,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MIN_VALUE, Byte.MIN_VALUE, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3685,7 +3699,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) 1, (byte) 1, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3694,7 +3708,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min((byte) -1, (byte) -1, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3703,7 +3717,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Byte.MAX_VALUE, Byte.MAX_VALUE, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-128", String.valueOf(actual));
+        assertEquals("-128", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3712,7 +3726,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0d, 0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3721,7 +3735,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0d, 1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3730,7 +3744,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0d, -1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3739,7 +3753,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0d, Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3748,7 +3762,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3757,7 +3771,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0d, 0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3766,7 +3780,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0d, 1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3775,7 +3789,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0d, -1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3784,7 +3798,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0d, Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3793,7 +3807,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0d, Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3802,7 +3816,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0d, 0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3811,7 +3825,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0d, 1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3820,7 +3834,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0d, -1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3829,7 +3843,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0d, Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3838,7 +3852,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0d, Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3847,7 +3861,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.NaN, 0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3856,7 +3870,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.NaN, 1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3865,7 +3879,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.NaN, -1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3874,7 +3888,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.NaN, Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3883,7 +3897,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.NaN, Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3892,7 +3906,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3901,7 +3915,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.POSITIVE_INFINITY, 1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3910,7 +3924,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.POSITIVE_INFINITY, -1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3919,7 +3933,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.POSITIVE_INFINITY, Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3928,7 +3942,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3937,7 +3951,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0d, 1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3946,7 +3960,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0d, -1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3955,7 +3969,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Double.NaN, Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3964,7 +3978,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0f, 0.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3973,7 +3987,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0f, 1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3982,7 +3996,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0f, -1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3991,7 +4005,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0f, Float.NaN, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4000,7 +4014,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(0.0f, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4009,7 +4023,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0f, 0.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4018,7 +4032,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0f, 1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4027,7 +4041,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0f, -1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4036,7 +4050,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0f, Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4045,7 +4059,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0f, Float.POSITIVE_INFINITY, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4054,7 +4068,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0f, 0.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4063,7 +4077,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0f, 1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4072,7 +4086,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0f, -1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4081,7 +4095,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0f, Float.NaN, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4090,7 +4104,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0f, Float.POSITIVE_INFINITY, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4099,7 +4113,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.NaN, 0.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4108,7 +4122,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.NaN, 1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4117,7 +4131,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.NaN, -1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4126,7 +4140,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.NaN, Float.NaN, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4135,7 +4149,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.NaN, Float.POSITIVE_INFINITY, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4144,7 +4158,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.POSITIVE_INFINITY, 0.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4153,7 +4167,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.POSITIVE_INFINITY, 1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4162,7 +4176,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.POSITIVE_INFINITY, -1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4171,7 +4185,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.POSITIVE_INFINITY, Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4180,7 +4194,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4189,7 +4203,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(1.0f, 1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4198,7 +4212,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(-1.0f, -1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4207,7 +4221,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.min(Float.NaN, Float.NaN, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4216,7 +4230,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0L, 0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4225,7 +4239,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0L, 1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4234,7 +4248,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0L, -1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4243,7 +4257,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0L, Long.MAX_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4252,7 +4266,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0L, Long.MIN_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4261,7 +4275,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1L, 0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4270,7 +4284,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1L, 1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4279,7 +4293,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1L, -1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4288,7 +4302,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1L, Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4297,7 +4311,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1L, Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4306,7 +4320,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1L, 0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4315,7 +4329,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1L, 1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4324,7 +4338,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1L, -1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4333,7 +4347,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1L, Long.MAX_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4342,7 +4356,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1L, Long.MIN_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4351,7 +4365,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MAX_VALUE, 0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4360,7 +4374,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MAX_VALUE, 1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4369,7 +4383,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MAX_VALUE, -1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4378,7 +4392,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MAX_VALUE, Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4387,7 +4401,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MAX_VALUE, Long.MIN_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4396,7 +4410,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MIN_VALUE, 0L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4405,7 +4419,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MIN_VALUE, 1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4414,7 +4428,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MIN_VALUE, -1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4423,7 +4437,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MIN_VALUE, Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4432,7 +4446,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MIN_VALUE, Long.MIN_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4441,7 +4455,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1L, 1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4450,7 +4464,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1L, -1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4459,7 +4473,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Long.MAX_VALUE, Long.MAX_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4468,7 +4482,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4477,7 +4491,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4486,7 +4500,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4495,7 +4509,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4504,7 +4518,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4513,7 +4527,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4522,7 +4536,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4531,7 +4545,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1, -1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4540,7 +4554,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4549,7 +4563,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4558,7 +4572,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1, 0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4567,7 +4581,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1, 1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4576,7 +4590,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4585,7 +4599,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4594,7 +4608,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4603,7 +4617,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4612,7 +4626,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MAX_VALUE, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4621,7 +4635,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MAX_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4630,7 +4644,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MAX_VALUE, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4639,7 +4653,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MAX_VALUE, Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4648,7 +4662,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MIN_VALUE, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4657,7 +4671,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MIN_VALUE, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4666,7 +4680,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MIN_VALUE, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4675,7 +4689,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MIN_VALUE, Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4684,7 +4698,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4693,7 +4707,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1, 1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4702,7 +4716,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1, -1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4711,7 +4725,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4720,7 +4734,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 0, (short) 0, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4729,7 +4743,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 0, (short) 1, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4738,7 +4752,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 0, (short) -1, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4747,7 +4761,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 0, Short.MAX_VALUE, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4756,7 +4770,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 0, Short.MIN_VALUE, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4765,7 +4779,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 1, (short) 0, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4774,7 +4788,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 1, (short) 1, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4783,7 +4797,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 1, (short) -1, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4792,7 +4806,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 1, Short.MAX_VALUE, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4801,7 +4815,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 1, Short.MIN_VALUE, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4810,7 +4824,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) -1, (short) 0, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4819,7 +4833,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) -1, (short) 1, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4828,7 +4842,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) -1, (short) -1, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4837,7 +4851,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) -1, Short.MAX_VALUE, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4846,7 +4860,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) -1, Short.MIN_VALUE, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4855,7 +4869,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MAX_VALUE, (short) 0, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4864,7 +4878,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MAX_VALUE, (short) 1, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4873,7 +4887,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MAX_VALUE, (short) -1, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4882,7 +4896,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MAX_VALUE, Short.MAX_VALUE, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4891,7 +4905,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MAX_VALUE, Short.MIN_VALUE, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4900,7 +4914,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MIN_VALUE, (short) 0, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4909,7 +4923,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MIN_VALUE, (short) 1, (short) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4918,7 +4932,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MIN_VALUE, (short) -1, (short) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4927,7 +4941,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MIN_VALUE, Short.MAX_VALUE, (short) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4936,7 +4950,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MIN_VALUE, Short.MIN_VALUE, Short.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4945,7 +4959,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) 1, (short) 1, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4954,7 +4968,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((short) -1, (short) -1, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4963,7 +4977,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Short.MAX_VALUE, Short.MAX_VALUE, Short.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Short", actual.getClass().getName());
-        assertEquals("32767", String.valueOf(actual));
+        assertEquals("32767", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4972,7 +4986,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 0, (byte) 0, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4981,7 +4995,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 0, (byte) 1, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4990,7 +5004,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 0, (byte) -1, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4999,7 +5013,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 0, Byte.MAX_VALUE, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5008,7 +5022,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 0, Byte.MIN_VALUE, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5017,7 +5031,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 1, (byte) 0, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5026,7 +5040,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 1, (byte) 1, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5035,7 +5049,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 1, (byte) -1, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5044,7 +5058,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 1, Byte.MAX_VALUE, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5053,7 +5067,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 1, Byte.MIN_VALUE, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5062,7 +5076,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) -1, (byte) 0, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5071,7 +5085,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) -1, (byte) 1, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5080,7 +5094,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) -1, (byte) -1, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5089,7 +5103,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) -1, Byte.MAX_VALUE, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5098,7 +5112,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) -1, Byte.MIN_VALUE, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5107,7 +5121,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MAX_VALUE, (byte) 0, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5116,7 +5130,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MAX_VALUE, (byte) 1, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5125,7 +5139,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MAX_VALUE, (byte) -1, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5134,7 +5148,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MAX_VALUE, Byte.MAX_VALUE, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5143,7 +5157,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MAX_VALUE, Byte.MIN_VALUE, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5152,7 +5166,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MIN_VALUE, (byte) 0, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5161,7 +5175,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MIN_VALUE, (byte) 1, (byte) 0);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5170,7 +5184,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MIN_VALUE, (byte) -1, (byte) 1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5179,7 +5193,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MIN_VALUE, Byte.MAX_VALUE, (byte) -1);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5188,7 +5202,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MIN_VALUE, Byte.MIN_VALUE, Byte.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5197,7 +5211,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) 1, (byte) 1, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5206,7 +5220,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max((byte) -1, (byte) -1, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5215,7 +5229,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Byte.MAX_VALUE, Byte.MAX_VALUE, Byte.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Byte", actual.getClass().getName());
-        assertEquals("127", String.valueOf(actual));
+        assertEquals("127", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5224,7 +5238,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0d, 0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5233,7 +5247,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0d, 1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5242,7 +5256,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0d, -1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5251,7 +5265,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0d, Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5260,7 +5274,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0d, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5269,7 +5283,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0d, 0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5278,7 +5292,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0d, 1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5287,7 +5301,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0d, -1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5296,7 +5310,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0d, Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5305,7 +5319,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0d, Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5314,7 +5328,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0d, 0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5323,7 +5337,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0d, 1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5332,7 +5346,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0d, -1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5341,7 +5355,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0d, Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5350,7 +5364,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0d, Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5359,7 +5373,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.NaN, 0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5368,7 +5382,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.NaN, 1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5377,7 +5391,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.NaN, -1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5386,7 +5400,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.NaN, Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5395,7 +5409,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.NaN, Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5404,7 +5418,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.POSITIVE_INFINITY, 0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5413,7 +5427,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.POSITIVE_INFINITY, 1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5422,7 +5436,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.POSITIVE_INFINITY, -1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5431,7 +5445,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.POSITIVE_INFINITY, Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5440,7 +5454,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5449,7 +5463,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0d, 1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5458,7 +5472,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0d, -1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5467,7 +5481,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Double.NaN, Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5476,7 +5490,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0f, 0.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5485,7 +5499,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0f, 1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5494,7 +5508,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0f, -1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5503,7 +5517,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0f, Float.NaN, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5512,7 +5526,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(0.0f, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5521,7 +5535,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0f, 0.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5530,7 +5544,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0f, 1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5539,7 +5553,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0f, -1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5548,7 +5562,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0f, Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5557,7 +5571,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0f, Float.POSITIVE_INFINITY, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5566,7 +5580,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0f, 0.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5575,7 +5589,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0f, 1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5584,7 +5598,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0f, -1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5593,7 +5607,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0f, Float.NaN, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5602,7 +5616,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0f, Float.POSITIVE_INFINITY, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5611,7 +5625,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.NaN, 0.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5620,7 +5634,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.NaN, 1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5629,7 +5643,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.NaN, -1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5638,7 +5652,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.NaN, Float.NaN, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5647,7 +5661,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.NaN, Float.POSITIVE_INFINITY, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5656,7 +5670,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.POSITIVE_INFINITY, 0.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5665,7 +5679,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.POSITIVE_INFINITY, 1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5674,7 +5688,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.POSITIVE_INFINITY, -1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5683,7 +5697,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.POSITIVE_INFINITY, Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5692,7 +5706,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5701,7 +5715,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(1.0f, 1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5710,7 +5724,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(-1.0f, -1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5719,7 +5733,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.max(Float.NaN, Float.NaN, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5728,7 +5742,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5737,7 +5751,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5746,7 +5760,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5755,7 +5769,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5764,7 +5778,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5773,7 +5787,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5782,7 +5796,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5791,7 +5805,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5800,7 +5814,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5809,7 +5823,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5818,7 +5832,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5827,7 +5841,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5836,7 +5850,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5845,7 +5859,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5854,7 +5868,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5863,7 +5877,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5872,7 +5886,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5881,7 +5895,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5890,7 +5904,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5899,7 +5913,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5908,7 +5922,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5917,7 +5931,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5926,7 +5940,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5935,7 +5949,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5944,7 +5958,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5953,7 +5967,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5962,7 +5976,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5971,7 +5985,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5980,7 +5994,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5989,7 +6003,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(0.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5998,7 +6012,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6007,7 +6021,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6016,7 +6030,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6025,7 +6039,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6034,7 +6048,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6043,7 +6057,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0f, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6052,7 +6066,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0f, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6061,7 +6075,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0f, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6070,7 +6084,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0f, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6079,7 +6093,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(-1.0f, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6088,7 +6102,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.NaN, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6097,7 +6111,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.NaN, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6106,7 +6120,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.NaN, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6115,7 +6129,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.NaN, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6124,7 +6138,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.NaN, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6133,7 +6147,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.POSITIVE_INFINITY, 0.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6142,7 +6156,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.POSITIVE_INFINITY, 1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6151,7 +6165,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.POSITIVE_INFINITY, -1.0f);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6160,7 +6174,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.POSITIVE_INFINITY, Float.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6169,7 +6183,7 @@ public class NumberUtils_IPOTest {
         Object actual = NumberUtils.compare(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
 }

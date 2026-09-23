@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for FastDateParser.
  */
 public class FastDateParser_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_getPattern_pairwise_001() throws Exception {
         // Combination: receiver__pattern="", receiver__timeZone=java.util.TimeZone.getTimeZone("UTC"), receiver__locale=java.util.Locale.ROOT
@@ -24,7 +38,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -33,7 +47,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -53,7 +67,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -62,7 +76,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -71,7 +85,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -80,7 +94,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -89,7 +103,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -98,7 +112,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -107,7 +121,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -127,7 +141,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -136,7 +150,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -156,7 +170,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -165,7 +179,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -174,7 +188,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -183,7 +197,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -192,7 +206,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -201,7 +215,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -210,7 +224,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -230,7 +244,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -239,7 +253,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -259,7 +273,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -268,7 +282,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -277,7 +291,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -286,7 +300,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -295,7 +309,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -304,7 +318,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -313,7 +327,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).getPattern();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -333,7 +347,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -342,7 +356,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -351,7 +365,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -382,7 +396,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -413,7 +427,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -422,7 +436,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -442,7 +456,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -451,7 +465,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -460,7 +474,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -469,7 +483,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -478,7 +492,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -487,7 +501,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -496,7 +510,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -505,7 +519,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -514,7 +528,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -523,7 +537,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -532,7 +546,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -541,7 +555,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -550,7 +564,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -559,7 +573,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -568,7 +582,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -577,7 +591,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -586,7 +600,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -595,7 +609,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -604,7 +618,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -613,7 +627,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -622,7 +636,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -642,7 +656,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("32", String.valueOf(actual));
+        assertEquals("32", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -651,7 +665,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("97", String.valueOf(actual));
+        assertEquals("97", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -671,7 +685,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("33732", String.valueOf(actual));
+        assertEquals("33732", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -680,7 +694,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("48", String.valueOf(actual));
+        assertEquals("48", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -689,7 +703,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1444", String.valueOf(actual));
+        assertEquals("1444", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -698,7 +712,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("48568", String.valueOf(actual));
+        assertEquals("48568", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -707,7 +721,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773151198", String.valueOf(actual));
+        assertEquals("-1773151198", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -716,7 +730,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773151197", String.valueOf(actual));
+        assertEquals("-1773151197", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -725,7 +739,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-474938880", String.valueOf(actual));
+        assertEquals("-474938880", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -745,7 +759,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234911", String.valueOf(actual));
+        assertEquals("-848234911", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -754,7 +768,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234846", String.valueOf(actual));
+        assertEquals("-848234846", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -774,7 +788,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848201211", String.valueOf(actual));
+        assertEquals("-848201211", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -783,7 +797,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848234895", String.valueOf(actual));
+        assertEquals("-848234895", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -792,7 +806,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848233499", String.valueOf(actual));
+        assertEquals("-848233499", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -801,7 +815,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-848186375", String.valueOf(actual));
+        assertEquals("-848186375", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -810,7 +824,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1673581155", String.valueOf(actual));
+        assertEquals("1673581155", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -819,7 +833,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1673581156", String.valueOf(actual));
+        assertEquals("1673581156", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -828,7 +842,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1323173823", String.valueOf(actual));
+        assertEquals("-1323173823", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -848,7 +862,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112709", String.valueOf(actual));
+        assertEquals("-135112709", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -857,7 +871,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112644", String.valueOf(actual));
+        assertEquals("-135112644", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -877,7 +891,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135079009", String.valueOf(actual));
+        assertEquals("-135079009", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -886,7 +900,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135112693", String.valueOf(actual));
+        assertEquals("-135112693", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -895,7 +909,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135111297", String.valueOf(actual));
+        assertEquals("-135111297", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -904,7 +918,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-135064173", String.valueOf(actual));
+        assertEquals("-135064173", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -913,7 +927,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1908263939", String.valueOf(actual));
+        assertEquals("-1908263939", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -922,7 +936,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1908263938", String.valueOf(actual));
+        assertEquals("-1908263938", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -931,7 +945,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-610051621", String.valueOf(actual));
+        assertEquals("-610051621", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -951,7 +965,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[ ,,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[ ,,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -960,7 +974,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[a,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[a,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -980,7 +994,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[!@#,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[!@#,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -989,7 +1003,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[0,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[0,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -998,7 +1012,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[-1,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[-1,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1007,7 +1021,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[1.5,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[1.5,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1016,7 +1030,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[9223372036854775807,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[9223372036854775807,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1025,7 +1039,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[9223372036854775808,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[9223372036854775808,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1034,7 +1048,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1054,7 +1068,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[ ,en_US,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[ ,en_US,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1063,7 +1077,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[a,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[a,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1083,7 +1097,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[!@#,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[!@#,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1092,7 +1106,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[0,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[0,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1101,7 +1115,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[-1,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[-1,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1110,7 +1124,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[1.5,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[1.5,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1119,7 +1133,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[9223372036854775807,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[9223372036854775807,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1128,7 +1142,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[9223372036854775808,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[9223372036854775808,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1137,7 +1151,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.US)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,en_US,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,en_US,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1157,7 +1171,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[ ,ja_JP,GMT]", String.valueOf(actual));
+        assertEquals("FastDateParser[ ,ja_JP,GMT]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1166,7 +1180,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("a", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[a,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[a,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1186,7 +1200,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[!@#,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[!@#,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1195,7 +1209,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[0,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[0,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1204,7 +1218,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[-1,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[-1,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1213,7 +1227,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[1.5,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[1.5,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1222,7 +1236,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[9223372036854775807,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[9223372036854775807,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1231,7 +1245,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[9223372036854775808,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[9223372036854775808,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1240,7 +1254,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.JAPAN)).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("FastDateParser[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,ja_JP,UTC]", String.valueOf(actual));
+        assertEquals("FastDateParser[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,ja_JP,UTC]", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1260,7 +1274,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser(" ", java.util.TimeZone.getTimeZone("GMT"), java.util.Locale.ROOT)).parse(" ");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1291,7 +1305,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("!@#", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).parse("!@#");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1300,7 +1314,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("0", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).parse("0");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1309,7 +1323,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("-1", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).parse("-1");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1318,7 +1332,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("1.5", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).parse("1.5");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1327,7 +1341,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775807", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).parse("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1336,7 +1350,7 @@ public class FastDateParser_IPOTest {
         Object actual = (new FastDateParser("9223372036854775808", java.util.TimeZone.getTimeZone("UTC"), java.util.Locale.ROOT)).parse("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.util.Date", actual.getClass().getName());
-        assertEquals("Thu Jan 01 00:00:00 UTC 1970", String.valueOf(actual));
+        assertEquals("Thu Jan 01 00:00:00 UTC 1970", formatValue(actual));
     }
 
     @Test(timeout = 4000)

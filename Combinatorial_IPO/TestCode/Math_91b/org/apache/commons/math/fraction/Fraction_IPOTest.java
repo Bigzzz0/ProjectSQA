@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for Fraction.
  */
 public class Fraction_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_compareTo_pairwise_001() throws Exception {
         // Combination: receiver__value=0.0d, object=new org.apache.commons.math.fraction.Fraction(1, 2)
         Object actual = (new Fraction(0.0d)).compareTo(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).compareTo(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).compareTo(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(Double.NaN)).compareTo(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -60,7 +74,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).compareTo(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -69,7 +83,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).compareTo(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -78,7 +92,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).compareTo(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -87,7 +101,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(Double.NaN)).compareTo(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -107,7 +121,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -116,7 +130,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -125,7 +139,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -134,7 +148,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(Double.NaN)).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -154,7 +168,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -163,7 +177,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -172,7 +186,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -181,7 +195,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(Double.NaN)).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -201,7 +215,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -210,7 +224,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -219,7 +233,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -228,7 +242,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(Double.NaN)).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -248,7 +262,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).add(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b10", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b10", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -257,7 +271,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).add(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b5a", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b5a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -266,7 +280,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).add(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac6", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac6", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -297,7 +311,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).add(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -306,7 +320,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).add(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b34", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b34", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -315,7 +329,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).add(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -346,7 +360,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).subtract(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac6", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac6", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -355,7 +369,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).subtract(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b10", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b10", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -364,7 +378,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).subtract(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5a7c", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5a7c", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -395,7 +409,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).subtract(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -404,7 +418,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).subtract(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -413,7 +427,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).subtract(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aa0", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aa0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -444,7 +458,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).multiply(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -453,7 +467,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).multiply(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b10", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b10", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -462,7 +476,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).multiply(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac6", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac6", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -493,7 +507,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).multiply(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -502,7 +516,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).multiply(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -511,7 +525,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).multiply(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -542,7 +556,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).divide(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -551,7 +565,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).divide(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b34", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b34", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -560,7 +574,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).divide(new org.apache.commons.math.fraction.Fraction(1, 2));
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aa0", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aa0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -591,7 +605,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(0.0d)).divide(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -600,7 +614,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(1.0d)).divide(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -609,7 +623,7 @@ public class Fraction_IPOTest {
         Object actual = (new Fraction(-1.0d)).divide(org.apache.commons.math.fraction.Fraction.ONE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -695,7 +709,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(0, 1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -704,7 +718,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(1, 1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -713,7 +727,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(-1, 1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -722,7 +736,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@80005ac5", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@80005ac5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -731,7 +745,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@80005aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@80005aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -740,7 +754,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(0, -1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -749,7 +763,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(1, -1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ac5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -758,7 +772,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(-1, -1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -767,7 +781,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@80005b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@80005b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -787,7 +801,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -796,7 +810,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@80005b0d", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@80005b0d", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -805,7 +819,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@80005ac3", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@80005ac3", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -814,7 +828,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -823,7 +837,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5ae8", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5ae8", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -832,7 +846,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5aea", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -874,7 +888,7 @@ public class Fraction_IPOTest {
         Object actual = Fraction.getReducedFraction(Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("org.apache.commons.math.fraction.Fraction", actual.getClass().getName());
-        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", String.valueOf(actual));
+        assertEquals("org.apache.commons.math.fraction.Fraction@5b0f", formatValue(actual));
     }
 
 }

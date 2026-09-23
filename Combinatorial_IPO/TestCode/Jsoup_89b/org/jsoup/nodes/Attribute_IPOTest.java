@@ -7,6 +7,20 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for Attribute.
  */
 public class Attribute_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_getKey_pairwise_001() throws Exception {
         // Combination: receiver__key="", receiver__value=""
@@ -255,7 +269,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -264,7 +278,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -273,7 +287,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -282,7 +296,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -291,7 +305,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -300,7 +314,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -309,7 +323,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -318,7 +332,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -327,7 +341,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -336,7 +350,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -345,7 +359,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -354,7 +368,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -363,7 +377,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -372,7 +386,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -381,7 +395,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -390,7 +404,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -399,7 +413,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -408,7 +422,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -417,7 +431,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -426,7 +440,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -435,7 +449,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -444,7 +458,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -453,7 +467,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -462,7 +476,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -471,7 +485,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -480,7 +494,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -489,7 +503,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -498,7 +512,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -507,7 +521,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -516,7 +530,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -525,7 +539,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -534,7 +548,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -543,7 +557,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -552,7 +566,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -561,7 +575,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -570,7 +584,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -579,7 +593,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -588,7 +602,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -597,7 +611,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -606,7 +620,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -615,7 +629,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -624,7 +638,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -633,7 +647,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -642,7 +656,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -651,7 +665,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -660,7 +674,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -669,7 +683,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -678,7 +692,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -687,7 +701,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -696,7 +710,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -705,7 +719,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -714,7 +728,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -723,7 +737,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -732,7 +746,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -741,7 +755,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -750,7 +764,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -759,7 +773,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -768,7 +782,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -777,7 +791,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -786,7 +800,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -795,7 +809,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -804,7 +818,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -813,7 +827,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -822,7 +836,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -831,7 +845,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -840,7 +854,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -849,7 +863,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -858,7 +872,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -867,7 +881,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -876,7 +890,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -885,7 +899,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -894,7 +908,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -903,7 +917,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -912,7 +926,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -921,7 +935,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -930,7 +944,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -939,7 +953,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -948,7 +962,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -957,7 +971,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -966,7 +980,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -975,7 +989,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -984,7 +998,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -993,7 +1007,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1002,7 +1016,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1011,7 +1025,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1020,7 +1034,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1029,7 +1043,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1038,7 +1052,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1047,7 +1061,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1056,7 +1070,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1065,7 +1079,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1074,7 +1088,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1083,7 +1097,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1092,7 +1106,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1101,7 +1115,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1110,7 +1124,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1119,7 +1133,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1128,7 +1142,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1137,7 +1151,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getKey();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1388,7 +1402,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1397,7 +1411,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1406,7 +1420,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1415,7 +1429,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1424,7 +1438,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1433,7 +1447,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1442,7 +1456,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1451,7 +1465,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1460,7 +1474,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1469,7 +1483,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1478,7 +1492,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1487,7 +1501,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1496,7 +1510,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1505,7 +1519,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1514,7 +1528,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1523,7 +1537,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1532,7 +1546,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1541,7 +1555,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1550,7 +1564,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1559,7 +1573,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1568,7 +1582,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1577,7 +1591,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1586,7 +1600,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1595,7 +1609,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1604,7 +1618,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1613,7 +1627,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1622,7 +1636,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1631,7 +1645,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1640,7 +1654,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1649,7 +1663,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1658,7 +1672,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1667,7 +1681,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1676,7 +1690,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1685,7 +1699,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1694,7 +1708,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1703,7 +1717,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1712,7 +1726,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1721,7 +1735,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1730,7 +1744,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1739,7 +1753,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1748,7 +1762,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1757,7 +1771,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1766,7 +1780,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1775,7 +1789,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1784,7 +1798,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1793,7 +1807,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1802,7 +1816,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1811,7 +1825,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1820,7 +1834,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1829,7 +1843,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1838,7 +1852,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1847,7 +1861,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1856,7 +1870,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1865,7 +1879,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1874,7 +1888,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1883,7 +1897,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1892,7 +1906,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1901,7 +1915,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1910,7 +1924,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1919,7 +1933,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1928,7 +1942,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1937,7 +1951,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1946,7 +1960,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1955,7 +1969,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1964,7 +1978,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1973,7 +1987,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1982,7 +1996,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1991,7 +2005,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2000,7 +2014,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2009,7 +2023,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2018,7 +2032,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2027,7 +2041,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2036,7 +2050,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2045,7 +2059,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2054,7 +2068,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2063,7 +2077,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2072,7 +2086,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2081,7 +2095,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2090,7 +2104,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2099,7 +2113,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2108,7 +2122,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2117,7 +2131,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2126,7 +2140,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2135,7 +2149,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2144,7 +2158,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2153,7 +2167,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2162,7 +2176,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2171,7 +2185,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2180,7 +2194,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2189,7 +2203,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2198,7 +2212,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2207,7 +2221,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2216,7 +2230,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2225,7 +2239,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2234,7 +2248,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2243,7 +2257,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2252,7 +2266,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2261,7 +2275,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2270,7 +2284,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).getValue();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2521,7 +2535,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2530,7 +2544,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2539,7 +2553,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2548,7 +2562,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2557,7 +2571,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2566,7 +2580,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2575,7 +2589,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2584,7 +2598,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2593,7 +2607,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2602,7 +2616,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2611,7 +2625,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2620,7 +2634,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2629,7 +2643,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2638,7 +2652,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2647,7 +2661,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2656,7 +2670,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2665,7 +2679,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2674,7 +2688,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2683,7 +2697,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2692,7 +2706,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2701,7 +2715,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2710,7 +2724,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2719,7 +2733,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2728,7 +2742,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2737,7 +2751,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2746,7 +2760,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2755,7 +2769,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2764,7 +2778,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2773,7 +2787,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2782,7 +2796,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2791,7 +2805,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2800,7 +2814,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2809,7 +2823,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2818,7 +2832,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2827,7 +2841,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2836,7 +2850,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2845,7 +2859,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2854,7 +2868,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2863,7 +2877,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2872,7 +2886,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2881,7 +2895,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2890,7 +2904,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2899,7 +2913,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2908,7 +2922,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2917,7 +2931,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2926,7 +2940,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2935,7 +2949,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2944,7 +2958,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2953,7 +2967,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2962,7 +2976,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2971,7 +2985,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2980,7 +2994,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2989,7 +3003,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2998,7 +3012,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3007,7 +3021,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3016,7 +3030,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3025,7 +3039,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3034,7 +3048,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3043,7 +3057,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3052,7 +3066,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3061,7 +3075,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3070,7 +3084,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3079,7 +3093,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3088,7 +3102,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3097,7 +3111,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3106,7 +3120,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3115,7 +3129,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3124,7 +3138,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3133,7 +3147,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3142,7 +3156,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3151,7 +3165,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3160,7 +3174,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3169,7 +3183,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3178,7 +3192,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3187,7 +3201,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3196,7 +3210,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3205,7 +3219,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3214,7 +3228,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3223,7 +3237,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3232,7 +3246,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3241,7 +3255,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3250,7 +3264,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3259,7 +3273,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3268,7 +3282,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3277,7 +3291,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3286,7 +3300,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3295,7 +3309,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3304,7 +3318,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3313,7 +3327,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("", String.valueOf(actual));
+        assertEquals("", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3322,7 +3336,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).setValue("");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals(" ", String.valueOf(actual));
+        assertEquals(" ", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3331,7 +3345,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3340,7 +3354,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3349,7 +3363,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).setValue(" ");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3358,7 +3372,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).setValue("a");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3367,7 +3381,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).setValue("test123");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3376,7 +3390,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).setValue("!@#");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3385,7 +3399,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3394,7 +3408,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).setValue("0");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3403,7 +3417,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).setValue("-1");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3412,7 +3426,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).setValue("1.5");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808", String.valueOf(actual));
+        assertEquals("9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3421,7 +3435,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123", String.valueOf(actual));
+        assertEquals("test123", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3430,7 +3444,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3439,7 +3453,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3448,7 +3462,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3457,7 +3471,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).setValue("9223372036854775807");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3466,7 +3480,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a", String.valueOf(actual));
+        assertEquals("a", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3475,7 +3489,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3484,7 +3498,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3493,7 +3507,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3502,7 +3516,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).setValue("9223372036854775808");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3522,7 +3536,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#", String.valueOf(actual));
+        assertEquals("!@#", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3531,7 +3545,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3540,7 +3554,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3549,7 +3563,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).setValue("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5", String.valueOf(actual));
+        assertEquals("1.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3800,7 +3814,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"\"", String.valueOf(actual));
+        assertEquals("a=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3809,7 +3823,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\" \"", String.valueOf(actual));
+        assertEquals("a=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3818,7 +3832,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"a\"", String.valueOf(actual));
+        assertEquals("a=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3827,7 +3841,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"test123\"", String.valueOf(actual));
+        assertEquals("a=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3836,7 +3850,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"!@#\"", String.valueOf(actual));
+        assertEquals("a=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3845,7 +3859,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"0\"", String.valueOf(actual));
+        assertEquals("a=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3854,7 +3868,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"-1\"", String.valueOf(actual));
+        assertEquals("a=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3863,7 +3877,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"1.5\"", String.valueOf(actual));
+        assertEquals("a=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3872,7 +3886,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("a=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3881,7 +3895,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("a=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3890,7 +3904,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("a=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3899,7 +3913,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"\"", String.valueOf(actual));
+        assertEquals("test123=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3908,7 +3922,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\" \"", String.valueOf(actual));
+        assertEquals("test123=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3917,7 +3931,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"a\"", String.valueOf(actual));
+        assertEquals("test123=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3926,7 +3940,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"test123\"", String.valueOf(actual));
+        assertEquals("test123=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3935,7 +3949,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"!@#\"", String.valueOf(actual));
+        assertEquals("test123=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3944,7 +3958,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"0\"", String.valueOf(actual));
+        assertEquals("test123=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3953,7 +3967,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"-1\"", String.valueOf(actual));
+        assertEquals("test123=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3962,7 +3976,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"1.5\"", String.valueOf(actual));
+        assertEquals("test123=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3971,7 +3985,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("test123=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3980,7 +3994,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("test123=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3989,7 +4003,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("test123=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3998,7 +4012,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"\"", String.valueOf(actual));
+        assertEquals("!@#=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4007,7 +4021,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\" \"", String.valueOf(actual));
+        assertEquals("!@#=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4016,7 +4030,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"a\"", String.valueOf(actual));
+        assertEquals("!@#=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4025,7 +4039,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"test123\"", String.valueOf(actual));
+        assertEquals("!@#=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4034,7 +4048,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"!@#\"", String.valueOf(actual));
+        assertEquals("!@#=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4043,7 +4057,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"0\"", String.valueOf(actual));
+        assertEquals("!@#=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4052,7 +4066,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"-1\"", String.valueOf(actual));
+        assertEquals("!@#=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4061,7 +4075,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"1.5\"", String.valueOf(actual));
+        assertEquals("!@#=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4070,7 +4084,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("!@#=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4079,7 +4093,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("!@#=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4088,7 +4102,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("!@#=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4097,7 +4111,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"\"", String.valueOf(actual));
+        assertEquals("0=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4106,7 +4120,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\" \"", String.valueOf(actual));
+        assertEquals("0=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4115,7 +4129,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"a\"", String.valueOf(actual));
+        assertEquals("0=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4124,7 +4138,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"test123\"", String.valueOf(actual));
+        assertEquals("0=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4133,7 +4147,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"!@#\"", String.valueOf(actual));
+        assertEquals("0=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4142,7 +4156,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"0\"", String.valueOf(actual));
+        assertEquals("0=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4151,7 +4165,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"-1\"", String.valueOf(actual));
+        assertEquals("0=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4160,7 +4174,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"1.5\"", String.valueOf(actual));
+        assertEquals("0=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4169,7 +4183,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("0=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4178,7 +4192,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("0=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4187,7 +4201,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("0=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4196,7 +4210,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"\"", String.valueOf(actual));
+        assertEquals("-1=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4205,7 +4219,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\" \"", String.valueOf(actual));
+        assertEquals("-1=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4214,7 +4228,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"a\"", String.valueOf(actual));
+        assertEquals("-1=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4223,7 +4237,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"test123\"", String.valueOf(actual));
+        assertEquals("-1=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4232,7 +4246,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"!@#\"", String.valueOf(actual));
+        assertEquals("-1=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4241,7 +4255,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"0\"", String.valueOf(actual));
+        assertEquals("-1=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4250,7 +4264,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"-1\"", String.valueOf(actual));
+        assertEquals("-1=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4259,7 +4273,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"1.5\"", String.valueOf(actual));
+        assertEquals("-1=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4268,7 +4282,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("-1=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4277,7 +4291,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("-1=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4286,7 +4300,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("-1=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4295,7 +4309,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"\"", String.valueOf(actual));
+        assertEquals("1.5=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4304,7 +4318,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\" \"", String.valueOf(actual));
+        assertEquals("1.5=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4313,7 +4327,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"a\"", String.valueOf(actual));
+        assertEquals("1.5=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4322,7 +4336,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"test123\"", String.valueOf(actual));
+        assertEquals("1.5=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4331,7 +4345,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"!@#\"", String.valueOf(actual));
+        assertEquals("1.5=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4340,7 +4354,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"0\"", String.valueOf(actual));
+        assertEquals("1.5=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4349,7 +4363,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"-1\"", String.valueOf(actual));
+        assertEquals("1.5=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4358,7 +4372,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"1.5\"", String.valueOf(actual));
+        assertEquals("1.5=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4367,7 +4381,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("1.5=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4376,7 +4390,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("1.5=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4385,7 +4399,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("1.5=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4394,7 +4408,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4403,7 +4417,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\" \"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4412,7 +4426,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"a\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4421,7 +4435,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"test123\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4430,7 +4444,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"!@#\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4439,7 +4453,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"0\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4448,7 +4462,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"-1\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4457,7 +4471,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"1.5\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4466,7 +4480,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4475,7 +4489,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4484,7 +4498,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4493,7 +4507,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4502,7 +4516,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\" \"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4511,7 +4525,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"a\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4520,7 +4534,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"test123\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4529,7 +4543,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"!@#\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4538,7 +4552,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"0\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4547,7 +4561,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"-1\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4556,7 +4570,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"1.5\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4565,7 +4579,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4574,7 +4588,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4583,7 +4597,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4592,7 +4606,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4601,7 +4615,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\" \"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4610,7 +4624,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"a\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4619,7 +4633,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"test123\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4628,7 +4642,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"!@#\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4637,7 +4651,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"0\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4646,7 +4660,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"-1\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4655,7 +4669,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"1.5\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4664,7 +4678,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4673,7 +4687,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4682,7 +4696,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4933,7 +4947,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"\"", String.valueOf(actual));
+        assertEquals("a=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4942,7 +4956,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\" \"", String.valueOf(actual));
+        assertEquals("a=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4951,7 +4965,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"a\"", String.valueOf(actual));
+        assertEquals("a=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4960,7 +4974,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"test123\"", String.valueOf(actual));
+        assertEquals("a=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4969,7 +4983,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"!@#\"", String.valueOf(actual));
+        assertEquals("a=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4978,7 +4992,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"0\"", String.valueOf(actual));
+        assertEquals("a=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4987,7 +5001,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"-1\"", String.valueOf(actual));
+        assertEquals("a=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4996,7 +5010,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"1.5\"", String.valueOf(actual));
+        assertEquals("a=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5005,7 +5019,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("a=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5014,7 +5028,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("a=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5023,7 +5037,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("a=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("a=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5032,7 +5046,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"\"", String.valueOf(actual));
+        assertEquals("test123=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5041,7 +5055,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\" \"", String.valueOf(actual));
+        assertEquals("test123=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5050,7 +5064,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"a\"", String.valueOf(actual));
+        assertEquals("test123=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5059,7 +5073,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"test123\"", String.valueOf(actual));
+        assertEquals("test123=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5068,7 +5082,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"!@#\"", String.valueOf(actual));
+        assertEquals("test123=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5077,7 +5091,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"0\"", String.valueOf(actual));
+        assertEquals("test123=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5086,7 +5100,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"-1\"", String.valueOf(actual));
+        assertEquals("test123=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5095,7 +5109,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"1.5\"", String.valueOf(actual));
+        assertEquals("test123=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5104,7 +5118,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("test123=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5113,7 +5127,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("test123=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5122,7 +5136,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("test123=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("test123=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5131,7 +5145,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"\"", String.valueOf(actual));
+        assertEquals("!@#=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5140,7 +5154,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\" \"", String.valueOf(actual));
+        assertEquals("!@#=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5149,7 +5163,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"a\"", String.valueOf(actual));
+        assertEquals("!@#=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5158,7 +5172,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"test123\"", String.valueOf(actual));
+        assertEquals("!@#=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5167,7 +5181,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"!@#\"", String.valueOf(actual));
+        assertEquals("!@#=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5176,7 +5190,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"0\"", String.valueOf(actual));
+        assertEquals("!@#=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5185,7 +5199,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"-1\"", String.valueOf(actual));
+        assertEquals("!@#=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5194,7 +5208,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"1.5\"", String.valueOf(actual));
+        assertEquals("!@#=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5203,7 +5217,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("!@#=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5212,7 +5226,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("!@#=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5221,7 +5235,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("!@#=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("!@#=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5230,7 +5244,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"\"", String.valueOf(actual));
+        assertEquals("0=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5239,7 +5253,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\" \"", String.valueOf(actual));
+        assertEquals("0=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5248,7 +5262,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"a\"", String.valueOf(actual));
+        assertEquals("0=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5257,7 +5271,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"test123\"", String.valueOf(actual));
+        assertEquals("0=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5266,7 +5280,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"!@#\"", String.valueOf(actual));
+        assertEquals("0=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5275,7 +5289,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"0\"", String.valueOf(actual));
+        assertEquals("0=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5284,7 +5298,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"-1\"", String.valueOf(actual));
+        assertEquals("0=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5293,7 +5307,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"1.5\"", String.valueOf(actual));
+        assertEquals("0=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5302,7 +5316,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("0=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5311,7 +5325,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("0=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5320,7 +5334,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("0=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("0=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5329,7 +5343,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"\"", String.valueOf(actual));
+        assertEquals("-1=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5338,7 +5352,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\" \"", String.valueOf(actual));
+        assertEquals("-1=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5347,7 +5361,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"a\"", String.valueOf(actual));
+        assertEquals("-1=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5356,7 +5370,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"test123\"", String.valueOf(actual));
+        assertEquals("-1=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5365,7 +5379,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"!@#\"", String.valueOf(actual));
+        assertEquals("-1=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5374,7 +5388,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"0\"", String.valueOf(actual));
+        assertEquals("-1=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5383,7 +5397,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"-1\"", String.valueOf(actual));
+        assertEquals("-1=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5392,7 +5406,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"1.5\"", String.valueOf(actual));
+        assertEquals("-1=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5401,7 +5415,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("-1=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5410,7 +5424,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("-1=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5419,7 +5433,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("-1=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("-1=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5428,7 +5442,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"\"", String.valueOf(actual));
+        assertEquals("1.5=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5437,7 +5451,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\" \"", String.valueOf(actual));
+        assertEquals("1.5=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5446,7 +5460,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"a\"", String.valueOf(actual));
+        assertEquals("1.5=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5455,7 +5469,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"test123\"", String.valueOf(actual));
+        assertEquals("1.5=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5464,7 +5478,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"!@#\"", String.valueOf(actual));
+        assertEquals("1.5=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5473,7 +5487,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"0\"", String.valueOf(actual));
+        assertEquals("1.5=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5482,7 +5496,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"-1\"", String.valueOf(actual));
+        assertEquals("1.5=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5491,7 +5505,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"1.5\"", String.valueOf(actual));
+        assertEquals("1.5=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5500,7 +5514,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("1.5=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5509,7 +5523,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("1.5=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5518,7 +5532,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("1.5=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("1.5=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5527,7 +5541,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5536,7 +5550,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\" \"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5545,7 +5559,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"a\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5554,7 +5568,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"test123\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5563,7 +5577,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"!@#\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5572,7 +5586,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"0\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5581,7 +5595,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"-1\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5590,7 +5604,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"1.5\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5599,7 +5613,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5608,7 +5622,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5617,7 +5631,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775807=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("9223372036854775807=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5626,7 +5640,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5635,7 +5649,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\" \"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5644,7 +5658,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"a\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5653,7 +5667,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"test123\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5662,7 +5676,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"!@#\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5671,7 +5685,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"0\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5680,7 +5694,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"-1\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5689,7 +5703,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"1.5\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5698,7 +5712,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5707,7 +5721,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5716,7 +5730,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("9223372036854775808=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("9223372036854775808=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5725,7 +5739,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5734,7 +5748,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\" \"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\" \"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5743,7 +5757,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"a\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"a\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5752,7 +5766,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"test123\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"test123\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5761,7 +5775,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"!@#\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"!@#\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5770,7 +5784,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"0\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"0\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5779,7 +5793,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"-1\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"-1\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5788,7 +5802,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"1.5\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"1.5\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5797,7 +5811,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775807\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775807\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5806,7 +5820,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775808\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775808\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -5815,7 +5829,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
         assertNotNull(actual);
         assertEquals("java.lang.String", actual.getClass().getName());
-        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6066,7 +6080,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6075,7 +6089,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6084,7 +6098,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6093,7 +6107,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6102,7 +6116,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6111,7 +6125,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6120,7 +6134,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6129,7 +6143,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6138,7 +6152,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6147,7 +6161,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6156,7 +6170,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6165,7 +6179,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6174,7 +6188,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6183,7 +6197,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6192,7 +6206,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6201,7 +6215,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6210,7 +6224,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6219,7 +6233,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6228,7 +6242,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6237,7 +6251,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6246,7 +6260,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6255,7 +6269,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6264,7 +6278,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6273,7 +6287,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6282,7 +6296,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6291,7 +6305,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6300,7 +6314,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6309,7 +6323,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6318,7 +6332,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6327,7 +6341,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6336,7 +6350,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6345,7 +6359,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6354,7 +6368,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6363,7 +6377,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6372,7 +6386,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6381,7 +6395,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6390,7 +6404,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6399,7 +6413,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6408,7 +6422,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6417,7 +6431,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6426,7 +6440,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6435,7 +6449,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6444,7 +6458,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6453,7 +6467,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6462,7 +6476,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6471,7 +6485,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6480,7 +6494,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6489,7 +6503,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6498,7 +6512,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6507,7 +6521,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6516,7 +6530,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6525,7 +6539,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6534,7 +6548,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6543,7 +6557,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6552,7 +6566,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6561,7 +6575,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6570,7 +6584,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6579,7 +6593,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6588,7 +6602,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6597,7 +6611,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6606,7 +6620,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6615,7 +6629,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6624,7 +6638,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6633,7 +6647,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6642,7 +6656,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6651,7 +6665,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6660,7 +6674,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6669,7 +6683,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6678,7 +6692,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6687,7 +6701,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6696,7 +6710,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6705,7 +6719,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6714,7 +6728,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6723,7 +6737,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6732,7 +6746,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6741,7 +6755,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6750,7 +6764,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6759,7 +6773,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6768,7 +6782,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6777,7 +6791,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6786,7 +6800,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6795,7 +6809,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6804,7 +6818,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6813,7 +6827,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6822,7 +6836,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6831,7 +6845,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6840,7 +6854,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6849,7 +6863,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6858,7 +6872,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6867,7 +6881,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6876,7 +6890,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6885,7 +6899,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6894,7 +6908,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6903,7 +6917,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6912,7 +6926,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6921,7 +6935,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6930,7 +6944,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6939,7 +6953,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -6948,7 +6962,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7199,7 +7213,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7208,7 +7222,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7217,7 +7231,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7226,7 +7240,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7235,7 +7249,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7244,7 +7258,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7253,7 +7267,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7262,7 +7276,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7271,7 +7285,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7280,7 +7294,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7289,7 +7303,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7298,7 +7312,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7307,7 +7321,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7316,7 +7330,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7325,7 +7339,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7334,7 +7348,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7343,7 +7357,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7352,7 +7366,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7361,7 +7375,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7370,7 +7384,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7379,7 +7393,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7388,7 +7402,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7397,7 +7411,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7406,7 +7420,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7415,7 +7429,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7424,7 +7438,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7433,7 +7447,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7442,7 +7456,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7451,7 +7465,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7460,7 +7474,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7469,7 +7483,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7478,7 +7492,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7487,7 +7501,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7496,7 +7510,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7505,7 +7519,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7514,7 +7528,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7523,7 +7537,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7532,7 +7546,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7541,7 +7555,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7550,7 +7564,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7559,7 +7573,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7568,7 +7582,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7577,7 +7591,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7586,7 +7600,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7595,7 +7609,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7604,7 +7618,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7613,7 +7627,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7622,7 +7636,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7631,7 +7645,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7640,7 +7654,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7649,7 +7663,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7658,7 +7672,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7667,7 +7681,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7676,7 +7690,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7685,7 +7699,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7694,7 +7708,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7703,7 +7717,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7712,7 +7726,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7721,7 +7735,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7730,7 +7744,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7739,7 +7753,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7748,7 +7762,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7757,7 +7771,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7766,7 +7780,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7775,7 +7789,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7784,7 +7798,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7793,7 +7807,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7802,7 +7816,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7811,7 +7825,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7820,7 +7834,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7829,7 +7843,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7838,7 +7852,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7847,7 +7861,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7856,7 +7870,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7865,7 +7879,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7874,7 +7888,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7883,7 +7897,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7892,7 +7906,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7901,7 +7915,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7910,7 +7924,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7919,7 +7933,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7928,7 +7942,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7937,7 +7951,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7946,7 +7960,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7955,7 +7969,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7964,7 +7978,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7973,7 +7987,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7982,7 +7996,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -7991,7 +8005,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8000,7 +8014,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8009,7 +8023,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8018,7 +8032,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8027,7 +8041,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8036,7 +8050,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8045,7 +8059,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8054,7 +8068,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8063,7 +8077,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8072,7 +8086,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8081,7 +8095,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8112,7 +8126,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8121,7 +8135,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8130,7 +8144,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8139,7 +8153,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8148,7 +8162,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8157,7 +8171,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8166,7 +8180,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8175,7 +8189,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8184,7 +8198,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8215,7 +8229,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8224,7 +8238,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8233,7 +8247,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8242,7 +8256,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8251,7 +8265,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8260,7 +8274,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8269,7 +8283,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8278,7 +8292,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8287,7 +8301,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).equals("sample_str");
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8318,7 +8332,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8327,7 +8341,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8336,7 +8350,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8345,7 +8359,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8354,7 +8368,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8363,7 +8377,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8372,7 +8386,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8381,7 +8395,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8390,7 +8404,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).equals(Integer.valueOf(1));
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8399,7 +8413,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8408,7 +8422,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8417,7 +8431,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8426,7 +8440,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8435,7 +8449,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8444,7 +8458,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8453,7 +8467,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8462,7 +8476,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8471,7 +8485,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8480,7 +8494,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8489,7 +8503,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8498,7 +8512,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8507,7 +8521,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8516,7 +8530,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8536,7 +8550,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8545,7 +8559,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8554,7 +8568,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8563,7 +8577,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8572,7 +8586,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8581,7 +8595,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8590,7 +8604,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8610,7 +8624,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8619,7 +8633,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8628,7 +8642,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8637,7 +8651,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8646,7 +8660,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8655,7 +8669,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8664,7 +8678,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8695,7 +8709,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8704,7 +8718,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8713,7 +8727,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8722,7 +8736,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8731,7 +8745,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8740,7 +8754,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8771,7 +8785,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8780,7 +8794,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8789,7 +8803,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8798,7 +8812,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8807,7 +8821,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8816,7 +8830,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8847,7 +8861,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8856,7 +8870,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8865,7 +8879,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8874,7 +8888,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8883,7 +8897,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8892,7 +8906,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8923,7 +8937,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8932,7 +8946,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8941,7 +8955,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8950,7 +8964,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8959,7 +8973,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8968,7 +8982,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -8999,7 +9013,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9008,7 +9022,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9017,7 +9031,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9026,7 +9040,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9035,7 +9049,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9044,7 +9058,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9075,7 +9089,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9084,7 +9098,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9093,7 +9107,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9102,7 +9116,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9111,7 +9125,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9120,7 +9134,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9129,7 +9143,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9160,7 +9174,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9169,7 +9183,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9178,7 +9192,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9187,7 +9201,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9196,7 +9210,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9205,7 +9219,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9214,7 +9228,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9465,7 +9479,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3007", String.valueOf(actual));
+        assertEquals("3007", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9474,7 +9488,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3039", String.valueOf(actual));
+        assertEquals("3039", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9483,7 +9497,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3104", String.valueOf(actual));
+        assertEquals("3104", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9492,7 +9506,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1422498785", String.valueOf(actual));
+        assertEquals("-1422498785", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9501,7 +9515,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("36739", String.valueOf(actual));
+        assertEquals("36739", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9510,7 +9524,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("3055", String.valueOf(actual));
+        assertEquals("3055", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9519,7 +9533,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("4451", String.valueOf(actual));
+        assertEquals("4451", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9528,7 +9542,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("51575", String.valueOf(actual));
+        assertEquals("51575", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9537,7 +9551,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773148191", String.valueOf(actual));
+        assertEquals("-1773148191", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9546,7 +9560,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773148190", String.valueOf(actual));
+        assertEquals("-1773148190", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9555,7 +9569,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-474935873", String.valueOf(actual));
+        assertEquals("-474935873", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9564,7 +9578,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147882592", String.valueOf(actual));
+        assertEquals("-1147882592", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9573,7 +9587,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147882560", String.valueOf(actual));
+        assertEquals("-1147882560", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9582,7 +9596,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147882495", String.valueOf(actual));
+        assertEquals("-1147882495", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9591,7 +9605,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1724582912", String.valueOf(actual));
+        assertEquals("1724582912", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9600,7 +9614,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147848860", String.valueOf(actual));
+        assertEquals("-1147848860", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9609,7 +9623,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147882544", String.valueOf(actual));
+        assertEquals("-1147882544", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9618,7 +9632,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147881148", String.valueOf(actual));
+        assertEquals("-1147881148", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9627,7 +9641,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1147834024", String.valueOf(actual));
+        assertEquals("-1147834024", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9636,7 +9650,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1373933506", String.valueOf(actual));
+        assertEquals("1373933506", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9645,7 +9659,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1373933507", String.valueOf(actual));
+        assertEquals("1373933507", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9654,7 +9668,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1622821472", String.valueOf(actual));
+        assertEquals("-1622821472", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9663,7 +9677,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1045692", String.valueOf(actual));
+        assertEquals("1045692", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9672,7 +9686,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1045724", String.valueOf(actual));
+        assertEquals("1045724", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9681,7 +9695,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1045789", String.valueOf(actual));
+        assertEquals("1045789", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9690,7 +9704,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1421456100", String.valueOf(actual));
+        assertEquals("-1421456100", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9699,7 +9713,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1079424", String.valueOf(actual));
+        assertEquals("1079424", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9708,7 +9722,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1045740", String.valueOf(actual));
+        assertEquals("1045740", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9717,7 +9731,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1047136", String.valueOf(actual));
+        assertEquals("1047136", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9726,7 +9740,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1094260", String.valueOf(actual));
+        assertEquals("1094260", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9735,7 +9749,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1772105506", String.valueOf(actual));
+        assertEquals("-1772105506", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9744,7 +9758,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1772105505", String.valueOf(actual));
+        assertEquals("-1772105505", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9753,7 +9767,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-473893188", String.valueOf(actual));
+        assertEquals("-473893188", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9762,7 +9776,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1488", String.valueOf(actual));
+        assertEquals("1488", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9771,7 +9785,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1520", String.valueOf(actual));
+        assertEquals("1520", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9780,7 +9794,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1585", String.valueOf(actual));
+        assertEquals("1585", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9789,7 +9803,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1422500304", String.valueOf(actual));
+        assertEquals("-1422500304", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9798,7 +9812,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("35220", String.valueOf(actual));
+        assertEquals("35220", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9807,7 +9821,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1536", String.valueOf(actual));
+        assertEquals("1536", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9816,7 +9830,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2932", String.valueOf(actual));
+        assertEquals("2932", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9825,7 +9839,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("50056", String.valueOf(actual));
+        assertEquals("50056", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9834,7 +9848,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773149710", String.valueOf(actual));
+        assertEquals("-1773149710", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9843,7 +9857,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773149709", String.valueOf(actual));
+        assertEquals("-1773149709", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9852,7 +9866,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-474937392", String.valueOf(actual));
+        assertEquals("-474937392", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9861,7 +9875,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("44764", String.valueOf(actual));
+        assertEquals("44764", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9870,7 +9884,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("44796", String.valueOf(actual));
+        assertEquals("44796", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9879,7 +9893,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("44861", String.valueOf(actual));
+        assertEquals("44861", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9888,7 +9902,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1422457028", String.valueOf(actual));
+        assertEquals("-1422457028", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9897,7 +9911,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("78496", String.valueOf(actual));
+        assertEquals("78496", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9906,7 +9920,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("44812", String.valueOf(actual));
+        assertEquals("44812", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9915,7 +9929,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("46208", String.valueOf(actual));
+        assertEquals("46208", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9924,7 +9938,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("93332", String.valueOf(actual));
+        assertEquals("93332", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9933,7 +9947,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773106434", String.valueOf(actual));
+        assertEquals("-1773106434", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9942,7 +9956,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1773106433", String.valueOf(actual));
+        assertEquals("-1773106433", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9951,7 +9965,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-474894116", String.valueOf(actual));
+        assertEquals("-474894116", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9960,7 +9974,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1505608", String.valueOf(actual));
+        assertEquals("1505608", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9969,7 +9983,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1505640", String.valueOf(actual));
+        assertEquals("1505640", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9978,7 +9992,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1505705", String.valueOf(actual));
+        assertEquals("1505705", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9987,7 +10001,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1420996184", String.valueOf(actual));
+        assertEquals("-1420996184", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -9996,7 +10010,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1539340", String.valueOf(actual));
+        assertEquals("1539340", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10005,7 +10019,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1505656", String.valueOf(actual));
+        assertEquals("1505656", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10014,7 +10028,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1507052", String.valueOf(actual));
+        assertEquals("1507052", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10023,7 +10037,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1554176", String.valueOf(actual));
+        assertEquals("1554176", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10032,7 +10046,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1771645590", String.valueOf(actual));
+        assertEquals("-1771645590", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10041,7 +10055,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1771645589", String.valueOf(actual));
+        assertEquals("-1771645589", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10050,7 +10064,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-473433272", String.valueOf(actual));
+        assertEquals("-473433272", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10059,7 +10073,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887710", String.valueOf(actual));
+        assertEquals("866887710", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10068,7 +10082,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887742", String.valueOf(actual));
+        assertEquals("866887742", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10077,7 +10091,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887807", String.valueOf(actual));
+        assertEquals("866887807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10086,7 +10100,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-555614082", String.valueOf(actual));
+        assertEquals("-555614082", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10095,7 +10109,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866921442", String.valueOf(actual));
+        assertEquals("866921442", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10104,7 +10118,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887758", String.valueOf(actual));
+        assertEquals("866887758", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10113,7 +10127,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866889154", String.valueOf(actual));
+        assertEquals("866889154", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10122,7 +10136,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866936278", String.valueOf(actual));
+        assertEquals("866936278", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10131,7 +10145,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-906263488", String.valueOf(actual));
+        assertEquals("-906263488", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10140,7 +10154,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-906263487", String.valueOf(actual));
+        assertEquals("-906263487", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10149,7 +10163,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("391948830", String.valueOf(actual));
+        assertEquals("391948830", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10158,7 +10172,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887741", String.valueOf(actual));
+        assertEquals("866887741", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10167,7 +10181,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887773", String.valueOf(actual));
+        assertEquals("866887773", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10176,7 +10190,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887838", String.valueOf(actual));
+        assertEquals("866887838", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10185,7 +10199,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-555614051", String.valueOf(actual));
+        assertEquals("-555614051", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10194,7 +10208,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866921473", String.valueOf(actual));
+        assertEquals("866921473", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10203,7 +10217,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866887789", String.valueOf(actual));
+        assertEquals("866887789", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10212,7 +10226,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866889185", String.valueOf(actual));
+        assertEquals("866889185", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10221,7 +10235,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("866936309", String.valueOf(actual));
+        assertEquals("866936309", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10230,7 +10244,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-906263457", String.valueOf(actual));
+        assertEquals("-906263457", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10239,7 +10253,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-906263456", String.valueOf(actual));
+        assertEquals("-906263456", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10248,7 +10262,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("391948861", String.valueOf(actual));
+        assertEquals("391948861", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10257,7 +10271,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838203392", String.valueOf(actual));
+        assertEquals("-1838203392", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10266,7 +10280,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838203360", String.valueOf(actual));
+        assertEquals("-1838203360", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10275,7 +10289,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838203295", String.valueOf(actual));
+        assertEquals("-1838203295", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10284,7 +10298,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1034262112", String.valueOf(actual));
+        assertEquals("1034262112", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10293,7 +10307,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838169660", String.valueOf(actual));
+        assertEquals("-1838169660", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10302,7 +10316,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838203344", String.valueOf(actual));
+        assertEquals("-1838203344", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10311,7 +10325,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838201948", String.valueOf(actual));
+        assertEquals("-1838201948", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10320,7 +10334,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1838154824", String.valueOf(actual));
+        assertEquals("-1838154824", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10329,7 +10343,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("683612706", String.valueOf(actual));
+        assertEquals("683612706", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10338,7 +10352,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("683612707", String.valueOf(actual));
+        assertEquals("683612707", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -10347,7 +10361,7 @@ public class Attribute_IPOTest {
         Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1981825024", String.valueOf(actual));
+        assertEquals("1981825024", formatValue(actual));
     }
 
 }

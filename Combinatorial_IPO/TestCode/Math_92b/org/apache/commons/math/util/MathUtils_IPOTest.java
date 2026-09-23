@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for MathUtils.
  */
 public class MathUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_addAndCheck_pairwise_001() throws Exception {
         // Combination: x=0, y=0
         Object actual = MathUtils.addAndCheck(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -96,7 +110,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -105,7 +119,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -114,7 +128,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -123,7 +137,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -132,7 +146,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483646", String.valueOf(actual));
+        assertEquals("2147483646", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -152,7 +166,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -172,7 +186,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483646", String.valueOf(actual));
+        assertEquals("2147483646", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -192,7 +206,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -201,7 +215,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -210,7 +224,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -230,7 +244,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -250,7 +264,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -259,7 +273,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -268,7 +282,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -277,7 +291,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -286,7 +300,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(0L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -295,7 +309,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -304,7 +318,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -313,7 +327,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -333,7 +347,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775807", String.valueOf(actual));
+        assertEquals("-9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -342,7 +356,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -351,7 +365,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -360,7 +374,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -369,7 +383,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(-1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775806", String.valueOf(actual));
+        assertEquals("9223372036854775806", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -389,7 +403,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -409,7 +423,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775806", String.valueOf(actual));
+        assertEquals("9223372036854775806", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -429,7 +443,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Long.MAX_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -438,7 +452,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -447,7 +461,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Long.MIN_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775807", String.valueOf(actual));
+        assertEquals("-9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -467,7 +481,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.addAndCheck(Long.MIN_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -487,7 +501,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -496,7 +510,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -516,7 +530,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -547,7 +561,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -567,7 +581,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -587,7 +601,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -596,7 +610,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -616,7 +630,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -669,7 +683,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -689,7 +703,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -698,7 +712,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -718,7 +732,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficient(Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -738,7 +752,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -747,7 +761,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -767,7 +781,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -798,7 +812,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -818,7 +832,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("2.147483647E9", String.valueOf(actual));
+        assertEquals("2.147483647E9", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -838,7 +852,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -847,7 +861,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -867,7 +881,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -920,7 +934,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -940,7 +954,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -949,7 +963,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -969,7 +983,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.binomialCoefficientDouble(Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -989,7 +1003,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -998,7 +1012,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1007,7 +1021,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1016,7 +1030,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1025,7 +1039,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1034,7 +1048,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1043,7 +1057,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1052,7 +1066,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1061,7 +1075,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1070,7 +1084,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1079,7 +1093,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1088,7 +1102,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1097,7 +1111,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1106,7 +1120,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1115,7 +1129,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1124,7 +1138,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1133,7 +1147,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1142,7 +1156,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1151,7 +1165,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1160,7 +1174,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1169,7 +1183,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1178,7 +1192,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1187,7 +1201,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1196,7 +1210,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1205,7 +1219,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1214,7 +1228,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(new double[] {}, new double[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1223,7 +1237,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(new double[] {}, new double[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1232,7 +1246,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(new double[] {1}, new double[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("false", String.valueOf(actual));
+        assertEquals("false", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1241,7 +1255,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.equals(new double[] {1}, new double[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Boolean", actual.getClass().getName());
-        assertEquals("true", String.valueOf(actual));
+        assertEquals("true", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1250,7 +1264,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1259,7 +1273,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1268,7 +1282,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1277,7 +1291,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1286,7 +1300,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1295,7 +1309,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1304,7 +1318,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1313,7 +1327,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1322,7 +1336,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1331,7 +1345,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1340,7 +1354,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1349,7 +1363,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1358,7 +1372,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1367,7 +1381,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1376,7 +1390,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(-1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1385,7 +1399,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1394,7 +1408,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1403,7 +1417,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1412,7 +1426,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1421,7 +1435,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MAX_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1430,7 +1444,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1439,7 +1453,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1448,7 +1462,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1457,7 +1471,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.gcd(Integer.MIN_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1488,7 +1502,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1497,7 +1511,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1506,7 +1520,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1515,7 +1529,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1524,7 +1538,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1533,7 +1547,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1542,7 +1556,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1551,7 +1565,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1560,7 +1574,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1569,7 +1583,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1578,7 +1592,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1587,7 +1601,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1596,7 +1610,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1616,7 +1630,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1625,7 +1639,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1634,7 +1648,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1643,7 +1657,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1663,7 +1677,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1672,7 +1686,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.lcm(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1714,7 +1728,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1723,7 +1737,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1732,7 +1746,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1741,7 +1755,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1750,7 +1764,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1759,7 +1773,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-Infinity", String.valueOf(actual));
+        assertEquals("-Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1768,7 +1782,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1777,7 +1791,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1786,7 +1800,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1795,7 +1809,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1804,7 +1818,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1813,7 +1827,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1822,7 +1836,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1831,7 +1845,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1840,7 +1854,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1849,7 +1863,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1858,7 +1872,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1867,7 +1881,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1876,7 +1890,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1885,7 +1899,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1894,7 +1908,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1903,7 +1917,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1912,7 +1926,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1921,7 +1935,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1930,7 +1944,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.log(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1939,7 +1953,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1948,7 +1962,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1957,7 +1971,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1966,7 +1980,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1975,7 +1989,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1984,7 +1998,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -1993,7 +2007,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2002,7 +2016,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2011,7 +2025,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2020,7 +2034,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2029,7 +2043,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2038,7 +2052,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2047,7 +2061,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2056,7 +2070,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2076,7 +2090,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2085,7 +2099,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2094,7 +2108,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Integer.MAX_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2125,7 +2139,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2134,7 +2148,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2176,7 +2190,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2185,7 +2199,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2194,7 +2208,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2203,7 +2217,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2212,7 +2226,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(0L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2221,7 +2235,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2230,7 +2244,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2239,7 +2253,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2248,7 +2262,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2257,7 +2271,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2266,7 +2280,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2275,7 +2289,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2284,7 +2298,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2293,7 +2307,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(-1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775807", String.valueOf(actual));
+        assertEquals("-9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2313,7 +2327,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2322,7 +2336,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Long.MAX_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2331,7 +2345,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Long.MAX_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775807", String.valueOf(actual));
+        assertEquals("-9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2362,7 +2376,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2371,7 +2385,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.mulAndCheck(Long.MIN_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2413,7 +2427,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2422,7 +2436,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2431,7 +2445,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-4.9E-324", String.valueOf(actual));
+        assertEquals("-4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2440,7 +2454,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2449,7 +2463,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("4.9E-324", String.valueOf(actual));
+        assertEquals("4.9E-324", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2458,7 +2472,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.9999999999999999", String.valueOf(actual));
+        assertEquals("0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2467,7 +2481,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0000000000000002", String.valueOf(actual));
+        assertEquals("1.0000000000000002", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2476,7 +2490,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.9999999999999999", String.valueOf(actual));
+        assertEquals("0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2485,7 +2499,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.9999999999999999", String.valueOf(actual));
+        assertEquals("0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2494,7 +2508,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0000000000000002", String.valueOf(actual));
+        assertEquals("1.0000000000000002", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2503,7 +2517,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2512,7 +2526,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2521,7 +2535,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0000000000000002", String.valueOf(actual));
+        assertEquals("-1.0000000000000002", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2530,7 +2544,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2539,7 +2553,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.9999999999999999", String.valueOf(actual));
+        assertEquals("-0.9999999999999999", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2548,7 +2562,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2557,7 +2571,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2566,7 +2580,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2575,7 +2589,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2584,7 +2598,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2593,7 +2607,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2602,7 +2616,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2611,7 +2625,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2620,7 +2634,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2629,7 +2643,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.nextAfter(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2638,7 +2652,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(0.0d, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2647,7 +2661,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(0.0d, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2656,7 +2670,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(0.0d, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2665,7 +2679,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(0.0d, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2674,7 +2688,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(0.0d, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2683,7 +2697,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(1.0d, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2692,7 +2706,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(1.0d, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("2.0", String.valueOf(actual));
+        assertEquals("2.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2701,7 +2715,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(1.0d, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2710,7 +2724,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(1.0d, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.5", String.valueOf(actual));
+        assertEquals("0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2719,7 +2733,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(1.0d, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2728,7 +2742,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(-1.0d, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2737,7 +2751,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(-1.0d, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-2.0", String.valueOf(actual));
+        assertEquals("-2.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2746,7 +2760,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(-1.0d, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2755,7 +2769,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(-1.0d, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-0.5", String.valueOf(actual));
+        assertEquals("-0.5", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2764,7 +2778,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(-1.0d, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2773,7 +2787,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.NaN, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2782,7 +2796,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.NaN, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2791,7 +2805,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.NaN, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2800,7 +2814,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.NaN, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2809,7 +2823,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.NaN, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2818,7 +2832,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.POSITIVE_INFINITY, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2827,7 +2841,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.POSITIVE_INFINITY, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2836,7 +2850,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.POSITIVE_INFINITY, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2845,7 +2859,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.POSITIVE_INFINITY, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2854,7 +2868,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.scalb(Double.POSITIVE_INFINITY, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2863,7 +2877,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(0.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2872,7 +2886,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(0.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2881,7 +2895,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(0.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2890,7 +2904,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(0.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2899,7 +2913,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(0.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2908,7 +2922,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2917,7 +2931,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2926,7 +2940,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2935,7 +2949,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2944,7 +2958,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2953,7 +2967,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(-1.0d, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2962,7 +2976,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(-1.0d, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2971,7 +2985,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(-1.0d, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2980,7 +2994,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(-1.0d, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2989,7 +3003,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(-1.0d, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -2998,7 +3012,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.NaN, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3007,7 +3021,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.NaN, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3016,7 +3030,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.NaN, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3025,7 +3039,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.NaN, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3034,7 +3048,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.NaN, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3043,7 +3057,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.POSITIVE_INFINITY, 0.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3052,7 +3066,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.POSITIVE_INFINITY, 1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3061,7 +3075,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.POSITIVE_INFINITY, -1.0d);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3070,7 +3084,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.POSITIVE_INFINITY, Double.NaN);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3079,7 +3093,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.normalizeAngle(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3088,7 +3102,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3097,7 +3111,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0d, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3106,7 +3120,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0d, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3115,7 +3129,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3124,7 +3138,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3133,7 +3147,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3142,7 +3156,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0d, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3151,7 +3165,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0d, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3160,7 +3174,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3169,7 +3183,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3178,7 +3192,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3187,7 +3201,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0d, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3196,7 +3210,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0d, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3205,7 +3219,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3214,7 +3228,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3223,7 +3237,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3254,7 +3268,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3263,7 +3277,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3272,7 +3286,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3303,7 +3317,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3312,7 +3326,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3321,7 +3335,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3330,7 +3344,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0d, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3339,7 +3353,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0d, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("-10.0", String.valueOf(actual));
+        assertEquals("-10.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3348,7 +3362,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3357,7 +3371,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3366,7 +3380,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0d, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3375,7 +3389,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3384,7 +3398,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3404,7 +3418,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0d, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3424,7 +3438,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, 1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3466,7 +3480,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, 0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3519,7 +3533,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, 0, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3561,7 +3575,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.NaN, Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3570,7 +3584,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3579,7 +3593,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, -1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3588,7 +3602,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Double.POSITIVE_INFINITY, Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Double", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3597,7 +3611,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3606,7 +3620,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3615,7 +3629,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3624,7 +3638,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3633,7 +3647,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3642,7 +3656,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3651,7 +3665,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3660,7 +3674,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-1.0", String.valueOf(actual));
+        assertEquals("-1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3669,7 +3683,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3678,7 +3692,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3687,7 +3701,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3696,7 +3710,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3705,7 +3719,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-0.0", String.valueOf(actual));
+        assertEquals("-0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3714,7 +3728,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3723,7 +3737,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3732,7 +3746,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3741,7 +3755,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3750,7 +3764,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3759,7 +3773,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3768,7 +3782,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3777,7 +3791,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3786,7 +3800,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3795,7 +3809,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3804,7 +3818,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3813,7 +3827,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3822,7 +3836,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, 0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.0", String.valueOf(actual));
+        assertEquals("1.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3831,7 +3845,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, 1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("1.1", String.valueOf(actual));
+        assertEquals("1.1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3840,7 +3854,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, -1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-10.0", String.valueOf(actual));
+        assertEquals("-10.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3849,7 +3863,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3858,7 +3872,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3867,7 +3881,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(1.0f, 0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("0.0", String.valueOf(actual));
+        assertEquals("0.0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3876,7 +3890,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-0.1", String.valueOf(actual));
+        assertEquals("-0.1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3885,7 +3899,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.NaN, -1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3894,7 +3908,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(-1.0f, Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("NaN", String.valueOf(actual));
+        assertEquals("NaN", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -3903,7 +3917,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(0.0f, Integer.MIN_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("-Infinity", String.valueOf(actual));
+        assertEquals("-Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4077,7 +4091,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.round(Float.POSITIVE_INFINITY, 1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Float", actual.getClass().getName());
-        assertEquals("Infinity", String.valueOf(actual));
+        assertEquals("Infinity", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4108,7 +4122,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4117,7 +4131,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4126,7 +4140,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4135,7 +4149,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4155,7 +4169,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4164,7 +4178,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4173,7 +4187,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4182,7 +4196,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483646", String.valueOf(actual));
+        assertEquals("-2147483646", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4202,7 +4216,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4211,7 +4225,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4220,7 +4234,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4229,7 +4243,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4238,7 +4252,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4247,7 +4261,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Integer.MAX_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483647", String.valueOf(actual));
+        assertEquals("2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4256,7 +4270,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Integer.MAX_VALUE, 1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("2147483646", String.valueOf(actual));
+        assertEquals("2147483646", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4276,7 +4290,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Integer.MAX_VALUE, Integer.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4296,7 +4310,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Integer.MIN_VALUE, 0);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483648", String.valueOf(actual));
+        assertEquals("-2147483648", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4316,7 +4330,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Integer.MIN_VALUE, -1);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("-2147483647", String.valueOf(actual));
+        assertEquals("-2147483647", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4336,7 +4350,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Integer.MIN_VALUE, Integer.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4345,7 +4359,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4354,7 +4368,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4363,7 +4377,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4372,7 +4386,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(0L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775807", String.valueOf(actual));
+        assertEquals("-9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4392,7 +4406,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4401,7 +4415,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4410,7 +4424,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("2", String.valueOf(actual));
+        assertEquals("2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4419,7 +4433,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775806", String.valueOf(actual));
+        assertEquals("-9223372036854775806", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4439,7 +4453,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1L, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-1", String.valueOf(actual));
+        assertEquals("-1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4448,7 +4462,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1L, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-2", String.valueOf(actual));
+        assertEquals("-2", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4457,7 +4471,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1L, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4466,7 +4480,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1L, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4475,7 +4489,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(-1L, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4484,7 +4498,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Long.MAX_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775807", String.valueOf(actual));
+        assertEquals("9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4493,7 +4507,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Long.MAX_VALUE, 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("9223372036854775806", String.valueOf(actual));
+        assertEquals("9223372036854775806", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4513,7 +4527,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Long.MAX_VALUE, Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4533,7 +4547,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Long.MIN_VALUE, 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775808", String.valueOf(actual));
+        assertEquals("-9223372036854775808", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4553,7 +4567,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Long.MIN_VALUE, -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("-9223372036854775807", String.valueOf(actual));
+        assertEquals("-9223372036854775807", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -4573,7 +4587,7 @@ public class MathUtils_IPOTest {
         Object actual = MathUtils.subAndCheck(Long.MIN_VALUE, Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
 }

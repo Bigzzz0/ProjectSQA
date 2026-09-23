@@ -37,7 +37,23 @@ class ConstructionPlan:
 
 # Known concrete subtypes for prominent abstract classes and interfaces in Defects4J
 KNOWN_CONCRETE_SUBTYPES: Dict[str, Tuple[str, ...]] = {
+    # Java Standard Library
+    "java.lang.Comparable": (
+        "java.lang.String",
+    ),
+    "java.lang.CharSequence": (
+        "java.lang.String",
+    ),
     # JFreeChart
+    "org.jfree.chart.axis.Axis": (
+        "org.jfree.chart.axis.NumberAxis",
+    ),
+    "org.jfree.chart.axis.ValueAxis": (
+        "org.jfree.chart.axis.NumberAxis",
+    ),
+    "org.jfree.chart.plot.Marker": (
+        "org.jfree.chart.plot.ValueMarker(0.0)",
+    ),
     "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer": (
         "org.jfree.chart.renderer.category.BarRenderer",
         "org.jfree.chart.renderer.category.LineAndShapeRenderer",
@@ -74,6 +90,24 @@ KNOWN_CONCRETE_SUBTYPES: Dict[str, Tuple[str, ...]] = {
     "org.apache.commons.math.analysis.UnivariateRealFunction": (
         "org.apache.commons.math.analysis.polynomials.PolynomialFunction",
     ),
+    "org.apache.commons.math3.distribution.RealDistribution": (
+        "org.apache.commons.math3.distribution.NormalDistribution",
+    ),
+    "org.apache.commons.math3.distribution.IntegerDistribution": (
+        "org.apache.commons.math3.distribution.BinomialDistribution",
+    ),
+    "org.apache.commons.math3.linear.RealVector": (
+        "org.apache.commons.math3.linear.ArrayRealVector",
+    ),
+    "org.apache.commons.math3.linear.RealMatrix": (
+        "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    ),
+    "org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer": (
+        "org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer",
+    ),
+    "org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer": (
+        "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+    ),
     # Commons Compress
     "org.apache.commons.compress.archivers.ArchiveInputStream": (
         "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
@@ -81,9 +115,16 @@ KNOWN_CONCRETE_SUBTYPES: Dict[str, Tuple[str, ...]] = {
     "org.apache.commons.compress.compressors.CompressorInputStream": (
         "org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream",
     ),
+    # Jsoup
+    "org.jsoup.parser.TreeBuilder": (
+        "org.jsoup.parser.HtmlTreeBuilder",
+    ),
     # Joda-Time
     "org.joda.time.Chronology": (
         "org.joda.time.chrono.ISOChronology",
+    ),
+    "org.joda.time.DateTimeZone": (
+        "org.joda.time.DateTimeZone.getDefault()",
     ),
     "org.joda.time.ReadableInstant": (
         "org.joda.time.Instant",
@@ -92,10 +133,29 @@ KNOWN_CONCRETE_SUBTYPES: Dict[str, Tuple[str, ...]] = {
     "org.joda.time.ReadableDateTime": (
         "org.joda.time.DateTime",
     ),
+    "org.joda.time.ReadablePeriod": (
+        "org.joda.time.Period",
+    ),
+    "org.joda.time.ReadableDuration": (
+        "org.joda.time.Duration",
+    ),
+    "org.joda.time.ReadablePartial": (
+        "org.joda.time.LocalDate",
+    ),
+    "org.joda.time.base.BaseSingleFieldPeriod": (
+        "org.joda.time.Days",
+    ),
+    "org.joda.time.base.BasePeriod": (
+        "org.joda.time.Period",
+    ),
+    # Closure Compiler
+    "com.google.javascript.jscomp.AbstractCompiler": (
+        "com.google.javascript.jscomp.Compiler",
+    ),
 }
 
 # Known static factories
-FACTORY_METHOD_NAMES = {"getInstance", "of", "create", "valueOf", "from", "newInstance", "getDefault"}
+FACTORY_METHOD_NAMES = {"getInstance", "of", "create", "valueOf", "from", "newInstance", "getDefault", "forID", "forOffsetHours"}
 
 
 def plan_receiver(
@@ -114,18 +174,42 @@ def plan_receiver(
     type_kind = str(metadata.get("type_kind", "class"))
     is_abstract = bool(metadata.get("abstract"))
 
-    # 1. If abstract or interface, look for known concrete subtype
+    # 1. If abstract or interface, look for known concrete subtype or static factory
     if is_abstract or type_kind in {"interface", "annotation"}:
         subtypes = KNOWN_CONCRETE_SUBTYPES.get(target_class, ())
         for subtype in subtypes:
-            sub_simple = subtype.rsplit(".", 1)[-1].replace("$", ".")
+            if subtype.endswith("()") or ("." in subtype and not subtype.split(".")[-1][0].isupper()):
+                expr = subtype
+            elif "(" in subtype:
+                expr = f"new {subtype}"
+            else:
+                expr = f"new {subtype}()"
             return ConstructionPlan(
                 kind="concrete_subtype",
                 target_class=target_class,
-                expression=f"new {subtype}()",
+                expression=expr,
                 provenance=f"subtype:{subtype}",
                 depth=1,
             )
+
+        # Check static factory methods on the abstract class
+        methods = [
+            item for item in metadata.get("methods", [])
+            if isinstance(item, dict) and item.get("static") and item.get("visibility") in {"public", "protected"}
+        ]
+        for m in methods:
+            m_name = str(m.get("name", ""))
+            return_type = str(m.get("return_type", ""))
+            if m_name in FACTORY_METHOD_NAMES and (simple_name in return_type or target_class in return_type):
+                params = m.get("parameters", [])
+                if isinstance(params, list) and not params:
+                    return ConstructionPlan(
+                        kind="static_factory",
+                        target_class=target_class,
+                        expression=f"{simple_name}.{m_name}()",
+                        provenance=f"factory:{m_name}",
+                        depth=1,
+                    )
         return None
 
     # 2. Check declared constructors
@@ -171,7 +255,7 @@ def plan_receiver(
 
         # Parameterized constructor: attempt to resolve parameters
         try:
-            domains, adapters, cleanup = domains_for_parameters(params)
+            domains, adapters, cleanup = domains_for_parameters(params, target_class=target_class)
             factor_domains = {f"receiver__{k}": v for k, v in domains.items()}
             adapter_map = {f"receiver__{k}": v for k, v in adapters.items()}
             args_expr = ", ".join(f"{{receiver__{p['name']}}}" for p in params)
@@ -210,7 +294,7 @@ def plan_receiver(
                     depth=1,
                 )
             try:
-                domains, adapters, cleanup = domains_for_parameters(params)
+                domains, adapters, cleanup = domains_for_parameters(params, target_class=target_class)
                 factor_domains = {f"receiver__{k}": v for k, v in domains.items()}
                 adapter_map = {f"receiver__{k}": v for k, v in adapters.items()}
                 args_expr = ", ".join(f"{{receiver__{p['name']}}}" for p in params)
@@ -231,12 +315,15 @@ def plan_receiver(
     # Look for a static builder() method returning a Builder
     for m in methods:
         if m.get("name") == "builder":
-            return ConstructionPlan(
-                kind="builder",
-                target_class=target_class,
-                expression=f"{simple_name}.builder().build()",
-                provenance="builder",
-                depth=2,
-            )
+            params = m.get("parameters", [])
+            is_static = bool(m.get("static")) or "static" in m.get("modifiers", [])
+            if is_static and not params:
+                return ConstructionPlan(
+                    kind="builder",
+                    target_class=target_class,
+                    expression=f"{simple_name}.builder().build()",
+                    provenance="builder",
+                    depth=2,
+                )
 
     return None

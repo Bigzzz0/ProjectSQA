@@ -7,13 +7,27 @@ import static org.junit.Assert.*;
  * Automatically generated pairwise test suite for IOUtils.
  */
 public class IOUtils_IPOTest {
+    private static String formatValue(Object value) {
+        if (value == null) return "null";
+        if (value instanceof Object[]) return java.util.Arrays.deepToString((Object[]) value);
+        if (value instanceof byte[]) return java.util.Arrays.toString((byte[]) value);
+        if (value instanceof short[]) return java.util.Arrays.toString((short[]) value);
+        if (value instanceof int[]) return java.util.Arrays.toString((int[]) value);
+        if (value instanceof long[]) return java.util.Arrays.toString((long[]) value);
+        if (value instanceof char[]) return java.util.Arrays.toString((char[]) value);
+        if (value instanceof float[]) return java.util.Arrays.toString((float[]) value);
+        if (value instanceof double[]) return java.util.Arrays.toString((double[]) value);
+        if (value instanceof boolean[]) return java.util.Arrays.toString((boolean[]) value);
+        return String.valueOf(value);
+    }
+
     @Test(timeout = 4000)
     public void test_copy_pairwise_001() throws Exception {
         // Combination: input=new java.io.ByteArrayInputStream(new byte[] {}), output=new java.io.ByteArrayOutputStream()
         Object actual = IOUtils.copy(new java.io.ByteArrayInputStream(new byte[] {}), new java.io.ByteArrayOutputStream());
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -22,7 +36,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.copy(new java.io.ByteArrayInputStream(new byte[] {}), new java.io.ByteArrayOutputStream(32));
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -31,7 +45,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.copy(new java.io.ByteArrayInputStream(new byte[] {1}), new java.io.ByteArrayOutputStream());
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -40,7 +54,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.copy(new java.io.ByteArrayInputStream(new byte[] {1}), new java.io.ByteArrayOutputStream(32));
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -49,7 +63,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {}), 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -58,7 +72,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {}), 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -67,7 +81,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {}), -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -76,7 +90,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {}), Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -85,7 +99,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {}), Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -94,7 +108,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {1}), 0L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -103,7 +117,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {1}), 1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -112,7 +126,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {1}), -1L);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -121,7 +135,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {1}), Long.MAX_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -130,7 +144,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.skip(new java.io.ByteArrayInputStream(new byte[] {1}), Long.MIN_VALUE);
         assertNotNull(actual);
         assertEquals("java.lang.Long", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -139,7 +153,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.readFully(new java.io.ByteArrayInputStream(new byte[] {}), new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -148,7 +162,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.readFully(new java.io.ByteArrayInputStream(new byte[] {1}), new byte[] {});
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -157,7 +171,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.readFully(new java.io.ByteArrayInputStream(new byte[] {}), new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("0", String.valueOf(actual));
+        assertEquals("0", formatValue(actual));
     }
 
     @Test(timeout = 4000)
@@ -166,7 +180,7 @@ public class IOUtils_IPOTest {
         Object actual = IOUtils.readFully(new java.io.ByteArrayInputStream(new byte[] {1}), new byte[] {1});
         assertNotNull(actual);
         assertEquals("java.lang.Integer", actual.getClass().getName());
-        assertEquals("1", String.valueOf(actual));
+        assertEquals("1", formatValue(actual));
     }
 
 }
