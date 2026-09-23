@@ -29,7 +29,8 @@ import matplotlib.pyplot as plt
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPTS_DIR)
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
-CSV_PATH = os.path.join(RESULTS_DIR, "benchmark_results.csv")
+MASTER_CSV = os.path.join(RESULTS_DIR, "master_benchmark_summary.csv")
+CSV_PATH = MASTER_CSV if os.path.exists(MASTER_CSV) else os.path.join(RESULTS_DIR, "benchmark_results.csv")
 
 FIG1_PATH = os.path.join(RESULTS_DIR, "figure1_coverage_comparison.png")
 FIG2_PATH = os.path.join(RESULTS_DIR, "figure2_fdr_distribution.png")
@@ -75,7 +76,7 @@ def generate_figure1_coverage(rows):
         except Exception:
             pass
             
-    desired_order = ["IPO (Native / PICT)", "IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Claude Sonnet 5", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
     techniques = [t for t in desired_order if t in tech_line]
     if not techniques:
         techniques = list(tech_line.keys())
@@ -142,7 +143,7 @@ def generate_figure2_fdr(rows):
         norm = normalize_status(status_val)
         tech_counts[tech][norm] += 1
         
-    desired_order = ["IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "Claude Sonnet 5", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
     techniques = [t for t in desired_order if t in tech_counts]
     if not techniques:
         techniques = list(tech_counts.keys())
@@ -185,11 +186,11 @@ def generate_figure3_projects(rows):
             pass
             
     projects = sorted(proj_tech_cov.keys())
-    desired_order = ["IPO (Native / PICT)", "IPO (Microsoft PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Claude Sonnet 5", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
     
-    fig, ax = plt.subplots(figsize=(12, 6))
+    fig, ax = plt.subplots(figsize=(13, 6))
     x = list(range(len(projects)))
-    width = 0.2
+    width = 0.18
     
     for idx, t in enumerate(desired_order):
         vals = []

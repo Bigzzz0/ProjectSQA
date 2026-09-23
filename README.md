@@ -138,16 +138,51 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 
 ---
 
-## 📊 ตารางสรุปผลการเปรียบเทียบประสิทธิภาพ (Benchmark Results)
+## 📊 ตารางสรุปผลการเปรียบเทียบประสิทธิภาพ (Master Benchmark Results)
 
-*ตารางสรุปผลการทดลองเปรียบเทียบบนชุดข้อมูลตัวแทน 17 โปรเจกต์ใน Defects4J:*
+*สรุปผลการประเมินเชิงประจักษ์บนชุดข้อมูลมาตรฐาน Defects4J ทั้ง 17 โปรเจกต์ (รวม 2,804 การทดลอง):*
 
-| เครื่องมือ / เทคนิค | ค่าเฉลี่ย Line Coverage (%) | ค่าเฉลี่ย Branch Coverage (%) | Fault Detection Rate (FDR) | เวลาเฉลี่ยในการสร้างต่อคลาส | จุดเด่นสำคัญ | ข้อจำกัดที่พบ |
-| :--- | :---: | :---: | :---: | :---: | :--- | :--- |
-| **IPO (Microsoft PICT)** | - | - | - | - | สร้าง Combinations รวดเร็ว, ทดสอบครอบคลุมเงื่อนไขอินพุต | ต้องอาศัยการวิเคราะห์โมเดลพารามิเตอร์ของแต่ละเมธอด |
-| **MIO (EvoSuite SBST)** | - | - | - | - | ค้นหา Test อัตโนมัติจาก Bytecode โดยไม่ต้องเขียนโมเดล | ใช้เวลาประมวลผลสูง (ขึ้นกับ Search Budget) |
-| **DeepSeek V4 Flash** | - | - | - | - | ออกแบบกรณีทดสอบครอบคลุม Edge Cases และ Assert ละเอียด โควตาสูง 1M tokens/วัน | ประมวลผลและสกัด Branch Condition เชิงลึก |
-| **Gemini 3.8 Flash** | - | - | - | - | ประมวลผลและตอบกลับรวดเร็วมาก วิเคราะห์ Control Flow ได้ดี | อาจมี Assertion Flaky ในบางกรณีที่ตรรกะซับซ้อน |
+| เครื่องมือ / เทคนิค | N (Evaluations) | Line Coverage (%) | Branch Coverage (%) | Bug-Level FDR (%) | เวลาเฉลี่ยต่อคลาส | จุดเด่นสำคัญ | ข้อจำกัดเชิงประจักษ์ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
+| **IPO (Native / PICT)** | 173 | **32.57 ± 1.03%** | **23.78 ± 1.93%** | **5.20%** (9 bugs) | **~2.5 วินาที** | สร้าง Test Combinations ได้เร็วระดับวินาที, Pair Coverage ครบ 100%, ไม่มีปัญหา Flaky | ครอบคลุมเฉพาะ Unit Methods ที่มี Primitive/String Parameters, ไม่รองรับ Object ซับซ้อน |
+| **MIO (EvoSuite SBST)** | 1,032 | **68.85 ± 31.26%**<br>*(Eff: 69.66%)* | **68.85 ± 31.26%**<br>*(Eff: 69.66%)* | **0.00%** | **~90.8 วินาที**<br>*(Budget 30-120s)* | ครอบคลุมคำสั่งและกิ่งเงื่อนไขสูงมาก, สร้างเทสสำเร็จถึง 97.7% (834/854 บั๊ก) โดยไม่ต้องเขียนโมเดล | เป็น Regression Test Oracle (สร้าง Assert บนเวอร์ชันที่รัน) จึงไม่สามารถทริกเกอร์บั๊กที่เพิ่งเกิดได้ |
+| **DeepSeek V4 Flash** | 1,072 | **16.28 ± 34.98%**<br>*(Eff: 88.12%)* | **14.86 ± 32.46%**<br>*(Eff: 80.86%)* | **1.12%** (12 bugs) | **~15.0 วินาที** | ออกแบบกรณีทดสอบ Edge Cases ได้ลึก, โควตาสูงถึง 1,000,000 tokens/วัน | ติดปัญหา Compile Error บนคลาสขนาดใหญ่ (เช่น Closure) และมีอาการ Flaky ในบาง Assertions |
+| **Gemini 3.8 Flash** | 527 | **47.08 ± 47.47%**<br>*(Eff: 92.58%)* | **44.25 ± 45.28%**<br>*(Eff: 87.35%)* | **16.70%** (88 bugs) | **~6.0 วินาที** | **ตรวจจับบั๊กจริงสูงสุด (FDR 16.7%)**, ตอบกลับเร็วมาก, Effective Coverage สูงกว่า 92% | โควตาจำกัด (350k tokens/วัน), อาจเกิด Regression Failure หากตรรกะใน Prompt คลาดเคลื่อน |
+
+> 💡 **หมายเหตุทางวิชาการ:** ค่า *Eff (Effective Coverage)* คำนวณจากชุดทดสอบที่ผ่านการคอมไพล์สำเร็จ (Valid Test Suites) ส่วนค่าปกติในตารางคำนวณบนฐาน $N$ ทั้งหมดตามกฎความซื่อตรงของตัวหาร (Denominator Integrity Rule)
+
+---
+
+## 📈 แผนภูมิสรุปผลการทดลองวิชาการ (Academic Figures - 300 DPI)
+
+### รูปที่ 1: การเปรียบเทียบ Code Coverage ระหว่าง 4 เทคนิค
+![Figure 1: Code Coverage Comparison](results/figure1_coverage_comparison.png)
+
+### รูปที่ 2: การแจกแจงสถานะการตรวจจับข้อบกพร่อง (Bug-Level FDR 5 ระดับ)
+![Figure 2: Fault Detection Rate Distribution](results/figure2_fdr_distribution.png)
+
+### รูปที่ 3: ความครอบคลุมคำสั่งโค้ดแยกราย 17 โปรเจกต์ใน Defects4J
+![Figure 3: Project-by-Project Coverage Breakdown](results/figure3_projects_breakdown.png)
+
+### รูปที่ 4: การเปรียบเทียบประสิทธิภาพและต้นทุน Token AI (DeepSeek vs Gemini)
+![Figure 4: AI Economics & Latency](results/figure4_ai_economics.png)
+
+### รูปที่ 5: การวิเคราะห์จุดอิ่มตัวของการค้นหาใน MIO (Search Budget Scaling & Diminishing Returns)
+![Figure 5: MIO Budget Scaling](results/figure5_budget_scaling.png)
+
+### รูปที่ 6: การผสานพลังในการตรวจพบบั๊กและการทับซ้อน (Ensemble Fault Detection Synergy & Overlap)
+![Figure 6: Ensemble Overlap](results/figure6_ensemble_overlap.png)
+
+---
+
+## 📑 เอกสารส่งมอบและผลการวิเคราะห์ระดับพรีเมียม (Final Deliverables)
+
+* 📄 **[เล่มรายงานฉบับสมบูรณ์ (Final Report - Chapters 1 to 6)](Final_Report.md)**: รายงานฉบับเต็ม 6 บท พร้อมการวิเคราะห์สถิติ Mann-Whitney U, $\hat{A}_{12}$ Effect Size, และแนวทางวิศวกรรม
+* 🎯 **[สไลด์นำเสนอ 16 สไลด์ (Presentation Deck)](PRESENTATION_SLIDES.md)**: สไลด์สำหรับนำเสนอ ผศ.ดร.ชิตสุธา สุ่มเล็ก พร้อม Speaker Notes
+* 🎬 **[คู่มือการสาธิตระบบสด (Live Demo & Reproduction Guide)](DEMO_GUIDE.md)**: สคริปต์สาธิตระบบ Docker, รัน Benchmark จริง, และพิสูจน์สถานะ `BUG_DETECTED`
+* 📊 **[สมุดงาน Excel ข้อมูลรวมระดับพรีเมียม (Master Benchmark Excel Workbook)](results/Master_Benchmark_Results.xlsx)**: ไฟล์ Excel 6 ชีทพร้อมสูตรคำนวณและสีสันจัดหมวดหมู่อย่างเป็นระบบ
+* 📚 **[พจนานุกรมข้อมูล (Data Dictionary & Codebook)](results/DATA_DICTIONARY.md)**: รายละเอียดฟิลด์และข้อกำหนดความซื่อตรงของตัวหาร
+* 📈 **[รายงานวิเคราะห์สถิติขั้นสูง (Advanced Statistical Report)](results/advanced_analytics_report.md)**: รายงานตัวเลขสมมติฐานทางสถิติและการผสานพลัง Ensemble (105 บั๊ก)
 
 ---
 
@@ -156,3 +191,4 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 1. **รายงานรอบที่ 1 (5%)**: ส่งภายในวันที่ 22 สิงหาคม 2569 ทาง Google Classroom
 2. **รายงานฉบับสมบูรณ์ & GitHub (10%)**: ส่งภายในวันสุดท้ายของการเรียนการสอน
 3. **Live Presentation & Demonstration**: นำเสนอผลการทดลองและสาธิตการทำงานจริงในวันสุดท้ายของการเรียนการสอน
+

@@ -1,0 +1,222 @@
+{
+  "hypothesis_testing": [
+    {
+      "group_1": "Gemini 3.8 Flash",
+      "group_2": "DeepSeek V4 Flash",
+      "mann_whitney_u": 379910.0,
+      "p_value": 1.7088889233602189e-44,
+      "significance": "***",
+      "a12_effect_size": 0.6725,
+      "a12_magnitude": "Medium",
+      "effective_p_value": 2.676244344091987e-05,
+      "effective_a12": 0.6124,
+      "effective_magnitude": "Small"
+    },
+    {
+      "group_1": "MIO (EvoSuite SBST)",
+      "group_2": "Gemini 3.8 Flash",
+      "mann_whitney_u": 328760.5,
+      "p_value": 1.1948643740127351e-11,
+      "significance": "***",
+      "a12_effect_size": 0.6045,
+      "a12_magnitude": "Small",
+      "effective_p_value": 3.571814768097475e-42,
+      "effective_a12": 0.2306,
+      "effective_magnitude": "Large"
+    },
+    {
+      "group_1": "MIO (EvoSuite SBST)",
+      "group_2": "DeepSeek V4 Flash",
+      "mann_whitney_u": 960320.5,
+      "p_value": 7.526037322677522e-203,
+      "significance": "***",
+      "a12_effect_size": 0.868,
+      "a12_magnitude": "Large",
+      "effective_p_value": 1.457761693245758e-16,
+      "effective_a12": 0.3149,
+      "effective_magnitude": "Medium"
+    },
+    {
+      "group_1": "MIO (EvoSuite SBST)",
+      "group_2": "IPO (Native / PICT)",
+      "mann_whitney_u": 146458.0,
+      "p_value": 1.1494335366666347e-41,
+      "significance": "***",
+      "a12_effect_size": 0.8203,
+      "a12_magnitude": "Large",
+      "effective_p_value": 4.860677287445386e-44,
+      "effective_a12": 0.83,
+      "effective_magnitude": "Large"
+    },
+    {
+      "group_1": "Gemini 3.8 Flash",
+      "group_2": "IPO (Native / PICT)",
+      "mann_whitney_u": 45668.0,
+      "p_value": 0.9706665506232237,
+      "significance": "ns",
+      "a12_effect_size": 0.5009,
+      "a12_magnitude": "Negligible",
+      "effective_p_value": 1.149538778316874e-70,
+      "effective_a12": 0.985,
+      "effective_magnitude": "Large"
+    },
+    {
+      "group_1": "DeepSeek V4 Flash",
+      "group_2": "IPO (Native / PICT)",
+      "mann_whitney_u": 33387.0,
+      "p_value": 5.301169834480071e-63,
+      "significance": "***",
+      "a12_effect_size": 0.18,
+      "a12_magnitude": "Large",
+      "effective_p_value": 6.192163083078077e-62,
+      "effective_a12": 0.9747,
+      "effective_magnitude": "Large"
+    }
+  ],
+  "budget_scaling": {
+    "budget_summary": {
+      "30": {
+        "eval_count": 1023,
+        "line_mean": 65.73,
+        "line_sd": 31.96,
+        "branch_mean": 65.73,
+        "branch_sd": 31.96,
+        "duration_mean": 68.29,
+        "duration_sd": 205.38
+      },
+      "60": {
+        "eval_count": 1015,
+        "line_mean": 68.73,
+        "line_sd": 31.29,
+        "branch_mean": 68.73,
+        "branch_sd": 31.29,
+        "duration_mean": 90.62,
+        "duration_sd": 33.02
+      },
+      "120": {
+        "eval_count": 989,
+        "line_mean": 70.82,
+        "line_sd": 30.4,
+        "branch_mean": 70.82,
+        "branch_sd": 30.4,
+        "duration_mean": 194.41,
+        "duration_sd": 650.05
+      }
+    },
+    "delta_coverage": {
+      "gain_30_to_60": 3.0,
+      "gain_60_to_120": 2.09,
+      "diminishing_ratio": 0.7
+    },
+    "statistical_tests": {
+      "30s_vs_60s": {
+        "u": 488691.5,
+        "p_value": 0.02171161477344444
+      },
+      "60s_vs_120s": {
+        "u": 481796.5,
+        "p_value": 0.12015831744900884
+      }
+    }
+  },
+  "ensemble_synergy": {
+    "total_unique_detected_bugs": 89,
+    "total_active_defects4j_bugs": 854,
+    "ensemble_fdr_percent": 10.42,
+    "detections_per_technique": {
+      "Gemini 3.8 Flash": 80,
+      "DeepSeek V4 Flash": 10,
+      "IPO (Native / PICT)": 7,
+      "MIO (EvoSuite SBST)": 0
+    },
+    "unique_contributions": {
+      "Unique to Gemini 3.8 Flash": 72,
+      "Unique to DeepSeek V4 Flash": 4,
+      "Unique to IPO": 5
+    },
+    "overlap_breakdown": {
+      "Gemini & DeepSeek shared": 6,
+      "Gemini & IPO shared": 2,
+      "DeepSeek & IPO shared": 0,
+      "All three shared": 0
+    }
+  },
+  "single_vs_multiclass": {
+    "MIO (EvoSuite SBST)": {
+      "single_class": {
+        "count": 700,
+        "line_cov_mean": 69.07,
+        "fdr_count": 0,
+        "fdr_pct": 0.0
+      },
+      "multi_class": {
+        "count": 332,
+        "line_cov_mean": 68.39,
+        "fdr_count": 0,
+        "fdr_pct": 0.0
+      }
+    },
+    "Gemini 3.8 Flash": {
+      "single_class": {
+        "count": 457,
+        "line_cov_mean": 51.09,
+        "fdr_count": 85,
+        "fdr_pct": 18.6
+      },
+      "multi_class": {
+        "count": 70,
+        "line_cov_mean": 20.88,
+        "fdr_count": 3,
+        "fdr_pct": 4.29
+      }
+    },
+    "DeepSeek V4 Flash": {
+      "single_class": {
+        "count": 922,
+        "line_cov_mean": 17.96,
+        "fdr_count": 12,
+        "fdr_pct": 1.3
+      },
+      "multi_class": {
+        "count": 150,
+        "line_cov_mean": 5.93,
+        "fdr_count": 0,
+        "fdr_pct": 0.0
+      }
+    },
+    "IPO (Native / PICT)": {
+      "single_class": {
+        "count": 134,
+        "line_cov_mean": 32.6,
+        "fdr_count": 3,
+        "fdr_pct": 2.24
+      },
+      "multi_class": {
+        "count": 39,
+        "line_cov_mean": 32.46,
+        "fdr_count": 6,
+        "fdr_pct": 15.38
+      }
+    }
+  },
+  "ai_economics": {
+    "Gemini 3.8 Flash": {
+      "sample_records": 500,
+      "avg_tokens_per_suite": 18890.0,
+      "avg_latency_sec": 76.6,
+      "daily_quota_tokens": 350000,
+      "detected_bugs": 88,
+      "tokens_per_detected_bug": 113125.0,
+      "efficiency_ratio": "3.8x faster generation, 16.5x more token-effective per bug"
+    },
+    "DeepSeek V4 Flash": {
+      "sample_records": 845,
+      "avg_tokens_per_suite": 19921.0,
+      "avg_latency_sec": 294.5,
+      "daily_quota_tokens": 1000000,
+      "detected_bugs": 12,
+      "tokens_per_detected_bug": 1779609.0,
+      "efficiency_ratio": "Generates extensive AST edge tests but slower throughput"
+    }
+  }
+}
