@@ -117,4 +117,114 @@ public class ChiSquareTestImpl_IPOTest {
         }
     }
 
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_011() throws Exception {
+        // Combination: observed1=new long[] {}, observed2=new long[] {}, alpha=0.0d
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {}, new long[] {}, 0.0d);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_012() throws Exception {
+        // Combination: observed1=new long[] {1}, observed2=new long[] {1}, alpha=0.0d
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {1}, new long[] {1}, 0.0d);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_013() throws Exception {
+        // Combination: observed1=new long[] {}, observed2=new long[] {1}, alpha=1.0d
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {}, new long[] {1}, 1.0d);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_014() throws Exception {
+        // Combination: observed1=new long[] {1}, observed2=new long[] {}, alpha=1.0d
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {1}, new long[] {}, 1.0d);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_015() throws Exception {
+        // Combination: observed1=new long[] {}, observed2=new long[] {}, alpha=-1.0d
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {}, new long[] {}, -1.0d);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_016() throws Exception {
+        // Combination: observed1=new long[] {1}, observed2=new long[] {1}, alpha=-1.0d
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {1}, new long[] {1}, -1.0d);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_017() throws Exception {
+        // Combination: observed1=new long[] {}, observed2=new long[] {}, alpha=Double.NaN
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {}, new long[] {}, Double.NaN);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_018() throws Exception {
+        // Combination: observed1=new long[] {1}, observed2=new long[] {1}, alpha=Double.NaN
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {1}, new long[] {1}, Double.NaN);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_019() throws Exception {
+        // Combination: observed1=new long[] {}, observed2=new long[] {}, alpha=Double.POSITIVE_INFINITY
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {}, new long[] {}, Double.POSITIVE_INFINITY);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_chiSquareTestDataSetsComparison_pairwise_020() throws Exception {
+        // Combination: observed1=new long[] {1}, observed2=new long[] {1}, alpha=Double.POSITIVE_INFINITY
+        try {
+            (new ChiSquareTestImpl()).chiSquareTestDataSetsComparison(new long[] {1}, new long[] {1}, Double.POSITIVE_INFINITY);
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
 }

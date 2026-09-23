@@ -3552,4 +3552,6802 @@ public class Attribute_IPOTest {
         assertEquals("1.5", String.valueOf(actual));
     }
 
+    @Test(timeout = 4000)
+    public void test_html_pairwise_380() throws Exception {
+        // Combination: receiver__key="", receiver__value=""
+        try {
+            (new Attribute("", "")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_381() throws Exception {
+        // Combination: receiver__key="", receiver__value=" "
+        try {
+            (new Attribute("", " ")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_382() throws Exception {
+        // Combination: receiver__key="", receiver__value="a"
+        try {
+            (new Attribute("", "a")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_383() throws Exception {
+        // Combination: receiver__key="", receiver__value="test123"
+        try {
+            (new Attribute("", "test123")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_384() throws Exception {
+        // Combination: receiver__key="", receiver__value="!@#"
+        try {
+            (new Attribute("", "!@#")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_385() throws Exception {
+        // Combination: receiver__key="", receiver__value="0"
+        try {
+            (new Attribute("", "0")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_386() throws Exception {
+        // Combination: receiver__key="", receiver__value="-1"
+        try {
+            (new Attribute("", "-1")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_387() throws Exception {
+        // Combination: receiver__key="", receiver__value="1.5"
+        try {
+            (new Attribute("", "1.5")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_388() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775807"
+        try {
+            (new Attribute("", "9223372036854775807")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_389() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775808"
+        try {
+            (new Attribute("", "9223372036854775808")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_390() throws Exception {
+        // Combination: receiver__key="", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_391() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=""
+        try {
+            (new Attribute(" ", "")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_392() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=" "
+        try {
+            (new Attribute(" ", " ")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_393() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="a"
+        try {
+            (new Attribute(" ", "a")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_394() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="test123"
+        try {
+            (new Attribute(" ", "test123")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_395() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="!@#"
+        try {
+            (new Attribute(" ", "!@#")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_396() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="0"
+        try {
+            (new Attribute(" ", "0")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_397() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="-1"
+        try {
+            (new Attribute(" ", "-1")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_398() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="1.5"
+        try {
+            (new Attribute(" ", "1.5")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_399() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775807"
+        try {
+            (new Attribute(" ", "9223372036854775807")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_400() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775808"
+        try {
+            (new Attribute(" ", "9223372036854775808")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_401() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_402() throws Exception {
+        // Combination: receiver__key="a", receiver__value=""
+        Object actual = (new Attribute("a", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_403() throws Exception {
+        // Combination: receiver__key="a", receiver__value=" "
+        Object actual = (new Attribute("a", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_404() throws Exception {
+        // Combination: receiver__key="a", receiver__value="a"
+        Object actual = (new Attribute("a", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_405() throws Exception {
+        // Combination: receiver__key="a", receiver__value="test123"
+        Object actual = (new Attribute("a", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_406() throws Exception {
+        // Combination: receiver__key="a", receiver__value="!@#"
+        Object actual = (new Attribute("a", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_407() throws Exception {
+        // Combination: receiver__key="a", receiver__value="0"
+        Object actual = (new Attribute("a", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_408() throws Exception {
+        // Combination: receiver__key="a", receiver__value="-1"
+        Object actual = (new Attribute("a", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_409() throws Exception {
+        // Combination: receiver__key="a", receiver__value="1.5"
+        Object actual = (new Attribute("a", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_410() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("a", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_411() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("a", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_412() throws Exception {
+        // Combination: receiver__key="a", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_413() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=""
+        Object actual = (new Attribute("test123", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_414() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=" "
+        Object actual = (new Attribute("test123", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_415() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="a"
+        Object actual = (new Attribute("test123", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_416() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="test123"
+        Object actual = (new Attribute("test123", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_417() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="!@#"
+        Object actual = (new Attribute("test123", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_418() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="0"
+        Object actual = (new Attribute("test123", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_419() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="-1"
+        Object actual = (new Attribute("test123", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_420() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="1.5"
+        Object actual = (new Attribute("test123", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_421() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("test123", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_422() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("test123", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_423() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_424() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=""
+        Object actual = (new Attribute("!@#", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_425() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=" "
+        Object actual = (new Attribute("!@#", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_426() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="a"
+        Object actual = (new Attribute("!@#", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_427() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="test123"
+        Object actual = (new Attribute("!@#", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_428() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="!@#"
+        Object actual = (new Attribute("!@#", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_429() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="0"
+        Object actual = (new Attribute("!@#", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_430() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="-1"
+        Object actual = (new Attribute("!@#", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_431() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="1.5"
+        Object actual = (new Attribute("!@#", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_432() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("!@#", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_433() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("!@#", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_434() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_435() throws Exception {
+        // Combination: receiver__key="0", receiver__value=""
+        Object actual = (new Attribute("0", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_436() throws Exception {
+        // Combination: receiver__key="0", receiver__value=" "
+        Object actual = (new Attribute("0", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_437() throws Exception {
+        // Combination: receiver__key="0", receiver__value="a"
+        Object actual = (new Attribute("0", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_438() throws Exception {
+        // Combination: receiver__key="0", receiver__value="test123"
+        Object actual = (new Attribute("0", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_439() throws Exception {
+        // Combination: receiver__key="0", receiver__value="!@#"
+        Object actual = (new Attribute("0", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_440() throws Exception {
+        // Combination: receiver__key="0", receiver__value="0"
+        Object actual = (new Attribute("0", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_441() throws Exception {
+        // Combination: receiver__key="0", receiver__value="-1"
+        Object actual = (new Attribute("0", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_442() throws Exception {
+        // Combination: receiver__key="0", receiver__value="1.5"
+        Object actual = (new Attribute("0", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_443() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("0", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_444() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("0", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_445() throws Exception {
+        // Combination: receiver__key="0", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_446() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=""
+        Object actual = (new Attribute("-1", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_447() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=" "
+        Object actual = (new Attribute("-1", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_448() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="a"
+        Object actual = (new Attribute("-1", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_449() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="test123"
+        Object actual = (new Attribute("-1", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_450() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="!@#"
+        Object actual = (new Attribute("-1", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_451() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="0"
+        Object actual = (new Attribute("-1", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_452() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="-1"
+        Object actual = (new Attribute("-1", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_453() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="1.5"
+        Object actual = (new Attribute("-1", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_454() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("-1", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_455() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("-1", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_456() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_457() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=""
+        Object actual = (new Attribute("1.5", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_458() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=" "
+        Object actual = (new Attribute("1.5", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_459() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="a"
+        Object actual = (new Attribute("1.5", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_460() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="test123"
+        Object actual = (new Attribute("1.5", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_461() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="!@#"
+        Object actual = (new Attribute("1.5", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_462() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="0"
+        Object actual = (new Attribute("1.5", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_463() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="-1"
+        Object actual = (new Attribute("1.5", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_464() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="1.5"
+        Object actual = (new Attribute("1.5", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_465() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("1.5", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_466() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("1.5", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_467() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_468() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=""
+        Object actual = (new Attribute("9223372036854775807", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_469() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775807", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_470() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775807", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_471() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775807", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_472() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775807", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_473() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775807", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_474() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775807", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_475() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775807", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_476() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_477() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_478() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_479() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=""
+        Object actual = (new Attribute("9223372036854775808", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_480() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775808", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_481() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775808", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_482() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775808", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_483() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775808", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_484() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775808", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_485() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775808", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_486() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775808", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_487() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_488() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_489() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_490() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=""
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_491() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=" "
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_492() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="a"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_493() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="test123"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_494() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="!@#"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_495() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="0"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_496() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="-1"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_497() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="1.5"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_498() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_499() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_html_pairwise_500() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).html();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_501() throws Exception {
+        // Combination: receiver__key="", receiver__value=""
+        try {
+            (new Attribute("", "")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_502() throws Exception {
+        // Combination: receiver__key="", receiver__value=" "
+        try {
+            (new Attribute("", " ")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_503() throws Exception {
+        // Combination: receiver__key="", receiver__value="a"
+        try {
+            (new Attribute("", "a")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_504() throws Exception {
+        // Combination: receiver__key="", receiver__value="test123"
+        try {
+            (new Attribute("", "test123")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_505() throws Exception {
+        // Combination: receiver__key="", receiver__value="!@#"
+        try {
+            (new Attribute("", "!@#")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_506() throws Exception {
+        // Combination: receiver__key="", receiver__value="0"
+        try {
+            (new Attribute("", "0")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_507() throws Exception {
+        // Combination: receiver__key="", receiver__value="-1"
+        try {
+            (new Attribute("", "-1")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_508() throws Exception {
+        // Combination: receiver__key="", receiver__value="1.5"
+        try {
+            (new Attribute("", "1.5")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_509() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775807"
+        try {
+            (new Attribute("", "9223372036854775807")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_510() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775808"
+        try {
+            (new Attribute("", "9223372036854775808")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_511() throws Exception {
+        // Combination: receiver__key="", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_512() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=""
+        try {
+            (new Attribute(" ", "")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_513() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=" "
+        try {
+            (new Attribute(" ", " ")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_514() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="a"
+        try {
+            (new Attribute(" ", "a")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_515() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="test123"
+        try {
+            (new Attribute(" ", "test123")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_516() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="!@#"
+        try {
+            (new Attribute(" ", "!@#")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_517() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="0"
+        try {
+            (new Attribute(" ", "0")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_518() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="-1"
+        try {
+            (new Attribute(" ", "-1")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_519() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="1.5"
+        try {
+            (new Attribute(" ", "1.5")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_520() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775807"
+        try {
+            (new Attribute(" ", "9223372036854775807")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_521() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775808"
+        try {
+            (new Attribute(" ", "9223372036854775808")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_522() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_523() throws Exception {
+        // Combination: receiver__key="a", receiver__value=""
+        Object actual = (new Attribute("a", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_524() throws Exception {
+        // Combination: receiver__key="a", receiver__value=" "
+        Object actual = (new Attribute("a", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_525() throws Exception {
+        // Combination: receiver__key="a", receiver__value="a"
+        Object actual = (new Attribute("a", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_526() throws Exception {
+        // Combination: receiver__key="a", receiver__value="test123"
+        Object actual = (new Attribute("a", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_527() throws Exception {
+        // Combination: receiver__key="a", receiver__value="!@#"
+        Object actual = (new Attribute("a", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_528() throws Exception {
+        // Combination: receiver__key="a", receiver__value="0"
+        Object actual = (new Attribute("a", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_529() throws Exception {
+        // Combination: receiver__key="a", receiver__value="-1"
+        Object actual = (new Attribute("a", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_530() throws Exception {
+        // Combination: receiver__key="a", receiver__value="1.5"
+        Object actual = (new Attribute("a", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_531() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("a", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_532() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("a", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_533() throws Exception {
+        // Combination: receiver__key="a", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("a=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_534() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=""
+        Object actual = (new Attribute("test123", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_535() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=" "
+        Object actual = (new Attribute("test123", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_536() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="a"
+        Object actual = (new Attribute("test123", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_537() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="test123"
+        Object actual = (new Attribute("test123", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_538() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="!@#"
+        Object actual = (new Attribute("test123", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_539() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="0"
+        Object actual = (new Attribute("test123", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_540() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="-1"
+        Object actual = (new Attribute("test123", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_541() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="1.5"
+        Object actual = (new Attribute("test123", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_542() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("test123", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_543() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("test123", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_544() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("test123=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_545() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=""
+        Object actual = (new Attribute("!@#", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_546() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=" "
+        Object actual = (new Attribute("!@#", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_547() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="a"
+        Object actual = (new Attribute("!@#", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_548() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="test123"
+        Object actual = (new Attribute("!@#", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_549() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="!@#"
+        Object actual = (new Attribute("!@#", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_550() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="0"
+        Object actual = (new Attribute("!@#", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_551() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="-1"
+        Object actual = (new Attribute("!@#", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_552() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="1.5"
+        Object actual = (new Attribute("!@#", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_553() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("!@#", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_554() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("!@#", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_555() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("!@#=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_556() throws Exception {
+        // Combination: receiver__key="0", receiver__value=""
+        Object actual = (new Attribute("0", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_557() throws Exception {
+        // Combination: receiver__key="0", receiver__value=" "
+        Object actual = (new Attribute("0", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_558() throws Exception {
+        // Combination: receiver__key="0", receiver__value="a"
+        Object actual = (new Attribute("0", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_559() throws Exception {
+        // Combination: receiver__key="0", receiver__value="test123"
+        Object actual = (new Attribute("0", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_560() throws Exception {
+        // Combination: receiver__key="0", receiver__value="!@#"
+        Object actual = (new Attribute("0", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_561() throws Exception {
+        // Combination: receiver__key="0", receiver__value="0"
+        Object actual = (new Attribute("0", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_562() throws Exception {
+        // Combination: receiver__key="0", receiver__value="-1"
+        Object actual = (new Attribute("0", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_563() throws Exception {
+        // Combination: receiver__key="0", receiver__value="1.5"
+        Object actual = (new Attribute("0", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_564() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("0", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_565() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("0", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_566() throws Exception {
+        // Combination: receiver__key="0", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("0=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_567() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=""
+        Object actual = (new Attribute("-1", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_568() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=" "
+        Object actual = (new Attribute("-1", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_569() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="a"
+        Object actual = (new Attribute("-1", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_570() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="test123"
+        Object actual = (new Attribute("-1", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_571() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="!@#"
+        Object actual = (new Attribute("-1", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_572() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="0"
+        Object actual = (new Attribute("-1", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_573() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="-1"
+        Object actual = (new Attribute("-1", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_574() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="1.5"
+        Object actual = (new Attribute("-1", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_575() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("-1", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_576() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("-1", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_577() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("-1=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_578() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=""
+        Object actual = (new Attribute("1.5", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_579() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=" "
+        Object actual = (new Attribute("1.5", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_580() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="a"
+        Object actual = (new Attribute("1.5", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_581() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="test123"
+        Object actual = (new Attribute("1.5", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_582() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="!@#"
+        Object actual = (new Attribute("1.5", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_583() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="0"
+        Object actual = (new Attribute("1.5", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_584() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="-1"
+        Object actual = (new Attribute("1.5", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_585() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="1.5"
+        Object actual = (new Attribute("1.5", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_586() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("1.5", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_587() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("1.5", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_588() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("1.5=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_589() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=""
+        Object actual = (new Attribute("9223372036854775807", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_590() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775807", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_591() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775807", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_592() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775807", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_593() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775807", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_594() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775807", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_595() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775807", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_596() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775807", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_597() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_598() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_599() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775807=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_600() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=""
+        Object actual = (new Attribute("9223372036854775808", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_601() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775808", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_602() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775808", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_603() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775808", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_604() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775808", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_605() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775808", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_606() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775808", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_607() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775808", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_608() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_609() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_610() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("9223372036854775808=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_611() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=""
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_612() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=" "
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\" \"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_613() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="a"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"a\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_614() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="test123"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"test123\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_615() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="!@#"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"!@#\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_616() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="0"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"0\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_617() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="-1"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"-1\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_618() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="1.5"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"1.5\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_619() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775807\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_620() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"9223372036854775808\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_toString_pairwise_621() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).toString();
+        assertNotNull(actual);
+        assertEquals("java.lang.String", actual.getClass().getName());
+        assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_622() throws Exception {
+        // Combination: receiver__key="", receiver__value=""
+        try {
+            (new Attribute("", "")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_623() throws Exception {
+        // Combination: receiver__key="", receiver__value=" "
+        try {
+            (new Attribute("", " ")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_624() throws Exception {
+        // Combination: receiver__key="", receiver__value="a"
+        try {
+            (new Attribute("", "a")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_625() throws Exception {
+        // Combination: receiver__key="", receiver__value="test123"
+        try {
+            (new Attribute("", "test123")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_626() throws Exception {
+        // Combination: receiver__key="", receiver__value="!@#"
+        try {
+            (new Attribute("", "!@#")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_627() throws Exception {
+        // Combination: receiver__key="", receiver__value="0"
+        try {
+            (new Attribute("", "0")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_628() throws Exception {
+        // Combination: receiver__key="", receiver__value="-1"
+        try {
+            (new Attribute("", "-1")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_629() throws Exception {
+        // Combination: receiver__key="", receiver__value="1.5"
+        try {
+            (new Attribute("", "1.5")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_630() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775807"
+        try {
+            (new Attribute("", "9223372036854775807")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_631() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775808"
+        try {
+            (new Attribute("", "9223372036854775808")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_632() throws Exception {
+        // Combination: receiver__key="", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_633() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=""
+        try {
+            (new Attribute(" ", "")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_634() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=" "
+        try {
+            (new Attribute(" ", " ")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_635() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="a"
+        try {
+            (new Attribute(" ", "a")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_636() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="test123"
+        try {
+            (new Attribute(" ", "test123")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_637() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="!@#"
+        try {
+            (new Attribute(" ", "!@#")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_638() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="0"
+        try {
+            (new Attribute(" ", "0")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_639() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="-1"
+        try {
+            (new Attribute(" ", "-1")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_640() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="1.5"
+        try {
+            (new Attribute(" ", "1.5")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_641() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775807"
+        try {
+            (new Attribute(" ", "9223372036854775807")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_642() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775808"
+        try {
+            (new Attribute(" ", "9223372036854775808")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_643() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_644() throws Exception {
+        // Combination: receiver__key="a", receiver__value=""
+        Object actual = (new Attribute("a", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_645() throws Exception {
+        // Combination: receiver__key="a", receiver__value=" "
+        Object actual = (new Attribute("a", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_646() throws Exception {
+        // Combination: receiver__key="a", receiver__value="a"
+        Object actual = (new Attribute("a", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_647() throws Exception {
+        // Combination: receiver__key="a", receiver__value="test123"
+        Object actual = (new Attribute("a", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_648() throws Exception {
+        // Combination: receiver__key="a", receiver__value="!@#"
+        Object actual = (new Attribute("a", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_649() throws Exception {
+        // Combination: receiver__key="a", receiver__value="0"
+        Object actual = (new Attribute("a", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_650() throws Exception {
+        // Combination: receiver__key="a", receiver__value="-1"
+        Object actual = (new Attribute("a", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_651() throws Exception {
+        // Combination: receiver__key="a", receiver__value="1.5"
+        Object actual = (new Attribute("a", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_652() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("a", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_653() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("a", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_654() throws Exception {
+        // Combination: receiver__key="a", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_655() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=""
+        Object actual = (new Attribute("test123", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_656() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=" "
+        Object actual = (new Attribute("test123", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_657() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="a"
+        Object actual = (new Attribute("test123", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_658() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="test123"
+        Object actual = (new Attribute("test123", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_659() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="!@#"
+        Object actual = (new Attribute("test123", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_660() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="0"
+        Object actual = (new Attribute("test123", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_661() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="-1"
+        Object actual = (new Attribute("test123", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_662() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="1.5"
+        Object actual = (new Attribute("test123", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_663() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("test123", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_664() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("test123", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_665() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_666() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=""
+        Object actual = (new Attribute("!@#", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_667() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=" "
+        Object actual = (new Attribute("!@#", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_668() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="a"
+        Object actual = (new Attribute("!@#", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_669() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="test123"
+        Object actual = (new Attribute("!@#", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_670() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="!@#"
+        Object actual = (new Attribute("!@#", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_671() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="0"
+        Object actual = (new Attribute("!@#", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_672() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="-1"
+        Object actual = (new Attribute("!@#", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_673() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="1.5"
+        Object actual = (new Attribute("!@#", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_674() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("!@#", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_675() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("!@#", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_676() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_677() throws Exception {
+        // Combination: receiver__key="0", receiver__value=""
+        Object actual = (new Attribute("0", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_678() throws Exception {
+        // Combination: receiver__key="0", receiver__value=" "
+        Object actual = (new Attribute("0", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_679() throws Exception {
+        // Combination: receiver__key="0", receiver__value="a"
+        Object actual = (new Attribute("0", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_680() throws Exception {
+        // Combination: receiver__key="0", receiver__value="test123"
+        Object actual = (new Attribute("0", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_681() throws Exception {
+        // Combination: receiver__key="0", receiver__value="!@#"
+        Object actual = (new Attribute("0", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_682() throws Exception {
+        // Combination: receiver__key="0", receiver__value="0"
+        Object actual = (new Attribute("0", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_683() throws Exception {
+        // Combination: receiver__key="0", receiver__value="-1"
+        Object actual = (new Attribute("0", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_684() throws Exception {
+        // Combination: receiver__key="0", receiver__value="1.5"
+        Object actual = (new Attribute("0", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_685() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("0", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_686() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("0", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_687() throws Exception {
+        // Combination: receiver__key="0", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_688() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=""
+        Object actual = (new Attribute("-1", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_689() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=" "
+        Object actual = (new Attribute("-1", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_690() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="a"
+        Object actual = (new Attribute("-1", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_691() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="test123"
+        Object actual = (new Attribute("-1", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_692() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="!@#"
+        Object actual = (new Attribute("-1", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_693() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="0"
+        Object actual = (new Attribute("-1", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_694() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="-1"
+        Object actual = (new Attribute("-1", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_695() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="1.5"
+        Object actual = (new Attribute("-1", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_696() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("-1", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_697() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("-1", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_698() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_699() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=""
+        Object actual = (new Attribute("1.5", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_700() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=" "
+        Object actual = (new Attribute("1.5", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_701() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="a"
+        Object actual = (new Attribute("1.5", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_702() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="test123"
+        Object actual = (new Attribute("1.5", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_703() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="!@#"
+        Object actual = (new Attribute("1.5", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_704() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="0"
+        Object actual = (new Attribute("1.5", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_705() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="-1"
+        Object actual = (new Attribute("1.5", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_706() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="1.5"
+        Object actual = (new Attribute("1.5", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_707() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("1.5", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_708() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("1.5", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_709() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_710() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=""
+        Object actual = (new Attribute("9223372036854775807", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_711() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775807", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_712() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775807", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_713() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775807", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_714() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775807", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_715() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775807", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_716() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775807", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_717() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775807", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_718() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_719() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_720() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_721() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=""
+        Object actual = (new Attribute("9223372036854775808", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_722() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775808", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_723() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775808", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_724() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775808", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_725() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775808", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_726() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775808", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_727() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775808", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_728() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775808", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_729() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_730() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_731() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_732() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=""
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_733() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=" "
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_734() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="a"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_735() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="test123"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_736() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="!@#"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_737() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="0"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_738() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="-1"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_739() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="1.5"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_740() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_741() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isDataAttribute_pairwise_742() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isDataAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_743() throws Exception {
+        // Combination: receiver__key="", receiver__value=""
+        try {
+            (new Attribute("", "")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_744() throws Exception {
+        // Combination: receiver__key="", receiver__value=" "
+        try {
+            (new Attribute("", " ")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_745() throws Exception {
+        // Combination: receiver__key="", receiver__value="a"
+        try {
+            (new Attribute("", "a")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_746() throws Exception {
+        // Combination: receiver__key="", receiver__value="test123"
+        try {
+            (new Attribute("", "test123")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_747() throws Exception {
+        // Combination: receiver__key="", receiver__value="!@#"
+        try {
+            (new Attribute("", "!@#")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_748() throws Exception {
+        // Combination: receiver__key="", receiver__value="0"
+        try {
+            (new Attribute("", "0")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_749() throws Exception {
+        // Combination: receiver__key="", receiver__value="-1"
+        try {
+            (new Attribute("", "-1")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_750() throws Exception {
+        // Combination: receiver__key="", receiver__value="1.5"
+        try {
+            (new Attribute("", "1.5")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_751() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775807"
+        try {
+            (new Attribute("", "9223372036854775807")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_752() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775808"
+        try {
+            (new Attribute("", "9223372036854775808")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_753() throws Exception {
+        // Combination: receiver__key="", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_754() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=""
+        try {
+            (new Attribute(" ", "")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_755() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=" "
+        try {
+            (new Attribute(" ", " ")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_756() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="a"
+        try {
+            (new Attribute(" ", "a")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_757() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="test123"
+        try {
+            (new Attribute(" ", "test123")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_758() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="!@#"
+        try {
+            (new Attribute(" ", "!@#")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_759() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="0"
+        try {
+            (new Attribute(" ", "0")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_760() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="-1"
+        try {
+            (new Attribute(" ", "-1")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_761() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="1.5"
+        try {
+            (new Attribute(" ", "1.5")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_762() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775807"
+        try {
+            (new Attribute(" ", "9223372036854775807")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_763() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775808"
+        try {
+            (new Attribute(" ", "9223372036854775808")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_764() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_765() throws Exception {
+        // Combination: receiver__key="a", receiver__value=""
+        Object actual = (new Attribute("a", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_766() throws Exception {
+        // Combination: receiver__key="a", receiver__value=" "
+        Object actual = (new Attribute("a", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_767() throws Exception {
+        // Combination: receiver__key="a", receiver__value="a"
+        Object actual = (new Attribute("a", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_768() throws Exception {
+        // Combination: receiver__key="a", receiver__value="test123"
+        Object actual = (new Attribute("a", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_769() throws Exception {
+        // Combination: receiver__key="a", receiver__value="!@#"
+        Object actual = (new Attribute("a", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_770() throws Exception {
+        // Combination: receiver__key="a", receiver__value="0"
+        Object actual = (new Attribute("a", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_771() throws Exception {
+        // Combination: receiver__key="a", receiver__value="-1"
+        Object actual = (new Attribute("a", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_772() throws Exception {
+        // Combination: receiver__key="a", receiver__value="1.5"
+        Object actual = (new Attribute("a", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_773() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("a", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_774() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("a", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_775() throws Exception {
+        // Combination: receiver__key="a", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_776() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=""
+        Object actual = (new Attribute("test123", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_777() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=" "
+        Object actual = (new Attribute("test123", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_778() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="a"
+        Object actual = (new Attribute("test123", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_779() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="test123"
+        Object actual = (new Attribute("test123", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_780() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="!@#"
+        Object actual = (new Attribute("test123", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_781() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="0"
+        Object actual = (new Attribute("test123", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_782() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="-1"
+        Object actual = (new Attribute("test123", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_783() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="1.5"
+        Object actual = (new Attribute("test123", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_784() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("test123", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_785() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("test123", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_786() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_787() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=""
+        Object actual = (new Attribute("!@#", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_788() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=" "
+        Object actual = (new Attribute("!@#", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_789() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="a"
+        Object actual = (new Attribute("!@#", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_790() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="test123"
+        Object actual = (new Attribute("!@#", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_791() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="!@#"
+        Object actual = (new Attribute("!@#", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_792() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="0"
+        Object actual = (new Attribute("!@#", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_793() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="-1"
+        Object actual = (new Attribute("!@#", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_794() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="1.5"
+        Object actual = (new Attribute("!@#", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_795() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("!@#", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_796() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("!@#", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_797() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_798() throws Exception {
+        // Combination: receiver__key="0", receiver__value=""
+        Object actual = (new Attribute("0", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_799() throws Exception {
+        // Combination: receiver__key="0", receiver__value=" "
+        Object actual = (new Attribute("0", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_800() throws Exception {
+        // Combination: receiver__key="0", receiver__value="a"
+        Object actual = (new Attribute("0", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_801() throws Exception {
+        // Combination: receiver__key="0", receiver__value="test123"
+        Object actual = (new Attribute("0", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_802() throws Exception {
+        // Combination: receiver__key="0", receiver__value="!@#"
+        Object actual = (new Attribute("0", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_803() throws Exception {
+        // Combination: receiver__key="0", receiver__value="0"
+        Object actual = (new Attribute("0", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_804() throws Exception {
+        // Combination: receiver__key="0", receiver__value="-1"
+        Object actual = (new Attribute("0", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_805() throws Exception {
+        // Combination: receiver__key="0", receiver__value="1.5"
+        Object actual = (new Attribute("0", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_806() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("0", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_807() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("0", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_808() throws Exception {
+        // Combination: receiver__key="0", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_809() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=""
+        Object actual = (new Attribute("-1", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_810() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=" "
+        Object actual = (new Attribute("-1", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_811() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="a"
+        Object actual = (new Attribute("-1", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_812() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="test123"
+        Object actual = (new Attribute("-1", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_813() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="!@#"
+        Object actual = (new Attribute("-1", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_814() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="0"
+        Object actual = (new Attribute("-1", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_815() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="-1"
+        Object actual = (new Attribute("-1", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_816() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="1.5"
+        Object actual = (new Attribute("-1", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_817() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("-1", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_818() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("-1", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_819() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_820() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=""
+        Object actual = (new Attribute("1.5", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_821() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=" "
+        Object actual = (new Attribute("1.5", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_822() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="a"
+        Object actual = (new Attribute("1.5", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_823() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="test123"
+        Object actual = (new Attribute("1.5", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_824() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="!@#"
+        Object actual = (new Attribute("1.5", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_825() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="0"
+        Object actual = (new Attribute("1.5", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_826() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="-1"
+        Object actual = (new Attribute("1.5", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_827() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="1.5"
+        Object actual = (new Attribute("1.5", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_828() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("1.5", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_829() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("1.5", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_830() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_831() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=""
+        Object actual = (new Attribute("9223372036854775807", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_832() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775807", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_833() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775807", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_834() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775807", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_835() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775807", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_836() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775807", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_837() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775807", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_838() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775807", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_839() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_840() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_841() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_842() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=""
+        Object actual = (new Attribute("9223372036854775808", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_843() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775808", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_844() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775808", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_845() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775808", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_846() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775808", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_847() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775808", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_848() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775808", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_849() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775808", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_850() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_851() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_852() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_853() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=""
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_854() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=" "
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_855() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="a"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_856() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="test123"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_857() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="!@#"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_858() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="0"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_859() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="-1"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_860() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="1.5"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_861() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_862() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_isBooleanAttribute_pairwise_863() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).isBooleanAttribute();
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_864() throws Exception {
+        // Combination: receiver__key="", receiver__value="", o=new Object()
+        try {
+            (new Attribute("", "")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_865() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=" ", o=new Object()
+        try {
+            (new Attribute(" ", " ")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_866() throws Exception {
+        // Combination: receiver__key="a", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("a", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_867() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("test123", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_868() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("!@#", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_869() throws Exception {
+        // Combination: receiver__key="0", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("0", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_870() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("-1", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_871() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("1.5", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_872() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_873() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_874() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_875() throws Exception {
+        // Combination: receiver__key="", receiver__value=" ", o="sample_str"
+        try {
+            (new Attribute("", " ")).equals("sample_str");
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_876() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="", o="sample_str"
+        try {
+            (new Attribute(" ", "")).equals("sample_str");
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_877() throws Exception {
+        // Combination: receiver__key="a", receiver__value="test123", o="sample_str"
+        Object actual = (new Attribute("a", "test123")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_878() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="a", o="sample_str"
+        Object actual = (new Attribute("test123", "a")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_879() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="0", o="sample_str"
+        Object actual = (new Attribute("!@#", "0")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_880() throws Exception {
+        // Combination: receiver__key="0", receiver__value="!@#", o="sample_str"
+        Object actual = (new Attribute("0", "!@#")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_881() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="1.5", o="sample_str"
+        Object actual = (new Attribute("-1", "1.5")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_882() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="-1", o="sample_str"
+        Object actual = (new Attribute("1.5", "-1")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_883() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775808", o="sample_str"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_884() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775807", o="sample_str"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_885() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="", o="sample_str"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).equals("sample_str");
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_886() throws Exception {
+        // Combination: receiver__key="", receiver__value="a", o=Integer.valueOf(1)
+        try {
+            (new Attribute("", "a")).equals(Integer.valueOf(1));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_887() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="test123", o=Integer.valueOf(1)
+        try {
+            (new Attribute(" ", "test123")).equals(Integer.valueOf(1));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_888() throws Exception {
+        // Combination: receiver__key="a", receiver__value="", o=Integer.valueOf(1)
+        Object actual = (new Attribute("a", "")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_889() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=" ", o=Integer.valueOf(1)
+        Object actual = (new Attribute("test123", " ")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_890() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="-1", o=Integer.valueOf(1)
+        Object actual = (new Attribute("!@#", "-1")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_891() throws Exception {
+        // Combination: receiver__key="0", receiver__value="1.5", o=Integer.valueOf(1)
+        Object actual = (new Attribute("0", "1.5")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_892() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="!@#", o=Integer.valueOf(1)
+        Object actual = (new Attribute("-1", "!@#")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_893() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="0", o=Integer.valueOf(1)
+        Object actual = (new Attribute("1.5", "0")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_894() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=Integer.valueOf(1)
+        Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_895() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="", o=Integer.valueOf(1)
+        Object actual = (new Attribute("9223372036854775808", "")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_896() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775807", o=Integer.valueOf(1)
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).equals(Integer.valueOf(1));
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_897() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="", o=new Object()
+        Object actual = (new Attribute("test123", "")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_898() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="", o=new Object()
+        Object actual = (new Attribute("!@#", "")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_899() throws Exception {
+        // Combination: receiver__key="0", receiver__value="", o=new Object()
+        Object actual = (new Attribute("0", "")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_900() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="", o=new Object()
+        Object actual = (new Attribute("-1", "")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_901() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="", o=new Object()
+        Object actual = (new Attribute("1.5", "")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_902() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_903() throws Exception {
+        // Combination: receiver__key="a", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("a", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_904() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("!@#", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_905() throws Exception {
+        // Combination: receiver__key="0", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("0", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_906() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("-1", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_907() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("1.5", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_908() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_909() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_910() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=" ", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_911() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="a", o=new Object()
+        try {
+            (new Attribute(" ", "a")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_912() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("!@#", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_913() throws Exception {
+        // Combination: receiver__key="0", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("0", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_914() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("-1", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_915() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("1.5", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_916() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_917() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_918() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="a", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_919() throws Exception {
+        // Combination: receiver__key="", receiver__value="test123", o=new Object()
+        try {
+            (new Attribute("", "test123")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_920() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("!@#", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_921() throws Exception {
+        // Combination: receiver__key="0", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("0", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_922() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("-1", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_923() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("1.5", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_924() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_925() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_926() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="test123", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_927() throws Exception {
+        // Combination: receiver__key="", receiver__value="!@#", o=new Object()
+        try {
+            (new Attribute("", "!@#")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_928() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="!@#", o=new Object()
+        try {
+            (new Attribute(" ", "!@#")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_929() throws Exception {
+        // Combination: receiver__key="a", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("a", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_930() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("test123", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_931() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("1.5", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_932() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_933() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_934() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="!@#", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_935() throws Exception {
+        // Combination: receiver__key="", receiver__value="0", o=new Object()
+        try {
+            (new Attribute("", "0")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_936() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="0", o=new Object()
+        try {
+            (new Attribute(" ", "0")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_937() throws Exception {
+        // Combination: receiver__key="a", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("a", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_938() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("test123", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_939() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("-1", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_940() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_941() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_942() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="0", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_943() throws Exception {
+        // Combination: receiver__key="", receiver__value="-1", o=new Object()
+        try {
+            (new Attribute("", "-1")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_944() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="-1", o=new Object()
+        try {
+            (new Attribute(" ", "-1")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_945() throws Exception {
+        // Combination: receiver__key="a", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("a", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_946() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("test123", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_947() throws Exception {
+        // Combination: receiver__key="0", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("0", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_948() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_949() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_950() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="-1", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_951() throws Exception {
+        // Combination: receiver__key="", receiver__value="1.5", o=new Object()
+        try {
+            (new Attribute("", "1.5")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_952() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="1.5", o=new Object()
+        try {
+            (new Attribute(" ", "1.5")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_953() throws Exception {
+        // Combination: receiver__key="a", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("a", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_954() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("test123", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_955() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("!@#", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_956() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("9223372036854775807", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_957() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_958() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="1.5", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_959() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775807", o=new Object()
+        try {
+            (new Attribute("", "9223372036854775807")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_960() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775807", o=new Object()
+        try {
+            (new Attribute(" ", "9223372036854775807")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_961() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("a", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_962() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("test123", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_963() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("!@#", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_964() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("0", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_965() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("-1", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_966() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775807", o=new Object()
+        Object actual = (new Attribute("1.5", "9223372036854775807")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_967() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775808", o=Integer.valueOf(1)
+        try {
+            (new Attribute("", "9223372036854775808")).equals(Integer.valueOf(1));
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_968() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775808", o=new Object()
+        try {
+            (new Attribute(" ", "9223372036854775808")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_969() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("a", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_970() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("test123", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_971() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("!@#", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_972() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("0", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_973() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("-1", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_974() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("1.5", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_975() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775808", o=new Object()
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_976() throws Exception {
+        // Combination: receiver__key="", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o="sample_str"
+        try {
+            (new Attribute("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals("sample_str");
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_977() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        try {
+            (new Attribute(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_978() throws Exception {
+        // Combination: receiver__key="a", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_979() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_980() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_981() throws Exception {
+        // Combination: receiver__key="0", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_982() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_983() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_equals_pairwise_984() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", o=new Object()
+        Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).equals(new Object());
+        assertNotNull(actual);
+        assertEquals("java.lang.Boolean", actual.getClass().getName());
+        assertEquals("false", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_985() throws Exception {
+        // Combination: receiver__key="", receiver__value=""
+        try {
+            (new Attribute("", "")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_986() throws Exception {
+        // Combination: receiver__key="", receiver__value=" "
+        try {
+            (new Attribute("", " ")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_987() throws Exception {
+        // Combination: receiver__key="", receiver__value="a"
+        try {
+            (new Attribute("", "a")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_988() throws Exception {
+        // Combination: receiver__key="", receiver__value="test123"
+        try {
+            (new Attribute("", "test123")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_989() throws Exception {
+        // Combination: receiver__key="", receiver__value="!@#"
+        try {
+            (new Attribute("", "!@#")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_990() throws Exception {
+        // Combination: receiver__key="", receiver__value="0"
+        try {
+            (new Attribute("", "0")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_991() throws Exception {
+        // Combination: receiver__key="", receiver__value="-1"
+        try {
+            (new Attribute("", "-1")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_992() throws Exception {
+        // Combination: receiver__key="", receiver__value="1.5"
+        try {
+            (new Attribute("", "1.5")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_993() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775807"
+        try {
+            (new Attribute("", "9223372036854775807")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_994() throws Exception {
+        // Combination: receiver__key="", receiver__value="9223372036854775808"
+        try {
+            (new Attribute("", "9223372036854775808")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_995() throws Exception {
+        // Combination: receiver__key="", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute("", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_996() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=""
+        try {
+            (new Attribute(" ", "")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_997() throws Exception {
+        // Combination: receiver__key=" ", receiver__value=" "
+        try {
+            (new Attribute(" ", " ")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_998() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="a"
+        try {
+            (new Attribute(" ", "a")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_999() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="test123"
+        try {
+            (new Attribute(" ", "test123")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1000() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="!@#"
+        try {
+            (new Attribute(" ", "!@#")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1001() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="0"
+        try {
+            (new Attribute(" ", "0")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1002() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="-1"
+        try {
+            (new Attribute(" ", "-1")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1003() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="1.5"
+        try {
+            (new Attribute(" ", "1.5")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1004() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775807"
+        try {
+            (new Attribute(" ", "9223372036854775807")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1005() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="9223372036854775808"
+        try {
+            (new Attribute(" ", "9223372036854775808")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1006() throws Exception {
+        // Combination: receiver__key=" ", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        try {
+            (new Attribute(" ", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+            fail("Expected java.lang.IllegalArgumentException");
+        } catch (java.lang.IllegalArgumentException expected) {
+            // Expected outcome recorded from the fixed version.
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1007() throws Exception {
+        // Combination: receiver__key="a", receiver__value=""
+        Object actual = (new Attribute("a", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("3007", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1008() throws Exception {
+        // Combination: receiver__key="a", receiver__value=" "
+        Object actual = (new Attribute("a", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("3039", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1009() throws Exception {
+        // Combination: receiver__key="a", receiver__value="a"
+        Object actual = (new Attribute("a", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("3104", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1010() throws Exception {
+        // Combination: receiver__key="a", receiver__value="test123"
+        Object actual = (new Attribute("a", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1422498785", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1011() throws Exception {
+        // Combination: receiver__key="a", receiver__value="!@#"
+        Object actual = (new Attribute("a", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("36739", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1012() throws Exception {
+        // Combination: receiver__key="a", receiver__value="0"
+        Object actual = (new Attribute("a", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("3055", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1013() throws Exception {
+        // Combination: receiver__key="a", receiver__value="-1"
+        Object actual = (new Attribute("a", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("4451", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1014() throws Exception {
+        // Combination: receiver__key="a", receiver__value="1.5"
+        Object actual = (new Attribute("a", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("51575", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1015() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("a", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1773148191", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1016() throws Exception {
+        // Combination: receiver__key="a", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("a", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1773148190", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1017() throws Exception {
+        // Combination: receiver__key="a", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-474935873", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1018() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=""
+        Object actual = (new Attribute("test123", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147882592", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1019() throws Exception {
+        // Combination: receiver__key="test123", receiver__value=" "
+        Object actual = (new Attribute("test123", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147882560", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1020() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="a"
+        Object actual = (new Attribute("test123", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147882495", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1021() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="test123"
+        Object actual = (new Attribute("test123", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1724582912", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1022() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="!@#"
+        Object actual = (new Attribute("test123", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147848860", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1023() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="0"
+        Object actual = (new Attribute("test123", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147882544", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1024() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="-1"
+        Object actual = (new Attribute("test123", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147881148", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1025() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="1.5"
+        Object actual = (new Attribute("test123", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1147834024", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1026() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("test123", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1373933506", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1027() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("test123", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1373933507", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1028() throws Exception {
+        // Combination: receiver__key="test123", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("test123", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1622821472", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1029() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=""
+        Object actual = (new Attribute("!@#", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1045692", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1030() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value=" "
+        Object actual = (new Attribute("!@#", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1045724", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1031() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="a"
+        Object actual = (new Attribute("!@#", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1045789", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1032() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="test123"
+        Object actual = (new Attribute("!@#", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1421456100", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1033() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="!@#"
+        Object actual = (new Attribute("!@#", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1079424", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1034() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="0"
+        Object actual = (new Attribute("!@#", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1045740", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1035() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="-1"
+        Object actual = (new Attribute("!@#", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1047136", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1036() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="1.5"
+        Object actual = (new Attribute("!@#", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1094260", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1037() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("!@#", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1772105506", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1038() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("!@#", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1772105505", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1039() throws Exception {
+        // Combination: receiver__key="!@#", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("!@#", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-473893188", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1040() throws Exception {
+        // Combination: receiver__key="0", receiver__value=""
+        Object actual = (new Attribute("0", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1488", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1041() throws Exception {
+        // Combination: receiver__key="0", receiver__value=" "
+        Object actual = (new Attribute("0", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1520", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1042() throws Exception {
+        // Combination: receiver__key="0", receiver__value="a"
+        Object actual = (new Attribute("0", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1585", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1043() throws Exception {
+        // Combination: receiver__key="0", receiver__value="test123"
+        Object actual = (new Attribute("0", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1422500304", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1044() throws Exception {
+        // Combination: receiver__key="0", receiver__value="!@#"
+        Object actual = (new Attribute("0", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("35220", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1045() throws Exception {
+        // Combination: receiver__key="0", receiver__value="0"
+        Object actual = (new Attribute("0", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1536", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1046() throws Exception {
+        // Combination: receiver__key="0", receiver__value="-1"
+        Object actual = (new Attribute("0", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("2932", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1047() throws Exception {
+        // Combination: receiver__key="0", receiver__value="1.5"
+        Object actual = (new Attribute("0", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("50056", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1048() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("0", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1773149710", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1049() throws Exception {
+        // Combination: receiver__key="0", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("0", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1773149709", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1050() throws Exception {
+        // Combination: receiver__key="0", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("0", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-474937392", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1051() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=""
+        Object actual = (new Attribute("-1", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("44764", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1052() throws Exception {
+        // Combination: receiver__key="-1", receiver__value=" "
+        Object actual = (new Attribute("-1", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("44796", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1053() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="a"
+        Object actual = (new Attribute("-1", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("44861", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1054() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="test123"
+        Object actual = (new Attribute("-1", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1422457028", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1055() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="!@#"
+        Object actual = (new Attribute("-1", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("78496", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1056() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="0"
+        Object actual = (new Attribute("-1", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("44812", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1057() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="-1"
+        Object actual = (new Attribute("-1", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("46208", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1058() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="1.5"
+        Object actual = (new Attribute("-1", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("93332", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1059() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("-1", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1773106434", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1060() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("-1", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1773106433", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1061() throws Exception {
+        // Combination: receiver__key="-1", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("-1", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-474894116", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1062() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=""
+        Object actual = (new Attribute("1.5", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1505608", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1063() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value=" "
+        Object actual = (new Attribute("1.5", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1505640", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1064() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="a"
+        Object actual = (new Attribute("1.5", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1505705", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1065() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="test123"
+        Object actual = (new Attribute("1.5", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1420996184", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1066() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="!@#"
+        Object actual = (new Attribute("1.5", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1539340", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1067() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="0"
+        Object actual = (new Attribute("1.5", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1505656", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1068() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="-1"
+        Object actual = (new Attribute("1.5", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1507052", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1069() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="1.5"
+        Object actual = (new Attribute("1.5", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1554176", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1070() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("1.5", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1771645590", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1071() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("1.5", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1771645589", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1072() throws Exception {
+        // Combination: receiver__key="1.5", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("1.5", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-473433272", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1073() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=""
+        Object actual = (new Attribute("9223372036854775807", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887710", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1074() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775807", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887742", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1075() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775807", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887807", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1076() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775807", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-555614082", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1077() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775807", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866921442", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1078() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775807", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887758", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1079() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775807", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866889154", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1080() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775807", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866936278", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1081() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-906263488", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1082() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775807", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-906263487", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1083() throws Exception {
+        // Combination: receiver__key="9223372036854775807", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775807", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("391948830", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1084() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=""
+        Object actual = (new Attribute("9223372036854775808", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887741", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1085() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value=" "
+        Object actual = (new Attribute("9223372036854775808", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887773", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1086() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="a"
+        Object actual = (new Attribute("9223372036854775808", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887838", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1087() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="test123"
+        Object actual = (new Attribute("9223372036854775808", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-555614051", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1088() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="!@#"
+        Object actual = (new Attribute("9223372036854775808", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866921473", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1089() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="0"
+        Object actual = (new Attribute("9223372036854775808", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866887789", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1090() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="-1"
+        Object actual = (new Attribute("9223372036854775808", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866889185", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1091() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="1.5"
+        Object actual = (new Attribute("9223372036854775808", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("866936309", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1092() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-906263457", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1093() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("9223372036854775808", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-906263456", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1094() throws Exception {
+        // Combination: receiver__key="9223372036854775808", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("9223372036854775808", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("391948861", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1095() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=""
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838203392", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1096() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value=" "
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", " ")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838203360", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1097() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="a"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "a")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838203295", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1098() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="test123"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test123")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1034262112", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1099() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="!@#"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "!@#")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838169660", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1100() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="0"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "0")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838203344", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1101() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="-1"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "-1")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838201948", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1102() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="1.5"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "1.5")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("-1838154824", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1103() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775807"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775807")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("683612706", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1104() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="9223372036854775808"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "9223372036854775808")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("683612707", String.valueOf(actual));
+    }
+
+    @Test(timeout = 4000)
+    public void test_hashCode_pairwise_1105() throws Exception {
+        // Combination: receiver__key="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", receiver__value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        Object actual = (new Attribute("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")).hashCode();
+        assertNotNull(actual);
+        assertEquals("java.lang.Integer", actual.getClass().getName());
+        assertEquals("1981825024", String.valueOf(actual));
+    }
+
 }

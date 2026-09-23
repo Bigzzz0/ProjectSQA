@@ -10,10 +10,13 @@
 |---|---|---|---|
 | **คลาสที่พร้อมสร้างเทส (AUTO_READY)** | 48 คลาส | **247 คลาส** | **+414.6% (เพิ่มขึ้น 5.1 เท่า)** |
 | **คลาสที่ติด Entry Point (NEEDS_ENTRY_POINT)** | 440 คลาส | **78 คลาส** | **-82.3% (ปลดล็อก 362 คลาส)** |
-| **จำนวนชุดทดสอบที่ผ่านการ Verify (FIXED_VERIFIED)** | 46 suites | **67 suites** (และกำลังเพิ่มขึ้น) | **+45.7%** |
-| **ความถูกต้องของชุดทดสอบที่ Publish** | 100% Verified | **100% Verified** | คงมาตรฐานความถูกต้องสมบูรณ์ |
-| **Pair Coverage ของทุก Factor ใน Suite** | 100.0% | **100.0%** | ไม่มี missing pair ใดๆ |
-| **Unit Tests ของระบบ IPO** | 108 tests | **110 tests** | ผ่าน 100% |
+| **จำนวนชุดทดสอบที่ผ่านการ Verify (FIXED_VERIFIED)** | 46 suites | **173 suites** | **+276.1% (เพิ่มขึ้น 3.8 เท่า)** |
+| **จำนวนเมธอดเป้าหมายที่ครอบคลุม (Methods)** | 48 methods | **1,175 methods** | **+2,347.9% (เพิ่มขึ้น 24.5 เท่า)** |
+| **จำนวนเคสทดสอบทั้งหมด (@Test Cases)** | ~1,200 tests | **42,398 tests** | **+3,433.2% (เพิ่มขึ้น 35.3 เท่า)** |
+| **จำนวนบรรทัดโค้ดทดสอบ (Java Test LOC)** | ~15,000 LOC | **405,456 LOC** | **เพิ่มขึ้น 27 เท่า** |
+| **ความถูกต้องของชุดทดสอบที่ Publish** | 100% Verified | **100% Verified** | คงมาตรฐานความถูกต้องสมบูรณ์ (Zero Flaky) |
+| **Pair Coverage ของทุก Method ใน Suite** | 100.0% | **100.0% (1,175/1,175)** | ไม่มี missing pair แม้แต่คู่เดียว |
+| **Unit Tests ของระบบ IPO** | 108 tests | **110 tests** | ผ่าน 100% (Windows & Docker) |
 
 ---
 
@@ -35,16 +38,33 @@
 
 ---
 
-## 3. ผลการทดลอง Canary Experiment (40 Class Instances)
+## 3. ผลการทดลอง All-Class Execution (173 Verified Suites)
 
-เราได้ทำการคัดเลือก 40 คลาสตัวแทนจาก **16 โปรเจกต์** ใน Defects4J เพื่อทดสอบการสร้างและ Verify จริง:
-- **จำนวนคลาสที่รันประมวลผล:** 29 คลาส (รันไปถึง JacksonDatabind ก่อนติด timeout ของสภาพแวดล้อมเบื้องหลัง)
-- **จำนวนคลาสที่ผ่านการ Verify (FIXED_VERIFIED):** **25 คลาส (อัตราสำเร็จ 86.2%)**
-- **คลาสที่พบปัญหา (ERROR):** 4 คลาส
-  1. `JacksonCore-9`: Constructor 9 arguments ถูกเข้าใจว่าเป็น 0-arg ctor ในแคชเดิม (แก้ไขได้โดยดึง AST ล่าสุด)
-  2. `Codec-2`: Overloaded method type collision
-  3. `Closure-57`: Parser node representation
-  4. `Closure-14`: Control flow analysis entry node
+ระบบได้ทำการประมวลผลครอบคลุมทั้ง 1,070 คลาสเป้าหมายใน Defects4J ผลการสร้างชุดทดสอบและ Verify บนสภาพแวดล้อมจริงเป็นดังนี้:
+
+### ก) การกระจายตัวของ 173 Verified Suites รายโปรเจกต์ (13 โปรเจกต์)
+| ลำดับ | โปรเจกต์ | จำนวน Suites ที่ผ่าน | จุดเด่นของคลาสที่ครอบคลุม |
+|---|---|:---:|---|
+| 1 | **Commons Math** | **31 suites** | `MathUtils`, `FastMath`, `Complex`, `Fraction`, `Variance`, `ChiSquareTest` |
+| 2 | **Commons Compress** | **30 suites** | `TarUtils`, `SevenZFile`, `ArArchiveInputStream`, `ZipArchiveInputStream` |
+| 3 | **Commons Lang** | **28 suites** | `NumberUtils`, `WordUtils`, `FastDatePrinter`, `ArrayUtils`, `StringUtils` |
+| 4 | **Jsoup** | **26 suites** | `Attribute`, `ParseSettings`, `TokenQueue`, `XmlDeclaration`, `FormElement` |
+| 5 | **Commons Codec** | **12 suites** | `DoubleMetaphone`, `Base64InputStream`, `Caverphone`, `Metaphone`, `StringUtils` |
+| 6 | **Commons Collections** | **12 suites** | `ExtendedProperties`, `CollectionUtils`, `MultiValueMap`, `SetUniqueList` |
+| 7 | **Closure Compiler** | **11 suites** | `Compiler`, `ProcessCommonJSModules`, `SourceFile` |
+| 8 | **Joda Time** | **6 suites** | `FieldUtils`, `DateTimeZone`, `GJChronology` |
+| 9 | **Commons Cli** | **5 suites** | `Option`, `GroupImpl`, `HelpFormatter` |
+| 10 | **Commons Csv** | **4 suites** | `CSVFormat`, `ExtendedBufferedReader` |
+| 11 | **Jackson Databind** | **4 suites** | `StdKeyDeserializer`, `TypeFactory` |
+| 12 | **JFreeChart** | **3 suites** | `DefaultKeyedValues2D`, `ValueMarker`, `BoxAndWhiskerCategoryDataset` |
+| 13 | **Google Gson** | **1 suite** | `ISO8601Utils` |
+| **รวม** | **13 โปรเจกต์** | **173 suites** | **1,175 methods, 42,398 @Test cases, 405,456 LOC** |
+
+### ข) การวิเคราะห์สาเหตุของคลาสที่ไม่ผ่านในกลุ่ม AUTO_READY (~74 คลาส)
+จากการตรวจสอบ Log เชิงลึกใน `Results/cache/` พบสาเหตุทางเทคนิค 3 ประการที่ระบบคัดทิ้งเพื่อรักษาความถูกต้อง (Soundness Guarantee):
+1. **Abstract Class (Static Detection Incompleteness):** เช่น `Chart_26b Axis`, `Math_13b AbstractLeastSquaresOptimizer` ใน Static Analysis มองเห็น Constructor แต่เมื่อ Compile จริง Java ไม่อนุญาตให้ `new` คลาส Abstract ตรงๆ
+2. **Fixed Version Refactoring:** เช่น `Codec_2b Base64` เมธอดที่ถูกแก้ไขใน Buggy Version ถูก Refactor เปลี่ยน Signature หรือลบทิ้งไปใน Fixed Version ทำให้ไม่สามารถเก็บ Fixed Oracle ได้
+3. **Numerical Solver Timeout:** เมธอดใน Commons Math บางฟังก์ชันคำนวณไม่สิ้นสุดเมื่อเจอบาง Combination สุดโต่ง (เช่น NaN, Infinity) จนติด Safe Timeout (300 วินาที) ระบบจึงตัดทิ้งเฉพาะเมธอดดังกล่าว
 
 ---
 

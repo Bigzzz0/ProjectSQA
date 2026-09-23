@@ -1,8 +1,8 @@
 # เอกสารส่งต่องาน (Handoff): Native IPO Class-Level Upgrade
 
-**วันที่:** 22 กันยายน 2026  
+**วันที่:** 23 กันยายน 2026  
 **Repository:** `ProjectSQA`  
-**สถานะปัจจุบัน:** 67 Verified Suites, 247 AUTO_READY Targets, 110 Unit Tests Passing (100%)
+**สถานะปัจจุบัน:** 173 Verified Suites, 1,175 Methods, 42,398 @Test Cases, 405,456 LOC, 110 Unit Tests Passing (100%)
 
 ---
 
@@ -38,8 +38,10 @@
 5. **การเพิ่มผลผลิตเชิงประจักษ์ (Empirical Yield):**
    - คลาสที่พร้อมสร้างเทส (`AUTO_READY`) เพิ่มขึ้นจาก 48 คลาสเป็น **247 คลาส** (เพิ่มขึ้น 5.1 เท่า)
    - คลาสที่ติด Entry Point (`NEEDS_ENTRY_POINT`) ลดลงจาก 440 คลาสเหลือเพียง **78 คลาส**
-   - จำนวนชุดทดสอบที่ผ่านการ Verify เพิ่มขึ้นจาก 46 เป็น **67 suites**
-   - Unit tests ผ่านครบ 100% (110/110 tests)
+   - จำนวนชุดทดสอบที่ผ่านการ Verify เพิ่มขึ้นจาก 46 เป็น **173 suites (+276.1% หรือเพิ่มขึ้น 3.8 เท่า)**
+   - ครอบคลุม **1,175 methods** และสร้างเทสเคสทั้งหมด **42,398 @Test cases**
+   - ทุก Method ได้ **100.0% Pair Coverage** สมบูรณ์
+   - Unit tests ผ่านครบ 100% (110/110 tests) ทั้งบน Windows Host และ Linux Docker
 
 ---
 
