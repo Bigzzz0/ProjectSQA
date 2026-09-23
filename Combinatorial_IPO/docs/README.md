@@ -17,31 +17,42 @@ Combinatorial_IPO/
 │   ├── generator/          # ตัวสังเคราะห์โค้ด JUnit 4
 │   ├── oracle/             # Fixed-version oracle runner และ verification
 │   ├── runner/             # all_class_pipeline.py, catalog loaders
-│   └── tests/              # Unit tests (110 tests ผ่านทั้งหมด)
+│   └── tests/              # Unit tests (110 tests ผ่านทั้งหมด พร้อม README.md)
 ├── Configuration/          # แคตตาล็อก, สแนปช็อต และการตั้งค่า
 │   ├── catalogs/           # all-modified-classes.normalized.json
 │   ├── experiments/        # all-854-modified-classes.json
 │   └── regression_reference_46.json # อ้างอิง 46 suites ดั้งเดิม
-├── TestCode/               # ชุดทดสอบ JUnit ที่ผ่านการ verify แล้วเท่านั้น
+├── TestCode/               # ชุดทดสอบ JUnit 4 (173 Verified Suites, 42,398 tests พร้อม README.md)
 │   └── <Project>_<BugID>b/ # แยกตาม bug directory โดยตรง
 │       └── <package-path>/<Class>_IPOTest.java
 ├── Results/                # ผลลัพธ์และดัชนีชี้วัด
 │   ├── inventory.json      # สถานะความพร้อมของ 1,070 คลาสเป้าหมาย (247 AUTO_READY)
-│   ├── routing_manifest.json# งานที่ส่งต่อให้ Member 4 หรือเครื่องมืออื่น
-│   ├── verified_suites_manifest.json # รายการชุดทดสอบที่ผ่าน Fixed-Verification 100%
+│   ├── routing_manifest.json# งานที่ส่งต่อให้ Member 4 (712 คลาสที่รอ Adapter)
+│   ├── verified_suites_manifest.json # รายการชุดทดสอบที่ผ่าน Fixed-Verification 100% (173 suites)
 │   ├── generation_manifest.json # ประวัติการรันล่าสุด
 │   └── cache/              # แคช intermediate oracle/combinations เพื่อ resume
 └── docs/                   # เอกสารประกอบโครงการ
     ├── README.md           # คู่มือนี้ (คู่มือภาษาไทยและคำสั่งรัน)
     ├── DESIGN.md           # เอกสารสถาปัตยกรรมและการออกแบบระบบ
-    ├── RESULTS_REPORT.md   # รายงานผลการทดลองและการเปรียบเทียบเชิงประจักษ์
-    ├── HANDOFF.md          # เอกสารส่งต่องาน
+    ├── RESULTS_REPORT.md   # รายงานผลการทดลองและการเปรียบเทียบเชิงประจักษ์ (สถิติ 173 suites)
+    ├── HANDOFF.md          # เอกสารส่งต่องานและคู่มือ Takeover Guide สำหรับ Member 4
     └── handoffs/           # เอกสารบันทึกการส่งต่องานย้อนหลัง
 ```
 
 ---
 
-## 2. การตรวจสอบความพร้อมเบื้องต้น (Preflight Check)
+## 2. ดัชนีเอกสารสำหรับผู้รับงานต่อ (Documentation Index)
+
+เพื่อการส่งต่องานเป็นไปอย่างราบรื่น เอกสารทั้งหมดถูกจัดระเบียบไว้อย่างเป็นสัดส่วน:
+1. **[คู่มือส่งมอบงาน (HANDOFF.md)](file:///d:/673380278-9/2569/CP353201-SQA/Miniproject/ProjectSQA/Combinatorial_IPO/docs/HANDOFF.md):** ขั้นตอนการ Takeover งาน, วิธีเขียน Custom Adapter เพิ่มเติม, และการเชื่อมโยงกับ Member 4
+2. **[รายงานผลการทดลอง (RESULTS_REPORT.md)](file:///d:/673380278-9/2569/CP353201-SQA/Miniproject/ProjectSQA/Combinatorial_IPO/docs/RESULTS_REPORT.md):** สรุปตัวเลขผลผลิตเชิงประจักษ์ 173 suites, 42,398 tests, Project breakdown และ Error analysis
+3. **[เอกสารสถาปัตยกรรม (DESIGN.md)](file:///d:/673380278-9/2569/CP353201-SQA/Miniproject/ProjectSQA/Combinatorial_IPO/docs/DESIGN.md):** การออกแบบ Java AST Parser, Construction Planner, IPO 2-Way Covering Array และ Fault Isolation
+4. **[คู่มือชุดทดสอบระบบ (Code/tests/README.md)](file:///d:/673380278-9/2569/CP353201-SQA/Miniproject/ProjectSQA/Combinatorial_IPO/Code/tests/README.md):** แผนที่ 110 Unit Tests และคำสั่งรันทั้งบน Windows และ Docker
+5. **[แคตตาล็อกชุดทดสอบที่ Publish (TestCode/README.md)](file:///d:/673380278-9/2569/CP353201-SQA/Miniproject/ProjectSQA/Combinatorial_IPO/TestCode/README.md):** รายละเอียดของ 173 Verified Suites, โครงสร้างไฟล์ และวิธีรันเทสบน Defects4J
+
+---
+
+## 3. การตรวจสอบความพร้อมเบื้องต้น (Preflight Check)
 
 ตรวจสอบความพร้อมของ Docker container `sqa-defects4j` และเครื่องมือ Defects4J:
 

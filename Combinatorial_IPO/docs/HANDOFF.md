@@ -57,24 +57,61 @@ docker --context default exec -e PYTHONPATH=/workspace/Combinatorial_IPO/Code sq
 ```
 
 > **ข้อดีของ `--resume`:**  
-> ระบบได้บันทึกแคชผลลัพธ์ของคลาสที่ผ่านแล้ว (67 suites) ไว้ใน `Results/cache/` เรียบร้อยแล้ว เมื่อรันคำสั่งนี้ ระบบจะข้ามคลาสที่ทำเสร็จแล้วในเสี้ยววินาที และดำเนินการสร้างชุดทดสอบให้กับคลาสที่เหลือต่อได้ทันที หากมีการขัดจังหวะ สามารถรันคำสั่งเดิมซ้ำเพื่อทำต่อจากจุดเดิมได้เสมอ
+> ระบบได้บันทึกผลลัพธ์ของคลาสที่ผ่านแล้ว (**173 suites**) ไว้ใน `Results/verified_suites_manifest.json` และแคชใน `Results/cache/` เรียบร้อยแล้ว หากมีการรันคำสั่งซ้ำ ระบบจะข้ามคลาสที่ทำเสร็จแล้วในเสี้ยววินาที และสามารถรันต่อจากจุดเดิมได้เสมอ
 
-### คำสั่งตรวจสอบผลหลังรันเสร็จ (รันเร็ว):
+### คำสั่งตรวจสอบผล (รันเร็ว):
 ```powershell
-# ดูสรุปจำนวนและสถานะ
+# 1. ดูสรุปจำนวนและสถานะทั้งหมด
 python Combinatorial_IPO/Code/runner/all_class_pipeline.py --mode summary
 
-# ตรวจสอบความถูกต้องของ Checksum และ Pair Coverage
+# 2. ตรวจสอบความถูกต้องของ Checksum และ Pair Coverage
 python Combinatorial_IPO/Code/runner/all_class_pipeline.py --mode validate
+
+# 3. รัน Unit Tests ทั้ง 110 tests
+python -m unittest discover -s Combinatorial_IPO/Code/tests -t Combinatorial_IPO/Code
 ```
 
 ---
 
-## 4. ข้อมูลส่งต่อสำหรับ Member 4 (Handoff to Member 4)
+## 4. คู่มือการรับช่วงต่องานสำหรับ Member 4 หรือผู้พัฒนาต่อ (Developer Takeover Guide)
 
-สำหรับคลาสที่ยังไม่สามารถประมวลผลด้วย Native IPO อัตโนมัติได้:
-1. **ไฟล์ส่งต่องาน:** `Combinatorial_IPO/Results/routing_manifest.json`
-2. **Backlog จำแนกตามสาเหตุ:**
-   - **`NEEDS_ADAPTER` (712 คลาส):** เมธอดที่รับพารามิเตอร์เป็น Object เฉพาะทางที่ต้องใช้ Semantic Model หรือ Factory เฉพาะ Member 4 สามารถดูรายการ Adapter ที่ปลดล็อกคลาสได้มากที่สุดใน `adapter_backlog`
-   - **`NEEDS_ENTRY_POINT` (78 คลาส):** คลาสที่เป็น Abstract หรือมีเฉพาะ private logic ซึ่งต้องอาศัย Subclass หรือ Entry Point ภายนอกมาเรียก
-   - **`NOT_PAIRWISE_APPLICABLE` (33 คลาส):** คลาสที่ถูกลบไปใน Fixed Version หรือมีพารามิเตอร์ < 2 แนะนำให้ใช้ Example-based หรือ Integration test แทน
+สำหรับผู้ที่มารับงานต่อเพื่อขยายผลผลิตให้เกิน 173 suites:
+
+### ขั้นที่ 1: ตรวจสอบ Backlog คลาสที่รอ Adapter
+เปิดไฟล์ **`Combinatorial_IPO/Results/routing_manifest.json`** ในไฟล์นี้จะมีรายการคลาส 712 คลาสที่อยู่ในสถานะ `NEEDS_ADAPTER` พร้อมระบุชื่อ Type ที่คลาสนั้นต้องการ เช่น `Base64Variant`, `Shape`, `JsonParser`
+
+### ขั้นที่ 2: วิธีการเขียน Custom Type Adapter เพิ่มเติม
+เปิดไฟล์ **`Combinatorial_IPO/Code/domain/adapter_registry.py`**  
+เพิ่มฟังก์ชัน Generator และลงทะเบียนเข้า Dictionary เช่น:
+
+```python
+# ตัวอย่าง: เพิ่ม Adapter สำหรับ org.apache.commons.codec.binary.Base64Variant
+def base64_variant_adapter() -> Sequence[str]:
+    return [
+        "org.apache.commons.codec.binary.Base64Variants.MIME",
+        "org.apache.commons.codec.binary.Base64Variants.PEM",
+    ]
+
+# ลงทะเบียนเข้า TYPE_ADAPTERS ใน adapter_registry.py:
+TYPE_ADAPTERS["Base64Variant"] = base64_variant_adapter
+```
+
+### ขั้นที่ 3: สั่งรัน Audit ซ้ำเพื่ออัปเดต Inventory
+เมื่อเพิ่ม Adapter ใหม่ ให้รันคำสั่ง Audit เพื่อตรวจจับคลาสที่จะถูกปลดล็อกเป็น `AUTO_READY`:
+```powershell
+docker --context default exec -e PYTHONPATH=/workspace/Combinatorial_IPO/Code sqa-defects4j python3 /workspace/Combinatorial_IPO/Code/runner/all_class_pipeline.py --mode audit --resume
+```
+
+### ขั้นที่ 4: สั่งรันสร้าง Test Suite สำหรับคลาสที่ปลดล็อกใหม่
+```powershell
+docker --context default exec -e PYTHONPATH=/workspace/Combinatorial_IPO/Code sqa-defects4j python3 /workspace/Combinatorial_IPO/Code/runner/all_class_pipeline.py --mode generate --resume
+```
+ระบบจะดึงเฉพาะคลาสที่ปลดล็อกใหม่มารัน โดยข้าม 173 suites เดิมที่ผ่านแล้วโดยอัตโนมัติ
+
+---
+
+## 5. การจำแนกประเภทงานที่ไม่สามารถแปลงเป็น Unit Test ได้
+
+1. **`NEEDS_ENTRY_POINT` (78 คลาส):** คลาสที่เป็น Abstract หรือมีเฉพาะ private logic ซึ่งต้องอาศัย Subclass หรือ Integration Driver ภายนอกมาเรียก
+2. **`NOT_PAIRWISE_APPLICABLE` (33 คลาส):** คลาสที่ถูกลบไปใน Fixed Version หรือมีพารามิเตอร์ < 2 แนะนำให้ใช้ Example-based หรือ Integration test แทน
+
