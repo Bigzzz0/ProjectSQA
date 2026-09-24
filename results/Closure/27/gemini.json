@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 86.1,
+  "branch_cov": 83.33,
+  "test_file": "IRGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.IR",
+  "buggy_failures": [
+    "com.google.javascript.rhino.IRGeminiTest::testExpressionsAndCalls",
+    "com.google.javascript.rhino.IRGeminiTest::testConditionalsAndLoops",
+    "com.google.javascript.rhino.IRGeminiTest::testIssue727_1",
+    "com.google.javascript.rhino.IRGeminiTest::testIssue727_2",
+    "com.google.javascript.rhino.IRGeminiTest::testIssue727_3",
+    "com.google.javascript.rhino.IRGeminiTest::testBlockAndScript",
+    "com.google.javascript.rhino.IRGeminiTest::testTryCatchCatchFinally"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.IRGeminiTest::testExpressionsAndCalls",
+    "com.google.javascript.rhino.IRGeminiTest::testConditionalsAndLoops",
+    "com.google.javascript.rhino.IRGeminiTest::testBlockAndScript",
+    "com.google.javascript.rhino.IRGeminiTest::testTryCatchCatchFinally"
+  ]
+}

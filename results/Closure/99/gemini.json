@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 93.1,
+  "test_file": "CheckGlobalThisGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testPropertyOfMethod",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testMethod4",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testInterface1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode"
+  ]
+}

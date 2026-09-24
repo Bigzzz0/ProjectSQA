@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 88.46,
+  "branch_cov": 76.79,
+  "test_file": "UnreachableCodeEliminationGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testCascadedRemovalOfUnlessUnconditonalJumps",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyStatementHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDirectVisitNodeNotInCurCfg",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInUnreachableBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testScopeStackPushPopIntegrity",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyBlockHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoLoopPreserved"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeAfterReturn",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyStatementHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDirectVisitNodeNotInCurCfg",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInUnreachableBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testScopeStackPushPopIntegrity",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testFineLoggerLoggingPath",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyBlockHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoLoopPreserved"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 51.82,
+  "branch_cov": 40.03,
+  "test_file": "NodeUtilGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testValidDefine_BinaryOperatorValidBothChildren",
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testValidDefine_AdditionOperationStringConcat",
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testValidDefine_BinaryOperatorRejectsInvalidSecondChild",
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testAstFactoryMethods"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testAstFactoryMethods"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 57.47,
+  "branch_cov": 43.69,
+  "test_file": "TypeCheckGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertyTestSuppression_inHookCondition",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall1",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall2",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testSuperclassOverrideMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportMissingPropertiesChaining",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentInitialState",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testAllDiagnosticsGroupCompleteness",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterface_nonEmptyBody",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testReturn_outsideFunctionIgnored",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCallWithArgs"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertyTestSuppression_inHookCondition",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall1",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall2",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testSuperclassOverrideMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportMissingPropertiesChaining",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentInitialState",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testAllDiagnosticsGroupCompleteness",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterface_nonEmptyBody",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testReturn_outsideFunctionIgnored",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCallWithArgs"
+  ]
+}

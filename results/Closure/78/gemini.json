@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 79.58,
+  "branch_cov": 64.83,
+  "test_file": "PeepholeFoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisons",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldArithmeticModuloByZeroKnownDefect",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldArithmeticDivideByZeroKnownDefect",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisons",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
+  ]
+}

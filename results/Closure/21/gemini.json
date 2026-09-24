@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 81.48,
+  "branch_cov": 86.67,
+  "test_file": "CheckSideEffectsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testDefectSideEffectFollowedByUselessCodeInCommaAssignment",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testDefectMultipleUselessCodeInCommaAssignment",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
+  ]
+}

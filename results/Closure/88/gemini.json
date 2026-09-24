@@ -1,0 +1,29 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 90.91,
+  "branch_cov": 77.0,
+  "test_file": "DeadAssignmentsEliminationGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.DeadAssignmentsElimination",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testEmptyReturnStatement",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297a",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297b",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297c",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297d",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testEmptyReturnStatement",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297a",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297b",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297c",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297d",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
+  ]
+}

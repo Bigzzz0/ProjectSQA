@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 96.33,
+  "branch_cov": 100.0,
+  "test_file": "CodeConsumerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeConsumerGeminiTest::testIssue620ForwardSlashAfterDiv",
+    "com.google.javascript.jscomp.CodeConsumerGeminiTest::testIssue620RegexpDivRegexpSpacing"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 97.62,
+  "branch_cov": 86.9,
+  "test_file": "AnalyzePrototypePropertiesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.AnalyzePrototypeProperties",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
+  ]
+}

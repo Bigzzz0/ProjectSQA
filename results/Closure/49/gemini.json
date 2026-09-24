@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 98.96,
+  "branch_cov": 88.57,
+  "test_file": "MakeDeclaredNamesUniqueGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testFullTraversalRemovesConstantPropertyWhenConfigured",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerCannotStartAtFunctionContext",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerRenamesShadowedArgumentsInLocalScope",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testInlineRenamerHandlesShadowedArgumentsWithoutException"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testFullTraversalRemovesConstantPropertyWhenConfigured",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerCannotStartAtFunctionContext",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerRenamesShadowedArgumentsInLocalScope",
+    "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testInlineRenamerHandlesShadowedArgumentsWithoutException"
+  ]
+}

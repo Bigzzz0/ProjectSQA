@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 96.15,
+  "test_file": "CollapseVariableDeclarationsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseVariableDeclarations",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testSequenceOfAssignmentsWithoutVarNotCollapsed",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_simpleReassignmentFollowedByNoVar",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_multipleSequentialReassignments",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testSequenceOfAssignmentsWithoutVarNotCollapsed",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_simpleReassignmentFollowedByNoVar",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_multipleSequentialReassignments",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820"
+  ]
+}

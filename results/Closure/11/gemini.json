@@ -1,0 +1,41 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 14,
+  "line_cov": 76.09,
+  "branch_cov": 54.46,
+  "test_file": "TypeCheckGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetprop4",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIncDecOperatorMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testBitwiseOperationsMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testNoTypeCheckSection",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testBinaryBitwiseOperatorsMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentEmpty",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportUnknownTypesSetting",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testSignOperatorMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testWithRequiresObject",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIssue810",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisTypeDiagnostic",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testInOperatorRequiresObject",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testConstructorChainingAndReportMissingProperties"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetprop4",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIncDecOperatorMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testBitwiseOperationsMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testNoTypeCheckSection",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testBinaryBitwiseOperatorsMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentEmpty",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportUnknownTypesSetting",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testSignOperatorMismatch",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testWithRequiresObject",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIssue810",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisTypeDiagnostic",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testInOperatorRequiresObject",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testConstructorChainingAndReportMissingProperties"
+  ]
+}

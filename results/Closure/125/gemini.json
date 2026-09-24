@@ -1,0 +1,39 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 75.7,
+  "branch_cov": 55.34,
+  "test_file": "TypeCheckGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructInOperatorViolation",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructPrototypeAssignedNonStruct",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testForInWithStructViolation",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetterAndSetterDefinitionsInObjectLiteral",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitwiseNot",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertySuggestionOnTypo",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalPropertyCreationOnStruct",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalImplicitCast",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testClassImplementingNonInterface",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterfaceExtendingNonInterface",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testDictPropertyDotAccess",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructInOperatorViolation",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructPrototypeAssignedNonStruct",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testForInWithStructViolation",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetterAndSetterDefinitionsInObjectLiteral",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitwiseNot",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertySuggestionOnTypo",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalPropertyCreationOnStruct",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalImplicitCast",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testClassImplementingNonInterface",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterfaceExtendingNonInterface",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testDictPropertyDotAccess",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+    "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
+  ]
+}

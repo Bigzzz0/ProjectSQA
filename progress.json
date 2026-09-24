@@ -18395,11 +18395,25 @@
     "fixed_failures": []
   },
   "Closure-8-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 96.15,
+    "test_file": "CollapseVariableDeclarationsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CollapseVariableDeclarations",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testSequenceOfAssignmentsWithoutVarNotCollapsed",
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_simpleReassignmentFollowedByNoVar",
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_multipleSequentialReassignments",
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testSequenceOfAssignmentsWithoutVarNotCollapsed",
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_simpleReassignmentFollowedByNoVar",
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_multipleSequentialReassignments",
+      "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820"
+    ]
   },
   "Closure-9-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18412,11 +18426,14 @@
     "fixed_failures": []
   },
   "Closure-9-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ProcessCommonJSModulesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ProcessCommonJSModules",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-10-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18429,11 +18446,14 @@
     "fixed_failures": []
   },
   "Closure-10-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-11-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18446,11 +18466,45 @@
     "fixed_failures": []
   },
   "Closure-11-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 14,
+    "line_cov": 76.09,
+    "branch_cov": 54.46,
+    "test_file": "TypeCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetprop4",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIncDecOperatorMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBitwiseOperationsMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testNoTypeCheckSection",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBinaryBitwiseOperatorsMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentEmpty",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportUnknownTypesSetting",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testSignOperatorMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testWithRequiresObject",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIssue810",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisTypeDiagnostic",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInOperatorRequiresObject",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConstructorChainingAndReportMissingProperties"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetprop4",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIncDecOperatorMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBitwiseOperationsMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testNoTypeCheckSection",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBinaryBitwiseOperatorsMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentEmpty",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportUnknownTypesSetting",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testSignOperatorMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testWithRequiresObject",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIssue810",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisTypeDiagnostic",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInOperatorRequiresObject",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConstructorChainingAndReportMissingProperties"
+    ]
   },
   "Closure-12-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18463,11 +18517,14 @@
     "fixed_failures": []
   },
   "Closure-12-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MaybeReachingVariableUseGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.MaybeReachingVariableUse",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-13-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18480,11 +18537,14 @@
     "fixed_failures": []
   },
   "Closure-13-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeepholeOptimizationsPassGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeOptimizationsPass",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-14-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18497,11 +18557,14 @@
     "fixed_failures": []
   },
   "Closure-14-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ControlFlowAnalysisGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ControlFlowAnalysis",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-15-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18514,11 +18577,14 @@
     "fixed_failures": []
   },
   "Closure-15-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FlowSensitiveInlineVariablesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-16-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18531,11 +18597,23 @@
     "fixed_failures": []
   },
   "Closure-16-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 97.52,
+    "branch_cov": 91.13,
+    "test_file": "ScopedAliasesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
+    ]
   },
   "Closure-17-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18548,11 +18626,14 @@
     "fixed_failures": []
   },
   "Closure-17-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-18-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18565,11 +18646,14 @@
     "fixed_failures": []
   },
   "Closure-18-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CompilerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Compiler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-19-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18582,11 +18666,14 @@
     "fixed_failures": []
   },
   "Closure-19-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ChainableReverseAbstractInterpreterGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-20-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18599,11 +18686,32 @@
     "fixed_failures": []
   },
   "Closure-20-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 8,
+    "line_cov": 78.38,
+    "branch_cov": 60.08,
+    "test_file": "PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testHookConditionMinimization",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSkipFinallyNodesDefensive",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceExitWithBreak",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testTryReplaceIfBlockVariants",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testDefectSimpleFunctionCallWithVariableShouldNotFold"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testHookConditionMinimization",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSkipFinallyNodesDefensive",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceExitWithBreak",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testTryReplaceIfBlockVariants",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid"
+    ]
   },
   "Closure-21-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18616,11 +18724,25 @@
     "fixed_failures": []
   },
   "Closure-21-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 81.48,
+    "branch_cov": 86.67,
+    "test_file": "CheckSideEffectsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testDefectSideEffectFollowedByUselessCodeInCommaAssignment",
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testDefectMultipleUselessCodeInCommaAssignment",
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
+      "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
+    ]
   },
   "Closure-22-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18633,11 +18755,14 @@
     "fixed_failures": []
   },
   "Closure-22-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CheckSideEffectsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-23-deepseek": {
     "status": "DONE",
@@ -18651,11 +18776,35 @@
     "fixed_failures": []
   },
   "Closure-23-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 11,
+    "line_cov": 80.43,
+    "branch_cov": 67.03,
+    "test_file": "PeepholeFoldConstantsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignFoldingLateMode",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldCtorCall",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldObjectPropertyAccess",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemIndexNonZero",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testBitwiseNotBoundaries",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemDefectIndexZero",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemEmptySlot",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemOutOfBoundsTooLarge"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignFoldingLateMode",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldCtorCall",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldObjectPropertyAccess",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testBitwiseNotBoundaries",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards"
+    ]
   },
   "Closure-24-deepseek": {
     "status": "DONE",
@@ -18701,11 +18850,14 @@
     ]
   },
   "Closure-24-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ScopedAliasesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-25-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18718,11 +18870,14 @@
     "fixed_failures": []
   },
   "Closure-25-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeInferenceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeInference",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-26-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18735,11 +18890,14 @@
     "fixed_failures": []
   },
   "Closure-26-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ProcessCommonJSModulesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ProcessCommonJSModules",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-27-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18752,11 +18910,28 @@
     "fixed_failures": []
   },
   "Closure-27-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 86.1,
+    "branch_cov": 83.33,
+    "test_file": "IRGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.IR",
+    "buggy_failures": [
+      "com.google.javascript.rhino.IRGeminiTest::testExpressionsAndCalls",
+      "com.google.javascript.rhino.IRGeminiTest::testConditionalsAndLoops",
+      "com.google.javascript.rhino.IRGeminiTest::testIssue727_1",
+      "com.google.javascript.rhino.IRGeminiTest::testIssue727_2",
+      "com.google.javascript.rhino.IRGeminiTest::testIssue727_3",
+      "com.google.javascript.rhino.IRGeminiTest::testBlockAndScript",
+      "com.google.javascript.rhino.IRGeminiTest::testTryCatchCatchFinally"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.rhino.IRGeminiTest::testExpressionsAndCalls",
+      "com.google.javascript.rhino.IRGeminiTest::testConditionalsAndLoops",
+      "com.google.javascript.rhino.IRGeminiTest::testBlockAndScript",
+      "com.google.javascript.rhino.IRGeminiTest::testTryCatchCatchFinally"
+    ]
   },
   "Closure-28-deepseek": {
     "status": "DONE",
@@ -18781,11 +18956,23 @@
     ]
   },
   "Closure-28-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "InlineCostEstimatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineCostEstimator",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testFunctionReturningConstantCost",
+      "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testCostOfConstants_RevealsIssue728Defect",
+      "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNullRootNodeReturnsZeroCost"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testCostOfConstants_RevealsIssue728Defect",
+      "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNullRootNodeReturnsZeroCost",
+      "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNumberLiteralCost"
+    ]
   },
   "Closure-29-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18798,11 +18985,59 @@
     "fixed_failures": []
   },
   "Closure-29-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 21,
+    "line_cov": 4.6,
+    "branch_cov": 0.0,
+    "test_file": "InlineObjectLiteralsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineObjectLiterals",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testGetterSetterDefPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testSetterDefPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testEmptyObjectLiteralInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testAssignedToNonObjectLiteralBailsOut",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectWithMultipleKeysAndMissingKeysInReassignment",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testReassignmentToObjectLiteral",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testMultipleVarsInFunction",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testIssue724SelfReferentialObjectLiteral",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testGlobalVariableNotForbiddenSkipped",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testMethodCallPreventsInliningDueToThisContext",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testUninitializedDeclarationFollowedByLiteral",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testVarWithNoAssignmentIgnoredGracefully",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testRenamePropertyFunctionExcluded",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testIssue724SelfReferentialReassignment",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testBasicInliningSimpleObject",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectReturnPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectEscapeAsArgumentPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testAssignedToArrayLiteralBailsOut",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject10",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject12",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject22"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testGetterSetterDefPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testSetterDefPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testEmptyObjectLiteralInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testAssignedToNonObjectLiteralBailsOut",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectWithMultipleKeysAndMissingKeysInReassignment",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testReassignmentToObjectLiteral",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testMultipleVarsInFunction",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testIssue724SelfReferentialObjectLiteral",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testGlobalVariableNotForbiddenSkipped",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testMethodCallPreventsInliningDueToThisContext",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testUninitializedDeclarationFollowedByLiteral",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testVarWithNoAssignmentIgnoredGracefully",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testRenamePropertyFunctionExcluded",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testIssue724SelfReferentialReassignment",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testBasicInliningSimpleObject",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectReturnPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectEscapeAsArgumentPreventsInlining",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testAssignedToArrayLiteralBailsOut",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject10",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject12",
+      "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject22"
+    ]
   },
   "Closure-30-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18815,11 +19050,14 @@
     "fixed_failures": []
   },
   "Closure-30-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FlowSensitiveInlineVariablesGeminiTest.java;MustBeReachingVariableDefGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables;com.google.javascript.jscomp.MustBeReachingVariableDef",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-31-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18832,25 +19070,34 @@
     "fixed_failures": []
   },
   "Closure-31-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CompilerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Compiler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-32-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsDocInfoParserDeepseekTest.java",
+    "target_classes": "com.google.javascript.jscomp.parsing.JsDocInfoParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-32-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsDocInfoParserGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.parsing.JsDocInfoParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-33-deepseek": {
     "status": "DONE",
@@ -18870,11 +19117,25 @@
     ]
   },
   "Closure-33-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 79.17,
+    "branch_cov": 75.0,
+    "test_file": "PrototypeObjectTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+    "buggy_failures": [
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testIssue700_matchConstraintOnFunctionPrototypeDoesNotMutate",
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts",
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testIssue700_matchConstraintOnNamedTypeDoesNotMutate"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
+      "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts"
+    ]
   },
   "Closure-34-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -18891,18 +19152,24 @@
     "test_file": "-"
   },
   "Closure-35-deepseek": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeInferenceDeepseekTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeInference",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-35-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeInferenceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeInference",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-36-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18915,11 +19182,59 @@
     "fixed_failures": []
   },
   "Closure-36-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 21,
+    "line_cov": 75.09,
+    "branch_cov": 59.91,
+    "test_file": "InlineVariablesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineVariables",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSpecialRenamePropertyVariableForbiddenFromInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testMethodCallContextPreventsInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSubclassDefinitionCallPreventsInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testEmptyAstProcessing",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringInliningHeuristicThresholdTrue",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testCrossControlStructureBoundaryPreventsInliningNonLiteral",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringInliningHeuristicThresholdFalse",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSingletonGetterBugDefects4J",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testNonImmutableVariableMultipleReadsNotWorthInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsModifiedViaLValuePreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testThisAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsEscapedPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testUninitializedVariableInlinedToUndefined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testDeclarationDifferentFromInitializationInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testModeConstantsOnlySkipsNonConstants",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testModeLocalsOnlyInlinesLocalsNotGlobals",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testDeadDeclarationsOnlyProcessing",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testImmutableVariableMultipleReadsInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSimpleVariableInlinedInAllMode",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testAliasCandidateInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testAssignedOnceNeverReadEliminated"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSpecialRenamePropertyVariableForbiddenFromInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testMethodCallContextPreventsInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSubclassDefinitionCallPreventsInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testEmptyAstProcessing",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringInliningHeuristicThresholdTrue",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testCrossControlStructureBoundaryPreventsInliningNonLiteral",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringInliningHeuristicThresholdFalse",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSingletonGetterBugDefects4J",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testNonImmutableVariableMultipleReadsNotWorthInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsModifiedViaLValuePreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testThisAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsEscapedPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testUninitializedVariableInlinedToUndefined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testDeclarationDifferentFromInitializationInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testModeConstantsOnlySkipsNonConstants",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testModeLocalsOnlyInlinesLocalsNotGlobals",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testDeadDeclarationsOnlyProcessing",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testImmutableVariableMultipleReadsInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSimpleVariableInlinedInAllMode",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testAliasCandidateInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testAssignedOnceNeverReadEliminated"
+    ]
   },
   "Closure-37-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18932,11 +19247,14 @@
     "fixed_failures": []
   },
   "Closure-37-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeTraversalGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeTraversal;com.google.javascript.jscomp.parsing.IRFactory",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-38-deepseek": {
     "status": "DONE",
@@ -18955,11 +19273,17 @@
     ]
   },
   "Closure-38-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 93.75,
+    "branch_cov": 93.75,
+    "test_file": "CodeConsumerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CodeConsumerGeminiTest::testMinusNegativeZeroSpaceAdded"
+    ],
+    "fixed_failures": []
   },
   "Closure-39-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18972,11 +19296,14 @@
     "fixed_failures": []
   },
   "Closure-39-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PrototypeObjectTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-40-deepseek": {
     "status": "COMPILE_ERROR",
@@ -18989,11 +19316,73 @@
     "fixed_failures": []
   },
   "Closure-40-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 28,
+    "line_cov": 86.66,
+    "branch_cov": 77.06,
+    "test_file": "NameAnalyzerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NameAnalyzer",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testForLoopAssignmentInitAndStep",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testGlobalObjectLiteralKeys",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_whileWithoutBlock",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testGetElemAssignmentDoesNotCrash",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testHookAndShortCircuitExpressionsInNodeAccumulator",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testClassDefiningFunctionInNonExprResult",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testSwitchAndWithDependencies",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testInstanceOfRemovalReplacedWithFalse",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testInheritancePreservedWhenSubclassUsed",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testSimpleUnreferencedVarRemoved",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testFunctionDeclarationsUsedAndUnused",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_doWhileWithoutBlock",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testDeadVariableWithSideEffectRhsPreserved",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testDottedPropertyReference",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testReferencedVarRetained",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testDeeplyNestedPropertyChain",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testPrototypeAssignmentsRemovedWhenClassUnreferenced",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testThrowAndReturnExpressionsPreserved",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testCircularDependencyElimination",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testInheritanceRemovedWhenSubclassUnused",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testProcessWithoutRemoveUnreferencedPreservesAllNodes",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testPrototypeAssignmentsRetainedWhenClassReferenced",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testPredicateDependenciesInIfWhileDo",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_ifWithoutBlockVar",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testAliasesWithWrittenDescendants",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testForAndForInLoops",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_ifElseWithoutBlock"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testForLoopAssignmentInitAndStep",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testGlobalObjectLiteralKeys",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_whileWithoutBlock",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testGetElemAssignmentDoesNotCrash",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testHookAndShortCircuitExpressionsInNodeAccumulator",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testClassDefiningFunctionInNonExprResult",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testSwitchAndWithDependencies",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testInstanceOfRemovalReplacedWithFalse",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testInheritancePreservedWhenSubclassUsed",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testSimpleUnreferencedVarRemoved",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testFunctionDeclarationsUsedAndUnused",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_doWhileWithoutBlock",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testDeadVariableWithSideEffectRhsPreserved",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testDottedPropertyReference",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testReferencedVarRetained",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testDeeplyNestedPropertyChain",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testPrototypeAssignmentsRemovedWhenClassUnreferenced",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testThrowAndReturnExpressionsPreserved",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testCircularDependencyElimination",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testInheritanceRemovedWhenSubclassUnused",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testProcessWithoutRemoveUnreferencedPreservesAllNodes",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testPrototypeAssignmentsRetainedWhenClassReferenced",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testPredicateDependenciesInIfWhileDo",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_ifWithoutBlockVar",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testAliasesWithWrittenDescendants",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testForAndForInLoops",
+      "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_ifElseWithoutBlock"
+    ]
   },
   "Closure-41-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19006,11 +19395,14 @@
     "fixed_failures": []
   },
   "Closure-41-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionTypeBuilderGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionTypeBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-42-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -19037,11 +19429,14 @@
     "fixed_failures": []
   },
   "Closure-43-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-44-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19054,11 +19449,18 @@
     "fixed_failures": []
   },
   "Closure-44-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 96.33,
+    "branch_cov": 100.0,
+    "test_file": "CodeConsumerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CodeConsumerGeminiTest::testIssue620ForwardSlashAfterDiv",
+      "com.google.javascript.jscomp.CodeConsumerGeminiTest::testIssue620RegexpDivRegexpSpacing"
+    ],
+    "fixed_failures": []
   },
   "Closure-45-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19071,11 +19473,14 @@
     "fixed_failures": []
   },
   "Closure-45-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "RemoveUnusedVarsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-46-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19088,11 +19493,14 @@
     "fixed_failures": []
   },
   "Closure-46-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "RecordTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.RecordType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-47-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19105,11 +19513,14 @@
     "fixed_failures": []
   },
   "Closure-47-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SourceMapConsumerV3GeminiTest.java;SourceMapGeminiTest.java",
+    "target_classes": "com.google.debugging.sourcemap.SourceMapConsumerV3;com.google.javascript.jscomp.SourceMap",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-48-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19122,11 +19533,14 @@
     "fixed_failures": []
   },
   "Closure-48-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-49-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19139,11 +19553,25 @@
     "fixed_failures": []
   },
   "Closure-49-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 98.96,
+    "branch_cov": 88.57,
+    "test_file": "MakeDeclaredNamesUniqueGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testFullTraversalRemovesConstantPropertyWhenConfigured",
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerCannotStartAtFunctionContext",
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerRenamesShadowedArgumentsInLocalScope",
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testInlineRenamerHandlesShadowedArgumentsWithoutException"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testFullTraversalRemovesConstantPropertyWhenConfigured",
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerCannotStartAtFunctionContext",
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerRenamesShadowedArgumentsInLocalScope",
+      "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testInlineRenamerHandlesShadowedArgumentsWithoutException"
+    ]
   },
   "Closure-50-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19156,11 +19584,22 @@
     "fixed_failures": []
   },
   "Closure-50-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 94.48,
+    "branch_cov": 82.04,
+    "test_file": "PeepholeReplaceKnownMethodsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeReplaceKnownMethods",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testParseFloat",
+      "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testStringJoinAdd"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testParseFloat",
+      "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testStringJoinAdd",
+      "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testNoStringJoin"
+    ]
   },
   "Closure-51-deepseek": {
     "status": "DONE",
@@ -19182,11 +19621,17 @@
     ]
   },
   "Closure-51-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 1,
+    "line_cov": 100.0,
+    "branch_cov": 96.3,
+    "test_file": "CodeConsumerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CodeConsumerGeminiTest::testIssue582NegativeZeroHandling"
+    ],
+    "fixed_failures": []
   },
   "Closure-52-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -19213,11 +19658,14 @@
     "fixed_failures": []
   },
   "Closure-53-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "InlineObjectLiteralsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineObjectLiterals",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-54-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19230,11 +19678,14 @@
     "fixed_failures": []
   },
   "Closure-54-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionTypeGeminiTest.java;TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator;com.google.javascript.rhino.jstype.FunctionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-55-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19247,11 +19698,14 @@
     "fixed_failures": []
   },
   "Closure-55-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionRewriterGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionRewriter",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-56-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19264,11 +19718,14 @@
     "fixed_failures": []
   },
   "Closure-56-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "SourceFileGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.SourceFile",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-57-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19281,11 +19738,14 @@
     "fixed_failures": []
   },
   "Closure-57-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ClosureCodingConventionGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ClosureCodingConvention",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-58-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19298,11 +19758,26 @@
     "fixed_failures": []
   },
   "Closure-58-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 100.0,
+    "branch_cov": 96.15,
+    "test_file": "LiveVariablesAnalysisGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.LiveVariablesAnalysis",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithVar",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testExpressionInForInCallTargetingDefect",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testMarkAllParametersEscapedDirectly",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testExpressionInForInGetElemTargetingDefect",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testExpressionInForInGetPropTargetingDefect",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithoutVar"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithVar",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testMarkAllParametersEscapedDirectly",
+      "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithoutVar"
+    ]
   },
   "Closure-59-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19315,11 +19790,14 @@
     "fixed_failures": []
   },
   "Closure-59-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CompilerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Compiler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-60-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19332,11 +19810,14 @@
     "fixed_failures": []
   },
   "Closure-60-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-61-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19349,11 +19830,14 @@
     "fixed_failures": []
   },
   "Closure-61-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-62-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19366,11 +19850,18 @@
     "fixed_failures": []
   },
   "Closure-62-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 100.0,
+    "branch_cov": 100.0,
+    "test_file": "LightweightMessageFormatterGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.LightweightMessageFormatter",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.LightweightMessageFormatterGeminiTest::testFormatErrorSpaceEndOfLine1",
+      "com.google.javascript.jscomp.LightweightMessageFormatterGeminiTest::testFormatErrorSpaceEndOfLine2"
+    ],
+    "fixed_failures": []
   },
   "Closure-64-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19383,11 +19874,14 @@
     "fixed_failures": []
   },
   "Closure-64-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CompilerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Compiler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-65-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19400,11 +19894,43 @@
     "fixed_failures": []
   },
   "Closure-65-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 14,
+    "line_cov": 76.81,
+    "branch_cov": 62.53,
+    "test_file": "CodeGeneratorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOpWithInvalidChildCountThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDoWhileAndWhile",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testZeroEscapeToDoubleQuotedJsString",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorsAssociativity",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testTokensDelpropLabelBreakContinueDebuggerThisNullTrueFalse",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testZero",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testGetAndSetInObjectLit",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelAndWith",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testSwitchCaseDefault",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBreakAndContinueWithLabel",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testForLoops",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownNodeTypeThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testIfElseAndDanglingElse"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOpWithInvalidChildCountThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDoWhileAndWhile",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorsAssociativity",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testTokensDelpropLabelBreakContinueDebuggerThisNullTrueFalse",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testGetAndSetInObjectLit",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelAndWith",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testSwitchCaseDefault",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBreakAndContinueWithLabel",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testForLoops",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownNodeTypeThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testIfElseAndDanglingElse"
+    ]
   },
   "Closure-66-deepseek": {
     "status": "DONE",
@@ -19476,11 +20002,61 @@
     ]
   },
   "Closure-66-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 22,
+    "line_cov": 81.71,
+    "branch_cov": 64.05,
+    "test_file": "TypeCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInvalidInterfaceMemberDeclaration",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testDeterministicEqualityTest",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitShiftLeftOperand",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetTypedPercent6_SetterKeyInObjectLit",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testAllDiagnosticsGroupInstantiation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalImplicitCastInNonExterns",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testHiddenSuperclassPropertyMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitwiseOperation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisType",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testDeterministicInequalityTest",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConflictingExtendedTypeConstructorExtendingInterface",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConflictingImplementedType",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testUnknownOverrideWarning",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConflictingExtendedTypeInterfaceExtendingConstructor",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetTypedPercent5_GetterKeyInObjectLit",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterfaceFunctionNotEmpty",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIncompatibleExtendedPropertyType",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testCheckWithExternsRoot",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInexistentPropertyWarning",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testUnexpectedTokenTraversalFallback",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInvalidInterfaceMemberDeclaration",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testDeterministicEqualityTest",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitShiftLeftOperand",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetTypedPercent6_SetterKeyInObjectLit",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testAllDiagnosticsGroupInstantiation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalImplicitCastInNonExterns",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testHiddenSuperclassPropertyMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitwiseOperation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisType",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testDeterministicInequalityTest",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConflictingExtendedTypeConstructorExtendingInterface",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConflictingImplementedType",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testUnknownOverrideWarning",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testConflictingExtendedTypeInterfaceExtendingConstructor",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetTypedPercent5_GetterKeyInObjectLit",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterfaceFunctionNotEmpty",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIncompatibleExtendedPropertyType",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testCheckWithExternsRoot",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInexistentPropertyWarning",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testUnexpectedTokenTraversalFallback",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
+    ]
   },
   "Closure-67-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19493,11 +20069,19 @@
     "fixed_failures": []
   },
   "Closure-67-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 1,
+    "line_cov": 97.62,
+    "branch_cov": 86.9,
+    "test_file": "AnalyzePrototypePropertiesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.AnalyzePrototypeProperties",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
+    ]
   },
   "Closure-68-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19510,11 +20094,14 @@
     "fixed_failures": []
   },
   "Closure-68-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsDocInfoParserGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.parsing.JsDocInfoParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-69-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19527,11 +20114,39 @@
     "fixed_failures": []
   },
   "Closure-69-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 11,
+    "line_cov": 57.47,
+    "branch_cov": 43.69,
+    "test_file": "TypeCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertyTestSuppression_inHookCondition",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall1",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall2",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testSuperclassOverrideMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportMissingPropertiesChaining",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentInitialState",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testAllDiagnosticsGroupCompleteness",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterface_nonEmptyBody",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testReturn_outsideFunctionIgnored",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCallWithArgs"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertyTestSuppression_inHookCondition",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall1",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCall2",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testSuperclassOverrideMismatch",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testReportMissingPropertiesChaining",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testTypedPercentInitialState",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testAllDiagnosticsGroupCompleteness",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterface_nonEmptyBody",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testReturn_outsideFunctionIgnored",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCallWithArgs"
+    ]
   },
   "Closure-70-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19544,11 +20159,14 @@
     "fixed_failures": []
   },
   "Closure-70-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-71-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19561,11 +20179,14 @@
     "fixed_failures": []
   },
   "Closure-71-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CheckAccessControlsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckAccessControls",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-72-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19578,11 +20199,24 @@
     "fixed_failures": []
   },
   "Closure-72-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 99.54,
+    "branch_cov": 87.13,
+    "test_file": "FunctionToBlockMutatorGeminiTest.java;RenameLabelsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionToBlockMutator;com.google.javascript.jscomp.RenameLabels",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
+      "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
+      "com.google.javascript.jscomp.RenameLabelsGeminiTest::testUnreferencedLabelPreservedWhenRemoveUnusedIsFalse",
+      "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
+      "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
+      "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
+    ]
   },
   "Closure-73-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19595,11 +20229,34 @@
     "fixed_failures": []
   },
   "Closure-73-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 10,
+    "line_cov": 85.15,
+    "branch_cov": 70.16,
+    "test_file": "CodeGeneratorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7FInRegexp",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7F",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7FInDoubleQuotedJsString",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testControlFlowStatements",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownTokenTypeThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testStringUnexpectedChildrenThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testControlFlowStatements",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownTokenTypeThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testStringUnexpectedChildrenThrows",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
+      "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
+    ]
   },
   "Closure-74-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19612,11 +20269,14 @@
     "fixed_failures": []
   },
   "Closure-74-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeepholeFoldConstantsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-75-deepseek": {
     "status": "DONE",
@@ -19647,11 +20307,14 @@
     ]
   },
   "Closure-75-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-76-deepseek": {
     "status": "DONE",
@@ -19715,11 +20378,14 @@
     ]
   },
   "Closure-76-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DeadAssignmentsEliminationGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.DeadAssignmentsElimination",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-77-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19732,11 +20398,14 @@
     "fixed_failures": []
   },
   "Closure-77-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CodeGeneratorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-78-deepseek": {
     "status": "DONE",
@@ -19946,11 +20615,27 @@
     ]
   },
   "Closure-78-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 79.58,
+    "branch_cov": 64.83,
+    "test_file": "PeepholeFoldConstantsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisons",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldArithmeticModuloByZeroKnownDefect",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldArithmeticDivideByZeroKnownDefect",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisons",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
+    ]
   },
   "Closure-79-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19963,11 +20648,14 @@
     "fixed_failures": []
   },
   "Closure-79-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NormalizeGeminiTest.java;VarCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Normalize;com.google.javascript.jscomp.VarCheck",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-80-deepseek": {
     "status": "COMPILE_ERROR",
@@ -19980,11 +20668,14 @@
     "fixed_failures": []
   },
   "Closure-80-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-81-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -20011,11 +20702,14 @@
     "fixed_failures": []
   },
   "Closure-82-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JSTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.JSType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-83-deepseek": {
     "status": "DONE",
@@ -20037,11 +20731,14 @@
     ]
   },
   "Closure-83-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CommandLineRunnerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-84-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -20068,11 +20765,32 @@
     "fixed_failures": []
   },
   "Closure-85-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 7,
+    "line_cov": 88.46,
+    "branch_cov": 76.79,
+    "test_file": "UnreachableCodeEliminationGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testCascadedRemovalOfUnlessUnconditonalJumps",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyStatementHandling",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDirectVisitNodeNotInCurCfg",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInUnreachableBranch",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testScopeStackPushPopIntegrity",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyBlockHandling",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoLoopPreserved"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeAfterReturn",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyStatementHandling",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDirectVisitNodeNotInCurCfg",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInUnreachableBranch",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testScopeStackPushPopIntegrity",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testFineLoggerLoggingPath",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyBlockHandling",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoLoopPreserved"
+    ]
   },
   "Closure-86-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20085,11 +20803,20 @@
     "fixed_failures": []
   },
   "Closure-86-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 2,
+    "line_cov": 59.52,
+    "branch_cov": 42.94,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testEvaluatesToLocalValue_newOperatorDefect",
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
+    ]
   },
   "Closure-87-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20102,11 +20829,14 @@
     "fixed_failures": []
   },
   "Closure-87-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-88-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20119,11 +20849,33 @@
     "fixed_failures": []
   },
   "Closure-88-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 8,
+    "line_cov": 90.91,
+    "branch_cov": 77.0,
+    "test_file": "DeadAssignmentsEliminationGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.DeadAssignmentsElimination",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testEmptyReturnStatement",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297a",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297b",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297c",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297d",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testEmptyReturnStatement",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297a",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297b",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297c",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297d",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
+      "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
+    ]
   },
   "Closure-89-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20136,11 +20888,14 @@
     "fixed_failures": []
   },
   "Closure-89-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CollapsePropertiesGeminiTest.java;GlobalNamespaceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CollapseProperties;com.google.javascript.jscomp.GlobalNamespace",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-90-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20153,11 +20908,14 @@
     "fixed_failures": []
   },
   "Closure-90-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionTypeBuilderGeminiTest.java;FunctionTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionTypeBuilder;com.google.javascript.rhino.jstype.FunctionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-91-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20170,11 +20928,21 @@
     "fixed_failures": []
   },
   "Closure-91-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 100.0,
+    "branch_cov": 95.45,
+    "test_file": "CheckGlobalThisGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testLendsAnnotation1",
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testLendsAnnotation3",
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testSyntheticAstTransitionsAndAssignLhsChildReset"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testSyntheticAstTransitionsAndAssignLhsChildReset"
+    ]
   },
   "Closure-92-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20187,11 +20955,14 @@
     "fixed_failures": []
   },
   "Closure-92-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ProcessClosurePrimitivesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ProcessClosurePrimitives",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-94-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20204,11 +20975,22 @@
     "fixed_failures": []
   },
   "Closure-94-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 51.82,
+    "branch_cov": 40.03,
+    "test_file": "NodeUtilGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testValidDefine_BinaryOperatorValidBothChildren",
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testValidDefine_AdditionOperationStringConcat",
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testValidDefine_BinaryOperatorRejectsInvalidSecondChild",
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testAstFactoryMethods"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.NodeUtilGeminiTest::testAstFactoryMethods"
+    ]
   },
   "Closure-95-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20221,11 +21003,14 @@
     "fixed_failures": []
   },
   "Closure-95-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-96-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20238,11 +21023,14 @@
     "fixed_failures": []
   },
   "Closure-96-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-97-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20255,11 +21043,14 @@
     "fixed_failures": []
   },
   "Closure-97-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeepholeFoldConstantsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-98-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20272,11 +21063,22 @@
     "fixed_failures": []
   },
   "Closure-98-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 98.81,
+    "branch_cov": 92.91,
+    "test_file": "ReferenceCollectingCallbackGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ReferenceCollectingCallback",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInForLoop",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInWhileLoop",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInDoWhileLoop"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection"
+    ]
   },
   "Closure-99-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20289,11 +21091,22 @@
     "fixed_failures": []
   },
   "Closure-99-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 100.0,
+    "branch_cov": 93.1,
+    "test_file": "CheckGlobalThisGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testPropertyOfMethod",
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode",
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testMethod4",
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testInterface1"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode"
+    ]
   },
   "Closure-100-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20306,11 +21119,14 @@
     "fixed_failures": []
   },
   "Closure-100-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CheckGlobalThisGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-101-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20323,11 +21139,14 @@
     "fixed_failures": []
   },
   "Closure-101-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CommandLineRunnerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-102-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20340,11 +21159,37 @@
     "fixed_failures": []
   },
   "Closure-102-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 10,
+    "line_cov": 93.55,
+    "branch_cov": 79.82,
+    "test_file": "NormalizeGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Normalize",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithForInitializer",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testSplitVarDeclarationsEmptyVarAssertOnChange",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithMultipleVarDeclarations",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testPropagateConstantAnnotationsAssertOnChange",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithWhile",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithLabelNormalization",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsUnexpectedConstantAnnotated",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithDuplicateVar",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsExpectedConstantNotAnnotated",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsInconsistentAnnotation"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithForInitializer",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testSplitVarDeclarationsEmptyVarAssertOnChange",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithMultipleVarDeclarations",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testPropagateConstantAnnotationsAssertOnChange",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithWhile",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithLabelNormalization",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsUnexpectedConstantAnnotated",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithDuplicateVar",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsExpectedConstantNotAnnotated",
+      "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsInconsistentAnnotation"
+    ]
   },
   "Closure-103-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20357,11 +21202,14 @@
     "fixed_failures": []
   },
   "Closure-103-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ControlFlowAnalysisGeminiTest.java;DisambiguatePropertiesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ControlFlowAnalysis;com.google.javascript.jscomp.DisambiguateProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-104-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20374,11 +21222,14 @@
     "fixed_failures": []
   },
   "Closure-104-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "UnionTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.UnionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-105-deepseek": {
     "status": "DONE",
@@ -20395,11 +21246,37 @@
     "fixed_failures": []
   },
   "Closure-105-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 10,
+    "line_cov": 56.8,
+    "branch_cov": 52.23,
+    "test_file": "FoldConstantsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FoldConstants",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLoopFolding",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testRegExpConstructor",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringJoinAddDefect",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testUnaryOperators",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testConditionMinimization",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testMinimizeNot",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringIndexOfAndJoin",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLoopFolding",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testRegExpConstructor",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringJoinAddDefect",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testUnaryOperators",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testConditionMinimization",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testMinimizeNot",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringIndexOfAndJoin",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
+      "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
+    ]
   },
   "Closure-106-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20412,11 +21289,14 @@
     "fixed_failures": []
   },
   "Closure-106-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "GlobalNamespaceGeminiTest.java;JSDocInfoBuilderGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.GlobalNamespace;com.google.javascript.rhino.JSDocInfoBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-107-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20429,11 +21309,27 @@
     "fixed_failures": []
   },
   "Closure-107-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 89.6,
+    "branch_cov": 85.51,
+    "test_file": "CommandLineRunnerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testQuotedArgumentStripping",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetMsgWiringNoWarnings",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsWithUseOnlyCustomExterns",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCommonJsModuleWithoutEntryModuleFails",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testDefaultExternsIntegrity"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testQuotedArgumentStripping",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetMsgWiringNoWarnings",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsWithUseOnlyCustomExterns",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCommonJsModuleWithoutEntryModuleFails",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testDefaultExternsIntegrity"
+    ]
   },
   "Closure-108-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20446,11 +21342,18 @@
     "fixed_failures": []
   },
   "Closure-108-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "BUG_DETECTED",
+    "failures_count": 2,
+    "line_cov": 97.77,
+    "branch_cov": 90.67,
+    "test_file": "ScopedAliasesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testIssue1144VarDeclarationWithDoc",
+      "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testTypeNodeRewritingSimpleAndComposite"
+    ],
+    "fixed_failures": []
   },
   "Closure-109-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20463,11 +21366,14 @@
     "fixed_failures": []
   },
   "Closure-109-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsDocInfoParserGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.parsing.JsDocInfoParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-110-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20480,11 +21386,14 @@
     "fixed_failures": []
   },
   "Closure-110-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ScopedAliasesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ScopedAliases;com.google.javascript.rhino.Node",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-111-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20497,11 +21406,14 @@
     "fixed_failures": []
   },
   "Closure-111-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ClosureReverseAbstractInterpreterGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-112-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20514,11 +21426,14 @@
     "fixed_failures": []
   },
   "Closure-112-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeInferenceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeInference",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-113-deepseek": {
     "status": "DONE",
@@ -20554,11 +21469,14 @@
     ]
   },
   "Closure-113-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ProcessClosurePrimitivesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ProcessClosurePrimitives",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-114-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20571,11 +21489,14 @@
     "fixed_failures": []
   },
   "Closure-114-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NameAnalyzerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NameAnalyzer",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-115-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20588,11 +21509,14 @@
     "fixed_failures": []
   },
   "Closure-115-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionInjectorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionInjector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-116-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20605,11 +21529,23 @@
     "fixed_failures": []
   },
   "Closure-116-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 3,
+    "line_cov": 87.13,
+    "branch_cov": 62.84,
+    "test_file": "FunctionInjectorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionInjector",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testDoesFunctionMeetMinimumRequirements_anonymousAssignedRecursion",
+      "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101a_directInlineArgumentWithSideEffectsRejected",
+      "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101b_directInlineAssignmentArgumentRejected"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testDoesFunctionMeetMinimumRequirements_anonymousAssignedRecursion",
+      "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101a_directInlineArgumentWithSideEffectsRejected",
+      "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101b_directInlineAssignmentArgumentRejected"
+    ]
   },
   "Closure-117-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20622,11 +21558,14 @@
     "fixed_failures": []
   },
   "Closure-117-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeValidatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeValidator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-118-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20639,11 +21578,14 @@
     "fixed_failures": []
   },
   "Closure-118-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DisambiguatePropertiesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.DisambiguateProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-119-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20656,11 +21598,25 @@
     "fixed_failures": []
   },
   "Closure-119-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 84.68,
+    "branch_cov": 63.01,
+    "test_file": "GlobalNamespaceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.GlobalNamespace",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchDefectExposed",
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchDefectExposed",
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
+      "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
+    ]
   },
   "Closure-120-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20673,11 +21629,53 @@
     "fixed_failures": []
   },
   "Closure-120-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 18,
+    "line_cov": 50.71,
+    "branch_cov": 34.23,
+    "test_file": "ReferenceCollectingCallbackGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ReferenceCollectingCallback",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testGetScopeDelegatesToVarScope",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testVariableAssignedInNestedFunctionScopeIsNotAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testCustomBehaviorInvocationsOnScopeExit",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testMultipleAssignmentsNotAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignmentInConditionalBranchIsNotWellDefined",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testReferenceClassificationMethods",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignmentsInsideLoopsAreNotAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testBlockBoundariesTraversal",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testNeverAssignedVariable",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testConstantsAssignedAfterUse",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testLocalVariableAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testVarFilterBehavior",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testVariableEscapedIntoInnerScope",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignmentImmediatelyFollowingDeclarationIsWellDefined",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testReferenceBleedingFunctionAndCloneWithNewScope",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testArgumentsKeywordReference",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testExternalIssue1053_variableAssignedInFunctionScopeIsNotAssignedOnceInLifetime"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testGetScopeDelegatesToVarScope",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testVariableAssignedInNestedFunctionScopeIsNotAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testCustomBehaviorInvocationsOnScopeExit",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testMultipleAssignmentsNotAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignmentInConditionalBranchIsNotWellDefined",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testReferenceClassificationMethods",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignmentsInsideLoopsAreNotAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testBlockBoundariesTraversal",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testNeverAssignedVariable",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testConstantsAssignedAfterUse",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testLocalVariableAssignedOnceInLifetime",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testVarFilterBehavior",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testVariableEscapedIntoInnerScope",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignmentImmediatelyFollowingDeclarationIsWellDefined",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testReferenceBleedingFunctionAndCloneWithNewScope",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testArgumentsKeywordReference",
+      "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testExternalIssue1053_variableAssignedInFunctionScopeIsNotAssignedOnceInLifetime"
+    ]
   },
   "Closure-121-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20690,11 +21688,69 @@
     "fixed_failures": []
   },
   "Closure-121-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 26,
+    "line_cov": 7.74,
+    "branch_cov": 1.27,
+    "test_file": "InlineVariablesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineVariables",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testDeadAssignmentPrunedWhenOnlyRefIsInit",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testMultipleReadsImmutableLiteralInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testScriptWithoutVariables",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringWorthInliningFalseForLargeRepeatedStrings",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsModifiedViaAssignmentPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsReadPropertyDoesNotEscape",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testInterveningSideEffectsPreventMotion",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testConstantsOnlyModeInlinesDeclaredConstants",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testPropertyPassedAsArgumentCanBeInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testConstantsOnlyModeDoesNotInlineLocals",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSingletonGetterCallMustNotBeInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testEmptyPassExecution",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testCleanAliasInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testRenamePropertyFunctionNotForbiddenFromRemaining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsModifiedViaIncrementPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsEscapedPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testMethodCallContextPreservation",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testUninitializedVariableInlinedToUndefined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testLocalsOnlyModePreservesGlobals",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringWorthInliningTrueForcesLargeStringInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testThisAliasInliningWhenUnescaped",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testExternalIssue1053ReturnVariant",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSimpleSingleReadVariableInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testExternalIssue1053",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testForInLoopVariableDeclarationNotEligibleForInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSubclassRelationshipCallMustNotBeInlined"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testDeadAssignmentPrunedWhenOnlyRefIsInit",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testMultipleReadsImmutableLiteralInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testScriptWithoutVariables",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringWorthInliningFalseForLargeRepeatedStrings",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsModifiedViaAssignmentPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsReadPropertyDoesNotEscape",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testInterveningSideEffectsPreventMotion",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testConstantsOnlyModeInlinesDeclaredConstants",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testPropertyPassedAsArgumentCanBeInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testConstantsOnlyModeDoesNotInlineLocals",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSingletonGetterCallMustNotBeInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testEmptyPassExecution",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testCleanAliasInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testRenamePropertyFunctionNotForbiddenFromRemaining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsModifiedViaIncrementPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testArgumentsEscapedPreventsAliasInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testMethodCallContextPreservation",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testUninitializedVariableInlinedToUndefined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testLocalsOnlyModePreservesGlobals",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testStringWorthInliningTrueForcesLargeStringInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testThisAliasInliningWhenUnescaped",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testExternalIssue1053ReturnVariant",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSimpleSingleReadVariableInlined",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testExternalIssue1053",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testForInLoopVariableDeclarationNotEligibleForInlining",
+      "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSubclassRelationshipCallMustNotBeInlined"
+    ]
   },
   "Closure-122-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -20735,11 +21791,14 @@
     "fixed_failures": []
   },
   "Closure-124-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ExploitAssignsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ExploitAssigns",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-125-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20752,11 +21811,43 @@
     "fixed_failures": []
   },
   "Closure-125-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 13,
+    "line_cov": 75.7,
+    "branch_cov": 55.34,
+    "test_file": "TypeCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructInOperatorViolation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructPrototypeAssignedNonStruct",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testForInWithStructViolation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetterAndSetterDefinitionsInObjectLiteral",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitwiseNot",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertySuggestionOnTypo",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalPropertyCreationOnStruct",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalImplicitCast",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testClassImplementingNonInterface",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterfaceExtendingNonInterface",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testDictPropertyDotAccess",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructInOperatorViolation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructPrototypeAssignedNonStruct",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testForInWithStructViolation",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testGetterAndSetterDefinitionsInObjectLiteral",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testBadBitwiseNot",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testPropertySuggestionOnTypo",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalPropertyCreationOnStruct",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testIllegalImplicitCast",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testClassImplementingNonInterface",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testInterfaceExtendingNonInterface",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testDictPropertyDotAccess",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testFunctionMasksVariable",
+      "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
+    ]
   },
   "Closure-126-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20769,11 +21860,14 @@
     "fixed_failures": []
   },
   "Closure-126-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MinimizeExitPointsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.MinimizeExitPoints",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-127-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20786,11 +21880,37 @@
     "fixed_failures": []
   },
   "Closure-127-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 10,
+    "line_cov": 96.34,
+    "branch_cov": 86.15,
+    "test_file": "UnreachableCodeEliminationGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInsideDeadBranch",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testSyntheticRootDirectInvocation",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInWhileConditionFalse",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDontRemoveBreakInTryFinally",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testNestedEmptyBlocksInComputeFollowing",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoWhilePreserved",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInIfElseBranches",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428a",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428c",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnconditionalBranchTargetingAnotherBranch"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInsideDeadBranch",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testSyntheticRootDirectInvocation",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInWhileConditionFalse",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDontRemoveBreakInTryFinally",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testNestedEmptyBlocksInComputeFollowing",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoWhilePreserved",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInIfElseBranches",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428a",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428c",
+      "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnconditionalBranchTargetingAnotherBranch"
+    ]
   },
   "Closure-128-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -20817,11 +21937,14 @@
     "fixed_failures": []
   },
   "Closure-129-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PrepareAstGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PrepareAst",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-130-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20834,11 +21957,14 @@
     "fixed_failures": []
   },
   "Closure-130-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CollapsePropertiesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CollapseProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-131-deepseek": {
     "status": "WAITING_FOR_TESTS",
@@ -20865,11 +21991,14 @@
     "fixed_failures": []
   },
   "Closure-132-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-133-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20882,11 +22011,14 @@
     "fixed_failures": []
   },
   "Closure-133-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsDocInfoParserGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.parsing.JsDocInfoParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-134-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20899,11 +22031,14 @@
     "fixed_failures": []
   },
   "Closure-134-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AmbiguatePropertiesGeminiTest.java;TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.AmbiguateProperties;com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-135-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20916,11 +22051,14 @@
     "fixed_failures": []
   },
   "Closure-135-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "DevirtualizePrototypeMethodsGeminiTest.java;FunctionTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.DevirtualizePrototypeMethods;com.google.javascript.rhino.jstype.FunctionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-136-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20933,11 +22071,14 @@
     "fixed_failures": []
   },
   "Closure-136-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MethodCompilerPassGeminiTest.java;RenameVarsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.MethodCompilerPass;com.google.javascript.jscomp.RenameVars",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-137-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20950,11 +22091,14 @@
     "fixed_failures": []
   },
   "Closure-137-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "MakeDeclaredNamesUniqueGeminiTest.java;NodeUtilGeminiTest.java;NormalizeGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.Normalize",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-138-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20967,11 +22111,14 @@
     "fixed_failures": []
   },
   "Closure-138-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ClosureReverseAbstractInterpreterGeminiTest.java;TypeInferenceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.ClosureReverseAbstractInterpreter;com.google.javascript.jscomp.TypeInference",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-139-deepseek": {
     "status": "COMPILE_ERROR",
@@ -20984,11 +22131,14 @@
     "fixed_failures": []
   },
   "Closure-139-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NormalizeGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Normalize",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-140-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21001,11 +22151,14 @@
     "fixed_failures": []
   },
   "Closure-140-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CompilerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Compiler",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-141-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21018,11 +22171,14 @@
     "fixed_failures": []
   },
   "Closure-141-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NodeUtilGeminiTest.java;PureFunctionIdentifierGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.PureFunctionIdentifier",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-142-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21035,11 +22191,14 @@
     "fixed_failures": []
   },
   "Closure-142-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CoalesceVariableNamesGeminiTest.java;JsDocInfoParserGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CoalesceVariableNames;com.google.javascript.jscomp.parsing.JsDocInfoParser",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-143-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21052,11 +22211,14 @@
     "fixed_failures": []
   },
   "Closure-143-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractCommandLineRunnerGeminiTest.java;RemoveConstantExpressionsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.RemoveConstantExpressions",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-144-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21069,11 +22231,14 @@
     "fixed_failures": []
   },
   "Closure-144-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionBuilderGeminiTest.java;FunctionTypeBuilderGeminiTest.java;FunctionTypeGeminiTest.java;TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionTypeBuilder;com.google.javascript.jscomp.TypedScopeCreator;com.google.javascript.rhino.jstype.FunctionBuilder;com.google.javascript.rhino.jstype.FunctionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-145-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21086,11 +22251,14 @@
     "fixed_failures": []
   },
   "Closure-145-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CodeGeneratorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-146-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21103,11 +22271,14 @@
     "fixed_failures": []
   },
   "Closure-146-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JSTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.JSType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-147-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21120,11 +22291,14 @@
     "fixed_failures": []
   },
   "Closure-147-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CheckGlobalThisGeminiTest.java;RuntimeTypeCheckGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CheckGlobalThis;com.google.javascript.jscomp.RuntimeTypeCheck",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-148-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21137,11 +22311,14 @@
     "fixed_failures": []
   },
   "Closure-148-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PeepholeFoldConstantsGeminiTest.java;SourceMapGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants;com.google.javascript.jscomp.SourceMap",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-149-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21154,11 +22331,14 @@
     "fixed_failures": []
   },
   "Closure-149-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractCommandLineRunnerGeminiTest.java;CommandLineRunnerGeminiTest.java;CompilerGeminiTest.java;CompilerOptionsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.CommandLineRunner;com.google.javascript.jscomp.Compiler;com.google.javascript.jscomp.CompilerOptions",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-150-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21171,11 +22351,35 @@
     "fixed_failures": []
   },
   "Closure-150-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 9,
+    "line_cov": 76.06,
+    "branch_cov": 56.91,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testInitialNativeScopeContent",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testNamespacedFunctionStubLocal",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testObjectLiteralCastValid",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testCollectedFunctionStubLocal",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testGlobalFunctionAliasRegistration",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testValidEnumCreationAndValues",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testInitialNativeScopeContent",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testNamespacedFunctionStubLocal",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testObjectLiteralCastValid",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testCollectedFunctionStubLocal",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testGlobalFunctionAliasRegistration",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testValidEnumCreationAndValues",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
+      "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
+    ]
   },
   "Closure-151-deepseek": {
     "status": "DONE",
@@ -21197,11 +22401,24 @@
     ]
   },
   "Closure-151-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 4,
+    "line_cov": 86.41,
+    "branch_cov": 73.53,
+    "test_file": "CommandLineRunnerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testVersionFlag",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
+      "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
+    ]
   },
   "Closure-152-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21214,11 +22431,14 @@
     "fixed_failures": []
   },
   "Closure-152-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.FunctionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-153-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21231,11 +22451,14 @@
     "fixed_failures": []
   },
   "Closure-153-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "NormalizeGeminiTest.java;SyntacticScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Normalize;com.google.javascript.jscomp.SyntacticScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-154-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21248,11 +22471,14 @@
     "fixed_failures": []
   },
   "Closure-154-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeCheckGeminiTest.java;TypeValidatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeCheck;com.google.javascript.jscomp.TypeValidator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-155-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21265,11 +22491,14 @@
     "fixed_failures": []
   },
   "Closure-155-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "InlineVariablesGeminiTest.java;ReferenceCollectingCallbackGeminiTest.java;ScopeGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineVariables;com.google.javascript.jscomp.ReferenceCollectingCallback;com.google.javascript.jscomp.Scope",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-156-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21282,11 +22511,14 @@
     "fixed_failures": []
   },
   "Closure-156-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CollapsePropertiesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CollapseProperties",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-157-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21299,11 +22531,14 @@
     "fixed_failures": []
   },
   "Closure-157-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "CodeGeneratorGeminiTest.java;RenamePrototypesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.parsing.IRFactory;com.google.javascript.jscomp.RenamePrototypes",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-158-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21316,11 +22551,14 @@
     "fixed_failures": []
   },
   "Closure-158-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AbstractCommandLineRunnerGeminiTest.java;CommandLineRunnerGeminiTest.java;DiagnosticGroupsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.CommandLineRunner;com.google.javascript.jscomp.DiagnosticGroups",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-159-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21333,11 +22571,14 @@
     "fixed_failures": []
   },
   "Closure-159-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "InlineFunctionsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.InlineFunctions",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-160-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21350,11 +22591,29 @@
     "fixed_failures": []
   },
   "Closure-160-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 6,
+    "line_cov": 47.47,
+    "branch_cov": 40.99,
+    "test_file": "CompilerGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Compiler",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.CompilerGeminiTest::testToSourceEmptyModule",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testParseSyntheticCodeVariants",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testGetNodeForCodeInsertionThrowsWhenNoInputs",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testAreNodesEqualForInliningWithAmbiguate",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testCompileBasicScriptSuccess",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testIntermediateStateSaveAndRestore"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.CompilerGeminiTest::testToSourceEmptyModule",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testParseSyntheticCodeVariants",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testGetNodeForCodeInsertionThrowsWhenNoInputs",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testAreNodesEqualForInliningWithAmbiguate",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testCompileBasicScriptSuccess",
+      "com.google.javascript.jscomp.CompilerGeminiTest::testIntermediateStateSaveAndRestore"
+    ]
   },
   "Closure-161-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21367,11 +22626,27 @@
     "fixed_failures": []
   },
   "Closure-161-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 5,
+    "line_cov": 70.75,
+    "branch_cov": 56.02,
+    "test_file": "PeepholeFoldConstantsGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisonNodes",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssignmentsToCompound",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testObjectPropAccessWithGetterFoldsToCall",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522NonEmptyArrayOutOfBounds"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisonNodes",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssignmentsToCompound",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testObjectPropAccessWithGetterFoldsToCall",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522",
+      "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522NonEmptyArrayOutOfBounds"
+    ]
   },
   "Closure-162-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21384,11 +22659,14 @@
     "fixed_failures": []
   },
   "Closure-162-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ScopedAliasesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.Scope;com.google.javascript.jscomp.ScopedAliases",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-163-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21401,11 +22679,14 @@
     "fixed_failures": []
   },
   "Closure-163-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "AnalyzePrototypePropertiesGeminiTest.java;CrossModuleMethodMotionGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.AnalyzePrototypeProperties;com.google.javascript.jscomp.CrossModuleMethodMotion",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-164-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21418,11 +22699,14 @@
     "fixed_failures": []
   },
   "Closure-164-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ArrowTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.ArrowType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-165-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21435,11 +22719,14 @@
     "fixed_failures": []
   },
   "Closure-165-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JSTypeRegistryGeminiTest.java;ObjectTypeGeminiTest.java;RecordTypeBuilderGeminiTest.java;RecordTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.JSTypeRegistry;com.google.javascript.rhino.jstype.ObjectType;com.google.javascript.rhino.jstype.RecordType;com.google.javascript.rhino.jstype.RecordTypeBuilder",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-166-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21452,11 +22739,14 @@
     "fixed_failures": []
   },
   "Closure-166-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "PrototypeObjectTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-167-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21469,11 +22759,14 @@
     "fixed_failures": []
   },
   "Closure-167-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JSTypeGeminiTest.java;SemanticReverseAbstractInterpreterGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter;com.google.javascript.rhino.jstype.JSType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-168-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21486,11 +22779,14 @@
     "fixed_failures": []
   },
   "Closure-168-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-169-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21503,11 +22799,14 @@
     "fixed_failures": []
   },
   "Closure-169-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "ArrowTypeGeminiTest.java;FunctionTypeGeminiTest.java;JSTypeGeminiTest.java;RecordTypeGeminiTest.java;UnionTypeGeminiTest.java",
+    "target_classes": "com.google.javascript.rhino.jstype.ArrowType;com.google.javascript.rhino.jstype.EquivalenceMethod;com.google.javascript.rhino.jstype.FunctionType;com.google.javascript.rhino.jstype.JSType;com.google.javascript.rhino.jstype.RecordType;com.google.javascript.rhino.jstype.UnionType",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-170-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21520,11 +22819,14 @@
     "fixed_failures": []
   },
   "Closure-170-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FlowSensitiveInlineVariablesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-171-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21537,11 +22839,14 @@
     "fixed_failures": []
   },
   "Closure-171-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java;TypeInferenceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeInference;com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-172-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21554,11 +22859,14 @@
     "fixed_failures": []
   },
   "Closure-172-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypedScopeCreatorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-173-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21571,11 +22879,59 @@
     "fixed_failures": []
   },
   "Closure-173-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "DONE",
+    "fault_detected": "FLAKY_OR_REGRESSION",
+    "failures_count": 21,
+    "line_cov": 5.67,
+    "branch_cov": 2.92,
+    "test_file": "CodeGeneratorGeminiTest.java;PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+    "buggy_failures": [
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpSpecialCharactersAndLineTerminators",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testMinimizeStringArrayLiteral",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnSideEffects",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldBoundFunctionImmediateCall",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testAssocitivity",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testStringArrayLiteralSplittingBoundaries",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceUndefinedWithVoidZero",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpConstructorBoundaryConditions",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpInEs3DisallowsGlobalFlagFolding",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNonMatchingStandardConstructors",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldRegularExpressionConstructor",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testInvalidRegularExpressionFlagsEmitsWarning",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceUndefinedGuards",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testAssocitivityWithAssignment",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testIssue1062",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturn",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSplitCommaWhenEarly",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testCommaSplitGuards",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testArrayConstructorUnsafeSingleArguments",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldStandardConstructorsWhenNormalized",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldSimpleStringFunctionCall"
+    ],
+    "fixed_failures": [
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpSpecialCharactersAndLineTerminators",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testMinimizeStringArrayLiteral",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnSideEffects",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldBoundFunctionImmediateCall",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testAssocitivity",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testStringArrayLiteralSplittingBoundaries",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceUndefinedWithVoidZero",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpConstructorBoundaryConditions",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpInEs3DisallowsGlobalFlagFolding",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNonMatchingStandardConstructors",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldRegularExpressionConstructor",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testInvalidRegularExpressionFlagsEmitsWarning",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceUndefinedGuards",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testAssocitivityWithAssignment",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testIssue1062",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturn",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSplitCommaWhenEarly",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testCommaSplitGuards",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testArrayConstructorUnsafeSingleArguments",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldStandardConstructorsWhenNormalized",
+      "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldSimpleStringFunctionCall"
+    ]
   },
   "Closure-174-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21588,11 +22944,14 @@
     "fixed_failures": []
   },
   "Closure-174-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "JsAstGeminiTest.java;NodeUtilGeminiTest.java;ScopedAliasesGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.JsAst;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.ScopedAliases",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-175-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21605,11 +22964,14 @@
     "fixed_failures": []
   },
   "Closure-175-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "FunctionInjectorGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.FunctionInjector",
+    "buggy_failures": [],
+    "fixed_failures": []
   },
   "Closure-176-deepseek": {
     "status": "COMPILE_ERROR",
@@ -21622,10 +22984,13 @@
     "fixed_failures": []
   },
   "Closure-176-gemini": {
-    "status": "WAITING_FOR_TESTS",
-    "fault_detected": "-",
-    "line_cov": "-",
-    "branch_cov": "-",
-    "test_file": "-"
+    "status": "COMPILE_ERROR",
+    "fault_detected": "COMPILE_ERROR",
+    "line_cov": 0.0,
+    "branch_cov": 0.0,
+    "test_file": "TypeInferenceGeminiTest.java",
+    "target_classes": "com.google.javascript.jscomp.TypeInference",
+    "buggy_failures": [],
+    "fixed_failures": []
   }
 }

@@ -1,0 +1,33 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 96.34,
+  "branch_cov": 86.15,
+  "test_file": "UnreachableCodeEliminationGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInsideDeadBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testSyntheticRootDirectInvocation",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInWhileConditionFalse",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDontRemoveBreakInTryFinally",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testNestedEmptyBlocksInComputeFollowing",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoWhilePreserved",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInIfElseBranches",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428a",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428c",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnconditionalBranchTargetingAnotherBranch"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInsideDeadBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testSyntheticRootDirectInvocation",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInWhileConditionFalse",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDontRemoveBreakInTryFinally",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testNestedEmptyBlocksInComputeFollowing",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoWhilePreserved",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInIfElseBranches",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428a",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428c",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnconditionalBranchTargetingAnotherBranch"
+  ]
+}

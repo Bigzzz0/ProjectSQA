@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 87.13,
+  "branch_cov": 62.84,
+  "test_file": "FunctionInjectorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionInjector",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testDoesFunctionMeetMinimumRequirements_anonymousAssignedRecursion",
+    "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101a_directInlineArgumentWithSideEffectsRejected",
+    "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101b_directInlineAssignmentArgumentRejected"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testDoesFunctionMeetMinimumRequirements_anonymousAssignedRecursion",
+    "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101a_directInlineArgumentWithSideEffectsRejected",
+    "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101b_directInlineAssignmentArgumentRejected"
+  ]
+}

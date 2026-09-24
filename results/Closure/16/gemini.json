@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 97.52,
+  "branch_cov": 91.13,
+  "test_file": "ScopedAliasesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
+  ]
+}

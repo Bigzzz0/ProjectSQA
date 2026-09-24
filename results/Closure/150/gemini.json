@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 9,
+  "line_cov": 76.06,
+  "branch_cov": 56.91,
+  "test_file": "TypedScopeCreatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testInitialNativeScopeContent",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testNamespacedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testObjectLiteralCastValid",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testCollectedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testGlobalFunctionAliasRegistration",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testValidEnumCreationAndValues",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testInitialNativeScopeContent",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testNamespacedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testObjectLiteralCastValid",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testCollectedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testGlobalFunctionAliasRegistration",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testValidEnumCreationAndValues",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
+  ]
+}

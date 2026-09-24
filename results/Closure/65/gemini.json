@@ -1,0 +1,39 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 14,
+  "line_cov": 76.81,
+  "branch_cov": 62.53,
+  "test_file": "CodeGeneratorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOpWithInvalidChildCountThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDoWhileAndWhile",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testZeroEscapeToDoubleQuotedJsString",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorsAssociativity",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testTokensDelpropLabelBreakContinueDebuggerThisNullTrueFalse",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testZero",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testGetAndSetInObjectLit",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelAndWith",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testSwitchCaseDefault",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBreakAndContinueWithLabel",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testForLoops",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownNodeTypeThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testIfElseAndDanglingElse"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOpWithInvalidChildCountThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDoWhileAndWhile",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorsAssociativity",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testTokensDelpropLabelBreakContinueDebuggerThisNullTrueFalse",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testGetAndSetInObjectLit",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelAndWith",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testSwitchCaseDefault",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBreakAndContinueWithLabel",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testForLoops",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownNodeTypeThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testIfElseAndDanglingElse"
+  ]
+}

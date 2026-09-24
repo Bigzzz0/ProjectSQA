@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 59.52,
+  "branch_cov": 42.94,
+  "test_file": "NodeUtilGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testEvaluatesToLocalValue_newOperatorDefect",
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
+  ]
+}

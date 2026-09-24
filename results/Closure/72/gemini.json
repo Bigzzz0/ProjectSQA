@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 99.54,
+  "branch_cov": 87.13,
+  "test_file": "FunctionToBlockMutatorGeminiTest.java;RenameLabelsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionToBlockMutator;com.google.javascript.jscomp.RenameLabels",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
+    "com.google.javascript.jscomp.RenameLabelsGeminiTest::testUnreferencedLabelPreservedWhenRemoveUnusedIsFalse",
+    "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
+    "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
+  ]
+}

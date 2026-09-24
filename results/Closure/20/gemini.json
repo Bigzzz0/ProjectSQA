@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 78.38,
+  "branch_cov": 60.08,
+  "test_file": "PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testHookConditionMinimization",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSkipFinallyNodesDefensive",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceExitWithBreak",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testTryReplaceIfBlockVariants",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testDefectSimpleFunctionCallWithVariableShouldNotFold"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testHookConditionMinimization",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSkipFinallyNodesDefensive",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceExitWithBreak",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testTryReplaceIfBlockVariants",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid"
+  ]
+}

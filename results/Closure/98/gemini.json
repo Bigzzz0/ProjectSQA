@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 98.81,
+  "branch_cov": 92.91,
+  "test_file": "ReferenceCollectingCallbackGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.ReferenceCollectingCallback",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInForLoop",
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection",
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInWhileLoop",
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInDoWhileLoop"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection"
+  ]
+}

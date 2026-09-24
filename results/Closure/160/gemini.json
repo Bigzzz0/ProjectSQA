@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 47.47,
+  "branch_cov": 40.99,
+  "test_file": "CompilerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.Compiler",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CompilerGeminiTest::testToSourceEmptyModule",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testParseSyntheticCodeVariants",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testGetNodeForCodeInsertionThrowsWhenNoInputs",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testAreNodesEqualForInliningWithAmbiguate",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testCompileBasicScriptSuccess",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testIntermediateStateSaveAndRestore"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CompilerGeminiTest::testToSourceEmptyModule",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testParseSyntheticCodeVariants",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testGetNodeForCodeInsertionThrowsWhenNoInputs",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testAreNodesEqualForInliningWithAmbiguate",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testCompileBasicScriptSuccess",
+    "com.google.javascript.jscomp.CompilerGeminiTest::testIntermediateStateSaveAndRestore"
+  ]
+}

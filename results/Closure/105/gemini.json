@@ -1,0 +1,33 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 56.8,
+  "branch_cov": 52.23,
+  "test_file": "FoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.FoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLoopFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testRegExpConstructor",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringJoinAddDefect",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testUnaryOperators",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testConditionMinimization",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testMinimizeNot",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringIndexOfAndJoin",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLoopFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testRegExpConstructor",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringJoinAddDefect",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testUnaryOperators",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testConditionMinimization",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testMinimizeNot",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringIndexOfAndJoin",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
+  ]
+}

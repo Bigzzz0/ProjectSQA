@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.77,
+  "branch_cov": 90.67,
+  "test_file": "ScopedAliasesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testIssue1144VarDeclarationWithDoc",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testTypeNodeRewritingSimpleAndComposite"
+  ],
+  "fixed_failures": []
+}

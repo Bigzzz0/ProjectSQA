@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 96.15,
+  "test_file": "LiveVariablesAnalysisGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.LiveVariablesAnalysis",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithVar",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testExpressionInForInCallTargetingDefect",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testMarkAllParametersEscapedDirectly",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testExpressionInForInGetElemTargetingDefect",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testExpressionInForInGetPropTargetingDefect",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithoutVar"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithVar",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testMarkAllParametersEscapedDirectly",
+    "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithoutVar"
+  ]
+}

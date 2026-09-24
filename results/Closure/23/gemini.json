@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 80.43,
+  "branch_cov": 67.03,
+  "test_file": "PeepholeFoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignFoldingLateMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldCtorCall",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldObjectPropertyAccess",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemIndexNonZero",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testBitwiseNotBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemDefectIndexZero",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemEmptySlot",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemOutOfBoundsTooLarge"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignFoldingLateMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldCtorCall",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldObjectPropertyAccess",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testBitwiseNotBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards"
+  ]
+}

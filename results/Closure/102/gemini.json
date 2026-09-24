@@ -1,0 +1,33 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 93.55,
+  "branch_cov": 79.82,
+  "test_file": "NormalizeGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.Normalize",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithForInitializer",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testSplitVarDeclarationsEmptyVarAssertOnChange",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithMultipleVarDeclarations",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testPropagateConstantAnnotationsAssertOnChange",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithWhile",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithLabelNormalization",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsUnexpectedConstantAnnotated",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithDuplicateVar",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsExpectedConstantNotAnnotated",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsInconsistentAnnotation"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithForInitializer",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testSplitVarDeclarationsEmptyVarAssertOnChange",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithMultipleVarDeclarations",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testPropagateConstantAnnotationsAssertOnChange",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithWhile",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithLabelNormalization",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsUnexpectedConstantAnnotated",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithDuplicateVar",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsExpectedConstantNotAnnotated",
+    "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsInconsistentAnnotation"
+  ]
+}

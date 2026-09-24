@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 85.15,
+  "branch_cov": 70.16,
+  "test_file": "CodeGeneratorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7FInRegexp",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7F",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7FInDoubleQuotedJsString",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testControlFlowStatements",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownTokenTypeThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testStringUnexpectedChildrenThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testControlFlowStatements",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownTokenTypeThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testStringUnexpectedChildrenThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
+  ]
+}

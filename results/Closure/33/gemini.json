@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 79.17,
+  "branch_cov": 75.0,
+  "test_file": "PrototypeObjectTypeGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+  "buggy_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testIssue700_matchConstraintOnFunctionPrototypeDoesNotMutate",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testIssue700_matchConstraintOnNamedTypeDoesNotMutate"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts"
+  ]
+}

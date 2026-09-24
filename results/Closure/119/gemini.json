@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 84.68,
+  "branch_cov": 63.01,
+  "test_file": "GlobalNamespaceGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchDefectExposed",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchDefectExposed",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
+  ]
+}

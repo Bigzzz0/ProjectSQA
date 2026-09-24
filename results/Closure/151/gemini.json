@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 86.41,
+  "branch_cov": 73.53,
+  "test_file": "CommandLineRunnerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testVersionFlag",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
+  ]
+}

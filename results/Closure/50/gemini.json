@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 94.48,
+  "branch_cov": 82.04,
+  "test_file": "PeepholeReplaceKnownMethodsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeReplaceKnownMethods",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testParseFloat",
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testStringJoinAdd"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testParseFloat",
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testStringJoinAdd",
+    "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testNoStringJoin"
+  ]
+}

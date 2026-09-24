@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 93.75,
+  "branch_cov": 93.75,
+  "test_file": "CodeConsumerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeConsumerGeminiTest::testMinusNegativeZeroSpaceAdded"
+  ],
+  "fixed_failures": []
+}

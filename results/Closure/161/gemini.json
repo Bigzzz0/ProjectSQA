@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 70.75,
+  "branch_cov": 56.02,
+  "test_file": "PeepholeFoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisonNodes",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssignmentsToCompound",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testObjectPropAccessWithGetterFoldsToCall",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522NonEmptyArrayOutOfBounds"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisonNodes",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssignmentsToCompound",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testObjectPropAccessWithGetterFoldsToCall",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522NonEmptyArrayOutOfBounds"
+  ]
+}

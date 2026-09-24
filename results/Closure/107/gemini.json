@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 89.6,
+  "branch_cov": 85.51,
+  "test_file": "CommandLineRunnerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testQuotedArgumentStripping",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetMsgWiringNoWarnings",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsWithUseOnlyCustomExterns",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCommonJsModuleWithoutEntryModuleFails",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testDefaultExternsIntegrity"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testQuotedArgumentStripping",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetMsgWiringNoWarnings",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsWithUseOnlyCustomExterns",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCommonJsModuleWithoutEntryModuleFails",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testDefaultExternsIntegrity"
+  ]
+}

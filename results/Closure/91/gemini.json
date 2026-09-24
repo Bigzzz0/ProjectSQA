@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 95.45,
+  "test_file": "CheckGlobalThisGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testLendsAnnotation1",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testLendsAnnotation3",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testSyntheticAstTransitionsAndAssignLhsChildReset"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testSyntheticAstTransitionsAndAssignLhsChildReset"
+  ]
+}
