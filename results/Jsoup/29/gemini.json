@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 94.87,
+  "branch_cov": 100.0,
+  "test_file": "DocumentGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentGeminiTest::testTitlesDefectInnerWhitespaceNormalization"
+  ],
+  "fixed_failures": []
+}

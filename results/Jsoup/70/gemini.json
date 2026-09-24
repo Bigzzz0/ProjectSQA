@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 93.65,
+  "branch_cov": 81.07,
+  "test_file": "ElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testKeepsPreTextAtDepth",
+    "org.jsoup.nodes.ElementGeminiTest::testStandaloneElementNavigationNullGuards",
+    "org.jsoup.nodes.ElementGeminiTest::testDomQuerySelectors",
+    "org.jsoup.nodes.ElementGeminiTest::testKeepsPreTextAtDepthDirectHierarchy",
+    "org.jsoup.nodes.ElementGeminiTest::testPreserveWhitespaceMultiLevelAncestry",
+    "org.jsoup.nodes.ElementGeminiTest::testCssSelectorPaths"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testStandaloneElementNavigationNullGuards",
+    "org.jsoup.nodes.ElementGeminiTest::testDomQuerySelectors",
+    "org.jsoup.nodes.ElementGeminiTest::testCssSelectorPaths"
+  ]
+}

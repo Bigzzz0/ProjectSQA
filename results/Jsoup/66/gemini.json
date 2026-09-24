@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 88.72,
+  "branch_cov": 80.88,
+  "test_file": "ElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndWhitespacePreservation",
+    "org.jsoup.nodes.ElementGeminiTest::testHtmlOutputAndPrettyPrintBranches",
+    "org.jsoup.nodes.ElementGeminiTest::testDomCollectorQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testDomSiblingsBeforeAfterWrap"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndWhitespacePreservation",
+    "org.jsoup.nodes.ElementGeminiTest::testHtmlOutputAndPrettyPrintBranches",
+    "org.jsoup.nodes.ElementGeminiTest::testDomCollectorQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testDomSiblingsBeforeAfterWrap"
+  ]
+}

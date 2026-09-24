@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.22,
+  "branch_cov": 90.74,
+  "test_file": "CodeConsumerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberBoundaryExponent",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZero",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinusNoSpaceIfPrevNotMinus"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberBoundaryExponent",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus"
+  ]
+}

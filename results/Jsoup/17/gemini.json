@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 71.08,
+  "branch_cov": 61.18,
+  "test_file": "TreeBuilderStateGeminiTest.java",
+  "target_classes": "org.jsoup.parser.TreeBuilderState",
+  "buggy_failures": [
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testAdoptionAgencyAlgorithmAnchorTags",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testInHeadElementsHandling",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testHandles0CharacterInTable",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testFragmentParsingTdOrphan",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testHandles0CharacterInSelect",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testInitialStateDoctypeQuirks",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testIsindexTagExpansion",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testHandles0CharacterAsText",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testTextareaXmpIframeNoembedRawTextTags",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testInitialStateAndDoctypeTransitions",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testHandles0CharacterInTableFosterParenting"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testAdoptionAgencyAlgorithmAnchorTags",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testInHeadElementsHandling",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testFragmentParsingTdOrphan",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testInitialStateDoctypeQuirks",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testIsindexTagExpansion",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testTextareaXmpIframeNoembedRawTextTags",
+    "org.jsoup.parser.TreeBuilderStateGeminiTest::testInitialStateAndDoctypeTransitions"
+  ]
+}

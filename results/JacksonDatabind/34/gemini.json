@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 96.55,
+  "branch_cov": 100.0,
+  "test_file": "NumberSerializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testSerializeZeroAndNegativeValues",
+    "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testBigDecimalVisitorNumberTypeExactDefectTrigger",
+    "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testSerializeExtremeValues"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testSerializeZeroAndNegativeValues",
+    "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testSerializeExtremeValues"
+  ]
+}

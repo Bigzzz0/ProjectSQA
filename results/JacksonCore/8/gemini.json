@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 93.36,
+  "branch_cov": 78.99,
+  "test_file": "TextBufferGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.TextBuffer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testEmpty",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithCopy",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalAllBranches",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentAndReturn",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentLengthContract"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testEmpty",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithCopy",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalAllBranches",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentAndReturn",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentLengthContract"
+  ]
+}

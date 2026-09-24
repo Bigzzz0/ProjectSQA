@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "SameGeminiTest.java",
+  "target_classes": "org.mockito.internal.matchers.Same",
+  "buggy_failures": [
+    "org.mockito.internal.matchers.SameGeminiTest::testDescribeToShouldNotThrowNPEWhenNullPassedToSame"
+  ],
+  "fixed_failures": []
+}

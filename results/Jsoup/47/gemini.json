@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 98.31,
+  "branch_cov": 100.0,
+  "test_file": "EntitiesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "buggy_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::escapesGtInXmlAttributesButNotInHtml",
+    "org.jsoup.nodes.EntitiesGeminiTest::testXmlAttributeEscapingDirect"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::escapesGtInXmlAttributesButNotInHtml"
+  ]
+}

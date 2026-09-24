@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 55.85,
+  "branch_cov": 57.6,
+  "test_file": "CharacterReaderGeminiTest.java;TokeniserStateGeminiTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader;org.jsoup.parser.TokeniserState",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNextIndexOfSequenceBoundaries",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNullStringThrowsException",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeTagNameStopsOnLessThanDelimiter",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testHandlesLessInTagThanAsNewTag",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testParsesQuiteRoughAttributes"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNextIndexOfSequenceBoundaries",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNullStringThrowsException",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testParsesQuiteRoughAttributes"
+  ]
+}

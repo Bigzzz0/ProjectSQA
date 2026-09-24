@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.5,
+  "branch_cov": 97.73,
+  "test_file": "TokenGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Token",
+  "buggy_failures": [
+    "org.jsoup.parser.TokenGeminiTest::testFinaliseTagControlCharsCollapsingToEmptyAttributeNameDoesNotThrow",
+    "org.jsoup.parser.TokenGeminiTest::testStartTagNameAttrMethod",
+    "org.jsoup.parser.TokenGeminiTest::testNewAttributeControlCharsCollapsingToEmptyAttributeNameDoesNotThrow",
+    "org.jsoup.parser.TokenGeminiTest::testStartTagCoreOperationsAndToString"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokenGeminiTest::testStartTagNameAttrMethod",
+    "org.jsoup.parser.TokenGeminiTest::testStartTagCoreOperationsAndToString"
+  ]
+}

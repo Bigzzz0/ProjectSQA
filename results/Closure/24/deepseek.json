@@ -1,0 +1,43 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 15,
+  "line_cov": 36.99,
+  "branch_cov": 22.12,
+  "test_file": "ScopedAliasesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testThisReference",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testAliasRedefinition",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testValidAliasProcessing",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testImproperUsage",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNamedFunction",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testTransitiveAlias",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testFunctionWithParams",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testReturnStatement",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNestedFunctionNotTraversed",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testSingleAliasDefinition",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNullPreprocessorSymbolTable",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testEmptyScopeBlock",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNonAliasLocal",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testMultipleScopeBlocks",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testThrowStatement"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testThisReference",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testAliasRedefinition",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testValidAliasProcessing",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testImproperUsage",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNamedFunction",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testTransitiveAlias",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testFunctionWithParams",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testReturnStatement",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNestedFunctionNotTraversed",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testSingleAliasDefinition",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNullPreprocessorSymbolTable",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testEmptyScopeBlock",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNonAliasLocal",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testMultipleScopeBlocks",
+    "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testThrowStatement"
+  ]
+}

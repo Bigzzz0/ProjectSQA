@@ -1,0 +1,29 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 9,
+  "line_cov": 84.05,
+  "branch_cov": 66.09,
+  "test_file": "ElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testDomSearchMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testCssSelectorBoundaries",
+    "org.jsoup.nodes.ElementGeminiTest::testChildAppendsAndPrepends",
+    "org.jsoup.nodes.ElementGeminiTest::testEmptyElementAndEmptyStateQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndWhitespaceHandlingWithBrAndPre",
+    "org.jsoup.nodes.ElementGeminiTest::testHashAndEqualsWithParsedDocumentsDefect",
+    "org.jsoup.nodes.ElementGeminiTest::testHashAndEqualsDefect",
+    "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+    "org.jsoup.nodes.ElementGeminiTest::testHtmlOutputFormattingAndSyntaxModes"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testDomSearchMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testCssSelectorBoundaries",
+    "org.jsoup.nodes.ElementGeminiTest::testChildAppendsAndPrepends",
+    "org.jsoup.nodes.ElementGeminiTest::testEmptyElementAndEmptyStateQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndWhitespaceHandlingWithBrAndPre",
+    "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+    "org.jsoup.nodes.ElementGeminiTest::testHtmlOutputFormattingAndSyntaxModes"
+  ]
+}

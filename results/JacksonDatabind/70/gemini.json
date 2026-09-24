@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 96.9,
+  "branch_cov": 86.96,
+  "test_file": "BeanPropertyMapGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMap",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testDefectCaseInsensitiveRemoveMultiplePropsWithMixedCase",
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testFindDeserializeAndSetUnwrapsInvocationTargetException",
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testDefectCaseInsensitiveRemoveMixedCase"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testFindDeserializeAndSetUnwrapsInvocationTargetException"
+  ]
+}

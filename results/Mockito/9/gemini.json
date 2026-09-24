@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 0.0,
+  "test_file": "CallsRealMethodsGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.answers.CallsRealMethods",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsVoid_shouldReturnNull",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsPrimitiveBoolean_shouldReturnDefaultFalse",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsObject_shouldReturnDefaultNullWithoutCallingRealMethod",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenInterfaceMethod_shouldReturnDefaultWithoutCallingRealMethod",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsPrimitiveInt_shouldReturnDefaultZero",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenInterfacePrimitiveMethod_shouldReturnDefaultValue"
+  ],
+  "fixed_failures": []
+}

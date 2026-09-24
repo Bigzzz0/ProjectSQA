@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 53.36,
+  "branch_cov": 32.91,
+  "test_file": "HttpConnectionGeminiTest.java",
+  "target_classes": "org.jsoup.helper.HttpConnection",
+  "buggy_failures": [
+    "org.jsoup.helper.HttpConnectionGeminiTest::testHandlesHeaderEncodingOnRequest",
+    "org.jsoup.helper.HttpConnectionGeminiTest::testConnectMalformedUrlThrows"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.HttpConnectionGeminiTest::testConnectMalformedUrlThrows"
+  ]
+}

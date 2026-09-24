@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 94.44,
+  "branch_cov": 100.0,
+  "test_file": "VerificationOverTimeImplGeminiTest.java",
+  "target_classes": "org.mockito.internal.verification.VerificationOverTimeImpl",
+  "buggy_failures": [
+    "org.mockito.internal.verification.VerificationOverTimeImplGeminiTest::pure_mockito_should_not_depend_JUnit",
+    "org.mockito.internal.verification.VerificationOverTimeImplGeminiTest::testVerifyRecoversFromGenericAssertionError"
+  ],
+  "fixed_failures": []
+}

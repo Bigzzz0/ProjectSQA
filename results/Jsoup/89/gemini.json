@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 92.42,
+  "branch_cov": 90.0,
+  "test_file": "AttributeGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attribute",
+  "buggy_failures": [
+    "org.jsoup.nodes.AttributeGeminiTest::testBooleanAttributeNoCollapseInXml",
+    "org.jsoup.nodes.AttributeGeminiTest::testSettersOnOrphanAttribute",
+    "org.jsoup.nodes.AttributeGeminiTest::testCloneIntegrity",
+    "org.jsoup.nodes.AttributeGeminiTest::testNullAttributeValueHandling"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.AttributeGeminiTest::testBooleanAttributeNoCollapseInXml",
+    "org.jsoup.nodes.AttributeGeminiTest::testNullAttributeValueHandling"
+  ]
+}

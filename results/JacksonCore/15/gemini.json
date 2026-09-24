@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 63.0,
+  "branch_cov": 51.39,
+  "test_file": "FilteringParserDelegateGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.filter.FilteringParserDelegate",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testTextAndBinaryDelegation",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testNotAllowMultipleMatchesScalarDefect",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testFilteringWithIncludePathFalse"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testTextAndBinaryDelegation",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testNotAllowMultipleMatchesScalarDefect",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testFilteringWithIncludePathFalse"
+  ]
+}

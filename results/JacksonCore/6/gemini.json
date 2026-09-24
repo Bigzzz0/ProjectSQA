@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 93.55,
+  "test_file": "JsonPointerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.JsonPointer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.JsonPointerGeminiTest::testLeadingZeroVariants",
+    "com.fasterxml.jackson.core.JsonPointerGeminiTest::testIZeroIndex"
+  ],
+  "fixed_failures": []
+}

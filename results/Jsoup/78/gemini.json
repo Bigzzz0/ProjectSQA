@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 95.41,
+  "branch_cov": 81.82,
+  "test_file": "DataUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeVariants"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeVariants"
+  ]
+}

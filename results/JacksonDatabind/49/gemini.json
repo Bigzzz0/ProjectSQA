@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "WritableObjectIdGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.impl.WritableObjectId",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.impl.WritableObjectIdGeminiTest::testDefectIssue1255ExistingIdNotOverwrittenOnSubsequentGenerateId",
+    "com.fasterxml.jackson.databind.ser.impl.WritableObjectIdGeminiTest::testDefectIssue1255PreSetIdPreservedByGenerateId"
+  ],
+  "fixed_failures": []
+}

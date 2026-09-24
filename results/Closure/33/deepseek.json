@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 81.02,
+  "branch_cov": 70.0,
+  "test_file": "PrototypeObjectTypeDeepseekTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+  "buggy_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeDeepseekTest::testToStringHelperNamedAnonymousAndPrettyPrint",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeDeepseekTest::testGetSlotFindsPropertiesOnImplementedInterfaces"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeDeepseekTest::testToStringHelperNamedAnonymousAndPrettyPrint",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeDeepseekTest::testGetSlotFindsPropertiesOnImplementedInterfaces"
+  ]
+}

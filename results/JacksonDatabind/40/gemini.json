@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 95.89,
+  "branch_cov": 89.23,
+  "test_file": "NumberDeserializersGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.NumberDeserializers",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.NumberDeserializersGeminiTest::testDefectEmptyStringToPrimitiveWithFailOnNull"
+  ],
+  "fixed_failures": []
+}

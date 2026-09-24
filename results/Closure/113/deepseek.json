@@ -1,0 +1,33 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 77.03,
+  "branch_cov": 66.05,
+  "test_file": "ProcessClosurePrimitivesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.ProcessClosurePrimitives",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithRequireAndProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithMissingAnnotation",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbol",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testGetExportedVariableNamesAfterMultipleExports",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbolNoDot",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideInSamePass",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideWithDefinition",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeImplicitProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testHotSwapScript",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithInvalidName"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithRequireAndProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithMissingAnnotation",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbol",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testGetExportedVariableNamesAfterMultipleExports",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbolNoDot",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideInSamePass",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideWithDefinition",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeImplicitProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testHotSwapScript",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithInvalidName"
+  ]
+}

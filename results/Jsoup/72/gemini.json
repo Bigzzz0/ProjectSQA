@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 99.12,
+  "branch_cov": 92.93,
+  "test_file": "CharacterReaderGeminiTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToNonexistentEndWhenAtEnd",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderConsumeToDelimiters",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToNonexistentSequenceWhenAtEnd"
+  ],
+  "fixed_failures": []
+}

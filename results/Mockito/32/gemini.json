@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 91.3,
+  "branch_cov": 100.0,
+  "test_file": "SpyAnnotationEngineGeminiTest.java",
+  "target_classes": "org.mockito.internal.configuration.SpyAnnotationEngine",
+  "buggy_failures": [
+    "org.mockito.internal.configuration.SpyAnnotationEngineGeminiTest::testSpyFieldRetainsFieldNameAsMockName_DefectTarget"
+  ],
+  "fixed_failures": []
+}

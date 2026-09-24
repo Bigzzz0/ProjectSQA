@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 83.54,
+  "branch_cov": 66.09,
+  "test_file": "ElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnText",
+    "org.jsoup.nodes.ElementGeminiTest::testGetElementsQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testSiblingNavigationEdgeCases",
+    "org.jsoup.nodes.ElementGeminiTest::testCssSelector",
+    "org.jsoup.nodes.ElementGeminiTest::testElementSiblingIndexSameContent",
+    "org.jsoup.nodes.ElementGeminiTest::testGetSiblingsWithDuplicateContent",
+    "org.jsoup.nodes.ElementGeminiTest::testInsertionAndManipulation"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnText",
+    "org.jsoup.nodes.ElementGeminiTest::testGetElementsQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testSiblingNavigationEdgeCases",
+    "org.jsoup.nodes.ElementGeminiTest::testGetSiblingsWithDuplicateContent",
+    "org.jsoup.nodes.ElementGeminiTest::testInsertionAndManipulation"
+  ]
+}

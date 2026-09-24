@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 22.32,
+  "branch_cov": 16.98,
+  "test_file": "TokeniserGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Tokeniser;org.jsoup.parser.TokeniserState",
+  "buggy_failures": [
+    "org.jsoup.parser.TokeniserGeminiTest::testConsumeCharacterReferenceHexNumeric",
+    "org.jsoup.parser.TokeniserGeminiTest::testConsumeCharacterReferenceDecimalNumeric",
+    "org.jsoup.parser.TokeniserGeminiTest::testConsumeCharacterReferenceNamedEntities"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokeniserGeminiTest::testConsumeCharacterReferenceHexNumeric",
+    "org.jsoup.parser.TokeniserGeminiTest::testConsumeCharacterReferenceDecimalNumeric",
+    "org.jsoup.parser.TokeniserGeminiTest::testConsumeCharacterReferenceNamedEntities"
+  ]
+}

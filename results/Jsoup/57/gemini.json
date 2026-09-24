@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 96.85,
+  "branch_cov": 97.37,
+  "test_file": "AttributesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes",
+  "buggy_failures": [
+    "org.jsoup.nodes.AttributesGeminiTest::testChainedRemoveIgnoreCaseSequence",
+    "org.jsoup.nodes.AttributesGeminiTest::testDatasetIteratorRemoveIntegrity",
+    "org.jsoup.nodes.AttributesGeminiTest::testRemoveIgnoreCaseConcurrentModificationDefect"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.AttributesGeminiTest::testDatasetIteratorRemoveIntegrity"
+  ]
+}

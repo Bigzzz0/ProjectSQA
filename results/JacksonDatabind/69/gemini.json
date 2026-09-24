@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 90.55,
+  "branch_cov": 90.54,
+  "test_file": "CreatorCollectorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.CreatorCollector",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testDeprecatedCreatorMethods",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testVerifyNonDupDifferentCreatorClasses",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testAddPropertyCreatorEmptyAndSingleProperties",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testSetDefaultCreatorAndFixAccess",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testDefectPropertyArgsNotOverwrittenByImplicit",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testDefectPropertyArgsNotOverwrittenWhenGenericIgnored"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testDeprecatedCreatorMethods",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testVerifyNonDupDifferentCreatorClasses",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testAddPropertyCreatorEmptyAndSingleProperties",
+    "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testSetDefaultCreatorAndFixAccess"
+  ]
+}

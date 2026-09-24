@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 71.79,
+  "branch_cov": 44.44,
+  "test_file": "CommandLineRunnerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testInvalidBooleanValue",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testDefaultExternsList",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testVersionFlag2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testInvalidBooleanValue",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testDefaultExternsList",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testVersionFlag2"
+  ]
+}

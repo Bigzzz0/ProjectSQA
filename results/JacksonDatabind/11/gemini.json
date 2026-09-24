@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 83.44,
+  "branch_cov": 73.74,
+  "test_file": "TypeFactoryGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.TypeFactory",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testRecursiveOrUnboundTypeVariableResolution_Defect609",
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testParameterizedReflectionTypes",
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testTypeVariableWithoutContextBounds_Defect728"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testParameterizedReflectionTypes"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 97.46,
+  "branch_cov": 100.0,
+  "test_file": "EntitiesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "buggy_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsBaseNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testGetCharacterByNameNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testAsciiRoundtripWithXhtmlNonBreakingSpace",
+    "org.jsoup.nodes.EntitiesGeminiTest::testShiftJisRoundtripWithXhtmlNonBreakingSpaceDefect"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsBaseNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testGetCharacterByNameNull"
+  ]
+}

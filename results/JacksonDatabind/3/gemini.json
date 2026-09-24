@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 95.16,
+  "branch_cov": 86.11,
+  "test_file": "StringArrayDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testAcceptSingleValueAsArrayEnabledNull",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDefectOnlyNullElements",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDeserializeWithType",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithDefault",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testInstanceConstant",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDefectNullPointerExceptionOnNullElement",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithCustomElementDeser"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testAcceptSingleValueAsArrayEnabledNull",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDeserializeWithType",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithDefault",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testInstanceConstant",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithCustomElementDeser"
+  ]
+}

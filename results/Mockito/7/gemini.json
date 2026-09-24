@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 97.13,
+  "branch_cov": 92.68,
+  "test_file": "GenericMetadataSupportGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.reflection.GenericMetadataSupport",
+  "buggy_failures": [
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::test_defect_discoverDeepMockingOfGenerics_with_bounded_type_variable",
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::test_defect_discoverDeepMockingOfGenerics_raw_nested_type"
+  ],
+  "fixed_failures": []
+}

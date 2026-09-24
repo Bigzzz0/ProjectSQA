@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 96.53,
+  "branch_cov": 88.24,
+  "test_file": "StdDateFormatGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDateUtilISO8601NoTimezoneWithCustomTimezoneViaWithTimeZone",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDateUtilISO8601NoTimezoneNonDefault"
+  ],
+  "fixed_failures": []
+}

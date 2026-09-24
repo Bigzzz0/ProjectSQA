@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 92.31,
+  "branch_cov": 100.0,
+  "test_file": "InlineCostEstimatorDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineCostEstimator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testConstantsAreNearZeroCost",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdBelow",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testNullCostDefect",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdExactZero",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testConstantVsIdentifierCostComparison",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testFalseCostDefect"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdBelow",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdExactZero",
+    "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdExactTwo"
+  ]
+}

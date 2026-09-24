@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 99.06,
+  "branch_cov": 100.0,
+  "test_file": "DefaultPrettyPrinterGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.DefaultPrettyPrinter",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testObjectFormattingLifecycleInlineIndenter",
+    "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testInvalidSubClass"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testObjectFormattingLifecycleInlineIndenter"
+  ]
+}

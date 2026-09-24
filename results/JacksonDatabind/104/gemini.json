@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 87.87,
+  "branch_cov": 79.67,
+  "test_file": "StdDateFormatGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseISO8601MalformedTime",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseExceptionOnEmptyString",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testMutantFactories",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseISO8601MalformedMonth",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDateISO8601_10k",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDateISO8601_BCE",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseExceptionOnWhitespaceOnly"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseISO8601MalformedTime",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseExceptionOnEmptyString",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testMutantFactories",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseISO8601MalformedMonth",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseExceptionOnWhitespaceOnly"
+  ]
+}

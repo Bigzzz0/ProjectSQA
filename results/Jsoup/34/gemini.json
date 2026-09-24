@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 90.0,
+  "test_file": "CharacterReaderGeminiTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderBoundaries",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNextIndexOfUnmatchedSequenceNearEOFRevealingDefect",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testHandlesUnclosedCdataAtEOFRevealingDefect",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToWithUnmatchedSequenceNearEOF"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderBoundaries"
+  ]
+}

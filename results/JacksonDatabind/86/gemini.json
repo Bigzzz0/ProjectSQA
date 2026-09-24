@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 86.67,
+  "branch_cov": 50.0,
+  "test_file": "ResolvedRecursiveTypeGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testEqualsContract",
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testSuperClassWithReferencedJavaType"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testEqualsContract"
+  ]
+}

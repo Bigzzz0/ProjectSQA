@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 89.13,
+  "test_file": "DataUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::discardsSpuriousByteOrderMarkWhenNoCharsetSet"
+  ],
+  "fixed_failures": []
+}

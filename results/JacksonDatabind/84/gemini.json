@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 92.86,
+  "test_file": "ResolvedRecursiveTypeGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testGetSuperClassDelegationToReferencedType"
+  ],
+  "fixed_failures": []
+}

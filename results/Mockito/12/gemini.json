@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 75.0,
+  "test_file": "GenericMasterGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.reflection.GenericMaster",
+  "buggy_failures": [
+    "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithDeeplyNestedGenerics",
+    "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithUnboundedWildcardGenerics",
+    "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithTypeVariableGenerics",
+    "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithBoundedWildcardGenerics",
+    "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithNestedMapGenerics",
+    "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithNestedGenerics"
+  ],
+  "fixed_failures": []
+}

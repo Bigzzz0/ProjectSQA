@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 62.9,
+  "branch_cov": 64.1,
+  "test_file": "StdSubtypeResolverGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testPropertyAnnotationsAndRegisteredSubtypesCombined",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testBaseTypeId1616DefectResolutionByTypeIdMember",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testNullBaseTypeFallbackToPropertyRawType",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testNameOverrideWhenSubtypeResolvedWithNameAfterBeingAddedWithoutName"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testPropertyAnnotationsAndRegisteredSubtypesCombined",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testBaseTypeId1616DefectResolutionByTypeIdMember",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testNullBaseTypeFallbackToPropertyRawType",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testNameOverrideWhenSubtypeResolvedWithNameAfterBeingAddedWithoutName"
+  ]
+}

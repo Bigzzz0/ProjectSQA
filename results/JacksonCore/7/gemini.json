@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 65.71,
+  "branch_cov": 9.38,
+  "test_file": "JsonWriteContextGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.JsonWriteContext",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.json.JsonWriteContextGeminiTest::testFailOnWritingConsecutiveValuesInObjectContext",
+    "com.fasterxml.jackson.core.json.JsonWriteContextGeminiTest::testFailOnWritingValueInObjectContextWhenExpectingFieldName"
+  ],
+  "fixed_failures": []
+}

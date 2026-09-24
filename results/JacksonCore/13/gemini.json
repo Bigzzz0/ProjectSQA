@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "JsonGeneratorImplGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.JsonGeneratorImpl",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testFieldNameQuotingDisabledViaDisableWriter",
+    "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testFieldNameQuotingDisabledViaDisableBytes",
+    "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testDirectCfgUnqNamesFlagUpdatedOnDisable"
+  ],
+  "fixed_failures": []
+}

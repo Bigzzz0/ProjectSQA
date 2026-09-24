@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "MockSettingsImplGeminiTest.java;MockUtilGeminiTest.java",
+  "target_classes": "org.mockito.internal.creation.MockSettingsImpl;org.mockito.internal.util.MockUtil",
+  "buggy_failures": [
+    "org.mockito.internal.creation.MockSettingsImplGeminiTest::testShouldBeSerializableAndHaveExtraInterfacesWhenSerializableCalledFirst",
+    "org.mockito.internal.creation.MockSettingsImplGeminiTest::testShouldRetainExtraInterfacesWhenSerializableCalledSecond",
+    "org.mockito.internal.util.MockUtilGeminiTest::testMockSerializationWithSerializableAndExtraInterfaces"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.creation.MockSettingsImplGeminiTest::testIsSerializableDirectlyWithSerializableInExtraInterfaces"
+  ]
+}

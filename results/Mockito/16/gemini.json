@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 10,
+  "line_cov": 51.92,
+  "branch_cov": 84.62,
+  "test_file": "MockitoCoreGeminiTest.java;MockitoGeminiTest.java",
+  "target_classes": "org.mockito.internal.MockitoCore;org.mockito.Mockito",
+  "buggy_failures": [
+    "org.mockito.internal.MockitoCoreGeminiTest::testResetWithSingleAndMultipleMocks",
+    "org.mockito.internal.MockitoCoreGeminiTest::testVerifyNoMoreInteractionsSuccess",
+    "org.mockito.internal.MockitoCoreGeminiTest::testInOrderSuccess",
+    "org.mockito.internal.MockitoCoreGeminiTest::testGetLastInvocation",
+    "org.mockito.internal.MockitoCoreGeminiTest::testMockMethodHonorsShouldResetOngoingStubbingFalse",
+    "org.mockito.internal.MockitoCoreGeminiTest::testVerifySuccessfulInvocation",
+    "org.mockito.internal.MockitoCoreGeminiTest::testMockCreationAndSimpleStubbingWithWhen",
+    "org.mockito.internal.MockitoCoreGeminiTest::testMultipleSequentialMocksLifecycle",
+    "org.mockito.internal.MockitoCoreGeminiTest::shouldAllowStubbingMocksConfiguredWithRETURNS_MOCKS",
+    "org.mockito.internal.MockitoCoreGeminiTest::testDeprecatedStubMethod"
+  ],
+  "fixed_failures": []
+}

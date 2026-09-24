@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 96.92,
+  "branch_cov": 85.48,
+  "test_file": "CharacterReaderGeminiTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testContainsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testSupportsNonAsciiLettersInTagNamesAndSequences",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderBehavior",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNonAsciiLetterThenDigitSequence",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testExhaustionBoundaries"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testContainsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testSupportsNonAsciiLettersInTagNamesAndSequences",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderBehavior",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNonAsciiLetterThenDigitSequence",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testExhaustionBoundaries"
+  ]
+}

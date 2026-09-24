@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 100.0,
+  "branch_cov": 0.0,
+  "test_file": "MatchersGeminiTest.java",
+  "target_classes": "org.mockito.Matchers",
+  "buggy_failures": [
+    "org.mockito.MatchersGeminiTest::testAnyMapOfClassesMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnyListMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnyListOfClassMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnySetMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnyStringMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnySetOfClassMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testEqObjectBoundaries",
+    "org.mockito.MatchersGeminiTest::testAnyCollectionMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnyMapMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testIsAMatcherTypeChecking",
+    "org.mockito.MatchersGeminiTest::testSameIdentityBoundaries",
+    "org.mockito.MatchersGeminiTest::testAnyCollectionOfClassMustNotAcceptNull",
+    "org.mockito.MatchersGeminiTest::testAnyPrimitiveWrapperMatchersMustNotAcceptNull"
+  ],
+  "fixed_failures": [
+    "org.mockito.MatchersGeminiTest::testEqObjectBoundaries",
+    "org.mockito.MatchersGeminiTest::testAnyObjectAndAnyMatchesNullPerContract",
+    "org.mockito.MatchersGeminiTest::testIsAMatcherTypeChecking",
+    "org.mockito.MatchersGeminiTest::testSameIdentityBoundaries"
+  ]
+}

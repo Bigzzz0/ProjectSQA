@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 100.0,
+  "branch_cov": 92.11,
+  "test_file": "DataUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldReturnNullForIllegalCharsetNames",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectQuotedCharset",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldSelectFirstCharsetOnWeirdMultipleCharsetsInMetaTags",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldNotThrowExceptionOnEmptyCharset",
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeStandard",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldCorrectCharsetForDuplicateCharsetString"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeStandard"
+  ]
+}

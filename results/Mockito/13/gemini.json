@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 90.0,
+  "branch_cov": 90.0,
+  "test_file": "MockHandlerGeminiTest.java",
+  "target_classes": "org.mockito.internal.MockHandler",
+  "buggy_failures": [
+    "org.mockito.internal.MockHandlerGeminiTest::testDefectVerifyingWithExtraCallToDifferentMockPreservesVerificationMode",
+    "org.mockito.internal.MockHandlerGeminiTest::testNonMockAwareVerificationModeDoesNotTriggerVerification",
+    "org.mockito.internal.MockHandlerGeminiTest::testStubbedInvocationArgumentsCaptured",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithDefaultAnswer",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithAnswersForStubbingQueue"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.MockHandlerGeminiTest::testDefectVerifyingWithExtraCallToDifferentMockPreservesVerificationMode",
+    "org.mockito.internal.MockHandlerGeminiTest::testNonMockAwareVerificationModeDoesNotTriggerVerification",
+    "org.mockito.internal.MockHandlerGeminiTest::testStubbedInvocationArgumentsCaptured",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithDefaultAnswer",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithAnswersForStubbingQueue"
+  ]
+}

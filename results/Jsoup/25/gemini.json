@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 98.89,
+  "branch_cov": 89.13,
+  "test_file": "TagGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Tag",
+  "buggy_failures": [
+    "org.jsoup.parser.TagGeminiTest::testPreservesWhitespaceInTextarea"
+  ],
+  "fixed_failures": []
+}

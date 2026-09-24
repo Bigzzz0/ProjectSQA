@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 90.91,
+  "branch_cov": 62.5,
+  "test_file": "ReturnsDeepStubsGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDeepStubMockSerializationDefect",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testReturnsDeepStubsItselfIsSerializable",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testRecordDeepStubMockAnswerMustImplementSerializable",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testNonMockableFinalClassReturnsEmptyValue"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testRecordDeepStubMockAnswerMustImplementSerializable",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testNonMockableFinalClassReturnsEmptyValue"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 98.21,
+  "branch_cov": 90.62,
+  "test_file": "CodeConsumerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testBeginBlockInsertsSemicolonWhenNeeded",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testBeginBlockInsertsSemicolonWhenNeeded"
+  ]
+}

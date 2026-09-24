@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ConstructorInstantiatorGeminiTest.java",
+  "target_classes": "org.mockito.internal.creation.instance.ConstructorInstantiator",
+  "buggy_failures": [
+    "org.mockito.internal.creation.instance.ConstructorInstantiatorGeminiTest::creates_instances_of_inner_classes_with_multilevel_subclass",
+    "org.mockito.internal.creation.instance.ConstructorInstantiatorGeminiTest::creates_instances_of_inner_classes"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.creation.instance.ConstructorInstantiatorGeminiTest::newInstance_withOuter_throwsWhenTargetClassHasNoOuterConstructor",
+    "org.mockito.internal.creation.instance.ConstructorInstantiatorGeminiTest::newInstance_withOuter_throwsWhenOuterInstanceIsIncompatible"
+  ]
+}

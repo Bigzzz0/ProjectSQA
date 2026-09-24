@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 81.94,
+  "branch_cov": 58.27,
+  "test_file": "ByteQuadsCanonicalizerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCascadingLookupThroughSecondaryTertiaryAndSpillover",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasicAddAndFind2Quads",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testRootCreationAndStateInspection",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCalcTertiaryShiftBoundaries"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCascadingLookupThroughSecondaryTertiaryAndSpillover",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasicAddAndFind2Quads",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testRootCreationAndStateInspection",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCalcTertiaryShiftBoundaries"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 100.0,
+  "branch_cov": 98.65,
+  "test_file": "StringUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.StringUtil",
+  "buggy_failures": [
+    "org.jsoup.helper.StringUtilGeminiTest::testNormaliseWhitespaceRemovesInvisibleCharacters",
+    "org.jsoup.helper.StringUtilGeminiTest::testNormaliseWhitespaceBasic",
+    "org.jsoup.helper.StringUtilGeminiTest::testResolveUrlDotRelativeWorkaround"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.StringUtilGeminiTest::testNormaliseWhitespaceBasic",
+    "org.jsoup.helper.StringUtilGeminiTest::testResolveUrlDotRelativeWorkaround"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 100.0,
+  "branch_cov": 92.86,
+  "test_file": "SubTypeValidatorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidator",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testDefectC3P0ComboPooledDataSourceBlocked",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringAbstractApplicationContextHierarchy",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testDefectC3P0JndiRefForwardingDataSourceBlocked",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedCommonsCollectionsInvokerTransformer",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdkRemoteObject",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testSubclassCustomIllegalClassNamesOverride",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdkLoggingFileHandler",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringAbstractPointcutAdvisorHierarchy",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringDirectMatchAbstractPointcutAdvisor",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdbcRowSetImpl",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringDirectMatchAbstractApplicationContext"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testDefectC3P0ComboPooledDataSourceBlocked",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringAbstractApplicationContextHierarchy",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testDefectC3P0JndiRefForwardingDataSourceBlocked",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedCommonsCollectionsInvokerTransformer",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdkRemoteObject",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testSubclassCustomIllegalClassNamesOverride",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdkLoggingFileHandler",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringAbstractPointcutAdvisorHierarchy",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringDirectMatchAbstractPointcutAdvisor",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdbcRowSetImpl",
+    "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringDirectMatchAbstractApplicationContext"
+  ]
+}

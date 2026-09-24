@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 2.01,
+  "branch_cov": 0.0,
+  "test_file": "PeepholeFoldConstantsDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

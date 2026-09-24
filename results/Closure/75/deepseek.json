@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 23.7,
+  "branch_cov": 18.07,
+  "test_file": "NodeUtilDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testMayHaveSideEffects",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetFunctionName_name",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetStringNumberValue_verticalTab",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testTrimJsWhiteSpace_verticalTab",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testIsLiteralValue",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetNearestFunctionName",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetImpureBooleanValue_hook",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetPureBooleanValue_number"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testIsStrWhiteSpaceChar_verticalTab",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testMayHaveSideEffects",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetFunctionName_name",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testIsLiteralValue",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetNearestFunctionName",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetImpureBooleanValue_hook",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetPureBooleanValue_number"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 93.06,
+  "branch_cov": 86.25,
+  "test_file": "GenericMetadataSupportGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.reflection.GenericMetadataSupport",
+  "buggy_failures": [
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::testTypeVariable_of_self_type_RegressionDefect",
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::testTypeVarBoundedType_Contract"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::testTypeVarBoundedType_Contract"
+  ]
+}

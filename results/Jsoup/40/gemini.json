@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "DocumentTypeGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentTypeGeminiTest::constructorValidationOkWithBlankNameAndValidIds",
+    "org.jsoup.nodes.DocumentTypeGeminiTest::constructorValidationOkWithBlankName"
+  ],
+  "fixed_failures": []
+}

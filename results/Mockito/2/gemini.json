@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 50.0,
+  "test_file": "TimerGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.Timer",
+  "buggy_failures": [
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationBoundaryMinusOneThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationArbitraryThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationMinValueThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::should_throw_friendly_reminder_exception_when_duration_is_negative"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationArbitraryThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationMinValueThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::should_throw_friendly_reminder_exception_when_duration_is_negative"
+  ]
+}

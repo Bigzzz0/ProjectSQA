@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 93.33,
+  "branch_cov": 96.88,
+  "test_file": "InvocationMatcherGeminiTest.java",
+  "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+  "buggy_failures": [
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCreateFrom_ListConversion_WrapsAllInvocations",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testDefect_InheritedPolymorphicCall_hasSimilarMethodShouldBeTrue",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testToString_AndPrintSettingsFormatting_ReturnsValidRepresentation",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testDefect_InheritedPolymorphicCall_hasSameMethodShouldMatchSubInterfaceOverriddenMethod",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testDefect_GenericInterfaceHierarchy_hasSameMethodShouldMatch"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCreateFrom_ListConversion_WrapsAllInvocations",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testToString_AndPrintSettingsFormatting_ReturnsValidRepresentation"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ReturnsEmptyValuesGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testSerializationRoundTrip",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testCompareTo_MockComparedToItself_ReturnsZero"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testSerializationRoundTrip"
+  ]
+}

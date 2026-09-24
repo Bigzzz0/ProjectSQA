@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 96.43,
+  "test_file": "FormElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "buggy_failures": [
+    "org.jsoup.nodes.FormElementGeminiTest::testRemoveFormElementReflectedInFormDataAndElements"
+  ],
+  "fixed_failures": []
+}

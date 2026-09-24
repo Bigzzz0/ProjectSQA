@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "JdkDeserializersGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.JdkDeserializers",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.JdkDeserializersGeminiTest::testDefectVoidClassDeserializerMappedToNullifying",
+    "com.fasterxml.jackson.databind.deser.std.JdkDeserializersGeminiTest::testKnownClassNameWithCrossMatchedRawType"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.std.JdkDeserializersGeminiTest::testKnownClassNameWithCrossMatchedRawType"
+  ]
+}

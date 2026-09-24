@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 95.8,
+  "branch_cov": 83.0,
+  "test_file": "HtmlTreeBuilderGeminiTest.java",
+  "target_classes": "org.jsoup.parser.HtmlTreeBuilder",
+  "buggy_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testResetInsertionModeAllBranches",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testInScopeVariants",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testGenerateImpliedEndTagsWithNullExcludeTag",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testActiveFormattingElementsLifecycleAndLimit"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testResetInsertionModeAllBranches",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testInScopeVariants",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testGenerateImpliedEndTagsWithNullExcludeTag",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testActiveFormattingElementsLifecycleAndLimit"
+  ]
+}

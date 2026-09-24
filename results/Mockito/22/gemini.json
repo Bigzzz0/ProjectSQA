@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "EqualityGeminiTest.java",
+  "target_classes": "org.mockito.internal.matchers.Equality",
+  "buggy_failures": [
+    "org.mockito.internal.matchers.EqualityGeminiTest::shouldKnowIfObjectsAreEqual"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.matchers.EqualityGeminiTest::shouldKnowIfObjectsAreEqual"
+  ]
+}

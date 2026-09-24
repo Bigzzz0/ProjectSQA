@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 47.22,
+  "branch_cov": 45.45,
+  "test_file": "ObjectMapperGeminiTest.java;StdTypeResolverBuilderGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectMapper;com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testReadTreeFromNullOrEmptyInput",
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testLocaleAndTimeZoneConfiguration",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testDefectPrimitiveBaseTypeDeserializerReturnsNull",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testDefectPrimitiveBaseTypeSerializerReturnsNull",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeDeserializerNullInclusionThrowsISE",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testDefectPrimitiveBaseTypeIntSerializerReturnsNull",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeSerializerNullInclusionThrowsISE"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testReadTreeFromNullOrEmptyInput",
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testLocaleAndTimeZoneConfiguration",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeDeserializerNullInclusionThrowsISE",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeSerializerNullInclusionThrowsISE"
+  ]
+}

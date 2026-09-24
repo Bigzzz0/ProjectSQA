@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 97.94,
+  "branch_cov": 91.46,
+  "test_file": "CharacterReaderGeminiTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToStringNotFoundDoesNotDropLastChar",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToEndDoesNotDropLastChar",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToEndFromOffsetDoesNotDropLastChar",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testToStringContract",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeToCharNotFoundDoesNotDropLastChar"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testToStringContract"
+  ]
+}

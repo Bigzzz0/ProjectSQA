@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.67,
+  "branch_cov": 100.0,
+  "test_file": "SimpleTypeGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.SimpleType",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

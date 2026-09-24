@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 96.75,
+  "branch_cov": 95.45,
+  "test_file": "JsonMappingExceptionGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JsonMappingException",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testReferenceChainForInnerClassInstance",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testJsonMappingExceptionSerialization",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testReferenceChainForDeepInnerClass",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testReferenceChainForInnerClass",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testDeprecatedConstructors",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testNullOrEmptyMessageBuild",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testCloseableProcessorConstructorsAndFactories"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testJsonMappingExceptionSerialization",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testDeprecatedConstructors",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testNullOrEmptyMessageBuild",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testCloseableProcessorConstructorsAndFactories"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 89.94,
+  "branch_cov": 95.45,
+  "test_file": "AnnotationIntrospectorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.AnnotationIntrospector",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.AnnotationIntrospectorGeminiTest::testRefineSerializationTypeUnrelatedDefect",
+    "com.fasterxml.jackson.databind.AnnotationIntrospectorGeminiTest::testRefineSerializationTypeSpecializationDefect"
+  ],
+  "fixed_failures": []
+}

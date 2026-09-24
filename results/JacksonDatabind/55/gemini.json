@@ -1,0 +1,15 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 98.36,
+  "branch_cov": 97.3,
+  "test_file": "StdKeySerializersGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.StdKeySerializers",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersGeminiTest::testEnumsWithJsonPropertyAsKey"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersGeminiTest::testGetFallbackKeySerializerEnumTypes"
+  ]
+}

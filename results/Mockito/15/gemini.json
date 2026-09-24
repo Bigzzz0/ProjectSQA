@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "FinalMockCandidateFilterGeminiTest.java",
+  "target_classes": "org.mockito.internal.configuration.injection.FinalMockCandidateFilter",
+  "buggy_failures": [
+    "org.mockito.internal.configuration.injection.FinalMockCandidateFilterGeminiTest::testDefect_shouldInjectUsingPropertySetterIfAvailable"
+  ],
+  "fixed_failures": []
+}

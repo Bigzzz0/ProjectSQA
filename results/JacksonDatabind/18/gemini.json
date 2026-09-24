@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 91.18,
+  "branch_cov": 94.12,
+  "test_file": "MappingIteratorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.MappingIterator",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testUnmanagedParserNotClosedByIterator",
+    "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testCloseMultipleTimesIsSafe",
+    "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testExplicitCloseClosesParser"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testUnmanagedParserNotClosedByIterator",
+    "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testEmptyArray"
+  ]
+}

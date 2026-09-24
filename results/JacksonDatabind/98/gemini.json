@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 85.02,
+  "branch_cov": 68.48,
+  "test_file": "ExternalTypeHandlerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testMissingTypeIdThrowsExceptionWhenNoDefaultImpl",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testExternalTypeIdWithEnumInCreator",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testExternalTypeIdWithEnumInCreatorReversedOrder",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testDefaultImplWhenTypePropertyIsMissing"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testMissingTypeIdThrowsExceptionWhenNoDefaultImpl",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testDefaultImplWhenTypePropertyIsMissing"
+  ]
+}

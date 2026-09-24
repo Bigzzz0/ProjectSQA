@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 7,
+  "line_cov": 94.29,
+  "branch_cov": 85.71,
+  "test_file": "InvocationGeminiTest.java",
+  "target_classes": "org.mockito.internal.invocation.Invocation",
+  "buggy_failures": [
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringWithArrayArgumentsCoversArrayEqualsMatcher",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringWithPrintSettingsMultilineForced",
+    "org.mockito.internal.invocation.InvocationGeminiTest::shouldScreamWhenCallingRealMethodOnInterface",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testIsValidReturnTypeForVoid",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringSingleLineWhenShort",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringMultilineWhenExceedsMaxLineLength",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringWithEmptyMatchersAndLongInvocationLine"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.invocation.InvocationGeminiTest::testCallRealMethodRethrowsRuntimeException",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringWithArrayArgumentsCoversArrayEqualsMatcher",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testCallRealMethodNormalExecution",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringWithPrintSettingsMultilineForced",
+    "org.mockito.internal.invocation.InvocationGeminiTest::shouldScreamWhenCallingRealMethodOnInterface",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testIsValidReturnTypeForVoid",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringSingleLineWhenShort",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringMultilineWhenExceedsMaxLineLength",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testToStringWithEmptyMatchersAndLongInvocationLine",
+    "org.mockito.internal.invocation.InvocationGeminiTest::testCallRealMethodRethrowsCheckedException"
+  ]
+}

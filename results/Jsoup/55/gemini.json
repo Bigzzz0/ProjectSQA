@@ -1,0 +1,37 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 63.41,
+  "branch_cov": 55.08,
+  "test_file": "TokeniserStateGeminiTest.java",
+  "target_classes": "org.jsoup.parser.TokeniserState",
+  "buggy_failures": [
+    "org.jsoup.parser.TokeniserStateGeminiTest::testBeforeAttributeNameSpecialChars",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testPLAINTEXTState",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testBeforeAttributeValueSpecialChars",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testTagOpenStates",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testSelfClosingStartTagPreservesAttributeNameCharacter",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testSelfClosingStartTagMultipleSlashesAndAttributes",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedDashDashBranches",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testDataStateBasicAndNullChar",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testEndTagOpenVariants",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCdataSection",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapeStartDashBranches",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testAfterAttributeNameBranches",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testRawtextState"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokeniserStateGeminiTest::testBeforeAttributeNameSpecialChars",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testPLAINTEXTState",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testBeforeAttributeValueSpecialChars",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testTagOpenStates",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedDashDashBranches",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testDataStateBasicAndNullChar",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testEndTagOpenVariants",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCdataSection",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapeStartDashBranches",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testAfterAttributeNameBranches",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testRawtextState"
+  ]
+}

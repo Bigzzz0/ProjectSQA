@@ -1,0 +1,29 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 82.19,
+  "branch_cov": 81.73,
+  "test_file": "StdValueInstantiatorGeminiTest.java;ValueInstantiatorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.ValueInstantiator;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testScalarCreatorsExecution",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingArrayDelegateFallbackToDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testIntWideningToLongCreator",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationSuccess",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testDefaultCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingDelegateFallbackToArrayDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testUnconfiguredCreatorsThrowMappingException"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testScalarCreatorsExecution",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingArrayDelegateFallbackToDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testIntWideningToLongCreator",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationSuccess",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testDefaultCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingDelegateFallbackToArrayDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testUnconfiguredCreatorsThrowMappingException"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 97.95,
+  "branch_cov": 85.37,
+  "test_file": "DataUtilGeminiTest.java;XmlDeclarationGeminiTest.java;XmlTreeBuilderGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil;org.jsoup.nodes.XmlDeclaration;org.jsoup.parser.XmlTreeBuilder",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeBoundaryValues",
+    "org.jsoup.helper.DataUtilGeminiTest::testDetectCharsetEncodingDeclarationXml",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleVersionAttribute",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationPreservesStandaloneAndCustomAttributes",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testProcessingInstructionOuterHtmlFormatting",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleEncodingAttribute",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testXmlDeclarationOuterHtmlMustEndWithQuestionMarkGreater",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testHandlesXmlDeclarationAsDeclarationNode",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testProcessingInstructionBangDeclaration",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testDetectAndParseDeclarationAttributesXml"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeBoundaryValues",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithNonXmlNameIgnoresAttributes",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleVersionAttribute",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithXmlNameAndBothAttributesPresent",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testProcessingInstructionOuterHtmlFormatting",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleEncodingAttribute",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testProcessingInstructionBangDeclaration"
+  ]
+}

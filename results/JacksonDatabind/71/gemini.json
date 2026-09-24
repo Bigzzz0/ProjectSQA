@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 95.3,
+  "branch_cov": 92.63,
+  "test_file": "StdKeyDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializerGeminiTest::testDefectCharSequenceKeyDeserializerSupported"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 91.19,
+  "branch_cov": 76.92,
+  "test_file": "StdDateFormatGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testLenientDefect",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseWithParsePosition"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseWithParsePosition"
+  ]
+}

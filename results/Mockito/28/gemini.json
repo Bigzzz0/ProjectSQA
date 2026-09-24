@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 93.33,
+  "branch_cov": 100.0,
+  "test_file": "DefaultInjectionEngineGeminiTest.java",
+  "target_classes": "org.mockito.internal.configuration.DefaultInjectionEngine",
+  "buggy_failures": [
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testClassHierarchyFieldTraversal",
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testCannotInitializeInterfaceFieldThrowsMockitoException",
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::mock_should_be_injected_once_and_in_the_best_matching_type"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testCannotInitializeInterfaceFieldThrowsMockitoException",
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::mock_should_be_injected_once_and_in_the_best_matching_type"
+  ]
+}

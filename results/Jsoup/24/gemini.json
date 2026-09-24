@@ -1,0 +1,32 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 47.62,
+  "branch_cov": 37.01,
+  "test_file": "TokeniserStateGeminiTest.java",
+  "target_classes": "org.jsoup.parser.TokeniserState",
+  "buggy_failures": [
+    "org.jsoup.parser.TokeniserStateGeminiTest::testRcdataWithInappropriateEndTag",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataDoubleEscapedTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testPLAINTEXTStateHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedEndTagNameHandlesQuotesInScriptCommentDefect",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCdataSectionHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testDataStateBasicTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testAfterDoctypeSystemKeywordAndBogus",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedEndTagNameDirectReaderPositionDefect",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testTokeniserStateEnumValuesAndCompleteness",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCharacterReferenceWithoutSemicolonOrInvalid"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokeniserStateGeminiTest::testRcdataWithInappropriateEndTag",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataDoubleEscapedTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testPLAINTEXTStateHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedEndTagNameHandlesQuotesInScriptCommentDefect",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCdataSectionHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testDataStateBasicTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testAfterDoctypeSystemKeywordAndBogus",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testTokeniserStateEnumValuesAndCompleteness",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCharacterReferenceWithoutSemicolonOrInvalid"
+  ]
+}

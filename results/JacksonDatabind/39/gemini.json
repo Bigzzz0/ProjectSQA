@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "NullifyingDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializerGeminiTest::testDefectSkipWhenParserPositionedAtFieldName",
+    "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializerGeminiTest::testDefectUnknownTypeIDRecoveryWithDefaultImpl"
+  ],
+  "fixed_failures": []
+}

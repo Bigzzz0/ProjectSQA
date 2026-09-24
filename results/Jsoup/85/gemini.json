@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 92.31,
+  "branch_cov": 88.0,
+  "test_file": "AttributeGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attribute",
+  "buggy_failures": [
+    "org.jsoup.nodes.AttributeGeminiTest::validatesKeysNotEmptyWithMultipleWhitespaces",
+    "org.jsoup.nodes.AttributeGeminiTest::validatesKeysNotEmpty",
+    "org.jsoup.nodes.AttributeGeminiTest::testSetValueWithParentWhenKeyNotFound"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.AttributeGeminiTest::testSetValueWithParentWhenKeyNotFound"
+  ]
+}

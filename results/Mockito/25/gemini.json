@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 95.65,
+  "branch_cov": 83.33,
+  "test_file": "ReturnsDeepStubsGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testActualParameterizedTypeRejectsNull",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDeepStubbingMultiLevelNavigation",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testCanCreateMockFromMultipleTypeVariableBounds",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDirectNonMockableReturnValues",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testCanCreateMockFromReturnTypesDeclaredWithBoundedWildcard",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testWillReturnDefaultValueOnNonMockableNestedGeneric"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testActualParameterizedTypeRejectsNull",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDeepStubbingMultiLevelNavigation",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDirectNonMockableReturnValues",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testCanCreateMockFromReturnTypesDeclaredWithBoundedWildcard",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testWillReturnDefaultValueOnNonMockableNestedGeneric"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 100.0,
+  "branch_cov": 92.0,
+  "test_file": "InvocationMatcherGeminiTest.java",
+  "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+  "buggy_failures": [
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCaptureArgumentsFromPureVarargsMethod",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testSerializationAndDeserializationIntegrity",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCaptureArgumentsFromMixedVarargsMethod",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testToStringContainsMethodDescription"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCaptureArgumentsFromPureVarargsMethod",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testSerializationAndDeserializationIntegrity",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCaptureArgumentsFromMixedVarargsMethod",
+    "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testToStringContainsMethodDescription"
+  ]
+}

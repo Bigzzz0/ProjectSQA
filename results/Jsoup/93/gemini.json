@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "FormElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

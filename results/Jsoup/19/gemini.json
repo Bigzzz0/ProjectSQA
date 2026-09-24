@@ -1,0 +1,13 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 99.32,
+  "branch_cov": 92.31,
+  "test_file": "WhitelistGeminiTest.java",
+  "target_classes": "org.jsoup.safety.Whitelist",
+  "buggy_failures": [
+    "org.jsoup.safety.WhitelistGeminiTest::testHandlesCustomProtocolsCidAndData"
+  ],
+  "fixed_failures": []
+}

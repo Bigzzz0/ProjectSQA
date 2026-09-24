@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 98.41,
+  "branch_cov": 96.88,
+  "test_file": "CombiningEvaluatorGeminiTest.java;QueryParserGeminiTest.java",
+  "target_classes": "org.jsoup.select.CombiningEvaluator;org.jsoup.select.QueryParser",
+  "buggy_failures": [
+    "org.jsoup.select.QueryParserGeminiTest::testCommasWithinAttributeSelectorValue",
+    "org.jsoup.select.QueryParserGeminiTest::testMalformedAttributeOperatorThrows",
+    "org.jsoup.select.QueryParserGeminiTest::testSurroundingWhitespaceAndMultipleSpaces",
+    "org.jsoup.select.QueryParserGeminiTest::testParseIdSelector",
+    "org.jsoup.select.QueryParserGeminiTest::testHandlesCommasInSelectorDocumentEvaluation",
+    "org.jsoup.select.QueryParserGeminiTest::testHandlesCommasInSelectorRegexPattern"
+  ],
+  "fixed_failures": [
+    "org.jsoup.select.QueryParserGeminiTest::testMalformedAttributeOperatorThrows",
+    "org.jsoup.select.QueryParserGeminiTest::testSurroundingWhitespaceAndMultipleSpaces",
+    "org.jsoup.select.QueryParserGeminiTest::testMixCombinatorGroup",
+    "org.jsoup.select.QueryParserGeminiTest::testParseIdSelector"
+  ]
+}

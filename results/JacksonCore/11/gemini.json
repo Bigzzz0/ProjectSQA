@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 5,
+  "line_cov": 91.24,
+  "branch_cov": 75.37,
+  "test_file": "ByteQuadsCanonicalizerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCreateRootAndChildLifecycle",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testConstructorSizeRoundingAndPadding",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testSymbolTableExpansionBytesDefect",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testMaxEntriesForReuseResetOnChildRelease",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasic2QuadFindAndAdd"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCreateRootAndChildLifecycle",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testConstructorSizeRoundingAndPadding",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testSymbolTableExpansionBytesDefect",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testMaxEntriesForReuseResetOnChildRelease",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasic2QuadFindAndAdd"
+  ]
+}

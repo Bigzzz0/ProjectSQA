@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 97.42,
+  "branch_cov": 90.62,
+  "test_file": "NodeGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Node",
+  "buggy_failures": [
+    "org.jsoup.nodes.NodeGeminiTest::testAbsUrlResolutionBranches",
+    "org.jsoup.nodes.NodeGeminiTest::testHandlesAbsPrefixOnHasAttr",
+    "org.jsoup.nodes.NodeGeminiTest::testHandlesAbsPrefixWhenBaseUriEmpty"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.NodeGeminiTest::testAbsUrlResolutionBranches"
+  ]
+}

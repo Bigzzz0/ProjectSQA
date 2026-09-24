@@ -1,0 +1,14 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 26.49,
+  "branch_cov": 25.44,
+  "test_file": "FoldConstantsDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.FoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FoldConstantsDeepseekTest::testStringJoinEmptyElements",
+    "com.google.javascript.jscomp.FoldConstantsDeepseekTest::testStringJoinAdd"
+  ],
+  "fixed_failures": []
+}
