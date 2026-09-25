@@ -199,6 +199,22 @@ def upsert_summary_csv(row_data: List[Any]):
         writer.writerow(header)
         writer.writerows(rows)
 
+def is_budget_in_summary_csv(project: str, bug_id: int, target_class: str, budget: int) -> bool:
+    """Check if an experiment already has recorded results in SUMMARY_CSV."""
+    if not os.path.exists(SUMMARY_CSV):
+        return False
+    key = (project.lower(), str(bug_id), target_class.lower(), str(budget))
+    try:
+        with open(SUMMARY_CSV, "r", encoding="utf-8", errors="replace") as f:
+            reader = csv.reader(f)
+            next(reader, None)
+            for r in reader:
+                if len(r) >= 4 and (r[0].lower(), str(r[1]), r[2].lower(), str(r[3])) == key:
+                    return True
+    except Exception:
+        pass
+    return False
+
 def parse_statistics_csv(stat_path: str) -> Dict[str, float]:
     """Parse EvoSuite statistics.csv file and return metrics."""
     res = {
@@ -242,6 +258,8 @@ def run_single_experiment(project: str, bug_id: int, target_class: str, budget: 
     set -e
     export LC_ALL=C.UTF-8
     export LANG=C.UTF-8
+    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    export PATH=$JAVA_HOME/bin:/opt/defects4j/framework/bin:$PATH
     export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
     mkdir -p "{container_report_dir}" "{container_out_dir}"
     [ -f /opt/defects4j/framework/projects/lib/junit-4.12.jar ] || ln -sf /opt/defects4j/framework/projects/lib/junit-4.12-hamcrest-1.3.jar /opt/defects4j/framework/projects/lib/junit-4.12.jar
@@ -349,6 +367,9 @@ def process_target(entry: Dict[str, Any], force: bool = False):
                 if len(completed_runs) == len(SEEDS) and all(r.get("success", True) for r in completed_runs):
                     print(f">> Budget {budget}s already completed with valid tests. Skipping...")
                     continue
+            if is_budget_in_summary_csv(project, bug_id, target_class, budget):
+                print(f">> Budget {budget}s already completed in summary CSV. Skipping...")
+                continue
             
         print(f"\n--- Running Search Budget: {budget}s (3 Seeds: {SEEDS}) ---")
         runs = []

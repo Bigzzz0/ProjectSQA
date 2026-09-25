@@ -1,7 +1,6 @@
-version: '3.8'
-
 services:
   defects4j-env:
+    image: docker-defects4j-env:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,3 +12,5 @@ services:
     stdin_open: true
     environment:
       - TZ=Asia/Bangkok
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+      - PATH=/usr/lib/jvm/java-11-openjdk-amd64/bin:/opt/defects4j/framework/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
