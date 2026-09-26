@@ -15,7 +15,7 @@ import numpy as np
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
-from scipy.stats import mannwhitneyu, rankdata
+from scipy.stats import rankdata, wilcoxon
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(SCRIPT_DIR)
@@ -75,19 +75,33 @@ def summarize(values):
     }
 
 
-def vargha_delaney_a12(x, y):
-    m, n = len(x), len(y)
-    if not m or not n:
-        return None
-    ranks = rankdata(np.concatenate([x, y]))
-    return round(float((np.sum(ranks[:m]) - m * (m + 1) / 2) / (m * n)), 4)
+def paired_rank_biserial(differences):
+    nonzero = [value for value in differences if value != 0]
+    if not nonzero:
+        return 0.0
+    ranks = rankdata(np.abs(nonzero))
+    positive = sum(rank for rank, value in zip(ranks, nonzero) if value > 0)
+    negative = sum(rank for rank, value in zip(ranks, nonzero) if value < 0)
+    total = positive + negative
+    return round(float((positive - negative) / total), 4) if total else 0.0
+
+
+def holm_adjust(results):
+    measured = [(i, item["p_value"]) for i, item in enumerate(results) if item.get("p_value") is not None]
+    ordered = sorted(measured, key=lambda item: item[1])
+    running = 0.0
+    count = len(ordered)
+    for rank, (index, p_value) in enumerate(ordered):
+        running = max(running, min(1.0, (count - rank) * p_value))
+        results[index]["p_value_holm"] = running
+    return results
 
 
 def run_hypothesis(rows):
     valid = {
-        tech: [r["Line_Coverage_%"] for r in rows
+        tech: {(r["Project"], r["Bug_ID"]): r["Line_Coverage_%"] for r in rows
                if r["Technique"] == tech and r["Execution_Status"] == "DONE"
-               and r["Line_Coverage_%"] is not None]
+               and r["Line_Coverage_%"] is not None}
         for tech in TECHNIQUES
     }
     pairs = [
@@ -100,33 +114,42 @@ def run_hypothesis(rows):
     ]
     results = []
     for left, right in pairs:
-        x, y = valid[left], valid[right]
-        item = {"group_1": left, "group_2": right, "n_1": len(x), "n_2": len(y)}
-        if len(x) < 2 or len(y) < 2:
+        common = sorted(set(valid[left]) & set(valid[right]))
+        x = [valid[left][key] for key in common]
+        y = [valid[right][key] for key in common]
+        differences = [a - b for a, b in zip(x, y)]
+        item = {"group_1": left, "group_2": right, "n_pairs": len(common),
+                "n_nonzero_pairs": sum(value != 0 for value in differences)}
+        if len(common) < 2:
             item["status"] = "INSUFFICIENT_SAMPLE"
         else:
-            stat, p = mannwhitneyu(x, y, alternative="two-sided")
-            a12 = vargha_delaney_a12(x, y)
-            delta = abs(a12 - 0.5)
-            magnitude = "Negligible" if delta < .06 else "Small" if delta < .14 else "Medium" if delta < .21 else "Large"
-            item.update({"status": "MEASURED", "mann_whitney_u": float(stat),
-                         "p_value": float(p), "a12_effect_size": a12, "a12_magnitude": magnitude})
+            if item["n_nonzero_pairs"] == 0:
+                stat, p_value = 0.0, 1.0
+            else:
+                stat, p_value = wilcoxon(x, y, alternative="two-sided", zero_method="wilcox")
+            item.update({"status": "MEASURED", "wilcoxon_statistic": float(stat),
+                         "p_value": float(p_value), "paired_rank_biserial": paired_rank_biserial(differences)})
         results.append(item)
-    return results
+    return holm_adjust(results)
 
 
 def run_mio_budget():
     records = read_csv(MIO_CSV)
     grouped = defaultdict(lambda: {"line": [], "branch": [], "duration": []})
+    by_budget_key = defaultdict(dict)
     for row in records:
         budget = number(row.get("Budget_Sec"))
         if budget is None:
             continue
+        budget = int(budget)
         for key, source in (("line", "Line_Cov_Mean_%"), ("branch", "Branch_Cov_Mean_%"),
                             ("duration", "Avg_Duration_Sec")):
             value = number(row.get(source))
             if value is not None:
                 grouped[int(budget)][key].append(value)
+                if key == "line":
+                    target_key = (row.get("Project", ""), row.get("Bug_ID", ""), row.get("Target_Class", ""))
+                    by_budget_key[budget][target_key] = value
     summary = {}
     for budget in (30, 60, 120):
         vals = grouped[budget]
@@ -136,21 +159,35 @@ def run_mio_budget():
             "branch": summarize(vals["branch"]),
             "duration": summarize(vals["duration"]),
         }
-    lines = {budget: grouped[budget]["line"] for budget in (30, 60, 120)}
     tests = {}
     for left, right in ((30, 60), (60, 120)):
-        x, y = lines[left], lines[right]
-        if len(x) > 1 and len(y) > 1:
-            stat, p = mannwhitneyu(x, y, alternative="two-sided")
-            tests[f"{left}s_vs_{right}s"] = {"u": float(stat), "p_value": float(p)}
+        common = sorted(set(by_budget_key[left]) & set(by_budget_key[right]))
+        x = [by_budget_key[left][key] for key in common]
+        y = [by_budget_key[right][key] for key in common]
+        differences = [a - b for a, b in zip(x, y)]
+        if len(common) > 1:
+            if all(value == 0 for value in differences):
+                stat, p_value = 0.0, 1.0
+            else:
+                stat, p_value = wilcoxon(x, y, alternative="two-sided", zero_method="wilcox")
+            tests[f"{left}s_vs_{right}s"] = {
+                "status": "MEASURED", "n_paired_target_classes": len(common),
+                "n_nonzero_pairs": sum(value != 0 for value in differences),
+                "wilcoxon_statistic": float(stat), "p_value": float(p_value),
+                "paired_rank_biserial": paired_rank_biserial(differences),
+            }
         else:
             tests[f"{left}s_vs_{right}s"] = {"status": "INSUFFICIENT_SAMPLE"}
+    test_rows = [dict(value, comparison=key) for key, value in tests.items() if value.get("p_value") is not None]
+    holm_adjust(test_rows)
+    for row in test_rows:
+        tests[row["comparison"]]["p_value_holm"] = row.get("p_value_holm")
     deltas = {}
     for left, right in ((30, 60), (60, 120)):
         a, b = summary[left]["line"]["mean"], summary[right]["line"]["mean"]
         deltas[f"gain_{left}_to_{right}"] = round(b - a, 3) if a is not None and b is not None else None
     result = {"source": "MIO generation budget summary; separate from benchmark evaluations",
-              "budget_summary": summary, "delta_coverage": deltas, "statistical_tests": tests}
+              "budget_summary": summary, "delta_coverage": deltas, "paired_tests": tests}
     available = [b for b in (30, 60, 120) if summary[b]["line"]["mean"] is not None]
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
     if not available:
@@ -364,12 +401,12 @@ def export_outputs(rows, catalog_bugs, hypothesis, budget, ensemble, single_mult
                           item["branch"]["mean"], item["branch"]["sd"], item["duration"]["mean"]])
 
     hypo_sheet = wb.create_sheet("Hypothesis tests")
-    hypo_sheet.append(["Technique 1", "Technique 2", "N1", "N2", "Status", "Mann-Whitney U",
-                       "p-value", "A12", "A12 magnitude"])
+    hypo_sheet.append(["Technique 1", "Technique 2", "Matched bug N", "Nonzero pairs", "Status",
+                       "Wilcoxon statistic", "p-value", "Holm-adjusted p", "Paired rank-biserial"])
     for item in hypothesis:
-        hypo_sheet.append([item.get("group_1"), item.get("group_2"), item.get("n_1"), item.get("n_2"),
-                           item.get("status"), item.get("mann_whitney_u"), item.get("p_value"),
-                           item.get("a12_effect_size"), item.get("a12_magnitude")])
+        hypo_sheet.append([item.get("group_1"), item.get("group_2"), item.get("n_pairs"),
+                           item.get("n_nonzero_pairs"), item.get("status"), item.get("wilcoxon_statistic"),
+                           item.get("p_value"), item.get("p_value_holm"), item.get("paired_rank_biserial")])
 
     ai_sheet = wb.create_sheet("AI generation logs")
     ai_sheet.append(["Model", "Generation records", "Mean tokens/record", "Mean generation sec",
@@ -499,13 +536,17 @@ def export_outputs(rows, catalog_bugs, hypothesis, budget, ensemble, single_mult
                "MIO budget and AI generation records are summarized from their own source files. They are not joined to measured fault detections unless a benchmark run identity supports the join."]
     for tech, values in economics.items():
         report.append(f"- {tech}: {values['generation_records']} generation log records; mean tokens {values['avg_tokens_per_generation_record']}; mean generation time {values['avg_generation_latency_sec']} seconds; measured benchmark detections {values['benchmark_detected_bugs']}.")
-    report += ["", "## Hypothesis tests", "",
-               "Mann–Whitney U tests compare measured line coverage. Small samples are marked insufficient."]
+    report += ["", "## Paired coverage comparisons", "",
+               "Wilcoxon signed-rank tests compare line coverage for the same project-bug keys with measured coverage in both techniques. Holm correction is applied across the six comparisons; the paired rank-biserial correlation reports direction and magnitude."]
     for result in hypothesis:
         if result.get("status") == "MEASURED":
-            report.append(f"- {result['group_1']} vs {result['group_2']}: n={result['n_1']}/{result['n_2']}, p={result['p_value']:.4g}, A12={result['a12_effect_size']}.")
+            report.append(f"- {result['group_1']} vs {result['group_2']}: matched n={result['n_pairs']}, nonzero pairs={result['n_nonzero_pairs']}, p={result['p_value']:.4g}, Holm-adjusted p={result['p_value_holm']:.4g}, paired rank-biserial={result['paired_rank_biserial']}.")
         else:
-            report.append(f"- {result['group_1']} vs {result['group_2']}: insufficient sample (n={result['n_1']}/{result['n_2']}).")
+            report.append(f"- {result['group_1']} vs {result['group_2']}: insufficient matched sample (n={result['n_pairs']}).")
+    report += ["", "MIO generation budget paired tests compare the same project-bug-target class at two budgets; the output records matched sample size and Holm-adjusted p-values. These tests describe generation coverage and do not measure benchmark fault detection."]
+    for comparison, result in budget.get("paired_tests", {}).items():
+        if result.get("status") == "MEASURED":
+            report.append(f"- MIO {comparison}: matched n={result['n_paired_target_classes']}, p={result['p_value']:.4g}, Holm-adjusted p={result['p_value_holm']:.4g}, paired rank-biserial={result['paired_rank_biserial']}.")
     with open(os.path.join(RESULTS, "advanced_analytics_report.md"), "w", encoding="utf-8") as stream:
         stream.write("\n".join(report) + "\n")
 

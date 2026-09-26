@@ -22,12 +22,16 @@ MIO budget and AI generation records are summarized from their own source files.
 - Gemini 3.8 Flash: 1068 generation log records; mean tokens 20699.64; mean generation time 88.66 seconds; measured benchmark detections 107.
 - DeepSeek V4 Flash: 1069 generation log records; mean tokens 20900.15; mean generation time 295.11 seconds; measured benchmark detections 11.
 
-## Hypothesis tests
+## Paired coverage comparisons
 
-Mann–Whitney U tests compare measured line coverage. Small samples are marked insufficient.
-- Gemini 3.8 Flash vs DeepSeek V4 Flash: n=422/191, p=1.613e-05, A12=0.6078.
-- MIO (EvoSuite SBST) vs Gemini 3.8 Flash: n=797/422, p=4.233e-40, A12=0.2699.
-- MIO (EvoSuite SBST) vs DeepSeek V4 Flash: n=797/191, p=1.578e-08, A12=0.3685.
-- MIO (EvoSuite SBST) vs IPO (Native IPO): n=797/252, p=4.116e-44, A12=0.7907.
-- Gemini 3.8 Flash vs IPO (Native IPO): n=422/252, p=9.938e-78, A12=0.9282.
-- DeepSeek V4 Flash vs IPO (Native IPO): n=191/252, p=2.312e-41, A12=0.8733.
+Wilcoxon signed-rank tests compare line coverage for the same project-bug keys with measured coverage in both techniques. Holm correction is applied across the six comparisons; the paired rank-biserial correlation reports direction and magnitude.
+- Gemini 3.8 Flash vs DeepSeek V4 Flash: matched n=135, nonzero pairs=93, p=3.639e-12, Holm-adjusted p=7.278e-12, paired rank-biserial=0.83.
+- MIO (EvoSuite SBST) vs Gemini 3.8 Flash: matched n=397, nonzero pairs=336, p=2.171e-33, Holm-adjusted p=1.085e-32, paired rank-biserial=-0.7579.
+- MIO (EvoSuite SBST) vs DeepSeek V4 Flash: matched n=182, nonzero pairs=151, p=0.01538, Holm-adjusted p=0.01538, paired rank-biserial=-0.2273.
+- MIO (EvoSuite SBST) vs IPO (Native IPO): matched n=245, nonzero pairs=232, p=2.73e-39, Holm-adjusted p=1.638e-38, paired rank-biserial=0.9931.
+- Gemini 3.8 Flash vs IPO (Native IPO): matched n=147, nonzero pairs=142, p=4.744e-25, Holm-adjusted p=1.898e-24, paired rank-biserial=1.0.
+- DeepSeek V4 Flash vs IPO (Native IPO): matched n=69, nonzero pairs=66, p=1.641e-12, Holm-adjusted p=4.923e-12, paired rank-biserial=1.0.
+
+MIO generation budget paired tests compare the same project-bug-target class at two budgets; the output records matched sample size and Holm-adjusted p-values. These tests describe generation coverage and do not measure benchmark fault detection.
+- MIO 30s_vs_60s: matched n=1006, p=1.693e-84, Holm-adjusted p=3.386e-84, paired rank-biserial=-0.8276.
+- MIO 60s_vs_120s: matched n=981, p=1.541e-67, Holm-adjusted p=1.541e-67, paired rank-biserial=-0.7647.

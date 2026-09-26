@@ -117,7 +117,7 @@ git clone https://github.com/YourGroup/ProjectSQA.git
 cd ProjectSQA
 
 # Build และเปิด Container
-docker-compose -f docker/docker-compose.yml up -d --build
+docker compose -f docker/docker-compose.yml up -d --build
 docker exec -it defects4j_sqa bash
 ```
 
@@ -148,6 +148,7 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 | [สถิติเชิงพรรณนา JSON](results/master_descriptive_stats.json) | จำนวน suite, จำนวนที่รัน, จำนวนตรวจพบ, FDR และ coverage ที่วัดได้ |
 | [รายงาน analytics](results/advanced_analytics_report.md) | ผลสุดท้ายจาก snapshot ที่ครบ suite ซึ่งมีอยู่ |
 | [บัญชี suite](results/suite_inventory.csv) | suite ที่พบและ hash สำหรับตรวจสอบย้อนกลับ |
+| [บัญชีตรวจช่อง NO_SUITE](results/suite_gap_audit.csv) | แยกไฟล์ที่ไม่มี Java candidate ออกจาก candidate ที่ยังไม่ผ่านการตรวจรับ |
 
 snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,768 คู่ และมี 648 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
 
@@ -157,6 +158,7 @@ snapshot ปัจจุบันประเมิน suite ที่มีอ�
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-member4.txt
 .\.venv\Scripts\python.exe scripts/consolidate_master_results.py
+.\.venv\Scripts\python.exe scripts/audit_suite_gaps.py
 .\.venv\Scripts\python.exe scripts/advanced_data_analytics.py
 .\.venv\Scripts\python.exe scripts/plot_results.py
 ```

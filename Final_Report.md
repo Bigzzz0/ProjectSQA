@@ -4,28 +4,28 @@
 
 ---
 
-**วิชา:** CP353201 การประกันคุณภาพซอฟต์แวร์ (Software Quality Assurance)  
-**ภาคการศึกษา:** ปลาย ปีการศึกษา 2568  
-**อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก  
-**ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น**  
+**วิชา:** CP353201 การประกันคุณภาพซอฟต์แวร์ (Software Quality Assurance)<br>
+**ภาคการศึกษา:** 1/2569<br>
+**อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก<br>
+**ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น**
 
 > **สถานะข้อมูล: ผลประเมินครบตาม suite ที่มีอยู่ (26 กันยายน 2026)** — ครอบคลุม 854 บั๊กใน 17 โปรเจกต์ มีผลครบ 2,768 suite evaluations และระบุ 648 ช่องที่ไม่มี suite เป็น `NO_SUITE`; ไม่มีช่อง `NOT_RUN` ค้างอยู่ (`results_complete: true`, `available_suite_evaluations_complete: true`). ตารางผลหลักสร้างจาก `results/master_benchmark_summary.csv` และสรุปสถิติอยู่ใน `results/master_descriptive_stats.json` ตัวเลข generation ของ IPO/MIO/AI รายงานแยกจากผลประเมินกลาง
 
 #### 👥 คณะผู้จัดทำและบทบาทหน้าที่ความรับผิดชอบ:
-1. **นายปวริศช์ ประมวล (รหัส 653380138-8) — Member 1:** Combinatorial Testing Lead & IPO/IPOG Algorithm Specialist
-2. **นายแทนคุณ พันธ์นิกุล (รหัส 653380292-8) — Member 2:** Search-Based Software Testing Lead & MIO/EvoSuite Algorithm Specialist
-3. **นายธนภูมิ จันทรา (รหัส 653380295-2) — Member 3:** AI Testing Lead & Dual-Model Prompt Architecture Specialist (DeepSeek & Gemini)
+1. **นายปวริศช์ ประมวล (รหัส 673380278-9) — Member 1:** Combinatorial Testing Lead & IPO Algorithm Specialist
+2. **นายแทนคุณ พันธ์นิกุล (รหัส 673380301-0) — Member 2:** Search-Based Software Testing Lead & MIO/EvoSuite Algorithm Specialist
+3. **นายธนภูมิ จันทรา (รหัส 673380272-1) — Member 3:** AI Testing Lead & Dual-Model Prompt Architecture Specialist (DeepSeek & Gemini)
 4. **นายศิฆรินทร์ อุปจันทร์ (รหัส 673380292-5) — Member 4:** Infrastructure, Big Data Management & Statistical Analytics Lead (ผู้รวบรวมและจัดทำรายงานฉบับสมบูรณ์)
 
 ---
 
 ## 📌 บทคัดย่อ (Abstract)
 
-งานนี้เปรียบเทียบ DeepSeek V4 Flash, Gemini 3.8 Flash, Native IPO และ MIO ใน EvoSuite บน Defects4J v2.0 ครอบคลุม 854 บั๊กใน 17 โปรเจกต์ จาก 3,416 ช่องที่คาดหวัง มี suite ให้ประเมิน 2,768 ช่องและไม่มี suite 648 ช่อง โดยประเมิน suite ที่มีครบและตรวจย้อนกลับได้ด้วย hash, run ID และ log
+งานนี้เปรียบเทียบ Native IPO, MIO ใน EvoSuite, DeepSeek V4 Flash และ Gemini 3.8 Flash บน Defects4J 3.0.1-7-g8c16da82 ซึ่งมี 854 active bugs จาก 17 โครงการ จัดทำผลหนึ่งรายการต่อบั๊กและเทคนิค รวม 3,416 ช่อง โดยมี suite ผ่านเกณฑ์ประเมิน 2,768 ช่อง และ 648 ช่องเป็น `NO_SUITE`. ทุกผล `BUG_DETECTED` มีหลักฐานว่า suite ทำให้ buggy version ล้มเหลวและ fixed version ผ่าน.
 
-Gemini มีค่าเฉลี่ย line/branch coverage สูงสุดในกลุ่มผลที่วัดได้ (86.24%/79.45%, n=422) ส่วน Native IPO มี bug-level FDR สูงสุด (37/257, 14.40%). MIO ตรวจพบ 5/834 บั๊ก (0.60%) และ DeepSeek ตรวจพบ 11/836 บั๊ก (1.32%). การคำนวณ coverage ใช้เฉพาะผลที่คอมไพล์และวัดได้; compile errors และ flaky/regression ยังคงอยู่ในตัวหาร FDR
+Coverage รวมทุก modified target class จาก aggregate summary ของ Defects4J โดยคิดผลรวม covered ÷ total ไม่ได้เฉลี่ยร้อยละรายคลาส. Gemini มี coverage เฉลี่ยสูงสุดในผลที่วัดได้ (86.24% line, 79.45% branch; n=422). Native IPO ตรวจพบ 37/257 suite (14.40%), MIO 5/834 (0.60%), DeepSeek 11/836 (1.32%) และ Gemini 107/841 (12.72%).
 
-เมื่อรวมสี่เทคนิค ตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มีอย่างน้อยหนึ่ง suite (16.88%). สถิติ generation ของ MIO/IPO และ token/เวลา generation ของ AI รายงานแยกจากการประเมินกลาง เพราะไม่มี run ID ที่เชื่อมบันทึก generation ทุกแถวเข้ากับผลตรวจจับได้
+ผลรวมสี่เทคนิคตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มีอย่างน้อยหนึ่ง suite (16.88%). สถิติ MIO budget และ AI generation นำเสนอแยกจากผล benchmark กลาง; ไม่คำนวณ token ต่อบั๊กที่ตรวจพบ เนื่องจาก generation records ไม่มี run ID ที่เชื่อมกับผล benchmark.
 
 ---
 
@@ -43,13 +43,13 @@ Gemini มีค่าเฉลี่ย line/branch coverage สูงสุด
 ## บทที่ 1: บทนำ วัตถุประสงค์ และขอบเขตงานวิจัย
 
 ### 1.1 ที่มาและความสำคัญของปัญหา (Problem Statement)
-ในการพัฒนาซอฟต์แวร์สมัยใหม่ การทดสอบซอฟต์แวร์ (Software Testing) ถือเป็นกระบวนการประกันคุณภาพที่สำคัญที่สุด ทว่ากระบวนการเขียนกรณีทดสอบด้วยมนุษย์ (Manual Test Authoring) ต้องใช้เวลาและทรัพยากรสูงถึง 40–60% ของวงจรการพัฒนาซอฟต์แวร์ทั้งหมด ในช่วงทศวรรษที่ผ่านมา วงการวิศวกรรมซอฟต์แวร์จึงได้พัฒนาขั้นตอนวิธีการสร้างกรณีทดสอบอัตโนมัติ (Automated Test Generation) ซึ่งแบ่งออกเป็น 2 แนวคิดหลัก ได้แก่:
+การทดสอบซอฟต์แวร์ช่วยตรวจสอบพฤติกรรมของโปรแกรมและลดความเสี่ยงจากการเปลี่ยนแปลงโค้ด อย่างไรก็ตาม การสร้างชุดทดสอบที่ครอบคลุมกรณีใช้งานและตรวจจับข้อบกพร่องยังต้องอาศัยการออกแบบและตรวจสอบอย่างระมัดระวัง งานนี้ศึกษาวิธีสร้างชุดทดสอบสามแนวทาง ได้แก่:
 1. **Combinatorial Interaction Testing (CIT):** การใช้ขั้นตอนวิธีทางคณิตศาสตร์ผสมผสาน เช่น **In-Parameter-Order (IPO/IPOG)** เพื่อสร้างชุดทดสอบที่ครอบคลุมทุกคู่ความสัมพันธ์ของตัวแปรนำเข้า (Pairwise / $t$-way Interactions) โดยมีขนาดของชุดทดสอบที่เล็กที่สุด
-2. **Search-Based Software Testing (SBST):** การใช้อัลกอริทึมเชิงพันธุกรรม (Genetic Algorithms) เช่น **Many-Independent-Objective (MIO)** ในเครื่องมือ EvoSuite เพื่อชี้นำการสุ่มและกลายพันธุ์ของโค้ดเทสให้ครอบคลุมเป้าหมายระดับโครงสร้างคำสั่ง (Coverage Targets) นับร้อยเป้าหมายพร้อมกัน
+2. **Search-Based Software Testing (SBST):** การค้นหาชุดทดสอบโดยใช้เกณฑ์ fitness และงบประมาณการค้นหา เช่น **Many-Independent-Objective (MIO)** ที่ประเมินในงานนี้ผ่าน EvoSuite
 
 อย่างไรก็ตาม ตั้งแต่ปี ค.ศ. 2023 เป็นต้นมา **โมเดลภาษาขนาดใหญ่ (Large Language Models: LLMs)** ได้ก้าวเข้ามามีบทบาทอย่างก้าวกระโดดในการเข้าใจความหมายเชิงตรรกะของโปรแกรม (Code Semantics) และสามารถสังเคราะห์ชุดทดสอบระดับหน่วย (Unit Test Suites) พร้อมข้อกำหนดการตรวจสอบ (Assertions) ที่เข้าใจบริบททางธุรกิจของโปรแกรมได้
 
-ปัญหาสำคัญในปัจจุบันคือ: **"การใช้ LLM ชั้นนำ (DeepSeek V4 Flash และ Gemini 3.8 Flash) มีประสิทธิภาพและคุณภาพเหนือกว่าอัลกอริทึมแบบดั้งเดิม (IPO และ MIO) จริงหรือไม่ ทั้งในแง่ของความครอบคลุมรหัสคำสั่ง (Coverage), อัตราการตรวจจับข้อบกพร่องจริง (Fault Detection Rate), และความคุ้มค่าเชิงทรัพยากร (Computational & Token Economics)?"** งานวิจัยนี้จึงถูกจัดทำขึ้นเพื่อตอบคำถามดังกล่าวอย่างเป็นรูปธรรมบนคลังข้อมูลมาตรฐานสากล Defects4J
+ปัญหาสำคัญในปัจจุบันคือ: **"การใช้ LLM ชั้นนำ (DeepSeek V4 Flash และ Gemini 3.8 Flash) มีประสิทธิภาพและคุณภาพเหนือกว่าอัลกอริทึมแบบดั้งเดิม (IPO และ MIO) จริงหรือไม่ ทั้งในแง่ของความครอบคลุมรหัสคำสั่ง (Coverage), อัตราการตรวจจับข้อบกพร่องจริง (Fault Detection Rate), และความคุ้มค่าเชิงทรัพยากร (Computational & Token Economics)?"** งานวิจัยนี้จึงถูกจัดทำขึ้นเพื่อตอบคำถามดังกล่าวอย่างเป็นรูปธรรมบนคลังข้อมูลมาตรฐานสากล Defects4J (Just et al., 2014)
 
 ---
 
@@ -57,16 +57,16 @@ Gemini มีค่าเฉลี่ย line/branch coverage สูงสุด
 1. เพื่อออกแบบและพัฒนาระบบประเมินมาตรฐานกลางแบบอัตโนมัติ (Universal Benchmark Pipeline) บนโครงสร้างตู้คอนเทนเนอร์ Docker ที่สามารถรันและวัดผลชุดทดสอบจากทั้ง 4 เทคนิคได้อย่างเป็นธรรม
 2. เพื่อเปรียบเทียบเชิงประจักษ์ด้านความครอบคลุมรหัสคำสั่ง (Line Coverage และ Branch Coverage) ของ Target Classes บนโปรเจกต์มาตรฐาน Defects4J ทั้ง 17 โปรเจกต์
 3. เพื่อศึกษาอัตราการตรวจจับข้อบกพร่องจริงในระดับบั๊ก (Bug-Level Fault Detection Rate: FDR %) โดยจำแนกพฤติกรรมความล้มเหลวออกเป็น 5 สถานะมาตรฐานวิชาการ
-4. เพื่อทดสอบสมมติฐานทางสถิติ (Hypothesis Testing) และวัดขนาดผลกระทบ (Effect Size) ของความแตกต่างระหว่างเทคนิค
+4. เพื่อเปรียบเทียบผลของแต่ละเทคนิคโดยแสดงจำนวนตัวอย่างและข้อจำกัดของข้อมูลที่วัดได้
 5. เพื่อวิเคราะห์พฤติกรรม MIO Search Budget Saturation, ศักยภาพการผสานพลังข้าม Paradigm (Ensemble Synergy), และความคุ้มค่าเชิงเศรษฐศาสตร์ของโทเค็น AI
 
 ---
 
 ### 1.3 ขอบเขตงานวิจัย (Scope & Delimitations)
-1. **คลังโปรแกรมทดสอบ (Benchmark Suite):** ใช้ **Defects4J v2.0** ซึ่งเป็นคลังข้อบกพร่องจริงระดับอุตสาหกรรมในภาษา Java ประกอบด้วย **17 โครงการโอเพนซอร์ส** ได้แก่ Chart, Cli, Closure, Codec, Collections, Compress, Csv, Gson, JacksonCore, JacksonDatabind, JacksonXml, Jsoup, JxPath, Lang, Math, Mockito, และ Time รวมทั้งสิ้น **854 Active Bugs**
+1. **คลังโปรแกรมทดสอบ (Benchmark Suite):** ใช้ **Defects4J 3.0.1-7-g8c16da82** ตาม checkout ที่ติดตั้งใน container ซึ่งประกอบด้วย **17 โครงการโอเพนซอร์สและ 854 active bugs** (Defects4J contributors, n.d.)
 2. **ขอบเขตการสร้างชุดทดสอบ (Defect-Targeted Classes):** ยึดตาม `classes.modified` ที่ระบุใน Ground Truth ของแต่ละบั๊ก โดยมีคลาสเป้าหมายรวม **1,073 คลาส (577 Unique Classes)** โดยไม่ทำการสร้างชุดทดสอบกระจายไปยังคลาสภายนอกที่ไม่เกี่ยวข้องกับบั๊ก เพื่อให้เป็น Defect-Targeted Test Generation ที่เป็นธรรม
-3. **การวัดผล Coverage:** วัดผลเฉพาะบน **Target Classes** โดยใช้ Cobertura ภายใต้ Defects4J CLI (`defects4j coverage -c <TargetClass>`)
-4. **เวอร์ชันภาษาและมาตรฐานการรัน:** Java 8 (OpenJDK 1.8.0), JUnit 4 Framework พร้อมการกำหนด `@Test(timeout = 4000)` ในทุกกรณีทดสอบ
+3. **การวัดผล Coverage:** ใช้ Defects4J coverage workflow และ aggregate summary สำหรับทุก modified target class; รวมจำนวน covered และ total ก่อนคำนวณเปอร์เซ็นต์
+4. **เวอร์ชันภาษาและมาตรฐานการรัน:** Defects4J CLI ใช้ Java 11; มี Java 8 ติดตั้งสำหรับขั้นตอน MIO ที่กำหนดให้ใช้ JDK 8; ใช้ JUnit 4 ตาม suite ที่ส่งมอบ
 
 ---
 
@@ -75,14 +75,14 @@ Gemini มีค่าเฉลี่ย line/branch coverage สูงสุด
 * **RQ2 (Fault Detection Capability):** เทคนิคใดมีอัตราการตรวจจับข้อบกพร่องจริง (Bug-Level FDR %) สูงที่สุดภายใต้กฎความซื่อตรงของตัวหาร (Denominator Integrity Rule)?
 * **RQ3 (Ensemble Synergy):** การผสมผสานชุดทดสอบจากต่าง Paradigm (AI + Combinatorial + SBST) สามารถตรวจจับข้อบกพร่องได้สูงกว่าการใช้เทคนิคที่ดีที่สุดเพียงเทคนิคเดียวหรือไม่?
 * **RQ4 (Search Budget Scaling):** การขยาย Search Budget ของ MIO จาก 30s เป็น 60s และ 120s ก่อให้เกิดผลตอบแทนความครอบคลุมส่วนเพิ่ม (Marginal Gain) คุ้มค่าหรือไม่ และจุดอิ่มตัวของการค้นหาเกิดขึ้นที่ระดับใด?
-* **RQ5 (AI Economics & Efficiency):** ความคุ้มค่าของโทเค็นและเวลาในการประมวลผลของโมเดล AI แต่ละตัวมีความแตกต่างกันอย่างไรเมื่อพิจารณาต้นทุนต่อหนึ่งบั๊กที่ตรวจพบ?
+* **RQ5 (AI Generation Effort):** บันทึกการสร้างชุดทดสอบของโมเดล AI แต่ละตัวมีจำนวนโทเค็นและเวลา generation เฉลี่ยเท่าใด เมื่อรายงานแยกจากผลตรวจจับบั๊กของ benchmark กลาง?
 
 ---
 
 ## บทที่ 2: ขั้นตอนวิธีการสร้างกรณีทดสอบอัตโนมัติ (IPO และ MIO)
 
 ### 2.1 In-Parameter-Order (IPO/IPOG) และ Combinatorial Interaction Testing (Member 1)
-เทคนิค Combinatorial Testing ตั้งอยู่บนสมมติฐานเชิงประจักษ์ที่ว่า **ข้อบกพร่องส่วนใหญ่ในซอฟต์แวร์ (70–90%) เกิดจากการปฏิสัมพันธ์ของตัวแปรนำเข้าเพียง 1 หรือ 2 ตัวแปร (Pairwise Interaction)** การทดสอบทุกค่าที่เป็นไปได้ทั้งหมด (Exhaustive Testing: $v^k$) ย่อมนำไปสู่ภาวะการระเบิดเชิงการจัดหมู่ (Combinatorial Explosion) ที่ไม่สามารถรันได้จริงในทางปฏิบัติ
+Combinatorial Interaction Testing ลดจำนวนกรณีทดสอบโดยกำหนดให้แต่ละคู่ค่าของพารามิเตอร์ปรากฏอย่างน้อยหนึ่งครั้งในชุดทดสอบ การครอบคลุม pairwise เป็นเกณฑ์การเลือกกรณีทดสอบและไม่ได้รับประกันว่าจะตรวจพบบั๊กทุกชนิด; งานนี้จึงวัด fault detection แยกจาก coverage ของ input combinations. การไล่ทุกค่าร่วมกันอาจมีจำนวนกรณีเพิ่มขึ้นแบบทวีคูณเมื่อจำนวนพารามิเตอร์เพิ่มขึ้น.
 
 #### ก. ทฤษฎีขั้นตอนวิธี IPO (In-Parameter-Order)
 ขั้นตอนวิธี IPO (Lei & Tai, 1998) และ IPOG (Forbes et al., 2008) แก้ปัญหานี้ด้วยการสร้างตารางการทดสอบแบบค่อยเป็นค่อยไป (Incremental Generation) โดยเริ่มสร้างความครอบคลุมจากตัวแปร 2 ตัวแรก แล้วทำการขยายแบบ 2 ทิศทาง:
@@ -93,45 +93,42 @@ Gemini มีค่าเฉลี่ย line/branch coverage สูงสุด
 [พารามิเตอร์ P1, P2] ---> Horizontal Growth (จับคู่ลงแถวเดิม) ---> Vertical Growth (เพิ่มแถวใหม่เก็บตก)
 ```
 
-#### ข. การใช้งาน Microsoft PICT ในฐานะ Reference Baseline
-ในการทดลองนี้ Member 1 ได้พัฒนา Automated IPO Engine โดยใช้ **Microsoft PICT (Pairwise Independent Combinatorial Testing)** เป็นเอนจินอ้างอิงหลัก ซึ่งใช้อัลกอริทึม Heuristic IPOG-based ที่มีความเสถียรสูง ได้ผลลัพธ์การลดขนาดกรณีทดสอบอย่างมหาศาล:
-* **ตัวอย่างผลการลดรูปบน Apache Commons Math (HypergeometricDistribution):**
-  - พารามิเตอร์ 3 ตัว: Population Size ($N$), Successes ($m$), Sample Size ($n$)
-  - การทดสอบแบบ Exhaustive (Full Combinations): **$10 \times 10 \times 10 = 1,000$ กรณีทดสอบ**
-  - การทดสอบแบบ Pairwise ด้วย IPO/PICT: **เหลือเพียง 36 กรณีทดสอบ (ลดขนาดลงถึง 96.4%)** โดยยังคงครอบคลุม 100% 2-way interactions ของค่าขอบเขต (Boundary Value Analysis: $0, 1, \text{Max}-1, \text{Max}$)
-* **ข้อมูลการสร้าง suite ของ IPO จาก baseline รอบก่อน:** มี 173 suites และ 42,398 test cases ตามเอกสารของสาย IPO ข้อมูลชุดนี้เป็นสถิติการสร้าง/ตรวจ suite รอบก่อน ไม่ใช่จำนวน suite ที่ผ่านการประเมินกลางรอบปัจจุบัน และไม่ใช้คำนวณ coverage หรือ FDR ใน master dataset
+#### ข. Native IPO ที่ใช้ในการประเมินและ PICT ในฐานะข้อมูลอ้างอิง
+เทคนิค IPO ที่นำเข้าการประเมินกลางคือ Native IPO ตามชุดทดสอบใน `Combinatorial_IPO/Results/verified_suites_manifest.json`; PICT เป็นเครื่องมืออ้างอิงในงานของสาย IPO ไม่ใช่ผล IPO หลักในตารางเปรียบเทียบนี้:
+* ตัวอย่าง pairwise จากเอกสารสาย IPO ใช้เพื่ออธิบายแนวคิด ไม่ใช่ผล coverage/FDR ของ benchmark กลาง
+* เอกสาร baseline รอบก่อนระบุ 173 suites และ 42,398 test cases ตัวเลขนี้เป็นสถิติคนละรอบ ไม่ใช่จำนวน suite หรือผลวัดของ Native IPO ปัจจุบัน
 
 ---
 
 ### 2.2 Search-Based Software Testing และ Many-Independent-Objective (MIO) Algorithm (Member 2)
-เครื่องมือ **EvoSuite** ถือเป็นเครื่องมือชั้นนำระดับโลกด้าน Search-Based Software Testing (SBST) โดยในอดีตใช้อัลกอริทึมพันธุกรรมแบบหลายเป้าหมายดั้งเดิม เช่น NSGA-II หรือ MOSA ทว่าเมื่อจำนวนเป้าหมายความครอบคลุม (Lines, Branches, Direct Methods) ในระดับคลาสเพิ่มขึ้นเป็นหลักร้อยหรือหลักพัน อัลกอริทึมแบบเดิมจะประสบปัญหา **Dominance Resistance** และการจัดการหน่วยความจำที่หนักเกินไป
+EvoSuite เป็นเครื่องมือสร้าง unit test สำหรับ Java ที่ใช้ search-based approaches (Fraser & Arcuri, 2011). ในงานนี้กำหนด algorithm เป็น MIO และ criterion เป็น `LINE:BRANCH:EXCEPTION:MUTATION` ตาม `MIO_Algorithm/Configuration/evosuite_mio_config.properties`; ผลการสร้างและผลการประเมิน suite ถูกรายงานแยกกัน.
 
 #### ก. ทฤษฎี Many-Independent-Objective (MIO)
-Arcuri (2017) ได้นำเสนออัลกอริทึม **MIO** ซึ่งเปลี่ยนกระบวนการจัดการประชากรจากการรวมศูนย์ (Single Global Population) มาเป็นการจัดสรรคลังเก็บข้อมูลแยกอิสระตามแต่ละเป้าหมาย (**Archive of Focused Targets**):
+Arcuri (2018) นำเสนออัลกอริทึม **MIO** ซึ่งจัดการเป้าหมายการค้นหาแต่ละรายการอย่างเป็นอิสระ (**Many Independent Objectives**):
 1. แต่ละเป้าหมาย (Objective $o_i$) จะมีคลังเก็บชุดทดสอบขนาดเล็กของตนเอง ($K$ solutions)
 2. อัลกอริทึมจะสุ่มเลือกชุดทดสอบจากคลังที่ยังไม่บรรลุเป้าหมายมาทำการกลายพันธุ์ (Mutation) เช่น การเปลี่ยน Method Call, สลับ Argument, หรือแทรกคำสั่งใหม่
 3. หากชุดทดสอบที่กลายพันธุ์มีระยะทางเข้าใกล้เป้าหมายดีขึ้น (Better Branch Distance) หรือครอบคลุมเป้าหมายใหม่สำเร็จ ชุดทดสอบนั้นจะถูกอัปเดตเข้าคลังทันที
 4. มีกระบวนการสุ่มรีเซ็ตแบบ Random Insertion เพื่อป้องกันไม่ให้อัลกอริทึมติดอยู่ในหลุม Local Optima
 
 #### ข. การวิเคราะห์ Search Budget Scaling (ข้อกำหนด 1.7)
-เพื่อศึกษาผลกระทบของเวลางบประมาณในการค้นหา Member 2 ได้บันทึกผลการสร้าง suite ของ EvoSuite MIO ภายใต้ **3 ระดับงบประมาณเวลา (Search Budget: 30s, 60s, และ 120s)** รวม **3,027 รายการ** ตารางนี้เป็นสถิติการสร้าง suite จาก `MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv` และแยกจากผล coverage/FDR ของการประเมินกลางซึ่งสรุปในบทผลลัพธ์
+Member 2 บันทึกการสร้างชุดทดสอบด้วย EvoSuite MIO ที่งบประมาณ 30, 60 และ 120 วินาที และใช้ seed 101, 102 และ 103 ตามสคริปต์และตารางสรุปใน `MIO_Algorithm/Result_Round2/`. แต่ละแถวเป็นสรุปคลาสและ budget; criterion `LINE;BRANCH` ให้ค่า coverage เดียว จึงรายงานเป็น coverage รวม ไม่แยก line กับ branch. ตัวเลขนี้เป็นข้อมูล generation ไม่ใช่ผล benchmark กลาง.
 
-| Search Budget | จำนวนรายการ ($N$) | Line Coverage ($\mu \pm \sigma$) | Branch Coverage ($\mu \pm \sigma$) | เวลา generation เฉลี่ย | ผลต่างจาก budget ก่อนหน้า |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| **30 วินาที** | 1,023 | $65.73 \pm 31.96\%$ | $65.73 \pm 31.96\%$ | 68.29 วินาที | *(Baseline)* |
-| **60 วินาที** | 1,015 | $68.73 \pm 31.29\%$ | $68.73 \pm 31.29\%$ | 90.62 วินาที | **$+3.00$ จุดร้อยละ** ($p = 0.0217$) |
-| **120 วินาที** | 989 | $70.82 \pm 30.40\%$ | $70.82 \pm 30.40\%$ | 194.41 วินาที | **$+2.09$ จุดร้อยละ** ($p = 0.1202$) |
+| Search budget | คลาส–budget records (n) | Coverage รวมเฉลี่ย ± SD ระหว่าง records | ค่า SD เฉลี่ยระหว่าง 3 seeds | เวลา generation เฉลี่ย |
+| :---: | ---: | ---: | ---: | ---: |
+| 30 วินาที | 1,023 | 65.73 ± 31.96% | 3.26 จุดร้อยละ | 68.29 วินาที |
+| 60 วินาที | 1,015 | 68.73 ± 31.29% | 2.66 จุดร้อยละ | 90.62 วินาที |
+| 120 วินาที | 989 | 70.82 ± 30.40% | 2.42 จุดร้อยละ | 194.41 วินาที |
 
-> การเปรียบเทียบ Mann–Whitney U ของค่า line coverage พบความต่างระหว่าง 30s กับ 60s ($p = 0.0217$) แต่ยังไม่พบหลักฐานความต่างระหว่าง 60s กับ 120s ที่ระดับนัยสำคัญ 0.05 ($p = 0.1202$) จึงรายงานเป็นแนวโน้มของข้อมูล generation ชุดนี้ และไม่สรุปว่า budget ใดดีที่สุดโดยทั่วไป
+SD ในคอลัมน์ coverage แสดงการกระจายระหว่างคลาส–budget records ไม่ใช่ SD ข้าม seed; คอลัมน์ถัดไปรายงานค่าเฉลี่ยของ SD ที่คำนวณจาก 3 seeds ต่อ record. เวลารวมมีขั้นตอน setup และ compile จึงอาจยาวกว่า search budget. ค่า p จากการทดสอบเดิมแบบไม่จับคู่ไม่ถูกใช้; การวิเคราะห์ใหม่จับคู่คลาสที่มีผลในทั้งสอง budget.
+
+การวิเคราะห์ใหม่จับคู่ project–bug–target class ที่มีค่าทั้งสอง budget และใช้ Wilcoxon signed-rank พร้อม Holm correction. ระหว่าง 30 กับ 60 วินาทีมี 1,006 คู่ (p หลัง Holm = 3.39 × 10⁻⁸⁴, rank-biserial = −0.828); ระหว่าง 60 กับ 120 วินาทีมี 981 คู่ (p หลัง Holm = 1.54 × 10⁻⁶⁷, rank-biserial = −0.765). ค่าลบหมายถึง coverage ของ budget ยาวสูงกว่าในคู่ที่มีข้อมูลครบ.
 
 ---
 
 ## บทที่ 3: สถาปัตยกรรมและเทคนิคการสร้างชุดทดสอบด้วยปัญญาประดิษฐ์ (AI Testing Architecture)
 
 ### 3.1 สถาปัตยกรรมการยิงโมเดล AI ผ่าน KKU IntelSphere Platform (Member 3)
-การสร้างชุดทดสอบด้วยปัญญาประดิษฐ์ดำเนินการผ่าน **KKU IntelSphere API Gateway** (`https://chat-ai.kku.ac.th/api/v1/chat/completions`) โดยทำการเปรียบเทียบระหว่างโมเดลภาษาขนาดใหญ่ 2 สถาปัตยกรรม:
-1. **DeepSeek V4 Flash:** ตัวแทนของสถาปัตยกรรม Mixture-of-Experts (MoE) ที่มีขนาด Parameter แฝงสูง มุ่งเน้นการคิดเชิงตรรกะแบบอนุรักษ์นิยม
-2. **Gemini 3.8 Flash:** ตัวแทนของโมเดล Dense Multimodal / Fast Reasoning Engine จาก Google ที่มีความเร็วในการสร้างข้อความ (Inference Speed) สูงมาก
+การสร้างชุดทดสอบใช้สคริปต์ `scripts/kku_generate.py` เรียก KKU IntelSphere API (`https://gen.ai.kku.ac.th/api/v1`) โดยใช้ model identifier `deepseek-v4-flash` และ `gemini-3.8-flash` ตามค่าเริ่มต้นในสคริปต์ งานนี้เปรียบเทียบผลของโมเดลตามป้ายชื่อดังกล่าว; repository ไม่ได้บันทึก provider model ID ต่อทุก generation record จึงไม่ระบุสถาปัตยกรรมหรือคุณสมบัติภายในเฉพาะรุ่นเกินหลักฐานที่มี.
 
 ---
 
@@ -146,30 +143,29 @@ Arcuri (2017) ได้นำเสนออัลกอริทึม **MIO** 
 
 ---
 
-### 3.3 ตารางเปรียบเทียบการใช้โทเค็นและเวลาประมวลผล (Token Economics & Speed)
-จากการประเมินชุดทดสอบที่สร้างโดยโมเดล AI ทั้งสองตัว รวม 1,599 รายการประเมิน:
+### 3.3 สถิติการสร้างชุดทดสอบ AI
 
-| มิติการวัดผล (Metric) | Gemini 3.8 Flash | DeepSeek V4 Flash | อัตราส่วนความต่าง (Ratio) |
-| :--- | :---: | :---: | :---: |
-| **จำนวนชุดทดสอบที่ประเมิน ($N$)** | 527 ชุด | 1,072 ชุด | — |
-| **เวลาสร้างชุดทดสอบเฉลี่ย (Gen Duration)** | **76.6 วินาที/คลาส** | 294.5 วินาที/คลาส | **Gemini เร็วกว่า 3.84 เท่า** |
-| **จำนวนโทเค็นอินพุตเฉลี่ย (Prompt Tokens)** | 16,340 tokens | 16,450 tokens | ใกล้เคียงกัน ($1.00\times$) |
-| **จำนวนโทเค็นเอาต์พุตเฉลี่ย (Completion)** | 2,550 tokens | 3,471 tokens | DeepSeek เขียนโค้ดยาวกว่า ($1.36\times$) |
-| **จำนวนโทเค็นรวมเฉลี่ยต่อคลาส (Total Tokens)** | **18,890 tokens** | **19,921 tokens** | Gemini ประหยัดกว่าเล็กน้อย |
-| **ต้นทุนโทเค็นต่อ 1 บั๊กที่ตรวจพบ (Tokens / Bug)** | **~113,000 tokens** | **~1,780,000 tokens** | **Gemini คุ้มค่ากว่า 15.75 เท่า** |
+ตารางนี้สรุป generation records จาก `results/Deepseek_vs_Gemini_Economics.csv` แยกจากจำนวน suite ที่รันใน benchmark กลาง จำนวน records ไม่ใช่จำนวน bug detections และไม่มี run ID ที่เชื่อมกับผล benchmark จึงไม่คำนวณ token ต่อบั๊กที่ตรวจพบ.
+
+| โมเดลตามป้ายชื่อในระบบ | Generation records (n) | โทเค็นเฉลี่ยต่อ record | เวลาเฉลี่ยต่อ record |
+| :--- | ---: | ---: | ---: |
+| Gemini 3.8 Flash | 1,068 | 20,699.64 | 88.66 วินาที |
+| DeepSeek V4 Flash | 1,069 | 20,900.15 | 295.11 วินาที |
+
+ค่ารุ่นโมเดลอ้างตาม identifier ที่สคริปต์เรียกผ่าน KKU IntelSphere API; บันทึก generation ไม่ได้เก็บ provider model ID ต่อทุกแถว จึงไม่อ้างรายละเอียดสถาปัตยกรรมเฉพาะรุ่น.
 
 ---
 
 ## บทที่ 4: สถาปัตยกรรมระบบ สภาพแวดล้อม และระเบียบวิธีวิจัยเชิงประจักษ์
 
 ### 4.1 สถาปัตยกรรมระบบทดสอบกลางบน Docker Container (Member 4)
-เพื่อให้สภาพแวดล้อมในการทดสอบมีความสามารถในการทำซ้ำได้ 100% (Reproducibility) และขจัดปัญหาความไม่เข้ากันของระบบปฏิบัติการ (Environment Drift) Member 4 ได้จัดทำสถาปัตยกรรม **Dockerized Defects4J Benchmark Environment**:
+เพื่อควบคุมสภาพแวดล้อมและช่วยให้ทำซ้ำการประเมินได้ Member 4 จัดทำ **Dockerized Defects4J Benchmark Environment** โดยบันทึก suite hash, run ID, timestamp และ log ของแต่ละผล การใช้ container ลดความต่างของ environment แต่ไม่ได้รับประกันการทำซ้ำสมบูรณ์ในทุกระบบ:
 
 ```mermaid
 graph TD
     Host[Host Machine: Windows / Linux / macOS] -->|Volume Mount /workspace| Docker[Docker Container: defects4j_sqa]
-    Docker --> D4J[Defects4J v2.0 Framework]
-    Docker --> JRE[OpenJDK 1.8.0_452]
+    Docker --> D4J[Defects4J 3.0.1-7-g8c16da82]
+    Docker --> JRE[OpenJDK 11 default; JDK 8 for selected MIO generation]
     Docker --> Runner[scripts/run_benchmark.py]
     
     Runner --> Evaluator[Universal Test Evaluator]
@@ -189,8 +185,9 @@ graph TD
     MasterCSV --> Analytics[scripts/advanced_data_analytics.py]
 ```
 
-* **Image Base:** Ubuntu 22.04 LTS ติดตั้ง Defects4J v2.0 สมบูรณ์แบบ
-* **Java SDK:** OpenJDK 1.8.0 64-bit (รองรับคอมไพเลอร์ของโปรเจกต์ยุค Java 5–8 ครบถ้วน)
+* **Defects4J:** 3.0.1-7-g8c16da82; CLI ใช้ Java 11
+* **Java SDK:** ติดตั้ง OpenJDK 8 และ 11; JDK 11 เป็นค่าเริ่มต้น และบางงาน MIO กำหนด JDK 8
+* **Container:** สร้างจาก Ubuntu 20.04 พร้อมตรึง Defects4J และ PICT ด้วย commit; ไม่ต้องเตรียม image พื้นฐานเฉพาะของเครื่อง การ build ครั้งแรกต้องเชื่อมต่อเครือข่ายและดาวน์โหลด catalog ของ Defects4J ซึ่งใช้พื้นที่และเวลามาก ส่วนแพ็กเกจระบบติดตั้งจาก Ubuntu package archive
 * **เครื่องมือวัดความครอบคลุม:** Cobertura CLI เชื่อมต่อผ่าน Defects4J Framework
 * **ระบบจัดการความคืบหน้า (State Preservation):** พัฒนาระบบบันทึกสถานะ `progress.json` เพื่อให้สามารถหยุดและรันต่อได้แบบ Incremental Resume
 
@@ -224,14 +221,25 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evalu
 
 ### 5.2 Coverage และ Fault Detection Rate
 
-Coverage เฉลี่ยคำนวณจากผล `DONE` ที่มีค่าตัวเลขวัดได้เท่านั้น ผลที่คอมไพล์ไม่ผ่านหรือไม่มี coverage ไม่ถูกนับเป็น coverage 0%. FDR คำนวณระดับบั๊กต่อเทคนิค; ตัวหารรวมผลที่พยายามรันทั้งหมด รวม `COMPILE_ERROR`, `FLAKY_OR_REGRESSION` และ `TIMEOUT`. `BUG_DETECTED` ต้อง fail บน buggy และ pass บน fixed.
+Coverage รวมทุก modified target class ตาม aggregate counts ที่ Defects4J เขียนใน summary.csv; จำนวน `n` นับเฉพาะผล `DONE` ที่มีค่าตัวเลข และ compile error ไม่ถูกแทนด้วย coverage 0%. FDR นับระดับบั๊กต่อเทคนิคโดยหารด้วยจำนวน suite ที่มีและถูกประเมิน; compile errors และ flaky/regression ยังคงอยู่ในตัวหาร. ตารางยังแสดงสัดส่วนเทียบ 854 บั๊กในแค็ตตาล็อก. `BUG_DETECTED` หมายถึง fail บน buggy และ pass บน fixed.
 
-| เทคนิค | มี suite/ประเมินแล้ว | ผล DONE (N coverage) | Line coverage เฉลี่ย | Branch coverage เฉลี่ย | ตรวจพบ | FDR ของ suite ที่ประเมิน |
-|---|---:|---:|---:|---:|---:|---:|
-| Native IPO | 257/257 | 252 | 26.76% | 18.67% | 37 | 14.40% |
-| MIO (EvoSuite) | 834/834 | 797 | 63.85% | 56.51% | 5 | 0.60% |
-| DeepSeek V4 Flash | 836/836 | 191 | 77.99% | 70.25% | 11 | 1.32% |
-| Gemini 3.8 Flash | 841/841 | 422 | 86.24% | 79.45% | 107 | 12.72% |
+| เทคนิค | Suite ที่ประเมิน | Compile error | Coverage n (all target classes) | Line / Branch coverage เฉลี่ย ± SD | พบ defect | FDR ต่อ suite | พบต่อ 854 บั๊ก |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Native IPO | 257 | 5 | 252 | 26.76% ± 21.50 / 18.67% ± 19.33 | 37 | 14.40% | 4.33% |
+| MIO (EvoSuite) | 834 | 37 | 797 | 63.85% ± 34.26 / 56.51% ± 35.94 | 5 | 0.60% | 0.59% |
+| DeepSeek V4 Flash | 836 | 645 | 191 | 77.99% ± 30.88 / 70.25% ± 31.18 | 11 | 1.32% | 1.29% |
+| Gemini 3.8 Flash | 841 | 419 | 422 | 86.24% ± 25.14 / 79.45% ± 26.98 | 107 | 12.72% | 12.53% |
+
+เปรียบเทียบ line coverage ด้วย Wilcoxon signed-rank เฉพาะ project–bug ที่ทั้งสองเทคนิคมีค่าที่วัดได้ และปรับ p-value ด้วย Holm สำหรับหกคู่. ค่า paired rank-biserial เป็นบวกเมื่อเทคนิคทางซ้ายมี coverage สูงกว่า; ผลนี้เป็นการวิเคราะห์เชิงสำรวจเพราะแต่ละเทคนิคมี suite ที่วัดได้ต่างกัน.
+
+| คู่เปรียบเทียบ | Matched N | p หลัง Holm | Paired rank-biserial |
+|---|---:|---:|---:|
+| Gemini – DeepSeek | 135 | 7.28×10⁻¹² | 0.830 |
+| MIO – Gemini | 397 | 1.09×10⁻³² | -0.758 |
+| MIO – DeepSeek | 182 | 0.0154 | -0.227 |
+| MIO – IPO | 245 | 1.64×10⁻³⁸ | 0.993 |
+| Gemini – IPO | 147 | 1.90×10⁻²⁴ | 1.000 |
+| DeepSeek – IPO | 69 | 4.92×10⁻¹² | 1.000 |
 
 เมื่อนับการตรวจจับแบบ union ระดับบั๊ก ทั้งสี่เทคนิคร่วมกันตรวจพบ 144 บั๊กจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%); มี 648 บั๊ก–เทคนิคที่ไม่มี suite และแยกเป็น `NO_SUITE`. รายงาน analytics, Excel และกราฟถูกสร้างจาก snapshot เดียวกันใน `results/advanced_analytics_report.md`, `results/Master_Benchmark_Results.xlsx` และ `results/figure1_coverage_comparison.png` ถึง `results/figure6_ensemble_overlap.png`.
 
@@ -247,21 +255,23 @@ Coverage เฉลี่ยคำนวณจากผล `DONE` ที่มี
 
 ## บทที่ 6: สรุปผลการวิจัย ข้อเสนอแนะเชิงวิศวกรรม และงานวิจัยในอนาคต
 
-ผลประเมินที่ตรวจ provenance ได้ครบทุก suite ที่มีอยู่แล้ว Gemini มีค่าเฉลี่ย coverage สูงสุด ขณะที่ Native IPO มี FDR สูงสุดต่อ suite ที่ประเมิน; ไม่มีเทคนิคเดียวที่ดีที่สุดในทุกตัวชี้วัด MIO และ DeepSeek ตรวจพบน้อยกว่าในชุดนี้ และ DeepSeek มีสัดส่วน compile error สูง จึงควรเลือกเครื่องมือตามเป้าหมายและคำนึงถึงคุณภาพการคอมไพล์ร่วมกับ coverage/FDR
+ผลประเมินครอบคลุม suite ที่ผ่านเกณฑ์ประเมินครบแล้ว Gemini มีค่าเฉลี่ย line/branch coverage สูงสุดในผลที่วัดได้เมื่อรวม modified target classes ทุกคลาส ขณะที่ Native IPO มี FDR สูงสุดต่อ suite ที่ประเมิน. ไม่มีเทคนิคเดียวที่ดีที่สุดในทุกตัวชี้วัด MIO และ DeepSeek ตรวจพบน้อยกว่าในชุดนี้ และ DeepSeek มีสัดส่วน compile error สูง จึงควรเลือกเครื่องมือตามเป้าหมายและคำนึงถึงคุณภาพการคอมไพล์ร่วมกับ coverage/FDR
 
 การรวมผลสี่เทคนิคตรวจพบ 144 บั๊กไม่ซ้ำ โดย Gemini มีส่วนตรวจพบเฉพาะเทคนิค 91 บั๊ก, Native IPO 27, MIO 5 และ DeepSeek 5. ตัวเลขเฉพาะเหล่านี้อธิบายความเสริมกันของเทคนิค แต่ไม่ใช่การประมาณต้นทุนต่อบั๊ก เพราะ log การสร้าง AI ยังเชื่อมกับ run ID ของ benchmark ไม่ครบ
 
 ผลนี้จำกัดอยู่ที่ target classes ใน Defects4J และ suite ที่สมาชิกส่งมอบจริง; 648 ช่อง `NO_SUITE` ไม่ได้ถูกตีความว่าไม่พบข้อบกพร่อง ส่วน compile errors และ flaky/regression ถูกแสดงเป็นผลลัพธ์แยกและยังอยู่ในตัวหาร FDR.
 
+การตรวจไฟล์ประกอบพบว่า 648 ช่อง `NO_SUITE` ไม่ได้หมายถึงไม่มีไฟล์ทุกกรณี: 591 ช่อง IPO และ 20 ช่อง MIO ไม่มีไฟล์ Java ในตำแหน่ง suite, 6 ช่อง IPO มีไฟล์ผู้สมัครที่ยังไม่อยู่ใน verified manifest, และ 31 ช่อง AI มีไฟล์ที่ strict target matcher ยังไม่ยอมรับ. รายละเอียดรายบั๊กและ hash อยู่ใน `results/suite_gap_audit.csv`; ไฟล์ผู้สมัครยังไม่นับเป็น suite จนกว่าเจ้าของเทคนิคจะยืนยัน.
+
 ---
 
 ## เอกสารอ้างอิง (References)
-1. Just, R., Jalali, D., & Ernst, M. D. (2014). Defects4J: A database of existing faults to enable controlled testing studies for Java programs. In *Proceedings of the 2014 International Symposium on Software Testing and Analysis (ISSTA)* (pp. 437–440).
-2. Arcuri, A. (2018). Many independent objective (MIO) algorithm for test suite generation. In *Proceedings of the 2018 International Symposium on Search-Based Software Engineering (SSBSE)* (pp. 3–17). Springer.
-3. Fraser, G., & Arcuri, A. (2011). EvoSuite: Automatic test suite generation for object-oriented software. In *Proceedings of the 19th ACM SIGSOFT Symposium on the Foundations of Software Engineering (FSE)* (pp. 416–419).
-4. Lei, Y., & Tai, K. C. (1998). In-parameter-order: A test generation strategy for pairwise testing. In *Proceedings of the 3rd IEEE High-Assurance Systems Engineering Symposium (HASE)* (pp. 254–261).
-5. Forbes, M., Lawrence, J., Mirarab, S., & Tahir, C. (2008). Refining the in-parameter-order strategy for combinatorial testing. Technical Report, University of Texas at Arlington.
-6. Vargha, A., & Delaney, H. D. (2000). A critique and improvement of the CL common language effect size statistics of McGraw and Wong. *Journal of Educational and Behavioral Statistics*, 25(2), 101–132.
-7. Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger than the other. *The Annals of Mathematical Statistics*, 18(1), 50–60.
-8. DeepSeek-AI. (2024). DeepSeek LLM: Scaling open-source language models with long-termism. *arXiv preprint arXiv:2401.02954*.
-9. Google DeepMind. (2024). Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context. *arXiv preprint arXiv:2403.05530*.
+Arcuri, A. (2018). Test suite generation with the Many Independent Objective (MIO) algorithm. *Information and Software Technology, 104*, 195–206. https://doi.org/10.1016/j.infsof.2018.05.003
+
+Defects4J contributors. (n.d.). *Defects4J (Version 3.0.1-7-g8c16da82)* [Computer software]. GitHub. https://github.com/rjust/defects4j/tree/8c16da8230843cdc918eaf4ddb449637f02b83c6
+
+Fraser, G., & Arcuri, A. (2011). EvoSuite: Automatic test suite generation for object-oriented software. In *Proceedings of the 19th ACM SIGSOFT Symposium on the Foundations of Software Engineering* (pp. 416–419). https://doi.org/10.1145/2025113.2025179
+
+Just, R., Jalali, D., & Ernst, M. D. (2014). Defects4J: A database of existing faults to enable controlled testing studies for Java programs. In *Proceedings of the 2014 International Symposium on Software Testing and Analysis* (pp. 437–440). https://doi.org/10.1145/2610384.2628055
+
+Lei, Y., & Tai, K. C. (1998). In-parameter-order: A test generation strategy for pairwise testing. In *Proceedings of the 3rd IEEE High-Assurance Systems Engineering Symposium* (pp. 254–261). https://doi.org/10.1109/HASE.1998.731623

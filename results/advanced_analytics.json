@@ -15,68 +15,68 @@
     {
       "group_1": "Gemini 3.8 Flash",
       "group_2": "DeepSeek V4 Flash",
-      "n_1": 422,
-      "n_2": 191,
+      "n_pairs": 135,
+      "n_nonzero_pairs": 93,
       "status": "MEASURED",
-      "mann_whitney_u": 48993.0,
-      "p_value": 1.613417750378559e-05,
-      "a12_effect_size": 0.6078,
-      "a12_magnitude": "Small"
+      "wilcoxon_statistic": 371.5,
+      "p_value": 3.639175320110401e-12,
+      "paired_rank_biserial": 0.83,
+      "p_value_holm": 7.278350640220802e-12
     },
     {
       "group_1": "MIO (EvoSuite SBST)",
       "group_2": "Gemini 3.8 Flash",
-      "n_1": 797,
-      "n_2": 422,
+      "n_pairs": 397,
+      "n_nonzero_pairs": 336,
       "status": "MEASURED",
-      "mann_whitney_u": 90760.5,
-      "p_value": 4.233325905554087e-40,
-      "a12_effect_size": 0.2699,
-      "a12_magnitude": "Large"
+      "wilcoxon_statistic": 6852.5,
+      "p_value": 2.1706361975040088e-33,
+      "paired_rank_biserial": -0.7579,
+      "p_value_holm": 1.0853180987520044e-32
     },
     {
       "group_1": "MIO (EvoSuite SBST)",
       "group_2": "DeepSeek V4 Flash",
-      "n_1": 797,
-      "n_2": 191,
+      "n_pairs": 182,
+      "n_nonzero_pairs": 151,
       "status": "MEASURED",
-      "mann_whitney_u": 56101.0,
-      "p_value": 1.5776115714554465e-08,
-      "a12_effect_size": 0.3685,
-      "a12_magnitude": "Small"
+      "wilcoxon_statistic": 4433.5,
+      "p_value": 0.015377480094745748,
+      "paired_rank_biserial": -0.2273,
+      "p_value_holm": 0.015377480094745748
     },
     {
       "group_1": "MIO (EvoSuite SBST)",
       "group_2": "IPO (Native IPO)",
-      "n_1": 797,
-      "n_2": 252,
+      "n_pairs": 245,
+      "n_nonzero_pairs": 232,
       "status": "MEASURED",
-      "mann_whitney_u": 158811.0,
-      "p_value": 4.116038792208953e-44,
-      "a12_effect_size": 0.7907,
-      "a12_magnitude": "Large"
+      "wilcoxon_statistic": 93.0,
+      "p_value": 2.7299127560653994e-39,
+      "paired_rank_biserial": 0.9931,
+      "p_value_holm": 1.6379476536392395e-38
     },
     {
       "group_1": "Gemini 3.8 Flash",
       "group_2": "IPO (Native IPO)",
-      "n_1": 422,
-      "n_2": 252,
+      "n_pairs": 147,
+      "n_nonzero_pairs": 142,
       "status": "MEASURED",
-      "mann_whitney_u": 98707.5,
-      "p_value": 9.938314144037615e-78,
-      "a12_effect_size": 0.9282,
-      "a12_magnitude": "Large"
+      "wilcoxon_statistic": 0.0,
+      "p_value": 4.7438777030139965e-25,
+      "paired_rank_biserial": 1.0,
+      "p_value_holm": 1.8975510812055986e-24
     },
     {
       "group_1": "DeepSeek V4 Flash",
       "group_2": "IPO (Native IPO)",
-      "n_1": 191,
-      "n_2": 252,
+      "n_pairs": 69,
+      "n_nonzero_pairs": 66,
       "status": "MEASURED",
-      "mann_whitney_u": 42036.0,
-      "p_value": 2.3123465044832055e-41,
-      "a12_effect_size": 0.8733,
-      "a12_magnitude": "Large"
+      "wilcoxon_statistic": 0.0,
+      "p_value": 1.640948467627228e-12,
+      "paired_rank_biserial": 1.0,
+      "p_value_holm": 4.922845402881684e-12
     }
   ],
   "mio_generation_budget": {
@@ -141,14 +141,24 @@
       "gain_30_to_60": 3.003,
       "gain_60_to_120": 2.089
     },
-    "statistical_tests": {
+    "paired_tests": {
       "30s_vs_60s": {
-        "u": 488691.5,
-        "p_value": 0.021711614773444434
+        "status": "MEASURED",
+        "n_paired_target_classes": 1006,
+        "n_nonzero_pairs": 738,
+        "wilcoxon_statistic": 23502.5,
+        "p_value": 1.6927809777164419e-84,
+        "paired_rank_biserial": -0.8276,
+        "p_value_holm": 3.3855619554328837e-84
       },
       "60s_vs_120s": {
-        "u": 481796.5,
-        "p_value": 0.12015831744900884
+        "status": "MEASURED",
+        "n_paired_target_classes": 981,
+        "n_nonzero_pairs": 687,
+        "wilcoxon_statistic": 27805.0,
+        "p_value": 1.540581911877995e-67,
+        "paired_rank_biserial": -0.7647,
+        "p_value_holm": 1.540581911877995e-67
       }
     }
   },

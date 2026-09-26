@@ -14,9 +14,9 @@
 ### Empirical Benchmark & Test Coverage Evaluation Across 17 Projects (854 bugs)
 
 * **สมาชิกในกลุ่ม:**
-  1. นายปวริศช์ ประมวล (653380138-8) — Member 1: IPO Lead
-  2. นายแทนคุณ พันธ์นิกุล (653380292-8) — Member 2: MIO Lead
-  3. นายธนภูมิ จันทรา (653380295-2) — Member 3: AI Lead
+  1. นายปวริศช์ ประมวล (673380278-9) — Member 1: IPO Lead
+  2. นายแทนคุณ พันธ์นิกุล (673380301-0) — Member 2: MIO Lead
+  3. นายธนภูมิ จันทรา (673380272-1) — Member 3: AI Lead
   4. นายศิฆรินทร์ อุปจันทร์ (673380292-5) — Member 4: Infra & Data Analysis Lead
 
 > **🗣️ Speaker Note (ผู้บรรยาย):**  
@@ -45,10 +45,10 @@
 #### ครอบคลุมทุกคลาสเป้าหมายของทุกบั๊กใน Defects4J (All-Bugs & All-Classes)
 * **17 โครงการมาตรฐานระดับโลก:** Chart, Cli, Closure, Codec, Collections, Compress, Csv, Gson, JacksonCore, JacksonDatabind, JacksonXml, Jsoup, JxPath, Lang, Math, Mockito, Time
 * **สถิติสเกลการประเมินผล:**
-  - **854 Active Bugs** ใน Defects4J v2.0 ครอบคลุม 17 โปรเจกต์
+  - **854 Active Bugs** ใน Defects4J 3.0.1-7-g8c16da82 ครอบคลุม 17 โปรเจกต์
   - **3,416 แถว** ใน master matrix (854 bugs × 4 techniques)
   - **2,768 suite evaluations เสร็จ**, **648 `NO_SUITE`**, และ **0 `NOT_RUN`**
-* **ขอบเขตการวัดผล:** วัด Target-Class Coverage ด้วย Cobertura เจาะจงเฉพาะ `classes.modified` เพื่อความเป็นธรรมของ Defect-Targeted Testing
+* **ขอบเขตการวัดผล:** ใช้ aggregate coverage summary ของทุกคลาสใน `classes.modified`; รวม covered/total ก่อนคิดเปอร์เซ็นต์
 
 ---
 
@@ -78,6 +78,7 @@
 #### แหล่งข้อมูล generation budget แยกจาก benchmark evaluation
 - ใช้ MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv เป็น source ของสถิติ budget, seed และเวลา generation
 - สร้างตารางทดสอบและกราฟใหม่ด้วย advanced_data_analytics.py
+- Wilcoxon signed-rank บน class ที่จับคู่กัน: 30→60 วินาที n=1,006, p หลัง Holm=3.39×10⁻⁸⁴; 60→120 วินาที n=981, p หลัง Holm=1.54×10⁻⁶⁷
 - ผล budget นี้อธิบายการสร้าง suite ไม่ใช่จำนวนบั๊กที่ตรวจพบหรือ coverage จากการประเมินกลาง
 - ดูผลที่สร้างล่าสุดใน results/advanced_analytics.json และ results/figure5_budget_scaling.png
 
@@ -98,7 +99,8 @@
 <!-- slide -->
 ### 📌 Slide 8: สถาปัตยกรรมระบบทดสอบกลาง Docker (Member 4)
 #### Universal Benchmark Pipeline & Dockerized Defects4J Environment
-* **Docker Container (`defects4j_sqa`):** ติดตั้ง Defects4J v2.0 บน Ubuntu 22.04 + OpenJDK 1.8.0
+* **Docker Container (`defects4j_sqa`):** Defects4J 3.0.1-7-g8c16da82; Java 11 เป็นค่าเริ่มต้น และติดตั้ง Java 8 สำหรับขั้นตอน MIO ที่กำหนด
+* **การ build:** Dockerfile สร้างจาก Ubuntu 20.04 และตรึง commit ของ Defects4J/PICT ไว้ใน repository; build ครั้งแรกดาวน์โหลด catalog ของ Defects4J และใช้พื้นที่กับเวลามาก
 * **กลไกการวัดผล:**
   - Automated Cobertura Coverage Instrumenter
   - Auto-discovery Test Loader (รองรับทั้ง Single-Class และ Multi-Class Folders)
@@ -139,12 +141,21 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 ---
 
 <!-- slide -->
-### 📌 Slide 11: การทดสอบสมมติฐานทางสถิติ
-- ตารางทดสอบและขนาดผล A12 สร้างจาก coverage ที่วัดได้ใน results/advanced_analytics.json
-- กรณีจำนวนตัวอย่างไม่พอจะแสดง INSUFFICIENT_SAMPLE
-- ผล line coverage ต่างกันอย่างมีนัยสำคัญในคู่ที่ทดสอบทั้งหมด (Mann–Whitney U, p < 0.001)
-- Gemini เทียบกับ IPO: n=422/252, p=9.94×10⁻⁷⁸, A12=0.928; Gemini เทียบ DeepSeek: n=422/191, p=1.61×10⁻⁵, A12=0.608
-- A12 แสดงขนาดและทิศทางของความต่างร่วมกับ p-value; สถิตินี้ไม่ได้แทนความสำคัญเชิงปฏิบัติ
+### 📌 Slide 11: เปรียบเทียบ coverage แบบจับคู่
+- เปรียบเทียบ line coverage เฉพาะ project–bug ที่ทั้งสองเทคนิคมีค่าที่วัดได้
+- ใช้ Wilcoxon signed-rank และปรับ p-value ด้วย Holm สำหรับหกคู่
+- ผล matched N, p-value หลัง Holm และ paired rank-biserial:
+
+| คู่เปรียบเทียบ | Matched N | p หลัง Holm | Rank-biserial |
+|---|---:|---:|---:|
+| Gemini – DeepSeek | 135 | 7.28×10⁻¹² | 0.830 |
+| MIO – Gemini | 397 | 1.09×10⁻³² | -0.758 |
+| MIO – DeepSeek | 182 | 0.0154 | -0.227 |
+| MIO – IPO | 245 | 1.64×10⁻³⁸ | 0.993 |
+| Gemini – IPO | 147 | 1.90×10⁻²⁴ | 1.000 |
+| DeepSeek – IPO | 69 | 4.92×10⁻¹² | 1.000 |
+- การเปรียบเทียบเป็น exploratory เพราะแต่ละเทคนิคมี suite ที่ compile และวัด coverage ได้ไม่เท่ากัน
+- ค่า rank-biserial บวกหมายถึงเทคนิคทางซ้ายมี line coverage สูงกว่า; รายละเอียดเต็มอยู่ใน `results/advanced_analytics.json`
 
 ---
 
@@ -172,6 +183,7 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 ### 📌 Slide 14: Single-Class และ Multi-Class
 - ใช้การแบ่งกลุ่มจาก target classes ใน all_bugs_catalog.json
 - ค่า coverage ใช้แถว DONE ที่มีค่าการวัดจริงเท่านั้น
+- ตารางนี้เป็นการแยกกลุ่มเพิ่มเติม; ตารางหลักรวม single-class และ multi-class bugs แล้ว
 - FDR แสดงจำนวน attempted และตัวหารของแต่ละกลุ่มแยกกัน
 - Gemini single-class: line coverage 87.01% (n=402), FDR 14.83% (106/715); multi-class: 70.61% (n=20), FDR 0.79% (1/126)
 - ผลแยกทุกเทคนิคอยู่ใน `single_vs_multiclass` ภายใน results/advanced_analytics.json

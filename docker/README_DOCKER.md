@@ -1,18 +1,18 @@
 # คู่มือการใช้งาน Docker Environment & Universal Runner สำหรับ Defects4J
 
-คู่มือฉบับนี้จัดทำโดย **Member 4 (Infrastructure & Data Analysis Lead)** เพื่อให้สมาชิกทุกคน (Member 1, 2, 3) ใช้งานสภาพแวดล้อมมาตรฐานเดียวกันได้อย่างราบรื่น 100% โดยไม่ต้องกังวลเรื่อง OS Compatibility หรือปัญหา Dependencies
+คู่มือนี้บันทึกสภาพแวดล้อม Docker ที่ใช้ประเมินผลและข้อกำหนดก่อนเปิด container เพื่อให้สมาชิกตรวจสอบรุ่นเครื่องมือกับ snapshot ผลได้ตรงกัน
 
 ---
 
 ## 🛠️ สภาพแวดล้อมที่จัดเตรียมไว้ใน Container
 
-1. **Multi-JDK Environment:**
-   * ติดตั้งทั้ง **OpenJDK 8** (เป็น Default สำหรับโปรเจกต์ดั้งเดิมของ Defects4J) และ **OpenJDK 11** (สำหรับโปรเจกต์ที่ต้องการ Java รุ่นใหม่)
-   * สามารถสลับเวอร์ชันได้ง่ายดายในคอนเทนเนอร์
-2. **Defects4J Framework:** ติดตั้งและตั้งค่า Environment Variable ไว้อย่างสมบูรณ์ พร้อมคำสั่ง `defects4j pids`, `bids`, `checkout`, `compile`, `test`, `coverage`, `export`
+1. **Multi-JDK Environment:** ติดตั้ง OpenJDK 8 และ 11; `JAVA_HOME` เริ่มที่ JDK 11 สำหรับ Defects4J CLI ส่วน MIO generation บางขั้นตอนกำหนด JDK 8
+2. **Defects4J Framework:** Dockerfile checkout commit `8c16da8230843cdc918eaf4ddb449637f02b83c6` (`3.0.1-7-g8c16da82`); Defects4J 3.x ใช้ Java 11
 3. **Microsoft PICT Tool:** คอมไพล์และติดตั้งไว้ที่ `/usr/local/bin/pict` (พร้อมให้ Member 1 รันได้ทันที)
 4. **EvoSuite Framework (Version 1.0.6):** จัดเตรียมไฟล์ `evosuite-1.0.6.jar` และ `evosuite-standalone-runtime-1.0.6.jar` ไว้ที่ `/opt/evosuite/` (พร้อมให้ Member 2 รัน MIO)
-5. **Python 3 & Dependencies:** ติดตั้ง `requests` และไลบรารีสำหรับการประมวลผลข้อมูลอัตโนมัติ
+5. **Python 3:** container มี `requests` และ `tabulate` สำหรับ runner บางส่วน; analytics บน host ใช้ dependencies จาก `requirements-member4.txt`
+
+Dockerfile เริ่มจาก Ubuntu 20.04 และติดตั้ง dependencies, Defects4J commit ที่ตรึงไว้, PICT commit ที่ตรึงไว้ และ EvoSuite 1.0.6 พร้อมตรวจ SHA-256 ของ JAR. การ build ครั้งแรกดาวน์โหลดและ initialize project repositories ของ Defects4J จึงใช้พื้นที่และเวลามาก; ครั้งต่อไป Docker ใช้ build cache.
 
 ---
 
@@ -22,7 +22,7 @@
 เปิด Terminal / PowerShell ในโฟลเดอร์หลักของโปรเจกต์ (`ProjectSQA/`):
 
 ```bash
-docker-compose -f docker/docker-compose.yml up -d --build
+docker compose -f docker/docker-compose.yml up -d --build
 ```
 
 ### 2. เข้าสู่ Terminal ของ Container
@@ -32,16 +32,22 @@ docker exec -it defects4j_sqa bash
 
 ### 3. ตรวจสอบความพร้อมของระบบ (Sanity Check)
 ```bash
-# ตรวจสอบ Defects4J
-defects4j sanity-check
+# ตรวจว่ารายชื่อโปรเจกต์และบั๊กอ่านได้
+defects4j pids
+defects4j bids -p Lang | head
 
-# ตรวจสอบเวอร์ชัน Java (ต้องเป็น Java 8 เป็นค่าเริ่มต้น)
+# ตรวจสอบเวอร์ชัน Java (ค่าเริ่มต้นเป็น Java 11)
 java -version
+
+# ตรวจสอบ Defects4J ที่ติดตั้ง
+git -C /opt/defects4j rev-parse HEAD
 
 # ตรวจสอบคำสั่ง PICT ของ Member 1
 pict
 
 # ตรวจสอบ EvoSuite ของ Member 2
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH="$JAVA_HOME/bin:$PATH"
 java -jar /opt/evosuite/evosuite-1.0.6.jar --help
 ```
 
