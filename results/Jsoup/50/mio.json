@@ -1,6 +1,6 @@
 {
   "status": "DONE",
-  "fault_detected": "NOT_DETECTED",
+  "fault_detected": "FLAKY_OR_REGRESSION",
   "failures_count": 0,
   "line_cov": 67.78,
   "branch_cov": 54.0,

@@ -728,14 +728,18 @@ def evaluate_technique_on_bug(
     if fail_b_count > 0 and fail_f_count == 0:
         fault_detected = "BUG_DETECTED"
         failures_count = fail_b_count
-    elif fail_b_count > 0 and fail_f_count > 0:
+    elif fail_f_count > 0:
         fault_detected = "FLAKY_OR_REGRESSION"
         failures_count = fail_b_count
     else:
         fault_detected = "NOT_DETECTED"
         failures_count = 0
         
-    print(f"[{state_key}] [RESULT] Status: DONE | Line Cov: {line_cov}% | Branch Cov: {branch_cov}% | Fault: {fault_detected} ({failures_count} Failures)")
+    print(
+        f"[{state_key}] [RESULT] Status: DONE | Line Cov: {line_cov}% | "
+        f"Branch Cov: {branch_cov}% | Fault: {fault_detected} | "
+        f"Buggy failures: {fail_b_count}; fixed failures: {fail_f_count}"
+    )
     
     res_dict = {
         "status": "DONE",

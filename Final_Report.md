@@ -44,12 +44,10 @@ Coverage รวมทุก modified target class จาก aggregate summary �
 
 ### 1.1 ที่มาและความสำคัญของปัญหา (Problem Statement)
 การทดสอบซอฟต์แวร์ช่วยตรวจสอบพฤติกรรมของโปรแกรมและลดความเสี่ยงจากการเปลี่ยนแปลงโค้ด อย่างไรก็ตาม การสร้างชุดทดสอบที่ครอบคลุมกรณีใช้งานและตรวจจับข้อบกพร่องยังต้องอาศัยการออกแบบและตรวจสอบอย่างระมัดระวัง งานนี้ศึกษาวิธีสร้างชุดทดสอบสามแนวทาง ได้แก่:
-1. **Combinatorial Interaction Testing (CIT):** การใช้ขั้นตอนวิธีทางคณิตศาสตร์ผสมผสาน เช่น **In-Parameter-Order (IPO/IPOG)** เพื่อสร้างชุดทดสอบที่ครอบคลุมทุกคู่ความสัมพันธ์ของตัวแปรนำเข้า (Pairwise / $t$-way Interactions) โดยมีขนาดของชุดทดสอบที่เล็กที่สุด
+1. **Combinatorial Interaction Testing (CIT):** การใช้ขั้นตอนวิธี เช่น **In-Parameter-Order (IPO/IPOG)** เพื่อสร้างชุดทดสอบที่ครอบคลุมทุกคู่ความสัมพันธ์ของตัวแปรนำเข้า (pairwise interactions) โดยควบคุมจำนวนกรณีทดสอบเมื่อเทียบกับการไล่ทุกชุดค่าที่เป็นไปได้ แต่ไม่รับประกันว่าจะได้ชุดทดสอบขนาดต่ำสุดเสมอ
 2. **Search-Based Software Testing (SBST):** การค้นหาชุดทดสอบโดยใช้เกณฑ์ fitness และงบประมาณการค้นหา เช่น **Many-Independent-Objective (MIO)** ที่ประเมินในงานนี้ผ่าน EvoSuite
 
-อย่างไรก็ตาม ตั้งแต่ปี ค.ศ. 2023 เป็นต้นมา **โมเดลภาษาขนาดใหญ่ (Large Language Models: LLMs)** ได้ก้าวเข้ามามีบทบาทอย่างก้าวกระโดดในการเข้าใจความหมายเชิงตรรกะของโปรแกรม (Code Semantics) และสามารถสังเคราะห์ชุดทดสอบระดับหน่วย (Unit Test Suites) พร้อมข้อกำหนดการตรวจสอบ (Assertions) ที่เข้าใจบริบททางธุรกิจของโปรแกรมได้
-
-ปัญหาสำคัญในปัจจุบันคือ: **"การใช้ LLM ชั้นนำ (DeepSeek V4 Flash และ Gemini 3.8 Flash) มีประสิทธิภาพและคุณภาพเหนือกว่าอัลกอริทึมแบบดั้งเดิม (IPO และ MIO) จริงหรือไม่ ทั้งในแง่ของความครอบคลุมรหัสคำสั่ง (Coverage), อัตราการตรวจจับข้อบกพร่องจริง (Fault Detection Rate), และความคุ้มค่าเชิงทรัพยากร (Computational & Token Economics)?"** งานวิจัยนี้จึงถูกจัดทำขึ้นเพื่อตอบคำถามดังกล่าวอย่างเป็นรูปธรรมบนคลังข้อมูลมาตรฐานสากล Defects4J (Just et al., 2014)
+งานนี้จึงเปรียบเทียบ Native IPO, MIO ใน EvoSuite และเครื่องมือ Generative AI สองรายการภายใต้ขอบเขตคลาสเป้าหมาย ตัวรัน และเกณฑ์วัดเดียวกัน เพื่อศึกษาความแตกต่างด้าน coverage, fault detection, ความสามารถในการคอมไพล์ และต้นทุน generation โดยสรุปผลตาม suite ที่มีหลักฐานจริงบน Defects4J (Just et al., 2014)
 
 ---
 
@@ -173,12 +171,12 @@ graph TD
     CompileB -->|Pass| RunB[Run Test on 'b']
     CompileB -->|Fail| CE[COMPILE_ERROR]
     
-    RunB -->|Fail| CompileF[Compile & Run on Fixed Code 'f']
-    RunB -->|Pass| ND[NOT_DETECTED]
+    RunB --> CompileF[Compile & Run on Fixed Code 'f']
     RunB -->|Timeout >4s| TO[TIMEOUT]
     
-    CompileF -->|Pass 100%| BD[BUG_DETECTED]
-    CompileF -->|Fail on 'f' too| FR[FLAKY_OR_REGRESSION]
+    CompileF -->|Pass; buggy failed| BD[BUG_DETECTED]
+    CompileF -->|Pass; buggy passed| ND[NOT_DETECTED]
+    CompileF -->|Any failure on fixed| FR[FLAKY_OR_REGRESSION]
     
     Evaluator --> Cov[Cobertura Coverage Engine]
     Cov --> MasterCSV[results/master_benchmark_summary.csv]
@@ -201,7 +199,7 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evalu
 #### ก. นิยาม 5 สถานะการตรวจจับข้อบกพร่อง (Bug-Level Classification)
 1. **`BUG_DETECTED` (ตรวจพบข้อบกพร่องจริง):** ชุดทดสอบเกิด Failure อย่างน้อย 1 Method บนเวอร์ชันที่มีบั๊ก (`b`) ตรงตามพฤติกรรมข้อบกพร่อง และ **ต้องผ่านการทดสอบ 100% (Pass) บนเวอร์ชันที่แก้บั๊กแล้ว (`f`)** ถือว่าระบุข้อบกพร่องได้แม่นยำ ปราศจาก False Positive ($D=1$)
 2. **`NOT_DETECTED` (ไม่พบข้อบกพร่อง):** ชุดทดสอบผ่าน 100% ทั้งบนเวอร์ชัน `b` และ `f` (ชุดทดสอบไม่สามารถเข้าถึงหรือกระตุ้นตรรกะที่ผิดพลาดได้)
-3. **`FLAKY_OR_REGRESSION` (ชุดทดสอบมีข้อผิดพลาด):** ชุดทดสอบเกิด Failure บนเวอร์ชัน `b` และยังคง Failure บนเวอร์ชัน `f` (เกิดจากการเขียน Assertion ขัดแย้งกับสเปกจริงของระบบ)
+3. **`FLAKY_OR_REGRESSION` (ผลไม่จำเพาะต่อบั๊กหรือมี regression):** ชุดทดสอบมี Failure บนเวอร์ชัน `f` ไม่ว่าจะเกิด Failure บน `b` ด้วยหรือไม่ จึงไม่ถือเป็นการตรวจพบบั๊กเป้าหมายที่ยืนยันได้
 4. **`COMPILE_ERROR` (คอมไพล์ไม่ผ่าน):** ซอร์สโค้ดของชุดทดสอบมีข้อผิดพลาดเชิงไวยากรณ์ หรือเรียกใช้ Class/Method ที่ไม่มีอยู่จริง
 5. **`TIMEOUT` (ทำงานเกินเวลา):** ชุดทดสอบใช้เวลาทำงานเกิน 4 วินาทีใน Method ใด Method หนึ่ง
 

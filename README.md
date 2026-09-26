@@ -154,13 +154,14 @@ python3 scripts/run_member3_delivery.py
 | [บัญชี suite](results/suite_inventory.csv) | suite ที่พบและ hash สำหรับตรวจสอบย้อนกลับ |
 | [บัญชีตรวจช่อง NO_SUITE](results/suite_gap_audit.csv) | แยกไฟล์ที่ไม่มี Java candidate ออกจาก candidate ที่ยังไม่ผ่านการตรวจรับ |
 
-snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,797 คู่ และมี 619 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ใน 29 คีย์จาก Member 3 มี 26 `COMPILE_ERROR` และ 3 `DONE` ที่ยัง fail บน fixed จึงไม่เพิ่ม `BUG_DETECTED`. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
+snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,797 คู่ และมี 619 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ผลที่รันจบมี 160 `BUG_DETECTED`, 711 `NOT_DETECTED` และ 794 `FLAKY_OR_REGRESSION`; สถานะหลังถูกใช้เมื่อ fixed version มี failure แม้ buggy version จะผ่าน. ใน 29 คีย์จาก Member 3 มี 26 `COMPILE_ERROR` และ 3 `DONE` ที่ยัง fail บน fixed จึงไม่เพิ่ม `BUG_DETECTED`. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
 
 หลัง runner จบหรือหยุดคิว ให้สร้าง snapshot และเอกสารผลใหม่ด้วยคำสั่งบน Windows host:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-member4.txt
+.\.venv\Scripts\python.exe scripts/reclassify_fault_detection.py --apply
 .\.venv\Scripts\python.exe scripts/consolidate_master_results.py
 .\.venv\Scripts\python.exe scripts/audit_suite_gaps.py
 .\.venv\Scripts\python.exe scripts/advanced_data_analytics.py

@@ -107,6 +107,10 @@ class BenchmarkRunnerTests(unittest.TestCase):
         self.case.update(failures_buggy=1, failures_fixed=1)
         self.assertEqual(self.evaluate()["fault_detected"], "FLAKY_OR_REGRESSION")
 
+    def test_fixed_only_failure_is_regression_not_not_detected(self):
+        self.case.update(failures_buggy=0, failures_fixed=1)
+        self.assertEqual(self.evaluate()["fault_detected"], "FLAKY_OR_REGRESSION")
+
     def test_compile_error_has_no_measured_coverage(self):
         self.case["compile_error"] = True
         result = self.evaluate()

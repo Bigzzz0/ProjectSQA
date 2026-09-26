@@ -58,8 +58,8 @@
       },
       "status_distribution": {
         "COMPILE_ERROR": 37,
-        "FLAKY_OR_REGRESSION": 176,
-        "NOT_DETECTED": 616,
+        "FLAKY_OR_REGRESSION": 291,
+        "NOT_DETECTED": 501,
         "BUG_DETECTED": 5
       },
       "suite_inventory_distribution": {
@@ -87,8 +87,8 @@
       },
       "status_distribution": {
         "COMPILE_ERROR": 661,
-        "FLAKY_OR_REGRESSION": 175,
-        "NOT_DETECTED": 6,
+        "FLAKY_OR_REGRESSION": 177,
+        "NOT_DETECTED": 4,
         "BUG_DETECTED": 11
       },
       "suite_inventory_distribution": {
@@ -117,8 +117,8 @@
       "status_distribution": {
         "COMPILE_ERROR": 429,
         "BUG_DETECTED": 107,
-        "FLAKY_OR_REGRESSION": 306,
-        "NOT_DETECTED": 11
+        "FLAKY_OR_REGRESSION": 308,
+        "NOT_DETECTED": 9
       },
       "suite_inventory_distribution": {
         "COMPILE_ERROR": 429,

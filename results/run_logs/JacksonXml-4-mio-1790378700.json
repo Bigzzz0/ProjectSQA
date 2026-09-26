@@ -9,7 +9,7 @@
   "timestamp": "2026-09-26 06:25:19",
   "evaluation_duration_sec": 19.209,
   "execution_status": "DONE",
-  "fault_detection_status": "NOT_DETECTED",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
   "line_coverage_percent": 52.1,
   "branch_coverage_percent": 43.1,
   "failures_count": 0,
