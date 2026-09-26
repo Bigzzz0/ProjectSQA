@@ -1,0 +1,55 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Closure --bug 22 --techniques deepseek --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: DeepSeek V4 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Closure-22-deepseek] Starting evaluation...
+[Closure-22-deepseek] Target modified classes: ['com.google.javascript.jscomp.CheckSideEffects']
+[Closure-22-deepseek] Checking out Closure-22b...
+[Closure-22-deepseek] Packaging test files: ['CheckSideEffectsDeepseekTest.java']
+[Closure-22-deepseek] Measuring code coverage via defects4j coverage -s...
+[Closure-22-deepseek] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Closure-22-deepseek-1790430981
+Suite_SHA256: e3ab185287449d651f819e3c652e2af823ca1a0fa9202770670b5c66bd193812
+Error_Detail:
+osure_22b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_22b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_22b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_22b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_22b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_22b/.test_suite/com/google/javascript/jscomp/CheckSideEffectsDeepseekTest.java:32: error: cannot find symbol
+    [javac]     options.setCheckSideEffects(CheckLevel.WARNING);
+    [javac]            ^
+    [javac]   symbol:   method setCheckSideEffects(CheckLevel)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

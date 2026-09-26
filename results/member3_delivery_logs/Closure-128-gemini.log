@@ -1,0 +1,54 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Closure --bug 128 --techniques gemini --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: Gemini 3.8 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Closure-128-gemini] Starting evaluation...
+[Closure-128-gemini] Target modified classes: ['com.google.javascript.jscomp.CodeGenerator']
+[Closure-128-gemini] Checking out Closure-128b...
+[Closure-128-gemini] Packaging test files: ['CodeGeneratorGeminiTest.java']
+[Closure-128-gemini] Measuring code coverage via defects4j coverage -s...
+[Closure-128-gemini] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Closure-128-gemini-1790431171
+Suite_SHA256: 9651f7cfa19d70bce5c82f2f32bd5a2b4aa286d7336633dd1da3750a4e765f54
+Error_Detail:
+p/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_128b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_128b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_128b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_128b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_128b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:569: error: incompatible types: Charset cannot be converted to String
+    [javac]     asciiOptions.setOutputCharset(Charsets.US_ASCII);
+    [javac]                                           ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

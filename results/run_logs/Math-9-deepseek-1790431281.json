@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 9,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-9-deepseek-1790431281",
+  "suite_sha256": "a8895a830841715aaa1a6c81b789de6e7750eec3881dd36317691e21b8444c19",
+  "test_files": "LineDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+  "timestamp": "2026-09-26 21:01:31",
+  "evaluation_duration_sec": 9.762,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "escriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/nonlinear/vector/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/univariate/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_9b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_9b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_9b/.test_suite/org/apache/commons/math3/geometry/euclidean/threed/LineDeepseekTest.java:75: error: cannot find symbol\n    [javac]         Vector1D sub = line.toSubSpace(point);\n    [javac]         ^\n    [javac]   symbol:   class Vector1D\n    [javac]   location: class LineDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

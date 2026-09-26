@@ -3547,7 +3547,34 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,17,IPO (Native IPO),com.google.javascript.jscomp.TypedScopeCreator,,,,NO_SUITE,0,NO_SUITE,2026-09-25 23:52:42,,Closure-17-ipo-1790355162,0.001,No matching test suite was available
 Closure,17,MIO (EvoSuite SBST),com.google.javascript.jscomp.TypedScopeCreator,TypedScopeCreator_ESTest.java,24.77,9.61,NOT_DETECTED,0,DONE,2026-09-25 23:53:23,f4cab09ef52a05ba4a4fc05d842a89b2a0d0179664264e83548cbbeb2fa61094,Closure-17-mio-1790355162,40.406,
-Closure,18,DeepSeek V4 Flash,com.google.javascript.jscomp.Compiler,,,,NO_SUITE,0,NO_SUITE,2026-09-25 23:55:03,,Closure-18-deepseek-1790355303,0.016,No matching test suite was available
+Closure,18,DeepSeek V4 Flash,com.google.javascript.jscomp.Compiler,CompilerDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:55:11,81e72d22e9e133f2333bc4500cc4bb69025dbb708617bacd2d4343c7801d8c4a,Closure-18-deepseek-1790430900,11.367,"/d4j_eval/Closure_18b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_18b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_18b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_18b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_18b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_18b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_18b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_18b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_18b/.test_suite/com/google/javascript/jscomp/CompilerDeepseekTest.java:24: error: diamond operator is not supported in -source 6
+    [javac]     List<SourceFile> inputs = new ArrayList<>();
+    [javac]                                             ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,18,Gemini 3.8 Flash,com.google.javascript.jscomp.Compiler,CompilerGeminiTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-25 23:55:14,d2f911486b537b16822c761b1f91804b31dfe353d2a7c0463cd549b837c8e96a,Closure-18-gemini-1790355304,10.249,"classes/rhino_ast/java/com/google/javascript/rhino
      [copy] Copying 1 file to /tmp/d4j_eval/Closure_18b/build/classes/com/google/javascript/jscomp/parsing
 [propertyfile] Updating property file: /tmp/d4j_eval/Closure_18b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
@@ -3701,7 +3728,35 @@ Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195
 Closure,21,Gemini 3.8 Flash,com.google.javascript.jscomp.CheckSideEffects,CheckSideEffectsGeminiTest.java,81.48,86.67,FLAKY_OR_REGRESSION,5,DONE,2026-09-25 23:59:05,edc812756cd7c8f997e4ba6c6c3dda92a4b39f9a39e0cd5ce9a2299ffa1a4870,Closure-21-gemini-1790355510,34.913,
 Closure,21,IPO (Native IPO),com.google.javascript.jscomp.CheckSideEffects,,,,NO_SUITE,0,NO_SUITE,2026-09-25 23:57:39,,Closure-21-ipo-1790355459,0.001,No matching test suite was available
 Closure,21,MIO (EvoSuite SBST),com.google.javascript.jscomp.CheckSideEffects,CheckSideEffects_ESTest.java,67.9,53.33,NOT_DETECTED,0,DONE,2026-09-25 23:58:19,d08cdc22a0dd2ee7336c1b3a1475ea5b36692798993381f66434366d9ca1e47f,Closure-21-mio-1790355459,40.226,
-Closure,22,DeepSeek V4 Flash,com.google.javascript.jscomp.CheckSideEffects,,,,NO_SUITE,0,NO_SUITE,2026-09-25 23:59:44,,Closure-22-deepseek-1790355584,0.018,No matching test suite was available
+Closure,22,DeepSeek V4 Flash,com.google.javascript.jscomp.CheckSideEffects,CheckSideEffectsDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:56:31,e3ab185287449d651f819e3c652e2af823ca1a0fa9202770670b5c66bd193812,Closure-22-deepseek-1790430981,10.428,"osure_22b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_22b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_22b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_22b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_22b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_22b/.test_suite/com/google/javascript/jscomp/CheckSideEffectsDeepseekTest.java:32: error: cannot find symbol
+    [javac]     options.setCheckSideEffects(CheckLevel.WARNING);
+    [javac]            ^
+    [javac]   symbol:   method setCheckSideEffects(CheckLevel)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,22,Gemini 3.8 Flash,com.google.javascript.jscomp.CheckSideEffects,CheckSideEffectsGeminiTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-25 23:59:55,de31a7ee565e2294aa01b6f4ed563cedde1df0988d9252d15fd7bb4d7640fe81,Closure-22-gemini-1790355585,10.254,"va/com/google/javascript/rhino
      [copy] Copying 1 file to /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/parsing
 [propertyfile] Updating property file: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
@@ -4014,7 +4069,35 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,30,IPO (Native IPO),com.google.javascript.jscomp.FlowSensitiveInlineVariables;com.google.javascript.jscomp.MustBeReachingVariableDef,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:10:24,,Closure-30-ipo-1790356224,0.003,No matching test suite was available
 Closure,30,MIO (EvoSuite SBST),com.google.javascript.jscomp.FlowSensitiveInlineVariables;com.google.javascript.jscomp.MustBeReachingVariableDef,FlowSensitiveInlineVariables_ESTest.java;MustBeReachingVariableDef_ESTest.java,0.0,0.0,FLAKY_OR_REGRESSION,4,DONE,2026-09-26 00:11:06,f1717abc83135d0ba8433981328428a443d4fdd8814c2ca86def1d8c7fe11b9f,Closure-30-mio-1790356224,42.685,
-Closure,31,DeepSeek V4 Flash,com.google.javascript.jscomp.Compiler,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:12:53,,Closure-31-deepseek-1790356373,0.02,No matching test suite was available
+Closure,31,DeepSeek V4 Flash,com.google.javascript.jscomp.Compiler,CompilerDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:56:43,344a434dc14dbd9782186a4e11e55914c6c987df484b5591e49a30d2ce00654c,Closure-31-deepseek-1790430992,10.416,"osure_31b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_31b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_31b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_31b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_31b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_31b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_31b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_31b/.test_suite/com/google/javascript/jscomp/CompilerDeepseekTest.java:15: error: cannot find symbol
+    [javac]     options.setDependencyMode(CompilerOptions.DependencyMode.SORT_ONLY);
+    [javac]                                              ^
+    [javac]   symbol:   variable DependencyMode
+    [javac]   location: class CompilerOptions
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,31,Gemini 3.8 Flash,com.google.javascript.jscomp.Compiler,CompilerGeminiTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 00:13:03,c0b2d75b53d7795e930cb7aa5d4e217d9d16ca5362460c866a7de37692f6f18c,Closure-31-gemini-1790356373,10.467,"javascript/jscomp/parsing
 [propertyfile] Updating property file: /tmp/d4j_eval/Closure_31b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
     [mkdir] Created dir: /tmp/d4j_eval/Closure_31b/build/classes/com/google/javascript/jscomp/js
@@ -4109,8 +4192,64 @@ Closure,33,DeepSeek V4 Flash,com.google.javascript.rhino.jstype.PrototypeObjectT
 Closure,33,Gemini 3.8 Flash,com.google.javascript.rhino.jstype.PrototypeObjectType,PrototypeObjectTypeGeminiTest.java,79.17,75.0,FLAKY_OR_REGRESSION,5,DONE,2026-09-26 00:16:00,da3589805791088ba8e0f04b82bd2827b64093cbb7ae7ccde94feb6215d45bac,Closure-33-gemini-1790356525,35.305,
 Closure,33,IPO (Native IPO),com.google.javascript.rhino.jstype.PrototypeObjectType,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:14:09,,Closure-33-ipo-1790356449,0.002,No matching test suite was available
 Closure,33,MIO (EvoSuite SBST),com.google.javascript.rhino.jstype.PrototypeObjectType,PrototypeObjectType_ESTest.java,91.67,87.78,NOT_DETECTED,0,DONE,2026-09-26 00:14:49,60b0405c2ea995a17a53a9301b8949f4fa42753da0141643e3bea0d975907914,Closure-33-mio-1790356449,39.469,
-Closure,34,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:16:43,,Closure-34-deepseek-1790356603,0.021,No matching test suite was available
-Closure,34,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:16:43,,Closure-34-gemini-1790356603,0.014,No matching test suite was available
+Closure,34,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter,CodeGeneratorDeepseekTest.java;CodePrinterDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:56:54,471ebe7300fc8977e9273e719188e8547f3bafddafa9dbcb4c08148df617f81f,Closure-34-deepseek-1790431003,10.265,"gle/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_34b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_34b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_34b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_34b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_34b/.test_suite/com/google/javascript/jscomp/CodeGeneratorDeepseekTest.java:29: error: no suitable constructor found for Node(int,String)
+    [javac]     return new Node(Token.NAME, s);
+    [javac]            ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,34,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter,CodeGeneratorGeminiTest.java;CodePrinterGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:57:05,a4a1bc5d844559975750dadc7303197f4468219f30d06d702421ed9ecb2f0d21,Closure-34-gemini-1790431014,10.262,"4b/build/classes/rhino_ast/java/com/google/javascript/rhino
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_34b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_34b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_34b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_34b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_34b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:602: error: illegal unicode escape
+    [javac]     // Non-latin character escapes to \uXXXX
+    [javac]                                         ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,34,IPO (Native IPO),com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:16:00,,Closure-34-ipo-1790356560,0.01,No matching test suite was available
 Closure,34,MIO (EvoSuite SBST),com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter,CodeGenerator_ESTest.java;CodePrinter_ESTest.java,31.29,22.78,NOT_DETECTED,0,DONE,2026-09-26 00:16:42,1e3175cb9d17cfd8c70a1921309e5839fade5cea8a2537103675910bb7b82447,Closure-34-mio-1790356560,42.028,
 Closure,35,DeepSeek V4 Flash,com.google.javascript.jscomp.TypeInference,TypeInferenceDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 00:17:34,d0ff78f856b1bfca595c85348dff4d5b82743278fe6fbf844cb491f25c21680a,Closure-35-deepseek-1790356644,10.288,"py] Copying 1 file to /tmp/d4j_eval/Closure_35b/build/classes/com/google/javascript/jscomp/parsing
@@ -4358,7 +4497,34 @@ Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195
 Closure,40,Gemini 3.8 Flash,com.google.javascript.jscomp.NameAnalyzer,NameAnalyzerGeminiTest.java,86.66,77.06,FLAKY_OR_REGRESSION,28,DONE,2026-09-26 00:24:24,c6f44642d305fd2e45fb905f7b0c83f5f8bf92c4319a267f925cd3064707a774,Closure-40-gemini-1790357029,34.825,
 Closure,40,IPO (Native IPO),com.google.javascript.jscomp.NameAnalyzer,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:22:59,,Closure-40-ipo-1790356979,0.001,No matching test suite was available
 Closure,40,MIO (EvoSuite SBST),com.google.javascript.jscomp.NameAnalyzer,NameAnalyzer_ESTest.java,33.01,25.69,NOT_DETECTED,0,DONE,2026-09-26 00:23:39,0652d9126c2b8564c158552cf4178b0f93c4149d6f9397352888c61ad496ec57,Closure-40-mio-1790356979,39.833,
-Closure,41,DeepSeek V4 Flash,com.google.javascript.jscomp.FunctionTypeBuilder,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:25:04,,Closure-41-deepseek-1790357104,0.014,No matching test suite was available
+Closure,41,DeepSeek V4 Flash,com.google.javascript.jscomp.FunctionTypeBuilder,FunctionTypeBuilderDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:57:16,9da2e202abdbb55f68bc596bec1f5b95728cc01245e2d67e4954c62febfdfb7c,Closure-41-deepseek-1790431025,10.495,"pying 1 file to /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_41b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_41b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_41b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_41b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_41b/.test_suite/com/google/javascript/jscomp/FunctionTypeBuilderDeepseekTest.java:68: error: cannot find symbol
+    [javac]       @Override public void addChangeHandler(ChangeHandler handler) {}
+    [javac]                                              ^
+    [javac]   symbol: class ChangeHandler
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,41,Gemini 3.8 Flash,com.google.javascript.jscomp.FunctionTypeBuilder,FunctionTypeBuilderGeminiTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 00:25:14,6f8c76f9ac5e7d7de20b71e26549c3ac77d8b90beadba5a8a27df2d6a59c5461,Closure-41-gemini-1790357104,10.544,"] Copying 1 file to /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/parsing
 [propertyfile] Updating property file: /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
     [mkdir] Created dir: /tmp/d4j_eval/Closure_41b/build/classes/com/google/javascript/jscomp/js
@@ -4390,8 +4556,62 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,41,IPO (Native IPO),com.google.javascript.jscomp.FunctionTypeBuilder,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:24:24,,Closure-41-ipo-1790357064,0.017,No matching test suite was available
 Closure,41,MIO (EvoSuite SBST),com.google.javascript.jscomp.FunctionTypeBuilder,FunctionTypeBuilder_ESTest.java,49.4,32.92,NOT_DETECTED,0,DONE,2026-09-26 00:25:03,0fbc71de766e6ab1c7f981b7b16b487c3880320e01cad0b8b8b89cef009c6828,Closure-41-mio-1790357064,39.386,
-Closure,42,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:25:53,,Closure-42-deepseek-1790357153,0.02,No matching test suite was available
-Closure,42,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:25:53,,Closure-42-gemini-1790357153,0.02,No matching test suite was available
+Closure,42,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:57:27,06b5d142ff1410f2afe5d39ee92c6d288c5517acbe4e4683a98515449ebaaf37,Closure-42-deepseek-1790431037,10.298,"va/com/google/javascript/rhino
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_42b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_42b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_42b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_42b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_42b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryDeepseekTest.java:5172: error: unclosed string literal
+    [javac]         parseAndTransform(""var o = { f: function() { for each(var x in obj); } };
+    [javac]                           ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,42,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:57:38,d43f2ba3e876053296aaa0f472633c767b4d7aba8ec2cc9e3616aec5a830ecef,Closure-42-gemini-1790431048,10.07,"ure_42b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_42b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_42b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_42b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_42b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_42b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_42b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryGeminiTest.java:60: error: diamond operator is not supported in -source 6
+    [javac]     final List<String> warnings = new ArrayList<>();
+    [javac]                                                 ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,42,IPO (Native IPO),com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:25:14,,Closure-42-ipo-1790357114,0.002,No matching test suite was available
 Closure,42,MIO (EvoSuite SBST),com.google.javascript.jscomp.parsing.IRFactory,IRFactory_ESTest.java,26.76,17.92,NOT_DETECTED,0,DONE,2026-09-26 00:25:53,47861ec09859f4ec45ed96731c59305fe7eaacc55008a5a44d76ced71709165c,Closure-42-mio-1790357114,38.414,
 Closure,43,DeepSeek V4 Flash,com.google.javascript.jscomp.TypedScopeCreator,TypedScopeCreatorDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 00:26:43,f9dfc4cafb82630e6d2aaabe4f801bedb8dccb0e6bbef977a54b40e72481bcde,Closure-43-deepseek-1790357193,10.019,"ascript/jscomp/parsing
@@ -4783,8 +5003,62 @@ Closure,51,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeConsumer,CodeConsu
 Closure,51,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeConsumer,CodeConsumerGeminiTest.java,100.0,96.3,BUG_DETECTED,1,DONE,2026-09-26 00:36:45,88eb974c538bc32170b72468ba521d11648e1f7ecc30545bb45ef37f7047d5a2,Closure-51-gemini-1790357771,34.601,
 Closure,51,IPO (Native IPO),com.google.javascript.jscomp.CodeConsumer,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:35:00,,Closure-51-ipo-1790357700,0.003,No matching test suite was available
 Closure,51,MIO (EvoSuite SBST),com.google.javascript.jscomp.CodeConsumer,CodeConsumer_ESTest.java,1.85,11.11,NOT_DETECTED,0,DONE,2026-09-26 00:35:37,f40ed36349285d6ce711ca566ecd7371ca7b738344c3c20b4079b4e672d0cd0c,Closure-51-mio-1790357700,36.406,
-Closure,52,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:37:25,,Closure-52-deepseek-1790357845,0.016,No matching test suite was available
-Closure,52,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:37:25,,Closure-52-gemini-1790357845,0.016,No matching test suite was available
+Closure,52,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator,CodeGeneratorDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:57:49,9e83a5839374b66266718340c9310ec391453f40ea2f16183a2646addfd718a7,Closure-52-deepseek-1790431059,10.08,"comp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_52b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_52b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_52b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_52b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_52b/.test_suite/com/google/javascript/jscomp/CodeGeneratorDeepseekTest.java:22: error: incompatible types: SourceFile cannot be converted to JSSourceFile
+    [javac]         SourceFile.fromCode(""test"", ""var x = {[\""010\""]: 1};""));
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,52,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator,CodeGeneratorGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:00,2f46743c24d5015e84d5964bf1c5c05490538f606c139af7e75d59361810c5c5,Closure-52-gemini-1790431069,10.264,"2b/build/classes/rhino_ast/java/com/google/javascript/rhino
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_52b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_52b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_52b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_52b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_52b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_52b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:50: error: class, interface, or enum expected
+    [javac] package com.google.javascript.jscomp; /* package org.mozilla.javascript; */
+    [javac] ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,52,IPO (Native IPO),com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 00:36:46,,Closure-52-ipo-1790357806,0.001,No matching test suite was available
 Closure,52,MIO (EvoSuite SBST),com.google.javascript.jscomp.CodeGenerator,CodeGenerator_ESTest.java,20.84,15.3,NOT_DETECTED,0,DONE,2026-09-26 00:37:25,a1313f36a18aba81e568f99fdad00ba62e92aad684bf715fd62894d758791515,Closure-52-mio-1790357806,38.875,
 Closure,53,DeepSeek V4 Flash,com.google.javascript.jscomp.InlineObjectLiterals,InlineObjectLiteralsDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 00:38:16,e21a6812b02b3a35986b807c0476ba341eeb19236019c1beaae9dbe2cf0117e8,Closure-53-deepseek-1790357885,10.849,"eval/Closure_53b/build/classes/com/google/javascript/jscomp/parsing
@@ -6009,8 +6283,62 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,80,IPO (Native IPO),com.google.javascript.jscomp.NodeUtil,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:07:02,,Closure-80-ipo-1790359622,0.001,No matching test suite was available
 Closure,80,MIO (EvoSuite SBST),com.google.javascript.jscomp.NodeUtil,NodeUtil_ESTest.java,51.48,35.85,FLAKY_OR_REGRESSION,5,DONE,2026-09-26 01:07:39,ffbac75396eadcbba540034ae8834a542d7b6b154f1d1d634025dc2bbf81f89f,Closure-80-mio-1790359622,36.271,
-Closure,81,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:08:25,,Closure-81-deepseek-1790359705,0.021,No matching test suite was available
-Closure,81,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:08:25,,Closure-81-gemini-1790359705,0.02,No matching test suite was available
+Closure,81,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:08,622a4db0d041737c9e4da3336efbfe3089b22b292c4901d7df062a6121c04930,Closure-81-deepseek-1790431080,8.048,"val/Closure_81b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_81b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_81b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_81b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_81b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_81b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryDeepseekTest.java:20: error: TestErrorReporter is not abstract and does not override abstract method runtimeError(String,String,int,String,int) in ErrorReporter
+    [javac]   private static class TestErrorReporter implements ErrorReporter {
+    [javac]                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,81,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:17,ba6245efd99a6fad4d2c99c67d86543e75697c4f61c19c7e707789d081f8dd26,Closure-81-gemini-1790431089,8.049,"opy] Copying 1 file to /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_81b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_81b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_81b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_81b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_81b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryGeminiTest.java:630: error: cannot find symbol
+    [javac]     arr.setDestructuring(true);
+    [javac]        ^
+    [javac]   symbol:   method setDestructuring(boolean)
+    [javac]   location: variable arr of type ArrayLiteral
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,81,IPO (Native IPO),com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:07:54,,Closure-81-ipo-1790359674,0.001,No matching test suite was available
 Closure,81,MIO (EvoSuite SBST),com.google.javascript.jscomp.parsing.IRFactory,IRFactory_ESTest.java,19.76,9.72,NOT_DETECTED,0,DONE,2026-09-26 01:08:25,c0e065a9c520bfc8e943ffc4434768e5ca404e4d652935a9718884eac7044640,Closure-81-mio-1790359674,30.561,
 Closure,82,DeepSeek V4 Flash,com.google.javascript.rhino.jstype.JSType,JSTypeDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 01:09:04,752a5b708aa419575ba48d04d1cbd06fa43cab369d991a76e3879b527e3678b6,Closure-82-deepseek-1790359736,7.605,"ses/com/google/javascript/jscomp/parsing/ParserConfig.properties
@@ -6105,8 +6433,63 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,83,IPO (Native IPO),com.google.javascript.jscomp.CommandLineRunner,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:09:12,,Closure-83-ipo-1790359752,0.001,No matching test suite was available
 Closure,83,MIO (EvoSuite SBST),com.google.javascript.jscomp.CommandLineRunner,CommandLineRunner_ESTest.java,58.46,36.11,NOT_DETECTED,0,DONE,2026-09-26 01:09:44,4bbc1e0b1ba91a6c3491c384c27391607690b59308f49cd23685c714ba8594a6,Closure-83-mio-1790359752,32.005,
-Closure,84,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:10:51,,Closure-84-deepseek-1790359851,0.017,No matching test suite was available
-Closure,84,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:10:51,,Closure-84-gemini-1790359851,0.03,No matching test suite was available
+Closure,84,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:26,0c0f033207cfb1a9aa1812f740edb5d45262bf8a13c10f5de569b10bfe5b28dc,Closure-84-deepseek-1790431098,7.948,"b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_84b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_84b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_84b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_84b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_84b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryDeepseekTest.java:61: error: diamond operator is not supported in -source 6
+    [javac]         final List<String> errors = new ArrayList<>();
+    [javac]                                                   ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,84,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:35,05d718ad42c311628e859d480fab22f885018c40d63a8875488506f3025dbe19,Closure-84-gemini-1790431107,8.407,"s/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_84b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_84b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_84b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_84b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_84b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryGeminiTest.java:502: error: cannot find symbol
+    [javac]         assertEquals(""testSource.js"", script.getSourceFileName());
+    [javac]                                             ^
+    [javac]   symbol:   method getSourceFileName()
+    [javac]   location: variable script of type Node
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,84,IPO (Native IPO),com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:10:19,,Closure-84-ipo-1790359819,0.001,No matching test suite was available
 Closure,84,MIO (EvoSuite SBST),com.google.javascript.jscomp.parsing.IRFactory,IRFactory_ESTest.java,18.3,9.9,NOT_DETECTED,0,DONE,2026-09-26 01:10:50,53467b64217a50ef2fec64ae54d5d736801414ea22237ae5624003622a652fc6,Closure-84-mio-1790359819,31.155,
 Closure,85,DeepSeek V4 Flash,com.google.javascript.jscomp.UnreachableCodeElimination,UnreachableCodeEliminationDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 01:11:32,05fbb398d432333efac828549386cc321e31212bf058be2a4c1b128a4bbe1a51,Closure-85-deepseek-1790359884,8.402,"ino_ast/java/com/google/javascript/rhino
@@ -7731,12 +8114,124 @@ Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195
 Closure,121,Gemini 3.8 Flash,com.google.javascript.jscomp.InlineVariables,InlineVariablesGeminiTest.java,7.74,1.27,FLAKY_OR_REGRESSION,26,DONE,2026-09-26 01:48:46,1af5cb84bdf2ff730b58fcf8b740b84ff05e0ccddf57409fdc72d6fe25d248ca,Closure-121-gemini-1790362092,33.885,
 Closure,121,IPO (Native IPO),com.google.javascript.jscomp.InlineVariables,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:47:24,,Closure-121-ipo-1790362044,0.001,No matching test suite was available
 Closure,121,MIO (EvoSuite SBST),com.google.javascript.jscomp.InlineVariables,InlineVariables_ESTest.java,0.0,0.0,NOT_DETECTED,0,DONE,2026-09-26 01:48:02,341adf987de5d354b399448163311ac5e1a6c54a0910b9f1d1b9c05a7a3ecf99,Closure-121-mio-1790362044,37.783,
-Closure,122,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:49:24,,Closure-122-deepseek-1790362164,0.025,No matching test suite was available
-Closure,122,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:49:24,,Closure-122-gemini-1790362164,0.029,No matching test suite was available
+Closure,122,DeepSeek V4 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:46,7387c2856402cfe58d93a7d17db046a509af03a53716db287968eaa9a268cfeb,Closure-122-deepseek-1790431116,10.504,"ipt/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_122b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_122b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_122b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_122b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_122b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_122b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_122b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryDeepseekTest.java:86: error: constructor Config in class Config cannot be applied to given types;
+    [javac]     Config config = new Config(languageMode, false, acceptConstKeyword);
+    [javac]                     ^
+    [javac]   required: Set<String>,Set<String>,boolean,LanguageMode,boolean
+    [javac]   found: LanguageMode,boolean,boolean
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,122,Gemini 3.8 Flash,com.google.javascript.jscomp.parsing.IRFactory,IRFactoryGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:58:57,2412f5f7ea8fd59cf347c03da8648a8fd2ccff9ee91aa08251b3dfd6a5ab5592,Closure-122-gemini-1790431127,9.948,"22b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_122b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_122b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_122b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_122b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_122b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryGeminiTest.java:384: error: no suitable constructor found for NumberLiteral(int,double)
+    [javac]     prop.setRight(new NumberLiteral(0, 1.0));
+    [javac]                   ^
+    [javac]     constructor NumberLiteral.NumberLiteral(int,int) is not applicable
+    [javac]       (argument mismatch; possible lossy conversion from double to int)
+    [javac]     constructor NumberLiteral.NumberLiteral(int,String) is not applicable
+    [javac]       (argument mismatch; double cannot be converted to String)
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,122,IPO (Native IPO),com.google.javascript.jscomp.parsing.IRFactory,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:48:46,,Closure-122-ipo-1790362126,0.001,No matching test suite was available
 Closure,122,MIO (EvoSuite SBST),com.google.javascript.jscomp.parsing.IRFactory,IRFactory_ESTest.java,17.8,9.5,NOT_DETECTED,0,DONE,2026-09-26 01:49:24,14ea664c31d663a518bd313b5df149525369430856725800d4d0b981433e11af,Closure-122-mio-1790362126,38.121,
-Closure,123,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:50:06,,Closure-123-deepseek-1790362206,0.013,No matching test suite was available
-Closure,123,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:50:06,,Closure-123-gemini-1790362206,0.02,No matching test suite was available
+Closure,123,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator,CodeGeneratorDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:59:08,8967b9ca239a1d5540bd04b94d812f59207d1bbae9311a7025c28ff7838640fd,Closure-123-deepseek-1790431138,10.487,"3b/build/classes/rhino_ast/java/com/google/javascript/rhino
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_123b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_123b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_123b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_123b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_123b/.test_suite/com/google/javascript/jscomp/CodeGeneratorDeepseekTest.java:435: error: illegal unicode escape
+    [javac]         // Should produce two \u sequences
+    [javac]                                 ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,123,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator,CodeGeneratorGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:59:19,79cd4b04cce30c6d468adc528d635093633ee7f541f9d2aff3c6cd8405f620f2,Closure-123-gemini-1790431149,10.154,"gle/javascript/rhino
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_123b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_123b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_123b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_123b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_123b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_123b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:683: error: cannot find symbol
+    [javac]     n1.setNext(n2);
+    [javac]       ^
+    [javac]   symbol:   method setNext(Node)
+    [javac]   location: variable n1 of type Node
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,123,IPO (Native IPO),com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:49:25,,Closure-123-ipo-1790362165,0.001,No matching test suite was available
 Closure,123,MIO (EvoSuite SBST),com.google.javascript.jscomp.CodeGenerator,CodeGenerator_ESTest.java,17.54,12.16,NOT_DETECTED,0,DONE,2026-09-26 01:50:05,03ae035f43583004993ac50cab9a69aaa94aace191dcb657898b5882c2389e3c,Closure-123-mio-1790362165,40.741,
 Closure,124,DeepSeek V4 Flash,com.google.javascript.jscomp.ExploitAssigns,ExploitAssignsDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 01:50:56,e207339064f8369bad5a40e700ec5803deff0252899d9ad06d82efac6c142e0a,Closure-124-deepseek-1790362245,10.291,"ig.properties
@@ -7918,8 +8413,62 @@ Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195
 Closure,127,Gemini 3.8 Flash,com.google.javascript.jscomp.UnreachableCodeElimination,UnreachableCodeEliminationGeminiTest.java,96.34,86.15,FLAKY_OR_REGRESSION,10,DONE,2026-09-26 01:54:58,9197aec5c8850d4966cdde3604087514d3815b3bb3856316d622de8face33424,Closure-127-gemini-1790362463,34.795,
 Closure,127,IPO (Native IPO),com.google.javascript.jscomp.UnreachableCodeElimination,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:53:33,,Closure-127-ipo-1790362413,0.008,No matching test suite was available
 Closure,127,MIO (EvoSuite SBST),com.google.javascript.jscomp.UnreachableCodeElimination,UnreachableCodeElimination_ESTest.java,12.2,0.0,NOT_DETECTED,0,DONE,2026-09-26 01:54:12,563ddd683cef15d028b4bdf49bc4a9cc2d55a9416d446377cbd5b9d513b877fc,Closure-127-mio-1790362413,39.214,
-Closure,128,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:55:38,,Closure-128-deepseek-1790362538,0.02,No matching test suite was available
-Closure,128,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:55:39,,Closure-128-gemini-1790362539,0.019,No matching test suite was available
+Closure,128,DeepSeek V4 Flash,com.google.javascript.jscomp.CodeGenerator,CodeGeneratorDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:59:30,f7a64b9ca547bdfa622e6ec833369cf1ab60f07623bacc4f164784b6a21a81ab,Closure-128-deepseek-1790431160,10.054,"omp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_128b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_128b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_128b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_128b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_128b/.test_suite/com/google/javascript/jscomp/CodeGeneratorDeepseekTest.java:1649: error: interface expected here
+    [javac]     private static class SimpleCodeConsumer implements CodeConsumer {
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Closure,128,Gemini 3.8 Flash,com.google.javascript.jscomp.CodeGenerator,CodeGeneratorGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 20:59:41,9651f7cfa19d70bce5c82f2f32bd5a2b4aa286d7336633dd1da3750a4e765f54,Closure-128-gemini-1790431171,10.108,"p/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_128b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_128b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_128b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_128b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_128b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_128b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:569: error: incompatible types: Charset cannot be converted to String
+    [javac]     asciiOptions.setOutputCharset(Charsets.US_ASCII);
+    [javac]                                           ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,128,IPO (Native IPO),com.google.javascript.jscomp.CodeGenerator,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:54:58,,Closure-128-ipo-1790362498,0.001,No matching test suite was available
 Closure,128,MIO (EvoSuite SBST),com.google.javascript.jscomp.CodeGenerator,CodeGenerator_ESTest.java,18.18,13.84,NOT_DETECTED,0,DONE,2026-09-26 01:55:38,d1354da1b8e8ff55369c0149790ff164cdd6e8a25831bf98eb76fd093b4f4306,Closure-128-mio-1790362498,39.868,
 Closure,129,DeepSeek V4 Flash,com.google.javascript.jscomp.PrepareAst,PrepareAstDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 01:56:28,462a1cb18674044c17e5ce3446f10675987ba7f2c712eeb1ea12bdc16163fd23,Closure-129-deepseek-1790362578,9.921,"mp/d4j_eval/Closure_129b/build/classes/com/google/javascript/jscomp/parsing
@@ -8037,8 +8586,8 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Closure,130,IPO (Native IPO),com.google.javascript.jscomp.CollapseProperties,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:56:38,,Closure-130-ipo-1790362598,0.001,No matching test suite was available
 Closure,130,MIO (EvoSuite SBST),com.google.javascript.jscomp.CollapseProperties,CollapseProperties_ESTest.java,4.04,1.14,FLAKY_OR_REGRESSION,1,DONE,2026-09-26 01:57:17,d11db201db429c35b69172ad6caf82e42612f5385b41dc6add5b83823c9a969f,Closure-130-mio-1790362598,39.024,
-Closure,131,DeepSeek V4 Flash,com.google.javascript.rhino.TokenStream,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:58:13,,Closure-131-deepseek-1790362693,0.014,No matching test suite was available
-Closure,131,Gemini 3.8 Flash,com.google.javascript.rhino.TokenStream,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:58:13,,Closure-131-gemini-1790362693,0.012,No matching test suite was available
+Closure,131,DeepSeek V4 Flash,com.google.javascript.rhino.TokenStream,TokenStreamDeepseekTest.java,82.3,66.06,FLAKY_OR_REGRESSION,10,DONE,2026-09-26 21:00:16,af0c58ea9f449967bef4d5786b21d3179c4f48413877648016c21ac2efcd209e,Closure-131-deepseek-1790431181,34.779,
+Closure,131,Gemini 3.8 Flash,com.google.javascript.rhino.TokenStream,TokenStreamGeminiTest.java,99.12,95.15,FLAKY_OR_REGRESSION,2,DONE,2026-09-26 21:00:51,0d2aba320b30c807600bbde1cffa16f9a43c3d81536f7afce4956c0281240ec6,Closure-131-gemini-1790431217,33.536,
 Closure,131,IPO (Native IPO),com.google.javascript.rhino.TokenStream,,,,NO_SUITE,0,NO_SUITE,2026-09-26 01:57:38,,Closure-131-ipo-1790362658,0.001,No matching test suite was available
 Closure,131,MIO (EvoSuite SBST),com.google.javascript.rhino.TokenStream,TokenStream_ESTest.java,86.73,75.76,NOT_DETECTED,0,DONE,2026-09-26 01:58:13,a483f8a670eb6bbc6dd176c065fea644931c6e5219b73e4eb6ab3e2c28cb7743,Closure-131-mio-1790362658,35.335,
 Closure,132,DeepSeek V4 Flash,com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,PeepholeSubstituteAlternateSyntaxDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 01:59:06,f8322f5e3598fa132c2e1276b6a91e638fd1954a30cbe43b2093c03e28cd7fbb,Closure-132-deepseek-1790362736,10.05,"scomp/parsing
@@ -11481,8 +12030,69 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Collections,7,IPO (Native IPO),org.apache.commons.collections.ExtendedProperties,ExtendedProperties_IPOTest.java,17.18,14.64,NOT_DETECTED,0,DONE,2026-09-26 03:01:20,f7f00e56b2386095fc40f50c08cec3b96082236408a100328e2e02e146ec3803,Collections-7-ipo-1790366459,20.624,
 Collections,7,MIO (EvoSuite SBST),org.apache.commons.collections.ExtendedProperties,ExtendedProperties_ESTest.java,80.54,70.36,FLAKY_OR_REGRESSION,2,DONE,2026-09-26 03:01:39,3a3fe89fa18554b236be459834f17cc1a13bc86a58b076096d061d6f91ef989d,Collections-7-mio-1790366480,18.567,
-Collections,8,DeepSeek V4 Flash,org.apache.commons.collections.buffer.UnboundedFifoBuffer,,,,NO_SUITE,0,NO_SUITE,2026-09-26 03:02:05,,Collections-8-deepseek-1790366525,0.026,No matching test suite was available
-Collections,8,Gemini 3.8 Flash,org.apache.commons.collections.buffer.UnboundedFifoBuffer,,,,NO_SUITE,0,NO_SUITE,2026-09-26 03:02:06,,Collections-8-gemini-1790366526,0.024,No matching test suite was available
+Collections,8,DeepSeek V4 Flash,org.apache.commons.collections.buffer.UnboundedFifoBuffer,UnboundedFifoBufferDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 21:00:56,94a94206504bb1f1068db55d50665d9103cd8a826489ad3d45f9ed0780c0f8f7,Collections-8-deepseek-1790431251,4.371,"rc/java/org/apache/commons/collections/comparators/FixedOrderComparator.java:194: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Object position = map.put(obj, new Integer(counter++));
+    [javac]                                        ^
+    [javac] /tmp/d4j_eval/Collections_8b/src/java/org/apache/commons/collections/map/MultiValueMap.java:434: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return clazz.newInstance();
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 28 warnings
+
+compile.gen.tests:
+     [echo] classes.dir: build/classes
+     [echo] build.home: build
+    [mkdir] Created dir: /tmp/d4j_eval/Collections_8b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_8b/.classes_testgen
+    [javac] /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferDeepseekTest.java:177: error: cannot find symbol
+    [javac]     @Test(timeout = 4000, expected = BufferUnderflowException.class)
+    [javac]                                      ^
+    [javac]   symbol:   class BufferUnderflowException
+    [javac]   location: class UnboundedFifoBufferDeepseekTest
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Collections,8,Gemini 3.8 Flash,org.apache.commons.collections.buffer.UnboundedFifoBuffer,UnboundedFifoBufferGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 21:01:01,bd50891eb01f494343c495b8ec435e7e57884c57c55946811fd00e1a14a5a844,Collections-8-gemini-1790431256,4.427,"recated
+    [javac]                 return clazz.newInstance();
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 28 warnings
+
+compile.gen.tests:
+     [echo] classes.dir: build/classes
+     [echo] build.home: build
+    [mkdir] Created dir: /tmp/d4j_eval/Collections_8b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_8b/.classes_testgen
+    [javac] /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferGeminiTest.java:203: error: cannot find symbol
+    [javac]     @Test(expected = BufferUnderflowException.class, timeout = 4000)
+    [javac]                      ^
+    [javac]   symbol:   class BufferUnderflowException
+    [javac]   location: class UnboundedFifoBufferGeminiTest
+    [javac] Note: /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferGeminiTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferGeminiTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Collections,8,IPO (Native IPO),org.apache.commons.collections.buffer.UnboundedFifoBuffer,,,,NO_SUITE,0,NO_SUITE,2026-09-26 03:01:48,,Collections-8-ipo-1790366508,0.001,No matching test suite was available
 Collections,8,MIO (EvoSuite SBST),org.apache.commons.collections.buffer.UnboundedFifoBuffer,UnboundedFifoBuffer_ESTest.java,72.73,77.78,NOT_DETECTED,0,DONE,2026-09-26 03:02:05,da690b76c87172f3622462d0110c991ef7393844522fa58ddf9917c85b975433,Collections-8-mio-1790366508,17.468,
 Collections,9,DeepSeek V4 Flash,org.apache.commons.collections.ExtendedProperties,ExtendedPropertiesDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 03:02:50,b6e5018ffe02dab05a802354b902c61a3a98f53230a33988e1b0043d5d8cb828,Collections-9-deepseek-1790366566,4.576,"ator.java:194: warning: [deprecation] Integer(int) in Integer has been deprecated
@@ -15908,7 +16518,35 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-cov
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 JacksonCore,24,IPO (Native IPO),com.fasterxml.jackson.core.base.ParserBase;com.fasterxml.jackson.core.base.ParserMinimalBase,,,,NO_SUITE,0,NO_SUITE,2026-09-26 04:37:25,,JacksonCore-24-ipo-1790372245,0.008,No matching test suite was available
 JacksonCore,24,MIO (EvoSuite SBST),com.fasterxml.jackson.core.base.ParserBase;com.fasterxml.jackson.core.base.ParserMinimalBase,ParserBase_ESTest.java;ParserMinimalBase_ESTest.java,33.11,22.14,NOT_DETECTED,0,DONE,2026-09-26 04:37:47,8421d811bdf3922950b1e71d6652e7e38a3583de45f1e87a5727b3fb668e1a33,JacksonCore-24-mio-1790372246,21.698,
-JacksonCore,25,DeepSeek V4 Flash,com.fasterxml.jackson.core.json.ReaderBasedJsonParser,,,,NO_SUITE,0,NO_SUITE,2026-09-26 04:38:20,,JacksonCore-25-deepseek-1790372300,0.029,No matching test suite was available
+JacksonCore,25,DeepSeek V4 Flash,com.fasterxml.jackson.core.json.ReaderBasedJsonParser,ReaderBasedJsonParserDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 21:01:06,8557a7732c262204381e6344976e47b02fd990c8b4e38ba0612749a2955f4564,JacksonCore-25-deepseek-1790431261,5.015,"e_25b/target/classes/com/fasterxml/jackson/core/format/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/json/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/json/async/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/sym/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/util/package-info.class
+     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_25b/target/classes
+
+compile:
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target/classes/..
+    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_25b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonCore_25b/.classes_testgen
+    [javac] /tmp/d4j_eval/JacksonCore_25b/.test_suite/com/fasterxml/jackson/core/json/ReaderBasedJsonParserDeepseekTest.java:38: error: cannot find symbol
+    [javac]     private ReaderBasedJsonParser createParser(String json, Feature... features) {
+    [javac]                                                             ^
+    [javac]   symbol:   class Feature
+    [javac]   location: class ReaderBasedJsonParserDeepseekTest
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 JacksonCore,25,Gemini 3.8 Flash,com.fasterxml.jackson.core.json.ReaderBasedJsonParser,ReaderBasedJsonParserGeminiTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 04:38:25,3bf2f1ee651d923f4a64d867a8e32d3b1ff2ec686eadf64880680549258e8348,JacksonCore-25-gemini-1790372300,4.545,"info.class
     [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/format/package-info.class
     [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/json/package-info.class
@@ -28004,8 +28642,67 @@ Lang,57,DeepSeek V4 Flash,org.apache.commons.lang.LocaleUtils,LocaleUtilsDeepsee
 Lang,57,Gemini 3.8 Flash,org.apache.commons.lang.LocaleUtils,LocaleUtilsGeminiTest.java,100.0,100.0,NOT_DETECTED,0,DONE,2026-09-26 08:44:41,083d6243249a025f852b6266bbe2e0ba2003bd2a79ee9e3b5863261fe8efdc7f,Lang-57-gemini-1790387061,20.031,
 Lang,57,IPO (Native IPO),org.apache.commons.lang.LocaleUtils,LocaleUtils_IPOTest.java,17.72,9.38,NOT_DETECTED,0,DONE,2026-09-26 08:43:39,8fb5be6b954b7f76a65c9e91777698b2b56cbdf2fad3f79a6d23535ae5e6c285,Lang-57-ipo-1790387000,19.638,
 Lang,57,MIO (EvoSuite SBST),org.apache.commons.lang.LocaleUtils,LocaleUtils_ESTest.java,96.2,93.75,FLAKY_OR_REGRESSION,1,DONE,2026-09-26 08:44:00,ed6eaa6a4b566bcfbc1f79213a9bdbfbb124bd65a399866a47fa40dd48c6abae,Lang-57-mio-1790387020,20.789,
-Lang,58,DeepSeek V4 Flash,org.apache.commons.lang.math.NumberUtils,,,,NO_SUITE,0,NO_SUITE,2026-09-26 08:45:27,,Lang-58-deepseek-1790387127,0.03,No matching test suite was available
-Lang,58,Gemini 3.8 Flash,org.apache.commons.lang.math.NumberUtils,,,,NO_SUITE,0,NO_SUITE,2026-09-26 08:45:27,,Lang-58-gemini-1790387127,0.019,No matching test suite was available
+Lang,58,DeepSeek V4 Flash,org.apache.commons.lang.math.NumberUtils,NumberUtilsDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 21:01:13,faa8f6b1a772f6340686ee4863cdcf0cdee3c5bce97415d3c864d5b282390541,Lang-58-deepseek-1790431267,6.123,"le), new Integer(timeStyle));
+    [javac]                               ^
+    [javac] /tmp/d4j_eval/Lang_58b/src/java/org/apache/commons/lang/time/FastDateFormat.java:458: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));
+    [javac]                                                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 77 warnings
+     [copy] Copying 14 files to /tmp/d4j_eval/Lang_58b/target/classes
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target
+    [mkdir] Created dir: /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsDeepseekTest.java:180: error: reference to assertEquals is ambiguous
+    [javac]         assertEquals(Float.POSITIVE_INFINITY, NumberUtils.createFloat(""1e40""));
+    [javac]         ^
+    [javac]   both method assertEquals(double,double) in Assert and method assertEquals(Object,Object) in Assert match
+    [javac] Note: /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsDeepseekTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Lang,58,Gemini 3.8 Flash,org.apache.commons.lang.math.NumberUtils,NumberUtilsGeminiTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 21:01:21,59526679c787c6bfc650653ad932ec59efb3e7d01573b013aaf266674ca63e52,Lang-58-gemini-1790431274,6.123,"      Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));
+    [javac]                               ^
+    [javac] /tmp/d4j_eval/Lang_58b/src/java/org/apache/commons/lang/time/FastDateFormat.java:458: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));
+    [javac]                                                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 77 warnings
+     [copy] Copying 14 files to /tmp/d4j_eval/Lang_58b/target/classes
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target
+    [mkdir] Created dir: /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsGeminiTest.java:187: error: cannot find symbol
+    [javac]         assertEquals(1, NumberUtils.minimum(1, 2, 3));
+    [javac]                                    ^
+    [javac]   symbol:   method minimum(int,int,int)
+    [javac]   location: class NumberUtils
+    [javac] Note: /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsGeminiTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Lang,58,IPO (Native IPO),org.apache.commons.lang.math.NumberUtils,NumberUtils_IPOTest.java,32.87,23.81,NOT_DETECTED,0,DONE,2026-09-26 08:45:05,e52a710cfe47c400f38db3c42deff75fb1fcea92e5e60ba5e15aed04e9c74346,Lang-58-ipo-1790387081,23.325,
 Lang,58,MIO (EvoSuite SBST),org.apache.commons.lang.math.NumberUtils,NumberUtils_ESTest.java,96.09,91.67,NOT_DETECTED,0,DONE,2026-09-26 08:45:27,3d330a70d25b3539f304de0e9e4ed44f93a98f4177c3d0ad99f693425ef95cab,Lang-58-mio-1790387105,21.975,
 Lang,59,DeepSeek V4 Flash,org.apache.commons.lang.text.StrBuilder,StrBuilderDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 08:45:57,ef7aaaf74af1579a4c6e82c3be11fe6f527a54c41f9616c36471a25ae8e5cd62,Lang-59-deepseek-1790387151,6.019,"javac]                      ^
@@ -28652,8 +29349,35 @@ Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-tes
 Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
 Math,8,IPO (Native IPO),org.apache.commons.math3.distribution.DiscreteDistribution,,,,NO_SUITE,0,NO_SUITE,2026-09-26 09:00:06,,Math-8-ipo-1790388006,0.007,No matching test suite was available
 Math,8,MIO (EvoSuite SBST),org.apache.commons.math3.distribution.DiscreteDistribution,DiscreteDistribution_ESTest.java,97.5,95.83,NOT_DETECTED,0,DONE,2026-09-26 09:00:34,5dd6ac708ff319dd3fed21aca5413c5778004b0da6c1dd35e5cbcd2d67851388,Math-8-mio-1790388006,27.935,
-Math,9,DeepSeek V4 Flash,org.apache.commons.math3.geometry.euclidean.threed.Line,,,,NO_SUITE,0,NO_SUITE,2026-09-26 09:01:35,,Math-9-deepseek-1790388095,0.024,No matching test suite was available
-Math,9,Gemini 3.8 Flash,org.apache.commons.math3.geometry.euclidean.threed.Line,,,,NO_SUITE,0,NO_SUITE,2026-09-26 09:01:36,,Math-9-gemini-1790388096,0.015,No matching test suite was available
+Math,9,DeepSeek V4 Flash,org.apache.commons.math3.geometry.euclidean.threed.Line,LineDeepseekTest.java,,,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 21:01:31,a8895a830841715aaa1a6c81b789de6e7750eec3881dd36317691e21b8444c19,Math-9-deepseek-1790431281,9.762,"escriptive/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optimization/general/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/nonlinear/vector/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/optim/univariate/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/Math_9b/target/classes/org/apache/commons/math3/ode/events/package-info.class
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target
+    [mkdir] Created dir: /tmp/d4j_eval/Math_9b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_9b/.classes_testgen
+    [javac] /tmp/d4j_eval/Math_9b/.test_suite/org/apache/commons/math3/geometry/euclidean/threed/LineDeepseekTest.java:75: error: cannot find symbol
+    [javac]         Vector1D sub = line.toSubSpace(point);
+    [javac]         ^
+    [javac]   symbol:   class Vector1D
+    [javac]   location: class LineDeepseekTest
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+Math,9,Gemini 3.8 Flash,org.apache.commons.math3.geometry.euclidean.threed.Line,LineGeminiTest.java,97.83,100.0,FLAKY_OR_REGRESSION,4,DONE,2026-09-26 21:02:00,6e96a0d355abe845cc18c6a3dc612a64ce02d2fa6e9b562324d592a7871e2cc5,Math-9-gemini-1790431292,28.199,
 Math,9,IPO (Native IPO),org.apache.commons.math3.geometry.euclidean.threed.Line,,,,NO_SUITE,0,NO_SUITE,2026-09-26 09:01:08,,Math-9-ipo-1790388068,0.001,No matching test suite was available
 Math,9,MIO (EvoSuite SBST),org.apache.commons.math3.geometry.euclidean.threed.Line,Line_ESTest.java,97.83,100.0,NOT_DETECTED,0,DONE,2026-09-26 09:01:35,c6bd62da4df37f040414d42a337a9aeb7e2d453b122c54964398cdf5b0339df9,Math-9-mio-1790388068,27.394,
 Math,10,DeepSeek V4 Flash,org.apache.commons.math3.analysis.differentiation.DSCompiler,DSCompilerDeepseekTest.java,0.0,0.0,COMPILE_ERROR,0,COMPILE_ERROR,2026-09-26 09:02:13,719c36384efae012237041337933c299c3e4114c910654b86b46be16ca9fb554,Math-10-deepseek-1790388124,8.421,"nfo.class

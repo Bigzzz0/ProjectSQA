@@ -6,7 +6,7 @@
     "legacy_or_unsupported_rows_excluded": 16,
     "results_are_complete": true,
     "available_suite_evaluations_complete": true,
-    "rows_with_no_suite": 648,
+    "rows_with_no_suite": 619,
     "unresolved_rows": 0
   },
   "techniques": {
@@ -70,60 +70,60 @@
     },
     "DeepSeek V4 Flash": {
       "catalog_bugs": 854,
-      "suite_available_bugs": 836,
-      "attempted_bugs": 836,
-      "successful_benchmark_bugs": 191,
-      "coverage_valid_bugs": 191,
+      "suite_available_bugs": 853,
+      "attempted_bugs": 853,
+      "successful_benchmark_bugs": 192,
+      "coverage_valid_bugs": 192,
       "detected_bugs": 11,
-      "fdr_evaluated_percent": 1.32,
+      "fdr_evaluated_percent": 1.29,
       "fdr_full_catalog_percent": 1.29,
       "line_coverage": {
-        "mean": 77.99,
-        "sd": 30.88
+        "mean": 78.02,
+        "sd": 30.8
       },
       "branch_coverage": {
-        "mean": 70.25,
-        "sd": 31.18
+        "mean": 70.22,
+        "sd": 31.1
       },
       "status_distribution": {
-        "COMPILE_ERROR": 645,
-        "FLAKY_OR_REGRESSION": 174,
+        "COMPILE_ERROR": 661,
+        "FLAKY_OR_REGRESSION": 175,
         "NOT_DETECTED": 6,
         "BUG_DETECTED": 11
       },
       "suite_inventory_distribution": {
-        "COMPILE_ERROR": 645,
-        "DONE": 191,
-        "NO_SUITE": 18
+        "COMPILE_ERROR": 661,
+        "DONE": 192,
+        "NO_SUITE": 1
       }
     },
     "Gemini 3.8 Flash": {
       "catalog_bugs": 854,
-      "suite_available_bugs": 841,
-      "attempted_bugs": 841,
-      "successful_benchmark_bugs": 422,
-      "coverage_valid_bugs": 422,
+      "suite_available_bugs": 853,
+      "attempted_bugs": 853,
+      "successful_benchmark_bugs": 424,
+      "coverage_valid_bugs": 424,
       "detected_bugs": 107,
-      "fdr_evaluated_percent": 12.72,
+      "fdr_evaluated_percent": 12.54,
       "fdr_full_catalog_percent": 12.53,
       "line_coverage": {
-        "mean": 86.24,
-        "sd": 25.14
+        "mean": 86.29,
+        "sd": 25.1
       },
       "branch_coverage": {
-        "mean": 79.45,
-        "sd": 26.98
+        "mean": 79.54,
+        "sd": 26.94
       },
       "status_distribution": {
-        "COMPILE_ERROR": 419,
+        "COMPILE_ERROR": 429,
         "BUG_DETECTED": 107,
-        "FLAKY_OR_REGRESSION": 304,
+        "FLAKY_OR_REGRESSION": 306,
         "NOT_DETECTED": 11
       },
       "suite_inventory_distribution": {
-        "COMPILE_ERROR": 419,
-        "DONE": 422,
-        "NO_SUITE": 13
+        "COMPILE_ERROR": 429,
+        "DONE": 424,
+        "NO_SUITE": 1
       }
     }
   }

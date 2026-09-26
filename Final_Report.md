@@ -9,7 +9,7 @@
 **อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก<br>
 **ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น**
 
-> **สถานะข้อมูล: ผลประเมินครบตาม suite ที่มีอยู่ (26 กันยายน 2026)** — ครอบคลุม 854 บั๊กใน 17 โปรเจกต์ มีผลครบ 2,768 suite evaluations และระบุ 648 ช่องที่ไม่มี suite เป็น `NO_SUITE`; ไม่มีช่อง `NOT_RUN` ค้างอยู่ (`results_complete: true`, `available_suite_evaluations_complete: true`). ตารางผลหลักสร้างจาก `results/master_benchmark_summary.csv` และสรุปสถิติอยู่ใน `results/master_descriptive_stats.json` ตัวเลข generation ของ IPO/MIO/AI รายงานแยกจากผลประเมินกลาง
+> **สถานะข้อมูล: ผลประเมินครบตาม suite ที่มีอยู่ (26 กันยายน 2026)** — ครอบคลุม 854 บั๊กใน 17 โปรเจกต์ มีผลครบ 2,797 suite evaluations และระบุ 619 ช่องที่ไม่มี suite เป็น `NO_SUITE`; ไม่มีช่อง `NOT_RUN` ค้างอยู่ (`results_complete: true`, `available_suite_evaluations_complete: true`). ตารางผลหลักสร้างจาก `results/master_benchmark_summary.csv` และสรุปสถิติอยู่ใน `results/master_descriptive_stats.json` ตัวเลข generation ของ IPO/MIO/AI รายงานแยกจากผลประเมินกลาง
 
 #### 👥 คณะผู้จัดทำและบทบาทหน้าที่ความรับผิดชอบ:
 1. **นายปวริศช์ ประมวล (รหัส 673380278-9) — Member 1:** Combinatorial Testing Lead & IPO Algorithm Specialist
@@ -21,9 +21,9 @@
 
 ## 📌 บทคัดย่อ (Abstract)
 
-งานนี้เปรียบเทียบ Native IPO, MIO ใน EvoSuite, DeepSeek V4 Flash และ Gemini 3.8 Flash บน Defects4J 3.0.1-7-g8c16da82 ซึ่งมี 854 active bugs จาก 17 โครงการ จัดทำผลหนึ่งรายการต่อบั๊กและเทคนิค รวม 3,416 ช่อง โดยมี suite ผ่านเกณฑ์ประเมิน 2,768 ช่อง และ 648 ช่องเป็น `NO_SUITE`. ทุกผล `BUG_DETECTED` มีหลักฐานว่า suite ทำให้ buggy version ล้มเหลวและ fixed version ผ่าน.
+งานนี้เปรียบเทียบ Native IPO, MIO ใน EvoSuite, DeepSeek V4 Flash และ Gemini 3.8 Flash บน Defects4J 3.0.1-7-g8c16da82 ซึ่งมี 854 active bugs จาก 17 โครงการ จัดทำผลหนึ่งรายการต่อบั๊กและเทคนิค รวม 3,416 ช่อง โดยมี suite ที่ประเมินแล้ว 2,797 ช่อง และ 619 ช่องเป็น `NO_SUITE`. ทุกผล `BUG_DETECTED` มีหลักฐานว่า suite ทำให้ buggy version ล้มเหลวและ fixed version ผ่าน.
 
-Coverage รวมทุก modified target class จาก aggregate summary ของ Defects4J โดยคิดผลรวม covered ÷ total ไม่ได้เฉลี่ยร้อยละรายคลาส. Gemini มี coverage เฉลี่ยสูงสุดในผลที่วัดได้ (86.24% line, 79.45% branch; n=422). Native IPO ตรวจพบ 37/257 suite (14.40%), MIO 5/834 (0.60%), DeepSeek 11/836 (1.32%) และ Gemini 107/841 (12.72%).
+Coverage รวมทุก modified target class จาก aggregate summary ของ Defects4J โดยคิดผลรวม covered ÷ total ไม่ได้เฉลี่ยร้อยละรายคลาส. Gemini มี coverage เฉลี่ยสูงสุดในผลที่วัดได้ (86.29% line, 79.54% branch; n=424). Native IPO ตรวจพบ 37/257 suite (14.40%), MIO 5/834 (0.60%), DeepSeek 11/853 (1.29%) และ Gemini 107/853 (12.54%).
 
 ผลรวมสี่เทคนิคตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มีอย่างน้อยหนึ่ง suite (16.88%). สถิติ MIO budget และ AI generation นำเสนอแยกจากผล benchmark กลาง; ไม่คำนวณ token ต่อบั๊กที่ตรวจพบ เนื่องจาก generation records ไม่มี run ID ที่เชื่อมกับผล benchmark.
 
@@ -149,8 +149,8 @@ SD ในคอลัมน์ coverage แสดงการกระจาย�
 
 | โมเดลตามป้ายชื่อในระบบ | Generation records (n) | โทเค็นเฉลี่ยต่อ record | เวลาเฉลี่ยต่อ record |
 | :--- | ---: | ---: | ---: |
-| Gemini 3.8 Flash | 1,068 | 20,699.64 | 88.66 วินาที |
-| DeepSeek V4 Flash | 1,069 | 20,900.15 | 295.11 วินาที |
+| Gemini 3.8 Flash | 1,079 | 20,855.06 | 89.78 วินาที |
+| DeepSeek V4 Flash | 1,082 | 21,045.26 | 295.54 วินาที |
 
 ค่ารุ่นโมเดลอ้างตาม identifier ที่สคริปต์เรียกผ่าน KKU IntelSphere API; บันทึก generation ไม่ได้เก็บ provider model ID ต่อทุกแถว จึงไม่อ้างรายละเอียดสถาปัตยกรรมเฉพาะรุ่น.
 
@@ -213,7 +213,7 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evalu
 
 ## บทที่ 5: ผลการทดลองเชิงประจักษ์ การวิเคราะห์สถิติ และการอภิปรายผล
 
-ผล master dataset รอบสุดท้ายสร้างจากผลที่ตรวจ provenance แล้ว ไฟล์หลักคือ `results/master_benchmark_summary.csv` และสรุปสถานะคือ `results/master_descriptive_stats.json`. ชุดข้อมูลมี 3,416 แถวจาก 854 บั๊ก × 4 เทคนิค; 2,768 แถวเป็น suite evaluations ที่รันครบ และ 648 แถวเป็น `NO_SUITE`. ไม่มีผลค้างที่ `NOT_RUN`.
+ผล master dataset รอบสุดท้ายสร้างจากผลที่ตรวจ provenance แล้ว ไฟล์หลักคือ `results/master_benchmark_summary.csv` และสรุปสถานะคือ `results/master_descriptive_stats.json`. ชุดข้อมูลมี 3,416 แถวจาก 854 บั๊ก × 4 เทคนิค; 2,797 แถวเป็น suite evaluations และ 619 แถวเป็น `NO_SUITE`. ไม่มีผลค้างที่ `NOT_RUN`.
 
 ### 5.1 ขอบเขตและสถานะการประเมิน
 
@@ -227,21 +227,21 @@ Coverage รวมทุก modified target class ตาม aggregate counts ท
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Native IPO | 257 | 5 | 252 | 26.76% ± 21.50 / 18.67% ± 19.33 | 37 | 14.40% | 4.33% |
 | MIO (EvoSuite) | 834 | 37 | 797 | 63.85% ± 34.26 / 56.51% ± 35.94 | 5 | 0.60% | 0.59% |
-| DeepSeek V4 Flash | 836 | 645 | 191 | 77.99% ± 30.88 / 70.25% ± 31.18 | 11 | 1.32% | 1.29% |
-| Gemini 3.8 Flash | 841 | 419 | 422 | 86.24% ± 25.14 / 79.45% ± 26.98 | 107 | 12.72% | 12.53% |
+| DeepSeek V4 Flash | 853 | 661 | 192 | 78.02% ± 30.80 / 70.22% ± 31.10 | 11 | 1.29% | 1.29% |
+| Gemini 3.8 Flash | 853 | 429 | 424 | 86.29% ± 25.10 / 79.54% ± 26.94 | 107 | 12.54% | 12.53% |
 
 เปรียบเทียบ line coverage ด้วย Wilcoxon signed-rank เฉพาะ project–bug ที่ทั้งสองเทคนิคมีค่าที่วัดได้ และปรับ p-value ด้วย Holm สำหรับหกคู่. ค่า paired rank-biserial เป็นบวกเมื่อเทคนิคทางซ้ายมี coverage สูงกว่า; ผลนี้เป็นการวิเคราะห์เชิงสำรวจเพราะแต่ละเทคนิคมี suite ที่วัดได้ต่างกัน.
 
 | คู่เปรียบเทียบ | Matched N | p หลัง Holm | Paired rank-biserial |
 |---|---:|---:|---:|
-| Gemini – DeepSeek | 135 | 7.28×10⁻¹² | 0.830 |
-| MIO – Gemini | 397 | 1.09×10⁻³² | -0.758 |
-| MIO – DeepSeek | 182 | 0.0154 | -0.227 |
+| Gemini – DeepSeek | 136 | 4.92×10⁻¹² | 0.834 |
+| MIO – Gemini | 399 | 7.29×10⁻³³ | -0.759 |
+| MIO – DeepSeek | 183 | 0.0175 | -0.222 |
 | MIO – IPO | 245 | 1.64×10⁻³⁸ | 0.993 |
 | Gemini – IPO | 147 | 1.90×10⁻²⁴ | 1.000 |
 | DeepSeek – IPO | 69 | 4.92×10⁻¹² | 1.000 |
 
-เมื่อนับการตรวจจับแบบ union ระดับบั๊ก ทั้งสี่เทคนิคร่วมกันตรวจพบ 144 บั๊กจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%); มี 648 บั๊ก–เทคนิคที่ไม่มี suite และแยกเป็น `NO_SUITE`. รายงาน analytics, Excel และกราฟถูกสร้างจาก snapshot เดียวกันใน `results/advanced_analytics_report.md`, `results/Master_Benchmark_Results.xlsx` และ `results/figure1_coverage_comparison.png` ถึง `results/figure6_ensemble_overlap.png`.
+เมื่อนับการตรวจจับแบบ union ระดับบั๊ก ทั้งสี่เทคนิคร่วมกันตรวจพบ 144 บั๊กจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%); มี 619 บั๊ก–เทคนิคที่ไม่มี suite และแยกเป็น `NO_SUITE`. รายงาน analytics, Excel และกราฟถูกสร้างจาก snapshot เดียวกันใน `results/advanced_analytics_report.md`, `results/Master_Benchmark_Results.xlsx` และ `results/figure1_coverage_comparison.png` ถึง `results/figure6_ensemble_overlap.png`.
 
 ### 5.3 สถิติการสร้างชุดทดสอบและข้อจำกัด
 
@@ -259,9 +259,18 @@ Coverage รวมทุก modified target class ตาม aggregate counts ท
 
 การรวมผลสี่เทคนิคตรวจพบ 144 บั๊กไม่ซ้ำ โดย Gemini มีส่วนตรวจพบเฉพาะเทคนิค 91 บั๊ก, Native IPO 27, MIO 5 และ DeepSeek 5. ตัวเลขเฉพาะเหล่านี้อธิบายความเสริมกันของเทคนิค แต่ไม่ใช่การประมาณต้นทุนต่อบั๊ก เพราะ log การสร้าง AI ยังเชื่อมกับ run ID ของ benchmark ไม่ครบ
 
-ผลนี้จำกัดอยู่ที่ target classes ใน Defects4J และ suite ที่สมาชิกส่งมอบจริง; 648 ช่อง `NO_SUITE` ไม่ได้ถูกตีความว่าไม่พบข้อบกพร่อง ส่วน compile errors และ flaky/regression ถูกแสดงเป็นผลลัพธ์แยกและยังอยู่ในตัวหาร FDR.
+ผลนี้จำกัดอยู่ที่ target classes ใน Defects4J และ suite ที่สมาชิกส่งมอบจริง; 619 ช่อง `NO_SUITE` ไม่ได้ถูกตีความว่าไม่พบข้อบกพร่อง ส่วน compile errors และ flaky/regression ถูกแสดงเป็นผลลัพธ์แยกและยังอยู่ในตัวหาร FDR.
 
-การตรวจไฟล์ประกอบพบว่า 648 ช่อง `NO_SUITE` ไม่ได้หมายถึงไม่มีไฟล์ทุกกรณี: 591 ช่อง IPO และ 20 ช่อง MIO ไม่มีไฟล์ Java ในตำแหน่ง suite, 6 ช่อง IPO มีไฟล์ผู้สมัครที่ยังไม่อยู่ใน verified manifest, และ 31 ช่อง AI มีไฟล์ที่ strict target matcher ยังไม่ยอมรับ. รายละเอียดรายบั๊กและ hash อยู่ใน `results/suite_gap_audit.csv`; ไฟล์ผู้สมัครยังไม่นับเป็น suite จนกว่าเจ้าของเทคนิคจะยืนยัน.
+ช่อง `NO_SUITE` ทั้ง 619 ช่องยังคงเป็นช่องที่ไม่มี suite สำหรับ benchmark evaluation จึงไม่ถูกนำไปคำนวณ coverage หรือ fault detection. การตรวจ manifest และหลักฐานจากผู้รับผิดชอบเทคนิคช่วยแยกสาเหตุการไม่มี suite ได้ดังนี้:
+
+| เทคนิค | ช่อง `NO_SUITE` | สถานะการสร้าง/ตรวจยืนยัน | รายละเอียด |
+|---|---:|---|---|
+| Native IPO | 597 | 37 `GENERATION_OR_VERIFICATION_ERROR`; 560 `SKIPPED_NOT_READY` | ใน 37 ช่องที่มี error พบไฟล์ Java ผู้สมัคร 6 ช่อง แต่ fixed-version verification ไม่ผ่าน; อีก 31 ช่องไม่พบไฟล์ผู้สมัคร. ใน 560 ช่องที่ถูกข้าม: 495 `NEEDS_ADAPTER`, 47 `NEEDS_ENTRY_POINT`, 16 มีทั้งสองสาเหตุ และ 2 มี `NEEDS_ADAPTER` ร่วมกับ `NOT_PAIRWISE_APPLICABLE`. |
+| MIO | 20 | 20 `GENERATION_FAILURE` | มีบันทึกการลองสร้าง 3 budgets × 3 seeds ต่อบั๊ก แต่ไม่มีไฟล์ suite สำหรับส่งเข้า benchmark. สาเหตุคือ Mockito 15 ช่อง compile ไม่ผ่านจาก dependency endpoint ของ Bintray/JCenter; Math 13 และ 31 รวม 2 ช่อง และ Gson 3 อีก 1 ช่องเกิด EvoSuite 1.0.6 internal NPE; Gson 8 เกิด JVM native crash; JacksonDatabind 24 เกิดปัญหา character encoding ตอน compile. |
+| DeepSeek | 1 | 17 คีย์รับมอบและประเมินแล้ว: 16 `COMPILE_ERROR`; 1 `DONE` แต่ flaky | เหลือ Math-13 ที่ candidate ใช้ package `org.apache.commons.math3.optim.nonlinear.vector.jacobian` ซึ่งไม่ตรง target `org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer` ที่ Defects4J ยืนยัน. |
+| Gemini | 1 | 12 คีย์รับมอบและประเมินแล้ว: 10 `COMPILE_ERROR`; 2 `DONE` แต่ flaky | เหลือ Math-13 ที่ candidate ใช้ package `org.apache.commons.math3.optim.nonlinear.vector.jacobian` ซึ่งไม่ตรง target `org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer` ที่ Defects4J ยืนยัน. |
+
+สถานะ `Audit_Status` ซึ่งบอกผลการตรวจไฟล์และสถานะ generation เป็นคนละข้อมูลกับ `Master_Status` ของ benchmark. รายละเอียดรายบั๊ก, hash ของ candidate files และแหล่งหลักฐานอยู่ใน `results/suite_gap_audit.csv`; manifests ของ IPO และรายงาน failure analysis ของ MIO ใช้ตรวจย้อนกลับสาเหตุ. ไฟล์ผู้สมัครที่ไม่ผ่านการยืนยันยังไม่นับเป็น suite และตัวเลข coverage/FDR ในรายงานไม่เปลี่ยนจากการจัดหมวดหมู่นี้.
 
 ---
 

@@ -1,0 +1,25 @@
+{
+  "project": "Closure",
+  "bug_id": 131,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-131-gemini-1790431217",
+  "suite_sha256": "0d2aba320b30c807600bbde1cffa16f9a43c3d81536f7afce4956c0281240ec6",
+  "test_files": "TokenStreamGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.TokenStream",
+  "timestamp": "2026-09-26 21:00:51",
+  "evaluation_duration_sec": 33.536,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.12,
+  "branch_coverage_percent": 95.15,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.rhino.TokenStreamGeminiTest::testDefectReservedKeywordsMustNotBeJSIdentifiers",
+    "com.google.javascript.rhino.TokenStreamGeminiTest::testDefectAdditionalKeywordsMustNotBeJSIdentifiers"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.TokenStreamGeminiTest::testDefectReservedKeywordsMustNotBeJSIdentifiers",
+    "com.google.javascript.rhino.TokenStreamGeminiTest::testDefectAdditionalKeywordsMustNotBeJSIdentifiers"
+  ]
+}

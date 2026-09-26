@@ -405,34 +405,52 @@ def create_test_suite_archive(test_files: List[str], archive_path: str, techniqu
     shutil.rmtree(temp_staging, ignore_errors=True)
     return archive_path
 
-def parse_d4j_coverage_summary(summary_csv_path: str) -> Dict[str, float]:
+def parse_d4j_coverage_summary(summary_csv_path: str) -> Dict[str, Any]:
     """
     Read summary.csv written automatically by defects4j coverage:
     LinesTotal,LinesCovered,ConditionsTotal,ConditionsCovered
     """
+    result = {
+        "line_coverage": None,
+        "branch_coverage": None,
+        "error": "",
+    }
     if not os.path.exists(summary_csv_path):
-        return {"line_coverage": 0.0, "branch_coverage": 0.0}
+        result["error"] = "Defects4J coverage summary.csv is missing"
+        return result
     try:
         with open(summary_csv_path, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
-            for row in reader:
-                lt = int(row.get("LinesTotal", 0))
-                lc = int(row.get("LinesCovered", 0))
-                ct = int(row.get("ConditionsTotal", 0))
-                cc = int(row.get("ConditionsCovered", 0))
-                l_rate = round(lc / lt * 100.0, 2) if lt > 0 else 0.0
-                b_rate = round(cc / ct * 100.0, 2) if ct > 0 else 0.0
-                return {
-                    "line_coverage": l_rate,
-                    "branch_coverage": b_rate,
-                    "lines_total": lt,
-                    "lines_covered": lc,
-                    "branches_total": ct,
-                    "branches_covered": cc
-                }
+            row = next(reader, None)
+            if row is None:
+                result["error"] = "Defects4J coverage summary.csv has no data row"
+                return result
+            lt = int(row["LinesTotal"])
+            lc = int(row["LinesCovered"])
+            ct = int(row["ConditionsTotal"])
+            cc = int(row["ConditionsCovered"])
+            if lt < 0 or ct < 0 or lc < 0 or cc < 0 or lc > lt or cc > ct:
+                raise ValueError("Coverage counts are outside valid denominator bounds")
+            result.update({
+                "line_coverage": round(lc / lt * 100.0, 2) if lt > 0 else None,
+                "branch_coverage": round(cc / ct * 100.0, 2) if ct > 0 else None,
+                "lines_total": lt,
+                "lines_covered": lc,
+                "branches_total": ct,
+                "branches_covered": cc,
+            })
+            missing = []
+            if lt == 0:
+                missing.append("line")
+            if ct == 0:
+                missing.append("branch")
+            if missing:
+                result["error"] = "Coverage denominator is zero for: " + ", ".join(missing)
+            return result
     except Exception as e:
-        print(f"Warning: Failed to parse summary.csv: {e}")
-    return {"line_coverage": 0.0, "branch_coverage": 0.0}
+        result["error"] = f"Failed to parse Defects4J coverage summary.csv: {e}"
+        print(f"Warning: {result['error']}")
+        return result
 
 def count_failing_tests(work_dir: str) -> Tuple[int, List[str]]:
     """Count failing tests listed in $WORK_DIR/failing_tests."""
@@ -594,8 +612,9 @@ def evaluate_technique_on_bug(
         
     summary_csv = os.path.join(work_buggy, "summary.csv")
     cov_metrics = parse_d4j_coverage_summary(summary_csv)
-    line_cov = cov_metrics.get("line_coverage", 0.0)
-    branch_cov = cov_metrics.get("branch_coverage", 0.0)
+    line_cov = cov_metrics.get("line_coverage")
+    branch_cov = cov_metrics.get("branch_coverage")
+    coverage_error = cov_metrics.get("error", "")
     print(f"[{state_key}] Target Modified Class Coverage -> Line: {line_cov}% | Branch: {branch_cov}%")
     
     # 6. Test on Buggy version
@@ -730,7 +749,8 @@ def evaluate_technique_on_bug(
         "fixed_failures": fail_f_list,
         "suite_sha256": test_sha256,
         "test_paths": test_files,
-        "run_id": run_id
+        "run_id": run_id,
+        "coverage_error": coverage_error,
     }
     
     # Save individual JSON
@@ -744,7 +764,8 @@ def evaluate_technique_on_bug(
         project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
         ";".join(modified_classes), test_fname, line_cov, branch_cov,
         fault_detected, failures_count, "DONE", time.strftime("%Y-%m-%d %H:%M:%S")
-    ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock)
+    ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock,
+        error_detail=coverage_error)
     
     # Save individual JSON with the exact suite provenance used for this result.
     with open(os.path.join(bug_res_dir, f"{technique}.json"), "w", encoding="utf-8") as jf:

@@ -1,0 +1,57 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Collections --bug 8 --techniques deepseek --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: DeepSeek V4 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Collections-8-deepseek] Starting evaluation...
+[Collections-8-deepseek] Target modified classes: ['org.apache.commons.collections.buffer.UnboundedFifoBuffer']
+[Collections-8-deepseek] Checking out Collections-8b...
+[Collections-8-deepseek] Packaging test files: ['UnboundedFifoBufferDeepseekTest.java']
+[Collections-8-deepseek] Measuring code coverage via defects4j coverage -s...
+[Collections-8-deepseek] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Collections-8-deepseek-1790431251
+Suite_SHA256: 94a94206504bb1f1068db55d50665d9103cd8a826489ad3d45f9ed0780c0f8f7
+Error_Detail:
+rc/java/org/apache/commons/collections/comparators/FixedOrderComparator.java:194: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Object position = map.put(obj, new Integer(counter++));
+    [javac]                                        ^
+    [javac] /tmp/d4j_eval/Collections_8b/src/java/org/apache/commons/collections/map/MultiValueMap.java:434: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return clazz.newInstance();
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 28 warnings
+
+compile.gen.tests:
+     [echo] classes.dir: build/classes
+     [echo] build.home: build
+    [mkdir] Created dir: /tmp/d4j_eval/Collections_8b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_8b/.classes_testgen
+    [javac] /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferDeepseekTest.java:177: error: cannot find symbol
+    [javac]     @Test(timeout = 4000, expected = BufferUnderflowException.class)
+    [javac]                                      ^
+    [javac]   symbol:   class BufferUnderflowException
+    [javac]   location: class UnboundedFifoBufferDeepseekTest
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

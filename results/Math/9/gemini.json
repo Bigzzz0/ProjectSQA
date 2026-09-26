@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.83,
+  "branch_cov": 100.0,
+  "test_file": "LineGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+  "buggy_failures": [
+    "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testRevertPointConsistency",
+    "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testWholeLine",
+    "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testLargeCoordinatesStability",
+    "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testRevert"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testWholeLine",
+    "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testLargeCoordinatesStability"
+  ],
+  "suite_sha256": "6e96a0d355abe845cc18c6a3dc612a64ce02d2fa6e9b562324d592a7871e2cc5",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_9b/LineGeminiTest.java"
+  ],
+  "run_id": "Math-9-gemini-1790431292",
+  "coverage_error": ""
+}

@@ -1,0 +1,57 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Lang --bug 58 --techniques gemini --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: Gemini 3.8 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Lang-58-gemini] Starting evaluation...
+[Lang-58-gemini] Target modified classes: ['org.apache.commons.lang.math.NumberUtils']
+[Lang-58-gemini] Checking out Lang-58b...
+[Lang-58-gemini] Packaging test files: ['NumberUtilsGeminiTest.java']
+[Lang-58-gemini] Measuring code coverage via defects4j coverage -s...
+[Lang-58-gemini] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Lang-58-gemini-1790431274
+Suite_SHA256: 59526679c787c6bfc650653ad932ec59efb3e7d01573b013aaf266674ca63e52
+Error_Detail:
+      Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));
+    [javac]                               ^
+    [javac] /tmp/d4j_eval/Lang_58b/src/java/org/apache/commons/lang/time/FastDateFormat.java:458: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));
+    [javac]                                                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 77 warnings
+     [copy] Copying 14 files to /tmp/d4j_eval/Lang_58b/target/classes
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target
+    [mkdir] Created dir: /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsGeminiTest.java:187: error: cannot find symbol
+    [javac]         assertEquals(1, NumberUtils.minimum(1, 2, 3));
+    [javac]                                    ^
+    [javac]   symbol:   method minimum(int,int,int)
+    [javac]   location: class NumberUtils
+    [javac] Note: /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsGeminiTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

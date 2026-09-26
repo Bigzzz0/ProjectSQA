@@ -134,6 +134,10 @@ python3 scripts/run_benchmark.py --sample-17
 
 # รันโหมด Exhaustive Benchmark (ทุกบั๊กใน Defects4J) พร้อมระบบทำต่อจากจุดเดิมอัตโนมัติ
 python3 scripts/run_benchmark.py --all-bugs --resume
+
+# ตรวจและประเมินเฉพาะไฟล์ส่งมอบของ Member 3 (31 ไฟล์ / 29 คีย์บั๊ก–เทคนิค)
+python3 scripts/run_member3_delivery.py --dry-run
+python3 scripts/run_member3_delivery.py
 ```
 
 ---
@@ -150,7 +154,7 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 | [บัญชี suite](results/suite_inventory.csv) | suite ที่พบและ hash สำหรับตรวจสอบย้อนกลับ |
 | [บัญชีตรวจช่อง NO_SUITE](results/suite_gap_audit.csv) | แยกไฟล์ที่ไม่มี Java candidate ออกจาก candidate ที่ยังไม่ผ่านการตรวจรับ |
 
-snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,768 คู่ และมี 648 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
+snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,797 คู่ และมี 619 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ใน 29 คีย์จาก Member 3 มี 26 `COMPILE_ERROR` และ 3 `DONE` ที่ยัง fail บน fixed จึงไม่เพิ่ม `BUG_DETECTED`. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
 
 หลัง runner จบหรือหยุดคิว ให้สร้าง snapshot และเอกสารผลใหม่ด้วยคำสั่งบน Windows host:
 

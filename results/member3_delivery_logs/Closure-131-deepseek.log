@@ -1,0 +1,31 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Closure --bug 131 --techniques deepseek --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: DeepSeek V4 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Closure-131-deepseek] Starting evaluation...
+[Closure-131-deepseek] Target modified classes: ['com.google.javascript.rhino.TokenStream']
+[Closure-131-deepseek] Checking out Closure-131b...
+[Closure-131-deepseek] Packaging test files: ['TokenStreamDeepseekTest.java']
+[Closure-131-deepseek] Measuring code coverage via defects4j coverage -s...
+[Closure-131-deepseek] Target Modified Class Coverage -> Line: 82.3% | Branch: 66.06%
+[Closure-131-deepseek] Running test on Buggy version to verify failure exposure...
+[Closure-131-deepseek] Buggy Failures (10): ['com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_NonJSKeywordsReturnFalse', 'com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length5_Invalid']
+[Closure-131-deepseek] Checking out Fixed version (Closure-131f)...
+[Closure-131-deepseek] Running test on Fixed version to verify fix passing...
+[Closure-131-deepseek] Fixed Failures (10): ['com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_NonJSKeywordsReturnFalse', 'com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length5_Invalid']
+[Closure-131-deepseek] [RESULT] Status: DONE | Line Cov: 82.3% | Branch Cov: 66.06% | Fault: FLAKY_OR_REGRESSION (10 Failures)
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: DONE
+Run_ID: Closure-131-deepseek-1790431181
+Suite_SHA256: af0c58ea9f449967bef4d5786b21d3179c4f48413877648016c21ac2efcd209e

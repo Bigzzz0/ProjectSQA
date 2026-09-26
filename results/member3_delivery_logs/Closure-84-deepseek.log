@@ -1,0 +1,54 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Closure --bug 84 --techniques deepseek --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: DeepSeek V4 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Closure-84-deepseek] Starting evaluation...
+[Closure-84-deepseek] Target modified classes: ['com.google.javascript.jscomp.parsing.IRFactory']
+[Closure-84-deepseek] Checking out Closure-84b...
+[Closure-84-deepseek] Packaging test files: ['IRFactoryDeepseekTest.java']
+[Closure-84-deepseek] Measuring code coverage via defects4j coverage -s...
+[Closure-84-deepseek] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Closure-84-deepseek-1790431098
+Suite_SHA256: 0c0f033207cfb1a9aa1812f740edb5d45262bf8a13c10f5de569b10bfe5b28dc
+Error_Detail:
+b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_84b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_84b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_84b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_84b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_84b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_84b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryDeepseekTest.java:61: error: diamond operator is not supported in -source 6
+    [javac]         final List<String> errors = new ArrayList<>();
+    [javac]                                                   ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

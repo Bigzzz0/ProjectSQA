@@ -1,0 +1,41 @@
+{
+  "project": "Closure",
+  "bug_id": 131,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-131-deepseek-1790431181",
+  "suite_sha256": "af0c58ea9f449967bef4d5786b21d3179c4f48413877648016c21ac2efcd209e",
+  "test_files": "TokenStreamDeepseekTest.java",
+  "target_classes": "com.google.javascript.rhino.TokenStream",
+  "timestamp": "2026-09-26 21:00:16",
+  "evaluation_duration_sec": 34.779,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 82.3,
+  "branch_coverage_percent": 66.06,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_NonJSKeywordsReturnFalse",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length5_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length9_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length7_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsJSIdentifier_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length4_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length10_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length6_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length12_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length8_Invalid"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_NonJSKeywordsReturnFalse",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length5_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length9_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length7_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsJSIdentifier_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length4_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length10_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length6_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length12_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length8_Invalid"
+  ]
+}

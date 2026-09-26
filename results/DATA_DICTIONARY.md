@@ -2,7 +2,7 @@
 
 Catalog: 854 bugs across 17 projects.
 Master CSV rows: 3416; expected matrix rows: 3416.
-Available suite rows: 2768; attempted rows: 2768; NO_SUITE rows: 648; unresolved rows: 0.
+Available suite rows: 2797; attempted rows: 2797; NO_SUITE rows: 619; unresolved rows: 0.
 
 | Field | Meaning |
 |---|---|
@@ -31,9 +31,9 @@ Current execution status by technique:
 | MIO (EvoSuite SBST) | COMPILE_ERROR | 37 |
 | MIO (EvoSuite SBST) | DONE | 797 |
 | MIO (EvoSuite SBST) | NO_SUITE | 20 |
-| DeepSeek V4 Flash | COMPILE_ERROR | 645 |
-| DeepSeek V4 Flash | DONE | 191 |
-| DeepSeek V4 Flash | NO_SUITE | 18 |
-| Gemini 3.8 Flash | COMPILE_ERROR | 419 |
-| Gemini 3.8 Flash | DONE | 422 |
-| Gemini 3.8 Flash | NO_SUITE | 13 |
+| DeepSeek V4 Flash | COMPILE_ERROR | 661 |
+| DeepSeek V4 Flash | DONE | 192 |
+| DeepSeek V4 Flash | NO_SUITE | 1 |
+| Gemini 3.8 Flash | COMPILE_ERROR | 429 |
+| Gemini 3.8 Flash | DONE | 424 |
+| Gemini 3.8 Flash | NO_SUITE | 1 |

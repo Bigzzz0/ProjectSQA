@@ -1,0 +1,39 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 82.3,
+  "branch_cov": 66.06,
+  "test_file": "TokenStreamDeepseekTest.java",
+  "target_classes": "com.google.javascript.rhino.TokenStream",
+  "buggy_failures": [
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_NonJSKeywordsReturnFalse",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length5_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length9_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length7_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsJSIdentifier_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length4_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length10_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length6_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length12_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length8_Invalid"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_NonJSKeywordsReturnFalse",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length5_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length9_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length7_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsJSIdentifier_Valid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length4_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length10_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length6_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length12_Invalid",
+    "com.google.javascript.rhino.TokenStreamDeepseekTest::testIsKeyword_Length8_Invalid"
+  ],
+  "suite_sha256": "af0c58ea9f449967bef4d5786b21d3179c4f48413877648016c21ac2efcd209e",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_131b/TokenStreamDeepseekTest.java"
+  ],
+  "run_id": "Closure-131-deepseek-1790431181",
+  "coverage_error": ""
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-8-deepseek-1790431251",
+  "suite_sha256": "94a94206504bb1f1068db55d50665d9103cd8a826489ad3d45f9ed0780c0f8f7",
+  "test_files": "UnboundedFifoBufferDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+  "timestamp": "2026-09-26 21:00:56",
+  "evaluation_duration_sec": 4.371,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "rc/java/org/apache/commons/collections/comparators/FixedOrderComparator.java:194: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]         Object position = map.put(obj, new Integer(counter++));\n    [javac]                                        ^\n    [javac] /tmp/d4j_eval/Collections_8b/src/java/org/apache/commons/collections/map/MultiValueMap.java:434: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 return clazz.newInstance();\n    [javac]                             ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 28 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferDeepseekTest.java:177: error: cannot find symbol\n    [javac]     @Test(timeout = 4000, expected = BufferUnderflowException.class)\n    [javac]                                      ^\n    [javac]   symbol:   class BufferUnderflowException\n    [javac]   location: class UnboundedFifoBufferDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

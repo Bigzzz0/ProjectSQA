@@ -21,7 +21,13 @@ class BenchmarkRunnerTests(unittest.TestCase):
         self.suite_dir.mkdir()
         self.classes = ["org.example.Target", "org.example.Helper"]
         self.suites = [self._write_suite("TargetGeminiTest.java"), self._write_suite("HelperGeminiTest.java")]
-        self.case = {"failures_buggy": 1, "failures_fixed": 0, "compile_error": False, "timeout": False}
+        self.case = {
+            "failures_buggy": 1,
+            "failures_fixed": 0,
+            "compile_error": False,
+            "timeout": False,
+            "missing_summary": False,
+        }
         self.current_classes = self.classes
         self.current_suites = self.suites
         self.checkout_calls = []
@@ -39,6 +45,8 @@ class BenchmarkRunnerTests(unittest.TestCase):
                     return 1, "", "command timed out"
                 if self.case["compile_error"]:
                     return 1, "", "cannot compile generated tests"
+                if self.case["missing_summary"]:
+                    return 0, "coverage completed without a summary", ""
                 Path(work_dir, "summary.csv").write_text(
                     "LinesTotal,LinesCovered,ConditionsTotal,ConditionsCovered\n10,7,4,2\n",
                     encoding="utf-8",
@@ -104,6 +112,18 @@ class BenchmarkRunnerTests(unittest.TestCase):
         result = self.evaluate()
         self.assertEqual(result["status"], "COMPILE_ERROR")
         self.assertEqual(self.latest_csv_row()["Line_Coverage_%"], "")
+
+    def test_missing_coverage_summary_is_not_reported_as_zero(self):
+        self.case["missing_summary"] = True
+        result = self.evaluate()
+        row = self.latest_csv_row()
+        self.assertEqual(result["status"], "DONE")
+        self.assertIsNone(result["line_cov"])
+        self.assertIsNone(result["branch_cov"])
+        self.assertEqual(row["Line_Coverage_%"], "")
+        self.assertEqual(row["Branch_Coverage_%"], "")
+        self.assertIn("summary.csv is missing", row["Error_Detail"])
+        self.assertEqual(row["Fault_Detection_Status"], "BUG_DETECTED")
 
     def test_timeout_is_recorded(self):
         self.case["timeout"] = True

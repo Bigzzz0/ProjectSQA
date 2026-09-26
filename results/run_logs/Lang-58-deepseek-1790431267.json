@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 58,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-58-deepseek-1790431267",
+  "suite_sha256": "faa8f6b1a772f6340686ee4863cdcf0cdee3c5bce97415d3c864d5b282390541",
+  "test_files": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.math.NumberUtils",
+  "timestamp": "2026-09-26 21:01:13",
+  "evaluation_duration_sec": 6.123,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "le), new Integer(timeStyle));\n    [javac]                               ^\n    [javac] /tmp/d4j_eval/Lang_58b/src/java/org/apache/commons/lang/time/FastDateFormat.java:458: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));\n    [javac]                                                       ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 77 warnings\n     [copy] Copying 14 files to /tmp/d4j_eval/Lang_58b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_58b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_58b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsDeepseekTest.java:180: error: reference to assertEquals is ambiguous\n    [javac]         assertEquals(Float.POSITIVE_INFINITY, NumberUtils.createFloat(\"1e40\"));\n    [javac]         ^\n    [javac]   both method assertEquals(double,double) in Assert and method assertEquals(Object,Object) in Assert match\n    [javac] Note: /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

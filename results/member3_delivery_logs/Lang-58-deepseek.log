@@ -1,0 +1,56 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Lang --bug 58 --techniques deepseek --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: DeepSeek V4 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Lang-58-deepseek] Starting evaluation...
+[Lang-58-deepseek] Target modified classes: ['org.apache.commons.lang.math.NumberUtils']
+[Lang-58-deepseek] Checking out Lang-58b...
+[Lang-58-deepseek] Packaging test files: ['NumberUtilsDeepseekTest.java']
+[Lang-58-deepseek] Measuring code coverage via defects4j coverage -s...
+[Lang-58-deepseek] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Lang-58-deepseek-1790431267
+Suite_SHA256: faa8f6b1a772f6340686ee4863cdcf0cdee3c5bce97415d3c864d5b282390541
+Error_Detail:
+le), new Integer(timeStyle));
+    [javac]                               ^
+    [javac] /tmp/d4j_eval/Lang_58b/src/java/org/apache/commons/lang/time/FastDateFormat.java:458: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));
+    [javac]                                                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 77 warnings
+     [copy] Copying 14 files to /tmp/d4j_eval/Lang_58b/target/classes
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target
+    [mkdir] Created dir: /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_58b/.classes_testgen
+    [javac] /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsDeepseekTest.java:180: error: reference to assertEquals is ambiguous
+    [javac]         assertEquals(Float.POSITIVE_INFINITY, NumberUtils.createFloat("1e40"));
+    [javac]         ^
+    [javac]   both method assertEquals(double,double) in Assert and method assertEquals(Object,Object) in Assert match
+    [javac] Note: /tmp/d4j_eval/Lang_58b/.test_suite/org/apache/commons/lang/math/NumberUtilsDeepseekTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

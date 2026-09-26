@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-8-gemini-1790431256",
+  "suite_sha256": "bd50891eb01f494343c495b8ec435e7e57884c57c55946811fd00e1a14a5a844",
+  "test_files": "UnboundedFifoBufferGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+  "timestamp": "2026-09-26 21:01:01",
+  "evaluation_duration_sec": 4.427,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "recated\n    [javac]                 return clazz.newInstance();\n    [javac]                             ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 28 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferGeminiTest.java:203: error: cannot find symbol\n    [javac]     @Test(expected = BufferUnderflowException.class, timeout = 4000)\n    [javac]                      ^\n    [javac]   symbol:   class BufferUnderflowException\n    [javac]   location: class UnboundedFifoBufferGeminiTest\n    [javac] Note: /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Collections_8b/.test_suite/org/apache/commons/collections/buffer/UnboundedFifoBufferGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

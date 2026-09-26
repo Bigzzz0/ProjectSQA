@@ -18,6 +18,8 @@ CATALOG = json.loads((ROOT / "target_benchmark/all_bugs_catalog.json").read_text
 STATS = json.loads((ROOT / "results/master_descriptive_stats.json").read_text(encoding="utf-8"))
 ANALYTICS = json.loads((ROOT / "results/advanced_analytics.json").read_text(encoding="utf-8"))
 MIO = list(csv.DictReader((ROOT / "MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv").open(encoding="utf-8-sig", newline="")))
+AUDIT_ROWS = list(csv.DictReader((ROOT / "results/suite_gap_audit.csv").open(encoding="utf-8-sig", newline="")))
+DELIVERY_ROWS = list(csv.DictReader((ROOT / "results/delivery_report_m3.csv").open(encoding="utf-8-sig", newline="")))
 TECHS = ["IPO (Native IPO)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
 LABEL = {TECHS[0]:"Native IPO", TECHS[1]:"MIO ใน EvoSuite", TECHS[2]:"DeepSeek V4 Flash", TECHS[3]:"Gemini 3.8 Flash"}
 CLASS_COUNT = {(x["project"],str(x["bug_id"])):len(x["target_classes"]) for x in CATALOG}
@@ -42,6 +44,18 @@ for t in TECHS:
 
 EXEC=Counter(r['Execution_Status'] for r in ROWS)
 FSTATE=Counter(r['Fault_Detection_Status'] for r in ROWS if r['Execution_Status']!='NO_SUITE')
+DELIVERY_KEYS=set()
+for item in DELIVERY_ROWS:
+    project, bug_text = item['bug'].rsplit('-',1)
+    DELIVERY_KEYS.add((project,str(int(bug_text)),item['tech']))
+DELIVERY_RESULTS=[r for r in ROWS if (r['Project'],r['Bug_ID'],r['Technique']) in DELIVERY_KEYS]
+DELIVERY_EXEC=Counter(r['Execution_Status'] for r in DELIVERY_RESULTS)
+DELIVERY_FAULT=Counter(r['Fault_Detection_Status'] for r in DELIVERY_RESULTS)
+AI_GAPS=[r for r in AUDIT_ROWS if r['Technique'] in TECHS[2:]]
+AI_TARGET_MISMATCHES=[r for r in AI_GAPS if r['Audit_Status']=='TARGET_MISMATCH_CANDIDATE']
+AI_MISMATCH_BUGS=', '.join(sorted({f"{r['Project']}-{r['Bug_ID']}" for r in AI_TARGET_MISMATCHES})) or 'ไม่มี'
+AI_MISMATCH_TARGETS=', '.join(sorted({r['Target_Classes'] for r in AI_TARGET_MISMATCHES})) or 'ไม่มี'
+AI_MISMATCH_PACKAGES=', '.join(sorted({r['Candidate_Packages'] for r in AI_TARGET_MISMATCHES})) or 'ไม่มี'
 DETECTED=[r for r in ROWS if r['Fault_Detection_Status']=='BUG_DETECTED']
 for r in DETECTED:
     d=json.loads((ROOT/r['Run_Log']).read_text(encoding='utf-8'))
@@ -159,9 +173,11 @@ def margins(cell):
     if m is None: m=OxmlElement('w:tcMar'); tc.append(m)
     for side,val in [('top',60),('start',70),('bottom',60),('end',70)]:
         e=OxmlElement('w:'+side); e.set(qn('w:w'),str(val)); e.set(qn('w:type'),'dxa'); m.append(e)
+CAPTION_COUNT={'Table':0,'Figure':0}
 def caption(kind,text):
+    CAPTION_COUNT[kind]+=1
     x=DOC.add_paragraph(style='Caption'); x.add_run('รูปที่ ' if kind=='Figure' else 'ตารางที่ ')
-    field(x,' SEQ '+kind+' \\* ARABIC ','1'); x.add_run('  '+text)
+    field(x,' SEQ '+kind+' \\* ARABIC ',str(CAPTION_COUNT[kind])); x.add_run('  '+text)
     x.alignment=WD_ALIGN_PARAGRAPH.CENTER; x.paragraph_format.keep_with_next=False
     return x
 def table(headers,rows,widths,cap,size=8.7):
@@ -220,9 +236,9 @@ cover_line('(กันยายน พ.ศ. 2569)',10.5,after=0)
 
 # Abstract and TOC
 page(); heading('บทคัดย่อ')
-p('โครงงานนี้เปรียบเทียบ Native IPO, Many-Independent-Objective (MIO) ใน EvoSuite, DeepSeek V4 Flash และ Gemini 3.8 Flash บน Defects4J 3.0.1-7-g8c16da82 ซึ่งมี active bugs 854 บั๊กจาก 17 โครงการ กำหนดผลหนึ่งรายการต่อบั๊กและเทคนิค รวม 3,416 ช่อง มี suite ที่ผ่านเกณฑ์สำหรับประเมิน 2,768 ช่อง และ 648 ช่องเป็น NO_SUITE. ผล BUG_DETECTED ต้องมีหลักฐานว่า test ล้มเหลวบน buggy version และผ่านบน fixed version.')
-p('Coverage รวมทุก modified target class ตามค่า aggregate ใน Defects4J summary โดยรวมจำนวนบรรทัดและ branch ที่ครอบคลุมหารด้วยจำนวนทั้งหมด ไม่ได้จำกัดที่บั๊กคลาสเดียว. Gemini มี line/branch coverage เฉลี่ยสูงสุด 86.24%/79.45% (n=422). Native IPO ตรวจพบ 37/257 suite (14.40%), MIO 5/834 (0.60%), DeepSeek 11/836 (1.32%) และ Gemini 107/841 (12.72%).')
-p('ผลรวมสี่เทคนิคตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%). สถิติ MIO budget และ token/เวลา AI แยกจาก benchmark กลางเพราะ generation logs ไม่มี run ID เชื่อมกับผลตรวจจับรายบั๊ก จึงไม่คำนวณ token ต่อบั๊กที่ตรวจพบ. ผลต้องอ่านควบคู่กับ compile errors และความพร้อมของ suite ที่ต่างกัน.')
+p(f"โครงงานนี้เปรียบเทียบ Native IPO, Many-Independent-Objective (MIO) ใน EvoSuite, DeepSeek V4 Flash และ Gemini 3.8 Flash บน Defects4J 3.0.1-7-g8c16da82 ซึ่งมี active bugs 854 บั๊กจาก 17 โครงการ กำหนดผลหนึ่งรายการต่อบั๊กและเทคนิค รวม 3,416 ช่อง มีผลประเมิน suite {len(ROWS)-EXEC['NO_SUITE']:,} ช่อง และ {EXEC['NO_SUITE']:,} ช่องเป็น NO_SUITE. ผล BUG_DETECTED ต้องมีหลักฐานว่า test ล้มเหลวบน buggy version และผ่านบน fixed version.")
+p(f"Coverage รวมทุก modified target class ตามค่า aggregate ใน Defects4J summary. Gemini มี line/branch coverage เฉลี่ยสูงสุด {TD[TECHS[3]]['lm']:.2f}%/{TD[TECHS[3]]['bm']:.2f}% (n={TD[TECHS[3]]['n']}). Native IPO ตรวจพบ {TD[TECHS[0]]['detected']}/{TD[TECHS[0]]['attempted']} suite ({TD[TECHS[0]]['fdr']:.2f}%), MIO {TD[TECHS[1]]['detected']}/{TD[TECHS[1]]['attempted']} ({TD[TECHS[1]]['fdr']:.2f}%), DeepSeek {TD[TECHS[2]]['detected']}/{TD[TECHS[2]]['attempted']} ({TD[TECHS[2]]['fdr']:.2f}%) และ Gemini {TD[TECHS[3]]['detected']}/{TD[TECHS[3]]['attempted']} ({TD[TECHS[3]]['fdr']:.2f}%).")
+p(f"ผลรวมสี่เทคนิคตรวจพบ {len(UNION)} บั๊กไม่ซ้ำจาก {len(ATTEMPTED_BUGS)} บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค ({100*len(UNION)/len(ATTEMPTED_BUGS):.2f}%). สถิติ MIO budget และ token/เวลา AI แยกจาก benchmark กลางเพราะ generation logs ไม่มี run ID เชื่อมกับผลตรวจจับรายบั๊ก จึงไม่คำนวณ token ต่อบั๊กที่ตรวจพบ.")
 rich('คำสำคัญ  ','Defects4J, software testing, IPO, MIO, EvoSuite, Generative AI, code coverage, fault detection')
 page(); heading('สารบัญ'); q=DOC.add_paragraph(); field(q,' TOC \\o "1-1" \\h \\z \\u ','สารบัญอัตโนมัติ — อัปเดตใน Word')
 page(); heading('สารบัญตาราง'); q=DOC.add_paragraph(); field(q,' TOC \\h \\z \\c "Table" ','รายการตารางอัตโนมัติ — อัปเดตใน Word')
@@ -272,7 +288,7 @@ table(['แนวทาง','เครื่องมือ/วิธี','ห�
 # Chapter 3
 page(); heading('บทที่ 3 สภาพแวดล้อมและวิธีทดลอง')
 heading('3.1 แหล่งข้อมูลและการจัดการผล',2)
-p('Catalog อยู่ใน `target_benchmark/all_bugs_catalog.json`; master results อยู่ใน `results/master_benchmark_summary.csv`; descriptive statistics อยู่ใน `results/master_descriptive_stats.json`. Master มี 3,416 คีย์ไม่ซ้ำ ครบ 854 บั๊ก × 4 เทคนิค. มี 2,768 คีย์ที่ runner พบ suite ซึ่งผ่านเกณฑ์ประเมิน; 648 คีย์เป็น NO_SUITE; ไม่มี unresolved outcomes. บัญชีตรวจเพิ่มเติมใน `results/suite_gap_audit.csv` แยกกรณีไม่มีไฟล์ Java ออกจากไฟล์ผู้สมัครที่ยังไม่ผ่าน manifest หรือ target matcher.')
+p(f"Catalog อยู่ใน `target_benchmark/all_bugs_catalog.json`; master results อยู่ใน `results/master_benchmark_summary.csv`; descriptive statistics อยู่ใน `results/master_descriptive_stats.json`. Master มี 3,416 คีย์ไม่ซ้ำ ครบ 854 บั๊ก × 4 เทคนิค. มี {len(ROWS)-EXEC['NO_SUITE']:,} คีย์ที่ runner ประเมินแล้ว; {EXEC['NO_SUITE']:,} คีย์เป็น NO_SUITE; unresolved outcomes {sum(EXEC[s] for s in ('NOT_RUN','STALE_RESULT','CHECKOUT_ERROR','INVALID_SUITE','RUN_ERROR'))}. บัญชีตรวจเพิ่มเติมใน `results/suite_gap_audit.csv` แยกกรณีไม่มีไฟล์ Javaออกจากไฟล์ผู้สมัครที่ยังไม่ผ่าน manifest หรือ target matcher.")
 p('Runner ตรวจ target classes กับ Defects4J, เลือก suite ตาม bug key และเทคนิค และเก็บ SHA-256, run ID, timestamp, duration และ structured log. ผลมาตรฐานหนึ่งรายการต่อคีย์ถูกรวมใน master; run ซ้ำไม่ได้เพิ่มจำนวนบั๊กในตัวหาร.')
 heading('3.2 สภาพแวดล้อม',2)
 table(['องค์ประกอบ','การตั้งค่าที่อ้างอิง'],[
@@ -303,18 +319,18 @@ p('FDR ต่อ suite = BUG_DETECTED ÷ suite ที่นำมาประเ
 # Chapter 4
 heading('บทที่ 4 ผลการทดลอง')
 heading('4.1 ความครบถ้วนและสถานะผล',2)
-p(f"Catalog มี 854 บั๊ก × 4 เทคนิค รวม 3,416 คีย์ไม่ซ้ำ. มี suite และรันครบ 2,768 รายการ; 648 รายการไม่มี suite. สถานะ final มี {EXEC['DONE']:,} DONE และ {EXEC['COMPILE_ERROR']:,} COMPILE_ERROR. ในผลที่รันได้มี {FSTATE['BUG_DETECTED']:,} BUG_DETECTED, {FSTATE['NOT_DETECTED']:,} NOT_DETECTED และ {FSTATE['FLAKY_OR_REGRESSION']:,} FLAKY_OR_REGRESSION. ไม่มี timeout หรือ unresolved outcome ใน snapshot.")
+p(f"Catalog มี 854 บั๊ก × 4 เทคนิค รวม 3,416 คีย์ไม่ซ้ำ. มี suite และผลประเมิน {len(ROWS)-EXEC['NO_SUITE']:,} รายการ; {EXEC['NO_SUITE']:,} รายการไม่มี suite. สถานะมี {EXEC['DONE']:,} DONE, {EXEC['COMPILE_ERROR']:,} COMPILE_ERROR และ {EXEC['TIMEOUT']:,} TIMEOUT. ในผลที่รันได้มี {FSTATE['BUG_DETECTED']:,} BUG_DETECTED, {FSTATE['NOT_DETECTED']:,} NOT_DETECTED และ {FSTATE['FLAKY_OR_REGRESSION']:,} FLAKY_OR_REGRESSION; unresolved outcomes {sum(EXEC[s] for s in ('NOT_RUN','STALE_RESULT','CHECKOUT_ERROR','INVALID_SUITE','RUN_ERROR'))}.")
 table(['เทคนิค','มี suite','NO_SUITE','DONE','compile','พบ defect','flaky','ไม่พบ','FDR suite','พบ/854'],[
     (LABEL[t],f"{TD[t]['attempted']}/854",TD[t]['nosuite'],TD[t]['done'],TD[t]['compile'],TD[t]['detected'],TD[t]['flaky'],TD[t]['notdet'],f"{TD[t]['fdr']:.2f}%",f"{TD[t]['catalog']:.2f}%") for t in TECHS
 ],[1.16,.58,.62,.42,.61,.59,.46,.44,.66,.54],'สถานะและ fault detection ต่อเทคนิค; FDR ต่อ suite รวม compile/flaky ในตัวหาร',7.0)
-p('`DONE` หมายถึงการประเมินสิ้นสุดโดยไม่เกิด compile error; fault status ของแถว DONE ยังอาจเป็น flaky/regression. จำนวน 648 NO_SUITE แสดงแยกจาก NOT_DETECTED.')
+p(f"`DONE` หมายถึงการประเมินสิ้นสุดโดยไม่เกิด compile error; fault status ของแถว DONE ยังอาจเป็น flaky/regression. จำนวน {EXEC['NO_SUITE']:,} NO_SUITE แสดงแยกจาก NOT_DETECTED.")
 figure(TMP/'fault_distribution.png','สัดส่วนสถานะใน suite ที่นำมาประเมิน; n ระบุใต้แต่ละเทคนิค')
 heading('4.2 Coverage ของ modified target classes',2)
 p('Defects4J coverage workflow เขียนจำนวนบรรทัดและ condition branches ที่ครอบคลุมและทั้งหมดเป็น aggregate summary ของคลาสที่ถูกวัด. รายงานจึงรวมบั๊กที่แก้หนึ่งคลาสและหลายคลาส โดยใช้ค่าร้อยละที่คำนวณจาก aggregate counts. ค่า n ต่างกันเพราะ suite ที่ไม่มีหรือ compile ไม่ผ่านไม่มี coverage ที่วัดได้. SD แสดงการกระจายระหว่างบั๊ก ไม่ใช่ standard error.')
 covrows=[(LABEL[t],TD[t]['n'],ms(TD[t]['lm'],TD[t]['ls']),ms(TD[t]['bm'],TD[t]['bs'])) for t in TECHS]
 table(['เทคนิค','n','Line mean ± SD','Branch mean ± SD'],covrows,[1.7,.55,2.2,2.25],'Coverage ของ modified target classes ที่มีค่าการวัด',8.6)
 figure(TMP/'coverage_all_targets.png','Line และ branch coverage เฉลี่ยของทุก modified target class ที่วัดได้; n คือจำนวนบั๊ก')
-p('Gemini มี coverage mean สูงสุดในผลที่วัดได้. ค่าเฉลี่ยนี้ยังมี selection bias ได้ เพราะ coverage คำนวณได้เฉพาะกรณีที่ suite ผ่านการ compile และทำงานสำเร็จ; Gemini compile error 419/841 และ DeepSeek 645/836.')
+p(f"Gemini มี coverage mean สูงสุดในผลที่วัดได้. ค่าเฉลี่ยนี้ยังมี selection bias ได้ เพราะ coverage คำนวณได้เฉพาะกรณีที่ suite ผ่านการ compile และทำงานสำเร็จ; Gemini compile error {TD[TECHS[3]]['compile']}/{TD[TECHS[3]]['attempted']} และ DeepSeek {TD[TECHS[2]]['compile']}/{TD[TECHS[2]]['attempted']}.")
 heading('4.3 การเปรียบเทียบ line coverage แบบจับคู่',2)
 PAIR_LABEL = {name: LABEL[name] for name in TECHS}
 paired = ANALYTICS['hypothesis_testing']
@@ -340,9 +356,9 @@ table(['เทคนิค','พบทั้งหมด','พบเฉพาะ
 page(); heading('บทที่ 5 การวิเคราะห์และอภิปรายผล')
 heading('5.1 Coverage และ fault detection',2)
 p('Gemini มีค่า coverage สูงสุดในชุดผลที่วัดได้ ขณะที่ Native IPO มี FDR ต่อ suite สูงสุด. MIO และ DeepSeek แสดงว่าการเข้าถึงโค้ดไม่ได้รับประกันว่า assertion จะจับพฤติกรรมบกพร่องได้. Coverage เป็นตัวชี้วัดการเข้าถึงโค้ด; fault detection วัดว่า suite แยก buggy จาก fixed ได้หรือไม่.')
-p('Native IPO ตรวจพบ 37/257 suite ที่นำมารัน (14.40%); ต่อ catalog เท่ากับ 37/854 (4.33%). มี suite ให้ประเมินเพียง 257 บั๊ก. Gemini ตรวจพบ 107/841 (12.72%) และ suite ครอบคลุม catalog กว้างกว่า แต่มี compile error 419 รายการ. การรายงานทั้งตัวหาร suite และตัวหาร catalog ป้องกันการอ่านเปอร์เซ็นต์โดยไม่เห็นขอบเขต.')
+p(f"Native IPO ตรวจพบ {TD[TECHS[0]]['detected']}/{TD[TECHS[0]]['attempted']} suite ({TD[TECHS[0]]['fdr']:.2f}%); ต่อ catalog เท่ากับ {TD[TECHS[0]]['detected']}/854 ({TD[TECHS[0]]['catalog']:.2f}%). มี suite ให้ประเมิน {TD[TECHS[0]]['attempted']} บั๊ก. Gemini ตรวจพบ {TD[TECHS[3]]['detected']}/{TD[TECHS[3]]['attempted']} ({TD[TECHS[3]]['fdr']:.2f}%) และมี compile error {TD[TECHS[3]]['compile']} รายการ. การรายงานทั้งตัวหาร suite และตัวหาร catalog ป้องกันการอ่านเปอร์เซ็นต์โดยไม่เห็นขอบเขต.")
 heading('5.2 Compile errors และความไม่เสถียร',2)
-p(f"ใน suite evaluations {EXEC['COMPILE_ERROR']:,} รายการ compile ไม่ผ่าน และ {FSTATE['FLAKY_OR_REGRESSION']:,} รายการเป็น flaky/regression. DeepSeek มี compile errors 645/836 และ Gemini 419/841. สถานะเหล่านี้ไม่ถูกแทนด้วย coverage 0; FDR ต่อ suite รวมไว้ในตัวหารเพื่อให้เห็นความพร้อมใช้จริง.")
+p(f"ใน suite evaluations {EXEC['COMPILE_ERROR']:,} รายการ compile ไม่ผ่าน และ {FSTATE['FLAKY_OR_REGRESSION']:,} รายการเป็น flaky/regression. DeepSeek มี compile errors {TD[TECHS[2]]['compile']}/{TD[TECHS[2]]['attempted']} และ Gemini {TD[TECHS[3]]['compile']}/{TD[TECHS[3]]['attempted']}. สถานะเหล่านี้ไม่ถูกแทนด้วย coverage 0; FDR ต่อ suite รวมไว้ในตัวหารเพื่อให้เห็นความพร้อมใช้จริง.")
 heading('5.3 MIO search budget',2)
 p('MIO budget summary เก็บผลตาม target class, budget และสาม seeds. Raw EvoSuite criterion `LINE;BRANCH` ให้ coverage ค่าเดียว; สคริปต์บันทึกค่าเดียวกันในคอลัมน์ line และ branch ดังนั้นรายงานเป็น combined coverage และไม่แสดง branch แยกหรือ mutation score ซึ่งใน summary เป็นค่าคงที่ placeholder. n คือจำนวน class-budget records ไม่ใช่จำนวนบั๊กไม่ซ้ำ.')
 br=[]
@@ -363,8 +379,10 @@ table(['โมเดลตาม label','records','Token/record เฉลี่�
 figure(TMP/'ai_generation.png','Token consumption และ generation latency เฉลี่ยต่อ record ตาม log')
 p('Generation record ไม่ใช่ benchmark evaluation และไม่มี run ID ผูกกับผลตรวจพบรายบั๊ก จึงห้ามใช้หารเป็น token ต่อการตรวจพบ. Provider model ID ไม่ได้เก็บครบทุกแถว จึงรายงานชื่อรุ่นตาม label ในโครงงาน.')
 heading('5.5 ข้อจำกัด',2)
-for x in ['จำนวน suite ต่างกันระหว่างเทคนิค; 648 ช่อง NO_SUITE ไม่ใช่ผลลบของการทดสอบ. บัญชีตรวจไฟล์พบ 591 ช่อง IPO และ 20 ช่อง MIO ที่ไม่มีไฟล์ Java ในตำแหน่ง suite, 6 ช่อง IPO มีไฟล์แต่ยังไม่อยู่ใน verified manifest, และ 31 ช่อง AI มีไฟล์ผู้สมัครแต่ไม่ผ่าน strict target matcher.',
-          'Coverage aggregate รวม modified target classes จาก Defects4J summary; การเฉลี่ยนี้ยังขึ้นกับชุด suite ที่ compile และรันสำเร็จ.',
+for x in [f"จำนวน suite ต่างกันระหว่างเทคนิค; {EXEC['NO_SUITE']:,} ช่อง NO_SUITE เป็นช่องที่ไม่มี suite สำหรับ benchmark evaluation และไม่ใช่ผลลบของการทดสอบ. IPO มี {TD[TECHS[0]]['nosuite']} ช่อง: 37 GENERATION_OR_VERIFICATION_ERROR และ 560 SKIPPED_NOT_READY. ใน 37 ช่องมี candidate Java 6 ช่องที่ fixed-version verification ไม่ผ่าน และอีก 31 ช่องไม่พบ candidate; ใน 560 ช่องที่ถูกข้าม มี 495 NEEDS_ADAPTER, 47 NEEDS_ENTRY_POINT, 16 ที่มีทั้งสองสาเหตุ และ 2 ที่มี NEEDS_ADAPTER ร่วมกับ NOT_PAIRWISE_APPLICABLE.",
+            f"MIO มี {TD[TECHS[1]]['nosuite']} GENERATION_FAILURE หลังบันทึกการลองสร้าง 3 budgets คูณ 3 seeds ต่อบั๊ก: Mockito 15 ช่อง compile ไม่ผ่านจาก Bintray/JCenter; Math-13, Math-31 และ Gson-3 เกิด EvoSuite 1.0.6 internal NPE; Gson-8 เกิด JVM native crash; JacksonDatabind-24 เกิดปัญหา character encoding ตอน compile. ทุกช่องยังคงเป็น NO_SUITE ใน benchmark เพราะไม่มีไฟล์ suite สำหรับประเมิน.",
+            f"Member 3 ส่งไฟล์ AI {len(DELIVERY_ROWS)} ไฟล์สำหรับ {len(DELIVERY_KEYS)} คีย์บั๊ก–เทคนิค; runner ประเมินครบแล้ว ได้ COMPILE_ERROR {DELIVERY_EXEC['COMPILE_ERROR']} คีย์ และ DONE {DELIVERY_EXEC['DONE']} คีย์ โดย {DELIVERY_FAULT['FLAKY_OR_REGRESSION']} คีย์ในกลุ่ม DONE ยัง fail บน fixed. เหลือ AI NO_SUITE {len(AI_GAPS)} คีย์ที่ target mismatch ({AI_MISMATCH_BUGS}); catalog/Defects4J ระบุ target {AI_MISMATCH_TARGETS} แต่ candidate ใช้ package {AI_MISMATCH_PACKAGES}.",
+            'Coverage aggregate รวม modified target classes จาก Defects4J summary; การเฉลี่ยนี้ยังขึ้นกับชุด suite ที่ compile และรันสำเร็จ.',
           'Compile errors และ flaky/regression สูงใน AI suites; coverage mean จากชุดที่วัดได้อาจมี survivorship bias.',
           'MIO budget summary ใช้ criterion coverage รวม ไม่แยก line/branch; cohort ต่อ budget ไม่เหมือนกัน.',
           'AI generation log ไม่มี run ID ครบ; ไม่รองรับการวิเคราะห์ token/time ต่อผล detection.',
@@ -375,14 +393,14 @@ for x in ['จำนวน suite ต่างกันระหว่างเ�
 page(); heading('บทที่ 6 สรุปผลและการทำซ้ำ')
 heading('6.1 สรุปคำตอบ',2)
 for x in ['RQ1: Gemini มี line/branch coverage mean สูงสุดในผลที่วัดได้เมื่อรวม modified target classes ทุกคลาส; n แสดงใต้ตารางและผล compile error แสดงแยก.',
-          'RQ2: Native IPO มี FDR ต่อ suite สูงสุดที่ 14.40%; Gemini ตรวจพบจำนวนบั๊กมากที่สุด 107/841 (12.72%). ตัวหารต่างกัน.',
-          f"RQ3: Union พบ {len(UNION)} บั๊กไม่ซ้ำ; ส่วนร่วมเฉพาะคือ Gemini 91, IPO 27, MIO 5 และ DeepSeek 5.",
+          f"RQ2: Native IPO มี FDR ต่อ suite สูงสุดที่ {TD[TECHS[0]]['fdr']:.2f}%; Gemini ตรวจพบจำนวนบั๊กมากที่สุด {TD[TECHS[3]]['detected']}/{TD[TECHS[3]]['attempted']} ({TD[TECHS[3]]['fdr']:.2f}%). ตัวหารต่างกัน.",
+          f"RQ3: Union พบ {len(UNION)} บั๊กไม่ซ้ำ; ส่วนร่วมเฉพาะคือ Gemini {sum(1 for _,ts in CONTR.items() if TECHS[3] in ts and len(ts)==1)}, IPO {sum(1 for _,ts in CONTR.items() if TECHS[0] in ts and len(ts)==1)}, MIO {sum(1 for _,ts in CONTR.items() if TECHS[1] in ts and len(ts)==1)} และ DeepSeek {sum(1 for _,ts in CONTR.items() if TECHS[2] in ts and len(ts)==1)}.",
           'RQ4: Coverage criterion รวมใน MIO summary เพิ่มตาม budget เชิงพรรณนา; cohort ต่างกันจึงไม่ยืนยัน causal gain หรือจุดอิ่มตัว.',
           'RQ5: AI logs ให้ token และเวลาเฉลี่ยต่อ generation record; ไม่มี run ID เชื่อมกับ detection จึงไม่คำนวณต้นทุนต่อบั๊ก.']: bullet(x)
 heading('6.2 ข้อสรุป',2)
-p('ไม่มีวิธีเดียวดีที่สุดทุกตัวชี้วัด. Gemini ให้ coverage สูงสุดในผลที่วัดได้และตรวจพบ 107 บั๊ก แต่มี compile errors จำนวนมาก. Native IPO มี FDR ต่อ suite สูงสุดใน snapshot นี้ แต่มี suite ผ่านเกณฑ์ประเมินน้อยกว่า. ผล MIO และ DeepSeek แสดงว่า coverage สูงไม่ได้รับประกัน fault detection. การเลือกใช้จึงควรพิจารณา coverage, detection, ความสามารถ compile และ stability ร่วมกัน.')
+p(f"ไม่มีวิธีเดียวดีที่สุดทุกตัวชี้วัด. Gemini ให้ coverage สูงสุดในผลที่วัดได้และตรวจพบ {TD[TECHS[3]]['detected']} บั๊ก แต่มี compile errors จำนวนมาก. Native IPO มี FDR ต่อ suite สูงสุดใน snapshot นี้ แต่มี suite ผ่านเกณฑ์ประเมินน้อยกว่า. ผล MIO และ DeepSeek แสดงว่า coverage สูงไม่ได้รับประกัน fault detection. การเลือกใช้จึงควรพิจารณา coverage, detection, ความสามารถ compile และ stability ร่วมกัน.")
 heading('6.3 งานต่อไป',2)
-for x in ['เจ้าของแต่ละเทคนิคยืนยันไฟล์ผู้สมัครที่ยังไม่ผ่าน manifest หรือ target matcher; Member 4 เพิ่ม suite ที่ได้รับการยืนยันเข้า evaluation และสร้าง master dataset ใหม่.',
+for x in ['Member 3 ตรวจ Math-13: แก้ package ให้ตรงกับ classes.modified ที่ Defects4J ยืนยัน หรือยืนยันว่าไม่มี suite ใช้ได้เพื่อคงสถานะ NO_SUITE; หากส่งไฟล์ใหม่ Member 4 ประเมินเฉพาะคีย์ที่เปลี่ยน.',
           'บันทึก immutable model ID และ generation record ID เชื่อมกับ suite hash และ benchmark run ID.',
           'แยก MIO raw reports ตาม class, budget และ seed ให้มี provenance ครบทุกแถว; แยก coverage criterion ที่วัดได้จริง.',
           'ปรับ prompt และเพิ่ม compile feedback เพื่อแก้ compile errors และ flaky assertions.',
@@ -420,10 +438,10 @@ table(['เนื้อหา','ไฟล์หลัก'],[
     ('Benchmark results','results/master_benchmark_summary.csv; results/run_logs/'),
     ('Suite gap audit','results/suite_gap_audit.csv; scripts/audit_suite_gaps.py'),
     ('สถิติและ analytics','results/master_descriptive_stats.json; results/advanced_analytics_report.md'),
-    ('Native IPO','Combinatorial_IPO/Code/; Combinatorial_IPO/Results/verified_suites_manifest.json'),
-    ('MIO','MIO_Algorithm/Code/batch_evosuite.py; MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv'),
+    ('Native IPO','Combinatorial_IPO/Code/; Combinatorial_IPO/Results/verified_suites_manifest.json; generation_manifest.json; routing_manifest.json'),
+    ('MIO','MIO_Algorithm/Code/batch_evosuite.py; MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv; MIO_FAILURE_ANALYSIS_REPORT.md'),
     ('AI prompts/economics','Deepseek-v4_flash/Prompt/; Gemini-3_8_flash/Prompt/; results/Deepseek_vs_Gemini_Economics.csv'),
-    ('Runner/analytics','scripts/run_benchmark.py; scripts/consolidate_master_results.py; scripts/advanced_data_analytics.py')
+    ('Runner/analytics','scripts/run_benchmark.py; scripts/run_member3_delivery.py; scripts/consolidate_master_results.py; scripts/advanced_data_analytics.py; results/member3_delivery_logs/')
 ],[1.65,5.05],'ไฟล์หลักสำหรับตรวจสอบและทำซ้ำ',8.3)
 heading('ภาคผนวก ข ตัวอย่างการตรวจย้อนกลับ',1)
 samples=[]
@@ -439,9 +457,12 @@ table(['ฟิลด์','ความหมาย'],[
     ('Suite_Available, Test_Files','การมี suite และชื่อไฟล์ที่ประเมิน'),
     ('Line_Coverage_%, Branch_Coverage_%','ค่าจาก Defects4J summary; ว่างเมื่อไม่ได้วัด'),
     ('Fault_Detection_Status','BUG_DETECTED, NOT_DETECTED, FLAKY_OR_REGRESSION, COMPILE_ERROR หรือ NOT_EVALUATED'),
-    ('Execution_Status','DONE, COMPILE_ERROR หรือ NO_SUITE ใน snapshot'),
-    ('Suite_SHA256, Run_ID, Timestamp, Run_Log','provenance และ structured log')
+    ('Execution_Status','สถานะ benchmark; สถานะ generation อยู่ใน audit; hash และ log อยู่ใน master')
 ],[2.25,4.45],'ความหมายฟิลด์สำหรับตรวจย้อนกลับ',8.5)
+tail=DOC.paragraphs[-1]
+tail.paragraph_format.space_before=Pt(0); tail.paragraph_format.space_after=Pt(0)
+tail.paragraph_format.line_spacing=Pt(1)
+for run in tail.runs: run.font.size=Pt(1)
 
 # Footer and metadata
 f=SEC.footer.paragraphs[0]; f.alignment=WD_ALIGN_PARAGRAPH.RIGHT

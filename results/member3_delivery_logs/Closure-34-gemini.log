@@ -1,0 +1,54 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Closure --bug 34 --techniques gemini --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: Gemini 3.8 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Closure-34-gemini] Starting evaluation...
+[Closure-34-gemini] Target modified classes: ['com.google.javascript.jscomp.CodeGenerator', 'com.google.javascript.jscomp.CodePrinter']
+[Closure-34-gemini] Checking out Closure-34b...
+[Closure-34-gemini] Packaging test files: ['CodeGeneratorGeminiTest.java', 'CodePrinterGeminiTest.java']
+[Closure-34-gemini] Measuring code coverage via defects4j coverage -s...
+[Closure-34-gemini] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: Closure-34-gemini-1790431014
+Suite_SHA256: a4a1bc5d844559975750dadc7303197f4468219f30d06d702421ed9ecb2f0d21
+Error_Detail:
+4b/build/classes/rhino_ast/java/com/google/javascript/rhino
+     [copy] Copying 1 file to /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/parsing
+[propertyfile] Updating property file: /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/js
+     [copy] Copying 2 files to /tmp/d4j_eval/Closure_34b/build/classes/com/google/javascript/jscomp/js
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/d4j_eval/Closure_34b/build/classes
+     [echo] build.home: /tmp/d4j_eval/Closure_34b/build
+    [mkdir] Created dir: /tmp/d4j_eval/Closure_34b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_34b/.classes_testgen
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/d4j_eval/Closure_34b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:602: error: illegal unicode escape
+    [javac]     // Non-latin character escapes to \uXXXX
+    [javac]                                         ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

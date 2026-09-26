@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 81,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-81-deepseek-1790431080",
+  "suite_sha256": "622a4db0d041737c9e4da3336efbfe3089b22b292c4901d7df062a6121c04930",
+  "test_files": "IRFactoryDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.parsing.IRFactory",
+  "timestamp": "2026-09-26 20:58:08",
+  "evaluation_duration_sec": 8.048,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "val/Closure_81b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_81b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_81b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_81b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_81b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_81b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_81b/.test_suite/com/google/javascript/jscomp/parsing/IRFactoryDeepseekTest.java:20: error: TestErrorReporter is not abstract and does not override abstract method runtimeError(String,String,int,String,int) in ErrorReporter\n    [javac]   private static class TestErrorReporter implements ErrorReporter {\n    [javac]                  ^\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,31 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project Math --bug 9 --techniques gemini --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: Gemini 3.8 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[Math-9-gemini] Starting evaluation...
+[Math-9-gemini] Target modified classes: ['org.apache.commons.math3.geometry.euclidean.threed.Line']
+[Math-9-gemini] Checking out Math-9b...
+[Math-9-gemini] Packaging test files: ['LineGeminiTest.java']
+[Math-9-gemini] Measuring code coverage via defects4j coverage -s...
+[Math-9-gemini] Target Modified Class Coverage -> Line: 97.83% | Branch: 100.0%
+[Math-9-gemini] Running test on Buggy version to verify failure exposure...
+[Math-9-gemini] Buggy Failures (4): ['org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testRevertPointConsistency', 'org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testWholeLine']
+[Math-9-gemini] Checking out Fixed version (Math-9f)...
+[Math-9-gemini] Running test on Fixed version to verify fix passing...
+[Math-9-gemini] Fixed Failures (2): ['org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testWholeLine', 'org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest::testLargeCoordinatesStability']
+[Math-9-gemini] [RESULT] Status: DONE | Line Cov: 97.83% | Branch Cov: 100.0% | Fault: FLAKY_OR_REGRESSION (4 Failures)
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: DONE
+Run_ID: Math-9-gemini-1790431292
+Suite_SHA256: 6e96a0d355abe845cc18c6a3dc612a64ce02d2fa6e9b562324d592a7871e2cc5

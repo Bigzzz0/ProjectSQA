@@ -1,0 +1,55 @@
+Command: /usr/bin/python3 /workspace/scripts/run_benchmark.py --project JacksonCore --bug 25 --techniques deepseek --resume
+=================================================================
+🚀 ProjectSQA Universal Benchmark Runner
+📊 Total Target Queue: 1 Bugs
+🔬 Techniques: DeepSeek V4 Flash
+💾 Results CSV: /workspace/results/benchmark_results.csv
+🔄 Resume Mode: ENABLED
+=================================================================
+
+[JacksonCore-25-deepseek] Starting evaluation...
+[JacksonCore-25-deepseek] Target modified classes: ['com.fasterxml.jackson.core.json.ReaderBasedJsonParser']
+[JacksonCore-25-deepseek] Checking out JacksonCore-25b...
+[JacksonCore-25-deepseek] Packaging test files: ['ReaderBasedJsonParserDeepseekTest.java']
+[JacksonCore-25-deepseek] Measuring code coverage via defects4j coverage -s...
+[JacksonCore-25-deepseek] ❌ COMPILE ERROR: Generated test suite failed to compile!
+
+=================================================================
+🎉 Benchmark Execution Completed!
+📄 Summary CSV available at: /workspace/results/benchmark_results.csv
+=================================================================
+
+Process_Exit_Code: 0
+Execution_Status: COMPILE_ERROR
+Run_ID: JacksonCore-25-deepseek-1790431261
+Suite_SHA256: 8557a7732c262204381e6344976e47b02fd990c8b4e38ba0612749a2955f4564
+Error_Detail:
+e_25b/target/classes/com/fasterxml/jackson/core/format/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/json/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/json/async/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/sym/package-info.class
+    [javac] Creating empty /tmp/d4j_eval/JacksonCore_25b/target/classes/com/fasterxml/jackson/core/util/package-info.class
+     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_25b/target/classes
+
+compile:
+
+compile.gen.tests:
+     [echo] classes.dir: target/classes
+     [echo] build.home: target/classes/..
+    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_25b/.classes_testgen
+    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonCore_25b/.classes_testgen
+    [javac] /tmp/d4j_eval/JacksonCore_25b/.test_suite/com/fasterxml/jackson/core/json/ReaderBasedJsonParserDeepseekTest.java:38: error: cannot find symbol
+    [javac]     private ReaderBasedJsonParser createParser(String json, Feature... features) {
+    [javac]                                                             ^
+    [javac]   symbol:   class Feature
+    [javac]   location: class ReaderBasedJsonParserDeepseekTest
+    [javac] 1 error
+
+BUILD FAILED
+/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.
+Compilation failed in require at /opt/defects4j/framework/bin/defects4j line 195.

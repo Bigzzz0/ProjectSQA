@@ -4,9 +4,9 @@
     "projects": 17,
     "expected_bug_technique_rows": 3416,
     "master_rows": 3416,
-    "available_suite_rows": 2768,
-    "attempted_rows": 2768,
-    "no_suite_rows": 648,
+    "available_suite_rows": 2797,
+    "attempted_rows": 2797,
+    "no_suite_rows": 619,
     "unresolved_rows": 0,
     "results_complete": true,
     "available_suite_evaluations_complete": true
@@ -15,35 +15,35 @@
     {
       "group_1": "Gemini 3.8 Flash",
       "group_2": "DeepSeek V4 Flash",
-      "n_pairs": 135,
-      "n_nonzero_pairs": 93,
+      "n_pairs": 136,
+      "n_nonzero_pairs": 94,
       "status": "MEASURED",
       "wilcoxon_statistic": 371.5,
-      "p_value": 3.639175320110401e-12,
-      "paired_rank_biserial": 0.83,
-      "p_value_holm": 7.278350640220802e-12
+      "p_value": 2.2550527954634234e-12,
+      "paired_rank_biserial": 0.8336,
+      "p_value_holm": 4.922845402881684e-12
     },
     {
       "group_1": "MIO (EvoSuite SBST)",
       "group_2": "Gemini 3.8 Flash",
-      "n_pairs": 397,
-      "n_nonzero_pairs": 336,
+      "n_pairs": 399,
+      "n_nonzero_pairs": 337,
       "status": "MEASURED",
-      "wilcoxon_statistic": 6852.5,
-      "p_value": 2.1706361975040088e-33,
-      "paired_rank_biserial": -0.7579,
-      "p_value_holm": 1.0853180987520044e-32
+      "wilcoxon_statistic": 6866.5,
+      "p_value": 1.4569109307526776e-33,
+      "paired_rank_biserial": -0.7589,
+      "p_value_holm": 7.284554653763388e-33
     },
     {
       "group_1": "MIO (EvoSuite SBST)",
       "group_2": "DeepSeek V4 Flash",
-      "n_pairs": 182,
-      "n_nonzero_pairs": 151,
+      "n_pairs": 183,
+      "n_nonzero_pairs": 152,
       "status": "MEASURED",
-      "wilcoxon_statistic": 4433.5,
-      "p_value": 0.015377480094745748,
-      "paired_rank_biserial": -0.2273,
-      "p_value_holm": 0.015377480094745748
+      "wilcoxon_statistic": 4522.5,
+      "p_value": 0.01751786595446864,
+      "paired_rank_biserial": -0.2221,
+      "p_value_holm": 0.01751786595446864
     },
     {
       "group_1": "MIO (EvoSuite SBST)",
@@ -173,8 +173,8 @@
     "attempted_per_technique": {
       "IPO (Native IPO)": 257,
       "MIO (EvoSuite SBST)": 834,
-      "DeepSeek V4 Flash": 836,
-      "Gemini 3.8 Flash": 841
+      "DeepSeek V4 Flash": 853,
+      "Gemini 3.8 Flash": 853
     },
     "detected_per_technique": {
       "IPO (Native IPO)": 37,
@@ -237,15 +237,15 @@
     "DeepSeek V4 Flash": {
       "single_class": {
         "catalog_bugs": 727,
-        "attempted_bugs": 710,
-        "coverage_n": 185,
-        "line_coverage_mean": 77.627,
+        "attempted_bugs": 726,
+        "coverage_n": 186,
+        "line_coverage_mean": 77.652,
         "detected_bugs": 11,
-        "fdr_attempted_percent": 1.549
+        "fdr_attempted_percent": 1.515
       },
       "multi_class": {
         "catalog_bugs": 127,
-        "attempted_bugs": 126,
+        "attempted_bugs": 127,
         "coverage_n": 6,
         "line_coverage_mean": 89.258,
         "detected_bugs": 0,
@@ -255,37 +255,37 @@
     "Gemini 3.8 Flash": {
       "single_class": {
         "catalog_bugs": 727,
-        "attempted_bugs": 715,
-        "coverage_n": 402,
-        "line_coverage_mean": 87.014,
+        "attempted_bugs": 726,
+        "coverage_n": 404,
+        "line_coverage_mean": 87.071,
         "detected_bugs": 106,
-        "fdr_attempted_percent": 14.825
+        "fdr_attempted_percent": 14.601
       },
       "multi_class": {
         "catalog_bugs": 127,
-        "attempted_bugs": 126,
+        "attempted_bugs": 127,
         "coverage_n": 20,
         "line_coverage_mean": 70.605,
         "detected_bugs": 1,
-        "fdr_attempted_percent": 0.794
+        "fdr_attempted_percent": 0.787
       }
     }
   },
   "ai_economics": {
     "Gemini 3.8 Flash": {
       "source": "results\\Deepseek_vs_Gemini_Economics.csv",
-      "generation_records": 1068,
-      "avg_tokens_per_generation_record": 20699.64,
-      "avg_generation_latency_sec": 88.66,
+      "generation_records": 1079,
+      "avg_tokens_per_generation_record": 20855.06,
+      "avg_generation_latency_sec": 89.78,
       "benchmark_detected_bugs": 107,
       "token_cost_per_detected_bug": null,
       "note": "Generation logs are summarized separately; they do not carry benchmark run IDs, so token cost per measured detection is not joined."
     },
     "DeepSeek V4 Flash": {
       "source": "results\\Deepseek_vs_Gemini_Economics.csv",
-      "generation_records": 1069,
-      "avg_tokens_per_generation_record": 20900.15,
-      "avg_generation_latency_sec": 295.11,
+      "generation_records": 1082,
+      "avg_tokens_per_generation_record": 21045.26,
+      "avg_generation_latency_sec": 295.54,
       "benchmark_detected_bugs": 11,
       "token_cost_per_detected_bug": null,
       "note": "Generation logs are summarized separately; they do not carry benchmark run IDs, so token cost per measured detection is not joined."
