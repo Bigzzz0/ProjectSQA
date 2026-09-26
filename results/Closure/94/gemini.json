@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.NodeUtilGeminiTest::testAstFactoryMethods"
-  ]
+  ],
+  "suite_sha256": "3dbec3286c44f0a01c0568c869572d19ae8b596dc72d2215a4277771074ab1ac",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_94b/NodeUtilGeminiTest.java"
+  ],
+  "run_id": "Closure-94-gemini-1790360377"
 }

@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 44.0,
+  "branch_cov": 34.38,
+  "test_file": "BigFraction_IPOTest.java;Fraction_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.BigFraction;org.apache.commons.math3.fraction.Fraction",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f8d3bb7ef80b9836109b35e1893cf139a120b12b65a59384b75b18e3079713a7",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_1b/org/apache/commons/math3/fraction/BigFraction_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/Math_1b/org/apache/commons/math3/fraction/Fraction_IPOTest.java"
+  ],
+  "run_id": "Math-1-ipo-1790387473"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 2.63,
+  "branch_cov": 0.0,
+  "test_file": "UnivariateRealSolverUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d3f0f002e5ecba19f31887ddfdca987d367fd07d5b0936c7e192936f5c419f97",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_85b/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils_IPOTest.java"
+  ],
+  "run_id": "Math-85-ipo-1790393229"
+}

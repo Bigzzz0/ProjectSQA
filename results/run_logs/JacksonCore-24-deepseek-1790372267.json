@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 24,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-24-deepseek-1790372267",
+  "suite_sha256": "e54ba0dc57c0a95753150fcf03f160a7c33c582e3bf9625f2bcd73d4e451af65",
+  "test_files": "ParserBaseDeepseekTest.java;ParserMinimalBaseDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.base.ParserBase;com.fasterxml.jackson.core.base.ParserMinimalBase",
+  "timestamp": "2026-09-26 04:37:52",
+  "evaluation_duration_sec": 4.826,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ore_24b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_24b/target/classes/com/fasterxml/jackson/core/json/async/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_24b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_24b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_24b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_24b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_24b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JacksonCore_24b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_24b/.test_suite/com/fasterxml/jackson/core/base/ParserBaseDeepseekTest.java:30: error: TestParser is not abstract and does not override abstract method setCodec(ObjectCodec) in JsonParser\n    [javac]     private static class TestParser extends ParserBase {\n    [javac]                    ^\n    [javac] Note: /tmp/d4j_eval/JacksonCore_24b/.test_suite/com/fasterxml/jackson/core/base/ParserBaseDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

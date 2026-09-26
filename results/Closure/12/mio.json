@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 40.91,
+  "branch_cov": 16.67,
+  "test_file": "MaybeReachingVariableUse_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.MaybeReachingVariableUse",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ba75f9acd6a2c9a7056a3d7837b3d8ec87b8418ab0bdf62bb1879c9c7635c160",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_12b/MaybeReachingVariableUse_ESTest.java"
+  ],
+  "run_id": "Closure-12-mio-1790354829"
+}

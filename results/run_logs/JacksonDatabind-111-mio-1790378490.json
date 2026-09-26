@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 111,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-111-mio-1790378490",
+  "suite_sha256": "8b5ea9cc670412dd4008c82f29bee9e741c38a2afade855b7a6745ef57e2fd74",
+  "test_files": "AtomicReferenceDeserializer_ESTest.java;CreatorProperty_ESTest.java;FieldProperty_ESTest.java;MethodProperty_ESTest.java;ObjectIdReferenceProperty_ESTest.java;ObjectIdValueProperty_ESTest.java;SetterlessProperty_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.CreatorProperty;com.fasterxml.jackson.databind.deser.impl.FieldProperty;com.fasterxml.jackson.databind.deser.impl.MethodProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty;com.fasterxml.jackson.databind.deser.impl.SetterlessProperty;com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer",
+  "timestamp": "2026-09-26 06:22:11",
+  "evaluation_duration_sec": 40.919,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 51.88,
+  "branch_coverage_percent": 27.66,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

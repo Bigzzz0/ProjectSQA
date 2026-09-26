@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 69,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-69-ipo-1790392121",
+  "suite_sha256": "85feaf57950fa2f7f16115b139e019dbe02f9f018d43103442bfcecd426dca2c",
+  "test_files": "PearsonsCorrelation_IPOTest.java",
+  "target_classes": "org.apache.commons.math.stat.correlation.PearsonsCorrelation",
+  "timestamp": "2026-09-26 10:09:05",
+  "evaluation_duration_sec": 23.775,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 10.67,
+  "branch_coverage_percent": 10.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 157,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-157-gemini-1790364098",
+  "suite_sha256": "88b4f455eacf34703cbdad5e380237d886a72b8819bca94b11d93dfa4e9c9fd0",
+  "test_files": "CodeGeneratorGeminiTest.java;RenamePrototypesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.parsing.IRFactory;com.google.javascript.jscomp.RenamePrototypes",
+  "timestamp": "2026-09-26 02:21:46",
+  "evaluation_duration_sec": 8.264,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ile to /tmp/d4j_eval/Closure_157b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_157b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_157b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_157b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_157b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_157b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_157b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_157b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_157b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:524: error: cannot find symbol\n    [javac]     Node badToken = new Node(Token.LAST_LINENO);\n    [javac]                                   ^\n    [javac]   symbol:   variable LAST_LINENO\n    [javac]   location: class Token\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

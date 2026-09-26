@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 19,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-19-gemini-1790352105",
+  "suite_sha256": "7a2e4613d8700bf1db97e3124091682610a022f6d9477fb5c8c9a9000dd2ab91",
+  "test_files": "CategoryPlotGeminiTest.java",
+  "target_classes": "org.jfree.chart.plot.CategoryPlot",
+  "timestamp": "2026-09-25 23:01:53",
+  "evaluation_duration_sec": 8.214,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "      ^\n    [javac]     constructor LegendItem.LegendItem(String,String,String,String,Shape,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(String,String,String,String,Shape,Paint,Stroke,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(String,String,String,String,Shape,Stroke,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(String,String,String,String,boolean,Shape,boolean,Paint,boolean,Paint,Stroke,boolean,Shape,Stroke,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(AttributedString,String,String,String,Shape,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(AttributedString,String,String,String,Shape,Paint,Stroke,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(AttributedString,String,String,String,Shape,Stroke,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor LegendItem.LegendItem(AttributedString,String,String,String,boolean,Shape,boolean,Paint,boolean,Paint,Stroke,boolean,Shape,Stroke,Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

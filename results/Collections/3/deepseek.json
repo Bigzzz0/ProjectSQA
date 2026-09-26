@@ -73,5 +73,10 @@
     "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSizeNull",
     "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectRejectedNullCollection",
     "org.apache.commons.collections.CollectionUtilsDeepseekTest::testSelectNullCollection"
-  ]
+  ],
+  "suite_sha256": "6c156209bc5447fc192b29f86b6e0e1228a7b397f6617594b14e7b1c4b5f3ac5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_3b/CollectionUtilsDeepseekTest.java"
+  ],
+  "run_id": "Collections-3-deepseek-1790366266"
 }

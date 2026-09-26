@@ -1,0 +1,21 @@
+{
+  "project": "Chart",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-8-gemini-1790351403",
+  "suite_sha256": "8c8d7343fa3208047cc8b1427321b34ec77af94cf46fa5422cc3fc971529b039",
+  "test_files": "WeekGeminiTest.java",
+  "target_classes": "org.jfree.data.time.Week",
+  "timestamp": "2026-09-25 22:50:29",
+  "evaluation_duration_sec": 25.729,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.15,
+  "branch_coverage_percent": 85.29,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.time.WeekGeminiTest::testConstructor"
+  ],
+  "fixed_failures": []
+}

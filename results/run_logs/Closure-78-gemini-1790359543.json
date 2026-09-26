@@ -1,0 +1,31 @@
+{
+  "project": "Closure",
+  "bug_id": 78,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-78-gemini-1790359543",
+  "suite_sha256": "3e415c2c1d66ea12c81ab039e1ed36c18c64488e5bc2ccaae3cd6c4ed54738aa",
+  "test_files": "PeepholeFoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "timestamp": "2026-09-26 01:06:11",
+  "evaluation_duration_sec": 27.61,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 79.58,
+  "branch_coverage_percent": 64.83,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisons",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldArithmeticModuloByZeroKnownDefect",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldArithmeticDivideByZeroKnownDefect",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldComparisons",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
+  ]
+}

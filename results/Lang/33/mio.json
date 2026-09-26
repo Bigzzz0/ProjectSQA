@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 90.56,
+  "branch_cov": 89.35,
+  "test_file": "ClassUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.ClassUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ClassUtils_ESTest::test32"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ClassUtils_ESTest::test32"
+  ],
+  "suite_sha256": "372ed2e15d478edfa5bb7b7a3951e118ee8f9f378b9d71b242c278d0dc6fd566",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_33b/ClassUtils_ESTest.java"
+  ],
+  "run_id": "Lang-33-mio-1790385586"
+}

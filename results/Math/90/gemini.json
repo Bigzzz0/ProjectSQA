@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.stat.FrequencyGeminiTest::testAddNonComparable"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "3f64ef431ef52087143185c86b41fe806995c93cd50a2ff6b7c31709011866c4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_90b/FrequencyGeminiTest.java"
+  ],
+  "run_id": "Math-90-gemini-1790393526"
 }

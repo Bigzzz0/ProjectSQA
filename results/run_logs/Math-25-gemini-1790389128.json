@@ -1,0 +1,26 @@
+{
+  "project": "Math",
+  "bug_id": 25,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-25-gemini-1790389128",
+  "suite_sha256": "3f092301b840f136a2d4b0b38900613c73f50bc361d571b7e563992aeaeade32",
+  "test_files": "HarmonicFitterGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.fitting.HarmonicFitter",
+  "timestamp": "2026-09-26 09:19:25",
+  "evaluation_duration_sec": 37.61,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.94,
+  "branch_coverage_percent": 89.29,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testMath844"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testParameterGuesserConstantYObservations",
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
+    "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testGuesserClonesObservationsDefensively"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.33,
+  "branch_cov": 0.0,
+  "test_file": "SimpleType_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.SimpleType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f9cc2828053b5820dc5138b7dabcd900ff57e9e1a719158e3976d10a5ce9a841",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_44b/com/fasterxml/jackson/databind/type/SimpleType_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-44-ipo-1790374782"
+}

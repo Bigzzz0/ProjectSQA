@@ -7,5 +7,10 @@
   "test_file": "EigenDecompositionImplGeminiTest.java",
   "target_classes": "org.apache.commons.math.linear.EigenDecompositionImpl",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "364a86063a4dc88a556df60150a64dd2aa5150ef520fb479673a303dc592785e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_81b/EigenDecompositionImplGeminiTest.java"
+  ],
+  "run_id": "Math-81-gemini-1790393028"
 }

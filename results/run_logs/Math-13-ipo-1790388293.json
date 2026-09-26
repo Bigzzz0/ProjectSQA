@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 13,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-13-ipo-1790388293",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer",
+  "timestamp": "2026-09-26 09:04:53",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

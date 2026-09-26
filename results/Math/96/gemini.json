@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.complex.ComplexGeminiTest::testMath221"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "1bcc199518436bf4e6442454614c798f963ac1a075fc9de5ed6bd66fdf8970cc",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_96b/ComplexGeminiTest.java"
+  ],
+  "run_id": "Math-96-gemini-1790394075"
 }

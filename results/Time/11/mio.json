@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 50.13,
+  "branch_cov": 46.63,
+  "test_file": "ZoneInfoCompiler_ESTest.java",
+  "target_classes": "org.joda.time.tz.ZoneInfoCompiler",
+  "buggy_failures": [
+    "org.joda.time.tz.ZoneInfoCompiler_ESTest::test07"
+  ],
+  "fixed_failures": [
+    "org.joda.time.tz.ZoneInfoCompiler_ESTest::test35",
+    "org.joda.time.tz.ZoneInfoCompiler_ESTest::test07"
+  ],
+  "suite_sha256": "1082f37bc3da193bb72ca567321853270be545b6246c6f5ce36f89b7faeb9ee9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_11b/ZoneInfoCompiler_ESTest.java"
+  ],
+  "run_id": "Time-11-mio-1790398948"
+}

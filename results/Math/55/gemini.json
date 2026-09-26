@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.geometry.Vector3DGeminiTest::testCrossProductCancellation"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "18bb4157f53dedb5452cb6a2798717b4d3fffefd1591c6391522edb339367930",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_55b/Vector3DGeminiTest.java"
+  ],
+  "run_id": "Math-55-gemini-1790391210"
 }

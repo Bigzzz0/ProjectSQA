@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.24,
+  "branch_cov": 17.74,
+  "test_file": "ScopedAliases_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b5160d508a7884c9f266c4b038ce6b4e8240d167556edca5d1ed6f89794347f5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_16b/ScopedAliases_ESTest.java"
+  ],
+  "run_id": "Closure-16-mio-1790355076"
+}

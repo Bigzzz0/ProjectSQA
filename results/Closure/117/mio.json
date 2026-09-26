@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 43.21,
+  "branch_cov": 21.15,
+  "test_file": "TypeValidator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeValidator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9d563d3d357c8a63497e5d5ed81121eed5e8bf04db27486c20fe94d015d1c16a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_117b/TypeValidator_ESTest.java"
+  ],
+  "run_id": "Closure-117-mio-1790361753"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 19.18,
+  "branch_cov": 11.9,
+  "test_file": "ArArchiveInputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ar.ArArchiveInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b36f94315c2c65ab8549c5ef693ca59d85eaa298e1a06e0d47f43b0ad8d3bcff",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_2b/org/apache/commons/compress/archivers/ar/ArArchiveInputStream_IPOTest.java"
+  ],
+  "run_id": "Compress-2-ipo-1790367622"
+}

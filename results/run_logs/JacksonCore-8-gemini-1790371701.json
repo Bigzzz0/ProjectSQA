@@ -1,0 +1,31 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-8-gemini-1790371701",
+  "suite_sha256": "893504134d1bc62beb4c94ca63a77ce06c73483ca3076c5daddd5e55644c074e",
+  "test_files": "TextBufferGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.TextBuffer",
+  "timestamp": "2026-09-26 04:28:35",
+  "evaluation_duration_sec": 14.48,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.36,
+  "branch_coverage_percent": 78.99,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testEmpty",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithCopy",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalAllBranches",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentAndReturn",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentLengthContract"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testEmpty",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithCopy",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalAllBranches",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentAndReturn",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentLengthContract"
+  ]
+}

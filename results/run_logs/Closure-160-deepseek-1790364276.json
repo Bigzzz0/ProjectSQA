@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 160,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-160-deepseek-1790364276",
+  "suite_sha256": "9991136951b4e02d537cdc5628297df84f30bfb559a1fa892e6ca97ab82666e6",
+  "test_files": "CompilerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.Compiler",
+  "timestamp": "2026-09-26 02:24:44",
+  "evaluation_duration_sec": 8.067,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "j_eval/Closure_160b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_160b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_160b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_160b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_160b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_160b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_160b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_160b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_160b/.test_suite/com/google/javascript/jscomp/CompilerDeepseekTest.java:37: error: RecordingErrorManager is not abstract and does not override abstract method printSummary() in BasicErrorManager\n    [javac]   private static class RecordingErrorManager extends BasicErrorManager {\n    [javac]                  ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

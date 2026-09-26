@@ -1,0 +1,23 @@
+{
+  "project": "Math",
+  "bug_id": 79,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-79-gemini-1790392876",
+  "suite_sha256": "467cf2da545dbf30996dea05446bfecdf218c801368b4eae27478f94db0b656b",
+  "test_files": "MathUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:21:41",
+  "evaluation_duration_sec": 24.843,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.05,
+  "branch_coverage_percent": 96.23,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficient"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficient"
+  ]
+}

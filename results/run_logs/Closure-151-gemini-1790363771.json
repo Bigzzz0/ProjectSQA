@@ -1,0 +1,28 @@
+{
+  "project": "Closure",
+  "bug_id": 151,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-151-gemini-1790363771",
+  "suite_sha256": "5fbb34e40f2bcf9f60b5f8a7bf32f2a0d282d774fbb1cd9140a85715eb973bea",
+  "test_files": "CommandLineRunnerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "timestamp": "2026-09-26 02:16:35",
+  "evaluation_duration_sec": 24.519,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 86.41,
+  "branch_coverage_percent": 73.53,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testVersionFlag",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
+    "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
+  ]
+}

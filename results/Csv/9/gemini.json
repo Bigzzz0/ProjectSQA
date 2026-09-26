@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.csv.CSVRecordGeminiTest::testToMapWithNoHeader"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "ddfdc66c955d1b7baba073bcc02766cd46bf392d5e540cb3d91df36bce38b0d7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_9b/CSVRecordGeminiTest.java"
+  ],
+  "run_id": "Csv-9-gemini-1790370434"
 }

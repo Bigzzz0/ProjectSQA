@@ -11,5 +11,10 @@
     "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentPoints",
     "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentLengths"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "d81728022b3b60bfc160c29a1baeffba914061dd590edaaa261b9c2cff24dd33",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_11b/ShapeUtilitiesGeminiTest.java"
+  ],
+  "run_id": "Chart-11-gemini-1790351632"
 }

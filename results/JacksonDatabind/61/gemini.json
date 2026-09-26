@@ -20,5 +20,11 @@
     "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testLocaleAndTimeZoneConfiguration",
     "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeDeserializerNullInclusionThrowsISE",
     "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeSerializerNullInclusionThrowsISE"
-  ]
+  ],
+  "suite_sha256": "f0728b1d1ad47c6b0dd5e34eb437f77de42ba0465f846c3e349238c44db9bda7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_61b/ObjectMapperGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_61b/StdTypeResolverBuilderGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-61-gemini-1790375794"
 }

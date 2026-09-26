@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.62,
+  "branch_cov": 94.74,
+  "test_file": "CharacterReader_ESTest.java;Tokeniser_ESTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader;org.jsoup.parser.Tokeniser",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.parser.Tokeniser_ESTest::test08"
+  ],
+  "suite_sha256": "a1649ec472de22fcc49372b542eb0e2856bc4d42aaa7dc0f669372d6f3417934",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_23b/CharacterReader_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_23b/Tokeniser_ESTest.java"
+  ],
+  "run_id": "Jsoup-23-mio-1790379684"
+}

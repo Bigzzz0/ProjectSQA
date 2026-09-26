@@ -1,0 +1,30 @@
+{
+  "project": "Jsoup",
+  "bug_id": 37,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-37-gemini-1790380323",
+  "suite_sha256": "c97834a0b732097a56b345b8909b2d63bee3346d5ead157ca0825ce7b192fda2",
+  "test_files": "ElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "timestamp": "2026-09-26 06:52:19",
+  "evaluation_duration_sec": 15.8,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 88.93,
+  "branch_coverage_percent": 82.89,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testPreserveWhitespaceInText",
+    "org.jsoup.nodes.ElementGeminiTest::testElementSelectionMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testAppendAndPrependHtml",
+    "org.jsoup.nodes.ElementGeminiTest::testNotPretty",
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnTextExtraction"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testPreserveWhitespaceInText",
+    "org.jsoup.nodes.ElementGeminiTest::testElementSelectionMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testAppendAndPrependHtml",
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnTextExtraction"
+  ]
+}

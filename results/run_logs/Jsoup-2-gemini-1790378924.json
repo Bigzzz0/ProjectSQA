@@ -1,0 +1,30 @@
+{
+  "project": "Jsoup",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-2-gemini-1790378924",
+  "suite_sha256": "12b6f251c9d006634d012d8b3a3699522c21bcb4ec79eac0c24a3d47d81b3e2b",
+  "test_files": "ParserGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Parser",
+  "timestamp": "2026-09-26 06:29:00",
+  "evaluation_duration_sec": 16.089,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.77,
+  "branch_coverage_percent": 94.19,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.ParserGeminiTest::testAttributeEdgeCases",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterDataTag",
+    "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.ParserGeminiTest::testAttributeEdgeCases",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
+    "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
+  ]
+}

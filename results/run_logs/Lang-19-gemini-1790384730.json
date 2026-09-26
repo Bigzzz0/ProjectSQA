@@ -1,0 +1,23 @@
+{
+  "project": "Lang",
+  "bug_id": 19,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-19-gemini-1790384730",
+  "suite_sha256": "66de2293e31f732ef6888a08759e2aca41c65437edfa2b1ca434df4031d62ce6",
+  "test_files": "NumericEntityUnescaperGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "timestamp": "2026-09-26 08:05:50",
+  "evaluation_duration_sec": 19.637,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testOutOfBoundsDefect",
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testUnfinishedEntityWithoutSemicolonDefect",
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testOutOfBoundsExactEnd"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 47.07,
+  "branch_cov": 36.82,
+  "test_file": "Normalize_ESTest.java;SyntacticScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Normalize;com.google.javascript.jscomp.SyntacticScopeCreator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test00",
+    "com.google.javascript.jscomp.SyntacticScopeCreator_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test00",
+    "com.google.javascript.jscomp.SyntacticScopeCreator_ESTest::test1"
+  ],
+  "suite_sha256": "ef49b193e87215fb7495b2853cc86329526c08e80f00cec36ffab37824bc7e9f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_153b/Normalize_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_153b/SyntacticScopeCreator_ESTest.java"
+  ],
+  "run_id": "Closure-153-mio-1790363840"
+}

@@ -1,0 +1,29 @@
+{
+  "project": "Collections",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-1-gemini-1790366147",
+  "suite_sha256": "fabbc9714ce54a7ca2c317f47011fe3d9368dde3f590a227e4f872fa232e9cbb",
+  "test_files": "Flat3MapGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.map.Flat3Map",
+  "timestamp": "2026-09-26 02:56:05",
+  "evaluation_duration_sec": 17.386,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 82.48,
+  "branch_coverage_percent": 73.94,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testRemoveNonDelegateAllSizes",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testEntryIteratorSetValue2",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testEntryIteratorSetValue3",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testNullKeyOperations",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testMapIteratorSetValue2",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testMapIteratorSetValue3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testRemoveNonDelegateAllSizes",
+    "org.apache.commons.collections.map.Flat3MapGeminiTest::testNullKeyOperations"
+  ]
+}

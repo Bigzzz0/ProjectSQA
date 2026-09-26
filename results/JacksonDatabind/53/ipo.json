@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 13.27,
+  "branch_cov": 4.62,
+  "test_file": "TypeBindings_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.TypeBindings;com.fasterxml.jackson.databind.type.TypeFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "11cf10cf57a78498044dbddcc6abc926cb66c540fe1d7c0b967cc67754eab8cb",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_53b/com/fasterxml/jackson/databind/type/TypeBindings_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-53-ipo-1790375304"
+}

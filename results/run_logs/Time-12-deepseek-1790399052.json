@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 12,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-12-deepseek-1790399052",
+  "suite_sha256": "174baf180859be9d97ae6b9505182a4def9d7abf84886895f9560aacda19d308",
+  "test_files": "LocalDateDeepseekTest.java;LocalDateTimeDeepseekTest.java",
+  "target_classes": "org.joda.time.LocalDate;org.joda.time.LocalDateTime",
+  "timestamp": "2026-09-26 12:04:18",
+  "evaluation_duration_sec": 6.711,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Time_12b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n     [copy] Copying 8 files to /tmp/d4j_eval/Time_12b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_12b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_12b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Time_12b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_12b/.test_suite/org/joda/time/LocalDateDeepseekTest.java:718: error: reference to toString is ambiguous\n    [javac]         assertEquals(\"2023-05-15\", date.toString(null));\n    [javac]                                        ^\n    [javac]   both method toString(DateTimeFormatter) in AbstractPartial and method toString(String) in LocalDate match\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,38 @@
+{
+  "project": "Jsoup",
+  "bug_id": 52,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-52-gemini-1790381101",
+  "suite_sha256": "e7849eaeb756ca0eced42a6c16d3bc4df8d9cd96984735693f5e9003ee50d478",
+  "test_files": "DataUtilGeminiTest.java;XmlDeclarationGeminiTest.java;XmlTreeBuilderGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil;org.jsoup.nodes.XmlDeclaration;org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:05:19",
+  "evaluation_duration_sec": 18.335,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.95,
+  "branch_coverage_percent": 85.37,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeBoundaryValues",
+    "org.jsoup.helper.DataUtilGeminiTest::testDetectCharsetEncodingDeclarationXml",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleVersionAttribute",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationPreservesStandaloneAndCustomAttributes",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testProcessingInstructionOuterHtmlFormatting",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleEncodingAttribute",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testXmlDeclarationOuterHtmlMustEndWithQuestionMarkGreater",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testHandlesXmlDeclarationAsDeclarationNode",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testProcessingInstructionBangDeclaration",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testDetectAndParseDeclarationAttributesXml"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeBoundaryValues",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithNonXmlNameIgnoresAttributes",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleVersionAttribute",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithXmlNameAndBothAttributesPresent",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testProcessingInstructionOuterHtmlFormatting",
+    "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleEncodingAttribute",
+    "org.jsoup.parser.XmlTreeBuilderGeminiTest::testProcessingInstructionBangDeclaration"
+  ]
+}

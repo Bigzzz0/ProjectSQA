@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.86,
+  "branch_cov": 84.85,
+  "test_file": "Attributes_ESTest.java;HtmlTreeBuilder_ESTest.java;ParseSettings_ESTest.java;Token_ESTest.java;XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes;org.jsoup.parser.HtmlTreeBuilder;org.jsoup.parser.ParseSettings;org.jsoup.parser.Token;org.jsoup.parser.XmlTreeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c6e57934f45b47d2a40a13dec3da9d6b20a622113fe9957670f20258b1abe5de",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_92b/Attributes_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_92b/HtmlTreeBuilder_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_92b/ParseSettings_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_92b/Token_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_92b/XmlTreeBuilder_ESTest.java"
+  ],
+  "run_id": "Jsoup-92-mio-1790382936"
+}

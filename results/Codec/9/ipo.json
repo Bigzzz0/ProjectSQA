@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 42.27,
+  "branch_cov": 32.24,
+  "test_file": "Base64_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b710dac8db630c8ce0533ff21079cabeca2b786d411d9e69d3cea37ffa56cd9e",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_9b/org/apache/commons/codec/binary/Base64_IPOTest.java"
+  ],
+  "run_id": "Codec-9-ipo-1790365714"
+}

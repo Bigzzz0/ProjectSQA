@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 24,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-24-mio-1790367340",
+  "suite_sha256": "1ef2507f5efc58b76006bb3bf3a58da2fc9597705871a275103bab7c45a9bc29",
+  "test_files": "UnmodifiableBoundedCollection_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection",
+  "timestamp": "2026-09-26 03:15:57",
+  "evaluation_duration_sec": 17.854,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 65.38,
+  "branch_coverage_percent": 83.33,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

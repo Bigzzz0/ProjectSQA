@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 18.18,
+  "branch_cov": 0.0,
+  "test_file": "ReturnsDeepStubs_ESTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9170c874814d3bf8f7608eafd75f086c5d9a2ba8fb46370aff429a7e4e0b1f49",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_23b/ReturnsDeepStubs_ESTest.java"
+  ],
+  "run_id": "Mockito-23-mio-1790397141"
+}

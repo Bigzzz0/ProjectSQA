@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::testTypeVarBoundedType_Contract"
-  ]
+  ],
+  "suite_sha256": "0fd21cf4a509efff7daa77dddaded2127360bdb89ee9785589438d3b1136b046",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_8b/GenericMetadataSupportGeminiTest.java"
+  ],
+  "run_id": "Mockito-8-gemini-1790395629"
 }

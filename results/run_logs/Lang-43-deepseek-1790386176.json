@@ -1,0 +1,31 @@
+{
+  "project": "Lang",
+  "bug_id": 43,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-43-deepseek-1790386176",
+  "suite_sha256": "78250080500925a2ae37ed7190ecb5a79fdc973edfc630cd6fe78bde1b349687",
+  "test_files": "ExtendedMessageFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.text.ExtendedMessageFormat",
+  "timestamp": "2026-09-26 08:29:56",
+  "evaluation_duration_sec": 20.412,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 75.3,
+  "branch_coverage_percent": 47.47,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testInvalidPatternUnterminatedQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testNullPattern",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testRegistryWithNullFactory",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithWhitespaceInFormatElement"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testInvalidPatternUnterminatedQuotedString",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testNullPattern",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testRegistryWithNullFactory",
+    "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithWhitespaceInFormatElement"
+  ]
+}

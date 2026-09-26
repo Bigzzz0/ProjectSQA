@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 56.01,
+  "branch_cov": 45.25,
+  "test_file": "NodeUtil_ESTest.java;PureFunctionIdentifier_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.PureFunctionIdentifier",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "dbc7ce27153bb811eabc91e585d3e7b24aa1d66d6ecd5d887d24c380d2a50f2f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_141b/NodeUtil_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_141b/PureFunctionIdentifier_ESTest.java"
+  ],
+  "run_id": "Closure-141-mio-1790363217"
+}

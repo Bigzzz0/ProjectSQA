@@ -17,5 +17,10 @@
     "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithShortRecord",
     "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithShortRecord",
     "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithNullMapping"
-  ]
+  ],
+  "suite_sha256": "66d967c9167ae8006bec013a9a2ba7cdbdf322f146107d16f74e8c1f8d6f40a6",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Csv_6b/CSVRecordDeepseekTest.java"
+  ],
+  "run_id": "Csv-6-deepseek-1790370312"
 }

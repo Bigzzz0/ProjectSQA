@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 42,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-42-gemini-1790374727",
+  "suite_sha256": "4cbf830a1e5717a4d56f1fb8f0627c9701e29725021d6e0cb7f7b7ad09154764",
+  "test_files": "FromStringDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.FromStringDeserializer",
+  "timestamp": "2026-09-26 05:18:55",
+  "evaluation_duration_sec": 8.294,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "JacksonDatabind_42b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_42b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_42b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_42b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_42b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_42b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_42b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_42b/.test_suite/com/fasterxml/jackson/databind/deser/std/FromStringDeserializerGeminiTest.java:366: error: cannot find symbol\n    [javac]         tb.writeEmbeddedObject(originalFile);\n    [javac]           ^\n    [javac]   symbol:   method writeEmbeddedObject(File)\n    [javac]   location: variable tb of type TokenBuffer\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_42b/.test_suite/com/fasterxml/jackson/databind/deser/std/FromStringDeserializerGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

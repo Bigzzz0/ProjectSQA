@@ -19,5 +19,10 @@
     "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
     "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
     "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
-  ]
+  ],
+  "suite_sha256": "3b7cfd03fdb0b8766cdc4bc709fde654c4747a74e51f3bd2f484a87452c3b798",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_14b/$Gson$TypesGeminiTest.java"
+  ],
+  "run_id": "Gson-14-gemini-1790371215"
 }

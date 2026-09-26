@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.ParserDeepseekTest"
-  ]
+  ],
+  "suite_sha256": "c21ac32981c5744b9f777a9405d02798c6ca40f0763ef02237c078d232dc4e7d",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_28b/ParserDeepseekTest.java"
+  ],
+  "run_id": "Cli-28-deepseek-1790353511"
 }

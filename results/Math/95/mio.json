@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "FDistributionImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.FDistributionImpl_ESTest::test5"
+  ],
+  "suite_sha256": "2e39c6d34aff0aee685b268797bf49ea01676e828ad1ddfbf53476d3d4c4f398",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_95b/FDistributionImpl_ESTest.java"
+  ],
+  "run_id": "Math-95-mio-1790393964"
+}

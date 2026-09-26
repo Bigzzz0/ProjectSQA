@@ -25,5 +25,10 @@
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingDecimal",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientificNotation",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
-  ]
+  ],
+  "suite_sha256": "5f37a311ac31172ab7a3b7e3bde8657cff5d7d4b13d2a07779d569994c06ca44",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_27b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-27-deepseek-1790385227"
 }

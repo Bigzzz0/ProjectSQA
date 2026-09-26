@@ -10,5 +10,10 @@
     "org.apache.commons.codec.binary.Base32GeminiTest::testCodec200IsInAlphabetWOnHex",
     "org.apache.commons.codec.binary.Base32GeminiTest::testCodec200HexCustomPadW"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "c575083827cbdcd5d1f84c94b649c75ee4bc374c6d1aa0a9f2d3b1bd6ad03207",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_16b/Base32GeminiTest.java"
+  ],
+  "run_id": "Codec-16-gemini-1790365997"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 62.75,
+  "branch_cov": 52.94,
+  "test_file": "Soundex_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.language.Soundex",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a6882d38f2b927a68c7bc411c045d0da1ac7628a13db4b2b590c375b87d82fa7",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_15b/org/apache/commons/codec/language/Soundex_IPOTest.java"
+  ],
+  "run_id": "Codec-15-ipo-1790365936"
+}

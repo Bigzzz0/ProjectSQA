@@ -1,0 +1,19 @@
+{
+  "project": "Codec",
+  "bug_id": 15,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Codec-15-ipo-1790365936",
+  "suite_sha256": "a6882d38f2b927a68c7bc411c045d0da1ac7628a13db4b2b590c375b87d82fa7",
+  "test_files": "Soundex_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.language.Soundex",
+  "timestamp": "2026-09-26 02:52:30",
+  "evaluation_duration_sec": 13.472,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 62.75,
+  "branch_coverage_percent": 52.94,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

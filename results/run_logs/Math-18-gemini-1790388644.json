@@ -1,0 +1,23 @@
+{
+  "project": "Math",
+  "bug_id": 18,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-18-gemini-1790388644",
+  "suite_sha256": "41beefba7bc835a5001f771a3e82969ad3d2fe5e394e70ed0ecc2d34b05c918f",
+  "test_files": "CMAESOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "timestamp": "2026-09-26 09:11:11",
+  "evaluation_duration_sec": 26.637,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.1,
+  "branch_coverage_percent": 87.32,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
+  ]
+}

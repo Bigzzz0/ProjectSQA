@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 158,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-158-deepseek-1790364142",
+  "suite_sha256": "8213c70ac458bb1cde745a3a1f369e0bbcc6b3de7d409aa1ac9a1c676a70d481",
+  "test_files": "AbstractCommandLineRunnerDeepseekTest.java;CommandLineRunnerDeepseekTest.java;DiagnosticGroupsDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.CommandLineRunner;com.google.javascript.jscomp.DiagnosticGroups",
+  "timestamp": "2026-09-26 02:22:30",
+  "evaluation_duration_sec": 8.153,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "g\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_158b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_158b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_158b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_158b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_158b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_158b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Closure_158b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_158b/.test_suite/com/google/javascript/jscomp/AbstractCommandLineRunnerDeepseekTest.java:118: error: lambda expressions are not supported in -source 6\n    [javac]         Supplier<List<JSSourceFile>> emptyExterns = () -> ImmutableList.of();\n    [javac]                                                        ^\n    [javac]   (use -source 8 or higher to enable lambda expressions)\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

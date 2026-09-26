@@ -13,5 +13,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
     "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
-  ]
+  ],
+  "suite_sha256": "de3af698c186b1739512ee8438b20c38871bb25b02794339aba52eb6b216c161",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_86b/ResolvedRecursiveTypeDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-86-deepseek-1790377107"
 }

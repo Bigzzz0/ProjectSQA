@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 60.16,
+  "branch_cov": 47.22,
+  "test_file": "BeanSerializerBase_ESTest.java;BeanSerializerFactory_ESTest.java;JavaType_ESTest.java;StdDelegatingSerializer_ESTest.java;StdSerializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JavaType;com.fasterxml.jackson.databind.ser.BeanSerializerFactory;com.fasterxml.jackson.databind.ser.std.BeanSerializerBase;com.fasterxml.jackson.databind.ser.std.StdDelegatingSerializer;com.fasterxml.jackson.databind.ser.std.StdSerializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "00a738279d681b265b904a6777d6ddfcc395c26c20eb1f9e5477dba1aafeb272",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_15b/BeanSerializerBase_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_15b/BeanSerializerFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_15b/JavaType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_15b/StdDelegatingSerializer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_15b/StdSerializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-15-mio-1790373119"
+}

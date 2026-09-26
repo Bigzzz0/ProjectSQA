@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.83,
+  "branch_cov": 15.04,
+  "test_file": "CodeGenerator_ESTest.java;PeepholeSubstituteAlternateSyntax_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "218c1644d505805459a26307b991df54eb5419b796dc7def1e3592571bbd37c3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_173b/CodeGenerator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_173b/PeepholeSubstituteAlternateSyntax_ESTest.java"
+  ],
+  "run_id": "Closure-173-mio-1790365088"
+}

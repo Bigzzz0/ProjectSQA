@@ -10,5 +10,10 @@
     "org.apache.commons.cli.TypeHandlerGeminiTest::testDefectExistingFilePatternFileNotExistThrowsParseException",
     "org.apache.commons.cli.TypeHandlerGeminiTest::testDefectExistingFilePatternReturnsFileInputStream"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "24e589f8b26c7dffdb258eb275ab5b48f3fd4dd728e09bd48b8db829688c54de",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_39b/TypeHandlerGeminiTest.java"
+  ],
+  "run_id": "Cli-39-gemini-1790353890"
 }

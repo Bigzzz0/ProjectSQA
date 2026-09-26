@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 94.22,
+  "branch_cov": 92.21,
+  "test_file": "CollectionUtils_ESTest.java",
+  "target_classes": "org.apache.commons.collections.CollectionUtils",
+  "buggy_failures": [
+    "org.apache.commons.collections.CollectionUtils_ESTest::test041"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.CollectionUtils_ESTest::test041"
+  ],
+  "suite_sha256": "030c4ccb0de6ce4020a6db00a913c1c53fb59c831b28398887b3dfac555c2a99",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_3b/CollectionUtils_ESTest.java"
+  ],
+  "run_id": "Collections-3-mio-1790366245"
+}

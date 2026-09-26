@@ -10,5 +10,10 @@
     "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValuesFarFromMean",
     "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testExtremeValues"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "45f2623263915f6e893124073b804c1cf4a571ac687f2b5a764e405ba3eb1879",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_103b/NormalDistributionImplGeminiTest.java"
+  ],
+  "run_id": "Math-103-gemini-1790394547"
 }

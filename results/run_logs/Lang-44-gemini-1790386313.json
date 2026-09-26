@@ -1,0 +1,25 @@
+{
+  "project": "Lang",
+  "bug_id": 44,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-44-gemini-1790386313",
+  "suite_sha256": "691be2ec7177b4e5a4d236bfb1d11534650927e54ac6463037844c98ac48cdf6",
+  "test_files": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.NumberUtils",
+  "timestamp": "2026-09-26 08:32:13",
+  "evaluation_duration_sec": 20.232,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.84,
+  "branch_coverage_percent": 88.43,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testLang457_createNumber_L",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testLang457_createNumber_l",
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testIsNumber_StandardIntegersAndDecimals"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.NumberUtilsGeminiTest::testIsNumber_StandardIntegersAndDecimals"
+  ]
+}

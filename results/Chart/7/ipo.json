@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 11.32,
+  "branch_cov": 3.7,
+  "test_file": "TimePeriodValues_IPOTest.java",
+  "target_classes": "org.jfree.data.time.TimePeriodValues",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e1cdb5471fc7f2fe192ef93a5ed2431562d7d83f8776f628f2a6f5de09a57e46",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_7b/org/jfree/data/time/TimePeriodValues_IPOTest.java"
+  ],
+  "run_id": "Chart-7-ipo-1790351278"
+}

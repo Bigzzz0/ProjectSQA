@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 20,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-20-mio-1790399527",
+  "suite_sha256": "7c48303ad6d7cb2ec50206a09d19231e64a926ea455ac241c9e2175a2568e255",
+  "test_files": "DateTimeFormatterBuilder_ESTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatterBuilder",
+  "timestamp": "2026-09-26 12:12:37",
+  "evaluation_duration_sec": 29.632,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 80.35,
+  "branch_coverage_percent": 66.21,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

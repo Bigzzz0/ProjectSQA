@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 27.62,
+  "branch_cov": 13.43,
+  "test_file": "ClassUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.ClassUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c6069276db48fd0a93fbc9c45652721936224448d15a584ff0cfbd19a3e0373c",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_33b/org/apache/commons/lang3/ClassUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-33-ipo-1790385565"
+}

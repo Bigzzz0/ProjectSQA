@@ -1,0 +1,23 @@
+{
+  "project": "Jsoup",
+  "bug_id": 48,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-48-mio-1790380852",
+  "suite_sha256": "c58aba9474f148c77ca89d1abb349169465f14f79d4169e6bc217d1546a91ee0",
+  "test_files": "HttpConnection_ESTest.java",
+  "target_classes": "org.jsoup.helper.HttpConnection",
+  "timestamp": "2026-09-26 07:01:12",
+  "evaluation_duration_sec": 20.199,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 73.99,
+  "branch_coverage_percent": 55.29,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.HttpConnection_ESTest::test42"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.HttpConnection_ESTest::test42"
+  ]
+}

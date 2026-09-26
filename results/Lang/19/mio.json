@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 40.74,
+  "branch_cov": 50.0,
+  "test_file": "NumericEntityUnescaper_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaper_ESTest::test0"
+  ],
+  "suite_sha256": "daf0e7f4a57aeabc3a13c353bb5a4d3fad37e95f76d8d8ff95587a44c03dae16",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_19b/NumericEntityUnescaper_ESTest.java"
+  ],
+  "run_id": "Lang-19-mio-1790384703"
+}

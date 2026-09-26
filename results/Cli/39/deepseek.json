@@ -28,5 +28,10 @@
     "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithNonExistingFile",
     "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueStringClassExistingFile",
     "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithObjectClassAndNullString"
-  ]
+  ],
+  "suite_sha256": "291af84a686051b085b6b779c4ffa2f486ecd8ba9fe7cc3d945913d05b4b39a3",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_39b/TypeHandlerDeepseekTest.java"
+  ],
+  "run_id": "Cli-39-deepseek-1790353875"
 }

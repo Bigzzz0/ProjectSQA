@@ -26,5 +26,12 @@
     "org.jsoup.nodes.XmlDeclarationGeminiTest::testProcessingInstructionOuterHtmlFormatting",
     "org.jsoup.nodes.XmlDeclarationGeminiTest::testGetWholeDeclarationWithSingleEncodingAttribute",
     "org.jsoup.parser.XmlTreeBuilderGeminiTest::testProcessingInstructionBangDeclaration"
-  ]
+  ],
+  "suite_sha256": "e7849eaeb756ca0eced42a6c16d3bc4df8d9cd96984735693f5e9003ee50d478",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_52b/DataUtilGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_52b/XmlDeclarationGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_52b/XmlTreeBuilderGeminiTest.java"
+  ],
+  "run_id": "Jsoup-52-gemini-1790381101"
 }

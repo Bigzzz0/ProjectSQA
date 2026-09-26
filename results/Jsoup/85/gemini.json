@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.nodes.AttributeGeminiTest::testSetValueWithParentWhenKeyNotFound"
-  ]
+  ],
+  "suite_sha256": "e31626afbf9807539a8e5aefdb12e4a5b954be58d530362f940d149883fae788",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_85b/AttributeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-85-gemini-1790382632"
 }

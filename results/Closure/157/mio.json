@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 30.19,
+  "branch_cov": 18.91,
+  "test_file": "CodeGenerator_ESTest.java;IRFactory_ESTest.java;RenamePrototypes_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.parsing.IRFactory;com.google.javascript.jscomp.RenamePrototypes",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d75091397339b21edd888b216a0f0bd15fdbeb35129e94842586bc200b56c1f2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_157b/CodeGenerator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_157b/IRFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_157b/RenamePrototypes_ESTest.java"
+  ],
+  "run_id": "Closure-157-mio-1790364051"
+}

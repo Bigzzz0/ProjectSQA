@@ -26,5 +26,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalTrailingNull",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalLeadingZeros",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalLargeValue"
-  ]
+  ],
+  "suite_sha256": "ede219407833d0230773439af64221ae0209621544fee9b7b6cf7ce519b9cbcb",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_7b/TarUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-7-deepseek-1790367874"
 }

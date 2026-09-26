@@ -1,0 +1,34 @@
+{
+  "project": "Compress",
+  "bug_id": 38,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-38-gemini-1790369625",
+  "suite_sha256": "1a372bcdc110869aa8244b041621c4c1953cf21c015dfbc94e8458e0bca2870d",
+  "test_files": "TarArchiveEntryGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveEntry",
+  "timestamp": "2026-09-26 03:54:04",
+  "evaluation_duration_sec": 19.006,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 86.84,
+  "branch_coverage_percent": 54.55,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testOldGnuFormatHeaderParsing",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testLinkTypeClassifications",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testHeaderEvaluationFormats",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testNormalizeFileNameWindowsDriveLetters",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testPaxHeaderEndingInSlashNotADirectory",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testGnuLongLinkAndNameEndingInSlashNotADirectory"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testOldGnuFormatHeaderParsing",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testLinkTypeClassifications",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testHeaderEvaluationFormats",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testNormalizeFileNameWindowsDriveLetters",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testGnuLongLinkAndNameEndingInSlashNotADirectory"
+  ]
+}

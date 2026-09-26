@@ -19,5 +19,10 @@
     "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsWithUseOnlyCustomExterns",
     "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCommonJsModuleWithoutEntryModuleFails",
     "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testDefaultExternsIntegrity"
-  ]
+  ],
+  "suite_sha256": "700625364681090722a69d7a82f13d13f0345be70666e675dffd2614fd5e8563",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_107b/CommandLineRunnerGeminiTest.java"
+  ],
+  "run_id": "Closure-107-gemini-1790361095"
 }

@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 62,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-62-mio-1790391704",
+  "suite_sha256": "a9bae374ea15e30f3bf51b045d4e3cd18b96cc0c238cb848b249b2b76f1ba8cc",
+  "test_files": "MultiStartUnivariateRealOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer",
+  "timestamp": "2026-09-26 10:02:09",
+  "evaluation_duration_sec": 25.558,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 93.62,
+  "branch_coverage_percent": 88.89,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

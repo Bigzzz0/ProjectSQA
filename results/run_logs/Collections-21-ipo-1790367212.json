@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 21,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Collections-21-ipo-1790367212",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.collections4.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:13:32",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

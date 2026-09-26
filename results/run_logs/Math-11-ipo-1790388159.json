@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 11,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-11-ipo-1790388159",
+  "suite_sha256": "148b36852075a49223ec2445d99edcacdcd273d38fd15d922f9ed63d1fa4a2f7",
+  "test_files": "MultivariateNormalDistribution_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.MultivariateNormalDistribution",
+  "timestamp": "2026-09-26 09:03:05",
+  "evaluation_duration_sec": 25.782,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 16.95,
+  "branch_coverage_percent": 17.86,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

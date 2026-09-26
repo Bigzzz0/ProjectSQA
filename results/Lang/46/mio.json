@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 76.92,
+  "branch_cov": 85.05,
+  "test_file": "StringEscapeUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.StringEscapeUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9031c00f37580fbbccebbab9068c42f49bfc1a5cb8205b610a0385019b1fd835",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_46b/StringEscapeUtils_ESTest.java"
+  ],
+  "run_id": "Lang-46-mio-1790386404"
+}

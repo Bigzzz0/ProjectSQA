@@ -1,0 +1,25 @@
+{
+  "project": "Mockito",
+  "bug_id": 27,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-27-gemini-1790397608",
+  "suite_sha256": "0e464a4937a8868ed7bdeeb50faf12d92b27101a7e2df75f72b8f9f0aef9fe05",
+  "test_files": "MockUtilGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.MockUtil",
+  "timestamp": "2026-09-26 11:40:38",
+  "evaluation_duration_sec": 29.746,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.util.MockUtilGeminiTest::testCreateMockWithSpiedInstanceCopiesState",
+    "org.mockito.internal.util.MockUtilGeminiTest::testListenersNotLostOnResetMock_DefectTarget"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.util.MockUtilGeminiTest::testCreateMockWithSpiedInstanceCopiesState",
+    "org.mockito.internal.util.MockUtilGeminiTest::testListenersNotLostOnResetMock_DefectTarget"
+  ]
+}

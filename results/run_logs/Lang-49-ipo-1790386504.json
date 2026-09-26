@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 49,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Lang-49-ipo-1790386504",
+  "suite_sha256": "e84d50693b63bff047381d411e265c287e1ab8180eb1edfddb17673a222a84ca",
+  "test_files": "Fraction_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.math.Fraction",
+  "timestamp": "2026-09-26 08:35:24",
+  "evaluation_duration_sec": 20.33,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 27.9,
+  "branch_coverage_percent": 27.72,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

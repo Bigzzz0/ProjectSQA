@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 53.85,
+  "branch_cov": 100.0,
+  "test_file": "FinalMockCandidateFilter_ESTest.java",
+  "target_classes": "org.mockito.internal.configuration.injection.FinalMockCandidateFilter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "07ea345583b3224d88838b9ed8c329fec3ebdc53a948a1cdedbd399c65176b7d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_15b/FinalMockCandidateFilter_ESTest.java"
+  ],
+  "run_id": "Mockito-15-mio-1790396425"
+}

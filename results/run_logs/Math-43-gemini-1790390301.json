@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 43,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-43-gemini-1790390301",
+  "suite_sha256": "f633025ec9985e78541a2476ea96653f2f6d095ebd553e5d89f8e966aee516a6",
+  "test_files": "SummaryStatisticsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.SummaryStatistics",
+  "timestamp": "2026-09-26 09:38:29",
+  "evaluation_duration_sec": 7.824,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/classes/org/apache/commons/math/stat/descriptive/moment/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/stat/descriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_43b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_43b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_43b/.test_suite/org/apache/commons/math/stat/descriptive/SummaryStatisticsGeminiTest.java:214: error: reached end of file while parsing\n    [javac]         double[] scores = { 1.0, 2.0, 3.0\n    [javac]                                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

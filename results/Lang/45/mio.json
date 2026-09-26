@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 99.28,
+  "branch_cov": 99.02,
+  "test_file": "WordUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.WordUtils",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang.WordUtils_ESTest::test06"
+  ],
+  "suite_sha256": "889154cccdf0e7517bac58afe84e3d9b0289da9993d41c4013a77e434212c762",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_45b/WordUtils_ESTest.java"
+  ],
+  "run_id": "Lang-45-mio-1790386356"
+}

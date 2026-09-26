@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "MultivariateNormalDistribution_ESTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.MultivariateNormalDistribution",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.distribution.MultivariateNormalDistribution_ESTest::test4"
+  ],
+  "suite_sha256": "af0477a8767413ce21d1f0c8c5face61a88ed0b4a034ca17884af3fe60bccb11",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_11b/MultivariateNormalDistribution_ESTest.java"
+  ],
+  "run_id": "Math-11-mio-1790388185"
+}

@@ -15,5 +15,12 @@
     "org.apache.commons.cli.HelpFormatterGeminiTest",
     "org.apache.commons.cli.OptionBuilderGeminiTest",
     "org.apache.commons.cli.OptionGeminiTest"
-  ]
+  ],
+  "suite_sha256": "9278d6aa3d6e98bed1e2e9554d539885671ccccf49968b1e17d03b73c79766c7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_31b/HelpFormatterGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_31b/OptionBuilderGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_31b/OptionGeminiTest.java"
+  ],
+  "run_id": "Cli-31-gemini-1790353615"
 }

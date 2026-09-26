@@ -1,0 +1,25 @@
+{
+  "project": "Closure",
+  "bug_id": 85,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-85-mio-1790359851",
+  "suite_sha256": "40a51cca3959bf937ecf1a5b77e4b68673f07012e6009b4a5bad799fe54afacd",
+  "test_files": "UnreachableCodeElimination_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "timestamp": "2026-09-26 01:11:24",
+  "evaluation_duration_sec": 32.715,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 62.82,
+  "branch_coverage_percent": 39.29,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test0",
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test0",
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test2"
+  ]
+}

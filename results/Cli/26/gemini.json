@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.OptionBuilderGeminiTest"
-  ]
+  ],
+  "suite_sha256": "db29e8be8b4eb157c8a058b726c99309b2b4b74b21e6e1c8cc09891c264ac512",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_26b/OptionBuilderGeminiTest.java"
+  ],
+  "run_id": "Cli-26-gemini-1790353450"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 27,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-27-deepseek-1790399996",
+  "suite_sha256": "61989140a465aef80b8e74e233fe97f8cd16fad8cc8a0620b76f8edfd5b31a37",
+  "test_files": "PeriodFormatterBuilderDeepseekTest.java",
+  "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+  "timestamp": "2026-09-26 12:20:03",
+  "evaluation_duration_sec": 6.917,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n     [copy] Copying 6 files to /tmp/d4j_eval/Time_27b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_27b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_27b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_27b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_27b/.test_suite/org/joda/time/format/PeriodFormatterBuilderDeepseekTest.java:3430: error: unclosed string literal\n    [javac]         Period period = formatter.parsePeriod(\"5\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\\uD83D\\uDE00\\u00A0\n    [javac]                                               ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

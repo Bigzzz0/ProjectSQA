@@ -11,5 +11,10 @@
     "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testLang720DefectSupplementaryCharacterWithConsumedZero",
     "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testLang720DefectSupplementaryCharacterWithMixedConsumption"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "994020834aabd93e87b21eaca695c2fdfd389c469763ac16a8522e05efb02256",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_17b/CharSequenceTranslatorDeepseekTest.java"
+  ],
+  "run_id": "Lang-17-deepseek-1790384657"
 }

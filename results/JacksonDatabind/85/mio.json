@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 48.84,
+  "branch_cov": 44.74,
+  "test_file": "DateTimeSerializerBase_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase_ESTest::test01"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase_ESTest::test01"
+  ],
+  "suite_sha256": "42d3ff82703264c5e25015f277a3a71a9cf496bc40a11c9a9037276adfdde596",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_85b/DateTimeSerializerBase_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-85-mio-1790377031"
+}

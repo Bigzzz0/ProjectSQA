@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.04,
+  "branch_cov": 0.0,
+  "test_file": "Matchers_ESTest.java",
+  "target_classes": "org.mockito.Matchers",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d9413052cc7e9962244d761e34c3df7a201fb2f31d2aa3bb8bb54de1d734878e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_35b/Matchers_ESTest.java"
+  ],
+  "run_id": "Mockito-35-mio-1790398057"
+}

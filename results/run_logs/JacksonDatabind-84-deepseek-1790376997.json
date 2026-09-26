@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 84,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-84-deepseek-1790376997",
+  "suite_sha256": "24e68f4f44e67da05e18335c33f341e67d1e948432c5f1f2162457af518aa4d0",
+  "test_files": "ResolvedRecursiveTypeDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "timestamp": "2026-09-26 05:56:45",
+  "evaluation_duration_sec": 8.471,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "_84b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_84b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_84b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_84b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_84b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_84b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_84b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_84b/.test_suite/com/fasterxml/jackson/databind/type/ResolvedRecursiveTypeDeepseekTest.java:45: error: cannot find symbol\n    [javac]         JavaType ref = TypeFactory.defaultInstance().constructType(String.class);\n    [javac]         ^\n    [javac]   symbol:   class JavaType\n    [javac]   location: class ResolvedRecursiveTypeDeepseekTest\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_84b/.test_suite/com/fasterxml/jackson/databind/type/ResolvedRecursiveTypeDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

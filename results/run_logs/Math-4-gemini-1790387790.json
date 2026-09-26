@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-4-gemini-1790387790",
+  "suite_sha256": "f0a8957d6ddf502d8b7710c608cf5ebb3b97c6730ebb9facd39ac406ef78d9bb",
+  "test_files": "SubLineGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.geometry.euclidean.threed.SubLine;org.apache.commons.math3.geometry.euclidean.twod.SubLine",
+  "timestamp": "2026-09-26 08:56:38",
+  "evaluation_duration_sec": 8.608,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "reating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/optim/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/optim/nonlinear/vector/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/ml/distance/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/optim/univariate/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_4b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_4b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_4b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_4b/.test_suite/org/apache/commons/math3/geometry/euclidean/twod/SubLineGeminiTest.java:325: error: cannot find symbol\n    [javac]         AbstractSubHyperplane<Euclidean2D, Euclidean1D> copy = subLine.buildNew(line, region);\n    [javac]         ^\n    [javac]   symbol:   class AbstractSubHyperplane\n    [javac]   location: class SubLineGeminiTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

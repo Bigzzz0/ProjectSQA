@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 4,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-4-deepseek-1790383733",
+  "suite_sha256": "8d6154c273dd0fc3e1e337b17562088734db677746e4c682945c3188f9ee5601",
+  "test_files": "LookupTranslatorDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.LookupTranslator",
+  "timestamp": "2026-09-26 07:49:13",
+  "evaluation_duration_sec": 20.073,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.LookupTranslatorDeepseekTest::testLang882_CharSequenceKeyWithoutEquals"
+  ],
+  "fixed_failures": []
+}

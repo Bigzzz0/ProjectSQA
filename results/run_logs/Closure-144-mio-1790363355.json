@@ -1,0 +1,33 @@
+{
+  "project": "Closure",
+  "bug_id": 144,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-144-mio-1790363355",
+  "suite_sha256": "c7529ea4d499fe084d16d2977169855ef142db18e45c134e0349d27ccd1c17eb",
+  "test_files": "FunctionBuilder_ESTest.java;FunctionTypeBuilder_ESTest.java;FunctionType_ESTest.java;TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionTypeBuilder;com.google.javascript.jscomp.TypedScopeCreator;com.google.javascript.rhino.jstype.FunctionBuilder;com.google.javascript.rhino.jstype.FunctionType",
+  "timestamp": "2026-09-26 02:09:49",
+  "evaluation_duration_sec": 34.371,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 54.63,
+  "branch_coverage_percent": 38.33,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test06",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test17",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test04",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test15",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test22",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test06",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test17",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test04",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test15",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test22",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2"
+  ]
+}

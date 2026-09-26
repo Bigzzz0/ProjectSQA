@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 92,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-92-deepseek-1790382959",
+  "suite_sha256": "2afd59c83faeb29e77dbb497adef0bdf018defb051c00d3f71d3d5a9560c1ad8",
+  "test_files": "AttributesDeepseekTest.java;HtmlTreeBuilderDeepseekTest.java;ParseSettingsDeepseekTest.java;TokenDeepseekTest.java;XmlTreeBuilderDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes;org.jsoup.parser.HtmlTreeBuilder;org.jsoup.parser.ParseSettings;org.jsoup.parser.Token;org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:36:03",
+  "evaluation_duration_sec": 4.004,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "[javac] 3 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_92b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_92b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_92b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 5 source files to /tmp/d4j_eval/Jsoup_92b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_92b/.test_suite/org/jsoup/parser/HtmlTreeBuilderDeepseekTest.java:71: error: cannot find symbol\n    [javac]         assertNotNull(doc.documentType());\n    [javac]                          ^\n    [javac]   symbol:   method documentType()\n    [javac]   location: variable doc of type Document\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

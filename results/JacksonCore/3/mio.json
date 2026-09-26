@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 15.86,
+  "branch_cov": 11.42,
+  "test_file": "UTF8StreamJsonParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "04645e3deac27580805ab1af284f87d22ddb744d5c2c6d0aa888c83000a36bb6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_3b/UTF8StreamJsonParser_ESTest.java"
+  ],
+  "run_id": "JacksonCore-3-mio-1790371499"
+}

@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 98,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-98-mio-1790360533",
+  "suite_sha256": "fc5f425989e04e29ab0de12d57135ec7d6e58ca0be0dff653d4fa31d4b5bbe5b",
+  "test_files": "ReferenceCollectingCallback_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ReferenceCollectingCallback",
+  "timestamp": "2026-09-26 01:22:42",
+  "evaluation_duration_sec": 29.267,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 76.79,
+  "branch_coverage_percent": 51.97,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test00",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test25",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test27"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test00",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test25",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test27"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 89,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-89-gemini-1790393468",
+  "suite_sha256": "d99a4d5f91f8bc49e4087132db44fb51d17611c268bff0a96fe46c3e9bfe6fde",
+  "test_files": "FrequencyGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.Frequency",
+  "timestamp": "2026-09-26 10:31:15",
+  "evaluation_duration_sec": 6.99,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "9b/build.xml:151: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 329 source files to /tmp/d4j_eval/Math_89b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_89b/src/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_89b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_89b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_89b/.test_suite/org/apache/commons/math/stat/FrequencyGeminiTest.java:183: error: unclosed string literal\n    [javac]         assertTrue(emptyStr.startsWith(\"Value \\t Freq. \\t Pct. \\t Cum Pct\n    [javac]                                        ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

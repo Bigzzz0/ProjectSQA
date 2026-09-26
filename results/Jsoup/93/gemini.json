@@ -7,5 +7,10 @@
   "test_file": "FormElementGeminiTest.java",
   "target_classes": "org.jsoup.nodes.FormElement",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "3f0e441700bf3024d240e6f681722f17ff667467c45cc9cef2e8941fe6d9cbb6",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_93b/FormElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-93-gemini-1790383005"
 }

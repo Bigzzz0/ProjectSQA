@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 3,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-3-gemini-1790387726",
+  "suite_sha256": "8437dbe584e5befb16874fdbb051683cf38999d51687729ada781d631d259e00",
+  "test_files": "MathArraysGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.util.MathArrays",
+  "timestamp": "2026-09-26 08:55:52",
+  "evaluation_duration_sec": 26.771,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.39,
+  "branch_coverage_percent": 90.6,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.util.MathArraysGeminiTest::testLinearCombinationWithSingleElementArray"
+  ],
+  "fixed_failures": []
+}

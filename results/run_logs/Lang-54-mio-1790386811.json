@@ -1,0 +1,25 @@
+{
+  "project": "Lang",
+  "bug_id": 54,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-54-mio-1790386811",
+  "suite_sha256": "e0de3534c4c6bc3bd8dfe98d0b91bd2e519f9ae5b384e9bda2a28a60c791d2fb",
+  "test_files": "LocaleUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.LocaleUtils",
+  "timestamp": "2026-09-26 08:40:32",
+  "evaluation_duration_sec": 20.811,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 89.87,
+  "branch_coverage_percent": 82.81,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.LocaleUtils_ESTest::test05",
+    "org.apache.commons.lang.LocaleUtils_ESTest::test00"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.LocaleUtils_ESTest::test05",
+    "org.apache.commons.lang.LocaleUtils_ESTest::test00"
+  ]
+}

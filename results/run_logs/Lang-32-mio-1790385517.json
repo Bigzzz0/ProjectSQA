@@ -1,0 +1,26 @@
+{
+  "project": "Lang",
+  "bug_id": 32,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-32-mio-1790385517",
+  "suite_sha256": "3f70769f84bb5ac7642bee04f69457abdcf91937c6266735c8c1d54d479d7bd5",
+  "test_files": "HashCodeBuilder_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.builder.HashCodeBuilder",
+  "timestamp": "2026-09-26 08:18:58",
+  "evaluation_duration_sec": 21.138,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 89.04,
+  "branch_coverage_percent": 83.72,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test23"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test18",
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test22",
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test23",
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test26"
+  ]
+}

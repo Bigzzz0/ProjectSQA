@@ -20,5 +20,10 @@
     "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlySystemId",
     "org.jsoup.nodes.DocumentTypeDeepseekTest::systemIdNullAllowed",
     "org.jsoup.nodes.DocumentTypeDeepseekTest::constructorRejectsNullName"
-  ]
+  ],
+  "suite_sha256": "cbede10eef92fec9f57482564b437a5aaf0218d8a3e046f57bb8f74b3768c2af",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_40b/DocumentTypeDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-40-deepseek-1790380449"
 }

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CoreOperationGreaterThanOrEqual_ESTest.java;CoreOperationGreaterThan_ESTest.java;CoreOperationLessThanOrEqual_ESTest.java;CoreOperationLessThan_ESTest.java;CoreOperationRelationalExpression_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThan;org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual_ESTest::test1",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan_ESTest::test2"
+  ],
+  "suite_sha256": "b15fd18d591ce01cf950ed31a87d4ddf28b8d1c1146fbf96a9d21ff2e6a21430",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_7b/CoreOperationGreaterThanOrEqual_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_7b/CoreOperationGreaterThan_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_7b/CoreOperationLessThanOrEqual_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_7b/CoreOperationLessThan_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_7b/CoreOperationRelationalExpression_ESTest.java"
+  ],
+  "run_id": "JxPath-7-mio-1790383186"
+}

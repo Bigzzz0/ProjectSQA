@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "Parser_ESTest.java",
+  "target_classes": "org.apache.commons.cli.Parser",
+  "buggy_failures": [
+    "org.apache.commons.cli.Parser_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.Parser_ESTest"
+  ],
+  "suite_sha256": "424651151556c544cd11114f10632f5d7aa685f256d37e94e6452988b3ae0fd9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_9b/Parser_ESTest.java"
+  ],
+  "run_id": "Cli-9-mio-1790352848"
+}

@@ -33,5 +33,10 @@
     "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapeStartDashBranches",
     "org.jsoup.parser.TokeniserStateGeminiTest::testAfterAttributeNameBranches",
     "org.jsoup.parser.TokeniserStateGeminiTest::testRawtextState"
-  ]
+  ],
+  "suite_sha256": "e1105848e56b2f34a748348d475c311488cb7b59464094229eceff75befd7e40",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_55b/TokeniserStateGeminiTest.java"
+  ],
+  "run_id": "Jsoup-55-gemini-1790381246"
 }

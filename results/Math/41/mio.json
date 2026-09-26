@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.21,
+  "branch_cov": 84.78,
+  "test_file": "Variance_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b61665d6c6b9644d952347070c8f263140bb41ff67d079777c35167d669843b1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_41b/Variance_ESTest.java"
+  ],
+  "run_id": "Math-41-mio-1790390142"
+}

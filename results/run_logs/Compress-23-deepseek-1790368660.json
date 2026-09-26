@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 23,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-23-deepseek-1790368660",
+  "suite_sha256": "451f38b8d65e51135235404bcd23c9102a8fbcf462978e966de1bc18bfbfb4d6",
+  "test_files": "CodersDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.Coders",
+  "timestamp": "2026-09-26 03:37:46",
+  "evaluation_duration_sec": 5.282,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ker u = Pack200.newUnpacker();\n    [javac]                 ^\n    [javac] /tmp/d4j_eval/Compress_23b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Unpacker in Pack200 has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Compress_23b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_23b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_23b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_23b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_23b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_23b/.test_suite/org/apache/commons/compress/archivers/sevenz/CodersDeepseekTest.java:96: error: enum types may not be instantiated\n    [javac]             Coders.addEncoder(out, new SevenZMethod(new byte[] {0x00}), null);\n    [javac]                                    ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 55,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-55-ipo-1790391148",
+  "suite_sha256": "fe0779209eb0500001d526795673f985801fa492f2c59f9e6c5967cd270131fa",
+  "test_files": "Vector3D_IPOTest.java",
+  "target_classes": "org.apache.commons.math.geometry.Vector3D",
+  "timestamp": "2026-09-26 09:52:55",
+  "evaluation_duration_sec": 26.681,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 35.34,
+  "branch_coverage_percent": 27.08,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

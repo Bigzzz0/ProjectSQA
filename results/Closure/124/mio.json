@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 8.75,
+  "branch_cov": 4.55,
+  "test_file": "ExploitAssigns_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ExploitAssigns",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "adea7591ea053d240f73e5404f086f3a881b9e229a84792d45d2fc19e50b69b9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_124b/ExploitAssigns_ESTest.java"
+  ],
+  "run_id": "Closure-124-mio-1790362206"
+}

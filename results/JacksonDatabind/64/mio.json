@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.6,
+  "branch_cov": 33.8,
+  "test_file": "PropertyBuilder_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5bfab5f4b2b40948471ebb9ed6a3f24771f0fb9958bcd9ff2f50b582e91c20cb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_64b/PropertyBuilder_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-64-mio-1790375934"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Chart-16-deepseek-1790351901",
+  "suite_sha256": "e3d87c0bfaeab74888e87b2da7ee2d55e9d913c7236647cbd10827bf23588f40",
+  "test_files": "DefaultIntervalCategoryDatasetDeepseekTest.java",
+  "target_classes": "org.jfree.data.category.DefaultIntervalCategoryDataset",
+  "timestamp": "2026-09-25 22:58:29",
+  "evaluation_duration_sec": 7.567,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ted API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_16b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_16b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_16b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_16b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_16b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_16b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_16b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_16b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Chart_16b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_16b/.test_suite/org/jfree/data/category/DefaultIntervalCategoryDatasetDeepseekTest.java:418: error: method testGetColumnIndexWithNullKey() is already defined in class DefaultIntervalCategoryDatasetDeepseekTest\n    [javac]     public void testGetColumnIndexWithNullKey() {\n    [javac]                 ^\n    [javac] Note: /tmp/d4j_eval/Chart_16b/.test_suite/org/jfree/data/category/DefaultIntervalCategoryDatasetDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

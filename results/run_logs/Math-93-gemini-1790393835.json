@@ -1,0 +1,26 @@
+{
+  "project": "Math",
+  "bug_id": 93,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-93-gemini-1790393835",
+  "suite_sha256": "af3c60687322fad0019446d4f30cf026f725cbb10905f9828bea2ffac8041bca",
+  "test_files": "MathUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:37:39",
+  "evaluation_duration_sec": 23.8,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.79,
+  "branch_coverage_percent": 98.16,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testNormalizeAngle",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testFactorialDoubleDefectAt17",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testNextAfter"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testNormalizeAngle",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testNextAfter"
+  ]
+}

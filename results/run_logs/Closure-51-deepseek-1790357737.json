@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 51,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-51-deepseek-1790357737",
+  "suite_sha256": "2dc75992a4e08e8412f8a96c315b39dfcb1b5e9137ffa0231870e986a25cf813",
+  "test_files": "CodeConsumerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "timestamp": "2026-09-26 00:36:11",
+  "evaluation_duration_sec": 33.872,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.22,
+  "branch_coverage_percent": 90.74,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberBoundaryExponent",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZero",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinusNoSpaceIfPrevNotMinus"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberBoundaryExponent",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus"
+  ]
+}

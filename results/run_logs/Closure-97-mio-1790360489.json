@@ -1,0 +1,31 @@
+{
+  "project": "Closure",
+  "bug_id": 97,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-97-mio-1790360489",
+  "suite_sha256": "f84d1ad0edf295fed9c5adedb37647db36167fb9ea4db0ccf3856fb3a0b905f1",
+  "test_files": "PeepholeFoldConstants_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "timestamp": "2026-09-26 01:21:58",
+  "evaluation_duration_sec": 29.237,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 19.46,
+  "branch_coverage_percent": 14.65,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test33",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test24",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test22",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test06",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test09"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test33",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test24",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test22",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test06",
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test09"
+  ]
+}

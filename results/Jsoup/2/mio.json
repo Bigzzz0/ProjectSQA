@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.98,
+  "branch_cov": 79.07,
+  "test_file": "Parser_ESTest.java",
+  "target_classes": "org.jsoup.parser.Parser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ac0b112a6fa435a434083e5e359ae963c5b7a0a39997cbd40f9b31795135a8a2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_2b/Parser_ESTest.java"
+  ],
+  "run_id": "Jsoup-2-mio-1790378902"
+}

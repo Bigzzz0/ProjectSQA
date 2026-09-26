@@ -1,0 +1,19 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 6,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-6-mio-1790371600",
+  "suite_sha256": "9aa89108d69c1ee8acf8e3672b41ff09e8c63680b9efe900c165614d9fca2170",
+  "test_files": "JsonPointer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.JsonPointer",
+  "timestamp": "2026-09-26 04:26:55",
+  "evaluation_duration_sec": 15.682,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.43,
+  "branch_coverage_percent": 90.32,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

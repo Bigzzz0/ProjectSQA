@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral"
-  ]
+  ],
+  "suite_sha256": "96a020784f8d83ea26400958e5ee664c6ad69580346f8ea6542fe2528da79906",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_1b/RemoveUnusedVarsGeminiTest.java"
+  ],
+  "run_id": "Closure-1-gemini-1790353990"
 }

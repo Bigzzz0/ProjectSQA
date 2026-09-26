@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "CommandLine_ESTest.java",
+  "target_classes": "org.apache.commons.cli.CommandLine",
+  "buggy_failures": [
+    "org.apache.commons.cli.CommandLine_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.CommandLine_ESTest"
+  ],
+  "suite_sha256": "57de9dd42d1529bcca2c78e5443cb27cc7cdc49010459db5ed6dc65300d0ca9a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_1b/CommandLine_ESTest.java"
+  ],
+  "run_id": "Cli-1-mio-1790352585"
+}

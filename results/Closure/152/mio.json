@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.45,
+  "branch_cov": 82.98,
+  "test_file": "FunctionType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.FunctionType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5fe5e241591af23bc78850dd12aaca9143198fd3cb854b5fa7cab9362238e8e6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_152b/FunctionType_ESTest.java"
+  ],
+  "run_id": "Closure-152-mio-1790363795"
+}

@@ -1,0 +1,29 @@
+{
+  "project": "Closure",
+  "bug_id": 69,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-69-mio-1790358941",
+  "suite_sha256": "eed6748720b6c62183da928f9efef79f31b43da92e2e6e44625e674497eda57c",
+  "test_files": "TypeCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "timestamp": "2026-09-26 00:56:13",
+  "evaluation_duration_sec": 32.148,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 23.58,
+  "branch_coverage_percent": 11.62,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test14",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test15",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test06",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test08"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test14",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test15",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test06",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test08"
+  ]
+}

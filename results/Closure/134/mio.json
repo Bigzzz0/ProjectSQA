@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 35.11,
+  "branch_cov": 15.64,
+  "test_file": "AmbiguateProperties_ESTest.java;TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.AmbiguateProperties;com.google.javascript.jscomp.TypedScopeCreator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test0",
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test0",
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test2"
+  ],
+  "suite_sha256": "6df9bda1c92477b62fac79a8b0cc39088bc3f3d6176fa1f7161b5312237adc51",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_134b/AmbiguateProperties_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_134b/TypedScopeCreator_ESTest.java"
+  ],
+  "run_id": "Closure-134-mio-1790362819"
+}

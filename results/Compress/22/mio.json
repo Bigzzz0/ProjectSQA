@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 4.58,
+  "branch_cov": 5.28,
+  "test_file": "BZip2CompressorInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "41ae59e645ad8f68a8e12ad6f5eb98d3184ac0d84b3d53c0b28e84ada4ed1c50",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_22b/BZip2CompressorInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-22-mio-1790368597"
+}

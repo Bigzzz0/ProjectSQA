@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 50.0,
+  "branch_cov": 0.0,
+  "test_file": "EqualPredicate_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.functors.EqualPredicate",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a0ab2deb9c5b43c0fa53db5f87c73ccb71dd401e18977df9e01b47655fdd4d6f",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Collections_17b/org/apache/commons/collections/functors/EqualPredicate_IPOTest.java"
+  ],
+  "run_id": "Collections-17-ipo-1790366992"
+}

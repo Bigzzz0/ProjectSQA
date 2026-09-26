@@ -1,0 +1,21 @@
+{
+  "project": "Jsoup",
+  "bug_id": 25,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-25-gemini-1790379781",
+  "suite_sha256": "56ddc76628594f00c4bb628ef6899e6ef480463a65d3797cc652bf9b3bf8cd7d",
+  "test_files": "TagGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Tag",
+  "timestamp": "2026-09-26 06:43:16",
+  "evaluation_duration_sec": 14.925,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.89,
+  "branch_coverage_percent": 89.13,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.TagGeminiTest::testPreservesWhitespaceInTextarea"
+  ],
+  "fixed_failures": []
+}

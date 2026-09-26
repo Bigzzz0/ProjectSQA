@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math.stat.FrequencyGeminiTest::testSerializationIntegrity"
-  ]
+  ],
+  "suite_sha256": "c1e654ebfc8a4d6b1e23111acdd574e967d00b6c965eb6490bd50d66d5d3331e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_75b/FrequencyGeminiTest.java"
+  ],
+  "run_id": "Math-75-gemini-1790392527"
 }

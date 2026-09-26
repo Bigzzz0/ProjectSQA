@@ -1,0 +1,25 @@
+{
+  "project": "Closure",
+  "bug_id": 134,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-134-mio-1790362819",
+  "suite_sha256": "6df9bda1c92477b62fac79a8b0cc39088bc3f3d6176fa1f7161b5312237adc51",
+  "test_files": "AmbiguateProperties_ESTest.java;TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.AmbiguateProperties;com.google.javascript.jscomp.TypedScopeCreator",
+  "timestamp": "2026-09-26 02:00:50",
+  "evaluation_duration_sec": 30.568,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 35.11,
+  "branch_coverage_percent": 15.64,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test0",
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test0",
+    "com.google.javascript.jscomp.AmbiguateProperties_ESTest::test2"
+  ]
+}

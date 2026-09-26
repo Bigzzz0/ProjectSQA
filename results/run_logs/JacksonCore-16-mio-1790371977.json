@@ -1,0 +1,24 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 16,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-16-mio-1790371977",
+  "suite_sha256": "7c552600420001bb39d2620c5f07eae3746a881cf30ae27d82b3d7a7566cf748",
+  "test_files": "JsonParserSequence_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.JsonParserSequence",
+  "timestamp": "2026-09-26 04:33:14",
+  "evaluation_duration_sec": 17.129,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test4",
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test5",
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test6",
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test7"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "project": "Compress",
+  "bug_id": 46,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-46-gemini-1790370065",
+  "suite_sha256": "e1f5d8723a816b79e4bf26d051a90aa589930429e77549a877e7b9f0c906f054",
+  "test_files": "X5455_ExtendedTimestampGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestamp",
+  "timestamp": "2026-09-26 04:01:24",
+  "evaluation_duration_sec": 19.798,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 91.67,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testAccessJavaTimeNegativeOverflowThrowsException",
+    "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testCreateJavaTimeNegativeOverflowThrowsException",
+    "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testModifyJavaTimeNegativeOverflowThrowsException"
+  ],
+  "fixed_failures": []
+}

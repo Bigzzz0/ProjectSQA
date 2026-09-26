@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.joda.time.DateTimeZoneGeminiTest::testIsStandardOffset",
     "org.joda.time.DateTimeZoneGeminiTest::testGetMillisKeepLocal"
-  ]
+  ],
+  "suite_sha256": "c1feffc6fc472996e47d30d8243fb170cc14d9851c0b75692b40a3dc1aea2dbf",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_8b/DateTimeZoneGeminiTest.java"
+  ],
+  "run_id": "Time-8-gemini-1790398761"
 }

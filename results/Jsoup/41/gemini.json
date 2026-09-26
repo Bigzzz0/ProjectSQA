@@ -25,5 +25,10 @@
     "org.jsoup.nodes.ElementGeminiTest::testTextAndWhitespaceHandlingWithBrAndPre",
     "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
     "org.jsoup.nodes.ElementGeminiTest::testHtmlOutputFormattingAndSyntaxModes"
-  ]
+  ],
+  "suite_sha256": "1c67f6ab4aa9eee375203aef91f265e0b07e61a58fe60d76f54e90b8660fa236",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_41b/ElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-41-gemini-1790380540"
 }

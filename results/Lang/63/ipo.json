@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 86.11,
+  "branch_cov": 79.26,
+  "test_file": "DurationFormatUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.time.DurationFormatUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriod_pairwise_182",
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriod_pairwise_251",
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriodISO_pairwise_142"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriod_pairwise_182"
+  ],
+  "suite_sha256": "06bb2f4463e03aafdc3f2ab5a6b2bb57bb52665c5699942f78b7e5fea6917fb8",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_63b/org/apache/commons/lang/time/DurationFormatUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-63-ipo-1790387298"
+}

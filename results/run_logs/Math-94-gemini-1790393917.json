@@ -1,0 +1,22 @@
+{
+  "project": "Math",
+  "bug_id": 94,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-94-gemini-1790393917",
+  "suite_sha256": "f83f83f73420d38e14d17b3facec1b7ff98158341fd98a9cd7601cacedf658a8",
+  "test_files": "MathUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:39:01",
+  "evaluation_duration_sec": 23.573,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.67,
+  "branch_coverage_percent": 98.14,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdIntegerOverflowBug",
+    "org.apache.commons.math.util.MathUtilsGeminiTest::testGcdOverflow2Pow31"
+  ],
+  "fixed_failures": []
+}

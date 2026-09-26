@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 19,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-19-deepseek-1790372096",
+  "suite_sha256": "bb678ca868c2bd4eca9cdbb7093739d499aad5613f621c1652903919ccc32a9f",
+  "test_files": "ReaderBasedJsonParserDeepseekTest.java;UTF8StreamJsonParserDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "timestamp": "2026-09-26 04:35:00",
+  "evaluation_duration_sec": 3.802,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "rxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_19b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_19b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_19b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_19b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_19b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JacksonCore_19b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_19b/.test_suite/com/fasterxml/jackson/core/json/ReaderBasedJsonParserDeepseekTest.java:300: error: <anonymous com.fasterxml.jackson.core.json.ReaderBasedJsonParserDeepseekTest$1> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString\n    [javac]         assertTrue(parser.nextFieldName(new SerializableString() {\n    [javac]                                                                  ^\n    [javac] Note: /tmp/d4j_eval/JacksonCore_19b/.test_suite/com/fasterxml/jackson/core/json/ReaderBasedJsonParserDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

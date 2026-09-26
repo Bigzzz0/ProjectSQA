@@ -1,0 +1,23 @@
+{
+  "project": "Collections",
+  "bug_id": 4,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Collections-4-ipo-1790366302",
+  "suite_sha256": "c89a769d12575ef5d4fe83443e27fed380c731b8e29ac7181625388b7f820274",
+  "test_files": "MultiValueMap_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+  "timestamp": "2026-09-26 02:58:39",
+  "evaluation_duration_sec": 16.731,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 22.52,
+  "branch_coverage_percent": 14.58,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.MultiValueMap_IPOTest::test_putAll_pairwise_011",
+    "org.apache.commons.collections.map.MultiValueMap_IPOTest::test_putAll_pairwise_013",
+    "org.apache.commons.collections.map.MultiValueMap_IPOTest::test_putAll_pairwise_015"
+  ],
+  "fixed_failures": []
+}

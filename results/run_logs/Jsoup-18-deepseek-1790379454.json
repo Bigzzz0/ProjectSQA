@@ -1,0 +1,41 @@
+{
+  "project": "Jsoup",
+  "bug_id": 18,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-18-deepseek-1790379454",
+  "suite_sha256": "445a7259bac13b37e7f38dfdfbfb2ae5105fdd64d32a0e25e08e48019b605430",
+  "test_files": "CharacterReaderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "timestamp": "2026-09-26 06:37:49",
+  "evaluation_duration_sec": 15.269,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.97,
+  "branch_coverage_percent": 85.37,
+  "failures_count": 15,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testContainsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testSingleCharInput",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testEmptyInput",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToEndWithOneChar",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToStringNotFound",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeAsString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToEndOnEmptyDoesNotThrow",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToEndKnownBug",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToEndFull",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToStringFound",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharAtEnd",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharFound",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharNotFound",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testHandleCarriageReturnAsLineFeed",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testMultipleOperations"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testContainsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testEmptyInput",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeAsString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToStringFound",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharFound"
+  ]
+}

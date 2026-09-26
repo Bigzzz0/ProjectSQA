@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 99.38,
+  "branch_cov": 100.0,
+  "test_file": "Token_ESTest.java",
+  "target_classes": "org.jsoup.parser.Token",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.parser.Token_ESTest::test19",
+    "org.jsoup.parser.Token_ESTest::test22"
+  ],
+  "suite_sha256": "1112fe700e4d789cb251ed5473328c45ca6016a25c607b271e9b3625c65f62c0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_59b/Token_ESTest.java"
+  ],
+  "run_id": "Jsoup-59-mio-1790381426"
+}

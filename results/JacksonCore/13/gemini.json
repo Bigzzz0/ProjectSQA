@@ -11,5 +11,10 @@
     "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testFieldNameQuotingDisabledViaDisableBytes",
     "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testDirectCfgUnqNamesFlagUpdatedOnDisable"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "a49e8da23c7e13fb5e15cb936b69da1bb784f80138e0255b66a08ced691e0379",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_13b/JsonGeneratorImplGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-13-gemini-1790371901"
 }

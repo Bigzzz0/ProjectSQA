@@ -1,0 +1,19 @@
+{
+  "project": "Mockito",
+  "bug_id": 32,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Mockito-32-mio-1790397878",
+  "suite_sha256": "776fb964d8ccbfab5c7e0ba610372944b18a23b78813f26e68379677d3b48f71",
+  "test_files": "SpyAnnotationEngine_ESTest.java",
+  "target_classes": "org.mockito.internal.configuration.SpyAnnotationEngine",
+  "timestamp": "2026-09-26 11:45:08",
+  "evaluation_duration_sec": 30.444,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 39.13,
+  "branch_coverage_percent": 41.67,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

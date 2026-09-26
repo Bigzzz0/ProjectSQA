@@ -1,0 +1,22 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 87,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-87-gemini-1790377193",
+  "suite_sha256": "a033ac3d9b0ad6e2d8c902ba2b9f04ccbc22f67cec07c99fb1d356c3eb13e959",
+  "test_files": "StdDateFormatGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "timestamp": "2026-09-26 06:00:18",
+  "evaluation_duration_sec": 25.377,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 96.53,
+  "branch_coverage_percent": 88.24,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDateUtilISO8601NoTimezoneWithCustomTimezoneViaWithTimeZone",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDateUtilISO8601NoTimezoneNonDefault"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 25.69,
+  "branch_cov": 14.06,
+  "test_file": "DateTimeParserBucket_IPOTest.java",
+  "target_classes": "org.joda.time.format.DateTimeParserBucket",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0d816860317e7593a91975edd5962c6bd8dfb5554ad7ec4f86feba0f0ab12097",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_24b/org/joda/time/format/DateTimeParserBucket_IPOTest.java"
+  ],
+  "run_id": "Time-24-ipo-1790399736"
+}

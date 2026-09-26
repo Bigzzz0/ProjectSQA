@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 98.84,
+  "branch_cov": 100.0,
+  "test_file": "SetUniqueList_ESTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueList_ESTest::test20"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueList_ESTest::test06",
+    "org.apache.commons.collections.list.SetUniqueList_ESTest::test20"
+  ],
+  "suite_sha256": "de9abe29221de4d0fdfd2748a31a35ec4be6c981d5dd34b98b4acddf4087f7e5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_15b/SetUniqueList_ESTest.java"
+  ],
+  "run_id": "Collections-15-mio-1790366881"
+}

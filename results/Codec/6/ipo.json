@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 62.86,
+  "branch_cov": 57.14,
+  "test_file": "Base64InputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64InputStream",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64InputStream_IPOTest::test_read_pairwise_007"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "7d2cce9b17675d939c6399c09b2f4fc6e52e5c8f28e44fc8c6f55d65d6763526",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_6b/org/apache/commons/codec/binary/Base64InputStream_IPOTest.java"
+  ],
+  "run_id": "Codec-6-ipo-1790365588"
+}

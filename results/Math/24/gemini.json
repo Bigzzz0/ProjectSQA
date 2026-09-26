@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
-  ]
+  ],
+  "suite_sha256": "6520724212c6367cf717aa152e070a2e62dbe1ce093333273bb2eba7a840ef35",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_24b/BrentOptimizerGeminiTest.java"
+  ],
+  "run_id": "Math-24-gemini-1790389065"
 }

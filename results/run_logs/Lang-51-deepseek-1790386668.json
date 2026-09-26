@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 51,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-51-deepseek-1790386668",
+  "suite_sha256": "2d25dba69a50a0436a5f04b402c3d5ec49bcb61ad40859041b98a5cec181fca7",
+  "test_files": "BooleanUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.BooleanUtils",
+  "timestamp": "2026-09-26 08:37:54",
+  "evaluation_duration_sec": 5.943,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "air(new Integer(dateStyle), new Integer(timeStyle));\n    [javac]                               ^\n    [javac] /tmp/d4j_eval/Lang_51b/src/java/org/apache/commons/lang/time/FastDateFormat.java:460: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));\n    [javac]                                                       ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 76 warnings\n     [copy] Copying 14 files to /tmp/d4j_eval/Lang_51b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_51b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_51b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_51b/.test_suite/org/apache/commons/lang/BooleanUtilsDeepseekTest.java:111: error: reference to toBoolean is ambiguous\n    [javac]         assertFalse(BooleanUtils.toBoolean(null));\n    [javac]                                 ^\n    [javac]   both method toBoolean(Boolean) in BooleanUtils and method toBoolean(String) in BooleanUtils match\n    [javac] Note: /tmp/d4j_eval/Lang_51b/.test_suite/org/apache/commons/lang/BooleanUtilsDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

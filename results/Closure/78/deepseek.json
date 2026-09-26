@@ -203,5 +203,10 @@
     "com.google.javascript.jscomp.PeepholeFoldConstantsDeepseekTest::testFoldAssignSideEffects",
     "com.google.javascript.jscomp.PeepholeFoldConstantsDeepseekTest::testFoldUnaryBitNotNonNumber",
     "com.google.javascript.jscomp.PeepholeFoldConstantsDeepseekTest::testFoldGetElemValidIndex"
-  ]
+  ],
+  "suite_sha256": "87837fad64123f911b813c64ddf118c4201cab3f7fffc6e2b7976b3b583329ef",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_78b/PeepholeFoldConstantsDeepseekTest.java"
+  ],
+  "run_id": "Closure-78-deepseek-1790359515"
 }

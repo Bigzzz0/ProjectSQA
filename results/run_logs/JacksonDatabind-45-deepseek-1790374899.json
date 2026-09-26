@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 45,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-45-deepseek-1790374899",
+  "suite_sha256": "ef78818aa81b1cbff8198ab2230aa1763ea0e55c0c9782f7d8438f8351a63eb5",
+  "test_files": "DateTimeSerializerBaseDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+  "timestamp": "2026-09-26 05:21:47",
+  "evaluation_duration_sec": 8.236,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "eDynamic13, boolean forceDynamic14, boolean forceDynamic15, boolean forceDynamic16, boolean forceDynamic17, boolean forceDynamic18, boolean forceDynamic19, boolean forceDynamic20, boolean forceDynamic21, boolean forceDynamic22, boolean forceDynamic23, boolean forceDynamic24, boolean forceDynamic25, boolean forceDynamic26, boolean forceDynamic27, boolean forceDynamic28, boolean forceDynamic29, boolean forceDynamic30, boolean forceDynamic31, boolean forceDynamic32, boolean forceDynamic33, boolean forceDynamic34, boolean forceDynamic35, boolean forceDynamic36, boolean forceDynamic37, boolean forceDynamic\n    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

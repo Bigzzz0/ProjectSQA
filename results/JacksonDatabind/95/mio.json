@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 85.19,
+  "branch_cov": 78.23,
+  "test_file": "TypeFactory_ESTest.java;TypeParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.TypeFactory;com.fasterxml.jackson.databind.type.TypeParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2160aa619c28e65cbc55eef4bc6c53c66d8f0d1a632505a46b1ea59829968ef5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_95b/TypeFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_95b/TypeParser_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-95-mio-1790377596"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 88.16,
+  "branch_cov": 76.1,
+  "test_file": "Elements_ESTest.java;Element_ESTest.java;Node_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Element;org.jsoup.nodes.Node;org.jsoup.select.Elements",
+  "buggy_failures": [
+    "org.jsoup.nodes.Node_ESTest::test28",
+    "org.jsoup.nodes.Node_ESTest::test24",
+    "org.jsoup.select.Elements_ESTest::test08",
+    "org.jsoup.select.Elements_ESTest::test40"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.Element_ESTest::test01",
+    "org.jsoup.nodes.Node_ESTest::test28",
+    "org.jsoup.nodes.Node_ESTest::test27",
+    "org.jsoup.nodes.Node_ESTest::test24",
+    "org.jsoup.select.Elements_ESTest::test08",
+    "org.jsoup.select.Elements_ESTest::test40"
+  ],
+  "suite_sha256": "f6e751e3715878851592bb7547f6125d13c0abb7dbaccf2e4e0854c2352c10e9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_22b/Elements_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_22b/Element_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_22b/Node_ESTest.java"
+  ],
+  "run_id": "Jsoup-22-mio-1790379656"
+}

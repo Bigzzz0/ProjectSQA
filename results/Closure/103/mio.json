@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 38.82,
+  "branch_cov": 31.2,
+  "test_file": "ControlFlowAnalysis_ESTest.java;DisambiguateProperties_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ControlFlowAnalysis;com.google.javascript.jscomp.DisambiguateProperties",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ControlFlowAnalysis_ESTest::test05",
+    "com.google.javascript.jscomp.DisambiguateProperties_ESTest::test5"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ControlFlowAnalysis_ESTest::test05",
+    "com.google.javascript.jscomp.DisambiguateProperties_ESTest::test5"
+  ],
+  "suite_sha256": "17aa3e2f9f92e8708969e02ef16c2ea666fa3267562f6c34b419bb724ed82aaa",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_103b/ControlFlowAnalysis_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_103b/evosuite-tests/com/google/javascript/jscomp/DisambiguateProperties_ESTest.java"
+  ],
+  "run_id": "Closure-103-mio-1790360808"
+}

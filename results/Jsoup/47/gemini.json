@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
     "org.jsoup.nodes.EntitiesGeminiTest::escapesGtInXmlAttributesButNotInHtml"
-  ]
+  ],
+  "suite_sha256": "b7467006a6274c59f29212a310c3bc4f09b8c368e7dce66a14d191f62161f181",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_47b/EntitiesGeminiTest.java"
+  ],
+  "run_id": "Jsoup-47-gemini-1790380834"
 }

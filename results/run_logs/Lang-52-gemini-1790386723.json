@@ -1,0 +1,24 @@
+{
+  "project": "Lang",
+  "bug_id": 52,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-52-gemini-1790386723",
+  "suite_sha256": "ee8f192dabd3177468cd4425c09c0aca209ac76d807b293d6bcd37454b7cb77e",
+  "test_files": "StringEscapeUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.StringEscapeUtils",
+  "timestamp": "2026-09-26 08:39:02",
+  "evaluation_duration_sec": 19.751,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.14,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testEscapeJavaScriptScriptTagDefect",
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testUnescapeJavaIncompleteUnicodeAtEof"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testUnescapeJavaIncompleteUnicodeAtEof"
+  ]
+}

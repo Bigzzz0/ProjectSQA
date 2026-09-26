@@ -7,5 +7,10 @@
   "test_file": "AbstractLeastSquaresOptimizerGeminiTest.java",
   "target_classes": "org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "eb8b2cde00df1888b15a04fb96d199739ec8e55012a21939a4588c9b100e6f8e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_65b/AbstractLeastSquaresOptimizerGeminiTest.java"
+  ],
+  "run_id": "Math-65-gemini-1790391904"
 }

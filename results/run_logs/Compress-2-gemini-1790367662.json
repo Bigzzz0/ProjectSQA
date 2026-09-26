@@ -1,0 +1,25 @@
+{
+  "project": "Compress",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-2-gemini-1790367662",
+  "suite_sha256": "07fb9c5de26d57129adf5b256a0e0b3752341f971a2d405a860db1c0584cf2d1",
+  "test_files": "ArArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ar.ArArchiveInputStream",
+  "timestamp": "2026-09-26 03:21:19",
+  "evaluation_duration_sec": 17.219,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.ar.ArArchiveInputStreamGeminiTest::testReadAtEofReturnsNegativeOne",
+    "org.apache.commons.compress.archivers.ar.ArArchiveInputStreamGeminiTest::testArDeleteDefectTargetReadMustStopAtEntryBoundary",
+    "org.apache.commons.compress.archivers.ar.ArArchiveInputStreamGeminiTest::testSingleByteReadReturnsEofAtEntryBoundary"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.ar.ArArchiveInputStreamGeminiTest::testCallingGetNextEntryWithoutReadingContentThrowsIOException"
+  ]
+}

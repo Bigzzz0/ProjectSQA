@@ -1,0 +1,29 @@
+{
+  "project": "Jsoup",
+  "bug_id": 83,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-83-gemini-1790382535",
+  "suite_sha256": "b7c1061dbda05c5c67df01d38c409599c52e4fe9979d2967f202446ac11198c4",
+  "test_files": "CharacterReaderGeminiTest.java;TokeniserStateGeminiTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader;org.jsoup.parser.TokeniserState",
+  "timestamp": "2026-09-26 07:29:12",
+  "evaluation_duration_sec": 16.563,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 55.85,
+  "branch_coverage_percent": 57.6,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNextIndexOfSequenceBoundaries",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNullStringThrowsException",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testConsumeTagNameStopsOnLessThanDelimiter",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testHandlesLessInTagThanAsNewTag",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testParsesQuiteRoughAttributes"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNextIndexOfSequenceBoundaries",
+    "org.jsoup.parser.CharacterReaderGeminiTest::testNullStringThrowsException",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testParsesQuiteRoughAttributes"
+  ]
+}

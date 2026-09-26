@@ -1,0 +1,25 @@
+{
+  "project": "Lang",
+  "bug_id": 35,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-35-gemini-1790385699",
+  "suite_sha256": "41f18ef292312c884a59620ee839ae1d0f1963b24d9b7ab462679f98366e8d35",
+  "test_files": "ArrayUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "timestamp": "2026-09-26 08:22:01",
+  "evaluation_duration_sec": 21.353,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 91.6,
+  "branch_coverage_percent": 78.04,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testLANG571AddNullArrayAndElementWithIndex",
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testLANG571AddNullArrayAndElement",
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testAddAllIncompatibleTypes"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testAddAllIncompatibleTypes"
+  ]
+}

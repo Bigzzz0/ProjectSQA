@@ -49,5 +49,10 @@
     "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testEqualsAndHashCode",
     "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathBasic",
     "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerDeepseekTest::testAsPathPositions"
-  ]
+  ],
+  "suite_sha256": "7eebdf4b7138f54f026b274f872a8bef2367989076ec3850542f918c47a717b0",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JxPath_22b/DOMNodePointerDeepseekTest.java"
+  ],
+  "run_id": "JxPath-22-deepseek-1790383533"
 }

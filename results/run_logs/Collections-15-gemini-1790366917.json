@@ -1,0 +1,23 @@
+{
+  "project": "Collections",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-15-gemini-1790366917",
+  "suite_sha256": "bbe9f49a608d9e8ad2a88bf5aa2b62bde4bef6ee064612b302a32a6fd449b12a",
+  "test_files": "SetUniqueListGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:08:54",
+  "evaluation_duration_sec": 16.917,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testCollections304"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testSetSelfSwapBranch"
+  ]
+}

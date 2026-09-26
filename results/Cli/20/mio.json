@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "PosixParser_ESTest.java",
+  "target_classes": "org.apache.commons.cli.PosixParser",
+  "buggy_failures": [
+    "org.apache.commons.cli.PosixParser_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.PosixParser_ESTest"
+  ],
+  "suite_sha256": "896bf153b72182109a3aed2f50e578b8f6d9b486439a873e199da237c9b8b7a5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_20b/PosixParser_ESTest.java"
+  ],
+  "run_id": "Cli-20-mio-1790353214"
+}

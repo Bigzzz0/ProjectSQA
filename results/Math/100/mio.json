@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 94.52,
+  "branch_cov": 86.36,
+  "test_file": "AbstractEstimator_ESTest.java",
+  "target_classes": "org.apache.commons.math.estimation.AbstractEstimator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0172b18ba60081881e2643a0492ef1aeb2a05b4d56b4250d29ff32b6bac48ad2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_100b/AbstractEstimator_ESTest.java"
+  ],
+  "run_id": "Math-100-mio-1790394280"
+}

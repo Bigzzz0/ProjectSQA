@@ -13,6 +13,7 @@ Generates 4 publication-ready figures for Chapter 5 of the final report:
 import os
 import sys
 import csv
+import math
 from collections import defaultdict
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -61,22 +62,31 @@ def load_csv_data():
             rows.append(r)
     return rows
 
+def is_complete_snapshot(rows):
+    attempted = {"DONE", "COMPILE_ERROR", "TIMEOUT"}
+    unresolved = {"NOT_RUN", "STALE_RESULT", "CHECKOUT_ERROR", "INVALID_SUITE", "RUN_ERROR"}
+    if any(r.get("Execution_Status") in unresolved for r in rows):
+        return False
+    return all(r.get("Execution_Status") in attempted for r in rows if r.get("Suite_Available") == "YES")
+
 def generate_figure1_coverage(rows):
     """Figure 1: Average Line & Branch Coverage across the 4 techniques."""
     tech_line = defaultdict(list)
     tech_branch = defaultdict(list)
     
     for r in rows:
+        if r.get("Execution_Status") != "DONE":
+            continue
         tech = r.get("Technique", "").strip()
         try:
-            l_cov = float(r.get("Line_Coverage_%", 0.0))
-            b_cov = float(r.get("Branch_Coverage_%", 0.0))
+            l_cov = float(r["Line_Coverage_%"])
+            b_cov = float(r["Branch_Coverage_%"])
             tech_line[tech].append(l_cov)
             tech_branch[tech].append(b_cov)
         except Exception:
             pass
             
-    desired_order = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native IPO)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
     techniques = [t for t in desired_order if t in tech_line]
     if not techniques:
         techniques = list(tech_line.keys())
@@ -92,9 +102,10 @@ def generate_figure1_coverage(rows):
     rects2 = ax.bar([i + width/2 for i in x], avg_branches, width, label="Branch Coverage (%)", color="#e27c3e", alpha=0.9)
     
     ax.set_ylabel("Coverage Percentage (%)")
-    ax.set_title("Figure 1: Comparison of Code Coverage Across Testing Techniques (Defects4J)")
+    snapshot = "complete" if is_complete_snapshot(rows) else "provisional snapshot"
+    ax.set_title(f"Figure 1: Target-Class Coverage (Defects4J; {snapshot})")
     ax.set_xticks(list(x))
-    ax.set_xticklabels(techniques, rotation=10, ha="right")
+    ax.set_xticklabels([f"{t}\n(n={len(tech_line[t])})" for t in techniques], rotation=10, ha="right")
     ax.set_ylim(0, 105)
     ax.legend(loc="upper left")
     
@@ -125,25 +136,29 @@ def generate_figure2_fdr(rows):
     
     def normalize_status(val):
         val_str = str(val).upper()
-        if "BUG_DETECTED" in val_str or "YES" in val_str:
+        if val_str == "BUG_DETECTED":
             return "BUG_DETECTED"
-        elif "FLAKY" in val_str:
+        elif val_str == "FLAKY_OR_REGRESSION":
             return "FLAKY_OR_REGRESSION"
-        elif "COMPILE" in val_str:
+        elif val_str == "COMPILE_ERROR":
             return "COMPILE_ERROR"
-        elif "TIMEOUT" in val_str:
+        elif val_str == "TIMEOUT":
             return "TIMEOUT"
-        else:
+        elif val_str == "NOT_DETECTED":
             return "NOT_DETECTED"
+        return None
             
     tech_counts = defaultdict(lambda: defaultdict(int))
     for r in rows:
+        if r.get("Execution_Status") not in {"DONE", "COMPILE_ERROR", "TIMEOUT"}:
+            continue
         tech = r.get("Technique", "").strip()
         status_val = r.get("Fault_Detection_Status", r.get("Fault_Detected", ""))
         norm = normalize_status(status_val)
-        tech_counts[tech][norm] += 1
+        if norm:
+            tech_counts[tech][norm] += 1
         
-    desired_order = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
+    desired_order = ["IPO (Native IPO)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
     techniques = [t for t in desired_order if t in tech_counts]
     if not techniques:
         techniques = list(tech_counts.keys())
@@ -162,10 +177,11 @@ def generate_figure2_fdr(rows):
         bottoms = [b + p for b, p in zip(bottoms, percentages)]
         
     ax.set_ylabel("Proportion of Evaluated Bugs (%)")
-    ax.set_title("Figure 2: Fault Detection Classification Distribution (Bug-Level FDR %)")
+    snapshot = "complete" if is_complete_snapshot(rows) else "provisional snapshot"
+    ax.set_title(f"Figure 2: Fault Detection Distribution (Bug-Level; {snapshot})")
     ax.set_ylim(0, 105)
     ax.set_xticks(range(len(techniques)))
-    ax.set_xticklabels(techniques, rotation=10, ha="right")
+    ax.set_xticklabels([f"{t}\n(n={sum(tech_counts[t].values())})" for t in techniques], rotation=10, ha="right")
     ax.legend(title="Classification", bbox_to_anchor=(1.02, 1), loc="upper left")
     
     plt.tight_layout()
@@ -177,16 +193,18 @@ def generate_figure3_projects(rows):
     """Figure 3: Project-by-Project Coverage Breakdown."""
     proj_tech_cov = defaultdict(lambda: defaultdict(list))
     for r in rows:
+        if r.get("Execution_Status") != "DONE":
+            continue
         p = r.get("Project", "").strip()
         t = r.get("Technique", "").strip()
         try:
-            cov = float(r.get("Line_Coverage_%", 0.0))
+            cov = float(r["Line_Coverage_%"])
             proj_tech_cov[p][t].append(cov)
         except Exception:
             pass
             
-    projects = sorted(proj_tech_cov.keys())
-    desired_order = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
+    projects = sorted({r.get("Project", "").strip() for r in rows if r.get("Project")})
+    desired_order = ["IPO (Native IPO)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
     
     fig, ax = plt.subplots(figsize=(13, 6))
     x = list(range(len(projects)))
@@ -196,12 +214,13 @@ def generate_figure3_projects(rows):
         vals = []
         for p in projects:
             covs = proj_tech_cov[p].get(t, [])
-            vals.append(sum(covs)/len(covs) if covs else 0.0)
+            vals.append(sum(covs)/len(covs) if covs else math.nan)
         pos = [i + (idx - 1.5) * width for i in x]
         ax.bar(pos, vals, width=width, label=t)
         
     ax.set_ylabel("Line Coverage (%)")
-    ax.set_title("Figure 3: Project-by-Project Line Coverage Breakdown across Defects4J")
+    snapshot = "complete" if is_complete_snapshot(rows) else "provisional snapshot"
+    ax.set_title(f"Figure 3: Target-Class Coverage by Project ({snapshot}; missing values omitted)")
     ax.set_xticks(x)
     ax.set_xticklabels(projects, rotation=25, ha="right")
     ax.set_ylim(0, 105)
@@ -227,7 +246,7 @@ def generate_figure4_ai_economics():
             for r in reader:
                 m = r.get("Model", "").strip()
                 try:
-                    tot_tok = int(r.get("Total_Tokens", 0))
+                    tot_tok = int(r.get("Total_Tokens", 0) or 0)
                     raw_sec = r.get("Generation_Time_Sec") or r.get("Generation_Time_s") or "0.0"
                     sec = float(raw_sec)
                     if tot_tok > 0:
@@ -246,15 +265,21 @@ def generate_figure4_ai_economics():
     for m in model_order:
         if m in model_data and model_data[m]["tokens"]:
             disp = "DeepSeek V4 Flash" if "deepseek" in m else ("Gemini 3.8 Flash" if "gemini" in m else "Claude Sonnet 5")
-            models.append(disp)
+            models.append(f"{disp}\n(n={len(model_data[m]['tokens'])})")
             avg_tokens.append(int(sum(model_data[m]["tokens"]) / len(model_data[m]["tokens"])))
             lats = model_data[m]["latencies"]
             avg_latency.append(round(sum(lats) / len(lats), 1) if lats else 0.0)
             
     if not models:
-        models = ["DeepSeek V4 Flash", "Gemini 3.8 Flash"]
-        avg_tokens = [4850, 5530]
-        avg_latency = [12.5, 4.8]
+        for ax in (ax1, ax2):
+            ax.set_axis_off()
+            ax.text(0.5, 0.5, "No measured AI generation records", ha="center", va="center", transform=ax.transAxes)
+        plt.suptitle("Figure 4: AI Model Economics & Latency Comparison (source records only)", fontsize=13)
+        plt.tight_layout()
+        plt.savefig(FIG4_PATH, dpi=300)
+        plt.close()
+        print(f"✅ Generated: {FIG4_PATH}")
+        return
         
     colors = ["#4a90e2", "#1a73e8"] if len(models) == 2 else ["#4a90e2", "#1a73e8", "#7c5295"][:len(models)]
     
@@ -262,17 +287,17 @@ def generate_figure4_ai_economics():
     ax1.set_ylabel("Average Tokens per Test Suite")
     ax1.set_title("Average Token Consumption")
     for i, v in enumerate(avg_tokens):
-        ax1.text(i, v + 80, f"{v:,} tokens", ha="center", fontweight="bold")
+        ax1.text(i, v + max(avg_tokens) * 0.02, f"{v:,} tokens", ha="center", fontweight="bold")
     ax1.set_ylim(0, max(avg_tokens) * 1.2 if avg_tokens else 100)
     
     ax2.bar(models, avg_latency, color=colors, width=0.5, alpha=0.9)
     ax2.set_ylabel("Average Latency (Seconds)")
     ax2.set_title("Generation Latency (Speed)")
     for i, v in enumerate(avg_latency):
-        ax2.text(i, v + 0.3, f"{v:.1f}s", ha="center", fontweight="bold")
+        ax2.text(i, v + max(avg_latency) * 0.02, f"{v:.1f}s", ha="center", fontweight="bold")
     ax2.set_ylim(0, max(avg_latency) * 1.2 if avg_latency else 10)
     
-    plt.suptitle("Figure 4: AI Model Economics & Latency Comparison (KKU IntelSphere API)", fontsize=13)
+    plt.suptitle("Figure 4: AI Suite-Generation Records (Tokens and Generation Time)", fontsize=13)
     plt.tight_layout()
     plt.savefig(FIG4_PATH, dpi=300)
     plt.close()

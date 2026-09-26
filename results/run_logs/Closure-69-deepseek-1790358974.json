@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 69,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-69-deepseek-1790358974",
+  "suite_sha256": "8ed817cad63c1bd37af7eb872d8934916754fbff4d75cda32d3bbc4316a992e3",
+  "test_files": "TypeCheckDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "timestamp": "2026-09-26 00:56:21",
+  "evaluation_duration_sec": 7.684,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_69b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_69b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_69b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_69b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_69b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_69b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_69b/.test_suite/com/google/javascript/jscomp/TypeCheckDeepseekTest.java:32: error: cannot find symbol\n    [javac]     options.setWarningLevel(DiagnosticGroups.UNKNOWN_PARAMETER, CheckLevel.WARNING);\n    [javac]                                             ^\n    [javac]   symbol:   variable UNKNOWN_PARAMETER\n    [javac]   location: class DiagnosticGroups\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

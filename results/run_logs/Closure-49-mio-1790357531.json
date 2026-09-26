@@ -1,0 +1,21 @@
+{
+  "project": "Closure",
+  "bug_id": 49,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-49-mio-1790357531",
+  "suite_sha256": "b8baa7859f83dc9015f132871c99f7982cbda4ae3b9322ef15381fcddb3ecd79",
+  "test_files": "MakeDeclaredNamesUnique_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique",
+  "timestamp": "2026-09-26 00:32:50",
+  "evaluation_duration_sec": 39.456,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 60.1,
+  "branch_coverage_percent": 43.81,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.MakeDeclaredNamesUnique_ESTest::test01"
+  ]
+}

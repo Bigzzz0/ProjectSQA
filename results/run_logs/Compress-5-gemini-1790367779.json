@@ -1,0 +1,24 @@
+{
+  "project": "Compress",
+  "bug_id": 5,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-5-gemini-1790367779",
+  "suite_sha256": "ed6db52c23ba60a1206e87e7755b2ca0603ca9a7f3a131c1e985fd218f4ea4ec",
+  "test_files": "ZipArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:23:14",
+  "evaluation_duration_sec": 15.249,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.03,
+  "branch_coverage_percent": 89.36,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testRead7ZipMultiVolumeArchiveForStreamDefect",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testDataDescriptorFlagProcessing"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testDataDescriptorFlagProcessing"
+  ]
+}

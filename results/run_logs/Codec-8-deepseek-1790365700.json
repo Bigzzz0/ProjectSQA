@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-8-deepseek-1790365700",
+  "suite_sha256": "57491375e2a682ab51328b5159da2e180998380397651fa047fb6fc2336158d9",
+  "test_files": "Base64DeepseekTest.java;Base64InputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64;org.apache.commons.codec.binary.Base64InputStream",
+  "timestamp": "2026-09-26 02:48:22",
+  "evaluation_duration_sec": 2.073,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "st-reports\n\nstatic:\n\ncompile:\n    [javac] /tmp/d4j_eval/Codec_8b/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 30 source files to /tmp/d4j_eval/Codec_8b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Codec_8b/src/java/org/apache/commons/codec/StringEncoderComparator.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 6 files to /tmp/d4j_eval/Codec_8b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Codec_8b/target/classes/\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Codec_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_8b/.test_suite/org/apache/commons/codec/binary/Base64DeepseekTest.java:490: error: ')' expected\n    [javac]         assertTrue(Base64.isBase64((byte)'+');\n    [javac]                                              ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 0 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

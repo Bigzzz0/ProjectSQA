@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 63,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-63-gemini-1790401198",
+  "suite_sha256": "55cd288bdb19ac2510daddc830a5bd22fbef503c6de7ac8b0ea7730a2d91f3d1",
+  "test_files": "HtmlTreeBuilderGeminiTest.java;TokeniserGeminiTest.java",
+  "target_classes": "org.jsoup.parser.HtmlTreeBuilder;org.jsoup.parser.Tokeniser",
+  "timestamp": "2026-09-26 12:40:03",
+  "evaluation_duration_sec": 5.096,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_63b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_63b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_63b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_63b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_63b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_63b/target/classes/org/jsoup/safety/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_63b/target/classes\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_63b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_63b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_63b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Jsoup_63b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_63b/.test_suite/org/jsoup/parser/HtmlTreeBuilderGeminiTest.java:630: error: cannot find symbol\n    [javac]         commentToken.getData().append(\"Test Comment\");\n    [javac]                               ^\n    [javac]   symbol:   method append(String)\n    [javac]   location: class String\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

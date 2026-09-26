@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 94.2,
+  "branch_cov": 50.0,
+  "test_file": "Caverphone_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.language.Caverphone",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9915db6e282354369049d88b1bbae4975801735b4919fca1111433016de85e6d",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_10b/org/apache/commons/codec/language/Caverphone_IPOTest.java"
+  ],
+  "run_id": "Codec-10-ipo-1790365754"
+}

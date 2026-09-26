@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.77,
+  "branch_cov": 92.16,
+  "test_file": "Complex_ESTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "557ecef8e84697fd8a6f94eaff2f7c79cede52139c7c1fb9367d938e7ea4866c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_96b/Complex_ESTest.java"
+  ],
+  "run_id": "Math-96-mio-1790394044"
+}

@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.nodes.LeafNodeGeminiTest::testCloningWithInflatedAttributes"
-  ]
+  ],
+  "suite_sha256": "036b373cfb4348cabc4528aea551e41b4ac63aa8e008dfebb43e37b14cf062ef",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_79b/LeafNodeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-79-gemini-1790382319"
 }

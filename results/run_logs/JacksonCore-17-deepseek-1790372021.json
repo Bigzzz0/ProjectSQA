@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 17,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-17-deepseek-1790372021",
+  "suite_sha256": "e8bbf1233326861d82f79248f053a725f6c723cff84f9d44bad2633803d48388",
+  "test_files": "UTF8JsonGeneratorDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.UTF8JsonGenerator",
+  "timestamp": "2026-09-26 04:33:45",
+  "evaluation_duration_sec": 3.471,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/type/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/base/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/format/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_17b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_17b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_17b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonCore_17b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_17b/.test_suite/com/fasterxml/jackson/core/json/UTF8JsonGeneratorDeepseekTest.java:730: error: _cfgPrettyPrinter has protected access in JsonGenerator\n    [javac]         assertNull(gen._cfgPrettyPrinter);\n    [javac]                       ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

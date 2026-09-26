@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.97,
+  "branch_cov": 95.76,
+  "test_file": "Partial_ESTest.java;UnsupportedDurationField_ESTest.java",
+  "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.joda.time.Partial_ESTest::test31"
+  ],
+  "suite_sha256": "b1ad9a9db3f80f5b13ebd9049490a17d323619bbdfc24c698e9d90f640282995",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_2b/Partial_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Time_2b/UnsupportedDurationField_ESTest.java"
+  ],
+  "run_id": "Time-2-mio-1790398342"
+}

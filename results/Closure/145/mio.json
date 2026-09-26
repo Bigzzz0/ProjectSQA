@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.15,
+  "branch_cov": 14.89,
+  "test_file": "CodeGenerator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "28a189d0175c86941d50b8d971d546a1aed7c78eb2486175892293646c8d92e3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_145b/CodeGenerator_ESTest.java"
+  ],
+  "run_id": "Closure-145-mio-1790363405"
+}

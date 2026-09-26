@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "PoissonDistributionImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.distribution.PoissonDistributionImpl",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.PoissonDistributionImpl_ESTest::test4"
+  ],
+  "suite_sha256": "5973a0d6fa9262ce923e08d19767e7e8459d7257cdac24ad19ebfdba95d76125",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_61b/PoissonDistributionImpl_ESTest.java"
+  ],
+  "run_id": "Math-61-mio-1790391649"
+}

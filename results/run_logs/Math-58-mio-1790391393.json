@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 58,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-58-mio-1790391393",
+  "suite_sha256": "4c52f1f36bebea993bad55cd13ec6d3788d187ad67eb5f8ab096d740f702e572",
+  "test_files": "GaussianFitter_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.fitting.GaussianFitter",
+  "timestamp": "2026-09-26 09:57:00",
+  "evaluation_duration_sec": 27.063,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 87.5,
+  "branch_coverage_percent": 94.83,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

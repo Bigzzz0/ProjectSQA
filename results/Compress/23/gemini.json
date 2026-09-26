@@ -15,5 +15,10 @@
     "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderNonDefaultDictionarySizeSignExtension",
     "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeProperty1SignExtension",
     "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeExceedsMax"
-  ]
+  ],
+  "suite_sha256": "6e5a850340f5e5ffd4610b8a0c44d20f11e6c6fd7facd38964a06e5673b696b7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_23b/CodersGeminiTest.java"
+  ],
+  "run_id": "Compress-23-gemini-1790368666"
 }

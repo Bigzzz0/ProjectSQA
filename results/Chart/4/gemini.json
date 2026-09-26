@@ -16,5 +16,10 @@
     "org.jfree.chart.plot.XYPlotGeminiTest::testGetDataRangeWithNullRendererDefect",
     "org.jfree.chart.plot.XYPlotGeminiTest::testCompleteDrawExecutionWithEmptyAndPopulatedData",
     "org.jfree.chart.plot.XYPlotGeminiTest::testDatasetToAxesMapping"
-  ]
+  ],
+  "suite_sha256": "4902ffeb8eb7f066099fec62d540c2f5e1b2b564de8a437efd839e48e20813b1",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_4b/XYPlotGeminiTest.java"
+  ],
+  "run_id": "Chart-4-gemini-1790351105"
 }

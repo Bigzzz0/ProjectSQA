@@ -23,5 +23,10 @@
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testEqualsAndHashCodeExhaustiveBranches",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testCopyConstructors",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testAddAsFirstExtraFieldAndReordering"
-  ]
+  ],
+  "suite_sha256": "7be27f694e40619e9828d6a672307fb9f823cc3d22c6f001c6fcc19118a2e325",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_13b/ZipArchiveEntryGeminiTest.java"
+  ],
+  "run_id": "Compress-13-gemini-1790368177"
 }

@@ -1,0 +1,26 @@
+{
+  "project": "Lang",
+  "bug_id": 33,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-33-deepseek-1790385607",
+  "suite_sha256": "522bea7b5a8779569bf119fc84331ebd38d7095b777098d3f8831f7c8bb024e0",
+  "test_files": "ClassUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.ClassUtils",
+  "timestamp": "2026-09-26 08:20:27",
+  "evaluation_duration_sec": 20.024,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 83.22,
+  "branch_coverage_percent": 70.83,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testToClassWithNullElements",
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPublicMethodPackagePrivateDeclaringClass",
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPackageNameString"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPublicMethodPackagePrivateDeclaringClass",
+    "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPackageNameString"
+  ]
+}

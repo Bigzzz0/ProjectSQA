@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 4,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-4-deepseek-1790365531",
+  "suite_sha256": "0b8453f01f8658e2ea45497623c3c9a05613563a6145c2d9a045fee867e6616b",
+  "test_files": "Base64DeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "timestamp": "2026-09-26 02:45:34",
+  "evaluation_duration_sec": 2.144,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ath not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Codec_4b/src/java/org/apache/commons/codec/StringEncoderComparator.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 6 files to /tmp/d4j_eval/Codec_4b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Codec_4b/target/classes/\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_4b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Codec_4b/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_4b/.test_suite/org/apache/commons/codec/binary/Base64DeepseekTest.java:134: error: cannot find symbol\n    [javac]         Base64 urlSafe = new Base64(0, CHUNK_SEPARATOR, true);\n    [javac]                                        ^\n    [javac]   symbol:   variable CHUNK_SEPARATOR\n    [javac]   location: class Base64DeepseekTest\n    [javac] Note: /tmp/d4j_eval/Codec_4b/.test_suite/org/apache/commons/codec/binary/Base64DeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

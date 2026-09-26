@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 45,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-45-mio-1790357294",
+  "suite_sha256": "f081d07b5ad2339c4b476da1df589438af55a7551705009ad9d275941428b801",
+  "test_files": "RemoveUnusedVars_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+  "timestamp": "2026-09-26 00:28:53",
+  "evaluation_duration_sec": 39.05,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 17.71,
+  "branch_coverage_percent": 7.83,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

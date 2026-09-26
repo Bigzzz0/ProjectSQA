@@ -1,0 +1,25 @@
+{
+  "project": "Compress",
+  "bug_id": 21,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-21-mio-1790368530",
+  "suite_sha256": "c4543b98124ec0aa48d35e6beca3125aefeb30c64e6813f2dbcb7b9a90ac93d2",
+  "test_files": "SevenZOutputFile_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile",
+  "timestamp": "2026-09-26 03:35:51",
+  "evaluation_duration_sec": 20.615,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.95,
+  "branch_coverage_percent": 92.65,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile_ESTest::test17",
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile_ESTest::test15"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile_ESTest::test17",
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile_ESTest::test15"
+  ]
+}

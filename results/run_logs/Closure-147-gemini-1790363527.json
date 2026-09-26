@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 147,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-147-gemini-1790363527",
+  "suite_sha256": "39e12c7075b51040d303ef02a40c5615187ef6edae8b616774f26d7f31325ac5",
+  "test_files": "CheckGlobalThisGeminiTest.java;RuntimeTypeCheckGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis;com.google.javascript.jscomp.RuntimeTypeCheck",
+  "timestamp": "2026-09-26 02:12:15",
+  "evaluation_duration_sec": 7.518,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "   [copy] Copying 1 file to /tmp/d4j_eval/Closure_147b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_147b/build/classes/com/google/javascript/jscomp/parsing\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_147b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_147b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_147b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_147b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_147b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_147b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_147b/.test_suite/com/google/javascript/jscomp/RuntimeTypeCheckGeminiTest.java:56: error: cannot find symbol\n    [javac] public class RuntimeTypeCheckGeminiTest extends RuntimeTypeCheckTest {\n    [javac]                                                 ^\n    [javac]   symbol: class RuntimeTypeCheckTest\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

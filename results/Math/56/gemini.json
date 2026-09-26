@@ -11,5 +11,10 @@
     "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectSingleDimensionGetCounts",
     "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectGetCountsLastDimension"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "17808c31919cbc09a6d2506b0942e42e70671054175980e7e115d1c0e43cef26",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_56b/MultidimensionalCounterGeminiTest.java"
+  ],
+  "run_id": "Math-56-gemini-1790391295"
 }

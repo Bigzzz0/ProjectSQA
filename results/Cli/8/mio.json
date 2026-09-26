@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "HelpFormatter_ESTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter",
+  "buggy_failures": [
+    "org.apache.commons.cli.HelpFormatter_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.HelpFormatter_ESTest"
+  ],
+  "suite_sha256": "a2b01d73c6e5b61c2384280f29103be64e57d08b83a94c1847eccb4741b6624b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_8b/HelpFormatter_ESTest.java"
+  ],
+  "run_id": "Cli-8-mio-1790352810"
+}

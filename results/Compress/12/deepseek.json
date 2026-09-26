@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testCOMPRESS178EmbeddedNulInModeDoesNotThrow",
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testUnexpectedEofThrowsIoException"
-  ]
+  ],
+  "suite_sha256": "3e9d5082306a4f7533c2dcec2380dd27caea20fb5c19267b28ceba24056d1d24",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_12b/TarArchiveInputStreamDeepseekTest.java"
+  ],
+  "run_id": "Compress-12-deepseek-1790368107"
 }

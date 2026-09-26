@@ -1,0 +1,30 @@
+{
+  "project": "Time",
+  "bug_id": 19,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-19-deepseek-1790399477",
+  "suite_sha256": "ffcd3e60982034f1ac90f95248b503cd46473edc1cf255b661631c8b23ca03cc",
+  "test_files": "DateTimeZoneDeepseekTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "timestamp": "2026-09-26 12:11:42",
+  "evaluation_duration_sec": 24.583,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 82.51,
+  "branch_coverage_percent": 69.75,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZoneDeepseekTest::testDateTimeCreation_london_cutover",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstSpringForward",
+    "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
+  ],
+  "fixed_failures": [
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstSpringForward",
+    "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
+    "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
+  ]
+}

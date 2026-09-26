@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 23.58,
+  "branch_cov": 11.62,
+  "test_file": "TypeCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test14",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test15",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test06",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test08"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test14",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test15",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test06",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test08"
+  ],
+  "suite_sha256": "eed6748720b6c62183da928f9efef79f31b43da92e2e6e44625e674497eda57c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_69b/TypeCheck_ESTest.java"
+  ],
+  "run_id": "Closure-69-mio-1790358941"
+}

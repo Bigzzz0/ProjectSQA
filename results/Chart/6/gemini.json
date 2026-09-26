@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.jfree.chart.util.ShapeListGeminiTest::testEqualsDifferentLengthsAndElements",
     "org.jfree.chart.util.ShapeListGeminiTest::testGetShapeNegativeIndexThrowsException"
-  ]
+  ],
+  "suite_sha256": "7e580ec584e14abc1a0d22b5456ca8ad346069b28b61885f8c0fda452be264a7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_6b/ShapeListGeminiTest.java"
+  ],
+  "run_id": "Chart-6-gemini-1790351253"
 }

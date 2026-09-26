@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 97,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-97-mio-1790394098",
+  "suite_sha256": "717ce4c216af204aed21b88a72c3c135c9bea43e4d138feb12addb2b332a2283",
+  "test_files": "BrentSolver_ESTest.java",
+  "target_classes": "org.apache.commons.math.analysis.BrentSolver",
+  "timestamp": "2026-09-26 10:42:01",
+  "evaluation_duration_sec": 23.344,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.BrentSolver_ESTest::test03"
+  ]
+}

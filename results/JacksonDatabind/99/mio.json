@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.14,
+  "branch_cov": 96.43,
+  "test_file": "ReferenceType_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ReferenceType",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test25"
+  ],
+  "suite_sha256": "92cbcc4e1115b21ce8ad4a5215204099ea791e2ea81b7a1c8ff70ef574b7e329",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_99b/ReferenceType_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-99-mio-1790377809"
+}

@@ -29,5 +29,10 @@
     "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
     "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
     "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
-  ]
+  ],
+  "suite_sha256": "c4da1f0bb0fd8e03492be8f003ea94d5a36cce3056ccbb822c6cf730a9fba7f9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_105b/FoldConstantsGeminiTest.java"
+  ],
+  "run_id": "Closure-105-gemini-1790360950"
 }

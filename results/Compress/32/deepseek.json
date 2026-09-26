@@ -18,5 +18,10 @@
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testSkip_MoreThanAvailable",
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testReadWithoutEntry",
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamDeepseekTest::testLongNameData_NullEntry"
-  ]
+  ],
+  "suite_sha256": "f5944c250429695ae8e65c959bc79feb964c14f98bffb2822f9f8a70f9e9f547",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_32b/TarArchiveInputStreamDeepseekTest.java"
+  ],
+  "run_id": "Compress-32-deepseek-1790369233"
 }

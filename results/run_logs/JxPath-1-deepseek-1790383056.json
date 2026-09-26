@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 1,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JxPath-1-deepseek-1790383056",
+  "suite_sha256": "3e50f3abb7097cb2a850b4e86e51e51338bcaf2628da292c089994fb4db9a388",
+  "test_files": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "timestamp": "2026-09-26 07:37:39",
+  "evaluation_duration_sec": 3.092,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "va/org/apache/commons/jxpath/util/ValueUtils.java:512: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 handler = (DynamicPropertyHandler) clazz.newInstance();\n    [javac]                                                         ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/JxPath_1b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_1b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_1b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_1b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JxPath_1b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_1b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerDeepseekTest.java:43: error: reference to Compiler is ambiguous\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_NODE);\n    [javac]                                              ^\n    [javac]   both interface org.apache.commons.jxpath.ri.Compiler in org.apache.commons.jxpath.ri and class java.lang.Compiler in java.lang match\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

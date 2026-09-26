@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 22,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-22-deepseek-1790399635",
+  "suite_sha256": "7fa8c242cb5b9097540d9511393fe7b7d0582d80c8712795f33ec2af82808f23",
+  "test_files": "BasePeriodDeepseekTest.java",
+  "target_classes": "org.joda.time.base.BasePeriod",
+  "timestamp": "2026-09-26 12:14:02",
+  "evaluation_duration_sec": 6.867,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/tmp/d4j_eval/Time_22b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_22b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_22b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_22b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_22b/.test_suite/org/joda/time/base/BasePeriodDeepseekTest.java:4141: error: reached end of file while parsing\n    [javac]     public void testConstructorWithLongDurationAndTypeTimeWithUTCDefaultChronologyFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZoneFixedZone\n    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                       ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

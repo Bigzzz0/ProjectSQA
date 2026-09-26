@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "BitsStreamGenerator_ESTest.java",
+  "target_classes": "org.apache.commons.math3.random.BitsStreamGenerator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2432954dea64e54b340bf969562439ef7474d3ea756115946d481198f5874c5f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_12b/BitsStreamGenerator_ESTest.java"
+  ],
+  "run_id": "Math-12-mio-1790388231"
+}

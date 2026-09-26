@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 27.96,
+  "branch_cov": 18.44,
+  "test_file": "CollectionUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.CollectionUtils",
+  "buggy_failures": [
+    "org.apache.commons.collections.CollectionUtils_IPOTest::test_removeAll_pairwise_051",
+    "org.apache.commons.collections.CollectionUtils_IPOTest::test_removeAll_pairwise_052"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "c18ee2e0ce94219d5bdb1b0f2925a18045156386ae0c7e50e3be4d7c3219259f",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Collections_3b/org/apache/commons/collections/CollectionUtils_IPOTest.java"
+  ],
+  "run_id": "Collections-3-ipo-1790366227"
+}

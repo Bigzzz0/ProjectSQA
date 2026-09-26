@@ -18,5 +18,10 @@
     "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdBelow",
     "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdExactZero",
     "com.google.javascript.jscomp.InlineCostEstimatorDeepseekTest::testCostThresholdExactTwo"
-  ]
+  ],
+  "suite_sha256": "7ec7e8218d9420f221488014dcebd140eb943b056e17e296ee107c4747974606",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_28b/InlineCostEstimatorDeepseekTest.java"
+  ],
+  "run_id": "Closure-28-deepseek-1790356068"
 }

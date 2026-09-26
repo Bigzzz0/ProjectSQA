@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 99.25,
+  "branch_cov": 96.72,
+  "test_file": "DefaultKeyedValues2D_ESTest.java;DefaultKeyedValues_ESTest.java",
+  "target_classes": "org.jfree.data.DefaultKeyedValues;org.jfree.data.DefaultKeyedValues2D",
+  "buggy_failures": [
+    "org.jfree.data.DefaultKeyedValues2D_ESTest::test21"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.DefaultKeyedValues2D_ESTest::test21",
+    "org.jfree.data.DefaultKeyedValues_ESTest::test07",
+    "org.jfree.data.DefaultKeyedValues_ESTest::test20"
+  ],
+  "suite_sha256": "679271321a80bf4458e8b54f581ab8de4bbc86268cb1a8256fd6cc30bfb6fc65",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_18b/DefaultKeyedValues2D_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Chart_18b/DefaultKeyedValues_ESTest.java"
+  ],
+  "run_id": "Chart-18-mio-1790352042"
+}

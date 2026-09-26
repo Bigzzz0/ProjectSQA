@@ -1,0 +1,34 @@
+{
+  "project": "Lang",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-14-deepseek-1790384432",
+  "suite_sha256": "165649c261d77a78614d3de55af7a7c64dfdfdc5daa48eb1c6306e9bac6b9eab",
+  "test_files": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "timestamp": "2026-09-26 08:00:54",
+  "evaluation_duration_sec": 22.087,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 84.6,
+  "branch_coverage_percent": 79.67,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testStripAll",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testStartsWithAny",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testSubstringsBetween",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAnyStrings",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testSwapCase",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testRepeatChar",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testEquals"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testStripAll",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testStartsWithAny",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testSubstringsBetween",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAnyStrings",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testSwapCase",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testRepeatChar"
+  ]
+}

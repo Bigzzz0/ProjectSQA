@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math3.distribution.HypergeometricDistributionDeepseekTest::testMath1021_IntegerOverflowInNumericalMean"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "08e59ee02a73520aed60d5ee05172b4c16f608620d00897a71e023266d482c24",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_2b/HypergeometricDistributionDeepseekTest.java"
+  ],
+  "run_id": "Math-2-deepseek-1790387606"
 }

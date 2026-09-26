@@ -21,5 +21,10 @@
     "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testMutantFactories",
     "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseISO8601MalformedMonth",
     "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseExceptionOnWhitespaceOnly"
-  ]
+  ],
+  "suite_sha256": "181bfb701a8e1a6de1926d24a86da4e887b11a61c7093a584047339a64391789",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_104b/StdDateFormatGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-104-gemini-1790378163"
 }

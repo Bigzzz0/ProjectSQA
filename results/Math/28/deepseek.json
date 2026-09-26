@@ -23,5 +23,10 @@
     "org.apache.commons.math3.optimization.linear.SimplexSolverDeepseekTest::testNullConstraints",
     "org.apache.commons.math3.optimization.linear.SimplexSolverDeepseekTest::testNoConstraints",
     "org.apache.commons.math3.optimization.linear.SimplexSolverDeepseekTest::testMath828Cycle"
-  ]
+  ],
+  "suite_sha256": "afd3851e7e1abd6c80874262c6a05a3eada6590d3163f097e8af30f2fa297e11",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_28b/SimplexSolverDeepseekTest.java"
+  ],
+  "run_id": "Math-28-deepseek-1790389335"
 }

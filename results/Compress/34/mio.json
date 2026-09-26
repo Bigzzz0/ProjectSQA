@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "X7875_NewUnix_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.X7875_NewUnix",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnix_ESTest::test13",
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnix_ESTest::test11"
+  ],
+  "suite_sha256": "44a49493409831df3ab88c1b980cd0844d0dec9b09edc6bb7a098b27f5725d70",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_34b/X7875_NewUnix_ESTest.java"
+  ],
+  "run_id": "Compress-34-mio-1790369324"
+}

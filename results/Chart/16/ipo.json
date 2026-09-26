@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 14,
+  "line_cov": 43.09,
+  "branch_cov": 30.47,
+  "test_file": "DefaultIntervalCategoryDataset_IPOTest.java",
+  "target_classes": "org.jfree.data.category.DefaultIntervalCategoryDataset",
+  "buggy_failures": [
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getRowIndex_pairwise_118",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getColumnKeys_pairwise_013",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getValue_pairwise_017",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getValue_pairwise_022",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getRowCount_pairwise_130",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getColumnIndex_pairwise_114",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getStartValue_pairwise_048",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getStartValue_pairwise_053",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getRowKeys_pairwise_122",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getCategoryIndex_pairwise_110",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getSeriesIndex_pairwise_005",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getColumnCount_pairwise_126",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getEndValue_pairwise_079",
+    "org.jfree.data.category.DefaultIntervalCategoryDataset_IPOTest::test_getEndValue_pairwise_084"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "d9c674900ba00a3b44c6afe53800f23dc801a2e8d436c54874326f8d6ace4fa8",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_16b/org/jfree/data/category/DefaultIntervalCategoryDataset_IPOTest.java"
+  ],
+  "run_id": "Chart-16-ipo-1790351848"
+}

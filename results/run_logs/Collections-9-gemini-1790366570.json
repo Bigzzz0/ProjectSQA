@@ -1,0 +1,25 @@
+{
+  "project": "Collections",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-9-gemini-1790366570",
+  "suite_sha256": "41af9ea82050e336f761ea7ef9e56d4e60d61135e61f3b9eec33ffb1cc1faa8d",
+  "test_files": "ExtendedPropertiesGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "timestamp": "2026-09-26 03:03:08",
+  "evaluation_duration_sec": 17.189,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 88.8,
+  "branch_coverage_percent": 82.14,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testCollections271",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testLoadFromStreamWithLineContinuationAndComments"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testCollections271",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testLoadFromStreamWithLineContinuationAndComments"
+  ]
+}

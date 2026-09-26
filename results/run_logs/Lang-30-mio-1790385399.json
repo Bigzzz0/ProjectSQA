@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 30,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-30-mio-1790385399",
+  "suite_sha256": "9a240a45fc492ea304b9ca04780fa6a47a0b891dd5f4b71d7f2f75d2d6fb6fb5",
+  "test_files": "StringUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "timestamp": "2026-09-26 08:16:39",
+  "evaluation_duration_sec": 21.711,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 95.29,
+  "branch_coverage_percent": 94.79,
+  "failures_count": 0,
+  "error_detail": "/lang3/reflect/MemberUtils.java:58: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 30 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_30f/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Lang_30f/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_30f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Lang_30f/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_30f/.test_suite/org/apache/commons/lang3/StringUtils_ESTest.java:2034: error: no suitable method found for containsAny(CharSequence,String)\n    [javac]       boolean boolean0 = StringUtils.containsAny((CharSequence) \"\", (String) null);\n    [javac]                                     ^\n    [javac]     method StringUtils.containsAny(String,char[]) is not applicable\n    [javac]       (argument mismatch; CharSequence cannot be converted to String)\n    [javac]     method StringUtils.containsAny(String,String) is not applicable\n    [javac]       (argument mismatch; CharSequence cannot be converted to String)\n    [javac] Note: /tmp/d4j_eval/Lang_30f/.test_suite/org/apache/commons/lang3/StringUtils_ESTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 50.0,
+  "branch_cov": 47.22,
+  "test_file": "ReturnsEmptyValues_ESTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fb99266d8c9f098d4abc0c72615cefd593e6d4146c0bf6c1031bb5ecc08a665e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_24b/ReturnsEmptyValues_ESTest.java"
+  ],
+  "run_id": "Mockito-24-mio-1790397259"
+}

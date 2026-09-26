@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 17,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-17-gemini-1790373273",
+  "suite_sha256": "56c5c5d05d786eda478f0bf68d44729a39cf84408a535c66c5ea0c923832238f",
+  "test_files": "ObjectMapperGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectMapper",
+  "timestamp": "2026-09-26 04:54:40",
+  "evaluation_duration_sec": 7.372,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ss\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_17b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_17b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_17b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_17b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_17b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_17b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_17b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_17b/.test_suite/com/fasterxml/jackson/databind/ObjectMapperGeminiTest.java:589: error: cannot find symbol\n    [javac]         assertFalse(v.isUnknownVersion());\n    [javac]                      ^\n    [javac]   symbol:   method isUnknownVersion()\n    [javac]   location: variable v of type Version\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_17b/.test_suite/com/fasterxml/jackson/databind/ObjectMapperGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

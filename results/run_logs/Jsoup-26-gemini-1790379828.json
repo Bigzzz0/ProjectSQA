@@ -1,0 +1,28 @@
+{
+  "project": "Jsoup",
+  "bug_id": 26,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-26-gemini-1790379828",
+  "suite_sha256": "8cda6c1a94d625ed898afa8171d49a470298b126283bc0529650bc8e5827b175",
+  "test_files": "CleanerGeminiTest.java",
+  "target_classes": "org.jsoup.safety.Cleaner",
+  "timestamp": "2026-09-26 06:44:03",
+  "evaluation_duration_sec": 14.98,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.safety.CleanerGeminiTest::testHandlesPureFramesetDocumentWithoutHead",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidReturnsTrueForFullyCompliantHtml",
+    "org.jsoup.safety.CleanerGeminiTest::testHandlesFramesetsIsValidDoesNotThrowNPE",
+    "org.jsoup.safety.CleanerGeminiTest::testHandlesFramesetsCleanDoesNotThrowNPE"
+  ],
+  "fixed_failures": [
+    "org.jsoup.safety.CleanerGeminiTest::testHandlesPureFramesetDocumentWithoutHead",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidReturnsTrueForFullyCompliantHtml",
+    "org.jsoup.safety.CleanerGeminiTest::testHandlesFramesetsIsValidDoesNotThrowNPE"
+  ]
+}

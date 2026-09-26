@@ -24,5 +24,10 @@
     "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetNearestFunctionName",
     "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetImpureBooleanValue_hook",
     "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetPureBooleanValue_number"
-  ]
+  ],
+  "suite_sha256": "856dacc54447b5885167b28327ebdb61e0abd4a3a315cbdb4e5a185a1662bb9e",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_75b/NodeUtilDeepseekTest.java"
+  ],
+  "run_id": "Closure-75-deepseek-1790359327"
 }

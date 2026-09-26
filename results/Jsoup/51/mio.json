@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.46,
+  "branch_cov": 96.24,
+  "test_file": "CharacterReader_ESTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b90efe92f2b0dbdd0e14faf04f861e117c64e961246a1bc072a33ab7162362c8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_51b/CharacterReader_ESTest.java"
+  ],
+  "run_id": "Jsoup-51-mio-1790381000"
+}

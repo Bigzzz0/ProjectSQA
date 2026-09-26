@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
     "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators"
-  ]
+  ],
+  "suite_sha256": "d36f46a2672055ada3a65104436ddf1be5ed60bd47a92fda05e7418be2522197",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_12b/SelectorGeminiTest.java"
+  ],
+  "run_id": "Jsoup-12-gemini-1790379247"
 }

@@ -7,5 +7,10 @@
   "test_file": "LocaleUtilsGeminiTest.java",
   "target_classes": "org.apache.commons.lang.LocaleUtils",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "083d6243249a025f852b6266bbe2e0ba2003bd2a79ee9e3b5863261fe8efdc7f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_57b/LocaleUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-57-gemini-1790387061"
 }

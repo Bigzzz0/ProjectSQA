@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.11,
+  "branch_cov": 94.19,
+  "test_file": "NumberUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0632b30cdedc229c2530f0972b0d1857e804c8ea2afb010d4bf0d99ec075a31e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_36b/NumberUtils_ESTest.java"
+  ],
+  "run_id": "Lang-36-mio-1790385744"
+}

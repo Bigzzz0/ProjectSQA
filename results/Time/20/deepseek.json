@@ -43,5 +43,10 @@
     "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testPrintWithNullZone",
     "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testToFormatterWithOnlyParser",
     "org.joda.time.format.DateTimeFormatterBuilderDeepseekTest::testParserOnlyFormatter"
-  ]
+  ],
+  "suite_sha256": "cd754212029ca9e9cc818021890092ae23ed522bbf00fb06a51c1ac607b5b1c7",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Time_20b/DateTimeFormatterBuilderDeepseekTest.java"
+  ],
+  "run_id": "Time-20-deepseek-1790399557"
 }

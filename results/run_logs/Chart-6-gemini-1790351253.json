@@ -1,0 +1,28 @@
+{
+  "project": "Chart",
+  "bug_id": 6,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-6-gemini-1790351253",
+  "suite_sha256": "7e580ec584e14abc1a0d22b5456ca8ad346069b28b61885f8c0fda452be264a7",
+  "test_files": "ShapeListGeminiTest.java",
+  "target_classes": "org.jfree.chart.util.ShapeList",
+  "timestamp": "2026-09-25 22:47:58",
+  "evaluation_duration_sec": 24.88,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsWithLine2DShapesRevealingDefect",
+    "org.jfree.chart.util.ShapeListGeminiTest::testSerializationWithNonObjectEqualsShapes",
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsWithEllipseAndGeneralPath",
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsDifferentLengthsAndElements",
+    "org.jfree.chart.util.ShapeListGeminiTest::testGetShapeNegativeIndexThrowsException"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.util.ShapeListGeminiTest::testEqualsDifferentLengthsAndElements",
+    "org.jfree.chart.util.ShapeListGeminiTest::testGetShapeNegativeIndexThrowsException"
+  ]
+}

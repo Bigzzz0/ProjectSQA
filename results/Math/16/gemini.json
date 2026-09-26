@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.util.FastMathGeminiTest::testRoundingAndFloorCeil"
-  ]
+  ],
+  "suite_sha256": "8ecae0c7781b4c580555f2ddb096d0f0140f42a93f7889ec9bff791a709185d0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_16b/FastMathGeminiTest.java"
+  ],
+  "run_id": "Math-16-gemini-1790388518"
 }

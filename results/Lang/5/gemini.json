@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.lang3.LocaleUtilsGeminiTest::testLang865"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "7442659139284883ae73e1408895d075ca0949d14753456d8b1c71f55070ad03",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_5b/LocaleUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-5-gemini-1790383816"
 }

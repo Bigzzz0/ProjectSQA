@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 27,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-27-deepseek-1790397601",
+  "suite_sha256": "17c4c919f93615d5b147be395e5b0a4e9ad27d297468ac0d536050e322ac8764",
+  "test_files": "MockUtilDeepseekTest.java",
+  "target_classes": "org.mockito.internal.util.MockUtil",
+  "timestamp": "2026-09-26 11:40:08",
+  "evaluation_duration_sec": 6.566,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": ") in AccessibleObject has been deprecated\n    [javac]         wasAccessible = accessibleObject.isAccessible();\n    [javac]                                         ^\n    [javac] /tmp/d4j_eval/Mockito_27b/src/org/mockito/verification/Timeout.java:65: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated\n    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {\n    [javac]                             ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 17 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_27b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_27b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_27b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_27b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_27b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_27b/.test_suite/org/mockito/internal/util/MockUtilDeepseekTest.java:12: error: cannot find symbol\n    [javac] import org.mockito.invocation.Invocation;\n    [javac]                              ^\n    [javac]   symbol:   class Invocation\n    [javac]   location: package org.mockito.invocation\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

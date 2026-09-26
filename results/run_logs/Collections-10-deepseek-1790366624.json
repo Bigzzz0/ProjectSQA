@@ -1,0 +1,30 @@
+{
+  "project": "Collections",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-10-deepseek-1790366624",
+  "suite_sha256": "912a53b03159b58f40f684b8afb50636e71ec1c45360d7664ee0bdbb242850ec",
+  "test_files": "MultiValueMapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+  "timestamp": "2026-09-26 03:04:01",
+  "evaluation_duration_sec": 17.186,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.44,
+  "branch_coverage_percent": 87.5,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testFactoryReturningNonEmptyCollection",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationCompatibility",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationNonEmptyMap",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testPutNewKey",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testDecorateNullClass",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testSerializationEmptyMap"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testFactoryReturningNonEmptyCollection",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testPutNewKey",
+    "org.apache.commons.collections.map.MultiValueMapDeepseekTest::testDecorateNullClass"
+  ]
+}

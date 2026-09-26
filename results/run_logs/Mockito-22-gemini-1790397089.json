@@ -1,0 +1,23 @@
+{
+  "project": "Mockito",
+  "bug_id": 22,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-22-gemini-1790397089",
+  "suite_sha256": "a5106060bb219be6485344161f83a67f6e332bb3203b73f280dbd63619e072eb",
+  "test_files": "EqualityGeminiTest.java",
+  "target_classes": "org.mockito.internal.matchers.Equality",
+  "timestamp": "2026-09-26 11:32:21",
+  "evaluation_duration_sec": 51.693,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.matchers.EqualityGeminiTest::shouldKnowIfObjectsAreEqual"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.matchers.EqualityGeminiTest::shouldKnowIfObjectsAreEqual"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "Base64InputStream_ESTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64InputStream",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.Base64InputStream_ESTest::test01"
+  ],
+  "suite_sha256": "8f791f3d35cc0b0916ad0ae3842ca2c882906e70a7b0f29ebb1fc4027758e427",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_6b/Base64InputStream_ESTest.java"
+  ],
+  "run_id": "Codec-6-mio-1790365600"
+}

@@ -10,5 +10,10 @@
     "com.google.javascript.jscomp.FoldConstantsDeepseekTest::testStringJoinEmptyElements",
     "com.google.javascript.jscomp.FoldConstantsDeepseekTest::testStringJoinAdd"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "4c51b036313f281c28c351c892fad0f3072841504f42aee51f5bc1a0f644bf72",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_105b/FoldConstantsDeepseekTest.java"
+  ],
+  "run_id": "Closure-105-deepseek-1790360926"
 }

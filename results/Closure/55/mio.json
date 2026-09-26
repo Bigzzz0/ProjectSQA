@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.72,
+  "branch_cov": 35.9,
+  "test_file": "FunctionRewriter_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionRewriter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a60e11284e5b1cae9957f0bf152c5fdda0f810bdf0c898b92ec571c1e5cf9ffe",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_55b/FunctionRewriter_ESTest.java"
+  ],
+  "run_id": "Closure-55-mio-1790357972"
+}

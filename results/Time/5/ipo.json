@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 8.83,
+  "branch_cov": 20.97,
+  "test_file": "Period_IPOTest.java",
+  "target_classes": "org.joda.time.Period",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "87c41e282999d9d1cabedad5673e0e21d40305fdb82b6d866508c2f4207789b7",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_5b/org/joda/time/Period_IPOTest.java"
+  ],
+  "run_id": "Time-5-ipo-1790398495"
+}

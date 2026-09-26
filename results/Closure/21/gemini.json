@@ -17,5 +17,10 @@
     "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
     "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
     "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
-  ]
+  ],
+  "suite_sha256": "edc812756cd7c8f997e4ba6c6c3dda92a4b39f9a39e0cd5ce9a2299ffa1a4870",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_21b/CheckSideEffectsGeminiTest.java"
+  ],
+  "run_id": "Closure-21-gemini-1790355510"
 }

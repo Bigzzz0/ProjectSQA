@@ -15,5 +15,10 @@
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testCOMPRESS178DefectTarget",
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadUnexpectedEOFThrowsIOException",
     "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGNUSparseHitEOFDuringSparseRead"
-  ]
+  ],
+  "suite_sha256": "877b53a6c6fe19b6103ba2fa7d3ad7fea8fbb49f127055af17eea6463b7b8340",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_12b/TarArchiveInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-12-gemini-1790368124"
 }

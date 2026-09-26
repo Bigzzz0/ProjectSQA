@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-10-deepseek-1790354714",
+  "suite_sha256": "d7eade8a6892e0daeaae9bf29007272880e59a1fa958e122ca02ad0d12beeaa4",
+  "test_files": "NodeUtilDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "timestamp": "2026-09-25 23:45:24",
+  "evaluation_duration_sec": 10.358,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " property file: /tmp/d4j_eval/Closure_10b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_10b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_10b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_10b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_10b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_10b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_10b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_10b/.test_suite/com/google/javascript/jscomp/NodeUtilDeepseekTest.java:372: error: method stringKey in class IR cannot be applied to given types;\n    [javac]     Node obj = IR.objectlit(IR.stringKey(\"a\", IR.call(IR.name(\"foo\"))));\n    [javac]                               ^\n    [javac]   required: String\n    [javac]   found: String,Node\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

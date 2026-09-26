@@ -19,5 +19,10 @@
     "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderBehavior",
     "org.jsoup.parser.CharacterReaderGeminiTest::testNonAsciiLetterThenDigitSequence",
     "org.jsoup.parser.CharacterReaderGeminiTest::testExhaustionBoundaries"
-  ]
+  ],
+  "suite_sha256": "92ad2c664b42940162b4ae9056bb81ad8d96c55755cf88de828a6914ba0c09b8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_51b/CharacterReaderGeminiTest.java"
+  ],
+  "run_id": "Jsoup-51-gemini-1790381036"
 }

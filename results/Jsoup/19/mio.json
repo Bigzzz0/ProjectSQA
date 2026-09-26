@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.64,
+  "branch_cov": 82.69,
+  "test_file": "Whitelist_ESTest.java",
+  "target_classes": "org.jsoup.safety.Whitelist",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.safety.Whitelist_ESTest::test14"
+  ],
+  "suite_sha256": "dc8e8835528707106b20c2f4a47d59ea20e4dfbc6aa7ab9d6ab115548f0c458c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_19b/Whitelist_ESTest.java"
+  ],
+  "run_id": "Jsoup-19-mio-1790379485"
+}

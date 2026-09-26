@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 70.83,
+  "branch_cov": 61.54,
+  "test_file": "ClassNameIdResolver_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.ClassNameIdResolver",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "944c0f94b7b09f8821794e7ecc1bbc203c1d2dd79a333f8426472351cb45a63f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_88b/ClassNameIdResolver_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-88-mio-1790377219"
+}

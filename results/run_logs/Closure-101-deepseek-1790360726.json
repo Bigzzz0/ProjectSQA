@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 101,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-101-deepseek-1790360726",
+  "suite_sha256": "1d8ede6a11dcbd1ba42b5d85c5f7c413ded661d566c8542c22b195983aaeb2d9",
+  "test_files": "CommandLineRunnerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "timestamp": "2026-09-26 01:25:33",
+  "evaluation_duration_sec": 7.141,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

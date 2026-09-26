@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 60,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-60-gemini-1790375740",
+  "suite_sha256": "a2aab565584b9b28b9b4a89a9dbbb9ce11d63747067612cda066c85da5d2ec68",
+  "test_files": "JsonValueSerializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.JsonValueSerializer",
+  "timestamp": "2026-09-26 05:35:48",
+  "evaluation_duration_sec": 7.895,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "pty /tmp/d4j_eval/JacksonDatabind_60b/target/classes/com/fasterxml/jackson/databind/jsontype/impl/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_60b/target/classes/com/fasterxml/jackson/databind/ser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_60b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_60b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_60b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_60b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_60b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_60b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_60b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_60b/.test_suite/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerGeminiTest.java:321: error: reached end of file while parsing\n    [javac]         assertFalse(ser.isNaturalTypeWithStdHandling(Byte\n    [javac]                                                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

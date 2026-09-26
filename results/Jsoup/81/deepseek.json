@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.jsoup.helper.DataUtilDeepseekTest::supportsXmlCharsetDeclarationUtf16",
     "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithExtraSpaces"
-  ]
+  ],
+  "suite_sha256": "f3b7a29443a96f950fe6c39484f49107515aea849fbb8bb8a40f9832f377422b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_81b/DataUtilDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-81-deepseek-1790382397"
 }

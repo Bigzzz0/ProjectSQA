@@ -1,0 +1,27 @@
+{
+  "project": "Csv",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Csv-16-gemini-1790370759",
+  "suite_sha256": "6dfcb70ff386d876760e4b6d156072e6afd083622887e7cbc3f3a6f7a978a426",
+  "test_files": "CSVParserGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.CSVParser",
+  "timestamp": "2026-09-26 04:12:55",
+  "evaluation_duration_sec": 15.857,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.75,
+  "branch_coverage_percent": 83.82,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVParserGeminiTest::testCurrentLineNumberMultiLine",
+    "org.apache.commons.csv.CSVParserGeminiTest::testDuplicateEmptyHeaderNamesAllowedWhenConfigured",
+    "org.apache.commons.csv.CSVParserGeminiTest::testHeaderCaseInsensitive"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVParserGeminiTest::testCurrentLineNumberMultiLine",
+    "org.apache.commons.csv.CSVParserGeminiTest::testDuplicateEmptyHeaderNamesAllowedWhenConfigured",
+    "org.apache.commons.csv.CSVParserGeminiTest::testHeaderCaseInsensitive"
+  ]
+}

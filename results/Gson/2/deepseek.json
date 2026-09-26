@@ -125,5 +125,10 @@
     "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringNull",
     "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testURIStringNull",
     "com.google.gson.internal.bind.TypeAdaptersDeepseekTest::testStringCoercesBoolean"
-  ]
+  ],
+  "suite_sha256": "92f2bb905e26f10b3b0d49ff1fa6882e8c91f6e77ed5c8fd5d02fe5f5916cb3a",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Gson_2b/TypeAdaptersDeepseekTest.java"
+  ],
+  "run_id": "Gson-2-deepseek-1790370833"
 }

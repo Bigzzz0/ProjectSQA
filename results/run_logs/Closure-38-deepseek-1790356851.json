@@ -1,0 +1,24 @@
+{
+  "project": "Closure",
+  "bug_id": 38,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-38-deepseek-1790356851",
+  "suite_sha256": "1b9ba4fb538f9fde2cfd4c7d3100a6d98e7d5c8f0a13d717231c482cc5c44d9f",
+  "test_files": "CodeConsumerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "timestamp": "2026-09-26 00:21:26",
+  "evaluation_duration_sec": 35.078,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.21,
+  "branch_coverage_percent": 90.62,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testBeginBlockInsertsSemicolonWhenNeeded",
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testBeginBlockInsertsSemicolonWhenNeeded"
+  ]
+}

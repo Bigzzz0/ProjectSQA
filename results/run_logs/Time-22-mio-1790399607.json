@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 22,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-22-mio-1790399607",
+  "suite_sha256": "c9086d86f93f4a172a00a15295bf4242196c19800ce636c8c6903ee0cad36f3b",
+  "test_files": "BasePeriod_ESTest.java",
+  "target_classes": "org.joda.time.base.BasePeriod",
+  "timestamp": "2026-09-26 12:13:55",
+  "evaluation_duration_sec": 27.498,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 97.66,
+  "branch_coverage_percent": 93.1,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

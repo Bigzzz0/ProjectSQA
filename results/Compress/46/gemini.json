@@ -11,5 +11,10 @@
     "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testCreateJavaTimeNegativeOverflowThrowsException",
     "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampGeminiTest::testModifyJavaTimeNegativeOverflowThrowsException"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "e1f5d8723a816b79e4bf26d051a90aa589930429e77549a877e7b9f0c906f054",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_46b/X5455_ExtendedTimestampGeminiTest.java"
+  ],
+  "run_id": "Compress-46-gemini-1790370065"
 }

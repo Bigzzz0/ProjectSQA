@@ -1,0 +1,23 @@
+{
+  "project": "Compress",
+  "bug_id": 35,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-35-mio-1790369389",
+  "suite_sha256": "6c6375911375bc1cd97b656c709aeb5722f8e7948526ece2dfd4f4b3aa078c87",
+  "test_files": "TarUtils_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:50:09",
+  "evaluation_duration_sec": 20.145,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 81.61,
+  "branch_coverage_percent": 83.04,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test02",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test03",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test01"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 34,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-34-mio-1790389676",
+  "suite_sha256": "50ae221588313c6a248d5e25fcc04df7d9ba41a27761f37e5d59a6800e6683ab",
+  "test_files": "ListPopulation_ESTest.java",
+  "target_classes": "org.apache.commons.math3.genetics.ListPopulation",
+  "timestamp": "2026-09-26 09:28:23",
+  "evaluation_duration_sec": 26.557,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.0,
+  "branch_coverage_percent": 81.82,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

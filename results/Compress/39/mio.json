@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 83.87,
+  "branch_cov": 97.22,
+  "test_file": "ArchiveUtils_ESTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ArchiveUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bd80bf2dc574f18bebbf75b94b833b87a4435e9a1141aecc0b8e47bef93d90bd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_39b/ArchiveUtils_ESTest.java"
+  ],
+  "run_id": "Compress-39-mio-1790369665"
+}

@@ -1,0 +1,25 @@
+{
+  "project": "Compress",
+  "bug_id": 24,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-24-gemini-1790368744",
+  "suite_sha256": "01f76a0719802d2d0ef1a0d8b8d346dd5071a64027bc878eee4449a8c36cfc32",
+  "test_files": "TarUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:39:23",
+  "evaluation_duration_sec": 18.654,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.78,
+  "branch_coverage_percent": 92.37,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseBinaryBigIntegerExceedsLongMax",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalDefectMaxOctalWithoutTrailingSpaceOrNul"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalMissingTrailingSpaceOrNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseBinaryBigIntegerExceedsLongMax"
+  ]
+}

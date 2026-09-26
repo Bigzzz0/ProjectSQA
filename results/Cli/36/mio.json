@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.94,
+  "branch_cov": 97.22,
+  "test_file": "OptionGroup_ESTest.java;Options_ESTest.java",
+  "target_classes": "org.apache.commons.cli.OptionGroup;org.apache.commons.cli.Options",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "28c3b599c1d7e13c3d51fa2a5df80d9d53743042ae9494f53b79c7e00e824b8a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_36b/OptionGroup_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_36b/Options_ESTest.java"
+  ],
+  "run_id": "Cli-36-mio-1790353770"
+}

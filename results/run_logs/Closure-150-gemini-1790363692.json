@@ -1,0 +1,39 @@
+{
+  "project": "Closure",
+  "bug_id": 150,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-150-gemini-1790363692",
+  "suite_sha256": "e8979f4f56930f78feedfb471840ffb60b6af9a47ecf58ea8f9abde4e9547629",
+  "test_files": "TypedScopeCreatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "timestamp": "2026-09-26 02:15:16",
+  "evaluation_duration_sec": 24.145,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 76.06,
+  "branch_coverage_percent": 56.91,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testInitialNativeScopeContent",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testNamespacedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testObjectLiteralCastValid",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testCollectedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testGlobalFunctionAliasRegistration",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testValidEnumCreationAndValues",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testInitialNativeScopeContent",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testNamespacedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testObjectLiteralCastValid",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testCollectedFunctionStubLocal",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testGlobalFunctionAliasRegistration",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testValidEnumCreationAndValues",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
+    "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
+  ]
+}

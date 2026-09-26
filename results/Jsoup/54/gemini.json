@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.helper.W3CDomGeminiTest::testPrefixWithoutDeclaredNamespace"
-  ]
+  ],
+  "suite_sha256": "5e023a11fb35c5059a3a193bb7789e7dc5c8f1bf823ccdc0291b805eb718925f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_54b/W3CDomGeminiTest.java"
+  ],
+  "run_id": "Jsoup-54-gemini-1790381191"
 }

@@ -12,5 +12,10 @@
   "fixed_failures": [
     "org.apache.commons.math.complex.ComplexGeminiTest::testAtanIDefect",
     "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZeroDefect"
-  ]
+  ],
+  "suite_sha256": "a256795c9021947fa62b77c3ac3dfc86c4a56bf296715b0222637382d220c381",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_47b/ComplexGeminiTest.java"
+  ],
+  "run_id": "Math-47-gemini-1790390594"
 }

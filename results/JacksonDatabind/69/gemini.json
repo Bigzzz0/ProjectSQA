@@ -19,5 +19,10 @@
     "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testVerifyNonDupDifferentCreatorClasses",
     "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testAddPropertyCreatorEmptyAndSingleProperties",
     "com.fasterxml.jackson.databind.deser.impl.CreatorCollectorGeminiTest::testSetDefaultCreatorAndFixAccess"
-  ]
+  ],
+  "suite_sha256": "1d0a188aaaf0343662f411d3e0fa9b3c0b0a856c6bba9ed98a68d575f61edc16",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_69b/CreatorCollectorGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-69-gemini-1790376184"
 }

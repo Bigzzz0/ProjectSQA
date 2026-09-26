@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 31,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-31-deepseek-1790353612",
+  "suite_sha256": "e09d03fd42d4e18010eed600d45208efd3ea506a41a03c20c8470d09da0ddfc4",
+  "test_files": "HelpFormatterDeepseekTest.java;OptionBuilderDeepseekTest.java;OptionDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter;org.apache.commons.cli.Option;org.apache.commons.cli.OptionBuilder",
+  "timestamp": "2026-09-25 23:26:55",
+  "evaluation_duration_sec": 3.024,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "nd will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Cli_31b/src/main/java/org/apache/commons/cli/TypeHandler.java:128: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]             instance = cl.newInstance();\n    [javac]                          ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 5 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_31b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Cli_31b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_31b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Cli_31b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_31b/.test_suite/org/apache/commons/cli/HelpFormatterDeepseekTest.java:365: error: ')' expected\n    [javac]         Option opt1 = new Option(\"a\", \"aaa\", false, \"\"       Option opt2 = new Option(\"b\", \"bbb\", false, \"\");\n    [javac]                                                       ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 0 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

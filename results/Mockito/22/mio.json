@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 69.23,
+  "branch_cov": 37.5,
+  "test_file": "Equality_ESTest.java",
+  "target_classes": "org.mockito.internal.matchers.Equality",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a34f1ee0368efe0afa40c60b5c1714046a9e355aa28064fd56b96b433f8a55b9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_22b/Equality_ESTest.java"
+  ],
+  "run_id": "Mockito-22-mio-1790397025"
+}

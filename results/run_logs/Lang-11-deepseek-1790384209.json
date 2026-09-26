@@ -1,0 +1,26 @@
+{
+  "project": "Lang",
+  "bug_id": 11,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-11-deepseek-1790384209",
+  "suite_sha256": "2b01dee1e7cb3f8cb34e9f7d821172f15fa28e9344d9eaf7db06f98927acd2a1",
+  "test_files": "RandomStringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "timestamp": "2026-09-26 07:57:21",
+  "evaluation_duration_sec": 32.22,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.43,
+  "branch_coverage_percent": 96.3,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testStartGreaterThanEndWithLetters",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testPrivateHighSurrogateSkipped",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testStartGreaterThanEndWithCharsArray",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testStartGreaterThanEnd_ShouldThrowWithStartInMessage"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testPrivateHighSurrogateSkipped"
+  ]
+}

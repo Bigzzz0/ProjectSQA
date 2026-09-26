@@ -1,0 +1,23 @@
+{
+  "project": "Closure",
+  "bug_id": 156,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-156-mio-1790364001",
+  "suite_sha256": "d3000b1aaafd3679e88082056b7dc2a41c0bcd363c276c38c74baabce0c885b1",
+  "test_files": "CollapseProperties_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseProperties",
+  "timestamp": "2026-09-26 02:20:32",
+  "evaluation_duration_sec": 31.295,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 4.18,
+  "branch_coverage_percent": 0.83,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CollapseProperties_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CollapseProperties_ESTest::test0"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 9,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "DocumentType_ESTest.java;HtmlTreeBuilderState_ESTest.java;TokeniserState_ESTest.java;Token_ESTest.java;XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType;org.jsoup.parser.HtmlTreeBuilderState;org.jsoup.parser.Token;org.jsoup.parser.TokeniserState;org.jsoup.parser.XmlTreeBuilder",
+  "buggy_failures": [
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test0",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test1",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test4",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test5",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test2",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test3",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test9",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test6",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test7"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "39a5ed0f02911ff9ccda7baa3bed04d5322df86a6911c6d8ff34137233a78c40",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_56b/DocumentType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_56b/HtmlTreeBuilderState_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_56b/TokeniserState_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_56b/Token_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_56b/XmlTreeBuilder_ESTest.java"
+  ],
+  "run_id": "Jsoup-56-mio-1790381295"
+}

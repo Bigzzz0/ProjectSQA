@@ -1,0 +1,24 @@
+{
+  "project": "Codec",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Codec-4-gemini-1790365534",
+  "suite_sha256": "7d3a8bdb30abb13fb6d64e238ebed9139b9e700491d25b75b61f258dccbe63fc",
+  "test_files": "Base64GeminiTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "timestamp": "2026-09-26 02:45:46",
+  "evaluation_duration_sec": 12.793,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.7,
+  "branch_coverage_percent": 94.3,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64GeminiTest::testDefaultConstructorMustNotChunk",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeToStringAndDecodeString",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testBinaryEncoderInterfaceDefaultInstance",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testObjectEncoderInterfaceDefaultInstance"
+  ],
+  "fixed_failures": []
+}

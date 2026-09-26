@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.26,
+  "branch_cov": 93.98,
+  "test_file": "StringUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.StringUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "81f5e907e7bb5c0581c37783c29ea17ba8aaf7c1e331f8d8c8346e213152c676",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_40b/StringUtils_ESTest.java"
+  ],
+  "run_id": "Lang-40-mio-1790385985"
+}

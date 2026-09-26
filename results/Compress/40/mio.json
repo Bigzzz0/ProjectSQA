@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "BitInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.utils.BitInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "43396c76e98b9758a949956c2cc7d6e75132f24de1698f340347d80dc0975735",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_40b/BitInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-40-mio-1790369709"
+}

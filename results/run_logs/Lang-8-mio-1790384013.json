@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 8,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-8-mio-1790384013",
+  "suite_sha256": "bef259307ca09acd96e7fe2f5a1a078d3fdad3bb8662da8b2cdfd83b860698cb",
+  "test_files": "FastDatePrinter_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDatePrinter",
+  "timestamp": "2026-09-26 07:53:57",
+  "evaluation_duration_sec": 24.028,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.58,
+  "branch_coverage_percent": 86.67,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

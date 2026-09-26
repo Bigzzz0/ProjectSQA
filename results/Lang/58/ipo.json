@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 32.87,
+  "branch_cov": 23.81,
+  "test_file": "NumberUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.math.NumberUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e52a710cfe47c400f38db3c42deff75fb1fcea92e5e60ba5e15aed04e9c74346",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_58b/org/apache/commons/lang/math/NumberUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-58-ipo-1790387081"
+}

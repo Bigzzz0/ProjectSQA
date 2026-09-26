@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.csv.CSVRecordDeepseekTest::testEmptyMapping"
-  ]
+  ],
+  "suite_sha256": "91dc9fff9991c44615430529388ed306920e7a642177235844ee6b1d085c42d8",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Csv_9b/CSVRecordDeepseekTest.java"
+  ],
+  "run_id": "Csv-9-deepseek-1790370418"
 }

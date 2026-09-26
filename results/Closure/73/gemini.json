@@ -26,5 +26,10 @@
     "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
     "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
     "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
-  ]
+  ],
+  "suite_sha256": "c76b9ea691c5c69afe2208029a4212cf335af3dee8313dddadefb72743a1b8e8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_73b/CodeGeneratorGeminiTest.java"
+  ],
+  "run_id": "Closure-73-gemini-1790359210"
 }

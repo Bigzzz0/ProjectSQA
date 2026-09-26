@@ -1,0 +1,22 @@
+{
+  "project": "Cli",
+  "bug_id": 39,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-39-gemini-1790353890",
+  "suite_sha256": "24e589f8b26c7dffdb258eb275ab5b48f3fd4dd728e09bd48b8db829688c54de",
+  "test_files": "TypeHandlerGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "timestamp": "2026-09-25 23:31:45",
+  "evaluation_duration_sec": 14.537,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.TypeHandlerGeminiTest::testDefectExistingFilePatternFileNotExistThrowsParseException",
+    "org.apache.commons.cli.TypeHandlerGeminiTest::testDefectExistingFilePatternReturnsFileInputStream"
+  ],
+  "fixed_failures": []
+}

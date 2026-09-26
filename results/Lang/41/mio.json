@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.48,
+  "branch_cov": 89.9,
+  "test_file": "ClassUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.ClassUtils",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang.ClassUtils_ESTest::test01"
+  ],
+  "suite_sha256": "ef5c262e9891b9e3693111d9fe6fa18be9eb6d143ab129b2dcd07609d1020bd1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_41b/ClassUtils_ESTest.java"
+  ],
+  "run_id": "Lang-41-mio-1790386057"
+}

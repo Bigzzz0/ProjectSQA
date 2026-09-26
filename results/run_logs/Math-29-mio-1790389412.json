@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 29,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-29-mio-1790389412",
+  "suite_sha256": "6f4574dc8fcad12c4862a627150cd60d9f83bd88653d2bbc24f29a9ce5d0374c",
+  "test_files": "OpenMapRealVector_ESTest.java",
+  "target_classes": "org.apache.commons.math3.linear.OpenMapRealVector",
+  "timestamp": "2026-09-26 09:24:01",
+  "evaluation_duration_sec": 28.588,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.26,
+  "branch_coverage_percent": 94.78,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

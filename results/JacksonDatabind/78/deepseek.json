@@ -19,5 +19,10 @@
     "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testBuildBeanDeserializerWithErrorThrowingDeserializer",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCreateBeanDeserializerForDangerousType",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testBuildThrowableDeserializer"
-  ]
+  ],
+  "suite_sha256": "0cafbb2bbfbb44f0c1ce46e231e1817c9041a32d9ef9821c12c966f018de7b00",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_78b/BeanDeserializerFactoryDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-78-deepseek-1790376676"
 }

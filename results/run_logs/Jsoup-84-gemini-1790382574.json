@@ -1,0 +1,24 @@
+{
+  "project": "Jsoup",
+  "bug_id": 84,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-84-gemini-1790382574",
+  "suite_sha256": "8ead63138a5371485640d5c57c1e21970a1c7754b1fd95d0424f4c90efe3dfd4",
+  "test_files": "W3CDomGeminiTest.java",
+  "target_classes": "org.jsoup.helper.W3CDom",
+  "timestamp": "2026-09-26 07:29:50",
+  "evaluation_duration_sec": 15.94,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.74,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.W3CDomGeminiTest::testAsStringTransformerExceptionHandled",
+    "org.jsoup.helper.W3CDomGeminiTest::testTreatsUndeclaredNamespaceAsLocalName"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.W3CDomGeminiTest::testAsStringTransformerExceptionHandled"
+  ]
+}

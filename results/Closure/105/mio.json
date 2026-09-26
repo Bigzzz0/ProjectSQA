@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 13.9,
+  "branch_cov": 14.48,
+  "test_file": "FoldConstants_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test51",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test43",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test45",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test09"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test51",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test43",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test45",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test09"
+  ],
+  "suite_sha256": "8eb233ca1062504bf7a4fd2c25303037493f2c7eff7110725a71b6a43283e9c0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_105b/FoldConstants_ESTest.java"
+  ],
+  "run_id": "Closure-105-mio-1790360894"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "BisectionSolver_ESTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BisectionSolver",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9a201d26495b360774b67a48a215b5ec1fae4cd3ad4dfdb10c3e0de1b2f52593",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_70b/BisectionSolver_ESTest.java"
+  ],
+  "run_id": "Math-70-mio-1790392204"
+}

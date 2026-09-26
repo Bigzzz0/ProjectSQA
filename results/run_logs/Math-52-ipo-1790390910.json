@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 52,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-52-ipo-1790390910",
+  "suite_sha256": "96563685dcefc81ae3e068fc37416d96315c844295d04038806d62f589fddc80",
+  "test_files": "Rotation_IPOTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "timestamp": "2026-09-26 09:48:57",
+  "evaluation_duration_sec": 26.486,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 12.26,
+  "branch_coverage_percent": 5.74,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

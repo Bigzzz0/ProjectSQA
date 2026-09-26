@@ -15,5 +15,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testMissingTypeIdThrowsExceptionWhenNoDefaultImpl",
     "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testDefaultImplWhenTypePropertyIsMissing"
-  ]
+  ],
+  "suite_sha256": "447a991a46266fce9ec1d867cb8cbc9be3acd0da1c841e728a984564f52ccd3f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_98b/ExternalTypeHandlerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-98-gemini-1790377782"
 }

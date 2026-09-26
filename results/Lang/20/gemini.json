@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.StringUtilsGeminiTest::testSplittingMethods",
     "org.apache.commons.lang3.StringUtilsGeminiTest::testSupplementarySurrogatePairsInSearch"
-  ]
+  ],
+  "suite_sha256": "f2a56e614ac45788838ac732b610536ca854aab84f03564ef2030b82c2e3b734",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_20b/StringUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-20-gemini-1790384796"
 }

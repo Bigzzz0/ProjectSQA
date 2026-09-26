@@ -1,0 +1,27 @@
+{
+  "project": "Lang",
+  "bug_id": 29,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-29-deepseek-1790385358",
+  "suite_sha256": "8f3442afab7c498d9fbf7bf9622ee59cd2cfd62522f25fb331aab8cd5d6f0e4d",
+  "test_files": "SystemUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.SystemUtils",
+  "timestamp": "2026-09-26 08:16:18",
+  "evaluation_duration_sec": 19.793,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.33,
+  "branch_coverage_percent": 82.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testJavaVersionAsInt",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testIsJavaVersionMatchRealVersion",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntNull",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntArrayDefaultLimit"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testIsJavaVersionMatchRealVersion",
+    "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntArrayDefaultLimit"
+  ]
+}

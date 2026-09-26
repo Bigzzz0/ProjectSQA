@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 40.99,
+  "branch_cov": 16.45,
+  "test_file": "GJChronology_IPOTest.java",
+  "target_classes": "org.joda.time.chrono.GJChronology",
+  "buggy_failures": [
+    "org.joda.time.chrono.GJChronology_IPOTest::test_getDateTimeMillis_pairwise_006"
+  ],
+  "fixed_failures": [
+    "org.joda.time.chrono.GJChronology_IPOTest::test_getDateTimeMillis_pairwise_006"
+  ],
+  "suite_sha256": "cab324f073f3f015a2fc4e58c394ff42a9c36f861fc2974e7aa220e2d8585b7c",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_18b/org/joda/time/chrono/GJChronology_IPOTest.java"
+  ],
+  "run_id": "Time-18-ipo-1790399359"
+}

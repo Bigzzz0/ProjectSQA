@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.59,
+  "branch_cov": 18.27,
+  "test_file": "StdValueInstantiator_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.ValueInstantiator;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "59cf67431156f23006ff46d6abe7ec292fb38ed23dcb3865c8eff556f0e05f56",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_90b/com/fasterxml/jackson/databind/deser/std/StdValueInstantiator_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-90-ipo-1790377265"
+}

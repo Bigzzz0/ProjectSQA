@@ -32,5 +32,10 @@
     "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testOnlyWhitespace",
     "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInitialStateDoctype",
     "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInBodyEndTagBr"
-  ]
+  ],
+  "suite_sha256": "2b650df4f38f6c973eec78a41cbe8a55e73caf810380194fd516577ae7a12570",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_76b/HtmlTreeBuilderStateDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-76-deepseek-1790382196"
 }

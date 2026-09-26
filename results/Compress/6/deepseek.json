@@ -20,5 +20,10 @@
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testCopyConstructor",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testRemoveExtraField",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraFields"
-  ]
+  ],
+  "suite_sha256": "4f8d25d9f1c1da464b05846cddf3001f1eb979d5b3216d6f512d8e4ab8e0a8d9",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_6b/ZipArchiveEntryDeepseekTest.java"
+  ],
+  "run_id": "Compress-6-deepseek-1790367811"
 }

@@ -1,0 +1,25 @@
+{
+  "project": "Collections",
+  "bug_id": 20,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-20-deepseek-1790367172",
+  "suite_sha256": "c9f7ddcdbe50f407ed7c0b5ac1fbd8be7e2af95945a6fee4a037a6f18ddd54dc",
+  "test_files": "TreeListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.list.TreeList",
+  "timestamp": "2026-09-26 03:13:12",
+  "evaluation_duration_sec": 19.582,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 86.35,
+  "branch_coverage_percent": 77.27,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
+    "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
+  ]
+}

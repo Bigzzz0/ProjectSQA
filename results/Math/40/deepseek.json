@@ -21,5 +21,10 @@
     "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testExactRootAtMax",
     "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testExactRootAtMin",
     "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverDeepseekTest::testAllAllowedSolutions"
-  ]
+  ],
+  "suite_sha256": "433ae227cececc4af5f5823c41bcb4203bfa684692bcdf4845429f05a162c175",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_40b/BracketingNthOrderBrentSolverDeepseekTest.java"
+  ],
+  "run_id": "Math-40-deepseek-1790390082"
 }

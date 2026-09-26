@@ -1,0 +1,23 @@
+{
+  "project": "Math",
+  "bug_id": 102,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-102-gemini-1790394472",
+  "suite_sha256": "8c381b3516b37dcdbc014fa3e6837b3a7a7d8fa31b4000cc474b9a7db210b399",
+  "test_files": "ChiSquareTestImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "timestamp": "2026-09-26 10:48:16",
+  "evaluation_duration_sec": 24.16,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 96.51,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingUnequalTotals",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingIdenticalProportions",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareTestRescalingPValue"
+  ],
+  "fixed_failures": []
+}

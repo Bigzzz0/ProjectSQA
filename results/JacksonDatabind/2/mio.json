@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 80.49,
+  "branch_cov": 68.79,
+  "test_file": "TokenBuffer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.TokenBuffer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.util.TokenBuffer_ESTest::test101",
+    "com.fasterxml.jackson.databind.util.TokenBuffer_ESTest::test112"
+  ],
+  "suite_sha256": "9967f0cf82bea28ca961c1e2a9473bebb4aabdaa9a62614cc811b096dd460fe6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_2b/TokenBuffer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-2-mio-1790372391"
+}

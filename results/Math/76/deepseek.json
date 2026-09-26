@@ -23,5 +23,10 @@
     "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testAllZeroMatrix",
     "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverNonSingular",
     "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testRankDeficientMatrix"
-  ]
+  ],
+  "suite_sha256": "557dec00deabeb0ac284fa9a324010829eae3d612e235a7ca599b3fccf2345cb",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_76b/SingularValueDecompositionImplDeepseekTest.java"
+  ],
+  "run_id": "Math-76-deepseek-1790392602"
 }

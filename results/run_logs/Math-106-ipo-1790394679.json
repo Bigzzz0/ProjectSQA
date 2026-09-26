@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 106,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-106-ipo-1790394679",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.math.fraction.ProperFractionFormat",
+  "timestamp": "2026-09-26 10:51:19",
+  "evaluation_duration_sec": 0.005,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

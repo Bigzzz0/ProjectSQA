@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 76,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-76-mio-1790392576",
+  "suite_sha256": "0ca9a50eaf2ad78d76eb8a40e51e65817a91fb55c37552f2859fd0351cca2b54",
+  "test_files": "SingularValueDecompositionImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+  "timestamp": "2026-09-26 10:16:42",
+  "evaluation_duration_sec": 26.031,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 91.79,
+  "branch_coverage_percent": 92.59,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

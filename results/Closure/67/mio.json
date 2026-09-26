@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 57.14,
+  "branch_cov": 28.97,
+  "test_file": "AnalyzePrototypeProperties_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.AnalyzePrototypeProperties",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "facb0bf990a199c5c13b7ce61d80574b534badd63ea9f23b9764d6e97dc88be8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_67b/AnalyzePrototypeProperties_ESTest.java"
+  ],
+  "run_id": "Closure-67-mio-1790358825"
+}

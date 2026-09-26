@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "Expression_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.Expression",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "58c1037eb58ed34e182c80777a61add18fc73f8bdf7418743e0854ee6305f040",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_2b/Expression_ESTest.java"
+  ],
+  "run_id": "JxPath-2-mio-1790383062"
+}

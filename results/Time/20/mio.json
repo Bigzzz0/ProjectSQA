@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 80.35,
+  "branch_cov": 66.21,
+  "test_file": "DateTimeFormatterBuilder_ESTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatterBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7c48303ad6d7cb2ec50206a09d19231e64a926ea455ac241c9e2175a2568e255",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_20b/DateTimeFormatterBuilder_ESTest.java"
+  ],
+  "run_id": "Time-20-mio-1790399527"
+}

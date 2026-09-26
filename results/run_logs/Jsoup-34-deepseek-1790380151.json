@@ -1,0 +1,37 @@
+{
+  "project": "Jsoup",
+  "bug_id": 34,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-34-deepseek-1790380151",
+  "suite_sha256": "2a176d8361835fb51efbcd016bd172ee947f7e074b68a61e942213fc217d701a",
+  "test_files": "CharacterReaderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "timestamp": "2026-09-26 06:49:26",
+  "evaluation_duration_sec": 15.29,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.79,
+  "branch_coverage_percent": 83.85,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testContainsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfSequenceOutOfBounds",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfSequenceBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfSequenceNotFound",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testEmptyReader",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToStringBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfCharBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnyBoundaries"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testContainsIgnoreCase",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfSequenceBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testEmptyReader",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToStringBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfCharBoundaries",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnyBoundaries"
+  ]
+}

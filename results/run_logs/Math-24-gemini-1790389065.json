@@ -1,0 +1,23 @@
+{
+  "project": "Math",
+  "bug_id": 24,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-24-gemini-1790389065",
+  "suite_sha256": "6520724212c6367cf717aa152e070a2e62dbe1ce093333273bb2eba7a840ef35",
+  "test_files": "BrentOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.univariate.BrentOptimizer",
+  "timestamp": "2026-09-26 09:18:11",
+  "evaluation_duration_sec": 25.56,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 98.65,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.optimization.univariate.BrentOptimizerGeminiTest::testKeepInitIfBetterMinimization"
+  ]
+}

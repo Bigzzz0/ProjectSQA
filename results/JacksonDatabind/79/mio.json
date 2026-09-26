@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 55.25,
+  "branch_cov": 37.46,
+  "test_file": "BeanSerializerBase_ESTest.java;JacksonAnnotationIntrospector_ESTest.java;ObjectIdInfo_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;com.fasterxml.jackson.databind.introspect.ObjectIdInfo;com.fasterxml.jackson.databind.ser.std.BeanSerializerBase",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7cc28755aada641528122bea1112222404501daaad6a5c92f8672aefe5f2d06e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_79b/BeanSerializerBase_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_79b/JacksonAnnotationIntrospector_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_79b/ObjectIdInfo_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-79-mio-1790376711"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "HelpFormatter_IPOTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter",
+  "buggy_failures": [
+    "org.apache.commons.cli.HelpFormatter_IPOTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.HelpFormatter_IPOTest"
+  ],
+  "suite_sha256": "073267dc64fd413c0459ff7a9c1f093cd8a589137240b6c93e6c67e9549c383e",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Cli_11b/org/apache/commons/cli/HelpFormatter_IPOTest.java"
+  ],
+  "run_id": "Cli-11-ipo-1790352904"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "GnuParser_ESTest.java",
+  "target_classes": "org.apache.commons.cli.GnuParser",
+  "buggy_failures": [
+    "org.apache.commons.cli.GnuParser_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.GnuParser_ESTest"
+  ],
+  "suite_sha256": "f51ef00db5304ba66def230976281f6831f0b02a6e6565b36d503f63fc4108d4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_12b/GnuParser_ESTest.java"
+  ],
+  "run_id": "Cli-12-mio-1790352936"
+}

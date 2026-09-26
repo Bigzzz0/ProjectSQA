@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 13,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-13-gemini-1790373063",
+  "suite_sha256": "661d55d4d9c9af808ec2d03a55acfcd6a83501b8efed36b9ae7203048eb8c4db",
+  "test_files": "DefaultDeserializationContextGeminiTest.java;ObjectIdValuePropertyGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.DefaultDeserializationContext;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty",
+  "timestamp": "2026-09-26 04:51:11",
+  "evaluation_duration_sec": 7.631,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "vac] Creating empty /tmp/d4j_eval/JacksonDatabind_13b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_13b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_13b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_13b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_13b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_13b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JacksonDatabind_13b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_13b/.test_suite/com/fasterxml/jackson/databind/deser/DefaultDeserializationContextGeminiTest.java:22: error: cannot find symbol\n    [javac] import com.fasterxml.jackson.databind.introspect.SimpleMixInResolver;\n    [javac]                                                 ^\n    [javac]   symbol:   class SimpleMixInResolver\n    [javac]   location: package com.fasterxml.jackson.databind.introspect\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

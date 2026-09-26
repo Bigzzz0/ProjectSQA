@@ -29,5 +29,10 @@
     "com.google.javascript.jscomp.NormalizeGeminiTest::testAssertOnChangeWithDuplicateVar",
     "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsExpectedConstantNotAnnotated",
     "com.google.javascript.jscomp.NormalizeGeminiTest::testVerifyConstantsInconsistentAnnotation"
-  ]
+  ],
+  "suite_sha256": "f02392a01bdaa4102782c3ba3d97e2ba5070e1f1426a00ef0698015df93ec976",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_102b/NormalizeGeminiTest.java"
+  ],
+  "run_id": "Closure-102-gemini-1790360780"
 }

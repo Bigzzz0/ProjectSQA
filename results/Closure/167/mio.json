@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 74.51,
+  "branch_cov": 67.55,
+  "test_file": "JSType_ESTest.java;SemanticReverseAbstractInterpreter_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter;com.google.javascript.rhino.jstype.JSType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b6c653488b7470b8d2749db73ca8da76a13d173cbc2b99361ee4b166e65036b3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_167b/JSType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_167b/SemanticReverseAbstractInterpreter_ESTest.java"
+  ],
+  "run_id": "Closure-167-mio-1790364714"
+}

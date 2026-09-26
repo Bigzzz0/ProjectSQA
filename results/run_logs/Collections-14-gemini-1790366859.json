@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-14-gemini-1790366859",
+  "suite_sha256": "09bde3e1d3cad0bfeccc0276bc1dccb825afd46b64da4698383eac703cef64e8",
+  "test_files": "CaseInsensitiveMapGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.map.CaseInsensitiveMap",
+  "timestamp": "2026-09-26 03:07:43",
+  "evaluation_duration_sec": 4.417,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "      return clazz.newInstance();\n    [javac]                             ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 28 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_14b/.test_suite/org/apache/commons/collections/map/CaseInsensitiveMapGeminiTest.java:333: error: cannot find symbol\n    [javac]         assertEquals(AbstractHashedMap.NULL, map.exposeConvertKey(null));\n    [javac]                                                 ^\n    [javac]   symbol:   method exposeConvertKey(<null>)\n    [javac]   location: variable map of type CaseInsensitiveMap\n    [javac] Note: /tmp/d4j_eval/Collections_14b/.test_suite/org/apache/commons/collections/map/CaseInsensitiveMapGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Collections_14b/.test_suite/org/apache/commons/collections/map/CaseInsensitiveMapGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

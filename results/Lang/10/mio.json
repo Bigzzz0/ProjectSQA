@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 86.74,
+  "branch_cov": 78.74,
+  "test_file": "FastDateParser_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f0bd5797da2336c2cfb551308fe94f5ac3b57a4fd54810702f862fb242cbe194",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_10b/FastDateParser_ESTest.java"
+  ],
+  "run_id": "Lang-10-mio-1790384130"
+}

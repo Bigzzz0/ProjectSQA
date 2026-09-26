@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.49,
+  "branch_cov": 93.88,
+  "test_file": "LevenbergMarquardtOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5a6d7310af96ac8d88d6daa5d6570717b10839ceff3856d38c00e0ac43a39e9f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_68b/LevenbergMarquardtOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-68-mio-1790392062"
+}

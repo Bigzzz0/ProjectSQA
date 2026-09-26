@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.71,
+  "branch_cov": 0.0,
+  "test_file": "StdKeyDeserializer_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "88e1e65e1a5599f78e12fdec6156f8eb3224d4186438e7aa6862b4085679aa84",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_71b/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-71-ipo-1790376278"
+}

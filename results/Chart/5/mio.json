@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 97.09,
+  "branch_cov": 98.75,
+  "test_file": "XYSeries_ESTest.java",
+  "target_classes": "org.jfree.data.xy.XYSeries",
+  "buggy_failures": [
+    "org.jfree.data.xy.XYSeries_ESTest::test22"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.xy.XYSeries_ESTest::test16",
+    "org.jfree.data.xy.XYSeries_ESTest::test22"
+  ],
+  "suite_sha256": "ef48e6311839e58baf01540d4269891ba83d48801748dce1b46794a09b620317",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_5b/XYSeries_ESTest.java"
+  ],
+  "run_id": "Chart-5-mio-1790351157"
+}

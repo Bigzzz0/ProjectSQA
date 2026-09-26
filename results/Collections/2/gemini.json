@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesTokenizer",
     "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesReaderDirect"
-  ]
+  ],
+  "suite_sha256": "5c8fe66a728e9d544bb41661a6ae1135cd1e5c07f4479b67074897eb5d0ee678",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_2b/ExtendedPropertiesGeminiTest.java"
+  ],
+  "run_id": "Collections-2-gemini-1790366210"
 }

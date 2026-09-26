@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testEqualSignIsEscaped",
     "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testEmptyInputsReturnEmpty"
-  ]
+  ],
+  "suite_sha256": "0eed1e23ab70dea0ae71eba067d4f902980a7cc6c038f521664f7561832d51ca",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_11b/QuotedPrintableCodecGeminiTest.java"
+  ],
+  "run_id": "Codec-11-gemini-1790365835"
 }

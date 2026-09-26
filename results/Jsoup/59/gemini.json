@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.jsoup.parser.TokenGeminiTest::testStartTagNameAttrMethod",
     "org.jsoup.parser.TokenGeminiTest::testStartTagCoreOperationsAndToString"
-  ]
+  ],
+  "suite_sha256": "164898549e760d01d73eb459af178fe8cc069b0769bedcbbcd4b43b5388be763",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_59b/TokenGeminiTest.java"
+  ],
+  "run_id": "Jsoup-59-gemini-1790381450"
 }

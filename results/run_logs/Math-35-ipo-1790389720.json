@@ -1,0 +1,22 @@
+{
+  "project": "Math",
+  "bug_id": 35,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-35-ipo-1790389720",
+  "suite_sha256": "bf66d219bb3a08c53e0d41ca473e503b12bf55e874021d0e06325de2ee2a4c0d",
+  "test_files": "ElitisticListPopulation_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.genetics.ElitisticListPopulation",
+  "timestamp": "2026-09-26 09:29:05",
+  "evaluation_duration_sec": 25.044,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 26.32,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_IPOTest::test_getElitismRate_pairwise_012",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_IPOTest::test_getElitismRate_pairwise_022"
+  ],
+  "fixed_failures": []
+}

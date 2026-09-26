@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 108,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-108-deepseek-1790361171",
+  "suite_sha256": "912f82ba8f26898d2d2ac239d28356d36b99fd180fb7bd1324a6ce6d5b4ca5f7",
+  "test_files": "ScopedAliasesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "timestamp": "2026-09-26 01:33:01",
+  "evaluation_duration_sec": 10.157,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ConsumerV3.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 warning\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_108b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_108b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_108b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_108b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_108b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_108b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_108b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_108b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_108b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_108b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7\n    [javac] /tmp/d4j_eval/Closure_108b/.test_suite/com/google/javascript/jscomp/ScopedAliasesDeepseekTest.java:62: error: method does not override or implement a method from a supertype\n    [javac]           @Override\n    [javac]           ^\n    [javac] 1 error\n    [javac] 1 warning\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

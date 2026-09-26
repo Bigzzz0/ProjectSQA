@@ -7,5 +7,10 @@
   "test_file": "ConstructorInstantiatorDeepseekTest.java",
   "target_classes": "org.mockito.internal.creation.instance.ConstructorInstantiator",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "f16740af4caebd8eeac1c5587b1daf47366eac46f8b4a2a4cf0184a700727ac6",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Mockito_21b/ConstructorInstantiatorDeepseekTest.java"
+  ],
+  "run_id": "Mockito-21-deepseek-1790396811"
 }

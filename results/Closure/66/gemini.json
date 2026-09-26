@@ -53,5 +53,10 @@
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testInexistentPropertyWarning",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testUnexpectedTokenTraversalFallback",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject"
-  ]
+  ],
+  "suite_sha256": "c07ce637b2ca31f418849d5cbbbd6cf113081871048dd977b4f3265ee457eec8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_66b/TypeCheckGeminiTest.java"
+  ],
+  "run_id": "Closure-66-gemini-1790358797"
 }

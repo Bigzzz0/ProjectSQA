@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "JsonParserSequence_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.JsonParserSequence",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test4",
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test5",
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test6",
+    "com.fasterxml.jackson.core.util.JsonParserSequence_ESTest::test7"
+  ],
+  "suite_sha256": "7c552600420001bb39d2620c5f07eae3746a881cf30ae27d82b3d7a7566cf748",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_16b/JsonParserSequence_ESTest.java"
+  ],
+  "run_id": "JacksonCore-16-mio-1790371977"
+}

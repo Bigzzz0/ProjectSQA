@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "Option_IPOTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter;org.apache.commons.cli.Option;org.apache.commons.cli.OptionBuilder",
+  "buggy_failures": [
+    "org.apache.commons.cli.Option_IPOTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.Option_IPOTest"
+  ],
+  "suite_sha256": "44b5143f70ffe3d0f5e6b654d9d18e362ab68ddd400fdb4695baa3fb57a734da",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Cli_31b/org/apache/commons/cli/Option_IPOTest.java"
+  ],
+  "run_id": "Cli-31-ipo-1790353580"
+}

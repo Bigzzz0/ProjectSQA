@@ -20,5 +20,10 @@
     "org.apache.commons.lang3.LocaleUtilsDeepseekTest::testLocaleLookupList_LanguageOnly",
     "org.apache.commons.lang3.LocaleUtilsDeepseekTest::testLanguagesByCountry_Existing",
     "org.apache.commons.lang3.LocaleUtilsDeepseekTest::testLocaleLookupList_WithVariant"
-  ]
+  ],
+  "suite_sha256": "0a270682f70523c49eb276988abd2636debdde577b853b3e0073db32f723e6a2",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_5b/LocaleUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-5-deepseek-1790383795"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.32,
+  "branch_cov": 0.0,
+  "test_file": "Compiler_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.Compiler",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "32cd942c7cfa0be62c433bec91b2afa9c590c5f1ee33054a8c37a62ec5fa6286",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Closure_59b/com/google/javascript/jscomp/Compiler_IPOTest.java"
+  ],
+  "run_id": "Closure-59-ipo-1790358268"
+}

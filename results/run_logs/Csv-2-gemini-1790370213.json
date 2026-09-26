@@ -1,0 +1,21 @@
+{
+  "project": "Csv",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Csv-2-gemini-1790370213",
+  "suite_sha256": "4c5317d136531072fe65c24d0ae56ac020be3849122157208e77a87c9fdedd8b",
+  "test_files": "CSVRecordGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.CSVRecord",
+  "timestamp": "2026-09-26 04:03:47",
+  "evaluation_duration_sec": 13.683,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVRecordGeminiTest::testGetStringInconsistentRecord"
+  ],
+  "fixed_failures": []
+}

@@ -15,5 +15,10 @@
     "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
     "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
     "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
-  ]
+  ],
+  "suite_sha256": "e20993078d1c59cc8b1b55f811a3f8e7512e7058b88aa438a5895c1247386b40",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_16b/ScopedAliasesGeminiTest.java"
+  ],
+  "run_id": "Closure-16-gemini-1790355126"
 }

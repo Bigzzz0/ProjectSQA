@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 19,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-19-deepseek-1790368427",
+  "suite_sha256": "372c5703c5b36c01308dd85f5eef7ba2f5ef823d75a9a5a483530aa1ef98f921",
+  "test_files": "Zip64ExtendedInformationExtraFieldDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField",
+  "timestamp": "2026-09-26 03:34:06",
+  "evaluation_duration_sec": 18.615,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 91.67,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataWithExcessData",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataExcessDataDifferentFlags",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataNullRawData"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataWithExcessData",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataExcessDataDifferentFlags",
+    "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataNullRawData"
+  ]
+}

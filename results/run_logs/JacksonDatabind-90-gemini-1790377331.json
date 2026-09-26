@@ -1,0 +1,37 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 90,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-90-gemini-1790377331",
+  "suite_sha256": "4fd711bf25400e1b6d05cfe13c50bfc012411663d10b1ad8deaa58d30baf8abb",
+  "test_files": "StdValueInstantiatorGeminiTest.java;ValueInstantiatorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.ValueInstantiator;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator",
+  "timestamp": "2026-09-26 06:02:38",
+  "evaluation_duration_sec": 26.977,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 82.19,
+  "branch_coverage_percent": 81.73,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testScalarCreatorsExecution",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingArrayDelegateFallbackToDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testIntWideningToLongCreator",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationSuccess",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testDefaultCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingDelegateFallbackToArrayDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testUnconfiguredCreatorsThrowMappingException"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testScalarCreatorsExecution",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingArrayDelegateFallbackToDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testIntWideningToLongCreator",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testWithArgsCreatorInvocationSuccess",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testDefaultCreatorInvocationExceptionHandling",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testCreateUsingDelegateFallbackToArrayDelegate",
+    "com.fasterxml.jackson.databind.deser.std.StdValueInstantiatorGeminiTest::testUnconfiguredCreatorsThrowMappingException"
+  ]
+}

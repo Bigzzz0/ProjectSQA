@@ -22,5 +22,10 @@
     "org.jsoup.safety.CleanerGeminiTest::testCleanRelativeLinksPreservedWhenConfigured",
     "org.jsoup.safety.CleanerGeminiTest::testIsValidHeadContaminationDefect",
     "org.jsoup.safety.CleanerGeminiTest::testIsValidGroundTruthDefectSuite"
-  ]
+  ],
+  "suite_sha256": "bc8eaea85c0a1a9da178e2e5a648e19cbafdc41ab2464fe903fa34fca51f3704",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_30b/CleanerGeminiTest.java"
+  ],
+  "run_id": "Jsoup-30-gemini-1790379987"
 }

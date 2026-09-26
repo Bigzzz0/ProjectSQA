@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 90.0,
+  "test_file": "MannWhitneyUTest_ESTest.java",
+  "target_classes": "org.apache.commons.math3.stat.inference.MannWhitneyUTest",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6746b3d1f2077a10ac1d5a6fa66ba73ba0d16c01e95c6ab2da297cfe27389d98",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_30b/MannWhitneyUTest_ESTest.java"
+  ],
+  "run_id": "Math-30-mio-1790389458"
+}

@@ -1,0 +1,31 @@
+{
+  "project": "JxPath",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-9-gemini-1790383254",
+  "suite_sha256": "8c4c9c82a6be773781deadb824030ba79e4c06efa941cc0180745900833a8c4f",
+  "test_files": "CoreOperationCompareGeminiTest.java;CoreOperationEqualGeminiTest.java;CoreOperationNotEqualGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare;org.apache.commons.jxpath.ri.compiler.CoreOperationEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual",
+  "timestamp": "2026-09-26 07:41:09",
+  "evaluation_duration_sec": 14.777,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testInitialContextReset",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testNanEquality_DefectTarget",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationEqualGeminiTest::testDefectNanViaJXPathContextEvaluation",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompareGeminiTest::testInitialContextReset",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanAgainstNumber",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanDistinctInstancesNotEqual"
+  ]
+}

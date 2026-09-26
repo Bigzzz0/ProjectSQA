@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 7,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-7-deepseek-1790366499",
+  "suite_sha256": "3c956913addf8c8a6b0c59edd141a795371343184c11ed62487d935a4b363ba7",
+  "test_files": "ExtendedPropertiesDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "timestamp": "2026-09-26 03:01:43",
+  "evaluation_duration_sec": 4.285,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "on] Double(double) in Double has been deprecated\n    [javac]         return new Double(answer.doubleValue());\n    [javac]                ^\n    [javac] /tmp/d4j_eval/Collections_7b/src/java/org/apache/commons/collections/comparators/FixedOrderComparator.java:194: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]         Object position = map.put(obj, new Integer(counter++));\n    [javac]                                        ^\n    [javac] /tmp/d4j_eval/Collections_7b/src/java/org/apache/commons/collections/map/MultiValueMap.java:434: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 return clazz.newInstance();\n    [javac]                             ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 28 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_7b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_7b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_7b/.test_suite/org/apache/commons/collections/ExtendedPropertiesDeepseekTest.java:384: error: reached end of file while parsing\n    [javac]     @Test(timeout\n    [javac]                  ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

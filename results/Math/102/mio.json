@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.89,
+  "branch_cov": 84.88,
+  "test_file": "ChiSquareTestImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d1f604d1efef52a6ab9669a6b968bb1aaa04c88deb114a8e647d09848e027911",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_102b/ChiSquareTestImpl_ESTest.java"
+  ],
+  "run_id": "Math-102-mio-1790394422"
+}

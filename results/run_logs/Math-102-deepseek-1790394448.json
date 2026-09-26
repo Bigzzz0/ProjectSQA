@@ -1,0 +1,30 @@
+{
+  "project": "Math",
+  "bug_id": 102,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-102-deepseek-1790394448",
+  "suite_sha256": "6aaf6e1853dcc844ce542da970ec554683751b3ada6d250dfe715ffc83c0feae",
+  "test_files": "ChiSquareTestImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "timestamp": "2026-09-26 10:47:52",
+  "evaluation_duration_sec": 24.181,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.3,
+  "branch_coverage_percent": 91.86,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTestWithAlpha",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testConstructorWithDistribution",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTwoWayTableAllZero",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testDefaultConstructor"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTestWithAlpha",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testConstructorWithDistribution",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTwoWayTableAllZero",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareLargeTestStatisticDefect",
+    "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testDefaultConstructor"
+  ]
+}

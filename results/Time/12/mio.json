@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.32,
+  "branch_cov": 86.86,
+  "test_file": "LocalDateTime_ESTest.java;LocalDate_ESTest.java",
+  "target_classes": "org.joda.time.LocalDate;org.joda.time.LocalDateTime",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c91a4721a476a2e7fa07ce5a4138521a6c4e13c33e76e2a97373f11ca23270e5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_12b/LocalDateTime_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Time_12b/LocalDate_ESTest.java"
+  ],
+  "run_id": "Time-12-mio-1790399019"
+}

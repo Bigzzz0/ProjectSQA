@@ -1,0 +1,29 @@
+{
+  "project": "Compress",
+  "bug_id": 25,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-25-gemini-1790368807",
+  "suite_sha256": "8df15c6a5a955f2f3ce6ed323313cfe8bd85b07f5e317f7086c0c34691443aa8",
+  "test_files": "ZipArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:40:27",
+  "evaluation_duration_sec": 19.548,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 56.86,
+  "branch_coverage_percent": 43.65,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSkipWithinEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testReadingMultipleConsecutiveStoredEntries",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testUnicodeExtraFieldResolution",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testReadingOfFirstStoredEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSplitZipThrowsUnsupportedZipFeatureException",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSingleSegmentSplitMarkerIsSkipped"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testUnicodeExtraFieldResolution",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSplitZipThrowsUnsupportedZipFeatureException"
+  ]
+}

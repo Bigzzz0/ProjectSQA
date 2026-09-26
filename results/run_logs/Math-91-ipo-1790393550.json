@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 91,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-91-ipo-1790393550",
+  "suite_sha256": "85c49223085d91816d79ef1a6dd892185143e88a87f721cce8286789c9a8ead0",
+  "test_files": "Fraction_IPOTest.java",
+  "target_classes": "org.apache.commons.math.fraction.Fraction",
+  "timestamp": "2026-09-26 10:32:54",
+  "evaluation_duration_sec": 23.954,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 74.23,
+  "branch_coverage_percent": 63.33,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

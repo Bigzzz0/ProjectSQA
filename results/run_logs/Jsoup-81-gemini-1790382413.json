@@ -1,0 +1,24 @@
+{
+  "project": "Jsoup",
+  "bug_id": 81,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-81-gemini-1790382413",
+  "suite_sha256": "f9a16163a384d9e73dc68a35a7717abf9f87ac450a65e16608f6e47f5180d22c",
+  "test_files": "DataUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 07:27:09",
+  "evaluation_duration_sec": 16.398,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.6,
+  "branch_coverage_percent": 78.72,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testSupportsXmlCharsetDeclaration",
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeVariants"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeVariants"
+  ]
+}

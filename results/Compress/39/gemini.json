@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testIsEqualOffsetBounds"
-  ]
+  ],
+  "suite_sha256": "47ac686c8d7c9fda0e623d245a81b359d9ee8a5c65ef3ac5e74115c7bf4d5354",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_39b/ArchiveUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-39-gemini-1790369690"
 }

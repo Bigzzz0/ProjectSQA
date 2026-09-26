@@ -21,5 +21,10 @@
     "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatLong",
     "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatLiteralCharacters",
     "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatYearUnpadded"
-  ]
+  ],
+  "suite_sha256": "21c0fc014f742817a3500292040bc1b2d9e4c2cbda0d4332736a521563ff2a0b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_56b/FastDateFormatDeepseekTest.java"
+  ],
+  "run_id": "Lang-56-deepseek-1790386958"
 }

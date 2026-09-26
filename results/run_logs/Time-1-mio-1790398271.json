@@ -1,0 +1,21 @@
+{
+  "project": "Time",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-1-mio-1790398271",
+  "suite_sha256": "f507665e436bd2b9c4d270d85b1ca64ae60a8b6cf60f2f01b767b26e8afc1b8f",
+  "test_files": "Partial_ESTest.java;UnsupportedDurationField_ESTest.java",
+  "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+  "timestamp": "2026-09-26 11:51:41",
+  "evaluation_duration_sec": 29.325,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 88.04,
+  "branch_coverage_percent": 88.98,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.joda.time.field.UnsupportedDurationField_ESTest::test02"
+  ]
+}

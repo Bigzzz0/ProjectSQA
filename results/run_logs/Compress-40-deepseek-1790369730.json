@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 40,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-40-deepseek-1790369730",
+  "suite_sha256": "dd92e13c3ec99912f1336b8f8651a30fa4cc1e57c9bd10f32b35a4750285457c",
+  "test_files": "BitInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.utils.BitInputStream",
+  "timestamp": "2026-09-26 03:55:35",
+  "evaluation_duration_sec": 5.414,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "d4j_eval/Compress_40b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:147: warning: [removal] Unpacker in Pack200 has been deprecated and marked for removal\n    [javac]                 final Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                              ^\n    [javac] /tmp/d4j_eval/Compress_40b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:147: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 final Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                            ^\n    [javac] 24 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_40b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_40b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_40b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_40b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_40b/.test_suite/org/apache/commons/compress/utils/BitInputStreamDeepseekTest.java:419: error: incompatible types: possible lossy conversion from int to byte\n    [javac]         BitInputStream bis = createStream(new byte[]{0xAB, 0xCD}, ByteOrder.BIG_ENDIAN);\n    [javac]                                                      ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 74.46,
+  "branch_cov": 41.18,
+  "test_file": "CommandLineRunner_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0c812719d19b6e91e5b07b201d50c546baae7d220858755e73638d1070f29bb4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_151b/CommandLineRunner_ESTest.java"
+  ],
+  "run_id": "Closure-151-mio-1790363716"
+}

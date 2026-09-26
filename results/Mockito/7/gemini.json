@@ -10,5 +10,10 @@
     "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::test_defect_discoverDeepMockingOfGenerics_with_bounded_type_variable",
     "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::test_defect_discoverDeepMockingOfGenerics_raw_nested_type"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "ead672bd2518f29f2ef90e23c28965d4ecaf00aabadd53b7b57a952c4d158f04",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_7b/GenericMetadataSupportGeminiTest.java"
+  ],
+  "run_id": "Mockito-7-gemini-1790395496"
 }

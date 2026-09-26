@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.TypeHandlerGeminiTest"
-  ]
+  ],
+  "suite_sha256": "605ec43fdcdfd8fc44aa1829387c2f8530c3acac43619d7de6ac572afdb9e8e7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_3b/TypeHandlerGeminiTest.java"
+  ],
+  "run_id": "Cli-3-gemini-1790352698"
 }

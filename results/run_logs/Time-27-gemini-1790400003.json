@@ -1,0 +1,27 @@
+{
+  "project": "Time",
+  "bug_id": 27,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Time-27-gemini-1790400003",
+  "suite_sha256": "76954d265fdf9b16ffa3b08b71bd3d47b63ae8f1629577f3692dedfe889d0ed7",
+  "test_files": "PeriodFormatterBuilderGeminiTest.java",
+  "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+  "timestamp": "2026-09-26 12:20:28",
+  "evaluation_duration_sec": 24.991,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.54,
+  "branch_coverage_percent": 80.94,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testDigitsBoundariesAndSignedRejection",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testCompositeHierarchyDecomposition",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testSeparatorLeadingWithoutFieldsBefore"
+  ],
+  "fixed_failures": [
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testDigitsBoundariesAndSignedRejection",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testCompositeHierarchyDecomposition",
+    "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testSeparatorLeadingWithoutFieldsBefore"
+  ]
+}

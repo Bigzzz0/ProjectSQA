@@ -10,5 +10,10 @@
     "org.apache.commons.compress.utils.IOUtilsDeepseekTest::testSkipWithPartialZeroSkipStream",
     "org.apache.commons.compress.utils.IOUtilsDeepseekTest::testSkipWithZeroSkipStream"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "7724b77eba28f0c02ed0fe826830aba434679135531d034ecf6036e39d58c19e",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_26b/IOUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-26-deepseek-1790368867"
 }

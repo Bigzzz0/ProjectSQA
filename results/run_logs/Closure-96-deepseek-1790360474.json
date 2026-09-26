@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 96,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-96-deepseek-1790360474",
+  "suite_sha256": "3b2b80c2b00fca8ede224cf2bd85551759befd4a48dff460495a595df50f33eb",
+  "test_files": "TypeCheckDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "timestamp": "2026-09-26 01:21:21",
+  "evaluation_duration_sec": 7.323,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "e options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_96b/.test_suite/com/google/javascript/jscomp/TypeCheckDeepseekTest.java:41: error: no suitable method found for compile(List<SourceFile>,List<SourceFile>,CompilerOptions)\n    [javac]     return compiler.compile(externs, inputs, options);\n    [javac]                    ^\n    [javac]     method Compiler.compile(JSSourceFile,JSSourceFile,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile,JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile,JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile[],JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile[])\n    [javac]     method Compiler.compile(List<JSSourceFile>,List<JSSourceFile>,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to List<JSSourceFile>)\n    [javac]     method Compiler.compile(JSSourceFile[],JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile[])\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

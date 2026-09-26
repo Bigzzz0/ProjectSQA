@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.83,
+  "branch_cov": 92.92,
+  "test_file": "BooleanUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.BooleanUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9411a7b6537ac29bfc660c0e5c510bc89e7e4a503a6e9760ef0bf700e3825b30",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_51b/BooleanUtils_ESTest.java"
+  ],
+  "run_id": "Lang-51-mio-1790386646"
+}

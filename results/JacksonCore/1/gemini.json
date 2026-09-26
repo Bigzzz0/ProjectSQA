@@ -18,5 +18,11 @@
   "fixed_failures": [
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testManualSegmentManipulation",
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testInitializationAndReleaseWithRecycler"
-  ]
+  ],
+  "suite_sha256": "bdffedf8e211d54236dbebb1565dc0bd2f331a2a96c1d56761cbf20be753473d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_1b/NumberInputGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_1b/TextBufferGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-1-gemini-1790371421"
 }

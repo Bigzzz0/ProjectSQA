@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.95,
+  "branch_cov": 0.94,
+  "test_file": "Partial_IPOTest.java",
+  "target_classes": "org.joda.time.Partial",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "64d811a176c283e09899aac990b3d4cd568750e5d256c90c7678a76d4fbdc704",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_4b/org/joda/time/Partial_IPOTest.java"
+  ],
+  "run_id": "Time-4-ipo-1790398428"
+}

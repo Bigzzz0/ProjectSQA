@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 73,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-73-deepseek-1790382078",
+  "suite_sha256": "307b8422eb1c284787c1f747a9eb321dee51cb02300981dd96a5db9917cb4267",
+  "test_files": "W3CDomDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.W3CDom",
+  "timestamp": "2026-09-26 07:21:21",
+  "evaluation_duration_sec": 3.71,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_73b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_73b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_73b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_73b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_73b/.test_suite/org/jsoup/helper/W3CDomDeepseekTest.java:190: error: ';' expected\n    [javac]         assertEquals(\"other@key after filtering becomes otherkey\", \"alsobad\", div.getAttribute(\"otherkey\")));\n    [javac]                                                                                                            ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

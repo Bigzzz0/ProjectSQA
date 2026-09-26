@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 36.68,
+  "branch_cov": 30.75,
+  "test_file": "ParserMinimalBase_ESTest.java;ReaderBasedJsonParser_ESTest.java;UTF8StreamJsonParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.base.ParserMinimalBase;com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.json.UTF8StreamJsonParser_ESTest::test29"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.json.UTF8StreamJsonParser_ESTest::test29"
+  ],
+  "suite_sha256": "7575af14789fb03c27527ee5ce643a628b37688bc737cbfe5b6255035909ee6c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_9b/ParserMinimalBase_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_9b/ReaderBasedJsonParser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_9b/UTF8StreamJsonParser_ESTest.java"
+  ],
+  "run_id": "JacksonCore-9-mio-1790371732"
+}

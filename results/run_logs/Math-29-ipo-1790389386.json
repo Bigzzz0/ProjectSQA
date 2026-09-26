@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 29,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-29-ipo-1790389386",
+  "suite_sha256": "c215d0f750da5781fb2b328d49404c31be8f15db901b4fd8090cbae6e30d31a1",
+  "test_files": "OpenMapRealVector_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.linear.OpenMapRealVector",
+  "timestamp": "2026-09-26 09:23:32",
+  "evaluation_duration_sec": 25.338,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 2.8,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

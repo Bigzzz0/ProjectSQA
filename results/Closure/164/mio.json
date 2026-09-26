@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 94.29,
+  "test_file": "ArrowType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.ArrowType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c38fd8869d6e38702a9e86e7fca0d6e2364fb3b7c968563e91693c7d8c778fb4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_164b/ArrowType_ESTest.java"
+  ],
+  "run_id": "Closure-164-mio-1790364528"
+}

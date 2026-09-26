@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.17,
+  "branch_cov": 92.05,
+  "test_file": "DateTimeFormatter_ESTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9d63a349662d9dc20eb0bf44b2eb2059ed2b8cdd8605afd21da4215740e01c71",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_16b/DateTimeFormatter_ESTest.java"
+  ],
+  "run_id": "Time-16-mio-1790399252"
+}

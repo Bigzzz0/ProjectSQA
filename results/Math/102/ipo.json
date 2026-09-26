@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 13.51,
+  "branch_cov": 9.3,
+  "test_file": "ChiSquareTestImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c5a46e636b440b942ad063c5e9242b06c2b7641789c87d6bc16b35edd152f559",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_102b/org/apache/commons/math/stat/inference/ChiSquareTestImpl_IPOTest.java"
+  ],
+  "run_id": "Math-102-ipo-1790394398"
+}

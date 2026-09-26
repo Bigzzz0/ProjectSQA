@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 4,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Time-4-ipo-1790398428",
+  "suite_sha256": "64d811a176c283e09899aac990b3d4cd568750e5d256c90c7678a76d4fbdc704",
+  "test_files": "Partial_IPOTest.java",
+  "target_classes": "org.joda.time.Partial",
+  "timestamp": "2026-09-26 11:54:13",
+  "evaluation_duration_sec": 24.328,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 3.95,
+  "branch_coverage_percent": 0.94,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

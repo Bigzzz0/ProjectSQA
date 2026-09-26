@@ -1,0 +1,22 @@
+{
+  "project": "Chart",
+  "bug_id": 3,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-3-gemini-1790350744",
+  "suite_sha256": "bcce42fcb234af77041bc36390ce7a79a791e78df3c8a92331c8c12175558d2e",
+  "test_files": "TimeSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "timestamp": "2026-09-25 22:39:30",
+  "evaluation_duration_sec": 26.766,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 94.74,
+  "branch_coverage_percent": 87.63,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDefectCreateCopyMaxYCache",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDefectCreateCopyIndexMinYCache"
+  ],
+  "fixed_failures": []
+}

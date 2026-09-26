@@ -1,0 +1,32 @@
+{
+  "project": "Mockito",
+  "bug_id": 25,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-25-gemini-1790397431",
+  "suite_sha256": "7b7dc2a0506bcc10e245ecfaa6c574a74f07c458c113c013bfb89e00759ce997",
+  "test_files": "ReturnsDeepStubsGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs",
+  "timestamp": "2026-09-26 11:37:54",
+  "evaluation_duration_sec": 42.672,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.65,
+  "branch_coverage_percent": 83.33,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testActualParameterizedTypeRejectsNull",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDeepStubbingMultiLevelNavigation",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testCanCreateMockFromMultipleTypeVariableBounds",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDirectNonMockableReturnValues",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testCanCreateMockFromReturnTypesDeclaredWithBoundedWildcard",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testWillReturnDefaultValueOnNonMockableNestedGeneric"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testActualParameterizedTypeRejectsNull",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDeepStubbingMultiLevelNavigation",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDirectNonMockableReturnValues",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testCanCreateMockFromReturnTypesDeclaredWithBoundedWildcard",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testWillReturnDefaultValueOnNonMockableNestedGeneric"
+  ]
+}

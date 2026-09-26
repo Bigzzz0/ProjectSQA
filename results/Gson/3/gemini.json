@@ -10,5 +10,10 @@
     "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentNavigableMapConstruction",
     "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentMapConstruction"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "7cf6924a10d602841edf7321ba707db259179dc7ece88ba31b692a0a40282ca4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_3b/ConstructorConstructorGeminiTest.java"
+  ],
+  "run_id": "Gson-3-gemini-1790370855"
 }

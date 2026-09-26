@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.25,
+  "branch_cov": 83.33,
+  "test_file": "Complex_IPOTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5594ae1af9063425c51468a3a235042c99f33e52690d6c31dacb63e88eafac8d",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_96b/org/apache/commons/math/complex/Complex_IPOTest.java"
+  ],
+  "run_id": "Math-96-ipo-1790394018"
+}

@@ -24,5 +24,10 @@
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_InvalidTrailingDot",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_WithExponent",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_TooLargeForFloatWithQualifier"
-  ]
+  ],
+  "suite_sha256": "f02098e120581f6735c6e2d4465f96a860acafa9e09dbe0ebbf4b4c05e87f264",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_36b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-36-deepseek-1790385766"
 }

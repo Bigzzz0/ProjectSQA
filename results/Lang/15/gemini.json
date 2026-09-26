@@ -17,5 +17,10 @@
     "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableTypeVariable",
     "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testNormalizeUpperBounds",
     "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testDefectGetTypeArgumentsInheritanceHierarchy"
-  ]
+  ],
+  "suite_sha256": "19ac75a9dcfbade5dc3764b11a14018aed445628ce09e87368a86e0446b5ca71",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_15b/TypeUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-15-gemini-1790384526"
 }

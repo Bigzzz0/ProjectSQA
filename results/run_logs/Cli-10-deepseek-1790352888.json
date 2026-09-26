@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-10-deepseek-1790352888",
+  "suite_sha256": "3f358ce141a0f9482659d4c5ff2e9912a486ef4f3709bbbd52186a401f0a1274",
+  "test_files": "ParserDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.Parser",
+  "timestamp": "2026-09-25 23:15:01",
+  "evaluation_duration_sec": 12.024,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.ParserDeepseekTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.ParserDeepseekTest"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-9-gemini-1790388096",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+  "timestamp": "2026-09-26 09:01:36",
+  "evaluation_duration_sec": 0.015,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

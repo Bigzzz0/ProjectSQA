@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.69,
+  "branch_cov": 2.99,
+  "test_file": "JSDocInfoBuilder_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace;com.google.javascript.rhino.JSDocInfoBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7a06cbc95bc28c09400fb0cbf1aa47cefa9dabd7374cdcbe68df723072834a20",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Closure_106b/com/google/javascript/rhino/JSDocInfoBuilder_IPOTest.java"
+  ],
+  "run_id": "Closure-106-ipo-1790360974"
+}

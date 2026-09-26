@@ -14,5 +14,10 @@
     "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testParameterGuesserConstantYObservations",
     "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testTinyVariationsData",
     "org.apache.commons.math3.optimization.fitting.HarmonicFitterGeminiTest::testGuesserClonesObservationsDefensively"
-  ]
+  ],
+  "suite_sha256": "3f092301b840f136a2d4b0b38900613c73f50bc361d571b7e563992aeaeade32",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_25b/HarmonicFitterGeminiTest.java"
+  ],
+  "run_id": "Math-25-gemini-1790389128"
 }

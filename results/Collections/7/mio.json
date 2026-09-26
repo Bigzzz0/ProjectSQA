@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 80.54,
+  "branch_cov": 70.36,
+  "test_file": "ExtendedProperties_ESTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "buggy_failures": [
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test55",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test56"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test55",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test12",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test56"
+  ],
+  "suite_sha256": "3a3fe89fa18554b236be459834f17cc1a13bc86a58b076096d061d6f91ef989d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_7b/ExtendedProperties_ESTest.java"
+  ],
+  "run_id": "Collections-7-mio-1790366480"
+}

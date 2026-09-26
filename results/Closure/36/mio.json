@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 7.27,
+  "branch_cov": 0.86,
+  "test_file": "InlineVariables_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineVariables",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.InlineVariables_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.InlineVariables_ESTest::test0"
+  ],
+  "suite_sha256": "c70b225af0ff1f69a27bb50e6080a802818447b51d72ca2c04c8caf53307c6b8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_36b/InlineVariables_ESTest.java"
+  ],
+  "run_id": "Closure-36-mio-1790356664"
+}

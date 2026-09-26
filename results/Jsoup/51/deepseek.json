@@ -22,5 +22,10 @@
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnySortedEmptySearch",
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterSequenceWithNonAscii",
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConstructorNullInput"
-  ]
+  ],
+  "suite_sha256": "df2daafbc86e329e857b0e3b5dfc3a322e0e6c266bec413339b40353463bee51",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_51b/CharacterReaderDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-51-deepseek-1790381018"
 }

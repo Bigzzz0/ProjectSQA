@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.85,
+  "branch_cov": 56.2,
+  "test_file": "ObjectMapper_ESTest.java;StdTypeResolverBuilder_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectMapper;com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder_ESTest::test17",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder_ESTest::test00",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder_ESTest::test03"
+  ],
+  "suite_sha256": "386605e6a089f1ea1f30df71884023172e6f8beced3acbfe658b653ca4887ee9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_61b/ObjectMapper_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_61b/StdTypeResolverBuilder_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-61-mio-1790375749"
+}

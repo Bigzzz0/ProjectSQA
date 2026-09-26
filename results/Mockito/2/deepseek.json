@@ -19,7 +19,6 @@
     "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldFailValidation",
     "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldBeHandled",
     "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsAssertionErrorWhenNotStarted",
-    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingReturnsFalseImmediatelyForZeroDuration",
     "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsWhenStartNeverCalled",
     "org.mockito.internal.util.TimerDeepseekTest::testIsCountingAfterElapsedOnNegativeDuration",
     "org.mockito.internal.util.TimerDeepseekTest::testTimerWithZeroDurationAndDelayedStart",
@@ -27,5 +26,10 @@
     "org.mockito.internal.util.TimerDeepseekTest::testLargeNegativeDuration",
     "org.mockito.internal.util.TimerDeepseekTest::testMinLongDuration",
     "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldThrowException"
-  ]
+  ],
+  "suite_sha256": "5df3537f13b1c0b4ee7c6f842d001569618a87ed6fe2e1010a29aecff29d630b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Mockito_2b/TimerDeepseekTest.java"
+  ],
+  "run_id": "Mockito-2-deepseek-1790394803"
 }

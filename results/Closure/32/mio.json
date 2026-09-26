@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 27.35,
+  "branch_cov": 21.28,
+  "test_file": "JsDocInfoParser_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.parsing.JsDocInfoParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b71bc6d2986dbb7f8cf6f3f4558cbb5c213fc383c98405de29de21ccdd85726c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_32b/JsDocInfoParser_ESTest.java"
+  ],
+  "run_id": "Closure-32-mio-1790356383"
+}

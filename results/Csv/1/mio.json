@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 83.78,
+  "branch_cov": 50.0,
+  "test_file": "ExtendedBufferedReader_ESTest.java",
+  "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c70879b951e2a4adcf8a0c21b31aecbda5f355facf6f92b1c65e23959ba8882c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_1b/ExtendedBufferedReader_ESTest.java"
+  ],
+  "run_id": "Csv-1-mio-1790370152"
+}

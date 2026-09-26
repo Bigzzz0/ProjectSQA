@@ -19,5 +19,10 @@
     "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testReadWithOffsetAndLength",
     "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testLargeDataStream",
     "org.apache.commons.codec.binary.Base64InputStreamDeepseekTest::testEncodeDecodeRoundTrip"
-  ]
+  ],
+  "suite_sha256": "ccf5f35e39f9924eaca7cf23aa063f8aeede4a8195f5dcc451b14c6a426381be",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_6b/Base64InputStreamDeepseekTest.java"
+  ],
+  "run_id": "Codec-6-deepseek-1790365614"
 }

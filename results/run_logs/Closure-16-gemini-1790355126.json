@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-16-gemini-1790355126",
+  "suite_sha256": "e20993078d1c59cc8b1b55f811a3f8e7512e7058b88aa438a5895c1247386b40",
+  "test_files": "ScopedAliasesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "timestamp": "2026-09-25 23:52:42",
+  "evaluation_duration_sec": 35.849,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.52,
+  "branch_coverage_percent": 91.13,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testMultipleDeclaratorsInSingleVarStatement",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testHotSwapScriptDirectInvocation",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testNamespaceShadowRenamingInInnerScope"
+  ]
+}

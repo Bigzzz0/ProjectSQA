@@ -1,0 +1,25 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-11-gemini-1790372952",
+  "suite_sha256": "64648dbc82de3588fd23cdf4c3da1adee58e84c10f4c781f86f416aadaef6a50",
+  "test_files": "TypeFactoryGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.TypeFactory",
+  "timestamp": "2026-09-26 04:49:37",
+  "evaluation_duration_sec": 25.647,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 83.44,
+  "branch_coverage_percent": 73.74,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testRecursiveOrUnboundTypeVariableResolution_Defect609",
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testParameterizedReflectionTypes",
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testTypeVariableWithoutContextBounds_Defect728"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testParameterizedReflectionTypes"
+  ]
+}

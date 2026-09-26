@@ -45,5 +45,10 @@
     "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testReferenceBleedingFunctionAndCloneWithNewScope",
     "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testArgumentsKeywordReference",
     "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testExternalIssue1053_variableAssignedInFunctionScopeIsNotAssignedOnceInLifetime"
-  ]
+  ],
+  "suite_sha256": "7ab4ceb0855078e1525cdd8043cddcd5116066ca677052cd7d8c941f122f2e15",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_120b/ReferenceCollectingCallbackGeminiTest.java"
+  ],
+  "run_id": "Closure-120-gemini-1790362009"
 }

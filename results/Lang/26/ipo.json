@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 13.98,
+  "branch_cov": 10.96,
+  "test_file": "FastDateFormat_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateFormat",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2ca699d619bd856b727c8feab7b1a7dd8aa0a6cffe483f4dfe7bd2b71469e0b6",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_26b/org/apache/commons/lang3/time/FastDateFormat_IPOTest.java"
+  ],
+  "run_id": "Lang-26-ipo-1790385093"
+}

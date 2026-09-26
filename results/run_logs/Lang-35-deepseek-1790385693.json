@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 35,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-35-deepseek-1790385693",
+  "suite_sha256": "63ec279d2e91b7788c3534d4e4d246bf64b001d0ddef85bf5989af2db4db7f16",
+  "test_files": "ArrayUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "timestamp": "2026-09-26 08:21:39",
+  "evaluation_duration_sec": 5.95,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "77: error: no suitable method found for assertArrayEquals(double[],double[])\n    [javac]         assertArrayEquals(new double[]{1.0, 2.0}, ArrayUtils.toPrimitive(new Double[]{1.0, 2.0}));\n    [javac]         ^\n    [javac]     method Assert.assertArrayEquals(long[],long[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to long[])\n    [javac]     method Assert.assertArrayEquals(int[],int[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to int[])\n    [javac]     method Assert.assertArrayEquals(short[],short[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to short[])\n    [javac]     method Assert.assertArrayEquals(char[],char[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to char[])\n    [javac]     method Assert.assertArrayEquals(byte[],byte[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to byte[])\n    [javac]     method Assert.assertArrayEquals(boolean[],boolean[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to boolean[])\n    [javac]     method Assert.assertArrayEquals(Object[],Object[]) is not applicable\n    [javac]       (argument mismatch; double[] cannot be converted to Object[])\n    [javac] Note: /tmp/d4j_eval/Lang_35b/.test_suite/org/apache/commons/lang3/ArrayUtilsDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

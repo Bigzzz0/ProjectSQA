@@ -18,5 +18,10 @@
     "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadPublicBlankSystemBlank",
     "org.jsoup.nodes.DocumentTypeDeepseekTest::testConstructorValidationThrowsExceptionOnBlankName",
     "org.jsoup.nodes.DocumentTypeDeepseekTest::testNullArguments"
-  ]
+  ],
+  "suite_sha256": "78c2eecb16bbbee32d5eed2744da5127c926cf53a7b91fd8ecef63c6a1a747d8",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_16b/DocumentTypeDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-16-deepseek-1790379382"
 }

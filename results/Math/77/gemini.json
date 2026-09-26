@@ -19,5 +19,11 @@
     "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
     "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
     "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis"
-  ]
+  ],
+  "suite_sha256": "2e58043605a486e959eee41cdde21d7c816a4d16a01a7214e4a65936629533cb",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_77b/ArrayRealVectorGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Math_77b/OpenMapRealVectorGeminiTest.java"
+  ],
+  "run_id": "Math-77-gemini-1790392713"
 }

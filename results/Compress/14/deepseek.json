@@ -21,5 +21,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalTrailerAfterTrim",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalWithTrailingNul",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalExtraTrailingSpace"
-  ]
+  ],
+  "suite_sha256": "e89cb552c03f24f40ac845355a49bc7671d7c324327a41456450b7459cdfa7e2",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_14b/TarUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-14-deepseek-1790368228"
 }

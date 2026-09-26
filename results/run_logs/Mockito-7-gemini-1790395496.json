@@ -1,0 +1,22 @@
+{
+  "project": "Mockito",
+  "bug_id": 7,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-7-gemini-1790395496",
+  "suite_sha256": "ead672bd2518f29f2ef90e23c28965d4ecaf00aabadd53b7b57a952c4d158f04",
+  "test_files": "GenericMetadataSupportGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.reflection.GenericMetadataSupport",
+  "timestamp": "2026-09-26 11:06:40",
+  "evaluation_duration_sec": 104.505,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.13,
+  "branch_coverage_percent": 92.68,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::test_defect_discoverDeepMockingOfGenerics_with_bounded_type_variable",
+    "org.mockito.internal.util.reflection.GenericMetadataSupportGeminiTest::test_defect_discoverDeepMockingOfGenerics_raw_nested_type"
+  ],
+  "fixed_failures": []
+}

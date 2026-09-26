@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 33.33,
+  "branch_cov": 0.0,
+  "test_file": "GenericMaster_ESTest.java",
+  "target_classes": "org.mockito.internal.util.reflection.GenericMaster",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "39f6d13c3d012e52a11718824b856a0215ae09d54b277715b711763b3c0e35c0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_12b/GenericMaster_ESTest.java"
+  ],
+  "run_id": "Mockito-12-mio-1790396224"
+}

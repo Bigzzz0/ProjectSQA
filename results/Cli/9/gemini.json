@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.ParserGeminiTest"
-  ]
+  ],
+  "suite_sha256": "10c87125d92d90edc77549a43be2786930129bc3653b8396897cb333014b8531",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_9b/ParserGeminiTest.java"
+  ],
+  "run_id": "Cli-9-gemini-1790352864"
 }

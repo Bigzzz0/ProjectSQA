@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 64,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-64-mio-1790391810",
+  "suite_sha256": "691be1e1e935acf265aae85db8e4ee0b0edf4e6c37202d92a2eae316b104ee44",
+  "test_files": "LevenbergMarquardtOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "timestamp": "2026-09-26 10:03:56",
+  "evaluation_duration_sec": 25.268,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 9.94,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

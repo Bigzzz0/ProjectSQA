@@ -1,0 +1,26 @@
+{
+  "project": "Compress",
+  "bug_id": 44,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-44-deepseek-1790369932",
+  "suite_sha256": "41796b21ffd1ff641292ec0a68811f9fcb363608a97fbcd7707c88ede67161bd",
+  "test_files": "ChecksumCalculatingInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ChecksumCalculatingInputStream",
+  "timestamp": "2026-09-26 03:59:11",
+  "evaluation_duration_sec": 19.472,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testConstructorNullChecksum",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testConstructorBothNull",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testReadByteArrayWithOffset",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testConstructorNullInputStream"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testReadByteArrayWithOffset"
+  ]
+}

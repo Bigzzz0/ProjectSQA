@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 81.56,
+  "branch_cov": 69.57,
+  "test_file": "TypeFactory_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.TypeFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2748872acaea04d534a41e5da66bddc115a75880b246ecdd724d0db169e863f8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_19b/TypeFactory_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-19-mio-1790373344"
+}

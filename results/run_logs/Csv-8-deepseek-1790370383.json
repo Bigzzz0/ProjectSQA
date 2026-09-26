@@ -1,0 +1,26 @@
+{
+  "project": "Csv",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Csv-8-deepseek-1790370383",
+  "suite_sha256": "edfb37990f3d725c635420979bc3be05241123cbbe2b56a5573cf1a6d196c22f",
+  "test_files": "CSVFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "timestamp": "2026-09-26 04:06:38",
+  "evaluation_duration_sec": 15.192,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.3,
+  "branch_coverage_percent": 77.86,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testDefaultFormat",
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testToString",
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testDuplicateHeaderElements"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testDefaultFormat",
+    "org.apache.commons.csv.CSVFormatDeepseekTest::testToString"
+  ]
+}

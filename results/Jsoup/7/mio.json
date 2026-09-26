@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.0,
+  "branch_cov": 96.15,
+  "test_file": "Document_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d9b2aa8bb6fa8372f2cdaba2a78c11f3c9eb314633f82766738a18cc35448009",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_7b/Document_ESTest.java"
+  ],
+  "run_id": "Jsoup-7-mio-1790379046"
+}

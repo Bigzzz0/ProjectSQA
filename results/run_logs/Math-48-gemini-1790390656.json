@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 48,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-48-gemini-1790390656",
+  "suite_sha256": "6595bbd3841e99be96f18953eb6ff015fe80149dcf08ab41a6c966442de697a5",
+  "test_files": "BaseSecantSolverGeminiTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "timestamp": "2026-09-26 09:44:41",
+  "evaluation_duration_sec": 25.349,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 90.41,
+  "branch_coverage_percent": 63.04,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631RegulaFalsiConvergenceFailure"
+  ],
+  "fixed_failures": []
+}

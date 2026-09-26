@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 34,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-34-deepseek-1790374173",
+  "suite_sha256": "f139f270aee2ae9d8c9754bfe7236663e127131a18b54ac59df40bcc77e5ad7f",
+  "test_files": "NumberSerializerDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializer",
+  "timestamp": "2026-09-26 05:09:42",
+  "evaluation_duration_sec": 8.168,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

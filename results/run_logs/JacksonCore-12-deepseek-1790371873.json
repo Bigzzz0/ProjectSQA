@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 12,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-12-deepseek-1790371873",
+  "suite_sha256": "34f088f3a7548274c2cd1ad9ac5c1fc6e1acd7ec0721069fb3068ecc27c60031",
+  "test_files": "ReaderBasedJsonParserDeepseekTest.java;UTF8StreamJsonParserDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "timestamp": "2026-09-26 04:31:17",
+  "evaluation_duration_sec": 3.802,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/classes/com/fasterxml/jackson/core/type/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_12b/target/classes/com/fasterxml/jackson/core/base/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_12b/target/classes/com/fasterxml/jackson/core/format/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_12b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_12b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_12b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_12b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_12b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_12b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JacksonCore_12b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_12b/.test_suite/com/fasterxml/jackson/core/json/ReaderBasedJsonParserDeepseekTest.java:2067: error: illegal escape character\n    [javac]         ReaderBasedJsonParser parser = createParser(\"{\\\"na\\x00me\\\":1}\");\n    [javac]                                                            ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-4-gemini-1790383125",
+  "suite_sha256": "5ad563b98cc6c4056e47499052f49e7c0e09b24a0ac8c393277cf0430caf7b61",
+  "test_files": "DOMNodePointerGeminiTest.java;JDOMNodePointerGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "timestamp": "2026-09-26 07:38:48",
+  "evaluation_duration_sec": 2.928,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "       new Integer(index),\n    [javac]                             ^\n    [javac] /tmp/d4j_eval/JxPath_4b/src/java/org/apache/commons/jxpath/util/ValueUtils.java:502: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 handler = (DynamicPropertyHandler) clazz.newInstance();\n    [javac]                                                         ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 2 files to /tmp/d4j_eval/JxPath_4b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_4b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_4b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_4b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JxPath_4b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_4b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerGeminiTest.java:301: error: reference to getNamespaceURI is ambiguous\n    [javac]         assertEquals(\"http://default.ns\", childPtr.getNamespaceURI(null));\n    [javac]                                                   ^\n    [javac]   both method getNamespaceURI(String) in DOMNodePointer and method getNamespaceURI(Node) in DOMNodePointer match\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

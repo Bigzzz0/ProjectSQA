@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "SimpleRegression_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.regression.SimpleRegression",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bd01783230a33b28651fbd42a8f7c00b09caa2ddea37b8842ac70a8fb1c26a96",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_105b/SimpleRegression_ESTest.java"
+  ],
+  "run_id": "Math-105-mio-1790394628"
+}

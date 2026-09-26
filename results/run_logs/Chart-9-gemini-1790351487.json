@@ -1,0 +1,24 @@
+{
+  "project": "Chart",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-9-gemini-1790351487",
+  "suite_sha256": "ed2246653d3fb4e1f3ebb492f7a8a0e155825e5ff715b637b6bb273f201a4d64",
+  "test_files": "TimeSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "timestamp": "2026-09-25 22:51:52",
+  "evaluation_duration_sec": 24.543,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.81,
+  "branch_coverage_percent": 89.84,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testBug1864222CreateCopyEmptySubRangeBetweenPoints",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeleteAndClear"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeleteAndClear"
+  ]
+}

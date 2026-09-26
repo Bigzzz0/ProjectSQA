@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.81,
+  "branch_cov": 94.53,
+  "test_file": "DefaultIntervalCategoryDataset_ESTest.java",
+  "target_classes": "org.jfree.data.category.DefaultIntervalCategoryDataset",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9c6b2c4b78c8421aaa5885d1edf68f17cfb548cd45d974cc9068a42d15176ad6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_16b/DefaultIntervalCategoryDataset_ESTest.java"
+  ],
+  "run_id": "Chart-16-mio-1790351875"
+}

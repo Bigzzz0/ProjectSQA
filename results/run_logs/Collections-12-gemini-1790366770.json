@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-12-gemini-1790366770",
+  "suite_sha256": "ae2229e04e24c7fd3cdda4e65064b2feee7b48a3f9fe9af4a633c43e4305a0ed",
+  "test_files": "ExtendedPropertiesGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "timestamp": "2026-09-26 03:06:15",
+  "evaluation_duration_sec": 4.326,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "d4j_eval/Collections_12b/src/java/org/apache/commons/collections/map/MultiValueMap.java:470: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 return clazz.newInstance();\n    [javac]                             ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 28 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_12b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_12b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_12b/.test_suite/org/apache/commons/collections/ExtendedPropertiesGeminiTest.java:244: error: defaults has private access in ExtendedProperties\n    [javac]         ep.defaults = defaults;\n    [javac]           ^\n    [javac] Note: /tmp/d4j_eval/Collections_12b/.test_suite/org/apache/commons/collections/ExtendedPropertiesGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Collections_12b/.test_suite/org/apache/commons/collections/ExtendedPropertiesGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.19,
+  "branch_cov": 93.42,
+  "test_file": "Attributes_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0aaeeff5746aa85b06b9080501cc4dfdef443d5e814053ac591b7b5328edee0d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_57b/Attributes_ESTest.java"
+  ],
+  "run_id": "Jsoup-57-mio-1790381329"
+}

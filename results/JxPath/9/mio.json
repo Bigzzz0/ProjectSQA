@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.65,
+  "branch_cov": 92.42,
+  "test_file": "CoreOperationCompare_ESTest.java;CoreOperationEqual_ESTest.java;CoreOperationNotEqual_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare;org.apache.commons.jxpath.ri.compiler.CoreOperationEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare_ESTest::test03",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual_ESTest::test1"
+  ],
+  "suite_sha256": "0563fb896425d615178b319bb2a84e26d4cbd510be3bef938ffe903bc261efde",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_9b/CoreOperationCompare_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_9b/CoreOperationEqual_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_9b/CoreOperationNotEqual_ESTest.java"
+  ],
+  "run_id": "JxPath-9-mio-1790383234"
+}

@@ -1,16 +1,16 @@
 {
   "status": "DONE",
-  "fault_detected": "BUG_DETECTED",
-  "failures_count": 4,
-  "line_cov": 52.17,
-  "branch_cov": 55.56,
-  "test_file": "Jsoup_1b_IPOTest.java",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 10.87,
+  "branch_cov": 0.0,
+  "test_file": "Document_IPOTest.java",
   "target_classes": "org.jsoup.nodes.Document",
-  "buggy_failures": [
-    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_001",
-    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_002",
-    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_003",
-    "org.jsoup.nodes.Jsoup_1b_IPOTest::test_body_snippet_order_004"
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "153a289a169f3c143b681b241ba24a73a9d3e3427abe2c708022f761e8413467",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_1b/org/jsoup/nodes/Document_IPOTest.java"
   ],
-  "fixed_failures": []
+  "run_id": "Jsoup-1-ipo-1790378818"
 }

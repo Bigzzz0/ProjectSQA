@@ -1,0 +1,36 @@
+{
+  "project": "Closure",
+  "bug_id": 20,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-20-gemini-1790355424",
+  "suite_sha256": "938f7c908cc78da7973c517c3976a000e12a7937dccc04b032a1ea39f38fbf9b",
+  "test_files": "PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+  "timestamp": "2026-09-25 23:57:39",
+  "evaluation_duration_sec": 35.172,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 78.38,
+  "branch_coverage_percent": 60.08,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testHookConditionMinimization",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSkipFinallyNodesDefensive",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceExitWithBreak",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testTryReplaceIfBlockVariants",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testDefectSimpleFunctionCallWithVariableShouldNotFold"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testHookConditionMinimization",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testSkipFinallyNodesDefensive",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReplaceExitWithBreak",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testTryReplaceIfBlockVariants",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
+    "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 43,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-43-deepseek-1790380671",
+  "suite_sha256": "95fbaaefbe990b6e74a9fefc8718ab7f8959662c3ee562038e303960256db298",
+  "test_files": "ElementDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "timestamp": "2026-09-26 06:57:55",
+  "evaluation_duration_sec": 4.553,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "   [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_43b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_43b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_43b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_43b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_43b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_43b/target/classes/org/jsoup/safety/package-info.class\n     [copy] Copying 2 files to /tmp/d4j_eval/Jsoup_43b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_43b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_43b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_43b/.test_suite/org/jsoup/nodes/ElementDeepseekTest.java:407: error: cannot find symbol\n    [javac]         Elements found = el.getElementsByAttributeValueMatching(\"href\", Pattern.compile(\"http.*\"));\n    [javac]                                                                         ^\n    [javac]   symbol:   variable Pattern\n    [javac]   location: class ElementDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

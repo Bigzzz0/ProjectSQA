@@ -1,0 +1,24 @@
+{
+  "project": "Jsoup",
+  "bug_id": 90,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-90-gemini-1790382874",
+  "suite_sha256": "002a8adaf52da3f8810db9801d20bb0e1a24ae893f7e997b70f908dceaf151ff",
+  "test_files": "HttpConnectionGeminiTest.java",
+  "target_classes": "org.jsoup.helper.HttpConnection",
+  "timestamp": "2026-09-26 07:34:51",
+  "evaluation_duration_sec": 16.253,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 53.36,
+  "branch_coverage_percent": 32.91,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.HttpConnectionGeminiTest::testHandlesHeaderEncodingOnRequest",
+    "org.jsoup.helper.HttpConnectionGeminiTest::testConnectMalformedUrlThrows"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.HttpConnectionGeminiTest::testConnectMalformedUrlThrows"
+  ]
+}

@@ -13,5 +13,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
     "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
-  ]
+  ],
+  "suite_sha256": "58a1cfdb7372951ad488022e894005c8bc5a52f7d0276fb2c3666def612aaf42",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_54b/PropertyBuilderDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-54-deepseek-1790375409"
 }

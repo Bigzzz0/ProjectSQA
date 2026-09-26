@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 4,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-4-mio-1790378981",
+  "suite_sha256": "ab7203c8b846a603b3a75edade43b9ee831c40cf81c859359d3d774fc4808561",
+  "test_files": "Entities_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "timestamp": "2026-09-26 06:29:46",
+  "evaluation_duration_sec": 4.281,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "onToSingleClass(Main.java:298)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.addInstrumentation(Main.java:307)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.parseArguments(Main.java:399)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.main(Main.java:421)\n[cobertura-instrument] Exception in thread \"main\" java.lang.RuntimeException: Warning detected and failOnError is true\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:126)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.addInstrumentationToSingleClass(CoberturaInstrumenter.java:234)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.addInstrumentationToSingleClass(Main.java:298)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.addInstrumentation(Main.java:307)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.parseArguments(Main.java:399)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.main(Main.java:421)\n[cobertura-instrument] Caused by: java.lang.RuntimeException: Method code too large!\n[cobertura-instrument] \tat org.objectweb.asm.MethodWriter.a(Unknown Source)\n[cobertura-instrument] \tat org.objectweb.asm.ClassWriter.toByteArray(Unknown Source)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:208)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:121)\n[cobertura-instrument] \t... 5 more\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:340: Error instrumenting classes. See messages above.\n\nTotal time: 0 seconds\nCouldn't obtain coverage results! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 153.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

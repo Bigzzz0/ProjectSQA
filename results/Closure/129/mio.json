@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 52.78,
+  "branch_cov": 31.37,
+  "test_file": "PrepareAst_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PrepareAst",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PrepareAst_ESTest::test4"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PrepareAst_ESTest::test4"
+  ],
+  "suite_sha256": "efac61f73051eac723fb4c38d789ad31b487cf0b5c29c5ec3704a5dde36cd231",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_129b/PrepareAst_ESTest.java"
+  ],
+  "run_id": "Closure-129-mio-1790362539"
+}

@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jsoup.helper.DataUtilGeminiTest::discardsSpuriousByteOrderMarkWhenNoCharsetSet"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "1ca83830de7d5f5cac7aa87a676d47a933eeebde9dece5051f91dfad7f3c8d66",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_39b/DataUtilGeminiTest.java"
+  ],
+  "run_id": "Jsoup-39-gemini-1790380401"
 }

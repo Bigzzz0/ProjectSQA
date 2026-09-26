@@ -1,0 +1,26 @@
+{
+  "project": "Compress",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-15-gemini-1790368284",
+  "suite_sha256": "940f637c153b6958b623bdad6d16a3e117cf3e3d1a0e675e91c3b46672c8437c",
+  "test_files": "ZipArchiveEntryGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "timestamp": "2026-09-26 03:31:40",
+  "evaluation_duration_sec": 16.41,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.61,
+  "branch_coverage_percent": 89.09,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testNullCommentEqualsEmptyComment",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testCopyConstructorFromZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testRemoveNonExistentExtraFieldThrowsException"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testCopyConstructorFromZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testRemoveNonExistentExtraFieldThrowsException"
+  ]
+}

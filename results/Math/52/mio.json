@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 89.1,
+  "branch_cov": 92.62,
+  "test_file": "Rotation_ESTest.java;Rotation_ESTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "8d91a90988969bf5f5d2982004179656514020158e14a47fb0f721758d3d6fab",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_52b/Rotation_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_52b/evosuite-tests/org/apache/commons/math/geometry/euclidean/threed/Rotation_ESTest.java"
+  ],
+  "run_id": "Math-52-mio-1790390937"
+}

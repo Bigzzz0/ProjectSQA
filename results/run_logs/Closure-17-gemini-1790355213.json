@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 17,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-17-gemini-1790355213",
+  "suite_sha256": "3b97939240150d487c091e96b2d49ef9cb42f30cde62de78ad6c2a86853cdf20",
+  "test_files": "TypedScopeCreatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "timestamp": "2026-09-25 23:53:43",
+  "evaluation_duration_sec": 10.2,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "_17b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_17b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_17b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_17b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_17b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_17b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_17b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_17b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_17b/.test_suite/com/google/javascript/jscomp/TypedScopeCreatorGeminiTest.java:142: error: cannot find symbol\n    [javac]       if (warning.getDescription().contains(\"inconsistent return type\")) {\n    [javac]                  ^\n    [javac]   symbol:   method getDescription()\n    [javac]   location: variable warning of type JSError\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

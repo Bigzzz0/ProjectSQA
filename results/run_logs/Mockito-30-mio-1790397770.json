@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 30,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Mockito-30-mio-1790397770",
+  "suite_sha256": "74ad49470b35d799875a8b97f1d6156505ae1bdf548bd0688062190a2f2838ea",
+  "test_files": "Reporter_ESTest.java;ReturnsSmartNulls_ESTest.java",
+  "target_classes": "org.mockito.exceptions.Reporter;org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls",
+  "timestamp": "2026-09-26 11:42:50",
+  "evaluation_duration_sec": 28.588,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 75.89,
+  "branch_coverage_percent": 42.86,
+  "failures_count": 0,
+  "error_detail": "notation,Field) in AnnotationEngine has been deprecated\n    [javac]     public Object createMockFor(Annotation annotation, Field field) {\n    [javac]                   ^\n    [javac] /tmp/d4j_eval/Mockito_30f/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = accessibleObject.isAccessible();\n    [javac]                                         ^\n    [javac] 16 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_30f/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_30f/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_30f/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_30f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/Mockito_30f/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_30f/.test_suite/org/mockito/exceptions/Reporter_ESTest.java:498: error: method smartNullPointerException in class Reporter cannot be applied to given types;\n    [javac]         reporter0.smartNullPointerException(location0);\n    [javac]                  ^\n    [javac]   required: Object,Location\n    [javac]   found: Location\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPublicMethodPackagePrivateDeclaringClass",
     "org.apache.commons.lang3.ClassUtilsDeepseekTest::testGetPackageNameString"
-  ]
+  ],
+  "suite_sha256": "522bea7b5a8779569bf119fc84331ebd38d7095b777098d3f8831f7c8bb024e0",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_33b/ClassUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-33-deepseek-1790385607"
 }

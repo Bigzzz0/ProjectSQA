@@ -1,0 +1,21 @@
+{
+  "project": "Jsoup",
+  "bug_id": 29,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-29-gemini-1790379952",
+  "suite_sha256": "fb214063030b89d99c2d813ba2c3895d6c60dddbe44b7e88f577451d07d69a70",
+  "test_files": "DocumentGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "timestamp": "2026-09-26 06:46:07",
+  "evaluation_duration_sec": 15.175,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 94.87,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentGeminiTest::testTitlesDefectInnerWhitespaceNormalization"
+  ],
+  "fixed_failures": []
+}

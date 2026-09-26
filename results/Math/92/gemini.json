@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficientLargeDefect"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "2bf3c3844f2173f1380e08444757416ca5f679341e6246179092e40cca305513",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_92b/MathUtilsGeminiTest.java"
+  ],
+  "run_id": "Math-92-gemini-1790393753"
 }

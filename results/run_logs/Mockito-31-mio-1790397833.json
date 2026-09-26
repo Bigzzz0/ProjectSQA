@@ -1,0 +1,19 @@
+{
+  "project": "Mockito",
+  "bug_id": 31,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Mockito-31-mio-1790397833",
+  "suite_sha256": "0f0da1adbdf8b763feac4465fbe9d18707d9a4cfb7cd3cf875cc82cd0b34d1b4",
+  "test_files": "ReturnsSmartNulls_ESTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls",
+  "timestamp": "2026-09-26 11:44:24",
+  "evaluation_duration_sec": 31.077,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 15.79,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

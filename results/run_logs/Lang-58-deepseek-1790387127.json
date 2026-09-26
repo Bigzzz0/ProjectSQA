@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 58,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-58-deepseek-1790387127",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.lang.math.NumberUtils",
+  "timestamp": "2026-09-26 08:45:27",
+  "evaluation_duration_sec": 0.03,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

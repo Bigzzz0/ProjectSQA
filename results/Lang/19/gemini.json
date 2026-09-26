@@ -11,5 +11,10 @@
     "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testUnfinishedEntityWithoutSemicolonDefect",
     "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testOutOfBoundsExactEnd"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "66de2293e31f732ef6888a08759e2aca41c65437edfa2b1ca434df4031d62ce6",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_19b/NumericEntityUnescaperGeminiTest.java"
+  ],
+  "run_id": "Lang-19-gemini-1790384730"
 }

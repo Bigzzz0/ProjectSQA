@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.mockito.internal.util.PrimitivesGeminiTest::testPrimitiveValueOrNullForDoubleReturnsDoubleTypeAndValue"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "495e51c17d7ef268957113411a7a104cf2090488f5a456be195e353432fdbe6a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_26b/PrimitivesGeminiTest.java"
+  ],
+  "run_id": "Mockito-26-gemini-1790397526"
 }

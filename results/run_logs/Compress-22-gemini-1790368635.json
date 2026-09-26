@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 22,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-22-gemini-1790368635",
+  "suite_sha256": "ddfaa5d664052d5100636797e8a1b3a20ff067d974351f08657e1a72cda7e7e0",
+  "test_files": "BZip2CompressorInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "timestamp": "2026-09-26 03:37:20",
+  "evaluation_duration_sec": 5.183,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                 ^\n    [javac] /tmp/d4j_eval/Compress_22b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Unpacker in Pack200 has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Compress_22b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_22b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_22b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_22b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_22b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_22b/.test_suite/org/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStreamGeminiTest.java:13: error: unclosed comment\n    [javac] /* [Branch & Defect Analysis Matrix]\n    [javac] ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

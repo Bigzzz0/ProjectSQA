@@ -1,0 +1,34 @@
+{
+  "project": "Jsoup",
+  "bug_id": 51,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-51-deepseek-1790381018",
+  "suite_sha256": "df2daafbc86e329e857b0e3b5dfc3a322e0e6c266bec413339b40353463bee51",
+  "test_files": "CharacterReaderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "timestamp": "2026-09-26 07:03:56",
+  "evaluation_duration_sec": 17.34,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.44,
+  "branch_coverage_percent": 83.33,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testBoundaryEmptyString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterThenDigitSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testUnconsumeAtZero",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnySortedEmptySearch",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConstructorNullInput",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testMatchesLetterWithNonAscii"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testBoundaryEmptyString",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterThenDigitSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testUnconsumeAtZero",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnySortedEmptySearch",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeLetterSequenceWithNonAscii",
+    "org.jsoup.parser.CharacterReaderDeepseekTest::testConstructorNullInput"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 1,
+  "line_cov": 72.0,
+  "branch_cov": 71.43,
+  "test_file": "FieldUtils_IPOTest.java",
+  "target_classes": "org.joda.time.field.FieldUtils",
+  "buggy_failures": [
+    "org.joda.time.field.FieldUtils_IPOTest::test_safeMultiply_pairwise_123"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "bba6efdd5513540de37be5e5cd305b8609a653495db9f65aed5ddcb611411638",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_15b/org/joda/time/field/FieldUtils_IPOTest.java"
+  ],
+  "run_id": "Time-15-ipo-1790399168"
+}

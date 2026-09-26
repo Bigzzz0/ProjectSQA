@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 86.63,
+  "branch_cov": 83.33,
+  "test_file": "IR_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.IR",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.rhino.IR_ESTest::test114"
+  ],
+  "suite_sha256": "adb0f74fdb485128c2414c91979f2cc5d9e7578c5af2b1dc53b825064d64ae33",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_27b/IR_ESTest.java"
+  ],
+  "run_id": "Closure-27-mio-1790355946"
+}

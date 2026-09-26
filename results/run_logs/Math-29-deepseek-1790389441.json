@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 29,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-29-deepseek-1790389441",
+  "suite_sha256": "97c46bff96a958ddec8f1bc26a9d01be6fb6532b1800d01a3ada571ad208b838",
+  "test_files": "OpenMapRealVectorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.linear.OpenMapRealVector",
+  "timestamp": "2026-09-26 09:24:09",
+  "evaluation_duration_sec": 8.105,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/stat/descriptive/summary/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/analysis/polynomials/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_29b/target/classes/org/apache/commons/math3/fraction/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_29b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_29b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_29b/.test_suite/org/apache/commons/math3/linear/OpenMapRealVectorDeepseekTest.java:269: error: variable v1 is already defined in method testEbeDivideBothZero()\n    [javac]         OpenMapRealVector v1 = new OpenMapRealVector(5);\n    [javac]                           ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

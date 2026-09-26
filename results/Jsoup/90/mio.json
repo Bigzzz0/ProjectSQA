@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 64.93,
+  "branch_cov": 43.16,
+  "test_file": "HttpConnection_ESTest.java",
+  "target_classes": "org.jsoup.helper.HttpConnection",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b8c85afdb79404bfd5395aad35d9286aed05e85e711dbcaefd4e0cd2ea9c0e86",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_90b/HttpConnection_ESTest.java"
+  ],
+  "run_id": "Jsoup-90-mio-1790382850"
+}

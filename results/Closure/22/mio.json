@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 56.98,
+  "branch_cov": 41.67,
+  "test_file": "CheckSideEffects_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckSideEffects_ESTest::test2",
+    "com.google.javascript.jscomp.CheckSideEffects_ESTest::test1"
+  ],
+  "suite_sha256": "0825994ba8084b4084c015d999449ddd6e1d6ceec4b0cf98e2b22f03a32aaebe",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_22b/CheckSideEffects_ESTest.java"
+  ],
+  "run_id": "Closure-22-mio-1790355545"
+}

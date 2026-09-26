@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.31,
+  "branch_cov": 100.0,
+  "test_file": "InlineCostEstimator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineCostEstimator",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.InlineCostEstimator_ESTest::test2"
+  ],
+  "suite_sha256": "3e0093f181720ce3dc28eebba321fc2b879288bf233d8bbf092962ef36a88821",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_28b/InlineCostEstimator_ESTest.java"
+  ],
+  "run_id": "Closure-28-mio-1790356030"
+}

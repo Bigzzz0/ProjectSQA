@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 70.32,
+  "branch_cov": 58.65,
+  "test_file": "StdValueInstantiator_ESTest.java;ValueInstantiator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.ValueInstantiator;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b0849bb5e5a6a3b76db006d77d37a660611769eaad674fc9eca3cf256247db66",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_90b/StdValueInstantiator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_90b/ValueInstantiator_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-90-mio-1790377292"
+}

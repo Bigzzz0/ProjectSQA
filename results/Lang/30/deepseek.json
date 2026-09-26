@@ -14,5 +14,10 @@
     "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAnyBut_StringStringWithSupplementaryChars",
     "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringCharArrayWithSupplementaryChars",
     "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringStringWithSupplementaryChars"
-  ]
+  ],
+  "suite_sha256": "9e0c0ac37ffe0f6afff06460447c2f3333acaf4d6752dce6818618a23f1142d2",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_30b/StringUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-30-deepseek-1790385421"
 }

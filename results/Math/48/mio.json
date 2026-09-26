@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.15,
+  "branch_cov": 86.96,
+  "test_file": "BaseSecantSolver_ESTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "163b16a6bc53af78a916aeceffc8a2b0528beccd2d268713312ab07634ffe3f4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_48b/BaseSecantSolver_ESTest.java"
+  ],
+  "run_id": "Math-48-mio-1790390620"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 8.57,
+  "branch_cov": 0.0,
+  "test_file": "Invocation_ESTest.java",
+  "target_classes": "org.mockito.internal.invocation.Invocation",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fa4a14c393dc8423b02c6332b0cebf7a380c5d595c749232f51a2351c08abca9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_36b/Invocation_ESTest.java"
+  ],
+  "run_id": "Mockito-36-mio-1790398100"
+}

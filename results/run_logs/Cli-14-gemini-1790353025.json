@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-14-gemini-1790353025",
+  "suite_sha256": "b0f8613759383f406b3762598ef4291ff1919bc403cd3ff49ef49275d4efacbd",
+  "test_files": "GroupImplGeminiTest.java",
+  "target_classes": "org.apache.commons.cli2.option.GroupImpl",
+  "timestamp": "2026-09-25 23:17:08",
+  "evaluation_duration_sec": 3.297,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "val/Cli_14b/src/java/org/apache/commons/cli2/validation/ClassValidator.java:84: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                         i.set(clazz.newInstance());\n    [javac]                                    ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 6 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Cli_14b/target/classes/org/apache/commons/cli2\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Cli_14b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Cli_14b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Cli_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_14b/.test_suite/org/apache/commons/cli2/option/GroupImplGeminiTest.java:87: error: cannot find symbol\n    [javac]         final DefaultOption optA = new DefaultOptionBuilder()\n    [javac]                                        ^\n    [javac]   symbol:   class DefaultOptionBuilder\n    [javac]   location: class GroupImplGeminiTest\n    [javac] Note: /tmp/d4j_eval/Cli_14b/.test_suite/org/apache/commons/cli2/option/GroupImplGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

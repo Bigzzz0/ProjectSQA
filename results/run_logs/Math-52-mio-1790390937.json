@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 52,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-52-mio-1790390937",
+  "suite_sha256": "8d91a90988969bf5f5d2982004179656514020158e14a47fb0f721758d3d6fab",
+  "test_files": "Rotation_ESTest.java;Rotation_ESTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "timestamp": "2026-09-26 09:49:25",
+  "evaluation_duration_sec": 28.016,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 89.1,
+  "branch_coverage_percent": 92.62,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

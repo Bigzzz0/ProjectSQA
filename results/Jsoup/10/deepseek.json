@@ -20,5 +20,10 @@
     "org.jsoup.nodes.NodeDeepseekTest::testHasAttrNullKey",
     "org.jsoup.nodes.NodeDeepseekTest::testAttrNullKey",
     "org.jsoup.nodes.NodeDeepseekTest::testRemoveAttrNullKey"
-  ]
+  ],
+  "suite_sha256": "e66c7c4e9e2e9bd7dae26b4ef8a1080af62ac3f201e5626fd36ddcc3052e0461",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_10b/NodeDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-10-deepseek-1790379132"
 }

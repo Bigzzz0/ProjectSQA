@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 34.04,
+  "branch_cov": 6.52,
+  "test_file": "ClosureReverseAbstractInterpreter_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "efab5ea1423a4e90f08d7fbada4660dc863107f44d4bc4408d84227ddef67433",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_111b/ClosureReverseAbstractInterpreter_ESTest.java"
+  ],
+  "run_id": "Closure-111-mio-1790361346"
+}

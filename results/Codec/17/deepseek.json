@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testEqualsRegionMatchesDifferentLength"
-  ]
+  ],
+  "suite_sha256": "58e8aa372ed4c2c642f65fc67843c35ffa5dedb21828a73a918f713ce3b30a3e",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_17b/StringUtilsDeepseekTest.java"
+  ],
+  "run_id": "Codec-17-deepseek-1790366038"
 }

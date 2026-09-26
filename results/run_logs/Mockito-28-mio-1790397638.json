@@ -1,0 +1,19 @@
+{
+  "project": "Mockito",
+  "bug_id": 28,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Mockito-28-mio-1790397638",
+  "suite_sha256": "e71ebd6bec3862d20e0dc8b36a5f616c0340083a2264f239f48b8e4f1ddd40b9",
+  "test_files": "DefaultInjectionEngine_ESTest.java",
+  "target_classes": "org.mockito.internal.configuration.DefaultInjectionEngine",
+  "timestamp": "2026-09-26 11:41:08",
+  "evaluation_duration_sec": 29.551,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 30.0,
+  "branch_coverage_percent": 20.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

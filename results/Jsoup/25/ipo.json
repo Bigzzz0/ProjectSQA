@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 62.22,
+  "branch_cov": 8.7,
+  "test_file": "Tag_IPOTest.java",
+  "target_classes": "org.jsoup.parser.Tag",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "209cb8b9e57db3c48140ea2cd915af5ecef7711363969df5910fa1652dd6dc97",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_25b/org/jsoup/parser/Tag_IPOTest.java"
+  ],
+  "run_id": "Jsoup-25-ipo-1790379746"
+}

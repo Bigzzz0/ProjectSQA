@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 14,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Codec-14-ipo-1790365914",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.codec.language.bm.Lang;org.apache.commons.codec.language.bm.PhoneticEngine;org.apache.commons.codec.language.bm.Rule;src.main.resources.org.apache.commons.codec.language.bm.ash_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.gen_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.sep_lang.txt",
+  "timestamp": "2026-09-26 02:51:54",
+  "evaluation_duration_sec": 0.007,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

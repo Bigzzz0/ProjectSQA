@@ -19,5 +19,10 @@
     "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testSymbolTableExpansionBytesDefect",
     "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testMaxEntriesForReuseResetOnChildRelease",
     "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasic2QuadFindAndAdd"
-  ]
+  ],
+  "suite_sha256": "5e7ea9ea332862050acc0e202bcc170488c401dc66749e196e2dc64fac2d6234",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_11b/ByteQuadsCanonicalizerGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-11-gemini-1790371820"
 }

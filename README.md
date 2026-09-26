@@ -140,16 +140,26 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 
 ## 📊 ตารางสรุปผลการเปรียบเทียบประสิทธิภาพ (Master Benchmark Results)
 
-*สรุปผลการประเมินเชิงประจักษ์บนชุดข้อมูลมาตรฐาน Defects4J ทั้ง 17 โปรเจกต์ (รวม 2,804 การทดลอง):*
+*ค่าปัจจุบันสร้างจากผลประเมินรายบั๊กที่มี provenance ในไฟล์ master ด้านล่างเท่านั้น*
 
-| เครื่องมือ / เทคนิค | N (Evaluations) | Line Coverage (%) | Branch Coverage (%) | Bug-Level FDR (%) | เวลาเฉลี่ยต่อคลาส | จุดเด่นสำคัญ | ข้อจำกัดเชิงประจักษ์ |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
-| **IPO (Native / PICT)** | 173 | **32.57 ± 1.03%** | **23.78 ± 1.93%** | **5.20%** (9 bugs) | **~2.5 วินาที** | สร้าง Test Combinations ได้เร็วระดับวินาที, Pair Coverage ครบ 100%, ไม่มีปัญหา Flaky | ครอบคลุมเฉพาะ Unit Methods ที่มี Primitive/String Parameters, ไม่รองรับ Object ซับซ้อน |
-| **MIO (EvoSuite SBST)** | 1,032 | **68.85 ± 31.26%**<br>*(Eff: 69.66%)* | **68.85 ± 31.26%**<br>*(Eff: 69.66%)* | **0.00%** | **~90.8 วินาที**<br>*(Budget 30-120s)* | ครอบคลุมคำสั่งและกิ่งเงื่อนไขสูงมาก, สร้างเทสสำเร็จถึง 97.7% (834/854 บั๊ก) โดยไม่ต้องเขียนโมเดล | เป็น Regression Test Oracle (สร้าง Assert บนเวอร์ชันที่รัน) จึงไม่สามารถทริกเกอร์บั๊กที่เพิ่งเกิดได้ |
-| **DeepSeek V4 Flash** | 1,072 | **16.28 ± 34.98%**<br>*(Eff: 88.12%)* | **14.86 ± 32.46%**<br>*(Eff: 80.86%)* | **1.12%** (12 bugs) | **~15.0 วินาที** | ออกแบบกรณีทดสอบ Edge Cases ได้ลึก, โควตาสูงถึง 1,000,000 tokens/วัน | ติดปัญหา Compile Error บนคลาสขนาดใหญ่ (เช่น Closure) และมีอาการ Flaky ในบาง Assertions |
-| **Gemini 3.8 Flash** | 527 | **47.08 ± 47.47%**<br>*(Eff: 92.58%)* | **44.25 ± 45.28%**<br>*(Eff: 87.35%)* | **16.70%** (88 bugs) | **~6.0 วินาที** | **ตรวจจับบั๊กจริงสูงสุด (FDR 16.7%)**, ตอบกลับเร็วมาก, Effective Coverage สูงกว่า 92% | โควตาจำกัด (350k tokens/วัน), อาจเกิด Regression Failure หากตรรกะใน Prompt คลาดเคลื่อน |
+| แหล่งข้อมูล | ใช้ตรวจสอบ |
+| :--- | :--- |
+| [Master benchmark CSV](results/master_benchmark_summary.csv) | สถานะและผลวัดของทุกคู่บั๊ก–เทคนิค โดยมีหนึ่งแถวต่อคู่ |
+| [สถิติเชิงพรรณนา JSON](results/master_descriptive_stats.json) | จำนวน suite, จำนวนที่รัน, จำนวนตรวจพบ, FDR และ coverage ที่วัดได้ |
+| [รายงาน analytics](results/advanced_analytics_report.md) | ผลสุดท้ายจาก snapshot ที่ครบ suite ซึ่งมีอยู่ |
+| [บัญชี suite](results/suite_inventory.csv) | suite ที่พบและ hash สำหรับตรวจสอบย้อนกลับ |
 
-> 💡 **หมายเหตุทางวิชาการ:** ค่า *Eff (Effective Coverage)* คำนวณจากชุดทดสอบที่ผ่านการคอมไพล์สำเร็จ (Valid Test Suites) ส่วนค่าปกติในตารางคำนวณบนฐาน $N$ ทั้งหมดตามกฎความซื่อตรงของตัวหาร (Denominator Integrity Rule)
+snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,768 คู่ และมี 648 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
+
+หลัง runner จบหรือหยุดคิว ให้สร้าง snapshot และเอกสารผลใหม่ด้วยคำสั่งบน Windows host:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-member4.txt
+.\.venv\Scripts\python.exe scripts/consolidate_master_results.py
+.\.venv\Scripts\python.exe scripts/advanced_data_analytics.py
+.\.venv\Scripts\python.exe scripts/plot_results.py
+```
 
 ---
 
@@ -177,12 +187,12 @@ python3 scripts/run_benchmark.py --all-bugs --resume
 
 ## 📑 เอกสารส่งมอบและผลการวิเคราะห์ระดับพรีเมียม (Final Deliverables)
 
-* 📄 **[เล่มรายงานฉบับสมบูรณ์ (Final Report - Chapters 1 to 6)](Final_Report.md)**: รายงานฉบับเต็ม 6 บท พร้อมการวิเคราะห์สถิติ Mann-Whitney U, $\hat{A}_{12}$ Effect Size, และแนวทางวิศวกรรม
-* 🎯 **[สไลด์นำเสนอ 16 สไลด์ (Presentation Deck)](PRESENTATION_SLIDES.md)**: สไลด์สำหรับนำเสนอ ผศ.ดร.ชิตสุธา สุ่มเล็ก พร้อม Speaker Notes
-* 🎬 **[คู่มือการสาธิตระบบสด (Live Demo & Reproduction Guide)](DEMO_GUIDE.md)**: สคริปต์สาธิตระบบ Docker, รัน Benchmark จริง, และพิสูจน์สถานะ `BUG_DETECTED`
-* 📊 **[สมุดงาน Excel ข้อมูลรวมระดับพรีเมียม (Master Benchmark Excel Workbook)](results/Master_Benchmark_Results.xlsx)**: ไฟล์ Excel 6 ชีทพร้อมสูตรคำนวณและสีสันจัดหมวดหมู่อย่างเป็นระบบ
+* 📄 **[รายงานโครงการ (Final Report)](Final_Report.md)**: บทวิธีวิจัยและผลจาก benchmark รอบที่ประเมินครบแล้ว
+* 🎯 **[สไลด์นำเสนอ (Presentation Deck)](PRESENTATION_SLIDES.md)**: โครงสไลด์พร้อมแหล่งตัวเลขที่ต้องตรวจจาก snapshot ล่าสุด
+* 🎬 **[คู่มือสาธิตและทำซ้ำ (Live Demo & Reproduction Guide)](DEMO_GUIDE.md)**: ขั้นตอนสาธิต Docker และตรวจหลักฐาน run log
+* 📊 **[สมุดงาน Excel (Master Benchmark Workbook)](results/Master_Benchmark_Results.xlsx)**: สรุปและข้อมูลดิบ พร้อมชีท coverage, FDR, MIO budget, AI generation, ensemble และ data dictionary
 * 📚 **[พจนานุกรมข้อมูล (Data Dictionary & Codebook)](results/DATA_DICTIONARY.md)**: รายละเอียดฟิลด์และข้อกำหนดความซื่อตรงของตัวหาร
-* 📈 **[รายงานวิเคราะห์สถิติขั้นสูง (Advanced Statistical Report)](results/advanced_analytics_report.md)**: รายงานตัวเลขสมมติฐานทางสถิติและการผสานพลัง Ensemble (105 บั๊ก)
+* 📈 **[รายงานวิเคราะห์สถิติขั้นสูง (Advanced Statistical Report)](results/advanced_analytics_report.md)**: สรุปตามผลที่วัดได้และระบุตัวหาร/สถานะครบถ้วน
 
 ---
 

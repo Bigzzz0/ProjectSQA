@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 7,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-7-mio-1790387959",
+  "suite_sha256": "cc0b4b9169f86ed06d2d50fd5a9737c52db1fd60fe9dfd0d89cd8c976d4b8a35",
+  "test_files": "AbstractIntegrator_ESTest.java",
+  "target_classes": "org.apache.commons.math3.ode.AbstractIntegrator",
+  "timestamp": "2026-09-26 08:59:48",
+  "evaluation_duration_sec": 29.322,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 88.46,
+  "branch_coverage_percent": 84.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

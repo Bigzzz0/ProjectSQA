@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 41.04,
+  "branch_cov": 27.78,
+  "test_file": "SingularValueDecompositionImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "044e1b242efff138a789f88584d713aa71935fc31110e285f333573755c528e6",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_76b/org/apache/commons/math/linear/SingularValueDecompositionImpl_IPOTest.java"
+  ],
+  "run_id": "Math-76-ipo-1790392552"
+}

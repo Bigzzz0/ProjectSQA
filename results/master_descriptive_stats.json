@@ -1,437 +1,129 @@
 {
-  "benchmark_dataset": {
-    "total_evaluations": 2804,
-    "total_projects": 17,
-    "projects_list": [
-      "Chart",
-      "Cli",
-      "Closure",
-      "Codec",
-      "Collections",
-      "Compress",
-      "Csv",
-      "Gson",
-      "JacksonCore",
-      "JacksonDatabind",
-      "JacksonXml",
-      "Jsoup",
-      "JxPath",
-      "Lang",
-      "Math",
-      "Mockito",
-      "Time"
-    ]
+  "dataset": {
+    "catalog_bugs": 854,
+    "projects": 17,
+    "expected_bug_technique_rows": 3416,
+    "legacy_or_unsupported_rows_excluded": 16,
+    "results_are_complete": true,
+    "available_suite_evaluations_complete": true,
+    "rows_with_no_suite": 648,
+    "unresolved_rows": 0
   },
-  "technique_comparison": {
-    "IPO (Native / PICT)": {
-      "evaluated_count": 173,
-      "line_coverage_all": {
-        "mean": 32.57,
-        "sd": 1.03
+  "techniques": {
+    "IPO (Native IPO)": {
+      "catalog_bugs": 854,
+      "suite_available_bugs": 257,
+      "attempted_bugs": 257,
+      "successful_benchmark_bugs": 252,
+      "coverage_valid_bugs": 252,
+      "detected_bugs": 37,
+      "fdr_evaluated_percent": 14.4,
+      "fdr_full_catalog_percent": 4.33,
+      "line_coverage": {
+        "mean": 26.76,
+        "sd": 21.5
       },
-      "branch_coverage_all": {
-        "mean": 23.78,
-        "sd": 1.93
+      "branch_coverage": {
+        "mean": 18.67,
+        "sd": 19.33
       },
-      "line_coverage_effective": {
-        "mean": 32.57,
-        "sd": 1.03,
-        "valid_count": 173
-      },
-      "branch_coverage_effective": {
-        "mean": 23.78,
-        "sd": 1.93,
-        "valid_count": 173
-      },
-      "avg_duration_sec": 2.5,
-      "total_test_cases": 42398,
       "status_distribution": {
-        "NOT_DETECTED": 164,
-        "BUG_DETECTED": 9
+        "NOT_DETECTED": 197,
+        "BUG_DETECTED": 37,
+        "FLAKY_OR_REGRESSION": 18,
+        "COMPILE_ERROR": 5
       },
-      "bug_level_fdr_percent": 5.2,
-      "detected_bugs_count": 9
+      "suite_inventory_distribution": {
+        "NO_SUITE": 597,
+        "DONE": 252,
+        "COMPILE_ERROR": 5
+      }
     },
     "MIO (EvoSuite SBST)": {
-      "evaluated_count": 1032,
-      "line_coverage_all": {
-        "mean": 68.85,
-        "sd": 31.26
+      "catalog_bugs": 854,
+      "suite_available_bugs": 834,
+      "attempted_bugs": 834,
+      "successful_benchmark_bugs": 797,
+      "coverage_valid_bugs": 797,
+      "detected_bugs": 5,
+      "fdr_evaluated_percent": 0.6,
+      "fdr_full_catalog_percent": 0.59,
+      "line_coverage": {
+        "mean": 63.85,
+        "sd": 34.26
       },
-      "branch_coverage_all": {
-        "mean": 68.85,
-        "sd": 31.26
+      "branch_coverage": {
+        "mean": 56.51,
+        "sd": 35.94
       },
-      "line_coverage_effective": {
-        "mean": 69.66,
-        "sd": 30.53,
-        "valid_count": 1020
-      },
-      "branch_coverage_effective": {
-        "mean": 69.66,
-        "sd": 30.53,
-        "valid_count": 1020
-      },
-      "avg_duration_sec": 90.84,
-      "total_test_cases": 25800,
       "status_distribution": {
-        "NOT_DETECTED": 1032
+        "COMPILE_ERROR": 37,
+        "FLAKY_OR_REGRESSION": 176,
+        "NOT_DETECTED": 616,
+        "BUG_DETECTED": 5
       },
-      "bug_level_fdr_percent": 0.0,
-      "detected_bugs_count": 0
+      "suite_inventory_distribution": {
+        "COMPILE_ERROR": 37,
+        "DONE": 797,
+        "NO_SUITE": 20
+      }
     },
     "DeepSeek V4 Flash": {
-      "evaluated_count": 1072,
-      "line_coverage_all": {
-        "mean": 16.28,
-        "sd": 34.98
+      "catalog_bugs": 854,
+      "suite_available_bugs": 836,
+      "attempted_bugs": 836,
+      "successful_benchmark_bugs": 191,
+      "coverage_valid_bugs": 191,
+      "detected_bugs": 11,
+      "fdr_evaluated_percent": 1.32,
+      "fdr_full_catalog_percent": 1.29,
+      "line_coverage": {
+        "mean": 77.99,
+        "sd": 30.88
       },
-      "branch_coverage_all": {
-        "mean": 14.86,
-        "sd": 32.46
+      "branch_coverage": {
+        "mean": 70.25,
+        "sd": 31.18
       },
-      "line_coverage_effective": {
-        "mean": 88.12,
-        "sd": 17.02,
-        "valid_count": 198
-      },
-      "branch_coverage_effective": {
-        "mean": 80.86,
-        "sd": 19.86,
-        "valid_count": 197
-      },
-      "avg_duration_sec": 15.0,
-      "total_test_cases": 12275,
       "status_distribution": {
-        "FLAKY_OR_REGRESSION": 197,
-        "COMPILE_ERROR": 856,
-        "BUG_DETECTED": 12,
-        "NOT_DETECTED": 7
+        "COMPILE_ERROR": 645,
+        "FLAKY_OR_REGRESSION": 174,
+        "NOT_DETECTED": 6,
+        "BUG_DETECTED": 11
       },
-      "bug_level_fdr_percent": 1.12,
-      "detected_bugs_count": 12
+      "suite_inventory_distribution": {
+        "COMPILE_ERROR": 645,
+        "DONE": 191,
+        "NO_SUITE": 18
+      }
     },
     "Gemini 3.8 Flash": {
-      "evaluated_count": 527,
-      "line_coverage_all": {
-        "mean": 47.08,
-        "sd": 47.47
+      "catalog_bugs": 854,
+      "suite_available_bugs": 841,
+      "attempted_bugs": 841,
+      "successful_benchmark_bugs": 422,
+      "coverage_valid_bugs": 422,
+      "detected_bugs": 107,
+      "fdr_evaluated_percent": 12.72,
+      "fdr_full_catalog_percent": 12.53,
+      "line_coverage": {
+        "mean": 86.24,
+        "sd": 25.14
       },
-      "branch_coverage_all": {
-        "mean": 44.25,
-        "sd": 45.28
+      "branch_coverage": {
+        "mean": 79.45,
+        "sd": 26.98
       },
-      "line_coverage_effective": {
-        "mean": 92.58,
-        "sd": 14.53,
-        "valid_count": 268
-      },
-      "branch_coverage_effective": {
-        "mean": 87.35,
-        "sd": 16.63,
-        "valid_count": 267
-      },
-      "avg_duration_sec": 6.0,
-      "total_test_cases": 6313,
       "status_distribution": {
-        "BUG_DETECTED": 88,
-        "FLAKY_OR_REGRESSION": 192,
-        "COMPILE_ERROR": 236,
+        "COMPILE_ERROR": 419,
+        "BUG_DETECTED": 107,
+        "FLAKY_OR_REGRESSION": 304,
         "NOT_DETECTED": 11
       },
-      "bug_level_fdr_percent": 16.7,
-      "detected_bugs_count": 88
-    }
-  },
-  "project_comparison": {
-    "Chart": {
-      "IPO (Native / PICT)": {
-        "count": 3,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 28,
-        "line_mean": 82.03
-      },
-      "DeepSeek V4 Flash": {
-        "count": 52,
-        "line_mean": 11.8
-      },
-      "Gemini 3.8 Flash": {
-        "count": 34,
-        "line_mean": 42.15
-      }
-    },
-    "Cli": {
-      "IPO (Native / PICT)": {
-        "count": 5,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 51,
-        "line_mean": 92.3
-      },
-      "DeepSeek V4 Flash": {
-        "count": 40,
-        "line_mean": 2.44
-      },
-      "Gemini 3.8 Flash": {
-        "count": 40,
-        "line_mean": 9.82
-      }
-    },
-    "Closure": {
-      "IPO (Native / PICT)": {
-        "count": 11,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 226,
-        "line_mean": 36.71
-      },
-      "DeepSeek V4 Flash": {
-        "count": 4,
-        "line_mean": 0.0
-      },
-      "Gemini 3.8 Flash": {
-        "count": 2,
-        "line_mean": 94.36
-      }
-    },
-    "Codec": {
-      "IPO (Native / PICT)": {
-        "count": 12,
-        "line_mean": 32.36
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 26,
-        "line_mean": 86.03
-      },
-      "DeepSeek V4 Flash": {
-        "count": 49,
-        "line_mean": 25.08
-      },
-      "Gemini 3.8 Flash": {
-        "count": 36,
-        "line_mean": 64.55
-      }
-    },
-    "Collections": {
-      "IPO (Native / PICT)": {
-        "count": 12,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 28,
-        "line_mean": 85.31
-      },
-      "DeepSeek V4 Flash": {
-        "count": 57,
-        "line_mean": 39.78
-      },
-      "Gemini 3.8 Flash": {
-        "count": 30,
-        "line_mean": 71.59
-      }
-    },
-    "Compress": {
-      "IPO (Native / PICT)": {
-        "count": 30,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 58,
-        "line_mean": 71.15
-      },
-      "DeepSeek V4 Flash": {
-        "count": 75,
-        "line_mean": 21.8
-      },
-      "Gemini 3.8 Flash": {
-        "count": 66,
-        "line_mean": 38.18
-      }
-    },
-    "Csv": {
-      "IPO (Native / PICT)": {
-        "count": 4,
-        "line_mean": 35.86
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 17,
-        "line_mean": 90.95
-      },
-      "DeepSeek V4 Flash": {
-        "count": 37,
-        "line_mean": 38.33
-      },
-      "Gemini 3.8 Flash": {
-        "count": 17,
-        "line_mean": 58.0
-      }
-    },
-    "Gson": {
-      "IPO (Native / PICT)": {
-        "count": 1,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 19,
-        "line_mean": 68.2
-      },
-      "DeepSeek V4 Flash": {
-        "count": 19,
-        "line_mean": 22.69
-      },
-      "Gemini 3.8 Flash": {
-        "count": 19,
-        "line_mean": 61.16
-      }
-    },
-    "JacksonCore": {
-      "MIO (EvoSuite SBST)": {
-        "count": 34,
-        "line_mean": 61.67
-      },
-      "DeepSeek V4 Flash": {
-        "count": 27,
-        "line_mean": 15.05
-      },
-      "Gemini 3.8 Flash": {
-        "count": 2,
-        "line_mean": 95.98
-      }
-    },
-    "JacksonDatabind": {
-      "IPO (Native / PICT)": {
-        "count": 4,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 152,
-        "line_mean": 64.88
-      },
-      "DeepSeek V4 Flash": {
-        "count": 136,
-        "line_mean": 4.39
-      },
-      "Gemini 3.8 Flash": {
-        "count": 3,
-        "line_mean": 0.0
-      }
-    },
-    "JacksonXml": {
-      "MIO (EvoSuite SBST)": {
-        "count": 6,
-        "line_mean": 33.02
-      },
-      "DeepSeek V4 Flash": {
-        "count": 7,
-        "line_mean": 0.0
-      },
-      "Gemini 3.8 Flash": {
-        "count": 7,
-        "line_mean": 66.42
-      }
-    },
-    "Jsoup": {
-      "IPO (Native / PICT)": {
-        "count": 26,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 121,
-        "line_mean": 74.81
-      },
-      "DeepSeek V4 Flash": {
-        "count": 174,
-        "line_mean": 11.93
-      },
-      "Gemini 3.8 Flash": {
-        "count": 20,
-        "line_mean": 29.17
-      }
-    },
-    "JxPath": {
-      "MIO (EvoSuite SBST)": {
-        "count": 35,
-        "line_mean": 84.99
-      },
-      "DeepSeek V4 Flash": {
-        "count": 45,
-        "line_mean": 0.0
-      },
-      "Gemini 3.8 Flash": {
-        "count": 44,
-        "line_mean": 20.03
-      }
-    },
-    "Lang": {
-      "IPO (Native / PICT)": {
-        "count": 28,
-        "line_mean": 32.49
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 61,
-        "line_mean": 88.14
-      },
-      "DeepSeek V4 Flash": {
-        "count": 78,
-        "line_mean": 36.66
-      },
-      "Gemini 3.8 Flash": {
-        "count": 64,
-        "line_mean": 72.4
-      }
-    },
-    "Math": {
-      "IPO (Native / PICT)": {
-        "count": 31,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 113,
-        "line_mean": 91.15
-      },
-      "DeepSeek V4 Flash": {
-        "count": 180,
-        "line_mean": 16.91
-      },
-      "Gemini 3.8 Flash": {
-        "count": 109,
-        "line_mean": 54.19
-      }
-    },
-    "Mockito": {
-      "MIO (EvoSuite SBST)": {
-        "count": 26,
-        "line_mean": 58.72
-      },
-      "DeepSeek V4 Flash": {
-        "count": 39,
-        "line_mean": 12.82
-      },
-      "Gemini 3.8 Flash": {
-        "count": 2,
-        "line_mean": 0.0
-      }
-    },
-    "Time": {
-      "IPO (Native / PICT)": {
-        "count": 6,
-        "line_mean": 32.5
-      },
-      "MIO (EvoSuite SBST)": {
-        "count": 31,
-        "line_mean": 89.59
-      },
-      "DeepSeek V4 Flash": {
-        "count": 53,
-        "line_mean": 5.14
-      },
-      "Gemini 3.8 Flash": {
-        "count": 32,
-        "line_mean": 31.13
+      "suite_inventory_distribution": {
+        "COMPILE_ERROR": 419,
+        "DONE": 422,
+        "NO_SUITE": 13
       }
     }
   }

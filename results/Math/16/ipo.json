@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 29.51,
+  "branch_cov": 31.77,
+  "test_file": "FastMath_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.util.FastMath",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ee9108a6ddfd250de0b434afd528ae3c1fae70ceabe59a52b10f0c3a2e1f0255",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_16b/org/apache/commons/math3/util/FastMath_IPOTest.java"
+  ],
+  "run_id": "Math-16-ipo-1790388432"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 51.14,
+  "branch_cov": 55.17,
+  "test_file": "StringCollectionDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StringCollectionDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "95ddfbceb2f57c89ee31a5602fdcef856546709a43e18d34037c1c3dfa195429",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_112b/StringCollectionDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-112-mio-1790378549"
+}

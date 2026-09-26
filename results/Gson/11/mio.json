@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.0,
+  "branch_cov": 31.63,
+  "test_file": "TypeAdapters_ESTest.java",
+  "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "12edf2eed267962dcd2d3b081e70f89405908cc927080973b85cf8a0cd591770",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_11b/TypeAdapters_ESTest.java"
+  ],
+  "run_id": "Gson-11-mio-1790371100"
+}

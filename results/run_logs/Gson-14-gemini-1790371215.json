@@ -1,0 +1,31 @@
+{
+  "project": "Gson",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-14-gemini-1790371215",
+  "suite_sha256": "3b7cfd03fdb0b8766cdc4bc709fde654c4747a74e51f3bd2f484a87452c3b798",
+  "test_files": "$Gson$TypesGeminiTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "timestamp": "2026-09-26 04:20:29",
+  "evaluation_duration_sec": 13.451,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.06,
+  "branch_coverage_percent": 85.26,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testDoubleSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testSubSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testDoubleSubtype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testSuperSubtype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
+  ],
+  "fixed_failures": [
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetGenericSupertype",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testGetArrayComponentTypeNonArrayThrows",
+    "com.google.gson.internal.$Gson$TypesGeminiTest::testRecursiveResolveSimple"
+  ]
+}

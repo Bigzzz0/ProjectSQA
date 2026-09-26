@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 69,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-69-deepseek-1790392172",
+  "suite_sha256": "da59245045e52ff0d64a066729706963728c44aeb117f278fe2e2f3bec9c4435",
+  "test_files": "PearsonsCorrelationDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.correlation.PearsonsCorrelation",
+  "timestamp": "2026-09-26 10:09:39",
+  "evaluation_duration_sec": 7.523,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ludeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 414 source files to /tmp/d4j_eval/Math_69b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_69b/src/main/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_69b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_69b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_69b/.test_suite/org/apache/commons/math/stat/correlation/PearsonsCorrelationDeepseekTest.java:33: error: ')' expected\n    [javac]     @Test(expected = IllegalArgumentException.class, time out = 4000)\n    [javac]                                                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

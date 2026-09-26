@@ -12,5 +12,10 @@
   "fixed_failures": [
     "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testSolutionBasicRowHandlingAndCollision",
     "org.apache.commons.math.optimization.linear.SimplexTableauGeminiTest::testMath286Defect"
-  ]
+  ],
+  "suite_sha256": "c20fe295f43e6278fea25c056e6e70f33b552a339a595316a373876f97d29f88",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_83b/SimplexTableauGeminiTest.java"
+  ],
+  "run_id": "Math-83-gemini-1790393146"
 }

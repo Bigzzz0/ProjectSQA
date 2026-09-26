@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.24,
+  "branch_cov": 3.32,
+  "test_file": "TypeInference_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeInference",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "efdc4f24aedd54160b758a2e27d1e03441102e336e502c4dfcd111253e197283",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_35b/TypeInference_ESTest.java"
+  ],
+  "run_id": "Closure-35-mio-1790356603"
+}

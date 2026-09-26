@@ -1,0 +1,22 @@
+{
+  "project": "Csv",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Csv-1-gemini-1790370170",
+  "suite_sha256": "c09d00c0e2e3b79e365ef46f9692b9ab1421022d45056e4f188af05361285b84",
+  "test_files": "ExtendedBufferedReaderGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
+  "timestamp": "2026-09-26 04:03:04",
+  "evaluation_duration_sec": 14.036,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 95.45,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCRLF_CSV75",
+    "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCarriageReturn_CSV75"
+  ],
+  "fixed_failures": []
+}

@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.UtilGeminiTest"
-  ]
+  ],
+  "suite_sha256": "348910326748de95c48d5bc5b60ca7567f25277f3252a6d0ad9ed96a99b4f390",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_29b/UtilGeminiTest.java"
+  ],
+  "run_id": "Cli-29-gemini-1790353550"
 }

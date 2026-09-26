@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.53,
+  "branch_cov": 1.35,
+  "test_file": "XmlTokenStream_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2441a1e1d243c1da63e1762e904d2cba5db97793a773b81f18551b6dd142115d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonXml_2b/XmlTokenStream_ESTest.java"
+  ],
+  "run_id": "JacksonXml-2-mio-1790378632"
+}

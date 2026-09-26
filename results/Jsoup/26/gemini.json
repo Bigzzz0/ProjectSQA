@@ -16,5 +16,10 @@
     "org.jsoup.safety.CleanerGeminiTest::testHandlesPureFramesetDocumentWithoutHead",
     "org.jsoup.safety.CleanerGeminiTest::testIsValidReturnsTrueForFullyCompliantHtml",
     "org.jsoup.safety.CleanerGeminiTest::testHandlesFramesetsIsValidDoesNotThrowNPE"
-  ]
+  ],
+  "suite_sha256": "8cda6c1a94d625ed898afa8171d49a470298b126283bc0529650bc8e5827b175",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_26b/CleanerGeminiTest.java"
+  ],
+  "run_id": "Jsoup-26-gemini-1790379828"
 }

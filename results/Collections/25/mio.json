@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 82.63,
+  "branch_cov": 76.98,
+  "test_file": "IteratorUtils_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.IteratorUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3513b19a129e9c26b3d7a4b123b7307b05c8d7879d17c1a76587983fb2ea8f86",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_25b/IteratorUtils_ESTest.java"
+  ],
+  "run_id": "Collections-25-mio-1790367393"
+}

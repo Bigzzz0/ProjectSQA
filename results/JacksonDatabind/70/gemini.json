@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testFindDeserializeAndSetUnwrapsInvocationTargetException"
-  ]
+  ],
+  "suite_sha256": "c92368786a2bdc9d0a015900f8422e5d3f2039054979d2099283b59135cce4d6",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_70b/BeanPropertyMapGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-70-gemini-1790376252"
 }

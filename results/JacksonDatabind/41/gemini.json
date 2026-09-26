@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testConstructMapTypeAndProperties"
-  ]
+  ],
+  "suite_sha256": "f982bc20c37e0c28bdca03932ca6554500e4893d04427ab612db2835bb02780a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_41b/TypeFactoryGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-41-gemini-1790374663"
 }

@@ -1,0 +1,41 @@
+{
+  "project": "Closure",
+  "bug_id": 127,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-127-gemini-1790362463",
+  "suite_sha256": "9197aec5c8850d4966cdde3604087514d3815b3bb3856316d622de8face33424",
+  "test_files": "UnreachableCodeEliminationGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "timestamp": "2026-09-26 01:54:58",
+  "evaluation_duration_sec": 34.795,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.34,
+  "branch_coverage_percent": 86.15,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInsideDeadBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testSyntheticRootDirectInvocation",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInWhileConditionFalse",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDontRemoveBreakInTryFinally",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testNestedEmptyBlocksInComputeFollowing",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoWhilePreserved",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInIfElseBranches",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428a",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428c",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnconditionalBranchTargetingAnotherBranch"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInsideDeadBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testSyntheticRootDirectInvocation",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInWhileConditionFalse",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDontRemoveBreakInTryFinally",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testNestedEmptyBlocksInComputeFollowing",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoWhilePreserved",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeInIfElseBranches",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428a",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testIssue4177428c",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnconditionalBranchTargetingAnotherBranch"
+  ]
+}

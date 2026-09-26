@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 28,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-28-gemini-1790389361",
+  "suite_sha256": "bdac01a1261b2db5d3ecae7af374605dd8873867536b15b3760767a1cd6740cb",
+  "test_files": "SimplexSolverGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.linear.SimplexSolver",
+  "timestamp": "2026-09-26 09:23:06",
+  "evaluation_duration_sec": 25.466,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 95.83,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

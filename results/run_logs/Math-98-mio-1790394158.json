@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 98,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-98-mio-1790394158",
+  "suite_sha256": "9b53834821ccada31b884c15744dd0f392c1fc6cc696d4f7557ea40a6d35676c",
+  "test_files": "BigMatrixImpl_ESTest.java;RealMatrixImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.linear.BigMatrixImpl;org.apache.commons.math.linear.RealMatrixImpl",
+  "timestamp": "2026-09-26 10:43:04",
+  "evaluation_duration_sec": 25.666,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 85.62,
+  "branch_coverage_percent": 83.21,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

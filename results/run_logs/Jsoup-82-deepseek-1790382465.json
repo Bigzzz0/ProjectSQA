@@ -1,0 +1,31 @@
+{
+  "project": "Jsoup",
+  "bug_id": 82,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-82-deepseek-1790382465",
+  "suite_sha256": "86d2b29413a9e9a672b45a70508197470540128b1a9ef3174e40cb2e4e7b0334",
+  "test_files": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 07:28:01",
+  "evaluation_duration_sec": 15.778,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.92,
+  "branch_coverage_percent": 72.92,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamWithUnsupportedCharset",
+    "org.jsoup.helper.DataUtilDeepseekTest::testValidateCharsetWithQuotesAndSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testGetCharsetFromContentTypeWithExtraSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamNotFullyRead",
+    "org.jsoup.helper.DataUtilDeepseekTest::testFallbackToUtfIfCantEncode"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamWithUnsupportedCharset",
+    "org.jsoup.helper.DataUtilDeepseekTest::testValidateCharsetWithQuotesAndSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testGetCharsetFromContentTypeWithExtraSpaces",
+    "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamNotFullyRead",
+    "org.jsoup.helper.DataUtilDeepseekTest::testFallbackToUtfIfCantEncode"
+  ]
+}

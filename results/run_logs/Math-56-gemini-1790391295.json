@@ -1,0 +1,23 @@
+{
+  "project": "Math",
+  "bug_id": 56,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-56-gemini-1790391295",
+  "suite_sha256": "17808c31919cbc09a6d2506b0942e42e70671054175980e7e115d1c0e43cef26",
+  "test_files": "MultidimensionalCounterGeminiTest.java",
+  "target_classes": "org.apache.commons.math.util.MultidimensionalCounter",
+  "timestamp": "2026-09-26 09:55:21",
+  "evaluation_duration_sec": 25.117,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.67,
+  "branch_coverage_percent": 97.06,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testIterationConsistency",
+    "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectSingleDimensionGetCounts",
+    "org.apache.commons.math.util.MultidimensionalCounterGeminiTest::testDefectGetCountsLastDimension"
+  ],
+  "fixed_failures": []
+}

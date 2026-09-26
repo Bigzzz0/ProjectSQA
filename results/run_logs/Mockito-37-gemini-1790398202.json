@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 37,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-37-gemini-1790398202",
+  "suite_sha256": "44bed3e82030b0ed81d842489d4b5a9f0aadac1fac94b4f1408b3f928c574d70",
+  "test_files": "AnswersValidatorGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.answers.AnswersValidator",
+  "timestamp": "2026-09-26 11:50:08",
+  "evaluation_duration_sec": 6.229,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "             return (IMockitoConfiguration) configClass.newInstance();\n    [javac]                                                       ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] /tmp/d4j_eval/Mockito_37b/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = field.isAccessible();\n    [javac]                              ^\n    [javac] 20 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_37b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_37b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_37b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_37b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_37b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_37b/.test_suite/org/mockito/internal/stubbing/answers/AnswersValidatorGeminiTest.java:10: error: cannot find symbol\n    [javac] import org.mockito.internal.invocation.InvocationBuilder;\n    [javac]                                       ^\n    [javac]   symbol:   class InvocationBuilder\n    [javac]   location: package org.mockito.internal.invocation\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

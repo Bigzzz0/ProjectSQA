@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 35,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-35-gemini-1790389780",
+  "suite_sha256": "8e29d0a9a9e30e33f4e890b485d1bb8a685e2e548321befd3e0b31d1b3ba61fa",
+  "test_files": "ElitisticListPopulationGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.genetics.ElitisticListPopulation",
+  "timestamp": "2026-09-26 09:29:48",
+  "evaluation_duration_sec": 7.879,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "neral/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/stat/descriptive/summary/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/analysis/polynomials/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_35b/target/classes/org/apache/commons/math3/fraction/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_35b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_35b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_35b/.test_suite/org/apache/commons/math3/genetics/ElitisticListPopulationGeminiTest.java:52: error: DummyChromosome is not abstract and does not override abstract method fitness() in Fitness\n    [javac]     private static class DummyChromosome extends Chromosome {\n    [javac]                    ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

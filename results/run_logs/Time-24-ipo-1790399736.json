@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 24,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Time-24-ipo-1790399736",
+  "suite_sha256": "0d816860317e7593a91975edd5962c6bd8dfb5554ad7ec4f86feba0f0ab12097",
+  "test_files": "DateTimeParserBucket_IPOTest.java",
+  "target_classes": "org.joda.time.format.DateTimeParserBucket",
+  "timestamp": "2026-09-26 12:16:02",
+  "evaluation_duration_sec": 25.632,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 25.69,
+  "branch_coverage_percent": 14.06,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

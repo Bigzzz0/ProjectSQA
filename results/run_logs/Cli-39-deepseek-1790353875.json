@@ -1,0 +1,40 @@
+{
+  "project": "Cli",
+  "bug_id": 39,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-39-deepseek-1790353875",
+  "suite_sha256": "291af84a686051b085b6b779c4ffa2f486ecd8ba9fe7cc3d945913d05b4b39a3",
+  "test_files": "TypeHandlerDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "timestamp": "2026-09-25 23:31:30",
+  "evaluation_duration_sec": 14.725,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.62,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testTypeHandlerConstructorIsPrivate",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateClassNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateFileNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithFileClassAndNullString",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateNumberNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithNullStringAndNumberClass",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithNonExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueStringClassExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithObjectClassAndNullString"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testTypeHandlerConstructorIsPrivate",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateClassNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateFileNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithFileClassAndNullString",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateNumberNull",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithNullStringAndNumberClass",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testExistingFilePatternWithNonExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueStringClassExistingFile",
+    "org.apache.commons.cli.TypeHandlerDeepseekTest::testCreateValueWithObjectClassAndNullString"
+  ]
+}

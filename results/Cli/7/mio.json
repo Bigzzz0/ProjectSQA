@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "PatternBuilder_ESTest.java",
+  "target_classes": "org.apache.commons.cli2.builder.PatternBuilder",
+  "buggy_failures": [
+    "org.apache.commons.cli2.builder.PatternBuilder_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.builder.PatternBuilder_ESTest"
+  ],
+  "suite_sha256": "40706366c8ab864ce431377d221786cfc8d0476ac5fc7bda519bf13a00d1d513",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_7b/PatternBuilder_ESTest.java"
+  ],
+  "run_id": "Cli-7-mio-1790352777"
+}

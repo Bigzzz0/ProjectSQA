@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 7,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-7-deepseek-1790371662",
+  "suite_sha256": "1dc92a8f2920d82ec061d05b0197c179a3ccfc341228873fb31195fe4ce1b725",
+  "test_files": "JsonWriteContextDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.JsonWriteContext",
+  "timestamp": "2026-09-26 04:27:46",
+  "evaluation_duration_sec": 3.405,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/type/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_7b/target/classes/com/fasterxml/jackson/core/base/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_7b/target/classes/com/fasterxml/jackson/core/format/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_7b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_7b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_7b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_7b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_7b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_7b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonCore_7b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_7b/.test_suite/com/fasterxml/jackson/core/json/JsonWriteContextDeepseekTest.java:246: error: ';' expected\n    [javac]         JsonWriteContext root = JsonWriteContext.createRootContext        JsonWriteContext obj = root.createChildObjectContext();\n    [javac]                                                                   ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

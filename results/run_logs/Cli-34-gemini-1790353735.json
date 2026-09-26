@@ -1,0 +1,25 @@
+{
+  "project": "Cli",
+  "bug_id": 34,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-34-gemini-1790353735",
+  "suite_sha256": "3545fa4651864466d139ad408f202667361f6f9d8ed87114ea75785cd72e175d",
+  "test_files": "OptionBuilderGeminiTest.java;OptionGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.Option;org.apache.commons.cli.OptionBuilder",
+  "timestamp": "2026-09-25 23:29:08",
+  "evaluation_duration_sec": 12.578,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.OptionBuilderGeminiTest",
+    "org.apache.commons.cli.OptionGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.OptionBuilderGeminiTest",
+    "org.apache.commons.cli.OptionGeminiTest"
+  ]
+}

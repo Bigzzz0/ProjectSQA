@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 8,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-8-mio-1790366508",
+  "suite_sha256": "da690b76c87172f3622462d0110c991ef7393844522fa58ddf9917c85b975433",
+  "test_files": "UnboundedFifoBuffer_ESTest.java",
+  "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+  "timestamp": "2026-09-26 03:02:05",
+  "evaluation_duration_sec": 17.468,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 72.73,
+  "branch_coverage_percent": 77.78,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

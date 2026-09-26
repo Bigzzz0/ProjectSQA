@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 67.07,
+  "branch_cov": 59.02,
+  "test_file": "DeserializerCache_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.DeserializerCache",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "618c758c34dac4d86fcac834efd3482387e60f73e8163479d0a39c231b535e32",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_91b/DeserializerCache_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-91-mio-1790377359"
+}

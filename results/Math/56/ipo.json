@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 37.33,
+  "branch_cov": 38.24,
+  "test_file": "MultidimensionalCounter_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.MultidimensionalCounter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c1472403cad7c1172e3e72f90b97d166ffdc191d82dbfc62639002855ae0d559",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_56b/org/apache/commons/math/util/MultidimensionalCounter_IPOTest.java"
+  ],
+  "run_id": "Math-56-ipo-1790391236"
+}

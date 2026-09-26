@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 22,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-22-mio-1790373501",
+  "suite_sha256": "1c7a29d8b971b77f809467f75c858227d34b4e4eaa9ed4c09c3d88c5add50d66",
+  "test_files": "BasicSerializerFactory_ESTest.java;BeanSerializerFactory_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.BasicSerializerFactory;com.fasterxml.jackson.databind.ser.BeanSerializerFactory",
+  "timestamp": "2026-09-26 04:58:21",
+  "evaluation_duration_sec": 28.903,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 54.39,
+  "branch_coverage_percent": 38.39,
+  "failures_count": 0,
+  "error_detail": "cksonDatabind_22f/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_22f/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_22f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/JacksonDatabind_22f/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_22f/.test_suite/com/fasterxml/jackson/databind/ser/BasicSerializerFactory_ESTest.java:229: error: incompatible types: SerializationConfig cannot be converted to SerializerProvider\n    [javac]       JsonSerializer<?> jsonSerializer0 = beanSerializerFactory0.buildArraySerializer((SerializationConfig) null, arrayType0, (BeanDescription) null, true, (TypeSerializer) null, beanSerializer0);\n    [javac]                                                                                       ^\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_22f/.test_suite/com/fasterxml/jackson/databind/ser/BasicSerializerFactory_ESTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

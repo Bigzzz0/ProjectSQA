@@ -16,5 +16,10 @@
     "org.jsoup.helper.DataUtilDeepseekTest::loadInputStreamWithBOM",
     "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithNullCharsetAndBOM",
     "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithSpaces"
-  ]
+  ],
+  "suite_sha256": "6e4888cfdaca4f53fda4003322be1711709033f6302a795b8e53ee567c49b511",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_20b/DataUtilDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-20-deepseek-1790379556"
 }

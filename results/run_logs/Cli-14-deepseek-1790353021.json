@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-14-deepseek-1790353021",
+  "suite_sha256": "18081e40c983fee6e7b25899f2ee6a27d29616e1ae340d9393c4c959f92a9ce0",
+  "test_files": "GroupImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli2.option.GroupImpl",
+  "timestamp": "2026-09-25 23:17:05",
+  "evaluation_duration_sec": 3.418,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                                                        ^\n    [javac] /tmp/d4j_eval/Cli_14b/src/java/org/apache/commons/cli2/validation/ClassValidator.java:84: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                         i.set(clazz.newInstance());\n    [javac]                                    ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 6 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Cli_14b/target/classes/org/apache/commons/cli2\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Cli_14b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Cli_14b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Cli_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_14b/.test_suite/org/apache/commons/cli2/option/GroupImplDeepseekTest.java:187: error: method addOption(Option) is already defined in class TestCommandLine\n    [javac]         public void addOption(Option option) {\n    [javac]                     ^\n    [javac] Note: /tmp/d4j_eval/Cli_14b/.test_suite/org/apache/commons/cli2/option/GroupImplDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

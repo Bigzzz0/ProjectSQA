@@ -9,5 +9,10 @@
   "buggy_failures": [
     "com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryGeminiTest::testPrimitiveFieldAnnotationTakesPrecedenceOverDefault"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "bb0f76e48fb937f28ab8a2031f712a6960178e2dc14b5abc873e79aac4ea5ce8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_10b/ReflectiveTypeAdapterFactoryGeminiTest.java"
+  ],
+  "run_id": "Gson-10-gemini-1790371085"
 }

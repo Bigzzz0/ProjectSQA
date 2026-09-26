@@ -1,0 +1,25 @@
+{
+  "project": "Chart",
+  "bug_id": 18,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-18-mio-1790352042",
+  "suite_sha256": "679271321a80bf4458e8b54f581ab8de4bbc86268cb1a8256fd6cc30bfb6fc65",
+  "test_files": "DefaultKeyedValues2D_ESTest.java;DefaultKeyedValues_ESTest.java",
+  "target_classes": "org.jfree.data.DefaultKeyedValues;org.jfree.data.DefaultKeyedValues2D",
+  "timestamp": "2026-09-25 23:01:09",
+  "evaluation_duration_sec": 26.384,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.25,
+  "branch_coverage_percent": 96.72,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.DefaultKeyedValues2D_ESTest::test21"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.DefaultKeyedValues2D_ESTest::test21",
+    "org.jfree.data.DefaultKeyedValues_ESTest::test07",
+    "org.jfree.data.DefaultKeyedValues_ESTest::test20"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 23,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-23-mio-1790372203",
+  "suite_sha256": "39776c4e4dafbf4918e047c98f6bb3a4347c7065be9f2ec4768cbb2309f8b9b6",
+  "test_files": "DefaultPrettyPrinter_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.DefaultPrettyPrinter",
+  "timestamp": "2026-09-26 04:37:02",
+  "evaluation_duration_sec": 19.145,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.23,
+  "branch_coverage_percent": 92.5,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

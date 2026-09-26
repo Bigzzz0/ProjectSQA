@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 42.36,
+  "branch_cov": 28.26,
+  "test_file": "MinMaxCategoryRenderer_ESTest.java",
+  "target_classes": "org.jfree.chart.renderer.category.MinMaxCategoryRenderer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6f5e6576cb5e8e3a454fffc75554a3641fcaf06255a4edc6fb30c4789922b32a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_23b/MinMaxCategoryRenderer_ESTest.java"
+  ],
+  "run_id": "Chart-23-mio-1790352353"
+}

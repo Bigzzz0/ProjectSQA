@@ -1,0 +1,25 @@
+{
+  "project": "Closure",
+  "bug_id": 6,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-6-mio-1790354344",
+  "suite_sha256": "927949b875e48e3d20ca1a62799c822a423ce7b4e9a5037271e371dba152cfde",
+  "test_files": "TypeValidator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeValidator",
+  "timestamp": "2026-09-25 23:39:49",
+  "evaluation_duration_sec": 45.759,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 62.19,
+  "branch_coverage_percent": 43.18,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test08"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test20",
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test24",
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test08"
+  ]
+}

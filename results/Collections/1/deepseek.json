@@ -15,5 +15,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods"
-  ]
+  ],
+  "suite_sha256": "c8e216c80e334618d72209a17f01923b335c2c78b8cc909d8dbf06f72c56f1f6",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_1b/Flat3MapDeepseekTest.java"
+  ],
+  "run_id": "Collections-1-deepseek-1790366130"
 }

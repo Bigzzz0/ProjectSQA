@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 63,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-63-mio-1790387320",
+  "suite_sha256": "6daedd5f6751e14a757b038b89359a1a4d7fbcfd6ca5518458a4dd699f9cee89",
+  "test_files": "DurationFormatUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.DurationFormatUtils",
+  "timestamp": "2026-09-26 08:48:40",
+  "evaluation_duration_sec": 19.373,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 93.65,
+  "branch_coverage_percent": 91.11,
+  "failures_count": 0,
+  "error_detail": "                           ^\n    [javac] /tmp/d4j_eval/Lang_63f/src/java/org/apache/commons/lang/time/FastDateFormat.java:458: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));\n    [javac]                                                       ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 77 warnings\n     [copy] Copying 14 files to /tmp/d4j_eval/Lang_63f/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_63f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Lang_63f/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_63f/.test_suite/org/apache/commons/lang/time/DurationFormatUtils_ESTest.java:92: error: cannot find symbol\n    [javac]       int int0 = DurationFormatUtils.reduceAndCorrect(mockGregorianCalendar0, calendar0, 1, 1);\n    [javac]                                     ^\n    [javac]   symbol:   method reduceAndCorrect(MockGregorianCalendar,Calendar,int,int)\n    [javac]   location: class DurationFormatUtils\n    [javac] Note: /tmp/d4j_eval/Lang_63f/.test_suite/org/apache/commons/lang/time/DurationFormatUtils_ESTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

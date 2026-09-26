@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.03,
+  "branch_cov": 1.3,
+  "test_file": "StdDeserializer_IPOTest.java;StdKeyDeserializer_IPOTest.java;StdValueInstantiator_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.DatabindContext;com.fasterxml.jackson.databind.DeserializationContext;com.fasterxml.jackson.databind.JsonMappingException;com.fasterxml.jackson.databind.SerializerProvider;com.fasterxml.jackson.databind.deser.BasicDeserializerFactory;com.fasterxml.jackson.databind.deser.BeanDeserializerFactory;com.fasterxml.jackson.databind.deser.DeserializerCache;com.fasterxml.jackson.databind.deser.SettableAnyProperty;com.fasterxml.jackson.databind.deser.SettableBeanProperty;com.fasterxml.jackson.databind.deser.std.StdDeserializer;com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator;com.fasterxml.jackson.databind.introspect.BasicBeanDescription;com.fasterxml.jackson.databind.ser.DefaultSerializerProvider;com.fasterxml.jackson.databind.ser.PropertyBuilder;com.fasterxml.jackson.databind.util.ClassUtil",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "631634eb97191a30d2c24bfbb78bac30ea901c0cb96f4216279a0d70257dcf93",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_103b/com/fasterxml/jackson/databind/deser/std/StdDeserializer_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_103b/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_103b/com/fasterxml/jackson/databind/deser/std/StdValueInstantiator_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-103-ipo-1790378036"
+}

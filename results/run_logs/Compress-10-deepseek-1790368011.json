@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-10-deepseek-1790368011",
+  "suite_sha256": "4b9b18324b4d5ac7a51fdad804fa679df836cf11d9b302625ab2d31ecae3915f",
+  "test_files": "ZipFileDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipFile",
+  "timestamp": "2026-09-26 03:26:55",
+  "evaluation_duration_sec": 4.079,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/tmp/d4j_eval/Compress_10b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Unpacker in Pack200 has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Compress_10b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_10b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_10b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_10b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_10b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_10b/.test_suite/org/apache/commons/compress/archivers/zip/ZipFileDeepseekTest.java:372: error: cannot find symbol\n    [javac]     public void testGetEntryWithNullName() throws IOExceptin {\n    [javac]                                                   ^\n    [javac]   symbol:   class IOExceptin\n    [javac]   location: class ZipFileDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,27 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-15-gemini-1790371961",
+  "suite_sha256": "04fe4f200ee73c10137caef8c9a154386435ceaeff830204e216fabee9df3e3c",
+  "test_files": "FilteringParserDelegateGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.filter.FilteringParserDelegate",
+  "timestamp": "2026-09-26 04:32:57",
+  "evaluation_duration_sec": 15.537,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 63.0,
+  "branch_coverage_percent": 51.39,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testTextAndBinaryDelegation",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testNotAllowMultipleMatchesScalarDefect",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testFilteringWithIncludePathFalse"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testTextAndBinaryDelegation",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testNotAllowMultipleMatchesScalarDefect",
+    "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testFilteringWithIncludePathFalse"
+  ]
+}

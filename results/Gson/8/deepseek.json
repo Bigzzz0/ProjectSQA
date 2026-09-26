@@ -11,5 +11,10 @@
     "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testNewInstancePrimitiveClass",
     "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testInterfaceInstantiation",
     "com.google.gson.internal.UnsafeAllocatorDeepseekTest::testAbstractClassInstantiation"
-  ]
+  ],
+  "suite_sha256": "83da2b013e16d2a8b05712e14430161c33cd4cabcd5b30417375f1631b02cc36",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Gson_8b/UnsafeAllocatorDeepseekTest.java"
+  ],
+  "run_id": "Gson-8-deepseek-1790371012"
 }

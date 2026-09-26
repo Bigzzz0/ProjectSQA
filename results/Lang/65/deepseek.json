@@ -32,5 +32,10 @@
     "org.apache.commons.lang.time.DateUtilsDeepseekTest::testRoundSemiMonthDay16",
     "org.apache.commons.lang.time.DateUtilsDeepseekTest::testAddMonths",
     "org.apache.commons.lang.time.DateUtilsDeepseekTest::testIsSameLocalTime"
-  ]
+  ],
+  "suite_sha256": "d804b2f524f87b9c55660b068efaf5634c4156e0e5595300262749afe0c43c53",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_65b/DateUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-65-deepseek-1790387432"
 }

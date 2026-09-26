@@ -1,0 +1,27 @@
+{
+  "project": "Time",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Time-8-gemini-1790398761",
+  "suite_sha256": "c1feffc6fc472996e47d30d8243fb170cc14d9851c0b75692b40a3dc1aea2dbf",
+  "test_files": "DateTimeZoneGeminiTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "timestamp": "2026-09-26 11:59:47",
+  "evaluation_duration_sec": 26.655,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 85.07,
+  "branch_coverage_percent": 70.79,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZoneGeminiTest::testDefect_forOffsetHoursMinutes_negativeMinutesWithNegativeHours",
+    "org.joda.time.DateTimeZoneGeminiTest::testIsStandardOffset",
+    "org.joda.time.DateTimeZoneGeminiTest::testDefect_forOffsetHoursMinutes_negativeMinutesWithZeroHours",
+    "org.joda.time.DateTimeZoneGeminiTest::testGetMillisKeepLocal"
+  ],
+  "fixed_failures": [
+    "org.joda.time.DateTimeZoneGeminiTest::testIsStandardOffset",
+    "org.joda.time.DateTimeZoneGeminiTest::testGetMillisKeepLocal"
+  ]
+}

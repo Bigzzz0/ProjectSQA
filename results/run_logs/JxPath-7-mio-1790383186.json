@@ -1,0 +1,22 @@
+{
+  "project": "JxPath",
+  "bug_id": 7,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-7-mio-1790383186",
+  "suite_sha256": "b15fd18d591ce01cf950ed31a87d4ddf28b8d1c1146fbf96a9d21ff2e6a21430",
+  "test_files": "CoreOperationGreaterThanOrEqual_ESTest.java;CoreOperationGreaterThan_ESTest.java;CoreOperationLessThanOrEqual_ESTest.java;CoreOperationLessThan_ESTest.java;CoreOperationRelationalExpression_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThan;org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "timestamp": "2026-09-26 07:40:04",
+  "evaluation_duration_sec": 17.827,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual_ESTest::test1",
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan_ESTest::test2"
+  ]
+}

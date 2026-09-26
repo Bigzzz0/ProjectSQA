@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 51.28,
+  "branch_cov": 35.71,
+  "test_file": "FormElement_ESTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "36db04a6b00fb69a2593cc5418ccc29746b11c2894ad1408925fac2bb0a56573",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_69b/FormElement_ESTest.java"
+  ],
+  "run_id": "Jsoup-69-mio-1790381860"
+}

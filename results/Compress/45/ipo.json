@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 43.27,
+  "branch_cov": 35.19,
+  "test_file": "TarUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_formatLongOctalOrBinaryBytes_pairwise_205",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_formatLongOctalOrBinaryBytes_pairwise_208"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "45bd9eb2d4f436db4ee14d6dd92b730335d5bd04fea96d2595a08e730887771c",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_45b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java"
+  ],
+  "run_id": "Compress-45-ipo-1790369970"
+}

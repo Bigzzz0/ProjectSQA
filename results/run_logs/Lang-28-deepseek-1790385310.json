@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 28,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-28-deepseek-1790385310",
+  "suite_sha256": "71b7fe8704bfeb08f659e2cc2c969e6025e6623dabbc529e79f5a7278a66acd8",
+  "test_files": "NumericEntityUnescaperDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "timestamp": "2026-09-26 08:15:16",
+  "evaluation_duration_sec": 6.007,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "& !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_28b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:518: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_28b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java:58: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 30 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_28b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Lang_28b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_28b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_28b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_28b/.test_suite/org/apache/commons/lang3/text/translate/NumericEntityUnescaperDeepseekTest.java:235: error: cannot find symbol\n    [javac]     public void testNonEntityTextPreserved() throws IOEXception {\n    [javac]                                                     ^\n    [javac]   symbol:   class IOEXception\n    [javac]   location: class NumericEntityUnescaperDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

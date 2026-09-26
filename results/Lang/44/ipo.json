@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 23.68,
+  "branch_cov": 14.81,
+  "test_file": "NumberUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.NumberUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "cdf288fbe600e1f0655c9b4b910d012979e2523b876a75e864faabd453943ac8",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_44b/org/apache/commons/lang/NumberUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-44-ipo-1790386249"
+}

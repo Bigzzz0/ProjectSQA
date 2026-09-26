@@ -1,0 +1,29 @@
+{
+  "project": "Collections",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-16-deepseek-1790366957",
+  "suite_sha256": "8cb1ab8284fafba41dfeb837524656a5cd4f69f01119b04c6ee6db66bea2b250",
+  "test_files": "SetUniqueListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:09:35",
+  "evaluation_duration_sec": 17.312,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetDuplicateEdgeCase",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testListIteratorPreviousAndRemove"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetDuplicateEdgeCase",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testListIteratorPreviousAndRemove",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListAddUpdatesParentSet",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListRemoveUpdatesParentSet"
+  ]
+}

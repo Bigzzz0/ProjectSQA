@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 30.4,
+  "branch_cov": 13.45,
+  "test_file": "TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1"
+  ],
+  "suite_sha256": "4d2c16de2e9c7aa3a4f9ad1216aef2ae0c2e6ebf33f6a630d86bcc24f3f89156",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_43b/TypedScopeCreator_ESTest.java"
+  ],
+  "run_id": "Closure-43-mio-1790357153"
+}

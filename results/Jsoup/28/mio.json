@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.05,
+  "branch_cov": 87.96,
+  "test_file": "Entities_ESTest.java;Parser_ESTest.java;Tokeniser_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Entities;org.jsoup.parser.Parser;org.jsoup.parser.Tokeniser",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.parser.Tokeniser_ESTest::test11"
+  ],
+  "suite_sha256": "a6f7dd50a518bc15793ea4167b75126ef59b84c13c03735aea4083d6737e86e8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_28b/Entities_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_28b/Parser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_28b/Tokeniser_ESTest.java"
+  ],
+  "run_id": "Jsoup-28-mio-1790379889"
+}

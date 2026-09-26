@@ -1,0 +1,22 @@
+{
+  "project": "Math",
+  "bug_id": 22,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-22-mio-1790388887",
+  "suite_sha256": "85926264f20808e5783775715a3252ae52e3c4a063b97c819392a044998e5d94",
+  "test_files": "FDistribution_ESTest.java;UniformRealDistribution_ESTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.FDistribution;org.apache.commons.math3.distribution.UniformRealDistribution",
+  "timestamp": "2026-09-26 09:15:14",
+  "evaluation_duration_sec": 27.484,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.distribution.FDistribution_ESTest::test5",
+    "org.apache.commons.math3.distribution.UniformRealDistribution_ESTest::test09"
+  ]
+}

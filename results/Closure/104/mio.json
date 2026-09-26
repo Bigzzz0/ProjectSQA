@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.92,
+  "branch_cov": 94.35,
+  "test_file": "UnionType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.UnionType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e1ebf3d54fa45d259126a4d60880d5b76608259822f93229e454f9a2344e5edc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_104b/UnionType_ESTest.java"
+  ],
+  "run_id": "Closure-104-mio-1790360854"
+}

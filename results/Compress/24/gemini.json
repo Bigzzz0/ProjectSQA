@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalMissingTrailingSpaceOrNul",
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseBinaryBigIntegerExceedsLongMax"
-  ]
+  ],
+  "suite_sha256": "01f76a0719802d2d0ef1a0d8b8d346dd5071a64027bc878eee4449a8c36cfc32",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_24b/TarUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-24-gemini-1790368744"
 }

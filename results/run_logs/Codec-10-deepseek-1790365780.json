@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-10-deepseek-1790365780",
+  "suite_sha256": "049542330af51fdb9f41bfbc90a13e83c734db081536d12e1895a8dc69875ad3",
+  "test_files": "CaverphoneDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.language.Caverphone",
+  "timestamp": "2026-09-26 02:49:42",
+  "evaluation_duration_sec": 2.08,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "avac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Codec_10b/src/java/org/apache/commons/codec/StringEncoderComparator.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 6 files to /tmp/d4j_eval/Codec_10b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Codec_10b/target/classes/\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_10b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Codec_10b/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_10b/.test_suite/org/apache/commons/codec/language/CaverphoneDeepseekTest.java:202: error: cannot find symbol\n    [javac]     public void testEncodeObjectWithNonString() throws EncoderException {\n    [javac]                                                        ^\n    [javac]   symbol:   class EncoderException\n    [javac]   location: class CaverphoneDeepseekTest\n    [javac] Note: /tmp/d4j_eval/Codec_10b/.test_suite/org/apache/commons/codec/language/CaverphoneDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

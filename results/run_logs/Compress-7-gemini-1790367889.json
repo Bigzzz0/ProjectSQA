@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 7,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-7-gemini-1790367889",
+  "suite_sha256": "238b1050f2f9dccd5dd67251156a6a57cbd8a12ea0b05fe3710878b31304465d",
+  "test_files": "TarUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:25:05",
+  "evaluation_duration_sec": 15.092,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 97.37,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testFormatOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseNameWithExtendedAsciiChar",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testRoundTripNamesDefectRevealing"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testFormatOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testFormatCheckSumOctalBytes"
+  ]
+}

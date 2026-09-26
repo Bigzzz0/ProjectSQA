@@ -17,5 +17,10 @@
     "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testInScopeVariants",
     "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testGenerateImpliedEndTagsWithNullExcludeTag",
     "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testActiveFormattingElementsLifecycleAndLimit"
-  ]
+  ],
+  "suite_sha256": "cd29155ebdd49c7c3bac1bd0b6e77edc122aebdb2dd489448830d53e90244a83",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_67b/HtmlTreeBuilderGeminiTest.java"
+  ],
+  "run_id": "Jsoup-67-gemini-1790381801"
 }

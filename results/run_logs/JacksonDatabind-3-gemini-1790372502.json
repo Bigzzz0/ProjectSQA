@@ -1,0 +1,33 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 3,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-3-gemini-1790372502",
+  "suite_sha256": "1123bc59c65eb159bb316d7cee91ae5fe3c86eae34c6b3f06742ec4df6b727f9",
+  "test_files": "StringArrayDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer",
+  "timestamp": "2026-09-26 04:42:07",
+  "evaluation_duration_sec": 24.844,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.16,
+  "branch_coverage_percent": 86.11,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testAcceptSingleValueAsArrayEnabledNull",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDefectOnlyNullElements",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDeserializeWithType",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithDefault",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testInstanceConstant",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDefectNullPointerExceptionOnNullElement",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithCustomElementDeser"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testAcceptSingleValueAsArrayEnabledNull",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDeserializeWithType",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithDefault",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testInstanceConstant",
+    "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithCustomElementDeser"
+  ]
+}

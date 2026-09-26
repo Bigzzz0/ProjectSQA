@@ -15,5 +15,10 @@
     "org.apache.commons.csv.CSVParserGeminiTest::testCurrentLineNumberMultiLine",
     "org.apache.commons.csv.CSVParserGeminiTest::testDuplicateEmptyHeaderNamesAllowedWhenConfigured",
     "org.apache.commons.csv.CSVParserGeminiTest::testHeaderCaseInsensitive"
-  ]
+  ],
+  "suite_sha256": "6dfcb70ff386d876760e4b6d156072e6afd083622887e7cbc3f3a6f7a978a426",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_16b/CSVParserGeminiTest.java"
+  ],
+  "run_id": "Csv-16-gemini-1790370759"
 }

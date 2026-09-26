@@ -1,0 +1,29 @@
+{
+  "project": "Chart",
+  "bug_id": 22,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-22-gemini-1790352304",
+  "suite_sha256": "f34c157ce847b340346d23253cb7261363a16634e280dcec588159e71fe1fc0b",
+  "test_files": "KeyedObjects2DGeminiTest.java",
+  "target_classes": "org.jfree.data.KeyedObjects2D",
+  "timestamp": "2026-09-25 23:05:27",
+  "evaluation_duration_sec": 23.466,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.35,
+  "branch_coverage_percent": 84.48,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveColumnSparseDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testSerialization",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveColumnByIndexSparseDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveObjectColumnCleanedUpDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testRemoveRowByUnknownKeyDefect",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testEqualsAndHashCode"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.KeyedObjects2DGeminiTest::testSerialization",
+    "org.jfree.data.KeyedObjects2DGeminiTest::testEqualsAndHashCode"
+  ]
+}

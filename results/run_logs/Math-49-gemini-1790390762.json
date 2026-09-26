@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 49,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-49-gemini-1790390762",
+  "suite_sha256": "82c8915e777d282a99ac7213c6cb5104be81ce06828c0aa8f5c080d757348875",
+  "test_files": "OpenMapRealVectorGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.OpenMapRealVector",
+  "timestamp": "2026-09-26 09:46:10",
+  "evaluation_duration_sec": 7.702,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "eval/Math_49b/target/classes/META-INF\n\ncompile:\n    [javac] Compiling 567 source files to /tmp/d4j_eval/Math_49b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_49b/src/main/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_49b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_49b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_49b/.test_suite/org/apache/commons/math/linear/OpenMapRealVectorGeminiTest.java:283: error: cannot find symbol\n    [javac]         double expectedL2 = FastMath.sqrt(1.0 + 16.0 + 0.0);\n    [javac]                             ^\n    [javac]   symbol:   variable FastMath\n    [javac]   location: class OpenMapRealVectorGeminiTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

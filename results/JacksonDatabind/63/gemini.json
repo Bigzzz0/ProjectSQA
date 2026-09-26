@@ -20,5 +20,10 @@
     "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testDeprecatedConstructors",
     "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testNullOrEmptyMessageBuild",
     "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testCloseableProcessorConstructorsAndFactories"
-  ]
+  ],
+  "suite_sha256": "4d9e9e36272bc8a9c1df33b4c1cb8df15b597c809d0f37619fa483cc2f7e7414",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_63b/JsonMappingExceptionGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-63-gemini-1790375908"
 }

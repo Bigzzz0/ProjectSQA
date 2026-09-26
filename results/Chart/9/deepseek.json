@@ -15,5 +15,10 @@
     "org.jfree.data.time.TimeSeriesDeepseekTest::testGetTimePeriodsUniqueToOtherSeries",
     "org.jfree.data.time.TimeSeriesDeepseekTest::testConstructorNullTimePeriodClass",
     "org.jfree.data.time.TimeSeriesDeepseekTest::testCreateCopyWithPeriodsNotInSeries"
-  ]
+  ],
+  "suite_sha256": "f6dd963d582e85470d64a5bcdcad83558cb06e42cf5f1892057c317f14d33a76",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Chart_9b/TimeSeriesDeepseekTest.java"
+  ],
+  "run_id": "Chart-9-deepseek-1790351462"
 }

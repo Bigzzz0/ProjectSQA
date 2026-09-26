@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.StringUtilsDeepseekTest::testJoinArrayWithNulls",
     "org.apache.commons.lang3.StringUtilsDeepseekTest::testDifference"
-  ]
+  ],
+  "suite_sha256": "ffc628e30256024333d57f159554d55730d2345418fa49e8744b49e9cde174d8",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_20b/StringUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-20-deepseek-1790384775"
 }

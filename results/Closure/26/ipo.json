@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.35,
+  "branch_cov": 5.0,
+  "test_file": "ProcessCommonJSModules_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.ProcessCommonJSModules",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6d55aca96e503711f243236addf1ce891d40d536c443d0343bae7b3e11ab8108",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Closure_26b/com/google/javascript/jscomp/ProcessCommonJSModules_IPOTest.java"
+  ],
+  "run_id": "Closure-26-ipo-1790355851"
+}

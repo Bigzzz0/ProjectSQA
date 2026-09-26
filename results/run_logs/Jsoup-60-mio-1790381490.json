@@ -1,0 +1,27 @@
+{
+  "project": "Jsoup",
+  "bug_id": 60,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-60-mio-1790381490",
+  "suite_sha256": "1c25d8fd4208af71f019c39fa42e30cf96753a79dea616546465a3de3533a74c",
+  "test_files": "QueryParser_ESTest.java;TokenQueue_ESTest.java",
+  "target_classes": "org.jsoup.parser.TokenQueue;org.jsoup.select.QueryParser",
+  "timestamp": "2026-09-26 07:11:50",
+  "evaluation_duration_sec": 20.271,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.05,
+  "branch_coverage_percent": 89.92,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.parser.TokenQueue_ESTest::test31",
+    "org.jsoup.parser.TokenQueue_ESTest::test10",
+    "org.jsoup.select.QueryParser_ESTest::test26",
+    "org.jsoup.select.QueryParser_ESTest::test19",
+    "org.jsoup.select.QueryParser_ESTest::test36",
+    "org.jsoup.select.QueryParser_ESTest::test33",
+    "org.jsoup.select.QueryParser_ESTest::test31"
+  ]
+}

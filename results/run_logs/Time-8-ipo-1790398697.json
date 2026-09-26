@@ -1,0 +1,22 @@
+{
+  "project": "Time",
+  "bug_id": 8,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Time-8-ipo-1790398697",
+  "suite_sha256": "1e6b1b28b808e0dd5367be893d7608868c5adb91be874d0d5724e76d4a305af4",
+  "test_files": "DateTimeZone_IPOTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "timestamp": "2026-09-26 11:58:43",
+  "evaluation_duration_sec": 25.603,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 22.25,
+  "branch_coverage_percent": 19.66,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZone_IPOTest::test_forOffsetHoursMinutes_pairwise_003",
+    "org.joda.time.DateTimeZone_IPOTest::test_forOffsetHoursMinutes_pairwise_013"
+  ],
+  "fixed_failures": []
+}

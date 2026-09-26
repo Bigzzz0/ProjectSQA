@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.85,
+  "branch_cov": 96.27,
+  "test_file": "TextBuffer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.TextBuffer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test07"
+  ],
+  "suite_sha256": "67a6eb76e8ce0a3a99c075c0c0c071bf13e6725fb6cb283e15e565ee7d84d9be",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_4b/TextBuffer_ESTest.java"
+  ],
+  "run_id": "JacksonCore-4-mio-1790371530"
+}

@@ -23,5 +23,11 @@
     "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullEquations",
     "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testStepRejectionNearStart",
     "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY0"
-  ]
+  ],
+  "suite_sha256": "fabf01a998ce3cab744753ed2f77ca2080c22e35c0836796582332ce043c4cbf",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_71b/EmbeddedRungeKuttaIntegratorDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/Math_71b/RungeKuttaIntegratorDeepseekTest.java"
+  ],
+  "run_id": "Math-71-deepseek-1790392290"
 }

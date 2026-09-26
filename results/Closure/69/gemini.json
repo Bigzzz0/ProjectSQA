@@ -31,5 +31,10 @@
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testReturn_outsideFunctionIgnored",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testOverridingPrototypeWithNonObject",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testThisTypeOfFunction_defectTargetFreeCallWithArgs"
-  ]
+  ],
+  "suite_sha256": "023e6b5a654fdad734840799c5b20bd87097c85f72b368279ac2c791d27916e0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_69b/TypeCheckGeminiTest.java"
+  ],
+  "run_id": "Closure-69-gemini-1790358981"
 }

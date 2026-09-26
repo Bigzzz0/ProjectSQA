@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.54,
+  "branch_cov": 5.52,
+  "test_file": "UntypedObjectDeserializer_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "85384d529efd0bff62c4dbd6f1884f040f72e26bff2863064ed921b4869889d9",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_32b/com/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializer_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-32-ipo-1790374025"
+}

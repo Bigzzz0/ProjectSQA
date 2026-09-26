@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.lang3.time.DateUtilsGeminiTest::testLANG677_isSameLocalTimeDifferentAmPm"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "731c57f1a167f939725f6f569dbeb235c90ea13a8a1f104cb3a5c577e1cf3446",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_21b/DateUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-21-gemini-1790384831"
 }

@@ -1,0 +1,31 @@
+{
+  "project": "Math",
+  "bug_id": 77,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-77-gemini-1790392713",
+  "suite_sha256": "2e58043605a486e959eee41cdde21d7c816a4d16a01a7214e4a65936629533cb",
+  "test_files": "ArrayRealVectorGeminiTest.java;OpenMapRealVectorGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.ArrayRealVector;org.apache.commons.math.linear.OpenMapRealVector",
+  "timestamp": "2026-09-26 10:18:59",
+  "evaluation_duration_sec": 25.572,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.0,
+  "branch_coverage_percent": 92.31,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testDefectTargetLInfNormAccumulationBug",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testDefectTargetLInfNormNegativeValues",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfNormWithNegativeValues",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfNormPositiveSumVersusMax"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryNegativeIndexThrows",
+    "org.apache.commons.math.linear.ArrayRealVectorGeminiTest::testGetEntryOverIndexThrows",
+    "org.apache.commons.math.linear.OpenMapRealVectorGeminiTest::testDefectGetLInfDistanceWithNegativeMissingInThis"
+  ]
+}

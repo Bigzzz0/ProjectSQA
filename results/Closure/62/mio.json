@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 74.32,
+  "branch_cov": 59.38,
+  "test_file": "LightweightMessageFormatter_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.LightweightMessageFormatter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bf4a54595878743b0900c586f3c873537943be4f94670a4b868a156f4a3068a9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_62b/LightweightMessageFormatter_ESTest.java"
+  ],
+  "run_id": "Closure-62-mio-1790358501"
+}

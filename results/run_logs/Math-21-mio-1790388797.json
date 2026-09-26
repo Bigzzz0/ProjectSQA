@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 21,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-21-mio-1790388797",
+  "suite_sha256": "b01f013e533194886732f381ca019c886dfdf291cc4ae108ff6409451ebd9d12",
+  "test_files": "RectangularCholeskyDecomposition_ESTest.java",
+  "target_classes": "org.apache.commons.math3.linear.RectangularCholeskyDecomposition",
+  "timestamp": "2026-09-26 09:13:44",
+  "evaluation_duration_sec": 27.414,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.linear.RectangularCholeskyDecomposition_ESTest::test3"
+  ]
+}

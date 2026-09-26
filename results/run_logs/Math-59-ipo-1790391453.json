@@ -1,0 +1,26 @@
+{
+  "project": "Math",
+  "bug_id": 59,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-59-ipo-1790391453",
+  "suite_sha256": "067175e71fedfcdd97afba1d7186e8b5fb0545eb1b833a58d68c4ccd3b715247",
+  "test_files": "FastMath_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.FastMath",
+  "timestamp": "2026-09-26 09:57:58",
+  "evaluation_duration_sec": 24.956,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 36.6,
+  "branch_coverage_percent": 26.99,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.FastMath_IPOTest::test_max_pairwise_228",
+    "org.apache.commons.math.util.FastMath_IPOTest::test_max_pairwise_231",
+    "org.apache.commons.math.util.FastMath_IPOTest::test_max_pairwise_233",
+    "org.apache.commons.math.util.FastMath_IPOTest::test_max_pairwise_246",
+    "org.apache.commons.math.util.FastMath_IPOTest::test_max_pairwise_247",
+    "org.apache.commons.math.util.FastMath_IPOTest::test_max_pairwise_248"
+  ],
+  "fixed_failures": []
+}

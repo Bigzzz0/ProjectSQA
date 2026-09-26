@@ -1,0 +1,24 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 86,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-86-gemini-1790377132",
+  "suite_sha256": "ee135f5281ddad3d789536a1e7838ecfd234ce98f0ac582a28ebc932d59271a0",
+  "test_files": "ResolvedRecursiveTypeGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "timestamp": "2026-09-26 05:59:17",
+  "evaluation_duration_sec": 25.285,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 86.67,
+  "branch_coverage_percent": 50.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testEqualsContract",
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testSuperClassWithReferencedJavaType"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testEqualsContract"
+  ]
+}

@@ -7,5 +7,10 @@
   "test_file": "SimplexSolverGeminiTest.java",
   "target_classes": "org.apache.commons.math3.optimization.linear.SimplexSolver",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "bdac01a1261b2db5d3ecae7af374605dd8873867536b15b3760767a1cd6740cb",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_28b/SimplexSolverGeminiTest.java"
+  ],
+  "run_id": "Math-28-gemini-1790389361"
 }

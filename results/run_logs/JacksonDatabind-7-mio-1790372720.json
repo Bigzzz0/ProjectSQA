@@ -1,0 +1,23 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 7,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-7-mio-1790372720",
+  "suite_sha256": "0f94a576dcdf8cc7573103e87b3d36cf12d3c684325ca3d569e73483a226e6d7",
+  "test_files": "TokenBuffer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.TokenBuffer",
+  "timestamp": "2026-09-26 04:45:58",
+  "evaluation_duration_sec": 37.85,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 77.24,
+  "branch_coverage_percent": 65.58,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.TokenBuffer_ESTest::test030"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.util.TokenBuffer_ESTest::test030"
+  ]
+}

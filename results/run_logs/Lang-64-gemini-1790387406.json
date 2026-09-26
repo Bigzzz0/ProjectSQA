@@ -1,0 +1,22 @@
+{
+  "project": "Lang",
+  "bug_id": 64,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-64-gemini-1790387406",
+  "suite_sha256": "9d16d3e3c46db6e5c65b0a1825392a10f9a53764bdbaabf1e486c958a7b42617",
+  "test_files": "ValuedEnumGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.enums.ValuedEnum",
+  "timestamp": "2026-09-26 08:50:25",
+  "evaluation_duration_sec": 19.87,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.enums.ValuedEnumGeminiTest::testCompareTo_otherEnumType",
+    "org.apache.commons.lang.enums.ValuedEnumGeminiTest::testCompareTo_otherEnumTypeDifferentValues"
+  ],
+  "fixed_failures": []
+}

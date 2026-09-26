@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.47,
+  "branch_cov": 28.99,
+  "test_file": "MinimizeExitPoints_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.MinimizeExitPoints",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "29ac08d74287333db414afe532fbb825e19c3e056066ff9b4321c21d66c7e458",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_126b/MinimizeExitPoints_ESTest.java"
+  ],
+  "run_id": "Closure-126-mio-1790362353"
+}

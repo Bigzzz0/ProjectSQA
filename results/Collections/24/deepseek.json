@@ -7,5 +7,10 @@
   "test_file": "UnmodifiableBoundedCollectionDeepseekTest.java",
   "target_classes": "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "876c8d1599ebd0b7fb7f9d6c5f490cbd27693ce4ad23fec392aac055f8ed5e9a",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_24b/UnmodifiableBoundedCollectionDeepseekTest.java"
+  ],
+  "run_id": "Collections-24-deepseek-1790367358"
 }

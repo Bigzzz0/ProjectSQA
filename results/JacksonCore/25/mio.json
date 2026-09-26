@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 51.74,
+  "branch_cov": 44.93,
+  "test_file": "ReaderBasedJsonParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4cf6bdef753176103ce6ef457ac2efe6a9632a45e33eee11bc674b5a3ba15639",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_25b/ReaderBasedJsonParser_ESTest.java"
+  ],
+  "run_id": "JacksonCore-25-mio-1790372277"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-8-gemini-1790372813",
+  "suite_sha256": "9bb1014de6635aa634eb2f747c2d155240c07a662e7c0655e6d2d7b19a10445e",
+  "test_files": "CreatorCollectorGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.CreatorCollector",
+  "timestamp": "2026-09-26 04:47:01",
+  "evaluation_duration_sec": 7.653,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ty /tmp/d4j_eval/JacksonDatabind_8b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_8b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_8b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_8b/.test_suite/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorGeminiTest.java:95: error: no suitable constructor found for AnnotatedConstructor(Constructor<CAP#1>,AnnotationMap,AnnotationMap[])\n    [javac]             return new AnnotatedConstructor(ctor, annMap, pAnns);\n    [javac]                    ^\n    [javac]     constructor AnnotatedConstructor.AnnotatedConstructor(AnnotatedClass,Constructor<?>,AnnotationMap,AnnotationMap[]) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor AnnotatedConstructor.AnnotatedConstructor(Serialization) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]   where CAP#1 is a fresh type-variable:\n    [javac]     CAP#1 extends Object from capture of ?\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

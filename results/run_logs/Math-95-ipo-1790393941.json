@@ -1,0 +1,26 @@
+{
+  "project": "Math",
+  "bug_id": 95,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-95-ipo-1790393941",
+  "suite_sha256": "306dea52aebe519206002b0119c1660389dc3f9a84c0ce6bff6c9d30f6559df1",
+  "test_files": "FDistributionImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+  "timestamp": "2026-09-26 10:39:24",
+  "evaluation_duration_sec": 23.356,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 83.33,
+  "branch_coverage_percent": 60.0,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_086",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_088",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_096",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_098",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_110",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_112"
+  ],
+  "fixed_failures": []
+}

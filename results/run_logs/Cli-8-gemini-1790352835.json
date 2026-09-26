@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-8-gemini-1790352835",
+  "suite_sha256": "00d13f6b6f8f7ac3e5340e60eceb628ebbb05ecd65818a36057298c0b01d3843",
+  "test_files": "HelpFormatterGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter",
+  "timestamp": "2026-09-25 23:14:08",
+  "evaluation_duration_sec": 12.452,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.HelpFormatterGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.HelpFormatterGeminiTest"
+  ]
+}

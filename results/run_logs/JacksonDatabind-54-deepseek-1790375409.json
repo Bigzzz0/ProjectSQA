@@ -1,0 +1,25 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 54,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-54-deepseek-1790375409",
+  "suite_sha256": "58a1cfdb7372951ad488022e894005c8bc5a52f7d0276fb2c3666def612aaf42",
+  "test_files": "PropertyBuilderDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+  "timestamp": "2026-09-26 05:30:35",
+  "evaluation_duration_sec": 26.413,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 75.26,
+  "branch_coverage_percent": 65.67,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testNullSerializerAnnotation",
+    "com.fasterxml.jackson.databind.ser.PropertyBuilderDeepseekTest::testInclusionNonAbsent"
+  ]
+}

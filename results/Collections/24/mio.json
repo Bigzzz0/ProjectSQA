@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 65.38,
+  "branch_cov": 83.33,
+  "test_file": "UnmodifiableBoundedCollection_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.collection.UnmodifiableBoundedCollection",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1ef2507f5efc58b76006bb3bf3a58da2fc9597705871a275103bab7c45a9bc29",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_24b/UnmodifiableBoundedCollection_ESTest.java"
+  ],
+  "run_id": "Collections-24-mio-1790367340"
+}

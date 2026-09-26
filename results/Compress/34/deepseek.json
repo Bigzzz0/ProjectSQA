@@ -16,5 +16,10 @@
     "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testClone",
     "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testGetCentralDirectoryLength",
     "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testParseFromLocalFileDataNull"
-  ]
+  ],
+  "suite_sha256": "83ba33afce3004d1245d7057b9fb72b7a9fdef46f61b48eb7ce899ff865b8d76",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_34b/X7875_NewUnixDeepseekTest.java"
+  ],
+  "run_id": "Compress-34-deepseek-1790369344"
 }

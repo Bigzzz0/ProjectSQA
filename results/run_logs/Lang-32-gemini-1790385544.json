@@ -1,0 +1,22 @@
+{
+  "project": "Lang",
+  "bug_id": 32,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-32-gemini-1790385544",
+  "suite_sha256": "4c67e64037de5e089700a0f2e83dfa81c065c028e4bc1817ff9dbdf442b64ca2",
+  "test_files": "HashCodeBuilderGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.builder.HashCodeBuilder",
+  "timestamp": "2026-09-26 08:19:24",
+  "evaluation_duration_sec": 20.165,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.95,
+  "branch_coverage_percent": 97.67,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.builder.HashCodeBuilderGeminiTest::testReflectionObjectCycle",
+    "org.apache.commons.lang3.builder.HashCodeBuilderGeminiTest::testReflectionCycleDirectSelfReference"
+  ],
+  "fixed_failures": []
+}

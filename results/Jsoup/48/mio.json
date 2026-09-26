@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 73.99,
+  "branch_cov": 55.29,
+  "test_file": "HttpConnection_ESTest.java",
+  "target_classes": "org.jsoup.helper.HttpConnection",
+  "buggy_failures": [
+    "org.jsoup.helper.HttpConnection_ESTest::test42"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.HttpConnection_ESTest::test42"
+  ],
+  "suite_sha256": "c58aba9474f148c77ca89d1abb349169465f14f79d4169e6bc217d1546a91ee0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_48b/HttpConnection_ESTest.java"
+  ],
+  "run_id": "Jsoup-48-mio-1790380852"
+}

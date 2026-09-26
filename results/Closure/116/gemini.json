@@ -15,5 +15,10 @@
     "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testDoesFunctionMeetMinimumRequirements_anonymousAssignedRecursion",
     "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101a_directInlineArgumentWithSideEffectsRejected",
     "com.google.javascript.jscomp.FunctionInjectorGeminiTest::testIssue1101b_directInlineAssignmentArgumentRejected"
-  ]
+  ],
+  "suite_sha256": "909809c891b2030b1436b465ea90a65b02937dff031271db230bf92a6480a8c4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_116b/FunctionInjectorGeminiTest.java"
+  ],
+  "run_id": "Closure-116-gemini-1790361719"
 }

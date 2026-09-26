@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 41,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-41-deepseek-1790390169",
+  "suite_sha256": "7241923ed5e71da908752b81fb2de9d27fe426944cdb40f8294f7cf2df6c2bc3",
+  "test_files": "VarianceDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+  "timestamp": "2026-09-26 09:36:17",
+  "evaluation_duration_sec": 7.894,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "d4j_eval/Math_41b/target/classes/org/apache/commons/math/stat/descriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_41b/target/classes/org/apache/commons/math/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_41b/target/classes/org/apache/commons/math/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_41b/target/classes/org/apache/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_41b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_41b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_41b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_41b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_41b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_41b/.test_suite/org/apache/commons/math/stat/descriptive/moment/VarianceDeepseekTest.java:457: error: cannot find symbol\n    [javac]     @Test(timeout = 4000, expected = NullArgumentException.class)\n    [javac]                                      ^\n    [javac]   symbol:   class NullArgumentException\n    [javac]   location: class VarianceDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

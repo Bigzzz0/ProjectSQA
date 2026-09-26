@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 69,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-69-deepseek-1790376177",
+  "suite_sha256": "fe9d0e8f23b286ecf63e8fe242cd48be102cd6da85707f7ea0317c3588e1822f",
+  "test_files": "CreatorCollectorDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.CreatorCollector",
+  "timestamp": "2026-09-26 05:43:04",
+  "evaluation_duration_sec": 7.455,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ses\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_69b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_69b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_69b/.test_suite/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorDeepseekTest.java:153: error: reached end of file while parsing\n    [javac]         return new MapperConfig.Base(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,\n    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

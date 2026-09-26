@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jsoup.nodes.DocumentGeminiTest::testTitlesDefectInnerWhitespaceNormalization"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "fb214063030b89d99c2d813ba2c3895d6c60dddbe44b7e88f577451d07d69a70",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_29b/DocumentGeminiTest.java"
+  ],
+  "run_id": "Jsoup-29-gemini-1790379952"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 18,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Gson-18-deepseek-1790371350",
+  "suite_sha256": "299d8089c20fea50fc894051d01f044f18d7f80ee98bde4951494b4954f46b1c",
+  "test_files": "$Gson$TypesDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "timestamp": "2026-09-26 04:22:33",
+  "evaluation_duration_sec": 2.963,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Gson_18b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:100: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]       if (!constructor.isAccessible()) {\n    [javac]                       ^\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Gson_18b/target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_18b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_18b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_18b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_18b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Gson_18b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_18b/.test_suite/com/google/gson/internal/$Gson$TypesDeepseekTest.java:756: error: method testParameterizedTypeImpl_NullTypeArgument() is already defined in class $Gson$TypesDeepseekTest\n    [javac]     public void testParameterizedTypeImpl_NullTypeArgument() {\n    [javac]                 ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

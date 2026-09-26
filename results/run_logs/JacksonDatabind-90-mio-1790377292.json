@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 90,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-90-mio-1790377292",
+  "suite_sha256": "b0849bb5e5a6a3b76db006d77d37a660611769eaad674fc9eca3cf256247db66",
+  "test_files": "StdValueInstantiator_ESTest.java;ValueInstantiator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.ValueInstantiator;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator",
+  "timestamp": "2026-09-26 06:02:03",
+  "evaluation_duration_sec": 31.282,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 70.32,
+  "branch_coverage_percent": 58.65,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

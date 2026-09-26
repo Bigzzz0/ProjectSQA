@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-16-deepseek-1790399280",
+  "suite_sha256": "a78ce8a5bbb9b44f2caefc5a0d6e884697464da4cfc0eadfb6a31e7739374168",
+  "test_files": "DateTimeFormatterDeepseekTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatter",
+  "timestamp": "2026-09-26 12:08:06",
+  "evaluation_duration_sec": 6.625,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "t value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Time_16b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n     [copy] Copying 7 files to /tmp/d4j_eval/Time_16b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_16b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_16b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_16b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_16b/.test_suite/org/joda/time/format/DateTimeFormatterDeepseekTest.java:117: error: cannot find symbol\n    [javac]         public void printTo(Writer out, long instant, Chronology chrono, int displayOffset,\n    [javac]                             ^\n    [javac]   symbol:   class Writer\n    [javac]   location: class MockDateTimePrinter\n    [javac] Note: /tmp/d4j_eval/Time_16b/.test_suite/org/joda/time/format/DateTimeFormatterDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

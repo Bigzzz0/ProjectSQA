@@ -19,5 +19,10 @@
     "org.apache.commons.lang.text.StrBuilderGeminiTest::testAsWriter",
     "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchAndContains",
     "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode"
-  ]
+  ],
+  "suite_sha256": "54aff5d968f47b9c2d4d9619a0003f213195bbe561e52cb09a86f46425699f59",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_47b/StrBuilderGeminiTest.java"
+  ],
+  "run_id": "Lang-47-gemini-1790386483"
 }

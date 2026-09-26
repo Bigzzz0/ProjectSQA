@@ -1,0 +1,27 @@
+{
+  "project": "JxPath",
+  "bug_id": 17,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-17-mio-1790383406",
+  "suite_sha256": "fcf52d96a458cedf8dd0c98f22d938cffec7db1ccee407d5e9a4976361b3dfe9",
+  "test_files": "DOMAttributeIterator_ESTest.java;JDOMAttributeIterator_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+  "timestamp": "2026-09-26 07:43:43",
+  "evaluation_duration_sec": 16.373,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 38.05,
+  "branch_coverage_percent": 31.4,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator_ESTest",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test1",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator_ESTest",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test1",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test2"
+  ]
+}

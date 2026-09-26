@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 51,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-51-gemini-1790386674",
+  "suite_sha256": "4d78f9754d0fb912e97087c3880498405dff3078b04699145fd39d5938a3c74c",
+  "test_files": "BooleanUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.BooleanUtils",
+  "timestamp": "2026-09-26 08:38:14",
+  "evaluation_duration_sec": 20.265,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 98.11,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.BooleanUtilsGeminiTest::testToBoolean_String_DefectTrigger_Length3StartsWithT"
+  ],
+  "fixed_failures": []
+}

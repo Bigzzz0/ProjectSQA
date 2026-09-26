@@ -1,0 +1,41 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 55,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-55-deepseek-1790375473",
+  "suite_sha256": "32e50e8514e828e28f387910bd27fecf6ba4fb99b253321dfcca242ae5c53f98",
+  "test_files": "StdKeySerializersDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.StdKeySerializers",
+  "timestamp": "2026-09-26 05:31:40",
+  "evaluation_duration_sec": 26.177,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 91.8,
+  "branch_coverage_percent": 91.89,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testStringKeySerializer",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testEnumKeyWithJsonProperty",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeToString",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeDate",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeEnum",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicReadResolve",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeSecondCall",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeClass",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testStringKeySerializer",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeToString",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeDate",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeEnum",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicReadResolve",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeSecondCall",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeClass",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testGetFallbackKeySerializerEnumType",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
+  ]
+}

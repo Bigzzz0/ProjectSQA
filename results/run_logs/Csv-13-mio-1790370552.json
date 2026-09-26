@@ -1,0 +1,35 @@
+{
+  "project": "Csv",
+  "bug_id": 13,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Csv-13-mio-1790370552",
+  "suite_sha256": "a2f9bbb58ad742fbb79fd2f3962f6e902ea5701cba3bca3cdf5b97d5fee88d4c",
+  "test_files": "CSVFormat_ESTest.java;CSVPrinter_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat;org.apache.commons.csv.CSVPrinter",
+  "timestamp": "2026-09-26 04:09:31",
+  "evaluation_duration_sec": 18.921,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.55,
+  "branch_coverage_percent": 92.73,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVPrinter_ESTest::test01"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormat_ESTest::test51",
+    "org.apache.commons.csv.CSVFormat_ESTest::test12",
+    "org.apache.commons.csv.CSVFormat_ESTest::test46",
+    "org.apache.commons.csv.CSVFormat_ESTest::test39",
+    "org.apache.commons.csv.CSVFormat_ESTest::test32",
+    "org.apache.commons.csv.CSVFormat_ESTest::test20",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test01",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test00",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test09",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test08",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test07",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test11",
+    "org.apache.commons.csv.CSVPrinter_ESTest::test10"
+  ]
+}

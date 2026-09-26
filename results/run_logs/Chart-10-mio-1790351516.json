@@ -1,0 +1,19 @@
+{
+  "project": "Chart",
+  "bug_id": 10,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-10-mio-1790351516",
+  "suite_sha256": "c24c768804b90567e7a4c08a8d24b9731912e0409547c83131509552e89d1bf3",
+  "test_files": "StandardToolTipTagFragmentGenerator_ESTest.java",
+  "target_classes": "org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator",
+  "timestamp": "2026-09-25 22:52:20",
+  "evaluation_duration_sec": 24.195,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

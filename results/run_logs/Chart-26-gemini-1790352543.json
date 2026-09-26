@@ -1,0 +1,24 @@
+{
+  "project": "Chart",
+  "bug_id": 26,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-26-gemini-1790352543",
+  "suite_sha256": "8b45f292e647a5595754c3022ea7f2d16ad5a73fa2d588921550fee3e288305a",
+  "test_files": "AxisGeminiTest.java",
+  "target_classes": "org.jfree.chart.axis.Axis",
+  "timestamp": "2026-09-25 23:09:29",
+  "evaluation_duration_sec": 25.815,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 96.88,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.chart.axis.AxisGeminiTest::testDrawLabelWithEntitiesCollected",
+    "org.jfree.chart.axis.AxisGeminiTest::testDrawLabelDefectNullChartRenderingInfoOwner"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.axis.AxisGeminiTest::testDrawLabelWithEntitiesCollected"
+  ]
+}

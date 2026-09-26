@@ -10,5 +10,10 @@
     "org.apache.commons.lang3.time.FastDateFormatGeminiTest::testLang538",
     "org.apache.commons.lang3.time.FastDateFormatGeminiTest::testLang538BufferVariant"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "49681f92477046a0411e221adcacf3f18ad18af9c8cf25fce0af3d2035821204",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_38b/FastDateFormatGeminiTest.java"
+  ],
+  "run_id": "Lang-38-gemini-1790385912"
 }

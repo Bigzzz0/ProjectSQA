@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.math.dfp.DfpGeminiTest::testTruncationAndRoundingModes",
     "org.apache.commons.math.dfp.DfpGeminiTest::testRoundAllModes"
-  ]
+  ],
+  "suite_sha256": "3bfe4652b076a415d7942cebd2592b514154543afde286eccbeeb535164a12ea",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_54b/DfpGeminiTest.java"
+  ],
+  "run_id": "Math-54-gemini-1790391123"
 }

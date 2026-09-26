@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 39,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-39-deepseek-1790390021",
+  "suite_sha256": "bd7ed2c90913c6448d70655ed220f6f27cd3053ba7a2a00957892763769193df",
+  "test_files": "EmbeddedRungeKuttaIntegratorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator",
+  "timestamp": "2026-09-26 09:33:49",
+  "evaluation_duration_sec": 7.805,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "g empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/stat/descriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_39b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_39b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_39b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_39b/.test_suite/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegratorDeepseekTest.java:9: error: cannot find symbol\n    [javac] import org.apache.commons.math.ode.TestProblem1;\n    [javac]                                   ^\n    [javac]   symbol:   class TestProblem1\n    [javac]   location: package org.apache.commons.math.ode\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

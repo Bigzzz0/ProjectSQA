@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 137,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-137-deepseek-1790363016",
+  "suite_sha256": "a2d7dfe0905742cfddb31d1b8f6d2737e4bf7c0edf451a70e7ae633cb5f7332f",
+  "test_files": "MakeDeclaredNamesUniqueDeepseekTest.java;NodeUtilDeepseekTest.java;NormalizeDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.Normalize",
+  "timestamp": "2026-09-26 02:03:44",
+  "evaluation_duration_sec": 8.256,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_137b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_137b/build/classes/com/google/javascript/jscomp/parsing\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_137b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_137b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_137b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_137b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_137b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Closure_137b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_137b/.test_suite/com/google/javascript/jscomp/NodeUtilDeepseekTest.java:535: error: cannot find symbol\n    [javac]   private static Node name(String value) {\n    [javac]                  ^\n    [javac]   symbol:   class Node\n    [javac]   location: class NodeUtilDeepseekTest\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

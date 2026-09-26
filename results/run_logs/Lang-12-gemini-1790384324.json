@@ -1,0 +1,24 @@
+{
+  "project": "Lang",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-12-gemini-1790384324",
+  "suite_sha256": "bf6e54a7420eb8f80a36b61737d3d63add9f735125464e9359c5640de4c19b20",
+  "test_files": "RandomStringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "timestamp": "2026-09-26 07:59:04",
+  "evaluation_duration_sec": 20.371,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 94.23,
+  "branch_coverage_percent": 95.83,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testLANG805WithLettersNumbersFalse",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testEmptyCharArrayThrowsIllegalArgumentException",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testLANG805WithLettersNumbersTrue",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testEmptyStringThrowsIllegalArgumentException"
+  ],
+  "fixed_failures": []
+}

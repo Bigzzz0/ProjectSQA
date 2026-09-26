@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.99,
+  "branch_cov": 75.0,
+  "test_file": "RecordType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.RecordType",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.RecordType_ESTest::test04"
+  ],
+  "suite_sha256": "178cb1ef1a84e7f07fd3780fe4e2f290ce44d2910da6cc234bad2c416db86272",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_46b/RecordType_ESTest.java"
+  ],
+  "run_id": "Closure-46-mio-1790357353"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-8-deepseek-1790371697",
+  "suite_sha256": "81ac520af3e2f5a5077e33b6578402045ff59a9cb1e20255cf7d0c590a5c380f",
+  "test_files": "TextBufferDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.TextBuffer",
+  "timestamp": "2026-09-26 04:28:21",
+  "evaluation_duration_sec": 3.525,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/type/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/base/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/format/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_8b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_8b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonCore_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_8b/.test_suite/com/fasterxml/jackson/core/util/TextBufferDeepseekTest.java:221: error: cannot find symbol\n    [javac]         Arrays.fill(data, 'a');\n    [javac]         ^\n    [javac]   symbol:   variable Arrays\n    [javac]   location: class TextBufferDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

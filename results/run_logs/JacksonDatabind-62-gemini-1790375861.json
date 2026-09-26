@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 62,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-62-gemini-1790375861",
+  "suite_sha256": "a9b07bb1be949ee6a23f77a29d97bd43b6baaf81ec8298695993b9047305ebd8",
+  "test_files": "CollectionDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.CollectionDeserializer",
+  "timestamp": "2026-09-26 05:37:49",
+  "evaluation_duration_sec": 8.058,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "   [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_62b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_62b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_62b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_62b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_62b/.test_suite/com/fasterxml/jackson/databind/deser/std/CollectionDeserializerGeminiTest.java:151: error: no suitable method found for constructCollectionType(Class<CAP#1>,Class<String>)\n    [javac]         JavaType targetType = mapper.getTypeFactory().constructCollectionType(unmodSetType, String.class);\n    [javac]                                                      ^\n    [javac]     method TypeFactory.constructCollectionType(Class<? extends Collection>,Class<?>) is not applicable\n    [javac]       (argument mismatch; Class<CAP#1> cannot be converted to Class<? extends Collection>)\n    [javac]     method TypeFactory.constructCollectionType(Class<? extends Collection>,JavaType) is not applicable\n    [javac]       (argument mismatch; Class<CAP#1> cannot be converted to Class<? extends Collection>)\n    [javac]   where CAP#1 is a fresh type-variable:\n    [javac]     CAP#1 extends Object from capture of ?\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

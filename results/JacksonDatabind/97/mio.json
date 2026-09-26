@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.24,
+  "branch_cov": 85.29,
+  "test_file": "POJONode_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.node.POJONode",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.node.POJONode_ESTest::test08"
+  ],
+  "suite_sha256": "4d28e242143c7af03497587d65177460e6e14354b2a2101b041a69f45c8fa78a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_97b/POJONode_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-97-mio-1790377696"
+}

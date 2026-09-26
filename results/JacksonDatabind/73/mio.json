@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.25,
+  "branch_cov": 5.87,
+  "test_file": "POJOPropertyBuilder_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector;com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c5edefa68cb8815ed503de69476a77848a193b6d18194d80744dc12df711beb7",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_73b/POJOPropertyBuilder_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-73-mio-1790376417"
+}

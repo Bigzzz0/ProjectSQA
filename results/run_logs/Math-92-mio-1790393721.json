@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 92,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-92-mio-1790393721",
+  "suite_sha256": "d2a9e1ab8b42efe77d835055b2ede36efda1322bff7e32ead8b6cb3bd2bc9dd6",
+  "test_files": "MathUtils_ESTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:35:46",
+  "evaluation_duration_sec": 25.016,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.21,
+  "branch_coverage_percent": 94.62,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.util.MathUtils_ESTest::test093"
+  ]
+}

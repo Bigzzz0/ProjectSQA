@@ -1,0 +1,42 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 17,
+  "line_cov": 48.39,
+  "branch_cov": 28.35,
+  "test_file": "FastDateParser_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateParser",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_134",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_137",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_138",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_139",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_140",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_141",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_142",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_145",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_156",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_190",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_198",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_206",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_214",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_222",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_230",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_238",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_246"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_134",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_137",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_138",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_139",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_140",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_141",
+    "org.apache.commons.lang3.time.FastDateParser_IPOTest::test_parse_pairwise_142"
+  ],
+  "suite_sha256": "9bd562aa8a6f61cc1ed2dc0cb95eec0f6daf53c487ea15e115d3587ad88eb846",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_10b/org/apache/commons/lang3/time/FastDateParser_IPOTest.java"
+  ],
+  "run_id": "Lang-10-ipo-1790384108"
+}

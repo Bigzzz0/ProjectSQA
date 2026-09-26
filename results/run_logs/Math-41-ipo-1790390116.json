@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 41,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-41-ipo-1790390116",
+  "suite_sha256": "145190fa2d9d5bab86d90ba86c7f240d6968e2f0b6c2cd8d2759bd5cd228a688",
+  "test_files": "Variance_IPOTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+  "timestamp": "2026-09-26 09:35:42",
+  "evaluation_duration_sec": 26.194,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 41.07,
+  "branch_coverage_percent": 36.96,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

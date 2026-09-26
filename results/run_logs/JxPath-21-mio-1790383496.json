@@ -1,0 +1,19 @@
+{
+  "project": "JxPath",
+  "bug_id": 21,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-21-mio-1790383496",
+  "suite_sha256": "3c79fb36d35c9189e9dc36a59247dde0e2122bb996685f39cd296d6eac65ba3f",
+  "test_files": "PropertyPointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.beans.PropertyPointer",
+  "timestamp": "2026-09-26 07:45:12",
+  "evaluation_duration_sec": 15.741,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 72.86,
+  "branch_coverage_percent": 65.38,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

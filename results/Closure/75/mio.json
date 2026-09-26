@@ -1,0 +1,40 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 58.37,
+  "branch_cov": 43.66,
+  "test_file": "NodeUtil_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test322",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test143",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test142",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test015",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test163",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test346",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test347",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test132",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test252",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test354",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test119"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test322",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test143",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test142",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test015",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test163",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test346",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test347",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test132",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test252",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test354",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test119"
+  ],
+  "suite_sha256": "db051ace9ba3d61f922b25869e3f2ae88f4d041c1baa3f6fe380ef4f205a6b88",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_75b/NodeUtil_ESTest.java"
+  ],
+  "run_id": "Closure-75-mio-1790359289"
+}

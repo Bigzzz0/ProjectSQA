@@ -18,5 +18,10 @@
     "org.jsoup.safety.CleanerDeepseekTest::cleanNestedSafeUnsafe",
     "org.jsoup.safety.CleanerDeepseekTest::cleanUnsafeTagsRemoved",
     "org.jsoup.safety.CleanerDeepseekTest::isValidFramesetDocument"
-  ]
+  ],
+  "suite_sha256": "cf0c69595e54ab3308b10433e92567eff20f66c60fe95ece85e94bfc994c576e",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_26b/CleanerDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-26-deepseek-1790379813"
 }

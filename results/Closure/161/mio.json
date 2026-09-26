@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 15.57,
+  "branch_cov": 10.84,
+  "test_file": "PeepholeFoldConstants_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test32"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test32"
+  ],
+  "suite_sha256": "4876c04eaf79a73e779ba9327a429f8581de47f4dbfe6f1bc5adbcbbbf1e8fe0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_161b/PeepholeFoldConstants_ESTest.java"
+  ],
+  "run_id": "Closure-161-mio-1790364313"
+}

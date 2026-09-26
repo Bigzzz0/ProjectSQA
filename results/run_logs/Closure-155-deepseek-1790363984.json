@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 155,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-155-deepseek-1790363984",
+  "suite_sha256": "3a93460a600440c97a9e63893c702155f3347bcc822a6aa0de31e6a1b14bab88",
+  "test_files": "InlineVariablesDeepseekTest.java;ReferenceCollectingCallbackDeepseekTest.java;ScopeDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineVariables;com.google.javascript.jscomp.ReferenceCollectingCallback;com.google.javascript.jscomp.Scope",
+  "timestamp": "2026-09-26 02:19:53",
+  "evaluation_duration_sec": 8.445,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "eatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGrandchild, Node greatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGreatGrand\n    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 13,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Compress-13-ipo-1790368141",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "timestamp": "2026-09-26 03:29:01",
+  "evaluation_duration_sec": 0.005,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

@@ -9,6 +9,8 @@
 **อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก  
 **ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น**  
 
+> **สถานะข้อมูล: ผลประเมินครบตาม suite ที่มีอยู่ (26 กันยายน 2026)** — ครอบคลุม 854 บั๊กใน 17 โปรเจกต์ มีผลครบ 2,768 suite evaluations และระบุ 648 ช่องที่ไม่มี suite เป็น `NO_SUITE`; ไม่มีช่อง `NOT_RUN` ค้างอยู่ (`results_complete: true`, `available_suite_evaluations_complete: true`). ตารางผลหลักสร้างจาก `results/master_benchmark_summary.csv` และสรุปสถิติอยู่ใน `results/master_descriptive_stats.json` ตัวเลข generation ของ IPO/MIO/AI รายงานแยกจากผลประเมินกลาง
+
 #### 👥 คณะผู้จัดทำและบทบาทหน้าที่ความรับผิดชอบ:
 1. **นายปวริศช์ ประมวล (รหัส 653380138-8) — Member 1:** Combinatorial Testing Lead & IPO/IPOG Algorithm Specialist
 2. **นายแทนคุณ พันธ์นิกุล (รหัส 653380292-8) — Member 2:** Search-Based Software Testing Lead & MIO/EvoSuite Algorithm Specialist
@@ -19,18 +21,11 @@
 
 ## 📌 บทคัดย่อ (Abstract)
 
-งานวิจัยเชิงประจักษ์นี้มุ่งเน้นการประเมินและเปรียบเทียบประสิทธิภาพระหว่าง **การทดสอบซอฟต์แวร์โดยใช้โมเดลภาษาขนาดใหญ่ (LLM-Assisted Testing)** ได้แก่ **DeepSeek V4 Flash** และ **Gemini 3.8 Flash** ร่วมกับเทคนิค Prompt Engineering ชั้นสูง และ **ขั้นตอนวิธีการสร้างกรณีทดสอบอัตโนมัติแบบดั้งเดิม (Algorithmic Test Generation)** ได้แก่ **In-Parameter-Order (IPO/IPOG)** สำหรับ Combinatorial Interaction Testing (โดยมี Microsoft PICT เป็น Baseline อ้างอิง) และ **Many-Independent-Objective (MIO)** ในเครื่องมือ EvoSuite สำหรับ Search-Based Software Testing (SBST)
+งานนี้เปรียบเทียบ DeepSeek V4 Flash, Gemini 3.8 Flash, Native IPO และ MIO ใน EvoSuite บน Defects4J v2.0 ครอบคลุม 854 บั๊กใน 17 โปรเจกต์ จาก 3,416 ช่องที่คาดหวัง มี suite ให้ประเมิน 2,768 ช่องและไม่มี suite 648 ช่อง โดยประเมิน suite ที่มีครบและตรวจย้อนกลับได้ด้วย hash, run ID และ log
 
-การประเมินผลดำเนินการบนคลังข้อบกพร่องจริงของระบบภาษาจาวา **Defects4J v2.0** ครอบคลุม **17 โครงการโอเพนซอร์สชั้นนำ** คิดเป็นคลาสเป้าหมายที่มีการแก้ไขโค้ดจริง (**Target Classes**) รวมทั้งสิ้น **1,073 คลาส (577 Unique Classes)** จากข้อบกพร่องจริง **854 บั๊ก** โดยมีชุดข้อมูลผลการประเมินรวบรวมไว้ทั้งสิ้น **2,804 รายการประเมิน (Evaluations)** ภายใต้กรอบการวัดผล 3 มิติหลัก ได้แก่:
-1. **ความครอบคลุมรหัสต้นฉบับ (Code Coverage):** วัด Target-Class Line Coverage และ Branch Coverage ผ่าน Cobertura
-2. **อัตราการตรวจจับข้อบกพร่อง (Bug-Level Fault Detection Rate: FDR %):** ประเมินผ่านกฎความซื่อตรงของตัวหาร (Denominator Integrity Rule) ด้วยระบบจัดหมวดหมู่ 5 สถานะ (`BUG_DETECTED`, `NOT_DETECTED`, `FLAKY_OR_REGRESSION`, `COMPILE_ERROR`, `TIMEOUT`)
-3. **ประสิทธิภาพและความคุ้มค่าเชิงทรัพยากร (Efficiency & Economics):** เวลาประมวลผล, Search Budget Saturation, และอัตราการใช้โทเค็น (Token Usage per Detected Bug)
+Gemini มีค่าเฉลี่ย line/branch coverage สูงสุดในกลุ่มผลที่วัดได้ (86.24%/79.45%, n=422) ส่วน Native IPO มี bug-level FDR สูงสุด (37/257, 14.40%). MIO ตรวจพบ 5/834 บั๊ก (0.60%) และ DeepSeek ตรวจพบ 11/836 บั๊ก (1.32%). การคำนวณ coverage ใช้เฉพาะผลที่คอมไพล์และวัดได้; compile errors และ flaky/regression ยังคงอยู่ในตัวหาร FDR
 
-ผลการทดลองเชิงประจักษ์และการวิเคราะห์ทางสถิติ (Non-parametric Mann-Whitney U Test และ Vargha-Delaney $\hat{A}_{12}$ Effect Size) พบว่า:
-1. **ด้านความครอบคลุมของโค้ด:** MIO (EvoSuite) มีความครอบคลุมสม่ำเสมอและสูงสุดในภาพรวม ($68.85 \pm 31.26\%$ Line Coverage, $\hat{A}_{12} = 0.868, p < 0.001$ เทียบกับ DeepSeek) ทว่าในกลุ่มชุดทดสอบที่คอมไพล์ผ่าน **Gemini 3.8 Flash สามารถบรรลุ Effective Coverage เฉลี่ยสูงถึง $92.58\%$** ซึ่งสูงกว่าทุกเทคนิคอย่างมีนัยสำคัญ
-2. **ด้านการตรวจจับข้อบกพร่องจริง (Fault Detection Rate):** Gemini 3.8 Flash มีอัตรา FDR สูงสุดถึง **$16.70\%$ (ตรวจพบ 88 บั๊ก จาก 527 บั๊ก)** ขณะที่ IPO ตรวจพบ $5.20\%$ (9 บั๊ก) และ DeepSeek ตรวจพบ $1.12\%$ (12 บั๊ก) โดย MIO ตรวจพบบั๊กได้ $0.00\%$ เนื่องจาก EvoSuite ถูกออกแบบด้วย Regression Oracle Assumption (สร้าง Assertion ยึดตามพฤติกรรมของโปรแกรมปัจจุบัน)
-3. **การผสานพลังร่วม (Ensemble Fault Detection Synergy):** เมื่อรวมผลการตรวจจับของทุกเทคนิคเข้าด้วยกัน (Hybrid Testing) สามารถตรวจจับข้อบกพร่องรวมได้ถึง **105 บั๊ก (Ensemble FDR = 12.30%)** โดย IPO สามารถตรวจเจอบั๊กเฉพาะตัว (Unique Detections) ที่ AI ไม่สามารถตรวจพบได้ถึง **7 บั๊ก** ด้วยอานุภาพของการจัดคู่พารามิเตอร์ขอบเขต (Pairwise Boundary Conditions)
-4. **จุดอิ่มตัวของการค้นหาใน MIO (Search Budget Saturation):** การเพิ่มเวลาจาก 30s สู่ 60s ให้ผลตอบแทนความครอบคลุม $+3.00\%$ ($p < 0.05$) ขณะที่การเพิ่มจาก 60s สู่ 120s ให้ผลตอบแทนชะลอตัวเหลือเพียง $+2.09\%$ แสดงว่า **60 วินาทีเป็นจุดคุ้มทุนเชิงวิศวกรรมที่ดีที่สุด (Optimal Engineering Trade-off)**
+เมื่อรวมสี่เทคนิค ตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มีอย่างน้อยหนึ่ง suite (16.88%). สถิติ generation ของ MIO/IPO และ token/เวลา generation ของ AI รายงานแยกจากการประเมินกลาง เพราะไม่มี run ID ที่เชื่อมบันทึก generation ทุกแถวเข้ากับผลตรวจจับได้
 
 ---
 
@@ -104,7 +99,7 @@
   - พารามิเตอร์ 3 ตัว: Population Size ($N$), Successes ($m$), Sample Size ($n$)
   - การทดสอบแบบ Exhaustive (Full Combinations): **$10 \times 10 \times 10 = 1,000$ กรณีทดสอบ**
   - การทดสอบแบบ Pairwise ด้วย IPO/PICT: **เหลือเพียง 36 กรณีทดสอบ (ลดขนาดลงถึง 96.4%)** โดยยังคงครอบคลุม 100% 2-way interactions ของค่าขอบเขต (Boundary Value Analysis: $0, 1, \text{Max}-1, \text{Max}$)
-* **สถิติภาพรวมของการทดลอง IPO:** รันการประเมิน 173 ชุดทดสอบบน Target Classes สังเคราะห์กรณีทดสอบจริงรวม **42,398 Test Cases** โดยใช้เวลาเฉลี่ยเพียง **2.5 วินาทีต่อคลาส**
+* **ข้อมูลการสร้าง suite ของ IPO จาก baseline รอบก่อน:** มี 173 suites และ 42,398 test cases ตามเอกสารของสาย IPO ข้อมูลชุดนี้เป็นสถิติการสร้าง/ตรวจ suite รอบก่อน ไม่ใช่จำนวน suite ที่ผ่านการประเมินกลางรอบปัจจุบัน และไม่ใช้คำนวณ coverage หรือ FDR ใน master dataset
 
 ---
 
@@ -119,16 +114,15 @@ Arcuri (2017) ได้นำเสนออัลกอริทึม **MIO** 
 4. มีกระบวนการสุ่มรีเซ็ตแบบ Random Insertion เพื่อป้องกันไม่ให้อัลกอริทึมติดอยู่ในหลุม Local Optima
 
 #### ข. การวิเคราะห์ Search Budget Scaling (ข้อกำหนด 1.7)
-เพื่อศึกษาผลกระทบของเวลางบประมาณในการค้นหา Member 2 ได้ทำการรัน EvoSuite MIO ภายใต้ **3 ระดับงบประมาณเวลา (Search Budget: 30s, 60s, และ 120s)** รวม **3,028 การทดลอง** โดยผลการประเมินแสดงรายละเอียดดังตาราง:
+เพื่อศึกษาผลกระทบของเวลางบประมาณในการค้นหา Member 2 ได้บันทึกผลการสร้าง suite ของ EvoSuite MIO ภายใต้ **3 ระดับงบประมาณเวลา (Search Budget: 30s, 60s, และ 120s)** รวม **3,027 รายการ** ตารางนี้เป็นสถิติการสร้าง suite จาก `MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv` และแยกจากผล coverage/FDR ของการประเมินกลางซึ่งสรุปในบทผลลัพธ์
 
-| Search Budget | จำนวนการทดลอง ($N$) | Line Coverage ($\mu \pm \sigma$) | Branch Coverage ($\mu \pm \sigma$) | เวลาประมวลผลจริงเฉลี่ย | ผลตอบแทนส่วนเพิ่ม ($\Delta \text{Cov}$) |
+| Search Budget | จำนวนรายการ ($N$) | Line Coverage ($\mu \pm \sigma$) | Branch Coverage ($\mu \pm \sigma$) | เวลา generation เฉลี่ย | ผลต่างจาก budget ก่อนหน้า |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| **30 วินาที** | 1,023 คลาส | $65.73 \pm 32.55\%$ | $65.73 \pm 32.55\%$ | 44.2 วินาที | *(Baseline)* |
-| **60 วินาที** | 1,015 คลาส | $68.73 \pm 31.42\%$ | $68.73 \pm 31.42\%$ | 74.5 วินาที | **$+3.00\%$** ($p < 0.05$) |
-| **120 วินาที** | 989 คลาส | $70.82 \pm 30.28\%$ | $70.82 \pm 30.28\%$ | 134.1 วินาที | **$+2.09\%$** ($p < 0.05$) |
+| **30 วินาที** | 1,023 | $65.73 \pm 31.96\%$ | $65.73 \pm 31.96\%$ | 68.29 วินาที | *(Baseline)* |
+| **60 วินาที** | 1,015 | $68.73 \pm 31.29\%$ | $68.73 \pm 31.29\%$ | 90.62 วินาที | **$+3.00$ จุดร้อยละ** ($p = 0.0217$) |
+| **120 วินาที** | 989 | $70.82 \pm 30.40\%$ | $70.82 \pm 30.40\%$ | 194.41 วินาที | **$+2.09$ จุดร้อยละ** ($p = 0.1202$) |
 
-> **📉 ข้อค้นพบเรื่องจุดอิ่มตัวของการค้นหา (Diminishing Returns Threshold):**  
-> การเพิ่ม Search Budget จาก 30s เป็น 60s ให้ความครอบคลุมเพิ่มขึ้นอย่างคุ้มค่า ($+3.00\%$) ทว่าเมื่อเพิ่มเวลาอีก 2 เท่าตัวจาก 60s ไปเป็น 120s อัตราความครอบคลุมกลับเพิ่มขึ้นเพียง $+2.09\%$ โดยต้องแลกกับเวลารันที่เพิ่มขึ้นเป็น 134.1 วินาทีต่อคลาส แสดงว่าอัลกอริทึมเข้าสู่สภาวะอิ่มตัว (Search Saturation) และ **60 วินาทีถือเป็นจุดคุ้มทุนที่ดีที่สุดในทางปฏิบัติ**
+> การเปรียบเทียบ Mann–Whitney U ของค่า line coverage พบความต่างระหว่าง 30s กับ 60s ($p = 0.0217$) แต่ยังไม่พบหลักฐานความต่างระหว่าง 60s กับ 120s ที่ระดับนัยสำคัญ 0.05 ($p = 0.1202$) จึงรายงานเป็นแนวโน้มของข้อมูล generation ชุดนี้ และไม่สรุปว่า budget ใดดีที่สุดโดยทั่วไป
 
 ---
 
@@ -222,121 +216,42 @@ $$FDR_{\text{technique}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evalu
 
 ## บทที่ 5: ผลการทดลองเชิงประจักษ์ การวิเคราะห์สถิติ และการอภิปรายผล
 
-### 5.1 ตารางสรุปผลการทดลองเปรียบเทียบภาพรวม (Master Benchmark Summary Table)
-จากผลการรวบรวมข้อมูลอย่างเป็นระบบจากชุดข้อมูลกลาง `results/master_benchmark_summary.csv` (รวม **2,804 รายการประเมิน**):
+ผล master dataset รอบสุดท้ายสร้างจากผลที่ตรวจ provenance แล้ว ไฟล์หลักคือ `results/master_benchmark_summary.csv` และสรุปสถานะคือ `results/master_descriptive_stats.json`. ชุดข้อมูลมี 3,416 แถวจาก 854 บั๊ก × 4 เทคนิค; 2,768 แถวเป็น suite evaluations ที่รันครบ และ 648 แถวเป็น `NO_SUITE`. ไม่มีผลค้างที่ `NOT_RUN`.
 
-| เทคนิคการทดสอบ (Technique) | จำนวนประเมิน ($N$) | Line Coverage ($\mu \pm \sigma$) | Effective Line Cov | Branch Coverage ($\mu \pm \sigma$) | Effective Branch Cov | อัตราตรวจพบบั๊ก (Bug-Level FDR %) | จำนวนบั๊กที่พบ ($N_{\text{detected}}$) | เวลาสร้างเฉลี่ย (วินาที) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **MIO (EvoSuite SBST)** | **1,032** | **$68.85 \pm 31.26\%$** | $69.66\%$ | **$68.85 \pm 31.26\%$** | $69.66\%$ | $0.00\%$ | 0 บั๊ก | 90.8 วินาที |
-| **Gemini 3.8 Flash** | **527** | $47.08 \pm 47.47\%$ | **$92.58\%$** | $44.25 \pm 45.28\%$ | **$87.03\%$** | **$16.70\%$** | **88 บั๊ก** | 6.0 วินาที |
-| **IPO (Native / PICT)** | **173** | $32.57 \pm 1.03\%$ | $32.57\%$ | $23.78 \pm 1.93\%$ | $23.78\%$ | $5.20\%$ | 9 บั๊ก | **2.5 วินาที** |
-| **DeepSeek V4 Flash** | **1,072** | $16.28 \pm 34.98\%$ | $88.12\%$ | $14.86 \pm 32.46\%$ | $80.43\%$ | $1.12\%$ | 12 บั๊ก | 15.0 วินาที |
-| **Ensemble (Hybrid Testing)** | **—** | **—** | **—** | **—** | **—** | **$12.30\%$** | **105 บั๊ก** | **—** |
+### 5.1 ขอบเขตและสถานะการประเมิน
 
-*หมายเหตุ: Effective Coverage คือค่าเฉลี่ย Coverage เฉพาะกลุ่มชุดทดสอบที่คอมไพล์ผ่านและรันได้สำเร็จ ($N_{\text{compilable}}$)*
+ชุดข้อมูลคาดหวังมีหนึ่งแถวต่อ project, bug และ technique จาก 854 บั๊ก × 4 เทคนิค ทุกแถวจำแนกสถานะ suite และการรันแยกจากกัน NO_SUITE หมายถึงไม่มีชุดทดสอบให้รัน ไม่ใช่ผลตรวจไม่พบบั๊ก ส่วน NOT_RUN, STALE_RESULT, CHECKOUT_ERROR, INVALID_SUITE และ RUN_ERROR ต้องแก้หรือระบุเป็นงานค้างก่อนประกาศผลครบ
 
----
+### 5.2 Coverage และ Fault Detection Rate
 
-### 5.2 การทดสอบสมมติฐานทางสถิติและขนาดผลกระทบ (Statistical Hypothesis Testing & Effect Size)
-เพื่อพิสูจน์ว่าความแตกต่างของค่า Line Coverage ระหว่างเทคนิคไม่ได้เกิดขึ้นโดยบังเอิญ จึงได้ทำการทดสอบแบบ Non-parametric ด้วย **Mann-Whitney U Test** (เนื่องจากการแจกแจงไม่เป็น Normal Distribution) และคำนวณขนาดผลกระทบด้วย **Vargha-Delaney Effect Size ($\hat{A}_{12}$)**:
+Coverage เฉลี่ยคำนวณจากผล `DONE` ที่มีค่าตัวเลขวัดได้เท่านั้น ผลที่คอมไพล์ไม่ผ่านหรือไม่มี coverage ไม่ถูกนับเป็น coverage 0%. FDR คำนวณระดับบั๊กต่อเทคนิค; ตัวหารรวมผลที่พยายามรันทั้งหมด รวม `COMPILE_ERROR`, `FLAKY_OR_REGRESSION` และ `TIMEOUT`. `BUG_DETECTED` ต้อง fail บน buggy และ pass บน fixed.
 
-| คู่การเปรียบเทียบ (Technique Comparison) | Mann-Whitney U | $p$-value | นัยสำคัญ ($\alpha=0.05$) | $\hat{A}_{12}$ Effect Size | ระดับผลกระทบ (Magnitude) |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Gemini 3.8 Flash vs. DeepSeek V4 Flash** | 379,910.0 | **$1.71 \times 10^{-44}$** | มีนัยสำคัญ (***) | **0.6725** | **Medium Effect** |
-| **MIO (EvoSuite SBST) vs. Gemini 3.8 Flash** | 328,760.5 | **$1.19 \times 10^{-11}$** | มีนัยสำคัญ (***) | **0.6045** | **Small Effect** |
-| **MIO (EvoSuite SBST) vs. DeepSeek V4 Flash** | 960,320.5 | **$7.53 \times 10^{-203}$** | มีนัยสำคัญ (***) | **0.8680** | **Large Effect** |
-| **MIO (EvoSuite SBST) vs. IPO (Native / PICT)** | 146,458.0 | **$1.15 \times 10^{-41}$** | มีนัยสำคัญ (***) | **0.8203** | **Large Effect** |
-| **Gemini 3.8 Flash vs. IPO (Native / PICT)** | 45,668.0 | $0.971$ | ไม่มีนัยสำคัญ (ns) | $0.5009$ | **Negligible Effect** |
+| เทคนิค | มี suite/ประเมินแล้ว | ผล DONE (N coverage) | Line coverage เฉลี่ย | Branch coverage เฉลี่ย | ตรวจพบ | FDR ของ suite ที่ประเมิน |
+|---|---:|---:|---:|---:|---:|---:|
+| Native IPO | 257/257 | 252 | 26.76% | 18.67% | 37 | 14.40% |
+| MIO (EvoSuite) | 834/834 | 797 | 63.85% | 56.51% | 5 | 0.60% |
+| DeepSeek V4 Flash | 836/836 | 191 | 77.99% | 70.25% | 11 | 1.32% |
+| Gemini 3.8 Flash | 841/841 | 422 | 86.24% | 79.45% | 107 | 12.72% |
 
-> **💡 การวิเคราะห์ผลทางสถิติเชิงลึก:**  
-> - ค่า $\hat{A}_{12} = 0.868$ ระหว่าง MIO และ DeepSeek ชี้ชัดว่า หากสุ่มหยิบชุดทดสอบจาก MIO และ DeepSeek มาเทียบกัน MIO จะมีความครอบคลุมสูงกว่าถึง 86.8% ของกรณีทั้งหมด ซึ่งถือเป็น **Large Effect ขนาดมหึมา**
-> - เมื่อพิจารณาเฉพาะกรณีที่คอมไพล์ผ่าน Gemini มีความครอบคลุมรหัสคำสั่งสูงกว่า MIO อย่างมีนัยสำคัญ ($\hat{A}_{12} = 0.812, p < 0.001$) อันเนื่องมาจากความเข้าใจเชิงความหมายของโค้ดที่สามารถเข้าถึงตรรกะเงื่อนไขที่ซับซ้อนได้ลึกซึ้งกว่าการสุ่มกลายพันธุ์
+เมื่อนับการตรวจจับแบบ union ระดับบั๊ก ทั้งสี่เทคนิคร่วมกันตรวจพบ 144 บั๊กจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%); มี 648 บั๊ก–เทคนิคที่ไม่มี suite และแยกเป็น `NO_SUITE`. รายงาน analytics, Excel และกราฟถูกสร้างจาก snapshot เดียวกันใน `results/advanced_analytics_report.md`, `results/Master_Benchmark_Results.xlsx` และ `results/figure1_coverage_comparison.png` ถึง `results/figure6_ensemble_overlap.png`.
 
----
+### 5.3 สถิติการสร้างชุดทดสอบและข้อจำกัด
 
-### 5.3 แผนภูมิผลการวิเคราะห์ทางวิชาการทั้ง 6 รูปแบบ (Visual Empirical Evidence)
+สถิติ MIO เรื่อง budget/seed และสถิติการสร้าง IPO/AI เป็นคนละการวัดกับ coverage และ FDR จากการประเมินกลาง บันทึก AI generation ที่ไม่มี run ID ไม่ถูกนำไปคำนวณ token cost ต่อ bug ที่ตรวจพบ
 
-#### 📊 รูปที่ 1: การเปรียบเทียบ Code Coverage ระหว่าง 4 เทคนิค
-![Figure 1: Coverage Comparison](file:///c:/Users/User/Downloads/ProjectSQA/results/figure1_coverage_comparison.png)
-*รูปที่ 1 แสดงการเปรียบเทียบ Line Coverage และ Branch Coverage ในภาพรวม (Mean $\pm$ SD) และแสดง Effective Coverage เมื่อพิจารณาเฉพาะโค้ดที่คอมไพล์ผ่าน*
+### 5.4 การตรวจสอบย้อนกลับ
 
-#### 🎯 รูปที่ 2: การกระจายตัวของสถานะการทดสอบ 5 ระดับ (5-State FDR Distribution)
-![Figure 2: FDR Distribution](file:///c:/Users/User/Downloads/ProjectSQA/results/figure2_fdr_distribution.png)
-*รูปที่ 2 แสดงสัดส่วน 5 สถานะการตรวจจับข้อบกพร่องตามระเบียบวิธีวิจัย โดยสะท้อนความสำเร็จอันโดดเด่นของ Gemini (88 บั๊ก) และปัญหา Compile Error ของ DeepSeek ในโปรเจกต์ขนาดใหญ่*
-
-#### 🏛️ รูปที่ 3: ประสิทธิภาพแยกตามรายโปรเจกต์ (17 Defects4J Projects Breakdown)
-![Figure 3: Projects Breakdown](file:///c:/Users/User/Downloads/ProjectSQA/results/figure3_projects_breakdown.png)
-*รูปที่ 3 แสดงผลสัมฤทธิ์ของแต่ละเทคนิคจำแนกตามโครงสร้างโดเมนซอฟต์แวร์ทั้ง 17 โปรเจกต์*
-
-#### 💰 รูปที่ 4: ความคุ้มค่าเชิงเศรษฐศาสตร์และประสิทธิภาพเวลาประมวลผล (AI Economics & Latency)
-![Figure 4: AI Economics](file:///c:/Users/User/Downloads/ProjectSQA/results/figure4_ai_economics.png)
-*รูปที่ 4 แสดงการเปรียบเทียบเวลาสร้างชุดทดสอบเฉลี่ย และความคุ้มค่าของโทเค็นต่อหนึ่งข้อบกพร่องที่ตรวจพบได้จริง*
-
-#### ⏱️ รูปที่ 5: การขยายตัวของ Search Budget ใน MIO และจุดอิ่มตัวของการค้นหา (Budget Scaling)
-![Figure 5: MIO Budget Scaling](file:///c:/Users/User/Downloads/ProjectSQA/results/figure5_budget_scaling.png)
-*รูปที่ 5 แสดงแนวโน้มความครอบคลุมรหัสคำสั่งเมื่อเพิ่มเวลางบประมาณ 30s, 60s, และ 120s ซึ่งแสดงภาวะผลตอบแทนลดน้อยถอยลง (Diminishing Returns) อย่างชัดเจน*
-
-#### 🤝 รูปที่ 6: เมทริกซ์การตรวจพบบั๊กซ้ำซ้อนและการผสานพลังร่วม (Ensemble Fault Detection Synergy)
-![Figure 6: Ensemble Overlap](file:///c:/Users/User/Downloads/ProjectSQA/results/figure6_ensemble_overlap.png)
-*รูปที่ 6 แสดงสัดส่วนบั๊กที่ตรวจพบร่วมกันและบั๊กเฉพาะตัว (Unique Detections) ของแต่ละเทคนิค*
-
----
-
-### 5.4 การผสานพลังในการตรวจจับข้อบกพร่อง (Ensemble Fault Detection Synergy)
-หนึ่งในข้อค้นพบที่สำคัญที่สุดของงานวิจัยนี้ คือ **การทำงานร่วมกันระหว่างเทคนิคที่ต่างกระบวนทัศน์ (Cross-Paradigm Ensemble Synergy)**:
-
-| เทคนิคการทดสอบ | จำนวนบั๊กที่ตรวจพบ ($N_{\text{detected}}$) | ตรวจพบเฉพาะตัว (Unique Detections) | ตรวจพบร่วมกับเทคนิคอื่น (Overlapping) |
-| :--- | :---: | :---: | :---: |
-| **Gemini 3.8 Flash** | **88 บั๊ก** | **80 บั๊ก (90.9%)** | 8 บั๊ก |
-| **DeepSeek V4 Flash** | **12 บั๊ก** | **4 บั๊ก (33.3%)** | 8 บั๊ก |
-| **IPO (Native / PICT)** | **9 บั๊ก** | **7 บั๊ก (77.8%)** | 2 บั๊ก |
-| **MIO (EvoSuite SBST)** | **0 บั๊ก** | 0 บั๊ก | 0 บั๊ก (Regression Oracle) |
-| **Ensemble Total (Hybrid)** | **105 บั๊ก** | **105 บั๊ก (100%)** | **Ensemble FDR = 12.30%** |
-
-> **🚀 ข้อค้นพบเชิงประจักษ์ระดับสูง (Breakthrough Finding):**  
-> 1. การนำเทคนิคทั้งหมดมารวมกันเป็น Ensemble Test Suite ช่วยยกระดับการตรวจจับข้อบกพร่องขึ้นสู่ **105 บั๊ก (12.30% FDR)** ซึ่งสูงกว่าการใช้ Gemini เพียงลำพัง (88 บั๊ก) อย่างมีนัยสำคัญ
-> 2. **IPO สามารถตรวจพบบั๊กที่ไม่ซ้ำกับ AI ถึง 7 บั๊ก** เนื่องจากโครงสร้างการจับคู่ค่าพารามิเตอร์ขอบเขต (Boundary Value Combinations) ของ IPO สามารถเข้าถึงจุดเปลี่ยนผ่านของสมการคณิตศาสตร์และตัวแปรเงื่อนไขที่ LLM มองข้าม
-> 3. สาเหตุที่ MIO ได้ FDR 0.00% ไม่ได้เกิดจากชุดทดสอบไม่มีคุณภาพ แต่เกิดจากธรรมชาติของ EvoSuite ที่เป็น **Regression Test Generator** ซึ่งสร้าง Assertion โดยยึดเอาพฤติกรรมของโค้ดปัจจุบันเป็นความถูกต้อง เมื่อนำไปรันบนเวอร์ชันมีบั๊ก โค้ดเทสจึงไม่เกิด Failure ตรงข้ามกับ LLM และ IPO ที่สร้าง Assertion จากสเปกและตรรกะความถูกต้องของโปรแกรม
-
----
-
-### 5.5 ผลกระทบของโครงสร้างบั๊ก: Single-Class vs. Multi-Class Defect Resilience
-เมื่อจำแนกข้อบกพร่องตามระดับความซับซ้อนของสถาปัตยกรรม:
-* **Single-Class Defects:** บั๊กที่มีการแก้ไขโค้ดเพียงคลาสเดียว (เช่น Math-2, Lang-1)
-* **Multi-Class Defects:** บั๊กที่มีการแก้ไขโค้ดเกี่ยวเนื่องกันตั้งแต่ 2 คลาสขึ้นไป (เช่น Closure, JxPath)
-
-| เทคนิคการทดสอบ | Single-Class Line Cov | Single-Class FDR % | Multi-Class Line Cov | Multi-Class FDR % | อัตราความยืดหยุ่น (Resilience) |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **MIO (EvoSuite)** | 69.12% | 0.00% | 67.24% | 0.00% | **สูงสุด** (Coverage ลดลงเพียง 1.88%) |
-| **Gemini 3.8 Flash** | 49.35% | 18.20% | 34.12% | 8.10% | **ปานกลาง** (FDR ลดลงครึ่งหนึ่งใน Multi-class) |
-| **DeepSeek V4 Flash** | 17.80% | 1.35% | 7.90% | 0.00% | **ต่ำ** (Compile Error สูงขึ้นมากเมื่อข้ามคลาส) |
-| **IPO (Native)** | 32.80% | 5.80% | 31.10% | 1.80% | **จำกัด** (จำกัดเฉพาะการทดสอบระดับฟังก์ชันในคลาส) |
+ทุก suite evaluation มี suite hash, run ID, timestamp, duration และ structured run log ในคอลัมน์ `Run_Log`; แถว `NO_SUITE` มีบันทึกสถานะและไม่มี suite hash ตามความหมาย ผู้ตรวจสามารถใช้ project + bug + technique ไล่กลับไปยัง log และตรวจผลบน buggy/fixed ได้
 
 ---
 
 ## บทที่ 6: สรุปผลการวิจัย ข้อเสนอแนะเชิงวิศวกรรม และงานวิจัยในอนาคต
 
-### 6.1 สรุปคำตอบสำหรับคำถามวิจัย (Answering Research Questions)
-1. **RQ1 (Coverage):** ในภาพรวม MIO (EvoSuite) มีความครอบคลุมรหัสคำสั่งเฉลี่ยสูงสุด ($68.85\%$) แต่หากพิจารณาเฉพาะโค้ดที่คอมไพล์ผ่าน **Gemini 3.8 Flash บรรลุความครอบคลุมสูงสุดถึง $92.58\%$** เหนือกว่าทุกเทคนิคอย่างมีนัยสำคัญ ($p < 0.001$)
-2. **RQ2 (Fault Detection):** **Gemini 3.8 Flash ครองความเป็นผู้นำในการตรวจจับข้อบกพร่องจริงสูงสุดที่ $16.70\%$ (88 บั๊ก)** เอาชนะทั้ง DeepSeek ($1.12\%$) และ IPO ($5.20\%$) ได้อย่างขาดลอย
-3. **RQ3 (Ensemble Synergy):** การรวมชุดทดสอบแบบ Hybrid (AI + IPO + MIO) สามารถเพิ่มจำนวนบั๊กที่ตรวจพบเป็น **105 บั๊ก (12.30% FDR)** โดย IPO สามารถเติมเต็มช่องว่างตรวจพบบั๊กเฉพาะตัวที่ AI ตรวจไม่พบถึง 7 บั๊ก
-4. **RQ4 (Budget Scaling):** การขยายงบประมาณ MIO เกินกว่า 60 วินาทีให้ผลตอบแทนชะลอตัวลงอย่างมีนัยสำคัญ ชี้ชัดว่า **Search Budget ที่ 60 วินาทีคือจุดคุ้มทุนเชิงวิศวกรรมที่ดีที่สุด**
-5. **RQ5 (Economics):** **Gemini 3.8 Flash มีความคุ้มค่าเชิงเศรษฐศาสตร์สูงสุด** โดยเร็วกว่า DeepSeek 3.84 เท่า และมีต้นทุนโทเค็นต่อหนึ่งบั๊กที่ตรวจพบถูกกว่าถึง 15.75 เท่า
+ผลประเมินที่ตรวจ provenance ได้ครบทุก suite ที่มีอยู่แล้ว Gemini มีค่าเฉลี่ย coverage สูงสุด ขณะที่ Native IPO มี FDR สูงสุดต่อ suite ที่ประเมิน; ไม่มีเทคนิคเดียวที่ดีที่สุดในทุกตัวชี้วัด MIO และ DeepSeek ตรวจพบน้อยกว่าในชุดนี้ และ DeepSeek มีสัดส่วน compile error สูง จึงควรเลือกเครื่องมือตามเป้าหมายและคำนึงถึงคุณภาพการคอมไพล์ร่วมกับ coverage/FDR
 
----
+การรวมผลสี่เทคนิคตรวจพบ 144 บั๊กไม่ซ้ำ โดย Gemini มีส่วนตรวจพบเฉพาะเทคนิค 91 บั๊ก, Native IPO 27, MIO 5 และ DeepSeek 5. ตัวเลขเฉพาะเหล่านี้อธิบายความเสริมกันของเทคนิค แต่ไม่ใช่การประมาณต้นทุนต่อบั๊ก เพราะ log การสร้าง AI ยังเชื่อมกับ run ID ของ benchmark ไม่ครบ
 
-### 6.2 ข้อเสนอแนะเชิงวิศวกรรมซอฟต์แวร์ในอุตสาหกรรม (Engineering Best Practices)
-จากผลการทดลองเชิงประจักษ์ คณะผู้วิจัยขอเสนอแนวทางปฏิบัติในการประกันคุณภาพซอฟต์แวร์สำหรับอุตสาหกรรมดังนี้:
-1. **การใช้สถาปัตยกรรม Hybrid Pipeline:** ไม่ควรพึ่งพาเทคนิคใดเพียงเทคนิคเดียว ควรใช้ **EvoSuite (MIO)** ในการสร้างโครงเทสและ Regression Suite เพื่อคุ้มกันความครอบคลุมภาพรวมของระบบ จากนั้นใช้ **LLM (เช่น Gemini)** ในการสร้าง Semantic Oracle และ Edge-case Assertions และเสริมด้วย **Combinatorial Testing (IPO)** บนฟังก์ชันที่มีความซับซ้อนของพารามิเตอร์นำเข้าสูง
-2. **การติดตั้ง Compile Guardrail ให้กับ LLM:** ปัญหาคอขวดที่ใหญ่ที่สุดของ LLM คืออัตราการเกิด `COMPILE_ERROR` ในโปรเจกต์ขนาดใหญ่ การออกแบบระบบในอุตสาหกรรมควรมี **Automated Compilation-Feedback Loop** เพื่อส่ง Error Log ให้โมเดลทำการ Auto-fix ซ้ำ 1–2 รอบก่อนนำเข้าสู่ CI/CD Pipeline
-3. **การตั้งงบประมาณเวลา Search-Based Testing:** การตั้งเวลารัน EvoSuite ควรจำกัดอยู่ที่ 60 วินาทีต่อคลาส เนื่องจากการเพิ่มเวลาเป็น 120 วินาทีไม่ได้เพิ่ม Coverage หรือ Fault Detection อย่างมีนัยสำคัญทางสถิติ แต่เพิ่มภาระการประมวลผลขึ้นเท่าตัว
-
----
-
-### 6.3 ทิศทางงานวิจัยในอนาคต (Future Work)
-1. **การวิจัย LLM Multi-Turn Self-Debugging Loop:** พัฒนา Agentic Workflow ที่เชื่อมต่อคอมไพเลอร์เข้ากับ LLM เพื่อแก้ปัญหา Compile Error แบบเรียลไทม์
-2. **การขยายผลสู่ Mutation Testing:** ศึกษาประสิทธิภาพในการฆ่ามิวแทนท์ (Mutation Score) เพิ่มเติมจากการทดสอบบนข้อบกพร่องจริงใน Defects4J
-3. **การสังเคราะห์ชุดทดสอบข้ามคลาส (Inter-Class Context Prompting):** พัฒนาระบบ Context Injection ที่สามารถอ่าน Type Hierarchy และ Dependency Graph ข้ามคลาส เพื่อยกระดับความสามารถในการตรวจจับ Multi-Class Defects ของโมเดล AI
+ผลนี้จำกัดอยู่ที่ target classes ใน Defects4J และ suite ที่สมาชิกส่งมอบจริง; 648 ช่อง `NO_SUITE` ไม่ได้ถูกตีความว่าไม่พบข้อบกพร่อง ส่วน compile errors และ flaky/regression ถูกแสดงเป็นผลลัพธ์แยกและยังอยู่ในตัวหาร FDR.
 
 ---
 

@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 48.54,
+  "branch_cov": 41.18,
+  "test_file": "Coders_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.Coders",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.Coders_ESTest::test08"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.Coders_ESTest::test08"
+  ],
+  "suite_sha256": "72fa11c6caf52f4cf1481b7029340a871b24131f4a82b05bd0356ea3a7ee4cb5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_23b/Coders_ESTest.java"
+  ],
+  "run_id": "Compress-23-mio-1790368640"
+}

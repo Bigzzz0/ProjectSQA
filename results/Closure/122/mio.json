@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.8,
+  "branch_cov": 9.5,
+  "test_file": "IRFactory_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.parsing.IRFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "14ea664c31d663a518bd313b5df149525369430856725800d4d0b981433e11af",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_122b/IRFactory_ESTest.java"
+  ],
+  "run_id": "Closure-122-mio-1790362126"
+}

@@ -1,0 +1,22 @@
+{
+  "project": "Closure",
+  "bug_id": 105,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-105-deepseek-1790360926",
+  "suite_sha256": "4c51b036313f281c28c351c892fad0f3072841504f42aee51f5bc1a0f644bf72",
+  "test_files": "FoldConstantsDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.FoldConstants",
+  "timestamp": "2026-09-26 01:29:10",
+  "evaluation_duration_sec": 24.078,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 26.49,
+  "branch_coverage_percent": 25.44,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FoldConstantsDeepseekTest::testStringJoinEmptyElements",
+    "com.google.javascript.jscomp.FoldConstantsDeepseekTest::testStringJoinAdd"
+  ],
+  "fixed_failures": []
+}

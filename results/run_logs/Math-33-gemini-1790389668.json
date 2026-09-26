@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 33,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-33-gemini-1790389668",
+  "suite_sha256": "e8a3d9887347c5b62d4b10b9e02d2c500b099c37f7ee082beceb9a526ff001a8",
+  "test_files": "SimplexTableauGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.linear.SimplexTableau",
+  "timestamp": "2026-09-26 09:27:56",
+  "evaluation_duration_sec": 7.951,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "e/commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/stat/descriptive/summary/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/analysis/polynomials/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_33b/target/classes/org/apache/commons/math3/fraction/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_33b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_33b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_33b/.test_suite/org/apache/commons/math3/optimization/linear/SimplexTableauGeminiTest.java:97: error: columnLabels has private access in SimplexTableau\n    [javac]         assertEquals(\"Z\", tableau.columnLabels.get(0));\n    [javac]                                  ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

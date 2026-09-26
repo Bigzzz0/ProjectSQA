@@ -10,5 +10,10 @@
     "org.apache.commons.lang.enums.ValuedEnumGeminiTest::testCompareTo_otherEnumType",
     "org.apache.commons.lang.enums.ValuedEnumGeminiTest::testCompareTo_otherEnumTypeDifferentValues"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "9d16d3e3c46db6e5c65b0a1825392a10f9a53764bdbaabf1e486c958a7b42617",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_64b/ValuedEnumGeminiTest.java"
+  ],
+  "run_id": "Lang-64-gemini-1790387406"
 }

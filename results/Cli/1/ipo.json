@@ -4,12 +4,17 @@
   "failures_count": 1,
   "line_cov": 0.0,
   "branch_cov": 0.0,
-  "test_file": "Cli_1b_IPOTest.java",
+  "test_file": "CommandLine_IPOTest.java",
   "target_classes": "org.apache.commons.cli.CommandLine",
   "buggy_failures": [
-    "org.apache.commons.cli.Cli_1b_IPOTest"
+    "org.apache.commons.cli.CommandLine_IPOTest"
   ],
   "fixed_failures": [
-    "org.apache.commons.cli.Cli_1b_IPOTest"
-  ]
+    "org.apache.commons.cli.CommandLine_IPOTest"
+  ],
+  "suite_sha256": "31d8761e752b2686f7f8dd49a5688df80b5d79b0c012304ff35a262c55444e48",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Cli_1b/org/apache/commons/cli/CommandLine_IPOTest.java"
+  ],
+  "run_id": "Cli-1-ipo-1790352569"
 }

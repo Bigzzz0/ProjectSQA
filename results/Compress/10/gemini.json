@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.compress.archivers.zip.ZipFileGeminiTest::testReadEntryWithUnicodeExtraFieldMutatedHashCode"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "3313cf0b7af2eb59024ec26d9b4a8452507744e95c66d9cb021ebb96b8da35a1",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_10b/ZipFileGeminiTest.java"
+  ],
+  "run_id": "Compress-10-gemini-1790368015"
 }

@@ -1,0 +1,35 @@
+{
+  "project": "Math",
+  "bug_id": 71,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-71-deepseek-1790392290",
+  "suite_sha256": "fabf01a998ce3cab744753ed2f77ca2080c22e35c0836796582332ce043c4cbf",
+  "test_files": "EmbeddedRungeKuttaIntegratorDeepseekTest.java;RungeKuttaIntegratorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator;org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator",
+  "timestamp": "2026-09-26 10:12:07",
+  "evaluation_duration_sec": 36.516,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.98,
+  "branch_coverage_percent": 93.88,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testResetStateEventContinues",
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testEventExactlyAtStartIsNotSkipped",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testMissedEndEvent",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullEquations",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testStepRejectionNearStart",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY0"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testResetStateEventContinues",
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorDeepseekTest::testEventExactlyAtStartIsNotSkipped",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testMissedEndEvent",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullEquations",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testStepRejectionNearStart",
+    "org.apache.commons.math.ode.nonstiff.RungeKuttaIntegratorDeepseekTest::testNullY0"
+  ]
+}

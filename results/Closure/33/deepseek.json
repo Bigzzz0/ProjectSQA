@@ -13,5 +13,10 @@
   "fixed_failures": [
     "com.google.javascript.rhino.jstype.PrototypeObjectTypeDeepseekTest::testToStringHelperNamedAnonymousAndPrettyPrint",
     "com.google.javascript.rhino.jstype.PrototypeObjectTypeDeepseekTest::testGetSlotFindsPropertiesOnImplementedInterfaces"
-  ]
+  ],
+  "suite_sha256": "bec471e7e38568e9de650d9d6359836b2d1d4bb78e8d896fe68329a9eb5c0e82",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_33b/PrototypeObjectTypeDeepseekTest.java"
+  ],
+  "run_id": "Closure-33-deepseek-1790356489"
 }

@@ -19,5 +19,10 @@
     "org.jsoup.nodes.EntitiesGeminiTest::testIsNamedEntityNull",
     "org.jsoup.nodes.EntitiesGeminiTest::testIsBaseNamedEntityNull",
     "org.jsoup.nodes.EntitiesGeminiTest::testGetCharacterByNameNull"
-  ]
+  ],
+  "suite_sha256": "c03d597fb0c31a39bfc14b5d530f866dca22decf43fa24523491283aa19657c9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_46b/EntitiesGeminiTest.java"
+  ],
+  "run_id": "Jsoup-46-gemini-1790380792"
 }

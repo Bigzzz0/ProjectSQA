@@ -1,0 +1,19 @@
+{
+  "project": "Chart",
+  "bug_id": 6,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-6-mio-1790351220",
+  "suite_sha256": "b60184c3c4ee9cff2b0f44ef18fcdfdf63b773df5eab9a99b0a2d6b750799aab",
+  "test_files": "ShapeList_ESTest.java",
+  "target_classes": "org.jfree.chart.util.ShapeList",
+  "timestamp": "2026-09-25 22:47:25",
+  "evaluation_duration_sec": 24.675,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 41.38,
+  "branch_coverage_percent": 33.33,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

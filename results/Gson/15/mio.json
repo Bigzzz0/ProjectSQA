@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.94,
+  "branch_cov": 84.78,
+  "test_file": "JsonWriter_ESTest.java",
+  "target_classes": "com.google.gson.stream.JsonWriter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1ce3fa922a4ced492fb291dd189c6aac95d88ce77f9e67531742d7560c58e7a7",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_15b/JsonWriter_ESTest.java"
+  ],
+  "run_id": "Gson-15-mio-1790371229"
+}

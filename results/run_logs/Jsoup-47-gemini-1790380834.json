@@ -1,0 +1,26 @@
+{
+  "project": "Jsoup",
+  "bug_id": 47,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-47-gemini-1790380834",
+  "suite_sha256": "b7467006a6274c59f29212a310c3bc4f09b8c368e7dce66a14d191f62161f181",
+  "test_files": "EntitiesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "timestamp": "2026-09-26 07:00:51",
+  "evaluation_duration_sec": 17.323,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.31,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::escapesGtInXmlAttributesButNotInHtml",
+    "org.jsoup.nodes.EntitiesGeminiTest::testXmlAttributeEscapingDirect"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::escapesGtInXmlAttributesButNotInHtml"
+  ]
+}

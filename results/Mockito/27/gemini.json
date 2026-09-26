@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.mockito.internal.util.MockUtilGeminiTest::testCreateMockWithSpiedInstanceCopiesState",
     "org.mockito.internal.util.MockUtilGeminiTest::testListenersNotLostOnResetMock_DefectTarget"
-  ]
+  ],
+  "suite_sha256": "0e464a4937a8868ed7bdeeb50faf12d92b27101a7e2df75f72b8f9f0aef9fe05",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_27b/MockUtilGeminiTest.java"
+  ],
+  "run_id": "Mockito-27-gemini-1790397608"
 }

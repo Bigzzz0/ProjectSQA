@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 34,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-34-deepseek-1790398044",
+  "suite_sha256": "4ac24bafef079d56335a071d3bf85edf0324e8b3c53031c719eb357d7adebec2",
+  "test_files": "InvocationMatcherDeepseekTest.java",
+  "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+  "timestamp": "2026-09-26 11:47:30",
+  "evaluation_duration_sec": 6.341,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "clared in class Class\n    [javac] /tmp/d4j_eval/Mockito_34b/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = field.isAccessible();\n    [javac]                              ^\n    [javac] 20 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_34b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_34b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_34b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_34b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_34b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_34b/.test_suite/org/mockito/internal/invocation/InvocationMatcherDeepseekTest.java:66: error: cannot find symbol\n    [javac]     private static class LocationStub extends Location {\n    [javac]                                               ^\n    [javac]   symbol:   class Location\n    [javac]   location: class InvocationMatcherDeepseekTest\n    [javac] Note: /tmp/d4j_eval/Mockito_34b/.test_suite/org/mockito/internal/invocation/InvocationMatcherDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

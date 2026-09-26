@@ -1,0 +1,24 @@
+{
+  "project": "Lang",
+  "bug_id": 64,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-64-deepseek-1790387386",
+  "suite_sha256": "be8bfbf2888284111206686201632f20ce7b6fdc601ab556b1f5184a8301ac25",
+  "test_files": "ValuedEnumDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.enums.ValuedEnum",
+  "timestamp": "2026-09-26 08:50:05",
+  "evaluation_duration_sec": 19.739,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareToBoundaryValues",
+    "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareTo_otherEnumType"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareToBoundaryValues"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 4.76,
+  "branch_cov": 0.68,
+  "test_file": "FromXmlParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a656d99f15684b75643201387a1321ef435618f2e297d2bcf2c906d355feec7b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonXml_1b/FromXmlParser_ESTest.java"
+  ],
+  "run_id": "JacksonXml-1-mio-1790378597"
+}

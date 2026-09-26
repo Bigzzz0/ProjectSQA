@@ -1,0 +1,24 @@
+{
+  "project": "Collections",
+  "bug_id": 26,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-26-gemini-1790367490",
+  "suite_sha256": "1423edc0cc5c4bcf9d245800e6ab8f842d7564518ed1c59734afc2bd7b976bf4",
+  "test_files": "MultiKeyGeminiTest.java",
+  "target_classes": "org.apache.commons.collections4.keyvalue.MultiKey",
+  "timestamp": "2026-09-26 03:18:27",
+  "evaluation_duration_sec": 17.4,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections4.keyvalue.MultiKeyGeminiTest::testGetKeysReturnsDefensiveCopy",
+    "org.apache.commons.collections4.keyvalue.MultiKeyGeminiTest::testEqualsAfterSerializationOfDerivedClass"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.keyvalue.MultiKeyGeminiTest::testGetKeysReturnsDefensiveCopy"
+  ]
+}

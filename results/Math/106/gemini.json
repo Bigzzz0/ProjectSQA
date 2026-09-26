@@ -18,5 +18,10 @@
   "fixed_failures": [
     "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
     "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash"
-  ]
+  ],
+  "suite_sha256": "b6f1a47740baa416e3bad1ed1b5e13ee74e4f2deca1c75ebcae79f02fba9ef1d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_106b/ProperFractionFormatGeminiTest.java"
+  ],
+  "run_id": "Math-106-gemini-1790394724"
 }

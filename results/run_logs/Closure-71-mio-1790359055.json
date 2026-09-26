@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 71,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-71-mio-1790359055",
+  "suite_sha256": "b4617f9c6ab554184b6a46aee583036822d03f9286683a940449265b15013e86",
+  "test_files": "CheckAccessControls_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckAccessControls",
+  "timestamp": "2026-09-26 00:58:06",
+  "evaluation_duration_sec": 30.561,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 27.34,
+  "branch_coverage_percent": 9.01,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

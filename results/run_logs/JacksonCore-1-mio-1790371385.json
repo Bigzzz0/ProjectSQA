@@ -1,0 +1,25 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-1-mio-1790371385",
+  "suite_sha256": "365b5aa1c77b7ac7c8fda0f1c2fe176fb325692f887a9cb8b523e196397a1f51",
+  "test_files": "NumberInput_ESTest.java;TextBuffer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
+  "timestamp": "2026-09-26 04:23:23",
+  "evaluation_duration_sec": 18.452,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.73,
+  "branch_coverage_percent": 92.44,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.io.NumberInput_ESTest::test44",
+    "com.fasterxml.jackson.core.io.NumberInput_ESTest::test45",
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test17",
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test18",
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test26"
+  ]
+}

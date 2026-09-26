@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 60.81,
+  "branch_cov": 32.35,
+  "test_file": "TypeDeserializerBase_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4bc32f8821d0dc2e488679ad5aabbcb722facfdf1c001248519bc46fedd4e0e0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_51b/TypeDeserializerBase_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-51-mio-1790375212"
+}

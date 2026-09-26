@@ -1,0 +1,23 @@
+{
+  "project": "Compress",
+  "bug_id": 21,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-21-deepseek-1790368551",
+  "suite_sha256": "d3fca32036fef213803fe235bd1883001304e89d97c55ea7af501cc552f2f5cc",
+  "test_files": "SevenZOutputFileDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZOutputFile",
+  "timestamp": "2026-09-26 03:36:13",
+  "evaluation_duration_sec": 22.297,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.77,
+  "branch_coverage_percent": 85.29,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFileDeepseekTest::testWriteWithoutPutArchiveEntry"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZOutputFileDeepseekTest::testWriteWithoutPutArchiveEntry"
+  ]
+}

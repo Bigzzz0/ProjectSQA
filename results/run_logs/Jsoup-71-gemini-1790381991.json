@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 71,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-71-gemini-1790381991",
+  "suite_sha256": "d98635d91e1bb9fe47ef1d1a739e885882279f4e6928dd7f2b82166843085667",
+  "test_files": "EvaluatorGeminiTest.java;QueryParserGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.PseudoTextElement;org.jsoup.select.Evaluator;org.jsoup.select.QueryParser",
+  "timestamp": "2026-09-26 07:19:55",
+  "evaluation_duration_sec": 3.98,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "rning\n    [javac] 3 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_71b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_71b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_71b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_71b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Jsoup_71b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_71b/.test_suite/org/jsoup/select/EvaluatorGeminiTest.java:4: error: cannot find symbol\n    [javac] import org.jsoup.helper.ValidationException;\n    [javac]                        ^\n    [javac]   symbol:   class ValidationException\n    [javac]   location: package org.jsoup.helper\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

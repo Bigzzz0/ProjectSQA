@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 19.72,
+  "branch_cov": 16.67,
+  "test_file": "SourceFile_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.SourceFile",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "87733b8bb0789e8b5a323e45103484f7ead39c1e03c870ae46b9738934017785",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Closure_56b/com/google/javascript/jscomp/SourceFile_IPOTest.java"
+  ],
+  "run_id": "Closure-56-ipo-1790358031"
+}

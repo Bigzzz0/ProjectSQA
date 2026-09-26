@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.98,
+  "branch_cov": 95.45,
+  "test_file": "TreeList_ESTest.java",
+  "target_classes": "org.apache.commons.collections.list.TreeList",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7a90b1b6e8e60c26eb2dd7d47b3631d6c44a0502d797ac436c8bb2c9bc576f98",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_20b/TreeList_ESTest.java"
+  ],
+  "run_id": "Collections-20-mio-1790367151"
+}

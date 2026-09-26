@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 38,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-38-deepseek-1790353842",
+  "suite_sha256": "a48e84d9563156c5915519491c5907d78d9ae706b6d2fc4537058d1cc818acd8",
+  "test_files": "DefaultParserDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.DefaultParser",
+  "timestamp": "2026-09-25 23:30:45",
+  "evaluation_duration_sec": 3.087,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "s obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Cli_38b/src/main/java/org/apache/commons/cli/TypeHandler.java:128: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]             return cl.newInstance();\n    [javac]                      ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Cli_38b/target/classes/org/apache/commons/cli/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_38b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Cli_38b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_38b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Cli_38b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_38b/.test_suite/org/apache/commons/cli/DefaultParserDeepseekTest.java:110: error: cannot find symbol\n    [javac]         Properties props = new Properties();\n    [javac]         ^\n    [javac]   symbol:   class Properties\n    [javac]   location: class DefaultParserDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 20,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-20-gemini-1790352173",
+  "suite_sha256": "9a20877270477b6fe0265e847589b69481be6fdcc42343529bc51f9945aaa87e",
+  "test_files": "ValueMarkerGeminiTest.java",
+  "target_classes": "org.jfree.chart.plot.ValueMarker",
+  "timestamp": "2026-09-25 23:03:01",
+  "evaluation_duration_sec": 7.767,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "compile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_20b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_20b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_20b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_20b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_20b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_20b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_20b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_20b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Chart_20b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_20b/.test_suite/org/jfree/chart/plot/ValueMarkerGeminiTest.java:290: error: no suitable constructor found for Marker(Paint,Stroke)\n    [javac]         Marker otherMarker = new Marker(vm.getPaint(), vm.getStroke()) {};\n    [javac]                              ^\n    [javac]     constructor Marker.Marker() is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor Marker.Marker(Paint) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor Marker.Marker(Paint,Stroke,Paint,Stroke,float) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

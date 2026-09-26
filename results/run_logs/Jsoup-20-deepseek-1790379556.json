@@ -1,0 +1,28 @@
+{
+  "project": "Jsoup",
+  "bug_id": 20,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-20-deepseek-1790379556",
+  "suite_sha256": "6e4888cfdaca4f53fda4003322be1711709033f6302a795b8e53ee567c49b511",
+  "test_files": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 06:39:31",
+  "evaluation_duration_sec": 15.028,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.73,
+  "branch_coverage_percent": 81.82,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::loadInputStreamWithBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithNullCharsetAndBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithSpecifiedCharsetAndBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithSpaces"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilDeepseekTest::loadInputStreamWithBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithNullCharsetAndBOM",
+    "org.jsoup.helper.DataUtilDeepseekTest::getCharsetFromContentTypeWithSpaces"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 7,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-7-deepseek-1790379062",
+  "suite_sha256": "3ccbec58ed850c100c2323f0375c554053b414f47220cbb07560a62fea095bd3",
+  "test_files": "DocumentDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "timestamp": "2026-09-26 06:31:05",
+  "evaluation_duration_sec": 3.269,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Jsoup_7b/src/main/java/org/jsoup/nodes/Node.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_7b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_7b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_7b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_7b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_7b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_7b/target/classes/org/jsoup/safety/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_7b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_7b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_7b/.test_suite/org/jsoup/nodes/DocumentDeepseekTest.java:105: error: cannot find symbol\n    [javac]         root.appendChild(new Element(Tag.valueOf(\"html\"), \"\"));\n    [javac]                                      ^\n    [javac]   symbol:   variable Tag\n    [javac]   location: class DocumentDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

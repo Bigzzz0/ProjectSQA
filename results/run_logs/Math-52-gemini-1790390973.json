@@ -1,0 +1,25 @@
+{
+  "project": "Math",
+  "bug_id": 52,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-52-gemini-1790390973",
+  "suite_sha256": "756e8dc8b34bd06574b5a2ff152ebb028a0fa4402a9cbe54a5f15f10b30488b6",
+  "test_files": "RotationGeminiTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "timestamp": "2026-09-26 09:49:59",
+  "evaluation_duration_sec": 25.443,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.46,
+  "branch_coverage_percent": 86.07,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
+    "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
+  ]
+}

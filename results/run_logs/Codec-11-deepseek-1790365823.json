@@ -1,0 +1,32 @@
+{
+  "project": "Codec",
+  "bug_id": 11,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-11-deepseek-1790365823",
+  "suite_sha256": "ffbcef263c36b52c2e15c02cb843bdc2ec21c10104f086bf40671d8b228e8096",
+  "test_files": "QuotedPrintableCodecDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+  "timestamp": "2026-09-26 02:50:35",
+  "evaluation_duration_sec": 12.56,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.12,
+  "branch_coverage_percent": 83.33,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSoftLineBreakDecode",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSoftLineBreakEncode",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testUltimateSoftBreak",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testTrailingSpecial",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testStaticDecodeQuotedPrintableWithCRLFSoftBreak"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeEmptyByteArray",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testStaticEncodeQuotedPrintableCustomPrintable",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testStaticEncodeQuotedPrintableNullPrintable",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSkipNotEncodedCRLF",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeByteArraySignedConversion",
+    "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeByteArrayNormal"
+  ]
+}

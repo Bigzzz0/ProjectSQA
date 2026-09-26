@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 77,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-77-deepseek-1790392705",
+  "suite_sha256": "60c9c9c7cca3e1f42546f4f7c5771606c05fca647d08ae2ff95513929e16f113",
+  "test_files": "ArrayRealVectorDeepseekTest.java;OpenMapRealVectorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.linear.ArrayRealVector;org.apache.commons.math.linear.OpenMapRealVector",
+  "timestamp": "2026-09-26 10:18:33",
+  "evaluation_duration_sec": 7.579,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "b/target/test-classes\n\ncompile:\n    [javac] /tmp/d4j_eval/Math_77b/build.xml:154: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 397 source files to /tmp/d4j_eval/Math_77b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_77b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Math_77b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_77b/.test_suite/org/apache/commons/math/linear/ArrayRealVectorDeepseekTest.java:58: error: reference to ArrayRealVector is ambiguous\n    [javac]         new ArrayRealVector(null, true);\n    [javac]         ^\n    [javac]   both constructor ArrayRealVector(double[],boolean) in ArrayRealVector and constructor ArrayRealVector(ArrayRealVector,boolean) in ArrayRealVector match\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

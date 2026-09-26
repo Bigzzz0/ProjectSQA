@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.61,
+  "branch_cov": 20.51,
+  "test_file": "StdSubtypeResolver_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolver",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "41f434ae143eadd67a80b16800c05fbf28a8e665bb879d84def7a657e2df236f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_80b/StdSubtypeResolver_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-80-mio-1790376763"
+}

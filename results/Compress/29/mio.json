@@ -1,0 +1,40 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 8,
+  "line_cov": 42.95,
+  "branch_cov": 31.98,
+  "test_file": "ArchiveStreamFactory_ESTest.java;CpioArchiveInputStream_ESTest.java;CpioArchiveOutputStream_ESTest.java;DumpArchiveInputStream_ESTest.java;TarArchiveInputStream_ESTest.java;TarArchiveOutputStream_ESTest.java;ZipArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ArchiveStreamFactory;org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream;org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream;org.apache.commons.compress.archivers.dump.DumpArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test09",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test10",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test18",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test08",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test09",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test20",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test5"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test09",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test10",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test18",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test08",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test09",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test20",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test5"
+  ],
+  "suite_sha256": "a6ab889e3a9c8b049a8ff726c10cc82b1187e21a3e6f13fd0fd6267c184d78d5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/ArchiveStreamFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/CpioArchiveInputStream_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/CpioArchiveOutputStream_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/DumpArchiveInputStream_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/TarArchiveInputStream_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/TarArchiveOutputStream_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_29b/evosuite-tests/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-29-mio-1790369040"
+}

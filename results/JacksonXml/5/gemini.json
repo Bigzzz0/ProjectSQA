@@ -10,5 +10,10 @@
     "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyDoesNotShareRootNameLookupInstance",
     "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyWithDefect282AnnotationIndependence"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "1930c655ae8c363e1eda1f12b57c9a238198eff6d0e23b8825c3e378c41da84a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonXml_5b/XmlSerializerProviderGeminiTest.java"
+  ],
+  "run_id": "JacksonXml-5-gemini-1790378761"
 }

@@ -17,5 +17,10 @@
   "fixed_failures": [
     "org.jfree.data.KeyedObjects2DGeminiTest::testSerialization",
     "org.jfree.data.KeyedObjects2DGeminiTest::testEqualsAndHashCode"
-  ]
+  ],
+  "suite_sha256": "f34c157ce847b340346d23253cb7261363a16634e280dcec588159e71fe1fc0b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_22b/KeyedObjects2DGeminiTest.java"
+  ],
+  "run_id": "Chart-22-gemini-1790352304"
 }

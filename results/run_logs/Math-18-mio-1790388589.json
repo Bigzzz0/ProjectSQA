@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 18,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-18-mio-1790388589",
+  "suite_sha256": "01f7c1fe7ca60f847ab66e561f7addf0606ce43859ca31ccf9af9f90d86e0dce",
+  "test_files": "CMAESOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "timestamp": "2026-09-26 09:10:17",
+  "evaluation_duration_sec": 27.97,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 82.94,
+  "branch_coverage_percent": 71.74,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 8,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Lang-8-ipo-1790383988",
+  "suite_sha256": "5a5f79e0bbf9410d719bf258f408d0c5f5353c0e80ecc23138edeb5366852972",
+  "test_files": "FastDatePrinter_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDatePrinter",
+  "timestamp": "2026-09-26 07:53:32",
+  "evaluation_duration_sec": 23.98,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 31.75,
+  "branch_coverage_percent": 22.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,35 @@
+{
+  "project": "Compress",
+  "bug_id": 37,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-37-gemini-1790369559",
+  "suite_sha256": "b18347da7ec2a368cdcb377eb40c7e2a9f7b25607d19375628d469aa3a1b9397",
+  "test_files": "TarArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "timestamp": "2026-09-26 03:52:58",
+  "evaluation_duration_sec": 19.082,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 77.64,
+  "branch_coverage_percent": 63.16,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testOldGnuSparsePrematureEOF",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadWithoutCurrentEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSparseHeadersInPax",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGlobalPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSurvivesBlankLinesInPaxHeader",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testTruncatedEntryDataThrowsIOException"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testOldGnuSparsePrematureEOF",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadWithoutCurrentEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSparseHeadersInPax",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGlobalPaxHeadersApplication",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testSurvivesBlankLinesInPaxHeader",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testTruncatedEntryDataThrowsIOException"
+  ]
+}

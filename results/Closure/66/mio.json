@@ -1,0 +1,46 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 14,
+  "line_cov": 21.99,
+  "branch_cov": 8.45,
+  "test_file": "TypeCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test02",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test27",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test04",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test20",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test23",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test22",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test13",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test15",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test32",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test31",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test12",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test11",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test33",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test17"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test02",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test27",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test04",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test20",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test23",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test22",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test13",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test15",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test32",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test31",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test12",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test11",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test33",
+    "com.google.javascript.jscomp.TypeCheck_ESTest::test17"
+  ],
+  "suite_sha256": "4a1cd161affc1d64b4d7758ee6a81e5ec1745a0d52f8f4f0989e0ff8490b026b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_66b/TypeCheck_ESTest.java"
+  ],
+  "run_id": "Closure-66-mio-1790358733"
+}

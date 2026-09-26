@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 27,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-27-deepseek-1790367544",
+  "suite_sha256": "4c84d409f21f46c9384296ab35ad171aa18cd1b3c924d381c68994aca13e1bee",
+  "test_files": "MultiValueMapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections4.map.MultiValueMap",
+  "timestamp": "2026-09-26 03:19:09",
+  "evaluation_duration_sec": 4.799,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "2>,Factory<C#2>) is not applicable\n    [javac]       (cannot infer type-variable(s) K#3,V#3,C#2\n    [javac]         (argument mismatch; Class<ArrayList> cannot be converted to Factory<C#2>))\n    [javac]   where K#1,V#1,K#2,V#2,C#1,K#3,V#3,C#2 are type-variables:\n    [javac]     K#1 extends Object declared in method <K#1,V#1>multiValueMap(Map<K#1,? super Collection<V#1>>)\n    [javac]     V#1 extends Object declared in method <K#1,V#1>multiValueMap(Map<K#1,? super Collection<V#1>>)\n    [javac]     K#2 extends Object declared in method <K#2,V#2,C#1>multiValueMap(Map<K#2,? super C#1>,Class<C#1>)\n    [javac]     V#2 extends Object declared in method <K#2,V#2,C#1>multiValueMap(Map<K#2,? super C#1>,Class<C#1>)\n    [javac]     C#1 extends Collection<V#2> declared in method <K#2,V#2,C#1>multiValueMap(Map<K#2,? super C#1>,Class<C#1>)\n    [javac]     K#3 extends Object declared in method <K#3,V#3,C#2>multiValueMap(Map<K#3,? super C#2>,Factory<C#2>)\n    [javac]     V#3 extends Object declared in method <K#3,V#3,C#2>multiValueMap(Map<K#3,? super C#2>,Factory<C#2>)\n    [javac]     C#2 extends Collection<V#3> declared in method <K#3,V#3,C#2>multiValueMap(Map<K#3,? super C#2>,Factory<C#2>)\n    [javac] Note: /tmp/d4j_eval/Collections_27b/.test_suite/org/apache/commons/collections4/map/MultiValueMapDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Collections_27b/.test_suite/org/apache/commons/collections4/map/MultiValueMapDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

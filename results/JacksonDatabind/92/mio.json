@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.1,
+  "branch_cov": 38.73,
+  "test_file": "BeanDeserializerFactory_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "01f8f10420c2b75997ed27a1d0f7f7d640e911592c9a44b03596db7337188c1b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_92b/BeanDeserializerFactory_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-92-mio-1790377405"
+}

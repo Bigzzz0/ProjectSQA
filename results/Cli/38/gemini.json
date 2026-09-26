@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.cli.DefaultParserGeminiTest::testQuotedArgumentStripping",
     "org.apache.commons.cli.DefaultParserGeminiTest::shouldParseConcatenatedShortOptions"
-  ]
+  ],
+  "suite_sha256": "c5fa3468ab960a659c8734b95301940d2ae2859566da9e44b60d68c23f41a36a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_38b/DefaultParserGeminiTest.java"
+  ],
+  "run_id": "Cli-38-gemini-1790353845"
 }

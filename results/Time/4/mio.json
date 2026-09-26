@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.84,
+  "branch_cov": 95.28,
+  "test_file": "Partial_ESTest.java",
+  "target_classes": "org.joda.time.Partial",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c482fddead9fb9d0b5a0110409ae2d4ae9652a5f8769a808d3087ae3b78ff710",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_4b/Partial_ESTest.java"
+  ],
+  "run_id": "Time-4-mio-1790398453"
+}

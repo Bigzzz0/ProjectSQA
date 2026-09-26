@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 69.44,
+  "branch_cov": 72.22,
+  "test_file": "IOUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.utils.IOUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d4684595059f2fefb81d6820f6acc0c4eb1744ebb722eb63927574db5074d1c5",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_26b/org/apache/commons/compress/utils/IOUtils_IPOTest.java"
+  ],
+  "run_id": "Compress-26-ipo-1790368827"
+}

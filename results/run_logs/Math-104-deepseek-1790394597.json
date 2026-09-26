@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 104,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-104-deepseek-1790394597",
+  "suite_sha256": "a2c610e5f44b0fc875da21089038188402e23fd013a175fd495e866abfc70423",
+  "test_files": "GammaDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.special.Gamma",
+  "timestamp": "2026-09-26 10:50:03",
+  "evaluation_duration_sec": 6.755,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "pache/commons/math/util/MathUtils.java:672: warning: [deprecation] ROUND_UNNECESSARY in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UNNECESSARY :\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_104b/src/java/org/apache/commons/math/util/MathUtils.java:677: warning: [deprecation] ROUND_UP in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UP :\n    [javac]                        ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 70 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Math_104b/target/classes/META-INF\n     [copy] Copying 1 file to /tmp/d4j_eval/Math_104b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Math_104b/target/classes/../classes\n     [echo] build.home: /tmp/d4j_eval/Math_104b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Math_104b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_104b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_104b/.test_suite/org/apache/commons/math/special/GammaDeepseekTest.java:56: error: cannot find symbol\n    [javac]     public void testRegularizedGammaPStandardValues() throws MathException {\n    [javac]                                                              ^\n    [javac]   symbol:   class MathException\n    [javac]   location: class GammaDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

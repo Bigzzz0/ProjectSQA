@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 95.7,
+  "branch_cov": 97.22,
+  "test_file": "ListOrderedSet_ESTest.java",
+  "target_classes": "org.apache.commons.collections.set.ListOrderedSet",
+  "buggy_failures": [
+    "org.apache.commons.collections.set.ListOrderedSet_ESTest::test18"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.set.ListOrderedSet_ESTest::test18"
+  ],
+  "suite_sha256": "34f7d162c0613560b2c031c8d86328ae210b6260095fdaabf924a2facc6d4908",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_18b/ListOrderedSet_ESTest.java"
+  ],
+  "run_id": "Collections-18-mio-1790367057"
+}

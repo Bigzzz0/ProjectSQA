@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.csv.CSVFormatGeminiTest::testFormatAndParseAndPrintOperations"
-  ]
+  ],
+  "suite_sha256": "a0f64acc6d16c6af32d16d8a6bd9ccd572e2e658faece425ba919a0c6095b8ef",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_12b/CSVFormatGeminiTest.java"
+  ],
+  "run_id": "Csv-12-gemini-1790370518"
 }

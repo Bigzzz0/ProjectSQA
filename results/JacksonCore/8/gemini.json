@@ -19,5 +19,10 @@
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalAllBranches",
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentAndReturn",
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testSetCurrentLengthContract"
-  ]
+  ],
+  "suite_sha256": "893504134d1bc62beb4c94ca63a77ce06c73483ca3076c5daddd5e55644c074e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_8b/TextBufferGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-8-gemini-1790371701"
 }

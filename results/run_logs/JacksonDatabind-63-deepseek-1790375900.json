@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 63,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-63-deepseek-1790375900",
+  "suite_sha256": "9cecb12aa0c6e223b01f79a51a5ff288a5dc3687b183b41e47d66b3126058374",
+  "test_files": "JsonMappingExceptionDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JsonMappingException",
+  "timestamp": "2026-09-26 05:38:28",
+  "evaluation_duration_sec": 8.517,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "er/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_63b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_63b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_63b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_63b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_63b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_63b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_63b/.test_suite/com/fasterxml/jackson/databind/JsonMappingExceptionDeepseekTest.java:54: error: cannot find symbol\n    [javac]         Closeable dummy = new Closeable() {\n    [javac]         ^\n    [javac]   symbol:   class Closeable\n    [javac]   location: class JsonMappingExceptionDeepseekTest\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_63b/.test_suite/com/fasterxml/jackson/databind/JsonMappingExceptionDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

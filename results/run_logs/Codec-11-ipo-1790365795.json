@@ -1,0 +1,19 @@
+{
+  "project": "Codec",
+  "bug_id": 11,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Codec-11-ipo-1790365795",
+  "suite_sha256": "3994a708aa9850bf26f966aa72725ac30257cbe06e536de4b9bd95c8fead45f2",
+  "test_files": "QuotedPrintableCodec_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+  "timestamp": "2026-09-26 02:50:09",
+  "evaluation_duration_sec": 13.723,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 30.86,
+  "branch_coverage_percent": 16.67,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

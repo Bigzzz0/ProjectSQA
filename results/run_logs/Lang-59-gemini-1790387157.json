@@ -1,0 +1,31 @@
+{
+  "project": "Lang",
+  "bug_id": 59,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-59-gemini-1790387157",
+  "suite_sha256": "098afe0a3d7a0dbd69c8975400ef043b55b7f774404928b2c0cd67add8c90a6c",
+  "test_files": "StrBuilderGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.text.StrBuilder",
+  "timestamp": "2026-09-26 08:46:18",
+  "evaluation_duration_sec": 20.611,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 85.21,
+  "branch_coverage_percent": 67.89,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAppendStringAndSubstrings",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testLang299_appendFixedWidthPadRight_truncateWhenWidthLessThanStringLength",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testLang299_appendFixedWidthPadRight_intOverloadTruncate",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchMethods",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testDeleteAndTrimOperations"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testAppendStringAndSubstrings",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testSearchMethods",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testEqualsAndHashCode",
+    "org.apache.commons.lang.text.StrBuilderGeminiTest::testDeleteAndTrimOperations"
+  ]
+}

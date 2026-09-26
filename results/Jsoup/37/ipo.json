@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 67.43,
+  "branch_cov": 34.87,
+  "test_file": "Element_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9a8e17894bc0e7c349dd6995b98ed4b4b4edb524dcaecf0fba3162cb4fa8fc46",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_37b/org/jsoup/nodes/Element_IPOTest.java"
+  ],
+  "run_id": "Jsoup-37-ipo-1790380270"
+}

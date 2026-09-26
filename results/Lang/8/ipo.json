@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 31.75,
+  "branch_cov": 22.0,
+  "test_file": "FastDatePrinter_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDatePrinter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5a5f79e0bbf9410d719bf258f408d0c5f5353c0e80ecc23138edeb5366852972",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_8b/org/apache/commons/lang3/time/FastDatePrinter_IPOTest.java"
+  ],
+  "run_id": "Lang-8-ipo-1790383988"
+}

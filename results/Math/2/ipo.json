@@ -1,18 +1,16 @@
 {
   "status": "DONE",
-  "fault_detected": "BUG_DETECTED",
-  "failures_count": 6,
-  "line_cov": 24.32,
-  "branch_cov": 19.23,
-  "test_file": "Math_2b_IPOTest.java",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 74.32,
+  "branch_cov": 69.23,
+  "test_file": "HypergeometricDistribution_IPOTest.java",
   "target_classes": "org.apache.commons.math3.distribution.HypergeometricDistribution",
-  "buggy_failures": [
-    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_004",
-    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_005",
-    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_007",
-    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_010",
-    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_011",
-    "org.apache.commons.math3.distribution.Math_2b_IPOTest::test_hypergeometric_mean_012"
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2c5da4aba2debd1c123ddcbe5277ff20f4857f9818d02f4890c0b83e45ccf2b6",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_2b/org/apache/commons/math3/distribution/HypergeometricDistribution_IPOTest.java"
   ],
-  "fixed_failures": []
+  "run_id": "Math-2-ipo-1790387550"
 }

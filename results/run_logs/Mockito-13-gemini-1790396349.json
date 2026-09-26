@@ -1,0 +1,31 @@
+{
+  "project": "Mockito",
+  "bug_id": 13,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-13-gemini-1790396349",
+  "suite_sha256": "63b6d1368ac407b8d2216bbd3ca334d63c3d092e61122dda5497b2e6bcfea00a",
+  "test_files": "MockHandlerGeminiTest.java",
+  "target_classes": "org.mockito.internal.MockHandler",
+  "timestamp": "2026-09-26 11:19:38",
+  "evaluation_duration_sec": 28.75,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.0,
+  "branch_coverage_percent": 90.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.MockHandlerGeminiTest::testDefectVerifyingWithExtraCallToDifferentMockPreservesVerificationMode",
+    "org.mockito.internal.MockHandlerGeminiTest::testNonMockAwareVerificationModeDoesNotTriggerVerification",
+    "org.mockito.internal.MockHandlerGeminiTest::testStubbedInvocationArgumentsCaptured",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithDefaultAnswer",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithAnswersForStubbingQueue"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.MockHandlerGeminiTest::testDefectVerifyingWithExtraCallToDifferentMockPreservesVerificationMode",
+    "org.mockito.internal.MockHandlerGeminiTest::testNonMockAwareVerificationModeDoesNotTriggerVerification",
+    "org.mockito.internal.MockHandlerGeminiTest::testStubbedInvocationArgumentsCaptured",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithDefaultAnswer",
+    "org.mockito.internal.MockHandlerGeminiTest::testHandleWithAnswersForStubbingQueue"
+  ]
+}

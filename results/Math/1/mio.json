@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.47,
+  "branch_cov": 94.79,
+  "test_file": "BigFraction_ESTest.java;Fraction_ESTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.BigFraction;org.apache.commons.math3.fraction.Fraction",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fcb18e3de53b4ef4530c27f2728bc39f31b97ad2d2ad3c3f84a6f83f28dd01a2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_1b/BigFraction_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_1b/Fraction_ESTest.java"
+  ],
+  "run_id": "Math-1-mio-1790387503"
+}

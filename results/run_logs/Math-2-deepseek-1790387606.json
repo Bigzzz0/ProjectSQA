@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 2,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-2-deepseek-1790387606",
+  "suite_sha256": "08e59ee02a73520aed60d5ee05172b4c16f608620d00897a71e023266d482c24",
+  "test_files": "HypergeometricDistributionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.HypergeometricDistribution",
+  "timestamp": "2026-09-26 08:53:52",
+  "evaluation_duration_sec": 26.571,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.distribution.HypergeometricDistributionDeepseekTest::testMath1021_IntegerOverflowInNumericalMean"
+  ],
+  "fixed_failures": []
+}

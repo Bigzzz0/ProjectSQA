@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.5,
+  "branch_cov": 82.43,
+  "test_file": "BrentOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.univariate.BrentOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d35d431e43fdab05511bf0b9a687b8e7ad9fa576fa19664790def0c4bcd6e34f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_24b/BrentOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-24-mio-1790389029"
+}

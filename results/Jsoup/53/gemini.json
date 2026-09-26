@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.jsoup.parser.TokenQueueGeminiTest::testBasicQueueLifecycleAndState",
     "org.jsoup.parser.TokenQueueGeminiTest::testChompBalancedUnclosedOrEmpty"
-  ]
+  ],
+  "suite_sha256": "1d88dbd969cc2f6853b6d40ccc03c2a145cc5720352e215517af64a174166e39",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_53b/TokenQueueGeminiTest.java"
+  ],
+  "run_id": "Jsoup-53-gemini-1790381164"
 }

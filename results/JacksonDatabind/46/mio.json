@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 98.08,
+  "branch_cov": 95.45,
+  "test_file": "ReferenceType_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ReferenceType",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test08",
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test00",
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test14"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test08",
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test00",
+    "com.fasterxml.jackson.databind.type.ReferenceType_ESTest::test14"
+  ],
+  "suite_sha256": "38f5d1ae0fdab6ed5c621c0e14a320bf6ec52c301ed2687fc343e1b3eb0f36ae",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_46b/ReferenceType_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-46-mio-1790374941"
+}

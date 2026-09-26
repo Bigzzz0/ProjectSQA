@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.jxpath.ri.model.NodePointerGeminiTest::testLocaleInheritanceAndLanguageMatching"
-  ]
+  ],
+  "suite_sha256": "13887361d0f27b54a0de3376eb6591b98fb6aafff271890ef9ed315f74edb709",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_5b/NodePointerGeminiTest.java"
+  ],
+  "run_id": "JxPath-5-gemini-1790383148"
 }

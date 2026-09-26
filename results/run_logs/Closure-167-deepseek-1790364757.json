@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 167,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-167-deepseek-1790364757",
+  "suite_sha256": "7fe2b0616ec7d9ec7875dafaef82c2c8ea2548d5129d5c8c44578c7547d355b4",
+  "test_files": "JSTypeDeepseekTest.java;SemanticReverseAbstractInterpreterDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter;com.google.javascript.rhino.jstype.JSType",
+  "timestamp": "2026-09-26 02:32:47",
+  "evaluation_duration_sec": 9.834,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ogle/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_167b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_167b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_167b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_167b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_167b/.test_suite/com/google/javascript/jscomp/type/SemanticReverseAbstractInterpreterDeepseekTest.java:60: error: no suitable constructor found for JSTypeRegistry(no arguments)\n    [javac]         registry = new JSTypeRegistry();\n    [javac]                    ^\n    [javac]     constructor JSTypeRegistry.JSTypeRegistry(ErrorReporter) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor JSTypeRegistry.JSTypeRegistry(ErrorReporter,boolean) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

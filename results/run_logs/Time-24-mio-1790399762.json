@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 24,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-24-mio-1790399762",
+  "suite_sha256": "63ce8a00aac915c70ca1b9c7abf90357a58161364fd49e08d1af14c85c933681",
+  "test_files": "DateTimeParserBucket_ESTest.java",
+  "target_classes": "org.joda.time.format.DateTimeParserBucket",
+  "timestamp": "2026-09-26 12:16:30",
+  "evaluation_duration_sec": 27.346,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 95.83,
+  "branch_coverage_percent": 90.62,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

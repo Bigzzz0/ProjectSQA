@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 37.76,
+  "branch_cov": 33.39,
+  "test_file": "ReaderBasedJsonParser_ESTest.java;UTF8StreamJsonParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test30",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test79",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test69",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test64",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test66",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test50",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test52",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test51",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test55"
+  ],
+  "suite_sha256": "73007650c80c2f698047914f70e9c6d3beecc2def4f42e019274ca9739f500f9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_2b/ReaderBasedJsonParser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_2b/UTF8StreamJsonParser_ESTest.java"
+  ],
+  "run_id": "JacksonCore-2-mio-1790371454"
+}

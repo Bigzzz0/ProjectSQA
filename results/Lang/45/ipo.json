@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 10,
+  "line_cov": 68.12,
+  "branch_cov": 68.63,
+  "test_file": "WordUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.WordUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_268",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_273",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_278",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_288",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_293",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_298",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_303",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_313",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_318",
+    "org.apache.commons.lang.WordUtils_IPOTest::test_abbreviate_pairwise_362"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "2d05acbc1baad66d92ea434a449e7502f96d3387e1fb0138f34f3ca78f0e6a52",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_45b/org/apache/commons/lang/WordUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-45-ipo-1790386333"
+}

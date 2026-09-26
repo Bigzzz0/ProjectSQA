@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 28,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Mockito-28-ipo-1790397638",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.mockito.internal.configuration.DefaultInjectionEngine",
+  "timestamp": "2026-09-26 11:40:38",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

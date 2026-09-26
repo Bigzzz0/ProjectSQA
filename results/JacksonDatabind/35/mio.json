@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 41.18,
+  "branch_cov": 18.75,
+  "test_file": "AsWrapperTypeDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.AsWrapperTypeDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a9b5e24c4cbf02684c4157f15d1db3d587158863741b0d3d3c8c21d095f7070c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_35b/AsWrapperTypeDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-35-mio-1790374208"
+}

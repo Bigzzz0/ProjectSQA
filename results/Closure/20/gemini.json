@@ -24,5 +24,10 @@
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testImmediateCallToBoundFunction",
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testNestedIfCombination",
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testReduceReturnUndefinedAndVoid"
-  ]
+  ],
+  "suite_sha256": "938f7c908cc78da7973c517c3976a000e12a7937dccc04b032a1ea39f38fbf9b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_20b/PeepholeSubstituteAlternateSyntaxGeminiTest.java"
+  ],
+  "run_id": "Closure-20-gemini-1790355424"
 }

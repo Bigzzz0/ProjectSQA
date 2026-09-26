@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-1-gemini-1790367619",
+  "suite_sha256": "b1f151114f1fd9cbd0a1d354671d5e2db5abb019a1d78621e4286981cf094632",
+  "test_files": "CpioArchiveOutputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+  "timestamp": "2026-09-26 03:20:22",
+  "evaluation_duration_sec": 3.519,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "    [javac]              ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 14 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_1b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_1b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_1b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_1b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_1b/.test_suite/org/apache/commons/compress/archivers/cpio/CpioArchiveOutputStreamGeminiTest.java:115: error: no suitable constructor found for CpioArchiveEntry(short,String,int)\n    [javac]         CpioArchiveEntry entry = new CpioArchiveEntry(CpioConstants.FORMAT_OLD_ASCII, \"ascii_entry.txt\", 5);\n    [javac]                                  ^\n    [javac]     constructor CpioArchiveEntry.CpioArchiveEntry(short) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor CpioArchiveEntry.CpioArchiveEntry(String) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor CpioArchiveEntry.CpioArchiveEntry(String,long) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

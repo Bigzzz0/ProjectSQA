@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 75.89,
+  "branch_cov": 67.65,
+  "test_file": "AnnotatedClass_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.introspect.AnnotatedClass",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.introspect.AnnotatedClass_ESTest::test32",
+    "com.fasterxml.jackson.databind.introspect.AnnotatedClass_ESTest::test25"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.introspect.AnnotatedClass_ESTest::test32",
+    "com.fasterxml.jackson.databind.introspect.AnnotatedClass_ESTest::test25"
+  ],
+  "suite_sha256": "181232612cfd0c536ca854326b914f885979732ae585a4657b71a967c7789511",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_5b/AnnotatedClass_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-5-mio-1790372615"
+}

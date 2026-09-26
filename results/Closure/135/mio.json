@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.84,
+  "branch_cov": 12.58,
+  "test_file": "DevirtualizePrototypeMethods_ESTest.java;FunctionType_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.DevirtualizePrototypeMethods;com.google.javascript.rhino.jstype.FunctionType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7a16e2988e5bf7d67c68f112a844141ea615997121641326213ba55eeeea85b2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_135b/DevirtualizePrototypeMethods_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_135b/FunctionType_ESTest.java"
+  ],
+  "run_id": "Closure-135-mio-1790362866"
+}

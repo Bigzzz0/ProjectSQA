@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.82,
+  "branch_cov": 87.78,
+  "test_file": "DoubleMetaphone_ESTest.java",
+  "target_classes": "org.apache.commons.codec.language.DoubleMetaphone",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f31e3a19df97a3ac0fcbac8b28acafae7cb996e7fda6c7b92c83716d5d80168c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_3b/DoubleMetaphone_ESTest.java"
+  ],
+  "run_id": "Codec-3-mio-1790365475"
+}

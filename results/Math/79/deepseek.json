@@ -15,5 +15,10 @@
     "org.apache.commons.math.util.MathUtilsDeepseekTest::testHashDoubleArrayNull",
     "org.apache.commons.math.util.MathUtilsDeepseekTest::testNormalizeAngle",
     "org.apache.commons.math.util.MathUtilsDeepseekTest::testBinomialCoefficientBoundaries"
-  ]
+  ],
+  "suite_sha256": "8c6a2c1238d170d72530ea6512a0903ada3085222d2fada692193ff382aae7e7",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_79b/MathUtilsDeepseekTest.java"
+  ],
+  "run_id": "Math-79-deepseek-1790392852"
 }

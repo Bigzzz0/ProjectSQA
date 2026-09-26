@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 86,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-86-mio-1790377078",
+  "suite_sha256": "728bd839c08cac86e436c396387856fd434b3f1b7884b827c6bedcc3700ba05d",
+  "test_files": "ResolvedRecursiveType_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "timestamp": "2026-09-26 05:58:26",
+  "evaluation_duration_sec": 28.392,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

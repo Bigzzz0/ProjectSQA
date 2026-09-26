@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.31,
+  "branch_cov": 84.03,
+  "test_file": "CollectionLikeType_ESTest.java;JavaType_ESTest.java;MapLikeType_ESTest.java;TypeFactory_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JavaType;com.fasterxml.jackson.databind.type.CollectionLikeType;com.fasterxml.jackson.databind.type.MapLikeType;com.fasterxml.jackson.databind.type.TypeFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a20d8dfd3e45343366a3d1b7978c398de05c5f73a17f70299982a239ed0dbade",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_59b/CollectionLikeType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_59b/JavaType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_59b/MapLikeType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_59b/TypeFactory_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-59-mio-1790375648"
+}

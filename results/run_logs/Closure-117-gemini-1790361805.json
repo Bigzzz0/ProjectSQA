@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 117,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-117-gemini-1790361805",
+  "suite_sha256": "1b4901db33e502dfc75724465c0f2fab177b5d7e0ee23a7b8a2be778c8da92e1",
+  "test_files": "TypeValidatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeValidator",
+  "timestamp": "2026-09-26 01:43:35",
+  "evaluation_duration_sec": 9.703,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": ".properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_117b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_117b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_117b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_117b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_117b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_117b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_117b/.test_suite/com/google/javascript/jscomp/TypeValidatorGeminiTest.java:116: error: cannot find symbol\n    [javac]     FunctionType c2Ctor = registry.buildConstructorType(\"C2\", null, null, null, null);\n    [javac]                                   ^\n    [javac]   symbol:   method buildConstructorType(String,<null>,<null>,<null>,<null>)\n    [javac]   location: variable registry of type JSTypeRegistry\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

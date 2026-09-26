@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.jsoup.nodes.AttributeGeminiTest::testHtmlOutputFormatting",
     "org.jsoup.nodes.AttributeGeminiTest::testSetValueWhenParentKeyNotFound"
-  ]
+  ],
+  "suite_sha256": "a58ee96c51b9b7f9b21c2bb5dce5a9c550b1562269362144ea2fccf5615e04f4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_88b/AttributeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-88-gemini-1790382776"
 }

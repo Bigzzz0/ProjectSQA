@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 25,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-25-mio-1790367393",
+  "suite_sha256": "3513b19a129e9c26b3d7a4b123b7307b05c8d7879d17c1a76587983fb2ea8f86",
+  "test_files": "IteratorUtils_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.IteratorUtils",
+  "timestamp": "2026-09-26 03:16:53",
+  "evaluation_duration_sec": 20.729,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 82.63,
+  "branch_coverage_percent": 76.98,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

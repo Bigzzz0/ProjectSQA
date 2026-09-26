@@ -1,0 +1,23 @@
+{
+  "project": "Compress",
+  "bug_id": 44,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-44-gemini-1790369951",
+  "suite_sha256": "fe73a0aa1863dd9e3c0ba5e996e96c014336c2f7ce2dc0f98ac6dd14423384c1",
+  "test_files": "ChecksumCalculatingInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ChecksumCalculatingInputStream",
+  "timestamp": "2026-09-26 03:59:30",
+  "evaluation_duration_sec": 19.038,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamGeminiTest::testClassInstantiationWithNullInputStreamThrowsNullPointerException",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamGeminiTest::testClassInstantiationWithBothParametersNullThrowsNullPointerException",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamGeminiTest::testClassInstantiationWithNullChecksumThrowsNullPointerException"
+  ],
+  "fixed_failures": []
+}

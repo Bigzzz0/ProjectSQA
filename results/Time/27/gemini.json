@@ -15,5 +15,10 @@
     "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testDigitsBoundariesAndSignedRejection",
     "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testCompositeHierarchyDecomposition",
     "org.joda.time.format.PeriodFormatterBuilderGeminiTest::testSeparatorLeadingWithoutFieldsBefore"
-  ]
+  ],
+  "suite_sha256": "76954d265fdf9b16ffa3b08b71bd3d47b63ae8f1629577f3692dedfe889d0ed7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_27b/PeriodFormatterBuilderGeminiTest.java"
+  ],
+  "run_id": "Time-27-gemini-1790400003"
 }

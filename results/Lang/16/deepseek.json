@@ -20,5 +20,10 @@
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDecimalNoQualifier",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
-  ]
+  ],
+  "suite_sha256": "6551b27244918eec64c6b492b704ee98f83674a08a5d1665f0e0076209cd4829",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_16b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-16-deepseek-1790384594"
 }

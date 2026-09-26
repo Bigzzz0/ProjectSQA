@@ -15,5 +15,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.parser.CharacterReaderGeminiTest::testToStringContract"
-  ]
+  ],
+  "suite_sha256": "2aabedb676de289b06453bd45c81703700c1fefa5d6078812656e08ab977cbe9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_18b/CharacterReaderGeminiTest.java"
+  ],
+  "run_id": "Jsoup-18-gemini-1790379470"
 }

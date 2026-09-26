@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 12.2,
+  "branch_cov": 0.0,
+  "test_file": "UnreachableCodeElimination_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "563ddd683cef15d028b4bdf49bc4a9cc2d55a9416d446377cbd5b9d513b877fc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_127b/UnreachableCodeElimination_ESTest.java"
+  ],
+  "run_id": "Closure-127-mio-1790362413"
+}

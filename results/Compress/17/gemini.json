@@ -15,5 +15,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testVerifyCheckSumCompress197StarTarHeader",
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testVerifyCheckSumCompress197StarTarHeaderTrailingNull",
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseNameStandard"
-  ]
+  ],
+  "suite_sha256": "1c269d14f6a7ff48245287688f3b3b03ddf645eb854d53153203635776cd0c2b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_17b/TarUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-17-gemini-1790368365"
 }

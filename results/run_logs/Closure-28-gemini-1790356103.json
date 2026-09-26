@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 28,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-28-gemini-1790356103",
+  "suite_sha256": "a6b59dfe44b9f1326f95fe62ca424ee329e84c8491228c0d51bd1f81f742c63c",
+  "test_files": "InlineCostEstimatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineCostEstimator",
+  "timestamp": "2026-09-26 00:08:57",
+  "evaluation_duration_sec": 33.977,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testFunctionReturningConstantCost",
+    "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testCostOfConstants_RevealsIssue728Defect",
+    "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNullRootNodeReturnsZeroCost"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testCostOfConstants_RevealsIssue728Defect",
+    "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNullRootNodeReturnsZeroCost",
+    "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNumberLiteralCost"
+  ]
+}

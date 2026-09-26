@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.89,
+  "branch_cov": 84.78,
+  "test_file": "Tag_ESTest.java",
+  "target_classes": "org.jsoup.parser.Tag",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4e6af3999c369ef1922314a32601b859d016146d779ea95708703b116e4cf9d1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_25b/Tag_ESTest.java"
+  ],
+  "run_id": "Jsoup-25-mio-1790379762"
+}

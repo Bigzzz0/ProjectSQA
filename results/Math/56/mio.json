@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 97.06,
+  "test_file": "MultidimensionalCounter_ESTest.java",
+  "target_classes": "org.apache.commons.math.util.MultidimensionalCounter",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.util.MultidimensionalCounter_ESTest::test05"
+  ],
+  "suite_sha256": "ba8d3d89f279ffc1ab40b1f80776df9078598356c073e76c605eeb849c6d4343",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_56b/MultidimensionalCounter_ESTest.java"
+  ],
+  "run_id": "Math-56-mio-1790391261"
+}

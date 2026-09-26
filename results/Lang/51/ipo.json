@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 21.64,
+  "branch_cov": 18.87,
+  "test_file": "BooleanUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.BooleanUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "710351e86aada9fa7d0ac95fc9da5f90f714509243bf0ceb760f55210e0baefc",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_51b/org/apache/commons/lang/BooleanUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-51-ipo-1790386623"
+}

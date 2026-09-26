@@ -1,0 +1,19 @@
+{
+  "project": "Compress",
+  "bug_id": 41,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Compress-41-ipo-1790369754",
+  "suite_sha256": "49ed3198a2cfe1179a2509bc80f13653c0ae10ce8b8d0ace1982b9f13d163141",
+  "test_files": "ZipArchiveInputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:56:14",
+  "evaluation_duration_sec": 19.92,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 12.38,
+  "branch_coverage_percent": 6.54,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

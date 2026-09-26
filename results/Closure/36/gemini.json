@@ -51,5 +51,10 @@
     "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSimpleVariableInlinedInAllMode",
     "com.google.javascript.jscomp.InlineVariablesGeminiTest::testAliasCandidateInlining",
     "com.google.javascript.jscomp.InlineVariablesGeminiTest::testAssignedOnceNeverReadEliminated"
-  ]
+  ],
+  "suite_sha256": "31bb049e06cccdeb27794865d45532155d1e1c33165561a5bb6c2c0b8d7c917f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_36b/InlineVariablesGeminiTest.java"
+  ],
+  "run_id": "Closure-36-gemini-1790356715"
 }

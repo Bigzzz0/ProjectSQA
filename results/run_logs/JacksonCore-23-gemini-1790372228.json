@@ -1,0 +1,24 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 23,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-23-gemini-1790372228",
+  "suite_sha256": "a75e9a704246ffea0b0cd74a45af8ef68cf6d035a8cec93dd63ec973be621aff",
+  "test_files": "DefaultPrettyPrinterGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.DefaultPrettyPrinter",
+  "timestamp": "2026-09-26 04:37:25",
+  "evaluation_duration_sec": 17.427,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.06,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testObjectFormattingLifecycleInlineIndenter",
+    "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testInvalidSubClass"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testObjectFormattingLifecycleInlineIndenter"
+  ]
+}

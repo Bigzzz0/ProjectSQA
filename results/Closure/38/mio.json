@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 2.68,
+  "branch_cov": 14.06,
+  "test_file": "CodeConsumer_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeConsumer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "31cd0f9d534832a85e5947702ef2261e30698bc0ad055b1eeae0854a8e28cf0e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_38b/CodeConsumer_ESTest.java"
+  ],
+  "run_id": "Closure-38-mio-1790356815"
+}

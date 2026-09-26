@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 23,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Chart-23-ipo-1790352327",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.jfree.chart.renderer.category.MinMaxCategoryRenderer",
+  "timestamp": "2026-09-25 23:05:27",
+  "evaluation_duration_sec": 3.812,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

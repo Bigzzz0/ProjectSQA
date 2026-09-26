@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalWithOffset"
-  ]
+  ],
+  "suite_sha256": "744d3fb5832bb05036832b3a93abb24284744b8c926182c8fe88fa55b438899d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_8b/TarUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-8-gemini-1790367952"
 }

@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.archivers.sevenz.SevenZOutputFileDeepseekTest::testWriteWithoutPutArchiveEntry"
-  ]
+  ],
+  "suite_sha256": "d3fca32036fef213803fe235bd1883001304e89d97c55ea7af501cc552f2f5cc",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_21b/SevenZOutputFileDeepseekTest.java"
+  ],
+  "run_id": "Compress-21-deepseek-1790368551"
 }

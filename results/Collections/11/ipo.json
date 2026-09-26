@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.57,
+  "branch_cov": 58.33,
+  "test_file": "MultiKey_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.keyvalue.MultiKey",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a01c4fadb24e2c6d6c3918b9c9f051a4d0a805987e1f6d8baab995152085d16b",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Collections_11b/org/apache/commons/collections/keyvalue/MultiKey_IPOTest.java"
+  ],
+  "run_id": "Collections-11-ipo-1790366658"
+}

@@ -1,0 +1,24 @@
+{
+  "project": "Lang",
+  "bug_id": 65,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-65-gemini-1790387453",
+  "suite_sha256": "7e6f071a2d166246617e60bee37d5380e6fc44aacd4be999dbc6b83e1cf50275",
+  "test_files": "DateUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.time.DateUtils",
+  "timestamp": "2026-09-26 08:51:13",
+  "evaluation_duration_sec": 20.33,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.95,
+  "branch_coverage_percent": 95.97,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.DateUtilsGeminiTest::testTruncateLang59",
+    "org.apache.commons.lang.time.DateUtilsGeminiTest::testRoundAndTruncate_AmPm"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.DateUtilsGeminiTest::testRoundAndTruncate_AmPm"
+  ]
+}

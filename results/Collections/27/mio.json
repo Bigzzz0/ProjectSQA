@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 67.72,
+  "branch_cov": 56.0,
+  "test_file": "MultiValueMap_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.map.MultiValueMap",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "eaf07f8742e909f32583e2780ee70f2babce1af9da8ea993892e003adc063732",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_27b/MultiValueMap_ESTest.java"
+  ],
+  "run_id": "Collections-27-mio-1790367525"
+}

@@ -1,0 +1,39 @@
+{
+  "project": "Closure",
+  "bug_id": 162,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-162-mio-1790364403",
+  "suite_sha256": "e32991946bb8e33d91166da377d1f147849182c329820dc0465fe91b1e1a099c",
+  "test_files": "ScopedAliases_ESTest.java;Scope_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Scope;com.google.javascript.jscomp.ScopedAliases",
+  "timestamp": "2026-09-26 02:27:27",
+  "evaluation_duration_sec": 44.042,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 53.59,
+  "branch_coverage_percent": 36.11,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Scope_ESTest::test09",
+    "com.google.javascript.jscomp.Scope_ESTest::test12",
+    "com.google.javascript.jscomp.Scope_ESTest::test19",
+    "com.google.javascript.jscomp.Scope_ESTest::test29",
+    "com.google.javascript.jscomp.Scope_ESTest::test37",
+    "com.google.javascript.jscomp.Scope_ESTest::test34",
+    "com.google.javascript.jscomp.Scope_ESTest::test33",
+    "com.google.javascript.jscomp.Scope_ESTest::test31",
+    "com.google.javascript.jscomp.Scope_ESTest::test30"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Scope_ESTest::test09",
+    "com.google.javascript.jscomp.Scope_ESTest::test12",
+    "com.google.javascript.jscomp.Scope_ESTest::test19",
+    "com.google.javascript.jscomp.Scope_ESTest::test29",
+    "com.google.javascript.jscomp.Scope_ESTest::test37",
+    "com.google.javascript.jscomp.Scope_ESTest::test34",
+    "com.google.javascript.jscomp.Scope_ESTest::test33",
+    "com.google.javascript.jscomp.Scope_ESTest::test31",
+    "com.google.javascript.jscomp.Scope_ESTest::test30"
+  ]
+}

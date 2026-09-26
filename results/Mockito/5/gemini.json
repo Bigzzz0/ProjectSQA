@@ -10,5 +10,10 @@
     "org.mockito.internal.verification.VerificationOverTimeImplGeminiTest::pure_mockito_should_not_depend_JUnit",
     "org.mockito.internal.verification.VerificationOverTimeImplGeminiTest::testVerifyRecoversFromGenericAssertionError"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "cf75f2727e83a9c3371e6fb8c2aeda91e64c7d9dca31af47866e4d8b7ff02e5e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_5b/VerificationOverTimeImplGeminiTest.java"
+  ],
+  "run_id": "Mockito-5-gemini-1790395228"
 }

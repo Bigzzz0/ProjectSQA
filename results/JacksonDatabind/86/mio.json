@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ResolvedRecursiveType_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "728bd839c08cac86e436c396387856fd434b3f1b7884b827c6bedcc3700ba05d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_86b/ResolvedRecursiveType_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-86-mio-1790377078"
+}

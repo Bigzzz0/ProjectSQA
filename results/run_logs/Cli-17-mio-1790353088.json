@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 17,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Cli-17-mio-1790353088",
+  "suite_sha256": "1a56d11d9375d0f446dbf57032992f17dd6a92b152ae75977db595f3541890e6",
+  "test_files": "PosixParser_ESTest.java",
+  "target_classes": "org.apache.commons.cli.PosixParser",
+  "timestamp": "2026-09-25 23:18:22",
+  "evaluation_duration_sec": 13.922,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.PosixParser_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.PosixParser_ESTest"
+  ]
+}

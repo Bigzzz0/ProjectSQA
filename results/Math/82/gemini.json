@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.math.optimization.linear.SimplexSolverGeminiTest::testTwoPhaseWithEqualityConstraint",
     "org.apache.commons.math.optimization.linear.SimplexSolverGeminiTest::testNegativeVariablesAllowed"
-  ]
+  ],
+  "suite_sha256": "d25bd52291ec672d88a0a245872856c8b89158cb6bf25fb2752cfda2738237e4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_82b/SimplexSolverGeminiTest.java"
+  ],
+  "run_id": "Math-82-gemini-1790393087"
 }

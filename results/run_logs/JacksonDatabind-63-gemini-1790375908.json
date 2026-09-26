@@ -1,0 +1,32 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 63,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-63-gemini-1790375908",
+  "suite_sha256": "4d9e9e36272bc8a9c1df33b4c1cb8df15b597c809d0f37619fa483cc2f7e7414",
+  "test_files": "JsonMappingExceptionGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JsonMappingException",
+  "timestamp": "2026-09-26 05:38:54",
+  "evaluation_duration_sec": 25.558,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.75,
+  "branch_coverage_percent": 95.45,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testReferenceChainForInnerClassInstance",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testJsonMappingExceptionSerialization",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testReferenceChainForDeepInnerClass",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testReferenceChainForInnerClass",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testDeprecatedConstructors",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testNullOrEmptyMessageBuild",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testCloseableProcessorConstructorsAndFactories"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testJsonMappingExceptionSerialization",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testDeprecatedConstructors",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testNullOrEmptyMessageBuild",
+    "com.fasterxml.jackson.databind.JsonMappingExceptionGeminiTest::testCloseableProcessorConstructorsAndFactories"
+  ]
+}

@@ -27,5 +27,10 @@
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards"
-  ]
+  ],
+  "suite_sha256": "80b2f1228f44f1149bc07e3e17628c4603c1d4e2c46fc9c6f69c7f27dc4bd00b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_23b/PeepholeFoldConstantsGeminiTest.java"
+  ],
+  "run_id": "Closure-23-gemini-1790355672"
 }

@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 39.72,
+  "branch_cov": 24.28,
+  "test_file": "GlobalNamespace_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test49",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test00"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test49",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test00"
+  ],
+  "suite_sha256": "15772f4a17bae9f8be64bb0e065467ef1a2e5c266a596ddaeded79999a0f449d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_119b/GlobalNamespace_ESTest.java"
+  ],
+  "run_id": "Closure-119-mio-1790361874"
+}

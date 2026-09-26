@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-2-gemini-1790370848",
+  "suite_sha256": "7aa110dc226971121ee75f0d908cbf9f58752aa5fc1a3c3fb1c758940d35b37b",
+  "test_files": "TypeAdaptersGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+  "timestamp": "2026-09-26 04:14:11",
+  "evaluation_duration_sec": 2.835,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]       if (!constructor.isAccessible()) {\n    [javac]                       ^\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Gson_2b/target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_2b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_2b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_2b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_2b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Gson_2b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_2b/.test_suite/com/google/gson/internal/bind/TypeAdaptersGeminiTest.java:538: error: <anonymous com.google.gson.internal.bind.TypeAdaptersGeminiTest$1> is not abstract and does not override abstract method deepCopy() in JsonElement\n    [javac]     JsonElement customElement = new JsonElement() {\n    [javac]                                                   ^\n    [javac] Note: /tmp/d4j_eval/Gson_2b/.test_suite/com/google/gson/internal/bind/TypeAdaptersGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

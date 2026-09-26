@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 4,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-4-deepseek-1790367734",
+  "suite_sha256": "e66c8773dd1a2a8edea72b53b27fabe89fe16ffcca01a242c451673b9b013126",
+  "test_files": "ChangeSetPerformerDeepseekTest.java;CpioArchiveOutputStreamDeepseekTest.java;TarArchiveOutputStreamDeepseekTest.java;ZipArchiveOutputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream;org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream;org.apache.commons.compress.changes.ChangeSetPerformer",
+  "timestamp": "2026-09-26 03:22:18",
+  "evaluation_duration_sec": 3.78,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "arning: [deprecation] finalize() in Object has been deprecated\n    [javac]     protected void finalize() throws Throwable {\n    [javac]                    ^\n    [javac] /tmp/d4j_eval/Compress_4b/src/main/java/org/apache/commons/compress/compressors/bzip2/BZip2CompressorOutputStream.java:501: warning: [deprecation] finalize() in Object has been deprecated\n    [javac]         super.finalize();\n    [javac]              ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 8 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_4b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_4b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_4b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/Compress_4b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_4b/.test_suite/org/apache/commons/compress/archivers/cpio/CpioArchiveOutputStreamDeepseekTest.java:375: error: cannot find symbol\n    [javac]         ArchiveEntry nonCpio = new ArchiveEntry() {\n    [javac]         ^\n    [javac]   symbol:   class ArchiveEntry\n    [javac]   location: class CpioArchiveOutputStreamDeepseekTest\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

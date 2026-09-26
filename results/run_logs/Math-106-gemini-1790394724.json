@@ -1,0 +1,30 @@
+{
+  "project": "Math",
+  "bug_id": 106,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-106-gemini-1790394724",
+  "suite_sha256": "b6f1a47740baa416e3bad1ed1b5e13ee74e4f2deca1c75ebcae79f02fba9ef1d",
+  "test_files": "ProperFractionFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.math.fraction.ProperFractionFormat",
+  "timestamp": "2026-09-26 10:52:26",
+  "evaluation_duration_sec": 21.776,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.25,
+  "branch_coverage_percent": 93.33,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusDenominator",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusWithNegativeWhole",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusWithParsePosition",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusNumerator",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseProperInvalidMinusBothNumeratorAndDenominator"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testFormatCustomBufferAndFieldPosition",
+    "org.apache.commons.math.fraction.ProperFractionFormatGeminiTest::testParseTerminatingWithoutSlash"
+  ]
+}

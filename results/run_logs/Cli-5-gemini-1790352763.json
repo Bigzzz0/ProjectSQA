@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 5,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-5-gemini-1790352763",
+  "suite_sha256": "88cfa04c1e04f5eb135b2d6166d05de17fc33dd5eae5f841724e8984d8e78537",
+  "test_files": "UtilGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.Util",
+  "timestamp": "2026-09-25 23:12:57",
+  "evaluation_duration_sec": 13.641,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.UtilGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.UtilGeminiTest"
+  ]
+}

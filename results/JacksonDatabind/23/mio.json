@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.41,
+  "branch_cov": 70.0,
+  "test_file": "NumberSerializers_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializers",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b93a6498a07c0f5cdc6225f813e24848345b5cefbe4239908b8af959b9518639",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_23b/NumberSerializers_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-23-mio-1790373547"
+}

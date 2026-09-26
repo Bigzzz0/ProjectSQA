@@ -20,5 +20,10 @@
     "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetValueAsString",
     "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testCurrentNameAndOverrideCurrentName",
     "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testGetBinaryValueCorruptBase64ThrowsException"
-  ]
+  ],
+  "suite_sha256": "807b0bafcb2405336d7237ffb2b03466b4ff1cadca17591054a07d3773040aee",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonXml_3b/FromXmlParserGeminiTest.java"
+  ],
+  "run_id": "JacksonXml-3-gemini-1790378685"
 }

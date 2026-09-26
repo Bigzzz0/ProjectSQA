@@ -1,0 +1,29 @@
+{
+  "project": "Closure",
+  "bug_id": 33,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-33-gemini-1790356525",
+  "suite_sha256": "da3589805791088ba8e0f04b82bd2827b64093cbb7ae7ccde94feb6215d45bac",
+  "test_files": "PrototypeObjectTypeGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+  "timestamp": "2026-09-26 00:16:00",
+  "evaluation_duration_sec": 35.305,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 79.17,
+  "branch_coverage_percent": 75.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testIssue700_matchConstraintOnFunctionPrototypeDoesNotMutate",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testIssue700_matchConstraintOnNamedTypeDoesNotMutate"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
+    "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts"
+  ]
+}

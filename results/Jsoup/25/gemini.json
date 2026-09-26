@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jsoup.parser.TagGeminiTest::testPreservesWhitespaceInTextarea"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "56ddc76628594f00c4bb628ef6899e6ef480463a65d3797cc652bf9b3bf8cd7d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_25b/TagGeminiTest.java"
+  ],
+  "run_id": "Jsoup-25-gemini-1790379781"
 }

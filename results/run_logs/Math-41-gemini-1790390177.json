@@ -1,0 +1,25 @@
+{
+  "project": "Math",
+  "bug_id": 41,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-41-gemini-1790390177",
+  "suite_sha256": "17e2943278fd835dcb3dba8485a95fafc3eaa416aa1e9f8af6e1d719287572ca",
+  "test_files": "VarianceGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+  "timestamp": "2026-09-26 09:36:42",
+  "evaluation_duration_sec": 25.53,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.32,
+  "branch_coverage_percent": 82.61,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateWeightedSingleAndEmpty",
+    "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateArraySegmentWeightedWithPrecomputedMean",
+    "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateArraySegmentWeighted"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateWeightedSingleAndEmpty"
+  ]
+}

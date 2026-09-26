@@ -1,0 +1,19 @@
+{
+  "project": "Jsoup",
+  "bug_id": 21,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-21-mio-1790379587",
+  "suite_sha256": "bb2a1c8877c63db26576be0a9bad515a362430ff0b6b2ca18401527311007cc2",
+  "test_files": "CombiningEvaluator_ESTest.java;QueryParser_ESTest.java",
+  "target_classes": "org.jsoup.select.CombiningEvaluator;org.jsoup.select.QueryParser",
+  "timestamp": "2026-09-26 06:40:04",
+  "evaluation_duration_sec": 17.599,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.06,
+  "branch_coverage_percent": 88.54,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

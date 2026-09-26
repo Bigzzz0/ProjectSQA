@@ -1,0 +1,32 @@
+{
+  "project": "Lang",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-16-deepseek-1790384594",
+  "suite_sha256": "6551b27244918eec64c6b492b704ee98f83674a08a5d1665f0e0076209cd4829",
+  "test_files": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "timestamp": "2026-09-26 08:03:35",
+  "evaluation_duration_sec": 20.987,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 87.73,
+  "branch_coverage_percent": 75.14,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberExpOnly",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberHexUpperX",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberHexUpperXNegative",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDecimalNoQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberNegativeHex",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberExpOnly",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDecimalNoQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
+  ]
+}

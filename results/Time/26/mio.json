@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.89,
+  "branch_cov": 82.5,
+  "test_file": "DateTimeZone_ESTest.java;LenientDateTimeField_ESTest.java;ZonedChronology_ESTest.java",
+  "target_classes": "org.joda.time.chrono.ZonedChronology;org.joda.time.DateTimeZone;org.joda.time.field.LenientDateTimeField",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "81151f8db604afcb09d0d81f860cbe08ee5cb5478cc086336eabd9b78b997626",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_26b/DateTimeZone_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Time_26b/LenientDateTimeField_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Time_26b/ZonedChronology_ESTest.java"
+  ],
+  "run_id": "Time-26-mio-1790399899"
+}

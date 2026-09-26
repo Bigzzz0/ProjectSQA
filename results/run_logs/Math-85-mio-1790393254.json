@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 85,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-85-mio-1790393254",
+  "suite_sha256": "b7f448be52585cbe50d9774bdc5fbe6d41b52854a3813ce001daf40578f8cd22",
+  "test_files": "UnivariateRealSolverUtils_ESTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils",
+  "timestamp": "2026-09-26 10:27:59",
+  "evaluation_duration_sec": 25.073,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 84.21,
+  "branch_coverage_percent": 86.36,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

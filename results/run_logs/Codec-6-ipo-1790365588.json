@@ -1,0 +1,21 @@
+{
+  "project": "Codec",
+  "bug_id": 6,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Codec-6-ipo-1790365588",
+  "suite_sha256": "7d2cce9b17675d939c6399c09b2f4fc6e52e5c8f28e44fc8c6f55d65d6763526",
+  "test_files": "Base64InputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64InputStream",
+  "timestamp": "2026-09-26 02:46:40",
+  "evaluation_duration_sec": 12.269,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 62.86,
+  "branch_coverage_percent": 57.14,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64InputStream_IPOTest::test_read_pairwise_007"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.61,
+  "branch_cov": 21.33,
+  "test_file": "Dfp_ESTest.java",
+  "target_classes": "org.apache.commons.math.dfp.Dfp",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a0c8e59b36e43b3dd8809d3dafa55d77c5954ed95d0cd33142e56d6edce28260",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_54b/Dfp_ESTest.java"
+  ],
+  "run_id": "Math-54-mio-1790391070"
+}

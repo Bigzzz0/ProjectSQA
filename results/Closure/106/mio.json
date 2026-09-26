@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 67.2,
+  "branch_cov": 55.4,
+  "test_file": "GlobalNamespace_ESTest.java;JSDocInfoBuilder_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace;com.google.javascript.rhino.JSDocInfoBuilder",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test37",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test48",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test41",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test40"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test37",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test48",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test41",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test40",
+    "com.google.javascript.rhino.JSDocInfoBuilder_ESTest::test55"
+  ],
+  "suite_sha256": "12a24f6d653bd2c2bed5860f27188b2b0f1e99086f05ccfae1d68f6bf6de09fb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_106b/GlobalNamespace_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_106b/JSDocInfoBuilder_ESTest.java"
+  ],
+  "run_id": "Closure-106-mio-1790360998"
+}

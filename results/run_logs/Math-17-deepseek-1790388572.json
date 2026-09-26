@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 17,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-17-deepseek-1790388572",
+  "suite_sha256": "47afc339fe3e59a1fe64dc295e8c45c516b2f2c95cc10d1d942bb5d84d92458f",
+  "test_files": "DfpDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.dfp.Dfp",
+  "timestamp": "2026-09-26 09:09:41",
+  "evaluation_duration_sec": 8.157,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/stat/descriptive/summary/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/analysis/polynomials/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_17b/target/classes/org/apache/commons/math3/fraction/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_17b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_17b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_17b/.test_suite/org/apache/commons/math3/dfp/DfpDeepseekTest.java:1467: error: floating point number too large\n    [javac]         Dfp a = d(1e309);\n    [javac]                   ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

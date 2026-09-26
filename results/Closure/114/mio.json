@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.24,
+  "branch_cov": 13.33,
+  "test_file": "NameAnalyzer_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NameAnalyzer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ec9d485e4b0e193739200c768efd533c7fe0b9b488ac51d4313ebd53fcf21e6d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_114b/NameAnalyzer_ESTest.java"
+  ],
+  "run_id": "Closure-114-mio-1790361550"
+}

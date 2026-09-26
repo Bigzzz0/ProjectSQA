@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 39.9,
+  "branch_cov": 28.57,
+  "test_file": "Normalize_ESTest.java;VarCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Normalize;com.google.javascript.jscomp.VarCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test01",
+    "com.google.javascript.jscomp.Normalize_ESTest::test00",
+    "com.google.javascript.jscomp.Normalize_ESTest::test07"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test01",
+    "com.google.javascript.jscomp.Normalize_ESTest::test00",
+    "com.google.javascript.jscomp.Normalize_ESTest::test07"
+  ],
+  "suite_sha256": "4bfdd4590b54c59bb1c567cfa118d797716fc70e4499c0cbda53024d58556031",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_79b/Normalize_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_79b/VarCheck_ESTest.java"
+  ],
+  "run_id": "Closure-79-mio-1790359571"
+}

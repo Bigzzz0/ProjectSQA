@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 75,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-75-deepseek-1790382158",
+  "suite_sha256": "5b72624f64ee8a649fd1968bfc2c72658fac2803c2b09fe393b87da6c97f03bb",
+  "test_files": "AttributesDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes",
+  "timestamp": "2026-09-26 07:22:42",
+  "evaluation_duration_sec": 3.778,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "et/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_75b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_75b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_75b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_75b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_75b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_75b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_75b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_75b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_75b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_75b/.test_suite/org/jsoup/nodes/AttributesDeepseekTest.java:154: error: cannot find symbol\n    [javac]         Iterator<Attribute> it = attrs.iterator();\n    [javac]         ^\n    [javac]   symbol:   class Iterator\n    [javac]   location: class AttributesDeepseekTest\n    [javac] Note: /tmp/d4j_eval/Jsoup_75b/.test_suite/org/jsoup/nodes/AttributesDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

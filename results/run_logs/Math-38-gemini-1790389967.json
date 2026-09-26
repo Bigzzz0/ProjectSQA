@@ -1,0 +1,30 @@
+{
+  "project": "Math",
+  "bug_id": 38,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-38-gemini-1790389967",
+  "suite_sha256": "09076a84d4770b216747b45cac578244497c06675a2c1859a79005edd87f713d",
+  "test_files": "BOBYQAOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.direct.BOBYQAOptimizer",
+  "timestamp": "2026-09-26 09:33:13",
+  "evaluation_duration_sec": 25.84,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 91.17,
+  "branch_coverage_percent": 87.5,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testSphereMinimization2D",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testConstrainedRosenWithMoreInterpolationPoints",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testSphereMinimization2D",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
+  ]
+}

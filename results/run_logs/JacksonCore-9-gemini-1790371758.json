@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-9-gemini-1790371758",
+  "suite_sha256": "4e618f451195390f4d3e03293f73c654b3ae8e22a552cb477eed8c8656f67c5a",
+  "test_files": "ParserMinimalBaseGeminiTest.java;ReaderBasedJsonParserGeminiTest.java;UTF8StreamJsonParserGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.base.ParserMinimalBase;com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "timestamp": "2026-09-26 04:29:22",
+  "evaluation_duration_sec": 3.728,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/type/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/base/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/format/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_9b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_9b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_9b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/JacksonCore_9b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_9b/.test_suite/com/fasterxml/jackson/core/json/ReaderBasedJsonParserGeminiTest.java:36: error: illegal unicode escape\n    [javac]  *   \\f,\\r,\\\",\\/,\\\\,\\uXXXX), unquoted control characters, _skipString partial skipping.\n    [javac]                       ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

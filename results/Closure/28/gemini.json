@@ -15,5 +15,10 @@
     "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testCostOfConstants_RevealsIssue728Defect",
     "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNullRootNodeReturnsZeroCost",
     "com.google.javascript.jscomp.InlineCostEstimatorGeminiTest::testNumberLiteralCost"
-  ]
+  ],
+  "suite_sha256": "a6b59dfe44b9f1326f95fe62ca424ee329e84c8491228c0d51bd1f81f742c63c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_28b/InlineCostEstimatorGeminiTest.java"
+  ],
+  "run_id": "Closure-28-gemini-1790356103"
 }

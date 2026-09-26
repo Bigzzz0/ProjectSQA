@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 99.48,
+  "branch_cov": 94.83,
+  "test_file": "SummaryStatistics_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.SummaryStatistics",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9584c56369a5b441f02334651270a6df2d94274e4a6f440f5464d7e5abec3cb5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_43b/SummaryStatistics_ESTest.java"
+  ],
+  "run_id": "Math-43-mio-1790390265"
+}

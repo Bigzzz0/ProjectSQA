@@ -1,0 +1,29 @@
+{
+  "project": "Jsoup",
+  "bug_id": 67,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-67-gemini-1790381801",
+  "suite_sha256": "cd29155ebdd49c7c3bac1bd0b6e77edc122aebdb2dd489448830d53e90244a83",
+  "test_files": "HtmlTreeBuilderGeminiTest.java",
+  "target_classes": "org.jsoup.parser.HtmlTreeBuilder",
+  "timestamp": "2026-09-26 07:16:57",
+  "evaluation_duration_sec": 16.168,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.8,
+  "branch_coverage_percent": 83.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testResetInsertionModeAllBranches",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testInScopeVariants",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testGenerateImpliedEndTagsWithNullExcludeTag",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testActiveFormattingElementsLifecycleAndLimit"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testResetInsertionModeAllBranches",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testInScopeVariants",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testGenerateImpliedEndTagsWithNullExcludeTag",
+    "org.jsoup.parser.HtmlTreeBuilderGeminiTest::testActiveFormattingElementsLifecycleAndLimit"
+  ]
+}

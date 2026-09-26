@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "EqualPredicate_ESTest.java",
+  "target_classes": "org.apache.commons.collections.functors.EqualPredicate",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5b8dc5d9bc2f3593c652026a8bd6d4b9ccf7ef7479aef2e06f56970ceb54c3a9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_17b/EqualPredicate_ESTest.java"
+  ],
+  "run_id": "Collections-17-mio-1790367011"
+}

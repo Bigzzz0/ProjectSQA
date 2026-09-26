@@ -1,0 +1,19 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 21,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-21-mio-1790372130",
+  "suite_sha256": "abba4af8e7eecb3902c9a1b8ffdc4926b894d29741c77bff29104c4f3196f65d",
+  "test_files": "FilteringParserDelegate_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.filter.FilteringParserDelegate",
+  "timestamp": "2026-09-26 04:35:50",
+  "evaluation_duration_sec": 20.151,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 52.21,
+  "branch_coverage_percent": 43.49,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

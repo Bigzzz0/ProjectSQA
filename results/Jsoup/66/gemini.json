@@ -17,5 +17,10 @@
     "org.jsoup.nodes.ElementGeminiTest::testHtmlOutputAndPrettyPrintBranches",
     "org.jsoup.nodes.ElementGeminiTest::testDomCollectorQueries",
     "org.jsoup.nodes.ElementGeminiTest::testDomSiblingsBeforeAfterWrap"
-  ]
+  ],
+  "suite_sha256": "ef96006e9ced1c1f648afb92bf71fd4b4bec49478e4723f1d379bcaee315d058",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_66b/ElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-66-gemini-1790381762"
 }

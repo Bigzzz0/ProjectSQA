@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.44,
+  "branch_cov": 91.89,
+  "test_file": "StdKeySerializers_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.StdKeySerializers",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "05f3f271f83e808bb0f4a19059fd537adaa1df954c4c8ac29e212821f1a79d42",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_55b/StdKeySerializers_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-55-mio-1790375444"
+}

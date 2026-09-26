@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 9,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Gson-9-deepseek-1790401178",
+  "suite_sha256": "634713d8e71a335e055bd0dfd259c48c0453aed61db0a85a64f78eab5a9e0669",
+  "test_files": "JsonTreeWriterDeepseekTest.java;JsonWriterDeepseekTest.java;TypeAdaptersDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeWriter;com.google.gson.internal.bind.TypeAdapters;com.google.gson.stream.JsonWriter",
+  "timestamp": "2026-09-26 12:39:41",
+  "evaluation_duration_sec": 2.891,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "olete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Gson_9b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:100: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]       if (!constructor.isAccessible()) {\n    [javac]                       ^\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Gson_9b/target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_9b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_9b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_9b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_9b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Gson_9b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_9b/.test_suite/com/google/gson/internal/bind/JsonTreeWriterDeepseekTest.java:7223: error: reached end of file while parsing\n    [javac]                 return false\n    [javac]                             ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

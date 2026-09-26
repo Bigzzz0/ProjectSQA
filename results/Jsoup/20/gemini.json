@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.helper.DataUtilGeminiTest::discardsSpuriousByteOrderMarkWhenCharsetNull"
-  ]
+  ],
+  "suite_sha256": "ae5c8ba65bfec25313a0a6555c1bc256073842c702f4488824fd5a2e7d7e2b87",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_20b/DataUtilGeminiTest.java"
+  ],
+  "run_id": "Jsoup-20-gemini-1790379571"
 }

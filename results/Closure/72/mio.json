@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 36.57,
+  "branch_cov": 13.86,
+  "test_file": "FunctionToBlockMutator_ESTest.java;RenameLabels_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionToBlockMutator;com.google.javascript.jscomp.RenameLabels",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b5098cf2ac91e809201bdf8d362d9d63ce1a50df418e044332afb2ac3bbb3540",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_72b/FunctionToBlockMutator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_72b/RenameLabels_ESTest.java"
+  ],
+  "run_id": "Closure-72-mio-1790359101"
+}

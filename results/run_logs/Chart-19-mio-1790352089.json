@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 19,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-19-mio-1790352089",
+  "suite_sha256": "c093dddbab7d834033bcc427d00ea2c09ebd9a9ce02b98e07f64618c039c53a1",
+  "test_files": "CategoryPlot_ESTest.java",
+  "target_classes": "org.jfree.chart.plot.CategoryPlot",
+  "timestamp": "2026-09-25 23:01:37",
+  "evaluation_duration_sec": 7.87,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_19b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_19b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_19b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_19b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_19b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_19b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_19b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_19b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Chart_19b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_19b/.test_suite/org/jfree/chart/plot/CategoryPlot_ESTest.java:101: error: package sun.java2d is not visible\n    [javac] import sun.java2d.SunGraphics2D;\n    [javac]           ^\n    [javac]   (package sun.java2d is declared in module java.desktop, which does not export it)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 83.38,
+  "branch_cov": 74.69,
+  "test_file": "DateTimeZone_ESTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1ca6ea1d0106e816b1287812aec1ec4342fae8bd663f90448e7340fb0cfca0b0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_17b/DateTimeZone_ESTest.java"
+  ],
+  "run_id": "Time-17-mio-1790399318"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "ElitisticListPopulation_ESTest.java",
+  "target_classes": "org.apache.commons.math3.genetics.ElitisticListPopulation",
+  "buggy_failures": [
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test2",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test3",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test4",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test0",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test1"
+  ],
+  "suite_sha256": "732b99902914ac00fcf0e79eac1cb1824cb08a6bd177f22703dfc3b02f22b296",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_35b/ElitisticListPopulation_ESTest.java"
+  ],
+  "run_id": "Math-35-mio-1790389745"
+}

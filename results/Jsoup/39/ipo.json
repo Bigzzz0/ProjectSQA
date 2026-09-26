@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 30.67,
+  "branch_cov": 13.04,
+  "test_file": "DataUtil_IPOTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e056f051677d929aae1b0d42ed4d54cb0e1f7d89dcb75ef8b961bd6558b24ed2",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_39b/org/jsoup/helper/DataUtil_IPOTest.java"
+  ],
+  "run_id": "Jsoup-39-ipo-1790380363"
+}

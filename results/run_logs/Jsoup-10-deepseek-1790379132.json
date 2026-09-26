@@ -1,0 +1,32 @@
+{
+  "project": "Jsoup",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-10-deepseek-1790379132",
+  "suite_sha256": "e66c7c4e9e2e9bd7dae26b4ef8a1080af62ac3f201e5626fd36ddcc3052e0461",
+  "test_files": "NodeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Node",
+  "timestamp": "2026-09-26 06:32:27",
+  "evaluation_duration_sec": 14.918,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.21,
+  "branch_coverage_percent": 81.25,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtml",
+    "org.jsoup.nodes.NodeDeepseekTest::testSetBaseUriNull",
+    "org.jsoup.nodes.NodeDeepseekTest::testAbsHandlesRelativeQuery",
+    "org.jsoup.nodes.NodeDeepseekTest::testHasAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveAttrNullKey"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtml",
+    "org.jsoup.nodes.NodeDeepseekTest::testSetBaseUriNull",
+    "org.jsoup.nodes.NodeDeepseekTest::testHasAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testAttrNullKey",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveAttrNullKey"
+  ]
+}

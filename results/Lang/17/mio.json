@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.94,
+  "branch_cov": 100.0,
+  "test_file": "CharSequenceTranslator_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.CharSequenceTranslator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c52016468b121d7ac317fc4afbba343c5cbc31dfba0eb88a1d6be1cb556e71ce",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_17b/CharSequenceTranslator_ESTest.java"
+  ],
+  "run_id": "Lang-17-mio-1790384636"
+}

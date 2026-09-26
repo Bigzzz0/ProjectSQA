@@ -1,0 +1,32 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 61,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-61-gemini-1790375794",
+  "suite_sha256": "f0728b1d1ad47c6b0dd5e34eb437f77de42ba0465f846c3e349238c44db9bda7",
+  "test_files": "ObjectMapperGeminiTest.java;StdTypeResolverBuilderGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectMapper;com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder",
+  "timestamp": "2026-09-26 05:37:02",
+  "evaluation_duration_sec": 27.279,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 47.22,
+  "branch_coverage_percent": 45.45,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testReadTreeFromNullOrEmptyInput",
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testLocaleAndTimeZoneConfiguration",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testDefectPrimitiveBaseTypeDeserializerReturnsNull",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testDefectPrimitiveBaseTypeSerializerReturnsNull",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeDeserializerNullInclusionThrowsISE",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testDefectPrimitiveBaseTypeIntSerializerReturnsNull",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeSerializerNullInclusionThrowsISE"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testReadTreeFromNullOrEmptyInput",
+    "com.fasterxml.jackson.databind.ObjectMapperGeminiTest::testLocaleAndTimeZoneConfiguration",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeDeserializerNullInclusionThrowsISE",
+    "com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilderGeminiTest::testBuildTypeSerializerNullInclusionThrowsISE"
+  ]
+}

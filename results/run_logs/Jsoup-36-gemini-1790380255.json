@@ -1,0 +1,28 @@
+{
+  "project": "Jsoup",
+  "bug_id": 36,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-36-gemini-1790380255",
+  "suite_sha256": "5c47b30497341292b75f901b839718b525891c9436a78f5ebd0bd37d13247155",
+  "test_files": "DataUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 06:51:10",
+  "evaluation_duration_sec": 15.356,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 92.11,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldReturnNullForIllegalCharsetNames",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectQuotedCharset",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldSelectFirstCharsetOnWeirdMultipleCharsetsInMetaTags",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldNotThrowExceptionOnEmptyCharset",
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeStandard",
+    "org.jsoup.helper.DataUtilGeminiTest::testDefectShouldCorrectCharsetForDuplicateCharsetString"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeStandard"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 62.09,
+  "branch_cov": 53.51,
+  "test_file": "AbstractPatriciaTrie_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.trie.AbstractPatriciaTrie",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "440584658b9d1daa4deebf905922845f93a64118a440032f37484d3c9798c11d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_28b/AbstractPatriciaTrie_ESTest.java"
+  ],
+  "run_id": "Collections-28-mio-1790367554"
+}

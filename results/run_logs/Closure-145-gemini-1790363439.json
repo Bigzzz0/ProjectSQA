@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 145,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-145-gemini-1790363439",
+  "suite_sha256": "0c5d11fff0c9d90d5cd49a2ce1988ebe8d344368f4a74594ccd4b5a1fc250579",
+  "test_files": "CodeGeneratorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+  "timestamp": "2026-09-26 02:10:46",
+  "evaluation_duration_sec": 6.95,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "asses/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_145b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_145b/build/classes/com/google/javascript/jscomp/parsing\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_145b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_145b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_145b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_145b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_145b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_145b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_145b/.test_suite/com/google/javascript/jscomp/CodeGeneratorGeminiTest.java:333: error: reached end of file while parsing\n    [javac]   public void testCatchConditionUnsupportedError() {\n    [javac]                                                     ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

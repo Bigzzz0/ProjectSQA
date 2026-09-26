@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 26,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-26-gemini-1790385160",
+  "suite_sha256": "a00a6bcefd334bd5721b6b0c3b5aaab1cb704064cf5d9da16f5db8ee2705bf57",
+  "test_files": "FastDateFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateFormat",
+  "timestamp": "2026-09-26 08:13:01",
+  "evaluation_duration_sec": 20.673,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 96.34,
+  "branch_coverage_percent": 87.72,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.FastDateFormatGeminiTest::testLang645"
+  ],
+  "fixed_failures": []
+}

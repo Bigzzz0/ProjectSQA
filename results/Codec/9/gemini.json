@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingAndLineBreakBehavior",
     "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeWhenAlreadyEof"
-  ]
+  ],
+  "suite_sha256": "6905a3a66612484812d92ca6950c786493e457f39ce85dbb01e6c90629f1e85e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_9b/Base64GeminiTest.java"
+  ],
+  "run_id": "Codec-9-gemini-1790365742"
 }

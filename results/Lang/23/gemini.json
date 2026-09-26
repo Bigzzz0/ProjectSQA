@@ -22,5 +22,10 @@
     "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testMultipleFormatElementsAndSpacing",
     "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testCustomRegistryWithArguments",
     "org.apache.commons.lang3.text.ExtendedMessageFormatGeminiTest::testUnterminatedQuotedString"
-  ]
+  ],
+  "suite_sha256": "ecc40613b2b463b1cb49589961e55a1b891ee600f9665497b6294cc2c7013a8b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_23b/ExtendedMessageFormatGeminiTest.java"
+  ],
+  "run_id": "Lang-23-gemini-1790384984"
 }

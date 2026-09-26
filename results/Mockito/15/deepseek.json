@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.mockito.internal.configuration.injection.FinalMockCandidateFilterDeepseekTest::testNullField_shouldThrowNullPointer",
     "org.mockito.internal.configuration.injection.FinalMockCandidateFilterDeepseekTest::testNullFieldInstance_shouldThrowNullPointer"
-  ]
+  ],
+  "suite_sha256": "a2b80190ff3aee28891e545306d405cb99a67aadd389df0b2ed1981c454d987d",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Mockito_15b/FinalMockCandidateFilterDeepseekTest.java"
+  ],
+  "run_id": "Mockito-15-deepseek-1790396455"
 }

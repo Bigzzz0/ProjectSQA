@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 111,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JacksonDatabind-111-ipo-1790378490",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.fasterxml.jackson.databind.deser.CreatorProperty;com.fasterxml.jackson.databind.deser.impl.FieldProperty;com.fasterxml.jackson.databind.deser.impl.MethodProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty;com.fasterxml.jackson.databind.deser.impl.SetterlessProperty;com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer",
+  "timestamp": "2026-09-26 06:21:30",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

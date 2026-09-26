@@ -1,0 +1,38 @@
+{
+  "project": "Closure",
+  "bug_id": 73,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-73-gemini-1790359210",
+  "suite_sha256": "c76b9ea691c5c69afe2208029a4212cf335af3dee8313dddadefb72743a1b8e8",
+  "test_files": "CodeGeneratorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator",
+  "timestamp": "2026-09-26 01:00:38",
+  "evaluation_duration_sec": 27.419,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 85.15,
+  "branch_coverage_percent": 70.16,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7FInRegexp",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7F",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testDefectUnicodeEscape0x7FInDoubleQuotedJsString",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testControlFlowStatements",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownTokenTypeThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testStringUnexpectedChildrenThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testControlFlowStatements",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownTokenTypeThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testThrowAndReturn",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testStringUnexpectedChildrenThrows",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testInOperatorInForInitClauseContext",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testLabelsBreakContinue",
+    "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testBinaryOperatorInvalidChildCount"
+  ]
+}

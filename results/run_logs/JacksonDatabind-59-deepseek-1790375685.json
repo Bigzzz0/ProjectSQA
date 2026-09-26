@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 59,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-59-deepseek-1790375685",
+  "suite_sha256": "2598d764f9325f6e33cb9d815c089b46b9f6c4bec536416080010baa22b85c60",
+  "test_files": "CollectionLikeTypeDeepseekTest.java;JavaTypeDeepseekTest.java;MapLikeTypeDeepseekTest.java;TypeFactoryDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JavaType;com.fasterxml.jackson.databind.type.CollectionLikeType;com.fasterxml.jackson.databind.type.MapLikeType;com.fasterxml.jackson.databind.type.TypeFactory",
+  "timestamp": "2026-09-26 05:34:53",
+  "evaluation_duration_sec": 8.7,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_59b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_59b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_59b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_59b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/JacksonDatabind_59b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_59b/.test_suite/com/fasterxml/jackson/databind/JavaTypeDeepseekTest.java:49: error: SimpleJavaType is not abstract and does not override abstract method isContainerType() in JavaType\n    [javac]     private static class SimpleJavaType extends JavaType {\n    [javac]                    ^\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_59b/.test_suite/com/fasterxml/jackson/databind/type/CollectionLikeTypeDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 6,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-6-gemini-1790383879",
+  "suite_sha256": "d83438624f657327616441fc9c256c66daad8c1b4a50f2c35c2329d40647f1e3",
+  "test_files": "CharSequenceTranslatorGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.CharSequenceTranslator",
+  "timestamp": "2026-09-26 07:51:39",
+  "evaluation_duration_sec": 20.208,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorGeminiTest::testEscapeSurrogatePairsDefectWithCustomTranslator"
+  ],
+  "fixed_failures": []
+}

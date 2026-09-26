@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldGeminiTest::testReparseCentralDirectoryDataWithExcessData"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "3d035709ba1ce175b36c00222eab143cfdaaf56e06cb05246a65ea7946e3aee5",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_19b/Zip64ExtendedInformationExtraFieldGeminiTest.java"
+  ],
+  "run_id": "Compress-19-gemini-1790368446"
 }

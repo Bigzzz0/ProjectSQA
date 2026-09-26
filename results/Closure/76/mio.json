@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 6.0,
+  "branch_cov": 0.0,
+  "test_file": "DeadAssignmentsElimination_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.DeadAssignmentsElimination",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.DeadAssignmentsElimination_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.DeadAssignmentsElimination_ESTest::test0"
+  ],
+  "suite_sha256": "7288d01d3acaec672c501bbd96bd8346337524a74b1b13abf01f5ed1c807c74b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_76b/DeadAssignmentsElimination_ESTest.java"
+  ],
+  "run_id": "Closure-76-mio-1790359361"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-1-mio-1790387503",
+  "suite_sha256": "fcb18e3de53b4ef4530c27f2728bc39f31b97ad2d2ad3c3f84a6f83f28dd01a2",
+  "test_files": "BigFraction_ESTest.java;Fraction_ESTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.BigFraction;org.apache.commons.math3.fraction.Fraction",
+  "timestamp": "2026-09-26 08:52:12",
+  "evaluation_duration_sec": 28.938,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.47,
+  "branch_coverage_percent": 94.79,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,24 @@
+{
+  "project": "Jsoup",
+  "bug_id": 20,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-20-gemini-1790379571",
+  "suite_sha256": "ae5c8ba65bfec25313a0a6555c1bc256073842c702f4488824fd5a2e7d7e2b87",
+  "test_files": "DataUtilGeminiTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 06:39:46",
+  "evaluation_duration_sec": 15.504,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 95.45,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::discardsSpuriousByteOrderMarkWhenCharsetNull",
+    "org.jsoup.helper.DataUtilGeminiTest::discardsSpuriousByteOrderMark"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtilGeminiTest::discardsSpuriousByteOrderMarkWhenCharsetNull"
+  ]
+}

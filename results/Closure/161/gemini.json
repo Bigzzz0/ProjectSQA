@@ -19,5 +19,10 @@
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testObjectPropAccessWithGetterFoldsToCall",
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522",
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testIssue522NonEmptyArrayOutOfBounds"
-  ]
+  ],
+  "suite_sha256": "5dc9bbd1f933301f8bb95b5cfb2b9eabf03a7ca84579d906699aa1be23983fbb",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_161b/PeepholeFoldConstantsGeminiTest.java"
+  ],
+  "run_id": "Closure-161-gemini-1790364366"
 }

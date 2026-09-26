@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 29,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-29-deepseek-1790397734",
+  "suite_sha256": "5f3bbccbc053670105897aa78f027ac0c7a854652a7976a6816205dad35fc3e2",
+  "test_files": "SameDeepseekTest.java",
+  "target_classes": "org.mockito.internal.matchers.Same",
+  "timestamp": "2026-09-26 11:42:21",
+  "evaluation_duration_sec": 6.615,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "l/Mockito_29b/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:22: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated\n    [javac]     public Object createMockFor(Annotation annotation, Field field) {\n    [javac]                   ^\n    [javac] /tmp/d4j_eval/Mockito_29b/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = accessibleObject.isAccessible();\n    [javac]                                         ^\n    [javac] 16 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_29b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_29b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_29b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_29b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_29b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_29b/.test_suite/org/mockito/internal/matchers/SameDeepseekTest.java:308: error: method testMatchesWithNullWantedAndNullActual() is already defined in class SameDeepseekTest\n    [javac]     public void testMatchesWithNullWantedAndNullActual() {\n    [javac]                 ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

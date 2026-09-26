@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.92,
+  "branch_cov": 90.91,
+  "test_file": "CoreOperationCompare_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare_ESTest::test12"
+  ],
+  "suite_sha256": "1e3c6e357f18daa05f73edce2548542f84bdd9d4ebe5504dd65b618268352965",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_6b/CoreOperationCompare_ESTest.java"
+  ],
+  "run_id": "JxPath-6-mio-1790383163"
+}

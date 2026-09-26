@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 8,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-8-mio-1790354472",
+  "suite_sha256": "76d0116da0bbb81cba972867fcae2c3b190342e1f2a13a70abcb2f01aa2b95bf",
+  "test_files": "CollapseVariableDeclarations_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseVariableDeclarations",
+  "timestamp": "2026-09-25 23:41:51",
+  "evaluation_duration_sec": 39.33,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 20.24,
+  "branch_coverage_percent": 13.46,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

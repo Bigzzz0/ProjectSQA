@@ -1,0 +1,31 @@
+{
+  "project": "Chart",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-16-gemini-1790351909",
+  "suite_sha256": "8b74b76dad6b83cc4718d1b71b1c8a4fbcda1ea341399b36253fa7a7bbc0e129",
+  "test_files": "DefaultIntervalCategoryDatasetGeminiTest.java",
+  "target_classes": "org.jfree.data.category.DefaultIntervalCategoryDataset",
+  "timestamp": "2026-09-25 22:58:53",
+  "evaluation_duration_sec": 24.122,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.87,
+  "branch_coverage_percent": 93.75,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetColumnIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetRowIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testNullStartsOrEnds",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetCloneDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetRowCountDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetSeriesIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetGetCategoryIndexDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetColumnCountDefect",
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testEmptyDatasetSetCategoryKeysDefect"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.category.DefaultIntervalCategoryDatasetGeminiTest::testNullStartsOrEnds"
+  ]
+}

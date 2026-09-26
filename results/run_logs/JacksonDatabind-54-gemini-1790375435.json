@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 54,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-54-gemini-1790375435",
+  "suite_sha256": "13e040398b0efb6d888d3c81b7fa5efe43359bb7f5384b27c216a9cbafd7234b",
+  "test_files": "PropertyBuilderGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+  "timestamp": "2026-09-26 05:30:44",
+  "evaluation_duration_sec": 8.085,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "py] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_54b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_54b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_54b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_54b/.test_suite/com/fasterxml/jackson/databind/ser/PropertyBuilderGeminiTest.java:219: error: no suitable constructor found for BasicBeanDescription(SerializationConfig,JavaType,AnnotatedClass,List<BeanPropertyDefinition>)\n    [javac]                 new BasicBeanDescription(config, type, AnnotatedClass.constructWithoutSuperTypes(SimplePrimitivesPojo.class, config), Collections.<BeanPropertyDefinition>emptyList())\n    [javac]                 ^\n    [javac]     constructor BasicBeanDescription.BasicBeanDescription(POJOPropertiesCollector,JavaType,AnnotatedClass) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor BasicBeanDescription.BasicBeanDescription(POJOPropertiesCollector) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_54b/.test_suite/com/fasterxml/jackson/databind/ser/PropertyBuilderGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

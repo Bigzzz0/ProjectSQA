@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 62.19,
+  "branch_cov": 43.18,
+  "test_file": "TypeValidator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeValidator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test08"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test20",
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test24",
+    "com.google.javascript.jscomp.TypeValidator_ESTest::test08"
+  ],
+  "suite_sha256": "927949b875e48e3d20ca1a62799c822a423ce7b4e9a5037271e371dba152cfde",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_6b/TypeValidator_ESTest.java"
+  ],
+  "run_id": "Closure-6-mio-1790354344"
+}

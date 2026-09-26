@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.43,
+  "branch_cov": 90.32,
+  "test_file": "JsonPointer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.JsonPointer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9aa89108d69c1ee8acf8e3672b41ff09e8c63680b9efe900c165614d9fca2170",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_6b/JsonPointer_ESTest.java"
+  ],
+  "run_id": "JacksonCore-6-mio-1790371600"
+}

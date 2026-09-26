@@ -10,5 +10,10 @@
     "org.jfree.data.xy.XYSeriesGeminiTest::testBug1955483WithMultipleDuplicates",
     "org.jfree.data.xy.XYSeriesGeminiTest::testBug1955483"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "930c9398b84e87118089506c990fd30b71816d271e0ec470b851306199b407b1",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_5b/XYSeriesGeminiTest.java"
+  ],
+  "run_id": "Chart-5-gemini-1790351192"
 }

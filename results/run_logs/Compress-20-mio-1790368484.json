@@ -1,0 +1,19 @@
+{
+  "project": "Compress",
+  "bug_id": 20,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-20-mio-1790368484",
+  "suite_sha256": "d07c8451c75f7044bfa750e5b85547457aad843c0c70aba4e8c014ae2f4b7532",
+  "test_files": "CpioArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
+  "timestamp": "2026-09-26 03:35:06",
+  "evaluation_duration_sec": 21.657,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 34.58,
+  "branch_coverage_percent": 31.58,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

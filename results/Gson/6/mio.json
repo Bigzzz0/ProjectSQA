@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 65.0,
+  "branch_cov": 83.33,
+  "test_file": "JsonAdapterAnnotationTypeAdapterFactory_ESTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2f6b83d7c1da86fdc4aee14226785a3d79623008a88cf80cd787a3773972ffd8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_6b/JsonAdapterAnnotationTypeAdapterFactory_ESTest.java"
+  ],
+  "run_id": "Gson-6-mio-1790370948"
+}

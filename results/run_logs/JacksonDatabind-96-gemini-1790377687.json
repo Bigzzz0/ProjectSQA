@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 96,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-96-gemini-1790377687",
+  "suite_sha256": "171bb46227af198e5b9ead1e286b8e2990032a910b29b08bd2128e120bb13965",
+  "test_files": "BasicDeserializerFactoryGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory",
+  "timestamp": "2026-09-26 06:08:15",
+  "evaluation_duration_sec": 8.761,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "on/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_96b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_96b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_96b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_96b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_96b/.test_suite/com/fasterxml/jackson/databind/deser/BasicDeserializerFactoryGeminiTest.java:215: error: cannot find symbol\n    [javac]         DeserializerFactoryConfig origConfig = factory.getFactoryConfig();\n    [javac]                                                       ^\n    [javac]   symbol:   method getFactoryConfig()\n    [javac]   location: variable factory of type DeserializerFactory\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_96b/.test_suite/com/fasterxml/jackson/databind/deser/BasicDeserializerFactoryGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_96b/.test_suite/com/fasterxml/jackson/databind/deser/BasicDeserializerFactoryGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 96.67,
+  "branch_cov": 92.59,
+  "test_file": "KMeansPlusPlusClusterer_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer_ESTest::test1"
+  ],
+  "suite_sha256": "cc2e687015c881bab9d63ed79e896339e345dfdc401c43359375b62d7362f1bc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_57b/KMeansPlusPlusClusterer_ESTest.java"
+  ],
+  "run_id": "Math-57-mio-1790391321"
+}

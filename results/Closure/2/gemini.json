@@ -41,5 +41,10 @@
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testProcessForTestingWithParentlessJsRootThrowsIllegalStateException",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testDictEnforcesQuotedKeys",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testStructEnforcesUnquotedKeys"
-  ]
+  ],
+  "suite_sha256": "f8578a777a6240202709d926cf468425fff9ec185b8dcee59f7ef4f5893303ec",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_2b/TypeCheckGeminiTest.java"
+  ],
+  "run_id": "Closure-2-gemini-1790354078"
 }

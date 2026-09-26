@@ -1,0 +1,35 @@
+{
+  "project": "Math",
+  "bug_id": 64,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-64-deepseek-1790391836",
+  "suite_sha256": "5b6fb11b515eb818734f499eca3db9f8b0eb742831f52b69418b5b8156ba06f0",
+  "test_files": "LevenbergMarquardtOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "timestamp": "2026-09-26 10:04:20",
+  "evaluation_duration_sec": 24.36,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.32,
+  "branch_coverage_percent": 83.5,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testWithNonnullChecker",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackFreudensteinRoth",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testConvergenceByCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallParRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallOrthoTolerance"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testWithNonnullChecker",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testMinpackFreudensteinRoth",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testConvergenceByCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallParRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallCostRelativeTolerance",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallOrthoTolerance"
+  ]
+}

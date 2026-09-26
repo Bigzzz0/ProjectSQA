@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 62,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-62-deepseek-1790391729",
+  "suite_sha256": "13066d6f9d03f098e166ba9fde5fa8606b4b313950152996936518af17c60b89",
+  "test_files": "MultiStartUnivariateRealOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer",
+  "timestamp": "2026-09-26 10:02:16",
+  "evaluation_duration_sec": 6.571,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "s to /tmp/d4j_eval/Math_62b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_62b/src/main/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_62b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_62b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_62b/.test_suite/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizerDeepseekTest.java:289: error: unreported exception FunctionEvaluationException; must be caught or declared to be thrown\n    [javac]         UnivariateRealPointValuePair result = ms.optimize(new SimpleFunction(), GoalType.MINIMIZE, 0.0, 10.0);\n    [javac]                                                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,29 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 29,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-29-gemini-1790373855",
+  "suite_sha256": "f495bbd4384f805a30e5cd8e1265acfaa6f33bf21ad6dfc85247ab6b4bd821ea",
+  "test_files": "ExternalTypeHandlerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+  "timestamp": "2026-09-26 05:04:41",
+  "evaluation_duration_sec": 26.065,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 87.23,
+  "branch_coverage_percent": 70.97,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testExternalTypeIdWithNullValueFirst",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testMissingTypeIdThrowsMappingException",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testExternalTypeIdWithNullTypeFirst",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testCreatorWithExternalTypeNormal",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testDefaultImplUsedWhenTypeIdMissing"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testMissingTypeIdThrowsMappingException",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testCreatorWithExternalTypeNormal",
+    "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testDefaultImplUsedWhenTypeIdMissing"
+  ]
+}

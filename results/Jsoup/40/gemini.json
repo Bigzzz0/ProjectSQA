@@ -10,5 +10,10 @@
     "org.jsoup.nodes.DocumentTypeGeminiTest::constructorValidationOkWithBlankNameAndValidIds",
     "org.jsoup.nodes.DocumentTypeGeminiTest::constructorValidationOkWithBlankName"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "26e1caa8d0b79a41014214fc90115186c98c171ed6b287979f628ce21b8cbb28",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_40b/DocumentTypeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-40-gemini-1790380464"
 }

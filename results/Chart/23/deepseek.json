@@ -18,5 +18,10 @@
     "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentMinIcon",
     "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentObjectIcon",
     "org.jfree.chart.renderer.category.MinMaxCategoryRendererDeepseekTest::testEqualsDifferentMaxIcon"
-  ]
+  ],
+  "suite_sha256": "a0d6f34558824fe958d52cad5a2c1b42fc8853c5ce07c01b432f0da25460b984",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Chart_23b/MinMaxCategoryRendererDeepseekTest.java"
+  ],
+  "run_id": "Chart-23-deepseek-1790352381"
 }

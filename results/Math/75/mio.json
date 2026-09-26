@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.76,
+  "branch_cov": 89.58,
+  "test_file": "Frequency_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.Frequency",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b7f842a23e0365d7a225fa822a520ccbaa6170adc87e63aa3b9ba0fd6244dcb0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_75b/Frequency_ESTest.java"
+  ],
+  "run_id": "Math-75-mio-1790392476"
+}

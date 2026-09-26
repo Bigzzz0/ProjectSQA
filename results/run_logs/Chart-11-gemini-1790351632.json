@@ -1,0 +1,23 @@
+{
+  "project": "Chart",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-11-gemini-1790351632",
+  "suite_sha256": "d81728022b3b60bfc160c29a1baeffba914061dd590edaaa261b9c2cff24dd33",
+  "test_files": "ShapeUtilitiesGeminiTest.java",
+  "target_classes": "org.jfree.chart.util.ShapeUtilities",
+  "timestamp": "2026-09-25 22:54:17",
+  "evaluation_duration_sec": 25.378,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 95.94,
+  "branch_coverage_percent": 90.52,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentSegmentTypes",
+    "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentPoints",
+    "org.jfree.chart.util.ShapeUtilitiesGeminiTest::testEqualGeneralPaths_DifferentLengths"
+  ],
+  "fixed_failures": []
+}

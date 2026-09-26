@@ -1,0 +1,32 @@
+{
+  "project": "Jsoup",
+  "bug_id": 40,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-40-deepseek-1790380449",
+  "suite_sha256": "cbede10eef92fec9f57482564b437a5aaf0218d8a3e046f57bb8f74b3768c2af",
+  "test_files": "DocumentTypeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType",
+  "timestamp": "2026-09-26 06:54:24",
+  "evaluation_duration_sec": 14.923,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::publicIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlAllBlank",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlyPublicId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlySystemId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::systemIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::constructorAllowsBlankName"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::publicIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlyPublicId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::outerHtmlOnlySystemId",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::systemIdNullAllowed",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::constructorRejectsNullName"
+  ]
+}

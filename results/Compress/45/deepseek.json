@@ -36,5 +36,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNulTerminated",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryParseBinaryLongTooLong",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalTrailingSpacesAndNuls"
-  ]
+  ],
+  "suite_sha256": "f04f161bcacf75bd3e5940879be7e648a49df0d9ce0d2bf5cc0363329938a552",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_45b/TarUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-45-deepseek-1790370012"
 }

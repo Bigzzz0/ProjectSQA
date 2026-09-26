@@ -11,5 +11,10 @@
     "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamGeminiTest::readOfLength0ShouldReturn0",
     "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamGeminiTest::readOfLength0WithNonZeroOffsetShouldReturn0"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "84a43866e395088a4e90e00163f7ec1e9d1c4e6760857f9e5fc07bec6a4c1586",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_30b/BZip2CompressorInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-30-gemini-1790369123"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-4-gemini-1790354248",
+  "suite_sha256": "b7e53377d092332df11710fa294e18b91b66c7e6137b9c4fd46c0349bcaeb145",
+  "test_files": "NamedTypeGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.NamedType",
+  "timestamp": "2026-09-25 23:37:38",
+  "evaluation_duration_sec": 9.975,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "_eval/Closure_4b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_4b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_4b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_4b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_4b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_4b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_4b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_4b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_4b/.test_suite/com/google/javascript/rhino/jstype/NamedTypeGeminiTest.java:76: error: diamond operator is not supported in -source 6\n    [javac]     final List<String> warnings = new ArrayList<>();\n    [javac]                                                 ^\n    [javac]   (use -source 7 or higher to enable diamond operator)\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

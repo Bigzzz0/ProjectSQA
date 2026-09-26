@@ -35,5 +35,10 @@
     "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testForLoops",
     "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testUnknownNodeTypeThrows",
     "com.google.javascript.jscomp.CodeGeneratorGeminiTest::testIfElseAndDanglingElse"
-  ]
+  ],
+  "suite_sha256": "85aaa82a38bd82db1a70dff14231fa923e3930d8edec1f0f60d54a0a674a2993",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_65b/CodeGeneratorGeminiTest.java"
+  ],
+  "run_id": "Closure-65-gemini-1790358706"
 }

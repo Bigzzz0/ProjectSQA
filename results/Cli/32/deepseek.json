@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.HelpFormatterDeepseekTest"
-  ]
+  ],
+  "suite_sha256": "5e8fe655c9dc83f6c65b7815f14904d23d29334cde2468717d9ae3d993c48893",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_32b/HelpFormatterDeepseekTest.java"
+  ],
+  "run_id": "Cli-32-deepseek-1790353654"
 }

@@ -1,0 +1,38 @@
+{
+  "project": "Mockito",
+  "bug_id": 2,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-2-deepseek-1790394803",
+  "suite_sha256": "5df3537f13b1c0b4ee7c6f842d001569618a87ed6fe2e1010a29aecff29d630b",
+  "test_files": "TimerDeepseekTest.java",
+  "target_classes": "org.mockito.internal.util.Timer",
+  "timestamp": "2026-09-26 10:55:08",
+  "evaluation_duration_sec": 105.201,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 50.0,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldFailValidation",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsAssertionErrorWhenNotStarted",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingReturnsFalseImmediatelyForZeroDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsWhenStartNeverCalled",
+    "org.mockito.internal.util.TimerDeepseekTest::testTimerWithZeroDurationAndDelayedStart",
+    "org.mockito.internal.util.TimerDeepseekTest::testLargeNegativeDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldThrowException"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldFailValidation",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldBeHandled",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsAssertionErrorWhenNotStarted",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingThrowsWhenStartNeverCalled",
+    "org.mockito.internal.util.TimerDeepseekTest::testIsCountingAfterElapsedOnNegativeDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testTimerWithZeroDurationAndDelayedStart",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationBehaviorOverTime",
+    "org.mockito.internal.util.TimerDeepseekTest::testLargeNegativeDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testMinLongDuration",
+    "org.mockito.internal.util.TimerDeepseekTest::testNegativeDurationShouldThrowException"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 55,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-55-mio-1790386873",
+  "suite_sha256": "23ff66b523fd69b069dadb76384d69a4d000709979ae41d9261f1ee7565f3b3d",
+  "test_files": "StopWatch_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.StopWatch",
+  "timestamp": "2026-09-26 08:41:33",
+  "evaluation_duration_sec": 20.65,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.49,
+  "branch_coverage_percent": 92.31,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

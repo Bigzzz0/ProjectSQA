@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 6,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-6-deepseek-1790387941",
+  "suite_sha256": "3dea6d17b08b85967f296f7e37a59524bbdd408cc7db9ea7ebc75f34ecc91fea",
+  "test_files": "BaseOptimizerDeepseekTest.java;CMAESOptimizerDeepseekTest.java;GaussNewtonOptimizerDeepseekTest.java;LevenbergMarquardtOptimizerDeepseekTest.java;NonLinearConjugateGradientOptimizerDeepseekTest.java;PowellOptimizerDeepseekTest.java;SimplexOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.optim.BaseOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizer;org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizer;org.apache.commons.math3.optim.nonlinear.vector.jacobian.LevenbergMarquardtOptimizer",
+  "timestamp": "2026-09-26 08:59:10",
+  "evaluation_duration_sec": 8.793,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "    [javac] Creating empty /tmp/d4j_eval/Math_6b/target/classes/org/apache/commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_6b/target/classes/org/apache/commons/math3/optim/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_6b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_6b/target/classes/org/apache/commons/math3/optim/nonlinear/vector/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_6b/target/classes/org/apache/commons/math3/optim/univariate/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_6b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_6b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 7 source files to /tmp/d4j_eval/Math_6b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_6b/.test_suite/org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizerDeepseekTest.java:19: error: cannot find symbol\n    [javac] import org.apache.commons.math3.optim.Target;\n    [javac]                                      ^\n    [javac]   symbol:   class Target\n    [javac]   location: package org.apache.commons.math3.optim\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -17,5 +17,10 @@
     "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testMatchConstraintOnAnonymousType",
     "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testToStringHelperRepresentations",
     "com.google.javascript.rhino.jstype.PrototypeObjectTypeGeminiTest::testPrototypeChainSlotLookupAndCounts"
-  ]
+  ],
+  "suite_sha256": "da3589805791088ba8e0f04b82bd2827b64093cbb7ae7ccde94feb6215d45bac",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_33b/PrototypeObjectTypeGeminiTest.java"
+  ],
+  "run_id": "Closure-33-gemini-1790356525"
 }

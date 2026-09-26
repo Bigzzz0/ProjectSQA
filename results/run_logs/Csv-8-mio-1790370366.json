@@ -1,0 +1,24 @@
+{
+  "project": "Csv",
+  "bug_id": 8,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Csv-8-mio-1790370366",
+  "suite_sha256": "87c9e3d3fe1f097c6d6f5fb60966d3e7181829751841d97a83e14e1605ba593b",
+  "test_files": "CSVFormat_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "timestamp": "2026-09-26 04:06:23",
+  "evaluation_duration_sec": 16.636,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.32,
+  "branch_coverage_percent": 98.57,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormat_ESTest::test11",
+    "org.apache.commons.csv.CSVFormat_ESTest::test04",
+    "org.apache.commons.csv.CSVFormat_ESTest::test26",
+    "org.apache.commons.csv.CSVFormat_ESTest::test21"
+  ]
+}

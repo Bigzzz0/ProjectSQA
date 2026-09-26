@@ -1,0 +1,22 @@
+{
+  "project": "Lang",
+  "bug_id": 13,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-13-gemini-1790384386",
+  "suite_sha256": "0181c2aa704bb114b93ee5d3585487816ee0b547db332f4657c83666d6f235a2",
+  "test_files": "SerializationUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.SerializationUtils",
+  "timestamp": "2026-09-26 08:00:07",
+  "evaluation_duration_sec": 20.872,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 93.75,
+  "branch_coverage_percent": 92.86,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.SerializationUtilsGeminiTest::testPrimitiveTypeClassSerialization",
+    "org.apache.commons.lang3.SerializationUtilsGeminiTest::testPrimitiveTypeArrayClassSerialization"
+  ],
+  "fixed_failures": []
+}

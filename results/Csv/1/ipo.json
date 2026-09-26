@@ -1,14 +1,16 @@
 {
   "status": "DONE",
-  "fault_detected": "BUG_DETECTED",
-  "failures_count": 2,
-  "line_cov": 45.95,
-  "branch_cov": 22.73,
-  "test_file": "Csv_1b_IPOTest.java",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 29.73,
+  "branch_cov": 18.18,
+  "test_file": "ExtendedBufferedReader_IPOTest.java",
   "target_classes": "org.apache.commons.csv.ExtendedBufferedReader",
-  "buggy_failures": [
-    "org.apache.commons.csv.Csv_1b_IPOTest::test_line_counter_001",
-    "org.apache.commons.csv.Csv_1b_IPOTest::test_line_counter_007"
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4c1ededfbd7043b1bd73bb5d610d02008b0b90ea75e92d6e0c278c153b8d9120",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Csv_1b/org/apache/commons/csv/ExtendedBufferedReader_IPOTest.java"
   ],
-  "fixed_failures": []
+  "run_id": "Csv-1-ipo-1790370138"
 }

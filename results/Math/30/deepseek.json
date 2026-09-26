@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.stat.inference.MannWhitneyUTestDeepseekTest::testLargeSampleOverflow"
-  ]
+  ],
+  "suite_sha256": "e77209251a464de36c42deadc725d1fbc7f96b2b66901e7cda50bde37c291771",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_30b/MannWhitneyUTestDeepseekTest.java"
+  ],
+  "run_id": "Math-30-deepseek-1790389484"
 }

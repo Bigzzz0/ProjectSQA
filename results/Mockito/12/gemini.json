@@ -14,5 +14,10 @@
     "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithNestedMapGenerics",
     "org.mockito.internal.util.reflection.GenericMasterGeminiTest::shouldDealWithNestedGenerics"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "9695881e192510f10b65defc4328a1beabbf85c8fec2436d1739b957f9db6bfd",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_12b/GenericMasterGeminiTest.java"
+  ],
+  "run_id": "Mockito-12-gemini-1790396282"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 22.74,
+  "branch_cov": 17.9,
+  "test_file": "DateTimeZone_IPOTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "cc62aeb41428a316bdad9c6605c38198534f1a0f22077880ed46e6982c513140",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_17b/org/joda/time/DateTimeZone_IPOTest.java"
+  ],
+  "run_id": "Time-17-ipo-1790399294"
+}

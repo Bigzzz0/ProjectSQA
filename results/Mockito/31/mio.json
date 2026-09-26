@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 15.79,
+  "branch_cov": 0.0,
+  "test_file": "ReturnsSmartNulls_ESTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0f0da1adbdf8b763feac4465fbe9d18707d9a4cfb7cd3cf875cc82cd0b34d1b4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_31b/ReturnsSmartNulls_ESTest.java"
+  ],
+  "run_id": "Mockito-31-mio-1790397833"
+}

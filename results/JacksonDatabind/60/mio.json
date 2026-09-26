@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 1.82,
+  "branch_cov": 0.0,
+  "test_file": "JsonValueSerializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.JsonValueSerializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5b227cc0a78f4886f37233c1a4db678b32fc69a365f21c700c3a6fa789727502",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_60b/JsonValueSerializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-60-mio-1790375702"
+}

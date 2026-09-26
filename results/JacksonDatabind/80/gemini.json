@@ -17,5 +17,10 @@
     "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testBaseTypeId1616DefectResolutionByTypeIdMember",
     "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testNullBaseTypeFallbackToPropertyRawType",
     "com.fasterxml.jackson.databind.jsontype.impl.StdSubtypeResolverGeminiTest::testNameOverrideWhenSubtypeResolvedWithNameAfterBeingAddedWithoutName"
-  ]
+  ],
+  "suite_sha256": "71b394194c4a4638730d55153116b4ad50f1a40056a0e09befc31ed4a73293c8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_80b/StdSubtypeResolverGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-80-gemini-1790376802"
 }

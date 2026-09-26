@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testFitWithNegativeSigmaGuess",
     "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testInterpolateXAtYZeroStep"
-  ]
+  ],
+  "suite_sha256": "0dd63ba43fc44061961ba1fe271e3b475e0b5b1fe77430362196f6dbad4dee6b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_58b/GaussianFitterDeepseekTest.java"
+  ],
+  "run_id": "Math-58-deepseek-1790391420"
 }

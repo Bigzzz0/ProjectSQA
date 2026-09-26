@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "ArgumentImpl_ESTest.java;WriteableCommandLineImpl_ESTest.java;WriteableCommandLine_ESTest.java",
+  "target_classes": "org.apache.commons.cli2.WriteableCommandLine;org.apache.commons.cli2.commandline.WriteableCommandLineImpl;org.apache.commons.cli2.option.ArgumentImpl",
+  "buggy_failures": [
+    "org.apache.commons.cli2.WriteableCommandLine_ESTest",
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest",
+    "org.apache.commons.cli2.option.ArgumentImpl_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.WriteableCommandLine_ESTest",
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest",
+    "org.apache.commons.cli2.option.ArgumentImpl_ESTest"
+  ],
+  "suite_sha256": "9383ae220a59c3335ef40367f389a0e0693c4f5ba40659a77e5879107e88b117",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_13b/ArgumentImpl_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_13b/WriteableCommandLineImpl_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_13b/WriteableCommandLine_ESTest.java"
+  ],
+  "run_id": "Cli-13-mio-1790352968"
+}

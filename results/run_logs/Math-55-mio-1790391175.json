@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 55,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-55-mio-1790391175",
+  "suite_sha256": "e0848264e8e9a274a7101af010a329435c3e03b55c306a91fc6da99797db22bb",
+  "test_files": "Vector3D_ESTest.java",
+  "target_classes": "org.apache.commons.math.geometry.Vector3D",
+  "timestamp": "2026-09-26 09:53:22",
+  "evaluation_duration_sec": 26.74,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 97.92,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.geometry.Vector3D_ESTest::test11"
+  ]
+}

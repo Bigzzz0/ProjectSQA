@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Gson-14-deepseek-1790371212",
+  "suite_sha256": "a6c75f1fc48ce626de4a3430b4fd3d5e7854ade5cc479c81114bf49981b52cf1",
+  "test_files": "$Gson$TypesDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "timestamp": "2026-09-26 04:20:15",
+  "evaluation_duration_sec": 2.914,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "4j_eval/Gson_14b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:100: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]       if (!constructor.isAccessible()) {\n    [javac]                       ^\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Gson_14b/target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_14b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_14b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_14b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Gson_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_14b/.test_suite/com/google/gson/internal/$Gson$TypesDeepseekTest.java:177: error: cannot find symbol\n    [javac]         ParameterizedType pt = new ParameterizedTypeImpl(null, List.class, String.class);\n    [javac]                                    ^\n    [javac]   symbol:   class ParameterizedTypeImpl\n    [javac]   location: class $Gson$TypesDeepseekTest\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

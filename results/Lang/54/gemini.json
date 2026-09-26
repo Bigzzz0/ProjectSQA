@@ -10,5 +10,10 @@
     "org.apache.commons.lang.LocaleUtilsGeminiTest::testLang328",
     "org.apache.commons.lang.LocaleUtilsGeminiTest::testLang328AdditionalVariants"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "38a75f3e194064e1126f38bf3cea01705f65e988e1572b5d58ceaed2e7e997ef",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_54b/LocaleUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-54-gemini-1790386852"
 }

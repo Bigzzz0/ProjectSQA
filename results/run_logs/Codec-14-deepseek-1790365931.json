@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-14-deepseek-1790365931",
+  "suite_sha256": "2a87475399e42819b191091a52c01faeed72c2ea896a85390b992c3d111b46ed",
+  "test_files": "LangDeepseekTest.java;PhoneticEngineDeepseekTest.java;RuleDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.language.bm.Lang;org.apache.commons.codec.language.bm.PhoneticEngine;org.apache.commons.codec.language.bm.Rule;src.main.resources.org.apache.commons.codec.language.bm.ash_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.gen_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.sep_lang.txt",
+  "timestamp": "2026-09-26 02:52:14",
+  "evaluation_duration_sec": 2.618,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "       return crypt(original.getBytes(Charsets.UTF_8), salt);\n    [javac]                                                ^\n    [javac] /tmp/d4j_eval/Codec_14b/src/main/java/org/apache/commons/codec/net/BCodec.java:56: warning: [deprecation] UTF_8 in Charsets has been deprecated\n    [javac]         this(Charsets.UTF_8);\n    [javac]                      ^\n    [javac] /tmp/d4j_eval/Codec_14b/src/main/java/org/apache/commons/codec/net/QCodec.java:116: warning: [deprecation] UTF_8 in Charsets has been deprecated\n    [javac]         this(Charsets.UTF_8);\n    [javac]                      ^\n    [javac] /tmp/d4j_eval/Codec_14b/src/main/java/org/apache/commons/codec/net/QuotedPrintableCodec.java:94: warning: [deprecation] UTF_8 in Charsets has been deprecated\n    [javac]         this(Charsets.UTF_8);\n    [javac]                      ^\n    [javac] 28 warnings\n     [copy] Copying 7 files to /tmp/d4j_eval/Codec_14b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Codec_14b/target/classes/\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Codec_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_14b/.test_suite/org/apache/commons/codec/language/bm/LangDeepseekTest.java:638: error: illegal escape character\n    [javac]         String result = lang.guessLanguage(\"a\\vb\");\n    [javac]                                               ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

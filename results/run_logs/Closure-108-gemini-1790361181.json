@@ -1,0 +1,22 @@
+{
+  "project": "Closure",
+  "bug_id": 108,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-108-gemini-1790361181",
+  "suite_sha256": "814e435d14adfed1e07234e30d7a7dcde772d01c313dd0339ffac0bc3882f5ac",
+  "test_files": "ScopedAliasesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases",
+  "timestamp": "2026-09-26 01:33:37",
+  "evaluation_duration_sec": 36.002,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.77,
+  "branch_coverage_percent": 90.67,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testIssue1144VarDeclarationWithDoc",
+    "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testTypeNodeRewritingSimpleAndComposite"
+  ],
+  "fixed_failures": []
+}

@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testFormatOctalBytes",
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testFormatCheckSumOctalBytes"
-  ]
+  ],
+  "suite_sha256": "238b1050f2f9dccd5dd67251156a6a57cbd8a12ea0b05fe3710878b31304465d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_7b/TarUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-7-gemini-1790367889"
 }

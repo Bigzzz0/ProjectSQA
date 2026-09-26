@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testCannotInitializeInterfaceFieldThrowsMockitoException",
     "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::mock_should_be_injected_once_and_in_the_best_matching_type"
-  ]
+  ],
+  "suite_sha256": "01970e9dfa7f056e7abe8a2a914a7f59dbb2064daad4d6d6bf17cfee30d2d01c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_28b/DefaultInjectionEngineGeminiTest.java"
+  ],
+  "run_id": "Mockito-28-gemini-1790397674"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.13,
+  "branch_cov": 0.04,
+  "test_file": "UTF8StreamJsonParser_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.core.base.ParserMinimalBase;com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d6872c0094bdeed29520ef0c1f1f6dbf191f3ed699e06bcbbb58419a6a1af294",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonCore_9b/com/fasterxml/jackson/core/json/UTF8StreamJsonParser_IPOTest.java"
+  ],
+  "run_id": "JacksonCore-9-ipo-1790371716"
+}

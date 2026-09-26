@@ -10,5 +10,10 @@
     "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityNegativeExtreme",
     "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityPositiveExtreme"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "543947ff067fd4de740c77ff2a9add97297d7ff2ace52b832d0f315c5c6417f5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_103b/NormalDistributionImplDeepseekTest.java"
+  ],
+  "run_id": "Math-103-deepseek-1790394522"
 }

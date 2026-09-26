@@ -1,0 +1,19 @@
+{
+  "project": "Mockito",
+  "bug_id": 37,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Mockito-37-mio-1790398165",
+  "suite_sha256": "1371a30e89c5ff790ab1ea1a1335efbb8788c4c8a2b3497e8cb66538ea38b941",
+  "test_files": "AnswersValidator_ESTest.java",
+  "target_classes": "org.mockito.internal.stubbing.answers.AnswersValidator",
+  "timestamp": "2026-09-26 11:49:55",
+  "evaluation_duration_sec": 29.349,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 62.96,
+  "branch_coverage_percent": 46.15,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,23 @@
+{
+  "project": "Collections",
+  "bug_id": 18,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-18-gemini-1790367083",
+  "suite_sha256": "795cfba1d43486f7c91e68b51efbde4dbd3a06015c33ed65ae0df5c3f696d916",
+  "test_files": "ListOrderedSetGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.set.ListOrderedSet",
+  "timestamp": "2026-09-26 03:11:43",
+  "evaluation_duration_sec": 19.648,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.set.ListOrderedSetGeminiTest::testFactoryDecorateListWithDuplicates"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.set.ListOrderedSetGeminiTest::testFactoryDecorateListWithDuplicates"
+  ]
+}

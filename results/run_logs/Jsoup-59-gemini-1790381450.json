@@ -1,0 +1,27 @@
+{
+  "project": "Jsoup",
+  "bug_id": 59,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-59-gemini-1790381450",
+  "suite_sha256": "164898549e760d01d73eb459af178fe8cc069b0769bedcbbcd4b43b5388be763",
+  "test_files": "TokenGeminiTest.java",
+  "target_classes": "org.jsoup.parser.Token",
+  "timestamp": "2026-09-26 07:11:08",
+  "evaluation_duration_sec": 17.37,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.5,
+  "branch_coverage_percent": 97.73,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.TokenGeminiTest::testFinaliseTagControlCharsCollapsingToEmptyAttributeNameDoesNotThrow",
+    "org.jsoup.parser.TokenGeminiTest::testStartTagNameAttrMethod",
+    "org.jsoup.parser.TokenGeminiTest::testNewAttributeControlCharsCollapsingToEmptyAttributeNameDoesNotThrow",
+    "org.jsoup.parser.TokenGeminiTest::testStartTagCoreOperationsAndToString"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokenGeminiTest::testStartTagNameAttrMethod",
+    "org.jsoup.parser.TokenGeminiTest::testStartTagCoreOperationsAndToString"
+  ]
+}

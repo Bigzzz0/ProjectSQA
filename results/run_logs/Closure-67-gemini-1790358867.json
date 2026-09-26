@@ -1,0 +1,23 @@
+{
+  "project": "Closure",
+  "bug_id": 67,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-67-gemini-1790358867",
+  "suite_sha256": "1aebe0de53017f8a68a5dee48a39e69a9a731fd47cc2be326f271a1ae9393a34",
+  "test_files": "AnalyzePrototypePropertiesGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.AnalyzePrototypeProperties",
+  "timestamp": "2026-09-26 00:54:55",
+  "evaluation_duration_sec": 28.18,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.62,
+  "branch_coverage_percent": 86.9,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
+  ]
+}

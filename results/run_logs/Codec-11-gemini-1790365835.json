@@ -1,0 +1,25 @@
+{
+  "project": "Codec",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Codec-11-gemini-1790365835",
+  "suite_sha256": "0eed1e23ab70dea0ae71eba067d4f902980a7cc6c038f521664f7561832d51ca",
+  "test_files": "QuotedPrintableCodecGeminiTest.java",
+  "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+  "timestamp": "2026-09-26 02:50:48",
+  "evaluation_duration_sec": 12.565,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testSkipNotEncodedCRLFDefect",
+    "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testSoftLineBreakDecodeDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testEqualSignIsEscaped",
+    "org.apache.commons.codec.net.QuotedPrintableCodecGeminiTest::testEmptyInputsReturnEmpty"
+  ]
+}

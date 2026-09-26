@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 89.47,
+  "branch_cov": 83.33,
+  "test_file": "MultiplePiePlot_ESTest.java",
+  "target_classes": "org.jfree.chart.plot.MultiplePiePlot",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4faf47633705ba3bee89917545e1477ededfceab24410b267e97637ee56f5864",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_12b/MultiplePiePlot_ESTest.java"
+  ],
+  "run_id": "Chart-12-mio-1790351661"
+}

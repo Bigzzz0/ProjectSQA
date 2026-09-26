@@ -16,5 +16,10 @@
     "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSlopeConfidenceIntervalInsufficientData",
     "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSlopeWithTinySumXX",
     "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSignificanceInsufficientData"
-  ]
+  ],
+  "suite_sha256": "d4b70dd37de28ce9b4464c5495331b3b96910c6f5dc45c8e33688f844aef3302",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_105b/SimpleRegressionDeepseekTest.java"
+  ],
+  "run_id": "Math-105-deepseek-1790394651"
 }

@@ -1,0 +1,19 @@
+{
+  "project": "Codec",
+  "bug_id": 3,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Codec-3-ipo-1790365460",
+  "suite_sha256": "2c9a53f4f711c705c2cb6b6ee937f0cccf1f150bc827c00d72f097b1335850a4",
+  "test_files": "DoubleMetaphone_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.language.DoubleMetaphone",
+  "timestamp": "2026-09-26 02:44:35",
+  "evaluation_duration_sec": 15.074,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 18.98,
+  "branch_coverage_percent": 11.78,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

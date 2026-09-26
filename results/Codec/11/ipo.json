@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 30.86,
+  "branch_cov": 16.67,
+  "test_file": "QuotedPrintableCodec_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3994a708aa9850bf26f966aa72725ac30257cbe06e536de4b9bd95c8fead45f2",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_11b/org/apache/commons/codec/net/QuotedPrintableCodec_IPOTest.java"
+  ],
+  "run_id": "Codec-11-ipo-1790365795"
+}

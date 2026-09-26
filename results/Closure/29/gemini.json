@@ -51,5 +51,10 @@
     "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject10",
     "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject12",
     "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testDefectGroundTruthObject22"
-  ]
+  ],
+  "suite_sha256": "3567cbfff601c982b2d128f3be8be36aa73c9a8afc0fed2ea8b75b6fa30bb3fc",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_29b/InlineObjectLiteralsGeminiTest.java"
+  ],
+  "run_id": "Closure-29-gemini-1790356188"
 }

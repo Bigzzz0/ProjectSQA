@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 11.86,
+  "branch_cov": 6.23,
+  "test_file": "ZipArchiveInputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "49ed3198a2cfe1179a2509bc80f13653c0ae10ce8b8d0ace1982b9f13d163141",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_47b/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream_IPOTest.java"
+  ],
+  "run_id": "Compress-47-ipo-1790370085"
+}

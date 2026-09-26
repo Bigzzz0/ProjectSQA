@@ -1,0 +1,29 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 2,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-2-mio-1790371454",
+  "suite_sha256": "73007650c80c2f698047914f70e9c6d3beecc2def4f42e019274ca9739f500f9",
+  "test_files": "ReaderBasedJsonParser_ESTest.java;UTF8StreamJsonParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "timestamp": "2026-09-26 04:24:35",
+  "evaluation_duration_sec": 20.946,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 37.76,
+  "branch_coverage_percent": 33.39,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test30",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test79",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test69",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test64",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test66",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test50",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test52",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test51",
+    "com.fasterxml.jackson.core.json.ReaderBasedJsonParser_ESTest::test55"
+  ]
+}

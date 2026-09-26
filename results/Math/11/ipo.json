@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 16.95,
+  "branch_cov": 17.86,
+  "test_file": "MultivariateNormalDistribution_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.MultivariateNormalDistribution",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "148b36852075a49223ec2445d99edcacdcd273d38fd15d922f9ed63d1fa4a2f7",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_11b/org/apache/commons/math3/distribution/MultivariateNormalDistribution_IPOTest.java"
+  ],
+  "run_id": "Math-11-ipo-1790388159"
+}

@@ -13,5 +13,11 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval"
-  ]
+  ],
+  "suite_sha256": "2bd0c2796b1d93719f1eb0418a3666508cb982389cef22d15ce63429c605a5b9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_22b/FDistributionGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Math_22b/UniformRealDistributionGeminiTest.java"
+  ],
+  "run_id": "Math-22-gemini-1790388923"
 }

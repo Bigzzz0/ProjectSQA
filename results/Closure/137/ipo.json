@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 1.54,
+  "branch_cov": 0.56,
+  "test_file": "NodeUtil_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.Normalize",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6c03410fff3bc0025a1d80a7432bd10e2bd901dfd477609da4a732b7b604ad92",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Closure_137b/com/google/javascript/jscomp/NodeUtil_IPOTest.java"
+  ],
+  "run_id": "Closure-137-ipo-1790362958"
+}

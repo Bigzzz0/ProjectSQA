@@ -1,0 +1,21 @@
+{
+  "project": "Gson",
+  "bug_id": 12,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Gson-12-mio-1790371121",
+  "suite_sha256": "5121d1506cbfaedfad5479c758ff92cfd954c92ebc9cb2059a0f0dbf10328f67",
+  "test_files": "JsonTreeReader_ESTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+  "timestamp": "2026-09-26 04:18:56",
+  "evaluation_duration_sec": 14.425,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 91.07,
+  "branch_coverage_percent": 90.7,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.JsonTreeReader_ESTest::test03"
+  ]
+}

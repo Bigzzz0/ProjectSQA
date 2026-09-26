@@ -23,5 +23,10 @@
     "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEqualsAndHashCodeContract",
     "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testEscapedQuote_LANG_477",
     "org.apache.commons.lang.text.ExtendedMessageFormatGeminiTest::testFormatDescriptionWithQuotedSection"
-  ]
+  ],
+  "suite_sha256": "3721f27dd94a1d388480200e67263bc9f02363bc67894e36aa35c0b8ebe113eb",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_43b/ExtendedMessageFormatGeminiTest.java"
+  ],
+  "run_id": "Lang-43-gemini-1790386196"
 }

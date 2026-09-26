@@ -15,5 +15,10 @@
     "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testMath789RankDeficientWithZeroDiagonal",
     "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testRankDeficientMatrix",
     "org.apache.commons.math3.linear.RectangularCholeskyDecompositionDeepseekTest::testZeroMatrix"
-  ]
+  ],
+  "suite_sha256": "a88199af168d8ac1b69bbcab8b985c5124a8c95040ec1f94b1b3cfcdb5a75ff8",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_21b/RectangularCholeskyDecompositionDeepseekTest.java"
+  ],
+  "run_id": "Math-21-deepseek-1790388824"
 }

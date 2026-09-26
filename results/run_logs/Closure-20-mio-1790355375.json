@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 20,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-20-mio-1790355375",
+  "suite_sha256": "b154309667a427e576d28b396e1893b1d9588d8decff33483c8f4ab349940868",
+  "test_files": "PeepholeSubstituteAlternateSyntax_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+  "timestamp": "2026-09-25 23:56:54",
+  "evaluation_duration_sec": 39.07,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 10.74,
+  "branch_coverage_percent": 8.94,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

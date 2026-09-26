@@ -32,5 +32,10 @@
     "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateScaleZero",
     "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateZeroInitial",
     "org.apache.commons.math3.util.ContinuedFractionDeepseekTest::testEvaluateNegativeX"
-  ]
+  ],
+  "suite_sha256": "df6a5553178a27abbbb3248ac24fa0113c36b42a8c29c723fda7bc554dc551de",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_31b/ContinuedFractionDeepseekTest.java"
+  ],
+  "run_id": "Math-31-deepseek-1790389536"
 }

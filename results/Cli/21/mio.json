@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "GroupImpl_ESTest.java;WriteableCommandLineImpl_ESTest.java;WriteableCommandLine_ESTest.java",
+  "target_classes": "org.apache.commons.cli2.WriteableCommandLine;org.apache.commons.cli2.commandline.WriteableCommandLineImpl;org.apache.commons.cli2.option.GroupImpl",
+  "buggy_failures": [
+    "org.apache.commons.cli2.WriteableCommandLine_ESTest",
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest",
+    "org.apache.commons.cli2.option.GroupImpl_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.WriteableCommandLine_ESTest",
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest",
+    "org.apache.commons.cli2.option.GroupImpl_ESTest"
+  ],
+  "suite_sha256": "cc41e6740ee860488d52bd2ce34507c224b81056fe44e456512907fa79c19954",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_21b/GroupImpl_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_21b/WriteableCommandLineImpl_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_21b/WriteableCommandLine_ESTest.java"
+  ],
+  "run_id": "Cli-21-mio-1790353265"
+}

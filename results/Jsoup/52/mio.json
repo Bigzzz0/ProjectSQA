@@ -1,0 +1,29 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 77.44,
+  "branch_cov": 50.41,
+  "test_file": "DataUtil_ESTest.java;XmlDeclaration_ESTest.java;XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil;org.jsoup.nodes.XmlDeclaration;org.jsoup.parser.XmlTreeBuilder",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtil_ESTest::test11",
+    "org.jsoup.helper.DataUtil_ESTest::test14",
+    "org.jsoup.helper.DataUtil_ESTest::test05"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtil_ESTest::test11",
+    "org.jsoup.helper.DataUtil_ESTest::test14",
+    "org.jsoup.helper.DataUtil_ESTest::test05",
+    "org.jsoup.nodes.XmlDeclaration_ESTest::test1",
+    "org.jsoup.nodes.XmlDeclaration_ESTest::test2",
+    "org.jsoup.nodes.XmlDeclaration_ESTest::test3"
+  ],
+  "suite_sha256": "e32a4d636c9f5703976f62674ef346a9eb2400e1cc0be5b73f69f537752bcecd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_52b/DataUtil_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_52b/XmlDeclaration_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_52b/XmlTreeBuilder_ESTest.java"
+  ],
+  "run_id": "Jsoup-52-mio-1790381074"
+}

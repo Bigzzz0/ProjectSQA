@@ -10,5 +10,10 @@
     "org.joda.time.base.BaseSingleFieldPeriodGeminiTest::testBetween_ReadablePartial_MonthDay_LeapYear_Defect",
     "org.joda.time.base.BaseSingleFieldPeriodGeminiTest::testBetween_ReadablePartial_MonthDay_LeapYearToLeapYear"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "e4d8c453f38ef79071c909eff1acb7cd546e9dadb43cbe24dd225056abf9dd2f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_10b/BaseSingleFieldPeriodGeminiTest.java"
+  ],
+  "run_id": "Time-10-gemini-1790398922"
 }

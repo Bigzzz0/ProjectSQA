@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-12-gemini-1790352954",
+  "suite_sha256": "4cc06ebd6a184f507d22f58c0844d252a90ed9acc97423c15d3d5f11166ae300",
+  "test_files": "GnuParserGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.GnuParser",
+  "timestamp": "2026-09-25 23:16:07",
+  "evaluation_duration_sec": 13.607,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.GnuParserGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.GnuParserGeminiTest"
+  ]
+}

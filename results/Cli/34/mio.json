@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "OptionBuilder_ESTest.java;Option_ESTest.java",
+  "target_classes": "org.apache.commons.cli.Option;org.apache.commons.cli.OptionBuilder",
+  "buggy_failures": [
+    "org.apache.commons.cli.OptionBuilder_ESTest",
+    "org.apache.commons.cli.Option_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.OptionBuilder_ESTest",
+    "org.apache.commons.cli.Option_ESTest"
+  ],
+  "suite_sha256": "5d8cc8496ec7a1d11bb7ce880309bca95eaeb9d60d00a6889a17b9aeb2dbb9b5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_34b/OptionBuilder_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_34b/Option_ESTest.java"
+  ],
+  "run_id": "Cli-34-mio-1790353719"
+}

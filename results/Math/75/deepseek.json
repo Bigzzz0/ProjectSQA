@@ -19,5 +19,10 @@
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testCumFreqUncomparable",
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testPctUncomparable",
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testCumPctUncomparable"
-  ]
+  ],
+  "suite_sha256": "40cdd49df7216a3494c1ca05485eb3816b62e0aafc5c8df661e6aacb777c2af5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_75b/FrequencyDeepseekTest.java"
+  ],
+  "run_id": "Math-75-deepseek-1790392502"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 41,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-41-deepseek-1790386079",
+  "suite_sha256": "290c103393f280334be76bf812b5452dd6fc1909ff9d76176a80d7bd3944f402",
+  "test_files": "ClassUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.ClassUtils",
+  "timestamp": "2026-09-26 08:28:05",
+  "evaluation_duration_sec": 6.023,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "cessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_41b/src/java/org/apache/commons/lang/reflect/FieldUtils.java:518: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_41b/src/java/org/apache/commons/lang/reflect/MemberUtils.java:74: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 42 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_41b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Lang_41b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_41b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_41b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_41b/.test_suite/org/apache/commons/lang/ClassUtilsDeepseekTest.java:289: error: cannot find symbol\n    [javac]         List<String> names = new ArrayList<>();\n    [javac]         ^\n    [javac]   symbol:   class List\n    [javac]   location: class ClassUtilsDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

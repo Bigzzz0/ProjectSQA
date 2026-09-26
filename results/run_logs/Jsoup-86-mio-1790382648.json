@@ -1,0 +1,23 @@
+{
+  "project": "Jsoup",
+  "bug_id": 86,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-86-mio-1790382648",
+  "suite_sha256": "89f041054cb12e43d50b933c8459cd150828da791f46fb7b5f87ddb6197871b5",
+  "test_files": "Comment_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Comment",
+  "timestamp": "2026-09-26 07:31:05",
+  "evaluation_duration_sec": 17.455,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.Comment_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.Comment_ESTest::test1"
+  ]
+}

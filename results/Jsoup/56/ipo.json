@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.24,
+  "branch_cov": 0.0,
+  "test_file": "DocumentType_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType;org.jsoup.parser.HtmlTreeBuilderState;org.jsoup.parser.Token;org.jsoup.parser.TokeniserState;org.jsoup.parser.XmlTreeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "da5a3beb9755ebeda22356a1cc7c9a719ff0a53cf0f31d3dc236cc1a55b56892",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_56b/org/jsoup/nodes/DocumentType_IPOTest.java"
+  ],
+  "run_id": "Jsoup-56-ipo-1790381277"
+}

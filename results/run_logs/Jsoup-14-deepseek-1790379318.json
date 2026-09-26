@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-14-deepseek-1790379318",
+  "suite_sha256": "c2a1f06addf07a1091f19b690968fd676f0005a6f8a39accf78bf2edfd18a3e3",
+  "test_files": "TokeniserDeepseekTest.java;TokeniserStateDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.Tokeniser;org.jsoup.parser.TokeniserState",
+  "timestamp": "2026-09-26 06:35:21",
+  "evaluation_duration_sec": 3.727,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "e value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_14b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_14b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_14b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_14b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_14b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_14b/target/classes/org/jsoup/safety/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Jsoup_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_14b/.test_suite/org/jsoup/parser/TokeniserDeepseekTest.java:82: error: errors has private access in Tokeniser\n    [javac]         assertTrue(\"Error should have been recorded\", tokeniser.errors.size() > 0);\n    [javac]                                                                ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

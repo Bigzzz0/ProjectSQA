@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 24,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-24-deepseek-1790399790",
+  "suite_sha256": "3b9d873f856e6367ea36937a68eaf7064c3712d2cbd7f31f64683f3b1c968713",
+  "test_files": "DateTimeParserBucketDeepseekTest.java",
+  "target_classes": "org.joda.time.format.DateTimeParserBucket",
+  "timestamp": "2026-09-26 12:16:37",
+  "evaluation_duration_sec": 7.047,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "e 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n     [copy] Copying 6 files to /tmp/d4j_eval/Time_24b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_24b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_24b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_24b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_24b/.test_suite/org/joda/time/format/DateTimeParserBucketDeepseekTest.java:452: error: cannot find symbol\n    [javac]         assertTrue(SavedField.compareReverse(year.iField.getDurationField(), month.iField.getDurationField()) < 0);\n    [javac]                              ^\n    [javac]   symbol:   method compareReverse(DurationField,DurationField)\n    [javac]   location: class SavedField\n    [javac] Note: /tmp/d4j_eval/Time_24b/.test_suite/org/joda/time/format/DateTimeParserBucketDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

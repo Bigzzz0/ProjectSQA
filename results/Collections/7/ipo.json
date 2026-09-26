@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.18,
+  "branch_cov": 14.64,
+  "test_file": "ExtendedProperties_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f7f00e56b2386095fc40f50c08cec3b96082236408a100328e2e02e146ec3803",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Collections_7b/org/apache/commons/collections/ExtendedProperties_IPOTest.java"
+  ],
+  "run_id": "Collections-7-ipo-1790366459"
+}

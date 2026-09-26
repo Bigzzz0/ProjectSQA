@@ -1,0 +1,19 @@
+{
+  "project": "JacksonXml",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonXml-1-mio-1790378597",
+  "suite_sha256": "a656d99f15684b75643201387a1321ef435618f2e297d2bcf2c906d355feec7b",
+  "test_files": "FromXmlParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+  "timestamp": "2026-09-26 06:23:34",
+  "evaluation_duration_sec": 17.347,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 4.76,
+  "branch_coverage_percent": 0.68,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -17,5 +17,10 @@
     "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerCannotStartAtFunctionContext",
     "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testContextualRenamerRenamesShadowedArgumentsInLocalScope",
     "com.google.javascript.jscomp.MakeDeclaredNamesUniqueGeminiTest::testInlineRenamerHandlesShadowedArgumentsWithoutException"
-  ]
+  ],
+  "suite_sha256": "0271658dfafd8ef67993e811a92c1e99d84aac47ee011c3e62bc9c5a048e8eec",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_49b/MakeDeclaredNamesUniqueGeminiTest.java"
+  ],
+  "run_id": "Closure-49-gemini-1790357581"
 }

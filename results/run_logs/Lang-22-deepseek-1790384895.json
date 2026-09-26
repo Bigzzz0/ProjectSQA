@@ -1,0 +1,27 @@
+{
+  "project": "Lang",
+  "bug_id": 22,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-22-deepseek-1790384895",
+  "suite_sha256": "bab9d90487bf074bedd3502dd374e4d45af364dd04397dc94083e5da7661cf3c",
+  "test_files": "FractionDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.Fraction",
+  "timestamp": "2026-09-26 08:08:35",
+  "evaluation_duration_sec": 20.465,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.45,
+  "branch_coverage_percent": 80.32,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testReducedFactoryWithMinValueNumerator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testReduceWithMinValueNumerator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testGetFractionMinValueDenominator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testReduceWithMinValueNumeratorAndEvenDenominator",
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testGetReducedFractionWithMinValueNumeratorAndEvenDenominator"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.FractionDeepseekTest::testGetFractionMinValueDenominator"
+  ]
+}

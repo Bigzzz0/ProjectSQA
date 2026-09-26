@@ -1,0 +1,29 @@
+{
+  "project": "Closure",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-8-gemini-1790354522",
+  "suite_sha256": "6cc93e0a1358c4d9905e1ff8f5dd09cf1a1e12b756e0e76b4690722464891f91",
+  "test_files": "CollapseVariableDeclarationsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseVariableDeclarations",
+  "timestamp": "2026-09-25 23:42:37",
+  "evaluation_duration_sec": 34.816,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 96.15,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testSequenceOfAssignmentsWithoutVarNotCollapsed",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_simpleReassignmentFollowedByNoVar",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_multipleSequentialReassignments",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testSequenceOfAssignmentsWithoutVarNotCollapsed",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_simpleReassignmentFollowedByNoVar",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820_multipleSequentialReassignments",
+    "com.google.javascript.jscomp.CollapseVariableDeclarationsGeminiTest::testIssue820"
+  ]
+}

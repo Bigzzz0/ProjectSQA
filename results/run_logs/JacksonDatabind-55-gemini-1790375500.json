@@ -1,0 +1,23 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 55,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-55-gemini-1790375500",
+  "suite_sha256": "855920df52b5d42cbcd5554632fc119f32b7767e97952873a463784c82cf75d3",
+  "test_files": "StdKeySerializersGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.StdKeySerializers",
+  "timestamp": "2026-09-26 05:32:06",
+  "evaluation_duration_sec": 25.79,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.36,
+  "branch_coverage_percent": 97.3,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersGeminiTest::testEnumsWithJsonPropertyAsKey"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.StdKeySerializersGeminiTest::testGetFallbackKeySerializerEnumTypes"
+  ]
+}

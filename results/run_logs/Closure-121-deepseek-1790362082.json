@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 121,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-121-deepseek-1790362082",
+  "suite_sha256": "3f8435c6662b98794f666595772cbc851d7fa4339aa737736a7b27e65d6d18b1",
+  "test_files": "InlineVariablesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineVariables",
+  "timestamp": "2026-09-26 01:48:12",
+  "evaluation_duration_sec": 9.81,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_121b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_121b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_121b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_121b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_121b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_121b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_121b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_121b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_121b/.test_suite/com/google/javascript/jscomp/InlineVariablesDeepseekTest.java:11: error: class InlineVariablesTest is public, should be declared in a file named InlineVariablesTest.java\n    [javac] public class InlineVariablesTest {\n    [javac]        ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

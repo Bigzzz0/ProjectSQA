@@ -19,5 +19,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNegativeOffset",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringZero",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNullBreak"
-  ]
+  ],
+  "suite_sha256": "1b1e877ba491b50c16f6592cfd6973595492524e7cfb31aa5b33dd4bd9530420",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_8b/TarUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-8-deepseek-1790367937"
 }

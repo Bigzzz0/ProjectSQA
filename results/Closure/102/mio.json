@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 37.63,
+  "branch_cov": 19.27,
+  "test_file": "Normalize_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Normalize",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test7",
+    "com.google.javascript.jscomp.Normalize_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test7",
+    "com.google.javascript.jscomp.Normalize_ESTest::test0"
+  ],
+  "suite_sha256": "5f361aea9e209d383f2404d1bb2ae90b3f8b2b8a10e9c36a7e288ee9e9d6f665",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_102b/Normalize_ESTest.java"
+  ],
+  "run_id": "Closure-102-mio-1790360741"
+}

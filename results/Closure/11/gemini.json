@@ -37,5 +37,10 @@
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testExpectedThisTypeDiagnostic",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testInOperatorRequiresObject",
     "com.google.javascript.jscomp.TypeCheckGeminiTest::testConstructorChainingAndReportMissingProperties"
-  ]
+  ],
+  "suite_sha256": "91ee11e1f862a2606da8685e98f5c0c4ca73847ce64bc17153cafc3f45f6ea8d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_11b/TypeCheckGeminiTest.java"
+  ],
+  "run_id": "Closure-11-gemini-1790354789"
 }

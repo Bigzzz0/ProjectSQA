@@ -1,0 +1,43 @@
+{
+  "project": "Jsoup",
+  "bug_id": 32,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-32-deepseek-1790380077",
+  "suite_sha256": "9030ba167ca535eced200574dbc5d1a8509dc3fcf54d88644d06ffd71c8ed7fc",
+  "test_files": "ElementDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "timestamp": "2026-09-26 06:48:13",
+  "evaluation_duration_sec": 16.003,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.38,
+  "branch_coverage_percent": 70.71,
+  "failures_count": 11,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementDeepseekTest::testFirstLastElementSibling",
+    "org.jsoup.nodes.ElementDeepseekTest::testClonesClassnames",
+    "org.jsoup.nodes.ElementDeepseekTest::testOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testWrap",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByAttributeValueNot",
+    "org.jsoup.nodes.ElementDeepseekTest::testPrependChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsContainingOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testPreserveWhitespace",
+    "org.jsoup.nodes.ElementDeepseekTest::testAppendChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testEmptyClassName",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByIndexLessThan"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementDeepseekTest::testFirstLastElementSibling",
+    "org.jsoup.nodes.ElementDeepseekTest::testClonesClassnames",
+    "org.jsoup.nodes.ElementDeepseekTest::testOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testWrap",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByAttributeValueNot",
+    "org.jsoup.nodes.ElementDeepseekTest::testPrependChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsContainingOwnText",
+    "org.jsoup.nodes.ElementDeepseekTest::testPreserveWhitespace",
+    "org.jsoup.nodes.ElementDeepseekTest::testAppendChildNull",
+    "org.jsoup.nodes.ElementDeepseekTest::testEmptyClassName",
+    "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByIndexLessThan"
+  ]
+}

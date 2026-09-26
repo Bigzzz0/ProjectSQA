@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 57,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-57-gemini-1790387061",
+  "suite_sha256": "083d6243249a025f852b6266bbe2e0ba2003bd2a79ee9e3b5863261fe8efdc7f",
+  "test_files": "LocaleUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.LocaleUtils",
+  "timestamp": "2026-09-26 08:44:41",
+  "evaluation_duration_sec": 20.031,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

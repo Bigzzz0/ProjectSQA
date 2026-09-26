@@ -37,5 +37,10 @@
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testGetUnparseableExtraFieldData",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testExtraFieldsNullWithUnparseable",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testAddExtraFieldUnparseable"
-  ]
+  ],
+  "suite_sha256": "af4506393c7c50ead0f2ef15d59f2b237f8bcf1b05afc1e22f6d517eff5ed336",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_13b/ZipArchiveEntryDeepseekTest.java"
+  ],
+  "run_id": "Compress-13-deepseek-1790368160"
 }

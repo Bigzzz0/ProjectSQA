@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 27.7,
+  "branch_cov": 27.13,
+  "test_file": "Fraction_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.math.Fraction",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4d71cdb93af5f1aed43e4b3d36a1764aaea1cc57de99129c0ce14ee3b512838a",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_22b/org/apache/commons/lang3/math/Fraction_IPOTest.java"
+  ],
+  "run_id": "Lang-22-ipo-1790384852"
+}

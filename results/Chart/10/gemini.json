@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorGeminiTest::testGenerateToolTipFragmentNullInput"
-  ]
+  ],
+  "suite_sha256": "f1bc14a69c7ab6abb685f6bd7a19141d726b8e7bb6d06559a4ed826582faab3c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_10b/StandardToolTipTagFragmentGeneratorGeminiTest.java"
+  ],
+  "run_id": "Chart-10-gemini-1790351565"
 }

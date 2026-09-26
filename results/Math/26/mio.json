@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.72,
+  "branch_cov": 95.74,
+  "test_file": "Fraction_ESTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.Fraction",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5a0e81d6e0dc44526a3af2ad09abef74bc39bd73e021d18cded7eb09d46196b1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_26b/Fraction_ESTest.java"
+  ],
+  "run_id": "Math-26-mio-1790389193"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 37.4,
+  "branch_cov": 33.1,
+  "test_file": "MapDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.MapDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1447c9806f195d63ab3c7a78072acce8cd9ab11d5b32c0062cfc862ae5355dfc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_12b/MapDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-12-mio-1790372978"
+}

@@ -1,0 +1,29 @@
+{
+  "project": "Closure",
+  "bug_id": 119,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-119-gemini-1790361925",
+  "suite_sha256": "ecb79ca7a4b17d85866de227191d10584d7ba0988f76750283c56b9c3b3fd84a",
+  "test_files": "GlobalNamespaceGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace",
+  "timestamp": "2026-09-26 01:45:59",
+  "evaluation_duration_sec": 34.083,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 84.68,
+  "branch_coverage_percent": 63.01,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchDefectExposed",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchDefectExposed",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
+    "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
+  ]
+}

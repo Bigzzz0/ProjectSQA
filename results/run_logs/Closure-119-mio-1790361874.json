@@ -1,0 +1,25 @@
+{
+  "project": "Closure",
+  "bug_id": 119,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-119-mio-1790361874",
+  "suite_sha256": "15772f4a17bae9f8be64bb0e065467ef1a2e5c266a596ddaeded79999a0f449d",
+  "test_files": "GlobalNamespace_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace",
+  "timestamp": "2026-09-26 01:45:15",
+  "evaluation_duration_sec": 41.161,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 39.72,
+  "branch_coverage_percent": 24.28,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test49",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test00"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test49",
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test00"
+  ]
+}

@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.collections4.keyvalue.MultiKeyGeminiTest::testGetKeysReturnsDefensiveCopy"
-  ]
+  ],
+  "suite_sha256": "1423edc0cc5c4bcf9d245800e6ab8f842d7564518ed1c59734afc2bd7b976bf4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_26b/MultiKeyGeminiTest.java"
+  ],
+  "run_id": "Collections-26-gemini-1790367490"
 }

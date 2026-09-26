@@ -9,5 +9,10 @@
   "buggy_failures": [
     "com.google.javascript.jscomp.CodeConsumerGeminiTest::testIssue582NegativeZeroHandling"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "88eb974c538bc32170b72468ba521d11648e1f7ecc30545bb45ef37f7047d5a2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_51b/CodeConsumerGeminiTest.java"
+  ],
+  "run_id": "Closure-51-gemini-1790357771"
 }

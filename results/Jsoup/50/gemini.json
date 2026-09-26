@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.helper.DataUtilGeminiTest::testParseByteDataZeroLength"
-  ]
+  ],
+  "suite_sha256": "1558249363912d8ca78ef033241b49c16af59e4f501d6dc848ce5b867fbf1c58",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_50b/DataUtilGeminiTest.java"
+  ],
+  "run_id": "Jsoup-50-gemini-1790380982"
 }

@@ -40,5 +40,10 @@
     "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testCompileEmpty",
     "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testCompileWithEscapedTildeAndSlashMixed",
     "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testMayMatchPropertyOnEmpty"
-  ]
+  ],
+  "suite_sha256": "ae34a773db317a1bddcc03587314113f80748a86620dff31e8d2f2c3c9f0b8d8",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonCore_5b/JsonPointerDeepseekTest.java"
+  ],
+  "run_id": "JacksonCore-5-deepseek-1790371581"
 }

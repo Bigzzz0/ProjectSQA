@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 40.0,
+  "branch_cov": 16.67,
+  "test_file": "AnnotationMap_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.introspect.AnnotationMap",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "84c3190bbb4835f0b9629f5dbf8226840062e9ec685efc1edd00a4d81c88cad2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_16b/AnnotationMap_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-16-mio-1790373172"
+}

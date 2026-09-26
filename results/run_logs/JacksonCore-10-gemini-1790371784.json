@@ -1,0 +1,29 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 10,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-10-gemini-1790371784",
+  "suite_sha256": "294b987144eb09533382e7c9cf678c88515ee28564effa3aa9b5e0e2a9809932",
+  "test_files": "ByteQuadsCanonicalizerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer",
+  "timestamp": "2026-09-26 04:29:59",
+  "evaluation_duration_sec": 15.203,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 81.94,
+  "branch_coverage_percent": 58.27,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCascadingLookupThroughSecondaryTertiaryAndSpillover",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasicAddAndFind2Quads",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testRootCreationAndStateInspection",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCalcTertiaryShiftBoundaries"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCascadingLookupThroughSecondaryTertiaryAndSpillover",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testBasicAddAndFind2Quads",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testRootCreationAndStateInspection",
+    "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizerGeminiTest::testCalcTertiaryShiftBoundaries"
+  ]
+}

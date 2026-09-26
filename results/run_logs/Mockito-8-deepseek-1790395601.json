@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-8-deepseek-1790395601",
+  "suite_sha256": "378299c7ba11019ba78fffb612ff79a62c1ad68563ac10b1f9f7e1f9c13f3b8e",
+  "test_files": "GenericMetadataSupportDeepseekTest.java",
+  "target_classes": "org.mockito.internal.util.reflection.GenericMetadataSupport",
+  "timestamp": "2026-09-26 11:07:09",
+  "evaluation_duration_sec": 27.654,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/tmp/d4j_eval/Mockito_8b/.gradle_local_home/wrapper/dists/gradle-4.9-bin/71gnev7nbut889mbjt1mdfmf1v/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()\n     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod\n     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\n     [exec] WARNING: All illegal access operations will be denied in a future release\n     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_8b/build/classes/java/main\n     [echo] build.home: /tmp/d4j_eval/Mockito_8b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_8b/.test_suite/org/mockito/internal/util/reflection/GenericMetadataSupportDeepseekTest.java:339: error: cannot find symbol\n    [javac]     public static class BoundedClass<T extends Comparable<T> & Serializable> {\n    [javac]                                                                ^\n    [javac]   symbol:   class Serializable\n    [javac]   location: class GenericMetadataSupportDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 23 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

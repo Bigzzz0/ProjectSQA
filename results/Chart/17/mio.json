@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.01,
+  "branch_cov": 85.94,
+  "test_file": "TimeSeries_ESTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeries_ESTest::test19",
+    "org.jfree.data.time.TimeSeries_ESTest::test08"
+  ],
+  "suite_sha256": "8d045ebbfd668fdf73afa3928628354f3c7e6943d560dfb8fdc3498405f3ade3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_17b/TimeSeries_ESTest.java"
+  ],
+  "run_id": "Chart-17-mio-1790351957"
+}

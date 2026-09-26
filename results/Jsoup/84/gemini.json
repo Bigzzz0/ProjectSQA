@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.helper.W3CDomGeminiTest::testAsStringTransformerExceptionHandled"
-  ]
+  ],
+  "suite_sha256": "8ead63138a5371485640d5c57c1e21970a1c7754b1fd95d0424f4c90efe3dfd4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_84b/W3CDomGeminiTest.java"
+  ],
+  "run_id": "Jsoup-84-gemini-1790382574"
 }

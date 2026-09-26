@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 32,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-32-gemini-1790374089",
+  "suite_sha256": "03251e4200ecce3a00927382ea6d1ba0429faa39b1c9d9340f27bb9bd38acbf3",
+  "test_files": "UntypedObjectDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer",
+  "timestamp": "2026-09-26 05:08:16",
+  "evaluation_duration_sec": 7.518,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_32b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_32b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_32b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_32b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_32b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_32b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_32b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_32b/.test_suite/com/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializerGeminiTest.java:135: error: <anonymous com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerGeminiTest$1> is not abstract and does not override abstract method getTypeInclusion() in TypeDeserializer\n    [javac]     private static final TypeDeserializer DUMMY_TYPE_DESERIALIZER = new TypeDeserializer() {\n    [javac]                                                                                            ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

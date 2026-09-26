@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang.StringEscapeUtilsGeminiTest::testUnescapeJavaIncompleteUnicodeAtEof"
-  ]
+  ],
+  "suite_sha256": "ee8f192dabd3177468cd4425c09c0aca209ac76d807b293d6bcd37454b7cb77e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_52b/StringEscapeUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-52-gemini-1790386723"
 }

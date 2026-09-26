@@ -15,5 +15,10 @@
     "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testGetDefaultExterns",
     "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testBooleanFlagNoValue",
     "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testVersionFlag"
-  ]
+  ],
+  "suite_sha256": "35fe70f35ff9cf737094e65b894919735fb45186cbe9669989f9b0a7b62a804b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_151b/CommandLineRunnerDeepseekTest.java"
+  ],
+  "run_id": "Closure-151-deepseek-1790363746"
 }

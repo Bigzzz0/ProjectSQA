@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 12,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-12-mio-1790372978",
+  "suite_sha256": "1447c9806f195d63ab3c7a78072acce8cd9ab11d5b32c0062cfc862ae5355dfc",
+  "test_files": "MapDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.MapDeserializer",
+  "timestamp": "2026-09-26 04:50:07",
+  "evaluation_duration_sec": 29.491,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 37.4,
+  "branch_coverage_percent": 33.1,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

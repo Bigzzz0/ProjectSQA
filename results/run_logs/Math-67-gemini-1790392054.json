@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 67,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-67-gemini-1790392054",
+  "suite_sha256": "af74d2675c229221f74a94e1bf93cf0a0b6ad8c897178211eed8664336f36760",
+  "test_files": "MultiStartUnivariateRealOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer",
+  "timestamp": "2026-09-26 10:07:42",
+  "evaluation_duration_sec": 7.284,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": ":-options.\n    [javac] /tmp/d4j_eval/Math_67b/src/main/java/org/apache/commons/math/exception/NoDataException.java:41: warning: non-varargs call of varargs method with inexact argument type for last parameter;\n    [javac]         super(specific, LocalizedFormats.NO_DATA, null);\n    [javac]                                                   ^\n    [javac]   cast to Object for a varargs call\n    [javac]   cast to Object[] for a non-varargs call and to suppress this warning\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_67b/src/main/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 5 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_67b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_67b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_67b/.test_suite/org/apache/commons/math/optimization/MultiStartUnivariateRealOptimizerGeminiTest.java:46: error: cannot find symbol\n    [javac] import org.apache.commons.math.analysis.QuinticFunction;\n    [javac]                                        ^\n    [javac]   symbol:   class QuinticFunction\n    [javac]   location: package org.apache.commons.math.analysis\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

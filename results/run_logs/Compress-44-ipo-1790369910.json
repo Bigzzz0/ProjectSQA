@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 44,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Compress-44-ipo-1790369910",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.compress.utils.ChecksumCalculatingInputStream",
+  "timestamp": "2026-09-26 03:58:30",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

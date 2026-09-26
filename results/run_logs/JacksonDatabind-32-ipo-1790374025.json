@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 32,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JacksonDatabind-32-ipo-1790374025",
+  "suite_sha256": "85384d529efd0bff62c4dbd6f1884f040f72e26bff2863064ed921b4869889d9",
+  "test_files": "UntypedObjectDeserializer_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer",
+  "timestamp": "2026-09-26 05:07:30",
+  "evaluation_duration_sec": 25.053,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 9.54,
+  "branch_coverage_percent": 5.52,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

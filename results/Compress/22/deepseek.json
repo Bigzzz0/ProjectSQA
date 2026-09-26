@@ -17,5 +17,10 @@
     "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadByteArrayNegativeOffset",
     "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadAfterCloseThrows",
     "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInput"
-  ]
+  ],
+  "suite_sha256": "6b3fdc322859d2517163091f31919051055c78212087a67eb3225bfab18d4e48",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_22b/BZip2CompressorInputStreamDeepseekTest.java"
+  ],
+  "run_id": "Compress-22-deepseek-1790368616"
 }

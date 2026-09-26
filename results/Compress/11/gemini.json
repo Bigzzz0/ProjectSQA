@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testCreateArchiveInputStreamByNameAllFormats",
     "org.apache.commons.compress.archivers.ArchiveStreamFactoryGeminiTest::testCreateArchiveInputStreamCaseInsensitive"
-  ]
+  ],
+  "suite_sha256": "628032fad169a91601edc60287ef664a833c10b69869c28d0a530356028d3679",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_11b/ArchiveStreamFactoryGeminiTest.java"
+  ],
+  "run_id": "Compress-11-gemini-1790368056"
 }

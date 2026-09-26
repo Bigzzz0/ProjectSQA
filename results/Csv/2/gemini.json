@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.csv.CSVRecordGeminiTest::testGetStringInconsistentRecord"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "4c5317d136531072fe65c24d0ae56ac020be3849122157208e77a87c9fdedd8b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_2b/CSVRecordGeminiTest.java"
+  ],
+  "run_id": "Csv-2-gemini-1790370213"
 }

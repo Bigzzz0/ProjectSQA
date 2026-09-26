@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.18,
+  "branch_cov": 16.75,
+  "test_file": "CoalesceVariableNames_ESTest.java;JsDocInfoParser_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CoalesceVariableNames;com.google.javascript.jscomp.parsing.JsDocInfoParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ab8d923f43a354c88566d6cfeaaab0cec41ace705d6b5883075b6c81aab26cdc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_142b/CoalesceVariableNames_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_142b/evosuite-tests/com/google/javascript/jscomp/parsing/JsDocInfoParser_ESTest.java"
+  ],
+  "run_id": "Closure-142-mio-1790363263"
+}

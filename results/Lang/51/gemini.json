@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.lang.BooleanUtilsGeminiTest::testToBoolean_String_DefectTrigger_Length3StartsWithT"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "4d78f9754d0fb912e97087c3880498405dff3078b04699145fd39d5938a3c74c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_51b/BooleanUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-51-gemini-1790386674"
 }

@@ -1,324 +1,359 @@
 #!/usr/bin/env python3
-"""
-Master Benchmark Data Consolidator for ProjectSQA
-Developed by Member 4 (Infrastructure & Data Analysis Lead)
+"""Build a provenance-checked, bug-level master benchmark dataset."""
 
-Harmonizes empirical results across all 4 testing techniques:
-1. Dual-AI: DeepSeek V4 Flash (1,072 runs) & Gemini 3.8 Flash (527 runs)
-2. MIO Algorithm: EvoSuite SBST (834 bugs across 3 budgets: 30s, 60s, 120s)
-3. Native IPO: Combinatorial Testing (173 verified suites, 42,398 test cases)
-
-Outputs:
-- results/master_benchmark_summary.csv (Standardized unified benchmark dataset)
-- results/master_descriptive_stats.json (Descriptive statistics & FDR % calculations)
-"""
-
-import os
-import sys
 import csv
 import json
-import math
+import os
 import statistics
-from collections import defaultdict, Counter
-
-if hasattr(sys.stdout, "reconfigure"):
-    try:
-        sys.stdout.reconfigure(encoding="utf-8")
-        sys.stderr.reconfigure(encoding="utf-8")
-    except Exception:
-        pass
+import sys
+import tempfile
+from collections import Counter
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPTS_DIR)
+sys.path.insert(0, SCRIPTS_DIR)
+
+from run_benchmark import (  # noqa: E402
+    TECHNIQUE_NAMES,
+    find_test_files_for_target,
+    suite_fingerprint,
+)
+
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
-
-# Data Sources
 BENCHMARK_CSV = os.path.join(RESULTS_DIR, "benchmark_results.csv")
-MIO_BUDGET_CSV = os.path.join(PROJECT_ROOT, "MIO_Algorithm", "Result_Round2", "evosuite_budget_summary.csv")
-IPO_MANIFEST_JSON = os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "Results", "verified_suites_manifest.json")
 CATALOG_JSON = os.path.join(PROJECT_ROOT, "target_benchmark", "all_bugs_catalog.json")
-
-# Output Targets
 MASTER_SUMMARY_CSV = os.path.join(RESULTS_DIR, "master_benchmark_summary.csv")
 MASTER_STATS_JSON = os.path.join(RESULTS_DIR, "master_descriptive_stats.json")
+SUITE_INVENTORY_CSV = os.path.join(RESULTS_DIR, "suite_inventory.csv")
 
-def load_catalog_metadata():
-    """Load target classes for each project and bug ID from Master Catalog."""
-    catalog_map = {}
-    if os.path.exists(CATALOG_JSON):
+TECHNIQUES = ("ipo", "mio", "deepseek", "gemini")
+TECHNIQUE_LABELS = {key: TECHNIQUE_NAMES[key] for key in TECHNIQUES}
+MEASURED_ATTEMPT_STATUSES = {"DONE", "COMPILE_ERROR", "TIMEOUT"}
+UNRESOLVED_STATUSES = {"NOT_RUN", "STALE_RESULT", "CHECKOUT_ERROR", "INVALID_SUITE", "RUN_ERROR"}
+RESULT_FIELDS = [
+    "Project", "Bug_ID", "Technique", "Target_Classes", "Suite_Available",
+    "Test_Files", "Line_Coverage_%", "Branch_Coverage_%",
+    "Fault_Detection_Status", "Execution_Status", "Failures_Count",
+    "Evaluation_Duration_Sec", "Suite_SHA256", "Run_ID", "Timestamp",
+    "Run_Log", "Error_Detail", "Source",
+]
+
+
+def load_catalog():
+    with open(CATALOG_JSON, "r", encoding="utf-8") as f:
+        catalog = json.load(f)
+    if not isinstance(catalog, list) or not catalog:
+        raise ValueError("Defects4J catalog is empty or has an unsupported format")
+    keys = [(item["project"], int(item["bug_id"])) for item in catalog]
+    if len(keys) != len(set(keys)):
+        raise ValueError("Defects4J catalog contains duplicate project/bug keys")
+    return catalog
+
+
+def load_latest_measured_rows():
+    """Use only runner rows with a run id and a fingerprint of the tested suite."""
+    latest = {}
+    legacy_rows = 0
+    if not os.path.isfile(BENCHMARK_CSV):
+        return latest, legacy_rows
+    with open(BENCHMARK_CSV, "r", newline="", encoding="utf-8", errors="replace") as f:
+        for row in csv.DictReader(f):
+            tech = (row.get("Technique") or "").strip()
+            execution_status = row.get("Execution_Status", "")
+            has_run_id = bool(row.get("Run_ID"))
+            has_suite_hash = bool(row.get("Suite_SHA256"))
+            if not has_run_id or (not has_suite_hash and execution_status not in {"NO_SUITE", "CHECKOUT_ERROR", "INVALID_SUITE"}):
+                legacy_rows += 1
+                continue
+            if tech not in TECHNIQUE_LABELS.values():
+                # Keep historical PICT measurements separate from manifest-backed
+                # Native IPO results; the two suite sources are not interchangeable.
+                legacy_rows += 1
+                continue
+            try:
+                bug_id = int(row["Bug_ID"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            key = (row["Project"].strip(), bug_id, tech)
+            previous = latest.get(key)
+            timestamp = row.get("Timestamp", "")
+            if previous is None or (timestamp, row.get("Run_ID", "")) >= (
+                previous.get("Timestamp", ""), previous.get("Run_ID", "")
+            ):
+                latest[key] = row
+    return latest, legacy_rows
+
+
+def discover_suites(project, bug_id, classes):
+    result = {}
+    for tech in TECHNIQUES:
         try:
-            with open(CATALOG_JSON, "r", encoding="utf-8") as f:
-                catalog = json.load(f)
-                for item in catalog:
-                    key = (item["project"], int(item["bug_id"]))
-                    classes = item.get("target_classes") or item.get("modified_classes", [])
-                    catalog_map[key] = classes
-        except Exception as e:
-            print(f"[!] Warning reading catalog: {e}")
-    return catalog_map
+            paths = find_test_files_for_target(tech, project, bug_id, classes)
+            result[tech] = {
+                "paths": paths,
+                "sha256": suite_fingerprint(paths) if paths else "",
+                "error": "",
+            }
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            result[tech] = {"paths": [], "sha256": "", "error": str(exc)}
+    return result
+
+
+def as_float(value):
+    try:
+        if value is None or value == "":
+            return ""
+        return float(value)
+    except (TypeError, ValueError):
+        return ""
+
+
+def as_int(value):
+    try:
+        return int(value) if value not in (None, "") else ""
+    except (TypeError, ValueError):
+        return ""
+
+
+def write_csv_atomic(path, rows, fields):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    fd, temp_path = tempfile.mkstemp(prefix="master_", suffix=".csv", dir=os.path.dirname(path))
+    try:
+        with os.fdopen(fd, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(rows)
+        os.replace(temp_path, path)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+
+
+def write_run_log(project, bug_id, technique, measured, master_row):
+    """Persist a compact result log with provenance and the detailed outcome."""
+    run_id = measured.get("Run_ID", "")
+    if not run_id:
+        return ""
+    log_dir = os.path.join(RESULTS_DIR, "run_logs")
+    os.makedirs(log_dir, exist_ok=True)
+    safe_name = "".join(ch if ch.isalnum() or ch in "-_." else "_" for ch in run_id)
+    log_path = os.path.join(log_dir, f"{safe_name}.json")
+    detail = {
+        "project": project,
+        "bug_id": int(bug_id),
+        "technique": technique,
+        "run_id": run_id,
+        "suite_sha256": measured.get("Suite_SHA256", ""),
+        "test_files": master_row.get("Test_Files", ""),
+        "target_classes": master_row.get("Target_Classes", ""),
+        "timestamp": measured.get("Timestamp", ""),
+        "evaluation_duration_sec": as_float(measured.get("Evaluation_Duration_Sec")),
+        "execution_status": measured.get("Execution_Status", ""),
+        "fault_detection_status": measured.get("Fault_Detection_Status", ""),
+        "line_coverage_percent": as_float(measured.get("Line_Coverage_%")),
+        "branch_coverage_percent": as_float(measured.get("Branch_Coverage_%")),
+        "failures_count": as_int(measured.get("Failures_Count")),
+        "error_detail": measured.get("Error_Detail", ""),
+    }
+    # The runner writes detailed buggy/fixed failing-test lists for successful runs.
+    technique_key = next((key for key, label in TECHNIQUE_LABELS.items() if label == technique), technique)
+    individual_json = os.path.join(RESULTS_DIR, project, str(bug_id), f"{technique_key}.json")
+    if os.path.isfile(individual_json):
+        try:
+            with open(individual_json, "r", encoding="utf-8") as stream:
+                generated = json.load(stream)
+            if generated.get("run_id") == run_id:
+                detail["buggy_failures"] = generated.get("buggy_failures", [])
+                detail["fixed_failures"] = generated.get("fixed_failures", [])
+        except (OSError, json.JSONDecodeError):
+            pass
+    fd, temp_path = tempfile.mkstemp(prefix="run_log_", suffix=".json", dir=log_dir)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as stream:
+            json.dump(detail, stream, indent=2, ensure_ascii=False)
+        os.replace(temp_path, log_path)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+    return os.path.relpath(log_path, PROJECT_ROOT)
+
+
+def mean_sd(values):
+    if not values:
+        return {"mean": None, "sd": None}
+    return {
+        "mean": round(statistics.mean(values), 2),
+        "sd": round(statistics.stdev(values), 2) if len(values) > 1 else 0.0,
+    }
+
 
 def consolidate():
-    print("=" * 65)
-    print("🔄 Consolidating Master Benchmark Dataset across 4 Techniques...")
-    print("=" * 65)
-    
-    catalog_map = load_catalog_metadata()
-    master_rows = []
-    
-    # -------------------------------------------------------------
-    # 1. Ingest Dual-AI (DeepSeek & Gemini) & Baseline Runs
-    # -------------------------------------------------------------
-    ai_count = 0
-    if os.path.exists(BENCHMARK_CSV):
-        with open(BENCHMARK_CSV, "r", encoding="utf-8", errors="replace") as f:
-            reader = csv.DictReader(f)
-            for r in reader:
-                tech = r.get("Technique", "").strip()
-                if "DeepSeek" in tech or "Gemini" in tech or "Claude" in tech:
-                    proj = r["Project"].strip()
-                    try:
-                        bug_id = int(r["Bug_ID"])
-                    except ValueError:
-                        continue
-                    
-                    line_cov = float(r.get("Line_Coverage_%", 0.0) or 0.0)
-                    branch_cov = float(r.get("Branch_Coverage_%", 0.0) or 0.0)
-                    fdr_status = r.get("Fault_Detection_Status", "NOT_DETECTED").strip()
-                    
-                    master_rows.append({
-                        "Project": proj,
-                        "Bug_ID": bug_id,
-                        "Technique": "DeepSeek V4 Flash" if "DeepSeek" in tech else ("Gemini 3.8 Flash" if "Gemini" in tech else tech),
-                        "Target_Classes": r.get("Target_Classes", ""),
-                        "Line_Coverage_%": line_cov,
-                        "Branch_Coverage_%": branch_cov,
-                        "Fault_Detection_Status": fdr_status,
-                        "Test_Count": int(r.get("Failures_Count", 0) or 0) + 10,  # Estimated test methods
-                        "Duration_Sec": 15.0 if "DeepSeek" in tech else 6.0,
-                        "Execution_Status": r.get("Execution_Status", "DONE"),
-                        "Source": "benchmark_results.csv"
-                    })
-                    ai_count += 1
-    print(f"✅ [Dual-AI] Loaded {ai_count} evaluations from benchmark_results.csv")
-    
-    # -------------------------------------------------------------
-    # 2. Ingest MIO Algorithm (EvoSuite SBST: 834 bugs, Standard Budget 60s & 120s)
-    # -------------------------------------------------------------
-    mio_count = 0
-    if os.path.exists(MIO_BUDGET_CSV):
-        # We select the standard 60s Search Budget as primary representative benchmark
-        # and keep 120s for budget scaling analysis.
-        mio_by_target = defaultdict(dict)
-        with open(MIO_BUDGET_CSV, "r", encoding="utf-8", errors="replace") as f:
-            reader = csv.DictReader(f)
-            for r in reader:
-                proj = r["Project"].strip()
-                try:
-                    bug_id = int(r["Bug_ID"])
-                    budget = int(r["Budget_Sec"])
-                except ValueError:
-                    continue
-                target_class = r.get("Target_Class", "").strip()
-                key = (proj, bug_id, target_class)
-                mio_by_target[key][budget] = {
-                    "line_cov": float(r.get("Line_Cov_Mean_%", 0.0) or 0.0),
-                    "branch_cov": float(r.get("Branch_Cov_Mean_%", 0.0) or 0.0),
-                    "duration": float(r.get("Avg_Duration_Sec", 0.0) or budget)
-                }
-        
-        for (proj, bug_id, target_class), budgets in mio_by_target.items():
-            # Use 60s as primary standard benchmark
-            primary = budgets.get(60) or budgets.get(120) or budgets.get(30)
-            if not primary:
-                continue
-            
-            # Fault detection for SBST: predominantly regression oracle on version under test
-            # (unless specifically exposing exception on buggy checkout)
-            fdr_status = "NOT_DETECTED"
-            if proj == "Lang" and bug_id == 1:
-                fdr_status = "NOT_DETECTED"  # Verified in Lang-1 empirical evaluation
-                
-            master_rows.append({
-                "Project": proj,
-                "Bug_ID": bug_id,
-                "Technique": "MIO (EvoSuite SBST)",
-                "Target_Classes": target_class,
-                "Line_Coverage_%": primary["line_cov"],
-                "Branch_Coverage_%": primary["branch_cov"],
-                "Fault_Detection_Status": fdr_status,
-                "Test_Count": 25,  # Typical EvoSuite generated suite size
-                "Duration_Sec": primary["duration"],
-                "Execution_Status": "DONE",
-                "Source": "MIO_Algorithm/evosuite_budget_summary.csv"
-            })
-            mio_count += 1
-    print(f"✅ [MIO] Loaded {mio_count} bug suites from evosuite_budget_summary.csv")
+    catalog = load_catalog()
+    latest, legacy_rows = load_latest_measured_rows()
+    results = []
+    inventory = []
 
-    # -------------------------------------------------------------
-    # 3. Ingest Native IPO (173 Verified Suites across 13 Projects)
-    # -------------------------------------------------------------
-    ipo_count = 0
-    if os.path.exists(IPO_MANIFEST_JSON):
-        with open(IPO_MANIFEST_JSON, "r", encoding="utf-8") as f:
-            ipo_data = json.load(f)
-            records = ipo_data.get("records", [])
-            for rec in records:
-                proj = rec["project"].strip()
-                try:
-                    bug_id = int(rec["bug_id"])
-                except ValueError:
-                    continue
-                target_class = rec.get("target_class", "").strip()
-                methods = rec.get("methods", [])
-                test_count = sum(m.get("pairwise_count", 0) for m in methods) or 25
-                
-                # Check if we have empirical benchmark measurement for this bug
-                fdr_status = "BUG_DETECTED" if proj in ["Lang", "Math", "Compress", "Csv", "Jsoup", "Time", "Codec"] and bug_id in [1, 2] else "NOT_DETECTED"
-                
-                # Method-level targeted coverage for combinatorial model
-                line_cov = 32.5
-                branch_cov = 24.0
-                if proj == "Lang" and bug_id == 1:
-                    line_cov = 32.27
-                    branch_cov = 23.96
-                elif proj == "Compress" and bug_id == 1:
-                    line_cov = 58.54
-                    branch_cov = 38.98
-                elif proj == "Csv" and bug_id == 1:
-                    line_cov = 45.95
-                    branch_cov = 22.73
-                elif proj == "Math" and bug_id == 2:
-                    line_cov = 24.32
-                    branch_cov = 19.23
-                elif proj == "Jsoup" and bug_id == 1:
-                    line_cov = 52.17
-                    branch_cov = 55.56
-                elif proj == "Codec" and bug_id == 1:
-                    line_cov = 31.64
-                    branch_cov = 5.98
-                
-                master_rows.append({
-                    "Project": proj,
-                    "Bug_ID": bug_id,
-                    "Technique": "IPO (Native / PICT)",
-                    "Target_Classes": target_class,
-                    "Line_Coverage_%": line_cov,
-                    "Branch_Coverage_%": branch_cov,
-                    "Fault_Detection_Status": fdr_status,
-                    "Test_Count": test_count,
-                    "Duration_Sec": 2.5,  # Sub-second to few seconds generation
-                    "Execution_Status": "DONE",
-                    "Source": "Combinatorial_IPO/verified_suites_manifest.json"
+    for item in catalog:
+        project = item["project"]
+        bug_id = int(item["bug_id"])
+        classes = item.get("target_classes") or item.get("modified_classes") or []
+        suites = discover_suites(project, bug_id, classes)
+
+        for tech in TECHNIQUES:
+            suite = suites[tech]
+            label = TECHNIQUE_LABELS[tech]
+            key = (project, bug_id, label)
+            measured = latest.get(key)
+            suite_available = bool(suite["paths"])
+
+            if suite["error"]:
+                execution_status = "INVALID_SUITE"
+                fault_status = "NOT_EVALUATED"
+                error_detail = suite["error"]
+            elif (
+                measured
+                and suite_available
+                and measured.get("Suite_SHA256") == suite["sha256"]
+            ):
+                execution_status = measured.get("Execution_Status", "")
+                fault_status = measured.get("Fault_Detection_Status", "NOT_EVALUATED")
+                error_detail = measured.get("Error_Detail", "")
+            elif measured and (
+                measured.get("Execution_Status") in {"CHECKOUT_ERROR", "INVALID_SUITE"}
+                or (measured.get("Execution_Status") == "NO_SUITE" and not suite_available)
+            ):
+                # These states are meaningful even without a suite hash; keep them
+                # visible while withholding benchmark metrics.
+                execution_status = measured.get("Execution_Status")
+                fault_status = "NOT_EVALUATED"
+                error_detail = measured.get("Error_Detail", "")
+            elif measured:
+                execution_status = "STALE_RESULT"
+                fault_status = "NOT_EVALUATED"
+                error_detail = "Saved measurement does not match the current suite fingerprint"
+            elif suite_available:
+                execution_status = "NOT_RUN"
+                fault_status = "NOT_EVALUATED"
+                error_detail = "A test suite exists but has no provenance-checked benchmark result"
+            else:
+                execution_status = "NO_SUITE"
+                fault_status = "NOT_EVALUATED"
+                error_detail = "No matching test suite is available"
+
+            row = {
+                "Project": project,
+                "Bug_ID": bug_id,
+                "Technique": label,
+                "Target_Classes": ";".join(classes),
+                "Suite_Available": "YES" if suite_available else "NO",
+                "Test_Files": ";".join(os.path.basename(p) for p in suite["paths"]),
+                "Line_Coverage_%": "",
+                "Branch_Coverage_%": "",
+                "Fault_Detection_Status": fault_status,
+                "Execution_Status": execution_status,
+                "Failures_Count": "",
+                "Evaluation_Duration_Sec": "",
+                "Suite_SHA256": suite["sha256"],
+                "Run_ID": "",
+                "Timestamp": "",
+                "Run_Log": "",
+                "Error_Detail": error_detail,
+                "Source": "",
+            }
+            if measured and execution_status == measured.get("Execution_Status"):
+                row.update({
+                    "Failures_Count": as_int(measured.get("Failures_Count")),
+                    "Evaluation_Duration_Sec": as_float(measured.get("Evaluation_Duration_Sec")),
+                    "Run_ID": measured.get("Run_ID", ""),
+                    "Timestamp": measured.get("Timestamp", ""),
+                    "Run_Log": write_run_log(project, bug_id, label, measured, row),
+                    "Source": "benchmark_results.csv",
                 })
-                ipo_count += 1
-    print(f"✅ [Native IPO] Loaded {ipo_count} verified suites from verified_suites_manifest.json")
-    
-    # -------------------------------------------------------------
-    # 4. Write Master Summary CSV
-    # -------------------------------------------------------------
-    fieldnames = [
-        "Project", "Bug_ID", "Technique", "Target_Classes",
-        "Line_Coverage_%", "Branch_Coverage_%", "Fault_Detection_Status",
-        "Test_Count", "Duration_Sec", "Execution_Status", "Source"
-    ]
-    with open(MASTER_SUMMARY_CSV, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for r in master_rows:
-            writer.writerow(r)
-    print(f"💾 Master Summary saved to {MASTER_SUMMARY_CSV} (Total: {len(master_rows)} rows)")
-    
-    # -------------------------------------------------------------
-    # 5. Compute Descriptive Statistics & FDR %
-    # -------------------------------------------------------------
-    tech_stats = {}
-    techniques = ["IPO (Native / PICT)", "MIO (EvoSuite SBST)", "DeepSeek V4 Flash", "Gemini 3.8 Flash"]
-    
-    for tech in techniques:
-        t_rows = [r for r in master_rows if r["Technique"] == tech]
-        n_total = len(t_rows)
-        if n_total == 0:
-            continue
-            
-        all_lines = [r["Line_Coverage_%"] for r in t_rows]
-        all_branches = [r["Branch_Coverage_%"] for r in t_rows]
-        durations = [r["Duration_Sec"] for r in t_rows]
-        test_counts = [r["Test_Count"] for r in t_rows]
-        
-        # Valid coverage (excluding compile errors for average effective coverage)
-        valid_lines = [l for l in all_lines if l > 0]
-        valid_branches = [b for b in all_branches if b > 0]
-        
-        status_counts = Counter(r["Fault_Detection_Status"] for r in t_rows)
-        n_detected = status_counts.get("BUG_DETECTED", 0)
-        
-        # Bug-level FDR % based on international benchmark formulation
-        fdr_percent = (n_detected / n_total) * 100.0 if n_total > 0 else 0.0
-        
-        def calc_mean_sd(vals):
-            if not vals:
-                return 0.0, 0.0
-            mean = statistics.mean(vals)
-            sd = statistics.stdev(vals) if len(vals) > 1 else 0.0
-            return round(mean, 2), round(sd, 2)
-            
-        l_mean, l_sd = calc_mean_sd(all_lines)
-        b_mean, b_sd = calc_mean_sd(all_branches)
-        eff_l_mean, eff_l_sd = calc_mean_sd(valid_lines)
-        eff_b_mean, eff_b_sd = calc_mean_sd(valid_branches)
-        dur_mean, dur_sd = calc_mean_sd(durations)
-        
-        tech_stats[tech] = {
-            "evaluated_count": n_total,
-            "line_coverage_all": {"mean": l_mean, "sd": l_sd},
-            "branch_coverage_all": {"mean": b_mean, "sd": b_sd},
-            "line_coverage_effective": {"mean": eff_l_mean, "sd": eff_l_sd, "valid_count": len(valid_lines)},
-            "branch_coverage_effective": {"mean": eff_b_mean, "sd": eff_b_sd, "valid_count": len(valid_branches)},
-            "avg_duration_sec": dur_mean,
-            "total_test_cases": sum(test_counts),
-            "status_distribution": dict(status_counts),
-            "bug_level_fdr_percent": round(fdr_percent, 2),
-            "detected_bugs_count": n_detected
+                # Coverage is a completed measurement only. In particular, the
+                # runner's legacy 0 placeholders on compile failures are not data.
+                if execution_status == "DONE":
+                    row.update({
+                        "Line_Coverage_%": as_float(measured.get("Line_Coverage_%")),
+                        "Branch_Coverage_%": as_float(measured.get("Branch_Coverage_%")),
+                    })
+            results.append(row)
+            inventory.append({
+                "Project": project,
+                "Bug_ID": bug_id,
+                "Technique": label,
+                "Target_Classes": ";".join(classes),
+                "Suite_Available": row["Suite_Available"],
+                "Test_Files": row["Test_Files"],
+                "Suite_SHA256": suite["sha256"],
+                "Inventory_Status": "INVALID_SUITE" if suite["error"] else ("READY" if suite_available else "NO_SUITE"),
+                "Error_Detail": suite["error"],
+            })
+
+    expected_rows = len(catalog) * len(TECHNIQUES)
+    if len(results) != expected_rows:
+        raise AssertionError(f"Expected {expected_rows} bug/technique rows, got {len(results)}")
+    keys = [(r["Project"], r["Bug_ID"], r["Technique"]) for r in results]
+    if len(keys) != len(set(keys)):
+        raise AssertionError("Master output contains duplicate bug/technique keys")
+
+    write_csv_atomic(MASTER_SUMMARY_CSV, results, RESULT_FIELDS)
+    write_csv_atomic(SUITE_INVENTORY_CSV, inventory, [
+        "Project", "Bug_ID", "Technique", "Target_Classes", "Suite_Available",
+        "Test_Files", "Suite_SHA256", "Inventory_Status", "Error_Detail",
+    ])
+
+    stats_by_technique = {}
+    for label in TECHNIQUE_LABELS.values():
+        group = [r for r in results if r["Technique"] == label]
+        attempted = [r for r in group if r["Execution_Status"] in MEASURED_ATTEMPT_STATUSES]
+        covered = [r for r in group if r["Execution_Status"] == "DONE"]
+        detected = sum(r["Fault_Detection_Status"] == "BUG_DETECTED" for r in attempted)
+        line_values = [float(r["Line_Coverage_%"]) for r in covered if r["Line_Coverage_%"] != ""]
+        branch_values = [float(r["Branch_Coverage_%"]) for r in covered if r["Branch_Coverage_%"] != ""]
+        distribution = Counter(r["Fault_Detection_Status"] for r in attempted)
+        stats_by_technique[label] = {
+            "catalog_bugs": len(catalog),
+            "suite_available_bugs": sum(r["Suite_Available"] == "YES" for r in group),
+            "attempted_bugs": len(attempted),
+            "successful_benchmark_bugs": len(covered),
+            "coverage_valid_bugs": min(len(line_values), len(branch_values)),
+            "detected_bugs": detected,
+            "fdr_evaluated_percent": round(detected / len(attempted) * 100, 2) if attempted else None,
+            "fdr_full_catalog_percent": round(detected / len(catalog) * 100, 2) if catalog else None,
+            "line_coverage": mean_sd(line_values),
+            "branch_coverage": mean_sd(branch_values),
+            "status_distribution": dict(distribution),
+            "suite_inventory_distribution": dict(Counter(r["Execution_Status"] for r in group)),
         }
 
-    # Project-level breakdown
-    projects = sorted(list(set(r["Project"] for r in master_rows)))
-    project_stats = {}
-    for p in projects:
-        project_stats[p] = {}
-        for tech in techniques:
-            p_rows = [r for r in master_rows if r["Project"] == p and r["Technique"] == tech]
-            if p_rows:
-                p_lines = [r["Line_Coverage_%"] for r in p_rows]
-                project_stats[p][tech] = {
-                    "count": len(p_rows),
-                    "line_mean": round(statistics.mean(p_lines), 2)
-                }
-
     final_stats = {
-        "benchmark_dataset": {
-            "total_evaluations": len(master_rows),
-            "total_projects": len(projects),
-            "projects_list": projects
+        "dataset": {
+            "catalog_bugs": len(catalog),
+            "projects": len({item["project"] for item in catalog}),
+            "expected_bug_technique_rows": expected_rows,
+            "legacy_or_unsupported_rows_excluded": legacy_rows,
+            "results_are_complete": not any(row["Execution_Status"] in UNRESOLVED_STATUSES for row in results),
+            "available_suite_evaluations_complete": all(
+                row["Execution_Status"] in MEASURED_ATTEMPT_STATUSES
+                for row in results if row["Suite_Available"] == "YES"
+            ),
+            "rows_with_no_suite": sum(row["Execution_Status"] == "NO_SUITE" for row in results),
+            "unresolved_rows": sum(row["Execution_Status"] in UNRESOLVED_STATUSES for row in results),
         },
-        "technique_comparison": tech_stats,
-        "project_comparison": project_stats
+        "techniques": stats_by_technique,
     }
-    
     with open(MASTER_STATS_JSON, "w", encoding="utf-8") as f:
         json.dump(final_stats, f, indent=2, ensure_ascii=False)
-    print(f"📊 Descriptive Statistics saved to {MASTER_STATS_JSON}")
-    
-    print("\n" + "=" * 65)
-    print("📈 Master Benchmark Summary Table:")
-    print("-" * 65)
-    print(f"{'Technique':<25} | {'N':<6} | {'Line Cov (%)':<15} | {'Branch Cov (%)':<15} | {'FDR (%)':<8}")
-    print("-" * 65)
-    for tech, s in tech_stats.items():
-        l_str = f"{s['line_coverage_all']['mean']} ± {s['line_coverage_all']['sd']}"
-        b_str = f"{s['branch_coverage_all']['mean']} ± {s['branch_coverage_all']['sd']}"
-        print(f"{tech:<25} | {s['evaluated_count']:<6} | {l_str:<15} | {b_str:<15} | {s['bug_level_fdr_percent']}%")
-    print("=" * 65)
+
+    print(f"Master dataset: {len(results)} bug/technique rows ({len(catalog)} bugs x {len(TECHNIQUES)} techniques)")
+    print(f"Legacy or unsupported benchmark rows excluded: {legacy_rows}")
+    for label, stats in stats_by_technique.items():
+        print(
+            f"{label}: suites={stats['suite_available_bugs']}, attempted={stats['attempted_bugs']}, "
+            f"detected={stats['detected_bugs']}, evaluated FDR={stats['fdr_evaluated_percent']}%"
+        )
+    print(f"Wrote {MASTER_SUMMARY_CSV}, {SUITE_INVENTORY_CSV}, and {MASTER_STATS_JSON}")
+
 
 if __name__ == "__main__":
     consolidate()

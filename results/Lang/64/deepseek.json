@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang.enums.ValuedEnumDeepseekTest::testCompareToBoundaryValues"
-  ]
+  ],
+  "suite_sha256": "be8bfbf2888284111206686201632f20ce7b6fdc601ab556b1f5184a8301ac25",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_64b/ValuedEnumDeepseekTest.java"
+  ],
+  "run_id": "Lang-64-deepseek-1790387386"
 }

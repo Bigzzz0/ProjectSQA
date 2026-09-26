@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 97.92,
+  "test_file": "Vector3D_ESTest.java",
+  "target_classes": "org.apache.commons.math.geometry.Vector3D",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.geometry.Vector3D_ESTest::test11"
+  ],
+  "suite_sha256": "e0848264e8e9a274a7101af010a329435c3e03b55c306a91fc6da99797db22bb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_55b/Vector3D_ESTest.java"
+  ],
+  "run_id": "Math-55-mio-1790391175"
+}

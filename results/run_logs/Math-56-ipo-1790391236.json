@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 56,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-56-ipo-1790391236",
+  "suite_sha256": "c1472403cad7c1172e3e72f90b97d166ffdc191d82dbfc62639002855ae0d559",
+  "test_files": "MultidimensionalCounter_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.MultidimensionalCounter",
+  "timestamp": "2026-09-26 09:54:20",
+  "evaluation_duration_sec": 24.762,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 37.33,
+  "branch_coverage_percent": 38.24,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 22.36,
+  "branch_cov": 17.24,
+  "test_file": "BeanDeserializerBase_ESTest.java;ExternalTypeHandler_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerBase;com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d76a94cbaffc95cbbd70a079d64d54185c0d544a432400b6d35be5e06ef2baa9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_52b/BeanDeserializerBase_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_52b/ExternalTypeHandler_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-52-mio-1790375257"
+}

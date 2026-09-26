@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.mockito.internal.creation.DelegatingMethodGeminiTest::testHashCodeContract"
-  ]
+  ],
+  "suite_sha256": "f417bc2163f81ec7baed5a9d031e8347a64323b1dbc01a363c13db1b94bfb103",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_11b/DelegatingMethodGeminiTest.java"
+  ],
+  "run_id": "Mockito-11-gemini-1790396116"
 }

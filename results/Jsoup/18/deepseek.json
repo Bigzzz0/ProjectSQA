@@ -29,5 +29,10 @@
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeAsString",
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToStringFound",
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharFound"
-  ]
+  ],
+  "suite_sha256": "445a7259bac13b37e7f38dfdfbfb2ae5105fdd64d32a0e25e08e48019b605430",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_18b/CharacterReaderDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-18-deepseek-1790379454"
 }

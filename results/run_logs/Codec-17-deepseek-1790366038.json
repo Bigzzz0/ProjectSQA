@@ -1,0 +1,24 @@
+{
+  "project": "Codec",
+  "bug_id": 17,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-17-deepseek-1790366038",
+  "suite_sha256": "58e8aa372ed4c2c642f65fc67843c35ffa5dedb21828a73a918f713ce3b30a3e",
+  "test_files": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.StringUtils",
+  "timestamp": "2026-09-26 02:54:11",
+  "evaluation_duration_sec": 13.114,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.44,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testNewStringNullInput_CODEC229",
+    "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testEqualsRegionMatchesDifferentLength"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.StringUtilsDeepseekTest::testEqualsRegionMatchesDifferentLength"
+  ]
+}

@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.ser.std.StdKeySerializersGeminiTest::testGetFallbackKeySerializerEnumTypes"
-  ]
+  ],
+  "suite_sha256": "855920df52b5d42cbcd5554632fc119f32b7767e97952873a463784c82cf75d3",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_55b/StdKeySerializersGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-55-gemini-1790375500"
 }

@@ -10,5 +10,10 @@
     "org.apache.commons.collections.keyvalue.MultiKeyGeminiTest::testSerializationRoundTripPreservesKeys",
     "org.apache.commons.collections.keyvalue.MultiKeyGeminiTest::testEqualsAfterSerialization"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "f549a0855f4411b4c8f69599ffc9fec48f966a978e8d42f961fe240c64f06361",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_11b/MultiKeyGeminiTest.java"
+  ],
+  "run_id": "Collections-11-gemini-1790366710"
 }

@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 8.78,
+  "branch_cov": 2.88,
+  "test_file": "TypedScopeCreator_ESTest.java;TypeInference_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeInference;com.google.javascript.jscomp.TypedScopeCreator",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test3",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test3",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1"
+  ],
+  "suite_sha256": "7cae74f7a7717fe63826ca460104df5ba8848ee98cf21d28a92e1975a0d94b79",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_171b/TypedScopeCreator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_171b/TypeInference_ESTest.java"
+  ],
+  "run_id": "Closure-171-mio-1790364962"
+}

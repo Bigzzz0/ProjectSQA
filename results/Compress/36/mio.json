@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 2.63,
+  "branch_cov": 1.65,
+  "test_file": "SevenZFile_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZFile",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFile_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFile_ESTest::test2"
+  ],
+  "suite_sha256": "08641712a98610dba7cc811a7bbe8f98cb1fc8c1faec86180849a934d49162f6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_36b/SevenZFile_ESTest.java"
+  ],
+  "run_id": "Compress-36-mio-1790369454"
+}

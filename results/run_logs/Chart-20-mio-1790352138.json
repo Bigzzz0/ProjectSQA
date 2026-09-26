@@ -1,0 +1,19 @@
+{
+  "project": "Chart",
+  "bug_id": 20,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-20-mio-1790352138",
+  "suite_sha256": "abf98b5d926c5ed232500373d4e7be1e7bf5263d41035f1df5cd31e541cf8698",
+  "test_files": "ValueMarker_ESTest.java",
+  "target_classes": "org.jfree.chart.plot.ValueMarker",
+  "timestamp": "2026-09-25 23:02:45",
+  "evaluation_duration_sec": 27.028,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 90.91,
+  "branch_coverage_percent": 75.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

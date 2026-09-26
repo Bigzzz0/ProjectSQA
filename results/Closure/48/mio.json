@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 29.21,
+  "branch_cov": 12.48,
+  "test_file": "TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ac95c20f7fbf41d6959ea0d40d652b2b2e1dd53e8fafefc5c6b3fef6aba10416",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_48b/TypedScopeCreator_ESTest.java"
+  ],
+  "run_id": "Closure-48-mio-1790357470"
+}

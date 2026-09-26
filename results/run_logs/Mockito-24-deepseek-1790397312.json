@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 24,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-24-deepseek-1790397312",
+  "suite_sha256": "d80756a04e8871c9813c15e8a9ea69b777c0fefc1c7c498c9c61044fed63e3fd",
+  "test_files": "ReturnsEmptyValuesDeepseekTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues",
+  "timestamp": "2026-09-26 11:35:24",
+  "evaluation_duration_sec": 12.04,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "flect.JavaMethod (file:/tmp/d4j_eval/Mockito_24b/.gradle_local_home/wrapper/dists/gradle-4.9-bin/71gnev7nbut889mbjt1mdfmf1v/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()\n     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod\n     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\n     [exec] WARNING: All illegal access operations will be denied in a future release\n     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_24b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_24b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_24b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_24b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_24b/.test_suite/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValuesDeepseekTest.java:105: error: cannot find symbol\n    [javac]     private static MockName createMockName(String name, boolean isDefault) {\n    [javac]                    ^\n    [javac]   symbol:   class MockName\n    [javac]   location: class ReturnsEmptyValuesDeepseekTest\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 7 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

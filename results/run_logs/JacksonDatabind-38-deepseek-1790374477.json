@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 38,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-38-deepseek-1790374477",
+  "suite_sha256": "4e5dc6ca4c4ddf2d05b90c6e1077c093792a999a5e3ea550b81904ffa0ff1fc8",
+  "test_files": "CollectionTypeDeepseekTest.java;MapTypeDeepseekTest.java;SimpleTypeDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.CollectionType;com.fasterxml.jackson.databind.type.MapType;com.fasterxml.jackson.databind.type.SimpleType",
+  "timestamp": "2026-09-26 05:14:46",
+  "evaluation_duration_sec": 8.299,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "son/databind/ser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_38b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_38b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_38b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_38b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_38b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_38b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/JacksonDatabind_38b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_38b/.test_suite/com/fasterxml/jackson/databind/type/CollectionTypeDeepseekTest.java:60: error: cannot find symbol\n    [javac]         assertArrayEquals(superInts, ct.getSuperInterfaces());\n    [javac]                                        ^\n    [javac]   symbol:   method getSuperInterfaces()\n    [javac]   location: variable ct of type CollectionType\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringUnsupportedEncodingThrowsIllegalStateException",
     "org.apache.commons.codec.binary.StringUtilsGeminiTest::testGetBytesUncheckedUnsupportedEncodingThrowsIllegalStateException"
-  ]
+  ],
+  "suite_sha256": "e292b4a77c9254151da3f9e592d9763c763efec37d874ebd347f978e75054895",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_18b/StringUtilsGeminiTest.java"
+  ],
+  "run_id": "Codec-18-gemini-1790366096"
 }

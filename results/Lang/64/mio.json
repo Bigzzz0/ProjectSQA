@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 16.67,
+  "branch_cov": 25.0,
+  "test_file": "ValuedEnum_ESTest.java",
+  "target_classes": "org.apache.commons.lang.enums.ValuedEnum",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "85eee47163d3bdf1070aa1979f9276a99a6c1ea394e5c17604a9caf91e094372",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_64b/ValuedEnum_ESTest.java"
+  ],
+  "run_id": "Lang-64-mio-1790387365"
+}

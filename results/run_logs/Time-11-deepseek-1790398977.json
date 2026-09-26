@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 11,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-11-deepseek-1790398977",
+  "suite_sha256": "1f5bee8e76f5ebc71612bcecf8301eec104530f8ed536d157c89be5da646999e",
+  "test_files": "ZoneInfoCompilerDeepseekTest.java",
+  "target_classes": "org.joda.time.tz.ZoneInfoCompiler",
+  "timestamp": "2026-09-26 12:03:05",
+  "evaluation_duration_sec": 7.476,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "11b/target/classes/org/joda/time/tz/ZoneInfoCompiler$Zone.class]\n    [javac] [wrote /tmp/d4j_eval/Time_11b/target/classes/org/joda/time/tz/ZoneInfoCompiler.class]\n    [javac] [checking org.joda.time.tz.ZoneInfoProvider]\n    [javac] [wrote /tmp/d4j_eval/Time_11b/target/classes/org/joda/time/tz/ZoneInfoProvider.class]\n    [javac] [total 1543ms]\n    [javac] Note: /tmp/d4j_eval/Time_11b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Time_11b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Time_11b/target/classes/META-INF\n     [copy] Copying 9 files to /tmp/d4j_eval/Time_11b/target/classes\n\njoda-time.compile:\n\ncompile:\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_11b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_11b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_11b/.test_suite/org/joda/time/tz/ZoneInfoCompilerDeepseekTest.java:196: error: cannot find symbol\n    [javac]         Zone zone = new Zone(\"Test\", new StringTokenizer(\"Test +1:00 - +02\", \" \\t\"));\n    [javac]         ^\n    [javac]   symbol:   class Zone\n    [javac]   location: class ZoneInfoCompilerDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

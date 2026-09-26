@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 64.63,
+  "branch_cov": 53.64,
+  "test_file": "FunctionTypeBuilder_ESTest.java;FunctionType_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionTypeBuilder;com.google.javascript.rhino.jstype.FunctionType",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test04",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test03",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test25",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test24",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test17",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test12"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test04",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test03",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test25",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test24",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test17",
+    "com.google.javascript.jscomp.FunctionTypeBuilder_ESTest::test12"
+  ],
+  "suite_sha256": "d89fe27beb38296b07cd22d43db21b37a45b54944533dbac491c106b9438b0c2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_90b/FunctionTypeBuilder_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_90b/FunctionType_ESTest.java"
+  ],
+  "run_id": "Closure-90-mio-1790360159"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 18,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-18-deepseek-1790366093",
+  "suite_sha256": "5bd75ea5d93513fb284901c0466d66bd94dfbd6a7ac2228900da2ecae727a375",
+  "test_files": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.StringUtils",
+  "timestamp": "2026-09-26 02:54:56",
+  "evaluation_duration_sec": 2.615,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ng to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 63 source files to /tmp/d4j_eval/Codec_18b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n     [copy] Copying 129 files to /tmp/d4j_eval/Codec_18b/target/classes\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_18b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Codec_18b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_18b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Codec_18b/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_18b/.test_suite/org/apache/commons/codec/binary/StringUtilsDeepseekTest.java:577: error: incompatible types: Charset cannot be converted to String\n    [javac]             StringUtils.newString(new byte[]{97}, (Charset) null);\n    [javac]                                                   ^\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

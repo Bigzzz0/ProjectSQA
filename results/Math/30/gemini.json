@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math3.stat.inference.MannWhitneyUTestGeminiTest::testBigDataSetIntegerOverflowDefect"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "b501a9d7471201d1d0b8e22cf1f3a3a2917f224671bcc52803a3fb0c9ffa63d9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_30b/MannWhitneyUTestGeminiTest.java"
+  ],
+  "run_id": "Math-30-gemini-1790389510"
 }

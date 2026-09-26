@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 43.55,
+  "branch_cov": 50.0,
+  "test_file": "ArchiveUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ArchiveUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5016eb2a5ebcac53251464be0c454dd7dc1a9dfdb9319227fcb5a394316a781c",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_39b/org/apache/commons/compress/utils/ArchiveUtils_IPOTest.java"
+  ],
+  "run_id": "Compress-39-ipo-1790369644"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 30,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-30-gemini-1790397806",
+  "suite_sha256": "035f86c5c85f62456d9542da00ec2b340e33bc1ada6116960b70982ad4fd5d67",
+  "test_files": "ReporterGeminiTest.java;ReturnsSmartNullsGeminiTest.java",
+  "target_classes": "org.mockito.exceptions.Reporter;org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls",
+  "timestamp": "2026-09-26 11:43:26",
+  "evaluation_duration_sec": 26.759,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 98.21,
+  "branch_coverage_percent": 92.86,
+  "failures_count": 0,
+  "error_detail": "s:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_30f/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_30f/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_30f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Mockito_30f/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_30f/.test_suite/org/mockito/exceptions/ReporterGeminiTest.java:90: warning: ReflectionFactory is internal proprietary API and may be removed in a future release\n    [javac]             sun.reflect.ReflectionFactory rf = sun.reflect.ReflectionFactory.getReflectionFactory();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Mockito_30f/.test_suite/org/mockito/exceptions/ReporterGeminiTest.java:90: warning: ReflectionFactory is internal proprietary API and may be removed in a future release\n    [javac]             sun.reflect.ReflectionFactory rf = sun.reflect.ReflectionFactory.getReflectionFactory();\n    [javac]                                                           ^\n    [javac] /tmp/d4j_eval/Mockito_30f/.test_suite/org/mockito/exceptions/ReporterGeminiTest.java:505: error: method smartNullPointerException in class Reporter cannot be applied to given types;\n    [javac]             reporter.smartNullPointerException(location);\n    [javac]                     ^\n    [javac]   required: Object,Location\n    [javac]   found: Location\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n    [javac] 2 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

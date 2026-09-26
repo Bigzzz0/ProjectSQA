@@ -18,5 +18,10 @@
     "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareTwoWayTableAllZero",
     "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testChiSquareLargeTestStatisticDefect",
     "org.apache.commons.math.stat.inference.ChiSquareTestImplDeepseekTest::testDefaultConstructor"
-  ]
+  ],
+  "suite_sha256": "6aaf6e1853dcc844ce542da970ec554683751b3ada6d250dfe715ffc83c0feae",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_102b/ChiSquareTestImplDeepseekTest.java"
+  ],
+  "run_id": "Math-102-deepseek-1790394448"
 }

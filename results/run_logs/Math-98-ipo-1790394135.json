@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 98,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-98-ipo-1790394135",
+  "suite_sha256": "58aae2fafaf32db1fe12b4ec8088108675086774c41e6d3b9d4e053b16ef6146",
+  "test_files": "BigMatrixImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.linear.BigMatrixImpl;org.apache.commons.math.linear.RealMatrixImpl",
+  "timestamp": "2026-09-26 10:42:38",
+  "evaluation_duration_sec": 22.496,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 1.42,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 52.21,
+  "branch_cov": 43.49,
+  "test_file": "FilteringParserDelegate_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.filter.FilteringParserDelegate",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "abba4af8e7eecb3902c9a1b8ffdc4926b894d29741c77bff29104c4f3196f65d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_21b/FilteringParserDelegate_ESTest.java"
+  ],
+  "run_id": "JacksonCore-21-mio-1790372130"
+}

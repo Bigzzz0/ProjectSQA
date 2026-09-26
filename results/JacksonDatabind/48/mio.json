@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.84,
+  "branch_cov": 89.76,
+  "test_file": "DeserializationConfig_ESTest.java;SerializationConfig_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.DeserializationConfig;com.fasterxml.jackson.databind.SerializationConfig",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b4caf5f761c0813717f44ef266f438da6b63078fcce588520aa390c57456273b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_48b/DeserializationConfig_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_48b/SerializationConfig_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-48-mio-1790375051"
+}

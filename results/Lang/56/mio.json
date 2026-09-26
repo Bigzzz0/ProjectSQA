@@ -1,0 +1,40 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 84.7,
+  "branch_cov": 71.98,
+  "test_file": "FastDateFormat_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test00",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test03",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test47",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test05",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test49",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test06",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test54",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test56",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test57",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test59"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test00",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test03",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test47",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test05",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test49",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test06",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test54",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test56",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test57",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test59"
+  ],
+  "suite_sha256": "9c70dd43e1447a28418503a3e86f7db307c3d1e2bad48f3f7b96246db4a5b0f4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_56b/FastDateFormat_ESTest.java"
+  ],
+  "run_id": "Lang-56-mio-1790386936"
+}

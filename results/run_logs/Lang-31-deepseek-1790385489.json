@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 31,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-31-deepseek-1790385489",
+  "suite_sha256": "b133086639807194c5d17876e56a619fcaa0ae371a2c3ca75e9ab3ab3d84c7dc",
+  "test_files": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "timestamp": "2026-09-26 08:18:15",
+  "evaluation_duration_sec": 6.013,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "s && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_31b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:518: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_31b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java:58: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 30 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_31b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Lang_31b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_31b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_31b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_31b/.test_suite/org/apache/commons/lang3/StringUtilsDeepseekTest.java:405: error: reference to containsAny is ambiguous\n    [javac]         assertFalse(StringUtils.containsAny(\"abc\", null));\n    [javac]                                ^\n    [javac]   both method containsAny(CharSequence,char[]) in StringUtils and method containsAny(CharSequence,String) in StringUtils match\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

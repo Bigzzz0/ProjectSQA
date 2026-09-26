@@ -1,0 +1,44 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 85.78,
+  "branch_cov": 69.74,
+  "test_file": "FastDateFormat_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test08",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test01",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test13",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test59",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test54",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test53",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test11",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test55",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test50",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test68",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test64",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test60"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test08",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test01",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test13",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test59",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test54",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test53",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test11",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test55",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test50",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test68",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test64",
+    "org.apache.commons.lang3.time.FastDateFormat_ESTest::test60"
+  ],
+  "suite_sha256": "294c4a4ebabc61412d787e6e5168a281ca2bc6dbead9f570e3fa6e36b20b37fc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_38b/FastDateFormat_ESTest.java"
+  ],
+  "run_id": "Lang-38-mio-1790385868"
+}

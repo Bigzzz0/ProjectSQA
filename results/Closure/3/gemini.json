@@ -71,5 +71,10 @@
     "com.google.javascript.jscomp.FlowSensitiveInlineVariablesGeminiTest::testSideEffectsLeftOfUse",
     "com.google.javascript.jscomp.FlowSensitiveInlineVariablesGeminiTest::testDoNotInlineAssignmentRValue",
     "com.google.javascript.jscomp.FlowSensitiveInlineVariablesGeminiTest::testMultipleUsesPreventInlining"
-  ]
+  ],
+  "suite_sha256": "59f4987bd59689518c67316ef14586ade162ef4dd507d264ebc9fed24e5636c7",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_3b/FlowSensitiveInlineVariablesGeminiTest.java"
+  ],
+  "run_id": "Closure-3-gemini-1790354164"
 }

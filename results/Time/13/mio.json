@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.9,
+  "branch_cov": 87.61,
+  "test_file": "PeriodFormatterBuilder_ESTest.java",
+  "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1855c24cd9de9dc5b3c42e40862fef034dada2b6fc9f2eae8daf7fc323166dc0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_13b/PeriodFormatterBuilder_ESTest.java"
+  ],
+  "run_id": "Time-13-mio-1790399066"
+}

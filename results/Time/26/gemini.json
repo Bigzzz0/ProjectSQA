@@ -52,5 +52,12 @@
     "org.joda.time.field.LenientDateTimeFieldGeminiTest::testGetInstance_StrictDateTimeFieldUnwrap",
     "org.joda.time.field.LenientDateTimeFieldGeminiTest::testSet_ArithmeticOverflowThrowsException",
     "org.joda.time.field.LenientDateTimeFieldGeminiTest::testBug2182444_ausNSW"
-  ]
+  ],
+  "suite_sha256": "a64adfc499c28ce3d5eac9608e6c103b34f81bad08f514acfd42d2046879cf4b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_26b/DateTimeZoneGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Time_26b/LenientDateTimeFieldGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Time_26b/ZonedChronologyGeminiTest.java"
+  ],
+  "run_id": "Time-26-gemini-1790399938"
 }

@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.0,
+  "branch_cov": 97.04,
+  "test_file": "ArrayRealVector_ESTest.java;OpenMapRealVector_ESTest.java",
+  "target_classes": "org.apache.commons.math.linear.ArrayRealVector;org.apache.commons.math.linear.OpenMapRealVector",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test53",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test55",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test14",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test58",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test52",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test29",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test65",
+    "org.apache.commons.math.linear.ArrayRealVector_ESTest::test35"
+  ],
+  "suite_sha256": "71ff521a5723bb78d811584719f038263b42ffd16734c15fdc367594d01ff29a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_77b/ArrayRealVector_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_77b/OpenMapRealVector_ESTest.java"
+  ],
+  "run_id": "Math-77-mio-1790392677"
+}

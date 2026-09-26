@@ -1,0 +1,25 @@
+{
+  "project": "Mockito",
+  "bug_id": 17,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-17-gemini-1790396617",
+  "suite_sha256": "2a48b2c945d75c750c3304e3bc2c8605ddbbe229a772f5a28891d4cc0a21abd4",
+  "test_files": "MockSettingsImplGeminiTest.java;MockUtilGeminiTest.java",
+  "target_classes": "org.mockito.internal.creation.MockSettingsImpl;org.mockito.internal.util.MockUtil",
+  "timestamp": "2026-09-26 11:24:06",
+  "evaluation_duration_sec": 28.899,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.creation.MockSettingsImplGeminiTest::testShouldBeSerializableAndHaveExtraInterfacesWhenSerializableCalledFirst",
+    "org.mockito.internal.creation.MockSettingsImplGeminiTest::testShouldRetainExtraInterfacesWhenSerializableCalledSecond",
+    "org.mockito.internal.util.MockUtilGeminiTest::testMockSerializationWithSerializableAndExtraInterfaces"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.creation.MockSettingsImplGeminiTest::testIsSerializableDirectlyWithSerializableInExtraInterfaces"
+  ]
+}

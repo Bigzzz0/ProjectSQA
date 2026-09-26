@@ -1,0 +1,23 @@
+{
+  "project": "Jsoup",
+  "bug_id": 1,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-1-deepseek-1790378852",
+  "suite_sha256": "38d2e8ee74cac49b4210327ce968799b6846c0d69b52d0b1af362899e3081566",
+  "test_files": "DocumentDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "timestamp": "2026-09-26 06:27:49",
+  "evaluation_duration_sec": 16.037,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentDeepseekTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentDeepseekTest::testNormalise_MultipleTextNodesOrder"
+  ]
+}

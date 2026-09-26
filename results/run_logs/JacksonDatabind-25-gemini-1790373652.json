@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 25,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-25-gemini-1790373652",
+  "suite_sha256": "9adb8f4233bc1b5e4ffa6ed84233e6512f88e049835d62da3be01f6860b056eb",
+  "test_files": "BasicDeserializerFactoryGeminiTest.java;DeserializerCacheGeminiTest.java;SimpleAbstractTypeResolverGeminiTest.java;TypeDeserializerBaseGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory;com.fasterxml.jackson.databind.deser.DeserializerCache;com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase;com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver",
+  "timestamp": "2026-09-26 05:01:00",
+  "evaluation_duration_sec": 8.034,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_25b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_25b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_25b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/JacksonDatabind_25b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_25b/.test_suite/com/fasterxml/jackson/databind/deser/BasicDeserializerFactoryGeminiTest.java:224: error: BeanDeserializerModifier is abstract; cannot be instantiated\n    [javac]         DeserializerFactory f3 = factory.withDeserializerModifier(new BeanDeserializerModifier());\n    [javac]                                                                   ^\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_25b/.test_suite/com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBaseGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_25b/.test_suite/com/fasterxml/jackson/databind/deser/BasicDeserializerFactoryGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

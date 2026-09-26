@@ -20,5 +20,10 @@
     "org.jsoup.select.SelectorGeminiTest::testTextAndRegexPseudoSelectors",
     "org.jsoup.select.SelectorGeminiTest::testAttributeOperators",
     "org.jsoup.select.SelectorGeminiTest::testInvalidAttributeSelectorThrowsException"
-  ]
+  ],
+  "suite_sha256": "ef05e218230dbe2f317db10ff120aa368913a87add00a55aeee59cdabe407be5",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_11b/SelectorGeminiTest.java"
+  ],
+  "run_id": "Jsoup-11-gemini-1790379185"
 }

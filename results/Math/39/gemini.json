@@ -10,5 +10,10 @@
     "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStepBackward",
     "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStep"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "500fccc7ea47c948c8b7334a0d33e18f81c64280fe31a1ac66a3072ca5baa193",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_39b/EmbeddedRungeKuttaIntegratorGeminiTest.java"
+  ],
+  "run_id": "Math-39-gemini-1790390029"
 }

@@ -1,0 +1,24 @@
+{
+  "project": "Lang",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-16-gemini-1790384615",
+  "suite_sha256": "05f6c5ad94f1cc4aa1ef21a21f8fbc60cc9069c32ad5e140cc1eead47c58283f",
+  "test_files": "NumberUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "timestamp": "2026-09-26 08:03:56",
+  "evaluation_duration_sec": 20.94,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.93,
+  "branch_coverage_percent": 83.8,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberHexUppercaseXDefect",
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointTypes"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointTypes"
+  ]
+}

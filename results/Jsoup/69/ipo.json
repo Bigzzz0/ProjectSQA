@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 10.26,
+  "branch_cov": 0.0,
+  "test_file": "FormElement_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4ea79bb06927cf600cf487b324c863e62ea4b526ffa0e0e21d73fe8c35c0f56a",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_69b/org/jsoup/nodes/FormElement_IPOTest.java"
+  ],
+  "run_id": "Jsoup-69-ipo-1790381844"
+}

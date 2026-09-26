@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 3,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Jsoup-3-ipo-1790378940",
+  "suite_sha256": "4a1293c802339be55d0150887e840dbfc9cad0699fa35e1d6edebc1e715a0cfb",
+  "test_files": "Element_IPOTest.java;Parser_IPOTest.java;Tag_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.Element;org.jsoup.parser.Parser;org.jsoup.parser.Tag",
+  "timestamp": "2026-09-26 06:29:05",
+  "evaluation_duration_sec": 5.001,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "nd will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_3b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_3b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_3b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_3b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_3b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_3b/target/classes/org/jsoup/safety/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_3b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Jsoup_3b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_3b/.test_suite/org/jsoup/parser/Parser_IPOTest.java:2205: error: cannot find symbol\n    [javac]         Object actual = Parser.parseBodyFragmentRelaxed(\"\", \"\");\n    [javac]                               ^\n    [javac]   symbol:   method parseBodyFragmentRelaxed(String,String)\n    [javac]   location: class Parser\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

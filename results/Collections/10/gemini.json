@@ -10,5 +10,10 @@
     "org.apache.commons.collections.map.MultiValueMapGeminiTest::testFullMapSerializationDefectTarget",
     "org.apache.commons.collections.map.MultiValueMapGeminiTest::testEmptyMapSerializationDefectTarget"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "3f332f47020b79d3f7adf220f02dd125877ec4f7ba480aa053146b23c7db0087",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_10b/MultiValueMapGeminiTest.java"
+  ],
+  "run_id": "Collections-10-gemini-1790366641"
 }

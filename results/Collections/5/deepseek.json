@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetNormalUniqueObject"
-  ]
+  ],
+  "suite_sha256": "2549106af50b67bf58680d057f9ef13458f7413c1a4f48525dcc980d96d9b432",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_5b/SetUniqueListDeepseekTest.java"
+  ],
+  "run_id": "Collections-5-deepseek-1790366396"
 }

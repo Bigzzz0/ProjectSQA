@@ -1,0 +1,19 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 12,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JacksonCore-12-ipo-1790371835",
+  "suite_sha256": "d6872c0094bdeed29520ef0c1f1f6dbf191f3ed699e06bcbbb58419a6a1af294",
+  "test_files": "UTF8StreamJsonParser_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser;com.fasterxml.jackson.core.json.UTF8StreamJsonParser",
+  "timestamp": "2026-09-26 04:30:51",
+  "evaluation_duration_sec": 15.459,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 0.13,
+  "branch_coverage_percent": 0.04,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

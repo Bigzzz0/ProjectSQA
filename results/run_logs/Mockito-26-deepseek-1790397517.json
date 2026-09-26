@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 26,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-26-deepseek-1790397517",
+  "suite_sha256": "3a43ec4c8de97f88f7b422bae6a3fe7dd944d6bf6da7973cfffa02f1b180d306",
+  "test_files": "PrimitivesDeepseekTest.java",
+  "target_classes": "org.mockito.internal.util.Primitives",
+  "timestamp": "2026-09-26 11:38:46",
+  "evaluation_duration_sec": 8.869,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "nt maxNumberOfInvocations) {\n    [javac]                             ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 18 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_26b/compileLib\n     [exec] WARNING: An illegal reflective access operation has occurred\n     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/tmp/d4j_eval/Mockito_26b/.gradle_local_home/wrapper/dists/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()\n     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod\n     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\n     [exec] WARNING: All illegal access operations will be denied in a future release\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_26b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_26b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_26b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_26b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_26b/.test_suite/org/mockito/internal/util/PrimitivesDeepseekTest.java:12: error: class, interface, or enum expected\n    [javac]  * - primitiveTypeOf:\n    [javac]  ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

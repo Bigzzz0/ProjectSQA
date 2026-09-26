@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 143,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-143-gemini-1790363347",
+  "suite_sha256": "370c6129e7ad8fca6ceb8b393b83dcb2afdd1242e2e98ef824129b0f3590c06c",
+  "test_files": "AbstractCommandLineRunnerGeminiTest.java;RemoveConstantExpressionsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.RemoveConstantExpressions",
+  "timestamp": "2026-09-26 02:09:14",
+  "evaluation_duration_sec": 7.331,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "re_143b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_143b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_143b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_143b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_143b/.test_suite/com/google/javascript/jscomp/AbstractCommandLineRunnerGeminiTest.java:402: error: no suitable constructor found for Result(JSError[],JSError[],String,<null>)\n    [javac]     Result result = new Result(new JSError[0], new JSError[0], \"none\", null);\n    [javac]                     ^\n    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

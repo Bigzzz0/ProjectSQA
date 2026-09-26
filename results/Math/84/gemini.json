@@ -20,5 +20,10 @@
     "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMinimizeMaximize",
     "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testRosenbrockValley",
     "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMath283"
-  ]
+  ],
+  "suite_sha256": "5f38e71d745bd0deebbf02c4bd9865c12cd1a0c98c0d849cd3336ee0e979b82b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_84b/MultiDirectionalGeminiTest.java"
+  ],
+  "run_id": "Math-84-gemini-1790393205"
 }

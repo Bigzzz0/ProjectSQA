@@ -1,0 +1,31 @@
+{
+  "project": "Lang",
+  "bug_id": 50,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-50-deepseek-1790386581",
+  "suite_sha256": "8b6f7f445303d8e0041af2e8b6719b58d27fd743861574c2975dc460966e57a5",
+  "test_files": "FastDateFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "timestamp": "2026-09-26 08:36:42",
+  "evaluation_duration_sec": 20.615,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.51,
+  "branch_coverage_percent": 82.33,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testChangeDefaultLocaleDateInstanceAfterCache",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatWithCalendarAndForcedTimeZone",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testChangeDefaultLocaleDateTimeInstance",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceInvalidStyle",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testEscapedQuoteInLiteral",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceDefault"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testChangeDefaultLocaleDateInstanceAfterCache",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatWithCalendarAndForcedTimeZone",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceInvalidStyle",
+    "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testEscapedQuoteInLiteral"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 28,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Jsoup-28-ipo-1790379885",
+  "suite_sha256": "2903fa9adbb9aa07995a0e8c688c644fa19d59f0bab7d3f4d6ac91082c15fbde",
+  "test_files": "Parser_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.Entities;org.jsoup.parser.Parser;org.jsoup.parser.Tokeniser",
+  "timestamp": "2026-09-26 06:44:49",
+  "evaluation_duration_sec": 3.555,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "gs\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_28b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_28b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_28b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_28b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_28b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_28b/target/classes/org/jsoup/safety/package-info.class\n     [copy] Copying 2 files to /tmp/d4j_eval/Jsoup_28b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_28b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_28b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_28b/.test_suite/org/jsoup/parser/Parser_IPOTest.java:2205: error: cannot find symbol\n    [javac]         Object actual = Parser.unescapeEntities(\"\", true);\n    [javac]                               ^\n    [javac]   symbol:   method unescapeEntities(String,boolean)\n    [javac]   location: class Parser\n    [javac] Note: /tmp/d4j_eval/Jsoup_28b/.test_suite/org/jsoup/parser/Parser_IPOTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

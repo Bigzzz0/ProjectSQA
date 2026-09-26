@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 75,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-75-gemini-1790359354",
+  "suite_sha256": "9fe6c4309455f0088383f44e512c000a1cc933d1ac17874106c9e90f8b7a85c6",
+  "test_files": "NodeUtilGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "timestamp": "2026-09-26 01:02:41",
+  "evaluation_duration_sec": 7.625,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "al/Closure_75b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_75b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_75b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_75b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_75b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_75b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_75b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_75b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_75b/.test_suite/com/google/javascript/jscomp/NodeUtilGeminiTest.java:458: error: cannot find symbol\n    [javac]     callNoSideEffects.putBooleanProp(Node.SIDE_EFFECTS_FLAGS, true);\n    [javac]                                          ^\n    [javac]   symbol:   variable SIDE_EFFECTS_FLAGS\n    [javac]   location: class Node\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

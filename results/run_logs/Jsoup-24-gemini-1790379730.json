@@ -1,0 +1,40 @@
+{
+  "project": "Jsoup",
+  "bug_id": 24,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-24-gemini-1790379730",
+  "suite_sha256": "fe6610edd4fc2ee095613e139be62faeeb0a113a045ebd7baed52c819fffc9ed",
+  "test_files": "TokeniserStateGeminiTest.java",
+  "target_classes": "org.jsoup.parser.TokeniserState",
+  "timestamp": "2026-09-26 06:42:26",
+  "evaluation_duration_sec": 15.93,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 47.62,
+  "branch_coverage_percent": 37.01,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.TokeniserStateGeminiTest::testRcdataWithInappropriateEndTag",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataDoubleEscapedTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testPLAINTEXTStateHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedEndTagNameHandlesQuotesInScriptCommentDefect",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCdataSectionHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testDataStateBasicTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testAfterDoctypeSystemKeywordAndBogus",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedEndTagNameDirectReaderPositionDefect",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testTokeniserStateEnumValuesAndCompleteness",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCharacterReferenceWithoutSemicolonOrInvalid"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokeniserStateGeminiTest::testRcdataWithInappropriateEndTag",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataDoubleEscapedTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testPLAINTEXTStateHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testScriptDataEscapedEndTagNameHandlesQuotesInScriptCommentDefect",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCdataSectionHandling",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testDataStateBasicTransitions",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testAfterDoctypeSystemKeywordAndBogus",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testTokeniserStateEnumValuesAndCompleteness",
+    "org.jsoup.parser.TokeniserStateGeminiTest::testCharacterReferenceWithoutSemicolonOrInvalid"
+  ]
+}

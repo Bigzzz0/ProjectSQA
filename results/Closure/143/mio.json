@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 47.61,
+  "branch_cov": 26.7,
+  "test_file": "AbstractCommandLineRunner_ESTest.java;RemoveConstantExpressions_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.RemoveConstantExpressions",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b6e36b092960f4ce97c2550b0487fb3c8af1f6a7a2960ecb05d55a12ea9dac0e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_143b/AbstractCommandLineRunner_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_143b/RemoveConstantExpressions_ESTest.java"
+  ],
+  "run_id": "Closure-143-mio-1790363309"
+}

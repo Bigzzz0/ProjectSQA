@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.44,
+  "branch_cov": 5.74,
+  "test_file": "TypeCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeCheck",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4ea27d4d3459890aa6d5ae0f5692f2159e2149e07285cb9b94cd022bea4bde74",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_125b/TypeCheck_ESTest.java"
+  ],
+  "run_id": "Closure-125-mio-1790362266"
+}

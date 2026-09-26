@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.36,
+  "branch_cov": 45.16,
+  "test_file": "XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.parser.XmlTreeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4b7004553a0c2577d3102e0927c65f59b0882f8539221a2f45ac02375de3e126",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_77b/XmlTreeBuilder_ESTest.java"
+  ],
+  "run_id": "Jsoup-77-mio-1790382216"
+}

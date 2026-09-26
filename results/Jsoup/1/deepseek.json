@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.nodes.DocumentDeepseekTest::testNormalise_MultipleTextNodesOrder"
-  ]
+  ],
+  "suite_sha256": "38d2e8ee74cac49b4210327ce968799b6846c0d69b52d0b1af362899e3081566",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_1b/DocumentDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-1-deepseek-1790378852"
 }

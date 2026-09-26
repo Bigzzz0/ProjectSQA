@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 44,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-44-mio-1790369911",
+  "suite_sha256": "1115c12a2f694470f81deba00f03fddf0a3100d953611967dce37e54e56dfb11",
+  "test_files": "ChecksumCalculatingInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ChecksumCalculatingInputStream",
+  "timestamp": "2026-09-26 03:58:51",
+  "evaluation_duration_sec": 20.852,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 47.06,
+  "branch_coverage_percent": 16.67,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test1",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test2",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test1",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test2",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test3"
+  ]
+}

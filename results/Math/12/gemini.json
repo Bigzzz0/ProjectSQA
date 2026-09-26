@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math3.random.BitsStreamGeneratorGeminiTest::testDefectNextGaussianPreservedOnSerialization"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "7ef3220007938a1432288a3c7315aac45df40120b667fafaf21853109c480601",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_12b/BitsStreamGeneratorGeminiTest.java"
+  ],
+  "run_id": "Math-12-gemini-1790388266"
 }

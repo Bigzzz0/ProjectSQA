@@ -10,5 +10,10 @@
     "org.apache.commons.compress.utils.IOUtilsGeminiTest::testSkipUsingSkipAndRead",
     "org.apache.commons.compress.utils.IOUtilsGeminiTest::testSkipUsingRead"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "9e88591c7bc603485145e6bfe41feb6cd2fa7dea930a4280d941ccb97c7cec0f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_26b/IOUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-26-gemini-1790368886"
 }

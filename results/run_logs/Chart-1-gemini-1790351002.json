@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-1-gemini-1790351002",
+  "suite_sha256": "173590f25366a4a380f66590fb5fe7acb60b7190e4ecc0b3999fd0fab94ff1f9",
+  "test_files": "AbstractCategoryItemRendererGeminiTest.java",
+  "target_classes": "org.jfree.chart.renderer.category.AbstractCategoryItemRenderer",
+  "timestamp": "2026-09-25 22:43:31",
+  "evaluation_duration_sec": 8.435,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ptions, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_1b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_1b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_1b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_1b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_1b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_1b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_1b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_1b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Chart_1b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_1b/.test_suite/org/jfree/chart/renderer/category/AbstractCategoryItemRendererGeminiTest.java:92: error: TestRenderer is not abstract and does not override abstract method drawItem(Graphics2D,CategoryItemRendererState,Rectangle2D,CategoryPlot,CategoryAxis,ValueAxis,CategoryDataset,int,int,boolean,int) in CategoryItemRenderer\n    [javac]     private static class TestRenderer extends AbstractCategoryItemRenderer {\n    [javac]                    ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

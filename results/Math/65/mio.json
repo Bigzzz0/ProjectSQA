@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.0,
+  "branch_cov": 56.67,
+  "test_file": "AbstractLeastSquaresOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6b5a496e75ba5031ef455b890a8f2be68ce6df09795d1f544c2db5f244ea3a4e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_65b/AbstractLeastSquaresOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-65-mio-1790391869"
+}

@@ -23,5 +23,10 @@
     "org.apache.commons.codec.language.CaverphoneGeminiTest::testSpecialPrefixReplacements",
     "org.apache.commons.codec.language.CaverphoneGeminiTest::testPhoneticRulesCoverage",
     "org.apache.commons.codec.language.CaverphoneGeminiTest::testVowelAndYRules"
-  ]
+  ],
+  "suite_sha256": "e5c8d439d914a14bf47957a37b3ecd9a68fd05c7c27e55e5c15d82dcdc2b486d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_10b/CaverphoneGeminiTest.java"
+  ],
+  "run_id": "Codec-10-gemini-1790365783"
 }

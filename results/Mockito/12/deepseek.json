@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.mockito.internal.util.reflection.GenericMasterDeepseekTest::shouldReturnObjectClassForWildcardField",
     "org.mockito.internal.util.reflection.GenericMasterDeepseekTest::shouldReturnObjectClassForTypeVariableField"
-  ]
+  ],
+  "suite_sha256": "4bc968b89e4651ac9ab9cb4dbd7b5dd3dc122dc84b9800d1b338d4ff04387c5a",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Mockito_12b/GenericMasterDeepseekTest.java"
+  ],
+  "run_id": "Mockito-12-deepseek-1790396253"
 }

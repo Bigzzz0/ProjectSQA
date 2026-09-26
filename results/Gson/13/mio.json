@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 69.69,
+  "branch_cov": 67.36,
+  "test_file": "JsonReader_ESTest.java",
+  "target_classes": "com.google.gson.stream.JsonReader",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "472d5baa8565e25819eb3b4a6250d38cb602bc94622d19d9bece314b6fe6cc25",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_13b/JsonReader_ESTest.java"
+  ],
+  "run_id": "Gson-13-mio-1790371164"
+}

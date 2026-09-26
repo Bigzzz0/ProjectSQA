@@ -1,0 +1,26 @@
+{
+  "project": "Mockito",
+  "bug_id": 28,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-28-gemini-1790397674",
+  "suite_sha256": "01970e9dfa7f056e7abe8a2a914a7f59dbb2064daad4d6d6bf17cfee30d2d01c",
+  "test_files": "DefaultInjectionEngineGeminiTest.java",
+  "target_classes": "org.mockito.internal.configuration.DefaultInjectionEngine",
+  "timestamp": "2026-09-26 11:41:44",
+  "evaluation_duration_sec": 29.491,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.33,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testClassHierarchyFieldTraversal",
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testCannotInitializeInterfaceFieldThrowsMockitoException",
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::mock_should_be_injected_once_and_in_the_best_matching_type"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::testCannotInitializeInterfaceFieldThrowsMockitoException",
+    "org.mockito.internal.configuration.DefaultInjectionEngineGeminiTest::mock_should_be_injected_once_and_in_the_best_matching_type"
+  ]
+}

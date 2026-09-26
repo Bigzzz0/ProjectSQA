@@ -23,5 +23,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNullTerminated",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalLeadingSpacesOnly"
-  ]
+  ],
+  "suite_sha256": "41a4ff790738cb026ffb07914c36d7408cb0936b141c67540248d2d293c4dca8",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_27b/TarUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-27-deepseek-1790368944"
 }

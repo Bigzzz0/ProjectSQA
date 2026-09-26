@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.83,
+  "branch_cov": 90.62,
+  "test_file": "DateTimeParserBucket_ESTest.java",
+  "target_classes": "org.joda.time.format.DateTimeParserBucket",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "63ce8a00aac915c70ca1b9c7abf90357a58161364fd49e08d1af14c85c933681",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_24b/DateTimeParserBucket_ESTest.java"
+  ],
+  "run_id": "Time-24-mio-1790399762"
+}

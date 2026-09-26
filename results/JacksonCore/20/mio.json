@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 61.39,
+  "branch_cov": 50.52,
+  "test_file": "JsonGenerator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.JsonGenerator",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.JsonGenerator_ESTest::test54"
+  ],
+  "suite_sha256": "0701f667bb8e99ffac4aaad378a450cee6eb28c0870157266140cc56054ab523",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_20b/JsonGenerator_ESTest.java"
+  ],
+  "run_id": "JacksonCore-20-mio-1790372104"
+}

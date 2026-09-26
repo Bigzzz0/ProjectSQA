@@ -1,0 +1,31 @@
+{
+  "project": "Compress",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-8-deepseek-1790367937",
+  "suite_sha256": "1b1e877ba491b50c16f6592cfd6973595492524e7cfb31aa5b33dd4bd9530420",
+  "test_files": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:25:52",
+  "evaluation_duration_sec": 14.993,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 94.74,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOutOfBounds",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalInvalidLengthOne",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNegativeOffset",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringZero",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalInvalidLengthZero",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalMissingTrailingSpace",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalInvalidLengthOneWithNull"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNegativeOffset",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringZero",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNullBreak"
+  ]
+}

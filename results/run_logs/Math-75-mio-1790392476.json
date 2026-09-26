@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 75,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-75-mio-1790392476",
+  "suite_sha256": "b7f842a23e0365d7a225fa822a520ccbaa6170adc87e63aa3b9ba0fd6244dcb0",
+  "test_files": "Frequency_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.Frequency",
+  "timestamp": "2026-09-26 10:15:02",
+  "evaluation_duration_sec": 26.021,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 97.76,
+  "branch_coverage_percent": 89.58,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

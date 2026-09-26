@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testPrefixMapIteratorRemoveSingleAndMultiple",
     "org.apache.commons.collections4.trie.AbstractPatriciaTrieGeminiTest::testEmptyStringAsRootKey"
-  ]
+  ],
+  "suite_sha256": "f85474495483d9df94b33fb7c4dd44bfb53255d62e8495a471e9b669b166f81a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_28b/AbstractPatriciaTrieGeminiTest.java"
+  ],
+  "run_id": "Collections-28-gemini-1790367580"
 }

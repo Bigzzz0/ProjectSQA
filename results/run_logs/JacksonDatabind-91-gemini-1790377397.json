@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 91,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-91-gemini-1790377397",
+  "suite_sha256": "bda170dc2eac47c6026b0c7a43b66b0946ad093e99de83d5564703bb9b12df53",
+  "test_files": "DeserializerCacheGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.DeserializerCache",
+  "timestamp": "2026-09-26 06:03:25",
+  "evaluation_duration_sec": 7.724,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ses/com/fasterxml/jackson/databind/ser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_91b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_91b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_91b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_91b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_91b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_91b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_91b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_91b/.test_suite/com/fasterxml/jackson/databind/deser/DeserializerCacheGeminiTest.java:252: error: incompatible types: <anonymous TypeReference<Map<String,Integer>>> cannot be converted to Type\n    [javac]         JavaType mapType = mapper.constructType(new TypeReference<Map<String, Integer>>() {});\n    [javac]                                                 ^\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

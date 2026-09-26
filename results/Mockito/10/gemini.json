@@ -15,5 +15,10 @@
     "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::deepStub_shouldDelegateToEmptyValuesWhenTypeIsNotMockable",
     "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::deepStub_shouldResolveGenericTypeVariablesToConcreteTypes",
     "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::returnsDeepStubsSerializationFallback_writeReplaceResolvesToSingleton"
-  ]
+  ],
+  "suite_sha256": "d451bb561f398fe2983f4ed0a4e7c0de9ed7099f2c04a5f30417cdac6741813b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_10b/ReturnsDeepStubsGeminiTest.java"
+  ],
+  "run_id": "Mockito-10-gemini-1790395901"
 }

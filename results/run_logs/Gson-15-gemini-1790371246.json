@@ -1,0 +1,26 @@
+{
+  "project": "Gson",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-15-gemini-1790371246",
+  "suite_sha256": "dcfe32c00f82de4b1cb5b3549c7d559b7e8c2dccf821edccbad89f097fd2e5db",
+  "test_files": "JsonWriterGeminiTest.java",
+  "target_classes": "com.google.gson.stream.JsonWriter",
+  "timestamp": "2026-09-26 04:20:59",
+  "evaluation_duration_sec": 13.124,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.48,
+  "branch_coverage_percent": 93.48,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.stream.JsonWriterGeminiTest::testNonFiniteDoublesWhenLenient",
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
+  ],
+  "fixed_failures": [
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
+    "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
+  ]
+}

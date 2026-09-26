@@ -1,0 +1,26 @@
+{
+  "project": "Compress",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-14-gemini-1790368245",
+  "suite_sha256": "f03e4dacd8bfeb32a77ffeaca83c0a9ec70bc1da26cb8d8275ee4681ddb59b0c",
+  "test_files": "TarUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:31:01",
+  "evaluation_duration_sec": 16.229,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.01,
+  "branch_coverage_percent": 96.97,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testWorkaroundForBrokenTimeHeaderLeadingNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testWorkaroundForBrokenTimeHeaderLeadingSpacesThenNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testWorkaroundForBrokenTimeHeaderParseOctalOrBinary"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testWorkaroundForBrokenTimeHeaderLeadingSpacesThenNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalInvalidTrailingByteExceptionMessageContainsNulReplacement"
+  ]
+}

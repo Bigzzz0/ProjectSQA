@@ -9,5 +9,10 @@
   "buggy_failures": [
     "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testGetSuperClassDelegationToReferencedType"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "b221d0af097f68d89658394c7751f8edc88f7987db3a0e60d966af08eb5c9215",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_84b/ResolvedRecursiveTypeGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-84-gemini-1790377005"
 }

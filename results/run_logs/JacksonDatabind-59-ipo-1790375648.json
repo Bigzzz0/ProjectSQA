@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 59,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JacksonDatabind-59-ipo-1790375648",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.fasterxml.jackson.databind.JavaType;com.fasterxml.jackson.databind.type.CollectionLikeType;com.fasterxml.jackson.databind.type.MapLikeType;com.fasterxml.jackson.databind.type.TypeFactory",
+  "timestamp": "2026-09-26 05:34:08",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 67.71,
+  "branch_cov": 58.33,
+  "test_file": "XmlSerializerProvider_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "355ae5af3edc143b9c2a439ac73105e10c051a27f9789872e38c080495dabdb6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonXml_5b/XmlSerializerProvider_ESTest.java"
+  ],
+  "run_id": "JacksonXml-5-mio-1790378738"
+}

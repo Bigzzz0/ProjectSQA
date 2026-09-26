@@ -20,5 +20,10 @@
     "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testSkipNotEncodedCRLF",
     "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeByteArraySignedConversion",
     "org.apache.commons.codec.net.QuotedPrintableCodecDeepseekTest::testEncodeByteArrayNormal"
-  ]
+  ],
+  "suite_sha256": "ffbcef263c36b52c2e15c02cb843bdc2ec21c10104f086bf40671d8b228e8096",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_11b/QuotedPrintableCodecDeepseekTest.java"
+  ],
+  "run_id": "Codec-11-deepseek-1790365823"
 }

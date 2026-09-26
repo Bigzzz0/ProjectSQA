@@ -1,0 +1,35 @@
+{
+  "project": "Compress",
+  "bug_id": 42,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-42-deepseek-1790369828",
+  "suite_sha256": "919a72ca1c14f346140ad37c95837a49ca55a3f27677cb6654142656c4a441c0",
+  "test_files": "UnixStatDeepseekTest.java;ZipArchiveEntryDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.UnixStat;org.apache.commons.compress.archivers.zip.ZipArchiveEntry",
+  "timestamp": "2026-09-26 03:57:27",
+  "evaluation_duration_sec": 19.632,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 84.84,
+  "branch_coverage_percent": 65.91,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplicationWithPerms",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplication",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_WhenMultipleTypeFlagsSet",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraInvalidData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraBytes",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetCentralDirectoryExtra"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplicationWithPerms",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_DefectReplication",
+    "org.apache.commons.compress.archivers.zip.UnixStatDeepseekTest::testIsLinkFlagOnly_WhenMultipleTypeFlagsSet",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraInvalidData",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraBytes",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetCentralDirectoryExtra"
+  ]
+}

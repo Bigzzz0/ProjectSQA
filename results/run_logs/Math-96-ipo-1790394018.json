@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 96,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-96-ipo-1790394018",
+  "suite_sha256": "5594ae1af9063425c51468a3a235042c99f33e52690d6c31dacb63e88eafac8d",
+  "test_files": "Complex_IPOTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "timestamp": "2026-09-26 10:40:44",
+  "evaluation_duration_sec": 25.742,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.25,
+  "branch_coverage_percent": 83.33,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

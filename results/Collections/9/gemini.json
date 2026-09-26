@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testCollections271",
     "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testLoadFromStreamWithLineContinuationAndComments"
-  ]
+  ],
+  "suite_sha256": "41af9ea82050e336f761ea7ef9e56d4e60d61135e61f3b9eec33ffb1cc1faa8d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_9b/ExtendedPropertiesGeminiTest.java"
+  ],
+  "run_id": "Collections-9-gemini-1790366570"
 }

@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testCopyConstructorFromZipArchiveEntry",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testRemoveNonExistentExtraFieldThrowsException"
-  ]
+  ],
+  "suite_sha256": "940f637c153b6958b623bdad6d16a3e117cf3e3d1a0e675e91c3b46672c8437c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_15b/ZipArchiveEntryGeminiTest.java"
+  ],
+  "run_id": "Compress-15-gemini-1790368284"
 }

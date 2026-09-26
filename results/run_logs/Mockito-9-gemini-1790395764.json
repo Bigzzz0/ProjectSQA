@@ -1,0 +1,26 @@
+{
+  "project": "Mockito",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-9-gemini-1790395764",
+  "suite_sha256": "371ff54bc4c8c0263e2de842cbe9967a6924c8ac080b536863e8e009ecdfd450",
+  "test_files": "CallsRealMethodsGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.answers.CallsRealMethods",
+  "timestamp": "2026-09-26 11:11:11",
+  "evaluation_duration_sec": 107.365,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsVoid_shouldReturnNull",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsPrimitiveBoolean_shouldReturnDefaultFalse",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsObject_shouldReturnDefaultNullWithoutCallingRealMethod",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenInterfaceMethod_shouldReturnDefaultWithoutCallingRealMethod",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsPrimitiveInt_shouldReturnDefaultZero",
+    "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenInterfacePrimitiveMethod_shouldReturnDefaultValue"
+  ],
+  "fixed_failures": []
+}

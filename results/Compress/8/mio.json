@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.43,
+  "branch_cov": 94.74,
+  "test_file": "TarUtils_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test09",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test13",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test14",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test10",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test11",
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test12"
+  ],
+  "suite_sha256": "ce3c3e221f69deffc6d7d08676e2fd5ccf2ebeac8c50dfd7a064838ae0084662",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_8b/TarUtils_ESTest.java"
+  ],
+  "run_id": "Compress-8-mio-1790367921"
+}

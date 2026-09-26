@@ -18,5 +18,10 @@
     "org.jsoup.nodes.ElementGeminiTest::testStandaloneElementNavigationNullGuards",
     "org.jsoup.nodes.ElementGeminiTest::testDomQuerySelectors",
     "org.jsoup.nodes.ElementGeminiTest::testCssSelectorPaths"
-  ]
+  ],
+  "suite_sha256": "ac439f737692e74eb2f3cc4fb3cd2422387d144067dd05d06f48e40132aa6dea",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_70b/ElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-70-gemini-1790381950"
 }

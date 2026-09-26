@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 62.96,
+  "branch_cov": 46.15,
+  "test_file": "AnswersValidator_ESTest.java",
+  "target_classes": "org.mockito.internal.stubbing.answers.AnswersValidator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1371a30e89c5ff790ab1ea1a1335efbb8788c4c8a2b3497e8cb66538ea38b941",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_37b/AnswersValidator_ESTest.java"
+  ],
+  "run_id": "Mockito-37-mio-1790398165"
+}

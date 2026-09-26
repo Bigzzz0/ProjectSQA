@@ -15,5 +15,10 @@
   "fixed_failures": [
     "com.google.gson.stream.JsonReaderGeminiTest::testNextStringFromVariousTokens",
     "com.google.gson.stream.JsonReaderGeminiTest::testLenientSeparatorsAndUnquotedTokens"
-  ]
+  ],
+  "suite_sha256": "0846a75add670689e4ed5e4a21de4dcd1f5426593c9df189c2b2b9958f430bf5",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_7b/JsonReaderGeminiTest.java"
+  ],
+  "run_id": "Gson-7-gemini-1790370998"
 }

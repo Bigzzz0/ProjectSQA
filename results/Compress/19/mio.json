@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.48,
+  "branch_cov": 95.0,
+  "test_file": "Zip64ExtendedInformationExtraField_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "583d6f1034b15a79076bccea0912a28cfe9e9bc4e76d34a7157e845ae5ce40e6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_19b/Zip64ExtendedInformationExtraField_ESTest.java"
+  ],
+  "run_id": "Compress-19-mio-1790368408"
+}

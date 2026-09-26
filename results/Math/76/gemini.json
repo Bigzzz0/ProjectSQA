@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math.linear.SingularValueDecompositionImplGeminiTest::testZeroMatrixRank"
-  ]
+  ],
+  "suite_sha256": "4d745e85800dca5137e45c656bd450a06a1a503eb412cf2aab76d6157f37e647",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_76b/SingularValueDecompositionImplGeminiTest.java"
+  ],
+  "run_id": "Math-76-gemini-1790392627"
 }

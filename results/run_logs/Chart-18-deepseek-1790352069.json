@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 18,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Chart-18-deepseek-1790352069",
+  "suite_sha256": "d334b358597a1b8782b6c484e434dd67b1f080eb431207c6527f061b412cfd65",
+  "test_files": "DefaultKeyedValues2DDeepseekTest.java;DefaultKeyedValuesDeepseekTest.java",
+  "target_classes": "org.jfree.data.DefaultKeyedValues;org.jfree.data.DefaultKeyedValues2D",
+  "timestamp": "2026-09-25 23:01:17",
+  "evaluation_duration_sec": 8.191,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "s use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_18b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_18b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_18b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_18b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_18b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_18b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_18b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_18b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Chart_18b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_18b/.test_suite/org/jfree/data/DefaultKeyedValuesDeepseekTest.java:97: error: cannot find symbol\n    [javac]         dkv.sortByKeys(SortOrder.ASCENDING);\n    [javac]                        ^\n    [javac]   symbol:   variable SortOrder\n    [javac]   location: class DefaultKeyedValuesDeepseekTest\n    [javac] Note: /tmp/d4j_eval/Chart_18b/.test_suite/org/jfree/data/DefaultKeyedValuesDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,26 @@
+{
+  "project": "Jsoup",
+  "bug_id": 88,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-88-gemini-1790382776",
+  "suite_sha256": "a58ee96c51b9b7f9b21c2bb5dce5a9c550b1562269362144ea2fccf5615e04f4",
+  "test_files": "AttributeGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attribute",
+  "timestamp": "2026-09-26 07:33:12",
+  "evaluation_duration_sec": 15.781,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.91,
+  "branch_coverage_percent": 90.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.AttributeGeminiTest::testHtmlOutputFormatting",
+    "org.jsoup.nodes.AttributeGeminiTest::testSetValueWhenParentKeyNotFound",
+    "org.jsoup.nodes.AttributeGeminiTest::booleanAttributesAreEmptyStringValues"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.AttributeGeminiTest::testHtmlOutputFormatting",
+    "org.jsoup.nodes.AttributeGeminiTest::testSetValueWhenParentKeyNotFound"
+  ]
+}

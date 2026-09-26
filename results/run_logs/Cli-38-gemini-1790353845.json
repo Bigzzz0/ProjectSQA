@@ -1,0 +1,25 @@
+{
+  "project": "Cli",
+  "bug_id": 38,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-38-gemini-1790353845",
+  "suite_sha256": "c5fa3468ab960a659c8734b95301940d2ae2859566da9e44b60d68c23f41a36a",
+  "test_files": "DefaultParserGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.DefaultParser",
+  "timestamp": "2026-09-25 23:31:00",
+  "evaluation_duration_sec": 14.727,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.29,
+  "branch_coverage_percent": 80.38,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.DefaultParserGeminiTest::testQuotedArgumentStripping",
+    "org.apache.commons.cli.DefaultParserGeminiTest::shouldParseConcatenatedShortOptions"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.DefaultParserGeminiTest::testQuotedArgumentStripping",
+    "org.apache.commons.cli.DefaultParserGeminiTest::shouldParseConcatenatedShortOptions"
+  ]
+}

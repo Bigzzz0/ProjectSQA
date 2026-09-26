@@ -1,0 +1,31 @@
+{
+  "project": "Lang",
+  "bug_id": 6,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-6-deepseek-1790383858",
+  "suite_sha256": "21981352f6d5cec85614ce7e1978479da70a47461a52e69091a2439e940e955b",
+  "test_files": "CharSequenceTranslatorDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.CharSequenceTranslator",
+  "timestamp": "2026-09-26 07:51:18",
+  "evaluation_duration_sec": 20.194,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithMaxCodepoint",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testWithNullArray",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithLargeCodepoint",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithNegative",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testTranslateMixedWithConsuming"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithMaxCodepoint",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testWithNullArray",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithLargeCodepoint",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithNegative",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testTranslateMixedWithConsuming"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.23,
+  "branch_cov": 86.67,
+  "test_file": "ProperFractionFormat_ESTest.java",
+  "target_classes": "org.apache.commons.math.fraction.ProperFractionFormat",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4d904eb59914ad47a6e1821b13afffa40d6cbbdace2688f38f105fbbb64ccc4b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_106b/ProperFractionFormat_ESTest.java"
+  ],
+  "run_id": "Math-106-mio-1790394679"
+}

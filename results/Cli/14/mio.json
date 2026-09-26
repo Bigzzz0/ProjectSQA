@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "GroupImpl_ESTest.java",
+  "target_classes": "org.apache.commons.cli2.option.GroupImpl",
+  "buggy_failures": [
+    "org.apache.commons.cli2.option.GroupImpl_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.option.GroupImpl_ESTest"
+  ],
+  "suite_sha256": "203c36817018ccc0597bed6560ab816877e980b492a39232fe01a551575cab7b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_14b/GroupImpl_ESTest.java"
+  ],
+  "run_id": "Cli-14-mio-1790353008"
+}

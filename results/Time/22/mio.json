@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.66,
+  "branch_cov": 93.1,
+  "test_file": "BasePeriod_ESTest.java",
+  "target_classes": "org.joda.time.base.BasePeriod",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c9086d86f93f4a172a00a15295bf4242196c19800ce636c8c6903ee0cad36f3b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_22b/BasePeriod_ESTest.java"
+  ],
+  "run_id": "Time-22-mio-1790399607"
+}

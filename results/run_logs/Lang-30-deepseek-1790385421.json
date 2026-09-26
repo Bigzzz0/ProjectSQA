@@ -1,0 +1,26 @@
+{
+  "project": "Lang",
+  "bug_id": 30,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-30-deepseek-1790385421",
+  "suite_sha256": "9e0c0ac37ffe0f6afff06460447c2f3333acaf4d6752dce6818618a23f1142d2",
+  "test_files": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "timestamp": "2026-09-26 08:17:22",
+  "evaluation_duration_sec": 20.865,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 47.6,
+  "branch_coverage_percent": 46.07,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringCharArrayWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringStringWithSupplementaryChars"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAnyBut_StringStringWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringCharArrayWithSupplementaryChars",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testIndexOfAny_StringStringWithSupplementaryChars"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.51,
+  "branch_cov": 93.75,
+  "test_file": "SimpleType_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.SimpleType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e11000541671d26f1e73810573f1ebf49df9c62ee515939283c9dd17a5f68e54",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_37b/SimpleType_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-37-mio-1790374357"
+}

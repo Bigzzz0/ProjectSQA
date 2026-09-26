@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.34,
+  "branch_cov": 86.44,
+  "test_file": "CpioArchiveOutputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3cbad1091c1899c72a2150dd8c7f411380ac12bc8c56c63ef6d5487160d8bb70",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_1b/CpioArchiveOutputStream_ESTest.java"
+  ],
+  "run_id": "Compress-1-mio-1790367598"
+}

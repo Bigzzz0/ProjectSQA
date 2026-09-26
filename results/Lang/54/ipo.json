@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.72,
+  "branch_cov": 9.38,
+  "test_file": "LocaleUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.LocaleUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "8fb5be6b954b7f76a65c9e91777698b2b56cbdf2fad3f79a6d23535ae5e6c285",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_54b/org/apache/commons/lang/LocaleUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-54-ipo-1790386791"
+}

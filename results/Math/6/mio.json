@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.61,
+  "branch_cov": 9.03,
+  "test_file": "BaseOptimizer_ESTest.java;CMAESOptimizer_ESTest.java;GaussNewtonOptimizer_ESTest.java;LevenbergMarquardtOptimizer_ESTest.java;NonLinearConjugateGradientOptimizer_ESTest.java;PowellOptimizer_ESTest.java;SimplexOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optim.BaseOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.CMAESOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizer;org.apache.commons.math3.optim.nonlinear.scalar.noderiv.SimplexOptimizer;org.apache.commons.math3.optim.nonlinear.vector.jacobian.GaussNewtonOptimizer;org.apache.commons.math3.optim.nonlinear.vector.jacobian.LevenbergMarquardtOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.optim.BaseOptimizer_ESTest::test4"
+  ],
+  "suite_sha256": "e76e75cc31e71798ac8de4755207a07e62d8a2485d07bf046d59a0c3413f0098",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/BaseOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/CMAESOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/GaussNewtonOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/LevenbergMarquardtOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/NonLinearConjugateGradientOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/PowellOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_6b/SimplexOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-6-mio-1790387910"
+}

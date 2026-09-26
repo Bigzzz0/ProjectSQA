@@ -17,5 +17,11 @@
     "org.jsoup.parser.CharacterReaderGeminiTest::testNextIndexOfSequenceBoundaries",
     "org.jsoup.parser.CharacterReaderGeminiTest::testNullStringThrowsException",
     "org.jsoup.parser.TokeniserStateGeminiTest::testParsesQuiteRoughAttributes"
-  ]
+  ],
+  "suite_sha256": "b7c1061dbda05c5c67df01d38c409599c52e4fe9979d2967f202446ac11198c4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_83b/CharacterReaderGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_83b/TokeniserStateGeminiTest.java"
+  ],
+  "run_id": "Jsoup-83-gemini-1790382535"
 }

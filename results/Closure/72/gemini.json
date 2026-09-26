@@ -16,5 +16,11 @@
     "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
     "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
     "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
-  ]
+  ],
+  "suite_sha256": "e1af27c38483fa24ebb06e90f433c12859dcc5c465f23913fe4e292bd89ee8b2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_72b/FunctionToBlockMutatorGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_72b/RenameLabelsGeminiTest.java"
+  ],
+  "run_id": "Closure-72-gemini-1790359144"
 }

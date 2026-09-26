@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 102,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-102-ipo-1790394398",
+  "suite_sha256": "c5a46e636b440b942ad063c5e9242b06c2b7641789c87d6bc16b35edd152f559",
+  "test_files": "ChiSquareTestImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.stat.inference.ChiSquareTestImpl",
+  "timestamp": "2026-09-26 10:47:02",
+  "evaluation_duration_sec": 24.165,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 13.51,
+  "branch_coverage_percent": 9.3,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,23 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 13,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-13-gemini-1790371901",
+  "suite_sha256": "a49e8da23c7e13fb5e15cb936b69da1bb784f80138e0255b66a08ced691e0379",
+  "test_files": "JsonGeneratorImplGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.JsonGeneratorImpl",
+  "timestamp": "2026-09-26 04:31:56",
+  "evaluation_duration_sec": 14.882,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testFieldNameQuotingDisabledViaDisableWriter",
+    "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testFieldNameQuotingDisabledViaDisableBytes",
+    "com.fasterxml.jackson.core.json.JsonGeneratorImplGeminiTest::testDirectCfgUnqNamesFlagUpdatedOnDisable"
+  ],
+  "fixed_failures": []
+}

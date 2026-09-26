@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 15,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Collections-15-ipo-1790366863",
+  "suite_sha256": "7b7d28dc0753062cd872e0baf561470c4dec6a573704c188a36d338c37e24370",
+  "test_files": "SetUniqueList_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:08:01",
+  "evaluation_duration_sec": 17.56,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 34.88,
+  "branch_coverage_percent": 31.82,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

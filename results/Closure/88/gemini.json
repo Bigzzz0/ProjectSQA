@@ -25,5 +25,10 @@
     "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
     "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
     "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
-  ]
+  ],
+  "suite_sha256": "74186b658109b2d4c0f2201b074935f00d848a357496c75a9b218e8107df481d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_88b/DeadAssignmentsEliminationGeminiTest.java"
+  ],
+  "run_id": "Closure-88-gemini-1790360082"
 }

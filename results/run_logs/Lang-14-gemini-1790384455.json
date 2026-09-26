@@ -1,0 +1,28 @@
+{
+  "project": "Lang",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-14-gemini-1790384455",
+  "suite_sha256": "a277938efee716483e1cf209a2528c81290ea19d2f5e36ad869124ca625bb6bc",
+  "test_files": "StringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "timestamp": "2026-09-26 08:01:17",
+  "evaluation_duration_sec": 21.693,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 78.87,
+  "branch_coverage_percent": 72.48,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testReplaceAndRemoveOperations",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplittingMethods",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSetMatchingSurrogatesAndBoundaries",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testEqualsDefectWithHeterogeneousCharSequences"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testReplaceAndRemoveOperations",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSplittingMethods",
+    "org.apache.commons.lang3.StringUtilsGeminiTest::testSetMatchingSurrogatesAndBoundaries"
+  ]
+}

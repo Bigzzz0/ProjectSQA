@@ -18,5 +18,10 @@
     "org.jsoup.nodes.ElementGeminiTest::testElementSelectionMethods",
     "org.jsoup.nodes.ElementGeminiTest::testAppendAndPrependHtml",
     "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnTextExtraction"
-  ]
+  ],
+  "suite_sha256": "c97834a0b732097a56b345b8909b2d63bee3346d5ead157ca0825ce7b192fda2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_37b/ElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-37-gemini-1790380323"
 }

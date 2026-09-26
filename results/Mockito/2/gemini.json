@@ -16,5 +16,10 @@
     "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationArbitraryThrowsException",
     "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationMinValueThrowsException",
     "org.mockito.internal.util.TimerGeminiTest::should_throw_friendly_reminder_exception_when_duration_is_negative"
-  ]
+  ],
+  "suite_sha256": "682565f7a1da11c2f98b8f188ce13860a703b6bfe723db010cc23722a4394237",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_2b/TimerGeminiTest.java"
+  ],
+  "run_id": "Mockito-2-gemini-1790394908"
 }

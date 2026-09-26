@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.HelpFormatterGeminiTest"
-  ]
+  ],
+  "suite_sha256": "a52a9af7281f6ca257e3f0244423f4c2afc6c659b6bbb9fae18f7bb8357e9841",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_24b/HelpFormatterGeminiTest.java"
+  ],
+  "run_id": "Cli-24-gemini-1790353388"
 }

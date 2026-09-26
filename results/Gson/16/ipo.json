@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.23,
+  "branch_cov": 2.06,
+  "test_file": "$Gson$Types_IPOTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "41296b564328d234f7174bee81ac9ab6703364c8270abffbddcc543feb4cdbe4",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Gson_16b/com/google/gson/internal/$Gson$Types_IPOTest.java"
+  ],
+  "run_id": "Gson-16-ipo-1790371259"
+}

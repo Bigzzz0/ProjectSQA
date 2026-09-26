@@ -27,5 +27,10 @@
     "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAny_StringCharArrayWithBadSupplementaryChars_RevealsDefect",
     "org.apache.commons.lang3.StringUtilsGeminiTest::testTrimAndStrip",
     "org.apache.commons.lang3.StringUtilsGeminiTest::testContainsAny_StringWithBadSupplementaryChars_RevealsDefect"
-  ]
+  ],
+  "suite_sha256": "e1625c829efc82eaa217b29c1df8ac5b3c9e526895470916553e8c332584046d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_30b/StringUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-30-gemini-1790385442"
 }

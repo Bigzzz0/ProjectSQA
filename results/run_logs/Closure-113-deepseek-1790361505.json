@@ -1,0 +1,41 @@
+{
+  "project": "Closure",
+  "bug_id": 113,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-113-deepseek-1790361505",
+  "suite_sha256": "3d96fa3065f1dfaa83e005b96e52e4633652b755306ae36072a289f11a34f69c",
+  "test_files": "ProcessClosurePrimitivesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.ProcessClosurePrimitives",
+  "timestamp": "2026-09-26 01:38:59",
+  "evaluation_duration_sec": 34.478,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 77.03,
+  "branch_coverage_percent": 66.05,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithRequireAndProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithMissingAnnotation",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbol",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testGetExportedVariableNamesAfterMultipleExports",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbolNoDot",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideInSamePass",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideWithDefinition",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeImplicitProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testHotSwapScript",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithInvalidName"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithRequireAndProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithMissingAnnotation",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbol",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testGetExportedVariableNamesAfterMultipleExports",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testProcessWithExportSymbolNoDot",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideInSamePass",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeProvideWithDefinition",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeImplicitProvide",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testHotSwapScript",
+    "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithInvalidName"
+  ]
+}

@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode"
-  ]
+  ],
+  "suite_sha256": "ddf7bfd403decaabe69477e68352904db837f547fe4b720237486c77771c98dc",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_99b/CheckGlobalThisGeminiTest.java"
+  ],
+  "run_id": "Closure-99-gemini-1790360631"
 }

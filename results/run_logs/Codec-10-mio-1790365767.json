@@ -1,0 +1,19 @@
+{
+  "project": "Codec",
+  "bug_id": 10,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Codec-10-mio-1790365767",
+  "suite_sha256": "ca19952d4bf3772dc1a27ae7279b9c4345810d8f18da798ed3eecb9cce923368",
+  "test_files": "Caverphone_ESTest.java",
+  "target_classes": "org.apache.commons.codec.language.Caverphone",
+  "timestamp": "2026-09-26 02:49:40",
+  "evaluation_duration_sec": 13.144,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

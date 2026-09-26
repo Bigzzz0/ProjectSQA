@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.3,
+  "branch_cov": 3.75,
+  "test_file": "XYSeries_IPOTest.java",
+  "target_classes": "org.jfree.data.xy.XYSeries",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f917fe71c33ea71157b6b8168754b45be235b4326edf8cd5f3bf9b352a99c221",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_5b/org/jfree/data/xy/XYSeries_IPOTest.java"
+  ],
+  "run_id": "Chart-5-ipo-1790351132"
+}

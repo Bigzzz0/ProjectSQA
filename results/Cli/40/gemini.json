@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.TypeHandlerGeminiTest::testCreateValueUnregisteredClassReturnsNull"
-  ]
+  ],
+  "suite_sha256": "e7532594a96bfd58f9496e84af02d2086600cc909fd0359b756cbba4c8984b7b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_40b/TypeHandlerGeminiTest.java"
+  ],
+  "run_id": "Cli-40-gemini-1790353924"
 }

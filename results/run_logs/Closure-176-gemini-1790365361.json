@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 176,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-176-gemini-1790365361",
+  "suite_sha256": "2f8e586288d3c1b4e942cfcfb07015b692777291d62b22e036fedce654f5cca1",
+  "test_files": "TypeInferenceGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeInference",
+  "timestamp": "2026-09-26 02:42:53",
+  "evaluation_duration_sec": 11.416,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "176b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_176b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_176b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_176b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_176b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_176b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_176b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_176b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_176b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_176b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7\n    [javac] /tmp/d4j_eval/Closure_176b/.test_suite/com/google/javascript/jscomp/TypeInferenceGeminiTest.java:89: error: cannot find symbol\n    [javac]     ReverseAbstractInterpreter rai = compiler.getReverseAbstractInterpreterForCheck();\n    [javac]                                              ^\n    [javac]   symbol:   method getReverseAbstractInterpreterForCheck()\n    [javac]   location: variable compiler of type Compiler\n    [javac] 1 error\n    [javac] 1 warning\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 7 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

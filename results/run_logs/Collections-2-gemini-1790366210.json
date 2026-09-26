@@ -1,0 +1,26 @@
+{
+  "project": "Collections",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-2-gemini-1790366210",
+  "suite_sha256": "5c8fe66a728e9d544bb41661a6ae1135cd1e5c07f4479b67074897eb5d0ee678",
+  "test_files": "ExtendedPropertiesGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "timestamp": "2026-09-26 02:57:07",
+  "evaluation_duration_sec": 17.243,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.54,
+  "branch_coverage_percent": 78.73,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesTokenizer",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testIncludeInstanceIsolationDefect",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesReaderDirect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesTokenizer",
+    "org.apache.commons.collections.ExtendedPropertiesGeminiTest::testPropertiesReaderDirect"
+  ]
+}

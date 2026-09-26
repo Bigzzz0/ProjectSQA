@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 100,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-100-gemini-1790394314",
+  "suite_sha256": "380ce4705f3f0d31efe99c62f9feb656c4d106daa90659cb778e3ee7be94da25",
+  "test_files": "AbstractEstimatorGeminiTest.java",
+  "target_classes": "org.apache.commons.math.estimation.AbstractEstimator",
+  "timestamp": "2026-09-26 10:45:21",
+  "evaluation_duration_sec": 6.886,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "til/MathUtils.java:878: warning: [deprecation] ROUND_UNNECESSARY in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UNNECESSARY :\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_100b/src/java/org/apache/commons/math/util/MathUtils.java:883: warning: [deprecation] ROUND_UP in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UP :\n    [javac]                        ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 97 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Math_100b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Math_100b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Math_100b/target/classes/../classes\n     [echo] build.home: /tmp/d4j_eval/Math_100b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Math_100b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_100b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_100b/.test_suite/org/apache/commons/math/estimation/AbstractEstimatorGeminiTest.java:67: error: incrementJacobianEvaluationsCounter() in ConcreteEstimator cannot override incrementJacobianEvaluationsCounter() in AbstractEstimator\n    [javac]         public void incrementJacobianEvaluationsCounter() {\n    [javac]                     ^\n    [javac]   overridden method is final\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

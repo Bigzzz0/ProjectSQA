@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 132,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-132-deepseek-1790362736",
+  "suite_sha256": "f8322f5e3598fa132c2e1276b6a91e638fd1954a30cbe43b2093c03e28cd7fbb",
+  "test_files": "PeepholeSubstituteAlternateSyntaxDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+  "timestamp": "2026-09-26 01:59:06",
+  "evaluation_duration_sec": 10.05,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "scomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_132b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_132b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_132b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_132b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_132b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_132b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_132b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_132b/.test_suite/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntaxDeepseekTest.java:43: error: cannot find symbol\n    [javac]     compiler.setLifeCycleStage(LifeCycleStage.NORMALIZED);\n    [javac]                                ^\n    [javac]   symbol:   variable LifeCycleStage\n    [javac]   location: class PeepholeSubstituteAlternateSyntaxDeepseekTest\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

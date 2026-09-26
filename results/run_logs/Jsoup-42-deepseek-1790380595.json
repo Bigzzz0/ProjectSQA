@@ -1,0 +1,21 @@
+{
+  "project": "Jsoup",
+  "bug_id": 42,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-42-deepseek-1790380595",
+  "suite_sha256": "80ee87ffcea0866d161169fe98cd8dc91b0c5aa535f3447330f266ee36774963",
+  "test_files": "FormElementDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "timestamp": "2026-09-26 06:56:53",
+  "evaluation_duration_sec": 17.599,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.FormElementDeepseekTest::checkboxWithoutValueDefaultsToOn"
+  ],
+  "fixed_failures": []
+}

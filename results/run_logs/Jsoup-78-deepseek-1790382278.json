@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 78,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-78-deepseek-1790382278",
+  "suite_sha256": "0b7eebe3f45d735e89a77ffb1870fd01ab00cf725216a27ea5509d1fab36bc93",
+  "test_files": "DataUtilDeepseekTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 07:24:41",
+  "evaluation_duration_sec": 3.741,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_78b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_78b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_78b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_78b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_78b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_78b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_78b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_78b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_78b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_78b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_78b/.test_suite/org/jsoup/helper/DataUtilDeepseekTest.java:84: error: cannot find symbol\n    [javac]         Document doc = DataUtil.load(streamFromString(xml), null, \"http://base\", Parser.xmlParser());\n    [javac]                                                                                  ^\n    [javac]   symbol:   variable Parser\n    [javac]   location: class DataUtilDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

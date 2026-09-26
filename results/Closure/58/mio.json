@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 53.85,
+  "branch_cov": 34.62,
+  "test_file": "LiveVariablesAnalysis_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.LiveVariablesAnalysis",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "525019fb55a18bcec641334f3e43f3bb158e377f1bd73d45c2b33cae4de84529",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_58b/LiveVariablesAnalysis_ESTest.java"
+  ],
+  "run_id": "Closure-58-mio-1790358182"
+}

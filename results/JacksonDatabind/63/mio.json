@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.56,
+  "branch_cov": 86.36,
+  "test_file": "JsonMappingException_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.JsonMappingException",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b9df0c59b582792dc221a154f0480367a5bce8277e8fcc797f7ea7102beb31ef",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_63b/JsonMappingException_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-63-mio-1790375870"
+}

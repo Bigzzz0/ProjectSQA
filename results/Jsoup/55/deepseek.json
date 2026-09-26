@@ -138,5 +138,10 @@
     "org.jsoup.parser.TokeniserStateDeepseekTest::testAfterDoctypeSystemKeywordWithEOF",
     "org.jsoup.parser.TokeniserStateDeepseekTest::testAfterDoctypeSystemIdentifierWithInvalid",
     "org.jsoup.parser.TokeniserStateDeepseekTest::testBeforeDoctypePublicIdentifierWithEOF"
-  ]
+  ],
+  "suite_sha256": "37b026255296a047a5890962124dc32e39d3e7ce8d4d596d4eb45a20b3f48ef6",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_55b/TokeniserStateDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-55-deepseek-1790381227"
 }

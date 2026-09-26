@@ -17,5 +17,10 @@
     "org.jfree.chart.renderer.GrayPaintScaleDeepseekTest::testGetPaintValueBelowLowerBound",
     "org.jfree.chart.renderer.GrayPaintScaleDeepseekTest::testHashCodeConsistency",
     "org.jfree.chart.renderer.GrayPaintScaleDeepseekTest::testConstructorNanBounds"
-  ]
+  ],
+  "suite_sha256": "37227435ce289493eec723e6649230f85a25f803f48c6b23ff282c3b99a1694a",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Chart_24b/GrayPaintScaleDeepseekTest.java"
+  ],
+  "run_id": "Chart-24-deepseek-1790352455"
 }

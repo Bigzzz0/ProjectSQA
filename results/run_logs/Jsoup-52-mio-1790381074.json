@@ -1,0 +1,30 @@
+{
+  "project": "Jsoup",
+  "bug_id": 52,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-52-mio-1790381074",
+  "suite_sha256": "e32a4d636c9f5703976f62674ef346a9eb2400e1cc0be5b73f69f537752bcecd",
+  "test_files": "DataUtil_ESTest.java;XmlDeclaration_ESTest.java;XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil;org.jsoup.nodes.XmlDeclaration;org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:04:56",
+  "evaluation_duration_sec": 21.433,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 77.44,
+  "branch_coverage_percent": 50.41,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.helper.DataUtil_ESTest::test11",
+    "org.jsoup.helper.DataUtil_ESTest::test14",
+    "org.jsoup.helper.DataUtil_ESTest::test05"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtil_ESTest::test11",
+    "org.jsoup.helper.DataUtil_ESTest::test14",
+    "org.jsoup.helper.DataUtil_ESTest::test05",
+    "org.jsoup.nodes.XmlDeclaration_ESTest::test1",
+    "org.jsoup.nodes.XmlDeclaration_ESTest::test2",
+    "org.jsoup.nodes.XmlDeclaration_ESTest::test3"
+  ]
+}

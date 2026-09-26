@@ -1,0 +1,31 @@
+{
+  "project": "Math",
+  "bug_id": 51,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-51-deepseek-1790390859",
+  "suite_sha256": "d86f4e376dcae36516e69c094a33b5a3b96097d53f3d6d6e974431f36741921c",
+  "test_files": "BaseSecantSolverDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "timestamp": "2026-09-26 09:48:04",
+  "evaluation_duration_sec": 25.542,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 87.32,
+  "branch_coverage_percent": 60.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithStartValueOutsideInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithNegativeMaxEval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMinEqualsMax",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithInvertedInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMaxEvalZero"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithStartValueOutsideInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithNegativeMaxEval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMinEqualsMax",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithInvertedInterval",
+    "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMaxEvalZero"
+  ]
+}

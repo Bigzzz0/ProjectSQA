@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 24.19,
+  "branch_cov": 13.89,
+  "test_file": "StringArrayDeserializer_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b4a5d081c4fb59324acc7ba1f33f85a431a3cbba6d02013931f315c1ced819f5",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_3b/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-3-ipo-1790372441"
+}

@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.OptionGroupDeepseekTest"
-  ]
+  ],
+  "suite_sha256": "1b0decbbb6a5fae3e5aac6de19cb6cf72500942e926455e6eac1773e91e40b40",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_27b/OptionGroupDeepseekTest.java"
+  ],
+  "run_id": "Cli-27-deepseek-1790353474"
 }

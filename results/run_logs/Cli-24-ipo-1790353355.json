@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 24,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Cli-24-ipo-1790353355",
+  "suite_sha256": "188e599c634503162ff55419afa69355db1dabe66dce3b64326af87025335f44",
+  "test_files": "HelpFormatter_IPOTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter",
+  "timestamp": "2026-09-25 23:22:50",
+  "evaluation_duration_sec": 14.413,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.HelpFormatter_IPOTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.HelpFormatter_IPOTest"
+  ]
+}

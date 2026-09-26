@@ -1,0 +1,26 @@
+{
+  "project": "Closure",
+  "bug_id": 98,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-98-gemini-1790360570",
+  "suite_sha256": "e95a3c73af937e945af110b37bd941d811a3f0f9bb1a1363631f180eb57ccb83",
+  "test_files": "ReferenceCollectingCallbackGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.ReferenceCollectingCallback",
+  "timestamp": "2026-09-26 01:23:14",
+  "evaluation_duration_sec": 23.924,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.81,
+  "branch_coverage_percent": 92.91,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInForLoop",
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection",
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInWhileLoop",
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testAssignedOnceInLifetime_defectInDoWhileLoop"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection"
+  ]
+}

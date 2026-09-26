@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 41.07,
+  "branch_cov": 38.89,
+  "test_file": "RandomStringUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2efef0529fb97e71172e4115b888f9fec77b801f3f2a6a899f22168fd0db8653",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_11b/org/apache/commons/lang3/RandomStringUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-11-ipo-1790384167"
+}

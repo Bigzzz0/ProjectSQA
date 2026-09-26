@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 14.81,
+  "branch_cov": 5.56,
+  "test_file": "NumericEntityUnescaper_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "15de95791370d9aa3ce1552a04bc465c0a7067cabd2ca62cca96c113f23236fd",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_19b/org/apache/commons/lang3/text/translate/NumericEntityUnescaper_IPOTest.java"
+  ],
+  "run_id": "Lang-19-ipo-1790384683"
+}

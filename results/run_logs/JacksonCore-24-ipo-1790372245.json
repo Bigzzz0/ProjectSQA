@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 24,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JacksonCore-24-ipo-1790372245",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.fasterxml.jackson.core.base.ParserBase;com.fasterxml.jackson.core.base.ParserMinimalBase",
+  "timestamp": "2026-09-26 04:37:25",
+  "evaluation_duration_sec": 0.008,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

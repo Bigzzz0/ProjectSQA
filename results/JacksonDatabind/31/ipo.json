@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.36,
+  "branch_cov": 0.29,
+  "test_file": "TokenBuffer_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.TokenBuffer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2fbcc6d48c0220dfd61c89b46e338b067924a4430717f9e72b7e9cd2f6210604",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_31b/com/fasterxml/jackson/databind/util/TokenBuffer_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-31-ipo-1790373933"
+}

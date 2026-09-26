@@ -1,0 +1,19 @@
+{
+  "project": "Mockito",
+  "bug_id": 17,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Mockito-17-mio-1790396579",
+  "suite_sha256": "07e8164de1d8e6d5f06159b18039848a8b881c4e601e44fd4602e92101cdc76d",
+  "test_files": "MockSettingsImpl_ESTest.java;MockUtil_ESTest.java",
+  "target_classes": "org.mockito.internal.creation.MockSettingsImpl;org.mockito.internal.util.MockUtil",
+  "timestamp": "2026-09-26 11:23:30",
+  "evaluation_duration_sec": 30.747,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 75.41,
+  "branch_coverage_percent": 68.75,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

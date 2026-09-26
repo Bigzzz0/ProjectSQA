@@ -1,0 +1,33 @@
+{
+  "project": "Math",
+  "bug_id": 72,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-72-deepseek-1790392360",
+  "suite_sha256": "553394e6807d293a715b6823eb4e68b24071f3d6877d80d369071898361d9250",
+  "test_files": "BrentSolverDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BrentSolver",
+  "timestamp": "2026-09-26 10:13:05",
+  "evaluation_duration_sec": 24.157,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 84.11,
+  "branch_coverage_percent": 75.93,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testConstructorDefault",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testMaxIterationsExceeded",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveBracketingIntervalQuadratic",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialAtEndpoint",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testFunctionEvaluationException",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialGuess"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testConstructorDefault",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testMaxIterationsExceeded",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveBracketingIntervalQuadratic",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialAtEndpoint",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testFunctionEvaluationException",
+    "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialGuess"
+  ]
+}

@@ -82,5 +82,12 @@
     "org.apache.commons.codec.language.MetaphoneDeepseekTest::testIsMetaphoneEqualTrue",
     "org.apache.commons.codec.language.MetaphoneDeepseekTest::testVWYNotBeforeVowel",
     "org.apache.commons.codec.language.MetaphoneDeepseekTest::testNumbers"
-  ]
+  ],
+  "suite_sha256": "5d3f2cc93216ab43fe652b1b8ab2bc059593231f3afac063a4ca28743e924daf",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_1b/CaverphoneDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_1b/MetaphoneDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_1b/SoundexUtilsDeepseekTest.java"
+  ],
+  "run_id": "Codec-1-deepseek-1790365402"
 }

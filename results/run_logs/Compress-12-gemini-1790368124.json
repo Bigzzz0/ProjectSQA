@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-12-gemini-1790368124",
+  "suite_sha256": "877b53a6c6fe19b6103ba2fa7d3ad7fea8fbb49f127055af17eea6463b7b8340",
+  "test_files": "TarArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "timestamp": "2026-09-26 03:29:01",
+  "evaluation_duration_sec": 16.711,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.85,
+  "branch_coverage_percent": 90.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testCOMPRESS178DefectTarget",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadUnexpectedEOFThrowsIOException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGNUSparseHitEOFDuringSparseRead"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testCOMPRESS178DefectTarget",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testReadUnexpectedEOFThrowsIOException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveInputStreamGeminiTest::testGNUSparseHitEOFDuringSparseRead"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 64,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-64-mio-1790387365",
+  "suite_sha256": "85eee47163d3bdf1070aa1979f9276a99a6c1ea394e5c17604a9caf91e094372",
+  "test_files": "ValuedEnum_ESTest.java",
+  "target_classes": "org.apache.commons.lang.enums.ValuedEnum",
+  "timestamp": "2026-09-26 08:49:45",
+  "evaluation_duration_sec": 20.445,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 16.67,
+  "branch_coverage_percent": 25.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

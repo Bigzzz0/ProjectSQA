@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 38,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-38-deepseek-1790398235",
+  "suite_sha256": "00dd61759a7185bbc59a67cdc2514b8b5e0c4e57c736755c4e0f78f1375b7d31",
+  "test_files": "ArgumentMatchingToolDeepseekTest.java",
+  "target_classes": "org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool",
+  "timestamp": "2026-09-26 11:50:40",
+  "evaluation_duration_sec": 5.241,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "35: warning: [deprecation] Double(double) in Double has been deprecated\n    [javac]         wrapperReturnValues.put(Double.class, new Double(0));\n    [javac]                                               ^\n    [javac] /tmp/d4j_eval/Mockito_38b/src/org/mockito/internal/util/copy/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = field.isAccessible();\n    [javac]                              ^\n    [javac] 21 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_38b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_38b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_38b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_38b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_38b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_38b/.test_suite/org/mockito/internal/verification/argumentmatching/ArgumentMatchingToolDeepseekTest.java:43: error: TypeAwareMatcher is not abstract and does not override abstract method withExtraTypeInfo() in ContainsExtraTypeInformation\n    [javac]     private static class TypeAwareMatcher extends BaseMatcher implements ContainsExtraTypeInformation {\n    [javac]                    ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

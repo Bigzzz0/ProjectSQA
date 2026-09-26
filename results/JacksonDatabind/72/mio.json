@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 68.09,
+  "branch_cov": 50.0,
+  "test_file": "InnerClassProperty_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.InnerClassProperty",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e818d7b07271669073780aef934b3f8dc644c6e60e817adef4731d1b8ff262e4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_72b/InnerClassProperty_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-72-mio-1790376370"
+}

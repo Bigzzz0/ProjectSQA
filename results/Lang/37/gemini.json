@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.ArrayUtilsGeminiTest::testJira567"
-  ]
+  ],
+  "suite_sha256": "8c4923f230ed8b64413eec378916036be0a0d63a79527ae0d4863e7aa084c391",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_37b/ArrayUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-37-gemini-1790385823"
 }

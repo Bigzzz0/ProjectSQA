@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 34.16,
+  "branch_cov": 27.66,
+  "test_file": "ZipArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e1378bb5d8deacf640cef8de32ea00a110934f9a56735d5b6ad64c44a36a178d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_5b/ZipArchiveInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-5-mio-1790367758"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 74.19,
+  "branch_cov": 64.18,
+  "test_file": "ExtendedProperties_ESTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "buggy_failures": [
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test25",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test67",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test30",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test49",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test03",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test17",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test13",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test10",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test54",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test51",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test52"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test25",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test67",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test30",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test49",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test03",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test17",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test13",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test10",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test54",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test51",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test52"
+  ],
+  "suite_sha256": "f8fe6b02c04e754d70e952ddb41d5da4f32193ea5f518f4e9a3b6dec95f00d26",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_2b/ExtendedProperties_ESTest.java"
+  ],
+  "run_id": "Collections-2-mio-1790366186"
+}

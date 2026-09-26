@@ -1,0 +1,34 @@
+{
+  "project": "Codec",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Codec-15-gemini-1790365966",
+  "suite_sha256": "26ae234a544be686de2fbbaf726365c189c63849870e7dc590a2a1453842af58",
+  "test_files": "SoundexGeminiTest.java",
+  "target_classes": "org.apache.commons.codec.language.Soundex",
+  "timestamp": "2026-09-26 02:52:59",
+  "evaluation_duration_sec": 12.939,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 94.12,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.language.SoundexGeminiTest::testCharacterBeforeUpperAThrowsIllegalArgumentException",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testAdjacentConsonantsSameGroupCodedOnce",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testNonLetterAndCleanHandling",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleSameCodeGroupSeparatedByHW",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testShortStringsPadding",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleEx1",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testDifferenceCalculation"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.language.SoundexGeminiTest::testCharacterBeforeUpperAThrowsIllegalArgumentException",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testAdjacentConsonantsSameGroupCodedOnce",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testNonLetterAndCleanHandling",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleSameCodeGroupSeparatedByHW",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testShortStringsPadding",
+    "org.apache.commons.codec.language.SoundexGeminiTest::testDifferenceCalculation"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 18,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-18-mio-1790399384",
+  "suite_sha256": "4e834c8ebaf41d85831900af171e5ca21a8eb872514cc005bd147eff6c315146",
+  "test_files": "GJChronology_ESTest.java",
+  "target_classes": "org.joda.time.chrono.GJChronology",
+  "timestamp": "2026-09-26 12:10:11",
+  "evaluation_duration_sec": 27.603,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 95.06,
+  "branch_coverage_percent": 84.21,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

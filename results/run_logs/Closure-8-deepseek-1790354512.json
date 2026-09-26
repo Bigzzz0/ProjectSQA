@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-8-deepseek-1790354512",
+  "suite_sha256": "6d8abde5a17aeee90b8dfcc21a2cde174d37bc3e64829597f16579e2cc1e52ad",
+  "test_files": "CollapseVariableDeclarationsDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseVariableDeclarations",
+  "timestamp": "2026-09-25 23:42:02",
+  "evaluation_duration_sec": 10.273,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "uild/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_8b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_8b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_8b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_8b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_8b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_8b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_8b/.test_suite/com/google/javascript/jscomp/CollapseVariableDeclarationsDeepseekTest.java:61: error: cannot find symbol\n    [javac]     pass.process(compiler.getExternsRoot(), compiler.getJsRoot());\n    [javac]                          ^\n    [javac]   symbol:   method getExternsRoot()\n    [javac]   location: variable compiler of type Compiler\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

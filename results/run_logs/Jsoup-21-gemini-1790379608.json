@@ -1,0 +1,31 @@
+{
+  "project": "Jsoup",
+  "bug_id": 21,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-21-gemini-1790379608",
+  "suite_sha256": "bdde06212161f78cc891c049fa783d68e4c5edd906cb24f80ac4f8dd7b9beee4",
+  "test_files": "CombiningEvaluatorGeminiTest.java;QueryParserGeminiTest.java",
+  "target_classes": "org.jsoup.select.CombiningEvaluator;org.jsoup.select.QueryParser",
+  "timestamp": "2026-09-26 06:40:24",
+  "evaluation_duration_sec": 15.972,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.41,
+  "branch_coverage_percent": 96.88,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.select.QueryParserGeminiTest::testCommasWithinAttributeSelectorValue",
+    "org.jsoup.select.QueryParserGeminiTest::testMalformedAttributeOperatorThrows",
+    "org.jsoup.select.QueryParserGeminiTest::testSurroundingWhitespaceAndMultipleSpaces",
+    "org.jsoup.select.QueryParserGeminiTest::testParseIdSelector",
+    "org.jsoup.select.QueryParserGeminiTest::testHandlesCommasInSelectorDocumentEvaluation",
+    "org.jsoup.select.QueryParserGeminiTest::testHandlesCommasInSelectorRegexPattern"
+  ],
+  "fixed_failures": [
+    "org.jsoup.select.QueryParserGeminiTest::testMalformedAttributeOperatorThrows",
+    "org.jsoup.select.QueryParserGeminiTest::testSurroundingWhitespaceAndMultipleSpaces",
+    "org.jsoup.select.QueryParserGeminiTest::testMixCombinatorGroup",
+    "org.jsoup.select.QueryParserGeminiTest::testParseIdSelector"
+  ]
+}

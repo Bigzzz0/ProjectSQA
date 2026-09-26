@@ -14,5 +14,10 @@
   "fixed_failures": [
     "com.google.gson.stream.JsonWriterGeminiTest::testNameAtDocumentRootThrows",
     "com.google.gson.stream.JsonWriterGeminiTest::testNameWithoutObjectThrows"
-  ]
+  ],
+  "suite_sha256": "dcfe32c00f82de4b1cb5b3549c7d559b7e8c2dccf821edccbad89f097fd2e5db",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_15b/JsonWriterGeminiTest.java"
+  ],
+  "run_id": "Gson-15-gemini-1790371246"
 }

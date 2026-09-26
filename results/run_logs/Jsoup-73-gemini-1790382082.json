@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 73,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-73-gemini-1790382082",
+  "suite_sha256": "93cd3100d8ed96954cdb68b9c68887f8f20d95b02396e1daa9eb15429c9135dd",
+  "test_files": "W3CDomGeminiTest.java",
+  "target_classes": "org.jsoup.helper.W3CDom",
+  "timestamp": "2026-09-26 07:21:25",
+  "evaluation_duration_sec": 3.617,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                ^\n    [javac]   cast to Object for a varargs call\n    [javac]   cast to Object[] for a non-varargs call and to suppress this warning\n    [javac] 3 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_73b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_73b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_73b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_73b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_73b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_73b/.test_suite/org/jsoup/helper/W3CDomGeminiTest.java:186: error: reached end of file while parsing\n    [javac]     }\n    [javac]      ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

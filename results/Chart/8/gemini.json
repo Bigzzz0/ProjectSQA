@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jfree.data.time.WeekGeminiTest::testConstructor"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "8c8d7343fa3208047cc8b1427321b34ec77af94cf46fa5422cc3fc971529b039",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_8b/WeekGeminiTest.java"
+  ],
+  "run_id": "Chart-8-gemini-1790351403"
 }

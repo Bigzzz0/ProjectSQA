@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 89.87,
+  "branch_cov": 80.87,
+  "test_file": "CSVPrinter_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVPrinter",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVPrinter_ESTest::test04"
+  ],
+  "suite_sha256": "b60bf764a49b7fc02caed7a0bb4236d8f13c6e19dd1e2db18ecccccbedf6c641",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_5b/CSVPrinter_ESTest.java"
+  ],
+  "run_id": "Csv-5-mio-1790370271"
+}

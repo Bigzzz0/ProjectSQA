@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 6,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Gson-6-deepseek-1790401175",
+  "suite_sha256": "0011abb482c0979abb2183ac7c008af074d4388c3242ebfc900896cc6950555f",
+  "test_files": "JsonAdapterAnnotationTypeAdapterFactoryDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+  "timestamp": "2026-09-26 12:39:37",
+  "evaluation_duration_sec": 2.947,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_6b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_6b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_6b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_6b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Gson_6b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_6b/.test_suite/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactoryDeepseekTest.java:126: error: constructor ConstructorConstructor in class ConstructorConstructor cannot be applied to given types;\n    [javac]     private final ConstructorConstructor constructorConstructor = new ConstructorConstructor();\n    [javac]                                                                   ^\n    [javac]   required: Map<Type,InstanceCreator<?>>\n    [javac]   found: no arguments\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] Note: /tmp/d4j_eval/Gson_6b/.test_suite/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactoryDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 78.05,
+  "branch_cov": 67.65,
+  "test_file": "CSVParser_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "db52c024f1b3fcbac0714d4e0bbf7c200c3d9d359ef7d9f9b0403ba738097bb0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_16b/CSVParser_ESTest.java"
+  ],
+  "run_id": "Csv-16-mio-1790370727"
+}

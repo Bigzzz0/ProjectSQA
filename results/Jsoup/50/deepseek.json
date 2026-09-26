@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataWithEmptyByteBuffer",
     "org.jsoup.helper.DataUtilDeepseekTest::parseByteDataInvalidCharsetName"
-  ]
+  ],
+  "suite_sha256": "c908542af0e4c46d2de86659d743fee7a385e243f031463b71a42679eabc7f81",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_50b/DataUtilDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-50-deepseek-1790380964"
 }

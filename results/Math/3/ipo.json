@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 38.48,
+  "branch_cov": 20.51,
+  "test_file": "MathArrays_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.util.MathArrays",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "71c8e1b8523d58e355ed753feb4e2a0869a42df762fde32aaecba375d86a0f0e",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_3b/org/apache/commons/math3/util/MathArrays_IPOTest.java"
+  ],
+  "run_id": "Math-3-ipo-1790387660"
+}

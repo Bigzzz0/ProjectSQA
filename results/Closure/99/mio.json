@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 74.47,
+  "branch_cov": 56.9,
+  "test_file": "CheckGlobalThis_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2d1dcdf02edcac5fbbff80c145adda8e6621fb32eab1c9375fbc979becb49359",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_99b/CheckGlobalThis_ESTest.java"
+  ],
+  "run_id": "Closure-99-mio-1790360594"
+}

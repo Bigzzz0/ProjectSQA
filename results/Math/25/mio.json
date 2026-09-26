@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.94,
+  "branch_cov": 96.43,
+  "test_file": "HarmonicFitter_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.fitting.HarmonicFitter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e6aa1cad9b16115d350aaaa1d0585510c3c8f301604b12c8d404c795090e926f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_25b/HarmonicFitter_ESTest.java"
+  ],
+  "run_id": "Math-25-mio-1790389091"
+}

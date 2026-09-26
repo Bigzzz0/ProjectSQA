@@ -1,14 +1,17 @@
 {
   "status": "DONE",
-  "fault_detected": "BUG_DETECTED",
-  "failures_count": 2,
-  "line_cov": 13.62,
-  "branch_cov": 15.25,
-  "test_file": "Time_1b_IPOTest.java",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 12.96,
+  "branch_cov": 5.93,
+  "test_file": "Partial_IPOTest.java;UnsupportedDurationField_IPOTest.java",
   "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
-  "buggy_failures": [
-    "org.joda.time.Time_1b_IPOTest::test_partial_field_order_003",
-    "org.joda.time.Time_1b_IPOTest::test_partial_field_order_004"
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3e5d249f95a1e95e95a233575f806a932faf0cecc279aa1f127e75ae561c2e83",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_1b/org/joda/time/Partial_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/Time_1b/org/joda/time/field/UnsupportedDurationField_IPOTest.java"
   ],
-  "fixed_failures": []
+  "run_id": "Time-1-ipo-1790398245"
 }

@@ -1,0 +1,23 @@
+{
+  "project": "Closure",
+  "bug_id": 74,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-74-mio-1790359238",
+  "suite_sha256": "cddea50e3cde29bfc78d3791d60c79d90ec9d7d81b3daf680fc0dd33e5ea6949",
+  "test_files": "PeepholeFoldConstants_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "timestamp": "2026-09-26 01:01:12",
+  "evaluation_duration_sec": 33.997,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 12.0,
+  "branch_coverage_percent": 7.92,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test63"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstants_ESTest::test63"
+  ]
+}

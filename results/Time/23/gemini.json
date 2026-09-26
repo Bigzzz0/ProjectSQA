@@ -17,5 +17,10 @@
     "org.joda.time.DateTimeZoneGeminiTest::testIsStandardOffset",
     "org.joda.time.DateTimeZoneGeminiTest::testGetMillisKeepLocal",
     "org.joda.time.DateTimeZoneGeminiTest::testForTimeZone_UnknownZone"
-  ]
+  ],
+  "suite_sha256": "a1b6ebeb309a6f86175c39ae5262c4f1eeb61fce3947229495a64b13f3cf04fa",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_23b/DateTimeZoneGeminiTest.java"
+  ],
+  "run_id": "Time-23-gemini-1790399711"
 }

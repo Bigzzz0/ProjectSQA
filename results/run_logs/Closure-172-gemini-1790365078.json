@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 172,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-172-gemini-1790365078",
+  "suite_sha256": "b67ba8d5f4213b0361417a7c540be2b3c0fa653fc6b5c7dd0417f6d4092b3578",
+  "test_files": "TypedScopeCreatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "timestamp": "2026-09-26 02:38:08",
+  "evaluation_duration_sec": 9.843,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "d4j_eval/Closure_172b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_172b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_172b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_172b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_172b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_172b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_172b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_172b/.test_suite/com/google/javascript/jscomp/TypedScopeCreatorGeminiTest.java:271: error: cannot find symbol\n    [javac]     assertTrue(scope.getVar(\"vObj\").getType().isRecordType() || scope.getVar(\"vObj\").getType().isObjectType());\n    [javac]                                                                                               ^\n    [javac]   symbol:   method isObjectType()\n    [javac]   location: class JSType\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

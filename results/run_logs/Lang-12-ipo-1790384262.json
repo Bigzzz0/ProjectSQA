@@ -1,0 +1,28 @@
+{
+  "project": "Lang",
+  "bug_id": 12,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Lang-12-ipo-1790384262",
+  "suite_sha256": "2efef0529fb97e71172e4115b888f9fec77b801f3f2a6a899f22168fd0db8653",
+  "test_files": "RandomStringUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "timestamp": "2026-09-26 07:58:02",
+  "evaluation_duration_sec": 20.359,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 44.23,
+  "branch_coverage_percent": 43.75,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_004",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_012",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_014",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_023",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_025",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_026",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_030",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_032"
+  ],
+  "fixed_failures": []
+}

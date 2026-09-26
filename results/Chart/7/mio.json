@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 97.48,
+  "branch_cov": 96.3,
+  "test_file": "TimePeriodValues_ESTest.java",
+  "target_classes": "org.jfree.data.time.TimePeriodValues",
+  "buggy_failures": [
+    "org.jfree.data.time.TimePeriodValues_ESTest::test10",
+    "org.jfree.data.time.TimePeriodValues_ESTest::test17"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimePeriodValues_ESTest::test10",
+    "org.jfree.data.time.TimePeriodValues_ESTest::test17"
+  ],
+  "suite_sha256": "a56a30d1a4679af5a2b601e12a95b12dc4ed567719a88e644441073b189bdb08",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_7b/TimePeriodValues_ESTest.java"
+  ],
+  "run_id": "Chart-7-mio-1790351304"
+}

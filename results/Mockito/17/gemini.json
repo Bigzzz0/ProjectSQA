@@ -13,5 +13,11 @@
   ],
   "fixed_failures": [
     "org.mockito.internal.creation.MockSettingsImplGeminiTest::testIsSerializableDirectlyWithSerializableInExtraInterfaces"
-  ]
+  ],
+  "suite_sha256": "2a48b2c945d75c750c3304e3bc2c8605ddbbe229a772f5a28891d4cc0a21abd4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_17b/MockSettingsImplGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_17b/MockUtilGeminiTest.java"
+  ],
+  "run_id": "Mockito-17-gemini-1790396617"
 }

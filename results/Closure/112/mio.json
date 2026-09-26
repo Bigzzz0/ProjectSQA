@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 7.29,
+  "branch_cov": 3.23,
+  "test_file": "TypeInference_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeInference",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeInference_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeInference_ESTest::test0"
+  ],
+  "suite_sha256": "27da0aef80dfa6c4698c98940955d325c6f9fcfd046bb493bf535736f781ae21",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_112b/TypeInference_ESTest.java"
+  ],
+  "run_id": "Closure-112-mio-1790361405"
+}

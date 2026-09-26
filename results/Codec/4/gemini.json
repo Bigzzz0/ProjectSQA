@@ -12,5 +12,10 @@
     "org.apache.commons.codec.binary.Base64GeminiTest::testBinaryEncoderInterfaceDefaultInstance",
     "org.apache.commons.codec.binary.Base64GeminiTest::testObjectEncoderInterfaceDefaultInstance"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "7d3a8bdb30abb13fb6d64e238ebed9139b9e700491d25b75b61f258dccbe63fc",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_4b/Base64GeminiTest.java"
+  ],
+  "run_id": "Codec-4-gemini-1790365534"
 }

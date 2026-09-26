@@ -2,10 +2,15 @@
   "status": "DONE",
   "fault_detected": "NOT_DETECTED",
   "failures_count": 0,
-  "line_cov": 11.25,
-  "branch_cov": 6.12,
-  "test_file": "JxPath_1b_IPOTest.java",
+  "line_cov": 4.92,
+  "branch_cov": 3.96,
+  "test_file": "JDOMNodePointer_IPOTest.java",
   "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "5684a0988be73e5cf80639b39492dbdded7599eb6783bd58eeffe7caef7b9dde",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JxPath_1b/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer_IPOTest.java"
+  ],
+  "run_id": "JxPath-1-ipo-1790383021"
 }

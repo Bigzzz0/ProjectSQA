@@ -25,5 +25,10 @@
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToCharBoundaries",
     "org.jsoup.parser.CharacterReaderDeepseekTest::testNextIndexOfCharBoundaries",
     "org.jsoup.parser.CharacterReaderDeepseekTest::testConsumeToAnyBoundaries"
-  ]
+  ],
+  "suite_sha256": "2a176d8361835fb51efbcd016bd172ee947f7e074b68a61e942213fc217d701a",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_34b/CharacterReaderDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-34-deepseek-1790380151"
 }

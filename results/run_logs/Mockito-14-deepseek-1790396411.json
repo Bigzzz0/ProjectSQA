@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-14-deepseek-1790396411",
+  "suite_sha256": "9707d06c6bcd6fd1df27aff03bc06eb557ba8c28421157019bf81134834ee4ed",
+  "test_files": "MockHandlerDeepseekTest.java;MockitoCoreDeepseekTest.java",
+  "target_classes": "org.mockito.internal.MockHandler;org.mockito.internal.MockitoCore",
+  "timestamp": "2026-09-26 11:20:18",
+  "evaluation_duration_sec": 6.511,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "   [javac] /tmp/d4j_eval/Mockito_14b/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = field.isAccessible();\n    [javac]                              ^\n    [javac] 21 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_14b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_14b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_14b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Mockito_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_14b/.test_suite/org/mockito/internal/MockitoCoreDeepseekTest.java:29: error: cannot find symbol\n    [javac] import org.mockito.stubbing.Answers;\n    [javac]                            ^\n    [javac]   symbol:   class Answers\n    [javac]   location: package org.mockito.stubbing\n    [javac] Note: /tmp/d4j_eval/Mockito_14b/.test_suite/org/mockito/internal/MockitoCoreDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

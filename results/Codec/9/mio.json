@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 78.64,
+  "branch_cov": 69.08,
+  "test_file": "Base64_ESTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "712e1a5af631c3c53149939133d7138e07e246e281849bee29f0945fbe3e992b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_9b/Base64_ESTest.java"
+  ],
+  "run_id": "Codec-9-mio-1790365726"
+}

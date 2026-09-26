@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.math.util.MathUtilsGeminiTest::testNormalizeAngle",
     "org.apache.commons.math.util.MathUtilsGeminiTest::testNextAfter"
-  ]
+  ],
+  "suite_sha256": "af3c60687322fad0019446d4f30cf026f725cbb10905f9828bea2ffac8041bca",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_93b/MathUtilsGeminiTest.java"
+  ],
+  "run_id": "Math-93-gemini-1790393835"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 57.69,
+  "branch_cov": 42.59,
+  "test_file": "TokenQueue_IPOTest.java",
+  "target_classes": "org.jsoup.parser.TokenQueue",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bbba64195dd124f6c1cd214c20fcea7838c2f59cea2122806066e8ce0c7437d2",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_53b/org/jsoup/parser/TokenQueue_IPOTest.java"
+  ],
+  "run_id": "Jsoup-53-ipo-1790381119"
+}

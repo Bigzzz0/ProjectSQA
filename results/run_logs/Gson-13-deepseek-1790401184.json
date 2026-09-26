@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 13,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Gson-13-deepseek-1790401184",
+  "suite_sha256": "593a9ed9c11268396495db347c7ace88ba53acfb939f3abb85128d1f6b2f6db9",
+  "test_files": "JsonReaderDeepseekTest.java",
+  "target_classes": "com.google.gson.stream.JsonReader",
+  "timestamp": "2026-09-26 12:39:47",
+  "evaluation_duration_sec": 2.736,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "l be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Gson_13b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:100: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]       if (!constructor.isAccessible()) {\n    [javac]                       ^\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Gson_13b/target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_13b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_13b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_13b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_13b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Gson_13b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_13b/.test_suite/com/google/gson/stream/JsonReaderDeepseekTest.java:343: error: cannot find symbol\n    [javac]     @Test(timeout = 4000, expected = EOFException.class)\n    [javac]                                      ^\n    [javac]   symbol:   class EOFException\n    [javac]   location: class JsonReaderDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,21 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 71,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-71-gemini-1790376344",
+  "suite_sha256": "476712278fcea37b83fc27d8bf471188a0ea4f97a5f478d82e73555bd2646eee",
+  "test_files": "StdKeyDeserializerGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer",
+  "timestamp": "2026-09-26 05:46:09",
+  "evaluation_duration_sec": 25.64,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 95.3,
+  "branch_coverage_percent": 92.63,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializerGeminiTest::testDefectCharSequenceKeyDeserializerSupported"
+  ],
+  "fixed_failures": []
+}

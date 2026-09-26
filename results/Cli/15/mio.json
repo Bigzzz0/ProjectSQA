@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "WriteableCommandLineImpl_ESTest.java",
+  "target_classes": "org.apache.commons.cli2.commandline.WriteableCommandLineImpl",
+  "buggy_failures": [
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest"
+  ],
+  "suite_sha256": "d9c67f5b663be6c8fea533ed8a4b2309a15f0d16aad99c65d0d76340a10aa751",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_15b/WriteableCommandLineImpl_ESTest.java"
+  ],
+  "run_id": "Cli-15-mio-1790353028"
+}

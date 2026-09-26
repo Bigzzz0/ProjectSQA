@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 0.0,
+  "test_file": "StandardToolTipTagFragmentGenerator_ESTest.java",
+  "target_classes": "org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c24c768804b90567e7a4c08a8d24b9731912e0409547c83131509552e89d1bf3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_10b/StandardToolTipTagFragmentGenerator_ESTest.java"
+  ],
+  "run_id": "Chart-10-mio-1790351516"
+}

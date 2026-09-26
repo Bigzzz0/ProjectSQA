@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.27,
+  "branch_cov": 92.39,
+  "test_file": "Caverphone_ESTest.java;Metaphone_ESTest.java;SoundexUtils_ESTest.java",
+  "target_classes": "org.apache.commons.codec.language.Caverphone;org.apache.commons.codec.language.Metaphone;org.apache.commons.codec.language.SoundexUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7c8e57be76e5fadbd72621dda3650c13037b1b17f649dea617aab7348e7db613",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_1b/Caverphone_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Codec_1b/Metaphone_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Codec_1b/SoundexUtils_ESTest.java"
+  ],
+  "run_id": "Codec-1-mio-1790365387"
+}

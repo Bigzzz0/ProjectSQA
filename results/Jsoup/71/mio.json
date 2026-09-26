@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 90.0,
+  "branch_cov": 85.48,
+  "test_file": "Evaluator_ESTest.java;QueryParser_ESTest.java",
+  "target_classes": "org.jsoup.nodes.PseudoTextElement;org.jsoup.select.Evaluator;org.jsoup.select.QueryParser",
+  "buggy_failures": [
+    "org.jsoup.select.Evaluator_ESTest::test68",
+    "org.jsoup.select.Evaluator_ESTest::test36",
+    "org.jsoup.select.Evaluator_ESTest::test35"
+  ],
+  "fixed_failures": [
+    "org.jsoup.select.Evaluator_ESTest::test68",
+    "org.jsoup.select.Evaluator_ESTest::test36",
+    "org.jsoup.select.Evaluator_ESTest::test35"
+  ],
+  "suite_sha256": "a2c7a5e7a989474dd5688ff23a514fcd21b9bc11665210b604ec444f22283520",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_71b/Evaluator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_71b/QueryParser_ESTest.java"
+  ],
+  "run_id": "Jsoup-71-mio-1790381967"
+}

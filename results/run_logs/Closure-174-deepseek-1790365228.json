@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 174,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-174-deepseek-1790365228",
+  "suite_sha256": "a20075f152141c4ae866b88788bf115db862ff0611e4cd2a83d5028bf70b8052",
+  "test_files": "JsAstDeepseekTest.java;NodeUtilDeepseekTest.java;ScopedAliasesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.JsAst;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.ScopedAliases",
+  "timestamp": "2026-09-26 02:40:38",
+  "evaluation_duration_sec": 10.104,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ogle/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_174b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_174b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_174b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_174b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_174b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_174b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 3 source files to /tmp/d4j_eval/Closure_174b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_174b/.test_suite/com/google/javascript/jscomp/JsAstDeepseekTest.java:133: error: cannot find symbol\n    [javac]         options.setWarningLevel(DiagnosticGroups.PARSE_ERRORS, CheckLevel.ERROR);\n    [javac]                                                 ^\n    [javac]   symbol:   variable PARSE_ERRORS\n    [javac]   location: class DiagnosticGroups\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

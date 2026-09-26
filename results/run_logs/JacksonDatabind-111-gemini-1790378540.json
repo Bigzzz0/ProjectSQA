@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 111,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-111-gemini-1790378540",
+  "suite_sha256": "a82ff18973259b31d583689b8238bcc51105444927907d60da3cf42cf19b8655",
+  "test_files": "AtomicReferenceDeserializerGeminiTest.java;CreatorPropertyGeminiTest.java;FieldPropertyGeminiTest.java;MethodPropertyGeminiTest.java;ObjectIdReferencePropertyGeminiTest.java;ObjectIdValuePropertyGeminiTest.java;SetterlessPropertyGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.CreatorProperty;com.fasterxml.jackson.databind.deser.impl.FieldProperty;com.fasterxml.jackson.databind.deser.impl.MethodProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty;com.fasterxml.jackson.databind.deser.impl.SetterlessProperty;com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer",
+  "timestamp": "2026-09-26 06:22:28",
+  "evaluation_duration_sec": 8.353,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "1b/target/classes/com/fasterxml/jackson/databind/ser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_111b/target/classes/com/fasterxml/jackson/databind/deser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_111b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_111b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_111b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_111b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_111b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 7 source files to /tmp/d4j_eval/JacksonDatabind_111b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_111b/.test_suite/com/fasterxml/jackson/databind/deser/impl/MethodPropertyGeminiTest.java:151: error: cannot find symbol\n    [javac]         @Override public AnnotatedMember getPrimaryMember() { return _method; }\n    [javac]                          ^\n    [javac]   symbol:   class AnnotatedMember\n    [javac]   location: class DummyPropDef\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

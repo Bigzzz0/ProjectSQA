@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 14,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Cli-14-ipo-1790352989",
+  "suite_sha256": "bc01bba6c31eca01e461f457d2470ebf17e06b173fa5daf4e631780437c19648",
+  "test_files": "GroupImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.cli2.option.GroupImpl",
+  "timestamp": "2026-09-25 23:16:48",
+  "evaluation_duration_sec": 18.523,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli2.option.GroupImpl_IPOTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.option.GroupImpl_IPOTest"
+  ]
+}

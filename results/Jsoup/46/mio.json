@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 85.59,
+  "branch_cov": 74.51,
+  "test_file": "Entities_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ac602f5d6dbea0d828fb6a44dfdedf14e40169764b0337868b00e11c431eea19",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_46b/Entities_ESTest.java"
+  ],
+  "run_id": "Jsoup-46-mio-1790380769"
+}

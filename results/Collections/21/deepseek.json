@@ -16,5 +16,10 @@
     "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
     "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
     "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
-  ]
+  ],
+  "suite_sha256": "30ef7d0f722103252b4f0c59831d6fd63dba9c107970589dc0cb2c59440d0c53",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_21b/SetUniqueListDeepseekTest.java"
+  ],
+  "run_id": "Collections-21-deepseek-1790367233"
 }

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.83,
+  "branch_cov": 98.57,
+  "test_file": "CSVFormat_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormat_ESTest::test19",
+    "org.apache.commons.csv.CSVFormat_ESTest::test13",
+    "org.apache.commons.csv.CSVFormat_ESTest::test41",
+    "org.apache.commons.csv.CSVFormat_ESTest::test33",
+    "org.apache.commons.csv.CSVFormat_ESTest::test34",
+    "org.apache.commons.csv.CSVFormat_ESTest::test20"
+  ],
+  "suite_sha256": "60b17b41ca6f52023920be58fab4c1a797707d7d94074beb90e0f24cb7adbc19",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_12b/CSVFormat_ESTest.java"
+  ],
+  "run_id": "Csv-12-mio-1790370498"
+}

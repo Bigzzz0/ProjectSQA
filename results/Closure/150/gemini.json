@@ -27,5 +27,10 @@
     "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnDuplicateEnumKeys",
     "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testWarningOnMalformedTypedef",
     "com.google.javascript.jscomp.TypedScopeCreatorGeminiTest::testPrototypeRedefinition"
-  ]
+  ],
+  "suite_sha256": "e8979f4f56930f78feedfb471840ffb60b6af9a47ecf58ea8f9abde4e9547629",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_150b/TypedScopeCreatorGeminiTest.java"
+  ],
+  "run_id": "Closure-150-gemini-1790363692"
 }

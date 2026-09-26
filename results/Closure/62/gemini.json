@@ -10,5 +10,10 @@
     "com.google.javascript.jscomp.LightweightMessageFormatterGeminiTest::testFormatErrorSpaceEndOfLine1",
     "com.google.javascript.jscomp.LightweightMessageFormatterGeminiTest::testFormatErrorSpaceEndOfLine2"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "6a60ef9587dccceae107c5d9733bfdd3bd541296d45a916739b67554a0048995",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_62b/LightweightMessageFormatterGeminiTest.java"
+  ],
+  "run_id": "Closure-62-gemini-1790358549"
 }

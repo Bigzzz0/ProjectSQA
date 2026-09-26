@@ -1,0 +1,21 @@
+{
+  "project": "JxPath",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-2-gemini-1790383081",
+  "suite_sha256": "ba5cd5b78304476ba9476c9c85ca1ba46e7c988b05d7c7d44f391fa7a7c4d061",
+  "test_files": "ExpressionGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.Expression",
+  "timestamp": "2026-09-26 07:38:15",
+  "evaluation_duration_sec": 14.016,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.compiler.ExpressionGeminiTest::testNodeSetReturn_DefectTarget"
+  ],
+  "fixed_failures": []
+}

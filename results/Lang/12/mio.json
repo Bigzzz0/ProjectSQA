@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.08,
+  "branch_cov": 97.92,
+  "test_file": "RandomStringUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6b8317d1a5bc0e50d933105755ec9915e4124520d355a62863448bd77998d097",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_12b/RandomStringUtils_ESTest.java"
+  ],
+  "run_id": "Lang-12-mio-1790384282"
+}

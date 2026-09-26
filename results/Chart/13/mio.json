@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.89,
+  "branch_cov": 92.5,
+  "test_file": "BorderArrangement_ESTest.java",
+  "target_classes": "org.jfree.chart.block.BorderArrangement",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "af25ed26699234f58926ddef10ac90297efeb4ababc121c3bf9d8764fa605e91",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_13b/BorderArrangement_ESTest.java"
+  ],
+  "run_id": "Chart-13-mio-1790351711"
+}

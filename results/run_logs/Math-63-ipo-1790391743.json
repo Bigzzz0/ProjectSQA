@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 63,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-63-ipo-1790391743",
+  "suite_sha256": "38924f5c4f2f84fe30a4c4450b8726db726009ab82caea8d4675ca5a17602c95",
+  "test_files": "MathUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:02:49",
+  "evaluation_duration_sec": 25.854,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 49.81,
+  "branch_coverage_percent": 50.57,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_equals_pairwise_147"
+  ],
+  "fixed_failures": []
+}

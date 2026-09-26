@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.collections.list.SetUniqueListGeminiTest::testSetSelfSwapBranch"
-  ]
+  ],
+  "suite_sha256": "bbe9f49a608d9e8ad2a88bf5aa2b62bde4bef6ee064612b302a32a6fd449b12a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_15b/SetUniqueListGeminiTest.java"
+  ],
+  "run_id": "Collections-15-gemini-1790366917"
 }

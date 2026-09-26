@@ -1,0 +1,42 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 12,
+  "line_cov": 87.15,
+  "branch_cov": 70.26,
+  "test_file": "FastDateFormat_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test42",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test45",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test07",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test09",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test08",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test56",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test55",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test57",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test59",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test60",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test63"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test42",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test45",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test07",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test09",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test08",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test56",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test55",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test57",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test59",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test60",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test63"
+  ],
+  "suite_sha256": "d1348cecb9e6161a51aeb934220e480fa26a68e60ca06c3341cc2f2048f5ec97",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_50b/FastDateFormat_ESTest.java"
+  ],
+  "run_id": "Lang-50-mio-1790386558"
+}

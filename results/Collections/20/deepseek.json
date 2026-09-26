@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.collections.list.TreeListDeepseekTest::testComplexAddRemoveSequence",
     "org.apache.commons.collections.list.TreeListDeepseekTest::testIteratorAddThenNext"
-  ]
+  ],
+  "suite_sha256": "c9f7ddcdbe50f407ed7c0b5ac1fbd8be7e2af95945a6fee4a037a6f18ddd54dc",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_20b/TreeListDeepseekTest.java"
+  ],
+  "run_id": "Collections-20-deepseek-1790367172"
 }

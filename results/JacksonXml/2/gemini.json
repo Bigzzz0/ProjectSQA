@@ -16,5 +16,10 @@
     "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testLocationsAndCloseAndToString",
     "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementAndDelayedReplay",
     "com.fasterxml.jackson.dataformat.xml.deser.XmlTokenStreamGeminiTest::testRepeatStartElementReplayEnd"
-  ]
+  ],
+  "suite_sha256": "619f54f918f6b1b639c36855fd3b885f4a65e679283997275fcbe415be1506f6",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonXml_2b/XmlTokenStreamGeminiTest.java"
+  ],
+  "run_id": "JacksonXml-2-gemini-1790378651"
 }

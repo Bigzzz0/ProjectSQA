@@ -19,5 +19,10 @@
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testErrorNegatingNonNumber",
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldLeftChildAssociativeOps",
     "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldAssign"
-  ]
+  ],
+  "suite_sha256": "3e415c2c1d66ea12c81ab039e1ed36c18c64488e5bc2ccaae3cd6c4ed54738aa",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_78b/PeepholeFoldConstantsGeminiTest.java"
+  ],
+  "run_id": "Closure-78-gemini-1790359543"
 }

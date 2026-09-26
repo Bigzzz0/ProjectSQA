@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 59.41,
+  "branch_cov": 32.14,
+  "test_file": "Element_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "buggy_failures": [
+    "org.jsoup.nodes.Element_ESTest::test30"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.Element_ESTest::test30"
+  ],
+  "suite_sha256": "ba914b1fd84cb0e2a4deb41f5b7a5fcb0b9be7ceae63fe094b7ecdc4c1aa1dfd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_32b/Element_ESTest.java"
+  ],
+  "run_id": "Jsoup-32-mio-1790380059"
+}

@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.AnalyzePrototypePropertiesGeminiTest::testGlobalFunctionAstRemoval_SingleChildVar"
-  ]
+  ],
+  "suite_sha256": "1aebe0de53017f8a68a5dee48a39e69a9a731fd47cc2be326f271a1ae9393a34",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_67b/AnalyzePrototypePropertiesGeminiTest.java"
+  ],
+  "run_id": "Closure-67-gemini-1790358867"
 }

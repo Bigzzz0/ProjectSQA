@@ -11,5 +11,10 @@
     "org.apache.commons.collections.map.MultiValueMapGeminiTest::testDefect_PutAllKeyCollectionReturnsTrueOnNewKey",
     "org.apache.commons.collections.map.MultiValueMapGeminiTest::testDefect_PutWithSetReturnsValue"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "620d793ea4180b639d2b3d7773ce73721ef00e56c79a0f36b19b2e5f98940712",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_4b/MultiValueMapGeminiTest.java"
+  ],
+  "run_id": "Collections-4-gemini-1790366342"
 }

@@ -1,0 +1,26 @@
+{
+  "project": "Lang",
+  "bug_id": 38,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-38-deepseek-1790385891",
+  "suite_sha256": "5957f060ea47a20c65e2d556a5d99250c9782da6d6873445a2be6357f9dae583",
+  "test_files": "FastDateFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateFormat",
+  "timestamp": "2026-09-26 08:25:12",
+  "evaluation_duration_sec": 20.533,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 91.38,
+  "branch_coverage_percent": 79.82,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testLiteralCharacters",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testCalendarTimeZoneForced",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testIllegalPatternToken"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testLiteralCharacters",
+    "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testIllegalPatternToken"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "project": "Lang",
+  "bug_id": 56,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-56-mio-1790386936",
+  "suite_sha256": "9c70dd43e1447a28418503a3e86f7db307c3d1e2bad48f3f7b96246db4a5b0f4",
+  "test_files": "FastDateFormat_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "timestamp": "2026-09-26 08:42:38",
+  "evaluation_duration_sec": 22.596,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 84.7,
+  "branch_coverage_percent": 71.98,
+  "failures_count": 11,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test00",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test03",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test47",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test05",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test49",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test06",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test54",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test56",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test57",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test59"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test00",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test03",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test47",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test02",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test05",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test49",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test06",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test54",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test56",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test57",
+    "org.apache.commons.lang.time.FastDateFormat_ESTest::test59"
+  ]
+}

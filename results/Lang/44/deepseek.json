@@ -19,5 +19,10 @@
     "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberFloatUnderflow",
     "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberBigDecimal",
     "org.apache.commons.lang.NumberUtilsDeepseekTest::testCreateNumberWithExponent"
-  ]
+  ],
+  "suite_sha256": "c1c9aaf20f78e76ef8c738eb9ca5b8175ac9cce68363225c683fd1d98f1ea03b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_44b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-44-deepseek-1790386292"
 }

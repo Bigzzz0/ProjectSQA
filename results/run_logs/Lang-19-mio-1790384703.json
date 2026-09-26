@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 19,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-19-mio-1790384703",
+  "suite_sha256": "daf0e7f4a57aeabc3a13c353bb5a4d3fad37e95f76d8d8ff95587a44c03dae16",
+  "test_files": "NumericEntityUnescaper_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.NumericEntityUnescaper",
+  "timestamp": "2026-09-26 08:05:24",
+  "evaluation_duration_sec": 20.954,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 40.74,
+  "branch_coverage_percent": 50.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang3.text.translate.NumericEntityUnescaper_ESTest::test0"
+  ]
+}

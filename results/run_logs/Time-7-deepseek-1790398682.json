@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 7,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-7-deepseek-1790398682",
+  "suite_sha256": "58909a6c4294479c03600216773b1789140e92a98b98fb14b51a3cf5b036b4a7",
+  "test_files": "DateTimeFormatterDeepseekTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatter",
+  "timestamp": "2026-09-26 11:58:09",
+  "evaluation_duration_sec": 7.558,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ing org.joda.time.tz.ZoneInfoProvider]\n    [javac] [wrote /tmp/d4j_eval/Time_7b/target/classes/org/joda/time/tz/ZoneInfoProvider.class]\n    [javac] [total 1671ms]\n    [javac] Note: /tmp/d4j_eval/Time_7b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Time_7b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Time_7b/target/classes/META-INF\n     [copy] Copying 9 files to /tmp/d4j_eval/Time_7b/target/classes\n\njoda-time.compile:\n\ncompile:\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_7b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_7b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_7b/.test_suite/org/joda/time/format/DateTimeFormatterDeepseekTest.java:52: error: cannot find symbol\n    [javac]         f2 = f.withLocale(Locale.US);\n    [javac]                           ^\n    [javac]   symbol:   variable Locale\n    [javac]   location: class DateTimeFormatterDeepseekTest\n    [javac] Note: /tmp/d4j_eval/Time_7b/.test_suite/org/joda/time/format/DateTimeFormatterDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

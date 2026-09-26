@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.google.gson.TypeInfoFactoryGeminiTest::testExtractRealTypes_NullArray_ThrowsNullPointerException"
-  ]
+  ],
+  "suite_sha256": "c77ac3754a8a37f9738fd27c6782d405d49e7209e984a2f5a418c8b6dbdc1e12",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_1b/TypeInfoFactoryGeminiTest.java"
+  ],
+  "run_id": "Gson-1-gemini-1790370802"
 }

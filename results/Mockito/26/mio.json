@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "Primitives_ESTest.java",
+  "target_classes": "org.mockito.internal.util.Primitives",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9ab61f1c59549e142ea12ba00aa69d59a64c220153a6e451215ee362ee6b07f0",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_26b/Primitives_ESTest.java"
+  ],
+  "run_id": "Mockito-26-mio-1790397474"
+}

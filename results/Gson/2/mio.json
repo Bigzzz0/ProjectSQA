@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 47.76,
+  "branch_cov": 35.11,
+  "test_file": "TypeAdapters_ESTest.java",
+  "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.TypeAdapters_ESTest::test05",
+    "com.google.gson.internal.bind.TypeAdapters_ESTest::test06",
+    "com.google.gson.internal.bind.TypeAdapters_ESTest::test07",
+    "com.google.gson.internal.bind.TypeAdapters_ESTest::test08"
+  ],
+  "suite_sha256": "fc64d49e53f4bd80a387c09a6b622fdd5fa8a140538b596edf79280901d3554a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_2b/TypeAdapters_ESTest.java"
+  ],
+  "run_id": "Gson-2-mio-1790370816"
+}

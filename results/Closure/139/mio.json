@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 31.98,
+  "branch_cov": 16.22,
+  "test_file": "Normalize_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Normalize",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "52b0618a58b51b77d31fb9b609f0d66db6e133e86f902c995d3d2f5629ca1660",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_139b/Normalize_ESTest.java"
+  ],
+  "run_id": "Closure-139-mio-1790363079"
+}

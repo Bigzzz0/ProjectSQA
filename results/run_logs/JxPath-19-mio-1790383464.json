@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 19,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-19-mio-1790383464",
+  "suite_sha256": "ba6c5309868e312c97654b5308f1855c4dc512c6bab0db6ac28067b2517499f7",
+  "test_files": "DOMNodePointer_ESTest.java;JDOMNodePointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "timestamp": "2026-09-26 07:44:27",
+  "evaluation_duration_sec": 3.014,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/org/apache/commons/jxpath/util/ValueUtils.java:541: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 handler = (DynamicPropertyHandler) clazz.newInstance();\n    [javac]                                                         ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 61 warnings\n     [copy] Copying 5 files to /tmp/d4j_eval/JxPath_19b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_19b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_19b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_19b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/JxPath_19b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_19b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointer_ESTest.java:86: error: cannot access DocumentLS\n    [javac]       Node node0 = hTMLDocumentImpl0.cloneNode(false);\n    [javac]                                     ^\n    [javac]   class file for org.w3c.dom.ls.DocumentLS not found\n    [javac] Note: /tmp/d4j_eval/JxPath_19b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointer_ESTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 83,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-83-deepseek-1790359784",
+  "suite_sha256": "4593c5c723819bed5c50c0e6a8e579636beb848a5c3c8303897635be55d0dff3",
+  "test_files": "CommandLineRunnerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.CommandLineRunner",
+  "timestamp": "2026-09-26 01:10:11",
+  "evaluation_duration_sec": 26.74,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 71.79,
+  "branch_coverage_percent": 44.44,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testInvalidBooleanValue",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testDefaultExternsList",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testVersionFlag2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testInvalidBooleanValue",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testDefaultExternsList",
+    "com.google.javascript.jscomp.CommandLineRunnerDeepseekTest::testVersionFlag2"
+  ]
+}

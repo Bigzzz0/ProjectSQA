@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 77.08,
+  "branch_cov": 50.0,
+  "test_file": "DataUtil_ESTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "cec3818841a27968ce892aedf49ebab17790f6b282f2845145d69da93080e038",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_27b/DataUtil_ESTest.java"
+  ],
+  "run_id": "Jsoup-27-mio-1790379860"
+}

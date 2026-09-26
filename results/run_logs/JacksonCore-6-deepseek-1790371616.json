@@ -1,0 +1,36 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 6,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-6-deepseek-1790371616",
+  "suite_sha256": "91e2273d4d5977b1f4478a9ea93fea86f2023454af55ae10c0366b1effdfe91b",
+  "test_files": "JsonPointerDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.JsonPointer",
+  "timestamp": "2026-09-26 04:27:10",
+  "evaluation_duration_sec": 14.765,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 95.16,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testZeroIndexInNestedPath",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexLeadingZero",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexMultiDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexSingleDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexZero",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIZeroIndexDefect",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testEmptyPointer",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testInvalidStartEmptyString"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testZeroIndexInNestedPath",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexMultiDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexSingleDigit",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIndexZero",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIZeroIndexDefect",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testEmptyPointer",
+    "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testInvalidStartEmptyString"
+  ]
+}

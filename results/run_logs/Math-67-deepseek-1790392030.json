@@ -1,0 +1,29 @@
+{
+  "project": "Math",
+  "bug_id": 67,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-67-deepseek-1790392030",
+  "suite_sha256": "36a6aaf445e92f06684f961a96a737324baa1b5804544e1ef13d9d54a1d6d643",
+  "test_files": "MultiStartUnivariateRealOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer",
+  "timestamp": "2026-09-26 10:07:34",
+  "evaluation_duration_sec": 24.225,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 76.34,
+  "branch_coverage_percent": 85.29,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testNaNHandlingDefect",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testConstructorState",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testManyStartsWithFailures",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testQuinticMinDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testNaNHandlingDefect",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testConstructorState",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testManyStartsWithFailures",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerDeepseekTest::testQuinticMinDefect"
+  ]
+}

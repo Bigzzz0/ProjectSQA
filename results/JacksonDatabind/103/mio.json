@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 62.85,
+  "branch_cov": 50.3,
+  "test_file": "BasicBeanDescription_ESTest.java;BasicDeserializerFactory_ESTest.java;BeanDeserializerFactory_ESTest.java;ClassUtil_ESTest.java;DatabindContext_ESTest.java;DefaultSerializerProvider_ESTest.java;DeserializationContext_ESTest.java;DeserializerCache_ESTest.java;JsonMappingException_ESTest.java;PropertyBuilder_ESTest.java;SerializerProvider_ESTest.java;SettableAnyProperty_ESTest.java;SettableBeanProperty_ESTest.java;StdDeserializer_ESTest.java;StdKeyDeserializer_ESTest.java;StdValueInstantiator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.DatabindContext;com.fasterxml.jackson.databind.DeserializationContext;com.fasterxml.jackson.databind.JsonMappingException;com.fasterxml.jackson.databind.SerializerProvider;com.fasterxml.jackson.databind.deser.BasicDeserializerFactory;com.fasterxml.jackson.databind.deser.BeanDeserializerFactory;com.fasterxml.jackson.databind.deser.DeserializerCache;com.fasterxml.jackson.databind.deser.SettableAnyProperty;com.fasterxml.jackson.databind.deser.SettableBeanProperty;com.fasterxml.jackson.databind.deser.std.StdDeserializer;com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer;com.fasterxml.jackson.databind.deser.std.StdValueInstantiator;com.fasterxml.jackson.databind.introspect.BasicBeanDescription;com.fasterxml.jackson.databind.ser.DefaultSerializerProvider;com.fasterxml.jackson.databind.ser.PropertyBuilder;com.fasterxml.jackson.databind.util.ClassUtil",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "309c10441987fefe42711da66d69e5fbb0a0b71a950d2f656041385267d14724",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/BasicBeanDescription_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/BasicDeserializerFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/BeanDeserializerFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/ClassUtil_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/DatabindContext_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/DefaultSerializerProvider_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/DeserializationContext_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/DeserializerCache_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/JsonMappingException_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/PropertyBuilder_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/SerializerProvider_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/SettableAnyProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/SettableBeanProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/StdDeserializer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/StdKeyDeserializer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_103b/StdValueInstantiator_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-103-mio-1790378065"
+}

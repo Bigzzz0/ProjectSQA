@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 3,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-3-mio-1790398386",
+  "suite_sha256": "5eb11a957d3497bd4c3bbd0dcf9c4e5f26f92066efc195b2c06c50e64ba72db4",
+  "test_files": "MutableDateTime_ESTest.java",
+  "target_classes": "org.joda.time.MutableDateTime",
+  "timestamp": "2026-09-26 11:53:34",
+  "evaluation_duration_sec": 28.875,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.86,
+  "branch_coverage_percent": 90.7,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

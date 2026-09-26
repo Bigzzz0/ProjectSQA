@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 72.86,
+  "branch_cov": 65.38,
+  "test_file": "PropertyPointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.beans.PropertyPointer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3c79fb36d35c9189e9dc36a59247dde0e2122bb996685f39cd296d6eac65ba3f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_21b/PropertyPointer_ESTest.java"
+  ],
+  "run_id": "JxPath-21-mio-1790383496"
+}

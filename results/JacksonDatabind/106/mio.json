@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 89.26,
+  "branch_cov": 83.12,
+  "test_file": "TreeTraversingParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.node.TreeTraversingParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5f1b0c15d7d36484297786a9a067cb6ff3e6e6cf59b8d7615a66fc7d188ebcae",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_106b/TreeTraversingParser_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-106-mio-1790378250"
+}

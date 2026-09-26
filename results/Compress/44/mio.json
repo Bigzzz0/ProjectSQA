@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 47.06,
+  "branch_cov": 16.67,
+  "test_file": "ChecksumCalculatingInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ChecksumCalculatingInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test1",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test2",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test1",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test2",
+    "org.apache.commons.compress.utils.ChecksumCalculatingInputStream_ESTest::test3"
+  ],
+  "suite_sha256": "1115c12a2f694470f81deba00f03fddf0a3100d953611967dce37e54e56dfb11",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_44b/ChecksumCalculatingInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-44-mio-1790369911"
+}

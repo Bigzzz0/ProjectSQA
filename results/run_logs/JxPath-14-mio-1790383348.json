@@ -1,0 +1,19 @@
+{
+  "project": "JxPath",
+  "bug_id": 14,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-14-mio-1790383348",
+  "suite_sha256": "76edd0af0777e1d99d61f3685133f80e3dd6ba22585a2f1c4bd54241f518ad44",
+  "test_files": "CoreFunction_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreFunction",
+  "timestamp": "2026-09-26 07:42:47",
+  "evaluation_duration_sec": 18.903,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 87.32,
+  "branch_coverage_percent": 84.43,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

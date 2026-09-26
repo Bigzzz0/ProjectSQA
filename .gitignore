@@ -9,6 +9,7 @@ Thumbs.db
 # IDE / Editor files
 .vscode/
 .idea/
+.venv/
 
 # Temporary test outputs
 tmp/

@@ -1,0 +1,19 @@
+{
+  "project": "Codec",
+  "bug_id": 3,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Codec-3-mio-1790365475",
+  "suite_sha256": "f31e3a19df97a3ac0fcbac8b28acafae7cb996e7fda6c7b92c83716d5d80168c",
+  "test_files": "DoubleMetaphone_ESTest.java",
+  "target_classes": "org.apache.commons.codec.language.DoubleMetaphone",
+  "timestamp": "2026-09-26 02:44:50",
+  "evaluation_duration_sec": 14.454,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 93.82,
+  "branch_coverage_percent": 87.78,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

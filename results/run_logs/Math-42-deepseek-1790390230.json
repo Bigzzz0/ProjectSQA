@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 42,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-42-deepseek-1790390230",
+  "suite_sha256": "28a121e111c58a9a4febee5ba960744643ad125a394481e4e956d558cf8d46f1",
+  "test_files": "SimplexTableauDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+  "timestamp": "2026-09-26 09:37:18",
+  "evaluation_duration_sec": 7.944,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "che/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_42b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_42b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_42b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_42b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_42b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_42b/.test_suite/org/apache/commons/math/optimization/linear/SimplexTableauDeepseekTest.java:5488: error: reached end of file while parsing\n    [javac]     public void testGetSolution_WithNegativeVariableAndAllConstraintTypesMixedSignAndZeroConstantTermMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMaximizeMinimizeMax\n    [javac]                                                                                                                                                                                                                                                                                                         ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

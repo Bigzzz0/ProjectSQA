@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.63,
+  "branch_cov": 96.77,
+  "test_file": "StrBuilder_ESTest.java",
+  "target_classes": "org.apache.commons.lang.text.StrBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3d3c6a40d5c4ab1c464d730ced204e2fdbef5eae483e5cdbc777e5085de883b7",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_60b/StrBuilder_ESTest.java"
+  ],
+  "run_id": "Lang-60-mio-1790387178"
+}

@@ -1,0 +1,21 @@
+{
+  "project": "Jsoup",
+  "bug_id": 69,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-69-gemini-1790381881",
+  "suite_sha256": "9000834f9695f3312c426a7857ab9a3eeed3713a5620c215394e4b532158d967",
+  "test_files": "FormElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "timestamp": "2026-09-26 07:18:17",
+  "evaluation_duration_sec": 15.755,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 96.43,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.FormElementGeminiTest::testRemoveFormElementReflectedInFormDataAndElements"
+  ],
+  "fixed_failures": []
+}

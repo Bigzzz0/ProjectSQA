@@ -1,0 +1,32 @@
+{
+  "project": "Time",
+  "bug_id": 20,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Time-20-gemini-1790399582",
+  "suite_sha256": "d907e7b1d4370d69590d73098e2975c6d07151ea03c05f33369a4a784a65e20a",
+  "test_files": "DateTimeFormatterBuilderGeminiTest.java",
+  "target_classes": "org.joda.time.format.DateTimeFormatterBuilder",
+  "timestamp": "2026-09-26 12:13:27",
+  "evaluation_duration_sec": 24.846,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 61.37,
+  "branch_coverage_percent": 48.22,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::test_printParseZoneDawsonCreek",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetWithFractionsAndNoSeparators",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetFormattingAndParsing",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTextFieldsLongAndShort",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToPrinterThrowsWhenParserOnly",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToParserThrowsWhenPrinterOnly"
+  ],
+  "fixed_failures": [
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetWithFractionsAndNoSeparators",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTimeZoneOffsetFormattingAndParsing",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTextFieldsLongAndShort",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToPrinterThrowsWhenParserOnly",
+    "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToParserThrowsWhenPrinterOnly"
+  ]
+}

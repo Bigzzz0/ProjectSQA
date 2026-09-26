@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.06,
+  "branch_cov": 88.54,
+  "test_file": "CombiningEvaluator_ESTest.java;QueryParser_ESTest.java",
+  "target_classes": "org.jsoup.select.CombiningEvaluator;org.jsoup.select.QueryParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bb2a1c8877c63db26576be0a9bad515a362430ff0b6b2ca18401527311007cc2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_21b/CombiningEvaluator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_21b/QueryParser_ESTest.java"
+  ],
+  "run_id": "Jsoup-21-mio-1790379587"
+}

@@ -1,0 +1,21 @@
+{
+  "project": "Gson",
+  "bug_id": 10,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-10-gemini-1790371085",
+  "suite_sha256": "bb0f76e48fb937f28ab8a2031f712a6960178e2dc14b5abc873e79aac4ea5ce8",
+  "test_files": "ReflectiveTypeAdapterFactoryGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+  "timestamp": "2026-09-26 04:18:19",
+  "evaluation_duration_sec": 13.971,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 96.58,
+  "branch_coverage_percent": 94.83,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryGeminiTest::testPrimitiveFieldAnnotationTakesPrecedenceOverDefault"
+  ],
+  "fixed_failures": []
+}

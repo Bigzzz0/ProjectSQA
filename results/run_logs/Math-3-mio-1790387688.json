@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 3,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-3-mio-1790387688",
+  "suite_sha256": "f7b8c251e2894b8947d33bbdea672c8299b65deaa1b7a7dc0e35bed11baae28c",
+  "test_files": "MathArrays_ESTest.java",
+  "target_classes": "org.apache.commons.math3.util.MathArrays",
+  "timestamp": "2026-09-26 08:55:17",
+  "evaluation_duration_sec": 29.065,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 99.05,
+  "branch_coverage_percent": 99.15,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

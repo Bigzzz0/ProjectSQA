@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 5,
+  "line_cov": 25.0,
+  "branch_cov": 10.61,
+  "test_file": "CharacterReader_IPOTest.java",
+  "target_classes": "org.jsoup.parser.CharacterReader",
+  "buggy_failures": [
+    "org.jsoup.parser.CharacterReader_IPOTest::test_consumeTo_pairwise_001",
+    "org.jsoup.parser.CharacterReader_IPOTest::test_consumeTo_pairwise_004",
+    "org.jsoup.parser.CharacterReader_IPOTest::test_consumeTo_pairwise_007",
+    "org.jsoup.parser.CharacterReader_IPOTest::test_consumeTo_pairwise_010",
+    "org.jsoup.parser.CharacterReader_IPOTest::test_consumeTo_pairwise_013"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "4b806a0a7a2ea5879e793a01d9a3055646a7f176bc3fc5ed937e8c6b05261faa",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_72b/org/jsoup/parser/CharacterReader_IPOTest.java"
+  ],
+  "run_id": "Jsoup-72-ipo-1790381995"
+}

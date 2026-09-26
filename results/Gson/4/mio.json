@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 73.58,
+  "branch_cov": 68.5,
+  "test_file": "JsonReader_ESTest.java;JsonWriter_ESTest.java",
+  "target_classes": "com.google.gson.stream.JsonReader;com.google.gson.stream.JsonWriter",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.gson.stream.JsonWriter_ESTest::test14",
+    "com.google.gson.stream.JsonWriter_ESTest::test13",
+    "com.google.gson.stream.JsonWriter_ESTest::test16",
+    "com.google.gson.stream.JsonWriter_ESTest::test17"
+  ],
+  "suite_sha256": "2ee78cffc0628b9b51caec2baad81352bec297223c39b321b8f0537803ca23eb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_4b/JsonReader_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Gson_4b/JsonWriter_ESTest.java"
+  ],
+  "run_id": "Gson-4-mio-1790370870"
+}

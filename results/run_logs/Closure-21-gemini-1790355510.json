@@ -1,0 +1,29 @@
+{
+  "project": "Closure",
+  "bug_id": 21,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-21-gemini-1790355510",
+  "suite_sha256": "edc812756cd7c8f997e4ba6c6c3dda92a4b39f9a39e0cd5ce9a2299ffa1a4870",
+  "test_files": "CheckSideEffectsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+  "timestamp": "2026-09-25 23:59:05",
+  "evaluation_duration_sec": 34.913,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 81.48,
+  "branch_coverage_percent": 86.67,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testDefectSideEffectFollowedByUselessCodeInCommaAssignment",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testDefectMultipleUselessCodeInCommaAssignment",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testStripProtectionRestoresOriginalNode",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionPassWithNoProblemsDoesNotAddExtern",
+    "com.google.javascript.jscomp.CheckSideEffectsGeminiTest::testProtectionModeWrapsProblemNodeAndAddsExtern"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 53,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-53-gemini-1790357896",
+  "suite_sha256": "3d8f1a33e3d1c67cbf841ae3a172f247d5677698eb212acbeddf763205a6dc88",
+  "test_files": "InlineObjectLiteralsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineObjectLiterals",
+  "timestamp": "2026-09-26 00:38:26",
+  "evaluation_duration_sec": 10.353,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ile to /tmp/d4j_eval/Closure_53b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_53b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_53b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_53b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_53b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_53b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_53b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_53b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_53b/.test_suite/com/google/javascript/jscomp/InlineObjectLiteralsGeminiTest.java:45: error: cannot find symbol\n    [javac] public class InlineObjectLiteralsGeminiTest extends CompilerTestCase {\n    [javac]                                                     ^\n    [javac]   symbol: class CompilerTestCase\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

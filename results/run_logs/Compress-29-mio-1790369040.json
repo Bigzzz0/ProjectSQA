@@ -1,0 +1,37 @@
+{
+  "project": "Compress",
+  "bug_id": 29,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-29-mio-1790369040",
+  "suite_sha256": "a6ab889e3a9c8b049a8ff726c10cc82b1187e21a3e6f13fd0fd6267c184d78d5",
+  "test_files": "ArchiveStreamFactory_ESTest.java;CpioArchiveInputStream_ESTest.java;CpioArchiveOutputStream_ESTest.java;DumpArchiveInputStream_ESTest.java;TarArchiveInputStream_ESTest.java;TarArchiveOutputStream_ESTest.java;ZipArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ArchiveStreamFactory;org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream;org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream;org.apache.commons.compress.archivers.dump.DumpArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:44:26",
+  "evaluation_duration_sec": 25.689,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 42.95,
+  "branch_coverage_percent": 31.98,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test09",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test10",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test18",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test08",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test09",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test20",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test5"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test09",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test10",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test18",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test08",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test09",
+    "org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream_ESTest::test20",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test5"
+  ]
+}

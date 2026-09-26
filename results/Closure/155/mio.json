@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 48.68,
+  "branch_cov": 31.03,
+  "test_file": "InlineVariables_ESTest.java;ReferenceCollectingCallback_ESTest.java;Scope_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineVariables;com.google.javascript.jscomp.ReferenceCollectingCallback;com.google.javascript.jscomp.Scope",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fd708da63109b64c04116309e8d8f61a38937e73664a588817d87a0e6aa7c0dd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_155b/InlineVariables_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_155b/ReferenceCollectingCallback_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_155b/Scope_ESTest.java"
+  ],
+  "run_id": "Closure-155-mio-1790363945"
+}

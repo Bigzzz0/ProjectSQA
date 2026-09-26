@@ -1,0 +1,24 @@
+{
+  "project": "Compress",
+  "bug_id": 39,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-39-gemini-1790369690",
+  "suite_sha256": "47ac686c8d7c9fda0e623d245a81b359d9ee8a5c65ef3ac5e74115c7bf4d5354",
+  "test_files": "ArchiveUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.utils.ArchiveUtils",
+  "timestamp": "2026-09-26 03:55:09",
+  "evaluation_duration_sec": 18.752,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 87.1,
+  "branch_coverage_percent": 97.22,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testIsEqualOffsetBounds",
+    "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testSanitizeShortensStringDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.ArchiveUtilsGeminiTest::testIsEqualOffsetBounds"
+  ]
+}

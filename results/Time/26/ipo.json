@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 30.34,
+  "branch_cov": 20.42,
+  "test_file": "DateTimeZone_IPOTest.java;ZonedChronology_IPOTest.java",
+  "target_classes": "org.joda.time.chrono.ZonedChronology;org.joda.time.DateTimeZone;org.joda.time.field.LenientDateTimeField",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e63ce205eb9f49783a7abd1185126d641eae43d937eed9a4a5f594123012d2a8",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_26b/org/joda/time/DateTimeZone_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/Time_26b/org/joda/time/chrono/ZonedChronology_IPOTest.java"
+  ],
+  "run_id": "Time-26-ipo-1790399873"
+}

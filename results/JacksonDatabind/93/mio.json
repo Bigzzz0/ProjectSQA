@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 66.67,
+  "branch_cov": 0.0,
+  "test_file": "SubTypeValidator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d598c0443919df82f9a13897e7151e846964a0df201b60af95ff5f328f6892e2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_93b/SubTypeValidator_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-93-mio-1790377469"
+}

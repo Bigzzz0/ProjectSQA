@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 50.0,
+  "branch_cov": 33.42,
+  "test_file": "JacksonAnnotationIntrospector_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2d2849b1fda5911d9b1ccdc619e0183f60b02f543be49dfb67c92b62f387d3a2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_81b/JacksonAnnotationIntrospector_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-81-mio-1790376829"
+}

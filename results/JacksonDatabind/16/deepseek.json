@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.introspect.AnnotationMapDeepseekTest::testMergeBothNullMapsInside"
-  ]
+  ],
+  "suite_sha256": "16de352b0e50735d6af31f92ff0e0084bdd78366ebc0a178bce0727171bd6800",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_16b/AnnotationMapDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-16-deepseek-1790373198"
 }

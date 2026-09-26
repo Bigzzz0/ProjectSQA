@@ -10,5 +10,10 @@
     "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializerGeminiTest::testDefectSkipWhenParserPositionedAtFieldName",
     "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializerGeminiTest::testDefectUnknownTypeIDRecoveryWithDefaultImpl"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "4257f78d1f7a45dd7cec3e21a8da53b0e35f414dc7774a43bacd639c09815670",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_39b/NullifyingDeserializerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-39-gemini-1790374532"
 }

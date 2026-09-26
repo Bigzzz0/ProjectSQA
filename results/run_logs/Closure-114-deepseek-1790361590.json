@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 114,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-114-deepseek-1790361590",
+  "suite_sha256": "9a9911d29dad8a9b8f4de297ec46797ab1ec07fbd702b511287be33da1c88696",
+  "test_files": "NameAnalyzerDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.NameAnalyzer",
+  "timestamp": "2026-09-26 01:40:00",
+  "evaluation_duration_sec": 10.084,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_114b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_114b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_114b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_114b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_114b/.test_suite/com/google/javascript/jscomp/NameAnalyzerDeepseekTest.java:65: error: PROTOTYPE_SUBSTRING has private access in NameAnalyzer\n    [javac]         assertEquals(\".prototype.\", NameAnalyzer.PROTOTYPE_SUBSTRING);\n    [javac]                                                 ^\n    [javac] Note: /tmp/d4j_eval/Closure_114b/.test_suite/com/google/javascript/jscomp/NameAnalyzerDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Closure_114b/.test_suite/com/google/javascript/jscomp/NameAnalyzerDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 65,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-65-mio-1790387426",
+  "suite_sha256": "8f048384e4eb45e2e175b0d67dc9ffb455d0c7de063d0d38eeb5e8c77589eab5",
+  "test_files": "DateUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.DateUtils",
+  "timestamp": "2026-09-26 08:50:32",
+  "evaluation_duration_sec": 5.885,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "precated\n    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));\n    [javac]                               ^\n    [javac] /tmp/d4j_eval/Lang_65b/src/java/org/apache/commons/lang/time/FastDateFormat.java:450: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]         Object key = new Pair(new Integer(dateStyle), new Integer(timeStyle));\n    [javac]                                                       ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 74 warnings\n     [copy] Copying 14 files to /tmp/d4j_eval/Lang_65b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_65b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Lang_65b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_65b/.test_suite/org/apache/commons/lang/time/DateUtils_ESTest.java:31: error: package sun.util.calendar is not visible\n    [javac] import sun.util.calendar.ZoneInfo;\n    [javac]                ^\n    [javac]   (package sun.util.calendar is declared in module java.base, which does not export it)\n    [javac] Note: /tmp/d4j_eval/Lang_65b/.test_suite/org/apache/commons/lang/time/DateUtils_ESTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

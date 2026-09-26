@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseWithParsePosition"
-  ]
+  ],
+  "suite_sha256": "5c8ddde95971dc722e9d804607d212f86245713f8ff81fefbca4758bac57cd90",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_36b/StdDateFormatGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-36-gemini-1790374307"
 }

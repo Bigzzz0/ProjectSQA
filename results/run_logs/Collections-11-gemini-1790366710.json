@@ -1,0 +1,22 @@
+{
+  "project": "Collections",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-11-gemini-1790366710",
+  "suite_sha256": "f549a0855f4411b4c8f69599ffc9fec48f966a978e8d42f961fe240c64f06361",
+  "test_files": "MultiKeyGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.keyvalue.MultiKey",
+  "timestamp": "2026-09-26 03:05:27",
+  "evaluation_duration_sec": 16.742,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.keyvalue.MultiKeyGeminiTest::testSerializationRoundTripPreservesKeys",
+    "org.apache.commons.collections.keyvalue.MultiKeyGeminiTest::testEqualsAfterSerialization"
+  ],
+  "fixed_failures": []
+}

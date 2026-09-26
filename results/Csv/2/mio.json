@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "CSVRecord_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVRecord",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVRecord_ESTest::test07"
+  ],
+  "suite_sha256": "775a05e4cf8837c9903ed2ee0c6b21b120fe9e3edbc255d0c9cb5982f5fa667b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_2b/CSVRecord_ESTest.java"
+  ],
+  "run_id": "Csv-2-mio-1790370184"
+}

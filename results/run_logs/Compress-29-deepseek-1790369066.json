@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 29,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-29-deepseek-1790369066",
+  "suite_sha256": "b5f2ac82e7afc3cd5258647aa6ea3f82f61cfb08c6bf6951866353f92d8713d5",
+  "test_files": "ArchiveStreamFactoryDeepseekTest.java;CpioArchiveInputStreamDeepseekTest.java;CpioArchiveOutputStreamDeepseekTest.java;DumpArchiveInputStreamDeepseekTest.java;TarArchiveInputStreamDeepseekTest.java;TarArchiveOutputStreamDeepseekTest.java;ZipArchiveInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ArchiveStreamFactory;org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream;org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream;org.apache.commons.compress.archivers.dump.DumpArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:44:32",
+  "evaluation_duration_sec": 5.678,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "arked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Compress_29b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_29b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_29b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_29b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 7 source files to /tmp/d4j_eval/Compress_29b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_29b/.test_suite/org/apache/commons/compress/archivers/dump/DumpArchiveInputStreamDeepseekTest.java:115: error: exception InvalidFormatException is never thrown in body of corresponding try statement\n    [javac]         } catch (InvalidFormatException e) {\n    [javac]           ^\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

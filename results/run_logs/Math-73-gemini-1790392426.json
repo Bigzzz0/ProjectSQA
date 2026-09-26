@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 73,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-73-gemini-1790392426",
+  "suite_sha256": "68de6adb5c4d722392ed3726b14f2bbeb2c68a63be7f6f1c69f67fe5a16f6aed",
+  "test_files": "BrentSolverGeminiTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BrentSolver",
+  "timestamp": "2026-09-26 10:13:53",
+  "evaluation_duration_sec": 7.226,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "- Commons MATH 2.1-SNAPSHOT --------\n    [mkdir] Created dir: /tmp/d4j_eval/Math_73b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_73b/target/classes\n    [mkdir] Created dir: /tmp/d4j_eval/Math_73b/target/test-classes\n\ncompile:\n    [javac] /tmp/d4j_eval/Math_73b/build.xml:154: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 399 source files to /tmp/d4j_eval/Math_73b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_73b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_73b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_73b/.test_suite/org/apache/commons/math/analysis/solvers/BrentSolverGeminiTest.java:9: error: unclosed comment\n    [javac] /* [Branch & Defect Analysis Matrix]\n    [javac] ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

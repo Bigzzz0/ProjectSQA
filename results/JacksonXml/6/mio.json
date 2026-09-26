@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.05,
+  "branch_cov": 68.02,
+  "test_file": "ToXmlGenerator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bfab28a79f0e9c8f75f8c623625f5a690c95fe046ee2176db87c1922e83f7edd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonXml_6b/ToXmlGenerator_ESTest.java"
+  ],
+  "run_id": "JacksonXml-6-mio-1790378777"
+}

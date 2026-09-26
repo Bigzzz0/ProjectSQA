@@ -1,0 +1,21 @@
+{
+  "project": "Chart",
+  "bug_id": 24,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-24-mio-1790352430",
+  "suite_sha256": "ec98b0f97d6ec4247a57d809af0c90b44d4079f265562ab503e0fbcbe2db1cfb",
+  "test_files": "GrayPaintScale_ESTest.java",
+  "target_classes": "org.jfree.chart.renderer.GrayPaintScale",
+  "timestamp": "2026-09-25 23:07:35",
+  "evaluation_duration_sec": 24.806,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jfree.chart.renderer.GrayPaintScale_ESTest::test8"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 33,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-33-mio-1790369277",
+  "suite_sha256": "a2e6b46d3f84f01770936c32bb04d647e2d7c68be1f6bae04ada1c36aad496cc",
+  "test_files": "CompressorStreamFactory_ESTest.java;DeflateCompressorInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.CompressorStreamFactory;org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStream",
+  "timestamp": "2026-09-26 03:48:19",
+  "evaluation_duration_sec": 21.522,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 80.21,
+  "branch_coverage_percent": 73.44,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test02",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test03",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test10"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test02",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test03",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test10"
+  ]
+}

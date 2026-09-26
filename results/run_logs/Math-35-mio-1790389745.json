@@ -1,0 +1,27 @@
+{
+  "project": "Math",
+  "bug_id": 35,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-35-mio-1790389745",
+  "suite_sha256": "732b99902914ac00fcf0e79eac1cb1824cb08a6bd177f22703dfc3b02f22b296",
+  "test_files": "ElitisticListPopulation_ESTest.java",
+  "target_classes": "org.apache.commons.math3.genetics.ElitisticListPopulation",
+  "timestamp": "2026-09-26 09:29:32",
+  "evaluation_duration_sec": 26.51,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test2",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test3",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test4",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test0",
+    "org.apache.commons.math3.genetics.ElitisticListPopulation_ESTest::test1"
+  ]
+}

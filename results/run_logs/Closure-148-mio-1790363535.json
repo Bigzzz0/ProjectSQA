@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 148,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-148-mio-1790363535",
+  "suite_sha256": "abdc73dcea19770fdb96ffbf2a3d3b93530f2c5dfdf79a2bb962d6078b017bf2",
+  "test_files": "PeepholeFoldConstants_ESTest.java;SourceMap_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants;com.google.javascript.jscomp.SourceMap",
+  "timestamp": "2026-09-26 02:12:15",
+  "evaluation_duration_sec": 26.495,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 32.2,
+  "branch_coverage_percent": 23.91,
+  "failures_count": 0,
+  "error_detail": "ing 1 file to /tmp/d4j_eval/Closure_148f/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_148f/build/classes/com/google/javascript/jscomp/parsing\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_148f/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_148f/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_148f/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_148f/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_148f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/Closure_148f/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_148f/.test_suite/com/google/javascript/jscomp/SourceMap_ESTest.java:43: error: cannot find symbol\n    [javac]       sourceMap_Mapping0.appendTo(stringWriter0);\n    [javac]                         ^\n    [javac]   symbol:   method appendTo(StringWriter)\n    [javac]   location: variable sourceMap_Mapping0 of type Mapping\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

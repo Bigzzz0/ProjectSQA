@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 93,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-93-mio-1790377469",
+  "suite_sha256": "d598c0443919df82f9a13897e7151e846964a0df201b60af95ff5f328f6892e2",
+  "test_files": "SubTypeValidator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidator",
+  "timestamp": "2026-09-26 06:04:57",
+  "evaluation_duration_sec": 28.262,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 66.67,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

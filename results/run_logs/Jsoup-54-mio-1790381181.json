@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 54,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-54-mio-1790381181",
+  "suite_sha256": "06df29c044325017e176bd704f3d3c41227f8e43d2d5ba064277433796456284",
+  "test_files": "W3CDom_ESTest.java",
+  "target_classes": "org.jsoup.helper.W3CDom",
+  "timestamp": "2026-09-26 07:06:26",
+  "evaluation_duration_sec": 4.6,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "se\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_54b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_54b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_54b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_54b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_54b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_54b/target/classes/org/jsoup/safety/package-info.class\n     [copy] Copying 2 files to /tmp/d4j_eval/Jsoup_54b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_54b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Jsoup_54b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_54b/.test_suite/org/jsoup/helper/W3CDom_ESTest.java:11: error: package com.sun.org.apache.xerces.internal.dom is not visible\n    [javac] import com.sun.org.apache.xerces.internal.dom.DocumentImpl;\n    [javac]                                          ^\n    [javac]   (package com.sun.org.apache.xerces.internal.dom is declared in module java.xml, which does not export it)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

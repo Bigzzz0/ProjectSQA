@@ -1,0 +1,28 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 36,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-36-deepseek-1790374281",
+  "suite_sha256": "1f93a0629cf933ffe1876c6273272766bc569b076204c97f04e2d3f7dcbcdde2",
+  "test_files": "StdDateFormatDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "timestamp": "2026-09-26 05:11:46",
+  "evaluation_duration_sec": 25.378,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.16,
+  "branch_coverage_percent": 72.31,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseWithPositionISO8601Failure",
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseEmptyString",
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseAsISO8601WithLenientFalseFailure",
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseISO8601TimeLenCases"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseWithPositionISO8601Failure",
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseEmptyString",
+    "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseISO8601TimeLenCases"
+  ]
+}

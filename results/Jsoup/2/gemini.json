@@ -18,5 +18,10 @@
     "org.jsoup.parser.ParserGeminiTest::testHandlesTextAfterTextareaDataTag",
     "org.jsoup.parser.ParserGeminiTest::testAttributeParsingVariations",
     "org.jsoup.parser.ParserGeminiTest::testSelfClosingAndEmptyTags"
-  ]
+  ],
+  "suite_sha256": "12b6f251c9d006634d012d8b3a3699522c21bcb4ec79eac0c24a3d47d81b3e2b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_2b/ParserGeminiTest.java"
+  ],
+  "run_id": "Jsoup-2-gemini-1790378924"
 }

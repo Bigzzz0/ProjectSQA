@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-1-mio-1790372349",
+  "suite_sha256": "72d0d7ee0a51ddca4b2e23a5295b56e7988fe40e47e9638b33da8a6c417b3b36",
+  "test_files": "BeanPropertyWriter_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+  "timestamp": "2026-09-26 04:39:37",
+  "evaluation_duration_sec": 28.137,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 66.67,
+  "branch_coverage_percent": 46.15,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

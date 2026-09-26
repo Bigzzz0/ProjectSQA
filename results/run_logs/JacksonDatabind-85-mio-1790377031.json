@@ -1,0 +1,23 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 85,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-85-mio-1790377031",
+  "suite_sha256": "42d3ff82703264c5e25015f277a3a71a9cf496bc40a11c9a9037276adfdde596",
+  "test_files": "DateTimeSerializerBase_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+  "timestamp": "2026-09-26 05:57:41",
+  "evaluation_duration_sec": 29.605,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 48.84,
+  "branch_coverage_percent": 44.74,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase_ESTest::test01"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase_ESTest::test01"
+  ]
+}

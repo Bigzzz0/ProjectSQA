@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.32,
+  "branch_cov": 82.94,
+  "test_file": "DateTimeZone_ESTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.joda.time.DateTimeZone_ESTest::test53",
+    "org.joda.time.DateTimeZone_ESTest::test09",
+    "org.joda.time.DateTimeZone_ESTest::test07",
+    "org.joda.time.DateTimeZone_ESTest::test24"
+  ],
+  "suite_sha256": "30e47bfd1f62849cd7e407b7a2ae44e527dce2b9c2558bbb75fb6142c2cb3403",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_9b/DateTimeZone_ESTest.java"
+  ],
+  "run_id": "Time-9-mio-1790398813"
+}

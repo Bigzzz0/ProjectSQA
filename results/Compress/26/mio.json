@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.67,
+  "branch_cov": 100.0,
+  "test_file": "IOUtils_ESTest.java",
+  "target_classes": "org.apache.commons.compress.utils.IOUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "dc923216ac40ecaaea852698f2793ab1a9d36e19a02c54cdcff15f3e42442538",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_26b/IOUtils_ESTest.java"
+  ],
+  "run_id": "Compress-26-mio-1790368846"
+}

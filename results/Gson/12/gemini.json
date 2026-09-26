@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting"
-  ]
+  ],
+  "suite_sha256": "085fca49d19ee96b61f0d751848818b4066368bec2c9969bdd163efc641dc973",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_12b/JsonTreeReaderGeminiTest.java"
+  ],
+  "run_id": "Gson-12-gemini-1790371150"
 }

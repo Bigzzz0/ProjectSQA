@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.07,
+  "branch_cov": 76.31,
+  "test_file": "JSTypeRegistry_ESTest.java;ObjectType_ESTest.java;RecordTypeBuilder_ESTest.java;RecordType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.JSTypeRegistry;com.google.javascript.rhino.jstype.ObjectType;com.google.javascript.rhino.jstype.RecordType;com.google.javascript.rhino.jstype.RecordTypeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.RecordType_ESTest::test04"
+  ],
+  "suite_sha256": "b84bec1d15d4570b1f3a75c8d4dc9e17285b96c1e67a0aadc47fd5e9bd81129d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_165b/JSTypeRegistry_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_165b/ObjectType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_165b/RecordTypeBuilder_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_165b/RecordType_ESTest.java"
+  ],
+  "run_id": "Closure-165-mio-1790364589"
+}

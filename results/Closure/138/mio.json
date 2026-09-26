@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 23.47,
+  "branch_cov": 10.99,
+  "test_file": "ClosureReverseAbstractInterpreter_ESTest.java;TypeInference_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ClosureReverseAbstractInterpreter;com.google.javascript.jscomp.TypeInference",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypeInference_ESTest::test04"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypeInference_ESTest::test04"
+  ],
+  "suite_sha256": "f094ec01cdc73cb84ee5ccbe5e6ffab27eeaae5282e29654ebde94138f9a5b7a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_138b/ClosureReverseAbstractInterpreter_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_138b/TypeInference_ESTest.java"
+  ],
+  "run_id": "Closure-138-mio-1790363032"
+}

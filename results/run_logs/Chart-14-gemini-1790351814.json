@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-14-gemini-1790351814",
+  "suite_sha256": "92273f9ad5008e8ee6a2acc71e824b02b7186918c60c1f0b566b4c91d9f60bcc",
+  "test_files": "CategoryPlotGeminiTest.java;XYPlotGeminiTest.java",
+  "target_classes": "org.jfree.chart.plot.CategoryPlot;org.jfree.chart.plot.XYPlot",
+  "timestamp": "2026-09-25 22:57:01",
+  "evaluation_duration_sec": 7.372,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "tion with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_14b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_14b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_14b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_14b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_14b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_14b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_14b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Chart_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_14b/.test_suite/org/jfree/chart/plot/XYPlotGeminiTest.java:400: error: reached end of file while parsing\n    [javac]     public\n    [javac]           ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

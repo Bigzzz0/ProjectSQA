@@ -11,5 +11,10 @@
     "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingAboveUpperBoundDefect",
     "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingExtremes"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "1bf050f3adf8cb835a33cb860a1b5e8e3c051962f55737b85f419ea49df6e66c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_24b/GrayPaintScaleGeminiTest.java"
+  ],
+  "run_id": "Chart-24-gemini-1790352478"
 }

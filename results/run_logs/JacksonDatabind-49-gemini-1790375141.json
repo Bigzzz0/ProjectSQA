@@ -1,0 +1,22 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 49,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-49-gemini-1790375141",
+  "suite_sha256": "f4e0240728c4301071e46c93acdc8bef0efef0803ff4080c2ee353f573e0d657",
+  "test_files": "WritableObjectIdGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.impl.WritableObjectId",
+  "timestamp": "2026-09-26 05:26:07",
+  "evaluation_duration_sec": 25.317,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.ser.impl.WritableObjectIdGeminiTest::testDefectIssue1255ExistingIdNotOverwrittenOnSubsequentGenerateId",
+    "com.fasterxml.jackson.databind.ser.impl.WritableObjectIdGeminiTest::testDefectIssue1255PreSetIdPreservedByGenerateId"
+  ],
+  "fixed_failures": []
+}

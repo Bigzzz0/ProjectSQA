@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 19,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-19-deepseek-1790353186",
+  "suite_sha256": "2a396ddc799da0437658c5f1e1bc289425d454ab531886e0bbfdc2a9610ecc33",
+  "test_files": "PosixParserDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli.PosixParser",
+  "timestamp": "2026-09-25 23:20:00",
+  "evaluation_duration_sec": 13.748,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.PosixParserDeepseekTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.PosixParserDeepseekTest"
+  ]
+}

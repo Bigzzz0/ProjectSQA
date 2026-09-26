@@ -19,5 +19,10 @@
     "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testNullPattern",
     "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testRegistryWithNullFactory",
     "org.apache.commons.lang.text.ExtendedMessageFormatDeepseekTest::testPatternWithWhitespaceInFormatElement"
-  ]
+  ],
+  "suite_sha256": "78250080500925a2ae37ed7190ecb5a79fdc973edfc630cd6fe78bde1b349687",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_43b/ExtendedMessageFormatDeepseekTest.java"
+  ],
+  "run_id": "Lang-43-deepseek-1790386176"
 }

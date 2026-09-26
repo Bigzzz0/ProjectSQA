@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 38,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-38-mio-1790389931",
+  "suite_sha256": "1bdf832e21a9574d97decabd730c3fcb9d460f7b6256e2ff155919ab457c7914",
+  "test_files": "BOBYQAOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.direct.BOBYQAOptimizer",
+  "timestamp": "2026-09-26 09:32:39",
+  "evaluation_duration_sec": 27.331,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 9.08,
+  "branch_coverage_percent": 5.45,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -12,5 +12,11 @@
     "org.apache.commons.csv.CSVPrinterGeminiTest::testMySqlNullOutput",
     "org.apache.commons.csv.CSVPrinterGeminiTest::testMySqlNullStringDefault"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "7889080ee0726a4ae802c862229c85b4ecb26d93b849a09dac2bf5bd564e7603",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_13b/CSVFormatGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_13b/CSVPrinterGeminiTest.java"
+  ],
+  "run_id": "Csv-13-gemini-1790370588"
 }

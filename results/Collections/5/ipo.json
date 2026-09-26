@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 34.15,
+  "branch_cov": 35.0,
+  "test_file": "SetUniqueList_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7b7d28dc0753062cd872e0baf561470c4dec6a573704c188a36d338c37e24370",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Collections_5b/org/apache/commons/collections/list/SetUniqueList_IPOTest.java"
+  ],
+  "run_id": "Collections-5-ipo-1790366359"
+}

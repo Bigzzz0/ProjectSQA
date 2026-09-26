@@ -10,5 +10,10 @@
     "org.apache.commons.lang3.builder.HashCodeBuilderGeminiTest::testReflectionObjectCycle",
     "org.apache.commons.lang3.builder.HashCodeBuilderGeminiTest::testReflectionCycleDirectSelfReference"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "4c67e64037de5e089700a0f2e83dfa81c065c028e4bc1817ff9dbdf442b64ca2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_32b/HashCodeBuilderGeminiTest.java"
+  ],
+  "run_id": "Lang-32-gemini-1790385544"
 }

@@ -19,5 +19,10 @@
     "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testFormatIntegerMax",
     "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testParseDoubleMinus",
     "org.apache.commons.math.fraction.ProperFractionFormatDeepseekTest::testEqualsAndHashCode"
-  ]
+  ],
+  "suite_sha256": "1a95a592ec4e91bba4c2bc47f22209472e032a9c5a001084363e3872f6d39290",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_106b/ProperFractionFormatDeepseekTest.java"
+  ],
+  "run_id": "Math-106-deepseek-1790394703"
 }

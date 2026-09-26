@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 65.71,
+  "branch_cov": 9.38,
+  "test_file": "JsonWriteContext_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.JsonWriteContext",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.json.JsonWriteContext_ESTest::test10"
+  ],
+  "suite_sha256": "2a04488d5fe04dc85a3912117537dc042beed0d24d664b0b8ed285f002ffc92d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_7b/JsonWriteContext_ESTest.java"
+  ],
+  "run_id": "JacksonCore-7-mio-1790371646"
+}

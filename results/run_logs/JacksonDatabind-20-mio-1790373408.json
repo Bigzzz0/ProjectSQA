@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 20,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-20-mio-1790373408",
+  "suite_sha256": "cb16addcf2b5a8fa4d2e62f6e4c8ac3f0ff0fac679fe51464d4cec4afce23eca",
+  "test_files": "ObjectNode_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.node.ObjectNode",
+  "timestamp": "2026-09-26 04:57:19",
+  "evaluation_duration_sec": 30.669,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 94.62,
+  "branch_coverage_percent": 92.86,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

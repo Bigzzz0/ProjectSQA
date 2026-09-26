@@ -1,0 +1,26 @@
+{
+  "project": "Collections",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-16-gemini-1790366975",
+  "suite_sha256": "68888b577daf30389c0fd07ea1b293ee946f0ae266976da6a0f226f11473f39b",
+  "test_files": "SetUniqueListGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:09:52",
+  "evaluation_duration_sec": 17.005,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testCollections307",
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testCollections307SecondaryIndex"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testCollections307",
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testCollections307SecondaryIndex",
+    "org.apache.commons.collections.list.SetUniqueListGeminiTest::testSubListOperations"
+  ]
+}

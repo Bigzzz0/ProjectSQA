@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumber"
-  ]
+  ],
+  "suite_sha256": "134947feb65a846668634e2a89b2cae5b32cf7a3b5d3ab4ab6603eae465264cf",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_3b/NumberUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-3-gemini-1790383690"
 }

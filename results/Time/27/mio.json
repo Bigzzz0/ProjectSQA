@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 88.21,
+  "branch_cov": 80.27,
+  "test_file": "PeriodFormatterBuilder_ESTest.java",
+  "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+  "buggy_failures": [
+    "org.joda.time.format.PeriodFormatterBuilder_ESTest::test047"
+  ],
+  "fixed_failures": [
+    "org.joda.time.format.PeriodFormatterBuilder_ESTest::test047"
+  ],
+  "suite_sha256": "75abd66e549b5a4f1ca4c96f3c7202424c9a5ba1f8dfba97449baeb0fcb8e590",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_27b/PeriodFormatterBuilder_ESTest.java"
+  ],
+  "run_id": "Time-27-mio-1790399966"
+}

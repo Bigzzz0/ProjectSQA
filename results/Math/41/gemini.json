@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math.stat.descriptive.moment.VarianceGeminiTest::testEvaluateWeightedSingleAndEmpty"
-  ]
+  ],
+  "suite_sha256": "17e2943278fd835dcb3dba8485a95fafc3eaa416aa1e9f8af6e1d719287572ca",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_41b/VarianceGeminiTest.java"
+  ],
+  "run_id": "Math-41-gemini-1790390177"
 }

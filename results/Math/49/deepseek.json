@@ -17,5 +17,10 @@
     "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testGetDistanceDimensionMismatch",
     "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testConcurrentModificationSparseIteratorFailFast",
     "org.apache.commons.math.linear.OpenMapRealVectorDeepseekTest::testDefaultConstructor"
-  ]
+  ],
+  "suite_sha256": "6122215b497da664967cf26a11e5c97b140d815828a44226e425ffdd099d2d6c",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_49b/OpenMapRealVectorDeepseekTest.java"
+  ],
+  "run_id": "Math-49-deepseek-1790390736"
 }

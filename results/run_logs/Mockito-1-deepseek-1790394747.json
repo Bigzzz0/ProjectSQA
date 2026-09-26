@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 1,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-1-deepseek-1790394747",
+  "suite_sha256": "b99873e0aa83c99693d318786fd7eade160994db6530c4efe0fe549c686e69b7",
+  "test_files": "InvocationMatcherDeepseekTest.java",
+  "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+  "timestamp": "2026-09-26 10:52:54",
+  "evaluation_duration_sec": 27.084,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_1b/compileLib\n     [exec] WARNING: An illegal reflective access operation has occurred\n     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/tmp/d4j_eval/Mockito_1b/.gradle_local_home/wrapper/dists/gradle-4.9-bin/71gnev7nbut889mbjt1mdfmf1v/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()\n     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod\n     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\n     [exec] WARNING: All illegal access operations will be denied in a future release\n     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_1b/build/classes/java/main\n     [echo] build.home: /tmp/d4j_eval/Mockito_1b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_1b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_1b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_1b/.test_suite/org/mockito/internal/invocation/InvocationMatcherDeepseekTest.java:14: error: package org.mockitousage does not exist\n    [javac] import org.mockitousage.IMethods;\n    [javac]                        ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 22 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

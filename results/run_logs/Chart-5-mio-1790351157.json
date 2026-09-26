@@ -1,0 +1,24 @@
+{
+  "project": "Chart",
+  "bug_id": 5,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-5-mio-1790351157",
+  "suite_sha256": "ef48e6311839e58baf01540d4269891ba83d48801748dce1b46794a09b620317",
+  "test_files": "XYSeries_ESTest.java",
+  "target_classes": "org.jfree.data.xy.XYSeries",
+  "timestamp": "2026-09-25 22:46:24",
+  "evaluation_duration_sec": 27.005,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.09,
+  "branch_coverage_percent": 98.75,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.xy.XYSeries_ESTest::test22"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.xy.XYSeries_ESTest::test16",
+    "org.jfree.data.xy.XYSeries_ESTest::test22"
+  ]
+}

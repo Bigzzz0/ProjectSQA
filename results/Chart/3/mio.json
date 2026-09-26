@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.58,
+  "branch_cov": 94.09,
+  "test_file": "TimeSeries_ESTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b2db0ce6bb0958435c25035c9be62791cb8b1469819184f3c279ede2980f6f15",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_3b/TimeSeries_ESTest.java"
+  ],
+  "run_id": "Chart-3-mio-1790350705"
+}

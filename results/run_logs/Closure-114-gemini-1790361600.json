@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 114,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-114-gemini-1790361600",
+  "suite_sha256": "dbc4569b2b506bafba2fd53d0420813a1927bf1b9dde07c5b762c12f310bdeac",
+  "test_files": "NameAnalyzerGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.NameAnalyzer",
+  "timestamp": "2026-09-26 01:40:11",
+  "evaluation_duration_sec": 10.218,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "sses/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_114b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_114b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_114b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_114b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_114b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_114b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_114b/.test_suite/com/google/javascript/jscomp/NameAnalyzerGeminiTest.java:170: error: method testSame in class NameAnalyzerGeminiTest cannot be applied to given types;\n    [javac]     testSame(\"function Super() {} function Sub() {} goog.inherits(Sub, Super); window.x = new Sub();\",\n    [javac]     ^\n    [javac]   required: String\n    [javac]   found: String,ClosureCodingConvention\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

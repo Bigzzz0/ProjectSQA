@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.89,
+  "branch_cov": 90.77,
+  "test_file": "StdDateFormat_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9b659d1916a47755472586f98af15a5c4c78b2e37104bc4017f2e335fac51577",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_36b/StdDateFormat_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-36-mio-1790374253"
+}

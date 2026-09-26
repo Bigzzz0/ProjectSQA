@@ -1,10 +1,16 @@
 {
   "status": "DONE",
-  "fault_detected": "\u274c NO (All passed on buggy)",
-  "line_cov": 22.67,
-  "branch_cov": 14.2,
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.4,
+  "branch_cov": 94.08,
   "test_file": "NumberUtils_ESTest.java",
   "target_classes": "org.apache.commons.lang3.math.NumberUtils",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "0d9e88b5f803dd7f41212bd8e230d2d08643984221de8311e1dc9e9807653a2e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_1b/NumberUtils_ESTest.java"
+  ],
+  "run_id": "Lang-1-mio-1790383573"
 }

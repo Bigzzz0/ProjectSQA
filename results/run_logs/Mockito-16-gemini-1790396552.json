@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-16-gemini-1790396552",
+  "suite_sha256": "e1073e17ab26e27680f02d9ae409ce3eb6e7d5894219b8d859436f7d0b595571",
+  "test_files": "MockitoCoreGeminiTest.java;MockitoGeminiTest.java",
+  "target_classes": "org.mockito.internal.MockitoCore;org.mockito.Mockito",
+  "timestamp": "2026-09-26 11:22:32",
+  "evaluation_duration_sec": 26.528,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 99.04,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "essible();\n    [javac]                              ^\n    [javac] 20 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_16f/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_16f/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_16f/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_16f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Mockito_16f/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_16f/.test_suite/org/mockito/internal/MockitoCoreGeminiTest.java:102: error: method mock in class MockitoCore cannot be applied to given types;\n    [javac]         TestSubject mock = core.mock(TestSubject.class, settings);\n    [javac]                                ^\n    [javac]   required: Class<T>,MockSettings,boolean\n    [javac]   found: Class<TestSubject>,MockSettingsImpl\n    [javac]   reason: cannot infer type-variable(s) T\n    [javac]     (actual and formal argument lists differ in length)\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in method <T>mock(Class<T>,MockSettings,boolean)\n    [javac] Note: /tmp/d4j_eval/Mockito_16f/.test_suite/org/mockito/MockitoGeminiTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.jfree.chart.axis.AxisGeminiTest::testDrawLabelWithEntitiesCollected"
-  ]
+  ],
+  "suite_sha256": "8b45f292e647a5595754c3022ea7f2d16ad5a73fa2d588921550fee3e288305a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_26b/AxisGeminiTest.java"
+  ],
+  "run_id": "Chart-26-gemini-1790352543"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 19,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JxPath-19-deepseek-1790383467",
+  "suite_sha256": "84c43334e1c70f1624e443cc09b777a2a671b5440dca941e0fd7ccb952d3154c",
+  "test_files": "DOMNodePointerDeepseekTest.java;JDOMNodePointerDeepseekTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "timestamp": "2026-09-26 07:44:30",
+  "evaluation_duration_sec": 3.027,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "val] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_NODE);\n    [javac]                                              ^\n    [javac] /tmp/d4j_eval/JxPath_19b/.test_suite/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerDeepseekTest.java:432: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_TEXT);\n    [javac]                                              ^\n    [javac] /tmp/d4j_eval/JxPath_19b/.test_suite/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerDeepseekTest.java:439: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_TEXT);\n    [javac]                                              ^\n    [javac] /tmp/d4j_eval/JxPath_19b/.test_suite/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerDeepseekTest.java:446: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_COMMENT);\n    [javac]                                              ^\n    [javac] /tmp/d4j_eval/JxPath_19b/.test_suite/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerDeepseekTest.java:453: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_PI);\n    [javac]                                              ^\n    [javac] 1 error\n    [javac] 9 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

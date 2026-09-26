@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeGeminiTest::testEqualsContract"
-  ]
+  ],
+  "suite_sha256": "ee135f5281ddad3d789536a1e7838ecfd234ce98f0ac582a28ebc932d59271a0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_86b/ResolvedRecursiveTypeGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-86-gemini-1790377132"
 }

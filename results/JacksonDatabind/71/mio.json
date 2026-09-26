@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 71.81,
+  "branch_cov": 71.58,
+  "test_file": "StdKeyDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.StdKeyDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e9cc62083d2775ad80af8de44b8ba506e6d27cab8622b1030aa3d81d6f09fe6d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_71b/StdKeyDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-71-mio-1790376304"
+}

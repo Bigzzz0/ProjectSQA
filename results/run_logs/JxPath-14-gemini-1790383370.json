@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 14,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-14-gemini-1790383370",
+  "suite_sha256": "67a99fca25fb92c7fd62b066d029a9d1ce8d5c0683cca3469f2aca55f69b3c6f",
+  "test_files": "CoreFunctionGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreFunction",
+  "timestamp": "2026-09-26 07:42:53",
+  "evaluation_duration_sec": 2.971,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 4 files to /tmp/d4j_eval/JxPath_14b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_14b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_14b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JxPath_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_14b/.test_suite/org/apache/commons/jxpath/ri/compiler/CoreFunctionGeminiTest.java:195: error: no suitable constructor found for Constant(Boolean)\n    [javac]         CoreFunction notFn = new CoreFunction(Compiler.FUNCTION_NOT, new Expression[]{new Constant(Boolean.TRUE)});\n    [javac]                                                                                       ^\n    [javac]     constructor Constant.Constant(Number) is not applicable\n    [javac]       (argument mismatch; Boolean cannot be converted to Number)\n    [javac]     constructor Constant.Constant(String) is not applicable\n    [javac]       (argument mismatch; Boolean cannot be converted to String)\n    [javac] Note: /tmp/d4j_eval/JxPath_14b/.test_suite/org/apache/commons/jxpath/ri/compiler/CoreFunctionGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

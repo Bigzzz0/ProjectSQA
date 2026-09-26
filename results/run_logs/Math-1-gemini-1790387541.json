@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-1-gemini-1790387541",
+  "suite_sha256": "2f3a4432eb98ccaf5b87a1a62dcf334c730619ad247a2b2056aa3ec38d29a5d3",
+  "test_files": "BigFractionGeminiTest.java;FractionGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.BigFraction;org.apache.commons.math3.fraction.Fraction",
+  "timestamp": "2026-09-26 08:52:30",
+  "evaluation_duration_sec": 8.411,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ting empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optimization/general/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/nonlinear/vector/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/ml/distance/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/univariate/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_1b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Math_1b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_1b/.test_suite/org/apache/commons/math3/fraction/FractionGeminiTest.java:116: error: reached end of file while parsing\n    [javac]         assertEquals(2, Fraction\n    [javac]                                 ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

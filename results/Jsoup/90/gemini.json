@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.helper.HttpConnectionGeminiTest::testConnectMalformedUrlThrows"
-  ]
+  ],
+  "suite_sha256": "002a8adaf52da3f8810db9801d20bb0e1a24ae893f7e997b70f908dceaf151ff",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_90b/HttpConnectionGeminiTest.java"
+  ],
+  "run_id": "Jsoup-90-gemini-1790382874"
 }

@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.lang.time.FastDateFormatGeminiTest::testInvalidPatternCharacterThrowsException",
     "org.apache.commons.lang.time.FastDateFormatGeminiTest::testCalendarWithOverriddenTimeZone"
-  ]
+  ],
+  "suite_sha256": "dd2e2acc925745d2f20acab4f1f101928ca4bf4f8f954460e581d727d1be830a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_56b/FastDateFormatGeminiTest.java"
+  ],
+  "run_id": "Lang-56-gemini-1790386979"
 }

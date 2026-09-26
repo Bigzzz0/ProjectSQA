@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamDeepseekTest::testReadByteArrayWithOffset"
-  ]
+  ],
+  "suite_sha256": "41796b21ffd1ff641292ec0a68811f9fcb363608a97fbcd7707c88ede67161bd",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_44b/ChecksumCalculatingInputStreamDeepseekTest.java"
+  ],
+  "run_id": "Compress-44-deepseek-1790369932"
 }

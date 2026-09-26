@@ -21,5 +21,10 @@
     "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseArchiveEntryBeforeSpecifiedBytesWrittenThrowsException",
     "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeAcrossMultipleWritesThrowsException",
     "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWritesTwoZeroRecords"
-  ]
+  ],
+  "suite_sha256": "87ad5472d00a9efa3b8e01d8e309c1db19c205cb371a36c7552a91356403ae8e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_3b/TarArchiveOutputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-3-gemini-1790367701"
 }

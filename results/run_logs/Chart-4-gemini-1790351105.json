@@ -1,0 +1,28 @@
+{
+  "project": "Chart",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-4-gemini-1790351105",
+  "suite_sha256": "4902ffeb8eb7f066099fec62d540c2f5e1b2b564de8a437efd839e48e20813b1",
+  "test_files": "XYPlotGeminiTest.java",
+  "target_classes": "org.jfree.chart.plot.XYPlot",
+  "timestamp": "2026-09-25 22:45:32",
+  "evaluation_duration_sec": 26.904,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 68.47,
+  "branch_coverage_percent": 53.22,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.chart.plot.XYPlotGeminiTest::testReplaceDatasetWithNullRendererTriggersAutoRange",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testGetDataRangeWithNullRendererDefect",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testCompleteDrawExecutionWithEmptyAndPopulatedData",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testDatasetToAxesMapping"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.plot.XYPlotGeminiTest::testGetDataRangeWithNullRendererDefect",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testCompleteDrawExecutionWithEmptyAndPopulatedData",
+    "org.jfree.chart.plot.XYPlotGeminiTest::testDatasetToAxesMapping"
+  ]
+}

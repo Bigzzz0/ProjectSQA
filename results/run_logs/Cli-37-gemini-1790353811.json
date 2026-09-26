@@ -1,0 +1,26 @@
+{
+  "project": "Cli",
+  "bug_id": 37,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-37-gemini-1790353811",
+  "suite_sha256": "ac33e5b3bec390dc5d49b4c5001fadce3a34e55d64cc53479663927ffb130b59",
+  "test_files": "DefaultParserGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.DefaultParser",
+  "timestamp": "2026-09-25 23:30:26",
+  "evaluation_duration_sec": 14.92,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.33,
+  "branch_coverage_percent": 86.71,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionMatching",
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionWithEqualSign",
+    "org.apache.commons.cli.DefaultParserGeminiTest::testCli265ShortOptionWithoutValue"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionMatching",
+    "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionWithEqualSign"
+  ]
+}

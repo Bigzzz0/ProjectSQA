@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmallWithNonZeroStart",
     "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmall_ShouldThrowIllegalArgument"
-  ]
+  ],
+  "suite_sha256": "c816681b985d68f4fc70bb61615f28a226bf55d0f3d631865eaf9d5b76d288fc",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_12b/RandomStringUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-12-deepseek-1790384304"
 }

@@ -1,0 +1,41 @@
+{
+  "project": "Closure",
+  "bug_id": 105,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-105-gemini-1790360950",
+  "suite_sha256": "c4da1f0bb0fd8e03492be8f003ea94d5a36cce3056ccbb822c6cf730a9fba7f9",
+  "test_files": "FoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.FoldConstants",
+  "timestamp": "2026-09-26 01:29:33",
+  "evaluation_duration_sec": 23.393,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 56.8,
+  "branch_coverage_percent": 52.23,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLoopFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testRegExpConstructor",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringJoinAddDefect",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testUnaryOperators",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testConditionMinimization",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testMinimizeNot",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringIndexOfAndJoin",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLoopFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testRegExpConstructor",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringJoinAddDefect",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testUnaryOperators",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testConditionMinimization",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testMinimizeNot",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testStringIndexOfAndJoin",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testLogicalAndOr",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testHookAndIfFolding",
+    "com.google.javascript.jscomp.FoldConstantsGeminiTest::testComparisonFolding"
+  ]
+}

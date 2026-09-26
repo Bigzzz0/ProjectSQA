@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.17,
+  "branch_cov": 4.49,
+  "test_file": "PeepholeReplaceKnownMethods_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeReplaceKnownMethods",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "155beba9aed8ea68dd49c06b744672d863763a3d7c725d57d95225ba80ca34de",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_50b/PeepholeReplaceKnownMethods_ESTest.java"
+  ],
+  "run_id": "Closure-50-mio-1790357616"
+}

@@ -17,5 +17,10 @@
     "org.apache.commons.lang.ClassUtilsGeminiTest::testGetShortClassName_Class",
     "org.apache.commons.lang.ClassUtilsGeminiTest::testGetPublicMethod_NoPublicImplementationThrowsNoSuchMethod",
     "org.apache.commons.lang.ClassUtilsGeminiTest::testIsAssignable_NullChecks"
-  ]
+  ],
+  "suite_sha256": "da5322e101ca69c6018d29da52c6fa16d2001617df19646f329a747555f5937b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_41b/ClassUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-41-gemini-1790386085"
 }

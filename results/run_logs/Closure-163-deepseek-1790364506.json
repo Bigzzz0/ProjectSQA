@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 163,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-163-deepseek-1790364506",
+  "suite_sha256": "d311518eabb22ca7e804c2a9fdb871e794dd3ad394433cffae8f5369b5cd93d9",
+  "test_files": "AnalyzePrototypePropertiesDeepseekTest.java;CrossModuleMethodMotionDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.AnalyzePrototypeProperties;com.google.javascript.jscomp.CrossModuleMethodMotion",
+  "timestamp": "2026-09-26 02:28:37",
+  "evaluation_duration_sec": 11.018,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_163b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_163b/.test_suite/com/google/javascript/jscomp/AnalyzePrototypePropertiesDeepseekTest.java:42: error: no suitable method found for init(ImmutableList<SourceFile>,ImmutableList<SourceFile>,CompilerOptions)\n    [javac]     compiler.init(ImmutableList.<SourceFile>of(), ImmutableList.<SourceFile>of(), options);\n    [javac]             ^\n    [javac]     method Compiler.init(JSSourceFile[],JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; ImmutableList<SourceFile> cannot be converted to JSSourceFile[])\n    [javac]     method Compiler.init(List<JSSourceFile>,List<JSSourceFile>,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; ImmutableList<SourceFile> cannot be converted to List<JSSourceFile>)\n    [javac]     method Compiler.init(JSSourceFile[],JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; ImmutableList<SourceFile> cannot be converted to JSSourceFile[])\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

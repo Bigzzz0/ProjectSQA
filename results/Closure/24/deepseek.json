@@ -39,5 +39,10 @@
     "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testNonAliasLocal",
     "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testMultipleScopeBlocks",
     "com.google.javascript.jscomp.ScopedAliasesDeepseekTest::testThrowStatement"
-  ]
+  ],
+  "suite_sha256": "90e16997b905850249bae4f9265bb3e545132392cb08ed5e0d09136fb23e0322",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_24b/ScopedAliasesDeepseekTest.java"
+  ],
+  "run_id": "Closure-24-deepseek-1790355745"
 }

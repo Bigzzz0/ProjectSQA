@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testRecordDeepStubMockAnswerMustImplementSerializable",
     "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testNonMockableFinalClassReturnsEmptyValue"
-  ]
+  ],
+  "suite_sha256": "378d0c6b5dea18a88ff8bd2f8a873f77bbb27dbeb9ecd2d41657ff3735ae8f77",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_23b/ReturnsDeepStubsGeminiTest.java"
+  ],
+  "run_id": "Mockito-23-gemini-1790397206"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "Csv",
+  "bug_id": 15,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Csv-15-deepseek-1790370707",
+  "suite_sha256": "b416caf4e2bba9886dd63c28189ff0e875d1f5ed288a33bc4c787d8329d2f068",
+  "test_files": "CSVFormatDeepseekTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "timestamp": "2026-09-26 04:11:50",
+  "evaluation_duration_sec": 3.263,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "mework/projects/defects4j.build.xml -Dd4j.home=/opt/defects4j -Dd4j.dir.projects=/opt/defects4j/framework/projects -Dbasedir=/tmp/d4j_eval/Csv_15b -Dd4j.test.dir=/tmp/d4j_eval/Csv_15b/.test_suite compile.gen.tests 2>&1\nBuildfile: /opt/defects4j/framework/projects/defects4j.build.xml\n\ntest-offline:\n\nget-deps:\n\ncommons-csv-from-maven.compile:\n    [mkdir] Created dir: /tmp/d4j_eval/Csv_15b/target/classes\n    [javac] /tmp/d4j_eval/Csv_15b/maven-build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 11 source files to /tmp/d4j_eval/Csv_15b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7\n    [javac] 1 warning\n    [javac] Creating empty /tmp/d4j_eval/Csv_15b/target/classes/org/apache/commons/csv/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Csv_15b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Csv_15b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Csv_15b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Csv_15b/.classes_testgen\n    [javac] /tmp/d4j_eval/Csv_15b/.test_suite/org/apache/commons/csv/CSVFormatDeepseekTest.java:107: error: ')' expected\n    [javac]     @Test(timeout 4000)\n    [javac]                  ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 0 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

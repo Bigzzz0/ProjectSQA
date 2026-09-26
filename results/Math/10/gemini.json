@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math3.analysis.differentiation.DSCompilerGeminiTest::testAtan2SpecialCasesZeroZero"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "26b88f40a04a5fe8e6a0991de332ee1041b329b1580acc4cdb71f82fb2ac0831",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_10b/DSCompilerGeminiTest.java"
+  ],
+  "run_id": "Math-10-gemini-1790388133"
 }

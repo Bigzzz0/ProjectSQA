@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-8-deepseek-1790384037",
+  "suite_sha256": "29a13749f18b5fa49e80223df6849f6a0ee02f9a37f9ffabec4455f5dc6e669a",
+  "test_files": "FastDatePrinterDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDatePrinter",
+  "timestamp": "2026-09-26 07:54:03",
+  "evaluation_duration_sec": 6.282,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "lect/FieldUtils.java:305: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_8b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:514: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_8b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java:55: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 7 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Lang_8b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_8b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_8b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_8b/.test_suite/org/apache/commons/lang3/time/FastDatePrinterDeepseekTest.java:912: error: TimeZoneDisplayKey has private access in FastDatePrinter\n    [javac]         FastDatePrinter.TimeZoneDisplayKey key1 = new FastDatePrinter.TimeZoneDisplayKey(tz, false, TimeZone.SHORT, Locale.US);\n    [javac]                        ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

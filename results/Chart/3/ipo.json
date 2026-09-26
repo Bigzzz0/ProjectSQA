@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 4.47,
+  "branch_cov": 1.08,
+  "test_file": "TimeSeries_IPOTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0763820cd6b26811269d4b979d4451dd74675ee395bfa775ebb8fe0912a02e90",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_3b/org/jfree/data/time/TimeSeries_IPOTest.java"
+  ],
+  "run_id": "Chart-3-ipo-1790350799"
+}

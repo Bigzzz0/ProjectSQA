@@ -47,5 +47,12 @@
     "org.apache.commons.codec.language.MetaphoneGeminiTest::testPTransformations",
     "org.apache.commons.codec.language.MetaphoneGeminiTest::testGTransformations",
     "org.apache.commons.codec.language.MetaphoneGeminiTest::testInitialPrefixTransformations"
-  ]
+  ],
+  "suite_sha256": "70b5c18be2755ed593ac19ec2928938fbc1904dfdc4a2132376e6439ef77a3e4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_1b/CaverphoneGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_1b/MetaphoneGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_1b/SoundexUtilsGeminiTest.java"
+  ],
+  "run_id": "Codec-1-gemini-1790365415"
 }

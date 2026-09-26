@@ -22,5 +22,10 @@
     "org.apache.commons.codec.language.SoundexGeminiTest::testHWRuleSameCodeGroupSeparatedByHW",
     "org.apache.commons.codec.language.SoundexGeminiTest::testShortStringsPadding",
     "org.apache.commons.codec.language.SoundexGeminiTest::testDifferenceCalculation"
-  ]
+  ],
+  "suite_sha256": "26ae234a544be686de2fbbaf726365c189c63849870e7dc590a2a1453842af58",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_15b/SoundexGeminiTest.java"
+  ],
+  "run_id": "Codec-15-gemini-1790365966"
 }

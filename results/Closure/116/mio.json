@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.07,
+  "branch_cov": 13.76,
+  "test_file": "FunctionInjector_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionInjector",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f2f9bf789b4ad36e0f7bb17d0a87a568011a192d488e38e6781a0f3020f0350e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_116b/FunctionInjector_ESTest.java"
+  ],
+  "run_id": "Closure-116-mio-1790361670"
+}

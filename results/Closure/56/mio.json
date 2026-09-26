@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 92.96,
+  "branch_cov": 81.25,
+  "test_file": "SourceFile_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.SourceFile",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.SourceFile_ESTest::test03",
+    "com.google.javascript.jscomp.SourceFile_ESTest::test24"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.SourceFile_ESTest::test03",
+    "com.google.javascript.jscomp.SourceFile_ESTest::test24"
+  ],
+  "suite_sha256": "979ceb8206dbf82f5072d3cef338ebf4d25b5f10396d97604268a2e0ed999931",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_56b/SourceFile_ESTest.java"
+  ],
+  "run_id": "Closure-56-mio-1790358066"
+}

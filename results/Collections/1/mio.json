@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 84.93,
+  "branch_cov": 77.66,
+  "test_file": "Flat3Map_ESTest.java",
+  "target_classes": "org.apache.commons.collections.map.Flat3Map",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "dde992719a512dc917638be1fde4872b00dcd43f48a06c22e5327d738bafe901",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_1b/Flat3Map_ESTest.java"
+  ],
+  "run_id": "Collections-1-mio-1790366109"
+}

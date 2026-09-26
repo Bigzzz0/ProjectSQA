@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.14,
+  "branch_cov": 97.42,
+  "test_file": "MathUtils_ESTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "21cedabc69e7dd08f32a4d68c2b3aa28e164b898a88f0567105158cfe80f12fa",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_99b/MathUtils_ESTest.java"
+  ],
+  "run_id": "Math-99-mio-1790394224"
+}

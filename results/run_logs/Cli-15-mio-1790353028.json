@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 15,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Cli-15-mio-1790353028",
+  "suite_sha256": "d9c67f5b663be6c8fea533ed8a4b2309a15f0d16aad99c65d0d76340a10aa751",
+  "test_files": "WriteableCommandLineImpl_ESTest.java",
+  "target_classes": "org.apache.commons.cli2.commandline.WriteableCommandLineImpl",
+  "timestamp": "2026-09-25 23:17:21",
+  "evaluation_duration_sec": 13.059,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.commandline.WriteableCommandLineImpl_ESTest"
+  ]
+}

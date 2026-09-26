@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 94,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-94-deepseek-1790393910",
+  "suite_sha256": "2502820ff6589916eddae23aedf8b86835c1e1c9bd4b55f8a7ce90a7874bf821",
+  "test_files": "MathUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:38:37",
+  "evaluation_duration_sec": 6.947,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ation] ROUND_HALF_UP in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_HALF_UP : {\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_94b/src/java/org/apache/commons/math/util/MathUtils.java:907: warning: [deprecation] ROUND_UNNECESSARY in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UNNECESSARY :\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_94b/src/java/org/apache/commons/math/util/MathUtils.java:912: warning: [deprecation] ROUND_UP in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UP :\n    [javac]                        ^\n    [javac] Note: /tmp/d4j_eval/Math_94b/src/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 21 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Math_94b/target/classes/META-INF\n     [copy] Copying 1 file to /tmp/d4j_eval/Math_94b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes/../classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Math_94b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_94b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_94b/.test_suite/org/apache/commons/math/util/MathUtilsDeepseekTest.java:4118: error: not a statement\n    [javac]         assertEquals\n    [javac]         ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

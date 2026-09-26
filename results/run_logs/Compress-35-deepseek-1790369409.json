@@ -1,0 +1,41 @@
+{
+  "project": "Compress",
+  "bug_id": 35,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-35-deepseek-1790369409",
+  "suite_sha256": "f3c64fa85da61336e99a4ffe4a5cd47e85c0fb8d4771f69ba81c466474d7a923",
+  "test_files": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:50:28",
+  "evaluation_duration_sec": 19.137,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 85.63,
+  "branch_coverage_percent": 83.93,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryLongPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNormal",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryBigIntegerPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryLongNegative",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryBigIntegerNegative",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatLongOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumLeadingNulInChecksumField",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryBigIntegerOverflow"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryLongPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNormal",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryBigIntegerPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryLongNegative",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryBigIntegerNegative",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatLongOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumLeadingNulInChecksumField",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryBigIntegerOverflow"
+  ]
+}

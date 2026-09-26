@@ -1,0 +1,21 @@
+{
+  "project": "Closure",
+  "bug_id": 28,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-28-mio-1790356030",
+  "suite_sha256": "3e0093f181720ce3dc28eebba321fc2b879288bf233d8bbf092962ef36a88821",
+  "test_files": "InlineCostEstimator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineCostEstimator",
+  "timestamp": "2026-09-26 00:07:48",
+  "evaluation_duration_sec": 38.091,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.31,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.InlineCostEstimator_ESTest::test2"
+  ]
+}

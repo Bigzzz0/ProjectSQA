@@ -26,5 +26,10 @@
     "org.mockito.MatchersGeminiTest::testAnyObjectAndAnyMatchesNullPerContract",
     "org.mockito.MatchersGeminiTest::testIsAMatcherTypeChecking",
     "org.mockito.MatchersGeminiTest::testSameIdentityBoundaries"
-  ]
+  ],
+  "suite_sha256": "293cadff5364f48a57244202c9e7b5f9b31920cae61d3fc2467bbff360e01c43",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_6b/MatchersGeminiTest.java"
+  ],
+  "run_id": "Mockito-6-gemini-1790395361"
 }

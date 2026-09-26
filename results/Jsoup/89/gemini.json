@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.jsoup.nodes.AttributeGeminiTest::testBooleanAttributeNoCollapseInXml",
     "org.jsoup.nodes.AttributeGeminiTest::testNullAttributeValueHandling"
-  ]
+  ],
+  "suite_sha256": "d2f5ba774457df9ac89c34375acecc276c59db001485b33b9352da8215618202",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_89b/AttributeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-89-gemini-1790382834"
 }

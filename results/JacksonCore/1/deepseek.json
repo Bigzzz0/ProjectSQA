@@ -26,5 +26,11 @@
     "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_SignOnly",
     "com.fasterxml.jackson.core.io.NumberInputDeepseekTest::testParseIntString_NonDigitCharacters",
     "com.fasterxml.jackson.core.util.TextBufferDeepseekTest::testFinishCurrentSegment"
-  ]
+  ],
+  "suite_sha256": "2ad0a8c1b6f42ffb5ef1af202f405aa1bd75b6fc20c872c595a9c22788ffdc90",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonCore_1b/NumberInputDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonCore_1b/TextBufferDeepseekTest.java"
+  ],
+  "run_id": "JacksonCore-1-deepseek-1790371404"
 }

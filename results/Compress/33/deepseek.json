@@ -34,5 +34,11 @@
     "org.apache.commons.compress.compressors.CompressorStreamFactoryDeepseekTest::testNamedOutputStreamXz",
     "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testAvailable",
     "org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStreamDeepseekTest::testSkipNegative"
-  ]
+  ],
+  "suite_sha256": "93d511fa10217b0619e2b3d01570d8fe711b45951132656061475597e217f3ca",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_33b/CompressorStreamFactoryDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_33b/DeflateCompressorInputStreamDeepseekTest.java"
+  ],
+  "run_id": "Compress-33-deepseek-1790369299"
 }

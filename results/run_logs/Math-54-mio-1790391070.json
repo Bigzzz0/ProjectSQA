@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 54,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-54-mio-1790391070",
+  "suite_sha256": "a0c8e59b36e43b3dd8809d3dafa55d77c5954ed95d0cd33142e56d6edce28260",
+  "test_files": "Dfp_ESTest.java",
+  "target_classes": "org.apache.commons.math.dfp.Dfp",
+  "timestamp": "2026-09-26 09:51:37",
+  "evaluation_duration_sec": 26.409,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 26.61,
+  "branch_coverage_percent": 21.33,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

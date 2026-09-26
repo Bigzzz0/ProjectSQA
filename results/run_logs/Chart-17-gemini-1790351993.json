@@ -1,0 +1,26 @@
+{
+  "project": "Chart",
+  "bug_id": 17,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-17-gemini-1790351993",
+  "suite_sha256": "660d45c633676787ef892d3d58254c2ee615ee38a18f1caacd7ac509343fc506",
+  "test_files": "TimeSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "timestamp": "2026-09-25 23:00:17",
+  "evaluation_duration_sec": 24.352,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.75,
+  "branch_coverage_percent": 88.28,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testBug1832432_cloneEmptySeries",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeletionMethods",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testRemoveAgedItemsByTimestamp"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeriesGeminiTest::testDeletionMethods",
+    "org.jfree.data.time.TimeSeriesGeminiTest::testRemoveAgedItemsByTimestamp"
+  ]
+}

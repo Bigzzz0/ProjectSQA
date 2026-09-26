@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 6,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-6-deepseek-1790398637",
+  "suite_sha256": "541b18933707393437b3ccc2bfa513ebe7b667eb96e8299625e0397e43821da0",
+  "test_files": "GJChronologyDeepseekTest.java",
+  "target_classes": "org.joda.time.chrono.GJChronology",
+  "timestamp": "2026-09-26 11:57:24",
+  "evaluation_duration_sec": 7.489,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "et/classes/org/joda/time/tz/ZoneInfoCompiler$Zone.class]\n    [javac] [wrote /tmp/d4j_eval/Time_6b/target/classes/org/joda/time/tz/ZoneInfoCompiler.class]\n    [javac] [checking org.joda.time.tz.ZoneInfoProvider]\n    [javac] [wrote /tmp/d4j_eval/Time_6b/target/classes/org/joda/time/tz/ZoneInfoProvider.class]\n    [javac] [total 1600ms]\n    [javac] Note: /tmp/d4j_eval/Time_6b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Time_6b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Time_6b/target/classes/META-INF\n     [copy] Copying 9 files to /tmp/d4j_eval/Time_6b/target/classes\n\njoda-time.compile:\n\ncompile:\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_6b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_6b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_6b/.test_suite/org/joda/time/chrono/GJChronologyDeepseekTest.java:4999: error: reached end of file while parsing\n    [javac]         GJChronology chrono = GJChronology.getInstance(DateTimeZone.forID(\"America/Chicago\"));\n    [javac]                                                                                               ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

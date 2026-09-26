@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 10,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-10-mio-1790366605",
+  "suite_sha256": "22bf9143fc56f191bf1ec6c4c42c803e1be60c8cc4baaf38137ab6b259ad1653",
+  "test_files": "MultiValueMap_ESTest.java",
+  "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+  "timestamp": "2026-09-26 03:03:44",
+  "evaluation_duration_sec": 18.732,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 88.24,
+  "branch_coverage_percent": 85.42,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-1-mio-1790366109",
+  "suite_sha256": "dde992719a512dc917638be1fde4872b00dcd43f48a06c22e5327d738bafe901",
+  "test_files": "Flat3Map_ESTest.java",
+  "target_classes": "org.apache.commons.collections.map.Flat3Map",
+  "timestamp": "2026-09-26 02:55:30",
+  "evaluation_duration_sec": 20.332,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 84.93,
+  "branch_coverage_percent": 77.66,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -9,5 +9,10 @@
   "buggy_failures": [],
   "fixed_failures": [
     "com.google.gson.internal.UnsafeAllocatorGeminiTest::testInstantiateStandardClassBypassesConstructor"
-  ]
+  ],
+  "suite_sha256": "72b4f88c2f6d31c952bb774f488f74bbb2a00663d4244afbdc57a5f1c06c1bb2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_8b/UnsafeAllocatorGeminiTest.java"
+  ],
+  "run_id": "Gson-8-gemini-1790371028"
 }

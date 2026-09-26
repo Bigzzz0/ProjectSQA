@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 29,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-29-gemini-1790369072",
+  "suite_sha256": "9003d9ca02bf89edb0463fbbdc2fb211e587b355f598a1750f6a1e225e968f82",
+  "test_files": "ArchiveStreamFactoryGeminiTest.java;CpioArchiveInputStreamGeminiTest.java;CpioArchiveOutputStreamGeminiTest.java;DumpArchiveInputStreamGeminiTest.java;TarArchiveInputStreamGeminiTest.java;TarArchiveOutputStreamGeminiTest.java;ZipArchiveInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ArchiveStreamFactory;org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream;org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream;org.apache.commons.compress.archivers.dump.DumpArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveInputStream;org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:44:37",
+  "evaluation_duration_sec": 5.53,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                       ^\n    [javac] /tmp/d4j_eval/Compress_29b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_29b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_29b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_29b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 7 source files to /tmp/d4j_eval/Compress_29b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_29b/.test_suite/org/apache/commons/compress/archivers/ArchiveStreamFactoryGeminiTest.java:155: error: cannot find symbol\n    [javac]         assertEquals(\"UTF-8\", ((ZipArchiveInputStream) inZip).getEncoding());\n    [javac]                                                              ^\n    [javac]   symbol:   method getEncoding()\n    [javac]   location: class ZipArchiveInputStream\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

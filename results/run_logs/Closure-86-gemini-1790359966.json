@@ -1,0 +1,24 @@
+{
+  "project": "Closure",
+  "bug_id": 86,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-86-gemini-1790359966",
+  "suite_sha256": "811775545be878222d2db8d23b2c923b3f9cb775bd242166b18d7c3144b49fce",
+  "test_files": "NodeUtilGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "timestamp": "2026-09-26 01:13:14",
+  "evaluation_duration_sec": 27.746,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 59.52,
+  "branch_coverage_percent": 42.94,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testEvaluatesToLocalValue_newOperatorDefect",
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
+  ]
+}

@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.text.translate.LookupTranslatorGeminiTest::testNullOutputMapping"
-  ]
+  ],
+  "suite_sha256": "569a2616826e1a60cac9dac634ccae275a56c9dc748fce5478ad15e70f26aece",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_4b/LookupTranslatorGeminiTest.java"
+  ],
+  "run_id": "Lang-4-gemini-1790383753"
 }

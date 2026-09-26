@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 53,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-53-mio-1790386743",
+  "suite_sha256": "c73e91467c84b74151e619ca0e0739333c267a867bb033411e073126ecf243b0",
+  "test_files": "DateUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.DateUtils",
+  "timestamp": "2026-09-26 08:39:24",
+  "evaluation_duration_sec": 21.443,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 95.85,
+  "branch_coverage_percent": 92.57,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

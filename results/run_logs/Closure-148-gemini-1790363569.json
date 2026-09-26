@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 148,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-148-gemini-1790363569",
+  "suite_sha256": "5858ecf907961d933d1684f892430d8d76aafaf97f6786fd9411516cd55dd31d",
+  "test_files": "PeepholeFoldConstantsGeminiTest.java;SourceMapGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants;com.google.javascript.jscomp.SourceMap",
+  "timestamp": "2026-09-26 02:12:57",
+  "evaluation_duration_sec": 7.245,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "no\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_148b/build/classes/rhino_ast/java/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_148b/build/classes/com/google/javascript/jscomp/parsing\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_148b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_148b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_148b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_148b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_148b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_148b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_148b/.test_suite/com/google/javascript/jscomp/SourceMapGeminiTest.java:22: error: unclosed string literal\n    [javac]  *    - output structure matching LavaBug format: \"/** Begin line maps. **/\", file count,\n    [javac]                                                                            ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

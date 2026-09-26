@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.mockito.internal.creation.DelegatingMethodDeepseekTest::testIsAbstract_abstractMethod"
-  ]
+  ],
+  "suite_sha256": "397465c6ac96b1502db0ff6740c498fc32fb945dc4be3c24ec776292d9c1a339",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Mockito_11b/DelegatingMethodDeepseekTest.java"
+  ],
+  "run_id": "Mockito-11-deepseek-1790396009"
 }

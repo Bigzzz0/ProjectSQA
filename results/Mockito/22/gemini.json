@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.mockito.internal.matchers.EqualityGeminiTest::shouldKnowIfObjectsAreEqual"
-  ]
+  ],
+  "suite_sha256": "a5106060bb219be6485344161f83a67f6e332bb3203b73f280dbd63619e072eb",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_22b/EqualityGeminiTest.java"
+  ],
+  "run_id": "Mockito-22-gemini-1790397089"
 }

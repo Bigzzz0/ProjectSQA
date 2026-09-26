@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.77,
+  "branch_cov": 91.67,
+  "test_file": "JsonGeneratorImpl_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.JsonGeneratorImpl",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "06708e2d85b6e3aa928ef330a8e95e2d6f9006f0e6c10e55f7e0b782a5bfddf8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_13b/JsonGeneratorImpl_ESTest.java"
+  ],
+  "run_id": "JacksonCore-13-mio-1790371881"
+}

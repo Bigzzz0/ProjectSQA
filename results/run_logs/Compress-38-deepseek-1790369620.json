@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 38,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-38-deepseek-1790369620",
+  "suite_sha256": "e94809da34d16e5d3a526e0cd55bb2bb7bc0ce7d561d19034d69252afe399ace",
+  "test_files": "TarArchiveEntryDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveEntry",
+  "timestamp": "2026-09-26 03:53:45",
+  "evaluation_duration_sec": 5.65,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "00.Unpacker u = Pack200.newUnpacker();\n    [javac]                              ^\n    [javac] /tmp/d4j_eval/Compress_38b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:147: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 final Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                            ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_38b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_38b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_38b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_38b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_38b/.test_suite/org/apache/commons/compress/archivers/tar/TarArchiveEntryDeepseekTest.java:101: error: linkFlag has private access in TarArchiveEntry\n    [javac]         assertEquals('2', e.linkFlag); // accessing package-private field via reflection? we can use isSymbolicLink\n    [javac]                            ^\n    [javac] Note: /tmp/d4j_eval/Compress_38b/.test_suite/org/apache/commons/compress/archivers/tar/TarArchiveEntryDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

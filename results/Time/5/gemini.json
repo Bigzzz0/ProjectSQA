@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.joda.time.PeriodGeminiTest::testWithers"
-  ]
+  ],
+  "suite_sha256": "f50afc0cd82633c87f32dd3a6184f2b5a105494fd98742c4a43b22dac5769703",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_5b/PeriodGeminiTest.java"
+  ],
+  "run_id": "Time-5-gemini-1790398555"
 }

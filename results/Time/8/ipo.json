@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 2,
+  "line_cov": 22.25,
+  "branch_cov": 19.66,
+  "test_file": "DateTimeZone_IPOTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "buggy_failures": [
+    "org.joda.time.DateTimeZone_IPOTest::test_forOffsetHoursMinutes_pairwise_003",
+    "org.joda.time.DateTimeZone_IPOTest::test_forOffsetHoursMinutes_pairwise_013"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "1e6b1b28b808e0dd5367be893d7608868c5adb91be874d0d5724e76d4a305af4",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_8b/org/joda/time/DateTimeZone_IPOTest.java"
+  ],
+  "run_id": "Time-8-ipo-1790398697"
+}

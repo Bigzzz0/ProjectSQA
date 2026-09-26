@@ -1,0 +1,27 @@
+{
+  "project": "Math",
+  "bug_id": 61,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-61-gemini-1790391681",
+  "suite_sha256": "40552d72a9d11030f5061d1feaf8bdda6d60fcecbb285cf13dfebea1765f731f",
+  "test_files": "PoissonDistributionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.distribution.PoissonDistributionImpl",
+  "timestamp": "2026-09-26 10:01:43",
+  "evaluation_duration_sec": 22.648,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testMeanZeroTargetingDefect",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testMean",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
+    "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
+  ]
+}

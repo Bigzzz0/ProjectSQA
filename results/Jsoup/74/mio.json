@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.98,
+  "branch_cov": 94.59,
+  "test_file": "StringUtil_ESTest.java",
+  "target_classes": "org.jsoup.helper.StringUtil",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b6f6b9cf024fa2fea7b7b01e9ff787c8b985d84f9f0cecaef554c644ff160e6f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_74b/StringUtil_ESTest.java"
+  ],
+  "run_id": "Jsoup-74-mio-1790382102"
+}

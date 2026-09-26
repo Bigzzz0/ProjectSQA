@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "GroupImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.cli2.option.GroupImpl",
+  "buggy_failures": [
+    "org.apache.commons.cli2.option.GroupImpl_IPOTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli2.option.GroupImpl_IPOTest"
+  ],
+  "suite_sha256": "bc01bba6c31eca01e461f457d2470ebf17e06b173fa5daf4e631780437c19648",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Cli_14b/org/apache/commons/cli2/option/GroupImpl_IPOTest.java"
+  ],
+  "run_id": "Cli-14-ipo-1790352989"
+}

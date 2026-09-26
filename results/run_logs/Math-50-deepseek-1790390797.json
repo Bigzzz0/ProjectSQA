@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 50,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-50-deepseek-1790390797",
+  "suite_sha256": "8e06ebf6fc2dc17c9d1f3ffe4f6809ebda1620e176384b7e82da631da49a27b8",
+  "test_files": "BaseSecantSolverDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BaseSecantSolver",
+  "timestamp": "2026-09-26 09:46:45",
+  "evaluation_duration_sec": 7.761,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "    [mkdir] Created dir: /tmp/d4j_eval/Math_50b/target/classes/META-INF\n     [copy] Copying 1 file to /tmp/d4j_eval/Math_50b/target/classes/META-INF\n\ncompile:\n    [javac] Compiling 567 source files to /tmp/d4j_eval/Math_50b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_50b/src/main/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_50b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_50b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_50b/.test_suite/org/apache/commons/math/analysis/solvers/BaseSecantSolverDeepseekTest.java:7147: error: reached end of file while parsing\n    [javac]                     break\n    [javac]                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

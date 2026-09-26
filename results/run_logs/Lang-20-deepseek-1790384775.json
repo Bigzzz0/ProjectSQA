@@ -1,0 +1,25 @@
+{
+  "project": "Lang",
+  "bug_id": 20,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-20-deepseek-1790384775",
+  "suite_sha256": "ffc628e30256024333d57f159554d55730d2345418fa49e8744b49e9cde174d8",
+  "test_files": "StringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.StringUtils",
+  "timestamp": "2026-09-26 08:06:36",
+  "evaluation_duration_sec": 21.174,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 49.92,
+  "branch_coverage_percent": 47.08,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testJoinArrayWithNulls",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testDifference"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testJoinArrayWithNulls",
+    "org.apache.commons.lang3.StringUtilsDeepseekTest::testDifference"
+  ]
+}

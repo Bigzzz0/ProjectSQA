@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 15,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-15-deepseek-1790379342",
+  "suite_sha256": "857313bd0f035da81fa3d65e085b5f5e924bfdd97d8e049507b9e4fa0b85a31f",
+  "test_files": "TreeBuilderStateDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.TreeBuilderState",
+  "timestamp": "2026-09-26 06:35:46",
+  "evaluation_duration_sec": 3.647,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_15b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_15b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_15b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_15b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_15b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_15b/target/classes/org/jsoup/safety/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_15b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_15b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_15b/.test_suite/org/jsoup/parser/TreeBuilderStateDeepseekTest.java:227: error: cannot find symbol\n    [javac]         Element script = doc.selectFirst(\"script\");\n    [javac]                             ^\n    [javac]   symbol:   method selectFirst(String)\n    [javac]   location: variable doc of type Document\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

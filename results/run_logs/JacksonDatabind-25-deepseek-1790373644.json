@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 25,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-25-deepseek-1790373644",
+  "suite_sha256": "b6592ef20d8da1c653733710c696bafe1845ac79607d22a7a9faea0c2fa1a7c5",
+  "test_files": "BasicDeserializerFactoryDeepseekTest.java;DeserializerCacheDeepseekTest.java;SimpleAbstractTypeResolverDeepseekTest.java;TypeDeserializerBaseDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory;com.fasterxml.jackson.databind.deser.DeserializerCache;com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase;com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver",
+  "timestamp": "2026-09-26 05:00:52",
+  "evaluation_duration_sec": 8.064,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ckson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_25b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_25b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_25b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/JacksonDatabind_25b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_25b/.test_suite/com/fasterxml/jackson/databind/deser/DeserializerCacheDeepseekTest.java:327: error: cannot inherit from final DeserializerCache\n    [javac]     private static class ExposedCache extends DeserializerCache {\n    [javac]                                               ^\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_25b/.test_suite/com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBaseDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_25b/.test_suite/com/fasterxml/jackson/databind/deser/BasicDeserializerFactoryDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

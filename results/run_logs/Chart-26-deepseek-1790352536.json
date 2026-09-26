@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 26,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Chart-26-deepseek-1790352536",
+  "suite_sha256": "dcb71130f1b2e599c2a49007e401c20120460a25a7a57466599b86f3655a4b2a",
+  "test_files": "AxisDeepseekTest.java",
+  "target_classes": "org.jfree.chart.axis.Axis",
+  "timestamp": "2026-09-25 23:09:03",
+  "evaluation_duration_sec": 7.672,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_26b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_26b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_26b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_26b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_26b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_26b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_26b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_26b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Chart_26b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_26b/.test_suite/org/jfree/chart/axis/AxisDeepseekTest.java:277: error: <anonymous org.jfree.chart.axis.AxisDeepseekTest$1> is not abstract and does not override abstract method draw(Graphics2D,Rectangle2D,Point2D,PlotState,PlotRenderingInfo) in Plot\n    [javac]         Plot dummyPlot = new Plot() {\n    [javac]                                     ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

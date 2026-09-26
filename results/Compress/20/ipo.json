@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 18.22,
+  "branch_cov": 14.04,
+  "test_file": "CpioArchiveInputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e3a380a692915eb9567c5e1135c76fd55401430ae201f8a88cdc4db56d3c0d39",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_20b/org/apache/commons/compress/archivers/cpio/CpioArchiveInputStream_IPOTest.java"
+  ],
+  "run_id": "Compress-20-ipo-1790368465"
+}

@@ -1,0 +1,25 @@
+{
+  "project": "Math",
+  "bug_id": 58,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-58-deepseek-1790391420",
+  "suite_sha256": "0dd63ba43fc44061961ba1fe271e3b475e0b5b1fe77430362196f6dbad4dee6b",
+  "test_files": "GaussianFitterDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.optimization.fitting.GaussianFitter",
+  "timestamp": "2026-09-26 09:57:25",
+  "evaluation_duration_sec": 24.512,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 81.25,
+  "branch_coverage_percent": 56.9,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testFitWithNegativeSigmaGuess",
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testInterpolateXAtYZeroStep"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testFitWithNegativeSigmaGuess",
+    "org.apache.commons.math.optimization.fitting.GaussianFitterDeepseekTest::testInterpolateXAtYZeroStep"
+  ]
+}

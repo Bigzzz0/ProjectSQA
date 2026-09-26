@@ -13,5 +13,10 @@
   "fixed_failures": [
     "com.google.gson.internal.bind.util.ISO8601UtilsGeminiTest::testParseDateWithNegativeTwoDigitTimezoneWithoutMinutes",
     "com.google.gson.internal.bind.util.ISO8601UtilsGeminiTest::testParseDateWithTwoDigitTimezoneWithoutMinutes"
-  ]
+  ],
+  "suite_sha256": "fc19a6679b5aed7eef0c3dde327866907237a1394c14de928ecd8ccc5bda3f2e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_5b/ISO8601UtilsGeminiTest.java"
+  ],
+  "run_id": "Gson-5-gemini-1790370935"
 }

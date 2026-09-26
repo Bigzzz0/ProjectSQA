@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.lang3.text.translate.CharSequenceTranslatorGeminiTest::testEscapeSurrogatePairsDefectWithCustomTranslator"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "d83438624f657327616441fc9c256c66daad8c1b4a50f2c35c2329d40647f1e3",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_6b/CharSequenceTranslatorGeminiTest.java"
+  ],
+  "run_id": "Lang-6-gemini-1790383879"
 }

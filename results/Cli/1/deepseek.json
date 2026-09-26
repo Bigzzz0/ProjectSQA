@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.CommandLineDeepseekTest"
-  ]
+  ],
+  "suite_sha256": "221ce95d6896e788b4e63dba0e9df7879c320a8500a1c755d34050fa09b8c085",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_1b/CommandLineDeepseekTest.java"
+  ],
+  "run_id": "Cli-1-deepseek-1790352599"
 }

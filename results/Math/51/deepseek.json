@@ -19,5 +19,10 @@
     "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMinEqualsMax",
     "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithInvertedInterval",
     "org.apache.commons.math.analysis.solvers.BaseSecantSolverDeepseekTest::testSolveWithMaxEvalZero"
-  ]
+  ],
+  "suite_sha256": "d86f4e376dcae36516e69c094a33b5a3b96097d53f3d6d6e974431f36741921c",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_51b/BaseSecantSolverDeepseekTest.java"
+  ],
+  "run_id": "Math-51-deepseek-1790390859"
 }

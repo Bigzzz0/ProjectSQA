@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 53,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-53-deepseek-1790381159",
+  "suite_sha256": "fbd63d8323c10aea671565db6592a4abd096c1b03a6e7ec63195f47f19a319ba",
+  "test_files": "TokenQueueDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.TokenQueue",
+  "timestamp": "2026-09-26 07:06:04",
+  "evaluation_duration_sec": 4.756,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "c] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] 4 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_53b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_53b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_53b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_53b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_53b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_53b/target/classes/org/jsoup/safety/package-info.class\n     [copy] Copying 2 files to /tmp/d4j_eval/Jsoup_53b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_53b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_53b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_53b/.test_suite/org/jsoup/parser/TokenQueueDeepseekTest.java:3815: error: illegal unicode escape\n    [javac]         TokenQueue tq = new TokenQueue(\"a\\uD83D\\uDC69\\u200D\\u2764\\uFE0F\\u200D\\uD83\n    [javac]                                                                                ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

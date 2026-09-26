@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 30.99,
+  "branch_cov": 32.61,
+  "test_file": "BaseSingleFieldPeriod_IPOTest.java",
+  "target_classes": "org.joda.time.base.BaseSingleFieldPeriod",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "256b53d86b4d0bf24922fa9f8439d53e87b45c8317c38a090c460454b0aebf8a",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_10b/org/joda/time/base/BaseSingleFieldPeriod_IPOTest.java"
+  ],
+  "run_id": "Time-10-ipo-1790398859"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 94.37,
+  "branch_cov": 97.83,
+  "test_file": "BaseSingleFieldPeriod_ESTest.java",
+  "target_classes": "org.joda.time.base.BaseSingleFieldPeriod",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "07de56c37532937d3556d99abbac629df28b85874e299a112b050808b40de56f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_10b/BaseSingleFieldPeriod_ESTest.java"
+  ],
+  "run_id": "Time-10-mio-1790398884"
+}

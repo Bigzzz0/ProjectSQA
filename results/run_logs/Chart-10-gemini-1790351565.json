@@ -1,0 +1,25 @@
+{
+  "project": "Chart",
+  "bug_id": 10,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-10-gemini-1790351565",
+  "suite_sha256": "f1bc14a69c7ab6abb685f6bd7a19141d726b8e7bb6d06559a4ed826582faab3c",
+  "test_files": "StandardToolTipTagFragmentGeneratorGeminiTest.java",
+  "target_classes": "org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator",
+  "timestamp": "2026-09-25 22:53:10",
+  "evaluation_duration_sec": 24.644,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorGeminiTest::testGenerateToolTipFragmentSingleQuoteOnly",
+    "org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorGeminiTest::testGenerateToolTipFragmentWithEmbeddedQuotes",
+    "org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorGeminiTest::testGenerateToolTipFragmentHtmlSpecialCharacters"
+  ],
+  "fixed_failures": [
+    "org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorGeminiTest::testGenerateToolTipFragmentNullInput"
+  ]
+}

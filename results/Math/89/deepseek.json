@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testGetCumFreqWithCustomComparator",
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testCharacterAndIntegerDistinct"
-  ]
+  ],
+  "suite_sha256": "41a275df6bc698e531b7540828462005723c36fe1b05d6716a74e4837d8f0812",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_89b/FrequencyDeepseekTest.java"
+  ],
+  "run_id": "Math-89-deepseek-1790393444"
 }

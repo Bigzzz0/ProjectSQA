@@ -1,0 +1,31 @@
+{
+  "project": "Jsoup",
+  "bug_id": 8,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-8-deepseek-1790379086",
+  "suite_sha256": "10819704fdfc87447d271eeeb017c1be4d6ef3a924641aa0e5de0ca27cf64c28",
+  "test_files": "NodeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Node",
+  "timestamp": "2026-09-26 06:31:41",
+  "evaluation_duration_sec": 15.139,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.65,
+  "branch_coverage_percent": 95.0,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtml",
+    "org.jsoup.nodes.NodeDeepseekTest::testParentlessToStringWithBaseUri",
+    "org.jsoup.nodes.NodeDeepseekTest::testToString",
+    "org.jsoup.nodes.NodeDeepseekTest::testOuterHtmlWithIndent",
+    "org.jsoup.nodes.NodeDeepseekTest::testParentlessToStringMethod",
+    "org.jsoup.nodes.NodeDeepseekTest::testSetParentNodeWithExistingParent",
+    "org.jsoup.nodes.NodeDeepseekTest::testParentlessToString",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveNoParent"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.NodeDeepseekTest::testSetParentNodeWithExistingParent",
+    "org.jsoup.nodes.NodeDeepseekTest::testRemoveNoParent"
+  ]
+}

@@ -10,5 +10,10 @@
     "com.fasterxml.jackson.databind.AnnotationIntrospectorGeminiTest::testRefineSerializationTypeUnrelatedDefect",
     "com.fasterxml.jackson.databind.AnnotationIntrospectorGeminiTest::testRefineSerializationTypeSpecializationDefect"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "5adad29ec05b4a3c09420812fd82b06d1a449fc51acc21aae3fe62630f416505",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_47b/AnnotationIntrospectorGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-47-gemini-1790375025"
 }

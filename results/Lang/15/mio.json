@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 50.5,
+  "branch_cov": 47.54,
+  "test_file": "TypeUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.reflect.TypeUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "95f8cef04f96286871f84d58556c583dd31e07609ebcb1685c0e00931dc03872",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_15b/TypeUtils_ESTest.java"
+  ],
+  "run_id": "Lang-15-mio-1790384497"
+}

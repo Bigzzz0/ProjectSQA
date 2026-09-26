@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 9,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-9-deepseek-1790354633",
+  "suite_sha256": "00ac55e2e4dcf6f2a474254e23836879dc2c23e90966552bfdbdc649fc891e2a",
+  "test_files": "ProcessCommonJSModulesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.ProcessCommonJSModules",
+  "timestamp": "2026-09-25 23:44:03",
+  "evaluation_duration_sec": 10.331,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ptions)\n    [javac]         compiler.compile(\n    [javac]                 ^\n    [javac]     method Compiler.compile(SourceFile,SourceFile,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile[] cannot be converted to SourceFile)\n    [javac]     method Compiler.compile(SourceFile,JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile[] cannot be converted to SourceFile)\n    [javac]     method Compiler.compile(JSSourceFile,JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile[] cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile[],JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile[] cannot be converted to JSSourceFile[])\n    [javac]     method Compiler.<T1,T2>compile(List<T1>,List<T2>,CompilerOptions) is not applicable\n    [javac]       (cannot infer type-variable(s) T1,T2\n    [javac]         (argument mismatch; SourceFile[] cannot be converted to List<T1>))\n    [javac]     method Compiler.compile(JSSourceFile[],JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile[] cannot be converted to JSSourceFile[])\n    [javac]   where T1,T2 are type-variables:\n    [javac]     T1 extends SourceFile declared in method <T1,T2>compile(List<T1>,List<T2>,CompilerOptions)\n    [javac]     T2 extends SourceFile declared in method <T1,T2>compile(List<T1>,List<T2>,CompilerOptions)\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

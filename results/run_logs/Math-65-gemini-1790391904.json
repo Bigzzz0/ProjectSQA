@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 65,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-65-gemini-1790391904",
+  "suite_sha256": "eb8b2cde00df1888b15a04fb96d199739ec8e55012a21939a4588c9b100e6f8e",
+  "test_files": "AbstractLeastSquaresOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer",
+  "timestamp": "2026-09-26 10:05:28",
+  "evaluation_duration_sec": 24.421,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

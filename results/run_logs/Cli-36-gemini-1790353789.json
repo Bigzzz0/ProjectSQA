@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 36,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-36-gemini-1790353789",
+  "suite_sha256": "b71f9493cc23875b89babec235429d652b3cdcc8cc812866249e001928a057e1",
+  "test_files": "OptionGroupGeminiTest.java;OptionsGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.OptionGroup;org.apache.commons.cli.Options",
+  "timestamp": "2026-09-25 23:29:52",
+  "evaluation_duration_sec": 3.064,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "urce value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Cli_36b/src/main/java/org/apache/commons/cli/TypeHandler.java:128: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]             return cl.newInstance();\n    [javac]                      ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Cli_36b/target/classes/org/apache/commons/cli/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_36b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Cli_36b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_36b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Cli_36b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_36b/.test_suite/org/apache/commons/cli/OptionGroupGeminiTest.java:257: error: reached end of file while parsing\n    [javac]         try\n    [javac]            ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 0 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

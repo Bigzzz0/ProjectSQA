@@ -14,5 +14,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testSerializeZeroAndNegativeValues",
     "com.fasterxml.jackson.databind.ser.std.NumberSerializerGeminiTest::testSerializeExtremeValues"
-  ]
+  ],
+  "suite_sha256": "49b13c7509d973b4bfa303f937ee1b40e12502a4bfabad835e977342d5ceebec",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_34b/NumberSerializerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-34-gemini-1790374182"
 }

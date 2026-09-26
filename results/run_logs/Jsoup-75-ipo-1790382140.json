@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 75,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Jsoup-75-ipo-1790382140",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.jsoup.nodes.Attributes",
+  "timestamp": "2026-09-26 07:22:20",
+  "evaluation_duration_sec": 0.008,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

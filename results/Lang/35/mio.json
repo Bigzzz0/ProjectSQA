@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 98.96,
+  "branch_cov": 98.88,
+  "test_file": "ArrayUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ArrayUtils_ESTest::test270",
+    "org.apache.commons.lang3.ArrayUtils_ESTest::test009"
+  ],
+  "suite_sha256": "7d6d91b12ae9828a7099d05441833adb5a168cd7f0be28e87d7a36c4b761d9aa",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_35b/ArrayUtils_ESTest.java"
+  ],
+  "run_id": "Lang-35-mio-1790385669"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 6,
+  "line_cov": 57.75,
+  "branch_cov": 41.11,
+  "test_file": "Compiler_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Compiler",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Compiler_ESTest::test28",
+    "com.google.javascript.jscomp.Compiler_ESTest::test34",
+    "com.google.javascript.jscomp.Compiler_ESTest::test30",
+    "com.google.javascript.jscomp.Compiler_ESTest::test74",
+    "com.google.javascript.jscomp.Compiler_ESTest::test40",
+    "com.google.javascript.jscomp.Compiler_ESTest::test90"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Compiler_ESTest::test28",
+    "com.google.javascript.jscomp.Compiler_ESTest::test34",
+    "com.google.javascript.jscomp.Compiler_ESTest::test30",
+    "com.google.javascript.jscomp.Compiler_ESTest::test74",
+    "com.google.javascript.jscomp.Compiler_ESTest::test40",
+    "com.google.javascript.jscomp.Compiler_ESTest::test90"
+  ],
+  "suite_sha256": "3b1bd16f3d5c462f5a6435540af4f51d6fd47c5291a51fb0d74929c60e3e9ba7",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_18b/Compiler_ESTest.java"
+  ],
+  "run_id": "Closure-18-mio-1790355259"
+}

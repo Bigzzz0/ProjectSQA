@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 8.41,
+  "branch_cov": 3.63,
+  "test_file": "XYPlot_IPOTest.java",
+  "target_classes": "org.jfree.chart.plot.XYPlot",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a8319aa106c1278a7177b74dbb1d3dd027b76c5fb41368d46a0b5b15f03d0d17",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_4b/org/jfree/chart/plot/XYPlot_IPOTest.java"
+  ],
+  "run_id": "Chart-4-ipo-1790351063"
+}

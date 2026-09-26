@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 147,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Closure-147-ipo-1790363489",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis;com.google.javascript.jscomp.RuntimeTypeCheck",
+  "timestamp": "2026-09-26 02:11:29",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

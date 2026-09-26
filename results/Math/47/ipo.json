@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 34.33,
+  "branch_cov": 39.44,
+  "test_file": "Complex_IPOTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.Complex_IPOTest::test_divide_pairwise_037",
+    "org.apache.commons.math.complex.Complex_IPOTest::test_divide_pairwise_038",
+    "org.apache.commons.math.complex.Complex_IPOTest::test_divide_pairwise_040"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "06ebeb9ba332d1bf0822996ae89189843b9c8e975e718f00d5a8a9100a780743",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_47b/org/apache/commons/math/complex/Complex_IPOTest.java"
+  ],
+  "run_id": "Math-47-ipo-1790390531"
+}

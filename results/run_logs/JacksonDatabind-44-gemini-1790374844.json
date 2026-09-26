@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 44,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-44-gemini-1790374844",
+  "suite_sha256": "c0e356ebf157f5d92791775aafb88bc7c012742b8d6d19343518a5ffc149976e",
+  "test_files": "SimpleTypeGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.SimpleType",
+  "timestamp": "2026-09-26 05:21:09",
+  "evaluation_duration_sec": 24.956,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.67,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

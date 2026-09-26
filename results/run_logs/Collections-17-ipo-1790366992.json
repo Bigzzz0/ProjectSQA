@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 17,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Collections-17-ipo-1790366992",
+  "suite_sha256": "a0ab2deb9c5b43c0fa53db5f87c73ccb71dd401e18977df9e01b47655fdd4d6f",
+  "test_files": "EqualPredicate_IPOTest.java",
+  "target_classes": "org.apache.commons.collections.functors.EqualPredicate",
+  "timestamp": "2026-09-26 03:10:11",
+  "evaluation_duration_sec": 18.833,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 50.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

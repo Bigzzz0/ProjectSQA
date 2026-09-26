@@ -1,0 +1,36 @@
+{
+  "project": "Lang",
+  "bug_id": 36,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-36-deepseek-1790385766",
+  "suite_sha256": "f02098e120581f6735c6e2d4465f96a860acafa9e09dbe0ebbf4b4c05e87f264",
+  "test_files": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "timestamp": "2026-09-26 08:23:06",
+  "evaluation_duration_sec": 20.246,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 86.76,
+  "branch_coverage_percent": 76.16,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_BigDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_Long",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumber_TrailingDot",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_AllZeroesMantissaAndExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_ExponentWithLeadingPlusSign",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_InvalidTrailingDot",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_WithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_TooLargeForFloatWithQualifier"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_BigDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_Long",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_AllZeroesMantissaAndExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_ExponentWithLeadingPlusSign",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_InvalidTrailingDot",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_WithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber_TooLargeForFloatWithQualifier"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 43.33,
+  "branch_cov": 28.12,
+  "test_file": "AsPropertyTypeDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "be59e6fc2c86165eb29dfbdba2c18f3d94d0b6dfd8bfa45dcf7d05a3faf2aa7b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_74b/AsPropertyTypeDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-74-mio-1790376463"
+}

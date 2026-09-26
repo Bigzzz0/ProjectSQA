@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 13,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Time-13-gemini-1790399102",
+  "suite_sha256": "740dcffd887fe95a459db3dcd6b8a06306423204869f57c6f28666a0dbdd8380",
+  "test_files": "PeriodFormatterBuilderGeminiTest.java",
+  "target_classes": "org.joda.time.format.PeriodFormatterBuilder",
+  "timestamp": "2026-09-26 12:05:09",
+  "evaluation_duration_sec": 6.718,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "l/Time_13b/build/conf\n\ncompile.main:\n    [javac] Compiling 156 source files to /tmp/d4j_eval/Time_13b/build/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Time_13b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n     [copy] Copying 7 files to /tmp/d4j_eval/Time_13b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_13b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_13b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_13b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_13b/.test_suite/org/joda/time/format/PeriodFormatterBuilderGeminiTest.java:195: error: void cannot be dereferenced\n    [javac]                 .appendHours().appendSuffix(\"h\")\n    [javac]                 ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

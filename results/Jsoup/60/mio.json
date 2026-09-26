@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.05,
+  "branch_cov": 89.92,
+  "test_file": "QueryParser_ESTest.java;TokenQueue_ESTest.java",
+  "target_classes": "org.jsoup.parser.TokenQueue;org.jsoup.select.QueryParser",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.parser.TokenQueue_ESTest::test31",
+    "org.jsoup.parser.TokenQueue_ESTest::test10",
+    "org.jsoup.select.QueryParser_ESTest::test26",
+    "org.jsoup.select.QueryParser_ESTest::test19",
+    "org.jsoup.select.QueryParser_ESTest::test36",
+    "org.jsoup.select.QueryParser_ESTest::test33",
+    "org.jsoup.select.QueryParser_ESTest::test31"
+  ],
+  "suite_sha256": "1c25d8fd4208af71f019c39fa42e30cf96753a79dea616546465a3de3533a74c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_60b/QueryParser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_60b/TokenQueue_ESTest.java"
+  ],
+  "run_id": "Jsoup-60-mio-1790381490"
+}

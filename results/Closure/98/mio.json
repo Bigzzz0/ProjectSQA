@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 76.79,
+  "branch_cov": 51.97,
+  "test_file": "ReferenceCollectingCallback_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ReferenceCollectingCallback",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test00",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test25",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test27"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test00",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test25",
+    "com.google.javascript.jscomp.ReferenceCollectingCallback_ESTest::test27"
+  ],
+  "suite_sha256": "fc5f425989e04e29ab0de12d57135ec7d6e58ca0be0dff653d4fa31d4b5bbe5b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_98b/ReferenceCollectingCallback_ESTest.java"
+  ],
+  "run_id": "Closure-98-mio-1790360533"
+}

@@ -21,5 +21,10 @@
     "org.jsoup.parser.CharacterReaderDeepseekTest::consumeTagName",
     "org.jsoup.parser.CharacterReaderDeepseekTest::consumeToString",
     "org.jsoup.parser.CharacterReaderDeepseekTest::containsIgnoreCase"
-  ]
+  ],
+  "suite_sha256": "2d4414667f054fd12ef59e2310868e8555c8f9d17feb12dc72c09a0d5c5399c4",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_72b/CharacterReaderDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-72-deepseek-1790382028"
 }

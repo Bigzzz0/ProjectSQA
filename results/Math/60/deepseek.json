@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testInverseCumulativeProbabilityNaN",
     "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testMultipleInstances"
-  ]
+  ],
+  "suite_sha256": "09bf074e109b89e96dca0873ab41d4458146e6a7f71e1af307b9d16e5bc99722",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_60b/NormalDistributionImplDeepseekTest.java"
+  ],
+  "run_id": "Math-60-deepseek-1790391579"
 }

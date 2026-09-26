@@ -31,5 +31,10 @@
     "org.jsoup.nodes.ElementDeepseekTest::testAppendChildNull",
     "org.jsoup.nodes.ElementDeepseekTest::testEmptyClassName",
     "org.jsoup.nodes.ElementDeepseekTest::testGetElementsByIndexLessThan"
-  ]
+  ],
+  "suite_sha256": "9030ba167ca535eced200574dbc5d1a8509dc3fcf54d88644d06ffd71c8ed7fc",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_32b/ElementDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-32-deepseek-1790380077"
 }

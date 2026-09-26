@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 21,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Chart-21-deepseek-1790352234",
+  "suite_sha256": "6f4c300bcd1b9ae90f4032560f7bcfc3a5e50a1575db4a978d22218aff772575",
+  "test_files": "DefaultBoxAndWhiskerCategoryDatasetDeepseekTest.java",
+  "target_classes": "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset",
+  "timestamp": "2026-09-25 23:04:02",
+  "evaluation_duration_sec": 7.848,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "tions.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Chart_21b/build/org/jfree/chart\n     [copy] Copying 12 files to /tmp/d4j_eval/Chart_21b/build/org/jfree/chart\n     [copy] Copying 9 files to /tmp/d4j_eval/Chart_21b/build/org/jfree/chart/plot\n     [copy] Copying 10 files to /tmp/d4j_eval/Chart_21b/build/org/jfree/chart/editor\n     [copy] Copying 5 files to /tmp/d4j_eval/Chart_21b/build/org/jfree/chart/ui\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Chart_21b/build\n     [echo] build.home: /tmp/d4j_eval/Chart_21b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_21b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Chart_21b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_21b/.test_suite/org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDatasetDeepseekTest.java:74: error: cannot find symbol\n    [javac]         assertEquals(new Range(0.0, 0.0), d.getRangeBounds(true));\n    [javac]                          ^\n    [javac]   symbol:   class Range\n    [javac]   location: class DefaultBoxAndWhiskerCategoryDatasetDeepseekTest\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

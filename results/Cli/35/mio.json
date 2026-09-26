@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 95.0,
+  "test_file": "Options_ESTest.java",
+  "target_classes": "org.apache.commons.cli.Options",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a23794fedfd3ea493dcdcd590217cec94a0389adb1effb0d9161cb9cecd09b7e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_35b/Options_ESTest.java"
+  ],
+  "run_id": "Cli-35-mio-1790353748"
+}

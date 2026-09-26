@@ -19,5 +19,10 @@
     "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testFormatWithCalendarAndForcedTimeZone",
     "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testGetDateInstanceInvalidStyle",
     "org.apache.commons.lang.time.FastDateFormatDeepseekTest::testEscapedQuoteInLiteral"
-  ]
+  ],
+  "suite_sha256": "8b6f7f445303d8e0041af2e8b6719b58d27fd743861574c2975dc460966e57a5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_50b/FastDateFormatDeepseekTest.java"
+  ],
+  "run_id": "Lang-50-deepseek-1790386581"
 }

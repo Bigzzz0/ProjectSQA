@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 77,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-77-deepseek-1790382234",
+  "suite_sha256": "bfc20969f46edc70760bfed843f26b76a0dba63276e6f1369beb0dd80b92b350",
+  "test_files": "XmlTreeBuilderDeepseekTest.java",
+  "target_classes": "org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:23:58",
+  "evaluation_duration_sec": 3.72,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "gs\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_77b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_77b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_77b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_77b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_77b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_77b/.test_suite/org/jsoup/parser/XmlTreeBuilderDeepseekTest.java:98: error: ')' expected\n    [javac]         assertEquals(\"<root><child></child></root>\", doc.html().replace(\" \", \" \"); // normalize spacing if any\n    [javac]                                                                                  ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

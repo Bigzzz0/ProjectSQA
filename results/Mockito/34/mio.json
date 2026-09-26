@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 39.47,
+  "branch_cov": 3.57,
+  "test_file": "InvocationMatcher_ESTest.java",
+  "target_classes": "org.mockito.internal.invocation.InvocationMatcher",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1ff2a62706991acad3ea9adb8e053865d0d503453f3d878771ba948f8240cf8a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_34b/InvocationMatcher_ESTest.java"
+  ],
+  "run_id": "Mockito-34-mio-1790398013"
+}

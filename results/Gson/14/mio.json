@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "$Gson$Types_ESTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d4c341f4dc9315b25e0696a485e5e2e3fc8c021e47fd34c827e3b03391f179b3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_14b/$Gson$Types_ESTest.java"
+  ],
+  "run_id": "Gson-14-mio-1790371197"
+}

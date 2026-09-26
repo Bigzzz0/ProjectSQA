@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "OptionGroup_ESTest.java",
+  "target_classes": "org.apache.commons.cli.OptionGroup",
+  "buggy_failures": [
+    "org.apache.commons.cli.OptionGroup_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.OptionGroup_ESTest"
+  ],
+  "suite_sha256": "2a4c04f98cfa5b57cb0d9adb7238440441d0d18661f666b176beed665c8e977e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_27b/OptionGroup_ESTest.java"
+  ],
+  "run_id": "Cli-27-mio-1790353462"
+}

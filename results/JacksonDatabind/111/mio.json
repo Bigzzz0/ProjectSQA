@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 51.88,
+  "branch_cov": 27.66,
+  "test_file": "AtomicReferenceDeserializer_ESTest.java;CreatorProperty_ESTest.java;FieldProperty_ESTest.java;MethodProperty_ESTest.java;ObjectIdReferenceProperty_ESTest.java;ObjectIdValueProperty_ESTest.java;SetterlessProperty_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.CreatorProperty;com.fasterxml.jackson.databind.deser.impl.FieldProperty;com.fasterxml.jackson.databind.deser.impl.MethodProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdReferenceProperty;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty;com.fasterxml.jackson.databind.deser.impl.SetterlessProperty;com.fasterxml.jackson.databind.deser.std.AtomicReferenceDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "8b5ea9cc670412dd4008c82f29bee9e741c38a2afade855b7a6745ef57e2fd74",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/AtomicReferenceDeserializer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/CreatorProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/FieldProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/MethodProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/ObjectIdReferenceProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/ObjectIdValueProperty_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_111b/SetterlessProperty_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-111-mio-1790378490"
+}

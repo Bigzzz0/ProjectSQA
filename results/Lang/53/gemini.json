@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang.time.DateUtilsGeminiTest::testRoundAndTruncate_AmPm"
-  ]
+  ],
+  "suite_sha256": "144ba32df28e3a8a084f4884fc05e68ca9e661d22f5322df24d1b60ae094438c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_53b/DateUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-53-gemini-1790386771"
 }

@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 55,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-55-gemini-1790391210",
+  "suite_sha256": "18bb4157f53dedb5452cb6a2798717b4d3fffefd1591c6391522edb339367930",
+  "test_files": "Vector3DGeminiTest.java",
+  "target_classes": "org.apache.commons.math.geometry.Vector3D",
+  "timestamp": "2026-09-26 09:53:55",
+  "evaluation_duration_sec": 24.806,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 95.83,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.geometry.Vector3DGeminiTest::testCrossProductCancellation"
+  ],
+  "fixed_failures": []
+}

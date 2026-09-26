@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 3,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-3-deepseek-1790383684",
+  "suite_sha256": "2ff8a6505bb938520430eba29550aaaef8d891bb836a9fc8a3c657ce5d42d375",
+  "test_files": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "timestamp": "2026-09-26 07:48:10",
+  "evaluation_duration_sec": 6.142,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "avac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Lang_3b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:385: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_3b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:656: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_3b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java:55: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 7 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Lang_3b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_3b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_3b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_3b/.test_suite/org/apache/commons/lang3/math/NumberUtilsDeepseekTest.java:5972: error: reached end of file while parsing\n    [javac]     }\n    [javac]      ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.math.util.FastMathGeminiTest::testLogAndLog10",
     "org.apache.commons.math.util.FastMathGeminiTest::testNextAfterAndNextUp"
-  ]
+  ],
+  "suite_sha256": "6092875559f273b4121c106531b41dcd2cffc956024f707dd537e75545a48928",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_59b/FastMathGeminiTest.java"
+  ],
+  "run_id": "Math-59-gemini-1790391530"
 }

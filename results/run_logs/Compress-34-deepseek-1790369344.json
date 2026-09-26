@@ -1,0 +1,28 @@
+{
+  "project": "Compress",
+  "bug_id": 34,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-34-deepseek-1790369344",
+  "suite_sha256": "83ba33afce3004d1245d7057b9fb72b7a9fdef46f61b48eb7ce899ff865b8d76",
+  "test_files": "X7875_NewUnixDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.X7875_NewUnix",
+  "timestamp": "2026-09-26 03:49:23",
+  "evaluation_duration_sec": 18.533,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.57,
+  "branch_coverage_percent": 85.71,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testDefaultValues",
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testClone",
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testParseFromLocalFileDataNull"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testDefaultValues",
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testClone",
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testGetCentralDirectoryLength",
+    "org.apache.commons.compress.archivers.zip.X7875_NewUnixDeepseekTest::testParseFromLocalFileDataNull"
+  ]
+}

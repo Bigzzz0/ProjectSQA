@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 63.02,
+  "branch_cov": 44.59,
+  "test_file": "MethodCompilerPass_ESTest.java;RenameVars_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.MethodCompilerPass;com.google.javascript.jscomp.RenameVars",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fbdcaab29541eb9e964fa779881b4f592c99a61240cf0b2f8e0d0df59df796f2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_136b/MethodCompilerPass_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_136b/RenameVars_ESTest.java"
+  ],
+  "run_id": "Closure-136-mio-1790362911"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 41.43,
+  "branch_cov": 29.56,
+  "test_file": "FunctionType_ESTest.java;TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator;com.google.javascript.rhino.jstype.FunctionType",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1",
+    "com.google.javascript.rhino.jstype.FunctionType_ESTest::test41",
+    "com.google.javascript.rhino.jstype.FunctionType_ESTest::test43"
+  ],
+  "suite_sha256": "3c2f92b6c70ddbe0ea71553657f871a44a90c256abc99925bf00387b697c7700",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_54b/FunctionType_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_54b/TypedScopeCreator_ESTest.java"
+  ],
+  "run_id": "Closure-54-mio-1790357907"
+}

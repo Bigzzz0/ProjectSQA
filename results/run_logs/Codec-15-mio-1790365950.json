@@ -1,0 +1,21 @@
+{
+  "project": "Codec",
+  "bug_id": 15,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Codec-15-mio-1790365950",
+  "suite_sha256": "f05be713862b2afc4e3b02f7e69aefebacbdb263d09e3b81ebf748b4631a978c",
+  "test_files": "Soundex_ESTest.java",
+  "target_classes": "org.apache.commons.codec.language.Soundex",
+  "timestamp": "2026-09-26 02:52:43",
+  "evaluation_duration_sec": 13.67,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 97.06,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.codec.language.Soundex_ESTest::test4"
+  ]
+}

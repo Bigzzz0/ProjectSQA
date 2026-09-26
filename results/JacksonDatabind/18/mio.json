@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.65,
+  "branch_cov": 88.24,
+  "test_file": "MappingIterator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.MappingIterator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6f4dba6c82907883fa5cb71c3fd73cd75981de5379eb816697e9e5d3ffc25e43",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_18b/MappingIterator_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-18-mio-1790373280"
+}

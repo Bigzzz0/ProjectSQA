@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 82.63,
+  "branch_cov": 74.49,
+  "test_file": "Element_ESTest.java;Parser_ESTest.java;Tag_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Element;org.jsoup.parser.Parser;org.jsoup.parser.Tag",
+  "buggy_failures": [
+    "org.jsoup.nodes.Element_ESTest::test18"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.Element_ESTest::test18",
+    "org.jsoup.parser.Tag_ESTest::test11",
+    "org.jsoup.parser.Tag_ESTest::test10"
+  ],
+  "suite_sha256": "18ebbf8e221cd0e090c8748a70d87f66f99fdc5da30ea473f676c8d138a2463f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_3b/Element_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_3b/Parser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_3b/Tag_ESTest.java"
+  ],
+  "run_id": "Jsoup-3-mio-1790378945"
+}

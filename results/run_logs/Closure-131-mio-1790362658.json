@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 131,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-131-mio-1790362658",
+  "suite_sha256": "a483f8a670eb6bbc6dd176c065fea644931c6e5219b73e4eb6ab3e2c28cb7743",
+  "test_files": "TokenStream_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.TokenStream",
+  "timestamp": "2026-09-26 01:58:13",
+  "evaluation_duration_sec": 35.335,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 86.73,
+  "branch_coverage_percent": 75.76,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

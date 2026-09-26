@@ -1,0 +1,25 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 6,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-6-gemini-1790372695",
+  "suite_sha256": "ee7257725d04ed867bfb4f19483cb716a7e7588f851089ca4545626a3778950c",
+  "test_files": "StdDateFormatGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.util.StdDateFormat",
+  "timestamp": "2026-09-26 04:45:20",
+  "evaluation_duration_sec": 24.79,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.66,
+  "branch_coverage_percent": 85.11,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseEmptyStringThrowsParseException",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDefectISO8601PartialMilliseconds",
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testDefectISO8601MissingSeconds"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.util.StdDateFormatGeminiTest::testParseEmptyStringThrowsParseException"
+  ]
+}

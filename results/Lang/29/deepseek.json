@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.SystemUtilsDeepseekTest::testIsJavaVersionMatchRealVersion",
     "org.apache.commons.lang3.SystemUtilsDeepseekTest::testToJavaVersionIntArrayDefaultLimit"
-  ]
+  ],
+  "suite_sha256": "8f3442afab7c498d9fbf7bf9622ee59cd2cfd62522f25fb331aab8cd5d6f0e4d",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_29b/SystemUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-29-deepseek-1790385358"
 }

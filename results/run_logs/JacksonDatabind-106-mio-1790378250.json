@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 106,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-106-mio-1790378250",
+  "suite_sha256": "5f1b0c15d7d36484297786a9a067cb6ff3e6e6cf59b8d7615a66fc7d188ebcae",
+  "test_files": "TreeTraversingParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.node.TreeTraversingParser",
+  "timestamp": "2026-09-26 06:18:00",
+  "evaluation_duration_sec": 30.103,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 89.26,
+  "branch_coverage_percent": 83.12,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

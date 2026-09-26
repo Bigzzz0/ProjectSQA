@@ -1,0 +1,19 @@
+{
+  "project": "Collections",
+  "bug_id": 14,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-14-mio-1790366824",
+  "suite_sha256": "110dbf7dcbef689c7c16ccbef23802a03c0fb65fcf15cd06754b0cb7ae9373a3",
+  "test_files": "CaseInsensitiveMap_ESTest.java",
+  "target_classes": "org.apache.commons.collections.map.CaseInsensitiveMap",
+  "timestamp": "2026-09-26 03:07:21",
+  "evaluation_duration_sec": 17.225,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 66.67,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

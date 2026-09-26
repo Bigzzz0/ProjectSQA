@@ -18,5 +18,10 @@
     "org.joda.time.DateTimeZoneDeepseekTest::testForTimeZone_invalid",
     "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_londonCutover",
     "org.joda.time.DateTimeZoneDeepseekTest::testGetOffsetFromLocal_dstFallBack"
-  ]
+  ],
+  "suite_sha256": "ffcd3e60982034f1ac90f95248b503cd46473edc1cf255b661631c8b23ca03cc",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Time_19b/DateTimeZoneDeepseekTest.java"
+  ],
+  "run_id": "Time-19-deepseek-1790399477"
 }

@@ -1,0 +1,30 @@
+{
+  "project": "Jsoup",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-16-deepseek-1790379382",
+  "suite_sha256": "78c2eecb16bbbee32d5eed2744da5127c926cf53a7b91fd8ecef63c6a1a747d8",
+  "test_files": "DocumentTypeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType",
+  "timestamp": "2026-09-26 06:36:37",
+  "evaluation_duration_sec": 15.039,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadWithSpecialCharacters",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadPublicBlankSystemBlank",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadSystemOnly_ShouldHaveOpeningQuote",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testConstructorValidationThrowsExceptionOnBlankName",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadBothIds",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testNullArguments"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testOuterHtmlHeadPublicBlankSystemBlank",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testConstructorValidationThrowsExceptionOnBlankName",
+    "org.jsoup.nodes.DocumentTypeDeepseekTest::testNullArguments"
+  ]
+}

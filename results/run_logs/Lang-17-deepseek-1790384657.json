@@ -1,0 +1,23 @@
+{
+  "project": "Lang",
+  "bug_id": 17,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-17-deepseek-1790384657",
+  "suite_sha256": "994020834aabd93e87b21eaca695c2fdfd389c469763ac16a8522e05efb02256",
+  "test_files": "CharSequenceTranslatorDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.CharSequenceTranslator",
+  "timestamp": "2026-09-26 08:04:37",
+  "evaluation_duration_sec": 19.982,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testTranslateWithSupplementaryAndAscii",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testLang720DefectSupplementaryCharacterWithConsumedZero",
+    "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testLang720DefectSupplementaryCharacterWithMixedConsumption"
+  ],
+  "fixed_failures": []
+}

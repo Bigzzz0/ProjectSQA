@@ -16,5 +16,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.text.translate.NumericEntityUnescaperGeminiTest::testTranslateAmpersandWithoutHash"
-  ]
+  ],
+  "suite_sha256": "0cacefe5b42943e5330136ac08ce0419305cd4bbd572e95bf03f861a9e933f32",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_28b/NumericEntityUnescaperGeminiTest.java"
+  ],
+  "run_id": "Lang-28-gemini-1790385316"
 }

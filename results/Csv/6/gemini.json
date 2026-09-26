@@ -10,5 +10,10 @@
     "org.apache.commons.csv.CSVRecordGeminiTest::testPutInWithShortRecord",
     "org.apache.commons.csv.CSVRecordGeminiTest::testToMapWithShortRecord"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "27465dadbec86381f0ea299aa019b258e157b26bab3574af2080a137e8a23f8f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_6b/CSVRecordGeminiTest.java"
+  ],
+  "run_id": "Csv-6-gemini-1790370327"
 }

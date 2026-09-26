@@ -29,5 +29,10 @@
     "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testGetFallbackKeySerializerEnumType",
     "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDefaultSerializeCalendar",
     "com.fasterxml.jackson.databind.ser.std.StdKeySerializersDeepseekTest::testDynamicSerializeFirstCall"
-  ]
+  ],
+  "suite_sha256": "32e50e8514e828e28f387910bd27fecf6ba4fb99b253321dfcca242ae5c53f98",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_55b/StdKeySerializersDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-55-deepseek-1790375473"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.24,
+  "branch_cov": 90.62,
+  "test_file": "Entities_ESTest.java",
+  "target_classes": "org.apache.commons.lang.Entities",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ddca68cf7a73c33ac6182583cd390739f540b4fa68796a3cf1e6bd1600c2164c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_42b/Entities_ESTest.java"
+  ],
+  "run_id": "Lang-42-mio-1790386106"
+}

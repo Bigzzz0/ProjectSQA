@@ -11,5 +11,10 @@
     "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowWriter",
     "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowHexString"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "595969518e34b8155476efbd2899303e43532c7f1d18540f77ad637dffb3d049",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_62b/EntitiesDeepseekTest.java"
+  ],
+  "run_id": "Lang-62-deepseek-1790387272"
 }

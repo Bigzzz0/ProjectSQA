@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 4,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-4-mio-1790387753",
+  "suite_sha256": "11d5175063be749f0e98262b2808f62aa3dae1f01592276e077277b421f73eb6",
+  "test_files": "SubLine_ESTest.java",
+  "target_classes": "org.apache.commons.math3.geometry.euclidean.threed.SubLine;org.apache.commons.math3.geometry.euclidean.twod.SubLine",
+  "timestamp": "2026-09-26 08:56:20",
+  "evaluation_duration_sec": 27.676,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 29.76,
+  "branch_coverage_percent": 25.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

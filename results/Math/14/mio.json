@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 72.55,
+  "branch_cov": 57.14,
+  "test_file": "AbstractLeastSquaresOptimizer_ESTest.java;Weight_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer;org.apache.commons.math3.optim.nonlinear.vector.Weight",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "26f20e374f0480f1d495d5faaf7564a440327cda3f23bdf2fb02da76959c47ae",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_14b/AbstractLeastSquaresOptimizer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Math_14b/Weight_ESTest.java"
+  ],
+  "run_id": "Math-14-mio-1790388294"
+}

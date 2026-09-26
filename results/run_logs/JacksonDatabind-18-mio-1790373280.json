@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 18,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-18-mio-1790373280",
+  "suite_sha256": "6f4dba6c82907883fa5cb71c3fd73cd75981de5379eb816697e9e5d3ffc25e43",
+  "test_files": "MappingIterator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.MappingIterator",
+  "timestamp": "2026-09-26 04:55:11",
+  "evaluation_duration_sec": 30.089,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.65,
+  "branch_coverage_percent": 88.24,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

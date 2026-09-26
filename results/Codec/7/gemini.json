@@ -11,5 +11,10 @@
     "org.apache.commons.codec.binary.Base64GeminiTest::testDefectRfc4648VectorsEncodeString",
     "org.apache.commons.codec.binary.Base64GeminiTest::testDefectRfc4648Section10SingleCharEncode"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "08a83c8220c0eb894853e7322df25056ed5b5356eeefa797591cb1464b938814",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_7b/Base64GeminiTest.java"
+  ],
+  "run_id": "Codec-7-gemini-1790365660"
 }

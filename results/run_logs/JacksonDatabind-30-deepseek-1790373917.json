@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 30,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-30-deepseek-1790373917",
+  "suite_sha256": "a4d0a148408790ab6930f6ac9ed21a17e51914c31bd20a3672854089d92d7090",
+  "test_files": "ObjectMapperDeepseekTest.java;TokenBufferDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectMapper;com.fasterxml.jackson.databind.util.TokenBuffer",
+  "timestamp": "2026-09-26 05:05:25",
+  "evaluation_duration_sec": 8.152,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "30b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_30b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_30b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_30b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_30b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JacksonDatabind_30b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_30b/.test_suite/com/fasterxml/jackson/databind/ObjectMapperDeepseekTest.java:168: error: method getDefaultTyper in class MapperConfig<T> cannot be applied to given types;\n    [javac]         assertNotNull(mapper.getSerializationConfig().getDefaultTyper());\n    [javac]                                                      ^\n    [javac]   required: JavaType\n    [javac]   found: no arguments\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac]   where T is a type-variable:\n    [javac]     T extends MapperConfig<T> declared in class MapperConfig\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

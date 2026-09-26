@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 33.11,
+  "branch_cov": 22.14,
+  "test_file": "ParserBase_ESTest.java;ParserMinimalBase_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.base.ParserBase;com.fasterxml.jackson.core.base.ParserMinimalBase",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "8421d811bdf3922950b1e71d6652e7e38a3583de45f1e87a5727b3fb668e1a33",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_24b/ParserBase_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_24b/ParserMinimalBase_ESTest.java"
+  ],
+  "run_id": "JacksonCore-24-mio-1790372246"
+}

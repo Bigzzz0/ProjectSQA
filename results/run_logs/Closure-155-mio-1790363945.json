@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 155,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-155-mio-1790363945",
+  "suite_sha256": "fd708da63109b64c04116309e8d8f61a38937e73664a588817d87a0e6aa7c0dd",
+  "test_files": "InlineVariables_ESTest.java;ReferenceCollectingCallback_ESTest.java;Scope_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineVariables;com.google.javascript.jscomp.ReferenceCollectingCallback;com.google.javascript.jscomp.Scope",
+  "timestamp": "2026-09-26 02:19:44",
+  "evaluation_duration_sec": 39.26,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 48.68,
+  "branch_coverage_percent": 31.03,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 72.65,
+  "branch_cov": 55.17,
+  "test_file": "ReflectiveTypeAdapterFactory_ESTest.java",
+  "target_classes": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "292c4f358c57f256127967a2d91ab0ef31efc380d9759757330f4004af897ea4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_10b/ReflectiveTypeAdapterFactory_ESTest.java"
+  ],
+  "run_id": "Gson-10-mio-1790371067"
+}

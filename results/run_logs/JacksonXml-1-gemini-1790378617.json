@@ -1,0 +1,23 @@
+{
+  "project": "JacksonXml",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonXml-1-gemini-1790378617",
+  "suite_sha256": "6e18ea83b0aa777302a56fc9eadad3b6c5f9abdd00109f0e8c58562a63e4e2d0",
+  "test_files": "FromXmlParserGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+  "timestamp": "2026-09-26 06:23:52",
+  "evaluation_duration_sec": 14.787,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 70.41,
+  "branch_coverage_percent": 62.59,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
+  ]
+}

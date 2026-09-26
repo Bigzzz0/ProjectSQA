@@ -1,0 +1,43 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 11,
+  "line_cov": 48.52,
+  "branch_cov": 24.91,
+  "test_file": "AbstractCommandLineRunner_ESTest.java;CommandLineRunner_ESTest.java;CompilerOptions_ESTest.java;Compiler_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.AbstractCommandLineRunner;com.google.javascript.jscomp.CommandLineRunner;com.google.javascript.jscomp.Compiler;com.google.javascript.jscomp.CompilerOptions",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Compiler_ESTest::test24",
+    "com.google.javascript.jscomp.Compiler_ESTest::test62",
+    "com.google.javascript.jscomp.Compiler_ESTest::test34",
+    "com.google.javascript.jscomp.Compiler_ESTest::test48",
+    "com.google.javascript.jscomp.Compiler_ESTest::test02",
+    "com.google.javascript.jscomp.Compiler_ESTest::test03",
+    "com.google.javascript.jscomp.Compiler_ESTest::test00",
+    "com.google.javascript.jscomp.Compiler_ESTest::test42",
+    "com.google.javascript.jscomp.Compiler_ESTest::test19",
+    "com.google.javascript.jscomp.Compiler_ESTest::test16",
+    "com.google.javascript.jscomp.Compiler_ESTest::test13"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Compiler_ESTest::test24",
+    "com.google.javascript.jscomp.Compiler_ESTest::test62",
+    "com.google.javascript.jscomp.Compiler_ESTest::test34",
+    "com.google.javascript.jscomp.Compiler_ESTest::test48",
+    "com.google.javascript.jscomp.Compiler_ESTest::test02",
+    "com.google.javascript.jscomp.Compiler_ESTest::test03",
+    "com.google.javascript.jscomp.Compiler_ESTest::test00",
+    "com.google.javascript.jscomp.Compiler_ESTest::test42",
+    "com.google.javascript.jscomp.Compiler_ESTest::test19",
+    "com.google.javascript.jscomp.Compiler_ESTest::test16",
+    "com.google.javascript.jscomp.Compiler_ESTest::test13"
+  ],
+  "suite_sha256": "be05011efa6f48ff8176c4fcc7a5ee5351e14ca9a4dfe12487035b08c452febf",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_149b/AbstractCommandLineRunner_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_149b/CommandLineRunner_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_149b/CompilerOptions_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_149b/Compiler_ESTest.java"
+  ],
+  "run_id": "Closure-149-mio-1790363601"
+}

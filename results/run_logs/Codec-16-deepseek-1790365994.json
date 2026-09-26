@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-16-deepseek-1790365994",
+  "suite_sha256": "48c6832fcfc5bb3eddd7c06fe835c00ec2fed1126ee3e941aebbf42c68f911a8",
+  "test_files": "Base32DeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base32",
+  "timestamp": "2026-09-26 02:53:16",
+  "evaluation_duration_sec": 2.429,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "Charsets has been deprecated\n    [javac]         this(Charsets.UTF_8);\n    [javac]                      ^\n    [javac] /tmp/d4j_eval/Codec_16b/src/main/java/org/apache/commons/codec/net/QuotedPrintableCodec.java:114: warning: [deprecation] UTF_8 in Charsets has been deprecated\n    [javac]         this(Charsets.UTF_8, false);\n    [javac]                      ^\n    [javac] /tmp/d4j_eval/Codec_16b/src/main/java/org/apache/commons/codec/net/QuotedPrintableCodec.java:125: warning: [deprecation] UTF_8 in Charsets has been deprecated\n    [javac]         this(Charsets.UTF_8, strict);\n    [javac]                      ^\n    [javac] 30 warnings\n     [copy] Copying 7 files to /tmp/d4j_eval/Codec_16b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Codec_16b/target/classes/\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_16b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Codec_16b/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_16b/.test_suite/org/apache/commons/codec/binary/Base32DeepseekTest.java:3262: error: unclosed character literal\n    [javac]         byte[] pads = {'=', '!', '#', '$', '%', '&', '*', '+', '-', '.', '/', ':', ';', '<', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '0', '1\n    [javac]                                                                                                                                                               ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

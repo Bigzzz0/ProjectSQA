@@ -17,5 +17,10 @@
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithString",
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testExpandDefectAtMaxSegmentBoundary",
     "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testGetTextBufferBranches"
-  ]
+  ],
+  "suite_sha256": "3bd13ce21d63edb9cd57edf07f695ac9aa717b7f1aa6e84fabd81603ad4f6230",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_4b/TextBufferGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-4-gemini-1790371549"
 }

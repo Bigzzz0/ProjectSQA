@@ -14,5 +14,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testUnmanagedParserNotClosedByIterator",
     "com.fasterxml.jackson.databind.MappingIteratorGeminiTest::testEmptyArray"
-  ]
+  ],
+  "suite_sha256": "3af3bb44977a44aca518516491f8a9e5bacb681d2c9f24e6cf83edd48ae518ea",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_18b/MappingIteratorGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-18-gemini-1790373318"
 }

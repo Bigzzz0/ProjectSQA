@@ -1,0 +1,17 @@
+{
+  "project": "Codec",
+  "bug_id": 8,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Codec-8-mio-1790365687",
+  "suite_sha256": "3616843bc949b217eda83dc1c89b16228628974b58210c360fbe1f283da1b14d",
+  "test_files": "Base64InputStream_ESTest.java;Base64_ESTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64;org.apache.commons.codec.binary.Base64InputStream",
+  "timestamp": "2026-09-26 02:48:07",
+  "evaluation_duration_sec": 13.249,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 82.76,
+  "branch_coverage_percent": 68.28,
+  "failures_count": 0,
+  "error_detail": " obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Codec_8f/src/java/org/apache/commons/codec/StringEncoderComparator.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n     [copy] Copying 6 files to /tmp/d4j_eval/Codec_8f/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Codec_8f/target/classes/\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Codec_8f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/Codec_8f/.classes_testgen\n    [javac] /tmp/d4j_eval/Codec_8f/.test_suite/org/apache/commons/codec/binary/Base64_ESTest.java:131: error: cannot find symbol\n    [javac]       base64_0.setInitialBuffer(byteArray0, 922, 0);\n    [javac]               ^\n    [javac]   symbol:   method setInitialBuffer(byte[],int,int)\n    [javac]   location: variable base64_0 of type Base64\n    [javac] Note: /tmp/d4j_eval/Codec_8f/.test_suite/org/apache/commons/codec/binary/Base64_ESTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Codec_8f/.test_suite/org/apache/commons/codec/binary/Base64InputStream_ESTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

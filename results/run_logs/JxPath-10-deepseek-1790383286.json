@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 10,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JxPath-10-deepseek-1790383286",
+  "suite_sha256": "7d6639fd6e40411fe312f98904f43083df25a9deab305d8b4fdc45888d916302",
+  "test_files": "CoreOperationRelationalExpressionDeepseekTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "timestamp": "2026-09-26 07:41:29",
+  "evaluation_duration_sec": 3.054,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "path/util/ValueUtils.java:502: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 handler = (DynamicPropertyHandler) clazz.newInstance();\n    [javac]                                                         ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 3 files to /tmp/d4j_eval/JxPath_10b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_10b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_10b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_10b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JxPath_10b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_10b/.test_suite/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpressionDeepseekTest.java:62: error: constructor CoreOperationGreaterThanOrEqual in class CoreOperationGreaterThanOrEqual cannot be applied to given types;\n    [javac]         CoreOperationRelationalExpression op = new CoreOperationGreaterThanOrEqual(\n    [javac]                                                ^\n    [javac]   required: Expression,Expression\n    [javac]   found: Expression[]\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

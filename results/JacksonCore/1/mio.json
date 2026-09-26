@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.73,
+  "branch_cov": 92.44,
+  "test_file": "NumberInput_ESTest.java;TextBuffer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.io.NumberInput_ESTest::test44",
+    "com.fasterxml.jackson.core.io.NumberInput_ESTest::test45",
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test17",
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test18",
+    "com.fasterxml.jackson.core.util.TextBuffer_ESTest::test26"
+  ],
+  "suite_sha256": "365b5aa1c77b7ac7c8fda0f1c2fe176fb325692f887a9cb8b523e196397a1f51",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_1b/NumberInput_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_1b/TextBuffer_ESTest.java"
+  ],
+  "run_id": "JacksonCore-1-mio-1790371385"
+}

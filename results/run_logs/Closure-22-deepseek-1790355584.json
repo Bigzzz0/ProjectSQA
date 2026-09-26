@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 22,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-22-deepseek-1790355584",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+  "timestamp": "2026-09-25 23:59:44",
+  "evaluation_duration_sec": 0.018,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

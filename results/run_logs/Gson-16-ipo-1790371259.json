@@ -1,0 +1,19 @@
+{
+  "project": "Gson",
+  "bug_id": 16,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Gson-16-ipo-1790371259",
+  "suite_sha256": "41296b564328d234f7174bee81ac9ab6703364c8270abffbddcc543feb4cdbe4",
+  "test_files": "$Gson$Types_IPOTest.java",
+  "target_classes": "com.google.gson.internal.$Gson$Types",
+  "timestamp": "2026-09-26 04:21:12",
+  "evaluation_duration_sec": 13.003,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 3.23,
+  "branch_coverage_percent": 2.06,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

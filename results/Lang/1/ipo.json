@@ -1,19 +1,16 @@
 {
   "status": "DONE",
-  "fault_detected": "BUG_DETECTED",
-  "failures_count": 7,
-  "line_cov": 32.27,
-  "branch_cov": 23.96,
-  "test_file": "Lang_1b_IPOTest.java;NumberUtils_createNumber__String_IPOTest.java;NumberUtils_min__int_int_int_IPOTest.java;NumberUtils_IPOTest.java",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 22.93,
+  "branch_cov": 11.24,
+  "test_file": "NumberUtils_IPOTest.java",
   "target_classes": "org.apache.commons.lang3.math.NumberUtils",
-  "buggy_failures": [
-    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_003",
-    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_005",
-    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_008",
-    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_009",
-    "org.apache.commons.lang3.math.Lang_1b_IPOTest::test_hexadecimal_boundaries_010",
-    "org.apache.commons.lang3.math.NumberUtils_IPOTest::test_createNumber_pairwise_001",
-    "org.apache.commons.lang3.math.NumberUtils_createNumber__String_IPOTest::test_createNumber_pairwise_019"
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e82ff1b3440823bb972b49eda185a59275bee0a8ef3f039097ff6b848555e20e",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_1b/org/apache/commons/lang3/math/NumberUtils_IPOTest.java"
   ],
-  "fixed_failures": []
+  "run_id": "Lang-1-ipo-1790383548"
 }

@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionMatching",
     "org.apache.commons.cli.DefaultParserGeminiTest::testPartialLongOptionWithEqualSign"
-  ]
+  ],
+  "suite_sha256": "ac33e5b3bec390dc5d49b4c5001fadce3a34e55d64cc53479663927ffb130b59",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_37b/DefaultParserGeminiTest.java"
+  ],
+  "run_id": "Cli-37-gemini-1790353811"
 }

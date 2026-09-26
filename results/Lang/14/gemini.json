@@ -16,5 +16,10 @@
     "org.apache.commons.lang3.StringUtilsGeminiTest::testReplaceAndRemoveOperations",
     "org.apache.commons.lang3.StringUtilsGeminiTest::testSplittingMethods",
     "org.apache.commons.lang3.StringUtilsGeminiTest::testSetMatchingSurrogatesAndBoundaries"
-  ]
+  ],
+  "suite_sha256": "a277938efee716483e1cf209a2528c81290ea19d2f5e36ad869124ca625bb6bc",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_14b/StringUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-14-gemini-1790384455"
 }

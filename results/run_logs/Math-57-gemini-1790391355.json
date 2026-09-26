@@ -1,0 +1,24 @@
+{
+  "project": "Math",
+  "bug_id": 57,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-57-gemini-1790391355",
+  "suite_sha256": "c3590fb1ba9f0785f66264013a230d5f4cd915fd7bdf047b4d7a6bef76f68960",
+  "test_files": "KMeansPlusPlusClustererGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer",
+  "timestamp": "2026-09-26 09:56:32",
+  "evaluation_duration_sec": 37.041,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 79.17,
+  "branch_coverage_percent": 77.78,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testSmallDistances",
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testKGreaterThanPointsSizeThrowsException"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererGeminiTest::testKGreaterThanPointsSizeThrowsException"
+  ]
+}

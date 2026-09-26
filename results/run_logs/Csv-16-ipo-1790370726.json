@@ -1,0 +1,17 @@
+{
+  "project": "Csv",
+  "bug_id": 16,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Csv-16-ipo-1790370726",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.csv.CSVParser",
+  "timestamp": "2026-09-26 04:12:06",
+  "evaluation_duration_sec": 0.003,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

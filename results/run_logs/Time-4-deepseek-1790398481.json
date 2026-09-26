@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 4,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-4-deepseek-1790398481",
+  "suite_sha256": "11e979036c3abb24dfa061ee301d01fc9c7de6dbdb95455a75bb4bce82841cbb",
+  "test_files": "PartialDeepseekTest.java",
+  "target_classes": "org.joda.time.Partial",
+  "timestamp": "2026-09-26 11:54:48",
+  "evaluation_duration_sec": 6.685,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " [javac] /tmp/d4j_eval/Time_4b/src/main/java/org/joda/time/DateTimeZone.java:559: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                     nameProvider = (NameProvider) Class.forName(providerClass).newInstance();\n    [javac]                                                                               ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] 6 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Time_4b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Time_4b/target/classes/META-INF\n     [copy] Copying 9 files to /tmp/d4j_eval/Time_4b/target/classes\n\njoda-time.compile:\n\ncompile:\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_4b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_4b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_4b/.test_suite/org/joda/time/PartialDeepseekTest.java:53: error: cannot find symbol\n    [javac]         assertEquals(ISOChronology.getInstanceUTC(), p.getChronology());\n    [javac]                      ^\n    [javac]   symbol:   variable ISOChronology\n    [javac]   location: class PartialDeepseekTest\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

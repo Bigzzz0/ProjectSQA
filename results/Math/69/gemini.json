@@ -10,5 +10,10 @@
     "org.apache.commons.math.stat.correlation.PearsonsCorrelationGeminiTest::testPValueNearZero",
     "org.apache.commons.math.stat.correlation.PearsonsCorrelationGeminiTest::testPValueNearZeroNegativeCorrelation"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "91b64809b1c9da711950ecc75fedfe06d26b1c59415c0f673874d806d7a63274",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_69b/PearsonsCorrelationGeminiTest.java"
+  ],
+  "run_id": "Math-69-gemini-1790392179"
 }

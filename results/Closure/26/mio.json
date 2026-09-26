@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 22.43,
+  "branch_cov": 15.0,
+  "test_file": "ProcessCommonJSModules_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ProcessCommonJSModules",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.ProcessCommonJSModules_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.ProcessCommonJSModules_ESTest::test0"
+  ],
+  "suite_sha256": "16505b64631807b9486f7fde031bfc10b5a0865cdaffaab1a10ea4bbad63b53f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_26b/ProcessCommonJSModules_ESTest.java"
+  ],
+  "run_id": "Closure-26-mio-1790355886"
+}

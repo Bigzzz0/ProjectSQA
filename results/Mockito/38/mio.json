@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 11.11,
+  "branch_cov": 0.0,
+  "test_file": "ArgumentMatchingTool_ESTest.java",
+  "target_classes": "org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6b8f90029a7f2b8123aea4774e332c636a995e79fee706da8f6c35b148c4acba",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_38b/ArgumentMatchingTool_ESTest.java"
+  ],
+  "run_id": "Mockito-38-mio-1790398209"
+}

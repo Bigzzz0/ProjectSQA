@@ -10,5 +10,10 @@
     "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCRLF_CSV75",
     "org.apache.commons.csv.ExtendedBufferedReaderGeminiTest::testRead_IncrementsLineCounterOnCarriageReturn_CSV75"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "c09d00c0e2e3b79e365ef46f9692b9ab1421022d45056e4f188af05361285b84",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_1b/ExtendedBufferedReaderGeminiTest.java"
+  ],
+  "run_id": "Csv-1-gemini-1790370170"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 65.5,
+  "branch_cov": 55.32,
+  "test_file": "ChainableReverseAbstractInterpreter_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ab8edbebe52b38c947927e584d437cfd6fb23d6d943c17b976e7e072bdc2290b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_19b/ChainableReverseAbstractInterpreter_ESTest.java"
+  ],
+  "run_id": "Closure-19-mio-1790355314"
+}

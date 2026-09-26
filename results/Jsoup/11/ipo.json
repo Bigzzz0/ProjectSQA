@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 28.28,
+  "branch_cov": 19.17,
+  "test_file": "Selector_IPOTest.java",
+  "target_classes": "org.jsoup.select.Selector",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ba05918e4b152f920ca14850888f1ef3bbcae391ef4ece5c828261f75c5cefa2",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_11b/org/jsoup/select/Selector_IPOTest.java"
+  ],
+  "run_id": "Jsoup-11-ipo-1790379151"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Jsoup",
+  "bug_id": 77,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-77-mio-1790382216",
+  "suite_sha256": "4b7004553a0c2577d3102e0927c65f59b0882f8539221a2f45ac02375de3e126",
+  "test_files": "XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:23:54",
+  "evaluation_duration_sec": 17.502,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 75.36,
+  "branch_coverage_percent": 45.16,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

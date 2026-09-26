@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 70.45,
+  "branch_cov": 54.41,
+  "test_file": "DefaultDeserializationContext_ESTest.java;ObjectIdValueProperty_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.DefaultDeserializationContext;com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.DefaultDeserializationContext_ESTest::test13"
+  ],
+  "suite_sha256": "2d7ed4b61825598fc742abcb9360417467dc7c68b3bde6cabc2a299325bfd3a8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_13b/DefaultDeserializationContext_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_13b/ObjectIdValueProperty_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-13-mio-1790373024"
+}

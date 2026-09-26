@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 26.51,
+  "branch_cov": 13.16,
+  "test_file": "CharacterReader_IPOTest.java",
+  "target_classes": "org.jsoup.UncheckedIOException;org.jsoup.parser.CharacterReader",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4b806a0a7a2ea5879e793a01d9a3055646a7f176bc3fc5ed937e8c6b05261faa",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_91b/org/jsoup/parser/CharacterReader_IPOTest.java"
+  ],
+  "run_id": "Jsoup-91-ipo-1790382891"
+}

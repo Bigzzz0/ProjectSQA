@@ -28,5 +28,10 @@
     "org.jsoup.parser.TokeniserStateGeminiTest::testAfterDoctypeSystemKeywordAndBogus",
     "org.jsoup.parser.TokeniserStateGeminiTest::testTokeniserStateEnumValuesAndCompleteness",
     "org.jsoup.parser.TokeniserStateGeminiTest::testCharacterReferenceWithoutSemicolonOrInvalid"
-  ]
+  ],
+  "suite_sha256": "fe6610edd4fc2ee095613e139be62faeeb0a113a045ebd7baed52c819fffc9ed",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_24b/TokeniserStateGeminiTest.java"
+  ],
+  "run_id": "Jsoup-24-gemini-1790379730"
 }

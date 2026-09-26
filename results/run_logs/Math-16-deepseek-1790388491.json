@@ -1,0 +1,29 @@
+{
+  "project": "Math",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-16-deepseek-1790388491",
+  "suite_sha256": "7f6e1dfdfa886fe14ff551b598b496a4c81a7b30aa16353340cc0c82069cba13",
+  "test_files": "FastMathDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.util.FastMath",
+  "timestamp": "2026-09-26 09:08:37",
+  "evaluation_duration_sec": 26.583,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 72.3,
+  "branch_coverage_percent": 57.22,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testExpm1",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testFloorCeilRint",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testSubnormal",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testZeroSign"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testExpm1",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testFloorCeilRint",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testSubnormal",
+    "org.apache.commons.math3.util.FastMathDeepseekTest::testZeroSign"
+  ]
+}

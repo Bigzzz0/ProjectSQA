@@ -1,0 +1,21 @@
+{
+  "project": "Compress",
+  "bug_id": 10,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-10-gemini-1790368015",
+  "suite_sha256": "3313cf0b7af2eb59024ec26d9b4a8452507744e95c66d9cb021ebb96b8da35a1",
+  "test_files": "ZipFileGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipFile",
+  "timestamp": "2026-09-26 03:27:12",
+  "evaluation_duration_sec": 16.465,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 89.47,
+  "branch_coverage_percent": 64.6,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipFileGeminiTest::testReadEntryWithUnicodeExtraFieldMutatedHashCode"
+  ],
+  "fixed_failures": []
+}

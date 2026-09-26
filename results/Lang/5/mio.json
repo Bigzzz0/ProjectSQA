@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 97.56,
+  "branch_cov": 94.64,
+  "test_file": "LocaleUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.LocaleUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.LocaleUtils_ESTest::test22"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.LocaleUtils_ESTest::test22"
+  ],
+  "suite_sha256": "b6a658d1c121fc5ec0e573e00cf11f17c9de88e9cf307b0b495f8e3672ccc147",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_5b/LocaleUtils_ESTest.java"
+  ],
+  "run_id": "Lang-5-mio-1790383774"
+}

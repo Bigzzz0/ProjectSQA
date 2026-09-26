@@ -1,0 +1,19 @@
+{
+  "project": "Chart",
+  "bug_id": 4,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Chart-4-ipo-1790351063",
+  "suite_sha256": "a8319aa106c1278a7177b74dbb1d3dd027b76c5fb41368d46a0b5b15f03d0d17",
+  "test_files": "XYPlot_IPOTest.java",
+  "target_classes": "org.jfree.chart.plot.XYPlot",
+  "timestamp": "2026-09-25 22:44:48",
+  "evaluation_duration_sec": 25.669,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 8.41,
+  "branch_coverage_percent": 3.63,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jsoup.safety.WhitelistGeminiTest::testHandlesCustomProtocolsCidAndData"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "05dccea96fba721fce00c033cae3347ed7c77b416ad8dc83687ec3afd809ea6d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_19b/WhitelistGeminiTest.java"
+  ],
+  "run_id": "Jsoup-19-gemini-1790379506"
 }

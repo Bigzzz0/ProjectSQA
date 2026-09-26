@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-2-gemini-1790352655",
+  "suite_sha256": "c86190bb7bfbc39bf0965d5fcb22c521dce3068b8b5271236699935dff8539c2",
+  "test_files": "PosixParserGeminiTest.java",
+  "target_classes": "org.apache.commons.cli.PosixParser",
+  "timestamp": "2026-09-25 23:11:10",
+  "evaluation_duration_sec": 14.28,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.PosixParserGeminiTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.PosixParserGeminiTest"
+  ]
+}

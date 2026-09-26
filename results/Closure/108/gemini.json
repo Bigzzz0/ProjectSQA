@@ -10,5 +10,10 @@
     "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testIssue1144VarDeclarationWithDoc",
     "com.google.javascript.jscomp.ScopedAliasesGeminiTest::testTypeNodeRewritingSimpleAndComposite"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "814e435d14adfed1e07234e30d7a7dcde772d01c313dd0339ffac0bc3882f5ac",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_108b/ScopedAliasesGeminiTest.java"
+  ],
+  "run_id": "Closure-108-gemini-1790361181"
 }

@@ -1,0 +1,29 @@
+{
+  "project": "Gson",
+  "bug_id": 17,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-17-gemini-1790371309",
+  "suite_sha256": "624437f84f2d8299d1114402a053e8063080dc110c9e361afcf61bc3713ad289",
+  "test_files": "DefaultDateTypeAdapterGeminiTest.java",
+  "target_classes": "com.google.gson.DefaultDateTypeAdapter",
+  "timestamp": "2026-09-26 04:22:02",
+  "evaluation_duration_sec": 13.23,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.18,
+  "branch_coverage_percent": 93.75,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedNumberToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValueSqlDate",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValue",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testNullValueTimestamp"
+  ],
+  "fixed_failures": [
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
+    "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken"
+  ]
+}

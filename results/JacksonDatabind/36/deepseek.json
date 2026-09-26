@@ -16,5 +16,10 @@
     "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseWithPositionISO8601Failure",
     "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseEmptyString",
     "com.fasterxml.jackson.databind.util.StdDateFormatDeepseekTest::testParseISO8601TimeLenCases"
-  ]
+  ],
+  "suite_sha256": "1f93a0629cf933ffe1876c6273272766bc569b076204c97f04e2d3f7dcbcdde2",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_36b/StdDateFormatDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-36-deepseek-1790374281"
 }

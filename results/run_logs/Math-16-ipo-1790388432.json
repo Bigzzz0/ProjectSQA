@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 16,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-16-ipo-1790388432",
+  "suite_sha256": "ee9108a6ddfd250de0b434afd528ae3c1fae70ceabe59a52b10f0c3a2e1f0255",
+  "test_files": "FastMath_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.util.FastMath",
+  "timestamp": "2026-09-26 09:07:40",
+  "evaluation_duration_sec": 28.059,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 29.51,
+  "branch_coverage_percent": 31.77,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

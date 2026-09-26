@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.61,
+  "branch_cov": 0.0,
+  "test_file": "NonBlockingJsonParser_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.async.NonBlockingJsonParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "adc66688a44c11965aae5f2bb742ba579d97a787357ceddea62e5e4c3cff3eaf",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_26b/NonBlockingJsonParser_ESTest.java"
+  ],
+  "run_id": "JacksonCore-26-mio-1790372305"
+}

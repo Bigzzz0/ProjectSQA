@@ -16,5 +16,10 @@
     "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
     "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
     "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS"
-  ]
+  ],
+  "suite_sha256": "5fcb08693329edb20a67e5c0ac11b920e422de7912053ffeaae098dc2d215724",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_14b/CaseInsensitiveMapDeepseekTest.java"
+  ],
+  "run_id": "Collections-14-deepseek-1790366841"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 12.18,
+  "branch_cov": 12.93,
+  "test_file": "ShapeUtilities_IPOTest.java",
+  "target_classes": "org.jfree.chart.util.ShapeUtilities",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "98fee6260d13abf0a8c02cb77d7482ce644d989a61769e4857b8550e0528c6a5",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_11b/org/jfree/chart/util/ShapeUtilities_IPOTest.java"
+  ],
+  "run_id": "Chart-11-ipo-1790351590"
+}

@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 79,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-79-mio-1790359571",
+  "suite_sha256": "4bfdd4590b54c59bb1c567cfa118d797716fc70e4499c0cbda53024d58556031",
+  "test_files": "Normalize_ESTest.java;VarCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Normalize;com.google.javascript.jscomp.VarCheck",
+  "timestamp": "2026-09-26 01:06:46",
+  "evaluation_duration_sec": 34.793,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 39.9,
+  "branch_coverage_percent": 28.57,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test01",
+    "com.google.javascript.jscomp.Normalize_ESTest::test00",
+    "com.google.javascript.jscomp.Normalize_ESTest::test07"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Normalize_ESTest::test01",
+    "com.google.javascript.jscomp.Normalize_ESTest::test00",
+    "com.google.javascript.jscomp.Normalize_ESTest::test07"
+  ]
+}

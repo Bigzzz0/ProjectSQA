@@ -1,0 +1,22 @@
+{
+  "project": "Lang",
+  "bug_id": 35,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-35-mio-1790385669",
+  "suite_sha256": "7d6d91b12ae9828a7099d05441833adb5a168cd7f0be28e87d7a36c4b761d9aa",
+  "test_files": "ArrayUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "timestamp": "2026-09-26 08:21:33",
+  "evaluation_duration_sec": 23.716,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.96,
+  "branch_coverage_percent": 98.88,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ArrayUtils_ESTest::test270",
+    "org.apache.commons.lang3.ArrayUtils_ESTest::test009"
+  ]
+}

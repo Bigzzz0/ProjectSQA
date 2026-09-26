@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 86,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-86-deepseek-1790382666",
+  "suite_sha256": "1ae2c8544ba5178250c52aedb05d9d54a43a41d6bfc9fff5a74a62ff1b7f68ae",
+  "test_files": "CommentDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Comment",
+  "timestamp": "2026-09-26 07:31:09",
+  "evaluation_duration_sec": 3.802,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ackage-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_86b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_86b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_86b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_86b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_86b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_86b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_86b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_86b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_86b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_86b/.test_suite/org/jsoup/nodes/CommentDeepseekTest.java:166: error: cannot find symbol\n    [javac]         assertEquals(\"xml\", decl.tagName());\n    [javac]                                 ^\n    [javac]   symbol:   method tagName()\n    [javac]   location: variable decl of type XmlDeclaration\n    [javac] Note: /tmp/d4j_eval/Jsoup_86b/.test_suite/org/jsoup/nodes/CommentDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

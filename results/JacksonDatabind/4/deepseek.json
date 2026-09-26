@@ -17,5 +17,10 @@
     "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerDeepseekTest::testSingleNullAsArrayEnabled",
     "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerDeepseekTest::testExceptionOnFirstElementReportsIndex0",
     "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerDeepseekTest::testHandleNonArrayWithNullAndSingleValueEnabled"
-  ]
+  ],
+  "suite_sha256": "5a83a03435d4be8cbf2d31359fa238d176b955b791004934ef4843f778e635b5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_4b/StringArrayDeserializerDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-4-deepseek-1790372581"
 }

@@ -16,5 +16,10 @@
     "org.apache.commons.math.complex.ComplexGeminiTest::testAtanNegativeI",
     "org.apache.commons.math.complex.ComplexGeminiTest::testDivideDoubleZero",
     "org.apache.commons.math.complex.ComplexGeminiTest::testDivideZero"
-  ]
+  ],
+  "suite_sha256": "44cde283864071cf0b4989cbcba3fb985f0ec11239265ab1230c5521a8bbcf85",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_46b/ComplexGeminiTest.java"
+  ],
+  "run_id": "Math-46-gemini-1790390505"
 }

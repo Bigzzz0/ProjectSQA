@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 91,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-91-gemini-1790393607",
+  "suite_sha256": "ea7e8287720aeda8f169e1d383797c51066dab6e2b7d0e94c8ccaa9569551839",
+  "test_files": "FractionGeminiTest.java",
+  "target_classes": "org.apache.commons.math.fraction.Fraction",
+  "timestamp": "2026-09-26 10:33:50",
+  "evaluation_duration_sec": 23.61,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.16,
+  "branch_coverage_percent": 95.56,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.fraction.FractionGeminiTest::testCompareToPrecisionDefect"
+  ],
+  "fixed_failures": []
+}

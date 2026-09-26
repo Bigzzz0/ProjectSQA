@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.collections4.trie.UnmodifiableTrieGeminiTest::testCoreDelegationReads"
-  ]
+  ],
+  "suite_sha256": "ec912b3cbe90b71ecf14b97208db04e61e0f0dd15b713c29260fc7c5e17c1557",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_23b/UnmodifiableTrieGeminiTest.java"
+  ],
+  "run_id": "Collections-23-gemini-1790367322"
 }

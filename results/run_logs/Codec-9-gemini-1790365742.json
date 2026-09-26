@@ -1,0 +1,26 @@
+{
+  "project": "Codec",
+  "bug_id": 9,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Codec-9-gemini-1790365742",
+  "suite_sha256": "6905a3a66612484812d92ca6950c786493e457f39ce85dbb01e6c90629f1e85e",
+  "test_files": "Base64GeminiTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "timestamp": "2026-09-26 02:49:14",
+  "evaluation_duration_sec": 12.296,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.09,
+  "branch_coverage_percent": 90.79,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingAndLineBreakBehavior",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testCodec112",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeWhenAlreadyEof"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.Base64GeminiTest::testChunkedEncodingAndLineBreakBehavior",
+    "org.apache.commons.codec.binary.Base64GeminiTest::testEncodeWhenAlreadyEof"
+  ]
+}

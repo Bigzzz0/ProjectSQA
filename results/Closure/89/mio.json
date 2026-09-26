@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 28.43,
+  "branch_cov": 19.0,
+  "test_file": "CollapseProperties_ESTest.java;GlobalNamespace_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseProperties;com.google.javascript.jscomp.GlobalNamespace",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test00"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.GlobalNamespace_ESTest::test00"
+  ],
+  "suite_sha256": "6c26ffe4c85abad7a63d366b3bae7a910e654e9df4b855fa65849b1eb7a10d7b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_89b/CollapseProperties_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_89b/GlobalNamespace_ESTest.java"
+  ],
+  "run_id": "Closure-89-mio-1790360110"
+}

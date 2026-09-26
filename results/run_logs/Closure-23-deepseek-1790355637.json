@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 23,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-23-deepseek-1790355637",
+  "suite_sha256": "19c5dc9abec32f179dc26e4a825775e48805aff1c9f93af66767b33d2ca905a6",
+  "test_files": "PeepholeFoldConstantsDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "timestamp": "2026-09-26 00:01:11",
+  "evaluation_duration_sec": 34.266,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 2.01,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 32,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-32-deepseek-1790374081",
+  "suite_sha256": "c284666165f3c4939de09a3cb9ea7674fda2b44352801e8fb45794f6e7850bbb",
+  "test_files": "UntypedObjectDeserializerDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer",
+  "timestamp": "2026-09-26 05:08:09",
+  "evaluation_duration_sec": 7.703,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_32b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_32b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_32b/.test_suite/com/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializerDeepseekTest.java:564: error: no suitable constructor found for UntypedObjectDeserializer(<null>,<null>,JsonDeserializer<Object>,<null>)\n    [javac]         UntypedObjectDeserializer customDeser = new UntypedObjectDeserializer(\n    [javac]                                                 ^\n    [javac]     constructor UntypedObjectDeserializer.UntypedObjectDeserializer() is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor UntypedObjectDeserializer.UntypedObjectDeserializer(JavaType,JavaType) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor UntypedObjectDeserializer.UntypedObjectDeserializer(UntypedObjectDeserializer,JsonDeserializer<?>,JsonDeserializer<?>,JsonDeserializer<?>,JsonDeserializer<?>) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_32b/.test_suite/com/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializerDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

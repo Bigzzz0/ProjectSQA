@@ -1,0 +1,43 @@
+{
+  "project": "Closure",
+  "bug_id": 75,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-75-mio-1790359289",
+  "suite_sha256": "db051ace9ba3d61f922b25869e3f2ae88f4d041c1baa3f6fe380ef4f205a6b88",
+  "test_files": "NodeUtil_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "timestamp": "2026-09-26 01:02:07",
+  "evaluation_duration_sec": 38.094,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 58.37,
+  "branch_coverage_percent": 43.66,
+  "failures_count": 11,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test322",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test143",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test142",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test015",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test163",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test346",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test347",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test132",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test252",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test354",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test119"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test322",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test143",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test142",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test015",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test163",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test346",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test347",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test132",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test252",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test354",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test119"
+  ]
+}

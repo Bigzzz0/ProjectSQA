@@ -1,0 +1,23 @@
+{
+  "project": "Math",
+  "bug_id": 95,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-95-gemini-1790393995",
+  "suite_sha256": "694f6eb561ab18467d6ded0feae8b3a3e8533f2990f0dab0bd38026217a3b9e9",
+  "test_files": "FDistributionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+  "timestamp": "2026-09-26 10:40:17",
+  "evaluation_duration_sec": 22.459,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorOne",
+    "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorTwo",
+    "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomAsymmetric"
+  ],
+  "fixed_failures": []
+}

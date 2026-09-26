@@ -1,0 +1,33 @@
+{
+  "project": "Math",
+  "bug_id": 45,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-45-ipo-1790390354",
+  "suite_sha256": "0771f69da78dca940479afbbb6f7c806e974f5a2d4f2e33dbe604ace01da1573",
+  "test_files": "OpenMapRealMatrix_IPOTest.java",
+  "target_classes": "org.apache.commons.math.linear.OpenMapRealMatrix",
+  "timestamp": "2026-09-26 09:39:40",
+  "evaluation_duration_sec": 25.86,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 12.37,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 13,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_multiply_pairwise_029",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_multiply_pairwise_037",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_multiply_pairwise_044",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getColumnDimension_pairwise_009",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getColumnDimension_pairwise_017",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getColumnDimension_pairwise_019",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getEntry_pairwise_054",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getEntry_pairwise_062",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getEntry_pairwise_064",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getEntry_pairwise_082",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getRowDimension_pairwise_091",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getRowDimension_pairwise_099",
+    "org.apache.commons.math.linear.OpenMapRealMatrix_IPOTest::test_getRowDimension_pairwise_101"
+  ],
+  "fixed_failures": []
+}

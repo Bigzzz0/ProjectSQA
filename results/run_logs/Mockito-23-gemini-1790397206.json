@@ -1,0 +1,27 @@
+{
+  "project": "Mockito",
+  "bug_id": 23,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-23-gemini-1790397206",
+  "suite_sha256": "378d0c6b5dea18a88ff8bd2f8a873f77bbb27dbeb9ecd2d41657ff3735ae8f77",
+  "test_files": "ReturnsDeepStubsGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs",
+  "timestamp": "2026-09-26 11:34:18",
+  "evaluation_duration_sec": 51.59,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.91,
+  "branch_coverage_percent": 62.5,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testDeepStubMockSerializationDefect",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testReturnsDeepStubsItselfIsSerializable",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testRecordDeepStubMockAnswerMustImplementSerializable",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testNonMockableFinalClassReturnsEmptyValue"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testRecordDeepStubMockAnswerMustImplementSerializable",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubsGeminiTest::testNonMockableFinalClassReturnsEmptyValue"
+  ]
+}

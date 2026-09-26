@@ -21,5 +21,10 @@
     "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithDefault",
     "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testInstanceConstant",
     "com.fasterxml.jackson.databind.deser.std.StringArrayDeserializerGeminiTest::testDirectCreateContextualWithCustomElementDeser"
-  ]
+  ],
+  "suite_sha256": "1123bc59c65eb159bb316d7cee91ae5fe3c86eae34c6b3f06742ec4df6b727f9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_3b/StringArrayDeserializerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-3-gemini-1790372502"
 }

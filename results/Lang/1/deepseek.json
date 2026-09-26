@@ -22,5 +22,10 @@
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZerosAsOctal",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientific",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberTrailingDot"
-  ]
+  ],
+  "suite_sha256": "47894152a9447a7db7d4c089def139509536ccf2f9482b93440ba31f08de1715",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_1b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-1-deepseek-1790383595"
 }

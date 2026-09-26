@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 95,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-95-mio-1790393964",
+  "suite_sha256": "2e39c6d34aff0aee685b268797bf49ea01676e828ad1ddfbf53476d3d4c4f398",
+  "test_files": "FDistributionImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+  "timestamp": "2026-09-26 10:39:48",
+  "evaluation_duration_sec": 23.486,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.FDistributionImpl_ESTest::test5"
+  ]
+}

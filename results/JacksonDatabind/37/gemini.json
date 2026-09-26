@@ -13,5 +13,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.type.SimpleTypeGeminiTest::testObjectIdOnMapSubtypeDefect1083Exact",
     "com.fasterxml.jackson.databind.type.SimpleTypeGeminiTest::testObjectIdOnMapSubtypeDefect1083WithAdditionalMapEntries"
-  ]
+  ],
+  "suite_sha256": "6f60e3f442136f25a388e25110b92dbce7f8649e2d8b8809f669d24374dbf275",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_37b/SimpleTypeGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-37-gemini-1790374395"
 }

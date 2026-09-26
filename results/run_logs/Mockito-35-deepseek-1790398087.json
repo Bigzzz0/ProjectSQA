@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 35,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-35-deepseek-1790398087",
+  "suite_sha256": "6f6a25c1c3cf006e1605989c883ea408594a11a51fee9347a14e106f5abdc0ad",
+  "test_files": "MatchersDeepseekTest.java",
+  "target_classes": "org.mockito.Matchers",
+  "timestamp": "2026-09-26 11:48:13",
+  "evaluation_duration_sec": 6.3,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "             return (IMockitoConfiguration) configClass.newInstance();\n    [javac]                                                       ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] /tmp/d4j_eval/Mockito_35b/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = field.isAccessible();\n    [javac]                              ^\n    [javac] 20 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_35b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_35b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_35b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_35b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_35b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_35b/.test_suite/org/mockito/MatchersDeepseekTest.java:246: error: cannot find symbol\n    [javac]         Matcher<String> matcher = org.mockito.ArgumentMatcher.any(String.class);\n    [javac]                                                              ^\n    [javac]   symbol:   method any(Class<String>)\n    [javac]   location: class ArgumentMatcher\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,25 @@
+{
+  "project": "Lang",
+  "bug_id": 57,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-57-deepseek-1790387041",
+  "suite_sha256": "d5d85d52ce36d2b5f6fce842aa867a34a7319c304347d0c5c7da68b52234d189",
+  "test_files": "LocaleUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.LocaleUtils",
+  "timestamp": "2026-09-26 08:44:21",
+  "evaluation_duration_sec": 20.136,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.47,
+  "branch_coverage_percent": 90.62,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupList_NullDefault",
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupList_NoVariant"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupList_NullDefault",
+    "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupList_NoVariant"
+  ]
+}

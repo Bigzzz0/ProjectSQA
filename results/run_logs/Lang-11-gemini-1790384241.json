@@ -1,0 +1,22 @@
+{
+  "project": "Lang",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-11-gemini-1790384241",
+  "suite_sha256": "85cdbfab11e9bc43420ff03dc3fff410c6436ac9134f8af464aeddb3e2d03359",
+  "test_files": "RandomStringUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "timestamp": "2026-09-26 07:57:42",
+  "evaluation_duration_sec": 20.426,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testLANG807",
+    "org.apache.commons.lang3.RandomStringUtilsGeminiTest::testLANG807_StartGreaterThanEnd"
+  ],
+  "fixed_failures": []
+}

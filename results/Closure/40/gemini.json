@@ -65,5 +65,10 @@
     "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284",
     "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testForAndForInLoops",
     "com.google.javascript.jscomp.NameAnalyzerGeminiTest::testIssue284_ifElseWithoutBlock"
-  ]
+  ],
+  "suite_sha256": "c6f44642d305fd2e45fb905f7b0c83f5f8bf92c4319a267f925cd3064707a774",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_40b/NameAnalyzerGeminiTest.java"
+  ],
+  "run_id": "Closure-40-gemini-1790357029"
 }

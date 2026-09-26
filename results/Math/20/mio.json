@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.4,
+  "branch_cov": 77.99,
+  "test_file": "CMAESOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "181eb249cf06bd385bb51b851825f1000d835a4d9ce8e192b931ff4c1e233221",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_20b/CMAESOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-20-mio-1790388734"
+}

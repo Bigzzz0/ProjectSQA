@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 45,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-45-gemini-1790374907",
+  "suite_sha256": "3b4476a203534b7dfee3ec128900ebb5622b3a4e6967a675db27ea5c98685534",
+  "test_files": "DateTimeSerializerBaseGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+  "timestamp": "2026-09-26 05:21:55",
+  "evaluation_duration_sec": 7.818,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "_eval/JacksonDatabind_45b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_45b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_45b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_45b/.test_suite/com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBaseGeminiTest.java:304: error: no suitable constructor found for Std(PropertyNamingStrategy,JavaType,<null>,<null>,<null>,boolean)\n    [javac]         BeanProperty prop = new BeanProperty.Std(\n    [javac]                             ^\n    [javac]     constructor Std.Std(PropertyName,JavaType,PropertyName,Annotations,AnnotatedMember,PropertyMetadata) is not applicable\n    [javac]       (argument mismatch; PropertyNamingStrategy cannot be converted to PropertyName)\n    [javac]     constructor Std.Std(String,JavaType,PropertyName,Annotations,AnnotatedMember,boolean) is not applicable\n    [javac]       (argument mismatch; PropertyNamingStrategy cannot be converted to String)\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_45b/.test_suite/com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBaseGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 89.39,
+  "branch_cov": 84.38,
+  "test_file": "DatasetUtilities_ESTest.java",
+  "target_classes": "org.jfree.data.general.DatasetUtilities",
+  "buggy_failures": [
+    "org.jfree.data.general.DatasetUtilities_ESTest::test004"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.general.DatasetUtilities_ESTest::test004"
+  ],
+  "suite_sha256": "72bd2b43ef1371aa76b18a44cb553cfc5cd5c0c5428e7e07119c52b26e848c93",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_2b/DatasetUtilities_ESTest.java"
+  ],
+  "run_id": "Chart-2-mio-1790351015"
+}

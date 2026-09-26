@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 44.95,
+  "branch_cov": 32.73,
+  "test_file": "IRFactory_ESTest.java;NodeTraversal_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeTraversal;com.google.javascript.jscomp.parsing.IRFactory",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test16",
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test06"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test16",
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test06"
+  ],
+  "suite_sha256": "712040406eefbcf0a2c392c447fcf84502015663c52103ea59d72c61278ac6c9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_37b/IRFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_37b/NodeTraversal_ESTest.java"
+  ],
+  "run_id": "Closure-37-mio-1790356752"
+}

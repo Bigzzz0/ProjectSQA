@@ -57,5 +57,10 @@
     "com.google.javascript.jscomp.DeadAssignmentsEliminationDeepseekTest::testIssue384d",
     "com.google.javascript.jscomp.DeadAssignmentsEliminationDeepseekTest::testIncInExpression",
     "com.google.javascript.jscomp.DeadAssignmentsEliminationDeepseekTest::testFunctionWithInnerFunction"
-  ]
+  ],
+  "suite_sha256": "b81bb4b16b8cea358f5618929c4026e611af38b69f4a9ee6b013da5c87f7c942",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_76b/DeadAssignmentsEliminationDeepseekTest.java"
+  ],
+  "run_id": "Closure-76-deepseek-1790359393"
 }

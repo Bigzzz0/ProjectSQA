@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupList_NullDefault",
     "org.apache.commons.lang.LocaleUtilsDeepseekTest::testLocaleLookupList_NoVariant"
-  ]
+  ],
+  "suite_sha256": "d5d85d52ce36d2b5f6fce842aa867a34a7319c304347d0c5c7da68b52234d189",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_57b/LocaleUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-57-deepseek-1790387041"
 }

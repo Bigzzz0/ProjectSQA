@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 34,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-34-gemini-1790356603",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.CodePrinter",
+  "timestamp": "2026-09-26 00:16:43",
+  "evaluation_duration_sec": 0.014,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

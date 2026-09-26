@@ -1,0 +1,44 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 13,
+  "line_cov": 57.14,
+  "branch_cov": 39.47,
+  "test_file": "NodeUtil_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test204",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test095",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test093",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test090",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test024",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test022",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test023",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test159",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test157",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test223",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test107",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test012",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test002"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test204",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test095",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test093",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test090",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test024",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test022",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test023",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test159",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test157",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test223",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test107",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test012",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test002"
+  ],
+  "suite_sha256": "52bfeec1cf4b0f96d7140425b573ed5538f144a7e6ebcd6f3023b17e6a0663a8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_86b/NodeUtil_ESTest.java"
+  ],
+  "run_id": "Closure-86-mio-1790359921"
+}

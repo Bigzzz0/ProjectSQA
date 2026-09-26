@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 17,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-17-deepseek-1790367032",
+  "suite_sha256": "7903c11916de5bc3886ef775052189a465d4b00ab2285118b79e05dc8acac4fb",
+  "test_files": "EqualPredicateDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.functors.EqualPredicate",
+  "timestamp": "2026-09-26 03:10:37",
+  "evaluation_duration_sec": 5.564,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ild/classes/org/apache/commons/collections/comparators/sequence/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/map/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/collection/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/keyvalue/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/splitmap/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/list/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_17b/build/classes/org/apache/commons/collections/set/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_17b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_17b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_17b/.test_suite/org/apache/commons/collections/functors/EqualPredicateDeepseekTest.java:5623: error: reached end of file while parsing\n    [javac]             @Override\n    [javac]                      ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

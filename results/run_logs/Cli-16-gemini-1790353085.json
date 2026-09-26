@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 16,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-16-gemini-1790353085",
+  "suite_sha256": "67f6bae022dc6b7adcbe9e69a3c2e89f996735a50abe1a8dac4a76d1ef3c05a6",
+  "test_files": "GroupImplGeminiTest.java;OptionGeminiTest.java;OptionImplGeminiTest.java;WriteableCommandLineImplGeminiTest.java",
+  "target_classes": "org.apache.commons.cli2.Option;org.apache.commons.cli2.commandline.WriteableCommandLineImpl;org.apache.commons.cli2.option.GroupImpl;org.apache.commons.cli2.option.OptionImpl",
+  "timestamp": "2026-09-25 23:18:08",
+  "evaluation_duration_sec": 3.346,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "er.java:346: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]                                                                                                  new Integer(width)\n    [javac]                                                                                                  ^\n    [javac] /tmp/d4j_eval/Cli_16b/src/java/org/apache/commons/cli2/validation/ClassValidator.java:84: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                         i.set(clazz.newInstance());\n    [javac]                                    ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 6 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Cli_16b/target/classes/org/apache/commons/cli2\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Cli_16b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Cli_16b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_16b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/Cli_16b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_16b/.test_suite/org/apache/commons/cli2/option/OptionImplGeminiTest.java:453: error: reached end of file while parsing\n    [javac]     @Test(timeout = 4000)\n    [javac]                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

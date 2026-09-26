@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.74,
+  "branch_cov": 80.88,
+  "test_file": "Week_ESTest.java",
+  "target_classes": "org.jfree.data.time.Week",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d0bff28f161893b8f98ae51811cdc81b4bf939306db963ab4a5ba905f0aabe5b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_8b/Week_ESTest.java"
+  ],
+  "run_id": "Chart-8-mio-1790351352"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 110,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-110-deepseek-1790361325",
+  "suite_sha256": "8dcdc23e9ff7af9df536865e288e2e4c6868d87611e7bbb4e5a5d9eedeb301ac",
+  "test_files": "ScopedAliasesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases;com.google.javascript.rhino.Node",
+  "timestamp": "2026-09-26 01:35:36",
+  "evaluation_duration_sec": 10.516,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "0b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_110b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_110b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_110b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_110b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_110b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_110b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_110b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_110b/.test_suite/com/google/javascript/jscomp/ScopedAliasesDeepseekTest.java:73: error: diamond operator is not supported in -source 6\n    [javac]     List<DiagnosticType> types = new ArrayList<>();\n    [javac]                                                ^\n    [javac]   (use -source 7 or higher to enable diamond operator)\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

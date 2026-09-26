@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.4,
+  "branch_cov": 80.0,
+  "test_file": "HtmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.parser.HtmlTreeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "63b8495aaa1cc6a60444ebb0f464fe7622c84283af794194fae92c108bcb6adf",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_67b/HtmlTreeBuilder_ESTest.java"
+  ],
+  "run_id": "Jsoup-67-mio-1790381778"
+}

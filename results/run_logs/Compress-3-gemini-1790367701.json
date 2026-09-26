@@ -1,0 +1,33 @@
+{
+  "project": "Compress",
+  "bug_id": 3,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-3-gemini-1790367701",
+  "suite_sha256": "87ad5472d00a9efa3b8e01d8e309c1db19c205cb371a36c7552a91356403ae8e",
+  "test_files": "TarArchiveOutputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveOutputStream",
+  "timestamp": "2026-09-26 03:21:56",
+  "evaluation_duration_sec": 15.136,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 96.43,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseIdempotency",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCustomBlockAndRecordSizes",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseWithoutCloseArchiveEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWithoutCloseArchiveEntryThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeAcrossMultipleWritesThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWritesTwoZeroRecords"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseIdempotency",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCustomBlockAndRecordSizes",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testCloseArchiveEntryBeforeSpecifiedBytesWrittenThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testWriteExceedingDeclaredSizeAcrossMultipleWritesThrowsException",
+    "org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamGeminiTest::testFinishWritesTwoZeroRecords"
+  ]
+}

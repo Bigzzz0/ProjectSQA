@@ -17,5 +17,10 @@
   "fixed_failures": [
     "org.apache.commons.collections.map.Flat3MapGeminiTest::testRemoveNonDelegateAllSizes",
     "org.apache.commons.collections.map.Flat3MapGeminiTest::testNullKeyOperations"
-  ]
+  ],
+  "suite_sha256": "fabbc9714ce54a7ca2c317f47011fe3d9368dde3f590a227e4f872fa232e9cbb",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_1b/Flat3MapGeminiTest.java"
+  ],
+  "run_id": "Collections-1-gemini-1790366147"
 }

@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 26.42,
+  "branch_cov": 18.57,
+  "test_file": "CheckGlobalThis_ESTest.java;RuntimeTypeCheck_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis;com.google.javascript.jscomp.RuntimeTypeCheck",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.RuntimeTypeCheck_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.RuntimeTypeCheck_ESTest::test2"
+  ],
+  "suite_sha256": "c2886c475e58b3109c412a781426d93a901daabba069a2306d424123fcb3910a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_147b/CheckGlobalThis_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_147b/RuntimeTypeCheck_ESTest.java"
+  ],
+  "run_id": "Closure-147-mio-1790363489"
+}

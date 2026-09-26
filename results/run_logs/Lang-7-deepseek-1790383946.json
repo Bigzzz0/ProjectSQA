@@ -1,0 +1,30 @@
+{
+  "project": "Lang",
+  "bug_id": 7,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-7-deepseek-1790383946",
+  "suite_sha256": "674f20b473a43dfa77d770e9bb9ae67bf824cddce54809eaf0af569815087524",
+  "test_files": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "timestamp": "2026-09-26 07:52:47",
+  "evaluation_duration_sec": 21.061,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 82.89,
+  "branch_coverage_percent": 70.22,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberAllZeros",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingPlus",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberDoubleMinus",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidWithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidBigDecimal"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberAllZeros",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingPlus",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidWithExponent",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidBigDecimal"
+  ]
+}

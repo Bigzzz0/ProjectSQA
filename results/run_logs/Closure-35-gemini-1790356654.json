@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 35,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-35-gemini-1790356654",
+  "suite_sha256": "81e02eea3dee206cb234d0f083367b57173bb1e2211eb5cf1d46ca554be606d6",
+  "test_files": "TypeInferenceGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypeInference",
+  "timestamp": "2026-09-26 00:17:44",
+  "evaluation_duration_sec": 10.15,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_35b/.test_suite/com/google/javascript/jscomp/TypeInferenceGeminiTest.java:72: error: no suitable method found for compile(SourceFile,SourceFile,CompilerOptions)\n    [javac]     compiler.compile(externSource, inputSource, options);\n    [javac]             ^\n    [javac]     method Compiler.compile(JSSourceFile,JSSourceFile,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile,JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile,JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)\n    [javac]     method Compiler.compile(JSSourceFile[],JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile[])\n    [javac]     method Compiler.compile(List<JSSourceFile>,List<JSSourceFile>,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile cannot be converted to List<JSSourceFile>)\n    [javac]     method Compiler.compile(JSSourceFile[],JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile[])\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

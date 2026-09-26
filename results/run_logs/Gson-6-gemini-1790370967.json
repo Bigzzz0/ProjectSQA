@@ -1,0 +1,24 @@
+{
+  "project": "Gson",
+  "bug_id": 6,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-6-gemini-1790370967",
+  "suite_sha256": "9be5b9e89c6ce3bc1fa44c9f5fe4e8c4415af7c514e4c18bfcdbd1d59e9805d2",
+  "test_files": "JsonAdapterAnnotationTypeAdapterFactoryGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+  "timestamp": "2026-09-26 04:16:20",
+  "evaluation_duration_sec": 13.417,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugDeserialize",
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testGetTypeAdapterReturnsNullWhenFactoryReturnsNullDirectly",
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugSerialize",
+    "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testCreateReturnsNullWhenFactoryReturnsNullDirectly"
+  ],
+  "fixed_failures": []
+}

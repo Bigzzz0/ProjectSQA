@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.76,
+  "branch_cov": 98.39,
+  "test_file": "SimplexTableau_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.linear.SimplexTableau",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "8ee179c26958b180440c09c7039ce71c977ecdfa034a5227ac4da6d45c613617",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_33b/SimplexTableau_ESTest.java"
+  ],
+  "run_id": "Math-33-mio-1790389632"
+}

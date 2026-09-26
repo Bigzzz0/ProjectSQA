@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 4.04,
+  "branch_cov": 1.14,
+  "test_file": "CollapseProperties_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseProperties",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CollapseProperties_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CollapseProperties_ESTest::test0"
+  ],
+  "suite_sha256": "d11db201db429c35b69172ad6caf82e42612f5385b41dc6add5b83823c9a969f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_130b/CollapseProperties_ESTest.java"
+  ],
+  "run_id": "Closure-130-mio-1790362598"
+}

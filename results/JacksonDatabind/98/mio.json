@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 42.03,
+  "branch_cov": 22.83,
+  "test_file": "ExternalTypeHandler_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "03cf1e8cabdf02bba15f66b9d55ce711f5e235588d9f21bbe0921e65680f04b1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_98b/ExternalTypeHandler_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-98-mio-1790377743"
+}

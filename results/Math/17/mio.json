@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 25.75,
+  "branch_cov": 20.05,
+  "test_file": "Dfp_ESTest.java",
+  "target_classes": "org.apache.commons.math3.dfp.Dfp",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a5996d6de084ad912fda175e8872e00d012cf9ce721afbacce02eefb662409cb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_17b/Dfp_ESTest.java"
+  ],
+  "run_id": "Math-17-mio-1790388545"
+}

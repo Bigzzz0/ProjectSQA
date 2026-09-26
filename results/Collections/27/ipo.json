@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 12.6,
+  "branch_cov": 6.0,
+  "test_file": "MultiValueMap_IPOTest.java",
+  "target_classes": "org.apache.commons.collections4.map.MultiValueMap",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3f1e449c54a110a8b8f277f1375f621f1c555fa0be6b51b172a17476aa638fa5",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Collections_27b/org/apache/commons/collections4/map/MultiValueMap_IPOTest.java"
+  ],
+  "run_id": "Collections-27-ipo-1790367508"
+}

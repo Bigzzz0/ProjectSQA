@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 42.86,
+  "branch_cov": 35.71,
+  "test_file": "Cleaner_ESTest.java",
+  "target_classes": "org.jsoup.safety.Cleaner",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ec8a64e6ba6141aa9cfeeb798677d8038922c657ef6479de074a79ab9ecdc842",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_26b/Cleaner_ESTest.java"
+  ],
+  "run_id": "Jsoup-26-mio-1790379797"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 64.52,
+  "branch_cov": 46.15,
+  "test_file": "JsonNodeDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "71b0ab8edfda9efa69337bc31166cd3bb7b2067b3004f7ca6fb4dcbb99bc6fea",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_28b/JsonNodeDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-28-mio-1790373772"
+}

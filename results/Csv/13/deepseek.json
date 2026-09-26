@@ -77,5 +77,11 @@
     "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintWithQuoteMinimalContainsDelimiter",
     "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintNestedObjectArray",
     "org.apache.commons.csv.CSVPrinterDeepseekTest::testPrintComment"
-  ]
+  ],
+  "suite_sha256": "fd1a52ad423fbd4cc77e19361e4186bcf1be4b32f7eab851aa8af1e08f33dab5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Csv_13b/CSVFormatDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/Csv_13b/CSVPrinterDeepseekTest.java"
+  ],
+  "run_id": "Csv-13-deepseek-1790370571"
 }

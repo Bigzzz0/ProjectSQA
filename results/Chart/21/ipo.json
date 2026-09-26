@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 29.81,
+  "branch_cov": 0.0,
+  "test_file": "DefaultBoxAndWhiskerCategoryDataset_IPOTest.java",
+  "target_classes": "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a0e65c267eab435a81b7ca08aafd23b9d3640d334863d1bad0d808d876fcc84e",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_21b/org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset_IPOTest.java"
+  ],
+  "run_id": "Chart-21-ipo-1790352181"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "DocumentType_ESTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.nodes.DocumentType_ESTest::test1",
+    "org.jsoup.nodes.DocumentType_ESTest::test0"
+  ],
+  "suite_sha256": "b26461d86666f8f6e633fa0e353e71580d61a8c931ca26653dff702d275a9e77",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_16b/DocumentType_ESTest.java"
+  ],
+  "run_id": "Jsoup-16-mio-1790379366"
+}

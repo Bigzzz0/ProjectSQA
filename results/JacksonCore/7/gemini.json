@@ -10,5 +10,10 @@
     "com.fasterxml.jackson.core.json.JsonWriteContextGeminiTest::testFailOnWritingConsecutiveValuesInObjectContext",
     "com.fasterxml.jackson.core.json.JsonWriteContextGeminiTest::testFailOnWritingValueInObjectContextWhenExpectingFieldName"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "9b8b1612908c15762a550fbec154bc44a0e6d9a778622c1b9bf0134eb8067e36",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_7b/JsonWriteContextGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-7-gemini-1790371666"
 }

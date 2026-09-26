@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.fraction.FractionGeminiTest::testCompareToPrecisionDefect"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "ea7e8287720aeda8f169e1d383797c51066dab6e2b7d0e94c8ccaa9569551839",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_91b/FractionGeminiTest.java"
+  ],
+  "run_id": "Math-91-gemini-1790393607"
 }

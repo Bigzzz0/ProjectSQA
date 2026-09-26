@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 39,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-39-gemini-1790356969",
+  "suite_sha256": "6a45c8c5f1f31930789b85778e4314051165fdbef35d3ed8514267097990853a",
+  "test_files": "PrototypeObjectTypeGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+  "timestamp": "2026-09-26 00:22:59",
+  "evaluation_duration_sec": 9.926,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_39b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_39b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_39b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_39b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_39b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_39b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_39b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_39b/.test_suite/com/google/javascript/rhino/jstype/PrototypeObjectTypeGeminiTest.java:95: error: cannot find symbol\n    [javac]     assertEquals(\"CustomClass\", type.getClassName());\n    [javac]                                     ^\n    [javac]   symbol:   method getClassName()\n    [javac]   location: variable type of type PrototypeObjectType\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

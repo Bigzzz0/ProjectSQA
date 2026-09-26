@@ -1,0 +1,27 @@
+{
+  "project": "Closure",
+  "bug_id": 54,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-54-mio-1790357907",
+  "suite_sha256": "3c2f92b6c70ddbe0ea71553657f871a44a90c256abc99925bf00387b697c7700",
+  "test_files": "FunctionType_ESTest.java;TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator;com.google.javascript.rhino.jstype.FunctionType",
+  "timestamp": "2026-09-26 00:39:10",
+  "evaluation_duration_sec": 43.795,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 41.43,
+  "branch_coverage_percent": 29.56,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test2",
+    "com.google.javascript.jscomp.TypedScopeCreator_ESTest::test1",
+    "com.google.javascript.rhino.jstype.FunctionType_ESTest::test41",
+    "com.google.javascript.rhino.jstype.FunctionType_ESTest::test43"
+  ]
+}

@@ -65,5 +65,10 @@
     "com.google.javascript.jscomp.TypeCheckDeepseekTest::testVisitVarWithTypeAnnotation",
     "com.google.javascript.jscomp.TypeCheckDeepseekTest::testVisitTypeOf",
     "com.google.javascript.jscomp.TypeCheckDeepseekTest::testVisitInstanceOf"
-  ]
+  ],
+  "suite_sha256": "cf367aa4453393e252d2647dc76b93044b6236fd1c2e53341af43d7d220df3cb",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_66b/TypeCheckDeepseekTest.java"
+  ],
+  "run_id": "Closure-66-deepseek-1790358769"
 }

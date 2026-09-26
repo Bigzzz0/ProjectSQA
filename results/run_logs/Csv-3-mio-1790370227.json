@@ -1,0 +1,21 @@
+{
+  "project": "Csv",
+  "bug_id": 3,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Csv-3-mio-1790370227",
+  "suite_sha256": "1f4472f54b22947bbf8bf716cd9583743b11ee9dc28355ce3aa22302fae9e7a5",
+  "test_files": "Lexer_ESTest.java",
+  "target_classes": "org.apache.commons.csv.Lexer",
+  "timestamp": "2026-09-26 04:04:01",
+  "evaluation_duration_sec": 14.197,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.11,
+  "branch_coverage_percent": 86.36,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.csv.Lexer_ESTest::test12"
+  ]
+}

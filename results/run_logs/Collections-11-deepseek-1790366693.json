@@ -1,0 +1,24 @@
+{
+  "project": "Collections",
+  "bug_id": 11,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-11-deepseek-1790366693",
+  "suite_sha256": "c48cc58294155f6069bb1ebe36fc4355d423f9fa635ccfd8af5cbf1fa87d8cc5",
+  "test_files": "MultiKeyDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.keyvalue.MultiKey",
+  "timestamp": "2026-09-26 03:05:10",
+  "evaluation_duration_sec": 16.989,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationWithThreeKeys",
+    "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testSerializationWithComplexObjects",
+    "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationWithNullKeys",
+    "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerialization"
+  ],
+  "fixed_failures": []
+}

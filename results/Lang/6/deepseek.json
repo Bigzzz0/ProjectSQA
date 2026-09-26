@@ -19,5 +19,10 @@
     "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithLargeCodepoint",
     "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testHexWithNegative",
     "org.apache.commons.lang3.text.translate.CharSequenceTranslatorDeepseekTest::testTranslateMixedWithConsuming"
-  ]
+  ],
+  "suite_sha256": "21981352f6d5cec85614ce7e1978479da70a47461a52e69091a2439e940e955b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_6b/CharSequenceTranslatorDeepseekTest.java"
+  ],
+  "run_id": "Lang-6-deepseek-1790383858"
 }

@@ -48,5 +48,10 @@
     "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterZVariations",
     "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testLetterCHVariations",
     "org.apache.commons.codec.language.DoubleMetaphoneGeminiTest::testIsDoubleMetaphoneEqual"
-  ]
+  ],
+  "suite_sha256": "e11ca002ee799c6b5e0cd6005ed5e1a30bfd66755524cb43a773cf52a87ac6ed",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_3b/DoubleMetaphoneGeminiTest.java"
+  ],
+  "run_id": "Codec-3-gemini-1790365492"
 }

@@ -11,5 +11,10 @@
     "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareRescalingIdenticalProportions",
     "org.apache.commons.math.stat.inference.ChiSquareTestImplGeminiTest::testChiSquareTestRescalingPValue"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "8c381b3516b37dcdbc014fa3e6837b3a7a7d8fa31b4000cc474b9a7db210b399",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_102b/ChiSquareTestImplGeminiTest.java"
+  ],
+  "run_id": "Math-102-gemini-1790394472"
 }

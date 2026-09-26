@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "BrentSolver_ESTest.java",
+  "target_classes": "org.apache.commons.math.analysis.BrentSolver",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.BrentSolver_ESTest::test03"
+  ],
+  "suite_sha256": "717ce4c216af204aed21b88a72c3c135c9bea43e4d138feb12addb2b332a2283",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_97b/BrentSolver_ESTest.java"
+  ],
+  "run_id": "Math-97-mio-1790394098"
+}

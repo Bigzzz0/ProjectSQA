@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
     "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
-  ]
+  ],
+  "suite_sha256": "e57c75008e79ded50503e26ba579361b39d7ca72f4746ab35daa13c9f9068233",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_21b/PropertyPointerGeminiTest.java"
+  ],
+  "run_id": "JxPath-21-gemini-1790383515"
 }

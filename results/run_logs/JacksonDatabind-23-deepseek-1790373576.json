@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 23,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-23-deepseek-1790373576",
+  "suite_sha256": "0c3291212750152e78d430af25119625e118da8e7183fdd398204cd78a8f6a4f",
+  "test_files": "NumberSerializersDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializers",
+  "timestamp": "2026-09-26 04:59:44",
+  "evaluation_duration_sec": 8.045,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "23b/target/classes/com/fasterxml/jackson/databind/ext/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_23b/target/classes/com/fasterxml/jackson/databind/cfg/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonDatabind_23b/target/classes/com/fasterxml/jackson/databind/jsonFormatVisitors/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonDatabind_23b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonDatabind_23b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_23b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_23b/.test_suite/com/fasterxml/jackson/databind/ser/std/NumberSerializersDeepseekTest.java:235: error: no suitable constructor found for Std(<null>,<null>,<null>,<null>,<null>)\n    [javac]         BeanProperty property = new BeanProperty.Std(null, null, null, null, null);\n    [javac]                                 ^\n    [javac]     constructor Std.Std(PropertyName,JavaType,PropertyName,Annotations,AnnotatedMember,PropertyMetadata) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor Std.Std(String,JavaType,PropertyName,Annotations,AnnotatedMember,boolean) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

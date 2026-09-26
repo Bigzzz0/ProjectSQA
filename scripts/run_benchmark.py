@@ -20,6 +20,9 @@ import csv
 import glob
 import shutil
 import argparse
+import hashlib
+import tempfile
+from functools import lru_cache
 from typing import List, Dict, Optional, Any, Tuple
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -40,6 +43,14 @@ PROGRESS_FILE = os.path.join(PROJECT_ROOT, "progress.json")
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
 DEFAULT_CSV = os.path.join(RESULTS_DIR, "benchmark_results.csv")
 WORK_BASE = "/tmp/d4j_eval"
+IPO_MANIFEST = os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "Results", "verified_suites_manifest.json")
+
+CSV_FIELDS = [
+    "Project", "Bug_ID", "Technique", "Target_Classes", "Test_Files",
+    "Line_Coverage_%", "Branch_Coverage_%", "Fault_Detection_Status",
+    "Failures_Count", "Execution_Status", "Timestamp", "Suite_SHA256",
+    "Run_ID", "Evaluation_Duration_Sec", "Error_Detail"
+]
 
 # Representative 17 projects with default selected bugs (Active and clear modified classes)
 REPRESENTATIVE_17 = [
@@ -71,7 +82,7 @@ TECHNIQUE_DIRS = {
 }
 
 TECHNIQUE_NAMES = {
-    "ipo": "IPO (Microsoft PICT)",
+    "ipo": "IPO (Native IPO)",
     "mio": "MIO (EvoSuite SBST)",
     "deepseek": "DeepSeek V4 Flash",
     "claude": "DeepSeek V4 Flash",
@@ -89,25 +100,191 @@ def load_progress() -> Dict[str, Any]:
 
 def save_progress(progress: Dict[str, Any]):
     os.makedirs(os.path.dirname(PROGRESS_FILE), exist_ok=True)
-    with open(PROGRESS_FILE, "w", encoding="utf-8") as f:
-        json.dump(progress, f, indent=2, ensure_ascii=False)
+    fd, temp_path = tempfile.mkstemp(prefix="progress_", suffix=".json", dir=os.path.dirname(PROGRESS_FILE))
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(progress, f, indent=2, ensure_ascii=False)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(temp_path, PROGRESS_FILE)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
 
 def init_csv(csv_path: str):
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     if not os.path.exists(csv_path):
         with open(csv_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                "Project", "Bug_ID", "Technique", "Target_Classes",
-                "Test_Files", "Line_Coverage_%", "Branch_Coverage_%",
-                "Fault_Detection_Status", "Failures_Count", "Execution_Status", "Timestamp"
-            ])
+            csv.DictWriter(f, fieldnames=CSV_FIELDS).writeheader()
 
-def append_csv_result(csv_path: str, row: List[Any]):
+def append_csv_result(
+    csv_path: str,
+    row: List[Any],
+    suite_sha256: str = "",
+    run_id: str = "",
+    duration_sec: Optional[float] = None,
+    error_detail: str = "",
+):
+    """Upsert one measured outcome per project/bug/technique; preserve older columns."""
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
-    with open(csv_path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(row)
+    if isinstance(row, dict):
+        new_row = {field: row.get(field, "") for field in CSV_FIELDS}
+    else:
+        new_row = dict(zip(CSV_FIELDS[:11], row))
+        new_row.update({
+            "Suite_SHA256": suite_sha256,
+            "Run_ID": run_id,
+            "Evaluation_Duration_Sec": "" if duration_sec is None else round(duration_sec, 3),
+            "Error_Detail": error_detail,
+        })
+
+    prior_rows = {}
+    if os.path.exists(csv_path):
+        with open(csv_path, "r", newline="", encoding="utf-8", errors="replace") as f:
+            for old in csv.DictReader(f):
+                migrated = {field: old.get(field, "") for field in CSV_FIELDS}
+                key = (migrated["Project"], migrated["Bug_ID"], migrated["Technique"])
+                if not all(key):
+                    continue
+                previous = prior_rows.get(key)
+                # CSV is append ordered historically; timestamps break ties after migration.
+                if previous is None or migrated["Timestamp"] >= previous["Timestamp"]:
+                    prior_rows[key] = migrated
+
+    key = (str(new_row.get("Project", "")), str(new_row.get("Bug_ID", "")), str(new_row.get("Technique", "")))
+    prior_rows[key] = {field: "" if new_row.get(field) is None else new_row.get(field, "") for field in CSV_FIELDS}
+    fd, temp_path = tempfile.mkstemp(prefix="benchmark_", suffix=".csv", dir=os.path.dirname(os.path.abspath(csv_path)))
+    try:
+        with os.fdopen(fd, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
+            writer.writeheader()
+            for item in sorted(prior_rows.values(), key=lambda r: (r["Project"], int(r["Bug_ID"] or 0), r["Technique"])):
+                writer.writerow(item)
+        os.replace(temp_path, csv_path)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+
+
+def sha256_file(path: str) -> str:
+    # The checked-in manifest records Git's LF-normalized source digest;
+    # Windows checkout may expand those line endings to CRLF.
+    with open(path, "rb") as f:
+        contents = f.read().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(contents).hexdigest()
+
+
+def suite_fingerprint(test_files: List[str]) -> str:
+    digest = hashlib.sha256()
+    for path in sorted(test_files):
+        digest.update(os.path.basename(path).encode("utf-8"))
+        digest.update(b"\0")
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                digest.update(chunk)
+        scaffold = path.replace(".java", "_scaffolding.java")
+        if os.path.exists(scaffold):
+            digest.update(os.path.basename(scaffold).encode("utf-8"))
+            with open(scaffold, "rb") as f:
+                for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                    digest.update(chunk)
+    return digest.hexdigest()
+
+
+def progress_result_is_current(
+    result: Dict[str, Any], project: Optional[str] = None,
+    bug_id: Optional[int] = None, technique: Optional[str] = None,
+) -> bool:
+    """A saved outcome can be reused only when its measured suite is unchanged."""
+    status = result.get("status")
+    if status == "NO_SUITE" and project and bug_id is not None and technique:
+        classes = load_catalog_targets().get((project, int(bug_id)), [])
+        if not classes:
+            return False
+        try:
+            return not find_test_files_for_target(technique, project, int(bug_id), classes)
+        except (OSError, ValueError, json.JSONDecodeError):
+            return False
+    if status not in {"DONE", "COMPILE_ERROR"}:
+        return False
+    paths = result.get("test_paths")
+    expected = result.get("suite_sha256")
+    if not paths or not expected or not all(os.path.isfile(path) for path in paths):
+        return False
+    try:
+        return suite_fingerprint(paths) == expected
+    except OSError:
+        return False
+
+
+def load_csv_run_ids(csv_path: str) -> set:
+    """Index persisted measurement runs so resume cannot skip another output file."""
+    runs = set()
+    if not os.path.isfile(csv_path):
+        return runs
+    with open(csv_path, "r", newline="", encoding="utf-8", errors="replace") as f:
+        for row in csv.DictReader(f):
+            runs.add((
+                row.get("Project", ""),
+                str(row.get("Bug_ID", "")),
+                row.get("Technique", ""),
+                row.get("Suite_SHA256", ""),
+                row.get("Run_ID", ""),
+            ))
+    return runs
+
+
+@lru_cache(maxsize=1)
+def load_ipo_manifest() -> Dict[str, Any]:
+    if not os.path.isfile(IPO_MANIFEST):
+        return {}
+    with open(IPO_MANIFEST, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+@lru_cache(maxsize=1)
+def load_catalog_targets() -> Dict[Tuple[str, int], List[str]]:
+    catalog_path = os.path.join(PROJECT_ROOT, "target_benchmark", "all_bugs_catalog.json")
+    if not os.path.isfile(catalog_path):
+        return {}
+    with open(catalog_path, "r", encoding="utf-8") as f:
+        catalog = json.load(f)
+    targets = {}
+    for item in catalog:
+        classes = item.get("target_classes") or item.get("modified_classes") or []
+        targets[(item["project"], int(item["bug_id"]))] = list(classes)
+    return targets
+
+
+def find_verified_ipo_suites(project: str, bug_id: int, modified_classes: List[str]) -> List[str]:
+    """Return only manifest-listed Native IPO suites whose content hash is intact."""
+    manifest = load_ipo_manifest()
+    suite_root = os.path.realpath(os.path.join(PROJECT_ROOT, "Combinatorial_IPO"))
+    modified = set(modified_classes)
+    found = []
+    invalid = []
+    for record in manifest.get("records", []):
+        if record.get("project") != project or int(record.get("bug_id", -1)) != int(bug_id):
+            continue
+        target_class = record.get("target_class", "")
+        if target_class not in modified:
+            continue
+        if record.get("status") != "FIXED_VERIFIED" or record.get("generation_backend") != "native_ipo":
+            invalid.append(f"{target_class}: manifest status/backend is not verified Native IPO")
+            continue
+        rel_path = record.get("suite_path", "")
+        suite_path = os.path.realpath(os.path.join(suite_root, rel_path))
+        if os.path.commonpath([suite_root, suite_path]) != suite_root or not os.path.isfile(suite_path):
+            invalid.append(f"{target_class}: missing or unsafe suite_path {rel_path!r}")
+            continue
+        expected_hash = record.get("suite_sha256", "")
+        if not expected_hash or sha256_file(suite_path) != expected_hash:
+            invalid.append(f"{target_class}: suite SHA-256 mismatch")
+            continue
+        found.append(suite_path)
+    if invalid:
+        raise ValueError("Invalid Native IPO manifest record(s): " + "; ".join(invalid))
+    return sorted(set(found))
 
 def find_test_files_for_target(technique: str, project: str, bug_id: int, modified_classes: List[str]) -> List[str]:
     """
@@ -115,6 +292,9 @@ def find_test_files_for_target(technique: str, project: str, bug_id: int, modifi
     Supports multi-class bugs, specific bug subdirectories, and root test directories.
     Strictly verifies class name match to prevent cross-project test leakage.
     """
+    if technique == "ipo":
+        return find_verified_ipo_suites(project, bug_id, modified_classes)
+
     base_dir = TECHNIQUE_DIRS.get(technique)
     if not base_dir or not os.path.exists(base_dir):
         return []
@@ -128,13 +308,7 @@ def find_test_files_for_target(technique: str, project: str, bug_id: int, modifi
         base_dir
     ]
     
-    # Fallback path for IPO PICT reference baseline
-    if technique == "ipo":
-        candidate_dirs.append(os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "baselines", "pict", f"{project}_{bug_id}b", "TestCode"))
-        candidate_dirs.append(os.path.join(PROJECT_ROOT, "Combinatorial_IPO", "Result_Round1", f"{project}_{bug_id}b"))
-
     found = []
-    found_classes = set()
     
     for c_dir in candidate_dirs:
         if not os.path.exists(c_dir):
@@ -150,26 +324,8 @@ def find_test_files_for_target(technique: str, project: str, bug_id: int, modifi
         for f in glob.glob(pattern, recursive=is_bug_specific_dir):
             if "scaffolding" in f:
                 continue
-            fname = os.path.basename(f)
-            
-            # If the file is in a bug-specific subfolder (e.g. Chart_1b/), accept it
-            if is_bug_specific_dir:
-                pkg = get_class_package(f)
-                if not pkg or any(tc.startswith(pkg) or pkg.startswith(".".join(tc.split(".")[:-1])) or project.lower() in pkg.lower() for tc in modified_classes):
-                    if f not in found:
-                        found.append(f)
-                continue
-
-            # Otherwise (in root test directory), check if filename matches target class or bug id
-            for tc in modified_classes:
-                short_name = tc.split(".")[-1]
-                if short_name.lower() in fname.lower() or f"{project.lower()}_{bug_id}b" in fname.lower() or f"{project.lower()}-{bug_id}" in fname.lower():
-                    pkg = get_class_package(f)
-                    tc_pkg = ".".join(tc.split(".")[:-1])
-                    if not pkg or not tc_pkg or pkg == tc_pkg or tc_pkg.startswith(pkg) or pkg.startswith(tc_pkg) or project.lower() in pkg.lower():
-                        if f not in found:
-                            found.append(f)
-                            found_classes.add(short_name)
+            if test_file_matches_targets(f, modified_classes) and f not in found:
+                found.append(f)
                             
         # If tests were found in the dedicated bug-specific directory, stop searching
         if is_bug_specific_dir and found:
@@ -189,6 +345,21 @@ def get_class_package(java_file_path: str) -> str:
     except Exception:
         pass
     return ""
+
+
+def test_file_matches_targets(java_file_path: str, modified_classes: List[str]) -> bool:
+    """Match generated tests by exact target package and target-name prefix."""
+    filename = os.path.basename(java_file_path).lower()
+    package = get_class_package(java_file_path)
+    for target_class in modified_classes:
+        short_name = target_class.rsplit(".", 1)[-1].lower()
+        target_package = target_class.rsplit(".", 1)[0] if "." in target_class else ""
+        if package != target_package or not filename.startswith(short_name):
+            continue
+        suffix = filename[len(short_name):]
+        if suffix.startswith(("_", "-", "deepseek", "gemini")):
+            return True
+    return False
 
 import tarfile
 
@@ -287,33 +458,87 @@ def evaluate_technique_on_bug(
     Evaluate a single technique on a specific bug using Defects4J native external test suite workflow (-s).
     """
     state_key = f"{project}-{bug_id}-{technique}"
+    started_clock = time.monotonic()
+    started_at = time.strftime("%Y-%m-%d %H:%M:%S")
+    run_id = f"{state_key}-{int(time.time())}"
     print(f"\n[{state_key}] Starting evaluation...")
     
     work_buggy = os.path.join(WORK_BASE, f"{project}_{bug_id}b")
     work_fixed = os.path.join(WORK_BASE, f"{project}_{bug_id}f")
+    # Never trust leftovers from an interrupted prior evaluation.
+    shutil.rmtree(work_buggy, ignore_errors=True)
+    shutil.rmtree(work_fixed, ignore_errors=True)
+
+    def finish(result: Dict[str, Any]) -> Dict[str, Any]:
+        if clean_tmp:
+            shutil.rmtree(work_buggy, ignore_errors=True)
+            shutil.rmtree(work_fixed, ignore_errors=True)
+        return result
     
-    # 1. Checkout Buggy version
-    print(f"[{state_key}] Checking out {project}-{bug_id}b...")
-    if not d4j_meta.checkout_project(project, bug_id, is_buggy=True, work_dir=work_buggy):
-        return {"status": "CHECKOUT_ERROR", "fault_detected": "NO", "line_cov": 0.0, "branch_cov": 0.0}
-    
-    # 2. Extract Metadata
-    modified_classes = d4j_meta.get_modified_classes(work_buggy)
+    # Resolve targets from the checked-in catalog so missing suites do not trigger
+    # expensive project checkouts. Every suite that will run is checked against D4J.
+    modified_classes = load_catalog_targets().get((project, int(bug_id)), [])
+    if not modified_classes:
+        print(f"[{state_key}] Checking out {project}-{bug_id}b to read target metadata...")
+        if not d4j_meta.checkout_project(project, bug_id, is_buggy=True, work_dir=work_buggy):
+            append_csv_result(csv_path, [
+                project, bug_id, TECHNIQUE_NAMES.get(technique, technique), "", "", "", "",
+                "CHECKOUT_ERROR", 0, "CHECKOUT_ERROR", started_at
+            ], run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail="Buggy checkout failed")
+            return finish({"status": "CHECKOUT_ERROR", "fault_detected": "NOT_EVALUATED", "line_cov": None, "branch_cov": None, "run_id": run_id})
+        modified_classes = d4j_meta.get_modified_classes(work_buggy)
     print(f"[{state_key}] Target modified classes: {modified_classes}")
-    
-    # 3. Locate Test Files
-    test_files = find_test_files_for_target(technique, project, bug_id, modified_classes)
+
+    # Locate suite before checkout; absent suites get a durable NO_SUITE outcome.
+    try:
+        test_files = find_test_files_for_target(technique, project, bug_id, modified_classes)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        detail = str(exc)
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), "", "", "",
+            "INVALID_SUITE", 0, "INVALID_SUITE", started_at
+        ], run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({
+            "status": "INVALID_SUITE", "fault_detected": "NOT_EVALUATED",
+            "target_classes": ";".join(modified_classes), "error": detail
+        })
+
     if not test_files:
-        print(f"[{state_key}] ⏳ No test files found yet in {TECHNIQUE_DIRS[technique]}. Skipping...")
-        return {
-            "status": "WAITING_FOR_TESTS",
-            "fault_detected": "-",
-            "line_cov": "-",
-            "branch_cov": "-",
-            "test_file": "-"
-        }
-    
+        print(f"[{state_key}] ⏳ No test files found for this bug. Recording NO_SUITE without checkout.")
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), "", "", "",
+            "NO_SUITE", 0, "NO_SUITE", started_at
+        ], run_id=run_id, duration_sec=time.monotonic() - started_clock,
+            error_detail="No matching test suite was available")
+        return finish({
+            "status": "NO_SUITE", "fault_detected": "NOT_EVALUATED", "line_cov": None,
+            "branch_cov": None, "target_classes": ";".join(modified_classes), "test_file": "",
+            "test_paths": [], "suite_sha256": "", "run_id": run_id,
+        })
+
+    if not os.path.isdir(work_buggy):
+        print(f"[{state_key}] Checking out {project}-{bug_id}b...")
+        if not d4j_meta.checkout_project(project, bug_id, is_buggy=True, work_dir=work_buggy):
+            append_csv_result(csv_path, [
+                project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), "", "", "",
+                "CHECKOUT_ERROR", 0, "CHECKOUT_ERROR", started_at
+            ], run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail="Buggy checkout failed")
+            return finish({"status": "CHECKOUT_ERROR", "fault_detected": "NOT_EVALUATED", "line_cov": None, "branch_cov": None, "run_id": run_id})
+
+    live_classes = d4j_meta.get_modified_classes(work_buggy)
+    if not live_classes or set(live_classes) != set(modified_classes):
+        detail = f"Catalog/D4J target class mismatch: catalog={modified_classes}; defects4j={live_classes}"
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes),
+            ";".join(os.path.basename(path) for path in test_files), "", "", "INVALID_SUITE", 0,
+            "INVALID_SUITE", started_at
+        ], suite_sha256=suite_fingerprint(test_files), run_id=run_id,
+            duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({"status": "INVALID_SUITE", "fault_detected": "NOT_EVALUATED", "error": detail,
+                       "suite_sha256": suite_fingerprint(test_files), "test_paths": test_files, "run_id": run_id})
+    modified_classes = live_classes
     test_fname = ";".join([os.path.basename(tf) for tf in test_files])
+    test_sha256 = suite_fingerprint(test_files)
     print(f"[{state_key}] Packaging test files: {[os.path.basename(tf) for tf in test_files]}")
     
     # 4. Package External Test Suite into .tar.bz2
@@ -332,8 +557,8 @@ def evaluate_technique_on_bug(
         res_dict = {
             "status": "TIMEOUT",
             "fault_detected": "TIMEOUT",
-            "line_cov": 0.0,
-            "branch_cov": 0.0,
+            "line_cov": None,
+            "branch_cov": None,
             "test_file": test_fname,
             "target_classes": ";".join(modified_classes),
             "buggy_failures": [],
@@ -341,18 +566,19 @@ def evaluate_technique_on_bug(
         }
         append_csv_result(csv_path, [
             project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
-            ";".join(modified_classes), test_fname, 0.0, 0.0,
+            ";".join(modified_classes), test_fname, "", "",
             "TIMEOUT", 0, "TIMEOUT", time.strftime("%Y-%m-%d %H:%M:%S")
-        ])
-        return res_dict
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=cov_err[-2000:])
+        res_dict.update({"suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id})
+        return finish(res_dict)
 
     if "cannot compile" in (cov_out + cov_err).lower() or (cov_code != 0 and not os.path.exists(os.path.join(work_buggy, "summary.csv"))):
         print(f"[{state_key}] ❌ COMPILE ERROR: Generated test suite failed to compile!")
         res_dict = {
             "status": "COMPILE_ERROR",
             "fault_detected": "COMPILE_ERROR",
-            "line_cov": 0.0,
-            "branch_cov": 0.0,
+            "line_cov": None,
+            "branch_cov": None,
             "test_file": test_fname,
             "target_classes": ";".join(modified_classes),
             "buggy_failures": [],
@@ -360,10 +586,11 @@ def evaluate_technique_on_bug(
         }
         append_csv_result(csv_path, [
             project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
-            ";".join(modified_classes), test_fname, 0.0, 0.0,
+            ";".join(modified_classes), test_fname, "", "",
             "COMPILE_ERROR", 0, "COMPILE_ERROR", time.strftime("%Y-%m-%d %H:%M:%S")
-        ])
-        return res_dict
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=(cov_out + "\n" + cov_err)[-2000:])
+        res_dict.update({"suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id})
+        return finish(res_dict)
         
     summary_csv = os.path.join(work_buggy, "summary.csv")
     cov_metrics = parse_d4j_coverage_summary(summary_csv)
@@ -389,15 +616,48 @@ def evaluate_technique_on_bug(
             project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
             ";".join(modified_classes), test_fname, line_cov, branch_cov,
             "TIMEOUT", 0, "TIMEOUT", time.strftime("%Y-%m-%d %H:%M:%S")
-        ])
-        return res_dict
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=test_b_err[-2000:])
+        res_dict.update({"suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id})
+        return finish(res_dict)
 
     fail_b_count, fail_b_list = count_failing_tests(work_buggy)
+    if "cannot compile" in (test_b_out + test_b_err).lower():
+        detail = (test_b_out + "\n" + test_b_err)[-2000:]
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), test_fname,
+            line_cov, branch_cov, "COMPILE_ERROR", 0, "COMPILE_ERROR", started_at
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({
+            "status": "COMPILE_ERROR", "fault_detected": "COMPILE_ERROR", "line_cov": None,
+            "branch_cov": None, "test_file": test_fname, "target_classes": ";".join(modified_classes),
+            "suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id, "error": detail
+        })
+    if test_b_code != 0 and fail_b_count == 0:
+        detail = (test_b_out + "\n" + test_b_err)[-2000:]
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), test_fname,
+            line_cov, branch_cov, "RUN_ERROR", 0, "RUN_ERROR", started_at
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({
+            "status": "RUN_ERROR", "fault_detected": "NOT_EVALUATED", "line_cov": None,
+            "branch_cov": None, "test_file": test_fname, "target_classes": ";".join(modified_classes),
+            "suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id, "error": detail
+        })
     print(f"[{state_key}] Buggy Failures ({fail_b_count}): {fail_b_list[:2]}")
     
     # 7. Checkout & Test on Fixed version
     print(f"[{state_key}] Checking out Fixed version ({project}-{bug_id}f)...")
-    d4j_meta.checkout_project(project, bug_id, is_buggy=False, work_dir=work_fixed)
+    if not d4j_meta.checkout_project(project, bug_id, is_buggy=False, work_dir=work_fixed):
+        detail = "Fixed checkout failed"
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), test_fname,
+            line_cov, branch_cov, "CHECKOUT_ERROR", 0, "CHECKOUT_ERROR", started_at
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({
+            "status": "CHECKOUT_ERROR", "fault_detected": "NOT_EVALUATED", "line_cov": None,
+            "branch_cov": None, "test_file": test_fname, "target_classes": ";".join(modified_classes),
+            "suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id, "error": detail
+        })
     print(f"[{state_key}] Running test on Fixed version to verify fix passing...")
     test_f_code, test_f_out, test_f_err = d4j_meta.run_cmd(["defects4j", "test", "-w", work_fixed, "-s", archive_fixed], timeout=240)
     if "timed out" in test_f_err.lower():
@@ -415,10 +675,33 @@ def evaluate_technique_on_bug(
             project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
             ";".join(modified_classes), test_fname, line_cov, branch_cov,
             "TIMEOUT", 0, "TIMEOUT", time.strftime("%Y-%m-%d %H:%M:%S")
-        ])
-        return res_dict
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=test_f_err[-2000:])
+        res_dict.update({"suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id})
+        return finish(res_dict)
 
     fail_f_count, fail_f_list = count_failing_tests(work_fixed)
+    if "cannot compile" in (test_f_out + test_f_err).lower():
+        detail = (test_f_out + "\n" + test_f_err)[-2000:]
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), test_fname,
+            line_cov, branch_cov, "COMPILE_ERROR", 0, "COMPILE_ERROR", started_at
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({
+            "status": "COMPILE_ERROR", "fault_detected": "COMPILE_ERROR", "line_cov": None,
+            "branch_cov": None, "test_file": test_fname, "target_classes": ";".join(modified_classes),
+            "suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id, "error": detail
+        })
+    if test_f_code != 0 and fail_f_count == 0:
+        detail = (test_f_out + "\n" + test_f_err)[-2000:]
+        append_csv_result(csv_path, [
+            project, bug_id, TECHNIQUE_NAMES.get(technique, technique), ";".join(modified_classes), test_fname,
+            line_cov, branch_cov, "RUN_ERROR", 0, "RUN_ERROR", started_at
+        ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock, error_detail=detail)
+        return finish({
+            "status": "RUN_ERROR", "fault_detected": "NOT_EVALUATED", "line_cov": None,
+            "branch_cov": None, "test_file": test_fname, "target_classes": ";".join(modified_classes),
+            "suite_sha256": test_sha256, "test_paths": test_files, "run_id": run_id, "error": detail
+        })
     print(f"[{state_key}] Fixed Failures ({fail_f_count}): {fail_f_list[:2]}")
     
     # 8. Classify Fault Detection with Academic Rigor (5 Standard Levels)
@@ -444,7 +727,10 @@ def evaluate_technique_on_bug(
         "test_file": test_fname,
         "target_classes": ";".join(modified_classes),
         "buggy_failures": fail_b_list,
-        "fixed_failures": fail_f_list
+        "fixed_failures": fail_f_list,
+        "suite_sha256": test_sha256,
+        "test_paths": test_files,
+        "run_id": run_id
     }
     
     # Save individual JSON
@@ -458,14 +744,13 @@ def evaluate_technique_on_bug(
         project, bug_id, TECHNIQUE_NAMES.get(technique, technique),
         ";".join(modified_classes), test_fname, line_cov, branch_cov,
         fault_detected, failures_count, "DONE", time.strftime("%Y-%m-%d %H:%M:%S")
-    ])
+    ], suite_sha256=test_sha256, run_id=run_id, duration_sec=time.monotonic() - started_clock)
     
-    # Cleanup work dirs if requested
-    if clean_tmp:
-        shutil.rmtree(work_buggy, ignore_errors=True)
-        shutil.rmtree(work_fixed, ignore_errors=True)
+    # Save individual JSON with the exact suite provenance used for this result.
+    with open(os.path.join(bug_res_dir, f"{technique}.json"), "w", encoding="utf-8") as jf:
+        json.dump(res_dict, jf, indent=2, ensure_ascii=False)
         
-    return res_dict
+    return finish(res_dict)
 
 def main():
     parser = argparse.ArgumentParser(description="Universal Benchmark Runner for Defects4J (All-Bugs & All-Classes)")
@@ -481,7 +766,12 @@ def main():
 
     init_csv(args.csv)
     progress = load_progress() if args.resume else {}
+    persisted_runs = load_csv_run_ids(args.csv)
     techniques = [t.strip().lower() for t in args.techniques.split(",") if t.strip()]
+    techniques = list(dict.fromkeys("deepseek" if t == "claude" else t for t in techniques))
+    unknown = sorted(set(techniques) - set(TECHNIQUE_NAMES))
+    if unknown:
+        parser.error(f"Unknown technique(s): {', '.join(unknown)}")
 
     # Build evaluation queue
     queue: List[Tuple[str, int]] = []
@@ -514,8 +804,16 @@ def main():
     for proj, bid in queue:
         for tech in techniques:
             key = f"{proj}-{bid}-{tech}"
-            if args.resume and progress.get(key, {}).get("status") == "DONE":
-                print(f"⏩ [SKIP] {key} already completed in progress.json")
+            prior = progress.get(key, {})
+            output_key = (
+                proj,
+                str(bid),
+                TECHNIQUE_NAMES.get(tech, tech),
+                prior.get("suite_sha256", ""),
+                prior.get("run_id", ""),
+            )
+            if args.resume and progress_result_is_current(prior, proj, bid, tech) and output_key in persisted_runs:
+                print(f"⏩ [SKIP] {key} already completed with the same suite hash")
                 continue
                 
             try:
@@ -526,7 +824,12 @@ def main():
                 save_progress(progress)
             except Exception as e:
                 print(f"❌ Error evaluating {key}: {e}")
-                progress[key] = {"status": "UNHANDLED_ERROR", "error": str(e)}
+                detail = str(e)
+                progress[key] = {"status": "RUN_ERROR", "error": detail}
+                append_csv_result(args.csv, [
+                    proj, bid, TECHNIQUE_NAMES.get(tech, tech), "", "", "", "",
+                    "RUN_ERROR", 0, "RUN_ERROR", time.strftime("%Y-%m-%d %H:%M:%S")
+                ], run_id=f"{key}-{int(time.time())}", error_detail=detail[-2000:])
                 save_progress(progress)
 
     print("\n" + "=" * 65)

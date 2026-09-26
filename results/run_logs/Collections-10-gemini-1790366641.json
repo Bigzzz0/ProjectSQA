@@ -1,0 +1,22 @@
+{
+  "project": "Collections",
+  "bug_id": 10,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-10-gemini-1790366641",
+  "suite_sha256": "3f332f47020b79d3f7adf220f02dd125877ec4f7ba480aa053146b23c7db0087",
+  "test_files": "MultiValueMapGeminiTest.java",
+  "target_classes": "org.apache.commons.collections.map.MultiValueMap",
+  "timestamp": "2026-09-26 03:04:18",
+  "evaluation_duration_sec": 17.111,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 93.28,
+  "branch_coverage_percent": 93.75,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.MultiValueMapGeminiTest::testFullMapSerializationDefectTarget",
+    "org.apache.commons.collections.map.MultiValueMapGeminiTest::testEmptyMapSerializationDefectTarget"
+  ],
+  "fixed_failures": []
+}

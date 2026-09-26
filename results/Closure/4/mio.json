@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 68.18,
+  "branch_cov": 62.79,
+  "test_file": "NamedType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.NamedType",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "69c7bf2f922f128a9bfb1448c87eaeb5dd63ee4cce3717af565f6831d27fab95",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_4b/NamedType_ESTest.java"
+  ],
+  "run_id": "Closure-4-mio-1790354200"
+}

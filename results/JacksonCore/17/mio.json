@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 61.25,
+  "branch_cov": 55.45,
+  "test_file": "UTF8JsonGenerator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.json.UTF8JsonGenerator",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test10"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test28",
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test77",
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test10",
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test57"
+  ],
+  "suite_sha256": "3b1c299bd81c9ef56a7b0e6f443c7e9fe796c4b5f856e8934529368cf835f49c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_17b/UTF8JsonGenerator_ESTest.java"
+  ],
+  "run_id": "JacksonCore-17-mio-1790372002"
+}

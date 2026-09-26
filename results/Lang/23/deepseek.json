@@ -35,5 +35,10 @@
     "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testPatternWithCustomFormat",
     "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testMultipleFormatElements",
     "org.apache.commons.lang3.text.ExtendedMessageFormatDeepseekTest::testReadArgumentIndexWithWhitespace"
-  ]
+  ],
+  "suite_sha256": "34717511ed4429d1858738dbdc31d7eb1ace700e02b2ac43bc907e48c9187d01",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_23b/ExtendedMessageFormatDeepseekTest.java"
+  ],
+  "run_id": "Lang-23-deepseek-1790384963"
 }

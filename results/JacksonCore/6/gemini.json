@@ -10,5 +10,10 @@
     "com.fasterxml.jackson.core.JsonPointerGeminiTest::testLeadingZeroVariants",
     "com.fasterxml.jackson.core.JsonPointerGeminiTest::testIZeroIndex"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "e6184e4c85f42ce349ad10324e13102f64dae35dcd6777ac0c111e78bbc39d5c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_6b/JsonPointerGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-6-gemini-1790371631"
 }

@@ -1,0 +1,22 @@
+{
+  "project": "Chart",
+  "bug_id": 5,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-5-gemini-1790351192",
+  "suite_sha256": "930c9398b84e87118089506c990fd30b71816d271e0ec470b851306199b407b1",
+  "test_files": "XYSeriesGeminiTest.java",
+  "target_classes": "org.jfree.data.xy.XYSeries",
+  "timestamp": "2026-09-25 22:46:56",
+  "evaluation_duration_sec": 24.419,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.67,
+  "branch_coverage_percent": 97.5,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.xy.XYSeriesGeminiTest::testBug1955483WithMultipleDuplicates",
+    "org.jfree.data.xy.XYSeriesGeminiTest::testBug1955483"
+  ],
+  "fixed_failures": []
+}

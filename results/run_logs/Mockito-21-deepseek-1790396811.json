@@ -1,0 +1,19 @@
+{
+  "project": "Mockito",
+  "bug_id": 21,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-21-deepseek-1790396811",
+  "suite_sha256": "f16740af4caebd8eeac1c5587b1daf47366eac46f8b4a2a4cf0184a700727ac6",
+  "test_files": "ConstructorInstantiatorDeepseekTest.java",
+  "target_classes": "org.mockito.internal.creation.instance.ConstructorInstantiator",
+  "timestamp": "2026-09-26 11:28:38",
+  "evaluation_duration_sec": 106.457,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 13,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-13-mio-1790384345",
+  "suite_sha256": "788ac98b6aff683de5b7b584ff986ded89b9264d08616f1aa01d7a6ad0cd475d",
+  "test_files": "SerializationUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.SerializationUtils",
+  "timestamp": "2026-09-26 07:59:26",
+  "evaluation_duration_sec": 21.128,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 78.12,
+  "branch_coverage_percent": 92.86,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

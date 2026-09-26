@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 9.47,
+  "branch_cov": 3.46,
+  "test_file": "ZipArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test2",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test2",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test3"
+  ],
+  "suite_sha256": "f0b3ad0a270b1d0d8d1983fd38c878bcff8998b2b323c8730ba9149f2089e514",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_41b/ZipArchiveInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-41-mio-1790369774"
+}

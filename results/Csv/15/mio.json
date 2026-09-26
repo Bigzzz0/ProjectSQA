@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 94.96,
+  "branch_cov": 86.55,
+  "test_file": "CSVFormat_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e9e60b015caae0456b671216056fd7a69bc7fd0c6ea6455981cf650f10af5b7e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_15b/CSVFormat_ESTest.java"
+  ],
+  "run_id": "Csv-15-mio-1790370679"
+}

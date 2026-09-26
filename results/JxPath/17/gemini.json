@@ -50,5 +50,11 @@
     "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testUndefinedPrefixNamespaceReturnsEmpty",
     "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testEmptyElementWildcardAttributes",
     "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIteratorGeminiTest::testNonExistentAttributeName"
-  ]
+  ],
+  "suite_sha256": "1c31648ba3f8aa565d159f514a018d83becd9c0fd34e352667d5a0cae8e2f00e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_17b/DOMAttributeIteratorGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_17b/JDOMAttributeIteratorGeminiTest.java"
+  ],
+  "run_id": "JxPath-17-gemini-1790383426"
 }

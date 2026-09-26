@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 81.16,
+  "branch_cov": 78.26,
+  "test_file": "ArchiveStreamFactory_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.ArchiveStreamFactory",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test03",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test05"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test03",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test05",
+    "org.apache.commons.compress.archivers.ArchiveStreamFactory_ESTest::test01"
+  ],
+  "suite_sha256": "bd2b6a1942012131bfb3e68aaadb765339974b706c8a8a3bb3226b291c494fa6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_11b/ArchiveStreamFactory_ESTest.java"
+  ],
+  "run_id": "Compress-11-mio-1790368033"
+}

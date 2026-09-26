@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.mockito.internal.creation.instance.ConstructorInstantiatorGeminiTest::newInstance_withOuter_throwsWhenTargetClassHasNoOuterConstructor",
     "org.mockito.internal.creation.instance.ConstructorInstantiatorGeminiTest::newInstance_withOuter_throwsWhenOuterInstanceIsIncompatible"
-  ]
+  ],
+  "suite_sha256": "aa327a1d179f7ad3d3969cbb674dfc9aeb267a5f728a0784eda3c785620e181a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_21b/ConstructorInstantiatorGeminiTest.java"
+  ],
+  "run_id": "Mockito-21-gemini-1790396918"
 }

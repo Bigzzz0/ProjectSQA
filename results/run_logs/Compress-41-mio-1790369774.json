@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 41,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-41-mio-1790369774",
+  "suite_sha256": "f0b3ad0a270b1d0d8d1983fd38c878bcff8998b2b323c8730ba9149f2089e514",
+  "test_files": "ZipArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream",
+  "timestamp": "2026-09-26 03:56:35",
+  "evaluation_duration_sec": 20.346,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 9.47,
+  "branch_coverage_percent": 3.46,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test2",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test4",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test2",
+    "org.apache.commons.compress.archivers.zip.ZipArchiveInputStream_ESTest::test3"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 105,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-105-gemini-1790394674",
+  "suite_sha256": "12fc99871c579c1f9cb96f41bccfddb31f789d8c2c5a46c9c7e5dff70136ec6b",
+  "test_files": "SimpleRegressionGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.regression.SimpleRegression",
+  "timestamp": "2026-09-26 10:51:19",
+  "evaluation_duration_sec": 5.481,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "vac]         case BigDecimal.ROUND_HALF_UP : {\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_105b/src/java/org/apache/commons/math/util/MathUtils.java:671: warning: [deprecation] ROUND_UNNECESSARY in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UNNECESSARY :\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_105b/src/java/org/apache/commons/math/util/MathUtils.java:676: warning: [deprecation] ROUND_UP in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UP :\n    [javac]                        ^\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 47 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Math_105b/target/classes/META-INF\n     [copy] Copying 1 file to /tmp/d4j_eval/Math_105b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Math_105b/target/classes/../classes\n     [echo] build.home: /tmp/d4j_eval/Math_105b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Math_105b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_105b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_105b/.test_suite/org/apache/commons/math/stat/regression/SimpleRegressionGeminiTest.java:117: error: reached end of file while parsing\n    [javac]         assertTrue(Double.isNaN\n    [javac]                                ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

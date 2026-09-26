@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 52,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-52-deepseek-1790390965",
+  "suite_sha256": "e057be2a3d74b91000daba95f076bd0e809b77d5ee4e8e1697431bdde664dbf3",
+  "test_files": "RotationDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "timestamp": "2026-09-26 09:49:33",
+  "evaluation_duration_sec": 7.771,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "h_52b/target/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: Some input files use or override a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: /tmp/d4j_eval/Math_52b/src/main/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 4 warnings\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_52b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_52b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_52b/.test_suite/org/apache/commons/math/geometry/euclidean/threed/RotationDeepseekTest.java:37: error: method assertVectorEquals in class RotationDeepseekTest cannot be applied to given types;\n    [javac]         assertVectorEquals(v, id.applyTo(v));\n    [javac]         ^\n    [javac]   required: Vector3D,Vector3D,double\n    [javac]   found: Vector3D,Vector3D\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

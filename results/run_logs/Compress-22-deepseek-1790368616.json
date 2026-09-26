@@ -1,0 +1,29 @@
+{
+  "project": "Compress",
+  "bug_id": 22,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-22-deepseek-1790368616",
+  "suite_sha256": "6b3fdc322859d2517163091f31919051055c78212087a67eb3225bfab18d4e48",
+  "test_files": "BZip2CompressorInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "timestamp": "2026-09-26 03:37:15",
+  "evaluation_duration_sec": 18.275,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 11.55,
+  "branch_coverage_percent": 12.45,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInputWithDecompressFlag",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadByteArrayNegativeOffset",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadAfterCloseThrows",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInput"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInputWithDecompressFlag",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadByteArrayNegativeOffset",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testReadAfterCloseThrows",
+    "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamDeepseekTest::testConstructorNullInput"
+  ]
+}

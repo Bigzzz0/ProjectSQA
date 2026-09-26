@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 111,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-111-deepseek-1790361385",
+  "suite_sha256": "dfd2297067b27cb0c54daf6cc4866c2dfb0843b911409a5afe35e28aa3569297",
+  "test_files": "ClosureReverseAbstractInterpreterDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter",
+  "timestamp": "2026-09-26 01:36:35",
+  "evaluation_duration_sec": 10.048,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "avascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_111b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_111b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_111b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_111b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_111b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_111b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_111b/.test_suite/com/google/javascript/jscomp/type/ClosureReverseAbstractInterpreterDeepseekTest.java:14: error: cannot find symbol\n    [javac] import com.google.javascript.jscomp.DefaultCodingConvention;\n    [javac]                                    ^\n    [javac]   symbol:   class DefaultCodingConvention\n    [javac]   location: package com.google.javascript.jscomp\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

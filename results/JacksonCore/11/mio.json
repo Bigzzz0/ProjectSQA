@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.38,
+  "branch_cov": 74.25,
+  "test_file": "ByteQuadsCanonicalizer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f6585ab29060e6ffc87cd56b667f38eb8081e5855ecc6d1de19445a8d5fb81c9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_11b/ByteQuadsCanonicalizer_ESTest.java"
+  ],
+  "run_id": "JacksonCore-11-mio-1790371799"
+}

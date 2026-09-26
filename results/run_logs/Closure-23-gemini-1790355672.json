@@ -1,0 +1,39 @@
+{
+  "project": "Closure",
+  "bug_id": 23,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-23-gemini-1790355672",
+  "suite_sha256": "80b2f1228f44f1149bc07e3e17628c4603c1d4e2c46fc9c6f69c7f27dc4bd00b",
+  "test_files": "PeepholeFoldConstantsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
+  "timestamp": "2026-09-26 00:01:45",
+  "evaluation_duration_sec": 33.839,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 80.43,
+  "branch_coverage_percent": 67.03,
+  "failures_count": 11,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignFoldingLateMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldCtorCall",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldObjectPropertyAccess",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemIndexNonZero",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testBitwiseNotBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemDefectIndexZero",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemEmptySlot",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldGetElemOutOfBoundsTooLarge"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignFoldingLateMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldCtorCall",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testFoldObjectPropertyAccess",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testBitwiseNotBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testComparisonsBoundaries",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignUnfoldingEarlyMode",
+    "com.google.javascript.jscomp.PeepholeFoldConstantsGeminiTest::testAssignmentTargetGuards"
+  ]
+}

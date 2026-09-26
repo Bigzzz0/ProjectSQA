@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 89.04,
+  "branch_cov": 83.72,
+  "test_file": "HashCodeBuilder_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.builder.HashCodeBuilder",
+  "buggy_failures": [
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test23"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test18",
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test22",
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test23",
+    "org.apache.commons.lang3.builder.HashCodeBuilder_ESTest::test26"
+  ],
+  "suite_sha256": "3f70769f84bb5ac7642bee04f69457abdcf91937c6266735c8c1d54d479d7bd5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_32b/HashCodeBuilder_ESTest.java"
+  ],
+  "run_id": "Lang-32-mio-1790385517"
+}

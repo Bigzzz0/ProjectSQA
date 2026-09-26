@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.nodes.AttributesGeminiTest::testCloneIndependence"
-  ]
+  ],
+  "suite_sha256": "ab9bef555fc10e3f00afc38b35ca7707d9204dcea20fdb56331ed641d40956d2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_75b/AttributesGeminiTest.java"
+  ],
+  "run_id": "Jsoup-75-gemini-1790382162"
 }

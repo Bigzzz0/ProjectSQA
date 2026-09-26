@@ -1,0 +1,29 @@
+{
+  "project": "Closure",
+  "bug_id": 105,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-105-mio-1790360894",
+  "suite_sha256": "8eb233ca1062504bf7a4fd2c25303037493f2c7eff7110725a71b6a43283e9c0",
+  "test_files": "FoldConstants_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FoldConstants",
+  "timestamp": "2026-09-26 01:28:45",
+  "evaluation_duration_sec": 31.459,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 13.9,
+  "branch_coverage_percent": 14.48,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test51",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test43",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test45",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test09"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test51",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test43",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test45",
+    "com.google.javascript.jscomp.FoldConstants_ESTest::test09"
+  ]
+}

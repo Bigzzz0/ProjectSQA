@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserGeminiTest::testBinaryValueInvalidBase64ContentThrows"
-  ]
+  ],
+  "suite_sha256": "6e18ea83b0aa777302a56fc9eadad3b6c5f9abdd00109f0e8c58562a63e4e2d0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonXml_1b/FromXmlParserGeminiTest.java"
+  ],
+  "run_id": "JacksonXml-1-gemini-1790378617"
 }

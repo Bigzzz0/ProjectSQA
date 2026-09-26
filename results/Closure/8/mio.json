@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.24,
+  "branch_cov": 13.46,
+  "test_file": "CollapseVariableDeclarations_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CollapseVariableDeclarations",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "76d0116da0bbb81cba972867fcae2c3b190342e1f2a13a70abcb2f01aa2b95bf",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_8b/CollapseVariableDeclarations_ESTest.java"
+  ],
+  "run_id": "Closure-8-mio-1790354472"
+}

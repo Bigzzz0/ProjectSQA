@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 58.41,
+  "branch_cov": 49.31,
+  "test_file": "MathUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "eabb68da325217faa56bf497a139688491c6570a332386e77358bf2a554fdf8d",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_93b/org/apache/commons/math/util/MathUtils_IPOTest.java"
+  ],
+  "run_id": "Math-93-ipo-1790393777"
+}

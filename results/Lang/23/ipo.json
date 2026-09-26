@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 7.78,
+  "branch_cov": 1.01,
+  "test_file": "ExtendedMessageFormat_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.text.ExtendedMessageFormat",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "d900d98f4eb89f6237266112a599b9f8f76c97f97da19e62d9c2400754f92910",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_23b/org/apache/commons/lang3/text/ExtendedMessageFormat_IPOTest.java"
+  ],
+  "run_id": "Lang-23-ipo-1790384922"
+}

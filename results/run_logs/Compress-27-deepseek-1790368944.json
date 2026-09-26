@@ -1,0 +1,35 @@
+{
+  "project": "Compress",
+  "bug_id": 27,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-27-deepseek-1790368944",
+  "suite_sha256": "41a4ff790738cb026ffb07914c36d7408cb0936b141c67540248d2d293c4dca8",
+  "test_files": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:42:43",
+  "evaluation_duration_sec": 18.839,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 79.78,
+  "branch_coverage_percent": 77.59,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumStoredGreaterThanUnsigned",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryTooBigThrows",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalValidMax",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNullTerminated",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalSpaceThenNUL"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumStoredGreaterThanUnsigned",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryBinaryTooBigThrows",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalValidMax",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatCheckSumOctalBytes",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseNameNullTerminated",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalLeadingSpacesOnly"
+  ]
+}

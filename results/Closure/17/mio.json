@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 24.77,
+  "branch_cov": 9.61,
+  "test_file": "TypedScopeCreator_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f4cab09ef52a05ba4a4fc05d842a89b2a0d0179664264e83548cbbeb2fa61094",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_17b/evosuite-tests/com/google/javascript/jscomp/TypedScopeCreator_ESTest.java"
+  ],
+  "run_id": "Closure-17-mio-1790355162"
+}

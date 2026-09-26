@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "UnionContext_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.axes.UnionContext",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "730b597d39cd8442dd6457bea7b8d8d608ba92ebca8d6c8bae2b851a1834dfc1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_15b/UnionContext_ESTest.java"
+  ],
+  "run_id": "JxPath-15-mio-1790383373"
+}

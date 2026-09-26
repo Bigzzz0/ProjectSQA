@@ -1,0 +1,17 @@
+{
+  "project": "JacksonXml",
+  "bug_id": 3,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonXml-3-deepseek-1790378682",
+  "suite_sha256": "bf1d15333afe5d52f006448af77c114cb1a8345449596dc22fd1600535139077",
+  "test_files": "FromXmlParserDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser",
+  "timestamp": "2026-09-26 06:24:45",
+  "evaluation_duration_sec": 2.608,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": " Class has been deprecated\n    [javac]             XMLOutputFactory outf = (XMLOutputFactory) Class.forName(_jdkXmlOutFactory).newInstance();\n    [javac]                                                                                        ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] 2 warnings\n    [javac] Creating empty /tmp/d4j_eval/JacksonXml_3b/target/classes/com/fasterxml/jackson/dataformat/xml/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonXml_3b/target/classes/com/fasterxml/jackson/dataformat/xml/annotation/package-info.class\n     [copy] Copying 4 files to /tmp/d4j_eval/JacksonXml_3b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonXml_3b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonXml_3b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonXml_3b/.test_suite/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserDeepseekTest.java:81: error: constructor IOContext in class IOContext cannot be applied to given types;\n    [javac]         return new IOContext(new BufferRecycler(),\n    [javac]                ^\n    [javac]   required: BufferRecycler,Object,boolean\n    [javac]   found: BufferRecycler,ClassLoader,boolean,boolean\n    [javac]   reason: actual and formal argument lists differ in length\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

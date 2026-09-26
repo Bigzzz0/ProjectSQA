@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 72.02,
+  "branch_cov": 59.85,
+  "test_file": "Selector_ESTest.java",
+  "target_classes": "org.jsoup.select.Selector",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.select.Selector_ESTest::test10"
+  ],
+  "suite_sha256": "ed36d40d9bb1491f659eb7323bf5ab5a2d6530cfe9a84b832070d44aa1aad875",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_12b/Selector_ESTest.java"
+  ],
+  "run_id": "Jsoup-12-mio-1790379216"
+}

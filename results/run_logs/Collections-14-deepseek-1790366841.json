@@ -1,0 +1,28 @@
+{
+  "project": "Collections",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-14-deepseek-1790366841",
+  "suite_sha256": "5fcb08693329edb20a67e5c0ac11b920e422de7912053ffeaae098dc2d215724",
+  "test_files": "CaseInsensitiveMapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.map.CaseInsensitiveMap",
+  "timestamp": "2026-09-26 03:07:38",
+  "evaluation_duration_sec": 16.84,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceTurkishI"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGreekSigma",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testEmptyStringKey",
+    "org.apache.commons.collections.map.CaseInsensitiveMapDeepseekTest::testLocaleIndependenceGermanSharpS"
+  ]
+}

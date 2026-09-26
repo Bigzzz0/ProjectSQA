@@ -19,5 +19,10 @@
     "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParseOnlyRealWithSign",
     "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParsePositionReturnsNullOnError",
     "org.apache.commons.math.complex.ComplexFormatDeepseekTest::testParsePositions"
-  ]
+  ],
+  "suite_sha256": "fdf92f3dc39b426a1fa0ed027ac18c42cf86a6d4ffd68aa253963dba0a59a62d",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_101b/ComplexFormatDeepseekTest.java"
+  ],
+  "run_id": "Math-101-deepseek-1790394348"
 }

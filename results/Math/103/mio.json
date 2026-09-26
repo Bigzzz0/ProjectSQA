@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.3,
+  "branch_cov": 92.86,
+  "test_file": "NormalDistributionImpl_ESTest.java",
+  "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "46abc63bad08122415fbec30d5688b41d3ed2831b4134532bf4cfd12d9b62365",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_103b/NormalDistributionImpl_ESTest.java"
+  ],
+  "run_id": "Math-103-mio-1790394497"
+}

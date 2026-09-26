@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 9,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JxPath-9-ipo-1790383233",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationCompare;org.apache.commons.jxpath.ri.compiler.CoreOperationEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqual",
+  "timestamp": "2026-09-26 07:40:33",
+  "evaluation_duration_sec": 0.006,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

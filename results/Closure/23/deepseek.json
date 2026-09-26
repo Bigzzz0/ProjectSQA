@@ -7,5 +7,10 @@
   "test_file": "PeepholeFoldConstantsDeepseekTest.java",
   "target_classes": "com.google.javascript.jscomp.PeepholeFoldConstants",
   "buggy_failures": [],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "19c5dc9abec32f179dc26e4a825775e48805aff1c9f93af66767b33d2ca905a6",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_23b/PeepholeFoldConstantsDeepseekTest.java"
+  ],
+  "run_id": "Closure-23-deepseek-1790355637"
 }

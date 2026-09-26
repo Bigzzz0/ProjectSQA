@@ -19,5 +19,12 @@
     "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanSameInstanceNotEqual",
     "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanViaXPathEvaluation",
     "org.apache.commons.jxpath.ri.compiler.CoreOperationNotEqualGeminiTest::testDefectNanDistinctInstancesNotEqual"
-  ]
+  ],
+  "suite_sha256": "8c4c9c82a6be773781deadb824030ba79e4c06efa941cc0180745900833a8c4f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_9b/CoreOperationCompareGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_9b/CoreOperationEqualGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_9b/CoreOperationNotEqualGeminiTest.java"
+  ],
+  "run_id": "JxPath-9-gemini-1790383254"
 }

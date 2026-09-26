@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.91,
+  "branch_cov": 75.0,
+  "test_file": "ValueMarker_ESTest.java",
+  "target_classes": "org.jfree.chart.plot.ValueMarker",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "abf98b5d926c5ed232500373d4e7be1e7bf5263d41035f1df5cd31e541cf8698",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_20b/ValueMarker_ESTest.java"
+  ],
+  "run_id": "Chart-20-mio-1790352138"
+}

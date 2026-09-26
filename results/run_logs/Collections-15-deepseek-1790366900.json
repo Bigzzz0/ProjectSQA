@@ -1,0 +1,27 @@
+{
+  "project": "Collections",
+  "bug_id": 15,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-15-deepseek-1790366900",
+  "suite_sha256": "8ccc78ee3c06c3b774a1865161c84749b50740aaee48d2c7f2cc110d3b548386",
+  "test_files": "SetUniqueListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:08:37",
+  "evaluation_duration_sec": 17.381,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetAndAddInteraction",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidIndices",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetMethodNormalNoDuplicate",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListMaintainsUniqueness"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListInvalidIndices",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSubListMaintainsUniqueness"
+  ]
+}

@@ -14,5 +14,10 @@
     "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testParseFloat",
     "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testStringJoinAdd",
     "com.google.javascript.jscomp.PeepholeReplaceKnownMethodsGeminiTest::testNoStringJoin"
-  ]
+  ],
+  "suite_sha256": "0c4865ae9ed699b0c6eaf9c20004681e2b616e41138c1f7a6fb5efc4fceff3a4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_50b/PeepholeReplaceKnownMethodsGeminiTest.java"
+  ],
+  "run_id": "Closure-50-gemini-1790357665"
 }

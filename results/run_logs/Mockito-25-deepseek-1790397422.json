@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 25,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Mockito-25-deepseek-1790397422",
+  "suite_sha256": "997dd13f635de58719ce067c75183f8750d7178d6be762b81229702424a155fe",
+  "test_files": "ReturnsDeepStubsDeepseekTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs",
+  "timestamp": "2026-09-26 11:37:11",
+  "evaluation_duration_sec": 9.007,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "valuating root project 'mockito'.\n     [exec] > Could not get unknown property 'Compile' for root project 'mockito' of type org.gradle.api.Project.\n     [exec] \n     [exec] * Try:\n     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.\n     [exec] \n     [exec] * Get more help at https://help.gradle.org\n     [exec] \n     [exec] BUILD FAILED in 2s\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_25b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_25b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_25b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_25b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_25b/.test_suite/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsDeepseekTest.java:96: error: type argument Comparable<Object> is not within bounds of type-variable K\n    [javac]         MultiBoundInterface<Comparable<Object>> mock = Mockito.mock(\n    [javac]                                       ^\n    [javac]   where K is a type-variable:\n    [javac]     K extends Comparable<K>,Cloneable declared in interface MultiBoundInterface\n    [javac] Note: /tmp/d4j_eval/Mockito_25b/.test_suite/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsDeepseekTest.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 4 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -25,5 +25,10 @@
     "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testCodec130Base32",
     "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadSingleByteDecodeBase32",
     "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayDecodeBase32"
-  ]
+  ],
+  "suite_sha256": "2c6f1c0388f85fed4a249fa0f98f6d55ab56a2444b12d981aece716b723e4298",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_12b/BaseNCodecInputStreamDeepseekTest.java"
+  ],
+  "run_id": "Codec-12-deepseek-1790365863"
 }

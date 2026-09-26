@@ -1,0 +1,19 @@
+{
+  "project": "JxPath",
+  "bug_id": 10,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-10-mio-1790383269",
+  "suite_sha256": "8c694297908795870ca2e60907f72eb0ed2a9eb21f70d3af6d1d4c635555e096",
+  "test_files": "CoreOperationRelationalExpression_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "timestamp": "2026-09-26 07:41:26",
+  "evaluation_duration_sec": 17.027,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 95.35,
+  "branch_coverage_percent": 94.44,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

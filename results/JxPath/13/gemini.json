@@ -58,5 +58,11 @@
     "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testCompareChildNodePointers",
     "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testAsPathVariations",
     "org.apache.commons.jxpath.ri.model.dom.DOMNodePointerGeminiTest::testSetValueOnTextAndCData"
-  ]
+  ],
+  "suite_sha256": "7775b8711915ab52b044153288313ff010b181da55d904944dde82ca129ef4e2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_13b/DOMNodePointerGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_13b/NamespaceResolverGeminiTest.java"
+  ],
+  "run_id": "JxPath-13-gemini-1790383332"
 }

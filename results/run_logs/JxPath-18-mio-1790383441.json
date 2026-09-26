@@ -1,0 +1,19 @@
+{
+  "project": "JxPath",
+  "bug_id": 18,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-18-mio-1790383441",
+  "suite_sha256": "c3522eecc2d47e59811b83990a73f9d09a1bc801cb8403066b47e20ba1009185",
+  "test_files": "AttributeContext_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.axes.AttributeContext",
+  "timestamp": "2026-09-26 07:44:17",
+  "evaluation_duration_sec": 15.975,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.05,
+  "branch_cov": 12.4,
+  "test_file": "ProcessClosurePrimitives_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ProcessClosurePrimitives",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ace45db1959b1014db40c96397e954384486184f2861974e972ab5b538a0cbd1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_92b/ProcessClosurePrimitives_ESTest.java"
+  ],
+  "run_id": "Closure-92-mio-1790360267"
+}

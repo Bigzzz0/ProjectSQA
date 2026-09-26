@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.27,
+  "branch_cov": 62.5,
+  "test_file": "DefaultDateTypeAdapter_ESTest.java",
+  "target_classes": "com.google.gson.DefaultDateTypeAdapter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "99ec471bf756acbeba1839219faf63ae6597eab58cd6806f1aa97b08a933a516",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_17b/DefaultDateTypeAdapter_ESTest.java"
+  ],
+  "run_id": "Gson-17-mio-1790371292"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 57.14,
+  "branch_cov": 50.0,
+  "test_file": "NullifyingDeserializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.NullifyingDeserializer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "be4e97c0c37bc21002ee5e3df2ed5ad9a9030221bffd250b68d67a2c0a395518",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_39b/NullifyingDeserializer_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-39-mio-1790374495"
+}

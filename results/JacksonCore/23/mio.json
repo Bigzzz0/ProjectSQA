@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.23,
+  "branch_cov": 92.5,
+  "test_file": "DefaultPrettyPrinter_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.DefaultPrettyPrinter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "39776c4e4dafbf4918e047c98f6bb3a4347c7065be9f2ec4768cbb2309f8b9b6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_23b/DefaultPrettyPrinter_ESTest.java"
+  ],
+  "run_id": "JacksonCore-23-mio-1790372203"
+}

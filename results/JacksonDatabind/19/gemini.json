@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testAtomicReferenceAndMapEntryResolution"
-  ]
+  ],
+  "suite_sha256": "7cdb289bad0c041f0174328094710610b9463f894e50b4ce7ba129ceed4b4608",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_19b/TypeFactoryGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-19-gemini-1790373383"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 23,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JacksonDatabind-23-ipo-1790373547",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.NumberSerializers",
+  "timestamp": "2026-09-26 04:59:07",
+  "evaluation_duration_sec": 0.002,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Codec",
+  "bug_id": 4,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Codec-4-mio-1790365517",
+  "suite_sha256": "ed14aea04bc03a3ecb7bc834f52707afa4f2ce0376187f4d73929239180c6e53",
+  "test_files": "Base64_ESTest.java",
+  "target_classes": "org.apache.commons.codec.binary.Base64",
+  "timestamp": "2026-09-26 02:45:31",
+  "evaluation_duration_sec": 14.099,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 69.26,
+  "branch_coverage_percent": 56.96,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

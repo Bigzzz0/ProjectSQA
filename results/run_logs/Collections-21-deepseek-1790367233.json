@@ -1,0 +1,28 @@
+{
+  "project": "Collections",
+  "bug_id": 21,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-21-deepseek-1790367233",
+  "suite_sha256": "30ef7d0f722103252b4f0c59831d6fd63dba9c107970589dc0cb2c59440d0c53",
+  "test_files": "SetUniqueListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections4.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:14:12",
+  "evaluation_duration_sec": 19.341,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 91.74,
+  "branch_coverage_percent": 97.37,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListIsUnmodifiable",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSubListInvalidRange",
+    "org.apache.commons.collections4.list.SetUniqueListDeepseekTest::testSetObjectAlreadyAtDifferentIndex2"
+  ]
+}

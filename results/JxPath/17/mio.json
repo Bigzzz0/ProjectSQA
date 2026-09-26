@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 38.05,
+  "branch_cov": 31.4,
+  "test_file": "DOMAttributeIterator_ESTest.java;JDOMAttributeIterator_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator_ESTest",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test1",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator_ESTest",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test1",
+    "org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator_ESTest::test2"
+  ],
+  "suite_sha256": "fcf52d96a458cedf8dd0c98f22d938cffec7db1ccee407d5e9a4976361b3dfe9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_17b/DOMAttributeIterator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_17b/JDOMAttributeIterator_ESTest.java"
+  ],
+  "run_id": "JxPath-17-mio-1790383406"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 18,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-18-deepseek-1790367078",
+  "suite_sha256": "6d023c49cf6f02d21feb3bd345cfd78e4a3d6e1054646c62ca2a2e19468a23c1",
+  "test_files": "ListOrderedSetDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.set.ListOrderedSet",
+  "timestamp": "2026-09-26 03:11:23",
+  "evaluation_duration_sec": 5.674,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "pty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/collection/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/keyvalue/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/splitmap/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/list/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/iterators/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_18b/build/classes/org/apache/commons/collections/set/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_18b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Collections_18b/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_18b/.test_suite/org/apache/commons/collections/set/ListOrderedSetDeepseekTest.java:677: error: cannot find symbol\n    [javac]         OrderedIterator<String> it = set.iterator();\n    [javac]         ^\n    [javac]   symbol:   class OrderedIterator\n    [javac]   location: class ListOrderedSetDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

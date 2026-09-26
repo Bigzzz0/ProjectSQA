@@ -1,0 +1,25 @@
+{
+  "project": "Jsoup",
+  "bug_id": 57,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-57-gemini-1790381354",
+  "suite_sha256": "d614186981caac8545fad77e6558b7aa05f24d7d6f25efb27a12bdbcbec1be28",
+  "test_files": "AttributesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes",
+  "timestamp": "2026-09-26 07:09:31",
+  "evaluation_duration_sec": 17.518,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.85,
+  "branch_coverage_percent": 97.37,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.AttributesGeminiTest::testChainedRemoveIgnoreCaseSequence",
+    "org.jsoup.nodes.AttributesGeminiTest::testDatasetIteratorRemoveIntegrity",
+    "org.jsoup.nodes.AttributesGeminiTest::testRemoveIgnoreCaseConcurrentModificationDefect"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.AttributesGeminiTest::testDatasetIteratorRemoveIntegrity"
+  ]
+}

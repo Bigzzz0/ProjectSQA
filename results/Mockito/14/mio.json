@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 69.81,
+  "branch_cov": 68.75,
+  "test_file": "MockHandler_ESTest.java;MockitoCore_ESTest.java",
+  "target_classes": "org.mockito.internal.MockHandler;org.mockito.internal.MockitoCore",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "22fde219bd5c037833bb37088f3c88e1d02736d4359fed4e51c33a722fbd7396",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_14b/MockHandler_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Mockito_14b/MockitoCore_ESTest.java"
+  ],
+  "run_id": "Mockito-14-mio-1790396378"
+}

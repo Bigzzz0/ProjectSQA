@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 78,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-78-gemini-1790392774",
+  "suite_sha256": "7ae7fc9aa82c993f77b956d181289cf2af4150f82f3861ee4ef646c16efe5ef9",
+  "test_files": "EventStateGeminiTest.java",
+  "target_classes": "org.apache.commons.math.ode.events.EventState",
+  "timestamp": "2026-09-26 10:19:58",
+  "evaluation_duration_sec": 24.394,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 91.11,
+  "branch_coverage_percent": 82.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

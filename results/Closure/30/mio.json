@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "FlowSensitiveInlineVariables_ESTest.java;MustBeReachingVariableDef_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables;com.google.javascript.jscomp.MustBeReachingVariableDef",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test1",
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test6",
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test2",
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test5"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test1",
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test6",
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test2",
+    "com.google.javascript.jscomp.MustBeReachingVariableDef_ESTest::test5"
+  ],
+  "suite_sha256": "f1717abc83135d0ba8433981328428a443d4fdd8814c2ca86def1d8c7fe11b9f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_30b/FlowSensitiveInlineVariables_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_30b/MustBeReachingVariableDef_ESTest.java"
+  ],
+  "run_id": "Closure-30-mio-1790356224"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 60,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-60-mio-1790375702",
+  "suite_sha256": "5b227cc0a78f4886f37233c1a4db678b32fc69a365f21c700c3a6fa789727502",
+  "test_files": "JsonValueSerializer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.JsonValueSerializer",
+  "timestamp": "2026-09-26 05:35:31",
+  "evaluation_duration_sec": 29.221,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 1.82,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.58,
+  "branch_cov": 86.67,
+  "test_file": "FastDatePrinter_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDatePrinter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "bef259307ca09acd96e7fe2f5a1a078d3fdad3bb8662da8b2cdfd83b860698cb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_8b/FastDatePrinter_ESTest.java"
+  ],
+  "run_id": "Lang-8-mio-1790384013"
+}

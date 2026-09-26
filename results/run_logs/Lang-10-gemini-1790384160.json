@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 10,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-10-gemini-1790384160",
+  "suite_sha256": "2f5bcac8df913add33d342a144b31b02b2df378a7f1bad462f3164d1e2d15485",
+  "test_files": "FastDateParserGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.time.FastDateParser",
+  "timestamp": "2026-09-26 07:56:06",
+  "evaluation_duration_sec": 6.161,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "a/org/apache/commons/lang3/reflect/FieldUtils.java:305: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_10b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:514: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_10b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java:55: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 7 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Lang_10b/target/classes\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_10b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_10b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_10b/.test_suite/org/apache/commons/lang3/time/FastDateParserGeminiTest.java:67: error: cannot find symbol\n    [javac]         cal.set(Calendar.ERA, Calendar.AD);\n    [javac]                                       ^\n    [javac]   symbol:   variable AD\n    [javac]   location: class Calendar\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

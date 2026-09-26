@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointTypes"
-  ]
+  ],
+  "suite_sha256": "05f6c5ad94f1cc4aa1ef21a21f8fbc60cc9069c32ad5e140cc1eead47c58283f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_16b/NumberUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-16-gemini-1790384615"
 }

@@ -1,19 +1,39 @@
 {
   "status": "DONE",
   "fault_detected": "BUG_DETECTED",
-  "failures_count": 7,
-  "line_cov": 16.83,
-  "branch_cov": 10.92,
-  "test_file": "JacksonCore_1b_IPOTest.java;NumberInput_inLongRange__String_boolean_IPOTest.java;NumberInput_parseAsDouble__String_double_IPOTest.java",
+  "failures_count": 22,
+  "line_cov": 18.84,
+  "branch_cov": 20.59,
+  "test_file": "NumberInput_IPOTest.java",
   "target_classes": "com.fasterxml.jackson.core.io.NumberInput;com.fasterxml.jackson.core.util.TextBuffer",
   "buggy_failures": [
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_001",
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_002",
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_003",
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_004",
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_005",
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_006",
-    "com.fasterxml.jackson.core.JacksonCore_1b_IPOTest::test_non_numeric_decimal_007"
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_264",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_265",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_266",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_267",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_270",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_271",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_272",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_273",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_274",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_275",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_276",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_277",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_278",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_279",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_280",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_281",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_282",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_283",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_284",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_285",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_286",
+    "com.fasterxml.jackson.core.io.NumberInput_IPOTest::test_parseBigDecimal_pairwise_287"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "eb5fadab7b8dc5c3a566c5705830666061538da42a78c8467a69d920f3f5cf14",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonCore_1b/com/fasterxml/jackson/core/io/NumberInput_IPOTest.java"
+  ],
+  "run_id": "JacksonCore-1-ipo-1790371366"
 }

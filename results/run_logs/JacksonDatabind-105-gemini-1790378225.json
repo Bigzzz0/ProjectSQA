@@ -1,0 +1,24 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 105,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-105-gemini-1790378225",
+  "suite_sha256": "91917950bbd955d59a2d31fa72b4b7c542cba7ebc71d1344884404f2664a256c",
+  "test_files": "JdkDeserializersGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.std.JdkDeserializers",
+  "timestamp": "2026-09-26 06:17:30",
+  "evaluation_duration_sec": 24.838,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.std.JdkDeserializersGeminiTest::testDefectVoidClassDeserializerMappedToNullifying",
+    "com.fasterxml.jackson.databind.deser.std.JdkDeserializersGeminiTest::testKnownClassNameWithCrossMatchedRawType"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.std.JdkDeserializersGeminiTest::testKnownClassNameWithCrossMatchedRawType"
+  ]
+}

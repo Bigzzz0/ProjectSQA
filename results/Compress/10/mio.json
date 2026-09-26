@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 13.49,
+  "branch_cov": 4.42,
+  "test_file": "ZipFile_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipFile",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipFile_ESTest::test1"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.zip.ZipFile_ESTest::test1"
+  ],
+  "suite_sha256": "6bb88195812945ad386caee650a6eba2f96231770ca9096f942c6d0e584721f3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_10b/ZipFile_ESTest.java"
+  ],
+  "run_id": "Compress-10-mio-1790367994"
+}

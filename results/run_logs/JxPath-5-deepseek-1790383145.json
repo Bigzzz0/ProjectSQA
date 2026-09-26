@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 5,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JxPath-5-deepseek-1790383145",
+  "suite_sha256": "d5513980e7e737bf8fca82d58f4eec3a4b096cbd338f21f767b982e0216c8483",
+  "test_files": "NodePointerDeepseekTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.NodePointer",
+  "timestamp": "2026-09-26 07:39:08",
+  "evaluation_duration_sec": 3.025,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "handler = (DynamicPropertyHandler) clazz.newInstance();\n    [javac]                                                         ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 3 files to /tmp/d4j_eval/JxPath_5b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_5b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_5b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_5b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JxPath_5b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_5b/.test_suite/org/apache/commons/jxpath/ri/model/NodePointerDeepseekTest.java:134: error: cannot find symbol\n    [javac]         NamespaceResolver resolver = new NamespaceResolver() {\n    [javac]         ^\n    [javac]   symbol:   class NamespaceResolver\n    [javac]   location: class NodePointerDeepseekTest\n    [javac] /tmp/d4j_eval/JxPath_5b/.test_suite/org/apache/commons/jxpath/ri/model/NodePointerDeepseekTest.java:241: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest test = new NodeTypeTest(Compiler.NODE_TYPE_NODE);\n    [javac]                                              ^\n    [javac] 1 error\n    [javac] 1 warning\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

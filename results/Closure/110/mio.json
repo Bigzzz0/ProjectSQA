@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.91,
+  "branch_cov": 66.43,
+  "test_file": "Node_ESTest.java;ScopedAliases_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ScopedAliases;com.google.javascript.rhino.Node",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.rhino.Node_ESTest::test151"
+  ],
+  "suite_sha256": "497ecfe8b3e08360fb6e3a3332d5f3c3f5d4fb2f35fe9c000cc907716abd5f47",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_110b/Node_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_110b/ScopedAliases_ESTest.java"
+  ],
+  "run_id": "Closure-110-mio-1790361280"
+}

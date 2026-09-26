@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "LeafNode_ESTest.java;LeafNode_ESTest.java",
+  "target_classes": "org.jsoup.nodes.LeafNode",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.nodes.LeafNode_ESTest::test6"
+  ],
+  "suite_sha256": "4f8d108acaf0a0b4034a8ff31eed1a41aba3f8663ed672b8d390101ebfe1f869",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_79b/LeafNode_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_79b/evosuite-tests/org/jsoup/nodes/LeafNode_ESTest.java"
+  ],
+  "run_id": "Jsoup-79-mio-1790382298"
+}

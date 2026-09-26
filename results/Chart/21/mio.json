@@ -1,0 +1,26 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 97.52,
+  "branch_cov": 90.0,
+  "test_file": "DefaultBoxAndWhiskerCategoryDataset_ESTest.java",
+  "target_classes": "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset",
+  "buggy_failures": [
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test42",
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test48",
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test36",
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test39"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test42",
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test48",
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test36",
+    "org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset_ESTest::test39"
+  ],
+  "suite_sha256": "f79ede1ba1c816fa9ec46bc70f4fce92d7b1d45a928e8a7c203945a10950ab22",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Chart_21b/DefaultBoxAndWhiskerCategoryDataset_ESTest.java"
+  ],
+  "run_id": "Chart-21-mio-1790352206"
+}

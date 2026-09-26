@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 137,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Closure-137-ipo-1790362958",
+  "suite_sha256": "6c03410fff3bc0025a1d80a7432bd10e2bd901dfd477609da4a732b7b604ad92",
+  "test_files": "NodeUtil_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.Normalize",
+  "timestamp": "2026-09-26 02:03:01",
+  "evaluation_duration_sec": 23.357,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 1.54,
+  "branch_coverage_percent": 0.56,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -27,5 +27,10 @@
     "org.jsoup.parser.TreeBuilderStateGeminiTest::testIsindexTagExpansion",
     "org.jsoup.parser.TreeBuilderStateGeminiTest::testTextareaXmpIframeNoembedRawTextTags",
     "org.jsoup.parser.TreeBuilderStateGeminiTest::testInitialStateAndDoctypeTransitions"
-  ]
+  ],
+  "suite_sha256": "876240d8378dc5e3d32193dba00a178aa571c7a257ad828dc262132c56359703",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_17b/TreeBuilderStateGeminiTest.java"
+  ],
+  "run_id": "Jsoup-17-gemini-1790379421"
 }

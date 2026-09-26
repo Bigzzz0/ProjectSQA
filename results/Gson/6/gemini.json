@@ -12,5 +12,10 @@
     "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testNullSafeBugSerialize",
     "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryGeminiTest::testCreateReturnsNullWhenFactoryReturnsNullDirectly"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "9be5b9e89c6ce3bc1fa44c9f5fe4e8c4415af7c514e4c18bfcdbd1d59e9805d2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_6b/JsonAdapterAnnotationTypeAdapterFactoryGeminiTest.java"
+  ],
+  "run_id": "Gson-6-gemini-1790370967"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "AttributeContext_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.axes.AttributeContext",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "c3522eecc2d47e59811b83990a73f9d09a1bc801cb8403066b47e20ba1009185",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_18b/AttributeContext_ESTest.java"
+  ],
+  "run_id": "JxPath-18-mio-1790383441"
+}

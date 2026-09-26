@@ -17,5 +17,10 @@
     "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testSerializationAndDeserializationIntegrity",
     "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCaptureArgumentsFromMixedVarargsMethod",
     "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testToStringContainsMethodDescription"
-  ]
+  ],
+  "suite_sha256": "b3a650deb988904ce48d8e53b3ed7167faf546239792e752acec82e91f73956f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_3b/InvocationMatcherGeminiTest.java"
+  ],
+  "run_id": "Mockito-3-gemini-1790395039"
 }

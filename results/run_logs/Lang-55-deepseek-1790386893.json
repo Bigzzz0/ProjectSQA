@@ -1,0 +1,23 @@
+{
+  "project": "Lang",
+  "bug_id": 55,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-55-deepseek-1790386893",
+  "suite_sha256": "08646743685da8230fe1eb09c7d24fc2b58b8f0aa74940ec5855a2a7517cd297",
+  "test_files": "StopWatchDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.time.StopWatch",
+  "timestamp": "2026-09-26 08:41:53",
+  "evaluation_duration_sec": 19.919,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 98.25,
+  "branch_coverage_percent": 92.31,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.StopWatchDeepseekTest::testLang315DoubleSplit"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.StopWatchDeepseekTest::testLang315DoubleSplit"
+  ]
+}

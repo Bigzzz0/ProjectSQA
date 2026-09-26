@@ -1,0 +1,33 @@
+{
+  "project": "Jsoup",
+  "bug_id": 43,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-43-gemini-1790380675",
+  "suite_sha256": "99ee985439848bdd749c3c0f6f1c005ba4a1f5a6c083d5347de12b6cf3adda52",
+  "test_files": "ElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element",
+  "timestamp": "2026-09-26 06:58:13",
+  "evaluation_duration_sec": 17.652,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 83.54,
+  "branch_coverage_percent": 66.09,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnText",
+    "org.jsoup.nodes.ElementGeminiTest::testGetElementsQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testSiblingNavigationEdgeCases",
+    "org.jsoup.nodes.ElementGeminiTest::testCssSelector",
+    "org.jsoup.nodes.ElementGeminiTest::testElementSiblingIndexSameContent",
+    "org.jsoup.nodes.ElementGeminiTest::testGetSiblingsWithDuplicateContent",
+    "org.jsoup.nodes.ElementGeminiTest::testInsertionAndManipulation"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testTextAndOwnText",
+    "org.jsoup.nodes.ElementGeminiTest::testGetElementsQueries",
+    "org.jsoup.nodes.ElementGeminiTest::testSiblingNavigationEdgeCases",
+    "org.jsoup.nodes.ElementGeminiTest::testGetSiblingsWithDuplicateContent",
+    "org.jsoup.nodes.ElementGeminiTest::testInsertionAndManipulation"
+  ]
+}

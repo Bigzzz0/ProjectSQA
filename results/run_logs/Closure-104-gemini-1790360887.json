@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 104,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-104-gemini-1790360887",
+  "suite_sha256": "6fcf4a198ac5a26061c56897bcf499c5ac0620222fe4c2b497e18e4a18ade795",
+  "test_files": "UnionTypeGeminiTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.UnionType",
+  "timestamp": "2026-09-26 01:28:14",
+  "evaluation_duration_sec": 6.92,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "t to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_104b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_104b/.test_suite/com/google/javascript/rhino/jstype/UnionTypeGeminiTest.java:102: error: no suitable method found for copyOf(JSType[])\n    [javac]     return new UnionType(registry, ImmutableSet.copyOf(types));\n    [javac]                                                ^\n    [javac]     method ImmutableSet.<E#1>copyOf(Iterable<? extends E#1>) is not applicable\n    [javac]       (cannot infer type-variable(s) E#1\n    [javac]         (argument mismatch; JSType[] cannot be converted to Iterable<? extends E#1>))\n    [javac]     method ImmutableSet.<E#2>copyOf(Iterator<? extends E#2>) is not applicable\n    [javac]       (cannot infer type-variable(s) E#2\n    [javac]         (argument mismatch; JSType[] cannot be converted to Iterator<? extends E#2>))\n    [javac]   where E#1,E#2 are type-variables:\n    [javac]     E#1 extends Object declared in method <E#1>copyOf(Iterable<? extends E#1>)\n    [javac]     E#2 extends Object declared in method <E#2>copyOf(Iterator<? extends E#2>)\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

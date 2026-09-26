@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 16,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Time-16-ipo-1790399252",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.joda.time.format.DateTimeFormatter",
+  "timestamp": "2026-09-26 12:07:32",
+  "evaluation_duration_sec": 0.007,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

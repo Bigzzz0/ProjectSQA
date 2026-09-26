@@ -1,0 +1,36 @@
+{
+  "project": "Closure",
+  "bug_id": 75,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-75-deepseek-1790359327",
+  "suite_sha256": "856dacc54447b5885167b28327ebdb61e0abd4a3a315cbdb4e5a185a1662bb9e",
+  "test_files": "NodeUtilDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "timestamp": "2026-09-26 01:02:34",
+  "evaluation_duration_sec": 26.474,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 23.7,
+  "branch_coverage_percent": 18.07,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testMayHaveSideEffects",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetFunctionName_name",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetStringNumberValue_verticalTab",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testTrimJsWhiteSpace_verticalTab",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testIsLiteralValue",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetNearestFunctionName",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetImpureBooleanValue_hook",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetPureBooleanValue_number"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testIsStrWhiteSpaceChar_verticalTab",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testMayHaveSideEffects",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetFunctionName_name",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testIsLiteralValue",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetNearestFunctionName",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetImpureBooleanValue_hook",
+    "com.google.javascript.jscomp.NodeUtilDeepseekTest::testGetPureBooleanValue_number"
+  ]
+}

@@ -61,5 +61,10 @@
     "com.google.javascript.jscomp.InlineVariablesGeminiTest::testExternalIssue1053",
     "com.google.javascript.jscomp.InlineVariablesGeminiTest::testForInLoopVariableDeclarationNotEligibleForInlining",
     "com.google.javascript.jscomp.InlineVariablesGeminiTest::testSubclassRelationshipCallMustNotBeInlined"
-  ]
+  ],
+  "suite_sha256": "1af5cb84bdf2ff730b58fcf8b740b84ff05e0ccddf57409fdc72d6fe25d248ca",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_121b/InlineVariablesGeminiTest.java"
+  ],
+  "run_id": "Closure-121-gemini-1790362092"
 }

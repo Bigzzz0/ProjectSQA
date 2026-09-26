@@ -29,5 +29,10 @@
     "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testRequireBeforeImplicitProvide",
     "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testHotSwapScript",
     "com.google.javascript.jscomp.ProcessClosurePrimitivesDeepseekTest::testDefineCallWithInvalidName"
-  ]
+  ],
+  "suite_sha256": "3d96fa3065f1dfaa83e005b96e52e4633652b755306ae36072a289f11a34f69c",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_113b/ProcessClosurePrimitivesDeepseekTest.java"
+  ],
+  "run_id": "Closure-113-deepseek-1790361505"
 }

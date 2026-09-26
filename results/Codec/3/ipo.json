@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 18.98,
+  "branch_cov": 11.78,
+  "test_file": "DoubleMetaphone_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.language.DoubleMetaphone",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2c9a53f4f711c705c2cb6b6ee937f0cccf1f150bc827c00d72f097b1335850a4",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_3b/org/apache/commons/codec/language/DoubleMetaphone_IPOTest.java"
+  ],
+  "run_id": "Codec-3-ipo-1790365460"
+}

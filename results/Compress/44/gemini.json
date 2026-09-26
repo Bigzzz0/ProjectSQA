@@ -11,5 +11,10 @@
     "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamGeminiTest::testClassInstantiationWithBothParametersNullThrowsNullPointerException",
     "org.apache.commons.compress.utils.ChecksumCalculatingInputStreamGeminiTest::testClassInstantiationWithNullChecksumThrowsNullPointerException"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "fe73a0aa1863dd9e3c0ba5e996e96c014336c2f7ce2dc0f98ac6dd14423384c1",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_44b/ChecksumCalculatingInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-44-gemini-1790369951"
 }

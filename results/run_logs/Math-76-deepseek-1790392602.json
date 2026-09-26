@@ -1,0 +1,35 @@
+{
+  "project": "Math",
+  "bug_id": 76,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-76-deepseek-1790392602",
+  "suite_sha256": "557dec00deabeb0ac284fa9a324010829eae3d612e235a7ca599b3fccf2345cb",
+  "test_files": "SingularValueDecompositionImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.linear.SingularValueDecompositionImpl",
+  "timestamp": "2026-09-26 10:17:07",
+  "evaluation_duration_sec": 24.384,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.25,
+  "branch_coverage_percent": 96.3,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealVector",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testGetRank",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testAllZeroMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSingular",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverNonSingular",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testRankDeficientMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testMath320A"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverSolveRealVector",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testGetRank",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testAllZeroMatrix",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testSolverNonSingular",
+    "org.apache.commons.math.linear.SingularValueDecompositionImplDeepseekTest::testRankDeficientMatrix"
+  ]
+}

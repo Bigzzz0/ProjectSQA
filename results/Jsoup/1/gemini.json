@@ -10,5 +10,10 @@
     "org.jsoup.nodes.DocumentGeminiTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23",
     "org.jsoup.nodes.DocumentGeminiTest::testNormaliseTextOrderingWhenLeadingTextOutsideBody"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "4b780b9459919b93e0ccf1078948c82120de935a576bd8b69d2a8f5925131bbd",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_1b/DocumentGeminiTest.java"
+  ],
+  "run_id": "Jsoup-1-gemini-1790378869"
 }

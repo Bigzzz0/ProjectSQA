@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 80,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-80-ipo-1790392901",
+  "suite_sha256": "bf3dd2c819539d98dff7b2edc146fccf38d692ca3be0d20f49bc498fc85cc990",
+  "test_files": "EigenDecompositionImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.linear.EigenDecompositionImpl",
+  "timestamp": "2026-09-26 10:22:07",
+  "evaluation_duration_sec": 25.326,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 24.33,
+  "branch_coverage_percent": 12.32,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

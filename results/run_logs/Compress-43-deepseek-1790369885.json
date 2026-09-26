@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 43,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-43-deepseek-1790369885",
+  "suite_sha256": "9ce20569ed3f1a11fe8e8e8748cc93933bae7c86b54b7286cd579a87c627c072",
+  "test_files": "ZipArchiveOutputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream",
+  "timestamp": "2026-09-26 03:58:10",
+  "evaluation_duration_sec": 5.429,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "packer unpacker = Pack200.newUnpacker();\n    [javac]                          ^\n    [javac] /tmp/d4j_eval/Compress_43b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:141: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]             final Pack200.Unpacker unpacker = Pack200.newUnpacker();\n    [javac]                                               ^\n    [javac] Note: /tmp/d4j_eval/Compress_43b/src/main/java/org/apache/commons/compress/utils/Sets.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 24 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_43b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_43b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_43b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_43b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_43b/.test_suite/org/apache/commons/compress/archivers/zip/ZipArchiveOutputStreamDeepseekTest.java:345: error: cannot find symbol\n    [javac]         assertEquals(\"Test Comment\", zf.getComment());\n    [javac]                                        ^\n    [javac]   symbol:   method getComment()\n    [javac]   location: variable zf of type ZipFile\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

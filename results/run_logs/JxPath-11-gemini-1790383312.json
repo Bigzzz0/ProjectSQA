@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-11-gemini-1790383312",
+  "suite_sha256": "a0c3efc5c2e24021033f3a9dd8d0a35bd59c6b92d842c0eadcce9bc2d0fc98d9",
+  "test_files": "DOMAttributeIteratorGeminiTest.java;JDOMAttributeIteratorGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMAttributeIterator;org.apache.commons.jxpath.ri.model.jdom.JDOMAttributeIterator",
+  "timestamp": "2026-09-26 07:41:55",
+  "evaluation_duration_sec": 2.897,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                                     ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 3 files to /tmp/d4j_eval/JxPath_11b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_11b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_11b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_11b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/JxPath_11b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_11b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMAttributeIteratorGeminiTest.java:230: error: no suitable constructor found for DOMNodePointer(Element,Element)\n    [javac]         DOMNodePointer amountPointer = new DOMNodePointer(product, amount);\n    [javac]                                        ^\n    [javac]     constructor DOMNodePointer.DOMNodePointer(Node,Locale) is not applicable\n    [javac]       (argument mismatch; Element cannot be converted to Locale)\n    [javac]     constructor DOMNodePointer.DOMNodePointer(NodePointer,Node) is not applicable\n    [javac]       (argument mismatch; Element cannot be converted to NodePointer)\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

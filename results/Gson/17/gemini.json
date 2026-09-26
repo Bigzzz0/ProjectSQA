@@ -17,5 +17,10 @@
   "fixed_failures": [
     "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedBooleanToken",
     "com.google.gson.DefaultDateTypeAdapterGeminiTest::testUnexpectedToken"
-  ]
+  ],
+  "suite_sha256": "624437f84f2d8299d1114402a053e8063080dc110c9e361afcf61bc3713ad289",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_17b/DefaultDateTypeAdapterGeminiTest.java"
+  ],
+  "run_id": "Gson-17-gemini-1790371309"
 }

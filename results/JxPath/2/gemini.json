@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.jxpath.ri.compiler.ExpressionGeminiTest::testNodeSetReturn_DefectTarget"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "ba5cd5b78304476ba9476c9c85ca1ba46e7c988b05d7c7d44f391fa7a7c4d061",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JxPath_2b/ExpressionGeminiTest.java"
+  ],
+  "run_id": "JxPath-2-gemini-1790383081"
 }

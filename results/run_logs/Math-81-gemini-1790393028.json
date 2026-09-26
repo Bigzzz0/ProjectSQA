@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 81,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-81-gemini-1790393028",
+  "suite_sha256": "364a86063a4dc88a556df60150a64dd2aa5150ef520fb479673a303dc592785e",
+  "test_files": "EigenDecompositionImplGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.EigenDecompositionImpl",
+  "timestamp": "2026-09-26 10:24:12",
+  "evaluation_duration_sec": 24.64,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 79.27,
+  "branch_coverage_percent": 67.15,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

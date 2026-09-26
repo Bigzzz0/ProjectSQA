@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 45,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-45-gemini-1790390416",
+  "suite_sha256": "015a480e75f2aa915333e2f9104f0b6784d0ff84abee02af5f857d8aeb84847b",
+  "test_files": "OpenMapRealMatrixGeminiTest.java",
+  "target_classes": "org.apache.commons.math.linear.OpenMapRealMatrix",
+  "timestamp": "2026-09-26 09:40:42",
+  "evaluation_duration_sec": 25.32,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.linear.OpenMapRealMatrixGeminiTest::testMath679"
+  ],
+  "fixed_failures": []
+}

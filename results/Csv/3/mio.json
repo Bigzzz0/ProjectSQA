@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.11,
+  "branch_cov": 86.36,
+  "test_file": "Lexer_ESTest.java",
+  "target_classes": "org.apache.commons.csv.Lexer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.csv.Lexer_ESTest::test12"
+  ],
+  "suite_sha256": "1f4472f54b22947bbf8bf716cd9583743b11ee9dc28355ce3aa22302fae9e7a5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Csv_3b/Lexer_ESTest.java"
+  ],
+  "run_id": "Csv-3-mio-1790370227"
+}

@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.parser.CharacterReaderGeminiTest::testEmptyReaderBoundaries"
-  ]
+  ],
+  "suite_sha256": "7fa6f159e2fa7006db078824a5445c4ef2304fa56d3678c0dd0d1e55c5246916",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_34b/CharacterReaderGeminiTest.java"
+  ],
+  "run_id": "Jsoup-34-gemini-1790380166"
 }

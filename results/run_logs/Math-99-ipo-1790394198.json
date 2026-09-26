@@ -1,0 +1,24 @@
+{
+  "project": "Math",
+  "bug_id": 99,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-99-ipo-1790394198",
+  "suite_sha256": "2cf976b152ef0d931658647e87ed13c1dd0bd5e30a75f98d38b7563e519511e5",
+  "test_files": "MathUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "timestamp": "2026-09-26 10:43:43",
+  "evaluation_duration_sec": 25.694,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 62.45,
+  "branch_coverage_percent": 57.2,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_gcd_pairwise_162",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_gcd_pairwise_178",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_lcm_pairwise_192",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_lcm_pairwise_204"
+  ],
+  "fixed_failures": []
+}

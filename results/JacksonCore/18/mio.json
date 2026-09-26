@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 59.39,
+  "branch_cov": 54.34,
+  "test_file": "GeneratorBase_ESTest.java;UTF8JsonGenerator_ESTest.java;WriterBasedJsonGenerator_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.base.GeneratorBase;com.fasterxml.jackson.core.json.UTF8JsonGenerator;com.fasterxml.jackson.core.json.WriterBasedJsonGenerator",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test61"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.json.UTF8JsonGenerator_ESTest::test61"
+  ],
+  "suite_sha256": "c8ff2046e1b30fe02726a94f5bbbfdab9fb6018fba94611aa25a3dcf0b9b8310",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_18b/GeneratorBase_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_18b/UTF8JsonGenerator_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_18b/WriterBasedJsonGenerator_ESTest.java"
+  ],
+  "run_id": "JacksonCore-18-mio-1790372029"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.06,
+  "branch_cov": 100.0,
+  "test_file": "IOContext_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.io.IOContext",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1a02585705cdb3eeb6410e8fc07b26c0dcee501c44d824be5c0a3604049135e7",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonCore_14b/IOContext_ESTest.java"
+  ],
+  "run_id": "JacksonCore-14-mio-1790371916"
+}

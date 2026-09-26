@@ -1,0 +1,28 @@
+{
+  "project": "Mockito",
+  "bug_id": 2,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-2-gemini-1790394908",
+  "suite_sha256": "682565f7a1da11c2f98b8f188ce13860a703b6bfe723db010cc23722a4394237",
+  "test_files": "TimerGeminiTest.java",
+  "target_classes": "org.mockito.internal.util.Timer",
+  "timestamp": "2026-09-26 10:56:51",
+  "evaluation_duration_sec": 102.79,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 50.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationBoundaryMinusOneThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationArbitraryThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationMinValueThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::should_throw_friendly_reminder_exception_when_duration_is_negative"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationArbitraryThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::testNegativeDurationMinValueThrowsException",
+    "org.mockito.internal.util.TimerGeminiTest::should_throw_friendly_reminder_exception_when_duration_is_negative"
+  ]
+}

@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testCumulativeProbabilityInterval",
     "org.apache.commons.math.distribution.PoissonDistributionImplGeminiTest::testInverseCumulativeProbability"
-  ]
+  ],
+  "suite_sha256": "40552d72a9d11030f5061d1feaf8bdda6d60fcecbb285cf13dfebea1765f731f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_61b/PoissonDistributionImplGeminiTest.java"
+  ],
+  "run_id": "Math-61-gemini-1790391681"
 }

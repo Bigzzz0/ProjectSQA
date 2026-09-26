@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 96,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-96-gemini-1790394075",
+  "suite_sha256": "1bcc199518436bf4e6442454614c798f963ac1a075fc9de5ed6bd66fdf8970cc",
+  "test_files": "ComplexGeminiTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "timestamp": "2026-09-26 10:41:38",
+  "evaluation_duration_sec": 22.845,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.89,
+  "branch_coverage_percent": 94.12,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexGeminiTest::testMath221"
+  ],
+  "fixed_failures": []
+}

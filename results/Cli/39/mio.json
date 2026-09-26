@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 90.48,
+  "branch_cov": 85.0,
+  "test_file": "TypeHandler_ESTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "577beb1d4567ae146d8d0d858941d784cc73294ec60130adb359225c35b46667",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_39b/TypeHandler_ESTest.java"
+  ],
+  "run_id": "Cli-39-mio-1790353860"
+}

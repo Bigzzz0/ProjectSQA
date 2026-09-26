@@ -15,5 +15,10 @@
     "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testTextAndBinaryDelegation",
     "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testNotAllowMultipleMatchesScalarDefect",
     "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testFilteringWithIncludePathFalse"
-  ]
+  ],
+  "suite_sha256": "04fe4f200ee73c10137caef8c9a154386435ceaeff830204e216fabee9df3e3c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_15b/FilteringParserDelegateGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-15-gemini-1790371961"
 }

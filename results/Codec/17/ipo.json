@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 35.9,
+  "branch_cov": 40.0,
+  "test_file": "StringUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.codec.binary.StringUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a6922b44f19231b4c3395e536d42a1ec5e2690299e64e6537548182a17de7a6a",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Codec_17b/org/apache/commons/codec/binary/StringUtils_IPOTest.java"
+  ],
+  "run_id": "Codec-17-ipo-1790366010"
+}

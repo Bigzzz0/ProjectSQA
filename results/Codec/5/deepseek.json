@@ -35,5 +35,10 @@
     "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeURLSafeModulus1",
     "org.apache.commons.codec.binary.Base64DeepseekTest::testStaticEncodeBase64StringNull",
     "org.apache.commons.codec.binary.Base64DeepseekTest::testEncodeMultipleCalls"
-  ]
+  ],
+  "suite_sha256": "85e36a58c0b6a768fd53a38138f0f7558affddda7855d107656d645684826de7",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Codec_5b/Base64DeepseekTest.java"
+  ],
+  "run_id": "Codec-5-deepseek-1790365573"
 }

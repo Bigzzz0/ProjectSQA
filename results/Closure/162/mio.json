@@ -1,0 +1,37 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 9,
+  "line_cov": 53.59,
+  "branch_cov": 36.11,
+  "test_file": "ScopedAliases_ESTest.java;Scope_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Scope;com.google.javascript.jscomp.ScopedAliases",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Scope_ESTest::test09",
+    "com.google.javascript.jscomp.Scope_ESTest::test12",
+    "com.google.javascript.jscomp.Scope_ESTest::test19",
+    "com.google.javascript.jscomp.Scope_ESTest::test29",
+    "com.google.javascript.jscomp.Scope_ESTest::test37",
+    "com.google.javascript.jscomp.Scope_ESTest::test34",
+    "com.google.javascript.jscomp.Scope_ESTest::test33",
+    "com.google.javascript.jscomp.Scope_ESTest::test31",
+    "com.google.javascript.jscomp.Scope_ESTest::test30"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Scope_ESTest::test09",
+    "com.google.javascript.jscomp.Scope_ESTest::test12",
+    "com.google.javascript.jscomp.Scope_ESTest::test19",
+    "com.google.javascript.jscomp.Scope_ESTest::test29",
+    "com.google.javascript.jscomp.Scope_ESTest::test37",
+    "com.google.javascript.jscomp.Scope_ESTest::test34",
+    "com.google.javascript.jscomp.Scope_ESTest::test33",
+    "com.google.javascript.jscomp.Scope_ESTest::test31",
+    "com.google.javascript.jscomp.Scope_ESTest::test30"
+  ],
+  "suite_sha256": "e32991946bb8e33d91166da377d1f147849182c329820dc0465fe91b1e1a099c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_162b/ScopedAliases_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_162b/Scope_ESTest.java"
+  ],
+  "run_id": "Closure-162-mio-1790364403"
+}

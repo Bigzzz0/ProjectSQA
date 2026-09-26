@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.helper.DataUtilGeminiTest::testGetCharsetFromContentTypeVariants"
-  ]
+  ],
+  "suite_sha256": "f9a16163a384d9e73dc68a35a7717abf9f87ac450a65e16608f6e47f5180d22c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_81b/DataUtilGeminiTest.java"
+  ],
+  "run_id": "Jsoup-81-gemini-1790382413"
 }

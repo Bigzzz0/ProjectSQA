@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.75,
+  "branch_cov": 95.51,
+  "test_file": "JSType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.JSType",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.JSType_ESTest::test48"
+  ],
+  "suite_sha256": "c6376865596f270561dd2631552d1a3775e54dab0faf78b25aaa548a18752e10",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_82b/JSType_ESTest.java"
+  ],
+  "run_id": "Closure-82-mio-1790359705"
+}

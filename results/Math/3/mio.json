@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 99.05,
+  "branch_cov": 99.15,
+  "test_file": "MathArrays_ESTest.java",
+  "target_classes": "org.apache.commons.math3.util.MathArrays",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f7b8c251e2894b8947d33bbdea672c8299b65deaa1b7a7dc0e35bed11baae28c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_3b/MathArrays_ESTest.java"
+  ],
+  "run_id": "Math-3-mio-1790387688"
+}

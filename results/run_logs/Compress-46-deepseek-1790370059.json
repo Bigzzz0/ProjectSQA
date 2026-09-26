@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 46,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-46-deepseek-1790370059",
+  "suite_sha256": "d392997ec8f6de5b414d3e058965fbb0a2ba7b2a871f2fcb09859f87a77ce6dc",
+  "test_files": "X5455_ExtendedTimestampDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestamp",
+  "timestamp": "2026-09-26 04:01:04",
+  "evaluation_duration_sec": 5.737,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                     ^\n    [javac] /tmp/d4j_eval/Compress_46b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:141: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]             final Pack200.Unpacker unpacker = Pack200.newUnpacker();\n    [javac]                                               ^\n    [javac] Note: /tmp/d4j_eval/Compress_46b/src/main/java/org/apache/commons/compress/utils/Sets.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 24 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_46b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_46b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_46b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_46b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_46b/.test_suite/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampDeepseekTest.java:362: error: cannot find symbol\n    [javac]     public void testParseFromLocalFileDataOnlyFlags() throws ZipException {\n    [javac]                                                              ^\n    [javac]   symbol:   class ZipException\n    [javac]   location: class X5455_ExtendedTimestampDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

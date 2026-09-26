@@ -33,5 +33,10 @@
     "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetNextEntryReturnsNullAtEnd",
     "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testGetNextEntryReturnsEntry",
     "org.apache.commons.compress.archivers.sevenz.SevenZFileDeepseekTest::testReadBufOffLenWithoutGetNextEntry"
-  ]
+  ],
+  "suite_sha256": "b55135471e98b12f38c75a02bf0ce25a244cb215079f233d5024ef9fe73a7b02",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_36b/SevenZFileDeepseekTest.java"
+  ],
+  "run_id": "Compress-36-deepseek-1790369474"
 }

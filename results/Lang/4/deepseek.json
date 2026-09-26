@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.lang3.text.translate.LookupTranslatorDeepseekTest::testLang882_CharSequenceKeyWithoutEquals"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "8d6154c273dd0fc3e1e337b17562088734db677746e4c682945c3188f9ee5601",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_4b/LookupTranslatorDeepseekTest.java"
+  ],
+  "run_id": "Lang-4-deepseek-1790383733"
 }

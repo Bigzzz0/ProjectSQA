@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.CommandLineGeminiTest"
-  ]
+  ],
+  "suite_sha256": "966d664d5a8f5f9484ba0c3f5046d7a31f0a0767f2d2e82318d80e435882c440",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_1b/CommandLineGeminiTest.java"
+  ],
+  "run_id": "Cli-1-gemini-1790352613"
 }

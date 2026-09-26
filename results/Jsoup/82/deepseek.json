@@ -19,5 +19,10 @@
     "org.jsoup.helper.DataUtilDeepseekTest::testGetCharsetFromContentTypeWithExtraSpaces",
     "org.jsoup.helper.DataUtilDeepseekTest::testParseInputStreamNotFullyRead",
     "org.jsoup.helper.DataUtilDeepseekTest::testFallbackToUtfIfCantEncode"
-  ]
+  ],
+  "suite_sha256": "86d2b29413a9e9a672b45a70508197470540128b1a9ef3174e40cb2e4e7b0334",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_82b/DataUtilDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-82-deepseek-1790382465"
 }

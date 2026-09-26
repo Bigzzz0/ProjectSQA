@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang.time.StopWatchDeepseekTest::testLang315DoubleSplit"
-  ]
+  ],
+  "suite_sha256": "08646743685da8230fe1eb09c7d24fc2b58b8f0aa74940ec5855a2a7517cd297",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_55b/StopWatchDeepseekTest.java"
+  ],
+  "run_id": "Lang-55-deepseek-1790386893"
 }

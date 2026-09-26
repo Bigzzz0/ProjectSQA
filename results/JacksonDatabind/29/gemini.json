@@ -17,5 +17,10 @@
     "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testMissingTypeIdThrowsMappingException",
     "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testCreatorWithExternalTypeNormal",
     "com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandlerGeminiTest::testDefaultImplUsedWhenTypeIdMissing"
-  ]
+  ],
+  "suite_sha256": "f495bbd4384f805a30e5cd8e1265acfaa6f33bf21ad6dfc85247ab6b4bd821ea",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_29b/ExternalTypeHandlerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-29-gemini-1790373855"
 }

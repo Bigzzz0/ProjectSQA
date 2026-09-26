@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 60.1,
+  "branch_cov": 43.81,
+  "test_file": "MakeDeclaredNamesUnique_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.MakeDeclaredNamesUnique",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.MakeDeclaredNamesUnique_ESTest::test01"
+  ],
+  "suite_sha256": "b8baa7859f83dc9015f132871c99f7982cbda4ae3b9322ef15381fcddb3ecd79",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_49b/MakeDeclaredNamesUnique_ESTest.java"
+  ],
+  "run_id": "Closure-49-mio-1790357531"
+}

@@ -1,0 +1,24 @@
+{
+  "project": "Closure",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-1-gemini-1790353990",
+  "suite_sha256": "96a020784f8d83ea26400958e5ee664c6ad69580346f8ea6542fe2528da79906",
+  "test_files": "RemoveUnusedVarsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+  "timestamp": "2026-09-25 23:33:46",
+  "evaluation_duration_sec": 35.659,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 94.36,
+  "branch_coverage_percent": 78.95,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral",
+    "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testClosure1_DoNotRemoveFunctionArgsWhenNotRemovingGlobals"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest::testPreserveSetterParamInObjectLiteral"
+  ]
+}

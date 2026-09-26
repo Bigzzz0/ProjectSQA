@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 58,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-58-mio-1790387105",
+  "suite_sha256": "3d330a70d25b3539f304de0e9e4ed44f93a98f4177c3d0ad99f693425ef95cab",
+  "test_files": "NumberUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang.math.NumberUtils",
+  "timestamp": "2026-09-26 08:45:27",
+  "evaluation_duration_sec": 21.975,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.09,
+  "branch_coverage_percent": 91.67,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,36 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 19,
+  "line_cov": 64.29,
+  "branch_cov": 55.26,
+  "test_file": "TarUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_001",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_002",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_003",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_005",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_006",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_008",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_010",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_011",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_013",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_015",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_016",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_017",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_018",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_019",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_020",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_021",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_022",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_023",
+    "org.apache.commons.compress.archivers.tar.TarUtils_IPOTest::test_parseOctal_pairwise_024"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "2fad7d845272277e298bb0d121ab89d7320f1560b9af4d57aa718d6e2c9dff43",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_8b/org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java"
+  ],
+  "run_id": "Compress-8-ipo-1790367905"
+}

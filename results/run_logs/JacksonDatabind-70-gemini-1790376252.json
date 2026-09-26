@@ -1,0 +1,25 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 70,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonDatabind-70-gemini-1790376252",
+  "suite_sha256": "c92368786a2bdc9d0a015900f8422e5d3f2039054979d2099283b59135cce4d6",
+  "test_files": "BeanPropertyMapGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMap",
+  "timestamp": "2026-09-26 05:44:38",
+  "evaluation_duration_sec": 26.598,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.9,
+  "branch_coverage_percent": 86.96,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testDefectCaseInsensitiveRemoveMultiplePropsWithMixedCase",
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testFindDeserializeAndSetUnwrapsInvocationTargetException",
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testDefectCaseInsensitiveRemoveMixedCase"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapGeminiTest::testFindDeserializeAndSetUnwrapsInvocationTargetException"
+  ]
+}

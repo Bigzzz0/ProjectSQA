@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 41.78,
+  "branch_cov": 24.59,
+  "test_file": "TarArchiveInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b59eef8a498f7fbb38813f2b3451f84d9c20e1dc723479c2d47b2d10e5e676d9",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_28b/TarArchiveInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-28-mio-1790368988"
+}

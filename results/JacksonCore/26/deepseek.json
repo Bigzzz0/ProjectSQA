@@ -85,5 +85,10 @@
     "com.fasterxml.jackson.core.json.async.NonBlockingJsonParserDeepseekTest::testSingleQuotesEnabled",
     "com.fasterxml.jackson.core.json.async.NonBlockingJsonParserDeepseekTest::testUnquotedFieldNameNotAllowed",
     "com.fasterxml.jackson.core.json.async.NonBlockingJsonParserDeepseekTest::testUnquotedFieldNamesEnabled"
-  ]
+  ],
+  "suite_sha256": "53f287e2e48cea66bb515dffe019a911a5ca39f6b3bf5c81e838ad783e3b1785",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonCore_26b/NonBlockingJsonParserDeepseekTest.java"
+  ],
+  "run_id": "JacksonCore-26-deepseek-1790372325"
 }

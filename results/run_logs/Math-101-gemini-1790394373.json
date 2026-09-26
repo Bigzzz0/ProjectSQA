@@ -1,0 +1,27 @@
+{
+  "project": "Math",
+  "bug_id": 101,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-101-gemini-1790394373",
+  "suite_sha256": "ac57a37b2d35ce9f3dad75747aecb117e79e24c220a184d40915d8b1dd7f8c94",
+  "test_files": "ComplexFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.math.complex.ComplexFormat",
+  "timestamp": "2026-09-26 10:46:37",
+  "evaluation_duration_sec": 24.542,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 98.08,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testForgottenImaginaryCharacterParsePosition",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testForgottenImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
+    "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
+  ]
+}

@@ -9,5 +9,10 @@
   "buggy_failures": [
     "com.google.javascript.jscomp.CodeConsumerGeminiTest::testMinusNegativeZeroSpaceAdded"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "bd882efd966422f20ccfe912a9633179730cf4f3f87837d613320d61a229fc78",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_38b/CodeConsumerGeminiTest.java"
+  ],
+  "run_id": "Closure-38-gemini-1790356887"
 }

@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 1,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-1-ipo-1790387473",
+  "suite_sha256": "f8d3bb7ef80b9836109b35e1893cf139a120b12b65a59384b75b18e3079713a7",
+  "test_files": "BigFraction_IPOTest.java;Fraction_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.BigFraction;org.apache.commons.math3.fraction.Fraction",
+  "timestamp": "2026-09-26 08:51:43",
+  "evaluation_duration_sec": 29.243,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 44.0,
+  "branch_coverage_percent": 34.38,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

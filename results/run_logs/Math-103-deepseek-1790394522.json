@@ -1,0 +1,22 @@
+{
+  "project": "Math",
+  "bug_id": 103,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-103-deepseek-1790394522",
+  "suite_sha256": "543947ff067fd4de740c77ff2a9add97297d7ff2ace52b832d0f315c5c6417f5",
+  "test_files": "NormalDistributionImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+  "timestamp": "2026-09-26 10:49:06",
+  "evaluation_duration_sec": 24.108,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityNegativeExtreme",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityPositiveExtreme"
+  ],
+  "fixed_failures": []
+}

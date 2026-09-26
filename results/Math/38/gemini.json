@@ -18,5 +18,10 @@
     "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnUpperBound",
     "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testMaxEvaluationsExceeded",
     "org.apache.commons.math.optimization.direct.BOBYQAOptimizerGeminiTest::testStartPointDirectlyOnLowerBound"
-  ]
+  ],
+  "suite_sha256": "09076a84d4770b216747b45cac578244497c06675a2c1859a79005edd87f713d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_38b/BOBYQAOptimizerGeminiTest.java"
+  ],
+  "run_id": "Math-38-gemini-1790389967"
 }

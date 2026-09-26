@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 82,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-82-mio-1790393053",
+  "suite_sha256": "83d69b437651c50a76119194c76c4dbeddd0356b1e45d1711f62d20badf3978b",
+  "test_files": "SimplexSolver_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.linear.SimplexSolver",
+  "timestamp": "2026-09-26 10:24:39",
+  "evaluation_duration_sec": 26.294,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.33,
+  "branch_coverage_percent": 97.22,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

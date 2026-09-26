@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 33,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-33-gemini-1790369319",
+  "suite_sha256": "7091784a80d4a41585151878df48066605abdaedea90e0821a5024e670e9f2ea",
+  "test_files": "CompressorStreamFactoryGeminiTest.java;DeflateCompressorInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.CompressorStreamFactory;org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStream",
+  "timestamp": "2026-09-26 03:48:44",
+  "evaluation_duration_sec": 5.502,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Compress_33b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_33b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_33b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_33b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Compress_33b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_33b/.test_suite/org/apache/commons/compress/compressors/CompressorStreamFactoryGeminiTest.java:502: error: incompatible types: possible lossy conversion from int to byte\n    [javac]                 0x00, 0x07, 0x00, 0x96,\n    [javac]                                   ^\n    [javac] Note: /tmp/d4j_eval/Compress_33b/.test_suite/org/apache/commons/compress/compressors/CompressorStreamFactoryGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

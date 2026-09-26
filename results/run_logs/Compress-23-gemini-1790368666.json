@@ -1,0 +1,27 @@
+{
+  "project": "Compress",
+  "bug_id": 23,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-23-gemini-1790368666",
+  "suite_sha256": "6e5a850340f5e5ffd4610b8a0c44d20f11e6c6fd7facd38964a06e5673b696b7",
+  "test_files": "CodersGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.Coders",
+  "timestamp": "2026-09-26 03:38:05",
+  "evaluation_duration_sec": 19.231,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 91.26,
+  "branch_coverage_percent": 91.18,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderNonDefaultDictionarySizeSignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeProperty1SignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeExceedsMax"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderNonDefaultDictionarySizeSignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeProperty1SignExtension",
+    "org.apache.commons.compress.archivers.sevenz.CodersGeminiTest::testLzmaDecoderDictionarySizeExceedsMax"
+  ]
+}

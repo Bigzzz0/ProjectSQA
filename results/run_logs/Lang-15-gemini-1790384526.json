@@ -1,0 +1,29 @@
+{
+  "project": "Lang",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-15-gemini-1790384526",
+  "suite_sha256": "19ac75a9dcfbade5dc3764b11a14018aed445628ce09e87368a86e0446b5ca71",
+  "test_files": "TypeUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.reflect.TypeUtils",
+  "timestamp": "2026-09-26 08:02:27",
+  "evaluation_duration_sec": 20.553,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 82.94,
+  "branch_coverage_percent": 75.7,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableGenericArrayTypeToGenericArrayType",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableTypeVariable",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testNormalizeUpperBounds",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testDefectGetTypeArgumentsInheritanceHierarchy"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableGenericArrayTypeToGenericArrayType",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testIsAssignableTypeVariable",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testNormalizeUpperBounds",
+    "org.apache.commons.lang3.reflect.TypeUtilsGeminiTest::testDefectGetTypeArgumentsInheritanceHierarchy"
+  ]
+}

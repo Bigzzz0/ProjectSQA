@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 41.07,
+  "branch_cov": 36.96,
+  "test_file": "Variance_IPOTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "145190fa2d9d5bab86d90ba86c7f240d6968e2f0b6c2cd8d2759bd5cd228a688",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_41b/org/apache/commons/math/stat/descriptive/moment/Variance_IPOTest.java"
+  ],
+  "run_id": "Math-41-ipo-1790390116"
+}

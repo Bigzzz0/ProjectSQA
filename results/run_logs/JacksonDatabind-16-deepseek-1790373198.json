@@ -1,0 +1,24 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-16-deepseek-1790373198",
+  "suite_sha256": "16de352b0e50735d6af31f92ff0e0084bdd78366ebc0a178bce0727171bd6800",
+  "test_files": "AnnotationMapDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.introspect.AnnotationMap",
+  "timestamp": "2026-09-26 04:53:42",
+  "evaluation_duration_sec": 24.314,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 86.11,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.introspect.AnnotationMapDeepseekTest::testChainOfOperations",
+    "com.fasterxml.jackson.databind.introspect.AnnotationMapDeepseekTest::testMergeBothNullMapsInside"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.introspect.AnnotationMapDeepseekTest::testMergeBothNullMapsInside"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Chart",
+  "bug_id": 18,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Chart-18-ipo-1790352017",
+  "suite_sha256": "9d7a6be8ed5bc4ba37bdc2ba455f073d332000e0483cf783b8a0129346ce33df",
+  "test_files": "DefaultKeyedValues2D_IPOTest.java",
+  "target_classes": "org.jfree.data.DefaultKeyedValues;org.jfree.data.DefaultKeyedValues2D",
+  "timestamp": "2026-09-25 23:00:42",
+  "evaluation_duration_sec": 24.529,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 5.26,
+  "branch_coverage_percent": 2.46,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

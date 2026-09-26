@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 3,
+  "line_cov": 21.64,
+  "branch_cov": 18.99,
+  "test_file": "TokenQueue_IPOTest.java",
+  "target_classes": "org.jsoup.parser.TokenQueue;org.jsoup.select.QueryParser",
+  "buggy_failures": [
+    "org.jsoup.parser.TokenQueue_IPOTest::test_chompBalanced_pairwise_930",
+    "org.jsoup.parser.TokenQueue_IPOTest::test_chompBalanced_pairwise_946",
+    "org.jsoup.parser.TokenQueue_IPOTest::test_chompBalanced_pairwise_965"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "8980b39b3cccd04090aeb9fdd569f2bf22d59868aa63e3079d486f5527acb2b2",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_60b/org/jsoup/parser/TokenQueue_IPOTest.java"
+  ],
+  "run_id": "Jsoup-60-ipo-1790381468"
+}

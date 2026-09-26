@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.archivers.zip.ZipArchiveOutputStreamGeminiTest::testDefectDoesntWriteDataDescriptorWhenAddingRawEntries"
-  ]
+  ],
+  "suite_sha256": "a0532050aab3214f2332209105ad76f9468f211c2db7ce55ccc9d60481a3c6ba",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_43b/ZipArchiveOutputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-43-gemini-1790369891"
 }

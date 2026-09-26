@@ -22,5 +22,10 @@
     "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForArray_NullType",
     "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_WildcardField",
     "com.google.gson.TypeInfoFactoryDeepseekTest::testGetTypeInfoForField_NullTypeDefiningF"
-  ]
+  ],
+  "suite_sha256": "a1bfca62009e188c56ee0e5a0a35385ca2b1b2100b2b959a8512c2e886ba3d4d",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Gson_1b/TypeInfoFactoryDeepseekTest.java"
+  ],
+  "run_id": "Gson-1-deepseek-1790370790"
 }

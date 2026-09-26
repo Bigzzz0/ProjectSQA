@@ -1,0 +1,17 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonCore-14-deepseek-1790371933",
+  "suite_sha256": "b543f5a0718a6c8498ee09278b716906a89d14f2d1528fc11cc3049a210e6b4f",
+  "test_files": "IOContextDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.core.io.IOContext",
+  "timestamp": "2026-09-26 04:32:16",
+  "evaluation_duration_sec": 3.521,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "get/classes/com/fasterxml/jackson/core/type/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_14b/target/classes/com/fasterxml/jackson/core/base/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_14b/target/classes/com/fasterxml/jackson/core/format/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_14b/target/classes/com/fasterxml/jackson/core/json/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_14b/target/classes/com/fasterxml/jackson/core/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_14b/target/classes/com/fasterxml/jackson/core/sym/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/JacksonCore_14b/target/classes/com/fasterxml/jackson/core/util/package-info.class\n     [copy] Copying 3 files to /tmp/d4j_eval/JacksonCore_14b/target/classes\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JacksonCore_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonCore_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonCore_14b/.test_suite/com/fasterxml/jackson/core/io/IOContextDeepseekTest.java:80: error: cannot find symbol\n    [javac]         TextBuffer tb = ctx.constructTextBuffer();\n    [javac]         ^\n    [javac]   symbol:   class TextBuffer\n    [javac]   location: class IOContextDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

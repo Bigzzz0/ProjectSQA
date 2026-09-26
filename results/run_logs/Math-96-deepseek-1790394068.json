@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 96,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-96-deepseek-1790394068",
+  "suite_sha256": "790fee720c4910ecec9b5fe42123fe11a2ce4e29f0ff53ab8f387a20d12f31dd",
+  "test_files": "ComplexDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "timestamp": "2026-09-26 10:41:15",
+  "evaluation_duration_sec": 6.622,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/src/java/org/apache/commons/math/util/MathUtils.java:878: warning: [deprecation] ROUND_UNNECESSARY in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UNNECESSARY :\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Math_96b/src/java/org/apache/commons/math/util/MathUtils.java:883: warning: [deprecation] ROUND_UP in BigDecimal has been deprecated\n    [javac]         case BigDecimal.ROUND_UP :\n    [javac]                        ^\n    [javac] Note: /tmp/d4j_eval/Math_96b/src/java/org/apache/commons/math/stat/Frequency.java uses unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 18 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Math_96b/target/classes/META-INF\n     [copy] Copying 1 file to /tmp/d4j_eval/Math_96b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes/../classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Math_96b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_96b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_96b/.test_suite/org/apache/commons/math/complex/ComplexDeepseekTest.java:432: error: cannot find symbol\n    [javac]         double expectedReal = Math.sin(1.0) * MathUtils.cosh(0.5);\n    [javac]                                               ^\n    [javac]   symbol:   variable MathUtils\n    [javac]   location: class ComplexDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

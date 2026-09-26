@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 30,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-30-mio-1790389458",
+  "suite_sha256": "6746b3d1f2077a10ac1d5a6fa66ba73ba0d16c01e95c6ab2da297cfe27389d98",
+  "test_files": "MannWhitneyUTest_ESTest.java",
+  "target_classes": "org.apache.commons.math3.stat.inference.MannWhitneyUTest",
+  "timestamp": "2026-09-26 09:24:44",
+  "evaluation_duration_sec": 26.39,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 90.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

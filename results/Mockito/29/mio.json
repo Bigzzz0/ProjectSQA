@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.33,
+  "branch_cov": 83.33,
+  "test_file": "Same_ESTest.java",
+  "target_classes": "org.mockito.internal.matchers.Same",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5504aa5b80a30287381261e9d3f54e4ac0e9d2519534929eccd5b3122ccd602b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Mockito_29b/Same_ESTest.java"
+  ],
+  "run_id": "Mockito-29-mio-1790397704"
+}

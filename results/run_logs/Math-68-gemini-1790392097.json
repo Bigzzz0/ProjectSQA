@@ -1,0 +1,28 @@
+{
+  "project": "Math",
+  "bug_id": 68,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-68-gemini-1790392097",
+  "suite_sha256": "19e15653a85eb451620fdeac85a0ee95680db492b2437b939a1eebc1a612d766",
+  "test_files": "LevenbergMarquardtOptimizerGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer",
+  "timestamp": "2026-09-26 10:08:41",
+  "evaluation_duration_sec": 24.503,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.39,
+  "branch_coverage_percent": 85.2,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testVectorialConvergenceCheckerIntegration"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
+    "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth"
+  ]
+}

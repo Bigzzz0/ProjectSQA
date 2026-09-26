@@ -16,5 +16,10 @@
     "org.apache.commons.codec.binary.StringUtilsGeminiTest::testNewStringInvalidCharset",
     "org.apache.commons.codec.binary.StringUtilsGeminiTest::testEqualsEmptySequences",
     "org.apache.commons.codec.binary.StringUtilsGeminiTest::testGetBytesUncheckedInvalidCharset"
-  ]
+  ],
+  "suite_sha256": "e94db72c4b1304c47f9be17e8bd044c810a8bc837fbb4333d619861a392945a0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Codec_17b/StringUtilsGeminiTest.java"
+  ],
+  "run_id": "Codec-17-gemini-1790366051"
 }

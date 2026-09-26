@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testBeginBlockInsertsSemicolonWhenNeeded"
-  ]
+  ],
+  "suite_sha256": "1b9ba4fb538f9fde2cfd4c7d3100a6d98e7d5c8f0a13d717231c482cc5c44d9f",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_38b/CodeConsumerDeepseekTest.java"
+  ],
+  "run_id": "Closure-38-deepseek-1790356851"
 }

@@ -1,0 +1,19 @@
+{
+  "project": "JxPath",
+  "bug_id": 1,
+  "technique": "IPO (Native IPO)",
+  "run_id": "JxPath-1-ipo-1790383021",
+  "suite_sha256": "5684a0988be73e5cf80639b39492dbdded7599eb6783bd58eeffe7caef7b9dde",
+  "test_files": "JDOMNodePointer_IPOTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "timestamp": "2026-09-26 07:37:16",
+  "evaluation_duration_sec": 15.254,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 4.92,
+  "branch_coverage_percent": 3.96,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

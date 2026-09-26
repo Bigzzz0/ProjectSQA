@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 23,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Lang-23-mio-1790384942",
+  "suite_sha256": "a16efaf59a04ecccee552a39d6e44bafe1b5d7bd4567240d4cc7e13db0c514b9",
+  "test_files": "ExtendedMessageFormat_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.text.ExtendedMessageFormat",
+  "timestamp": "2026-09-26 08:09:23",
+  "evaluation_duration_sec": 20.963,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 50.9,
+  "branch_coverage_percent": 42.42,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 57,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-57-mio-1790358122",
+  "suite_sha256": "de94e5c86a316a3dab020e10c05f30220541c690604c6f490cb90dcfc2cea0da",
+  "test_files": "ClosureCodingConvention_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ClosureCodingConvention",
+  "timestamp": "2026-09-26 00:42:41",
+  "evaluation_duration_sec": 38.935,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 44.6,
+  "branch_coverage_percent": 22.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

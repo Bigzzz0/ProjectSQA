@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 5,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-5-deepseek-1790387856",
+  "suite_sha256": "e14860d1e742407b2f0cd4f4960cfe48e7822049536f9071e9c00e7f307d6091",
+  "test_files": "ComplexDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.complex.Complex",
+  "timestamp": "2026-09-26 08:58:03",
+  "evaluation_duration_sec": 26.625,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 97.35,
+  "branch_coverage_percent": 90.59,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.complex.ComplexDeepseekTest::testReciprocalZero"
+  ]
+}

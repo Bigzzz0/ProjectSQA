@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 80.21,
+  "branch_cov": 73.44,
+  "test_file": "CompressorStreamFactory_ESTest.java;DeflateCompressorInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.CompressorStreamFactory;org.apache.commons.compress.compressors.deflate.DeflateCompressorInputStream",
+  "buggy_failures": [
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test02",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test03",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test10"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test02",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test03",
+    "org.apache.commons.compress.compressors.CompressorStreamFactory_ESTest::test10"
+  ],
+  "suite_sha256": "a2e6b46d3f84f01770936c32bb04d647e2d7c68be1f6bae04ada1c36aad496cc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_33b/CompressorStreamFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Compress_33b/DeflateCompressorInputStream_ESTest.java"
+  ],
+  "run_id": "Compress-33-mio-1790369277"
+}

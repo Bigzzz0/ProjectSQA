@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.25,
+  "branch_cov": 0.0,
+  "test_file": "TypeInfoFactory_ESTest.java",
+  "target_classes": "com.google.gson.TypeInfoFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "7c91338b827c3e89f4b906ff2301976036fedfc800dac8fca48a9d24a82650cd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_1b/TypeInfoFactory_ESTest.java"
+  ],
+  "run_id": "Gson-1-mio-1790370776"
+}

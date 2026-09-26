@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.0,
+  "branch_cov": 0.0,
+  "test_file": "TreeBuilder_IPOTest.java",
+  "target_classes": "org.jsoup.parser.TreeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "44ed1f49fafcb29c5a39df5705029de54fa0041bcf6be8eba165a8420fe2b69e",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_44b/org/jsoup/parser/TreeBuilder_IPOTest.java"
+  ],
+  "run_id": "Jsoup-44-ipo-1790380693"
+}

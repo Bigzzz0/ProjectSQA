@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 13,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-13-deepseek-1790384366",
+  "suite_sha256": "fe651419b60013e17c2b5c37fe2e913519c47ed9ae58ea0149cd1381e40c7957",
+  "test_files": "SerializationUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.SerializationUtils",
+  "timestamp": "2026-09-26 07:59:46",
+  "evaluation_duration_sec": 19.883,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 87.5,
+  "branch_coverage_percent": 85.71,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.SerializationUtilsDeepseekTest::testClonePrimitiveTypeClass"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,27 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 92,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-92-deepseek-1790377435",
+  "suite_sha256": "d167e13481fbad38908c87a5ed3cde1e9f6d077b5147571d1019522748b74033",
+  "test_files": "BeanDeserializerFactoryDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BeanDeserializerFactory",
+  "timestamp": "2026-09-26 06:04:20",
+  "evaluation_duration_sec": 25.28,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 9.04,
+  "branch_coverage_percent": 4.41,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
+    "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
+  ]
+}

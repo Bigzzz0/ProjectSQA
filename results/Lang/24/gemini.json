@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testCreateNumberFloatingPointNoQualifier",
     "org.apache.commons.lang3.math.NumberUtilsGeminiTest::testIsNumberLang664HexUpperCase"
-  ]
+  ],
+  "suite_sha256": "94fa017292f8354e285f28a69edd9c2ab15c0af70f73586d20e819158391e00c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_24b/NumberUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-24-gemini-1790385072"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "X5455_ExtendedTimestamp_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestamp",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "929a4cc116ae458d1f0d7f3095d384597c1ea7c1f25c6155af8fb194896fc10c",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_46b/X5455_ExtendedTimestamp_ESTest.java"
+  ],
+  "run_id": "Compress-46-mio-1790370038"
+}

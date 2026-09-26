@@ -18,5 +18,10 @@
     "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithVar",
     "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testMarkAllParametersEscapedDirectly",
     "com.google.javascript.jscomp.LiveVariablesAnalysisGeminiTest::testStandardForInWithoutVar"
-  ]
+  ],
+  "suite_sha256": "80063920a32694d4b183af7cdc18bb65b2dff104cffa761bef64d94bcaf0b91c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_58b/LiveVariablesAnalysisGeminiTest.java"
+  ],
+  "run_id": "Closure-58-gemini-1790358233"
 }

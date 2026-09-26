@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.databind.type.TypeFactoryGeminiTest::testParameterizedReflectionTypes"
-  ]
+  ],
+  "suite_sha256": "64648dbc82de3588fd23cdf4c3da1adee58e84c10f4c781f86f416aadaef6a50",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_11b/TypeFactoryGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-11-gemini-1790372952"
 }

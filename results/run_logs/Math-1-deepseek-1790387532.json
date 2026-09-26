@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 1,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-1-deepseek-1790387532",
+  "suite_sha256": "10ba60c64cfe31e9a43d5a59d67c13bce3a610dc47ad0090dced6cca73fc940f",
+  "test_files": "BigFractionDeepseekTest.java;FractionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.BigFraction;org.apache.commons.math3.fraction.Fraction",
+  "timestamp": "2026-09-26 08:52:21",
+  "evaluation_duration_sec": 8.713,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/nonlinear/vector/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/ml/distance/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/optim/univariate/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_1b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_1b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Math_1b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_1b/.test_suite/org/apache/commons/math3/fraction/FractionDeepseekTest.java:394: error: cannot find symbol\n    [javac]     @Test(timeout = 4000, expected = NullArgumentException.class)\n    [javac]                                      ^\n    [javac]   symbol:   class NullArgumentException\n    [javac]   location: class FractionDeepseekTest\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

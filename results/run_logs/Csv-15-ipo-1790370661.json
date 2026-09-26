@@ -1,0 +1,19 @@
+{
+  "project": "Csv",
+  "bug_id": 15,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Csv-15-ipo-1790370661",
+  "suite_sha256": "2d272cbf8ceea686c4e3ba1160b1c4e872e27019462605fcdc3da3bffc31c14a",
+  "test_files": "CSVFormat_IPOTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "timestamp": "2026-09-26 04:11:19",
+  "evaluation_duration_sec": 18.314,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 26.2,
+  "branch_coverage_percent": 10.18,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

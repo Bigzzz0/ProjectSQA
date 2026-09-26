@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 93.49,
+  "branch_cov": 87.5,
+  "test_file": "PolygonsSet_ESTest.java",
+  "target_classes": "org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet_ESTest::test2"
+  ],
+  "suite_sha256": "a0986bc5d7400cd4c79ab12aff8bfbc0362bdf97601cfe5211302ec0e22b9122",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_32b/PolygonsSet_ESTest.java"
+  ],
+  "run_id": "Math-32-mio-1790389587"
+}

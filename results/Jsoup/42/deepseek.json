@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jsoup.nodes.FormElementDeepseekTest::checkboxWithoutValueDefaultsToOn"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "80ee87ffcea0866d161169fe98cd8dc91b0c5aa535f3447330f266ee36774963",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_42b/FormElementDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-42-deepseek-1790380595"
 }

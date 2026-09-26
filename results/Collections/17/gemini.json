@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.collections.functors.EqualPredicateGeminiTest::testSerializationRoundTrip"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "688193e670edc3d4856a9faf066a1794954edb9584fef028d021efcd9e99da40",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_17b/EqualPredicateGeminiTest.java"
+  ],
+  "run_id": "Collections-17-gemini-1790367037"
 }

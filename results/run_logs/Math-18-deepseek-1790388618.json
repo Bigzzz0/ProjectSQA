@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 18,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-18-deepseek-1790388618",
+  "suite_sha256": "fedf4eecb2b3b6f69383a06f0c3a5f1702c96e14e33230ba6cd242518218550c",
+  "test_files": "CMAESOptimizerDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
+  "timestamp": "2026-09-26 09:10:44",
+  "evaluation_duration_sec": 26.436,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 87.84,
+  "branch_coverage_percent": 73.91,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

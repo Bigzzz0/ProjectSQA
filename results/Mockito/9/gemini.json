@@ -14,5 +14,10 @@
     "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenAbstractMethodReturnsPrimitiveInt_shouldReturnDefaultZero",
     "org.mockito.internal.stubbing.answers.CallsRealMethodsGeminiTest::testAnswer_whenInterfacePrimitiveMethod_shouldReturnDefaultValue"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "371ff54bc4c8c0263e2de842cbe9967a6924c8ac080b536863e8e009ecdfd450",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_9b/CallsRealMethodsGeminiTest.java"
+  ],
+  "run_id": "Mockito-9-gemini-1790395764"
 }

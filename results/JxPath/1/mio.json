@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.16,
+  "branch_cov": 66.55,
+  "test_file": "DOMNodePointer_ESTest.java;JDOMNodePointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "859f82d5cfffd1d6357b90b937d5a2559d8a84b941b088379b9308251761ca6b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_1b/DOMNodePointer_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JxPath_1b/JDOMNodePointer_ESTest.java"
+  ],
+  "run_id": "JxPath-1-mio-1790383037"
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 43,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-43-deepseek-1790390292",
+  "suite_sha256": "d31d49a5da1b7320c2e248275ad40525e2e24b252fe6f34466f34ba076527ecb",
+  "test_files": "SummaryStatisticsDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.SummaryStatistics",
+  "timestamp": "2026-09-26 09:38:20",
+  "evaluation_duration_sec": 8.649,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "_eval/Math_43b/target/classes/org/apache/commons/math/stat/descriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_43b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_43b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_43b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_43b/.test_suite/org/apache/commons/math/stat/descriptive/SummaryStatisticsDeepseekTest.java:415: error: cannot find symbol\n    [javac]     @Test(expected = MathIllegalStateException.class, timeout = 4000)\n    [javac]                      ^\n    [javac]   symbol:   class MathIllegalStateException\n    [javac]   location: class SummaryStatisticsDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

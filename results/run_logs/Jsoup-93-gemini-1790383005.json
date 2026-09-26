@@ -1,0 +1,19 @@
+{
+  "project": "Jsoup",
+  "bug_id": 93,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-93-gemini-1790383005",
+  "suite_sha256": "3f0e441700bf3024d240e6f681722f17ff667467c45cc9cef2e8941fe6d9cbb6",
+  "test_files": "FormElementGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "timestamp": "2026-09-26 07:37:01",
+  "evaluation_duration_sec": 15.58,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

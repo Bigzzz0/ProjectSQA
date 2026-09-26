@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 51.81,
+  "branch_cov": 43.43,
+  "test_file": "ExtendedMessageFormat_ESTest.java",
+  "target_classes": "org.apache.commons.lang.text.ExtendedMessageFormat",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "6201309319778da9d204c37ae7c48b5883e523ddca41e3cdaef7476a9ba4cd39",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_43b/ExtendedMessageFormat_ESTest.java"
+  ],
+  "run_id": "Lang-43-mio-1790386155"
+}

@@ -1,0 +1,38 @@
+{
+  "project": "Gson",
+  "bug_id": 12,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Gson-12-deepseek-1790371136",
+  "suite_sha256": "fc8d49ab63742aa574c34d77597576dc17b0b66cde0a12c8968b923f8dd351fd",
+  "test_files": "JsonTreeReaderDeepseekTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+  "timestamp": "2026-09-26 04:19:10",
+  "evaluation_duration_sec": 13.743,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.26,
+  "branch_coverage_percent": 83.72,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnEmptyObjectDirectly",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnNestedObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnFilledObjectAfterBegin",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyArray",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testLargeNestingToTriggerStackResize",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_filledJsonObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testPathSimple",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testHasNext",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyJsonObject"
+  ],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnNestedObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValueOnFilledObjectAfterBegin",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyArray",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testLargeNestingToTriggerStackResize",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_filledJsonObject",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testPathSimple",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testHasNext",
+    "com.google.gson.internal.bind.JsonTreeReaderDeepseekTest::testSkipValue_emptyJsonObject"
+  ]
+}

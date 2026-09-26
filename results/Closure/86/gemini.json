@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.NodeUtilGeminiTest::testOpToStrNoFail_unknownTokenThrows"
-  ]
+  ],
+  "suite_sha256": "811775545be878222d2db8d23b2c923b3f9cb775bd242166b18d7c3144b49fce",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_86b/NodeUtilGeminiTest.java"
+  ],
+  "run_id": "Closure-86-gemini-1790359966"
 }

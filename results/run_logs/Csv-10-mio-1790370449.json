@@ -1,0 +1,19 @@
+{
+  "project": "Csv",
+  "bug_id": 10,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Csv-10-mio-1790370449",
+  "suite_sha256": "a25d9442fec718b80913a8d14b33a73fef9affdada904c7064971611356689c7",
+  "test_files": "CSVPrinter_ESTest.java",
+  "target_classes": "org.apache.commons.csv.CSVPrinter",
+  "timestamp": "2026-09-26 04:07:46",
+  "evaluation_duration_sec": 17.352,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 87.5,
+  "branch_coverage_percent": 77.78,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

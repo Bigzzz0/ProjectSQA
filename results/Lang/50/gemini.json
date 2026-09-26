@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang.time.FastDateFormatGeminiTest::testCalendarTimeZoneForcing"
-  ]
+  ],
+  "suite_sha256": "25d1501f9c2b492bc222bb253bf98c452d4d7f2b613f196b6c64f652f5a15b5e",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_50b/FastDateFormatGeminiTest.java"
+  ],
+  "run_id": "Lang-50-gemini-1790386602"
 }

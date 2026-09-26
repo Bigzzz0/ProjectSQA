@@ -1,0 +1,25 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 86,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-86-deepseek-1790377107",
+  "suite_sha256": "de3af698c186b1739512ee8438b20c38871bb25b02794339aba52eb6b216c161",
+  "test_files": "ResolvedRecursiveTypeDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ResolvedRecursiveType",
+  "timestamp": "2026-09-26 05:58:52",
+  "evaluation_duration_sec": 25.192,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 92.86,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringUnresolved",
+    "com.fasterxml.jackson.databind.type.ResolvedRecursiveTypeDeepseekTest::testToStringResolved"
+  ]
+}

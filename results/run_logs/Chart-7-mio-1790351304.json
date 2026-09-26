@@ -1,0 +1,25 @@
+{
+  "project": "Chart",
+  "bug_id": 7,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-7-mio-1790351304",
+  "suite_sha256": "a56a30d1a4679af5a2b601e12a95b12dc4ed567719a88e644441073b189bdb08",
+  "test_files": "TimePeriodValues_ESTest.java",
+  "target_classes": "org.jfree.data.time.TimePeriodValues",
+  "timestamp": "2026-09-25 22:48:51",
+  "evaluation_duration_sec": 27.006,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.48,
+  "branch_coverage_percent": 96.3,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.data.time.TimePeriodValues_ESTest::test10",
+    "org.jfree.data.time.TimePeriodValues_ESTest::test17"
+  ],
+  "fixed_failures": [
+    "org.jfree.data.time.TimePeriodValues_ESTest::test10",
+    "org.jfree.data.time.TimePeriodValues_ESTest::test17"
+  ]
+}

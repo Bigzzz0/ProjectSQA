@@ -17,5 +17,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testUnicodeExtraFieldResolution",
     "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testSplitZipThrowsUnsupportedZipFeatureException"
-  ]
+  ],
+  "suite_sha256": "8df15c6a5a955f2f3ce6ed323313cfe8bd85b07f5e317f7086c0c34691443aa8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_25b/ZipArchiveInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-25-gemini-1790368807"
 }

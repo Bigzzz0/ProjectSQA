@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testSerializationRoundTrip"
-  ]
+  ],
+  "suite_sha256": "43c4f5665db5d6d9eda0c9373112d3758088c748553fff862c9211cccdcb0d40",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_24b/ReturnsEmptyValuesGeminiTest.java"
+  ],
+  "run_id": "Mockito-24-gemini-1790397325"
 }

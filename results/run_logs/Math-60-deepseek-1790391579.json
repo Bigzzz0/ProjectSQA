@@ -1,0 +1,28 @@
+{
+  "project": "Math",
+  "bug_id": 60,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-60-deepseek-1790391579",
+  "suite_sha256": "09bf074e109b89e96dca0873ab41d4458146e6a7f71e1af307b9d16e5bc99722",
+  "test_files": "NormalDistributionImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.distribution.NormalDistributionImpl",
+  "timestamp": "2026-09-26 10:00:02",
+  "evaluation_duration_sec": 22.843,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 87.23,
+  "branch_coverage_percent": 77.78,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityNegativeInfinity",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityAtNegativeInfinity",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testInverseCumulativeProbabilityNaN",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testCumulativeProbabilityPositiveInfinity",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testMultipleInstances"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testInverseCumulativeProbabilityNaN",
+    "org.apache.commons.math.distribution.NormalDistributionImplDeepseekTest::testMultipleInstances"
+  ]
+}

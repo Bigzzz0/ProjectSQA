@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.SystemUtilsGeminiTest::testToJavaVersionIntArray",
     "org.apache.commons.lang3.SystemUtilsGeminiTest::testToJavaVersionIntArrayBoundary"
-  ]
+  ],
+  "suite_sha256": "89843d8fb332b6da924f94ae3c491e338b2dacebd100017e112f11f679b1b77d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_29b/SystemUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-29-gemini-1790385378"
 }

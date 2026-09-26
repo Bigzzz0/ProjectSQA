@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.util.ContinuedFractionGeminiTest::testScalingBranchWithBGreaterThanA"
-  ]
+  ],
+  "suite_sha256": "ff668f9e6fc611febdf88a1c610292e2535c0685b00eeee45a7d68004599d5c0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_31b/ContinuedFractionGeminiTest.java"
+  ],
+  "run_id": "Math-31-gemini-1790389561"
 }

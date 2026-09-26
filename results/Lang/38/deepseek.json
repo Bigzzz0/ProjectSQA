@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testLiteralCharacters",
     "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testIllegalPatternToken"
-  ]
+  ],
+  "suite_sha256": "5957f060ea47a20c65e2d556a5d99250c9782da6d6873445a2be6357f9dae583",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_38b/FastDateFormatDeepseekTest.java"
+  ],
+  "run_id": "Lang-38-deepseek-1790385891"
 }

@@ -4,7 +4,7 @@
   "failures_count": 21,
   "line_cov": 5.67,
   "branch_cov": 2.92,
-  "test_file": "CodeGeneratorGeminiTest.java;PeepholeSubstituteAlternateSyntaxGeminiTest.java",
+  "test_file": "PeepholeSubstituteAlternateSyntaxGeminiTest.java",
   "target_classes": "com.google.javascript.jscomp.CodeGenerator;com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
   "buggy_failures": [
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testRegExpSpecialCharactersAndLineTerminators",
@@ -51,5 +51,10 @@
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testArrayConstructorUnsafeSingleArguments",
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldStandardConstructorsWhenNormalized",
     "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxGeminiTest::testFoldSimpleStringFunctionCall"
-  ]
+  ],
+  "suite_sha256": "c5b1ee3d0bf6e04974dc75ba4249ff740b543fa8bb71c54ed2996c2d233cea46",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_173b/PeepholeSubstituteAlternateSyntaxGeminiTest.java"
+  ],
+  "run_id": "Closure-173-gemini-1790365142"
 }

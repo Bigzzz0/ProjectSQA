@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 27.27,
+  "branch_cov": 25.0,
+  "test_file": "ValueMarker_IPOTest.java",
+  "target_classes": "org.jfree.chart.plot.ValueMarker",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "2d8c8bdd988d2f85a7100c186411d135d11ccbe4e4992e0b1943cc45ef62faaa",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Chart_20b/org/jfree/chart/plot/ValueMarker_IPOTest.java"
+  ],
+  "run_id": "Chart-20-ipo-1790352114"
+}

@@ -1,0 +1,27 @@
+{
+  "project": "JxPath",
+  "bug_id": 21,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-21-gemini-1790383515",
+  "suite_sha256": "e57c75008e79ded50503e26ba579361b39d7ca72f4746ab35daa13c9f9068233",
+  "test_files": "PropertyPointerGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.beans.PropertyPointer",
+  "timestamp": "2026-09-26 07:45:29",
+  "evaluation_duration_sec": 14.155,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 92.86,
+  "branch_coverage_percent": 84.62,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testGetLengthWhenBaseValueIsNullDefect",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testNullPropertyIterationDefect",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreateChildWithAndWithoutQName",
+    "org.apache.commons.jxpath.ri.model.beans.PropertyPointerGeminiTest::testCreatePathUsingAbstractFactorySuccess"
+  ]
+}

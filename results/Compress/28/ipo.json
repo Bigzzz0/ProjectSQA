@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 11.74,
+  "branch_cov": 4.92,
+  "test_file": "TarArchiveInputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarArchiveInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1c42c9b09338d588f157eda0cca5700fa44dff8fb2a2ff42becee75d7cd7331d",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_28b/org/apache/commons/compress/archivers/tar/TarArchiveInputStream_IPOTest.java"
+  ],
+  "run_id": "Compress-28-ipo-1790368969"
+}

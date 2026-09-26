@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 88,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-88-deepseek-1790382772",
+  "suite_sha256": "caee254c47ea0c1b718e41143ceb8b8da29adb4f4fc8d1601b3b1086fba8c228",
+  "test_files": "AttributeDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.Attribute",
+  "timestamp": "2026-09-26 07:32:56",
+  "evaluation_duration_sec": 3.712,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "arargs call and to suppress this warning\n    [javac] 3 warnings\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_88b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_88b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_88b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_88b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_88b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_88b/.test_suite/org/jsoup/nodes/AttributeDeepseekTest.java:79: error: incompatible types: Attributes cannot be converted to Attribute\n    [javac]         Attribute attr = parent.put(\"old\", \"val\");\n    [javac]                                    ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

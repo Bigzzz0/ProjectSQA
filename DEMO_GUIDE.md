@@ -14,12 +14,14 @@
 | ลำดับขั้นตอน | รายการสาธิต | เวลาที่ใช้ | เครื่องมือที่ใช้ |
 | :---: | :--- | :---: | :--- |
 | **Stage 1** | ตรวจสอบ Docker Container และ Defects4J Environment | 1 นาที | PowerShell / Docker |
-| **Stage 2** | สาธิตการรัน Universal Benchmark Runner บนบั๊กจริง (Math-2) | 2 นาที | `run_benchmark.py` |
+| **Stage 2** | ตรวจผลจริง Chart-3 / Gemini ที่ตรวจพบข้อบกพร่อง | 2 นาที | Master CSV / Run log |
 | **Stage 3** | แสดงการพิสูจน์สถานะ `BUG_DETECTED` บนเวอร์ชัน `b` และ `f` | 1 นาที | Defects4J CLI |
 | **Stage 4** | สาธิตการรันสคริปต์สถิติและการพล็อตกราฟอัตโนมัติ 6 รูปแบบ | 1 นาที | `advanced_data_analytics.py` |
-| **Stage 5** | เปิดไฟล์ Excel รวม 6 ชีทและ Data Dictionary สรุปผล | 1 นาที | Excel / VS Code |
+| **Stage 5** | เปิดไฟล์ Excel รวม 8 ชีทและ Data Dictionary สรุปผล | 1 นาที | Excel / VS Code |
 
 ---
+
+> **สถานะ:** benchmark รอบปัจจุบันเสร็จแล้ว; 2,768 suite evaluations มีผลครบ, 648 ช่องไม่มี suite และถูกระบุ `NO_SUITE`. ใช้ master dataset กับ structured run log ด้านล่างสำหรับการสาธิต
 
 ## 🚀 ขั้นที่ 1: ตรวจสอบความพร้อมของ Docker Container
 
@@ -41,93 +43,47 @@ docker exec defects4j_sqa defects4j info -p Math -b 2
 
 ---
 
-## 🚀 ขั้นที่ 2: สาธิตการรัน Universal Benchmark Runner แบบสดๆ
+## 🚀 ขั้นที่ 2: ตรวจผลการรันที่มี provenance
 
-สั่งรันตัวประเมินกลางบนกรณีศึกษา **Math-2** เพื่อแสดงการวัดผล Coverage และการตรวจจับข้อบกพร่อง:
+ใช้ Chart-3 / Gemini เป็นตัวอย่างที่ได้สถานะ BUG_DETECTED จาก runner จริง ตรวจแถว master และเปิด structured run log:
 
-```powershell
-docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Math --bug 2
-```
+    Import-Csv results/master_benchmark_summary.csv | Where-Object {
+      $_.Project -eq 'Chart' -and $_.Bug_ID -eq '3' -and $_.Technique -eq 'Gemini 3.8 Flash'
+    } | Format-List
+    Get-Content results/run_logs/Chart-3-gemini-1790350744.json
 
-### สิ่งที่ระบบจะทำงานและแสดงผลบนหน้าจอ:
-1. ดึง Source code ของ Math-2 เวอร์ชันมีบั๊ก (`Math_2b`) และเวอร์ชันแก้แล้ว (`Math_2f`)
-2. ค้นหาชุดทดสอบของทั้ง 4 เทคนิคใน `TestCode/`:
-   - `Combinatorial_IPO`: `HypergeometricDistribution_IPOTest.java`
-   - `MIO_Algorithm`: `HypergeometricDistribution_ESTest.java`
-   - `Deepseek-v4_flash`: `HypergeometricDistributionDeepseekTest.java`
-   - `Gemini-3_8_flash`: `HypergeometricDistributionGeminiTest.java`
-3. ทำการคอมไพล์และรันการทดสอบ พร้อมจับเวลา
-4. วัด Cobertura Target-Class Coverage
-5. รายงานผลสถานะการตรวจจับข้อบกพร่องทั้ง 5 สถานะทันที!
+เช็กว่า Run_ID และ Suite_SHA256 ใน master ตรงกับ log และผลบั๊กมี failing tests บน buggy พร้อมรายการ fixed_failures ว่าง ก่อนใช้เป็นกรณีสาธิต
 
 ---
 
-## 🚀 ขั้นที่ 3: สาธิตการพิสูจน์สถานะ `BUG_DETECTED` ตามหลักวิชาการ
+## 🚀 ขั้นที่ 3: อธิบายเกณฑ์ BUG_DETECTED
 
-เพื่ออธิบายให้อาจารย์เห็นว่าทำไมเทคนิค AI (Gemini) ถึงได้สถานะ **`BUG_DETECTED`** ตามกฎ 5 สถานะ:
+BUG_DETECTED นับได้เมื่อชุดทดสอบ fail บน buggy และ pass บน fixed เท่านั้น เปิดผลดิบรายบั๊กใน results/run_logs และผลรวมใน master CSV เพื่อไล่กลับจากตัวเลขไปยังหลักฐาน
 
-```powershell
-# 3.1 ทดสอบรันบนเวอร์ชันมีบั๊ก (Math-2b) -> จะต้องเกิด FAILURE
-docker exec -w /tmp/Math_2b defects4j_sqa defects4j test
-
-# 3.2 ทดสอบรันบนเวอร์ชันแก้บั๊กแล้ว (Math-2f) -> จะต้อง PASS 100%
-docker exec -w /tmp/Math_2f defects4j_sqa defects4j test
-```
-
-> **🗣️ สิ่งที่ต้องชี้แจงอาจารย์:**  
-> "นี่คือหลักฐานเชิงประจักษ์ของ **กฎความซื่อตรงของตัวหาร (Denominator Integrity Rule)** ครับอาจารย์ ชุดทดสอบของ Gemini สามารถกระตุ้นจุดบกพร่องบนโค้ด `b` จนเกิด Failure ได้จริง และเมื่อนำไปรันบนโค้ด `f` ที่นักพัฒนาได้แก้บั๊กแล้ว เทสผ่าน 100% อย่างสมบูรณ์แบบ จึงได้รับการรับรองเป็นสถานะ `BUG_DETECTED` ปราศจาก False Positive ครับ"
+ถ้าต้องแสดงหน้าจอ Defects4J แบบสด ให้ทำหลังคิว benchmark หลักจบแล้วเท่านั้น ใช้ suite และ checkout ของบั๊กเดียวกัน และเก็บ output ไว้ใน run log ก่อนนำเสนอ
 
 ---
 
-## 🚀 ขั้นที่ 4: สาธิตการรันสคริปต์สถิติขั้นสูงและการสร้างกราฟ 6 รูปแบบ
+## 🚀 ขั้นที่ 4: สร้าง snapshot, สถิติ และกราฟ
 
-เปิด Terminal บน Windows Host และสั่งรันสคริปต์วิเคราะห์ข้อมูลขั้นสูง:
+รันหลังคิว benchmark หยุดหรือเสร็จ เพื่อให้ CSV, Excel, JSON และกราฟมาจาก snapshot เดียวกัน:
 
-```powershell
-& "C:\Users\User\AppData\Local\Programs\Python\Python313\python.exe" scripts/advanced_data_analytics.py
-```
+    .\.venv\Scripts\python.exe scripts/consolidate_master_results.py
+    .\.venv\Scripts\python.exe scripts/advanced_data_analytics.py
+    .\.venv\Scripts\python.exe scripts/plot_results.py
 
-### การตอบสนองของระบบ:
-```text
-=================================================================
-🚀 ProjectSQA Advanced Data Analytics Engine
-=================================================================
-🔬 1. Running Statistical Hypothesis Tests & Effect Sizes...
-⏱️ 2. Analyzing MIO Search Budget Scaling (30s vs 60s vs 120s)...
-✅ Generated: results\figure5_budget_scaling.png
-🤝 3. Analyzing Ensemble Fault Detection Synergy & Overlap Matrix...
-✅ Generated: results\figure6_ensemble_overlap.png
-🏛️ 4. Analyzing Single-Class vs Multi-Class Defect Resilience...
-💰 5. Evaluating AI Economics & Cost per Detected Bug...
-✅ Full analytics JSON saved: results\advanced_analytics.json
-📊 6. Exporting Professional Multi-Tab Excel Workbook...
-✅ Master Excel saved: results\Master_Benchmark_Results.xlsx
-✅ Data Dictionary saved: results\DATA_DICTIONARY.md
-✅ Advanced Analytics Report saved: results\advanced_analytics_report.md
-=================================================================
-🎉 Advanced Data Analytics Pipeline Completed Successfully!
-=================================================================
-```
+ตรวจ `results/master_descriptive_stats.json` ก่อนพูดถึงผล ปัจจุบัน `results_complete` และ `available_suite_evaluations_complete` เป็น true; หากมีการเปลี่ยนข้อมูลภายหลัง ให้ใช้สถานะและตัวหารล่าสุดในไฟล์นี้
 
 ---
 
-## 🚀 ขั้นที่ 5: นำเสนอไฟล์ผลลัพธ์ระดับพรีเมียม (Showcasing Deliverables)
+## 🚀 ขั้นที่ 5: ตรวจไฟล์ส่งมอบ
 
-1. **เปิดไฟล์รูปภาพกราฟวิชาการ 300 DPI ทั้ง 6 รูปในโฟลเดอร์ `results/`:**
-   - `figure1_coverage_comparison.png`: เปรียบเทียบ Coverage ภาพรวม และ Effective Coverage
-   - `figure2_fdr_distribution.png`: แผนภูมิสัดส่วน 5 สถานะ FDR
-   - `figure3_projects_breakdown.png`: ผลการทดลองจำแนก 17 โปรเจกต์
-   - `figure4_ai_economics.png`: กราฟเปรียบเทียบเวลาและความคุ้มค่าของโทเค็น
-   - `figure5_budget_scaling.png`: กราฟจุดอิ่มตัวของการค้นหาใน MIO (Diminishing Returns)
-   - `figure6_ensemble_overlap.png`: แผนภูมิการผสานพลังร่วมตรวจพบ 105 บั๊ก
-2. **เปิดไฟล์สมุดงาน Excel หลายชีท (`results/Master_Benchmark_Results.xlsx`):**
-   - ชีท 1: `Executive_Summary`
-   - ชีท 2: `Master_Evaluations_Data` (2,804 แถว พร้อมสูตรและสีจัดหมวดหมู่)
-   - ชีท 3: `Technique_Descriptive_Stats`
-   - ชีท 4: `Hypothesis_Testing_A12`
-   - ชีท 5: `MIO_Budget_Scaling`
-   - ชีท 6: `AI_Economics_Cost`
-3. **เปิดเล่มรายงานฉบับสมบูรณ์ (`Final_Report.md`)** เพื่อสรุปข้อเสนอแนะเชิงวิศวกรรมสำหรับอุตสาหกรรม
+- กราฟ: figure1 ถึง figure6 ใน results/
+- Excel: results/Master_Benchmark_Results.xlsx มี Summary, Master evaluations, MIO generation budget, Hypothesis tests, AI generation logs, Ensemble, Single vs multiclass และ Data dictionary
+- Data dictionary และรายงาน snapshot: results/DATA_DICTIONARY.md และ results/advanced_analytics_report.md
+- README, Final_Report และ PRESENTATION_SLIDES ต้องตรงกับ status และค่าจาก snapshot เดียวกัน
+- ยืนยันก่อนส่งว่าไม่มีแถว key ซ้ำ และสุ่มเปิด Run_Log อย่างน้อยหนึ่งรายการต่อเทคนิค
+
+หากผลประเมินยังไม่ครบ ให้รายงานจำนวน suite, จำนวน attempted, จำนวน DONE, จำนวน BUG_DETECTED และจำนวน NO_SUITE แยกกัน ห้ามนำผลเก่ามาแทนค่าที่หายไป
 
 ---
-*คู่มือฉบับนี้พร้อมใช้งานจริงสำหรับการนำเสนอสดต่อหน้าอาจารย์ผู้สอน เพื่อความมั่นใจและได้คะแนนเต็ม 100%!*

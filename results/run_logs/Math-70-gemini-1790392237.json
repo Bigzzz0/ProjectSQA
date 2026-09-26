@@ -1,0 +1,25 @@
+{
+  "project": "Math",
+  "bug_id": 70,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-70-gemini-1790392237",
+  "suite_sha256": "a2236e1af45880bb2993b26a1afc86606bf9b50e0243e6ea54ed7dcbdbdea1ec",
+  "test_files": "BisectionSolverGeminiTest.java",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BisectionSolver",
+  "timestamp": "2026-09-26 10:11:02",
+  "evaluation_duration_sec": 24.894,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testMath369Quadratic",
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testIntervalAlreadyWithinTolerance",
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testMath369"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.analysis.solvers.BisectionSolverGeminiTest::testIntervalAlreadyWithinTolerance"
+  ]
+}

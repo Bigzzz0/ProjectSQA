@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 7,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JxPath-7-gemini-1790383208",
+  "suite_sha256": "a2320ea9b19d2f7c1a72a5d63e3f1f2c15e1b5306ec1c6785dd93df04f908d03",
+  "test_files": "CoreOperationGreaterThanGeminiTest.java;CoreOperationGreaterThanOrEqualGeminiTest.java;CoreOperationLessThanGeminiTest.java;CoreOperationLessThanOrEqualGeminiTest.java;CoreOperationRelationalExpressionGeminiTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThan;org.apache.commons.jxpath.ri.compiler.CoreOperationGreaterThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThan;org.apache.commons.jxpath.ri.compiler.CoreOperationLessThanOrEqual;org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "timestamp": "2026-09-26 07:40:11",
+  "evaluation_duration_sec": 3.104,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "tils.java:454: warning: [deprecation] Integer(int) in Integer has been deprecated\n    [javac]                             new Integer(index),\n    [javac]                             ^\n    [javac] /tmp/d4j_eval/JxPath_7b/src/java/org/apache/commons/jxpath/util/ValueUtils.java:502: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                 handler = (DynamicPropertyHandler) clazz.newInstance();\n    [javac]                                                         ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 58 warnings\n     [copy] Copying 3 files to /tmp/d4j_eval/JxPath_7b/target/test-classes\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/JxPath_7b/target/classes\n     [echo] build.home: /tmp/d4j_eval/JxPath_7b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/JxPath_7b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 5 source files to /tmp/d4j_eval/JxPath_7b/.classes_testgen\n    [javac] /tmp/d4j_eval/JxPath_7b/.test_suite/org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanGeminiTest.java:240: error: getEvalContext() has private access in JXPathContextReferenceImpl\n    [javac]         RootContext rootContext = context.getEvalContext();\n    [javac]                                          ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

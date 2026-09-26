@@ -1,0 +1,19 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 11,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonCore-11-mio-1790371799",
+  "suite_sha256": "f6585ab29060e6ffc87cd56b667f38eb8081e5855ecc6d1de19445a8d5fb81c9",
+  "test_files": "ByteQuadsCanonicalizer_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer",
+  "timestamp": "2026-09-26 04:30:16",
+  "evaluation_duration_sec": 16.793,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 90.38,
+  "branch_coverage_percent": 74.25,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

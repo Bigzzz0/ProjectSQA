@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math.util.MathUtilsGeminiTest::testBinomialCoefficient"
-  ]
+  ],
+  "suite_sha256": "467cf2da545dbf30996dea05446bfecdf218c801368b4eae27478f94db0b656b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_79b/MathUtilsGeminiTest.java"
+  ],
+  "run_id": "Math-79-gemini-1790392876"
 }

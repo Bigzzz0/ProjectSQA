@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.special.GammaGeminiTest::testRegularizedGammaPositivePositiveBug"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "1004f7b4ea484029088c15ef158bdeef0e63f85f6da467dd654c4413b528de7f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_104b/GammaGeminiTest.java"
+  ],
+  "run_id": "Math-104-gemini-1790394604"
 }

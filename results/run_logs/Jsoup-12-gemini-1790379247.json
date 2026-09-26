@@ -1,0 +1,27 @@
+{
+  "project": "Jsoup",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-12-gemini-1790379247",
+  "suite_sha256": "d36f46a2672055ada3a65104436ddf1be5ed60bd47a92fda05e7418be2522197",
+  "test_files": "SelectorGeminiTest.java",
+  "target_classes": "org.jsoup.select.Selector",
+  "timestamp": "2026-09-26 06:34:23",
+  "evaluation_duration_sec": 15.08,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.71,
+  "branch_coverage_percent": 94.7,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
+    "org.jsoup.select.SelectorGeminiTest::testByAttributeRegexWithMultipleAlternations",
+    "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators",
+    "org.jsoup.select.SelectorGeminiTest::testByAttributeRegexCombined"
+  ],
+  "fixed_failures": [
+    "org.jsoup.select.SelectorGeminiTest::testMalformedAttributeQueryThrows",
+    "org.jsoup.select.SelectorGeminiTest::testSelectorStartingWithCombinators"
+  ]
+}

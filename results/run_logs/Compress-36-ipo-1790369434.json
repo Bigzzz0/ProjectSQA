@@ -1,0 +1,19 @@
+{
+  "project": "Compress",
+  "bug_id": 36,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Compress-36-ipo-1790369434",
+  "suite_sha256": "65544cfe35c8a8f05dd28c11e847eb2fea9bddeaf02a2b43a4a510546610e54c",
+  "test_files": "SevenZFile_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZFile",
+  "timestamp": "2026-09-26 03:50:53",
+  "evaluation_duration_sec": 19.652,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 2.63,
+  "branch_coverage_percent": 1.32,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

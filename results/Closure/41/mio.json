@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 49.4,
+  "branch_cov": 32.92,
+  "test_file": "FunctionTypeBuilder_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionTypeBuilder",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "0fbc71de766e6ab1c7f981b7b16b487c3880320e01cad0b8b8b89cef009c6828",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_41b/FunctionTypeBuilder_ESTest.java"
+  ],
+  "run_id": "Closure-41-mio-1790357064"
+}

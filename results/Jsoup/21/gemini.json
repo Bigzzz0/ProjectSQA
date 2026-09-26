@@ -19,5 +19,11 @@
     "org.jsoup.select.QueryParserGeminiTest::testSurroundingWhitespaceAndMultipleSpaces",
     "org.jsoup.select.QueryParserGeminiTest::testMixCombinatorGroup",
     "org.jsoup.select.QueryParserGeminiTest::testParseIdSelector"
-  ]
+  ],
+  "suite_sha256": "bdde06212161f78cc891c049fa783d68e4c5edd906cb24f80ac4f8dd7b9beee4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_21b/CombiningEvaluatorGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_21b/QueryParserGeminiTest.java"
+  ],
+  "run_id": "Jsoup-21-gemini-1790379608"
 }

@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang.EntitiesGeminiTest::testUnescapeMalformedAmpersands"
-  ]
+  ],
+  "suite_sha256": "a0993b27cd901b6d94211ea0d47c99529b34124413b9aada60fe580a4213b563",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_42b/EntitiesGeminiTest.java"
+  ],
+  "run_id": "Lang-42-gemini-1790386133"
 }

@@ -24,5 +24,10 @@
     "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testIZeroIndexDefect",
     "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testEmptyPointer",
     "com.fasterxml.jackson.core.JsonPointerDeepseekTest::testInvalidStartEmptyString"
-  ]
+  ],
+  "suite_sha256": "91e2273d4d5977b1f4478a9ea93fea86f2023454af55ae10c0366b1effdfe91b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonCore_6b/JsonPointerDeepseekTest.java"
+  ],
+  "run_id": "JacksonCore-6-deepseek-1790371616"
 }

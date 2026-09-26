@@ -17,5 +17,10 @@
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testGetCumFreqWithNull",
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testGetCountWithNull",
     "org.apache.commons.math.stat.FrequencyDeepseekTest::testAddValueObjectWithNonComparableAfterComparable"
-  ]
+  ],
+  "suite_sha256": "9260d8466cda4eb662833f32b297e7839e47186f2ba424819c462fa77acabb75",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_90b/FrequencyDeepseekTest.java"
+  ],
+  "run_id": "Math-90-deepseek-1790393502"
 }

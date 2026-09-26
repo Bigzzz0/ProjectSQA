@@ -25,5 +25,10 @@
     "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeWithNullTokenAndCustomCodec",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testDeserializeOtherWithNullToken",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerDeepseekTest::testUnwrappingDeserializerRecursionDetection"
-  ]
+  ],
+  "suite_sha256": "e233e436fadfebf62a72993c83fb07c2457b59c44471f2f9d7625e177b0bdce5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_101b/BeanDeserializerDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-101-deepseek-1790377934"
 }

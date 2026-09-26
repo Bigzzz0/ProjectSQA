@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.nodes.AttributesGeminiTest::testDatasetIteratorRemoveIntegrity"
-  ]
+  ],
+  "suite_sha256": "d614186981caac8545fad77e6558b7aa05f24d7d6f25efb27a12bdbcbec1be28",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_57b/AttributesGeminiTest.java"
+  ],
+  "run_id": "Jsoup-57-gemini-1790381354"
 }

@@ -19,5 +19,10 @@
     "org.mockito.internal.MockHandlerGeminiTest::testStubbedInvocationArgumentsCaptured",
     "org.mockito.internal.MockHandlerGeminiTest::testHandleWithDefaultAnswer",
     "org.mockito.internal.MockHandlerGeminiTest::testHandleWithAnswersForStubbingQueue"
-  ]
+  ],
+  "suite_sha256": "63b6d1368ac407b8d2216bbd3ca334d63c3d092e61122dda5497b2e6bcfea00a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_13b/MockHandlerGeminiTest.java"
+  ],
+  "run_id": "Mockito-13-gemini-1790396349"
 }

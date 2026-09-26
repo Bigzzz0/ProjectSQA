@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 96.49,
+  "branch_cov": 92.31,
+  "test_file": "StopWatch_ESTest.java",
+  "target_classes": "org.apache.commons.lang.time.StopWatch",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "23ff66b523fd69b069dadb76384d69a4d000709979ae41d9261f1ee7565f3b3d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_55b/StopWatch_ESTest.java"
+  ],
+  "run_id": "Lang-55-mio-1790386873"
+}

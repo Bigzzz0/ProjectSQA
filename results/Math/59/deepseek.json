@@ -20,5 +20,10 @@
     "org.apache.commons.math.util.FastMathDeepseekTest::testLog10",
     "org.apache.commons.math.util.FastMathDeepseekTest::testNextUp",
     "org.apache.commons.math.util.FastMathDeepseekTest::testNextAfter"
-  ]
+  ],
+  "suite_sha256": "627e46ded477098271ead04cae8d7853b3a2bf122ef5cbb9c4564f72d7cf56d1",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_59b/FastMathDeepseekTest.java"
+  ],
+  "run_id": "Math-59-deepseek-1790391506"
 }

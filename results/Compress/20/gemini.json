@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamGeminiTest::testReadOldBinaryFormatLittleEndian",
     "org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamGeminiTest::testCpioUnarchiveCreatedByRedlineRpm"
-  ]
+  ],
+  "suite_sha256": "8477be16ea94ac038e0cb9c35bd43365463cc33b55b1aad6e17593217ac34d61",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_20b/CpioArchiveInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-20-gemini-1790368511"
 }

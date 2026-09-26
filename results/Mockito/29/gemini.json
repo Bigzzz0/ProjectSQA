@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.mockito.internal.matchers.SameGeminiTest::testDescribeToShouldNotThrowNPEWhenNullPassedToSame"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "a107dfa39e86d8f0a63b0c74d9cbe46b399da422ebcdbab49ab9e334ee7ac6a0",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_29b/SameGeminiTest.java"
+  ],
+  "run_id": "Mockito-29-gemini-1790397741"
 }

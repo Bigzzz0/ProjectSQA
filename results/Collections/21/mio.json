@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.25,
+  "branch_cov": 97.37,
+  "test_file": "SetUniqueList_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.list.SetUniqueList",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "69d6a3923b9e0e1d5f9d6b51f6855ade197309c5492bff5b7b41236793e072b2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_21b/SetUniqueList_ESTest.java"
+  ],
+  "run_id": "Collections-21-mio-1790367212"
+}

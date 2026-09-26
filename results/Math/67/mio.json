@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.1,
+  "branch_cov": 91.18,
+  "test_file": "MultiStartUnivariateRealOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer_ESTest::test07",
+    "org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer_ESTest::test12"
+  ],
+  "suite_sha256": "f2315ba3ca69b1d1da0aca5e5227acb47dd6f527af28411bc7df308173dc1948",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_67b/MultiStartUnivariateRealOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-67-mio-1790392003"
+}

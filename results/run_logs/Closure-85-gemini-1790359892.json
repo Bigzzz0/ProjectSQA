@@ -1,0 +1,36 @@
+{
+  "project": "Closure",
+  "bug_id": 85,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-85-gemini-1790359892",
+  "suite_sha256": "2ba552e884e906660983aa8a316682e16eed52240cf9448235c18046432d888b",
+  "test_files": "UnreachableCodeEliminationGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "timestamp": "2026-09-26 01:12:00",
+  "evaluation_duration_sec": 27.815,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 88.46,
+  "branch_coverage_percent": 76.79,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testCascadedRemovalOfUnlessUnconditonalJumps",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyStatementHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDirectVisitNodeNotInCurCfg",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInUnreachableBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testScopeStackPushPopIntegrity",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyBlockHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoLoopPreserved"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableCodeAfterReturn",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyStatementHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testDirectVisitNodeNotInCurCfg",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testRedeclareVarsInUnreachableBranch",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testScopeStackPushPopIntegrity",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testFineLoggerLoggingPath",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testEmptyBlockHandling",
+    "com.google.javascript.jscomp.UnreachableCodeEliminationGeminiTest::testUnreachableDoLoopPreserved"
+  ]
+}

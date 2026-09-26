@@ -9,5 +9,10 @@
   "buggy_failures": [],
   "fixed_failures": [
     "org.apache.commons.math3.complex.ComplexDeepseekTest::testReciprocalZero"
-  ]
+  ],
+  "suite_sha256": "e14860d1e742407b2f0cd4f4960cfe48e7822049536f9071e9c00e7f307d6091",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_5b/ComplexDeepseekTest.java"
+  ],
+  "run_id": "Math-5-deepseek-1790387856"
 }

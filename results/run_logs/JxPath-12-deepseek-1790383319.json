@@ -1,0 +1,17 @@
+{
+  "project": "JxPath",
+  "bug_id": 12,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JxPath-12-deepseek-1790383319",
+  "suite_sha256": "b3d01ccf96ba000f0d59d99aa9eace85ba99bc6b4aa22f8bd65245c87ae58776",
+  "test_files": "DOMNodePointerDeepseekTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer",
+  "timestamp": "2026-09-26 07:42:02",
+  "evaluation_duration_sec": 3.041,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "[javac]                                                                          ^\n    [javac] /tmp/d4j_eval/JxPath_12b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerDeepseekTest.java:179: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest nodeTest = new NodeTypeTest(Compiler.NODE_TYPE_NODE);\n    [javac]                                                  ^\n    [javac] /tmp/d4j_eval/JxPath_12b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerDeepseekTest.java:184: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest textTest = new NodeTypeTest(Compiler.NODE_TYPE_TEXT);\n    [javac]                                                  ^\n    [javac] /tmp/d4j_eval/JxPath_12b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerDeepseekTest.java:191: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest commentTest = new NodeTypeTest(Compiler.NODE_TYPE_COMMENT);\n    [javac]                                                     ^\n    [javac] /tmp/d4j_eval/JxPath_12b/.test_suite/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerDeepseekTest.java:195: warning: [removal] Compiler in java.lang has been deprecated and marked for removal\n    [javac]         NodeTypeTest piTest = new NodeTypeTest(Compiler.NODE_TYPE_PI);\n    [javac]                                                ^\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

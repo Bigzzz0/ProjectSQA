@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 4.42,
+  "branch_cov": 0.0,
+  "test_file": "InlineObjectLiterals_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineObjectLiterals",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "badc8a75b2a8893c23e7543146ca52e97c84a915a9b9b7ed3053ba60f2c6e6d8",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_5b/InlineObjectLiterals_ESTest.java"
+  ],
+  "run_id": "Closure-5-mio-1790354258"
+}

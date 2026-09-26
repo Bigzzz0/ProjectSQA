@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 10.74,
+  "branch_cov": 8.94,
+  "test_file": "PeepholeSubstituteAlternateSyntax_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b154309667a427e576d28b396e1893b1d9588d8decff33483c8f4ab349940868",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_20b/PeepholeSubstituteAlternateSyntax_ESTest.java"
+  ],
+  "run_id": "Closure-20-mio-1790355375"
+}

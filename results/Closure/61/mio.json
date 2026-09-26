@@ -1,0 +1,48 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 15,
+  "line_cov": 59.44,
+  "branch_cov": 43.26,
+  "test_file": "NodeUtil_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test403",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test275",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test153",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test026",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test027",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test387",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test146",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test028",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test019",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test139",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test163",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test038",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test002",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test128",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test359"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test403",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test275",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test153",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test026",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test027",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test387",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test146",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test028",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test019",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test139",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test163",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test038",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test002",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test128",
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test359"
+  ],
+  "suite_sha256": "e94a6f2b1eea7c871d3691aeb49f1d2974303503a3647268a1fef81e2702d136",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_61b/NodeUtil_ESTest.java"
+  ],
+  "run_id": "Closure-61-mio-1790358435"
+}

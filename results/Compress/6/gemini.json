@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryGeminiTest::testNotEqualsFailureCondition"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "fc13f3068bbf147c314bac4a92beac90bc398c7270c1b5aea68d847811d104f2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_6b/ZipArchiveEntryGeminiTest.java"
+  ],
+  "run_id": "Compress-6-gemini-1790367826"
 }

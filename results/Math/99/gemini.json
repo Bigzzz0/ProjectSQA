@@ -16,5 +16,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math.util.MathUtilsGeminiTest::testSubAndCheckLong"
-  ]
+  ],
+  "suite_sha256": "795c9d0b6df989010312ee6636bd95af84e3249ff42569e042bb48e245ce25f1",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_99b/MathUtilsGeminiTest.java"
+  ],
+  "run_id": "Math-99-gemini-1790394256"
 }

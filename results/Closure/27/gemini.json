@@ -20,5 +20,10 @@
     "com.google.javascript.rhino.IRGeminiTest::testConditionalsAndLoops",
     "com.google.javascript.rhino.IRGeminiTest::testBlockAndScript",
     "com.google.javascript.rhino.IRGeminiTest::testTryCatchCatchFinally"
-  ]
+  ],
+  "suite_sha256": "f8dabeedc548aca443d0b592faa759055060c47639f5f8fdab435b0a5f85ad80",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_27b/IRGeminiTest.java"
+  ],
+  "run_id": "Closure-27-gemini-1790355994"
 }

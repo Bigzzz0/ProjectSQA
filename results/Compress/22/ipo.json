@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.8,
+  "branch_cov": 1.13,
+  "test_file": "BZip2CompressorInputStream_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a0274a31eb3240028ac9b5e0939ca702f61a4bbef723c92957f6f8f107f0ffaf",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_22b/org/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream_IPOTest.java"
+  ],
+  "run_id": "Compress-22-ipo-1790368578"
+}

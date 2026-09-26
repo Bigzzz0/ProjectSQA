@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 86.05,
+  "branch_cov": 70.0,
+  "test_file": "PeepholeOptimizationsPass_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.PeepholeOptimizationsPass",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "af927df3221e34eb369a6e5c41e36e751271f5210c72879024cd18e27f177436",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_13b/PeepholeOptimizationsPass_ESTest.java"
+  ],
+  "run_id": "Closure-13-mio-1790354890"
+}

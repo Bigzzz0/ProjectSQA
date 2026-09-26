@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumber",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testIsNumberEdgeCases"
-  ]
+  ],
+  "suite_sha256": "d2f09f7faecab7de5fbbf6c784d1f5fd5d7d85a388135cbc5e5acdd0b6507319",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_24b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-24-deepseek-1790385051"
 }

@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.jsoup.nodes.NodeGeminiTest::testAddSiblingHtmlWhenParentIsNotElement",
     "org.jsoup.nodes.NodeGeminiTest::testAppendMustCorrectlyMoveChildrenInsideOneParentElement"
-  ]
+  ],
+  "suite_sha256": "8d55718446dd43985d519463c124af57d6eb4c2929e4e99300b25e3e16c98293",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_49b/NodeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-49-gemini-1790380907"
 }

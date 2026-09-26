@@ -1,0 +1,31 @@
+{
+  "project": "Jsoup",
+  "bug_id": 22,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-22-mio-1790379656",
+  "suite_sha256": "f6e751e3715878851592bb7547f6125d13c0abb7dbaccf2e4e0854c2352c10e9",
+  "test_files": "Elements_ESTest.java;Element_ESTest.java;Node_ESTest.java",
+  "target_classes": "org.jsoup.nodes.Element;org.jsoup.nodes.Node;org.jsoup.select.Elements",
+  "timestamp": "2026-09-26 06:41:16",
+  "evaluation_duration_sec": 20.469,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 88.16,
+  "branch_coverage_percent": 76.1,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.Node_ESTest::test28",
+    "org.jsoup.nodes.Node_ESTest::test24",
+    "org.jsoup.select.Elements_ESTest::test08",
+    "org.jsoup.select.Elements_ESTest::test40"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.Element_ESTest::test01",
+    "org.jsoup.nodes.Node_ESTest::test28",
+    "org.jsoup.nodes.Node_ESTest::test27",
+    "org.jsoup.nodes.Node_ESTest::test24",
+    "org.jsoup.select.Elements_ESTest::test08",
+    "org.jsoup.select.Elements_ESTest::test40"
+  ]
+}

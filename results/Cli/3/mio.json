@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "TypeHandler_ESTest.java",
+  "target_classes": "org.apache.commons.cli.TypeHandler",
+  "buggy_failures": [
+    "org.apache.commons.cli.TypeHandler_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.TypeHandler_ESTest"
+  ],
+  "suite_sha256": "b45055e4244015c5ac91b75111e4fa2f821d296c668af7bbd0d945ca0c0ece59",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_3b/TypeHandler_ESTest.java"
+  ],
+  "run_id": "Cli-3-mio-1790352670"
+}

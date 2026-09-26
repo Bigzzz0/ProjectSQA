@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "SourceMapConsumerV3_ESTest.java;SourceMap_ESTest.java",
+  "target_classes": "com.google.debugging.sourcemap.SourceMapConsumerV3;com.google.javascript.jscomp.SourceMap",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ec6921e7308f50fdb48265fcb27a3da801d9ab727d9188b05c57dc5219031048",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_47b/SourceMapConsumerV3_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_47b/SourceMap_ESTest.java"
+  ],
+  "run_id": "Closure-47-mio-1790357410"
+}

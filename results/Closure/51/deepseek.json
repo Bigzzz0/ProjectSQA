@@ -15,5 +15,10 @@
   "fixed_failures": [
     "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberBoundaryExponent",
     "com.google.javascript.jscomp.CodeConsumerDeepseekTest::testAddNumberNegativeZeroAfterMinus"
-  ]
+  ],
+  "suite_sha256": "2dc75992a4e08e8412f8a96c315b39dfcb1b5e9137ffa0231870e986a25cf813",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Closure_51b/CodeConsumerDeepseekTest.java"
+  ],
+  "run_id": "Closure-51-deepseek-1790357737"
 }

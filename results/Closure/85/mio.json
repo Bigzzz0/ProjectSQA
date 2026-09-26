@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 62.82,
+  "branch_cov": 39.29,
+  "test_file": "UnreachableCodeElimination_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.UnreachableCodeElimination",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test0",
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test2"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test0",
+    "com.google.javascript.jscomp.UnreachableCodeElimination_ESTest::test2"
+  ],
+  "suite_sha256": "40a51cca3959bf937ecf1a5b77e4b68673f07012e6009b4a5bad799fe54afacd",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_85b/UnreachableCodeElimination_ESTest.java"
+  ],
+  "run_id": "Closure-85-mio-1790359851"
+}

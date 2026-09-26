@@ -1,0 +1,25 @@
+{
+  "project": "Collections",
+  "bug_id": 5,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-5-deepseek-1790366396",
+  "suite_sha256": "2549106af50b67bf58680d057f9ef13458f7413c1a4f48525dcc980d96d9b432",
+  "test_files": "SetUniqueListDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.list.SetUniqueList",
+  "timestamp": "2026-09-26 03:00:13",
+  "evaluation_duration_sec": 16.974,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.12,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testAddAllMiddleWithExistingDuplicatesInColl",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetNormalUniqueObject",
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testIntCollectionAddAll"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.list.SetUniqueListDeepseekTest::testSetNormalUniqueObject"
+  ]
+}

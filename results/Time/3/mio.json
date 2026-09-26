@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.86,
+  "branch_cov": 90.7,
+  "test_file": "MutableDateTime_ESTest.java",
+  "target_classes": "org.joda.time.MutableDateTime",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5eb11a957d3497bd4c3bbd0dcf9c4e5f26f92066efc195b2c06c50e64ba72db4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_3b/MutableDateTime_ESTest.java"
+  ],
+  "run_id": "Time-3-mio-1790398386"
+}

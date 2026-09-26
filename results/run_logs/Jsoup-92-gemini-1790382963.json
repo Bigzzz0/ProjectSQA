@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 92,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-92-gemini-1790382963",
+  "suite_sha256": "cd7dcaf10ffbc273baff83e1d93af61312caec62a938dbd7e762f532b6401660",
+  "test_files": "AttributesGeminiTest.java;HtmlTreeBuilderGeminiTest.java;ParseSettingsGeminiTest.java;TokenGeminiTest.java;XmlTreeBuilderGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes;org.jsoup.parser.HtmlTreeBuilder;org.jsoup.parser.ParseSettings;org.jsoup.parser.Token;org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:36:07",
+  "evaluation_duration_sec": 4.063,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "c] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_92b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_92b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_92b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_92b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 5 source files to /tmp/d4j_eval/Jsoup_92b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_92b/.test_suite/org/jsoup/parser/HtmlTreeBuilderGeminiTest.java:81: error: preserveAttributeCase has private access in ParseSettings\n    [javac]         Parser parser = Parser.htmlParser().settings(ParseSettings.preserveAttributeCase);\n    [javac]                                                                   ^\n    [javac] Note: /tmp/d4j_eval/Jsoup_92b/.test_suite/org/jsoup/nodes/AttributesGeminiTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

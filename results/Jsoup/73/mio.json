@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 92.96,
+  "branch_cov": 96.43,
+  "test_file": "W3CDom_ESTest.java",
+  "target_classes": "org.jsoup.helper.W3CDom",
+  "buggy_failures": [
+    "org.jsoup.helper.W3CDom_ESTest::test9"
+  ],
+  "fixed_failures": [
+    "org.jsoup.helper.W3CDom_ESTest::test9"
+  ],
+  "suite_sha256": "9704d661c3144628a196a2624b42ff4d7c0f2c49e9751bdd19f94d54b101435e",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Jsoup_73b/W3CDom_ESTest.java"
+  ],
+  "run_id": "Jsoup-73-mio-1790382060"
+}

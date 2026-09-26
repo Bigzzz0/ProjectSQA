@@ -1,0 +1,17 @@
+{
+  "project": "Compress",
+  "bug_id": 31,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-31-deepseek-1790369182",
+  "suite_sha256": "2128b3a6e89c0bc34a4a77f612c84f1d7918e37fe1d68017a92c0065692ae31c",
+  "test_files": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:46:27",
+  "evaluation_duration_sec": 5.437,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": ";\n    [javac]                 ^\n    [javac] /tmp/d4j_eval/Compress_31b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Unpacker in Pack200 has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                        ^\n    [javac] /tmp/d4j_eval/Compress_31b/src/main/java/org/apache/commons/compress/compressors/pack200/Pack200Utils.java:143: warning: [removal] Pack200 in java.util.jar has been deprecated and marked for removal\n    [javac]                 Pack200.Unpacker u = Pack200.newUnpacker();\n    [javac]                                      ^\n    [javac] 27 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_31b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Compress_31b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Compress_31b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Compress_31b/.classes_testgen\n    [javac] /tmp/d4j_eval/Compress_31b/.test_suite/org/apache/commons/compress/archivers/tar/TarUtilsDeepseekTest.java:196: error: cannot find symbol\n    [javac]         ZipEncoding failingEncoding = new ZipEncoding() {\n    [javac]         ^\n    [javac]   symbol:   class ZipEncoding\n    [javac]   location: class TarUtilsDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

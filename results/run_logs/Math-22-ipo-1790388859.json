@@ -1,0 +1,29 @@
+{
+  "project": "Math",
+  "bug_id": 22,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-22-ipo-1790388859",
+  "suite_sha256": "29e59717761f24ca8682f5ae458fef072bae03acc6a6c35c42e08e7adeeb0bd8",
+  "test_files": "FDistribution_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.FDistribution;org.apache.commons.math3.distribution.UniformRealDistribution",
+  "timestamp": "2026-09-26 09:14:46",
+  "evaluation_duration_sec": 27.566,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 61.63,
+  "branch_coverage_percent": 50.0,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_263",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_265",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_266",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_273",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_275",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_276",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_278",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_280",
+    "org.apache.commons.math3.distribution.FDistribution_IPOTest::test_isSupportLowerBoundInclusive_pairwise_281"
+  ],
+  "fixed_failures": []
+}

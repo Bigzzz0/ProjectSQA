@@ -17,5 +17,10 @@
     "org.apache.commons.csv.CSVFormatGeminiTest::testPrintNullValuesWithVariousModes",
     "org.apache.commons.csv.CSVFormatGeminiTest::testQuoteModeNoneWithEscape",
     "org.apache.commons.csv.CSVFormatGeminiTest::testPrintEmptyRecordAndMinimalQuotes"
-  ]
+  ],
+  "suite_sha256": "7b3ffb3bd2b2a216a971658b48fe53d8dc5f17d290cc01e1792f3ca456a6c925",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_15b/CSVFormatGeminiTest.java"
+  ],
+  "run_id": "Csv-15-gemini-1790370710"
 }

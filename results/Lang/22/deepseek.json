@@ -15,5 +15,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.math.FractionDeepseekTest::testGetFractionMinValueDenominator"
-  ]
+  ],
+  "suite_sha256": "bab9d90487bf074bedd3502dd374e4d45af364dd04397dc94083e5da7661cf3c",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_22b/FractionDeepseekTest.java"
+  ],
+  "run_id": "Lang-22-deepseek-1790384895"
 }

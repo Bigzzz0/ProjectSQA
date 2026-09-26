@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 76.96,
+  "branch_cov": 55.33,
+  "test_file": "ObjectReader_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectReader",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a18f9f748b848727e72617bff5e1958dcaa48d15f9c04004225ed4739c950185",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_14b/ObjectReader_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-14-mio-1790373071"
+}

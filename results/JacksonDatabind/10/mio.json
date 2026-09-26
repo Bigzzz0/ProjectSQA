@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 59.64,
+  "branch_cov": 42.07,
+  "test_file": "AnyGetterWriter_ESTest.java;BeanSerializerFactory_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.AnyGetterWriter;com.fasterxml.jackson.databind.ser.BeanSerializerFactory",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9a9205919cbc918b2ffe5a2ef92e3357aa06df02339fb02f2ae0486166747740",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_10b/AnyGetterWriter_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_10b/BeanSerializerFactory_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-10-mio-1790372866"
+}

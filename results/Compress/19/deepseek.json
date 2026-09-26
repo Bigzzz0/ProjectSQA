@@ -15,5 +15,10 @@
     "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataWithExcessData",
     "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataExcessDataDifferentFlags",
     "org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraFieldDeepseekTest::testReparseCentralDirectoryDataNullRawData"
-  ]
+  ],
+  "suite_sha256": "372c5703c5b36c01308dd85f5eef7ba2f5ef823d75a9a5a483530aa1ef98f921",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_19b/Zip64ExtendedInformationExtraFieldDeepseekTest.java"
+  ],
+  "run_id": "Compress-19-deepseek-1790368427"
 }

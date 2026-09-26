@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 44.6,
+  "branch_cov": 22.0,
+  "test_file": "ClosureCodingConvention_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.ClosureCodingConvention",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "de94e5c86a316a3dab020e10c05f30220541c690604c6f490cb90dcfc2cea0da",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_57b/ClosureCodingConvention_ESTest.java"
+  ],
+  "run_id": "Closure-57-mio-1790358122"
+}

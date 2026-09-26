@@ -12,5 +12,10 @@
     "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerializationWithNullKeys",
     "org.apache.commons.collections.keyvalue.MultiKeyDeepseekTest::testEqualsAfterSerialization"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "c48cc58294155f6069bb1ebe36fc4355d423f9fa635ccfd8af5cbf1fa87d8cc5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Collections_11b/MultiKeyDeepseekTest.java"
+  ],
+  "run_id": "Collections-11-deepseek-1790366693"
 }

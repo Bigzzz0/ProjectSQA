@@ -1,0 +1,29 @@
+{
+  "project": "Jsoup",
+  "bug_id": 56,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-56-mio-1790381295",
+  "suite_sha256": "39a5ed0f02911ff9ccda7baa3bed04d5322df86a6911c6d8ff34137233a78c40",
+  "test_files": "DocumentType_ESTest.java;HtmlTreeBuilderState_ESTest.java;TokeniserState_ESTest.java;Token_ESTest.java;XmlTreeBuilder_ESTest.java",
+  "target_classes": "org.jsoup.nodes.DocumentType;org.jsoup.parser.HtmlTreeBuilderState;org.jsoup.parser.Token;org.jsoup.parser.TokeniserState;org.jsoup.parser.XmlTreeBuilder",
+  "timestamp": "2026-09-26 07:08:39",
+  "evaluation_duration_sec": 23.182,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 9,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test0",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test1",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test4",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test5",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test2",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test3",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test9",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test6",
+    "org.jsoup.parser.XmlTreeBuilder_ESTest::test7"
+  ],
+  "fixed_failures": []
+}

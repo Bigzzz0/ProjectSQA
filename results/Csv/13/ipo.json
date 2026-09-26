@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 15.58,
+  "branch_cov": 9.66,
+  "test_file": "CSVFormat_IPOTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat;org.apache.commons.csv.CSVPrinter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "341ce849c434519d4e96f125d948bcafb52d8cbfcd67daa330863a665cfff40a",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Csv_13b/org/apache/commons/csv/CSVFormat_IPOTest.java"
+  ],
+  "run_id": "Csv-13-ipo-1790370534"
+}

@@ -1,0 +1,37 @@
+{
+  "project": "Closure",
+  "bug_id": 88,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-88-gemini-1790360082",
+  "suite_sha256": "74186b658109b2d4c0f2201b074935f00d848a357496c75a9b218e8107df481d",
+  "test_files": "DeadAssignmentsEliminationGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.DeadAssignmentsElimination",
+  "timestamp": "2026-09-26 01:15:09",
+  "evaluation_duration_sec": 27.461,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.91,
+  "branch_coverage_percent": 77.0,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testEmptyReturnStatement",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297a",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297b",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297c",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297d",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testEmptyReturnStatement",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297a",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297b",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297c",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297d",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297e",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testIssue297f",
+    "com.google.javascript.jscomp.DeadAssignmentsEliminationGeminiTest::testForLoopUpdateIncrementElimination"
+  ]
+}

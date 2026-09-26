@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.99,
+  "branch_cov": 11.63,
+  "test_file": "Parser_IPOTest.java",
+  "target_classes": "org.jsoup.parser.Parser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "9c7e8f853db5ee5dd509af57dd5526d0de5156cefe4b62ffc44e0a3957490367",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_2b/org/jsoup/parser/Parser_IPOTest.java"
+  ],
+  "run_id": "Jsoup-2-ipo-1790378885"
+}

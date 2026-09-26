@@ -1,0 +1,28 @@
+{
+  "project": "Closure",
+  "bug_id": 72,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-72-gemini-1790359144",
+  "suite_sha256": "e1af27c38483fa24ebb06e90f433c12859dcc5c465f23913fe4e292bd89ee8b2",
+  "test_files": "FunctionToBlockMutatorGeminiTest.java;RenameLabelsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionToBlockMutator;com.google.javascript.jscomp.RenameLabels",
+  "timestamp": "2026-09-26 00:59:31",
+  "evaluation_duration_sec": 27.29,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.54,
+  "branch_coverage_percent": 87.13,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
+    "com.google.javascript.jscomp.RenameLabelsGeminiTest::testUnreferencedLabelPreservedWhenRemoveUnusedIsFalse",
+    "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_multipleUninitializedVarsInLoop",
+    "com.google.javascript.jscomp.FunctionToBlockMutatorGeminiTest::testInlineFunctions31_firstInitializedSecondUninitializedVarInLoop",
+    "com.google.javascript.jscomp.RenameLabelsGeminiTest::testDuplicateLabelInSameScopeThrowsIllegalState"
+  ]
+}

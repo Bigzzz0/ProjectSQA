@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.07,
+  "branch_cov": 90.7,
+  "test_file": "JsonTreeReader_ESTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.JsonTreeReader_ESTest::test03"
+  ],
+  "suite_sha256": "5121d1506cbfaedfad5479c758ff92cfd954c92ebc9cb2059a0f0dbf10328f67",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Gson_12b/JsonTreeReader_ESTest.java"
+  ],
+  "run_id": "Gson-12-mio-1790371121"
+}

@@ -1,0 +1,24 @@
+{
+  "project": "Compress",
+  "bug_id": 36,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-36-gemini-1790369493",
+  "suite_sha256": "89d2c5932ced1aa9f46f4d20f377d1fc7736b5593e31d9d9ee3d354205ed7bcf",
+  "test_files": "SevenZFileGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZFile",
+  "timestamp": "2026-09-26 03:51:52",
+  "evaluation_duration_sec": 19.138,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 35.65,
+  "branch_coverage_percent": 26.4,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadEntriesOfSize0ReturnsEOF"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadWithoutGetNextEntryThrowsIllegalStateException",
+    "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadBufferWithoutGetNextEntryThrowsIllegalStateException"
+  ]
+}

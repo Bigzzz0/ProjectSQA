@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 54.73,
+  "branch_cov": 38.7,
+  "test_file": "BasicDeserializerFactory_ESTest.java;DeserializerCache_ESTest.java;SimpleAbstractTypeResolver_ESTest.java;TypeDeserializerBase_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.BasicDeserializerFactory;com.fasterxml.jackson.databind.deser.DeserializerCache;com.fasterxml.jackson.databind.jsontype.impl.TypeDeserializerBase;com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver_ESTest::test4"
+  ],
+  "suite_sha256": "c01120d9dadaf715f5a8a9f6ef2ea636b5e79263250809e0ff8cda7f97e978d1",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_25b/BasicDeserializerFactory_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_25b/DeserializerCache_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_25b/SimpleAbstractTypeResolver_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_25b/TypeDeserializerBase_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-25-mio-1790373609"
+}

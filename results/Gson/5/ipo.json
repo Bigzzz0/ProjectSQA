@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 20.67,
+  "branch_cov": 8.99,
+  "test_file": "ISO8601Utils_IPOTest.java",
+  "target_classes": "com.google.gson.internal.bind.util.ISO8601Utils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "28b2762029fff796305a11602fd18773169a2d992e7c6aa879dd661ba7c8614a",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Gson_5b/com/google/gson/internal/bind/util/ISO8601Utils_IPOTest.java"
+  ],
+  "run_id": "Gson-5-ipo-1790370893"
+}

@@ -1,0 +1,28 @@
+{
+  "project": "Compress",
+  "bug_id": 40,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Compress-40-gemini-1790369735",
+  "suite_sha256": "ac1a646a27c5435cf0d6422bc00a850e3756231c2acb1bbcf3b406c7b99dcd89",
+  "test_files": "BitInputStreamGeminiTest.java",
+  "target_classes": "org.apache.commons.compress.utils.BitInputStream",
+  "timestamp": "2026-09-26 03:55:54",
+  "evaluation_duration_sec": 18.818,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianMaxOverflowAt62Bits",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testBigEndianMaxOverflowAt62Bits",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testReadBitsStreamEndsPrematurelyReturnsNegativeOne",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testBigEndianBitCacheOverflowRevealsDefect",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianBitCacheOverflowRevealsDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianMaxOverflowAt62Bits",
+    "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testReadBitsStreamEndsPrematurelyReturnsNegativeOne"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "project": "Jsoup",
+  "bug_id": 20,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Jsoup-20-mio-1790379538",
+  "suite_sha256": "bcda4b8207356e2fa76f024b361c1c7237bb4326e9f96de5dc19cc216433f102",
+  "test_files": "DataUtil_ESTest.java",
+  "target_classes": "org.jsoup.helper.DataUtil",
+  "timestamp": "2026-09-26 06:39:16",
+  "evaluation_duration_sec": 17.54,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 81.82,
+  "branch_coverage_percent": 50.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jsoup.helper.DataUtil_ESTest::test3"
+  ]
+}

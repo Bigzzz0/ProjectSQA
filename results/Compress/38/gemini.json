@@ -22,5 +22,10 @@
     "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testNormalizeFileNameWindowsDriveLetters",
     "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testEqualsAndHashCode",
     "org.apache.commons.compress.archivers.tar.TarArchiveEntryGeminiTest::testGnuLongLinkAndNameEndingInSlashNotADirectory"
-  ]
+  ],
+  "suite_sha256": "1a372bcdc110869aa8244b041621c4c1953cf21c015dfbc94e8458e0bca2870d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_38b/TarArchiveEntryGeminiTest.java"
+  ],
+  "run_id": "Compress-38-gemini-1790369625"
 }

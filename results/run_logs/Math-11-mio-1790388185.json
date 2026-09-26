@@ -1,0 +1,21 @@
+{
+  "project": "Math",
+  "bug_id": 11,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-11-mio-1790388185",
+  "suite_sha256": "af0477a8767413ce21d1f0c8c5face61a88ed0b4a034ca17884af3fe60bccb11",
+  "test_files": "MultivariateNormalDistribution_ESTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.MultivariateNormalDistribution",
+  "timestamp": "2026-09-26 09:03:33",
+  "evaluation_duration_sec": 27.594,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.math3.distribution.MultivariateNormalDistribution_ESTest::test4"
+  ]
+}

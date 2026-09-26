@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 37,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-37-deepseek-1790389915",
+  "suite_sha256": "3f26f8f6b7eef6d4f732faf68466c8004c9e9fa51a3e5b87b5dc16616cec13af",
+  "test_files": "ComplexDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.complex.Complex",
+  "timestamp": "2026-09-26 09:32:03",
+  "evaluation_duration_sec": 8.154,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "e/moment/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/stat/descriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_37b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_37b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_37b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_37b/.test_suite/org/apache/commons/math/complex/ComplexDeepseekTest.java:559: error: cannot find symbol\n    [javac]         } catch (NullArgumentException e) {\n    [javac]                  ^\n    [javac]   symbol:   class NullArgumentException\n    [javac]   location: class ComplexDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

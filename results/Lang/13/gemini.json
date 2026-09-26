@@ -10,5 +10,10 @@
     "org.apache.commons.lang3.SerializationUtilsGeminiTest::testPrimitiveTypeClassSerialization",
     "org.apache.commons.lang3.SerializationUtilsGeminiTest::testPrimitiveTypeArrayClassSerialization"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "0181c2aa704bb114b93ee5d3585487816ee0b547db332f4657c83666d6f235a2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Lang_13b/SerializationUtilsGeminiTest.java"
+  ],
+  "run_id": "Lang-13-gemini-1790384386"
 }

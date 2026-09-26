@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.jfree.data.time.TimeSeriesGeminiTest::testDeletionMethods",
     "org.jfree.data.time.TimeSeriesGeminiTest::testRemoveAgedItemsByTimestamp"
-  ]
+  ],
+  "suite_sha256": "660d45c633676787ef892d3d58254c2ee615ee38a18f1caacd7ac509343fc506",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_17b/TimeSeriesGeminiTest.java"
+  ],
+  "run_id": "Chart-17-gemini-1790351993"
 }

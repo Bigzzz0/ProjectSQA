@@ -1,0 +1,37 @@
+{
+  "project": "Codec",
+  "bug_id": 12,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Codec-12-deepseek-1790365863",
+  "suite_sha256": "2c6f1c0388f85fed4a249fa0f98f6d55ab56a2444b12d981aece716b723e4298",
+  "test_files": "BaseNCodecInputStreamDeepseekTest.java",
+  "target_classes": "org.apache.commons.codec.binary.BaseNCodecInputStream",
+  "timestamp": "2026-09-26 02:51:15",
+  "evaluation_duration_sec": 12.521,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.77,
+  "branch_coverage_percent": 92.31,
+  "failures_count": 10,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipEncodeMode",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipToEnd",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayEncodeBase64",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testAvailable",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testCodec130Base32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipPastEnd",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipNegativeArgument",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadSingleByteDecodeBase32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipBig",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayDecodeBase32"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testSkipEncodeMode",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayEncodeBase64",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testAvailable",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testCodec130Base32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadSingleByteDecodeBase32",
+    "org.apache.commons.codec.binary.BaseNCodecInputStreamDeepseekTest::testReadArrayDecodeBase32"
+  ]
+}

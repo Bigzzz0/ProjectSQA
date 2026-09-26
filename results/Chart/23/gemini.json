@@ -11,5 +11,10 @@
     "org.jfree.chart.renderer.category.MinMaxCategoryRendererGeminiTest::testEqualsDefect_PlotLines",
     "org.jfree.chart.renderer.category.MinMaxCategoryRendererGeminiTest::testEqualsDefect_GroupPaint"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "c97e1be52d2899f81b1a93d71d30dd311dc6ccb5416a2bb1378d24004b0dd264",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_23b/MinMaxCategoryRendererGeminiTest.java"
+  ],
+  "run_id": "Chart-23-gemini-1790352405"
 }

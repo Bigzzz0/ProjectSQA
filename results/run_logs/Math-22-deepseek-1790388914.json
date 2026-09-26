@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 22,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-22-deepseek-1790388914",
+  "suite_sha256": "603afdaf8c04f48363a179078ef5c204102ab99a264c110b8439dc77e603977b",
+  "test_files": "FDistributionDeepseekTest.java;UniformRealDistributionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.FDistribution;org.apache.commons.math3.distribution.UniformRealDistribution",
+  "timestamp": "2026-09-26 09:15:23",
+  "evaluation_duration_sec": 8.325,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "b/target/classes/org/apache/commons/math3/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_22b/target/classes/org/apache/commons/math3/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_22b/target/classes/org/apache/commons/math3/analysis/solvers/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_22b/target/classes/org/apache/commons/math3/stat/descriptive/summary/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_22b/target/classes/org/apache/commons/math3/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_22b/target/classes/org/apache/commons/math3/analysis/polynomials/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_22b/target/classes/org/apache/commons/math3/fraction/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_22b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Math_22b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_22b/.test_suite/org/apache/commons/math3/distribution/UniformRealDistributionDeepseekTest.java:198: error: cannot find symbol\n    [javac]         new UniformRealDistribution(new Well19937c(), 7.0, 7.0, 1e-9);\n    [javac]                                         ^\n    [javac]   symbol:   class Well19937c\n    [javac]   location: class UniformRealDistributionDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 106,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Closure-106-ipo-1790360974",
+  "suite_sha256": "7a06cbc95bc28c09400fb0cbf1aa47cefa9dabd7374cdcbe68df723072834a20",
+  "test_files": "JSDocInfoBuilder_IPOTest.java",
+  "target_classes": "com.google.javascript.jscomp.GlobalNamespace;com.google.javascript.rhino.JSDocInfoBuilder",
+  "timestamp": "2026-09-26 01:29:58",
+  "evaluation_duration_sec": 24.218,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 6.69,
+  "branch_coverage_percent": 2.99,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

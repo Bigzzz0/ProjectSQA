@@ -18,5 +18,10 @@
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingPlus",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidWithExponent",
     "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberValidBigDecimal"
-  ]
+  ],
+  "suite_sha256": "674f20b473a43dfa77d770e9bb9ae67bf824cddce54809eaf0af569815087524",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_7b/NumberUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-7-deepseek-1790383946"
 }

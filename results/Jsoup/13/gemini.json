@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.jsoup.nodes.NodeGeminiTest::testAbsUrlResolutionBranches"
-  ]
+  ],
+  "suite_sha256": "4f09186db73165ec9ab2c1dc4b616a8ae8dec6f312e9eacadc7952252a989cd2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_13b/NodeGeminiTest.java"
+  ],
+  "run_id": "Jsoup-13-gemini-1790379284"
 }

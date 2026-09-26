@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math.distribution.NormalDistributionImplGeminiTest::testInverseCumulativeProbabilityStandard"
-  ]
+  ],
+  "suite_sha256": "75a190dff2fa145dd8dcd58314669f65923c27060913998ae9a884c39a3909f4",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_60b/NormalDistributionImplGeminiTest.java"
+  ],
+  "run_id": "Math-60-gemini-1790391602"
 }

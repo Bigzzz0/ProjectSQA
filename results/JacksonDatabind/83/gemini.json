@@ -16,5 +16,10 @@
     "com.fasterxml.jackson.databind.deser.std.FromStringDeserializerGeminiTest::testDefectWeirdStringHandlingURL",
     "com.fasterxml.jackson.databind.deser.std.FromStringDeserializerGeminiTest::testCustomDeserializerNullFallthroughAndEmptyString",
     "com.fasterxml.jackson.databind.deser.std.FromStringDeserializerGeminiTest::testInetSocketAddressParsing"
-  ]
+  ],
+  "suite_sha256": "7ef01e409d739c2b65fcebf3f7cb8caa1b4f5b9efbe05793bbbf3a16ccb52b68",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_83b/FromStringDeserializerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-83-gemini-1790376941"
 }

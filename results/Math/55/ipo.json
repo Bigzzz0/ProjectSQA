@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 35.34,
+  "branch_cov": 27.08,
+  "test_file": "Vector3D_IPOTest.java",
+  "target_classes": "org.apache.commons.math.geometry.Vector3D",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fe0779209eb0500001d526795673f985801fa492f2c59f9e6c5967cd270131fa",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_55b/org/apache/commons/math/geometry/Vector3D_IPOTest.java"
+  ],
+  "run_id": "Math-55-ipo-1790391148"
+}

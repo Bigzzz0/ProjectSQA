@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 4,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-4-mio-1790398453",
+  "suite_sha256": "c482fddead9fb9d0b5a0110409ae2d4ae9652a5f8769a808d3087ae3b78ff710",
+  "test_files": "Partial_ESTest.java",
+  "target_classes": "org.joda.time.Partial",
+  "timestamp": "2026-09-26 11:54:41",
+  "evaluation_duration_sec": 27.678,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.84,
+  "branch_coverage_percent": 95.28,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

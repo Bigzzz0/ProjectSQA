@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.archivers.ar.ArArchiveInputStreamGeminiTest::testCallingGetNextEntryWithoutReadingContentThrowsIOException"
-  ]
+  ],
+  "suite_sha256": "07fb9c5de26d57129adf5b256a0e0b3752341f971a2d405a860db1c0584cf2d1",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_2b/ArArchiveInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-2-gemini-1790367662"
 }

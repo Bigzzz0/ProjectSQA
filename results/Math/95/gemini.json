@@ -11,5 +11,10 @@
     "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomDenominatorTwo",
     "org.apache.commons.math.distribution.FDistributionImplGeminiTest::testSmallDegreesOfFreedomAsymmetric"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "694f6eb561ab18467d6ded0feae8b3a3e8533f2990f0dab0bd38026217a3b9e9",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_95b/FDistributionImplGeminiTest.java"
+  ],
+  "run_id": "Math-95-gemini-1790393995"
 }

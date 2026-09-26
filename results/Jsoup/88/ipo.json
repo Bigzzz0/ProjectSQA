@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 59.09,
+  "branch_cov": 34.0,
+  "test_file": "Attribute_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.Attribute",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "734edb9982e28736c64a7cece9322a31f3cf2e7e8b88468740881eb3f2b0fb05",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_88b/org/jsoup/nodes/Attribute_IPOTest.java"
+  ],
+  "run_id": "Jsoup-88-ipo-1790382734"
+}

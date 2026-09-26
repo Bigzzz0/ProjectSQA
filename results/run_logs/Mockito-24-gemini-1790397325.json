@@ -1,0 +1,24 @@
+{
+  "project": "Mockito",
+  "bug_id": 24,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-24-gemini-1790397325",
+  "suite_sha256": "43c4f5665db5d6d9eda0c9373112d3758088c748553fff862c9211cccdcb0d40",
+  "test_files": "ReturnsEmptyValuesGeminiTest.java",
+  "target_classes": "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues",
+  "timestamp": "2026-09-26 11:36:16",
+  "evaluation_duration_sec": 51.179,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testSerializationRoundTrip",
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testCompareTo_MockComparedToItself_ReturnsZero"
+  ],
+  "fixed_failures": [
+    "org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesGeminiTest::testSerializationRoundTrip"
+  ]
+}

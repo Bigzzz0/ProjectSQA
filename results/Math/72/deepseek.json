@@ -21,5 +21,10 @@
     "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialAtEndpoint",
     "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testFunctionEvaluationException",
     "org.apache.commons.math.analysis.solvers.BrentSolverDeepseekTest::testSolveWithInitialGuess"
-  ]
+  ],
+  "suite_sha256": "553394e6807d293a715b6823eb4e68b24071f3d6877d80d369071898361d9250",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_72b/BrentSolverDeepseekTest.java"
+  ],
+  "run_id": "Math-72-deepseek-1790392360"
 }

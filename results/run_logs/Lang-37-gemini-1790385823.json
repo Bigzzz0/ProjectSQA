@@ -1,0 +1,23 @@
+{
+  "project": "Lang",
+  "bug_id": 37,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-37-gemini-1790385823",
+  "suite_sha256": "8c4923f230ed8b64413eec378916036be0a0d63a79527ae0d4863e7aa084c391",
+  "test_files": "ArrayUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.ArrayUtils",
+  "timestamp": "2026-09-26 08:24:04",
+  "evaluation_duration_sec": 21.429,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.89,
+  "branch_coverage_percent": 96.52,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testJira567"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.ArrayUtilsGeminiTest::testJira567"
+  ]
+}

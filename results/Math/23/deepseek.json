@@ -10,5 +10,10 @@
     "org.apache.commons.math3.optimization.univariate.BrentOptimizerDeepseekTest::testMinimizeWithStartRight",
     "org.apache.commons.math3.optimization.univariate.BrentOptimizerDeepseekTest::testKeepInitIfBest"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "f47b0ae4a53b771576af16eea4087c0d84e6ed36ff91b5321703d154df2313a9",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_23b/BrentOptimizerDeepseekTest.java"
+  ],
+  "run_id": "Math-23-deepseek-1790388977"
 }

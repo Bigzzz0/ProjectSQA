@@ -1,0 +1,22 @@
+{
+  "project": "Gson",
+  "bug_id": 3,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-3-gemini-1790370855",
+  "suite_sha256": "7cf6924a10d602841edf7321ba707db259179dc7ece88ba31b692a0a40282ca4",
+  "test_files": "ConstructorConstructorGeminiTest.java",
+  "target_classes": "com.google.gson.internal.ConstructorConstructor",
+  "timestamp": "2026-09-26 04:14:29",
+  "evaluation_duration_sec": 13.669,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 97.67,
+  "branch_coverage_percent": 96.88,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentNavigableMapConstruction",
+    "com.google.gson.internal.ConstructorConstructorGeminiTest::testDefectConcurrentMapConstruction"
+  ],
+  "fixed_failures": []
+}

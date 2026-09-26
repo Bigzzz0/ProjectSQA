@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 95.06,
+  "branch_cov": 84.21,
+  "test_file": "GJChronology_ESTest.java",
+  "target_classes": "org.joda.time.chrono.GJChronology",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4e834c8ebaf41d85831900af171e5ca21a8eb872514cc005bd147eff6c315146",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Time_18b/GJChronology_ESTest.java"
+  ],
+  "run_id": "Time-18-mio-1790399384"
+}

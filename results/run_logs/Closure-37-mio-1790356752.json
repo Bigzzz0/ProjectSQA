@@ -1,0 +1,25 @@
+{
+  "project": "Closure",
+  "bug_id": 37,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-37-mio-1790356752",
+  "suite_sha256": "712040406eefbcf0a2c392c447fcf84502015663c52103ea59d72c61278ac6c9",
+  "test_files": "IRFactory_ESTest.java;NodeTraversal_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeTraversal;com.google.javascript.jscomp.parsing.IRFactory",
+  "timestamp": "2026-09-26 00:19:54",
+  "evaluation_duration_sec": 42.556,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 44.95,
+  "branch_coverage_percent": 32.73,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test16",
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test06"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test16",
+    "com.google.javascript.jscomp.NodeTraversal_ESTest::test06"
+  ]
+}

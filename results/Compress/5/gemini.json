@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamGeminiTest::testDataDescriptorFlagProcessing"
-  ]
+  ],
+  "suite_sha256": "ed6db52c23ba60a1206e87e7755b2ca0603ca9a7f3a131c1e985fd218f4ea4ec",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_5b/ZipArchiveInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-5-gemini-1790367779"
 }

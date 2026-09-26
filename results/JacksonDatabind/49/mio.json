@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 85.71,
+  "branch_cov": 83.33,
+  "test_file": "WritableObjectId_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.impl.WritableObjectId",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f9643be7dc774ec90e01543f7ce7eaea04de796080424fbdaad227b712efd411",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_49b/WritableObjectId_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-49-mio-1790375103"
+}

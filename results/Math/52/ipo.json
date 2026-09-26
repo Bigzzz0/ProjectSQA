@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 12.26,
+  "branch_cov": 5.74,
+  "test_file": "Rotation_IPOTest.java",
+  "target_classes": "org.apache.commons.math.geometry.euclidean.threed.Rotation",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "96563685dcefc81ae3e068fc37416d96315c844295d04038806d62f589fddc80",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_52b/org/apache/commons/math/geometry/euclidean/threed/Rotation_IPOTest.java"
+  ],
+  "run_id": "Math-52-ipo-1790390910"
+}

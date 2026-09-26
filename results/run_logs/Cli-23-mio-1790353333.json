@@ -1,0 +1,23 @@
+{
+  "project": "Cli",
+  "bug_id": 23,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Cli-23-mio-1790353333",
+  "suite_sha256": "e241e6f2176227410cc28a861dfa53705971cdbe313368b9ee9011394c0d5d40",
+  "test_files": "HelpFormatter_ESTest.java",
+  "target_classes": "org.apache.commons.cli.HelpFormatter",
+  "timestamp": "2026-09-25 23:22:27",
+  "evaluation_duration_sec": 14.486,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.HelpFormatter_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.HelpFormatter_ESTest"
+  ]
+}

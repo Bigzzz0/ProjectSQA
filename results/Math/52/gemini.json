@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testMatrixNonOrthogonalNonConvergentThrows",
     "org.apache.commons.math.geometry.euclidean.threed.RotationGeminiTest::testIssue639"
-  ]
+  ],
+  "suite_sha256": "756e8dc8b34bd06574b5a2ff152ebb028a0fa4402a9cbe54a5f15f10b30488b6",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_52b/RotationGeminiTest.java"
+  ],
+  "run_id": "Math-52-gemini-1790390973"
 }

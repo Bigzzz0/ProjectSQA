@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 27.34,
+  "branch_cov": 9.01,
+  "test_file": "CheckAccessControls_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckAccessControls",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b4617f9c6ab554184b6a46aee583036822d03f9286683a940449265b15013e86",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_71b/CheckAccessControls_ESTest.java"
+  ],
+  "run_id": "Closure-71-mio-1790359055"
+}

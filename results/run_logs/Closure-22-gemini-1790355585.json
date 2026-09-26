@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 22,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-22-gemini-1790355585",
+  "suite_sha256": "de31a7ee565e2294aa01b6f4ed563cedde1df0988d9252d15fd7bb4d7640fe81",
+  "test_files": "CheckSideEffectsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckSideEffects",
+  "timestamp": "2026-09-25 23:59:55",
+  "evaluation_duration_sec": 10.254,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "va/com/google/javascript/rhino\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 2 files to /tmp/d4j_eval/Closure_22b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_22b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_22b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_22b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_22b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_22b/.test_suite/com/google/javascript/jscomp/CheckSideEffectsGeminiTest.java:302: error: cannot find symbol\n    [javac]     Node root = IR.root();\n    [javac]                   ^\n    [javac]   symbol:   method root()\n    [javac]   location: class IR\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

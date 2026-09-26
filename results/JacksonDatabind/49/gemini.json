@@ -10,5 +10,10 @@
     "com.fasterxml.jackson.databind.ser.impl.WritableObjectIdGeminiTest::testDefectIssue1255ExistingIdNotOverwrittenOnSubsequentGenerateId",
     "com.fasterxml.jackson.databind.ser.impl.WritableObjectIdGeminiTest::testDefectIssue1255PreSetIdPreservedByGenerateId"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "f4e0240728c4301071e46c93acdc8bef0efef0803ff4080c2ee353f573e0d657",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_49b/WritableObjectIdGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-49-gemini-1790375141"
 }

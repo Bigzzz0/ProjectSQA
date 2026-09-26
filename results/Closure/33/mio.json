@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 91.67,
+  "branch_cov": 87.78,
+  "test_file": "PrototypeObjectType_ESTest.java",
+  "target_classes": "com.google.javascript.rhino.jstype.PrototypeObjectType",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.google.javascript.rhino.jstype.PrototypeObjectType_ESTest::test00"
+  ],
+  "suite_sha256": "60b0405c2ea995a17a53a9301b8949f4fa42753da0141643e3bea0d975907914",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_33b/PrototypeObjectType_ESTest.java"
+  ],
+  "run_id": "Closure-33-mio-1790356449"
+}

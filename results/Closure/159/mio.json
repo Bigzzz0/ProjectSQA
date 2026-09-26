@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 11.38,
+  "branch_cov": 8.3,
+  "test_file": "InlineFunctions_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineFunctions",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "5f33bb8727b6f360a6d25b7ce07ad1bf79687e2e39d1bba5d9d2ee26ef814399",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_159b/InlineFunctions_ESTest.java"
+  ],
+  "run_id": "Closure-159-mio-1790364158"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 47,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JacksonDatabind-47-mio-1790374987",
+  "suite_sha256": "81abf9d87acb57a3827ea54177df78d7ac3aa121c29c2d104dedb6a4d4ba0941",
+  "test_files": "AnnotationIntrospector_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.AnnotationIntrospector",
+  "timestamp": "2026-09-26 05:23:36",
+  "evaluation_duration_sec": 29.446,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 58.66,
+  "branch_coverage_percent": 34.09,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,17 @@
+{
+  "project": "JacksonDatabind",
+  "bug_id": 64,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "JacksonDatabind-64-deepseek-1790375963",
+  "suite_sha256": "9975cf38ad00a87bdbb54bb220fec52255d73bbfe2a46bf151abc7813980be17",
+  "test_files": "PropertyBuilderDeepseekTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.PropertyBuilder",
+  "timestamp": "2026-09-26 05:39:32",
+  "evaluation_duration_sec": 8.291,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "untime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/JacksonDatabind_64b/.classes_testgen\n    [javac] /tmp/d4j_eval/JacksonDatabind_64b/.test_suite/com/fasterxml/jackson/databind/ser/PropertyBuilderDeepseekTest.java:46: error: no suitable constructor found for SerializationConfig(<null>,<null>)\n    [javac]         SerializationConfig config = new SerializationConfig(null, null);\n    [javac]                                      ^\n    [javac]     constructor SerializationConfig.SerializationConfig(BaseSettings,SubtypeResolver,SimpleMixInResolver,RootNameLookup,ConfigOverrides) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor SerializationConfig.SerializationConfig(BaseSettings,SubtypeResolver,SimpleMixInResolver,RootNameLookup) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor SerializationConfig.SerializationConfig(SerializationConfig,int,int,int,int,int,int) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor SerializationConfig.SerializationConfig(SerializationConfig,SimpleMixInResolver,RootNameLookup,ConfigOverrides) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] Note: /tmp/d4j_eval/JacksonDatabind_64b/.test_suite/com/fasterxml/jackson/databind/ser/PropertyBuilderDeepseekTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

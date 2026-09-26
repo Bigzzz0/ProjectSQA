@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 3,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Closure-3-deepseek-1790354153",
+  "suite_sha256": "f1c51245039500cebde6e589db1fba3bd82a687598d87fcad9bb871f9e0843e0",
+  "test_files": "FlowSensitiveInlineVariablesDeepseekTest.java",
+  "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+  "timestamp": "2026-09-25 23:36:04",
+  "evaluation_duration_sec": 10.279,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "d dir: /tmp/d4j_eval/Closure_3b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_3b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_3b/.test_suite/com/google/javascript/jscomp/FlowSensitiveInlineVariablesDeepseekTest.java:1574: error: unclosed string literal\n    [javac]         String js = \"function f() { var x; try { throw 1; } catch (e) { x = e; } catch (e2) { try { throw 2; } catch (e3) { print(x); } catch (e4) { print(x); } catch (e5) { print(x); } catch (e6) { print(x); } catch (e7) { print(x); } catch (e8) { print(x); } catch (e9) { print(x); } catch (e10) { print(x); } catch (e11) { print(x); } catch (e12) { print(x); } catch (e13) { print(x); } catch (e14) { print(x); } catch (e15) { print(x); } catch (e16) { print(x); } catch (e17) { print(x); } catch (e18) { print(x); } catch (e19) { print(x); } catch (e20) { print(x); } catch (e21) { print(x); } catch (e22) { print(x); } catch (e23) { print(x); } catch (e24) { print(x); } catch (e25) { print(x); } catch (e26) {\n    [javac]                     ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

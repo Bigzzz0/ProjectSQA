@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 6,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-6-gemini-1790379042",
+  "suite_sha256": "0959bc2d1f791cd2630f67286023f2bc86b34167b555bb264dec9c443a5e56fc",
+  "test_files": "EntitiesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "timestamp": "2026-09-26 06:30:46",
+  "evaluation_duration_sec": 4.198,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "e.cobertura.instrument.Main.main(Main.java:421)\n[cobertura-instrument] Caused by: java.lang.RuntimeException: Method code too large!\n[cobertura-instrument] \tat org.objectweb.asm.MethodWriter.a(Unknown Source)\n[cobertura-instrument] \n[cobertura-instrument] java.lang.RuntimeException: Method code too large!\tat org.objectweb.asm.ClassWriter.toByteArray(Unknown Source)\n[cobertura-instrument] \tat org.objectweb.asm.MethodWriter.a(Unknown Source)\n[cobertura-instrument] \tat org.objectweb.asm.ClassWriter.toByteArray(Unknown Source)\n[cobertura-instrument] \n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:208)\tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:208)\n[cobertura-instrument] \n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:121)\tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.instrumentClass(CoberturaInstrumenter.java:121)\n[cobertura-instrument] \t... 5 more\n[cobertura-instrument] \n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.CoberturaInstrumenter.addInstrumentationToSingleClass(CoberturaInstrumenter.java:234)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.addInstrumentationToSingleClass(Main.java:298)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.addInstrumentation(Main.java:307)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.parseArguments(Main.java:399)\n[cobertura-instrument] \tat net.sourceforge.cobertura.instrument.Main.main(Main.java:421)\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:340: Error instrumenting classes. See messages above.\n\nTotal time: 0 seconds\nCouldn't obtain coverage results! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 153.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

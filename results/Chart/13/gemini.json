@@ -11,5 +11,10 @@
     "org.jfree.chart.block.BorderArrangementGeminiTest::testArrangeFNLeftBlockLargerThanWidth",
     "org.jfree.chart.block.BorderArrangementGeminiTest::testSizingWithWidthConstraintDefect"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "1cb52ef869eabe1603b4c5d730c398547a9991691d91870d7b071489cc8175dd",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Chart_13b/BorderArrangementGeminiTest.java"
+  ],
+  "run_id": "Chart-13-gemini-1790351747"
 }

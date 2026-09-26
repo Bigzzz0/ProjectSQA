@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 10.67,
+  "branch_cov": 10.0,
+  "test_file": "PearsonsCorrelation_IPOTest.java",
+  "target_classes": "org.apache.commons.math.stat.correlation.PearsonsCorrelation",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "85feaf57950fa2f7f16115b139e019dbe02f9f018d43103442bfcecd426dca2c",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_69b/org/apache/commons/math/stat/correlation/PearsonsCorrelation_IPOTest.java"
+  ],
+  "run_id": "Math-69-ipo-1790392121"
+}

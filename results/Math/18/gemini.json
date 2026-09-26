@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.optimization.direct.CMAESOptimizerGeminiTest::testOptimizeMaximizationGoal"
-  ]
+  ],
+  "suite_sha256": "41beefba7bc835a5001f771a3e82969ad3d2fe5e394e70ed0ecc2d34b05c918f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_18b/CMAESOptimizerGeminiTest.java"
+  ],
+  "run_id": "Math-18-gemini-1790388644"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "LookupTranslator_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.LookupTranslator",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e92bda52c5d95b9fc1b438884dcc404fadc1a0a608fb54e4bfe899eee4f5c3eb",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_4b/LookupTranslator_ESTest.java"
+  ],
+  "run_id": "Lang-4-mio-1790383712"
+}

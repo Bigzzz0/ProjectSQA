@@ -1,0 +1,25 @@
+{
+  "project": "Math",
+  "bug_id": 22,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-22-gemini-1790388923",
+  "suite_sha256": "2bd0c2796b1d93719f1eb0418a3666508cb982389cef22d15ce63429c605a5b9",
+  "test_files": "FDistributionGeminiTest.java;UniformRealDistributionGeminiTest.java",
+  "target_classes": "org.apache.commons.math3.distribution.FDistribution;org.apache.commons.math3.distribution.UniformRealDistribution",
+  "timestamp": "2026-09-26 09:15:49",
+  "evaluation_duration_sec": 26.161,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math3.distribution.FDistributionGeminiTest::testIsSupportLowerBoundInclusive",
+    "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval",
+    "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testIsSupportUpperBoundInclusive"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math3.distribution.UniformRealDistributionGeminiTest::testSmallInterval"
+  ]
+}

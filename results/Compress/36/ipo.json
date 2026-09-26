@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 2.63,
+  "branch_cov": 1.32,
+  "test_file": "SevenZFile_IPOTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.SevenZFile",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "65544cfe35c8a8f05dd28c11e847eb2fea9bddeaf02a2b43a4a510546610e54c",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Compress_36b/org/apache/commons/compress/archivers/sevenz/SevenZFile_IPOTest.java"
+  ],
+  "run_id": "Compress-36-ipo-1790369434"
+}

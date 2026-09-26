@@ -1,0 +1,19 @@
+{
+  "project": "Closure",
+  "bug_id": 3,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-3-mio-1790354114",
+  "suite_sha256": "01b308c1f12a66d824a8dc602017248a130ec43ccc77d5837fdd8af5b5d85c16",
+  "test_files": "FlowSensitiveInlineVariables_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+  "timestamp": "2026-09-25 23:35:53",
+  "evaluation_duration_sec": 39.467,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 6.82,
+  "branch_coverage_percent": 0.79,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

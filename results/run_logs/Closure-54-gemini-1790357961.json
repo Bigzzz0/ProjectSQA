@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 54,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-54-gemini-1790357961",
+  "suite_sha256": "371d75a21c718c13b679700e529b85133b16348fcc67349ba41b57d670ccd01c",
+  "test_files": "FunctionTypeGeminiTest.java;TypedScopeCreatorGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.TypedScopeCreator;com.google.javascript.rhino.jstype.FunctionType",
+  "timestamp": "2026-09-26 00:39:31",
+  "evaluation_duration_sec": 10.374,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "     [copy] Copying 1 file to /tmp/d4j_eval/Closure_54b/build/classes/com/google/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_54b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_54b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_54b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_54b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_54b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_54b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Closure_54b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_54b/.test_suite/com/google/javascript/rhino/jstype/FunctionTypeGeminiTest.java:37: error: package com.google.javascript.rhino.testing does not exist\n    [javac] import com.google.javascript.rhino.testing.SimpleErrorReporter;\n    [javac]                                           ^\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

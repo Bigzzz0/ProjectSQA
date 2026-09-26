@@ -30,5 +30,10 @@
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumValid",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryOctalPath",
     "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringLarge"
-  ]
+  ],
+  "suite_sha256": "2afc1c3f1fc9c4605b7b5fcaf3c2cbbdad577f24be4e56f212611faa471e2599",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_24b/TarUtilsDeepseekTest.java"
+  ],
+  "run_id": "Compress-24-deepseek-1790368725"
 }

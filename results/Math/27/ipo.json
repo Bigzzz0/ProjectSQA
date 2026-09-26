@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 54.1,
+  "branch_cov": 42.55,
+  "test_file": "Fraction_IPOTest.java",
+  "target_classes": "org.apache.commons.math3.fraction.Fraction",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "14524f533b36870ba1e3e1dadb0e2c38f12868358f688f8f694e6fb77a4fc10d",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_27b/org/apache/commons/math3/fraction/Fraction_IPOTest.java"
+  ],
+  "run_id": "Math-27-ipo-1790389236"
+}

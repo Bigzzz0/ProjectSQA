@@ -1,0 +1,19 @@
+{
+  "project": "Lang",
+  "bug_id": 58,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Lang-58-ipo-1790387081",
+  "suite_sha256": "e52a710cfe47c400f38db3c42deff75fb1fcea92e5e60ba5e15aed04e9c74346",
+  "test_files": "NumberUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.math.NumberUtils",
+  "timestamp": "2026-09-26 08:45:05",
+  "evaluation_duration_sec": 23.325,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 32.87,
+  "branch_coverage_percent": 23.81,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,23 @@
+{
+  "project": "Chart",
+  "bug_id": 24,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Chart-24-gemini-1790352478",
+  "suite_sha256": "1bf050f3adf8cb835a33cb860a1b5e8e3c051962f55737b85f419ea49df6e66c",
+  "test_files": "GrayPaintScaleGeminiTest.java",
+  "target_classes": "org.jfree.chart.renderer.GrayPaintScale",
+  "timestamp": "2026-09-25 23:08:23",
+  "evaluation_duration_sec": 24.233,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingBelowLowerBoundDefect",
+    "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingAboveUpperBoundDefect",
+    "org.jfree.chart.renderer.GrayPaintScaleGeminiTest::testGetPaintClampingExtremes"
+  ],
+  "fixed_failures": []
+}

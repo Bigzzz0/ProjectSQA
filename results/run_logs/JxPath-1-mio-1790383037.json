@@ -1,0 +1,19 @@
+{
+  "project": "JxPath",
+  "bug_id": 1,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "JxPath-1-mio-1790383037",
+  "suite_sha256": "859f82d5cfffd1d6357b90b937d5a2559d8a84b941b088379b9308251761ca6b",
+  "test_files": "DOMNodePointer_ESTest.java;JDOMNodePointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.dom.DOMNodePointer;org.apache.commons.jxpath.ri.model.jdom.JDOMNodePointer",
+  "timestamp": "2026-09-26 07:37:35",
+  "evaluation_duration_sec": 18.842,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 75.16,
+  "branch_coverage_percent": 66.55,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

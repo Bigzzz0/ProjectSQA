@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 9,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Gson-9-ipo-1790371043",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeWriter;com.google.gson.internal.bind.TypeAdapters;com.google.gson.stream.JsonWriter",
+  "timestamp": "2026-09-26 04:17:23",
+  "evaluation_duration_sec": 0.009,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

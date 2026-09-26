@@ -20,5 +20,10 @@
     "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testTextFieldsLongAndShort",
     "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToPrinterThrowsWhenParserOnly",
     "org.joda.time.format.DateTimeFormatterBuilderGeminiTest::testToParserThrowsWhenPrinterOnly"
-  ]
+  ],
+  "suite_sha256": "d907e7b1d4370d69590d73098e2975c6d07151ea03c05f33369a4a784a65e20a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Time_20b/DateTimeFormatterBuilderGeminiTest.java"
+  ],
+  "run_id": "Time-20-gemini-1790399582"
 }

@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 94.39,
+  "branch_cov": 88.21,
+  "test_file": "DoubleMetaphone_ESTest.java;StringUtils_ESTest.java",
+  "target_classes": "org.apache.commons.codec.binary.CharSequenceUtils;org.apache.commons.codec.binary.StringUtils;org.apache.commons.codec.language.DoubleMetaphone",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.codec.language.DoubleMetaphone_ESTest::test75"
+  ],
+  "suite_sha256": "d63e7cd5f61fcf0262a4a670af5f34d879dfffcd8ebf58427ed2bf28375f2a56",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_13b/DoubleMetaphone_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Codec_13b/StringUtils_ESTest.java"
+  ],
+  "run_id": "Codec-13-mio-1790365893"
+}

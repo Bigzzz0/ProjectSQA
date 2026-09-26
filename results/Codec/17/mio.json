@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "StringUtils_ESTest.java",
+  "target_classes": "org.apache.commons.codec.binary.StringUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "e59c8f851dc03dc4c5a87d9a5e436ba7ae9664f43f4fc4e4c1e65ed0971bb3f3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_17b/StringUtils_ESTest.java"
+  ],
+  "run_id": "Codec-17-mio-1790366024"
+}

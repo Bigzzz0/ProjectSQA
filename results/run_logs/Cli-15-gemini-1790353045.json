@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Cli-15-gemini-1790353045",
+  "suite_sha256": "8a95f38f41ada46e812f3863a0b294ea29bd82ccf982eeb35cdff2178dbcbdd3",
+  "test_files": "WriteableCommandLineImplGeminiTest.java",
+  "target_classes": "org.apache.commons.cli2.commandline.WriteableCommandLineImpl",
+  "timestamp": "2026-09-25 23:17:28",
+  "evaluation_duration_sec": 3.228,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "Integer(int) in Integer has been deprecated\n    [javac]                                                                                                  new Integer(width)\n    [javac]                                                                                                  ^\n    [javac] /tmp/d4j_eval/Cli_15b/src/java/org/apache/commons/cli2/validation/ClassValidator.java:84: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                         i.set(clazz.newInstance());\n    [javac]                                    ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 6 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Cli_15b/target/classes/org/apache/commons/cli2\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Cli_15b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Cli_15b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_15b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Cli_15b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_15b/.test_suite/org/apache/commons/cli2/commandline/WriteableCommandLineImplGeminiTest.java:228: error: reached end of file while parsing\n    [javac]         final WriteableCommandLine\n    [javac]                                   ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

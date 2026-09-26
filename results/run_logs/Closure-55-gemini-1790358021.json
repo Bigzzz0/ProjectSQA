@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 55,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-55-gemini-1790358021",
+  "suite_sha256": "b9737c6609f195b1186691fa55ba5b5f5a28cfbde6a0fcbe36dce7db43204d77",
+  "test_files": "FunctionRewriterGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionRewriter",
+  "timestamp": "2026-09-26 00:40:31",
+  "evaluation_duration_sec": 10.229,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "uild.home: /tmp/d4j_eval/Closure_55b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_55b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_55b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_55b/.test_suite/com/google/javascript/jscomp/FunctionRewriterGeminiTest.java:67: error: no suitable method found for init(List<SourceFile>,List<SourceFile>,CompilerOptions)\n    [javac]     compiler.init(\n    [javac]             ^\n    [javac]     method Compiler.init(JSSourceFile[],JSSourceFile[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile[])\n    [javac]     method Compiler.init(List<JSSourceFile>,List<JSSourceFile>,CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to List<JSSourceFile>)\n    [javac]     method Compiler.init(JSSourceFile[],JSModule[],CompilerOptions) is not applicable\n    [javac]       (argument mismatch; List<SourceFile> cannot be converted to JSSourceFile[])\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

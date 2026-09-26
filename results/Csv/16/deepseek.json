@@ -33,5 +33,10 @@
     "org.apache.commons.csv.CSVParserDeepseekTest::testManyRecords",
     "org.apache.commons.csv.CSVParserDeepseekTest::testNullReader",
     "org.apache.commons.csv.CSVParserDeepseekTest::testCharacterOffset"
-  ]
+  ],
+  "suite_sha256": "8a7c046a80711bed864c213d4237f17b95dd57f309a5dd05b7fccab577d41c6f",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Csv_16b/CSVParserDeepseekTest.java"
+  ],
+  "run_id": "Csv-16-deepseek-1790370744"
 }

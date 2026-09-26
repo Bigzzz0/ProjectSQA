@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 33.73,
+  "branch_cov": 16.22,
+  "test_file": "StringUtil_IPOTest.java",
+  "target_classes": "org.jsoup.helper.StringUtil",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "71369dd7a366b166cc5b8ed4522c4b28392b3e446b1166305f8866ad5978bd12",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Jsoup_74b/org/jsoup/helper/StringUtil_IPOTest.java"
+  ],
+  "run_id": "Jsoup-74-ipo-1790382085"
+}

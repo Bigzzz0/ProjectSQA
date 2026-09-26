@@ -1,0 +1,31 @@
+{
+  "project": "Jsoup",
+  "bug_id": 46,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-46-gemini-1790380792",
+  "suite_sha256": "c03d597fb0c31a39bfc14b5d530f866dca22decf43fa24523491283aa19657c9",
+  "test_files": "EntitiesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Entities",
+  "timestamp": "2026-09-26 07:00:10",
+  "evaluation_duration_sec": 17.439,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.46,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 6,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsBaseNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testGetCharacterByNameNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testAsciiRoundtripWithXhtmlNonBreakingSpace",
+    "org.jsoup.nodes.EntitiesGeminiTest::testShiftJisRoundtripWithXhtmlNonBreakingSpaceDefect"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.EntitiesGeminiTest::testUnescapeBasicAndStrict",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testIsBaseNamedEntityNull",
+    "org.jsoup.nodes.EntitiesGeminiTest::testGetCharacterByNameNull"
+  ]
+}

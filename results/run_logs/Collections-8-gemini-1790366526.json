@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 8,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Collections-8-gemini-1790366526",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+  "timestamp": "2026-09-26 03:02:06",
+  "evaluation_duration_sec": 0.024,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

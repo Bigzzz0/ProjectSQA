@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 3.13,
+  "branch_cov": 0.0,
+  "test_file": "ArrayRealVector_IPOTest.java;OpenMapRealVector_IPOTest.java",
+  "target_classes": "org.apache.commons.math.linear.ArrayRealVector;org.apache.commons.math.linear.OpenMapRealVector",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "ad6511fc8805e0ba106104f99961b35d0fdf3dd04667a5aae56932916f71f421",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_77b/org/apache/commons/math/linear/ArrayRealVector_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/Math_77b/org/apache/commons/math/linear/OpenMapRealVector_IPOTest.java"
+  ],
+  "run_id": "Math-77-ipo-1790392651"
+}

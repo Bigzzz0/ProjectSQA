@@ -21,5 +21,10 @@
     "org.jsoup.nodes.ElementGeminiTest::testSiblingNavigationEdgeCases",
     "org.jsoup.nodes.ElementGeminiTest::testGetSiblingsWithDuplicateContent",
     "org.jsoup.nodes.ElementGeminiTest::testInsertionAndManipulation"
-  ]
+  ],
+  "suite_sha256": "99ee985439848bdd749c3c0f6f1c005ba4a1f5a6c083d5347de12b6cf3adda52",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_43b/ElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-43-gemini-1790380675"
 }

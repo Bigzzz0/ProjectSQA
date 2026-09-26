@@ -1,0 +1,22 @@
+{
+  "project": "Jsoup",
+  "bug_id": 1,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-1-gemini-1790378869",
+  "suite_sha256": "4b780b9459919b93e0ccf1078948c82120de935a576bd8b69d2a8f5925131bbd",
+  "test_files": "DocumentGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Document",
+  "timestamp": "2026-09-26 06:28:05",
+  "evaluation_duration_sec": 15.902,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.DocumentGeminiTest::testCreatesStructureFromBodySnippet_TextOrder_Issue23",
+    "org.jsoup.nodes.DocumentGeminiTest::testNormaliseTextOrderingWhenLeadingTextOutsideBody"
+  ],
+  "fixed_failures": []
+}

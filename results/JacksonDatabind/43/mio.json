@@ -1,0 +1,19 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 75.0,
+  "branch_cov": 66.67,
+  "test_file": "ObjectIdValueProperty_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty_ESTest::test3",
+    "com.fasterxml.jackson.databind.deser.impl.ObjectIdValueProperty_ESTest::test2"
+  ],
+  "suite_sha256": "64010df47038e4b7864f1ea3bb008e07dad3d2d28a371742d88b40b8f194bc04",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_43b/ObjectIdValueProperty_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-43-mio-1790374735"
+}

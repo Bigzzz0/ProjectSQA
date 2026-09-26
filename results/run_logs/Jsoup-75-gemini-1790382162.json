@@ -1,0 +1,25 @@
+{
+  "project": "Jsoup",
+  "bug_id": 75,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-75-gemini-1790382162",
+  "suite_sha256": "ab9bef555fc10e3f00afc38b35ca7707d9204dcea20fdb56331ed641d40956d2",
+  "test_files": "AttributesGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Attributes",
+  "timestamp": "2026-09-26 07:22:58",
+  "evaluation_duration_sec": 15.825,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.02,
+  "branch_coverage_percent": 90.48,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.AttributesGeminiTest::testBooleanAttributeOutputCollapseMatchingName",
+    "org.jsoup.nodes.AttributesGeminiTest::testBooleanAttributeOutputCollapseEmptyString",
+    "org.jsoup.nodes.AttributesGeminiTest::testCloneIndependence"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.AttributesGeminiTest::testCloneIndependence"
+  ]
+}

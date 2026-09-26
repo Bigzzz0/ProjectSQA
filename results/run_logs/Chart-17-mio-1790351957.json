@@ -1,0 +1,22 @@
+{
+  "project": "Chart",
+  "bug_id": 17,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-17-mio-1790351957",
+  "suite_sha256": "8d045ebbfd668fdf73afa3928628354f3c7e6943d560dfb8fdc3498405f3ade3",
+  "test_files": "TimeSeries_ESTest.java",
+  "target_classes": "org.jfree.data.time.TimeSeries",
+  "timestamp": "2026-09-25 22:59:45",
+  "evaluation_duration_sec": 27.475,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 92.01,
+  "branch_coverage_percent": 85.94,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.jfree.data.time.TimeSeries_ESTest::test19",
+    "org.jfree.data.time.TimeSeries_ESTest::test08"
+  ]
+}

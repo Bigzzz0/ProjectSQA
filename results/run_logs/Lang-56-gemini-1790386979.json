@@ -1,0 +1,27 @@
+{
+  "project": "Lang",
+  "bug_id": 56,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-56-gemini-1790386979",
+  "suite_sha256": "dd2e2acc925745d2f20acab4f1f101928ca4bf4f8f954460e581d727d1be830a",
+  "test_files": "FastDateFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.lang.time.FastDateFormat",
+  "timestamp": "2026-09-26 08:43:20",
+  "evaluation_duration_sec": 20.437,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.97,
+  "branch_coverage_percent": 81.9,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testSerializationWithTimeZoneNameRules",
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testInvalidPatternCharacterThrowsException",
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testCalendarWithOverriddenTimeZone",
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testLang303SerializationRoundTrip"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testInvalidPatternCharacterThrowsException",
+    "org.apache.commons.lang.time.FastDateFormatGeminiTest::testCalendarWithOverriddenTimeZone"
+  ]
+}

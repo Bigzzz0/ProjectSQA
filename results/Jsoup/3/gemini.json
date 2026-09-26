@@ -31,5 +31,12 @@
     "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot",
     "org.jsoup.parser.TagGeminiTest::testMultiAncestorResolution",
     "org.jsoup.parser.TagGeminiTest::testHtmlTagIsValidParentForAny"
-  ]
+  ],
+  "suite_sha256": "b9f42c17330bb050c0f52fbddccfeee6947201bd6c103df02af0b59abd47043d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_3b/ElementGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_3b/ParserGeminiTest.java",
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_3b/TagGeminiTest.java"
+  ],
+  "run_id": "Jsoup-3-gemini-1790378966"
 }

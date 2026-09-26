@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 3,
+  "line_cov": 57.14,
+  "branch_cov": 29.55,
+  "test_file": "CheckGlobalThis_ESTest.java;CheckGlobalThis_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThis_ESTest::test02",
+    "com.google.javascript.jscomp.CheckGlobalThis_ESTest::test01",
+    "com.google.javascript.jscomp.CheckGlobalThis_ESTest::test00"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThis_ESTest::test02",
+    "com.google.javascript.jscomp.CheckGlobalThis_ESTest::test01",
+    "com.google.javascript.jscomp.CheckGlobalThis_ESTest::test00"
+  ],
+  "suite_sha256": "80307d20f908143b8c0e15a54fd6e941cfbaeb9a778b50b1151d498d1fe11fbc",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_100b/CheckGlobalThis_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_100b/evosuite-tests/com/google/javascript/jscomp/CheckGlobalThis_ESTest.java"
+  ],
+  "run_id": "Closure-100-mio-1790360654"
+}

@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.mockito.internal.configuration.SpyAnnotationEngineGeminiTest::testSpyFieldRetainsFieldNameAsMockName_DefectTarget"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "90e41391ea4450d5c85364c1ad540a2650ab89a0065b98447fe0c0e1466aae6d",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_32b/SpyAnnotationEngineGeminiTest.java"
+  ],
+  "run_id": "Mockito-32-gemini-1790397915"
 }

@@ -1,0 +1,35 @@
+{
+  "project": "Collections",
+  "bug_id": 13,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-13-mio-1790366796",
+  "suite_sha256": "5349f63d3ea53351a7f2cc8ef08081f5009a021e683c7aac1f11e04ac76acf4e",
+  "test_files": "ExtendedProperties_ESTest.java",
+  "target_classes": "org.apache.commons.collections.ExtendedProperties",
+  "timestamp": "2026-09-26 03:06:55",
+  "evaluation_duration_sec": 19.202,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 73.06,
+  "branch_coverage_percent": 63.67,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test20",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test62",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test32",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test04",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test15",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test55",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test50"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test20",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test62",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test32",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test04",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test15",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test55",
+    "org.apache.commons.collections.ExtendedProperties_ESTest::test50"
+  ]
+}

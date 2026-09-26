@@ -1,0 +1,22 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 42.6,
+  "branch_cov": 27.25,
+  "test_file": "JsAst_ESTest.java;NodeUtil_ESTest.java;ScopedAliases_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.JsAst;com.google.javascript.jscomp.NodeUtil;com.google.javascript.jscomp.ScopedAliases",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.JsAst_ESTest::test4"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.JsAst_ESTest::test4"
+  ],
+  "suite_sha256": "f5b97b66c4c7016e92e6e215d1a1295ff6367b7af1680f68fef75ad697185356",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_174b/JsAst_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_174b/NodeUtil_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_174b/ScopedAliases_ESTest.java"
+  ],
+  "run_id": "Closure-174-mio-1790365180"
+}

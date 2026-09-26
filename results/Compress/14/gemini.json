@@ -14,5 +14,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testWorkaroundForBrokenTimeHeaderLeadingSpacesThenNul",
     "org.apache.commons.compress.archivers.tar.TarUtilsGeminiTest::testParseOctalInvalidTrailingByteExceptionMessageContainsNulReplacement"
-  ]
+  ],
+  "suite_sha256": "f03e4dacd8bfeb32a77ffeaca83c0a9ec70bc1da26cb8d8275ee4681ddb59b0c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_14b/TarUtilsGeminiTest.java"
+  ],
+  "run_id": "Compress-14-gemini-1790368245"
 }

@@ -1,0 +1,17 @@
+{
+  "project": "Gson",
+  "bug_id": 11,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-11-gemini-1790371118",
+  "suite_sha256": "427b20a3b113aa81c821476a9dab23779e55e75e743cb5da3fa18f512b16854c",
+  "test_files": "TypeAdaptersGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.TypeAdapters",
+  "timestamp": "2026-09-26 04:18:41",
+  "evaluation_duration_sec": 2.548,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "solete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Gson_11b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:100: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]       if (!constructor.isAccessible()) {\n    [javac]                       ^\n    [javac] 5 warnings\n    [javac] Creating empty /tmp/d4j_eval/Gson_11b/target/classes/com/google/gson/reflect/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_11b/target/classes/com/google/gson/annotations/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_11b/target/classes/com/google/gson/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Gson_11b/target/classes/com/google/gson/internal/package-info.class\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Gson_11b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Gson_11b/.classes_testgen\n    [javac] /tmp/d4j_eval/Gson_11b/.test_suite/com/google/gson/internal/bind/TypeAdaptersGeminiTest.java:44: error: reached end of file while parsing\n    [javac] import com.google.gson.Json\n    [javac]                            ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

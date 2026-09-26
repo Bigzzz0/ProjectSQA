@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.5,
+  "branch_cov": 94.83,
+  "test_file": "GaussianFitter_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.fitting.GaussianFitter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4c52f1f36bebea993bad55cd13ec6d3788d187ad67eb5f8ab096d740f702e572",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_58b/GaussianFitter_ESTest.java"
+  ],
+  "run_id": "Math-58-mio-1790391393"
+}

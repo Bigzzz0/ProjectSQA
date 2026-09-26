@@ -1,0 +1,17 @@
+{
+  "project": "Lang",
+  "bug_id": 33,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-33-gemini-1790385628",
+  "suite_sha256": "083f6988032ba8f1d8ab0d46a5f069213375472ff912831a686ef6328b421e9f",
+  "test_files": "ClassUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.ClassUtils",
+  "timestamp": "2026-09-26 08:20:34",
+  "evaluation_duration_sec": 6.05,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "flect/FieldUtils.java:311: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_33b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java:518: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (forceAccess && !field.isAccessible()) {\n    [javac]                                  ^\n    [javac] /tmp/d4j_eval/Lang_33b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java:58: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         if (o == null || o.isAccessible()) {\n    [javac]                           ^\n    [javac] 30 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_33b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Lang_33b/target/classes/META-INF\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Lang_33b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Lang_33b/.classes_testgen\n    [javac] /tmp/d4j_eval/Lang_33b/.test_suite/org/apache/commons/lang3/ClassUtilsGeminiTest.java:361: error: array required, but List<Class<?>> found\n    [javac]         assertEquals(String.class, classes[0]);\n    [javac]                                           ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

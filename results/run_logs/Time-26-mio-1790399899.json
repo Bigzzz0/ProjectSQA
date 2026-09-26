@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 26,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-26-mio-1790399899",
+  "suite_sha256": "81151f8db604afcb09d0d81f860cbe08ee5cb5478cc086336eabd9b78b997626",
+  "test_files": "DateTimeZone_ESTest.java;LenientDateTimeField_ESTest.java;ZonedChronology_ESTest.java",
+  "target_classes": "org.joda.time.chrono.ZonedChronology;org.joda.time.DateTimeZone;org.joda.time.field.LenientDateTimeField",
+  "timestamp": "2026-09-26 12:18:50",
+  "evaluation_duration_sec": 31.667,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 88.89,
+  "branch_coverage_percent": 82.5,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

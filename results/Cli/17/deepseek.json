@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.PosixParserDeepseekTest"
-  ]
+  ],
+  "suite_sha256": "5305a042b926608feb93f3cae727729c0ee929ba30417ea38693d98f6f64116b",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_17b/PosixParserDeepseekTest.java"
+  ],
+  "run_id": "Cli-17-deepseek-1790353102"
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.32,
+  "branch_cov": 84.43,
+  "test_file": "CoreFunction_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreFunction",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "76edd0af0777e1d99d61f3685133f80e3dd6ba22585a2f1c4bd54241f518ad44",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_14b/CoreFunction_ESTest.java"
+  ],
+  "run_id": "JxPath-14-mio-1790383348"
+}

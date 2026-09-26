@@ -856,17 +856,21 @@ docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project 
 docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Math --bug 2
 ```
 
-#### ขั้นที่ 4: การวิเคราะห์ข้อมูลและสร้างกราฟสรุป (Data Analysis & Plotting)
-1. **Average Line & Branch Coverage:** คำนวณค่าเฉลี่ย $\mu$ และ $\sigma$ ของทั้ง 4 เทคนิค
-2. **Fault Detection Rate ในระดับ Bug (Bug-Level FDR %):**
-   คำนวณสัดส่วนของข้อบกพร่อง (Bugs) ที่ชุดทดสอบของแต่ละเทคนิคสามารถตรวจพบได้จริงเทียบกับจำนวน Bug ทั้งหมดที่ทำการประเมิน:
-   $$FDR_{\text{technique}} = \left(\frac{N_{\text{detected\_bugs}}}{N_{\text{evaluated\_bugs}}}\right) \times 100\% = \left(\frac{\text{จำนวน Bug ที่ได้สถานะ BUG\_DETECTED}}{\text{จำนวน Bug ทั้งหมดที่ทำการประเมิน}}\right) \times 100\%$$
-   *(หมายเหตุทางวิชาการ: กรณีที่เกิด `COMPILE_ERROR` หรือ `TIMEOUT` จะถือว่าไม่สามารถตรวจพบบั๊กนั้นได้ โดยยังคงถูกนับเป็นส่วนหนึ่งของตัวหาร $N_{\text{evaluated\_bugs}}$ เสมอเพื่อรักษามาตรฐานความซื่อตรงของงานวิจัย)*
-3. **การพล็อตกราฟอัตโนมัติ 4 แผนภูมิวิชาการ:** สั่งรันสคริปต์กลาง:
-   ```bash
-   python scripts/plot_results.py
-   ```
-   สคริปต์จะประมวลผล `results/benchmark_results.csv` และสร้างรูปภาพความละเอียดสูง (300 DPI) 4 รูปในโฟลเดอร์ `results/` สำหรับใส่บทที่ 5 ทันที!
+#### ขั้นที่ 4: รวมผลและสร้างรายงานจาก snapshot เดียวกัน
+
+ให้รันหลัง benchmark หยุดหรือเสร็จ เพื่อไม่ให้ผล CSV, Excel, JSON และกราฟมาจากคนละ snapshot:
+
+```powershell
+python scripts/consolidate_master_results.py
+.\.venv\Scripts\python.exe scripts/advanced_data_analytics.py
+.\.venv\Scripts\python.exe scripts/plot_results.py
+```
+
+- Master dataset มีหนึ่งแถวต่อ project + bug + technique; แถวซ้ำไม่เพิ่มตัวหาร
+- FDR เป็นระดับบั๊ก และนับเฉพาะ `BUG_DETECTED` ที่ fail บน buggy และ pass บน fixed
+- ตัวหาร evaluated FDR รวม `DONE`, `COMPILE_ERROR` และ `TIMEOUT`; แสดงจำนวน suite และ `NO_SUITE` แยก
+- Coverage เฉลี่ยรวมแถว `DONE` ที่มีค่าที่วัดได้เท่านั้น
+- ตรวจ `results_complete` และ `available_suite_evaluations_complete` ใน `results/master_descriptive_stats.json` ก่อนเรียกผลสุดท้าย
 
 ---
 
@@ -880,8 +884,10 @@ flowchart TD
     BatchExt --> Teammates["เพื่อนร่วมทีม 3 คน<br/>(IPO, MIO, AI) ทยอยสร้าง Test Suites"]
     Teammates --> AutoBench["scripts/run_benchmark.py --all-bugs --resume<br/>รันประเมินต่อเนื่องอัตโนมัติ"]
     AutoBench --> ResultCSV["results/benchmark_results.csv<br/>(บันทึก 5 สถานะมาตรฐานสากล)"]
-    ResultCSV --> Plotter["scripts/plot_results.py<br/>สร้าง 4 แผนภูมิวิชาการอัตโนมัติ"]
-    Plotter --> Report["พร้อมประกอบเล่มรายงานบทที่ 5 ทันที!"]
+    ResultCSV --> Consolidator["scripts/consolidate_master_results.py<br/>ทำ provenance check และสร้าง 3,416-key matrix"]
+    Consolidator --> Master["master_benchmark_summary.csv<br/>และ master_descriptive_stats.json"]
+    Master --> Analytics["advanced_data_analytics.py<br/>สร้าง Excel, report และ figures 5–6"]
+    Master --> Plotter["plot_results.py<br/>สร้าง figures 1–4"]
 ```
 
 #### รายละเอียดขั้นตอนการดำเนินงานอัตโนมัติ (Step-by-Step Guide):

@@ -13,5 +13,10 @@
   "fixed_failures": [
     "com.fasterxml.jackson.databind.deser.BeanDeserializerGeminiTest::testInverseExternalId928",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerGeminiTest::testUnwrappedWithPropertyBasedCreator"
-  ]
+  ],
+  "suite_sha256": "44fb4491726aa03fd509608e3a0093f0963d91b67e2754e44b6d682f64dd40ae",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_27b/BeanDeserializerGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-27-gemini-1790373746"
 }

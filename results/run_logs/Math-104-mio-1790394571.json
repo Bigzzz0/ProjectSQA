@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 104,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-104-mio-1790394571",
+  "suite_sha256": "b3217e75339e3fb3b080087ce9dca5e7dde96e4fc92d2a9c952053c59050e4a1",
+  "test_files": "Gamma_ESTest.java",
+  "target_classes": "org.apache.commons.math.special.Gamma",
+  "timestamp": "2026-09-26 10:49:56",
+  "evaluation_duration_sec": 25.064,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 93.62,
+  "branch_coverage_percent": 97.5,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

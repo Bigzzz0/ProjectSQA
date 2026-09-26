@@ -1,0 +1,27 @@
+{
+  "project": "Jsoup",
+  "bug_id": 53,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-53-gemini-1790381164",
+  "suite_sha256": "1d88dbd969cc2f6853b6d40ccc03c2a145cc5720352e215517af64a174166e39",
+  "test_files": "TokenQueueGeminiTest.java",
+  "target_classes": "org.jsoup.parser.TokenQueue",
+  "timestamp": "2026-09-26 07:06:21",
+  "evaluation_duration_sec": 17.15,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 99.23,
+  "branch_coverage_percent": 97.22,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.parser.TokenQueueGeminiTest::testChompBalancedWithQuotesContainingCloseBracket",
+    "org.jsoup.parser.TokenQueueGeminiTest::testBasicQueueLifecycleAndState",
+    "org.jsoup.parser.TokenQueueGeminiTest::testChompBalancedUnclosedOrEmpty",
+    "org.jsoup.parser.TokenQueueGeminiTest::testChompBalancedWithDoubleQuotesContainingCloseBracket"
+  ],
+  "fixed_failures": [
+    "org.jsoup.parser.TokenQueueGeminiTest::testBasicQueueLifecycleAndState",
+    "org.jsoup.parser.TokenQueueGeminiTest::testChompBalancedUnclosedOrEmpty"
+  ]
+}

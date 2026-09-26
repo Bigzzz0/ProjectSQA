@@ -1,0 +1,29 @@
+{
+  "project": "JacksonCore",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonCore-4-gemini-1790371549",
+  "suite_sha256": "3bd13ce21d63edb9cd57edf07f695ac9aa717b7f1aa6e84fabd81603ad4f6230",
+  "test_files": "TextBufferGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.core.util.TextBuffer",
+  "timestamp": "2026-09-26 04:26:04",
+  "evaluation_duration_sec": 14.763,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 79.01,
+  "branch_coverage_percent": 70.9,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalFromAggregatedSegments",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithString",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testExpandDefectAtMaxSegmentBoundary",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testGetTextBufferBranches"
+  ],
+  "fixed_failures": [
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testContentsAsDecimalFromAggregatedSegments",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testResetWithString",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testExpandDefectAtMaxSegmentBoundary",
+    "com.fasterxml.jackson.core.util.TextBufferGeminiTest::testGetTextBufferBranches"
+  ]
+}

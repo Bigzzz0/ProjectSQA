@@ -21,5 +21,10 @@
     "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testConstructorDefaultState",
     "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testSinMinDefect",
     "org.apache.commons.math.optimization.univariate.BrentOptimizerGeminiTest::testDoOptimizeThrowsUnsupportedOperationException"
-  ]
+  ],
+  "suite_sha256": "a237be1550a8a9f7164bad684280db0c534f313ac277e1021d3a11af814ab39c",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_66b/BrentOptimizerGeminiTest.java"
+  ],
+  "run_id": "Math-66-gemini-1790391978"
 }

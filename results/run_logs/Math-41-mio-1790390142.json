@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 41,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-41-mio-1790390142",
+  "suite_sha256": "b61665d6c6b9644d952347070c8f263140bb41ff67d079777c35167d669843b1",
+  "test_files": "Variance_ESTest.java",
+  "target_classes": "org.apache.commons.math.stat.descriptive.moment.Variance",
+  "timestamp": "2026-09-26 09:36:08",
+  "evaluation_duration_sec": 26.239,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.21,
+  "branch_coverage_percent": 84.78,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

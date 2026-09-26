@@ -1,0 +1,22 @@
+{
+  "project": "JacksonXml",
+  "bug_id": 5,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "JacksonXml-5-gemini-1790378761",
+  "suite_sha256": "1930c655ae8c363e1eda1f12b57c9a238198eff6d0e23b8825c3e378c41da84a",
+  "test_files": "XmlSerializerProviderGeminiTest.java",
+  "target_classes": "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProvider",
+  "timestamp": "2026-09-26 06:26:17",
+  "evaluation_duration_sec": 15.426,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 93.75,
+  "branch_coverage_percent": 87.5,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyDoesNotShareRootNameLookupInstance",
+    "com.fasterxml.jackson.dataformat.xml.ser.XmlSerializerProviderGeminiTest::testCopyWithDefect282AnnotationIndependence"
+  ],
+  "fixed_failures": []
+}

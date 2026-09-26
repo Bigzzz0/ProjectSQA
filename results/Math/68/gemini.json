@@ -16,5 +16,10 @@
     "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMismatchedTargetAndWeightsDimensions",
     "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackJennrichSampson",
     "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerGeminiTest::testMinpackFreudensteinRoth"
-  ]
+  ],
+  "suite_sha256": "19e15653a85eb451620fdeac85a0ee95680db492b2437b939a1eebc1a612d766",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_68b/LevenbergMarquardtOptimizerGeminiTest.java"
+  ],
+  "run_id": "Math-68-gemini-1790392097"
 }

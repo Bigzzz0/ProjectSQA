@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 4.01,
+  "branch_cov": 3.17,
+  "test_file": "TypeUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.reflect.TypeUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "fbf2137833b6a4281db1c5a6c405562ac5be0ce3ef87bfb70bce4104fff7853b",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_15b/org/apache/commons/lang3/reflect/TypeUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-15-ipo-1790384477"
+}

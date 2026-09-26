@@ -1,0 +1,25 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 8,
+  "line_cov": 44.23,
+  "branch_cov": 43.75,
+  "test_file": "RandomStringUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_004",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_012",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_014",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_023",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_025",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_026",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_030",
+    "org.apache.commons.lang3.RandomStringUtils_IPOTest::test_random_pairwise_032"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "2efef0529fb97e71172e4115b888f9fec77b801f3f2a6a899f22168fd0db8653",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Lang_12b/org/apache/commons/lang3/RandomStringUtils_IPOTest.java"
+  ],
+  "run_id": "Lang-12-ipo-1790384262"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 10,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-10-mio-1790388096",
+  "suite_sha256": "a153eda8704ba952d5ac6006ee39c60bbd464c8ddce49d7c953cfe8a5e342b0e",
+  "test_files": "DSCompiler_ESTest.java",
+  "target_classes": "org.apache.commons.math3.analysis.differentiation.DSCompiler",
+  "timestamp": "2026-09-26 09:02:04",
+  "evaluation_duration_sec": 28.075,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 96.75,
+  "branch_coverage_percent": 92.66,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

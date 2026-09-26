@@ -1,0 +1,27 @@
+{
+  "project": "Collections",
+  "bug_id": 1,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Collections-1-deepseek-1790366130",
+  "suite_sha256": "c8e216c80e334618d72209a17f01923b335c2c78b8cc909d8dbf06f72c56f1f6",
+  "test_files": "Flat3MapDeepseekTest.java",
+  "target_classes": "org.apache.commons.collections.map.Flat3Map",
+  "timestamp": "2026-09-26 02:55:47",
+  "evaluation_duration_sec": 17.262,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 87.98,
+  "branch_coverage_percent": 75.8,
+  "failures_count": 5,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testMapIteratorSetValueOnThirdEntryDoesNotModifyEarlier",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testMapIteratorSetValueOnSecondEntryDoesNotModifyFirst",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorSetValueOnSecondEntryDoesNotModifyFirst",
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorSetValueOnThirdEntryDoesNotModifyEarlier"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.collections.map.Flat3MapDeepseekTest::testEntrySetIteratorTraversalAndEntryMethods"
+  ]
+}

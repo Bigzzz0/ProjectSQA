@@ -1,0 +1,17 @@
+{
+  "project": "Mockito",
+  "bug_id": 38,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-38-gemini-1790398240",
+  "suite_sha256": "ad8f886b326edd6071d598cd3ced802e5def124c640f324d17bc5f26181decec",
+  "test_files": "ArgumentMatchingToolGeminiTest.java",
+  "target_classes": "org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool",
+  "timestamp": "2026-09-26 11:50:45",
+  "evaluation_duration_sec": 5.097,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "javac] /tmp/d4j_eval/Mockito_38b/src/org/mockito/internal/util/Primitives.java:35: warning: [deprecation] Double(double) in Double has been deprecated\n    [javac]         wrapperReturnValues.put(Double.class, new Double(0));\n    [javac]                                               ^\n    [javac] /tmp/d4j_eval/Mockito_38b/src/org/mockito/internal/util/copy/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated\n    [javac]         wasAccessible = field.isAccessible();\n    [javac]                              ^\n    [javac] 21 warnings\n\ngradle.compile.mutants:\n\nant.compile.mutants:\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_38b/compileLib\n     [exec] /opt/defects4j/framework/projects/Mockito/chooseDepedencyVersion.sh: line 8: ./gradlew: No such file or directory\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Mockito_38b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Mockito_38b/target\n    [mkdir] Created dir: /tmp/d4j_eval/Mockito_38b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Mockito_38b/.classes_testgen\n    [javac] /tmp/d4j_eval/Mockito_38b/.test_suite/org/mockito/internal/verification/argumentmatching/ArgumentMatchingToolGeminiTest.java:320: error: ';' expected\n    [javac]         Matcher errorMatcher = new BaseMatcher<Object>() implements ContainsExtraTypeInformation {\n    [javac]                                                         ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

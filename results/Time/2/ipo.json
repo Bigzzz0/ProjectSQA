@@ -1,0 +1,17 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 13.13,
+  "branch_cov": 5.93,
+  "test_file": "Partial_IPOTest.java;UnsupportedDurationField_IPOTest.java",
+  "target_classes": "org.joda.time.field.UnsupportedDurationField;org.joda.time.Partial",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "3e5d249f95a1e95e95a233575f806a932faf0cecc279aa1f127e75ae561c2e83",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Time_2b/org/joda/time/Partial_IPOTest.java",
+    "/workspace/Combinatorial_IPO/TestCode/Time_2b/org/joda/time/field/UnsupportedDurationField_IPOTest.java"
+  ],
+  "run_id": "Time-2-ipo-1790398315"
+}

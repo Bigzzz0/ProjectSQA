@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 66.67,
+  "branch_cov": 100.0,
+  "test_file": "CaseInsensitiveMap_ESTest.java",
+  "target_classes": "org.apache.commons.collections.map.CaseInsensitiveMap",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "110dbf7dcbef689c7c16ccbef23802a03c0fb65fcf15cd06754b0cb7ae9373a3",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_14b/CaseInsensitiveMap_ESTest.java"
+  ],
+  "run_id": "Collections-14-mio-1790366824"
+}

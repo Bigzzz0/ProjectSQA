@@ -1,0 +1,23 @@
+{
+  "project": "Closure",
+  "bug_id": 115,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Closure-115-mio-1790361611",
+  "suite_sha256": "5846f725604e2055aa7a31b2762b2b645a87193806a36f7ad249d2fbcc0e4455",
+  "test_files": "FunctionInjector_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FunctionInjector",
+  "timestamp": "2026-09-26 01:40:49",
+  "evaluation_duration_sec": 38.565,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 18.65,
+  "branch_coverage_percent": 5.75,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.FunctionInjector_ESTest::test3"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.FunctionInjector_ESTest::test3"
+  ]
+}

@@ -17,5 +17,10 @@
   ],
   "fixed_failures": [
     "org.jfree.chart.imagemap.StandardToolTipTagFragmentGeneratorDeepseekTest::testGenerateToolTipFragmentNullInput"
-  ]
+  ],
+  "suite_sha256": "fe88507bc1f2ea4b4d80c03f751e9e7fd6812d7c1ae601ba43b8b44e4bb2f682",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Chart_10b/StandardToolTipTagFragmentGeneratorDeepseekTest.java"
+  ],
+  "run_id": "Chart-10-deepseek-1790351540"
 }

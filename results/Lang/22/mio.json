@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.84,
+  "branch_cov": 92.02,
+  "test_file": "Fraction_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.math.Fraction",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.Fraction_ESTest::test36"
+  ],
+  "suite_sha256": "f921596d6ce496d430c95c7b30f74f1ec7ca63af4db3025854acf36e4e838537",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_22b/Fraction_ESTest.java"
+  ],
+  "run_id": "Lang-22-mio-1790384873"
+}

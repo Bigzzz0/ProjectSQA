@@ -1,0 +1,23 @@
+{
+  "project": "Compress",
+  "bug_id": 23,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-23-mio-1790368640",
+  "suite_sha256": "72fa11c6caf52f4cf1481b7029340a871b24131f4a82b05bd0356ea3a7ee4cb5",
+  "test_files": "Coders_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.sevenz.Coders",
+  "timestamp": "2026-09-26 03:37:40",
+  "evaluation_duration_sec": 20.041,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 48.54,
+  "branch_coverage_percent": 41.18,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.sevenz.Coders_ESTest::test08"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.sevenz.Coders_ESTest::test08"
+  ]
+}

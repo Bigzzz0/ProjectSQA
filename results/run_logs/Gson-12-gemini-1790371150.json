@@ -1,0 +1,26 @@
+{
+  "project": "Gson",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Gson-12-gemini-1790371150",
+  "suite_sha256": "085fca49d19ee96b61f0d751848818b4066368bec2c9969bdd163efc641dc973",
+  "test_files": "JsonTreeReaderGeminiTest.java",
+  "target_classes": "com.google.gson.internal.bind.JsonTreeReader",
+  "timestamp": "2026-09-26 04:19:24",
+  "evaluation_duration_sec": 13.47,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 97.02,
+  "branch_coverage_percent": 87.21,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_rootPrimitiveAndArray",
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting",
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_filledJsonObject",
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testSkipValue_emptyJsonObject"
+  ],
+  "fixed_failures": [
+    "com.google.gson.internal.bind.JsonTreeReaderGeminiTest::testPathFormatAcrossMixedNesting"
+  ]
+}

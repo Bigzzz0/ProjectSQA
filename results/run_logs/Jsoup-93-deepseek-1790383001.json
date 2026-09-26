@@ -1,0 +1,17 @@
+{
+  "project": "Jsoup",
+  "bug_id": 93,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Jsoup-93-deepseek-1790383001",
+  "suite_sha256": "ce77d18c20c0acf8e2c86a97f3c050f5d55912e12d5bc88e96b9f7eda35f76f0",
+  "test_files": "FormElementDeepseekTest.java",
+  "target_classes": "org.jsoup.nodes.FormElement",
+  "timestamp": "2026-09-26 07:36:45",
+  "evaluation_duration_sec": 3.864,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "mp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/parser/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/select/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/internal/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/examples/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/nodes/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Jsoup_93b/target/classes/org/jsoup/safety/package-info.class\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_93b/target/classes/META-INF\n     [copy] Copying 3 files to /tmp/d4j_eval/Jsoup_93b/target/classes/META-INF\n\ncompile:\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Jsoup_93b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Jsoup_93b/.classes_testgen\n    [javac] /tmp/d4j_eval/Jsoup_93b/.test_suite/org/jsoup/nodes/FormElementDeepseekTest.java:266: error: cannot find symbol\n    [javac]         FormElement form = new FormElement(Tag.valueOf(\"form\"), \"\", new Attributes());\n    [javac]                                            ^\n    [javac]   symbol:   variable Tag\n    [javac]   location: class FormElementDeepseekTest\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

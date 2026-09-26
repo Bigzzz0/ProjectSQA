@@ -1,0 +1,19 @@
+{
+  "project": "Chart",
+  "bug_id": 23,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Chart-23-mio-1790352353",
+  "suite_sha256": "6f5e6576cb5e8e3a454fffc75554a3641fcaf06255a4edc6fb30c4789922b32a",
+  "test_files": "MinMaxCategoryRenderer_ESTest.java",
+  "target_classes": "org.jfree.chart.renderer.category.MinMaxCategoryRenderer",
+  "timestamp": "2026-09-25 23:06:21",
+  "evaluation_duration_sec": 28.156,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 42.36,
+  "branch_coverage_percent": 28.26,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

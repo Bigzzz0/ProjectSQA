@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "InlineVariables_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.InlineVariables",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "341adf987de5d354b399448163311ac5e1a6c54a0910b9f1d1b9c05a7a3ecf99",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_121b/InlineVariables_ESTest.java"
+  ],
+  "run_id": "Closure-121-mio-1790362044"
+}

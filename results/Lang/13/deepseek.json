@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.lang3.SerializationUtilsDeepseekTest::testClonePrimitiveTypeClass"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "fe651419b60013e17c2b5c37fe2e913519c47ed9ae58ea0149cd1381e40c7957",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_13b/SerializationUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-13-deepseek-1790384366"
 }

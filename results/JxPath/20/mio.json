@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 76.74,
+  "branch_cov": 72.22,
+  "test_file": "CoreOperationRelationalExpression_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.compiler.CoreOperationRelationalExpression",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "908d9c6605c659c708e92c0e7f406080d8e1eb8253427a3721665ffd0d331f63",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_20b/CoreOperationRelationalExpression_ESTest.java"
+  ],
+  "run_id": "JxPath-20-mio-1790383474"
+}

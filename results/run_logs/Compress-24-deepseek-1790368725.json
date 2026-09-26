@@ -1,0 +1,42 @@
+{
+  "project": "Compress",
+  "bug_id": 24,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-24-deepseek-1790368725",
+  "suite_sha256": "2afc1c3f1fc9c4605b7b5fcaf3c2cbbdad577f24be4e56f212611faa471e2599",
+  "test_files": "TarUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "timestamp": "2026-09-26 03:39:04",
+  "evaluation_duration_sec": 18.582,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 85.56,
+  "branch_coverage_percent": 80.51,
+  "failures_count": 11,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalMultipleTrailing",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatLongOctalOrBinaryBytesBinaryPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseBinaryLongLengthTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalDefectTargetWithSpaces",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNormal",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalDefectTarget",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringOverflow",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalWithTrailingNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumValid",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryOctalPath",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringLarge"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalMultipleTrailing",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatLongOctalOrBinaryBytesBinaryPositive",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseBinaryLongLengthTooLarge",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalDefectTargetWithSpaces",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalNormal",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringOverflow",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalWithTrailingNul",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testVerifyCheckSumValid",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testParseOctalOrBinaryOctalPath",
+    "org.apache.commons.compress.archivers.tar.TarUtilsDeepseekTest::testFormatUnsignedOctalStringLarge"
+  ]
+}

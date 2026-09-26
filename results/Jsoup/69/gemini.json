@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.jsoup.nodes.FormElementGeminiTest::testRemoveFormElementReflectedInFormDataAndElements"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "9000834f9695f3312c426a7857ab9a3eeed3713a5620c215394e4b532158d967",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Jsoup_69b/FormElementGeminiTest.java"
+  ],
+  "run_id": "Jsoup-69-gemini-1790381881"
 }

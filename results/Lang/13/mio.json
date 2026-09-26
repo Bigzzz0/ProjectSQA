@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 78.12,
+  "branch_cov": 92.86,
+  "test_file": "SerializationUtils_ESTest.java",
+  "target_classes": "org.apache.commons.lang3.SerializationUtils",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "788ac98b6aff683de5b7b584ff986ded89b9264d08616f1aa01d7a6ad0cd475d",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Lang_13b/SerializationUtils_ESTest.java"
+  ],
+  "run_id": "Lang-13-mio-1790384345"
+}

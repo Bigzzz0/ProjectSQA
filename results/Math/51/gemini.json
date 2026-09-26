@@ -13,5 +13,10 @@
   "fixed_failures": [
     "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testInitialMinIsExactRoot",
     "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631"
-  ]
+  ],
+  "suite_sha256": "22c8b2ae2b4edaa104698642e96940b57b7afce389ed82f506beef05c0d13fb8",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_51b/BaseSecantSolverGeminiTest.java"
+  ],
+  "run_id": "Math-51-gemini-1790390884"
 }

@@ -63,5 +63,10 @@
     "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testNoInlineSelfReferentialObjectLiteralOrderable",
     "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testNoInlineDeletedPropertiesMultipleProps",
     "com.google.javascript.jscomp.InlineObjectLiteralsGeminiTest::testObjectPropertyWrite"
-  ]
+  ],
+  "suite_sha256": "c46e726281302f1ebee4a82bf6dd2447a83cfa17ec51e08c9dd70451f5ca1c7b",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_5b/InlineObjectLiteralsGeminiTest.java"
+  ],
+  "run_id": "Closure-5-gemini-1790354309"
 }

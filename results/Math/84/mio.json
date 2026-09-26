@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 97.06,
+  "branch_cov": 90.0,
+  "test_file": "MultiDirectional_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.direct.MultiDirectional",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "b93d9e50b6e2ab3be9fedaa0e8a8ed7c59801ed4f81c2a51276537f5c0f85537",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_84b/MultiDirectional_ESTest.java"
+  ],
+  "run_id": "Math-84-mio-1790393171"
+}

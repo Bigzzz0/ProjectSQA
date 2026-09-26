@@ -1,0 +1,21 @@
+{
+  "project": "Mockito",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Mockito-15-gemini-1790396485",
+  "suite_sha256": "c176f39a1cd9c081b47822cec328c1d25653aab8f7d3f6daf7e69eab15dd4f7a",
+  "test_files": "FinalMockCandidateFilterGeminiTest.java",
+  "target_classes": "org.mockito.internal.configuration.injection.FinalMockCandidateFilter",
+  "timestamp": "2026-09-26 11:21:53",
+  "evaluation_duration_sec": 28.772,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.mockito.internal.configuration.injection.FinalMockCandidateFilterGeminiTest::testDefect_shouldInjectUsingPropertySetterIfAvailable"
+  ],
+  "fixed_failures": []
+}

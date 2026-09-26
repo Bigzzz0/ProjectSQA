@@ -1,0 +1,27 @@
+{
+  "project": "Lang",
+  "bug_id": 12,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-12-deepseek-1790384304",
+  "suite_sha256": "c816681b985d68f4fc70bb61615f28a226bf55d0f3d631865eaf9d5b76d288fc",
+  "test_files": "RandomStringUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.RandomStringUtils",
+  "timestamp": "2026-09-26 07:58:44",
+  "evaluation_duration_sec": 20.045,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 90.38,
+  "branch_coverage_percent": 93.75,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmallWithNonZeroStart",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsEmptyArray",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsEmptyString",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmall_ShouldThrowIllegalArgument"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmallWithNonZeroStart",
+    "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testCharsArrayTooSmall_ShouldThrowIllegalArgument"
+  ]
+}

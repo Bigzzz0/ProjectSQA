@@ -65,5 +65,10 @@
     "org.apache.commons.math.dfp.DfpDeepseekTest::testNewInstanceByte",
     "org.apache.commons.math.dfp.DfpDeepseekTest::testNewInstanceLong",
     "org.apache.commons.math.dfp.DfpDeepseekTest::testTrapUnderflow"
-  ]
+  ],
+  "suite_sha256": "678881b1ac533848573c4c815b2300a94a7e4730de29d4f27b6344970c8b819d",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_54b/DfpDeepseekTest.java"
+  ],
+  "run_id": "Math-54-deepseek-1790391097"
 }

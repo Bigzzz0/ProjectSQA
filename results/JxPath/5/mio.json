@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 88.83,
+  "branch_cov": 71.54,
+  "test_file": "NodePointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.NodePointer",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.jxpath.ri.model.NodePointer_ESTest::test03"
+  ],
+  "suite_sha256": "98ad1761d6a57bb54ea6f0bd4ce633231833da89fe690c242b8b18349871b3c4",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_5b/NodePointer_ESTest.java"
+  ],
+  "run_id": "JxPath-5-mio-1790383128"
+}

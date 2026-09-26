@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 79.31,
+  "branch_cov": 45.31,
+  "test_file": "CreatorCollector_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.deser.impl.CreatorCollector",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "89ced1409ea08d25b8039a48a8c149fc8e60fc6f30f38126c6c9c9c18e9c9962",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_8b/CreatorCollector_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-8-mio-1790372775"
+}

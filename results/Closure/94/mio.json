@@ -1,0 +1,20 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 1,
+  "line_cov": 59.24,
+  "branch_cov": 42.92,
+  "test_file": "NodeUtil_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.NodeUtil",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test103"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.NodeUtil_ESTest::test103"
+  ],
+  "suite_sha256": "70f4bc68083cf58484e74207d33ee59f68c798854d5db8f75daf1c69d22114d5",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_94b/NodeUtil_ESTest.java"
+  ],
+  "run_id": "Closure-94-mio-1790360335"
+}

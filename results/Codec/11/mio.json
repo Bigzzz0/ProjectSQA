@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 92.59,
+  "branch_cov": 86.11,
+  "test_file": "QuotedPrintableCodec_ESTest.java",
+  "target_classes": "org.apache.commons.codec.net.QuotedPrintableCodec",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "4840a0541380721c1228f9dee9ea786865a65ea33bf8df9c1d8e86e677a15d80",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_11b/QuotedPrintableCodec_ESTest.java"
+  ],
+  "run_id": "Codec-11-mio-1790365809"
+}

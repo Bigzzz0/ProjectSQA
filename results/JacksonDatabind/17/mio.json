@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 69.44,
+  "branch_cov": 50.0,
+  "test_file": "ObjectMapper_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ObjectMapper",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "com.fasterxml.jackson.databind.ObjectMapper_ESTest::test049"
+  ],
+  "suite_sha256": "0c6987bb71ffe869171117da93b733da0951621ed490604498e9c0f03cf05cb2",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_17b/ObjectMapper_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-17-mio-1790373231"
+}

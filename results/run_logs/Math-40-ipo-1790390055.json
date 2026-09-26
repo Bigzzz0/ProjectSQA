@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 40,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Math-40-ipo-1790390055",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver",
+  "timestamp": "2026-09-26 09:34:15",
+  "evaluation_duration_sec": 0.001,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

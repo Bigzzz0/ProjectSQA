@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math.analysis.solvers.BaseSecantSolverGeminiTest::testIssue631RegulaFalsiConvergenceFailure"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "6595bbd3841e99be96f18953eb6ff015fe80149dcf08ab41a6c966442de697a5",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_48b/BaseSecantSolverGeminiTest.java"
+  ],
+  "run_id": "Math-48-gemini-1790390656"
 }

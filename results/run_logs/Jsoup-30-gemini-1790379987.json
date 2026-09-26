@@ -1,0 +1,34 @@
+{
+  "project": "Jsoup",
+  "bug_id": 30,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-30-gemini-1790379987",
+  "suite_sha256": "bc8eaea85c0a1a9da178e2e5a648e19cbafdc41ab2464fe903fa34fca51f3704",
+  "test_files": "CleanerGeminiTest.java",
+  "target_classes": "org.jsoup.safety.Cleaner",
+  "timestamp": "2026-09-26 06:46:42",
+  "evaluation_duration_sec": 15.032,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.safety.CleanerGeminiTest::testCleanWithSimpleTextWhitelist",
+    "org.jsoup.safety.CleanerGeminiTest::testCleanStripsDisallowedTagsWhilePreservingValidChildren",
+    "org.jsoup.safety.CleanerGeminiTest::testCleanRelativeLinksAbsolutizedByDefault",
+    "org.jsoup.safety.CleanerGeminiTest::testCleanRelativeLinksPreservedWhenConfigured",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidCommentInBodyDefect",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidHeadContaminationDefect",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidGroundTruthDefectSuite"
+  ],
+  "fixed_failures": [
+    "org.jsoup.safety.CleanerGeminiTest::testCleanWithSimpleTextWhitelist",
+    "org.jsoup.safety.CleanerGeminiTest::testCleanStripsDisallowedTagsWhilePreservingValidChildren",
+    "org.jsoup.safety.CleanerGeminiTest::testCleanRelativeLinksAbsolutizedByDefault",
+    "org.jsoup.safety.CleanerGeminiTest::testCleanRelativeLinksPreservedWhenConfigured",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidHeadContaminationDefect",
+    "org.jsoup.safety.CleanerGeminiTest::testIsValidGroundTruthDefectSuite"
+  ]
+}

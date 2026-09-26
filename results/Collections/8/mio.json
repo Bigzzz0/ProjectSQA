@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 72.73,
+  "branch_cov": 77.78,
+  "test_file": "UnboundedFifoBuffer_ESTest.java",
+  "target_classes": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "da690b76c87172f3622462d0110c991ef7393844522fa58ddf9917c85b975433",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_8b/UnboundedFifoBuffer_ESTest.java"
+  ],
+  "run_id": "Collections-8-mio-1790366508"
+}

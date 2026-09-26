@@ -1,0 +1,32 @@
+{
+  "project": "Math",
+  "bug_id": 84,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-84-gemini-1790393205",
+  "suite_sha256": "5f38e71d745bd0deebbf02c4bd9865c12cd1a0c98c0d849cd3336ee0e979b82b",
+  "test_files": "MultiDirectionalGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.direct.MultiDirectional",
+  "timestamp": "2026-09-26 10:27:09",
+  "evaluation_duration_sec": 24.213,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 7,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testCustomSimplexConfiguration",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMinimizeMaximize",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testHighDimensionalSphere",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testRosenbrockValley",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMath283",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testOneDimensionalOptimization"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMaxEvaluationsExceeded",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMinimizeMaximize",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testRosenbrockValley",
+    "org.apache.commons.math.optimization.direct.MultiDirectionalGeminiTest::testMath283"
+  ]
+}

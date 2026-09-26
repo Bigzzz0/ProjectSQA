@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 25,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-25-mio-1790389091",
+  "suite_sha256": "e6aa1cad9b16115d350aaaa1d0585510c3c8f301604b12c8d404c795090e926f",
+  "test_files": "HarmonicFitter_ESTest.java",
+  "target_classes": "org.apache.commons.math3.optimization.fitting.HarmonicFitter",
+  "timestamp": "2026-09-26 09:18:38",
+  "evaluation_duration_sec": 26.739,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.94,
+  "branch_coverage_percent": 96.43,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

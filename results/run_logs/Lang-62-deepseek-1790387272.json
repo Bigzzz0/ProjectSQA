@@ -1,0 +1,23 @@
+{
+  "project": "Lang",
+  "bug_id": 62,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-62-deepseek-1790387272",
+  "suite_sha256": "595969518e34b8155476efbd2899303e43532c7f1d18540f77ad637dffb3d049",
+  "test_files": "EntitiesDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang.Entities",
+  "timestamp": "2026-09-26 08:48:12",
+  "evaluation_duration_sec": 19.959,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 98.76,
+  "branch_coverage_percent": 98.89,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowString",
+    "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowWriter",
+    "org.apache.commons.lang.EntitiesDeepseekTest::testNumberOverflowHexString"
+  ],
+  "fixed_failures": []
+}

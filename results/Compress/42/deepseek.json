@@ -23,5 +23,11 @@
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetExtraBytes",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testConstructorZipArchiveEntry",
     "org.apache.commons.compress.archivers.zip.ZipArchiveEntryDeepseekTest::testSetCentralDirectoryExtra"
-  ]
+  ],
+  "suite_sha256": "919a72ca1c14f346140ad37c95837a49ca55a3f27677cb6654142656c4a441c0",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_42b/UnixStatDeepseekTest.java",
+    "/workspace/Deepseek-v4_flash/TestCode/Compress_42b/ZipArchiveEntryDeepseekTest.java"
+  ],
+  "run_id": "Compress-42-deepseek-1790369828"
 }

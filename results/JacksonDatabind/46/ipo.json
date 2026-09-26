@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 10,
+  "line_cov": 53.85,
+  "branch_cov": 22.73,
+  "test_file": "ReferenceType_IPOTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.type.ReferenceType",
+  "buggy_failures": [
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_058",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_059",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_060",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_061",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_062",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_063",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_064",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_065",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_066",
+    "com.fasterxml.jackson.databind.type.ReferenceType_IPOTest::test_getGenericSignature_pairwise_067"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "4cb8a51f26ce03396acdc1647b906fcf64596b5dea310a01e37542f1f45ee836",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/JacksonDatabind_46b/com/fasterxml/jackson/databind/type/ReferenceType_IPOTest.java"
+  ],
+  "run_id": "JacksonDatabind-46-ipo-1790374915"
+}

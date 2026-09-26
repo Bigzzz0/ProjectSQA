@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 22,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Chart-22-ipo-1790352250",
+  "suite_sha256": "",
+  "test_files": "",
+  "target_classes": "org.jfree.data.KeyedObjects2D",
+  "timestamp": "2026-09-25 23:04:10",
+  "evaluation_duration_sec": 3.677,
+  "execution_status": "NO_SUITE",
+  "fault_detection_status": "NO_SUITE",
+  "line_coverage_percent": "",
+  "branch_coverage_percent": "",
+  "failures_count": 0,
+  "error_detail": "No matching test suite was available"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 6,
+  "line_cov": 83.33,
+  "branch_cov": 60.0,
+  "test_file": "FDistributionImpl_IPOTest.java",
+  "target_classes": "org.apache.commons.math.distribution.FDistributionImpl",
+  "buggy_failures": [
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_086",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_088",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_096",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_098",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_110",
+    "org.apache.commons.math.distribution.FDistributionImpl_IPOTest::test_getInitialDomain_pairwise_112"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "306dea52aebe519206002b0119c1660389dc3f9a84c0ce6bff6c9d30f6559df1",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_95b/org/apache/commons/math/distribution/FDistributionImpl_IPOTest.java"
+  ],
+  "run_id": "Math-95-ipo-1790393941"
+}

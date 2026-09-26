@@ -1,0 +1,25 @@
+{
+  "project": "Lang",
+  "bug_id": 63,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Lang-63-ipo-1790387298",
+  "suite_sha256": "06bb2f4463e03aafdc3f2ab5a6b2bb57bb52665c5699942f78b7e5fea6917fb8",
+  "test_files": "DurationFormatUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.lang.time.DurationFormatUtils",
+  "timestamp": "2026-09-26 08:48:40",
+  "evaluation_duration_sec": 21.673,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 86.11,
+  "branch_coverage_percent": 79.26,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriod_pairwise_182",
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriod_pairwise_251",
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriodISO_pairwise_142"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang.time.DurationFormatUtils_IPOTest::test_formatPeriod_pairwise_182"
+  ]
+}

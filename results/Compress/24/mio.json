@@ -1,0 +1,18 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 87.22,
+  "branch_cov": 81.36,
+  "test_file": "TarUtils_ESTest.java",
+  "target_classes": "org.apache.commons.compress.archivers.tar.TarUtils",
+  "buggy_failures": [],
+  "fixed_failures": [
+    "org.apache.commons.compress.archivers.tar.TarUtils_ESTest::test23"
+  ],
+  "suite_sha256": "02eb574660d002799d1eeec156dd94ad24186da89ccb8566daf6020219bb2a47",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Compress_24b/TarUtils_ESTest.java"
+  ],
+  "run_id": "Compress-24-mio-1790368706"
+}

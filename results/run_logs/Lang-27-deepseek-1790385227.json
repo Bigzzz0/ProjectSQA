@@ -1,0 +1,37 @@
+{
+  "project": "Lang",
+  "bug_id": 27,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Lang-27-deepseek-1790385227",
+  "suite_sha256": "5f37a311ac31172ab7a3b7e3bde8657cff5d7d4b13d2a07779d569994c06ca44",
+  "test_files": "NumberUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.lang3.math.NumberUtils",
+  "timestamp": "2026-09-26 08:14:07",
+  "evaluation_duration_sec": 20.397,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 81.82,
+  "branch_coverage_percent": 71.02,
+  "failures_count": 8,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberBigDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberSingleTypeQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberNegativeZero",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberZero",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberTrailingDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientificNotation",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberBigDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberSingleTypeQualifier",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberNegativeZero",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberZero",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberTrailingDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingDecimal",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberScientificNotation",
+    "org.apache.commons.lang3.math.NumberUtilsDeepseekTest::testCreateNumberLeadingZeros"
+  ]
+}

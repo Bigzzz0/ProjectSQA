@@ -1,0 +1,24 @@
+{
+  "project": "Csv",
+  "bug_id": 12,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Csv-12-gemini-1790370518",
+  "suite_sha256": "a0f64acc6d16c6af32d16d8a6bd9ccd572e2e658faece425ba919a0c6095b8ef",
+  "test_files": "CSVFormatGeminiTest.java",
+  "target_classes": "org.apache.commons.csv.CSVFormat",
+  "timestamp": "2026-09-26 04:08:54",
+  "evaluation_duration_sec": 15.32,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 96.74,
+  "branch_coverage_percent": 97.14,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVFormatGeminiTest::testFormatAndParseAndPrintOperations",
+    "org.apache.commons.csv.CSVFormatGeminiTest::testExcelFormatAllowMissingColumnNamesDefect"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVFormatGeminiTest::testFormatAndParseAndPrintOperations"
+  ]
+}

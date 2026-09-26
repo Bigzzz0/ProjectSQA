@@ -1,0 +1,17 @@
+{
+  "project": "Cli",
+  "bug_id": 16,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Cli-16-deepseek-1790353081",
+  "suite_sha256": "febe304ae28c1d04d106a0e695583a00f1d393a95d51ecca95a85f9a3bb78fc1",
+  "test_files": "GroupImplDeepseekTest.java;OptionDeepseekTest.java;OptionImplDeepseekTest.java;WriteableCommandLineImplDeepseekTest.java",
+  "target_classes": "org.apache.commons.cli2.Option;org.apache.commons.cli2.commandline.WriteableCommandLineImpl;org.apache.commons.cli2.option.GroupImpl;org.apache.commons.cli2.option.OptionImpl",
+  "timestamp": "2026-09-25 23:18:05",
+  "evaluation_duration_sec": 3.474,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "c]                                    ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] Note: Some input files use unchecked or unsafe operations.\n    [javac] Note: Recompile with -Xlint:unchecked for details.\n    [javac] 6 warnings\n     [copy] Copying 1 file to /tmp/d4j_eval/Cli_16b/target/classes/org/apache/commons/cli2\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Cli_16b/target/classes\n     [echo] build.home: /tmp/d4j_eval/Cli_16b/target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Cli_16b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 4 source files to /tmp/d4j_eval/Cli_16b/.classes_testgen\n    [javac] /tmp/d4j_eval/Cli_16b/.test_suite/org/apache/commons/cli2/OptionDeepseekTest.java:1788: error: reached end of file while parsing\n    [javac]             public void setProperty(String property, String value, String delimiter, boolean append, boolean replace, boolean inherit, boolean replaceAll, boolean replaceAllValues, boolean inheritDefault, boolean replaceAllProperties, boolean replaceAllPropertyValues, boolean replaceAllPropertyNames, boolean\n    [javac]                                                                                                                                                                                                                                                                                                                      ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 1 second\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

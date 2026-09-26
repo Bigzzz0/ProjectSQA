@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 55.0,
+  "branch_cov": 50.0,
+  "test_file": "DateTimeSerializerBase_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.std.DateTimeSerializerBase",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f9815bc3a0be80719e16d750acb51556e2ccdb59c139b9f9b5028e6c933c929a",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_45b/DateTimeSerializerBase_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-45-mio-1790374869"
+}

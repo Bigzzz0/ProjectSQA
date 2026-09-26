@@ -15,5 +15,10 @@
     "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testIsPotentialBeanTypeProxy",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testCheckIllegalTypesRejectsDangerousClass",
     "com.fasterxml.jackson.databind.deser.BeanDeserializerFactoryDeepseekTest::testStaticInstanceIsShared"
-  ]
+  ],
+  "suite_sha256": "d167e13481fbad38908c87a5ed3cde1e9f6d077b5147571d1019522748b74033",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/JacksonDatabind_92b/BeanDeserializerFactoryDeepseekTest.java"
+  ],
+  "run_id": "JacksonDatabind-92-deepseek-1790377435"
 }

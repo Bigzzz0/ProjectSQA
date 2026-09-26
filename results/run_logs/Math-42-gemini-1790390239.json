@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 42,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-42-gemini-1790390239",
+  "suite_sha256": "b317eb06c70737106d92623f21d3c67b2c06ee116c3fa75b037d0a47c39814c4",
+  "test_files": "SimplexTableauGeminiTest.java",
+  "target_classes": "org.apache.commons.math.optimization.linear.SimplexTableau",
+  "timestamp": "2026-09-26 09:37:44",
+  "evaluation_duration_sec": 25.781,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.36,
+  "branch_coverage_percent": 93.33,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

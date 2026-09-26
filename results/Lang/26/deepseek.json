@@ -33,5 +33,10 @@
     "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testNegativeYear",
     "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testYearFourDigits",
     "org.apache.commons.lang3.time.FastDateFormatDeepseekTest::testWeekInYear"
-  ]
+  ],
+  "suite_sha256": "7af22f5a4c2e508fe2902a2edb7a24eb7f6dc50df74c80469486a5e3e13a57f5",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_26b/FastDateFormatDeepseekTest.java"
+  ],
+  "run_id": "Lang-26-deepseek-1790385139"
 }

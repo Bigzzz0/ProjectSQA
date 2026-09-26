@@ -45,5 +45,10 @@
     "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInitialStateDoctype",
     "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testBeforeHtmlAnythingElse",
     "org.jsoup.parser.HtmlTreeBuilderStateDeepseekTest::testInTableStartTagTable"
-  ]
+  ],
+  "suite_sha256": "f547aa3d1a0e3eeb771ce9451249054b8b06533235175bd7f78d199d1c5c4939",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_64b/HtmlTreeBuilderStateDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-64-deepseek-1790381658"
 }

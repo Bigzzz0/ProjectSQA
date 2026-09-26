@@ -1,0 +1,17 @@
+{
+  "project": "Collections",
+  "bug_id": 23,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Collections-23-mio-1790367301",
+  "suite_sha256": "38a11885e94fdeaf3f2abe4b40397e2ba093956012082f305ef1a8982939f2ec",
+  "test_files": "UnmodifiableTrie_ESTest.java",
+  "target_classes": "org.apache.commons.collections4.trie.UnmodifiableTrie",
+  "timestamp": "2026-09-26 03:15:01",
+  "evaluation_duration_sec": 16.461,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 94.12,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 0,
+  "error_detail": "ting empty /tmp/d4j_eval/Collections_23f/target/classes/org/apache/commons/collections4/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Collections_23f/target/classes/org/apache/commons/collections4/queue/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Collections_23f/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 2 source files to /tmp/d4j_eval/Collections_23f/.classes_testgen\n    [javac] /tmp/d4j_eval/Collections_23f/.test_suite/org/apache/commons/collections4/trie/UnmodifiableTrie_ESTest.java:63: error: incompatible types: no instance(s) of type variable(s) K,V exist so that Trie<K,V> conforms to UnmodifiableTrie<String,String>\n    [javac]       UnmodifiableTrie<String, String> unmodifiableTrie0 = UnmodifiableTrie.unmodifiableTrie((Trie<String, ? extends String>) patriciaTrie0);\n    [javac]                                                                                             ^\n    [javac]   where K,V are type-variables:\n    [javac]     K extends Object declared in method <K,V>unmodifiableTrie(Trie<K,? extends V>)\n    [javac]     V extends Object declared in method <K,V>unmodifiableTrie(Trie<K,? extends V>)\n    [javac] Note: /tmp/d4j_eval/Collections_23f/.test_suite/org/apache/commons/collections4/trie/UnmodifiableTrie_ESTest.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-test line 126.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

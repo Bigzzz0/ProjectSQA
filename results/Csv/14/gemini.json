@@ -15,5 +15,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.csv.CSVFormatGeminiTest::testPrintQuoteModeNoneWithEscape"
-  ]
+  ],
+  "suite_sha256": "b3e1f016a5aa400c721cd2acac305fc660f335155448f16b73e0f05f3c28e823",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Csv_14b/CSVFormatGeminiTest.java"
+  ],
+  "run_id": "Csv-14-gemini-1790370645"
 }

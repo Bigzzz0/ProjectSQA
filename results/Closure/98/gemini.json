@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.ReferenceCollectingCallbackGeminiTest::testEmptyReferenceCollection"
-  ]
+  ],
+  "suite_sha256": "e95a3c73af937e945af110b37bd941d811a3f0f9bb1a1363631f180eb57ccb83",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_98b/ReferenceCollectingCallbackGeminiTest.java"
+  ],
+  "run_id": "Closure-98-gemini-1790360570"
 }

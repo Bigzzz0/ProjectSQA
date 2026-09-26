@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testSyntheticAstTransitionsAndAssignLhsChildReset"
-  ]
+  ],
+  "suite_sha256": "1e4b7b5ec7ca802b0a301a96f21582a9187339ba51f4848bb554443118e596bf",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_91b/CheckGlobalThisGeminiTest.java"
+  ],
+  "run_id": "Closure-91-gemini-1790360242"
 }

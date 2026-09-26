@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.collections.set.ListOrderedSetGeminiTest::testFactoryDecorateListWithDuplicates"
-  ]
+  ],
+  "suite_sha256": "795cfba1d43486f7c91e68b51efbde4dbd3a06015c33ed65ae0df5c3f696d916",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Collections_18b/ListOrderedSetGeminiTest.java"
+  ],
+  "run_id": "Collections-18-gemini-1790367083"
 }

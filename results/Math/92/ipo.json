@@ -1,0 +1,27 @@
+{
+  "status": "DONE",
+  "fault_detected": "BUG_DETECTED",
+  "failures_count": 10,
+  "line_cov": 68.4,
+  "branch_cov": 60.99,
+  "test_file": "MathUtils_IPOTest.java",
+  "target_classes": "org.apache.commons.math.util.MathUtils",
+  "buggy_failures": [
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficientDouble_pairwise_087",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficientDouble_pairwise_089",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficientDouble_pairwise_096",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficientDouble_pairwise_097",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficientDouble_pairwise_099",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficient_pairwise_062",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficient_pairwise_064",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficient_pairwise_071",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficient_pairwise_072",
+    "org.apache.commons.math.util.MathUtils_IPOTest::test_binomialCoefficient_pairwise_074"
+  ],
+  "fixed_failures": [],
+  "suite_sha256": "d6a5fa3b0465b321bc1965c3ebec22e0ba3f14fa76d857ccb1ec650c515a0ae7",
+  "test_paths": [
+    "/workspace/Combinatorial_IPO/TestCode/Math_92b/org/apache/commons/math/util/MathUtils_IPOTest.java"
+  ],
+  "run_id": "Math-92-ipo-1790393631"
+}

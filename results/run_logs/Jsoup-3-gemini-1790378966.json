@@ -1,0 +1,43 @@
+{
+  "project": "Jsoup",
+  "bug_id": 3,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-3-gemini-1790378966",
+  "suite_sha256": "b9f42c17330bb050c0f52fbddccfeee6947201bd6c103df02af0b59abd47043d",
+  "test_files": "ElementGeminiTest.java;ParserGeminiTest.java;TagGeminiTest.java",
+  "target_classes": "org.jsoup.nodes.Element;org.jsoup.parser.Parser;org.jsoup.parser.Tag",
+  "timestamp": "2026-09-26 06:29:41",
+  "evaluation_duration_sec": 15.207,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 93.42,
+  "branch_coverage_percent": 88.44,
+  "failures_count": 11,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testEqualsAndHashCodeContract",
+    "org.jsoup.nodes.ElementGeminiTest::testPrependRowToTableDefect",
+    "org.jsoup.nodes.ElementGeminiTest::testAppendRowToTableDefect",
+    "org.jsoup.nodes.ElementGeminiTest::testDomQueryMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testOuterHtmlVoidElements",
+    "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesNestedImplicitTableDefect",
+    "org.jsoup.parser.ParserGeminiTest::testUnclosedAndMismatchedEndTags",
+    "org.jsoup.parser.ParserGeminiTest::testNestedTableImplicitRowDirect",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeWithCorruptChar",
+    "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot"
+  ],
+  "fixed_failures": [
+    "org.jsoup.nodes.ElementGeminiTest::testEqualsAndHashCodeContract",
+    "org.jsoup.nodes.ElementGeminiTest::testDomQueryMethods",
+    "org.jsoup.nodes.ElementGeminiTest::testOuterHtmlVoidElements",
+    "org.jsoup.nodes.ElementGeminiTest::testClassManipulation",
+    "org.jsoup.parser.ParserGeminiTest::testHandlesNestedImplicitTableDefect",
+    "org.jsoup.parser.ParserGeminiTest::testUnclosedAndMismatchedEndTags",
+    "org.jsoup.parser.ParserGeminiTest::testNestedTableImplicitRowDirect",
+    "org.jsoup.parser.ParserGeminiTest::testAttributeWithCorruptChar",
+    "org.jsoup.parser.TagGeminiTest::testTableRowAncestrySupportsTbodyTheadTfoot",
+    "org.jsoup.parser.TagGeminiTest::testMultiAncestorResolution",
+    "org.jsoup.parser.TagGeminiTest::testHtmlTagIsValidParentForAny"
+  ]
+}

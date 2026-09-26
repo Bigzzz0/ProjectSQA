@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testCreateFrom_ListConversion_WrapsAllInvocations",
     "org.mockito.internal.invocation.InvocationMatcherGeminiTest::testToString_AndPrintSettingsFormatting_ReturnsValidRepresentation"
-  ]
+  ],
+  "suite_sha256": "6465649574172bc620cc2ab2a3d0e7013aa8e518853a4d3a661aeaee08d44eae",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Mockito_33b/InvocationMatcherGeminiTest.java"
+  ],
+  "run_id": "Mockito-33-gemini-1790397983"
 }

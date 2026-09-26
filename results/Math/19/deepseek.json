@@ -3,7 +3,7 @@
   "fault_detected": "FLAKY_OR_REGRESSION",
   "failures_count": 2,
   "line_cov": 93.21,
-  "branch_cov": 83.82,
+  "branch_cov": 84.19,
   "test_file": "CMAESOptimizerDeepseekTest.java",
   "target_classes": "org.apache.commons.math3.optimization.direct.CMAESOptimizer",
   "buggy_failures": [
@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.math3.optimization.direct.CMAESOptimizerDeepseekTest::testNullStartPoint"
-  ]
+  ],
+  "suite_sha256": "3637a43c55ca19a474fbb4a072f019e53fbe8ba8a26fa16a508e1f2822fd6880",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_19b/CMAESOptimizerDeepseekTest.java"
+  ],
+  "run_id": "Math-19-deepseek-1790388700"
 }

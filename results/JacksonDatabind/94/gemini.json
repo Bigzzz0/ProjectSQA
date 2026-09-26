@@ -31,5 +31,10 @@
     "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringDirectMatchAbstractPointcutAdvisor",
     "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedJdbcRowSetImpl",
     "com.fasterxml.jackson.databind.jsontype.impl.SubTypeValidatorGeminiTest::testBlockedSpringDirectMatchAbstractApplicationContext"
-  ]
+  ],
+  "suite_sha256": "470419f6b581fc4f2db385d3954b1397ba3a241db50502348fb1a00a531e935f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonDatabind_94b/SubTypeValidatorGeminiTest.java"
+  ],
+  "run_id": "JacksonDatabind-94-gemini-1790377569"
 }

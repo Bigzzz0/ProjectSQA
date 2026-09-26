@@ -1,0 +1,19 @@
+{
+  "project": "Compress",
+  "bug_id": 30,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Compress-30-mio-1790369097",
+  "suite_sha256": "399b56aa545ec5f8cb03e01e15b7cada32c5a14ae4c84b7c6cb5b1e7e0bf064e",
+  "test_files": "BZip2CompressorInputStream_ESTest.java",
+  "target_classes": "org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream",
+  "timestamp": "2026-09-26 03:45:17",
+  "evaluation_duration_sec": 20.54,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 4.49,
+  "branch_coverage_percent": 4.53,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

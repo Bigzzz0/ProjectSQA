@@ -23,5 +23,10 @@
     "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallParRelativeTolerance",
     "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallCostRelativeTolerance",
     "org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerDeepseekTest::testTooSmallOrthoTolerance"
-  ]
+  ],
+  "suite_sha256": "5b6fb11b515eb818734f499eca3db9f8b0eb742831f52b69418b5b8156ba06f0",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Math_64b/LevenbergMarquardtOptimizerDeepseekTest.java"
+  ],
+  "run_id": "Math-64-deepseek-1790391836"
 }

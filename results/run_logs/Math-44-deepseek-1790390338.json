@@ -1,0 +1,17 @@
+{
+  "project": "Math",
+  "bug_id": 44,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-44-deepseek-1790390338",
+  "suite_sha256": "c813ff2ba85913a5c89d4a748ace94399c5585b6ea7d4e3495fd1eec9a61ac1c",
+  "test_files": "AbstractIntegratorDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.ode.AbstractIntegrator",
+  "timestamp": "2026-09-26 09:39:05",
+  "evaluation_duration_sec": 7.85,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/stat/descriptive/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/ode/events/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/optimization/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/stat/correlation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/analysis/interpolation/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/stat/ranking/package-info.class\n    [javac] Creating empty /tmp/d4j_eval/Math_44b/target/classes/org/apache/commons/math/geometry/euclidean/twod/package-info.class\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target\n    [mkdir] Created dir: /tmp/d4j_eval/Math_44b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Math_44b/.classes_testgen\n    [javac] /tmp/d4j_eval/Math_44b/.test_suite/org/apache/commons/math/ode/AbstractIntegratorDeepseekTest.java:55: error: TimeCrossingHandler is not abstract and does not override abstract method eventOccurred(double,double[],boolean) in EventHandler\n    [javac]     private static class TimeCrossingHandler implements EventHandler {\n    [javac]                    ^\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

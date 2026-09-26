@@ -1,0 +1,17 @@
+{
+  "project": "Closure",
+  "bug_id": 45,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-45-gemini-1790357343",
+  "suite_sha256": "617ef8d893def88d8596cd60a2b21bd1a60310d70339a78fb7fd267a6a59da43",
+  "test_files": "RemoveUnusedVarsGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+  "timestamp": "2026-09-26 00:29:13",
+  "evaluation_duration_sec": 9.951,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "le/javascript/jscomp/parsing\n[propertyfile] Updating property file: /tmp/d4j_eval/Closure_45b/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_45b/build/classes/com/google/javascript/jscomp/js\n     [copy] Copying 1 file to /tmp/d4j_eval/Closure_45b/build/classes/com/google/javascript/jscomp/js\n\ncompile.gen.tests:\n     [echo] classes.dir: /tmp/d4j_eval/Closure_45b/build/classes\n     [echo] build.home: /tmp/d4j_eval/Closure_45b/build\n    [mkdir] Created dir: /tmp/d4j_eval/Closure_45b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Closure_45b/.classes_testgen\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] /tmp/d4j_eval/Closure_45b/.test_suite/com/google/javascript/jscomp/RemoveUnusedVarsGeminiTest.java:357: error: isExported(String) in <anonymous com.google.javascript.jscomp.RemoveUnusedVarsGeminiTest$1> cannot override isExported(String) in Proxy\n    [javac]       public boolean isExported(String name) {\n    [javac]                      ^\n    [javac]   overridden method is final\n    [javac] 1 error\n    [javac] 4 warnings\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 6 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

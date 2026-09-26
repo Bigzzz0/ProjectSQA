@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 66.67,
+  "branch_cov": 46.15,
+  "test_file": "BeanPropertyWriter_ESTest.java",
+  "target_classes": "com.fasterxml.jackson.databind.ser.BeanPropertyWriter",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "72d0d7ee0a51ddca4b2e23a5295b56e7988fe40e47e9638b33da8a6c417b3b36",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JacksonDatabind_1b/BeanPropertyWriter_ESTest.java"
+  ],
+  "run_id": "JacksonDatabind-1-mio-1790372349"
+}

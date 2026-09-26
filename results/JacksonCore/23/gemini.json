@@ -12,5 +12,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.core.util.DefaultPrettyPrinterGeminiTest::testObjectFormattingLifecycleInlineIndenter"
-  ]
+  ],
+  "suite_sha256": "a75e9a704246ffea0b0cd74a45af8ef68cf6d035a8cec93dd63ec973be621aff",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_23b/DefaultPrettyPrinterGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-23-gemini-1790372228"
 }

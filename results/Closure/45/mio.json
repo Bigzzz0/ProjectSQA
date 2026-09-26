@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 17.71,
+  "branch_cov": 7.83,
+  "test_file": "RemoveUnusedVars_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.RemoveUnusedVars",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "f081d07b5ad2339c4b476da1df589438af55a7551705009ad9d275941428b801",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_45b/RemoveUnusedVars_ESTest.java"
+  ],
+  "run_id": "Closure-45-mio-1790357294"
+}

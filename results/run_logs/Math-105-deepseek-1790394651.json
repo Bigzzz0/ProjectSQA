@@ -1,0 +1,28 @@
+{
+  "project": "Math",
+  "bug_id": 105,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Math-105-deepseek-1790394651",
+  "suite_sha256": "d4b70dd37de28ce9b4464c5495331b3b96910c6f5dc45c8e33688f844aef3302",
+  "test_files": "SimpleRegressionDeepseekTest.java",
+  "target_classes": "org.apache.commons.math.stat.regression.SimpleRegression",
+  "timestamp": "2026-09-26 10:51:13",
+  "evaluation_duration_sec": 21.671,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.77,
+  "branch_coverage_percent": 94.44,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSlopeConfidenceIntervalInsufficientData",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSlopeWithTinySumXX",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSSENonNegativeWithExactBugData",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSignificanceInsufficientData"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSlopeConfidenceIntervalInsufficientData",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testSlopeWithTinySumXX",
+    "org.apache.commons.math.stat.regression.SimpleRegressionDeepseekTest::testGetSignificanceInsufficientData"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "project": "Closure",
+  "bug_id": 99,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Closure-99-gemini-1790360631",
+  "suite_sha256": "ddf7bfd403decaabe69477e68352904db837f547fe4b720237486c77771c98dc",
+  "test_files": "CheckGlobalThisGeminiTest.java",
+  "target_classes": "com.google.javascript.jscomp.CheckGlobalThis",
+  "timestamp": "2026-09-26 01:24:14",
+  "evaluation_duration_sec": 23.238,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 93.1,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testPropertyOfMethod",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testMethod4",
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testInterface1"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.CheckGlobalThisGeminiTest::testDirectCallbackVisitWithNonThisNode"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 4,
+  "line_cov": 47.61,
+  "branch_cov": 38.5,
+  "test_file": "Lang_ESTest.java;PhoneticEngine_ESTest.java;Rule_ESTest.java",
+  "target_classes": "org.apache.commons.codec.language.bm.Lang;org.apache.commons.codec.language.bm.PhoneticEngine;org.apache.commons.codec.language.bm.Rule;src.main.resources.org.apache.commons.codec.language.bm.ash_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.gen_lang.txt;src.main.resources.org.apache.commons.codec.language.bm.sep_lang.txt",
+  "buggy_failures": [
+    "org.apache.commons.codec.language.bm.Lang_ESTest::test0",
+    "org.apache.commons.codec.language.bm.PhoneticEngine_ESTest::test2",
+    "org.apache.commons.codec.language.bm.PhoneticEngine_ESTest::test0",
+    "org.apache.commons.codec.language.bm.Rule_ESTest::test0"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.codec.language.bm.Lang_ESTest::test0",
+    "org.apache.commons.codec.language.bm.PhoneticEngine_ESTest::test2",
+    "org.apache.commons.codec.language.bm.PhoneticEngine_ESTest::test0",
+    "org.apache.commons.codec.language.bm.Rule_ESTest::test0"
+  ],
+  "suite_sha256": "a5a055dedefcbc22e9a7802f572997380b6abccbf0dd9dc0cee85262ef5ee61b",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Codec_14b/Lang_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Codec_14b/PhoneticEngine_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Codec_14b/Rule_ESTest.java"
+  ],
+  "run_id": "Codec-14-mio-1790365914"
+}

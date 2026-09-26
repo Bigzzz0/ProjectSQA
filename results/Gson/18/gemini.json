@@ -10,5 +10,10 @@
     "com.google.gson.internal.$Gson$TypesGeminiTest::testIssue1107_WildcardSupertypeResolutionDirect",
     "com.google.gson.internal.$Gson$TypesGeminiTest::testIssue1107_WildcardCollectionElementTypeResolution"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "5b611004458a49ee6338831ef043626b4acb9e453c1e38fdb16cde8f6ef0d172",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Gson_18b/$Gson$TypesGeminiTest.java"
+  ],
+  "run_id": "Gson-18-gemini-1790371353"
 }

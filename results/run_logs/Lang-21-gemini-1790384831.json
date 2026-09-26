@@ -1,0 +1,21 @@
+{
+  "project": "Lang",
+  "bug_id": 21,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-21-gemini-1790384831",
+  "suite_sha256": "731c57f1a167f939725f6f569dbeb235c90ea13a8a1f104cb3a5c577e1cf3446",
+  "test_files": "DateUtilsGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.time.DateUtils",
+  "timestamp": "2026-09-26 08:07:32",
+  "evaluation_duration_sec": 20.501,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 94.04,
+  "branch_coverage_percent": 83.49,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.time.DateUtilsGeminiTest::testLANG677_isSameLocalTimeDifferentAmPm"
+  ],
+  "fixed_failures": []
+}

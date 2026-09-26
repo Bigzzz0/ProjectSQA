@@ -4,12 +4,14 @@
 **อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก  
 **ทีมผู้จัดทำ:** กลุ่มที่ 4 (ปวริศช์, แทนคุณ, ธนภูมิ, ศิฆรินทร์)  
 
+> **ผลการประเมินครบแล้ว (26 กันยายน 2026)** — master มีครบ 3,416 แถวสำหรับ 854 บั๊ก × 4 เทคนิค; suite ที่มีอยู่ 2,768 คู่ถูกรันครบ และ 648 คู่ไม่มี suite (`NO_SUITE`). ไม่มีรายการ `NOT_RUN` ค้าง (`results_complete: true`, `available_suite_evaluations_complete: true`).
+
 ---
 
 <!-- slide -->
 ### 📌 Slide 1: หน้าปกโครงงาน (Title Slide)
 # การเปรียบเทียบเชิงประจักษ์ระหว่าง AI Testing และ Algorithmic Test Generation บน Defects4J
-### Empirical Benchmark & Test Coverage Evaluation Across 17 Projects (2,804 Evaluations)
+### Empirical Benchmark & Test Coverage Evaluation Across 17 Projects (854 bugs)
 
 * **สมาชิกในกลุ่ม:**
   1. นายปวริศช์ ประมวล (653380138-8) — Member 1: IPO Lead
@@ -43,50 +45,41 @@
 #### ครอบคลุมทุกคลาสเป้าหมายของทุกบั๊กใน Defects4J (All-Bugs & All-Classes)
 * **17 โครงการมาตรฐานระดับโลก:** Chart, Cli, Closure, Codec, Collections, Compress, Csv, Gson, JacksonCore, JacksonDatabind, JacksonXml, Jsoup, JxPath, Lang, Math, Mockito, Time
 * **สถิติสเกลการประเมินผล:**
-  - **854 Active Bugs** ทั้งหมดใน Defects4J v2.0
-  - **1,073 Target Class Instances** (577 Unique Modified Classes)
-  - **2,804 การประเมินทั้งหมด (Evaluations Dataset)**
+  - **854 Active Bugs** ใน Defects4J v2.0 ครอบคลุม 17 โปรเจกต์
+  - **3,416 แถว** ใน master matrix (854 bugs × 4 techniques)
+  - **2,768 suite evaluations เสร็จ**, **648 `NO_SUITE`**, และ **0 `NOT_RUN`**
 * **ขอบเขตการวัดผล:** วัด Target-Class Coverage ด้วย Cobertura เจาะจงเฉพาะ `classes.modified` เพื่อความเป็นธรรมของ Defect-Targeted Testing
 
 ---
 
 <!-- slide -->
 ### 📌 Slide 4: เทคนิคที่ 1 — Combinatorial Testing & IPO (Member 1)
-#### In-Parameter-Order (IPO/IPOG) Engine ร่วมกับ Microsoft PICT
-* **หลักการ:** ข้อบกพร่อง 70–90% เกิดจากการปฏิสัมพันธ์ของพารามิเตอร์เพียง 1 หรือ 2 ตัว (Pairwise Interactions)
-* **กลยุทธ์การขยาย:** Horizontal Growth (จับคู่ลงแถวเดิม) + Vertical Growth (เติมแถวใหม่เก็บตก)
-* **ผลลัพธ์เชิงประจักษ์:**
-  - รันการประเมิน 173 ชุดทดสอบ สังเคราะห์ **42,398 กรณีทดสอบ**
-  - ตัวอย่าง Math-2 (`HypergeometricDistribution`): ลดจาก 1,000 การทดสอบ เหลือเพียง **36 กรณีทดสอบ (ลดขนาดลง 96.4%)**
-  - **เวลาประมวลผลเร็วที่สุดในทุกเทคนิค:** เฉลี่ยเพียง **2.5 วินาทีต่อคลาส**
+#### In-Parameter-Order (IPO/IPOG) และแหล่ง suite ปัจจุบัน
+- IPO Native สร้าง pairwise combinations จาก factor/value model ของคลาสเป้าหมาย
+- ผลที่ใช้ประเมินต้องอยู่ใน verified_suites_manifest.json และ hash ต้องตรง
+- manifest ปัจจุบันมี 277 class-level suite records ครอบคลุม 257 bug-technique slots
+- ประเมินครบ 257 suite slots; 252 ได้ผลวัด coverage, ตรวจพบ 37 บั๊ก (FDR 14.40%)
+- ค่าเฉลี่ย line/branch coverage จากผลที่วัดได้: 26.76%/18.67% (n=252)
 
 ---
 
 <!-- slide -->
 ### 📌 Slide 5: เทคนิคที่ 2 — Search-Based Testing & MIO (Member 2)
 #### Many-Independent-Objective (MIO) Algorithm ใน EvoSuite
-* **ข้อจำกัดของ NSGA-II/MOSA:** เมื่อเป้าหมาย Coverage มีเป็นร้อยเป็นพัน จะเกิดอาการ Dominance Resistance
-* **นวัตกรรมของ MIO:**
-  - แยกคลังเก็บประชากร (Archive) ตามแต่ละ Objective อิสระ
-  - สุ่มกลายพันธุ์ (Mutation) เจาะจงเป้าหมายที่ยังไม่ครอบคลุม
-* **ผลลัพธ์เชิงประจักษ์:**
-  - รันครบ 1,032 คลาส ในงบประมาณหลัก
-  - บรรลุ **Line Coverage สูงสุดในภาพรวมที่ $68.85 \pm 31.26\%$**
-  - แต่มี **FDR 0.00%** เนื่องจากถูกออกแบบด้วย Regression Oracle Assumption (ยึดโค้ดปัจจุบันเป็นความถูกต้อง)
+- EvoSuite สร้าง regression suites ด้วย search budget ที่กำหนด
+- สถิติ generation แยกจาก coverage และ FDR ใน benchmark กลาง
+- ประเมินครบ 834 suite slots; 797 ได้ผลวัด coverage, ตรวจพบ 5 บั๊ก (FDR 0.60%)
+- ค่าเฉลี่ย line/branch coverage จากผลที่วัดได้: 63.85%/56.51% (n=797)
 
 ---
 
 <!-- slide -->
-### 📌 Slide 6: การวิเคราะห์ MIO Budget Scaling (Member 2)
-#### ผลกระทบของ Search Budget (30s vs 60s vs 120s) รวม 3,028 การทดลอง
-* **30 วินาที:** Line Coverage = **$65.73 \pm 32.55\%$** (เวลารันเฉลี่ย 44.2s)
-* **60 วินาที:** Line Coverage = **$68.73 \pm 31.42\%$** (เพิ่มขึ้น **$+3.00\%$**, $p < 0.05$)
-* **120 วินาที:** Line Coverage = **$70.82 \pm 30.28\%$** (เพิ่มขึ้นเพียง **$+2.09\%$**, $p < 0.05$)
-
-> **📉 Search Saturation Finding:**  
-> การขยายเวลาเพิ่มอีก 60 วินาที (จาก 60s เป็น 120s) ให้ผลตอบแทนชะลอตัวลงอย่างมีนัยสำคัญ **60 วินาทีจึงเป็นจุดคุ้มทุนเชิงวิศวกรรมที่ดีที่สุด (Optimal Trade-off)**
-
-*(อ้างอิง Figure 5: MIO Budget Scaling Plot)*
+### 📌 Slide 6: MIO Search Budget
+#### แหล่งข้อมูล generation budget แยกจาก benchmark evaluation
+- ใช้ MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv เป็น source ของสถิติ budget, seed และเวลา generation
+- สร้างตารางทดสอบและกราฟใหม่ด้วย advanced_data_analytics.py
+- ผล budget นี้อธิบายการสร้าง suite ไม่ใช่จำนวนบั๊กที่ตรวจพบหรือ coverage จากการประเมินกลาง
+- ดูผลที่สร้างล่าสุดใน results/advanced_analytics.json และ results/figure5_budget_scaling.png
 
 ---
 
@@ -131,91 +124,78 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 ---
 
 <!-- slide -->
-### 📌 Slide 10: ตารางสรุปผลการทดลองเปรียบเทียบภาพรวม (Master Results)
-#### สรุปผลจากชุดข้อมูล 2,804 การประเมิน ครบทั้ง 4 เทคนิค
+### 📌 Slide 10: ผลการประเมินปัจจุบัน (Master Results)
+- ใช้ results/master_benchmark_summary.csv เป็นตารางหลัก หนึ่งแถวต่อบั๊กและเทคนิค
 
-| เทคนิคการทดสอบ | $N$ | Line Cov ($\mu \pm \sigma$) | Effective Line Cov | Branch Cov | Bug-Level FDR % | บั๊กที่ตรวจพบ | เวลาเฉลี่ย |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **MIO (EvoSuite)** | 1,032 | **$68.85 \pm 31.26\%$** | $69.66\%$ | **$68.85\%$** | $0.00\%$ | 0 บั๊ก | 90.8s |
-| **Gemini 3.8 Flash** | 527 | $47.08 \pm 47.47\%$ | **$92.58\%$** | $44.25\%$ | **$16.70\%$** | **88 บั๊ก** | 6.0s |
-| **IPO (Native/PICT)** | 173 | $32.57 \pm 1.03\%$ | $32.57\%$ | $23.78\%$ | $5.20\%$ | 9 บั๊ก | **2.5s** |
-| **DeepSeek V4 Flash**| 1,072 | $16.28 \pm 34.98\%$ | $88.12\%$ | $14.86\%$ | $1.12\%$ | 12 บั๊ก | 15.0s |
-| **Ensemble (Hybrid)** | — | — | — | — | **$12.30\%$** | **105 บั๊ก** | — |
+| เทคนิค | Suite ที่ประเมิน | Coverage N | Line / Branch coverage | ตรวจพบ | FDR |
+|---|---:|---:|---:|---:|---:|
+| Native IPO | 257/257 | 252 | 26.76% / 18.67% | 37 | 14.40% |
+| MIO (EvoSuite) | 834/834 | 797 | 63.85% / 56.51% | 5 | 0.60% |
+| DeepSeek V4 Flash | 836/836 | 191 | 77.99% / 70.25% | 11 | 1.32% |
+| Gemini 3.8 Flash | 841/841 | 422 | 86.24% / 79.45% | 107 | 12.72% |
 
----
-
-<!-- slide -->
-### 📌 Slide 11: การทดสอบสมมติฐานทางสถิติ (Hypothesis Testing)
-#### Non-parametric Mann-Whitney U Test & Vargha-Delaney $\hat{A}_{12}$ Effect Size
-* **MIO vs. DeepSeek:** $U = 960,320.5, p = 7.53 \times 10^{-203}$ (**$\hat{A}_{12} = 0.8680$ Large Effect**)
-* **MIO vs. IPO:** $U = 146,458.0, p = 1.15 \times 10^{-41}$ (**$\hat{A}_{12} = 0.8203$ Large Effect**)
-* **Gemini vs. DeepSeek:** $U = 379,910.0, p = 1.71 \times 10^{-44}$ (**$\hat{A}_{12} = 0.6725$ Medium Effect**)
-* **Effective Coverage Insight:** ในกลุ่มที่คอมไพล์ผ่าน Gemini ชนะ MIO อย่างมีนัยสำคัญ ($\hat{A}_{12} = 0.812, p < 0.001$)
+*FDR ใช้ suite evaluations ทั้งหมดของเทคนิคนั้นเป็นตัวหาร รวม compile errors และ flaky/regression; coverage เฉลี่ยใช้เฉพาะผล DONE ที่มีค่าจริง*
 
 ---
 
 <!-- slide -->
-### 📌 Slide 12: การผสานพลังในการตรวจพบบั๊ก (Ensemble Synergy)
-#### การทำงานร่วมกันระหว่างข้ามกระบวนทัศน์ (Cross-Paradigm Hybrid Testing)
-* **จำนวนบั๊กที่ตรวจพบรวม:** **105 บั๊ก (Ensemble FDR = 12.30%)**
-* **สัดส่วนการตรวจพบบั๊กเฉพาะตัว (Unique Detections):**
-  - **Gemini:** 88 บั๊ก (Unique = 80 บั๊ก, 90.9%)
-  - **DeepSeek:** 12 บั๊ก (Unique = 4 บั๊ก, 33.3%)
-  - **IPO:** 9 บั๊ก (**Unique = 7 บั๊ก, 77.8%**)
-* **🚀 Key Takeaway:** IPO สามารถตรวจเจอบั๊กเฉพาะตัวที่ AI มองข้ามได้ถึง **7 บั๊ก** จากพลังของการจับคู่เงื่อนไขขอบเขตตัวเลขลึก!
+### 📌 Slide 11: การทดสอบสมมติฐานทางสถิติ
+- ตารางทดสอบและขนาดผล A12 สร้างจาก coverage ที่วัดได้ใน results/advanced_analytics.json
+- กรณีจำนวนตัวอย่างไม่พอจะแสดง INSUFFICIENT_SAMPLE
+- ผล line coverage ต่างกันอย่างมีนัยสำคัญในคู่ที่ทดสอบทั้งหมด (Mann–Whitney U, p < 0.001)
+- Gemini เทียบกับ IPO: n=422/252, p=9.94×10⁻⁷⁸, A12=0.928; Gemini เทียบ DeepSeek: n=422/191, p=1.61×10⁻⁵, A12=0.608
+- A12 แสดงขนาดและทิศทางของความต่างร่วมกับ p-value; สถิตินี้ไม่ได้แทนความสำคัญเชิงปฏิบัติ
 
 ---
 
 <!-- slide -->
-### 📌 Slide 13: ความคุ้มค่าเชิงเศรษฐศาสตร์ AI (AI Economics)
-#### การเปรียบเทียบระหว่าง Gemini 3.8 Flash vs. DeepSeek V4 Flash
-* **ความเร็วในการประมวลผล:**
-  - Gemini ใช้เวลาเฉลี่ย **76.6 วินาที/คลาส**
-  - DeepSeek ใช้เวลาเฉลี่ย **294.5 วินาที/คลาส** (Gemini เร็วกว่า **3.84 เท่า**)
-* **จำนวน Token เฉลี่ยต่อคลาส:** Gemini 18,890 tokens vs. DeepSeek 19,921 tokens
-* **ต้นทุนโทเค็นต่อ 1 บั๊กที่ตรวจพบจริง (Tokens per Detected Bug):**
-  - **Gemini:** **~113,000 tokens / bug**
-  - **DeepSeek:** **~1,780,000 tokens / bug**
-  - **Gemini คุ้มค่ากว่าถึง 15.75 เท่า!**
+### 📌 Slide 12: ผลตรวจจับบั๊กและ Ensemble
+- ใช้จำนวน detected และ FDR จากผลประเมินที่ provenance ตรงกับ suite ปัจจุบัน
+- นับหนึ่งบั๊กต่อหนึ่งเทคนิค; BUG_DETECTED ต้อง fail บน buggy และ pass บน fixed
+- ผลรวมเทคนิคตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%)
+- ผลตรวจพบเฉพาะเทคนิค: IPO 27, MIO 5, DeepSeek 5, Gemini 91 บั๊ก
+- แหล่งข้อมูล: results/master_descriptive_stats.json และ results/advanced_analytics.json
 
 ---
 
 <!-- slide -->
-### 📌 Slide 14: โครงสร้างบั๊ก Single-Class vs. Multi-Class Resilience
-#### ผลกระทบของความซับซ้อนสถาปัตยกรรมต่อประสิทธิภาพของแต่ละเครื่องมือ
-* **Single-Class Defects:**
-  - MIO ทำได้ 69.12% Coverage
-  - Gemini ทำได้ 49.35% Coverage และ FDR 18.20%
-* **Multi-Class Defects (บั๊กที่แก้ข้ามหลายคลาส):**
-  - **MIO มีความยืดหยุ่นสูงสุด:** Coverage ลดลงเพียง 1.88% (เหลือ 67.24%)
-  - **Gemini และ DeepSeek ประสิทธิภาพตกลงชัดเจน:** Compile Error เพิ่มสูงขึ้นเนื่องจากขาด Context ของคลาสข้างเคียง
-  - **คำแนะนำ:** ระบบ AI จำเป็นต้องมี Inter-Class Context Injection ในโปรเจกต์ขนาดใหญ่
+### 📌 Slide 13: AI Generation Economics
+- แสดงค่าเฉลี่ย token และเวลา generation จากบันทึกจริงใน Deepseek_vs_Gemini_Economics.csv
+- Gemini: 1,068 generation records, เฉลี่ย 20,699.64 tokens และ 88.66 วินาที; benchmark ตรวจพบ 107 บั๊ก
+- DeepSeek: 1,069 generation records, เฉลี่ย 20,900.15 tokens และ 295.11 วินาที; benchmark ตรวจพบ 11 บั๊ก
+- ไม่คำนวณ token ต่อบั๊กที่ตรวจพบ เพราะ generation log ไม่มี run ID สำหรับจับคู่ผล benchmark
+- แหล่งข้อมูลสรุป: results/advanced_analytics.json
 
 ---
 
 <!-- slide -->
-### 📌 Slide 15: ข้อเสนอแนะเชิงวิศวกรรมสำหรับอุตสาหกรรม (Industry Guidelines)
-#### 3 เสาหลักของการประกันคุณภาพซอฟต์แวร์ยุคใหม่ (Modern SQA Blueprint)
-1. **Hybrid SQA Pipeline:**
-   - ใช้ **MIO (EvoSuite)** วางโครง Regression Test ครอบคลุมภาพรวมทั้งระบบ (60s budget)
-   - ใช้ **LLM (Gemini)** สร้าง Semantic Oracle Assertions ตรวจจับ Logic Bugs
-   - เสริมด้วย **IPO (PICT)** บนฟังก์ชันตรรกะคณิตศาสตร์และตัวแปรเงื่อนไขขอบเขต
-2. **Compile-Feedback Auto-fixing Loop:**
-   - ติดตั้งกลไกจับคู่ Compile Error ส่งกลับไปให้ LLM แก้ไขอัตโนมัติก่อนขึ้น CI/CD
-3. **Budget Cap Optimization:**
-   - ล็อก Search Budget ของ SBST ไว้ที่ 60 วินาทีเพื่อความคุ้มค่าสูงสุด
+### 📌 Slide 14: Single-Class และ Multi-Class
+- ใช้การแบ่งกลุ่มจาก target classes ใน all_bugs_catalog.json
+- ค่า coverage ใช้แถว DONE ที่มีค่าการวัดจริงเท่านั้น
+- FDR แสดงจำนวน attempted และตัวหารของแต่ละกลุ่มแยกกัน
+- Gemini single-class: line coverage 87.01% (n=402), FDR 14.83% (106/715); multi-class: 70.61% (n=20), FDR 0.79% (1/126)
+- ผลแยกทุกเทคนิคอยู่ใน `single_vs_multiclass` ภายใน results/advanced_analytics.json
+
+---
+
+<!-- slide -->
+### 📌 Slide 15: ข้อเสนอแนะเชิงวิศวกรรม
+- เลือกแนวทางสร้าง suite จากผล coverage, FDR, compile error และเวลา generation ที่วัดได้
+- ระบุข้อจำกัดของแต่ละเทคนิคและจำนวน suite ที่มีจริง
+- แยก generation budget และ AI token logs ออกจากผล benchmark
+- Gemini ให้ coverage เฉลี่ยสูงสุดและตรวจพบ 107 บั๊ก; Native IPO ให้ FDR สูงสุดที่ 14.40% จาก 257 suites
+- ควรพิจารณาควบคู่กับ compile errors: DeepSeek 645/836 และ Gemini 419/841; ผลนี้จึงไม่ชี้ผู้ชนะตัวเดียวสำหรับทุกเกณฑ์
 
 ---
 
 <!-- slide -->
 ### 📌 Slide 16: บทสรุปและการส่งมอบผลงาน (Conclusion & Deliverables)
-#### สรุปส่งมอบชิ้นงานของกลุ่มที่ 4 (ครบถ้วน 100%):
-* ✅ **Master Dataset:** `results/master_benchmark_summary.csv` (2,804 Records)
-* ✅ **Master Excel:** `results/Master_Benchmark_Results.xlsx` (6 Multi-tab Sheets)
-* ✅ **Publication Figures:** 6 แผนภูมิความละเอียดสูง (300 DPI)
-* ✅ **Data Dictionary:** `results/DATA_DICTIONARY.md`
-* ✅ **Final Report:** `Final_Report.md` (6 บท พร้อมสถิติและการอ้างอิงสมบูรณ์)
-* ✅ **Live Reproduction:** รันได้จริง 100% ผ่าน Universal Benchmark Runner
+#### รายการส่งมอบที่ Member 4 ตรวจแล้ว:
+* Master CSV ต้องมีหนึ่งแถวต่อ project, bug และ technique โดยไม่มี key ซ้ำ
+* Excel, JSON, report และกราฟต้องสร้างจาก master CSV snapshot เดียวกัน
+* Snapshot ปัจจุบันมี 3,416 แถว, 0 `NOT_RUN`, และ `results_complete: true`
+* มี 648 `NO_SUITE` ซึ่งแยกออกจากตัวหาร FDR และไม่ตีความเป็นการตรวจไม่พบบั๊ก
+* ต้องซ้อมสาธิตกรณี BUG_DETECTED โดยมี log แสดงผล fail บน buggy และ pass บน fixed
 
 **ขอขอบคุณ ผศ.ดร.ชิตสุธา สุ่มเล็ก และทุกท่านครับ**  
 *เปิดรับคำถามและข้อเสนอแนะ (Q&A)*

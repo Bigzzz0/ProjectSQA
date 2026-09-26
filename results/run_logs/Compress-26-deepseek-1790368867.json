@@ -1,0 +1,22 @@
+{
+  "project": "Compress",
+  "bug_id": 26,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Compress-26-deepseek-1790368867",
+  "suite_sha256": "7724b77eba28f0c02ed0fe826830aba434679135531d034ecf6036e39d58c19e",
+  "test_files": "IOUtilsDeepseekTest.java",
+  "target_classes": "org.apache.commons.compress.utils.IOUtils",
+  "timestamp": "2026-09-26 03:41:26",
+  "evaluation_duration_sec": 18.982,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 88.89,
+  "branch_coverage_percent": 88.89,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.compress.utils.IOUtilsDeepseekTest::testSkipWithPartialZeroSkipStream",
+    "org.apache.commons.compress.utils.IOUtilsDeepseekTest::testSkipWithZeroSkipStream"
+  ],
+  "fixed_failures": []
+}

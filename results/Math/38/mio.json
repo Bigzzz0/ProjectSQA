@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 9.08,
+  "branch_cov": 5.45,
+  "test_file": "BOBYQAOptimizer_ESTest.java",
+  "target_classes": "org.apache.commons.math.optimization.direct.BOBYQAOptimizer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "1bdf832e21a9574d97decabd730c3fcb9d460f7b6256e2ff155919ab457c7914",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Math_38b/BOBYQAOptimizer_ESTest.java"
+  ],
+  "run_id": "Math-38-mio-1790389931"
+}

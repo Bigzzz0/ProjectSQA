@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 60.73,
+  "branch_cov": 43.67,
+  "test_file": "DefaultParser_ESTest.java",
+  "target_classes": "org.apache.commons.cli.DefaultParser",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "385f72979efc991a12f8bbaaf662093d00d612909b3797469dc8d742cdae1fbf",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_38b/DefaultParser_ESTest.java"
+  ],
+  "run_id": "Cli-38-mio-1790353826"
+}

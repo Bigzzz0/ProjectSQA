@@ -1,0 +1,39 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 10,
+  "line_cov": 58.15,
+  "branch_cov": 41.25,
+  "test_file": "Compiler_ESTest.java;Compiler_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.Compiler",
+  "buggy_failures": [
+    "com.google.javascript.jscomp.Compiler_ESTest::test010",
+    "com.google.javascript.jscomp.Compiler_ESTest::test004",
+    "com.google.javascript.jscomp.Compiler_ESTest::test002",
+    "com.google.javascript.jscomp.Compiler_ESTest::test067",
+    "com.google.javascript.jscomp.Compiler_ESTest::test043",
+    "com.google.javascript.jscomp.Compiler_ESTest::test051",
+    "com.google.javascript.jscomp.Compiler_ESTest::test018",
+    "com.google.javascript.jscomp.Compiler_ESTest::test034",
+    "com.google.javascript.jscomp.Compiler_ESTest::test030",
+    "com.google.javascript.jscomp.Compiler_ESTest::test028"
+  ],
+  "fixed_failures": [
+    "com.google.javascript.jscomp.Compiler_ESTest::test010",
+    "com.google.javascript.jscomp.Compiler_ESTest::test004",
+    "com.google.javascript.jscomp.Compiler_ESTest::test002",
+    "com.google.javascript.jscomp.Compiler_ESTest::test067",
+    "com.google.javascript.jscomp.Compiler_ESTest::test043",
+    "com.google.javascript.jscomp.Compiler_ESTest::test051",
+    "com.google.javascript.jscomp.Compiler_ESTest::test018",
+    "com.google.javascript.jscomp.Compiler_ESTest::test034",
+    "com.google.javascript.jscomp.Compiler_ESTest::test030",
+    "com.google.javascript.jscomp.Compiler_ESTest::test028"
+  ],
+  "suite_sha256": "ab609613965b59d6fddb2f11f393eb4e209ff780263a49520cd0164275665afe",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_31b/Compiler_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Closure_31b/evosuite-tests/com/google/javascript/jscomp/Compiler_ESTest.java"
+  ],
+  "run_id": "Closure-31-mio-1790356324"
+}

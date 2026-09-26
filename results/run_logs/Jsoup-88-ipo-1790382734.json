@@ -1,0 +1,19 @@
+{
+  "project": "Jsoup",
+  "bug_id": 88,
+  "technique": "IPO (Native IPO)",
+  "run_id": "Jsoup-88-ipo-1790382734",
+  "suite_sha256": "734edb9982e28736c64a7cece9322a31f3cf2e7e8b88468740881eb3f2b0fb05",
+  "test_files": "Attribute_IPOTest.java",
+  "target_classes": "org.jsoup.nodes.Attribute",
+  "timestamp": "2026-09-26 07:32:34",
+  "evaluation_duration_sec": 19.994,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 59.09,
+  "branch_coverage_percent": 34.0,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

@@ -1,0 +1,25 @@
+{
+  "project": "Math",
+  "bug_id": 75,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-75-gemini-1790392527",
+  "suite_sha256": "c1e654ebfc8a4d6b1e23111acdd574e967d00b6c965eb6490bd50d66d5d3331e",
+  "test_files": "FrequencyGeminiTest.java",
+  "target_classes": "org.apache.commons.math.stat.Frequency",
+  "timestamp": "2026-09-26 10:15:51",
+  "evaluation_duration_sec": 24.257,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 95.52,
+  "branch_coverage_percent": 85.42,
+  "failures_count": 3,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.stat.FrequencyGeminiTest::testSerializationIntegrity",
+    "org.apache.commons.math.stat.FrequencyGeminiTest::testDefectTargetedGetPctObjectCall",
+    "org.apache.commons.math.stat.FrequencyGeminiTest::testDefectTargetedIntegerObjectPct"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.math.stat.FrequencyGeminiTest::testSerializationIntegrity"
+  ]
+}

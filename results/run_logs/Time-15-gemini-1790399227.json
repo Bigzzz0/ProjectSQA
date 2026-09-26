@@ -1,0 +1,21 @@
+{
+  "project": "Time",
+  "bug_id": 15,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Time-15-gemini-1790399227",
+  "suite_sha256": "ab6ba4f392e6bc0eafe390a42caafe3b5c50d6915391abe19c1d09b0dc2cce9e",
+  "test_files": "FieldUtilsGeminiTest.java",
+  "target_classes": "org.joda.time.field.FieldUtils",
+  "timestamp": "2026-09-26 12:07:31",
+  "evaluation_duration_sec": 24.021,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 94.29,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.joda.time.field.FieldUtilsGeminiTest::testDefectSafeMultiplyLongIntMinValueNegation"
+  ],
+  "fixed_failures": []
+}

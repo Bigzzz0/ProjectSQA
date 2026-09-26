@@ -1,0 +1,19 @@
+{
+  "project": "Time",
+  "bug_id": 8,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Time-8-mio-1790398723",
+  "suite_sha256": "43a858346f4a6b03d8385511a1b767e92466940f9554471c7e4726850df645ff",
+  "test_files": "DateTimeZone_ESTest.java",
+  "target_classes": "org.joda.time.DateTimeZone",
+  "timestamp": "2026-09-26 11:59:13",
+  "evaluation_duration_sec": 29.39,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 85.07,
+  "branch_coverage_percent": 76.97,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

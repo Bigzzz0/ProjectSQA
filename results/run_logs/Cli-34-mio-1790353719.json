@@ -1,0 +1,25 @@
+{
+  "project": "Cli",
+  "bug_id": 34,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Cli-34-mio-1790353719",
+  "suite_sha256": "5d8cc8496ec7a1d11bb7ce880309bca95eaeb9d60d00a6889a17b9aeb2dbb9b5",
+  "test_files": "OptionBuilder_ESTest.java;Option_ESTest.java",
+  "target_classes": "org.apache.commons.cli.Option;org.apache.commons.cli.OptionBuilder",
+  "timestamp": "2026-09-25 23:28:52",
+  "evaluation_duration_sec": 12.736,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.cli.OptionBuilder_ESTest",
+    "org.apache.commons.cli.Option_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.OptionBuilder_ESTest",
+    "org.apache.commons.cli.Option_ESTest"
+  ]
+}

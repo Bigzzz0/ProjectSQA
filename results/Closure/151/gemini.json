@@ -16,5 +16,10 @@
     "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testFullSuiteOfSupportedCommandLineFlags",
     "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testGetDefaultExternsDirectly",
     "com.google.javascript.jscomp.CommandLineRunnerGeminiTest::testCreateExternsDefaultVsCustomOnly"
-  ]
+  ],
+  "suite_sha256": "5fbb34e40f2bcf9f60b5f8a7bf32f2a0d282d774fbb1cd9140a85715eb973bea",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_151b/CommandLineRunnerGeminiTest.java"
+  ],
+  "run_id": "Closure-151-gemini-1790363771"
 }

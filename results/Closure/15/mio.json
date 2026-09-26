@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 6.63,
+  "branch_cov": 0.84,
+  "test_file": "FlowSensitiveInlineVariables_ESTest.java",
+  "target_classes": "com.google.javascript.jscomp.FlowSensitiveInlineVariables",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "cb3812dfae9151b0bf7f79ecce21474cb9f342a67c4e52ad2cb1219a12edc4b6",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Closure_15b/FlowSensitiveInlineVariables_ESTest.java"
+  ],
+  "run_id": "Closure-15-mio-1790355015"
+}

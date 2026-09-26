@@ -1,0 +1,24 @@
+{
+  "status": "DONE",
+  "fault_detected": "FLAKY_OR_REGRESSION",
+  "failures_count": 2,
+  "line_cov": 0.0,
+  "branch_cov": 0.0,
+  "test_file": "DefaultParser_ESTest.java;Parser_ESTest.java;Parser_ESTest.java",
+  "target_classes": "org.apache.commons.cli.DefaultParser;org.apache.commons.cli.Parser",
+  "buggy_failures": [
+    "org.apache.commons.cli.DefaultParser_ESTest",
+    "org.apache.commons.cli.Parser_ESTest"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.cli.DefaultParser_ESTest",
+    "org.apache.commons.cli.Parser_ESTest"
+  ],
+  "suite_sha256": "184473d46a592f3e669c150bc2a26608e81a655551ffeec45320ff496532dc39",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Cli_30b/DefaultParser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_30b/Parser_ESTest.java",
+    "/workspace/MIO_Algorithm/TestCode/Cli_30b/evosuite-tests/org/apache/commons/cli/Parser_ESTest.java"
+  ],
+  "run_id": "Cli-30-mio-1790353561"
+}

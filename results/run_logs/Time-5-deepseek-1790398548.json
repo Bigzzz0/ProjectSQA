@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 5,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-5-deepseek-1790398548",
+  "suite_sha256": "1d5c0eb8b344418cea238e270547e211917849cec86c7f8ce38b1d80c70b24dd",
+  "test_files": "PeriodDeepseekTest.java",
+  "target_classes": "org.joda.time.Period",
+  "timestamp": "2026-09-26 11:55:55",
+  "evaluation_duration_sec": 6.649,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "                 ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] /tmp/d4j_eval/Time_5b/src/main/java/org/joda/time/DateTimeZone.java:559: warning: [deprecation] newInstance() in Class has been deprecated\n    [javac]                     nameProvider = (NameProvider) Class.forName(providerClass).newInstance();\n    [javac]                                                                               ^\n    [javac]   where T is a type-variable:\n    [javac]     T extends Object declared in class Class\n    [javac] 6 warnings\n    [mkdir] Created dir: /tmp/d4j_eval/Time_5b/target/classes/META-INF\n     [copy] Copying 2 files to /tmp/d4j_eval/Time_5b/target/classes/META-INF\n     [copy] Copying 9 files to /tmp/d4j_eval/Time_5b/target/classes\n\njoda-time.compile:\n\ncompile:\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: target/classes\n     [echo] build.home: target/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_5b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_5b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_5b/.test_suite/org/joda/time/PeriodDeepseekTest.java:612: error: cannot find symbol\n    [javac]         PeriodType type = PeriodType.weekDayTime();\n    [javac]                                     ^\n    [javac]   symbol:   method weekDayTime()\n    [javac]   location: class PeriodType\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

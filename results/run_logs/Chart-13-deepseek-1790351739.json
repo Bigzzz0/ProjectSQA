@@ -1,0 +1,17 @@
+{
+  "project": "Chart",
+  "bug_id": 13,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Chart-13-deepseek-1790351739",
+  "suite_sha256": "171827b705e23de252fcbadfba8703ba016113df6b0b7c121c9f0d3fc89264e6",
+  "test_files": "BorderArrangementDeepseekTest.java",
+  "target_classes": "org.jfree.chart.block.BorderArrangement",
+  "timestamp": "2026-09-25 22:55:47",
+  "evaluation_duration_sec": 7.571,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ld\n     [echo] build.home: /tmp/d4j_eval/Chart_13b\n    [mkdir] Created dir: /tmp/d4j_eval/Chart_13b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Chart_13b/.classes_testgen\n    [javac] /tmp/d4j_eval/Chart_13b/.test_suite/org/jfree/chart/block/BorderArrangementDeepseekTest.java:345: error: no suitable constructor found for RectangleConstraint(<null>,LengthConstraintType,double,LengthConstraintType)\n    [javac]             RectangleConstraint c1 = new RectangleConstraint(null, \n    [javac]                                      ^\n    [javac]     constructor RectangleConstraint.RectangleConstraint(double,double) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor RectangleConstraint.RectangleConstraint(Range,Range) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor RectangleConstraint.RectangleConstraint(Range,double) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor RectangleConstraint.RectangleConstraint(double,Range) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac]     constructor RectangleConstraint.RectangleConstraint(double,Range,LengthConstraintType,double,Range,LengthConstraintType) is not applicable\n    [javac]       (actual and formal argument lists differ in length)\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 3 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

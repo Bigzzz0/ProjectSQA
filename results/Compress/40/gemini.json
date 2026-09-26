@@ -16,5 +16,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testLittleEndianMaxOverflowAt62Bits",
     "org.apache.commons.compress.utils.BitInputStreamGeminiTest::testReadBitsStreamEndsPrematurelyReturnsNegativeOne"
-  ]
+  ],
+  "suite_sha256": "ac1a646a27c5435cf0d6422bc00a850e3756231c2acb1bbcf3b406c7b99dcd89",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_40b/BitInputStreamGeminiTest.java"
+  ],
+  "run_id": "Compress-40-gemini-1790369735"
 }

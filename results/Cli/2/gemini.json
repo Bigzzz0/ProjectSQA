@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.PosixParserGeminiTest"
-  ]
+  ],
+  "suite_sha256": "c86190bb7bfbc39bf0965d5fcb22c521dce3068b8b5271236699935dff8539c2",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Cli_2b/PosixParserGeminiTest.java"
+  ],
+  "run_id": "Cli-2-gemini-1790352655"
 }

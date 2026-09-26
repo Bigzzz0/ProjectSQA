@@ -15,5 +15,10 @@
   "fixed_failures": [
     "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseWrongImaginaryCharacter",
     "org.apache.commons.math.complex.ComplexFormatGeminiTest::testParseInvalidSign"
-  ]
+  ],
+  "suite_sha256": "ac57a37b2d35ce9f3dad75747aecb117e79e24c220a184d40915d8b1dd7f8c94",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_101b/ComplexFormatGeminiTest.java"
+  ],
+  "run_id": "Math-101-gemini-1790394373"
 }

@@ -11,5 +11,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.cli.TypeHandlerDeepseekTest"
-  ]
+  ],
+  "suite_sha256": "ef1ef3ba5e21272c9cb8ced8448e7221017b265d04544a71454335bbfee084d0",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Cli_3b/TypeHandlerDeepseekTest.java"
+  ],
+  "run_id": "Cli-3-deepseek-1790352684"
 }

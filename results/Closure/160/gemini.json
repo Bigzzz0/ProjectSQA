@@ -21,5 +21,10 @@
     "com.google.javascript.jscomp.CompilerGeminiTest::testAreNodesEqualForInliningWithAmbiguate",
     "com.google.javascript.jscomp.CompilerGeminiTest::testCompileBasicScriptSuccess",
     "com.google.javascript.jscomp.CompilerGeminiTest::testIntermediateStateSaveAndRestore"
-  ]
+  ],
+  "suite_sha256": "859ad158459567d3bdc1a58077bd6272296b980b90bba46ddc5e5ae2917c4a88",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_160b/CompilerGeminiTest.java"
+  ],
+  "run_id": "Closure-160-gemini-1790364285"
 }

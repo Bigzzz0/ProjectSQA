@@ -1,0 +1,17 @@
+{
+  "project": "Time",
+  "bug_id": 14,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Time-14-deepseek-1790399137",
+  "suite_sha256": "963a42ff8a6b3470755a973ce402ff536d4e7f86a29abd704c0f62d39cb8ded0",
+  "test_files": "BasicMonthOfYearDateTimeFieldDeepseekTest.java",
+  "target_classes": "org.joda.time.chrono.BasicMonthOfYearDateTimeField",
+  "timestamp": "2026-09-26 12:05:43",
+  "evaluation_duration_sec": 6.617,
+  "execution_status": "COMPILE_ERROR",
+  "fault_detection_status": "COMPILE_ERROR",
+  "line_coverage_percent": 0.0,
+  "branch_coverage_percent": 0.0,
+  "failures_count": 0,
+  "error_detail": "ompiling 156 source files to /tmp/d4j_eval/Time_14b/build/classes\n    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6\n    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release\n    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release\n    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.\n    [javac] Note: /tmp/d4j_eval/Time_14b/src/main/java/org/joda/time/DateTimeZone.java uses or overrides a deprecated API.\n    [javac] Note: Recompile with -Xlint:deprecation for details.\n    [javac] 4 warnings\n     [copy] Copying 7 files to /tmp/d4j_eval/Time_14b/build/classes\n\ncompile.zoneinfo:\n\njoda-time.compile:\n\ncompile:\n    [mkdir] Created dir: /tmp/d4j_eval/Time_14b/build/classes/org/joda/time/tz/data\n     [java] Writing zoneinfo files\n     [java] Writing ZoneInfoMap\n\ncompile.gen.tests:\n     [echo] classes.dir: build/classes\n     [echo] build.home: build/classes/..\n    [mkdir] Created dir: /tmp/d4j_eval/Time_14b/.classes_testgen\n    [javac] /opt/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds\n    [javac] Compiling 1 source file to /tmp/d4j_eval/Time_14b/.classes_testgen\n    [javac] /tmp/d4j_eval/Time_14b/.test_suite/org/joda/time/chrono/BasicMonthOfYearDateTimeFieldDeepseekTest.java:311: error: cannot find symbol\n    [javac]     @Test(imeout = 4000)\n    [javac]           ^\n    [javac]   symbol:   method imeout()\n    [javac]   location: @interface Test\n    [javac] 1 error\n\nBUILD FAILED\n/opt/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.\n\nTotal time: 2 seconds\nCannot compile extracted test suite! at /opt/defects4j/framework/bin/d4j/d4j-coverage line 142.\nCompilation failed in require at /opt/defects4j/framework/bin/defects4j line 195."
+}

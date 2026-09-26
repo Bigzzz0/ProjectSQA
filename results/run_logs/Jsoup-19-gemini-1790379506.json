@@ -1,0 +1,21 @@
+{
+  "project": "Jsoup",
+  "bug_id": 19,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Jsoup-19-gemini-1790379506",
+  "suite_sha256": "05dccea96fba721fce00c033cae3347ed7c77b416ad8dc83687ec3afd809ea6d",
+  "test_files": "WhitelistGeminiTest.java",
+  "target_classes": "org.jsoup.safety.Whitelist",
+  "timestamp": "2026-09-26 06:38:41",
+  "evaluation_duration_sec": 15.082,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 99.32,
+  "branch_coverage_percent": 92.31,
+  "failures_count": 1,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.jsoup.safety.WhitelistGeminiTest::testHandlesCustomProtocolsCidAndData"
+  ],
+  "fixed_failures": []
+}

@@ -1,0 +1,26 @@
+{
+  "project": "Lang",
+  "bug_id": 4,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Lang-4-gemini-1790383753",
+  "suite_sha256": "569a2616826e1a60cac9dac634ccae275a56c9dc748fce5478ad15e70f26aece",
+  "test_files": "LookupTranslatorGeminiTest.java",
+  "target_classes": "org.apache.commons.lang3.text.translate.LookupTranslator",
+  "timestamp": "2026-09-26 07:49:33",
+  "evaluation_duration_sec": 20.25,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.lang3.text.translate.LookupTranslatorGeminiTest::testLang882ViaInheritedTranslate",
+    "org.apache.commons.lang3.text.translate.LookupTranslatorGeminiTest::testLang882WithStringBuilderKeyAndStringInput",
+    "org.apache.commons.lang3.text.translate.LookupTranslatorGeminiTest::testLang882WithStringBufferKey",
+    "org.apache.commons.lang3.text.translate.LookupTranslatorGeminiTest::testNullOutputMapping"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.lang3.text.translate.LookupTranslatorGeminiTest::testNullOutputMapping"
+  ]
+}

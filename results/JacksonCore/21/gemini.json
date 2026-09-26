@@ -13,5 +13,10 @@
   ],
   "fixed_failures": [
     "com.fasterxml.jackson.core.filter.FilteringParserDelegateGeminiTest::testIncludeImmediateParent"
-  ]
+  ],
+  "suite_sha256": "e4bff337b7c2f56a6908a5e17bc5bd6dc58e0365a76547e083bf167fffb7098f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/JacksonCore_21b/FilteringParserDelegateGeminiTest.java"
+  ],
+  "run_id": "JacksonCore-21-gemini-1790372156"
 }

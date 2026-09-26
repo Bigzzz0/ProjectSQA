@@ -49,5 +49,10 @@
     "org.jsoup.select.SelectorDeepseekTest::testCombinatorUnknown",
     "org.jsoup.select.SelectorDeepseekTest::testEmptyMatchesRegex",
     "org.jsoup.select.SelectorDeepseekTest::testUnbalancedPseudo"
-  ]
+  ],
+  "suite_sha256": "21f501cfacd5d5fcf7bc3597aefa7a491c91ba434bbc0f947c6d77d54d0ec524",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Jsoup_12b/SelectorDeepseekTest.java"
+  ],
+  "run_id": "Jsoup-12-deepseek-1790379232"
 }

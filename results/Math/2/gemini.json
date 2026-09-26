@@ -9,5 +9,10 @@
   "buggy_failures": [
     "org.apache.commons.math3.distribution.HypergeometricDistributionGeminiTest::testMath1021_IntegerOverflowInNumericalMean"
   ],
-  "fixed_failures": []
+  "fixed_failures": [],
+  "suite_sha256": "297e602996919b9f7b453adacbc1a0baa1ce40868d602037877cc69c1c8b9f3f",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Math_2b/HypergeometricDistributionGeminiTest.java"
+  ],
+  "run_id": "Math-2-gemini-1790387633"
 }

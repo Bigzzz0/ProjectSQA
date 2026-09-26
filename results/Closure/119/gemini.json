@@ -17,5 +17,10 @@
     "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testExternsBoundary",
     "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testObjectLiteralsAndNestedKeys",
     "com.google.javascript.jscomp.GlobalNamespaceGeminiTest::testGlobalCatchWithAssignment"
-  ]
+  ],
+  "suite_sha256": "ecb79ca7a4b17d85866de227191d10584d7ba0988f76750283c56b9c3b3fd84a",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Closure_119b/GlobalNamespaceGeminiTest.java"
+  ],
+  "run_id": "Closure-119-gemini-1790361925"
 }

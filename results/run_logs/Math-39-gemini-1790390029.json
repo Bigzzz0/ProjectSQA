@@ -1,0 +1,22 @@
+{
+  "project": "Math",
+  "bug_id": 39,
+  "technique": "Gemini 3.8 Flash",
+  "run_id": "Math-39-gemini-1790390029",
+  "suite_sha256": "500fccc7ea47c948c8b7334a0d33e18f81c64280fe31a1ac66a3072ca5baa193",
+  "test_files": "EmbeddedRungeKuttaIntegratorGeminiTest.java",
+  "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator",
+  "timestamp": "2026-09-26 09:34:15",
+  "evaluation_duration_sec": 25.422,
+  "execution_status": "DONE",
+  "fault_detection_status": "BUG_DETECTED",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 2,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStepBackward",
+    "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegratorGeminiTest::testTooLargeFirstStep"
+  ],
+  "fixed_failures": []
+}

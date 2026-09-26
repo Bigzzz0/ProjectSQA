@@ -1,0 +1,19 @@
+{
+  "project": "Math",
+  "bug_id": 71,
+  "technique": "MIO (EvoSuite SBST)",
+  "run_id": "Math-71-mio-1790392262",
+  "suite_sha256": "5523eaa3174edf5f394f8c0b15612e8e89d804cb440c580fa28cc4e8b1cd1b27",
+  "test_files": "EmbeddedRungeKuttaIntegrator_ESTest.java;RungeKuttaIntegrator_ESTest.java",
+  "target_classes": "org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator;org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator",
+  "timestamp": "2026-09-26 10:11:30",
+  "evaluation_duration_sec": 27.51,
+  "execution_status": "DONE",
+  "fault_detection_status": "NOT_DETECTED",
+  "line_coverage_percent": 98.98,
+  "branch_coverage_percent": 95.92,
+  "failures_count": 0,
+  "error_detail": "",
+  "buggy_failures": [],
+  "fixed_failures": []
+}

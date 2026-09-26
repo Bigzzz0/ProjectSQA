@@ -12,5 +12,10 @@
   "fixed_failures": [
     "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadWithoutGetNextEntryThrowsIllegalStateException",
     "org.apache.commons.compress.archivers.sevenz.SevenZFileGeminiTest::testReadBufferWithoutGetNextEntryThrowsIllegalStateException"
-  ]
+  ],
+  "suite_sha256": "89d2c5932ced1aa9f46f4d20f377d1fc7736b5593e31d9d9ee3d354205ed7bcf",
+  "test_paths": [
+    "/workspace/Gemini-3_8_flash/TestCode/Compress_36b/SevenZFileGeminiTest.java"
+  ],
+  "run_id": "Compress-36-gemini-1790369493"
 }

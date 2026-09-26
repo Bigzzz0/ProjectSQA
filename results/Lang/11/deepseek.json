@@ -14,5 +14,10 @@
   ],
   "fixed_failures": [
     "org.apache.commons.lang3.RandomStringUtilsDeepseekTest::testPrivateHighSurrogateSkipped"
-  ]
+  ],
+  "suite_sha256": "2b01dee1e7cb3f8cb34e9f7d821172f15fa28e9344d9eaf7db06f98927acd2a1",
+  "test_paths": [
+    "/workspace/Deepseek-v4_flash/TestCode/Lang_11b/RandomStringUtilsDeepseekTest.java"
+  ],
+  "run_id": "Lang-11-deepseek-1790384209"
 }

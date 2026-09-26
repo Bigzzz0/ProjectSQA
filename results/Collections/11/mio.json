@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 100.0,
+  "branch_cov": 100.0,
+  "test_file": "MultiKey_ESTest.java",
+  "target_classes": "org.apache.commons.collections.keyvalue.MultiKey",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "577ef642a4ead880fabc06811eb8594e8d2e42458076b04cbdaa947cd1a0c22f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/Collections_11b/MultiKey_ESTest.java"
+  ],
+  "run_id": "Collections-11-mio-1790366675"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "DONE",
+  "fault_detected": "NOT_DETECTED",
+  "failures_count": 0,
+  "line_cov": 85.71,
+  "branch_cov": 92.31,
+  "test_file": "NullPropertyPointer_ESTest.java",
+  "target_classes": "org.apache.commons.jxpath.ri.model.beans.NullPropertyPointer",
+  "buggy_failures": [],
+  "fixed_failures": [],
+  "suite_sha256": "a982b49be5e2b7f14dd5cc961e345214f49976828c1f6e73902de1f0db51590f",
+  "test_paths": [
+    "/workspace/MIO_Algorithm/TestCode/JxPath_3b/NullPropertyPointer_ESTest.java"
+  ],
+  "run_id": "JxPath-3-mio-1790383096"
+}

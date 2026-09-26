@@ -1,0 +1,29 @@
+{
+  "project": "Csv",
+  "bug_id": 6,
+  "technique": "DeepSeek V4 Flash",
+  "run_id": "Csv-6-deepseek-1790370312",
+  "suite_sha256": "66d967c9167ae8006bec013a9a2ba7cdbdf322f146107d16f74e8c1f8d6f40a6",
+  "test_files": "CSVRecordDeepseekTest.java",
+  "target_classes": "org.apache.commons.csv.CSVRecord",
+  "timestamp": "2026-09-26 04:05:27",
+  "evaluation_duration_sec": 15.002,
+  "execution_status": "DONE",
+  "fault_detection_status": "FLAKY_OR_REGRESSION",
+  "line_coverage_percent": 100.0,
+  "branch_coverage_percent": 100.0,
+  "failures_count": 4,
+  "error_detail": "",
+  "buggy_failures": [
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithNullMapping",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithShortRecord",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithShortRecord",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithNullMapping"
+  ],
+  "fixed_failures": [
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithNullMapping",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithShortRecord",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testToMapWithShortRecord",
+    "org.apache.commons.csv.CSVRecordDeepseekTest::testPutInWithNullMapping"
+  ]
+}
