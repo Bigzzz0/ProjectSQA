@@ -439,7 +439,7 @@ table(['เนื้อหา','ไฟล์หลัก'],[
     ('Suite gap audit','results/suite_gap_audit.csv; scripts/audit_suite_gaps.py'),
     ('สถิติและ analytics','results/master_descriptive_stats.json; results/advanced_analytics_report.md'),
     ('Native IPO','Combinatorial_IPO/Code/; Combinatorial_IPO/Results/verified_suites_manifest.json; generation_manifest.json; routing_manifest.json'),
-    ('MIO','MIO_Algorithm/Code/batch_evosuite.py; MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv; MIO_FAILURE_ANALYSIS_REPORT.md'),
+    ('MIO','MIO_Algorithm/Code/batch_evosuite.py; MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv; MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md'),
     ('AI prompts/economics','Deepseek-v4_flash/Prompt/; Gemini-3_8_flash/Prompt/; results/Deepseek_vs_Gemini_Economics.csv'),
     ('Runner/analytics','scripts/run_benchmark.py; scripts/run_member3_delivery.py; scripts/consolidate_master_results.py; scripts/advanced_data_analytics.py; results/member3_delivery_logs/')
 ],[1.65,5.05],'ไฟล์หลักสำหรับตรวจสอบและทำซ้ำ',8.3)
