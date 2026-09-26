@@ -3,8 +3,9 @@ import csv, json, statistics, tempfile
 from collections import Counter, defaultdict
 from PIL import Image, ImageDraw, ImageFont
 from docx import Document
-from docx.shared import Inches, Pt, RGBColor
+from docx.shared import Inches, Cm, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.section import WD_SECTION_START
 from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 from docx.oxml import OxmlElement
@@ -107,11 +108,12 @@ for src,dst,mask_h in [
     im=Image.open(src).convert('RGB'); ImageDraw.Draw(im).rectangle((0,0,im.width,mask_h),fill='white'); im.save(dst)
 
 DOC=Document(); SEC=DOC.sections[0]
-SEC.page_width,SEC.page_height=Inches(8.5),Inches(11)
-SEC.top_margin,SEC.bottom_margin=Inches(.78),Inches(.74)
-SEC.left_margin,SEC.right_margin=Inches(.82),Inches(.82)
+SEC.page_width,SEC.page_height=Cm(21),Cm(29.7)
+SEC.top_margin,SEC.bottom_margin=Inches(1.5),Inches(1.0)
+SEC.left_margin,SEC.right_margin=Inches(1.5),Inches(1.0)
+SEC.header_distance,SEC.footer_distance=Inches(.5),Inches(.5)
 SEC.different_first_page_header_footer=True
-FONT='Tahoma'; NAVY=RGBColor(27,54,82); INK=RGBColor(31,43,55); GRAY=RGBColor(83,96,108)
+FONT='TH Sarabun New'; NAVY=RGBColor(27,54,82); INK=RGBColor(31,43,55); GRAY=RGBColor(83,96,108)
 GRID='D9E0E6'
 
 def sf(st,n,b=False,c=INK):
@@ -121,18 +123,20 @@ def sf(st,n,b=False,c=INK):
     for x in ('ascii','hAnsi','eastAsia','cs'): rf.set(qn('w:'+x),FONT)
 
 styles=DOC.styles
-sf(styles['Normal'],10.4); styles['Normal'].paragraph_format.line_spacing=1.14; styles['Normal'].paragraph_format.space_after=Pt(5)
-sf(styles['Title'],20,True,NAVY); styles['Title'].paragraph_format.space_after=Pt(8)
-sf(styles['Subtitle'],11,False,GRAY)
-for name,size,bef,aft in [('Heading 1',15,15,7),('Heading 2',12.1,10,5),('Heading 3',10.8,7,3)]:
-    st=styles[name]; sf(st,size,True,NAVY); st.paragraph_format.space_before=Pt(bef); st.paragraph_format.space_after=Pt(aft); st.paragraph_format.keep_with_next=True
+sf(styles['Normal'],16); styles['Normal'].paragraph_format.line_spacing=1.0; styles['Normal'].paragraph_format.space_after=Pt(4)
+styles['Normal'].paragraph_format.first_line_indent=Inches(.35)
+styles['Normal'].paragraph_format.alignment=WD_ALIGN_PARAGRAPH.JUSTIFY
+sf(styles['Title'],22,True,RGBColor(0,0,0)); styles['Title'].paragraph_format.space_after=Pt(8); styles['Title'].paragraph_format.first_line_indent=Inches(0)
+sf(styles['Subtitle'],16,False,GRAY)
+for name,size,bef,aft in [('Heading 1',18,15,7),('Heading 2',16,10,5),('Heading 3',15,7,3)]:
+    st=styles[name]; sf(st,size,True,RGBColor(0,0,0)); st.paragraph_format.space_before=Pt(bef); st.paragraph_format.space_after=Pt(aft); st.paragraph_format.keep_with_next=True; st.paragraph_format.first_line_indent=Inches(0)
 for name in ('List Bullet','List Number'):
-    sf(styles[name],10.3); styles[name].paragraph_format.space_after=Pt(3); styles[name].paragraph_format.line_spacing=1.12
-sf(styles['Caption'],9,False,GRAY); styles['Caption'].paragraph_format.space_after=Pt(4); styles['Caption'].paragraph_format.keep_with_next=True
+    sf(styles[name],16); styles[name].paragraph_format.space_after=Pt(2); styles[name].paragraph_format.line_spacing=1.0; styles[name].paragraph_format.first_line_indent=Inches(0); styles[name].paragraph_format.alignment=WD_ALIGN_PARAGRAPH.LEFT
+sf(styles['Caption'],14,False,GRAY); styles['Caption'].paragraph_format.space_after=Pt(4); styles['Caption'].paragraph_format.keep_with_next=True; styles['Caption'].paragraph_format.first_line_indent=Inches(0)
 for name in ('TOC 1','TOC 2'):
     try: st=styles[name]
     except KeyError: st=styles.add_style(name,WD_STYLE_TYPE.PARAGRAPH)
-    sf(st,8.8,False,INK); st.paragraph_format.space_before=Pt(0); st.paragraph_format.space_after=Pt(0); st.paragraph_format.line_spacing=1.0
+    sf(st,14,False,INK); st.paragraph_format.space_before=Pt(0); st.paragraph_format.space_after=Pt(0); st.paragraph_format.line_spacing=1.0; st.paragraph_format.first_line_indent=Inches(0)
 tp=styles['Title'].element.get_or_add_pPr()
 for el in list(tp):
     if el.tag==qn('w:pBdr'): tp.remove(el)
@@ -150,7 +154,21 @@ def field(p,instr,result=''):
     if result: rchild('w:t',None,result)
     rchild('w:fldChar',{'fldCharType':'end'})
 
-def heading(text,level=1): return DOC.add_heading(text,level)
+def set_run_font(run,size=None):
+    run.font.name=FONT
+    if size is not None: run.font.size=Pt(size)
+    rp=run._element.get_or_add_rPr(); rf=rp.rFonts
+    if rf is None: rf=OxmlElement('w:rFonts'); rp.insert(0,rf)
+    for x in ('ascii','hAnsi','eastAsia','cs'): rf.set(qn('w:'+x),FONT)
+
+PAGE_BREAK_PENDING=False
+def heading(text,level=1):
+    global PAGE_BREAK_PENDING
+    x=DOC.add_heading(text,level)
+    if PAGE_BREAK_PENDING:
+        x.paragraph_format.page_break_before=True
+        PAGE_BREAK_PENDING=False
+    return x
 def p(text='',style=None,align=None):
     x=DOC.add_paragraph(style=style)
     if text: x.add_run(text)
@@ -160,7 +178,9 @@ def rich(label,text):
     x=DOC.add_paragraph(); x.add_run(label).bold=True; x.add_run(text); return x
 def bullet(text): return p(text,'List Bullet')
 def number(text): return p(text,'List Number')
-def page(): DOC.add_page_break()
+def page():
+    global PAGE_BREAK_PENDING
+    PAGE_BREAK_PENDING=True
 def shade(cell,color):
     sh=OxmlElement('w:shd'); sh.set(qn('w:fill'),color); cell._tc.get_or_add_tcPr().append(sh)
 def borders(cell):
@@ -180,8 +200,11 @@ def caption(kind,text):
     field(x,' SEQ '+kind+' \\* ARABIC ',str(CAPTION_COUNT[kind])); x.add_run('  '+text)
     x.alignment=WD_ALIGN_PARAGRAPH.CENTER; x.paragraph_format.keep_with_next=False
     return x
-def table(headers,rows,widths,cap,size=8.7):
+def table(headers,rows,widths,cap,size=11.5):
+    size=max(11.5,size)
     t=DOC.add_table(rows=1,cols=len(headers)); t.alignment=WD_TABLE_ALIGNMENT.CENTER; t.autofit=False
+    available=(SEC.page_width-SEC.left_margin-SEC.right_margin)/914400
+    scale=min(1.0,available/sum(widths)); widths=[w*scale for w in widths]
     for i,w in enumerate(widths): t.columns[i].width=Inches(w)
     h=t.rows[0]; h._tr.get_or_add_trPr().append(OxmlElement('w:tblHeader'))
     for i,txt in enumerate(headers):
@@ -195,47 +218,59 @@ def table(headers,rows,widths,cap,size=8.7):
         for c in row.cells:
             c.vertical_alignment=WD_CELL_VERTICAL_ALIGNMENT.CENTER; margins(c); borders(c)
             for q in c.paragraphs:
-                q.paragraph_format.space_after=Pt(0); q.paragraph_format.line_spacing=1.08
+                q.paragraph_format.space_after=Pt(0); q.paragraph_format.line_spacing=1.0; q.paragraph_format.first_line_indent=Inches(0); q.alignment=WD_ALIGN_PARAGRAPH.LEFT
+                if ri==0: q.paragraph_format.keep_with_next=True
                 for run in q.runs:
-                    run.font.name=FONT; run.font.size=Pt(size); run.font.color.rgb=NAVY if ri==0 else INK
+                    set_run_font(run,size); run.font.color.rgb=NAVY if ri==0 else INK
                     if ri==0: run.bold=True
     caption('Table',cap)
     DOC.add_paragraph().paragraph_format.space_after=Pt(1)
     return t
 def figure(path,text,width=6.7):
     q=DOC.add_paragraph(); q.alignment=WD_ALIGN_PARAGRAPH.CENTER
-    q.paragraph_format.keep_together=True; q.paragraph_format.keep_with_next=True
+    q.paragraph_format.keep_together=True; q.paragraph_format.keep_with_next=True; q.paragraph_format.first_line_indent=Inches(0)
+    width=min(width,(SEC.page_width-SEC.left_margin-SEC.right_margin)/914400)
     q.add_run().add_picture(str(path),width=Inches(width)); caption('Figure',text)
 def ms(a,b): return f'{a:.2f} ± {b:.2f}%'
 
 # Cover
 logo_src=ROOT/'assets'/'kku_logo.png'
 logo=Image.open(logo_src).convert('RGBA'); logo=logo.crop(logo.getchannel('A').getbbox()); logo_path=TMP/'kku_cover_logo.png'; logo.save(logo_path)
-q=DOC.add_paragraph(); q.alignment=WD_ALIGN_PARAGRAPH.CENTER; q.paragraph_format.space_after=Pt(8)
+q=DOC.add_paragraph(); q.alignment=WD_ALIGN_PARAGRAPH.CENTER; q.paragraph_format.space_after=Pt(8); q.paragraph_format.first_line_indent=Inches(0)
 q.add_run().add_picture(str(logo_path),height=Inches(1.42))
 def cover_line(text,size=12,bold=False,italic=False,before=0,after=3):
     q=DOC.add_paragraph(); q.alignment=WD_ALIGN_PARAGRAPH.CENTER
-    q.paragraph_format.space_before=Pt(before); q.paragraph_format.space_after=Pt(after); q.paragraph_format.line_spacing=1.08
-    r=q.add_run(text); r.font.name=FONT; r.font.size=Pt(size); r.font.color.rgb=INK; r.bold=bold; r.italic=italic
+    q.paragraph_format.space_before=Pt(before); q.paragraph_format.space_after=Pt(after); q.paragraph_format.line_spacing=1.0; q.paragraph_format.first_line_indent=Inches(0)
+    r=q.add_run(text); set_run_font(r,size); r.font.color.rgb=INK; r.bold=bold; r.italic=italic
     return q
-cover_line('รายงานโครงงานคอมพิวเตอร์',16,True,after=7)
-cover_line('การเปรียบเทียบการสร้างชุดทดสอบอัตโนมัติและชุดทดสอบจาก Generative AI บน Defects4J',16,True,after=4)
-cover_line('An Empirical Comparison of Automated and Generative AI Test Generation on Defects4J',10.5,False,True,after=12)
-cover_line('โดย',12.5,False,before=6,after=5)
-cover_line('นายปวริศช์ ประมวล  (รหัสนักศึกษา 673380278-9)',11.5,after=2)
-cover_line('นายแทนคุณ พันธ์นิกุล  (รหัสนักศึกษา 673380301-0)',11.5,after=2)
-cover_line('นายธนภูมิ จันทรา  (รหัสนักศึกษา 673380272-1)',11.5,after=2)
-cover_line('นายศิฆรินทร์ อุปจันทร์  (รหัสนักศึกษา 673380292-5)',11.5,after=10)
-cover_line('อาจารย์ประจำวิชา',11.5,False,before=5,after=2)
-cover_line('ผู้ช่วยศาสตราจารย์ ดร. ชิตสุธา สุ่มเล็ก',12,after=14)
-cover_line('รายงานนี้เป็นส่วนหนึ่งของการศึกษาวิชา CP353201 การประกันคุณภาพซอฟต์แวร์',10.5,after=4)
-cover_line('ภาคเรียนที่ 1 ปีการศึกษา 2569',10.5,after=4)
-cover_line('สาขาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์',10.5,after=2)
-cover_line('มหาวิทยาลัยขอนแก่น',10.5,after=2)
-cover_line('(กันยายน พ.ศ. 2569)',10.5,after=0)
+cover_line('รายงานโครงงานคอมพิวเตอร์',18,True,after=7)
+cover_line('การเปรียบเทียบการสร้างชุดทดสอบอัตโนมัติและชุดทดสอบจาก Generative AI บน Defects4J',18,True,after=4)
+cover_line('An Empirical Comparison of Automated and Generative AI Test Generation on Defects4J',14,False,True,after=12)
+cover_line('โดย',14,False,before=6,after=5)
+cover_line('นายปวริศช์ ประมวล  (รหัสนักศึกษา 673380278-9)',14,after=2)
+cover_line('นายแทนคุณ พันธ์นิกุล  (รหัสนักศึกษา 673380301-0)',14,after=2)
+cover_line('นายธนภูมิ จันทรา  (รหัสนักศึกษา 673380272-1)',14,after=2)
+cover_line('นายศิฆรินทร์ อุปจันทร์  (รหัสนักศึกษา 673380292-5)',14,after=10)
+cover_line('อาจารย์ประจำวิชา',14,False,before=5,after=2)
+cover_line('ผู้ช่วยศาสตราจารย์ ดร. ชิตสุธา สุ่มเล็ก',16,after=14)
+cover_line('รายงานนี้เป็นส่วนหนึ่งของการศึกษาวิชา CP353201 การประกันคุณภาพซอฟต์แวร์',14,after=4)
+cover_line('ภาคเรียนที่ 1 ปีการศึกษา 2569',14,after=4)
+cover_line('สาขาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์',14,after=2)
+cover_line('มหาวิทยาลัยขอนแก่น',14,after=2)
+cover_line('(กันยายน พ.ศ. 2569)',14,after=0)
 
-# Abstract and TOC
-page(); heading('บทคัดย่อ')
+# Start the report body on a new section so the cover is unnumbered and the
+# first page after it starts with Arabic page number 1.
+BODY=DOC.add_section(WD_SECTION_START.NEW_PAGE)
+BODY.page_width,BODY.page_height=Cm(21),Cm(29.7)
+BODY.top_margin,BODY.bottom_margin=Inches(1.5),Inches(1.0)
+BODY.left_margin,BODY.right_margin=Inches(1.5),Inches(1.0)
+BODY.header_distance,BODY.footer_distance=Inches(.5),Inches(.5)
+BODY.different_first_page_header_footer=False
+pg=BODY._sectPr.find(qn('w:pgNumType'))
+if pg is None: pg=OxmlElement('w:pgNumType'); BODY._sectPr.append(pg)
+pg.set(qn('w:start'),'1')
+heading('บทคัดย่อ')
 p(f"โครงงานนี้เปรียบเทียบ Native IPO, Many-Independent-Objective (MIO) ใน EvoSuite, DeepSeek V4 Flash และ Gemini 3.8 Flash บน Defects4J 3.0.1-7-g8c16da82 ซึ่งมี active bugs 854 บั๊กจาก 17 โครงการ กำหนดผลหนึ่งรายการต่อบั๊กและเทคนิค รวม 3,416 ช่อง มีผลประเมิน suite {len(ROWS)-EXEC['NO_SUITE']:,} ช่อง และ {EXEC['NO_SUITE']:,} ช่องเป็น NO_SUITE. ผล BUG_DETECTED ต้องมีหลักฐานว่า test ล้มเหลวบน buggy version และผ่านบน fixed version.")
 p(f"Coverage รวมทุก modified target class ตามค่า aggregate ใน Defects4J summary. Gemini มี line/branch coverage เฉลี่ยสูงสุด {TD[TECHS[3]]['lm']:.2f}%/{TD[TECHS[3]]['bm']:.2f}% (n={TD[TECHS[3]]['n']}). Native IPO ตรวจพบ {TD[TECHS[0]]['detected']}/{TD[TECHS[0]]['attempted']} suite ({TD[TECHS[0]]['fdr']:.2f}%), MIO {TD[TECHS[1]]['detected']}/{TD[TECHS[1]]['attempted']} ({TD[TECHS[1]]['fdr']:.2f}%), DeepSeek {TD[TECHS[2]]['detected']}/{TD[TECHS[2]]['attempted']} ({TD[TECHS[2]]['fdr']:.2f}%) และ Gemini {TD[TECHS[3]]['detected']}/{TD[TECHS[3]]['attempted']} ({TD[TECHS[3]]['fdr']:.2f}%).")
 p(f"ผลรวมสี่เทคนิคตรวจพบ {len(UNION)} บั๊กไม่ซ้ำจาก {len(ATTEMPTED_BUGS)} บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค ({100*len(UNION)/len(ATTEMPTED_BUGS):.2f}%). สถิติ MIO budget และ token/เวลา AI แยกจาก benchmark กลางเพราะ generation logs ไม่มี run ID เชื่อมกับผลตรวจจับรายบั๊ก จึงไม่คำนวณ token ต่อบั๊กที่ตรวจพบ.")
@@ -321,8 +356,8 @@ heading('บทที่ 4 ผลการทดลอง')
 heading('4.1 ความครบถ้วนและสถานะผล',2)
 p(f"Catalog มี 854 บั๊ก × 4 เทคนิค รวม 3,416 คีย์ไม่ซ้ำ. มี suite และผลประเมิน {len(ROWS)-EXEC['NO_SUITE']:,} รายการ; {EXEC['NO_SUITE']:,} รายการไม่มี suite. สถานะมี {EXEC['DONE']:,} DONE, {EXEC['COMPILE_ERROR']:,} COMPILE_ERROR และ {EXEC['TIMEOUT']:,} TIMEOUT. ในผลที่รันได้มี {FSTATE['BUG_DETECTED']:,} BUG_DETECTED, {FSTATE['NOT_DETECTED']:,} NOT_DETECTED และ {FSTATE['FLAKY_OR_REGRESSION']:,} FLAKY_OR_REGRESSION; unresolved outcomes {sum(EXEC[s] for s in ('NOT_RUN','STALE_RESULT','CHECKOUT_ERROR','INVALID_SUITE','RUN_ERROR'))}.")
 table(['เทคนิค','มี suite','NO_SUITE','DONE','compile','พบ defect','flaky','ไม่พบ','FDR suite','พบ/854'],[
-    (LABEL[t],f"{TD[t]['attempted']}/854",TD[t]['nosuite'],TD[t]['done'],TD[t]['compile'],TD[t]['detected'],TD[t]['flaky'],TD[t]['notdet'],f"{TD[t]['fdr']:.2f}%",f"{TD[t]['catalog']:.2f}%") for t in TECHS
-],[1.16,.58,.62,.42,.61,.59,.46,.44,.66,.54],'สถานะและ fault detection ต่อเทคนิค; FDR ต่อ suite รวม compile/flaky ในตัวหาร',7.0)
+    (LABEL[t],TD[t]['attempted'],TD[t]['nosuite'],TD[t]['done'],TD[t]['compile'],TD[t]['detected'],TD[t]['flaky'],TD[t]['notdet'],f"{TD[t]['fdr']:.2f}%",f"{TD[t]['catalog']:.2f}%") for t in TECHS
+],[1.05,.53,.84,.62,.60,.57,.45,.43,.68,.55],'สถานะและ fault detection ต่อเทคนิค; FDR ต่อ suite รวม compile/flaky ในตัวหาร',7.0)
 p(f"`DONE` หมายถึงการประเมินสิ้นสุดโดยไม่เกิด compile error; fault status ของแถว DONE ยังอาจเป็น flaky/regression. จำนวน {EXEC['NO_SUITE']:,} NO_SUITE แสดงแยกจาก NOT_DETECTED.")
 figure(TMP/'fault_distribution.png','สัดส่วนสถานะใน suite ที่นำมาประเมิน; n ระบุใต้แต่ละเทคนิค')
 heading('4.2 Coverage ของ modified target classes',2)
@@ -412,7 +447,8 @@ for cmd in ['docker compose -f docker/docker-compose.yml up -d --build',
             'python scripts/consolidate_master_results.py',
             'python scripts/advanced_data_analytics.py']:
     q=p(); q.paragraph_format.left_indent=Inches(.25); q.paragraph_format.space_after=Pt(3)
-    r=q.add_run(cmd); r.font.name='Consolas'; r.font.size=Pt(8.5); r.font.color.rgb=NAVY
+    q.alignment=WD_ALIGN_PARAGRAPH.LEFT; q.paragraph_format.first_line_indent=Inches(0)
+    r=q.add_run(cmd); r.font.name='Consolas'; r.font.size=Pt(10.5); r.font.color.rgb=NAVY
 p('การรัน AI ต้องตั้ง KKU API key ใน environment ตาม `.env.example`; ห้ามใส่ secret ใน repository. ตัวเลขในเล่มอ้างอิง snapshot วันที่ 26 กันยายน 2569.')
 
 # References
@@ -426,7 +462,7 @@ apa_refs=[
 ]
 for prefix,italic_text,suffix in apa_refs:
     q=DOC.add_paragraph(); q.paragraph_format.left_indent=Inches(.5); q.paragraph_format.first_line_indent=Inches(-.5)
-    q.paragraph_format.line_spacing=2.0; q.paragraph_format.space_after=Pt(0)
+    q.paragraph_format.line_spacing=2.0; q.paragraph_format.space_after=Pt(0); q.alignment=WD_ALIGN_PARAGRAPH.LEFT
     q.add_run(prefix); q.add_run(italic_text).italic=True; q.add_run(suffix)
 p('รายละเอียดค่าจำนวนบั๊ก, configuration, prompt และผลวัดในรายงานมาจาก catalog, source, manifest, CSV และ run logs ของโครงงาน ณ snapshot ที่ระบุ.')
 
@@ -464,10 +500,16 @@ tail.paragraph_format.space_before=Pt(0); tail.paragraph_format.space_after=Pt(0
 tail.paragraph_format.line_spacing=Pt(1)
 for run in tail.runs: run.font.size=Pt(1)
 
-# Footer and metadata
-f=SEC.footer.paragraphs[0]; f.alignment=WD_ALIGN_PARAGRAPH.RIGHT
-r=f.add_run('CP353201 Software Quality Assurance  |  '); r.font.name=FONT; r.font.size=Pt(8); r.font.color.rgb=GRAY
-field(f,' PAGE ','2')
+# Page number: Arabic numeral at the upper-right; the cover is unnumbered.
+SEC.header.paragraphs[0].text=''; SEC.first_page_header.paragraphs[0].text=''
+SEC.footer.paragraphs[0].text=''
+h=BODY.header; h.is_linked_to_previous=False
+h=h.paragraphs[0]; h.alignment=WD_ALIGN_PARAGRAPH.RIGHT
+h.paragraph_format.first_line_indent=Inches(0); h.paragraph_format.space_after=Pt(0)
+field(h,' PAGE ','1')
+for run in h.runs:
+    set_run_font(run,14); run.font.color.rgb=GRAY
+BODY.footer.is_linked_to_previous=False; BODY.footer.paragraphs[0].text=''
 DOC.core_properties.title='รายงานฉบับสมบูรณ์ การเปรียบเทียบการสร้างชุดทดสอบบน Defects4J'
 DOC.core_properties.subject='CP353201 Software Quality Assurance ภาคการศึกษา 1/2569'
 DOC.core_properties.author='กลุ่มโครงงาน CP353201'
