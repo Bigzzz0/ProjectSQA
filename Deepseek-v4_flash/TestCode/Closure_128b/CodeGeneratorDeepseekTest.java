@@ -1,610 +1,1878 @@
-package org.mozilla.javascript;
+package com.google.javascript.jscomp;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import org.mozilla.javascript.ast.*;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
 
 /**
- * White-box JUnit 4 test suite for CodeGenerator.
- * Targets line/branch coverage and the known defect (numeric keys in object literals).
- *
- * Branch & Defect Analysis Matrix:
- * - Core functional logic: empty scripts, functions, statements (IF, LOOP, TRY, SWITCH, etc.)
- * - Boundary: empty strings, zero/negative numbers, large indices, null arguments
- * - Defect-targeted: OBJECTLIT with numeric keys (propertyIds as Integer vs String)
- * - Exception paths: illegal tokens, bad tree nodes (though not thrown directly)
- * - Object lifecycle: compile with null? Not possible due to internal usage
+ * CodeGeneratorDeepseekTest - Advanced White-Box Test Suite for CodeGenerator
+ * 
+ * [Branch & Defect Analysis Matrix]
+ * 
+ * Partition A: Core Functional Logic & State Transitions
+ *   - Test basic code generation for all major token types
+ *   - Test binary/unary operator generation
+ *   - Test function/block/statement generation
+ *   - Test string escaping and quote selection
+ * 
+ * Partition B: Boundary Value Analysis (BVA) & Extremes
+ *   - Test empty strings, null nodes, edge case numbers
+ *   - Test boundary values for string escaping (0x00, 0x7F, 0x80, etc.)
+ *   - Test MAX_POSITIVE_INTEGER_NUMBER boundary for getSimpleNumber
+ *   - Test empty blocks, single-child blocks, multi-child blocks
+ * 
+ * Partition C: Defect-Targeted Branch Zone
+ *   - Test issue942: Object literal property names with numeric strings
+ *     should NOT be quoted when they are simple numbers
+ *   - Test isSimpleNumber with leading zeros, non-numeric strings
+ *   - Test getSimpleNumber with various numeric string formats
+ * 
+ * Partition D: Exception & Defensive Guard Paths
+ *   - Test invalid token types
+ *   - Test malformed AST structures
+ *   - Test edge cases in unrollBinaryOperator
+ * 
+ * Partition E: Object Lifecycle & Contract Integrity
+ *   - Test forCostEstimation factory method
+ *   - Test constructor with CompilerOptions
+ *   - Test tagAsStrict method
  */
 public class CodeGeneratorDeepseekTest {
-
-    private CodeGenerator createGenerator(CompilerEnvirons env) {
-        CodeGenerator gen = new CodeGenerator();
-        // The CodeGenerator has no public constructor; it's package-private; so instantiation OK.
-        // We need to set compilerEnv via compile method.
-        return gen;
-    }
-
-    // Helper to create a simple AstRoot
-    private AstRoot createEmptyScript() {
-        AstRoot root = new AstRoot();
-        root.setSourceName("test");
-        root.addChild(new Node(Token.EXPR_VOID)); // make it non-empty? We'll keep empty.
-        return root;
-    }
-
+    
+    // ==================== Partition A: Core Functional Logic ====================
+    
     @Test(timeout = 4000)
-    public void testCompileNullExpression() {
-        // Should handle empty script? Actually, visitStatement for SCRIPT will iterate children.
-        AstRoot root = new AstRoot();
-        root.setSourceName("empty");
-        // No children; should still compile
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        assertTrue(data.itsICode.length >= 0);
-        // Should have no tokens except maybe RETURN_RESULT?
-        // For script with no statements, visitStatement will not add RETURN_RESULT because itsFunctionType==0? Actually, generateICodeFromTree adds RETURN_RESULT only if itsFunctionType==0.
-        // So should have at least one instruction.
-        assertTrue(data.itsICode.length > 0);
+    public void testAddString() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        cg.add("test");
+        assertEquals("test", sb.toString());
     }
-
+    
     @Test(timeout = 4000)
-    public void testCompileSimpleNumber() {
-        // Expression: 42;
-        AstRoot root = new AstRoot();
-        root.setSourceName("num");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node numNode = new Node(Token.NUMBER);
-        numNode.setDouble(42.0);
-        expr.addChild(numNode);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Check that we have instruction for number: either ZERO, ONE, SHORTNUMBER, INTNUMBER, or NUMBER
-        boolean foundNumber = false;
-        byte[] code = data.itsICode;
-        for (int i = 0; i < code.length; i++) {
-            if (code[i] == (byte) Icode.Icode_ZERO || code[i] == (byte) Icode.Icode_ONE ||
-                code[i] == (byte) Icode.Icode_SHORTNUMBER || code[i] == (byte) Icode.Icode_INTNUMBER ||
-                code[i] == (byte) Token.NUMBER) {
-                foundNumber = true;
-                break;
-            }
-        }
-        assertTrue("Expected number instruction", foundNumber);
+    public void testTagAsStrict() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        cg.tagAsStrict();
+        assertEquals("'use strict';", sb.toString());
     }
-
+    
     @Test(timeout = 4000)
-    public void testCompileStringLiteral() {
-        // Expression: "hello";
-        AstRoot root = new AstRoot();
-        root.setSourceName("str");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node strNode = new Node(Token.STRING);
-        strNode.setString("hello");
-        expr.addChild(strNode);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // String should be in itsStringTable
-        assertNotNull(data.itsStringTable);
-        boolean found = false;
-        for (String s : data.itsStringTable) {
-            if ("hello".equals(s)) {
-                found = true;
-                break;
-            }
-        }
-        assertTrue("Expected string 'hello' in table", found);
+    public void testAddNullNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node nullNode = new Node(Token.NULL);
+        cg.add(nullNode);
+        assertEquals("null", sb.toString());
     }
-
+    
     @Test(timeout = 4000)
-    public void testCompileObjectLiteralWithNumericKey() {
-        // Targeted defect: {0: 1}
-        AstRoot root = new AstRoot();
-        root.setSourceName("obj");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node objLit = new Node(Token.OBJECTLIT);
-        // Set propertyIds: an array of one Integer
-        Object[] propertyIds = new Object[] { Integer.valueOf(0) };
-        objLit.putProp(Node.OBJECT_IDS_PROP, propertyIds);
-        // Child node: the value expression (1)
-        Node valNode = new Node(Token.NUMBER);
-        valNode.setDouble(1.0);
-        objLit.addChild(valNode);
-        expr.addChild(objLit);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Check literalIds: should contain the propertyIds array
-        Object[] literalIds = data.literalIds;
-        assertNotNull(literalIds);
-        boolean foundNumericKey = false;
-        for (Object o : literalIds) {
-            if (o instanceof Object[]) {
-                Object[] arr = (Object[]) o;
-                if (arr.length == 1 && arr[0] instanceof Integer && ((Integer) arr[0]) == 0) {
-                    foundNumericKey = true;
-                    break;
-                }
-            }
-        }
-        assertTrue("Expected numeric key 0 in literalIds", foundNumericKey);
-        // Also check that the propertyIds in literalIds is exactly the same object? Not necessary.
+    public void testAddThisNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node thisNode = new Node(Token.THIS);
+        cg.add(thisNode);
+        assertEquals("this", sb.toString());
     }
-
+    
     @Test(timeout = 4000)
-    public void testCompileObjectLiteralWithStringKey() {
-        // { "foo": 1 }
-        AstRoot root = new AstRoot();
-        root.setSourceName("obj2");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node objLit = new Node(Token.OBJECTLIT);
-        Object[] propertyIds = new Object[] { "foo" };
-        objLit.putProp(Node.OBJECT_IDS_PROP, propertyIds);
-        Node valNode = new Node(Token.NUMBER);
-        valNode.setDouble(1.0);
-        objLit.addChild(valNode);
-        expr.addChild(objLit);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        Object[] literalIds = data.literalIds;
-        assertNotNull(literalIds);
-        boolean foundStringKey = false;
-        for (Object o : literalIds) {
-            if (o instanceof Object[]) {
-                Object[] arr = (Object[]) o;
-                if (arr.length == 1 && "foo".equals(arr[0])) {
-                    foundStringKey = true;
-                    break;
-                }
-            }
-        }
-        assertTrue("Expected string key 'foo' in literalIds", foundStringKey);
+    public void testAddTrueNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node trueNode = new Node(Token.TRUE);
+        cg.add(trueNode);
+        assertEquals("true", sb.toString());
     }
-
+    
     @Test(timeout = 4000)
-    public void testCompileArrayLiteral() {
-        // [1, 2]
-        AstRoot root = new AstRoot();
-        root.setSourceName("arr");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node arrLit = new Node(Token.ARRAYLIT);
-        Node val1 = new Node(Token.NUMBER);
-        val1.setDouble(1.0);
-        Node val2 = new Node(Token.NUMBER);
-        val2.setDouble(2.0);
-        arrLit.addChild(val1);
-        arrLit.addChild(val2);
-        expr.addChild(arrLit);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Should have LITERAL_NEW and LITERAL_SET instructions
-        // We can check that the code contains the correct token
-        boolean hasLitNew = false, hasLitSet = false;
-        for (byte b : data.itsICode) {
-            if ((b & 0xFF) == Icode.Icode_LITERAL_NEW) hasLitNew = true;
-            if ((b & 0xFF) == Icode.Icode_LITERAL_SET) hasLitSet = true;
-        }
-        assertTrue("Expected LITERAL_NEW", hasLitNew);
-        assertTrue("Expected LITERAL_SET", hasLitSet);
+    public void testAddFalseNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node falseNode = new Node(Token.FALSE);
+        cg.add(falseNode);
+        assertEquals("false", sb.toString());
     }
-
+    
     @Test(timeout = 4000)
-    public void testCompileFunctionCall() {
-        // f()
-        // We'll simulate a function call: NAME f, CALL
-        AstRoot root = new AstRoot();
-        root.setSourceName("call");
-        Node expr = new Node(Token.EXPR_VOID);
+    public void testAddNumberNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node numberNode = Node.newNumber(42.0);
+        cg.add(numberNode);
+        assertEquals("42", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddStringNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("hello");
+        cg.add(stringNode);
+        assertEquals("\"hello\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddStringNodeWithSpecialChars() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("hello\nworld");
+        cg.add(stringNode);
+        assertEquals("\"hello\\nworld\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddStringNodeWithQuotes() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // String with double quotes should use single quotes
+        Node stringNode = Node.newString("he\"llo");
+        cg.add(stringNode);
+        assertEquals("'he\"llo'", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddStringNodeWithSingleQuotes() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // String with single quotes should use double quotes
+        Node stringNode = Node.newString("he'llo");
+        cg.add(stringNode);
+        assertEquals("\"he'llo\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNameNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node nameNode = Node.newString(Token.NAME, "x");
+        cg.add(nameNode);
+        assertEquals("x", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNameNodeWithAssignment() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node nameNode = Node.newString(Token.NAME, "x");
+        Node valueNode = Node.newNumber(5.0);
+        nameNode.addChildToFront(valueNode);
+        cg.add(nameNode);
+        assertEquals("x=5", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddVarNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node varNode = new Node(Token.VAR);
+        Node nameNode = Node.newString(Token.NAME, "x");
+        Node valueNode = Node.newNumber(10.0);
+        nameNode.addChildToFront(valueNode);
+        varNode.addChildToFront(nameNode);
+        cg.add(varNode);
+        assertEquals("var x=10", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddReturnNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node returnNode = new Node(Token.RETURN);
+        Node valueNode = Node.newNumber(42.0);
+        returnNode.addChildToFront(valueNode);
+        cg.add(returnNode);
+        assertEquals("return42", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddReturnNodeNoValue() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node returnNode = new Node(Token.RETURN);
+        cg.add(returnNode);
+        assertEquals("return", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddThrowNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node throwNode = new Node(Token.THROW);
+        Node errorNode = Node.newString(Token.NAME, "Error");
+        throwNode.addChildToFront(errorNode);
+        cg.add(throwNode);
+        assertEquals("throwError", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddBreakNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node breakNode = new Node(Token.BREAK);
+        cg.add(breakNode);
+        assertEquals("break", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddContinueNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node continueNode = new Node(Token.CONTINUE);
+        cg.add(continueNode);
+        assertEquals("continue", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddDebuggerNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node debuggerNode = new Node(Token.DEBUGGER);
+        cg.add(debuggerNode);
+        assertEquals("debugger", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddEmptyNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node emptyNode = new Node(Token.EMPTY);
+        cg.add(emptyNode);
+        assertEquals("", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddArrayLitNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node arrayNode = new Node(Token.ARRAYLIT);
+        Node elem1 = Node.newNumber(1.0);
+        Node elem2 = Node.newNumber(2.0);
+        arrayNode.addChildToFront(elem2);
+        arrayNode.addChildToFront(elem1);
+        cg.add(arrayNode);
+        assertEquals("[1,2]", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddObjectLitNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        Node keyNode = Node.newString(Token.STRING_KEY, "key");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        cg.add(objectNode);
+        assertEquals("{key:1}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddFunctionNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node functionNode = new Node(Token.FUNCTION);
+        Node nameNode = Node.newString(Token.NAME, "f");
+        Node paramNode = new Node(Token.PARAM_LIST);
+        Node bodyNode = new Node(Token.BLOCK);
+        functionNode.addChildToFront(bodyNode);
+        functionNode.addChildToFront(paramNode);
+        functionNode.addChildToFront(nameNode);
+        cg.add(functionNode);
+        assertEquals("function f(){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNewNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node newNode = new Node(Token.NEW);
+        Node constructorNode = Node.newString(Token.NAME, "Array");
+        newNode.addChildToFront(constructorNode);
+        cg.add(newNode);
+        assertEquals("new Array", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNewNodeWithArgs() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node newNode = new Node(Token.NEW);
+        Node constructorNode = Node.newString(Token.NAME, "Array");
+        Node argNode = Node.newNumber(5.0);
+        newNode.addChildToFront(argNode);
+        newNode.addChildToFront(constructorNode);
+        cg.add(newNode);
+        assertEquals("new Array(5)", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddDelPropNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node delNode = new Node(Token.DELPROP);
+        Node propNode = Node.newString(Token.NAME, "x");
+        delNode.addChildToFront(propNode);
+        cg.add(delNode);
+        assertEquals("delete x", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddTypeofNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node typeofNode = new Node(Token.TYPEOF);
+        Node operandNode = Node.newString(Token.NAME, "x");
+        typeofNode.addChildToFront(operandNode);
+        cg.add(typeofNode);
+        assertEquals("typeof x", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddVoidNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node voidNode = new Node(Token.VOID);
+        Node operandNode = Node.newNumber(0.0);
+        voidNode.addChildToFront(operandNode);
+        cg.add(voidNode);
+        assertEquals("void 0", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNotNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node notNode = new Node(Token.NOT);
+        Node operandNode = Node.newString(Token.NAME, "x");
+        notNode.addChildToFront(operandNode);
+        cg.add(notNode);
+        assertEquals("!x", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddBitnotNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node bitnotNode = new Node(Token.BITNOT);
+        Node operandNode = Node.newNumber(5.0);
+        bitnotNode.addChildToFront(operandNode);
+        cg.add(bitnotNode);
+        assertEquals("~5", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddPosNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node posNode = new Node(Token.POS);
+        Node operandNode = Node.newNumber(5.0);
+        posNode.addChildToFront(operandNode);
+        cg.add(posNode);
+        assertEquals("+5", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNegNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node negNode = new Node(Token.NEG);
+        Node operandNode = Node.newNumber(5.0);
+        negNode.addChildToFront(operandNode);
+        cg.add(negNode);
+        assertEquals("-5", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddNegNodeWithNegativeNumber() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node negNode = new Node(Token.NEG);
+        Node operandNode = Node.newNumber(-2.0);
+        negNode.addChildToFront(operandNode);
+        cg.add(negNode);
+        assertEquals("2", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddIncPreNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node incNode = new Node(Token.INC);
+        incNode.putIntProp(Node.INCRDECR_PROP, 0); // pre-increment
+        Node operandNode = Node.newString(Token.NAME, "x");
+        incNode.addChildToFront(operandNode);
+        cg.add(incNode);
+        assertEquals("++x", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddIncPostNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node incNode = new Node(Token.INC);
+        incNode.putIntProp(Node.INCRDECR_PROP, 1); // post-increment
+        Node operandNode = Node.newString(Token.NAME, "x");
+        incNode.addChildToFront(operandNode);
+        cg.add(incNode);
+        assertEquals("x++", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddDecPreNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node decNode = new Node(Token.DEC);
+        decNode.putIntProp(Node.INCRDECR_PROP, 0); // pre-decrement
+        Node operandNode = Node.newString(Token.NAME, "x");
+        decNode.addChildToFront(operandNode);
+        cg.add(decNode);
+        assertEquals("--x", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddDecPostNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node decNode = new Node(Token.DEC);
+        decNode.putIntProp(Node.INCRDECR_PROP, 1); // post-decrement
+        Node operandNode = Node.newString(Token.NAME, "x");
+        decNode.addChildToFront(operandNode);
+        cg.add(decNode);
+        assertEquals("x--", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddHookNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node hookNode = new Node(Token.HOOK);
+        Node condNode = Node.newString(Token.NAME, "a");
+        Node trueNode = Node.newString(Token.NAME, "b");
+        Node falseNode = Node.newString(Token.NAME, "c");
+        hookNode.addChildToFront(falseNode);
+        hookNode.addChildToFront(trueNode);
+        hookNode.addChildToFront(condNode);
+        cg.add(hookNode);
+        assertEquals("a?b:c", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddCommaNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node commaNode = new Node(Token.COMMA);
+        Node leftNode = Node.newNumber(1.0);
+        Node rightNode = Node.newNumber(2.0);
+        commaNode.addChildToFront(rightNode);
+        commaNode.addChildToFront(leftNode);
+        cg.add(commaNode);
+        assertEquals("1,2", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddAssignNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node assignNode = new Node(Token.ASSIGN);
+        Node leftNode = Node.newString(Token.NAME, "x");
+        Node rightNode = Node.newNumber(5.0);
+        assignNode.addChildToFront(rightNode);
+        assignNode.addChildToFront(leftNode);
+        cg.add(assignNode);
+        assertEquals("x=5", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddGetPropNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node getPropNode = new Node(Token.GETPROP);
+        Node objNode = Node.newString(Token.NAME, "obj");
+        Node propNode = Node.newString("prop");
+        getPropNode.addChildToFront(propNode);
+        getPropNode.addChildToFront(objNode);
+        cg.add(getPropNode);
+        assertEquals("obj.prop", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddGetElemNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node getElemNode = new Node(Token.GETELEM);
+        Node objNode = Node.newString(Token.NAME, "arr");
+        Node indexNode = Node.newNumber(0.0);
+        getElemNode.addChildToFront(indexNode);
+        getElemNode.addChildToFront(objNode);
+        cg.add(getElemNode);
+        assertEquals("arr[0]", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddCallNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
         Node callNode = new Node(Token.CALL);
-        Node nameNode = new Node(Token.NAME);
-        nameNode.setString("f");
-        // The call expects function and thisObj; but for simplicity, we just add the function expression.
-        // generateCallFunAndThis requires a left child. So we add left as NAME.
-        callNode.addChild(nameNode);
-        expr.addChild(callNode);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        try {
-            InterpreterData data = gen.compile(env, root, null, false);
-            // May throw because stack depth check? We'll just catch and fail if exception.
-            // Actually, this should produce some code.
-            assertNotNull(data);
-        } catch (Exception e) {
-            fail("Unexpected exception: " + e.getMessage());
+        Node funcNode = Node.newString(Token.NAME, "f");
+        Node argNode = Node.newNumber(1.0);
+        callNode.addChildToFront(argNode);
+        callNode.addChildToFront(funcNode);
+        cg.add(callNode);
+        assertEquals("f(1)", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddIfNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node ifNode = new Node(Token.IF);
+        Node condNode = Node.newString(Token.NAME, "a");
+        Node thenNode = new Node(Token.BLOCK);
+        Node elseNode = new Node(Token.BLOCK);
+        ifNode.addChildToFront(elseNode);
+        ifNode.addChildToFront(thenNode);
+        ifNode.addChildToFront(condNode);
+        cg.add(ifNode);
+        assertEquals("if(a){}else{}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddIfNodeNoElse() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node ifNode = new Node(Token.IF);
+        Node condNode = Node.newString(Token.NAME, "a");
+        Node thenNode = new Node(Token.BLOCK);
+        ifNode.addChildToFront(thenNode);
+        ifNode.addChildToFront(condNode);
+        cg.add(ifNode);
+        assertEquals("if(a){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddWhileNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node whileNode = new Node(Token.WHILE);
+        Node condNode = Node.newString(Token.NAME, "a");
+        Node bodyNode = new Node(Token.BLOCK);
+        whileNode.addChildToFront(bodyNode);
+        whileNode.addChildToFront(condNode);
+        cg.add(whileNode);
+        assertEquals("while(a){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddDoNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node doNode = new Node(Token.DO);
+        Node bodyNode = new Node(Token.BLOCK);
+        Node condNode = Node.newString(Token.NAME, "a");
+        doNode.addChildToFront(condNode);
+        doNode.addChildToFront(bodyNode);
+        cg.add(doNode);
+        assertEquals("do{}while(a)", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddForNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node forNode = new Node(Token.FOR);
+        Node initNode = Node.newString(Token.NAME, "i");
+        Node condNode = Node.newString(Token.NAME, "j");
+        Node incrNode = Node.newString(Token.NAME, "k");
+        Node bodyNode = new Node(Token.BLOCK);
+        forNode.addChildToFront(bodyNode);
+        forNode.addChildToFront(incrNode);
+        forNode.addChildToFront(condNode);
+        forNode.addChildToFront(initNode);
+        cg.add(forNode);
+        assertEquals("for(i;j;k){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddForInNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node forInNode = new Node(Token.FOR);
+        Node varNode = Node.newString(Token.NAME, "x");
+        Node objNode = Node.newString(Token.NAME, "obj");
+        Node bodyNode = new Node(Token.BLOCK);
+        forInNode.addChildToFront(bodyNode);
+        forInNode.addChildToFront(objNode);
+        forInNode.addChildToFront(varNode);
+        cg.add(forInNode);
+        assertEquals("for(xin obj){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddWithNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node withNode = new Node(Token.WITH);
+        Node objNode = Node.newString(Token.NAME, "obj");
+        Node bodyNode = new Node(Token.BLOCK);
+        withNode.addChildToFront(bodyNode);
+        withNode.addChildToFront(objNode);
+        cg.add(withNode);
+        assertEquals("with(obj){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddSwitchNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node switchNode = new Node(Token.SWITCH);
+        Node exprNode = Node.newString(Token.NAME, "x");
+        switchNode.addChildToFront(exprNode);
+        cg.add(switchNode);
+        assertEquals("switch(x){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddCaseNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node caseNode = new Node(Token.CASE);
+        Node valueNode = Node.newNumber(1.0);
+        Node bodyNode = new Node(Token.BLOCK);
+        caseNode.addChildToFront(bodyNode);
+        caseNode.addChildToFront(valueNode);
+        cg.add(caseNode);
+        assertEquals("case 1{}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddDefaultCaseNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node defaultCaseNode = new Node(Token.DEFAULT_CASE);
+        Node bodyNode = new Node(Token.BLOCK);
+        defaultCaseNode.addChildToFront(bodyNode);
+        cg.add(defaultCaseNode);
+        assertEquals("default{}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddLabelNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node labelNode = new Node(Token.LABEL);
+        Node labelNameNode = Node.newString(Token.LABEL_NAME, "loop");
+        Node bodyNode = new Node(Token.BLOCK);
+        labelNode.addChildToFront(bodyNode);
+        labelNode.addChildToFront(labelNameNode);
+        cg.add(labelNode);
+        assertEquals("loop:{}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddCastNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node castNode = new Node(Token.CAST);
+        Node exprNode = Node.newNumber(5.0);
+        castNode.addChildToFront(exprNode);
+        cg.add(castNode);
+        assertEquals("(5)", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddExprResultNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node exprResultNode = new Node(Token.EXPR_RESULT);
+        Node exprNode = Node.newNumber(5.0);
+        exprResultNode.addChildToFront(exprNode);
+        cg.add(exprResultNode);
+        assertEquals("5", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddBlockNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node blockNode = new Node(Token.BLOCK);
+        Node stmtNode = new Node(Token.EXPR_RESULT);
+        stmtNode.addChildToFront(Node.newNumber(1.0));
+        blockNode.addChildToFront(stmtNode);
+        cg.add(blockNode);
+        assertEquals("1", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddScriptNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node scriptNode = new Node(Token.SCRIPT);
+        Node stmtNode = new Node(Token.EXPR_RESULT);
+        stmtNode.addChildToFront(Node.newNumber(1.0));
+        scriptNode.addChildToFront(stmtNode);
+        cg.add(scriptNode);
+        assertEquals("1", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddTryCatchNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node tryNode = new Node(Token.TRY);
+        Node tryBlock = new Node(Token.BLOCK);
+        Node catchBlock = new Node(Token.BLOCK);
+        Node catchNode = new Node(Token.CATCH);
+        Node catchVar = Node.newString(Token.NAME, "e");
+        Node catchBody = new Node(Token.BLOCK);
+        catchNode.addChildToFront(catchBody);
+        catchNode.addChildToFront(catchVar);
+        catchBlock.addChildToFront(catchNode);
+        tryNode.addChildToFront(catchBlock);
+        tryNode.addChildToFront(tryBlock);
+        cg.add(tryNode);
+        assertEquals("try{}catch(e){}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddTryFinallyNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node tryNode = new Node(Token.TRY);
+        Node tryBlock = new Node(Token.BLOCK);
+        Node catchBlock = new Node(Token.BLOCK);
+        Node finallyBlock = new Node(Token.BLOCK);
+        tryNode.addChildToFront(finallyBlock);
+        tryNode.addChildToFront(catchBlock);
+        tryNode.addChildToFront(tryBlock);
+        cg.add(tryNode);
+        assertEquals("try{}finally{}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddTryCatchFinallyNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node tryNode = new Node(Token.TRY);
+        Node tryBlock = new Node(Token.BLOCK);
+        Node catchBlock = new Node(Token.BLOCK);
+        Node catchNode = new Node(Token.CATCH);
+        Node catchVar = Node.newString(Token.NAME, "e");
+        Node catchBody = new Node(Token.BLOCK);
+        catchNode.addChildToFront(catchBody);
+        catchNode.addChildToFront(catchVar);
+        catchBlock.addChildToFront(catchNode);
+        Node finallyBlock = new Node(Token.BLOCK);
+        tryNode.addChildToFront(finallyBlock);
+        tryNode.addChildToFront(catchBlock);
+        tryNode.addChildToFront(tryBlock);
+        cg.add(tryNode);
+        assertEquals("try{}catch(e){}finally{}", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddRegExpNode() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node regexpNode = new Node(Token.REGEXP);
+        Node patternNode = Node.newString("test");
+        Node flagsNode = Node.newString("g");
+        regexpNode.addChildToFront(flagsNode);
+        regexpNode.addChildToFront(patternNode);
+        cg.add(regexpNode);
+        assertEquals("/test/g", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddRegExpNodeNoFlags() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node regexpNode = new Node(Token.REGEXP);
+        Node patternNode = Node.newString("test");
+        regexpNode.addChildToFront(patternNode);
+        cg.add(regexpNode);
+        assertEquals("/test/", sb.toString());
+    }
+    
+    // ==================== Partition B: Boundary Value Analysis ====================
+    
+    @Test(timeout = 4000)
+    public void testIsSimpleNumber() {
+        assertTrue(CodeGenerator.isSimpleNumber("123"));
+        assertTrue(CodeGenerator.isSimpleNumber("0"));
+        assertTrue(CodeGenerator.isSimpleNumber("9999999999999999"));
+        assertFalse(CodeGenerator.isSimpleNumber(""));
+        assertFalse(CodeGenerator.isSimpleNumber("0123")); // leading zero
+        assertFalse(CodeGenerator.isSimpleNumber("12.3"));
+        assertFalse(CodeGenerator.isSimpleNumber("abc"));
+        assertFalse(CodeGenerator.isSimpleNumber("12a"));
+        assertFalse(CodeGenerator.isSimpleNumber("-123"));
+    }
+    
+    @Test(timeout = 4000)
+    public void testGetSimpleNumber() {
+        assertEquals(123.0, CodeGenerator.getSimpleNumber("123"), 0.0);
+        assertEquals(0.0, CodeGenerator.getSimpleNumber("0"), 0.0);
+        assertTrue(Double.isNaN(CodeGenerator.getSimpleNumber("")));
+        assertTrue(Double.isNaN(CodeGenerator.getSimpleNumber("0123")));
+        assertTrue(Double.isNaN(CodeGenerator.getSimpleNumber("abc")));
+        assertTrue(Double.isNaN(CodeGenerator.getSimpleNumber("12.3")));
+        
+        // Test boundary near MAX_POSITIVE_INTEGER_NUMBER
+        // This should return NaN since it's too large
+        assertTrue(Double.isNaN(CodeGenerator.getSimpleNumber("99999999999999999999")));
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeNullChar() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\0");
+        cg.add(stringNode);
+        assertEquals("\"\\x00\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeBackspace() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\b");
+        cg.add(stringNode);
+        assertEquals("\"\\b\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeFormFeed() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\f");
+        cg.add(stringNode);
+        assertEquals("\"\\f\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeNewline() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\n");
+        cg.add(stringNode);
+        assertEquals("\"\\n\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeCarriageReturn() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\r");
+        cg.add(stringNode);
+        assertEquals("\"\\r\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeTab() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\t");
+        cg.add(stringNode);
+        assertEquals("\"\\t\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeVerticalTab() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u000B");
+        stringNode.putBooleanProp(Node.SLASH_V, true);
+        cg.add(stringNode);
+        assertEquals("\"\\v\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeVerticalTabNoSlashV() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u000B");
+        cg.add(stringNode);
+        assertEquals("\"\\x0B\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeLineSeparator() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u2028");
+        cg.add(stringNode);
+        assertEquals("\"\\u2028\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeParagraphSeparator() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u2029");
+        cg.add(stringNode);
+        assertEquals("\"\\u2029\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeBackslash() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\\");
+        cg.add(stringNode);
+        assertEquals("\"\\\\\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeNonLatinCharacters() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u00E9"); // é
+        cg.add(stringNode);
+        assertEquals("\"\\u00e9\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeLatinCharacters() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("abc");
+        cg.add(stringNode);
+        assertEquals("\"abc\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeHighAscii() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u0080");
+        cg.add(stringNode);
+        assertEquals("\"\\u0080\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testStringEscapeDelChar() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node stringNode = Node.newString("\u007F");
+        cg.add(stringNode);
+        assertEquals("\"\\u007f\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testIdentifierEscape() {
+        assertEquals("abc", CodeGenerator.identifierEscape("abc"));
+        assertEquals("\\u00e9", CodeGenerator.identifierEscape("\u00E9"));
+        assertEquals("a\\u00e9b", CodeGenerator.identifierEscape("a\u00E9b"));
+    }
+    
+    @Test(timeout = 4000)
+    public void testEscapeToDoubleQuotedJsString() {
+        CodeGenerator cg = CodeGenerator.forCostEstimation(new SimpleCodeConsumer(new StringBuilder()));
+        assertEquals("\"hello\"", cg.escapeToDoubleQuotedJsString("hello"));
+        assertEquals("\"he\\\"llo\"", cg.escapeToDoubleQuotedJsString("he\"llo"));
+        assertEquals("\"he'llo\"", cg.escapeToDoubleQuotedJsString("he'llo"));
+    }
+    
+    @Test(timeout = 4000)
+    public void testRegexpEscape() {
+        CodeGenerator cg = CodeGenerator.forCostEstimation(new SimpleCodeConsumer(new StringBuilder()));
+        assertEquals("/test/", cg.regexpEscape("test"));
+        assertEquals("/test\\/g/", cg.regexpEscape("test/g"));
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddArrayListWithEmptyTrailing() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node arrayNode = new Node(Token.ARRAYLIT);
+        Node elem1 = Node.newNumber(1.0);
+        Node emptyNode = new Node(Token.EMPTY);
+        arrayNode.addChildToFront(emptyNode);
+        arrayNode.addChildToFront(elem1);
+        cg.add(arrayNode);
+        assertEquals("[1,]", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddArrayListWithMultipleEmpties() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node arrayNode = new Node(Token.ARRAYLIT);
+        Node empty1 = new Node(Token.EMPTY);
+        Node empty2 = new Node(Token.EMPTY);
+        Node elem1 = Node.newNumber(1.0);
+        arrayNode.addChildToFront(empty2);
+        arrayNode.addChildToFront(empty1);
+        arrayNode.addChildToFront(elem1);
+        cg.add(arrayNode);
+        assertEquals("[1,,]", sb.toString());
+    }
+    
+    // ==================== Partition C: Defect-Targeted Branch Zone ====================
+    
+    /**
+     * Test for issue942: Object literal property names that are simple numbers
+     * should NOT be quoted. The bug causes numeric property names like "0" to be
+     * output as ["0"] instead of [0].
+     */
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitNumericPropertyName() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // Create object literal with numeric property name "0"
+        Node objectNode = new Node(Token.OBJECTLIT);
+        Node keyNode = Node.newString(Token.STRING_KEY, "0");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        // The expected output should be {0:1} not {["0"]:1}
+        // This is the bug from issue942
+        String result = sb.toString();
+        assertEquals("Object literal with numeric property name should use unquoted number", 
+                     "{0:1}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitMultipleNumericPropertyNames() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        Node key1 = Node.newString(Token.STRING_KEY, "0");
+        key1.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(key1);
+        
+        Node key2 = Node.newString(Token.STRING_KEY, "1");
+        key2.addChildToFront(Node.newNumber(2.0));
+        objectNode.addChildToFront(key2);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with multiple numeric property names", 
+                     "{0:1,1:2}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitMixedPropertyNames() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // Numeric property name
+        Node key1 = Node.newString(Token.STRING_KEY, "0");
+        key1.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(key1);
+        
+        // String property name
+        Node key2 = Node.newString(Token.STRING_KEY, "foo");
+        key2.addChildToFront(Node.newNumber(2.0));
+        objectNode.addChildToFront(key2);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with mixed property names", 
+                     "{0:1,foo:2}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitNumericPropertyNameWithLeadingZero() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // "01" is not a simple number (leading zero), so it should be quoted
+        Node keyNode = Node.newString(Token.STRING_KEY, "01");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with leading zero property name should be quoted", 
+                     "{\"01\":1}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitNumericPropertyNameLargeNumber() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // Large number that exceeds MAX_POSITIVE_INTEGER_NUMBER should be quoted
+        Node keyNode = Node.newString(Token.STRING_KEY, "99999999999999999999");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with large numeric property name should be quoted", 
+                     "{\"99999999999999999999\":1}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitNonNumericStringProperty() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // Non-numeric string property should be quoted if it's not a valid identifier
+        Node keyNode = Node.newString(Token.STRING_KEY, "foo-bar");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with non-identifier property name should be quoted", 
+                     "{\"foo-bar\":1}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitKeywordProperty() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // JavaScript keyword should be quoted
+        Node keyNode = Node.newString(Token.STRING_KEY, "if");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with keyword property name should be quoted", 
+                     "{\"if\":1}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitQuotedStringProperty() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // Quoted string property should always be quoted
+        Node keyNode = Node.newString(Token.STRING_KEY, "foo");
+        keyNode.setQuotedString();
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with quoted string property should be quoted", 
+                     "{\"foo\":1}", result);
+    }
+    
+    @Test(timeout = 4000)
+    public void testIssue942_ObjectLitNonLatinProperty() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node objectNode = new Node(Token.OBJECTLIT);
+        
+        // Non-Latin property name should be quoted
+        Node keyNode = Node.newString(Token.STRING_KEY, "\u00E9");
+        keyNode.addChildToFront(Node.newNumber(1.0));
+        objectNode.addChildToFront(keyNode);
+        
+        cg.add(objectNode);
+        
+        String result = sb.toString();
+        assertEquals("Object literal with non-Latin property name should be quoted", 
+                     "{\"\\u00e9\":1}", result);
+    }
+    
+    // ==================== Partition D: Exception & Defensive Guard Paths ====================
+    
+    @Test(expected = IllegalStateException.class, timeout = 4000)
+    public void testAddInvalidBinaryOperator() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // Create a binary operator node with wrong number of children
+        Node addNode = new Node(Token.ADD);
+        Node leftNode = Node.newNumber(1.0);
+        addNode.addChildToFront(leftNode);
+        // Only one child, should throw
+        cg.add(addNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddUnknownTokenType() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // Create a node with an unknown token type
+        Node unknownNode = new Node(9999);
+        cg.add(unknownNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddRegExpWithNonStringChildren() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node regexpNode = new Node(Token.REGEXP);
+        Node nonStringNode = Node.newNumber(1.0);
+        regexpNode.addChildToFront(nonStringNode);
+        cg.add(regexpNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddFunctionWithNonNodeClass() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // This would require a subclass of Node, which is hard to create
+        // Just verify the precondition check works
+        Node functionNode = new Node(Token.FUNCTION);
+        Node nameNode = Node.newString(Token.NAME, "f");
+        Node paramNode = new Node(Token.PARAM_LIST);
+        Node bodyNode = new Node(Token.BLOCK);
+        functionNode.addChildToFront(bodyNode);
+        functionNode.addChildToFront(paramNode);
+        functionNode.addChildToFront(nameNode);
+        cg.add(functionNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddBreakWithNonLabelChild() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node breakNode = new Node(Token.BREAK);
+        Node nonLabelNode = Node.newNumber(1.0);
+        breakNode.addChildToFront(nonLabelNode);
+        cg.add(breakNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddContinueWithNonLabelChild() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node continueNode = new Node(Token.CONTINUE);
+        Node nonLabelNode = Node.newNumber(1.0);
+        continueNode.addChildToFront(nonLabelNode);
+        cg.add(continueNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddLabelWithNonLabelNameChild() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node labelNode = new Node(Token.LABEL);
+        Node nonLabelNameNode = Node.newNumber(1.0);
+        Node bodyNode = new Node(Token.BLOCK);
+        labelNode.addChildToFront(bodyNode);
+        labelNode.addChildToFront(nonLabelNameNode);
+        cg.add(labelNode);
+    }
+    
+    @Test(expected = Error.class, timeout = 4000)
+    public void testAddNonEmptyStatementWithNonBlockChild() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // This should trigger the error in addNonEmptyStatement
+        Node ifNode = new Node(Token.IF);
+        Node condNode = Node.newString(Token.NAME, "a");
+        Node nonBlockNode = Node.newNumber(1.0);
+        ifNode.addChildToFront(nonBlockNode);
+        ifNode.addChildToFront(condNode);
+        cg.add(ifNode);
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddWithContinueProcessingFalse() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new StoppingCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node numberNode = Node.newNumber(42.0);
+        cg.add(numberNode);
+        // Should not add anything because continueProcessing returns false
+        assertEquals("", sb.toString());
+    }
+    
+    // ==================== Partition E: Object Lifecycle & Contract ====================
+    
+    @Test(timeout = 4000)
+    public void testForCostEstimation() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        assertNotNull(cg);
+        cg.add("test");
+        assertEquals("test", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testConstructorWithOptions() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CompilerOptions options = new CompilerOptions();
+        
+        CodeGenerator cg = new CodeGenerator(consumer, options);
+        assertNotNull(cg);
+        cg.add("test");
+        assertEquals("test", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testConstructorWithOptionsPreferSingleQuotes() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CompilerOptions options = new CompilerOptions();
+        options.preferSingleQuotes = true;
+        
+        CodeGenerator cg = new CodeGenerator(consumer, options);
+        
+        // String with more double quotes should use single quotes
+        Node stringNode = Node.newString("he\"\"llo");
+        cg.add(stringNode);
+        assertEquals("'he\"\"llo'", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testConstructorWithOptionsTrustedStringsFalse() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CompilerOptions options = new CompilerOptions();
+        options.trustedStrings = false;
+        
+        CodeGenerator cg = new CodeGenerator(consumer, options);
+        
+        // With trustedStrings=false, < and > should be escaped
+        Node stringNode = Node.newString("<script>");
+        cg.add(stringNode);
+        assertEquals("\"\\x3cscript\\x3e\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testConstructorWithOptionsCharsetEncoder() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CompilerOptions options = new CompilerOptions();
+        options.setOutputCharset(java.nio.charset.Charset.forName("ISO-8859-1"));
+        
+        CodeGenerator cg = new CodeGenerator(consumer, options);
+        
+        // Characters encodable in ISO-8859-1 should pass through
+        Node stringNode = Node.newString("hello");
+        cg.add(stringNode);
+        assertEquals("\"hello\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testConstructorWithOptionsCharsetEncoderNonEncodable() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CompilerOptions options = new CompilerOptions();
+        options.setOutputCharset(java.nio.charset.Charset.forName("US-ASCII"));
+        
+        CodeGenerator cg = new CodeGenerator(consumer, options);
+        
+        // Non-ASCII characters should be escaped
+        Node stringNode = Node.newString("\u00E9");
+        cg.add(stringNode);
+        assertEquals("\"\\u00e9\"", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddListMethod() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node firstNode = Node.newNumber(1.0);
+        Node secondNode = Node.newNumber(2.0);
+        firstNode.setNext(secondNode);
+        
+        cg.addList(firstNode);
+        assertEquals("1,2", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddListWithIsArrayArgument() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node firstNode = Node.newNumber(1.0);
+        Node secondNode = Node.newNumber(2.0);
+        firstNode.setNext(secondNode);
+        
+        cg.addList(firstNode, true);
+        assertEquals("1,2", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testAddAllSiblings() {
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        Node firstNode = Node.newNumber(1.0);
+        Node secondNode = Node.newNumber(2.0);
+        firstNode.setNext(secondNode);
+        
+        cg.addAllSiblings(firstNode);
+        assertEquals("12", sb.toString());
+    }
+    
+    @Test(timeout = 4000)
+    public void testGetContextForNoInOperator() {
+        // This is a private method, but we can test it indirectly through code generation
+        StringBuilder sb = new StringBuilder();
+        CodeConsumer consumer = new SimpleCodeConsumer(sb);
+        CodeGenerator cg = CodeGenerator.forCostEstimation(consumer);
+        
+        // Create a for-in loop which uses IN_FOR_INIT_CLAUSE context
+        Node forNode = new Node(Token.FOR);
+        Node varNode = new Node(Token.VAR);
+        Node nameNode = Node.newString(Token.NAME, "x");
+        Node valueNode = Node.newNumber(10.0);
+        nameNode.addChildToFront(valueNode);
+        varNode.addChildToFront(nameNode);
+        Node objNode = Node.newString(Token.NAME, "obj");
+        Node bodyNode = new Node(Token.BLOCK);
+        forNode.addChildToFront(bodyNode);
+        forNode.addChildToFront(objNode);
+        forNode.addChildToFront(varNode);
+        
+        cg.add(forNode);
+        assertEquals("for(var x=10in obj){}", sb.toString());
+    }
+    
+    // ==================== Helper CodeConsumer Implementations ====================
+    
+    /**
+     * Simple CodeConsumer that appends to a StringBuilder.
+     */
+    private static class SimpleCodeConsumer implements CodeConsumer {
+        private final StringBuilder sb;
+        
+        SimpleCodeConsumer(StringBuilder sb) {
+            this.sb = sb;
         }
-    }
-
-    @Test(timeout = 4000)
-    public void testCompileIfStatement() {
-        // if (true) { 1; }
-        AstRoot root = new AstRoot();
-        root.setSourceName("if");
-        Node ifNode = new Jump(Token.IFNE); // Not exactly; we need IFEQ or IFNE. Use IFEQ.
-        // Actually, visitStatement uses Token.IFEQ and Token.IFNE for condition.
-        // The structure: child = condition, target = then branch.
-        Jump ifJump = new Jump(Token.IFEQ);
-        Node cond = new Node(Token.TRUE);
-        ifJump.addChild(cond);
-        Node thenBlock = new Node(Token.EXPR_VOID);
-        Node numNode = new Node(Token.NUMBER);
-        numNode.setDouble(1.0);
-        thenBlock.addChild(numNode);
-        // We need to set target for ifJump; but we can't easily without label.
-        // Instead, let's use a simple IF by creating a Jump with a target label and then a TARGET.
-        // For simplicity, we can skip this test if too complex. We'll approximate.
-        // We'll not implement full IF due to complexity. Instead, test a simple expression.
-        root.addChild(ifNode);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        try {
-            InterpreterData data = gen.compile(env, root, null, false);
-            // May fail with bad tree; we expect it to throw perhaps.
-            fail("Expected RuntimeException due to incomplete IF structure");
-        } catch (RuntimeException e) {
-            // Expected
+        
+        @Override
+        public void add(String str) {
+            sb.append(str);
         }
-    }
-
-    @Test(timeout = 4000)
-    public void testCompileTryFinally() {
-        // try { 1; } finally { 2; }
-        // Very complex; we'll skip due to time.
-    }
-
-    @Test(timeout = 4000)
-    public void testCompileFunctionNode() {
-        // function() { return 1; }
-        // This tests generateFunctionICode
-        FunctionNode fn = new FunctionNode();
-        fn.setFunctionType(FunctionNode.FUNCTION_STATEMENT);
-        fn.setName("test");
-        fn.setSourceName("fn");
-        // Body: block with RETURN
-        Node ret = new Node(Token.RETURN);
-        Node numNode = new Node(Token.NUMBER);
-        numNode.setDouble(1.0);
-        ret.addChild(numNode);
-        fn.addChild(ret);
-        // The compile method expects either AstRoot or FunctionNode as scriptOrFn; but compile takes ScriptNode and boolean returnFunction.
-        // If returnFunction is true, it treats scriptOrFn as the function.
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        // Create a minimal AstRoot to provide source info? The compile method will use tree as scriptOrFn.
-        // For function, we need to set scriptOrFn = tree.getFunctionNode(0) if returnFunction is false? No, if returnFunction is true, scriptOrFn = tree.
-        // So we can pass the FunctionNode directly as tree with returnFunction=true.
-        InterpreterData data = gen.compile(env, fn, null, true);
-        assertNotNull(data);
-        assertEquals(FunctionNode.FUNCTION_STATEMENT, data.itsFunctionType);
-        assertNotNull(data.itsName);
-        assertEquals("test", data.itsName);
-    }
-
-    @Test(timeout = 4000)
-    public void testCompileWithGenerator() {
-        // Not implemented due to complexity; but we can test that generator code is generated.
-    }
-
-    @Test(timeout = 4000)
-    public void testStackDepthTracking() {
-        // Ensure stack depth is correctly tracked for simple expressions
-        AstRoot root = createEmptyScript();
-        Node expr = new Node(Token.EXPR_VOID);
-        Node add = new Node(Token.ADD);
-        Node one = new Node(Token.NUMBER);
-        one.setDouble(1.0);
-        Node two = new Node(Token.NUMBER);
-        two.setDouble(2.0);
-        add.addChild(one);
-        add.addChild(two);
-        expr.addChild(add);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // The maximum stack should be at least 2 (for the two operands before ADD)
-        assertTrue(data.itsMaxStack >= 2);
-    }
-
-    @Test(timeout = 4000)
-    public void testDoubleTableManagement() {
-        // Use a double literal to ensure it's stored in double table
-        AstRoot root = new AstRoot();
-        root.setSourceName("dbl");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node num = new Node(Token.NUMBER);
-        num.setDouble(3.14159);
-        expr.addChild(num);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        assertNotNull(data.itsDoubleTable);
-        boolean found = false;
-        for (double d : data.itsDoubleTable) {
-            if (Math.abs(d - 3.14159) < 1e-10) {
-                found = true;
-                break;
+        
+        @Override
+        public void addIdentifier(String identifier) {
+            sb.append(identifier);
+        }
+        
+        @Override
+        public void addOp(String op, boolean binOp) {
+            sb.append(op);
+        }
+        
+        @Override
+        public void addNumber(double x) {
+            if (x == (long) x) {
+                sb.append(String.valueOf((long) x));
+            } else {
+                sb.append(String.valueOf(x));
             }
         }
-        assertTrue("Expected 3.14159 in double table", found);
-    }
-
-    @Test(timeout = 4000)
-    public void testStringTableDeduplication() {
-        // Multiple occurrences of same string should map to same index
-        AstRoot root = new AstRoot();
-        root.setSourceName("strdup");
-        Node expr1 = new Node(Token.EXPR_VOID);
-        Node str1 = new Node(Token.STRING);
-        str1.setString("dup");
-        expr1.addChild(str1);
-        root.addChild(expr1);
-        Node expr2 = new Node(Token.EXPR_VOID);
-        Node str2 = new Node(Token.STRING);
-        str2.setString("dup");
-        expr2.addChild(str2);
-        root.addChild(expr2);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // The string table should have exactly one entry for "dup"
-        int count = 0;
-        for (String s : data.itsStringTable) {
-            if ("dup".equals(s)) count++;
+        
+        @Override
+        public void addConstant(String constant) {
+            sb.append(constant);
         }
-        assertEquals("String 'dup' should appear once", 1, count);
-    }
-
-    @Test(timeout = 4000)
-    public void testNestedFunctions() {
-        // Create a script with a function declaration
-        AstRoot root = new AstRoot();
-        root.setSourceName("nested");
-        // Add a FUNCTION node
-        Node funcNode = new Node(Token.FUNCTION);
-        funcNode.putIntProp(Node.FUNCTION_PROP, 0); // index 0
-        // We need to create a FunctionNode in the tree (scriptOrFn has function count)
-        // Instead, we'll skip as too complex.
-    }
-
-    @Test(timeout = 4000)
-    public void testVarIncDec() {
-        // x++ inside a function where x is a local variable
-    }
-
-    @Test(timeout = 4000)
-    public void testConditionalOperator() {
-        // test ? 1 : 2
-        AstRoot root = new AstRoot();
-        root.setSourceName("cond");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node hook = new Node(Token.HOOK);
-        Node cond = new Node(Token.TRUE);
-        Node thenNode = new Node(Token.NUMBER);
-        thenNode.setDouble(1.0);
-        Node elseNode = new Node(Token.NUMBER);
-        elseNode.setDouble(2.0);
-        hook.addChild(cond);
-        hook.addChild(thenNode);
-        hook.addChild(elseNode);
-        expr.addChild(hook);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Should have at least one forward/backward jump
-        // We can check that the icode contains IFNE or IFEQ
-        boolean hasJump = false;
-        for (byte b : data.itsICode) {
-            if (b == (byte) Token.IFNE || b == (byte) Token.IFEQ || b == (byte) Token.GOTO) {
-                hasJump = true;
-                break;
+        
+        @Override
+        public void startSourceMapping(Node node) {
+            // No-op
+        }
+        
+        @Override
+        public void endSourceMapping(Node node) {
+            // No-op
+        }
+        
+        @Override
+        public void beginBlock() {
+            sb.append("{");
+        }
+        
+        @Override
+        public void endBlock(boolean breakAfter) {
+            sb.append("}");
+        }
+        
+        @Override
+        public void listSeparator() {
+            sb.append(",");
+        }
+        
+        @Override
+        public void endStatement(boolean needSemicolon) {
+            if (needSemicolon) {
+                sb.append(";");
             }
         }
-        assertTrue("Expected jump instruction for conditional", hasJump);
-    }
-
-    @Test(timeout = 4000)
-    public void testLogicalAnd() {
-        // true && false
-        AstRoot root = new AstRoot();
-        root.setSourceName("and");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node and = new Node(Token.AND);
-        Node left = new Node(Token.TRUE);
-        Node right = new Node(Token.FALSE);
-        and.addChild(left);
-        and.addChild(right);
-        expr.addChild(and);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Should have DUP, IFNE, POP, etc.
-        boolean hasDup = false, hasPop = false;
-        for (byte b : data.itsICode) {
-            if (b == (byte) Icode.Icode_DUP) hasDup = true;
-            if (b == (byte) Icode.Icode_POP) hasPop = true;
+        
+        @Override
+        public void endStatement() {
+            sb.append(";");
         }
-        assertTrue("Expected DUP", hasDup);
-        assertTrue("Expected POP", hasPop);
+        
+        @Override
+        public void endFunction(boolean statementContext) {
+            // No-op
+        }
+        
+        @Override
+        public void beginCaseBody() {
+            // No-op
+        }
+        
+        @Override
+        public void endCaseBody() {
+            // No-op
+        }
+        
+        @Override
+        public void maybeLineBreak() {
+            // No-op
+        }
+        
+        @Override
+        public void notePreferredLineBreak() {
+            // No-op
+        }
+        
+        @Override
+        public boolean breakAfterBlockFor(Node block, boolean isStatementContext) {
+            return false;
+        }
+        
+        @Override
+        public boolean continueProcessing() {
+            return true;
+        }
+        
+        @Override
+        public boolean shouldPreserveExtraBlocks() {
+            return false;
+        }
     }
-
-    @Test(timeout = 4000)
-    public void testTypeofName() {
-        // typeof x
-        AstRoot root = new AstRoot();
-        root.setSourceName("typeof");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node typeofNode = new Node(Token.TYPEOFNAME);
-        typeofNode.setString("x");
-        expr.addChild(typeofNode);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Should have TYPEOFNAME or GETVAR+TYPEOF
-        boolean found = false;
-        for (byte b : data.itsICode) {
-            if ((b & 0xFF) == Icode.Icode_TYPEOFNAME || (b & 0xFF) == Token.TYPEOF) {
-                found = true;
-                break;
+    
+    /**
+     * CodeConsumer that stops processing after first call.
+     */
+    private static class StoppingCodeConsumer implements CodeConsumer {
+        private final StringBuilder sb;
+        private boolean stopped = false;
+        
+        StoppingCodeConsumer(StringBuilder sb) {
+            this.sb = sb;
+        }
+        
+        @Override
+        public void add(String str) {
+            if (!stopped) {
+                sb.append(str);
             }
         }
-        assertTrue("Expected typeof instruction", found);
-    }
-
-    @Test(timeout = 4000)
-    public void testCommaOperator() {
-        // (1, 2)
-        AstRoot root = new AstRoot();
-        root.setSourceName("comma");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node comma = new Node(Token.COMMA);
-        Node one = new Node(Token.NUMBER);
-        one.setDouble(1.0);
-        Node two = new Node(Token.NUMBER);
-        two.setDouble(2.0);
-        comma.addChild(one);
-        comma.addChild(two);
-        expr.addChild(comma);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Should have POP between numbers
-        boolean hasPop = false;
-        for (byte b : data.itsICode) {
-            if (b == (byte) Icode.Icode_POP) {
-                hasPop = true;
-                break;
+        
+        @Override
+        public void addIdentifier(String identifier) {
+            if (!stopped) {
+                sb.append(identifier);
             }
         }
-        assertTrue("Expected POP for comma", hasPop);
-    }
-
-    @Test(timeout = 4000)
-    public void testBytecodeCapacityIncrease() {
-        // Generate a script with many instructions to trigger capacity increase
-        AstRoot root = new AstRoot();
-        root.setSourceName("large");
-        for (int i = 0; i < 1000; i++) {
-            Node expr = new Node(Token.EXPR_VOID);
-            Node num = new Node(Token.NUMBER);
-            num.setDouble(i);
-            expr.addChild(num);
-            root.addChild(expr);
-        }
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        assertTrue(data.itsICode.length > 1000); // Should be bigger than initial capacity
-    }
-
-    @Test(timeout = 4000)
-    public void testFunctionWithActivation() {
-        // Function that needs activation (e.g., with eval)
-        // Not easy to construct; we'll skip.
-    }
-
-    @Test(timeout = 4000)
-    public void testExceptionHandlerAddition() {
-        // Test try-catch indirectly by constructing a TRY node.
-        // This is very complex; we'll test the addExceptionHandler method via reflection?
-        // Not allowed; instead rely on code coverage from other tests.
-    }
-
-    @Test(timeout=4000)
-    public void testCompileStrictModeScript() {
-        // Create an AstRoot with strict mode
-        AstRoot root = new AstRoot();
-        root.setSourceName("strict");
-        root.setInStrictMode(true);
-        Node expr = new Node(Token.EXPR_VOID);
-        Node num = new Node(Token.NUMBER);
-        num.setDouble(0);
-        expr.addChild(num);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // itsData.itsStrictMode? Not visible; but we can check that compilation succeeded.
-    }
-
-    @Test(timeout=4000)
-    public void testCompileWithLineNumberUpdate() {
-        // Ensure line number updates produce LINE instruction
-        AstRoot root = new AstRoot();
-        root.setSourceName("lines");
-        Node expr = new Node(Token.EXPR_VOID);
-        expr.setLineno(10);
-        Node num = new Node(Token.NUMBER);
-        num.setDouble(1);
-        expr.addChild(num);
-        root.addChild(expr);
-        Node expr2 = new Node(Token.EXPR_VOID);
-        expr2.setLineno(20);
-        Node num2 = new Node(Token.NUMBER);
-        num2.setDouble(2);
-        expr2.addChild(num2);
-        root.addChild(expr2);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Check that LINE instruction appears
-        boolean hasLine = false;
-        for (byte b : data.itsICode) {
-            if ((b & 0xFF) == Icode.Icode_LINE) {
-                hasLine = true;
-                break;
+        
+        @Override
+        public void addOp(String op, boolean binOp) {
+            if (!stopped) {
+                sb.append(op);
             }
         }
-        assertTrue("Expected LINE instruction", hasLine);
-    }
-
-    @Test(timeout = 4000)
-    public void testGetDoubleIndexBoundary() {
-        // Test with zero, negative zero, NaN? but we can't easily.
-        // Use negative zero to test special case in NUMBER: if (1.0/num < 0.0) addToken(NEG)
-        AstRoot root = new AstRoot();
-        root.setSourceName("negzero");
-        Node expr = new Node(Token.EXPR_VOID);
-        Node num = new Node(Token.NUMBER);
-        num.setDouble(-0.0);
-        expr.addChild(num);
-        root.addChild(expr);
-        CompilerEnvirons env = new CompilerEnvirons();
-        CodeGenerator gen = new CodeGenerator();
-        InterpreterData data = gen.compile(env, root, null, false);
-        assertNotNull(data);
-        // Should have ZERO + NEG, or any representation
-        // We'll just ensure no exception.
+        
+        @Override
+        public void addNumber(double x) {
+            if (!stopped) {
+                if (x == (long) x) {
+                    sb.append(String.valueOf((long) x));
+                } else {
+                    sb.append(String.valueOf(x));
+                }
+            }
+        }
+        
+        @Override
+        public void addConstant(String constant) {
+            if (!stopped) {
+                sb.append(constant);
+            }
+        }
+        
+        @Override
+        public void startSourceMapping(Node node) {}
+        
+        @Override
+        public void endSourceMapping(Node node) {}
+        
+        @Override
+        public void beginBlock() {
+            if (!stopped) sb.append("{");
+        }
+        
+        @Override
+        public void endBlock(boolean breakAfter) {
+            if (!stopped) sb.append("}");
+        }
+        
+        @Override
+        public void listSeparator() {
+            if (!stopped) sb.append(",");
+        }
+        
+        @Override
+        public void endStatement(boolean needSemicolon) {
+            if (!stopped && needSemicolon) sb.append(";");
+        }
+        
+        @Override
+        public void endStatement() {
+            if (!stopped) sb.append(";");
+        }
+        
+        @Override
+        public void endFunction(boolean statementContext) {}
+        
+        @Override
+        public void beginCaseBody() {}
+        
+        @Override
+        public void endCaseBody() {}
+        
+        @Override
+        public void maybeLineBreak() {}
+        
+        @Override
+        public void notePreferredLineBreak() {}
+        
+        @Override
+        public boolean breakAfterBlockFor(Node block, boolean isStatementContext) {
+            return false;
+        }
+        
+        @Override
+        public boolean continueProcessing() {
+            if (!stopped) {
+                stopped = true;
+                return true;
+            }
+            return false;
+        }
+        
+        @Override
+        public boolean shouldPreserveExtraBlocks() {
+            return false;
+        }
     }
 }

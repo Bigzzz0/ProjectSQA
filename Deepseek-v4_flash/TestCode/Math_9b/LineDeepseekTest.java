@@ -1,336 +1,261 @@
-/* [Branch & Defect Analysis Matrix]
- * Target: org.apache.commons.math3.geometry.euclidean.twod.Line
- * Key branches to cover:
- * - Constructors: from two points (reset p1,p2), from point and angle, copy constructor
- * - reset(Vector2D,Vector2D): d == 0.0 branch (coincident points)
- * - reset(Vector2D,double): normalize angle
- * - revertSelf(): angle < PI branch, angle >= PI branch
- * - getReverse(): angle < PI branch, else branch
- * - intersection(): parallel lines (d ~ 0), non-parallel
- * - getOffset(Line): dot product >= 0 branch, else
- * - sameOrientationAs(): sin*sin+cos*cos >= 0 branch (always true because sum of squares >=0, but shows branch)
- * - isParallelTo(): abs(cross product) < epsilon branch
- * - contains(): abs(getOffset(p)) < 1.0e-10 branch
- * - setAngle(): normalization and recalc cos/sin
- * - getAngle(): normalization
- * - translateToPoint(), toSubSpace(), toSpace(), getPointAt()
- *
- * Defect targeting: The known defect from Defects4J (3D Line) suggests precision loss in revert logic.
- * We test revertSelf() and getReverse() twice to verify exact round-trip and consistency.
- */
-package org.apache.commons.math3.geometry.euclidean.twod;
+package org.apache.commons.math3.geometry.euclidean.threed;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
+
+/**
+ * White-box test suite for {@link Line} targeting the known Defects4J defect
+ * in the revert() method (testRevert numerical failure).
+ *
+ * <p><b>[Branch & Defect Analysis Matrix]</b>
+ * <ul>
+ *   <li>reset(): norm2 == 0 (exception branch)</li>
+ *   <li>contains(): distance(p) < 1.0e-10 (true/false)</li>
+ *   <li>isSimilarTo(): angle < 1e-10, angle > PI-1e-10, contains(line.zero) – 3 branches combined</li>
+ *   <li>distance(Line): n < Precision.SAFE_MIN (parallel path)</li>
+ *   <li>closestPoint(): n < Precision.EPSILON (parallel path)</li>
+ *   <li>intersection(): line.contains(closest) (true/false)</li>
+ *   <li>revert(): construction line from zero and zero.subtract(direction) – precision defect</li>
+ *   <li>Whole-line coverage of all public methods</li>
+ * </ul>
+ * </p>
+ */
 public class LineDeepseekTest {
 
-    private static final double EPS = 1.0e-10;
-    private static final double PRECISION_EPS = 1.0e-12; // for low-level floating point comparisons
-
-    // ===== Partition A: Core Functional Logic & State Transitions =====
+    // -------- Partition A: Core Functional Logic & State Transitions --------
 
     @Test(timeout = 4000)
-    public void testConstructorFromTwoPoints() {
-        Vector2D p1 = new Vector2D(0.0, 0.0);
-        Vector2D p2 = new Vector2D(1.0, 0.0);
+    public void testResetAndGetters() {
+        Vector3D p1 = new Vector3D(1, 2, 3);
+        Vector3D p2 = new Vector3D(4, -1, 7);
         Line line = new Line(p1, p2);
-        assertNotNull(line);
-        assertEquals(0.0, line.getAngle(), EPS);
-        assertEquals(1.0, line.cos, EPS);
-        assertEquals(0.0, line.sin, EPS);
-        assertEquals(0.0, line.getOriginOffset(), EPS);
+
+        // Direction must be normalized
+        Vector3D dir = line.getDirection();
+        assertEquals("Direction must be unit", 1.0, dir.getNormSq(), 1e-15);
+
+        // Zero point must be the closest point to origin
+        Vector3D zero = line.getOrigin();
+        // The zero is orthogonal to direction: dot(zero, direction) should be 0
+        double dot = zero.dotProduct(dir);
+        assertEquals("Zero dot direction must be 0", 0.0, dot, 1e-12);
     }
 
     @Test(timeout = 4000)
-    public void testConstructorFromPointAndAngle() {
-        Vector2D p = new Vector2D(2.0, 3.0);
-        double angle = FastMath.PI / 4;
-        Line line = new Line(p, angle);
-        assertNotNull(line);
-        assertEquals(MathUtils.normalizeAngle(angle, FastMath.PI), line.getAngle(), EPS);
-        assertEquals(angle, line.getAngle(), EPS); // normalized to same range
-    }
-
-    @Test(timeout = 4000)
-    public void testCopyConstructor() {
-        Line original = new Line(new Vector2D(0,0), new Vector2D(1,1));
-        Line copy = new Line(original);
-        assertEquals(original.getAngle(), copy.getAngle(), EPS);
-        assertEquals(original.getOriginOffset(), copy.getOriginOffset(), EPS);
-        assertEquals(original.cos, copy.cos, PRECISION_EPS);
-        assertEquals(original.sin, copy.sin, PRECISION_EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testCopySelf() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(2,0));
-        Line copy = line.copySelf();
-        assertNotSame(line, copy);
-        assertEquals(line.getAngle(), copy.getAngle(), EPS);
-        assertEquals(line.getOriginOffset(), copy.getOriginOffset(), EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testResetTwoPoints() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        line.reset(new Vector2D(1,1), new Vector2D(2,2));
-        assertEquals(FastMath.PI / 4, line.getAngle(), EPS);
-        assertEquals(0.0, line.getOriginOffset(), EPS); // line through origin
-    }
-
-    @Test(timeout = 4000)
-    public void testResetTwoPointsCoincident() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Vector2D p = new Vector2D(5.0, 3.0);
-        line.reset(p, p); // d == 0.0 branch
-        assertEquals(0.0, line.getAngle(), EPS);
-        assertEquals(1.0, line.cos, EPS);
-        assertEquals(0.0, line.sin, EPS);
-        assertEquals(p.getY(), line.getOriginOffset(), EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testResetPointAngle() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Vector2D p = new Vector2D(3.0, -2.0);
-        double alpha = FastMath.PI;
-        line.reset(p, alpha);
-        assertEquals(FastMath.PI, line.getAngle(), EPS);
-        assertEquals(-3.0, line.getOriginOffset(), EPS); // originOffset = cos*Py - sin*Px = -1* -2? wait cos= -1, sin=0 => (-1)*(-2) - 0*3 = 2? let's compute: cos= -1, sin=0 => -1 * (-2) - 0*3 = 2. Actually 2. So offset = 2.
-        assertEquals(2.0, line.getOriginOffset(), EPS);
-    }
-
-    // ===== Partition B: Boundary Value Analysis (BVA) & Extremes =====
-
-    @Test(timeout = 4000)
-    public void testAngleNormalizationBoundary() {
-        // angle near 2*PI
-        double angleNear2Pi = 2 * FastMath.PI - 1e-14;
-        Line line = new Line(new Vector2D(0,0), angleNear2Pi);
-        assertEquals(angleNear2Pi, line.getAngle(), EPS);
-        // After setAngle, check normalization
-        line.setAngle(2 * FastMath.PI + 0.1);
-        double normalized = MathUtils.normalizeAngle(2 * FastMath.PI + 0.1, FastMath.PI);
-        assertEquals(normalized, line.getAngle(), EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testResetWithVeryLargeCoordinates() {
-        Vector2D p1 = new Vector2D(1e10, 2e10);
-        Vector2D p2 = new Vector2D(3e10, 5e10);
+    public void testAbscissaAndPointAt() {
+        Vector3D p1 = new Vector3D(0, 0, 0);
+        Vector3D p2 = new Vector3D(1, 0, 0);
         Line line = new Line(p1, p2);
-        assertNotNull(line);
-        // Should not throw, verify approximate direction
-        double expectedAngle = FastMath.atan2(p2.getY()-p1.getY(), p2.getX()-p1.getX());
-        assertEquals(expectedAngle, line.getAngle(), EPS);
+
+        // Point at abscissa 0 should be zero
+        Vector3D pt0 = line.pointAt(0.0);
+        assertEquals("pointAt(0) should equal zero", line.getOrigin(), pt0);
+
+        // Abscissa of zero should be 0
+        double abscZero = line.getAbscissa(line.getOrigin());
+        assertEquals("Abscissa of zero should be 0", 0.0, abscZero, 1e-12);
+
+        // Consistency: pointAt(a) then getAbscissa should return a
+        double a = 5.0;
+        Vector3D pt = line.pointAt(a);
+        double back = line.getAbscissa(pt);
+        assertEquals("Abscissa after pointAt", a, back, 1e-12);
     }
 
     @Test(timeout = 4000)
-    public void testExtremeAngle() {
-        Line line = new Line(new Vector2D(1,1), 1e-12);
-        assertEquals(1e-12, line.getAngle(), 1e-12);
+    public void testToSubSpaceToSpace() {
+        Vector3D p1 = new Vector3D(0, 1, 0);
+        Vector3D p2 = new Vector3D(2, 1, 0);
+        Line line = new Line(p1, p2);
+
+        Vector3D point = new Vector3D(3, 1, 0);
+        double expectedAbscissa = line.getAbscissa(point);
+        Vector1D sub = line.toSubSpace(point);
+        assertEquals("ToSubSpace", expectedAbscissa, sub.getX(), 1e-12);
+
+        Vector3D recovered = line.toSpace(sub);
+        assertEquals("ToSpace then toSubSpace recovers point", point, recovered);
     }
 
-    // ===== Partition C: Defect-Targeted Branch Zone =====
-    // Known defect: precision loss in revert operations (cf. 3D LineTest testRevert)
-    @Test(timeout = 4000)
-    public void testRevertSelfPrecisionRoundTrip() {
-        Line original = new Line(new Vector2D(3, 4), new Vector2D(7, 1)); // random line
-        Line afterTwoReverts = new Line(original);
-        afterTwoReverts.revertSelf();
-        afterTwoReverts.revertSelf();
-        // After two reverts, should be identical to original within tight tolerance
-        assertEquals("Angle mismatch after double revert", original.getAngle(),
-                     afterTwoReverts.getAngle(), PRECISION_EPS);
-        assertEquals("Origin offset mismatch after double revert", original.getOriginOffset(),
-                     afterTwoReverts.getOriginOffset(), PRECISION_EPS);
-        // Also check cos and sin directly
-        assertEquals(original.cos, afterTwoReverts.cos, 1e-15);
-        assertEquals(original.sin, afterTwoReverts.sin, 1e-15);
-    }
+    // -------- Partition B: Boundary Value Analysis & Extremes --------
 
     @Test(timeout = 4000)
-    public void testGetReverseDoubleRoundTrip() {
-        Line original = new Line(new Vector2D(0,0), new Vector2D(0, 5)); // vertical line, angle = PI/2
-        Line reversed = original.getReverse();
-        Line doubleReversed = reversed.getReverse();
-        assertEquals(original.getAngle(), doubleReversed.getAngle(), PRECISION_EPS);
-        assertEquals(original.getOriginOffset(), doubleReversed.getOriginOffset(), PRECISION_EPS);
+    public void testResetThrowsOnEqualPoints() {
+        Vector3D p = new Vector3D(1, -2, 3);
+        try {
+            new Line(p, p);
+            fail("MathIllegalArgumentException expected");
+        } catch (MathIllegalArgumentException e) {
+            // expected
+        }
     }
 
     @Test(timeout = 4000)
-    public void testRevertSelfAndGetReverseConsistency() {
-        Line original = new Line(new Vector2D(2,3), new Vector2D(5,-1));
-        Line reversedViaSelf = original.copySelf();
-        reversedViaSelf.revertSelf();
-        Line reversedViaMethod = original.getReverse();
-        // They should be equal
-        assertEquals(reversedViaSelf.getAngle(), reversedViaMethod.getAngle(), PRECISION_EPS);
-        assertEquals(reversedViaSelf.getOriginOffset(), reversedViaMethod.getOriginOffset(), PRECISION_EPS);
-        assertEquals(reversedViaSelf.cos, reversedViaMethod.cos, 1e-15);
-        assertEquals(reversedViaSelf.sin, reversedViaMethod.sin, 1e-15);
-    }
-
-    // ===== Partition D: Exception & Defensive Guard Paths =====
-
-    @Test(timeout = 4000)
-    public void testIntersectionParallelLines() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = new Line(new Vector2D(0,1), new Vector2D(1,1));
-        Vector2D intersection = line1.intersection(line2);
-        assertNull("Parallel lines should have no intersection", intersection);
+    public void testContains() {
+        Line line = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 1, 1));
+        // Point on line (the zero point)
+        assertTrue("Zero point should be contained", line.contains(line.getOrigin()));
+        // Point on line
+        Vector3D onLine = new Vector3D(2, 2, 2);
+        // Check if it's really on line: distance < 1e-10
+        assertTrue("Point on line should be contained", line.contains(onLine));
+        // Point off line
+        Vector3D offLine = new Vector3D(1, 0, 0);
+        assertFalse("Point off line should not be contained", line.contains(offLine));
     }
 
     @Test(timeout = 4000)
-    public void testIntersectionNonParallel() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = new Line(new Vector2D(0,0), new Vector2D(0,1));
-        Vector2D intersection = line1.intersection(line2);
-        assertNotNull(intersection);
-        assertEquals(0.0, intersection.getX(), EPS);
-        assertEquals(0.0, intersection.getY(), EPS);
+    public void testDistanceToPoint() {
+        Line line = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        // Point on line
+        assertEquals("Distance to point on line", 0.0, line.distance(new Vector3D(5, 0, 0)), 1e-12);
+        // Point off line
+        double dist = line.distance(new Vector3D(2, 3, 0));
+        assertEquals("Distance to off-line point", 3.0, dist, 1e-12);
+    }
+
+    // -------- Partition C: Defect-Targeted Branch Zone (revert precision) --------
+
+    @Test(timeout = 4000)
+    public void testRevertPrecision() {
+        // This test directly targets the known defect in revert() where
+        // numerical precision causes a ~1e-10 difference after double revert.
+        // Use points that trigger the problematic computation (similar to original testRevert).
+        Vector3D p1 = new Vector3D(0.028581782127907646, 0.0, 0.0);
+        Vector3D p2 = new Vector3D(0.028581782243293483, 1.0, 0.0);
+
+        Line original = new Line(p1, p2);
+        Line reverted = original.revert();
+        Line doubleReverted = reverted.revert();
+
+        // After two reverts, the line should be identical to the original.
+        Vector3D origZero = original.getOrigin();
+        Vector3D origDir  = original.getDirection();
+        Vector3D finalZero = doubleReverted.getOrigin();
+        Vector3D finalDir  = doubleReverted.getDirection();
+
+        // Use a tolerance of 1e-10 to reveal the defect on the buggy version.
+        // On the fixed version this should pass as well (tolerance is tight).
+        assertEquals("Zero X after double revert", origZero.getX(), finalZero.getX(), 1e-10);
+        assertEquals("Zero Y after double revert", origZero.getY(), finalZero.getY(), 1e-10);
+        assertEquals("Zero Z after double revert", origZero.getZ(), finalZero.getZ(), 1e-10);
+
+        assertEquals("Dir X after double revert", origDir.getX(), finalDir.getX(), 1e-10);
+        assertEquals("Dir Y after double revert", origDir.getY(), finalDir.getY(), 1e-10);
+        assertEquals("Dir Z after double revert", origDir.getZ(), finalDir.getZ(), 1e-10);
+    }
+
+    // -------- Partition D: Exception & Defensive Guard Paths --------
+
+    @Test(timeout = 4000)
+    public void testDistanceParallelLines() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 5, 0), new Vector3D(1, 5, 0)); // parallel, offset
+        double dist = line1.distance(line2);
+        assertEquals("Distance between parallel lines", 5.0, dist, 1e-12);
     }
 
     @Test(timeout = 4000)
-    public void testContainsTrue() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(0,1));
-        assertTrue(line.contains(new Vector2D(0, 5)));
-        assertTrue(line.contains(new Vector2D(0, -3)));
+    public void testDistanceSkewLines() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 1, 0), new Vector3D(0, 1, 1)); // perpendicular and skew
+        double dist = line1.distance(line2);
+        assertEquals("Distance between skew lines", 1.0, dist, 1e-12);
     }
 
     @Test(timeout = 4000)
-    public void testContainsFalse() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(0,1));
-        assertFalse(line.contains(new Vector2D(1, 0)));
-        assertFalse(line.contains(new Vector2D(0.001, 0)));
+    public void testClosestPointParallel() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 5, 0), new Vector3D(1, 5, 0));
+        Vector3D closest = line1.closestPoint(line2);
+        // For parallel lines, closestPoint returns zero of this line (line1.zero)
+        assertEquals("Closest point for parallel lines", line1.getOrigin(), closest);
     }
 
     @Test(timeout = 4000)
-    public void testDistance() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        assertEquals(3.0, line.distance(new Vector2D(0, 3)), EPS);
-        assertEquals(2.0, line.distance(new Vector2D(0, -2)), EPS);
+    public void testClosestPointIntersecting() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 0, 0), new Vector3D(0, 1, 0));
+        Vector3D closest = line1.closestPoint(line2);
+        // They intersect at (0,0,0)
+        assertEquals("Closest point for intersecting lines", new Vector3D(0, 0, 0), closest);
     }
 
     @Test(timeout = 4000)
-    public void testIsParallelToParallel() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = new Line(new Vector2D(0,1), new Vector2D(1,1));
-        assertTrue(line1.isParallelTo(line2));
-        // opposite orientation also parallel
-        Line line3 = line1.getReverse();
-        assertTrue(line1.isParallelTo(line3));
+    public void testIntersectionExists() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 0, 0), new Vector3D(0, 1, 0));
+        Vector3D intersection = line1.intersection(line2);
+        assertNotNull("Intersection should exist", intersection);
+        assertEquals("Intersection point", new Vector3D(0, 0, 0), intersection);
     }
 
     @Test(timeout = 4000)
-    public void testIsParallelToNotParallel() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = new Line(new Vector2D(0,0), new Vector2D(1,1));
-        assertFalse(line1.isParallelTo(line2));
+    public void testIntersectionNone() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 1, 0), new Vector3D(0, 1, 1)); // skew, not intersecting
+        Vector3D intersection = line1.intersection(line2);
+        assertNull("Intersection should be null for skew lines", intersection);
     }
 
     @Test(timeout = 4000)
-    public void testSameOrientationAsTrue() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = new Line(new Vector2D(3,4), new Vector2D(5,4));
-        assertTrue(line1.sameOrientationAs(line2));
+    public void testIsSimilarToSameDirection() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(2, 0, 0), new Vector3D(3, 0, 0)); // same direction, offset
+        assertTrue("Lines with same direction containing zero should be similar", line1.isSimilarTo(line2));
     }
 
     @Test(timeout = 4000)
-    public void testSameOrientationAsFalse() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = line1.getReverse();
-        assertFalse(line1.sameOrientationAs(line2));
+    public void testIsSimilarToOppositeDirection() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 0, 0), new Vector3D(-1, 0, 0)); // opposite direction
+        assertTrue("Opposite direction lines containing each other zero should be similar", line1.isSimilarTo(line2));
     }
 
     @Test(timeout = 4000)
-    public void testTranslateToPoint() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        line.translateToPoint(new Vector2D(5, -3));
-        assertEquals(-3.0, line.getOriginOffset(), EPS); // offset = cos*y - sin*x = 1*(-3) - 0*5 = -3
-        // line should now pass through (5,-3)
-        assertTrue(line.contains(new Vector2D(5, -3)));
+    public void testIsNotSimilarTo() {
+        Line line1 = new Line(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        Line line2 = new Line(new Vector3D(0, 1, 0), new Vector3D(1, 1, 0)); // parallel but different line
+        assertFalse("Different parallel lines should not be similar", line1.isSimilarTo(line2));
+    }
+
+    // -------- Partition E: Object Lifecycle & Contract Integrity --------
+
+    @Test(timeout = 4000)
+    public void testCopyConstructorAndRevertConsistency() {
+        Vector3D p1 = new Vector3D(1, 2, 3);
+        Vector3D p2 = new Vector3D(4, 5, 6);
+        Line line = new Line(p1, p2);
+        Line copy = new Line(line);
+        // Check that copy is independent
+        copy.reset(new Vector3D(0, 0, 0), new Vector3D(1, 0, 0));
+        assertFalse("Copy reset should not affect original direction",
+                     line.getDirection().equals(copy.getDirection()));
     }
 
     @Test(timeout = 4000)
-    public void testSetAngle() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        line.setAngle(FastMath.PI / 2);
-        assertEquals(FastMath.PI / 2, line.getAngle(), EPS);
-        assertEquals(0.0, line.cos, EPS);
-        assertEquals(1.0, line.sin, EPS);
+    public void testWholeLine() {
+        Vector3D p1 = new Vector3D(0, 0, 0);
+        Vector3D p2 = new Vector3D(1, 0, 0);
+        Line line = new Line(p1, p2);
+        SubLine sub = line.wholeLine();
+        assertNotNull("wholeLine should return non-null SubLine", sub);
+        // The SubLine should contain the line's zero point
+        assertTrue("SubLine should contain zero of line", sub.contains(line.getOrigin()));
     }
 
     @Test(timeout = 4000)
-    public void testSetOriginOffset() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        line.setOriginOffset(2.5);
-        assertEquals(2.5, line.getOriginOffset(), EPS);
-    }
-
-    // ===== Partition E: Object Lifecycle & Contract Integrity =====
-
-    @Test(timeout = 4000)
-    public void testToSubSpaceAndToSpace() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Vector2D originalPoint = new Vector2D(3.0, 4.0);
-        Vector1D sub = line.toSubSpace(originalPoint);
-        assertEquals(3.0, sub.getX(), EPS); // cos*X + sin*Y = 1*3 + 0*4 = 3
-        Vector2D restored = line.toSpace(sub);
-        assertEquals(3.0, restored.getX(), EPS);
-        assertEquals(0.0, restored.getY(), EPS); // because toSpace gives point on line with same abscissa, offset=0
-    }
-
-    @Test(timeout = 4000)
-    public void testGetPointAt() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Vector1D abscissa = new Vector1D(2.0);
-        double offset = 3.0;
-        Vector2D point = line.getPointAt(abscissa, offset);
-        // Expected: x = abscissa * cos + (offset - originOffset) * sin = 2*1 + (3-0)*0 = 2
-        // y = abscissa * sin - (offset - originOffset) * cos = 2*0 - (3-0)*1 = -3
-        assertEquals(2.0, point.getX(), EPS);
-        assertEquals(-3.0, point.getY(), EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testWholeHyperplane() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        SubLine sub = line.wholeHyperplane();
-        assertNotNull(sub);
-        assertSame(line, sub.getHyperplane());
-    }
-
-    @Test(timeout = 4000)
-    public void testWholeSpace() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        PolygonsSet space = line.wholeSpace();
-        assertNotNull(space);
-    }
-
-    @Test(timeout = 4000)
-    public void testGetOffsetLinePositive() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = new Line(new Vector2D(0,5), new Vector2D(1,5));
-        double offset = line1.getOffset(line2);
-        // dot product cos1*cos2 + sin1*sin2 = 1*1 + 0*0 = 1 > 0 => offset = originOffset1 - originOffset2 = 0 - 5 = -5? Wait formula: originOffset + (dot>0 ? -line.originOffset : line.originOffset) = 0 + (-5) = -5. So offset = -5 (line2 is left side?)
-        assertEquals(-5.0, offset, EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testGetOffsetLineNegative() {
-        Line line1 = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        Line line2 = line1.getReverse(); // same line but opposite orientation -> dot = -1 < 0 => offset = originOffset1 + line2.originOffset = 0 + 0 = 0
-        double offset = line1.getOffset(line2);
-        assertEquals(0.0, offset, EPS);
-    }
-
-    @Test(timeout = 4000)
-    public void testGetOffsetVectorPoint() {
-        Line line = new Line(new Vector2D(0,0), new Vector2D(1,0));
-        double offset = line.getOffset((Vector<Euclidean2D>) new Vector2D(3.0, 4.0));
-        // offset = sin*X - cos*Y + originOffset = 0*3 - 1*4 + 0 = -4
-        assertEquals(-4.0, offset, EPS);
+    public void testResetAfterConstruction() {
+        Vector3D p1 = new Vector3D(0, 0, 0);
+        Vector3D p2 = new Vector3D(1, 0, 0);
+        Line line = new Line(p1, p2);
+        // Reset with new points
+        Vector3D q1 = new Vector3D(0, 2, 0);
+        Vector3D q2 = new Vector3D(0, 2, 1);
+        line.reset(q1, q2);
+        assertEquals("Direction after reset", new Vector3D(0, 0, 1), line.getDirection());
+        assertEquals("Zero after reset", new Vector3D(0, 2, 0), line.getOrigin());
     }
 }

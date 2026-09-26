@@ -1,4 +1,4 @@
-package org.apache.commons.lang;
+package org.apache.commons.lang.math;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

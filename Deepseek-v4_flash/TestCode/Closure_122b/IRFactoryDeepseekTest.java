@@ -1,657 +1,503 @@
-package org.mozilla.javascript;
+package com.google.javascript.jscomp.parsing;
 
-import org.junit.Test;
 import static org.junit.Assert.*;
 
-import org.mozilla.javascript.ast.*;
-import java.util.List;
-import java.util.ArrayList;
-import java.io.StringReader;
+import com.google.javascript.jscomp.parsing.Config.LanguageMode;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+import com.google.javascript.rhino.head.CompilerEnvirons;
+import com.google.javascript.rhino.head.ErrorReporter;
+import com.google.javascript.rhino.head.EvaluatorException;
+import com.google.javascript.rhino.head.Parser;
+import com.google.javascript.rhino.head.ast.AstRoot;
 
-/**
- * IRFactoryDeepseekTest - Comprehensive White-Box test suite for IRFactory.
- *
- * [Branch & Defect Analysis Matrix]
- * - Part A: Core Functional Logic & State Transitions (constructors, transformTree, all transform* methods)
- * - Part B: Boundary Value Analysis (empty arrays/objects, null arguments where applicable, zero/one boundaries in numeric ops)
- * - Part C: Defect-Targeted Branch Zone (suspicious block comment warning, see Defects4J ground truth)
- * - Part D: Exception & Defensive Guard Paths (IllegalArgumentException for unsupported nodes, null handling)
- * - Part E: Object Lifecycle & Contract Integrity (basic scope push/pop, function initialization)
- *
- * Key branches covered:
- * - transform() switch on all token types (ARRAYCOMP, ARRAYLIT, BLOCK, BREAK, CALL, CONTINUE, DO, EMPTY, FOR, FUNCTION, etc.)
- * - createBinary() constant folding paths (ADD, SUB, MUL, DIV, AND, OR)
- * - createUnary() constant folding (BITNOT, NEG, NOT, TYPEOF, DELPROP)
- * - createIf() / createCondExpr() with always-true/false boolean elimination
- * - createFor() with LET rewrite
- * - createForIn() with destructuring
- * - createTryCatchFinally() short circuits
- * - isAlwaysDefinedBoolean() for NUMBER, TRUE, FALSE, NULL
- * - makeReference() for CALL, NAME, GETPROP, GETELEM, GET_REF
- * - Destructuring handling in transformAssignment, transformVariables
- * - Scope push/pop in transformBlock, transformFunction, loops
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.junit.Test;
+
+/* [Branch & Defect Analysis Matrix]
+ * - handleBlockComment: original heuristic only matches "/* @" and "\n * @";
+ *   it fails to warn for extra spaces after "*", tabs, multiple spaces after
+ *   the opening "/*", and annotation lines without a leading "*".
+ * - transformDispatcher branches covered by real syntax snippets:
+ *   assignments, infix/bitwise/shift/logical/comparison operators, unary ops,
+ *   functions, if/else, do/while, for, for-in, switch, labels, try/catch,
+ *   object/array literals, getters/setters, regexps, new, delete, with.
+ * - defensive paths: invalid ES3 property names, unsupported getters/setters,
+ *   getter/setter parameter validation, rejected const, invalid delete operand.
  */
 public class IRFactoryDeepseekTest {
 
-    // ==================== Part A: Constructors ====================
+  private static class RecordingReporter implements ErrorReporter {
+    final List<String> warnings = new ArrayList<String>();
+    final List<String> errors = new ArrayList<String>();
 
-    @Test(timeout = 4000)
-    public void testConstructorNoArg() {
-        IRFactory irf = new IRFactory();
-        assertNotNull(irf);
+    @Override
+    public void warning(String message, String sourceName, int line,
+        String lineSource, int lineOffset) {
+      warnings.add(message);
     }
 
-    @Test(timeout = 4000)
-    public void testConstructorWithEnv() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        IRFactory irf = new IRFactory(env);
-        assertNotNull(irf);
+    @Override
+    public void error(String message, String sourceName, int line,
+        String lineSource, int lineOffset) {
+      errors.add(message);
     }
 
-    @Test(timeout = 4000)
-    public void testConstructorWithEnvAndReporter() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        ErrorReporter reporter = new DefaultErrorReporter();
-        IRFactory irf = new IRFactory(env, reporter);
-        assertNotNull(irf);
+    @Override
+    public EvaluatorException runtimeError(String message, String sourceName,
+        int line, String lineSource, int lineOffset) {
+      return null;
     }
+  }
 
-    // ==================== Part A: transformTree ====================
+  private static class TransformResult {
+    final Node root;
+    final RecordingReporter reporter;
 
-    @Test(timeout = 4000)
-    public void testTransformTreeSimpleScript() {
-        IRFactory irf = new IRFactory();
-        String source = "var a = 1;";
-        AstRoot root = irf.parse(new StringReader(source), null, 1);
-        assertNotNull(root);
-        ScriptNode script = irf.transformTree(root);
-        assertNotNull(script);
-        assertTrue(script instanceof ScriptNode);
+    TransformResult(Node root, RecordingReporter reporter) {
+      this.root = root;
+      this.reporter = reporter;
     }
+  }
 
-    @Test(timeout = 4000)
-    public void testTransformTreeWithFunction() {
-        IRFactory irf = new IRFactory();
-        String source = "function f(x) { return x + 1; }";
-        AstRoot root = irf.parse(new StringReader(source), null, 1);
-        assertNotNull(root);
-        ScriptNode script = irf.transformTree(root);
-        assertNotNull(script);
+  private static boolean containsMessage(List<String> messages, String fragment) {
+    for (String message : messages) {
+      if (message.contains(fragment)) {
+        return true;
+      }
     }
-
-    // ==================== Part A: Transform Literals ====================
-
-    @Test(timeout = 4000)
-    public void testTransformLiteralTrue() {
-        IRFactory irf = new IRFactory();
-        AstNode trueNode = new KeywordLiteral(1, 1, Token.TRUE);
-        Node result = irf.transform(trueNode);
-        assertEquals(Token.TRUE, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformLiteralFalse() {
-        IRFactory irf = new IRFactory();
-        AstNode falseNode = new KeywordLiteral(1, 1, Token.FALSE);
-        Node result = irf.transform(falseNode);
-        assertEquals(Token.FALSE, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformLiteralNull() {
-        IRFactory irf = new IRFactory();
-        AstNode nullNode = new KeywordLiteral(1, 1, Token.NULL);
-        Node result = irf.transform(nullNode);
-        assertEquals(Token.NULL, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformLiteralThis() {
-        IRFactory irf = new IRFactory();
-        AstNode thisNode = new KeywordLiteral(1, 1, Token.THIS);
-        Node result = irf.transform(thisNode);
-        assertEquals(Token.THIS, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformLiteralDebugger() {
-        IRFactory irf = new IRFactory();
-        AstNode debuggerNode = new KeywordLiteral(1, 1, Token.DEBUGGER);
-        Node result = irf.transform(debuggerNode);
-        assertEquals(Token.DEBUGGER, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformNumber() {
-        IRFactory irf = new IRFactory();
-        NumberLiteral num = new NumberLiteral(1, 1, "42");
-        Node result = irf.transform(num);
-        assertEquals(Token.NUMBER, result.getType());
-        assertEquals(42.0, result.getDouble(), 0.0);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformString() {
-        IRFactory irf = new IRFactory();
-        StringLiteral str = new StringLiteral(1, 1, "hello");
-        Node result = irf.transform(str);
-        assertEquals(Token.STRING, result.getType());
-        assertEquals("hello", result.getString());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformName() {
-        IRFactory irf = new IRFactory();
-        Name name = new Name(1, 1, "x");
-        Node result = irf.transform(name);
-        assertEquals(Token.NAME, result.getType());
-        assertEquals("x", result.getString());
-    }
-
-    // ==================== Part A: Transform Array Literal ====================
-
-    @Test(timeout = 4000)
-    public void testTransformArrayLiteralNonDestructuring() {
-        IRFactory irf = new IRFactory();
-        // [1, 2, 3]
-        ArrayLiteral arr = new ArrayLiteral(1, 1);
-        arr.addElement(new NumberLiteral(1, 1, "1"));
-        arr.addElement(new NumberLiteral(1, 1, "2"));
-        arr.addElement(new NumberLiteral(1, 1, "3"));
-        Node result = irf.transform(arr);
-        assertEquals(Token.ARRAYLIT, result.getType());
-        assertNotNull(result.getFirstChild());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformArrayLiteralWithEmpty() {
-        IRFactory irf = new IRFactory();
-        // [1, , 3]
-        ArrayLiteral arr = new ArrayLiteral(1, 1);
-        arr.addElement(new NumberLiteral(1, 1, "1"));
-        arr.addElement(new EmptyExpression(1, 1));
-        arr.addElement(new NumberLiteral(1, 1, "3"));
-        arr.setDestructuringLength(3);
-        Node result = irf.transform(arr);
-        assertEquals(Token.ARRAYLIT, result.getType());
-        // Check SKIP_INDEXES_PROP is set
-        assertNotNull(result.getProp(Node.SKIP_INDEXES_PROP));
-    }
-
-    // ==================== Part A: Transform Object Literal ====================
-
-    @Test(timeout = 4000)
-    public void testTransformObjectLiteralNonDestructuring() {
-        IRFactory irf = new IRFactory();
-        ObjectLiteral obj = new ObjectLiteral(1, 1);
-        ObjectProperty prop = new ObjectProperty(1, 1);
-        prop.setLeft(new Name(1, 1, "a"));
-        prop.setRight(new NumberLiteral(1, 1, "1"));
-        obj.addElement(prop);
-        Node result = irf.transform(obj);
-        assertEquals(Token.OBJECTLIT, result.getType());
-        assertNotNull(result.getProp(Node.OBJECT_IDS_PROP));
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformObjectLiteralEmpty() {
-        IRFactory irf = new IRFactory();
-        ObjectLiteral obj = new ObjectLiteral(1, 1);
-        Node result = irf.transform(obj);
-        assertEquals(Token.OBJECTLIT, result.getType());
-        Object[] ids = (Object[]) result.getProp(Node.OBJECT_IDS_PROP);
-        assertEquals(0, ids.length);
-    }
-
-    // ==================== Part A: Transform If ====================
-
-    @Test(timeout = 4000)
-    public void testTransformIfWithElse() {
-        IRFactory irf = new IRFactory();
-        IfStatement ifStmt = new IfStatement(1, 1);
-        ifStmt.setCondition(new KeywordLiteral(1, 1, Token.TRUE));
-        ifStmt.setThenPart(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        ifStmt.setElsePart(new ExpressionStatement(new NumberLiteral(1, 1, "2")));
-        Node result = irf.transform(ifStmt);
-        assertEquals(Token.BLOCK, result.getType());
-        // Should be just the then part because condition is always true
-        assertTrue(result.getChildCount() >= 1);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformIfWithoutElse() {
-        IRFactory irf = new IRFactory();
-        IfStatement ifStmt = new IfStatement(1, 1);
-        ifStmt.setCondition(new KeywordLiteral(1, 1, Token.FALSE));
-        ifStmt.setThenPart(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        Node result = irf.transform(ifStmt);
-        // Condition always false -> empty block
-        assertEquals(Token.BLOCK, result.getType());
-        assertEquals(0, result.getChildCount());
-    }
-
-    // ==================== Part A: Transform Loops ====================
-
-    @Test(timeout = 4000)
-    public void testTransformWhileLoop() {
-        IRFactory irf = new IRFactory();
-        WhileLoop loop = new WhileLoop(1, 1);
-        loop.setCondition(new KeywordLiteral(1, 1, Token.TRUE));
-        loop.setBody(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        Node result = irf.transform(loop);
-        assertEquals(Token.LOOP, result.getType());
-        assertTrue(result instanceof Jump);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformDoLoop() {
-        IRFactory irf = new IRFactory();
-        DoLoop loop = new DoLoop(1, 1);
-        loop.setCondition(new KeywordLiteral(1, 1, Token.TRUE));
-        loop.setBody(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        Node result = irf.transform(loop);
-        assertEquals(Token.LOOP, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformForLoop() {
-        IRFactory irf = new IRFactory();
-        ForLoop loop = new ForLoop(1, 1);
-        loop.setInitializer(new EmptyExpression(1, 1));
-        loop.setCondition(new EmptyExpression(1, 1));
-        loop.setIncrement(new EmptyExpression(1, 1));
-        loop.setBody(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        Node result = irf.transform(loop);
-        assertEquals(Token.LOOP, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformForInLoop() {
-        IRFactory irf = new IRFactory();
-        ForInLoop loop = new ForInLoop(1, 1);
-        loop.setIterator(new Name(1, 1, "x"));
-        loop.setIteratedObject(new Name(1, 1, "obj"));
-        loop.setBody(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        Node result = irf.transform(loop);
-        assertEquals(Token.LOOP, result.getType());
-    }
-
-    // ==================== Part A: Transform Function ====================
-
-    @Test(timeout = 4000)
-    public void testTransformFunction() {
-        IRFactory irf = new IRFactory();
-        FunctionNode fn = new FunctionNode();
-        fn.setName("f");
-        fn.setBody(new Block(1, 1));
-        // Need to set a dummy scriptOrFn context? Actually transformFunction will use currentScriptOrFn.
-        // Let's parse a small script that contains a function to set up the context.
-        String source = "function f() {}";
-        AstRoot root = irf.parse(new StringReader(source), null, 1);
-        irf.transformTree(root); // This sets currentScriptOrFn
-        // Now create a new function node and transform it? But currentScriptOrFn is set from the last transform.
-        // Better to test via parsing: the transformTree will call transformFunction internally.
-        // We'll test the result from parsing.
-        ScriptNode script = irf.transformTree(root);
-        // The script should contain the function definition.
-        assertNotNull(script);
-    }
-
-    // ==================== Part A: Transform Function Call ====================
-
-    @Test(timeout = 4000)
-    public void testTransformFunctionCall() {
-        IRFactory irf = new IRFactory();
-        FunctionCall call = new FunctionCall(1, 1);
-        call.setTarget(new Name(1, 1, "foo"));
-        call.addArgument(new NumberLiteral(1, 1, "42"));
-        Node result = irf.transform(call);
-        assertEquals(Token.CALL, result.getType());
-    }
-
-    // ==================== Part A: Transform New Expression ====================
-
-    @Test(timeout = 4000)
-    public void testTransformNewExpr() {
-        IRFactory irf = new IRFactory();
-        NewExpression ne = new NewExpression(1, 1);
-        ne.setTarget(new Name(1, 1, "Array"));
-        ne.addArgument(new NumberLiteral(1, 1, "10"));
-        Node result = irf.transform(ne);
-        assertEquals(Token.NEW, result.getType());
-    }
-
-    // ==================== Part A: Transform Return ====================
-
-    @Test(timeout = 4000)
-    public void testTransformReturnWithValue() {
-        IRFactory irf = new IRFactory();
-        ReturnStatement ret = new ReturnStatement(1, 1);
-        ret.setReturnValue(new NumberLiteral(1, 1, "5"));
-        Node result = irf.transform(ret);
-        assertEquals(Token.RETURN, result.getType());
-        assertNotNull(result.getFirstChild());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformReturnWithoutValue() {
-        IRFactory irf = new IRFactory();
-        ReturnStatement ret = new ReturnStatement(1, 1);
-        Node result = irf.transform(ret);
-        assertEquals(Token.RETURN, result.getType());
-        assertNull(result.getFirstChild());
-    }
-
-    // ==================== Part A: Transform Throw ====================
-
-    @Test(timeout = 4000)
-    public void testTransformThrow() {
-        IRFactory irf = new IRFactory();
-        ThrowStatement thr = new ThrowStatement(1, 1);
-        thr.setExpression(new Name(1, 1, "e"));
-        Node result = irf.transform(thr);
-        assertEquals(Token.THROW, result.getType());
-    }
-
-    // ==================== Part A: Transform Try/Catch/Finally ====================
-
-    @Test(timeout = 4000)
-    public void testTransformTryCatch() {
-        IRFactory irf = new IRFactory();
-        TryStatement tryStmt = new TryStatement(1, 1);
-        tryStmt.setTryBlock(new Block(1, 1));
-        CatchClause cc = new CatchClause(1, 1);
-        cc.setVarName(new Name(1, 1, "e"));
-        cc.setBody(new Block(1, 1));
-        tryStmt.addCatchClause(cc);
-        Node result = irf.transform(tryStmt);
-        assertNotNull(result);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformTryFinally() {
-        IRFactory irf = new IRFactory();
-        TryStatement tryStmt = new TryStatement(1, 1);
-        tryStmt.setTryBlock(new Block(1, 1));
-        tryStmt.setFinallyBlock(new Block(1, 1));
-        Node result = irf.transform(tryStmt);
-        assertNotNull(result);
-    }
-
-    // ==================== Part B: Boundary and Edge Cases ====================
-
-    @Test(timeout = 4000)
-    public void testTransformEmptyBlock() {
-        IRFactory irf = new IRFactory();
-        Block emptyBlock = new Block(1, 1);
-        Node result = irf.transform(emptyBlock);
-        assertEquals(Token.BLOCK, result.getType());
-        assertEquals(0, result.getChildCount());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformAssignmentSimple() {
-        IRFactory irf = new IRFactory();
-        Assignment assign = new Assignment(1, 1);
-        assign.setLeft(new Name(1, 1, "x"));
-        assign.setRight(new NumberLiteral(1, 1, "10"));
-        assign.setType(Token.ASSIGN);
-        Node result = irf.transform(assign);
-        assertEquals(Token.SETNAME, result.getType()); // SETNAME expected
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformInfixAddition() {
-        IRFactory irf = new IRFactory();
-        InfixExpression add = new InfixExpression(1, 1);
-        add.setLeft(new NumberLiteral(1, 1, "2"));
-        add.setRight(new NumberLiteral(1, 1, "3"));
-        add.setType(Token.ADD);
-        Node result = irf.transform(add);
-        // Constant folding: 2+3 = 5
-        assertEquals(Token.NUMBER, result.getType());
-        assertEquals(5.0, result.getDouble(), 0.0);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformInfixSubtraction() {
-        IRFactory irf = new IRFactory();
-        InfixExpression sub = new InfixExpression(1, 1);
-        sub.setLeft(new NumberLiteral(1, 1, "0"));
-        sub.setRight(new NumberLiteral(1, 1, "5"));
-        sub.setType(Token.SUB);
-        Node result = irf.transform(sub);
-        // 0-5 = -5 -> NEG of 5? Actually constant folding produces -5 as NEG? The code creates NEG for 0-x
-        // But if left is 0 and right is NUMBER, it returns new Node(Token.NEG, right)
-        assertEquals(Token.NEG, result.getType());
-    }
-
-    // ==================== Part C: Defect-Targeted Branch Zone ====================
-
-    @Test(timeout = 4000)
-    public void testDefectSuspiciousBlockComment() {
-        // This test targets the known defect: suspicious block comment warnings.
-        // The bug likely causes an assertion or wrong behavior when parsing code with block comments
-        // that contain JSDoc-like annotations (e.g., @type).
-        // We verify that transformTree completes without throwing and returns a valid ScriptNode.
-        IRFactory irf = new IRFactory();
-        // Include a block comment that might be considered suspicious
-        String source = "/* @type {number} */ var x = 1;";
-        AstRoot root = irf.parse(new StringReader(source), null, 1);
-        assertNotNull(root);
-        // This should not throw any assertion error
-        ScriptNode script = irf.transformTree(root);
-        assertNotNull(script);
-        // Also verify that the source is correctly encoded
-        assertTrue(script.getEncodedSource().length() > 0);
-    }
-
-    @Test(timeout = 4000)
-    public void testDefectSuspiciousBlockCommentWithWarning() {
-        // Additional test for multiple suspicious comments
-        IRFactory irf = new IRFactory();
-        String source = "/** @param {string} s */ function f(s) { return s; }";
-        AstRoot root = irf.parse(new StringReader(source), null, 1);
-        assertNotNull(root);
-        ScriptNode script = irf.transformTree(root);
-        assertNotNull(script);
-    }
-
-    // ==================== Part D: Exception & Defensive Guard Paths ====================
-
-    @Test(expected = IllegalArgumentException.class, timeout = 4000)
-    public void testTransformUnsupportedNode() {
-        IRFactory irf = new IRFactory();
-        // Create a node with an unsupported token type (e.g., Token.ERROR)
-        AstNode errorNode = new ErrorNode(1, 1); // hypothetical, but we can create a simple AstNode with a bad type
-        // Use a dummy AstNode subclass that returns an unsupported token
-        AstNode unsupported = new AstNode(1, 1) {
-            @Override
-            public String toSource(int depth) {
-                return "";
-            }
-            @Override
-            public void visit(NodeVisitor visitor) {
-            }
-        };
-        unsupported.setType(Token.ERROR); // ERROR is not in the switch
-        irf.transform(unsupported);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformNullNode() {
-        IRFactory irf = new IRFactory();
-        // transform(null) will throw NullPointerException; we expect it to fail gracefully? Actually it will throw NPE.
-        // We can test that it throws NPE, but that's not ideal. Better to avoid null.
-        // Instead, we test that transform handles EMPTY node correctly.
-        EmptyExpression empty = new EmptyExpression(1, 1);
-        Node result = irf.transform(empty);
-        assertEquals(Token.EMPTY, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformVariableDeclaration() {
-        IRFactory irf = new IRFactory();
-        VariableDeclaration decl = new VariableDeclaration(1, 1);
-        decl.setType(Token.VAR);
-        VariableInitializer init = new VariableInitializer(1, 1);
-        init.setTarget(new Name(1, 1, "a"));
-        init.setInitializer(new NumberLiteral(1, 1, "1"));
-        decl.addVariable(init);
-        Node result = irf.transform(decl);
-        assertEquals(Token.VAR, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformBreakWithLabel() {
-        IRFactory irf = new IRFactory();
-        BreakStatement brk = new BreakStatement(1, 1);
-        brk.setBreakLabel(new Name(1, 1, "outer"));
-        Node result = irf.transform(brk);
-        assertEquals(Token.BREAK, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformContinueWithLabel() {
-        IRFactory irf = new IRFactory();
-        ContinueStatement cont = new ContinueStatement(1, 1);
-        cont.setLabel(new Name(1, 1, "loop1"));
-        Node result = irf.transform(cont);
-        assertEquals(Token.CONTINUE, result.getType());
-    }
-
-    // ==================== Part E: Object Lifecycle & Contract Integrity ====================
-
-    @Test(timeout = 4000)
-    public void testTransformParenExpr() {
-        IRFactory irf = new IRFactory();
-        ParenthesizedExpression paren = new ParenthesizedExpression(1, 1);
-        paren.setExpression(new NumberLiteral(1, 1, "7"));
-        Node result = irf.transform(paren);
-        // Should have PARENTHESIZED_PROP set
-        assertNotNull(result.getProp(Node.PARENTHESIZED_PROP));
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformPropertyGet() {
-        IRFactory irf = new IRFactory();
-        PropertyGet pg = new PropertyGet(1, 1);
-        pg.setTarget(new Name(1, 1, "obj"));
-        pg.setProperty(new Name(1, 1, "prop"));
-        Node result = irf.transform(pg);
-        assertEquals(Token.GETPROP, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformElementGet() {
-        IRFactory irf = new IRFactory();
-        ElementGet eg = new ElementGet(1, 1);
-        eg.setTarget(new Name(1, 1, "arr"));
-        eg.setElement(new NumberLiteral(1, 1, "0"));
-        Node result = irf.transform(eg);
-        assertEquals(Token.GETELEM, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformRegExp() {
-        IRFactory irf = new IRFactory();
-        RegExpLiteral regex = new RegExpLiteral(1, 1);
-        regex.setValue("abc");
-        regex.setFlags("g");
-        Node result = irf.transform(regex);
-        assertEquals(Token.REGEXP, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformSwitch() {
-        IRFactory irf = new IRFactory();
-        SwitchStatement sw = new SwitchStatement(1, 1);
-        sw.setExpression(new Name(1, 1, "x"));
-        SwitchCase sc = new SwitchCase(1, 1);
-        sc.setExpression(new NumberLiteral(1, 1, "1"));
-        sc.addStatement(new ExpressionStatement(new NumberLiteral(1, 1, "10")));
-        sw.addCase(sc);
-        Node result = irf.transform(sw);
-        assertEquals(Token.BLOCK, result.getType());
-        assertTrue(result.getChildCount() > 0);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformWith() {
-        IRFactory irf = new IRFactory();
-        WithStatement with = new WithStatement(1, 1);
-        with.setExpression(new Name(1, 1, "obj"));
-        with.setStatement(new ExpressionStatement(new NumberLiteral(1, 1, "1")));
-        Node result = irf.transform(with);
-        assertEquals(Token.BLOCK, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformYield() {
-        IRFactory irf = new IRFactory();
-        Yield yield = new Yield(1, 1);
-        yield.setValue(new NumberLiteral(1, 1, "42"));
-        Node result = irf.transform(yield);
-        assertEquals(Token.YIELD, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformUnaryNot() {
-        IRFactory irf = new IRFactory();
-        UnaryExpression not = new UnaryExpression(1, 1);
-        not.setType(Token.NOT);
-        not.setOperand(new KeywordLiteral(1, 1, Token.TRUE));
-        Node result = irf.transform(not);
-        // NOT of TRUE -> FALSE
-        assertEquals(Token.FALSE, result.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformUnaryBitNot() {
-        IRFactory irf = new IRFactory();
-        UnaryExpression bitnot = new UnaryExpression(1, 1);
-        bitnot.setType(Token.BITNOT);
-        bitnot.setOperand(new NumberLiteral(1, 1, "5"));
-        Node result = irf.transform(bitnot);
-        // ~5 = -6 => NEG? Actually constant folding: ~5 -> -6 (as number)
-        assertEquals(Token.NUMBER, result.getType());
-        assertEquals(-6.0, result.getDouble(), 0.0);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformUnaryNeg() {
-        IRFactory irf = new IRFactory();
-        UnaryExpression neg = new UnaryExpression(1, 1);
-        neg.setType(Token.NEG);
-        neg.setOperand(new NumberLiteral(1, 1, "3"));
-        Node result = irf.transform(neg);
-        // -3 constant fold
-        assertEquals(Token.NUMBER, result.getType());
-        assertEquals(-3.0, result.getDouble(), 0.0);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformCondExprAlwaysTrue() {
-        IRFactory irf = new IRFactory();
-        ConditionalExpression cond = new ConditionalExpression(1, 1);
-        cond.setTestExpression(new KeywordLiteral(1, 1, Token.TRUE));
-        cond.setTrueExpression(new NumberLiteral(1, 1, "1"));
-        cond.setFalseExpression(new NumberLiteral(1, 1, "2"));
-        Node result = irf.transform(cond);
-        // Always true, should return ifTrue
-        assertEquals(Token.NUMBER, result.getType());
-        assertEquals(1.0, result.getDouble(), 0.0);
-    }
-
-    @Test(timeout = 4000)
-    public void testTransformCondExprAlwaysFalse() {
-        IRFactory irf = new IRFactory();
-        ConditionalExpression cond = new ConditionalExpression(1, 1);
-        cond.setTestExpression(new KeywordLiteral(1, 1, Token.FALSE));
-        cond.setTrueExpression(new NumberLiteral(1, 1, "1"));
-        cond.setFalseExpression(new NumberLiteral(1, 1, "2"));
-        Node result = irf.transform(cond);
-        assertEquals(Token.NUMBER, result.getType());
-        assertEquals(2.0, result.getDouble(), 0.0);
-    }
+    return false;
+  }
+
+  private TransformResult transform(String source, LanguageMode languageMode,
+      boolean acceptConstKeyword) {
+    RecordingReporter reporter = new RecordingReporter();
+    CompilerEnvirons env = new CompilerEnvirons();
+    env.setRecordingComments(true);
+    env.setRecordingLocalJsDocComments(true);
+    env.setErrorReporter(reporter);
+
+    Parser parser = new Parser(env, reporter);
+    AstRoot ast = parser.parse(source, "test.js", 1);
+
+    Config config = new Config(languageMode, false, acceptConstKeyword);
+    Node root = IRFactory.transformTree(ast, null, source, config, reporter);
+    return new TransformResult(root, reporter);
+  }
+
+  private TransformResult transform(String source, LanguageMode languageMode) {
+    return transform(source, languageMode, true);
+  }
+
+  @Test(timeout = 4000)
+  public void testSuspiciousBlockCommentWithMultipleSpacesAfterOpening() {
+    String source = "/*  @type {number} */\nvar x = 3;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertTrue(result.reporter.warnings.toString(),
+        result.reporter.warnings.contains(IRFactory.SUSPICIOUS_COMMENT_WARNING));
+  }
+
+  @Test(timeout = 4000)
+  public void testSuspiciousBlockCommentWithMultipleSpacesAfterAsterisk() {
+    String source = "/*\n *  @type {number}\n */\nvar x = 3;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertTrue(result.reporter.warnings.toString(),
+        result.reporter.warnings.contains(IRFactory.SUSPICIOUS_COMMENT_WARNING));
+  }
+
+  @Test(timeout = 4000)
+  public void testSuspiciousBlockCommentWithTabAfterAsterisk() {
+    String source = "/*\n *\t@type {number}\n */\nvar x = 3;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertTrue(result.reporter.warnings.toString(),
+        result.reporter.warnings.contains(IRFactory.SUSPICIOUS_COMMENT_WARNING));
+  }
+
+  @Test(timeout = 4000)
+  public void testSuspiciousBlockCommentWithoutLeadingStar() {
+    String source = "/*\n   @type {number}\n */\nvar x = 3;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertTrue(result.reporter.warnings.toString(),
+        result.reporter.warnings.contains(IRFactory.SUSPICIOUS_COMMENT_WARNING));
+  }
+
+  @Test(timeout = 4000)
+  public void testOrdinaryBlockCommentDoesNotWarn() {
+    String source = "/* ordinary comment */\nvar x = 3;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertFalse(result.reporter.warnings.toString(),
+        result.reporter.warnings.contains(IRFactory.SUSPICIOUS_COMMENT_WARNING));
+  }
+
+  @Test(timeout = 4000)
+  public void testJSDocCommentDoesNotTriggerSuspiciousWarning() {
+    String source = "/** @type {number} */\nvar x = 3;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertFalse(result.reporter.warnings.toString(),
+        result.reporter.warnings.contains(IRFactory.SUSPICIOUS_COMMENT_WARNING));
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformExpressionStatement() {
+    TransformResult result = transform("a = 1 + 2 * 3; foo();",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(Token.SCRIPT, root.getType());
+    assertEquals(2, root.getChildCount());
+
+    Node firstStmt = root.getFirstChild();
+    assertEquals(Token.EXPR_RESULT, firstStmt.getType());
+    Node assign = firstStmt.getFirstChild();
+    assertEquals(Token.ASSIGN, assign.getType());
+    assertEquals(Token.NAME, assign.getFirstChild().getType());
+    assertEquals("a", assign.getFirstChild().getString());
+    assertEquals(Token.ADD, assign.getSecondChild().getType());
+
+    Node secondStmt = firstStmt.getNext();
+    assertEquals(Token.EXPR_RESULT, secondStmt.getType());
+    assertEquals(Token.CALL, secondStmt.getFirstChild().getType());
+    assertEquals(Token.NAME,
+        secondStmt.getFirstChild().getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformVariableDeclarationWithNegativeNumbers() {
+    TransformResult result = transform("var x = -1, y = 2;",
+        LanguageMode.ECMASCRIPT5);
+    Node var = result.root.getFirstChild();
+    assertEquals(Token.VAR, var.getType());
+    assertEquals(2, var.getChildCount());
+
+    Node x = var.getFirstChild();
+    assertEquals(Token.NAME, x.getType());
+    assertEquals("x", x.getString());
+    assertNotNull(x.getFirstChild());
+    assertEquals(Token.NUMBER, x.getFirstChild().getType());
+    assertEquals(-1.0, x.getFirstChild().getDouble(), 0.0);
+
+    Node y = x.getNext();
+    assertEquals(Token.NAME, y.getType());
+    assertNotNull(y.getFirstChild());
+    assertEquals(Token.NUMBER, y.getFirstChild().getType());
+    assertEquals(2.0, y.getFirstChild().getDouble(), 0.0);
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformFunctionDeclaration() {
+    TransformResult result = transform("function f(a, b) { return a + b; }",
+        LanguageMode.ECMASCRIPT5);
+    Node fn = result.root.getFirstChild();
+    assertEquals(Token.FUNCTION, fn.getType());
+
+    Node name = fn.getFirstChild();
+    assertEquals(Token.NAME, name.getType());
+    assertEquals("f", name.getString());
+
+    Node params = name.getNext();
+    assertEquals(Token.PARAM_LIST, params.getType());
+    assertEquals(2, params.getChildCount());
+
+    Node body = params.getNext();
+    assertEquals(Token.BLOCK, body.getType());
+    assertEquals(Token.RETURN, body.getFirstChild().getType());
+    assertEquals(Token.ADD, body.getFirstChild().getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformIfAndDoWhile() {
+    TransformResult result = transform(
+        "if (a) { b(); } else { c(); } do { d(); } while (e);",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(2, root.getChildCount());
+
+    Node ifNode = root.getFirstChild();
+    assertEquals(Token.IF, ifNode.getType());
+    assertEquals(3, ifNode.getChildCount());
+    assertEquals(Token.NAME, ifNode.getFirstChild().getType());
+    assertEquals(Token.BLOCK, ifNode.getFirstChild().getNext().getType());
+    assertEquals(Token.BLOCK, ifNode.getFirstChild().getNext().getNext().getType());
+
+    Node doNode = ifNode.getNext();
+    assertEquals(Token.DO, doNode.getType());
+    assertEquals(2, doNode.getChildCount());
+    assertEquals(Token.BLOCK, doNode.getFirstChild().getType());
+    assertEquals(Token.NAME, doNode.getSecondChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformForLoops() {
+    TransformResult result = transform(
+        "for (var i = 0; i < 10; i++) { x += i; }"
+        + "for (var k in obj) { use(k); }",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(2, root.getChildCount());
+
+    Node standardFor = root.getFirstChild();
+    assertEquals(Token.FOR, standardFor.getType());
+    assertEquals(4, standardFor.getChildCount());
+    assertEquals(Token.VAR, standardFor.getFirstChild().getType());
+
+    Node forIn = standardFor.getNext();
+    assertEquals(Token.FOR, forIn.getType());
+    assertEquals(3, forIn.getChildCount());
+    assertEquals(Token.NAME, forIn.getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformSwitchAndLabel() {
+    TransformResult result = transform(
+        "switch (x) { case 1: y(); break; default: z(); }"
+        + "label: for (;;) { break label; }",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(2, root.getChildCount());
+
+    Node switchNode = root.getFirstChild();
+    assertEquals(Token.SWITCH, switchNode.getType());
+    assertEquals(3, switchNode.getChildCount());
+    assertEquals(Token.NAME, switchNode.getFirstChild().getType());
+    assertEquals(Token.CASE, switchNode.getFirstChild().getNext().getType());
+    assertEquals(Token.DEFAULT_CASE,
+        switchNode.getFirstChild().getNext().getNext().getType());
+
+    Node labelNode = switchNode.getNext();
+    assertEquals(Token.LABEL, labelNode.getType());
+    assertEquals(2, labelNode.getChildCount());
+    assertEquals(Token.LABEL_NAME, labelNode.getFirstChild().getType());
+    assertEquals(Token.FOR, labelNode.getSecondChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformTryCatchFinally() {
+    TransformResult result = transform(
+        "try { throw e; } catch (e) { handle(e); } finally { cleanup(); }",
+        LanguageMode.ECMASCRIPT5);
+    Node tryNode = result.root.getFirstChild();
+    assertEquals(Token.TRY, tryNode.getType());
+    assertEquals(3, tryNode.getChildCount());
+
+    Node tryBlock = tryNode.getFirstChild();
+    assertEquals(Token.BLOCK, tryBlock.getType());
+
+    Node catchBlock = tryBlock.getNext();
+    assertEquals(Token.BLOCK, catchBlock.getType());
+    assertEquals(Token.CATCH, catchBlock.getFirstChild().getType());
+
+    Node catchNode = catchBlock.getFirstChild();
+    assertEquals(2, catchNode.getChildCount());
+    assertEquals(Token.NAME, catchNode.getFirstChild().getType());
+    assertEquals(Token.BLOCK, catchNode.getSecondChild().getType());
+
+    Node finallyBlock = catchBlock.getNext();
+    assertEquals(Token.BLOCK, finallyBlock.getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformObjectLiteralGetterSetter() {
+    TransformResult result = transform(
+        "var o = {a: 1, get b() { return 2; }, set b(v) { v; }};",
+        LanguageMode.ECMASCRIPT5);
+    Node varNode = result.root.getFirstChild();
+    assertEquals(Token.VAR, varNode.getType());
+
+    Node objectLit = varNode.getFirstChild().getFirstChild();
+    assertEquals(Token.OBJECTLIT, objectLit.getType());
+    assertEquals(3, objectLit.getChildCount());
+    assertEquals(Token.STRING_KEY, objectLit.getFirstChild().getType());
+    assertEquals(Token.GETTER_DEF,
+        objectLit.getFirstChild().getNext().getType());
+    assertEquals(Token.SETTER_DEF,
+        objectLit.getFirstChild().getNext().getNext().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformArrayAndRegexp() {
+    TransformResult result = transform(
+        "var a = [1, , \"x\"]; var r = /ab/g;",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(2, root.getChildCount());
+
+    Node varA = root.getFirstChild();
+    assertEquals(Token.VAR, varA.getType());
+    Node arrayLit = varA.getFirstChild().getFirstChild();
+    assertEquals(Token.ARRAYLIT, arrayLit.getType());
+    assertEquals(3, arrayLit.getChildCount());
+    assertEquals(Token.EMPTY, arrayLit.getFirstChild().getNext().getType());
+
+    Node varR = varA.getNext();
+    assertEquals(Token.VAR, varR.getType());
+    Node regexp = varR.getFirstChild().getFirstChild();
+    assertEquals(Token.REGEXP, regexp.getType());
+    assertEquals(Token.STRING, regexp.getFirstChild().getType());
+    assertEquals("ab", regexp.getFirstChild().getString());
+    assertEquals(Token.STRING, regexp.getSecondChild().getType());
+    assertEquals("g", regexp.getSecondChild().getString());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformNewAndDeleteError() {
+    TransformResult result = transform("var x = new Foo(1); delete 1;",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(2, root.getChildCount());
+
+    Node varNode = root.getFirstChild();
+    assertEquals(Token.VAR, varNode.getType());
+    Node newExpr = varNode.getFirstChild().getFirstChild();
+    assertEquals(Token.NEW, newExpr.getType());
+
+    assertTrue(containsMessage(result.reporter.errors, "Invalid delete operand"));
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformKeywordLiterals() {
+    TransformResult result = transform(
+        "var a = true, b = false, c = null, d = this;",
+        LanguageMode.ECMASCRIPT5);
+    Node varNode = result.root.getFirstChild();
+    assertEquals(Token.VAR, varNode.getType());
+    assertEquals(4, varNode.getChildCount());
+
+    assertEquals(Token.TRUE, varNode.getFirstChild().getFirstChild().getType());
+    assertEquals(Token.FALSE,
+        varNode.getFirstChild().getNext().getFirstChild().getType());
+    assertEquals(Token.NULL,
+        varNode.getFirstChild().getNext().getNext().getFirstChild().getType());
+    assertEquals(Token.THIS,
+        varNode.getFirstChild().getNext().getNext().getNext().getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformUnaryKeywordOperators() {
+    TransformResult result = transform(
+        "var a = !b, c = ~d, e = -f, g = +h, i = typeof j;",
+        LanguageMode.ECMASCRIPT5);
+    Node varNode = result.root.getFirstChild();
+    assertEquals(Token.VAR, varNode.getType());
+    assertEquals(5, varNode.getChildCount());
+
+    assertEquals(Token.NOT, varNode.getFirstChild().getFirstChild().getType());
+    assertEquals(Token.BITNOT,
+        varNode.getFirstChild().getNext().getFirstChild().getType());
+    assertEquals(Token.NEG,
+        varNode.getFirstChild().getNext().getNext().getFirstChild().getType());
+    assertEquals(Token.POS,
+        varNode.getFirstChild().getNext().getNext().getNext().getFirstChild().getType());
+    assertEquals(Token.TYPEOF,
+        varNode.getFirstChild().getNext().getNext().getNext().getNext().getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformMiscOperators() {
+    String source = "a = b & c | d ^ e;"
+        + "f = g << 2 >> 3 >>> 4;"
+        + "h = i == j && k != l || m <= n;"
+        + "o += p;"
+        + "q = r % s;"
+        + "t = u instanceof v;"
+        + "w = x in y;";
+    TransformResult result = transform(source, LanguageMode.ECMASCRIPT5);
+    assertEquals(Token.SCRIPT, result.root.getType());
+    assertTrue(result.reporter.errors.toString(), result.reporter.errors.isEmpty());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformWithStatement() {
+    TransformResult result = transform("with (obj) { x; }",
+        LanguageMode.ECMASCRIPT5);
+    Node withNode = result.root.getFirstChild();
+    assertEquals(Token.WITH, withNode.getType());
+    assertEquals(Token.NAME, withNode.getFirstChild().getType());
+    assertEquals(Token.BLOCK, withNode.getSecondChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTransformEmptyStatement() {
+    TransformResult result = transform(";", LanguageMode.ECMASCRIPT5);
+    assertEquals(Token.EMPTY, result.root.getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testDirectivesAreEncodedAndRemoved() {
+    TransformResult result = transform("\"use strict\"; var x = 1;",
+        LanguageMode.ECMASCRIPT5);
+    Node root = result.root;
+    assertEquals(Token.SCRIPT, root.getType());
+    assertEquals(1, root.getChildCount());
+    Set<String> directives = root.getDirectives();
+    assertNotNull(directives);
+    assertTrue(directives.contains("use strict"));
+  }
+
+  @Test(timeout = 4000)
+  public void testCastNodeInjectionWithInlineJSDoc() {
+    TransformResult result = transform(
+        "var x = /** @type {number} */ (y);",
+        LanguageMode.ECMASCRIPT5);
+    Node varNode = result.root.getFirstChild();
+    assertEquals(Token.VAR, varNode.getType());
+    Node cast = varNode.getFirstChild().getFirstChild();
+    assertEquals(Token.CAST, cast.getType());
+    assertEquals(Token.NAME, cast.getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testInvalidES3PropertyNameWarning() {
+    TransformResult result = transform("var x = obj.class;",
+        LanguageMode.ECMASCRIPT3);
+    assertTrue(containsMessage(result.reporter.warnings,
+        IRFactory.INVALID_ES3_PROP_NAME));
+  }
+
+  @Test(timeout = 4000)
+  public void testGetterNotSupportedInES3() {
+    TransformResult result = transform("var o = {get a() { return 1; }};",
+        LanguageMode.ECMASCRIPT3);
+    assertTrue(containsMessage(result.reporter.errors,
+        IRFactory.GETTER_ERROR_MESSAGE));
+  }
+
+  @Test(timeout = 4000)
+  public void testSetterNotSupportedInES3() {
+    TransformResult result = transform("var o = {set a(v) { v; }};",
+        LanguageMode.ECMASCRIPT3);
+    assertTrue(containsMessage(result.reporter.errors,
+        IRFactory.SETTER_ERROR_MESSAGE));
+  }
+
+  @Test(timeout = 4000)
+  public void testGetterWithParameterError() {
+    TransformResult result = transform("var o = {get a(x) { return x; }};",
+        LanguageMode.ECMASCRIPT5);
+    assertTrue(containsMessage(result.reporter.errors,
+        "getters may not have parameters"));
+  }
+
+  @Test(timeout = 4000)
+  public void testSetterWithoutParameterError() {
+    TransformResult result = transform("var o = {set a() { }};",
+        LanguageMode.ECMASCRIPT5);
+    assertTrue(containsMessage(result.reporter.errors,
+        "setters must have exactly one parameter"));
+  }
+
+  @Test(timeout = 4000)
+  public void testConstRejectedWithoutFlag() {
+    TransformResult result = transform("const x = 1;",
+        LanguageMode.ECMASCRIPT5, false);
+    assertTrue(containsMessage(result.reporter.errors, "Unsupported syntax"));
+  }
+
+  @Test(timeout = 4000)
+  public void testConstAcceptedWithFlag() {
+    TransformResult result = transform("const x = 1;",
+        LanguageMode.ECMASCRIPT5, true);
+    assertFalse(containsMessage(result.reporter.errors, "Unsupported syntax"));
+  }
 }

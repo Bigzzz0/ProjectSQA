@@ -1,846 +1,518 @@
-package com.google.javascript.rhino;
+package com.google.javascript.jscomp.parsing;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
-/*
- * [Branch & Defect Analysis Matrix]
+import com.google.javascript.jscomp.mozilla.rhino.CompilerEnvirons;
+import com.google.javascript.jscomp.mozilla.rhino.ErrorReporter;
+import com.google.javascript.jscomp.mozilla.rhino.EvaluatorException;
+import com.google.javascript.jscomp.mozilla.rhino.Parser;
+import com.google.javascript.jscomp.mozilla.rhino.ast.AstRoot;
+import com.google.javascript.jscomp.mozilla.rhino.ast.EmptyExpression;
+import com.google.javascript.jscomp.parsing.Config;
+import com.google.javascript.jscomp.parsing.IRFactory;
+import com.google.javascript.rhino.JSDocInfo;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+
+/* [Branch & Defect Analysis Matrix]
+ * =================================================================================================
+ * Target: com.google.javascript.jscomp.parsing.IRFactory
+ * Known Defect: ParserTest::testDestructuringAssignForbidden4 (Rhino destructuring assignment in
+ *               parenthesized expression `({x, y} = new Object());` produces an ObjectProperty with
+ *               a null right-hand expression, causing NullPointerException in processObjectLiteral /
+ *               transform(el.getRight())).
  *
- * Class Under Test: com.google.javascript.rhino.IRFactory
- * Target Environment: Java 8 / Defects4J / JUnit 4
+ * Partition Matrix:
+ * - Partition A: Core Functional Logic & Language Constructs
+ *   * Array/Object literals (unquoted names, quoted strings, destructuring detection)
+ *   * Function declarations (named vs. anonymous/unnamed with lp positioning)
+ *   * Control flow statements (if-then-else, switch-case-default, loops: while, do-while, for, for-in)
+ *   * Labeled statements, break/continue with and without labels
+ *   * Exception handling (try-catch, try-finally, try-catch-finally, conditional catch warning)
+ *   * Operators: unary (+, -, !, ~, typeof, void, delete, ++, --, number negation optimization),
+ *     infix (+, -, *, /, %, ==, ===, !=, !==, <, <=, >, >=, &&, ||, bitwise, assignment ops), hook (? :)
+ *   * Comments and JSDoc: fileoverview, @license propagation, node-level JSDoc
+ *   * ES5 directives ('use strict' extraction and AST annotation)
  *
- * Covered Functional Branches & Boundary Conditions:
- * 1. Script Lifecycle:
- *    - createScript() -> Token.SCRIPT
- *    - initScript() -> children != null (body transfer), children == null (empty body)
- * 2. Switch & Case Handling:
- *    - addSwitchCase() -> switchNode.getType() != Token.SWITCH (Kit.codeBug exception)
- *    - addSwitchCase() -> caseExpression != null (Token.CASE) vs caseExpression == null (Token.DEFAULT)
- *    - closeSwitch() -> verify no-op execution
- * 3. Statements & Declarations:
- *    - createExprStatement() -> parser.insideFunction() == true (EXPR_VOID) vs false (EXPR_RESULT)
- *    - createExprStatementNoReturn() -> Token.EXPR_VOID
- *    - createDefaultNamespace() -> activation requirement and Token.DEFAULTNAMESPACE wrapping
- *    - createVariables(), createBlock(), createDebugger(), createErrorName()
- * 4. Exception & Control Flow:
- *    - createCatch() -> catchCond != null vs catchCond == null (Token.EMPTY fallback)
- *    - createThrow() -> Token.THROW wrapping
- *    - createReturn() -> expr != null vs expr == null (empty return)
- *    - createBreak() / createContinue() -> label != null (with NAME child) vs label == null (standalone)
- *    - createWhile(), createDoWhile(), createFor(), createForIn(), createWith()
- *    - createTryCatchFinally() -> finallyBlock != null vs finallyBlock == null
- * 5. Functions & Activations:
- *    - createFunction() -> creates FunctionNode with initial NAME child
- *    - initFunction() -> sourceName != null vs null; JSDocInfo != null vs null; functionCount == 0 vs > 0
- *    - initFunction() nested functions: FUNCTION_EXPRESSION_STATEMENT with non-empty name (removeParamOrVar),
- *      empty string name, null name, and non-expression function types
- *    - checkActivationName() & setRequiresActivation():
- *      * "arguments" inside function
- *      * Custom compilerEnv.activationNames map match
- *      * "length" property get under Context.VERSION_1_2 vs other version / non-GETPROP
- *      * calls outside function (activation skipped)
- * 6. Literals & Invocations:
- *    - createArrayLiteral() -> skipCount == 0 vs skipCount > 0 with null skips and SKIP_INDEXES_PROP
- *    - createObjectLiteral() -> key-value sequence insertion
- *    - createRegExp() -> flags.length() == 0 vs flags.length() > 0
- *    - createIf() -> ifFalse != null vs ifFalse == null
- *    - createCondExpr() -> Token.HOOK conditional expression
- *    - createCallOrNew() -> child NAME "eval" (SPECIALCALL_EVAL), "With" (SPECIALCALL_WITH), normal name;
- *      child GETPROP ending with "eval" vs other property; non-NAME/GETPROP child
- * 7. Increments, Decrements & Reference Checks:
- *    - createIncDec() -> valid reference types (NAME, GETPROP, GETELEM, GET_REF, CALL) with post=true/false
- *    - createIncDec() -> invalid reference (e.g. NUMBER): Token.DEC ("msg.bad.decr") vs Token.INC ("msg.bad.incr")
- * 8. Property & Member Lookups:
- *    - createPropertyGet() -> namespace == null && memberTypeFlags == 0:
- *      * target == null -> fallback to createName
- *      * special property ("__proto__", "__parent__") -> REF_SPECIAL & GET_REF
- *      * normal property -> Token.GETPROP
- *    - createElementGet() -> namespace == null && memberTypeFlags == 0:
- *      * target == null -> Kit.codeBug exception
- *      * target != null -> Token.GETELEM
- *    - createMemberRefGet() (via property/element gets):
- *      * namespace: null vs "*" (Token.NULL nsNode) vs custom namespace (createName nsNode)
- *      * target: null (REF_NAME / REF_NS_NAME) vs non-null (REF_MEMBER / REF_NS_MEMBER)
- *      * memberTypeFlags != 0 (MEMBER_TYPE_PROP set) vs 0
- * 9. Binary Operations:
- *    - Token.DOT -> transformed to GETPROP with right child set to Token.STRING
- *    - Token.LB -> transformed to GETELEM
- *    - Standard binary (Token.ADD, Token.SUB, etc.)
- * 10. Defect-Targeted Zone (com.google.javascript.jscomp.parsing.ParserTest::testDestructuringAssignForbidden4):
- *    - createAssignment():
- *      * Valid LHS: Token.NAME, Token.GETPROP, Token.GETELEM -> no error reported
- *      * Forbidden LHS in assignments (e.g., destructuring ARRAYLIT, OBJECTLIT, or NUMBER):
- *        triggers parser.reportError("msg.bad.assign.left") and returns ASSIGN node.
+ * - Partition B: Boundary Value Analysis (BVA) & Extremes
+ *   * Array literals with holes/elisions (skipCount > 0, Node.SKIP_INDEXES_PROP calculation)
+ *   * Single statements vs. empty statements in block contexts (wasEmptyNode vs. block wrapping)
+ *   * Multiline vs. single-line position-to-charno mapping (position2charno boundary checks)
+ *   * Regular expressions with and without flags
+ *   * Return statements with and without return value
+ *
+ * - Partition C: Defect-Targeted Branch Zone (Defects4J Ground Truth)
+ *   * Destructuring assignments:
+ *     - Array destructuring in var: `var [x, y] = [1, 2];`
+ *     - Object destructuring in var: `var {x, y} = new Object();`
+ *     - Array destructuring assignment: `[x, y] = [1, 2];`
+ *     - Object destructuring assignment: `({x, y} = new Object());` (Reveals NPE defect in defective AST)
+ *
+ * - Partition D: Exception & Defensive Guard Paths
+ *   * ES5 getter/setter validation when acceptES5 is false
+ *   * Unsupported syntax handling via processIllegalToken
+ *   * transformTokenType default branch guard (IllegalStateException on unknown token type)
+ *
+ * - Partition E: Object Lifecycle & Contract Integrity
+ *   * Template node propagation (SOURCENAME_PROP)
+ *   * Synthetic block and parenthesized expression property integrity
+ * =================================================================================================
  */
 public class IRFactoryGeminiTest {
 
-    /**
-     * Test-specific sub-class of Rhino Parser to control and observe parser interactions
-     * without external mocking frameworks.
-     */
-    private static class MockParser extends Parser {
-        boolean insideFunc = false;
-        String sourceName = null;
-        final List<String> reportedErrors = new ArrayList<String>();
+    // -------------------------------------------------------------------------
+    // Test Infrastructure Helpers
+    // -------------------------------------------------------------------------
 
-        MockParser(CompilerEnvirons env) {
-            super(env);
-            this.compilerEnv = env;
+    private static class RecordingErrorReporter implements ErrorReporter {
+        final List<String> errors = new ArrayList<String>();
+        final List<String> warnings = new ArrayList<String>();
+
+        @Override
+        public void warning(String message, String sourceName, int line, String lineSource, int lineOffset) {
+            warnings.add(message);
         }
 
         @Override
-        boolean insideFunction() {
-            return insideFunc;
+        public void error(String message, String sourceName, int line, String lineSource, int lineOffset) {
+            errors.add(message);
         }
 
         @Override
-        String getSourceName() {
-            return sourceName;
-        }
-
-        @Override
-        void reportError(String messageId) {
-            reportedErrors.add(messageId);
+        public EvaluatorException runtimeError(String message, String sourceName, int line, String lineSource, int lineOffset) {
+            error(message, sourceName, line, lineSource, lineOffset);
+            return new EvaluatorException(message);
         }
     }
 
-    private IRFactory createFactory(MockParser parser) {
-        return new IRFactory(parser);
+    private static Config createTestConfig(boolean acceptES5) {
+        try {
+            Class<?> configClass = Class.forName("com.google.javascript.jscomp.parsing.Config");
+            Constructor<?>[] constructors = configClass.getDeclaredConstructors();
+            for (Constructor<?> c : constructors) {
+                c.setAccessible(true);
+                Class<?>[] pTypes = c.getParameterTypes();
+                Object[] args = new Object[pTypes.length];
+                int boolCount = 0;
+                for (int i = 0; i < pTypes.length; i++) {
+                    if (pTypes[i] == boolean.class || pTypes[i] == Boolean.class) {
+                        boolCount++;
+                        if (boolCount == 1) {
+                            args[i] = true; // isIdeMode
+                        } else {
+                            args[i] = acceptES5;
+                        }
+                    } else if (pTypes[i] == Set.class) {
+                        args[i] = Collections.emptySet();
+                    } else if (pTypes[i].isEnum()) {
+                        Object[] constants = pTypes[i].getEnumConstants();
+                        args[i] = constants.length > 0 ? constants[0] : null;
+                    } else {
+                        args[i] = null;
+                    }
+                }
+                return (Config) c.newInstance(args);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to construct Config instance reflectively", e);
+        }
+        return null;
     }
 
-    private MockParser createDefaultParser() {
+    private Node parseAndTransform(String code, boolean acceptES5, RecordingErrorReporter errorReporter) {
         CompilerEnvirons env = new CompilerEnvirons();
-        return new MockParser(env);
+        env.setErrorReporter(errorReporter);
+        env.setRecordingComments(true);
+        env.setRecordingLocalJsDocComments(true);
+        Parser p = new Parser(env, errorReporter);
+        AstRoot ast = p.parse(code, "testSource.js", 1);
+        Config config = createTestConfig(acceptES5);
+        return IRFactory.transformTree(ast, code, config, errorReporter);
     }
 
-    // =========================================================================
-    // PARTITION A: Core Functional Logic & State Transitions
-    // =========================================================================
-
-    @Test(timeout = 4000)
-    public void testScriptCreationAndInitWithChildren() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        ScriptOrFnNode scriptNode = factory.createScript();
-        assertNotNull(scriptNode);
-        assertEquals(Token.SCRIPT, scriptNode.getType());
-
-        Node body = new Node(Token.BLOCK);
-        Node child1 = factory.createLeaf(Token.EMPTY);
-        Node child2 = factory.createLeaf(Token.EMPTY);
-        body.addChildToBack(child1);
-        body.addChildToBack(child2);
-
-        factory.initScript(scriptNode, body);
-        assertEquals(child1, scriptNode.getFirstChild());
-        assertEquals(child2, scriptNode.getLastChild());
-        assertNull(body.getFirstChild());
+    private Node parseAndTransform(String code) {
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        return parseAndTransform(code, true, reporter);
     }
 
-    @Test(timeout = 4000)
-    public void testInitScriptWithEmptyBody() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        ScriptOrFnNode scriptNode = factory.createScript();
-        Node emptyBody = new Node(Token.BLOCK);
-
-        factory.initScript(scriptNode, emptyBody);
-        assertNull(scriptNode.getFirstChild());
-    }
+    // -------------------------------------------------------------------------
+    // Partition A: Core Functional Logic & State Transitions
+    // -------------------------------------------------------------------------
 
     @Test(timeout = 4000)
-    public void testSwitchAndCaseConstruction() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testFunctionDeclarationsNamedAndUnnamed() {
+        String code = "function foo(a, b) { return a + b; }\n" +
+                      "var fn = function(x) { return x; };";
+        Node script = parseAndTransform(code);
+        assertEquals(Token.SCRIPT, script.getType());
 
-        Node switchNode = factory.createSwitch(10, 2);
-        assertEquals(Token.SWITCH, switchNode.getType());
-        assertEquals(10, switchNode.getLineno());
-        assertEquals(2, switchNode.getCharno());
+        Node namedFn = script.getFirstChild();
+        assertEquals(Token.FUNCTION, namedFn.getType());
+        Node fnName = namedFn.getFirstChild();
+        assertEquals(Token.NAME, fnName.getType());
+        assertEquals("foo", fnName.getString());
+        assertEquals(1, namedFn.getLineno());
 
-        Node caseExpr = factory.createNumber(1.0, 11, 4);
-        Node caseStmts = factory.createBlock(11, 8);
-        factory.addSwitchCase(switchNode, caseExpr, caseStmts, 11, 0);
-
-        Node defaultStmts = factory.createBlock(12, 8);
-        factory.addSwitchCase(switchNode, null, defaultStmts, 12, 0);
-
-        factory.closeSwitch(switchNode);
-
-        Node firstCase = switchNode.getFirstChild();
-        assertNotNull(firstCase);
-        assertEquals(Token.CASE, firstCase.getType());
-        assertEquals(caseExpr, firstCase.getFirstChild());
-        assertEquals(caseStmts, firstCase.getLastChild());
-
-        Node defaultCase = firstCase.getNext();
-        assertNotNull(defaultCase);
-        assertEquals(Token.DEFAULT, defaultCase.getType());
-        assertEquals(defaultStmts, defaultCase.getFirstChild());
+        Node varDecl = namedFn.getNext();
+        assertEquals(Token.VAR, varDecl.getType());
+        Node varName = varDecl.getFirstChild();
+        Node anonFn = varName.getFirstChild();
+        assertEquals(Token.FUNCTION, anonFn.getType());
+        Node emptyName = anonFn.getFirstChild();
+        assertEquals("", emptyName.getString());
+        assertEquals(2, emptyName.getLineno());
     }
 
     @Test(timeout = 4000)
-    public void testExpressionStatementsInsideAndOutsideFunction() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testControlFlowStatements() {
+        String code = "if (true) { var a = 1; } else { var a = 2; }\n" +
+                      "while (false) { break; }\n" +
+                      "do { continue; } while (false);\n" +
+                      "for (var i = 0; i < 10; i++) {}\n" +
+                      "for (var k in obj) {}\n" +
+                      "switch (x) { case 1: break; default: break; }\n" +
+                      "with (o) { foo(); }";
+        Node script = parseAndTransform(code);
+        assertNotNull(script);
+        assertEquals(7, script.getChildCount());
 
-        Node expr1 = factory.createNumber(5.0);
-        parser.insideFunc = false;
-        Node stmtResult = factory.createExprStatement(expr1, 1, 0);
-        assertEquals(Token.EXPR_RESULT, stmtResult.getType());
-        assertEquals(expr1, stmtResult.getFirstChild());
+        Node ifNode = script.getFirstChild();
+        assertEquals(Token.IF, ifNode.getType());
 
-        Node expr2 = factory.createNumber(10.0);
-        parser.insideFunc = true;
-        Node stmtVoid = factory.createExprStatement(expr2, 2, 0);
-        assertEquals(Token.EXPR_VOID, stmtVoid.getType());
-        assertEquals(expr2, stmtVoid.getFirstChild());
+        Node whileNode = ifNode.getNext();
+        assertEquals(Token.WHILE, whileNode.getType());
 
-        Node stmtNoReturn = factory.createExprStatementNoReturn(expr1, 3, 0);
-        assertEquals(Token.EXPR_VOID, stmtNoReturn.getType());
-    }
+        Node doNode = whileNode.getNext();
+        assertEquals(Token.DO, doNode.getType());
 
-    @Test(timeout = 4000)
-    public void testDefaultNamespaceCreation() {
-        MockParser parser = createDefaultParser();
-        FunctionNode fn = new FunctionNode("testFn", 1, 0);
-        parser.currentScriptOrFn = fn;
-        parser.insideFunc = true;
-        IRFactory factory = createFactory(parser);
-
-        Node nsExpr = factory.createString("http://example.com");
-        Node defaultNs = factory.createDefaultNamespace(nsExpr, 4, 1);
-
-        assertTrue(fn.itsNeedsActivation);
-        assertEquals(Token.EXPR_VOID, defaultNs.getType());
-        Node unary = defaultNs.getFirstChild();
-        assertEquals(Token.DEFAULTNAMESPACE, unary.getType());
-        assertEquals(nsExpr, unary.getFirstChild());
-    }
-
-    @Test(timeout = 4000)
-    public void testCatchClausesWithAndWithoutCondition() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node stmts = factory.createBlock(1, 0);
-
-        // Catch with null condition defaults to Token.EMPTY
-        Node catchNode1 = factory.createCatch("err", 2, 0, null, stmts, 2, 0);
-        assertEquals(Token.CATCH, catchNode1.getType());
-        Node nameNode1 = catchNode1.getFirstChild();
-        assertEquals(Token.NAME, nameNode1.getType());
-        assertEquals("err", nameNode1.getString());
-        Node condNode1 = nameNode1.getNext();
-        assertEquals(Token.EMPTY, condNode1.getType());
-        assertEquals(stmts, condNode1.getNext());
-
-        // Catch with explicit condition
-        Node explicitCond = factory.createName("ErrorType", 3, 0);
-        Node catchNode2 = factory.createCatch("err2", 3, 0, explicitCond, stmts, 3, 0);
-        Node condNode2 = catchNode2.getFirstChild().getNext();
-        assertEquals(explicitCond, condNode2);
-    }
-
-    @Test(timeout = 4000)
-    public void testControlFlowConstructs() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node cond = factory.createName("c", 1, 0);
-        Node body = factory.createBlock(1, 0);
-
-        assertEquals(Token.WHILE, factory.createWhile(cond, body, 1, 0).getType());
-        assertEquals(Token.DO, factory.createDoWhile(body, cond, 1, 0).getType());
-
-        Node init = factory.createVariables(Token.VAR, 1, 0);
-        Node incr = factory.createName("i", 1, 0);
-        Node forNode = factory.createFor(init, cond, incr, body, 1, 0);
+        Node forNode = doNode.getNext();
         assertEquals(Token.FOR, forNode.getType());
 
-        Node forInNode = factory.createForIn(init, cond, body, 1, 0);
+        Node forInNode = forNode.getNext();
         assertEquals(Token.FOR, forInNode.getType());
 
-        Node withNode = factory.createWith(cond, body, 1, 0);
+        Node switchNode = forInNode.getNext();
+        assertEquals(Token.SWITCH, switchNode.getType());
+
+        Node withNode = switchNode.getNext();
         assertEquals(Token.WITH, withNode.getType());
     }
 
     @Test(timeout = 4000)
-    public void testTryCatchFinallyVariations() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node tryBlock = factory.createBlock(1, 0);
-        Node catchBlock = factory.createBlock(2, 0);
-        Node finallyBlock = factory.createBlock(3, 0);
-
-        Node tryCatchOnly = factory.createTryCatchFinally(tryBlock, catchBlock, null, 1, 0);
-        assertEquals(Token.TRY, tryCatchOnly.getType());
-        assertNull(catchBlock.getNext());
-
-        Node tryCatchFinally = factory.createTryCatchFinally(tryBlock, catchBlock, finallyBlock, 1, 0);
-        assertEquals(Token.TRY, tryCatchFinally.getType());
-        assertEquals(finallyBlock, tryCatchFinally.getLastChild());
-    }
-
-    @Test(timeout = 4000)
-    public void testReturnsAndBreaksAndContinues() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        // Return
-        Node retEmpty = factory.createReturn(null, 1, 0);
-        assertEquals(Token.RETURN, retEmpty.getType());
-        assertNull(retEmpty.getFirstChild());
-
-        Node expr = factory.createNumber(10.0);
-        Node retVal = factory.createReturn(expr, 1, 0);
-        assertEquals(Token.RETURN, retVal.getType());
-        assertEquals(expr, retVal.getFirstChild());
-
-        // Break
-        Node brkSimple = factory.createBreak(null, 2, 0);
-        assertEquals(Token.BREAK, brkSimple.getType());
-        assertNull(brkSimple.getFirstChild());
-
-        Node brkLabel = factory.createBreak("myLabel", 2, 0);
-        assertEquals(Token.BREAK, brkLabel.getType());
-        assertEquals("myLabel", brkLabel.getFirstChild().getString());
-
-        // Continue
-        Node contSimple = factory.createContinue(null, 3, 0);
-        assertEquals(Token.CONTINUE, contSimple.getType());
-        assertNull(contSimple.getFirstChild());
-
-        Node contLabel = factory.createContinue("myLabel", 3, 0);
-        assertEquals(Token.CONTINUE, contLabel.getType());
-        assertEquals("myLabel", contLabel.getFirstChild().getString());
-
-        // Label
-        Node labelNode = factory.createLabel("loop", 4, 0);
+    public void testLabeledStatementAndBreakContinueTarget() {
+        String code = "outer: for (;;) { inner: while (true) { break outer; continue inner; } }";
+        Node script = parseAndTransform(code);
+        Node labelNode = script.getFirstChild();
         assertEquals(Token.LABEL, labelNode.getType());
-        assertEquals("loop", labelNode.getFirstChild().getString());
-
-        // Throw & Debugger
-        assertEquals(Token.THROW, factory.createThrow(expr, 5, 0).getType());
-        assertEquals(Token.DEBUGGER, factory.createDebugger(6, 0).getType());
+        Node labelName = labelNode.getFirstChild();
+        assertEquals(Token.LABEL_NAME, labelName.getType());
+        assertEquals("outer", labelName.getString());
     }
 
     @Test(timeout = 4000)
-    public void testIfAndConditionalExpressions() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testTryCatchFinallyVariations() {
+        String code = "try { var a = 1; } catch (e) { var b = 2; }\n" +
+                      "try { var c = 3; } finally { var d = 4; }\n" +
+                      "try { var e = 5; } catch (err) { var f = 6; } finally { var g = 7; }";
+        Node script = parseAndTransform(code);
+        assertEquals(3, script.getChildCount());
 
-        Node cond = factory.createName("flag", 1, 0);
-        Node ifTrue = factory.createBlock(2, 0);
-        Node ifFalse = factory.createBlock(3, 0);
+        for (Node child = script.getFirstChild(); child != null; child = child.getNext()) {
+            assertEquals(Token.TRY, child.getType());
+        }
+    }
 
-        Node ifSingle = factory.createIf(cond, ifTrue, null, 1, 0);
-        assertEquals(Token.IF, ifSingle.getType());
-        assertNull(ifTrue.getNext());
+    @Test(timeout = 4000)
+    public void testUnaryAndInfixExpressions() {
+        String code = "var a = -42;\n" +
+                      "var b = -x;\n" +
+                      "var c = +x;\n" +
+                      "var d = !x;\n" +
+                      "var e = ~x;\n" +
+                      "var f = typeof x;\n" +
+                      "var g = void 0;\n" +
+                      "var h = x++;\n" +
+                      "var i = ++x;\n" +
+                      "var j = (x ? y : z);";
+        Node script = parseAndTransform(code);
 
-        Node ifElse = factory.createIf(cond, ifTrue, ifFalse, 1, 0);
-        assertEquals(Token.IF, ifElse.getType());
-        assertEquals(ifFalse, ifElse.getLastChild());
+        // a = -42 should be folded into negative number node
+        Node varA = script.getFirstChild().getFirstChild();
+        Node numVal = varA.getFirstChild();
+        assertEquals(Token.NUMBER, numVal.getType());
+        assertEquals(-42.0, numVal.getDouble(), 0.0001);
 
-        Node hook = factory.createCondExpr(cond, ifTrue, ifFalse, 1, 0);
+        // b = -x should remain Token.NEG
+        Node varB = script.getFirstChild().getNext().getFirstChild();
+        assertEquals(Token.NEG, varB.getFirstChild().getType());
+
+        // h = x++ has INCRDECR_PROP set
+        Node varH = script.getChildAtIndex(7).getFirstChild();
+        Node postIncr = varH.getFirstChild();
+        assertEquals(Token.INC, postIncr.getType());
+        assertTrue(postIncr.getBooleanProp(Node.INCRDECR_PROP));
+
+        // j has Hook (conditional) and Parenthesized prop
+        Node varJ = script.getChildAtIndex(9).getFirstChild();
+        Node hook = varJ.getFirstChild();
         assertEquals(Token.HOOK, hook.getType());
+        assertTrue(hook.getBooleanProp(Node.PARENTHESIZED_PROP));
     }
 
     @Test(timeout = 4000)
-    public void testDotQuerySetsActivation() {
-        MockParser parser = createDefaultParser();
-        FunctionNode fn = new FunctionNode("queryFn", 1, 0);
-        parser.currentScriptOrFn = fn;
-        parser.insideFunc = true;
-        IRFactory factory = createFactory(parser);
+    public void testDirectivesParsing() {
+        String code = "'use strict';\nvar a = 1;\nfunction f() { 'use strict'; return 2; }";
+        Node script = parseAndTransform(code);
+        assertNotNull(script.getDirectives());
+        assertTrue(script.getDirectives().contains("use strict"));
 
-        Node obj = factory.createName("xmlObj", 1, 0);
-        Node body = factory.createName("filter", 1, 5);
-
-        Node dotQuery = factory.createDotQuery(obj, body, 1, 0);
-        assertEquals(Token.DOTQUERY, dotQuery.getType());
-        assertTrue(fn.itsNeedsActivation);
+        Node fnNode = script.getLastChild();
+        assertEquals(Token.FUNCTION, fnNode.getType());
+        Node fnBody = fnNode.getLastChild();
+        assertNotNull(fnBody.getDirectives());
+        assertTrue(fnBody.getDirectives().contains("use strict"));
     }
 
-    // =========================================================================
-    // PARTITION B: Boundary Value Analysis (BVA) & Extremes
-    // =========================================================================
+    @Test(timeout = 4000)
+    public void testFileOverviewAndJsDocLicense() {
+        String code = "/**\n" +
+                      " * @fileoverview Module description\n" +
+                      " * @license MIT License\n" +
+                      " */\n" +
+                      "/** @type {number} */\n" +
+                      "var x = 10;";
+        Node script = parseAndTransform(code);
+        JSDocInfo fileDoc = script.getJSDocInfo();
+        assertNotNull(fileDoc);
+        assertEquals("MIT License", fileDoc.getLicense());
+
+        Node varNode = script.getFirstChild();
+        JSDocInfo varDoc = varNode.getJSDocInfo();
+        assertNotNull(varDoc);
+    }
+
+    // -------------------------------------------------------------------------
+    // Partition B: Boundary Value Analysis (BVA) & Extremes
+    // -------------------------------------------------------------------------
 
     @Test(timeout = 4000)
-    public void testArrayLiteralWithAndWithoutSkips() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testArrayLiteralWithHolesSkipIndexes() {
+        String code = "var arr = [1, , 3, , , 6];";
+        Node script = parseAndTransform(code);
+        Node varNode = script.getFirstChild();
+        Node arrLit = varNode.getFirstChild().getFirstChild();
+        assertEquals(Token.ARRAYLIT, arrLit.getType());
 
-        // Case 1: No skips
-        ObjArray elems1 = new ObjArray();
-        elems1.add(factory.createNumber(1.0));
-        elems1.add(factory.createNumber(2.0));
-        Node array1 = factory.createArrayLiteral(elems1, 0, 1, 0);
-        assertEquals(Token.ARRAYLIT, array1.getType());
-        assertNull(array1.getProp(Node.SKIP_INDEXES_PROP));
-
-        // Case 2: With skips (sparse array literal: [1, , 3, ])
-        ObjArray elems2 = new ObjArray();
-        elems2.add(factory.createNumber(1.0));
-        elems2.add(null);
-        elems2.add(factory.createNumber(3.0));
-        elems2.add(null);
-        Node array2 = factory.createArrayLiteral(elems2, 2, 2, 0);
-        assertEquals(Token.ARRAYLIT, array2.getType());
-        int[] skips = (int[]) array2.getProp(Node.SKIP_INDEXES_PROP);
+        int[] skips = (int[]) arrLit.getProp(Node.SKIP_INDEXES_PROP);
         assertNotNull(skips);
-        assertEquals(2, skips.length);
+        assertEquals(3, skips.length);
         assertEquals(1, skips[0]);
         assertEquals(3, skips[1]);
+        assertEquals(4, skips[2]);
     }
 
     @Test(timeout = 4000)
-    public void testObjectLiteralEmptyAndMultiPair() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testTransformBlockBranchConditioning() {
+        // Condition: irNode.getType() == Token.EMPTY vs single expression statement
+        String code = "if (true); else x = 1;";
+        Node script = parseAndTransform(code);
+        Node ifNode = script.getFirstChild();
 
-        ObjArray objEmpty = new ObjArray();
-        Node emptyObjLit = factory.createObjectLiteral(objEmpty, 1, 0);
-        assertEquals(Token.OBJECTLIT, emptyObjLit.getType());
-        assertNull(emptyObjLit.getFirstChild());
+        Node thenPart = ifNode.getChildAtIndex(1);
+        assertEquals(Token.BLOCK, thenPart.getType());
+        assertTrue(thenPart.wasEmptyNode());
 
-        ObjArray objPairs = new ObjArray();
-        Node k1 = factory.createString("a");
-        Node v1 = factory.createNumber(1.0);
-        Node k2 = factory.createString("b");
-        Node v2 = factory.createNumber(2.0);
-        objPairs.add(k1);
-        objPairs.add(v1);
-        objPairs.add(k2);
-        objPairs.add(v2);
-
-        Node objLit = factory.createObjectLiteral(objPairs, 1, 0);
-        assertEquals(k1, objLit.getFirstChild());
-        assertEquals(v1, k1.getNext());
-        assertEquals(k2, v1.getNext());
-        assertEquals(v2, k2.getNext());
+        Node elsePart = ifNode.getChildAtIndex(2);
+        assertEquals(Token.BLOCK, elsePart.getType());
+        assertFalse(elsePart.wasEmptyNode());
+        assertEquals(Token.EXPR_RESULT, elsePart.getFirstChild().getType());
     }
 
     @Test(timeout = 4000)
-    public void testRegExpEmptyFlagsVsNonEmptyFlags() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testRegExpLiteralWithAndWithoutFlags() {
+        String code = "var r1 = /pattern/gi;\n" +
+                      "var r2 = /simple/;";
+        Node script = parseAndTransform(code);
+        Node r1Node = script.getFirstChild().getFirstChild().getFirstChild();
+        assertEquals(Token.REGEXP, r1Node.getType());
+        assertEquals(2, r1Node.getChildCount()); // pattern and flags
+        assertEquals("gi", r1Node.getLastChild().getString());
 
-        Node regexNoFlags = factory.createRegExp("abc", "", 1, 0);
-        assertEquals(Token.REGEXP, regexNoFlags.getType());
-        assertNull(regexNoFlags.getFirstChild().getNext());
-
-        Node regexFlags = factory.createRegExp("abc", "gi", 1, 0);
-        assertEquals(Token.REGEXP, regexFlags.getType());
-        Node flagsNode = regexFlags.getFirstChild().getNext();
-        assertNotNull(flagsNode);
-        assertEquals("gi", flagsNode.getString());
+        Node r2Node = script.getLastChild().getFirstChild().getFirstChild();
+        assertEquals(Token.REGEXP, r2Node.getType());
+        assertEquals(1, r2Node.getChildCount()); // pattern only
     }
 
     @Test(timeout = 4000)
-    public void testBinaryDotAndBracketAndStandard() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node left = factory.createName("obj", 1, 0);
-        Node right = factory.createName("prop", 1, 4);
-
-        // Token.DOT transforms to GETPROP and converts right child to STRING
-        Node dotNode = factory.createBinary(Token.DOT, left, right, 1, 0);
-        assertEquals(Token.GETPROP, dotNode.getType());
-        assertEquals(Token.STRING, dotNode.getLastChild().getType());
-
-        // Token.LB transforms to GETELEM
-        Node elemIdx = factory.createNumber(0.0);
-        Node lbNode = factory.createBinary(Token.LB, left, elemIdx, 1, 0);
-        assertEquals(Token.GETELEM, lbNode.getType());
-
-        // Standard arithmetic
-        Node addNode = factory.createBinary(Token.ADD, left, right, 1, 0);
-        assertEquals(Token.ADD, addNode.getType());
+    public void testMultilinePositionToCharno() {
+        String code = "var firstLine = 1;\n" +
+                      "var secondLine = 2;\n" +
+                      "\n" +
+                      "var fourthLine = 4;";
+        Node script = parseAndTransform(code);
+        Node fourthVar = script.getLastChild();
+        assertEquals(4, fourthVar.getLineno());
+        assertEquals(0, fourthVar.getCharno());
     }
 
-    // =========================================================================
-    // PARTITION C: Defect-Targeted Zone (testDestructuringAssignForbidden4)
-    // =========================================================================
+    @Test(timeout = 4000)
+    public void testObjectPropertiesQuotedVsUnquoted() {
+        String code = "var obj = { a: 1, 'b': 2 };";
+        Node script = parseAndTransform(code);
+        Node objLit = script.getFirstChild().getFirstChild().getFirstChild();
+        Node propA = objLit.getFirstChild();
+        Node propB = propA.getNext();
+
+        assertEquals(Token.STRING, propA.getType());
+        assertFalse(propA.getBooleanProp(Node.QUOTED_PROP));
+
+        assertEquals(Token.STRING, propB.getType());
+        assertTrue(propB.getBooleanProp(Node.QUOTED_PROP));
+    }
+
+    // -------------------------------------------------------------------------
+    // Partition C: Defect-Targeted Branch Zone (Defects4J Ground Truth)
+    // -------------------------------------------------------------------------
+
+    @Test(timeout = 4000)
+    public void testDestructuringAssignForbidden1ArrayVar() {
+        String code = "var [x, y] = [1, 2];";
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        parseAndTransform(code, false, reporter);
+        assertTrue("Expected destructuring assignment error on array pattern in var",
+                reporter.errors.contains("destructuring assignment forbidden"));
+    }
+
+    @Test(timeout = 4000)
+    public void testDestructuringAssignForbidden2ObjectVar() {
+        String code = "var {x, y} = new Object();";
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        parseAndTransform(code, false, reporter);
+        assertTrue("Expected destructuring assignment error on object pattern in var",
+                reporter.errors.contains("destructuring assignment forbidden"));
+    }
+
+    @Test(timeout = 4000)
+    public void testDestructuringAssignForbidden3ArrayAssign() {
+        String code = "[x, y] = [1, 2];";
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        parseAndTransform(code, false, reporter);
+        assertTrue("Expected destructuring assignment error on array assignment",
+                reporter.errors.contains("destructuring assignment forbidden"));
+    }
 
     /**
-     * Targets known defect referenced by ParserTest::testDestructuringAssignForbidden4.
-     * In JavaScript assignment syntax, assigning to an invalid Left-Hand Side expression
-     * such as an Array Literal or Object Literal must report "msg.bad.assign.left".
+     * TARGET DEFECT TEST CASE:
+     * Targets `ParserTest::testDestructuringAssignForbidden4`.
+     * In the defective version, parsing `({x, y} = new Object());` causes an ObjectProperty
+     * with null value (`el.getRight() == null`) to be passed to `transform(null)`,
+     * throwing a fatal NullPointerException instead of properly reporting the error.
      */
     @Test(timeout = 4000)
-    public void testDestructuringAssignForbidden_ArrayLhsReportsError() throws Exception {
-        CompilerEnvirons env = new CompilerEnvirons();
-        MockParser mockParser = new MockParser(env);
-        IRFactory factory = createFactory(mockParser);
+    public void testDestructuringAssignForbidden4() {
+        String code = "({x, y} = new Object());";
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        Node result = parseAndTransform(code, false, reporter);
+        assertNotNull("Transformation must complete and return an AST node", result);
+        assertTrue("Must report 'destructuring assignment forbidden'",
+                reporter.errors.contains("destructuring assignment forbidden"));
+    }
 
-        ObjArray arrayElems = new ObjArray();
-        arrayElems.add(factory.createName("x", 1, 1));
-        Node arrayLitLhs = factory.createArrayLiteral(arrayElems, 0, 1, 0);
-        Node rhs = factory.createNumber(100.0, 1, 10);
+    // -------------------------------------------------------------------------
+    // Partition D: Exception & Defensive Guard Paths
+    // -------------------------------------------------------------------------
 
-        Node assignNode = factory.createAssignment(Token.ASSIGN, arrayLitLhs, rhs, 1, 0);
+    @Test(timeout = 4000)
+    public void testGetterSetterForbiddenWhenAcceptES5IsFalse() {
+        String codeGetter = "var o = { get x() { return 1; } };";
+        RecordingErrorReporter getterReporter = new RecordingErrorReporter();
+        parseAndTransform(codeGetter, false, getterReporter);
+        assertTrue(getterReporter.errors.contains("getters are not supported in Internet Explorer"));
 
-        assertNotNull(assignNode);
-        assertEquals(Token.ASSIGN, assignNode.getType());
-        assertEquals(1, mockParser.reportedErrors.size());
-        assertEquals("msg.bad.assign.left", mockParser.reportedErrors.get(0));
+        String codeSetter = "var o = { set x(v) { } };";
+        RecordingErrorReporter setterReporter = new RecordingErrorReporter();
+        parseAndTransform(codeSetter, false, setterReporter);
+        assertTrue(setterReporter.errors.contains("setters are not supported in Internet Explorer"));
     }
 
     @Test(timeout = 4000)
-    public void testDestructuringAssignForbidden_ObjectLhsReportsError() throws Exception {
-        CompilerEnvirons env = new CompilerEnvirons();
-        MockParser mockParser = new MockParser(env);
-        IRFactory factory = createFactory(mockParser);
-
-        ObjArray objElems = new ObjArray();
-        objElems.add(factory.createString("x", 1, 1));
-        objElems.add(factory.createName("x", 1, 3));
-        Node objLitLhs = factory.createObjectLiteral(objElems, 1, 0);
-        Node rhs = factory.createNumber(200.0, 1, 10);
-
-        Node assignNode = factory.createAssignment(Token.ASSIGN, objLitLhs, rhs, 1, 0);
-
-        assertNotNull(assignNode);
-        assertEquals(Token.ASSIGN, assignNode.getType());
-        assertEquals(1, mockParser.reportedErrors.size());
-        assertEquals("msg.bad.assign.left", mockParser.reportedErrors.get(0));
+    public void testGetterSetterAcceptedWhenAcceptES5IsTrue() {
+        String code = "var o = { get x() { return 1; }, set x(v) { this.val = v; } };";
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        Node script = parseAndTransform(code, true, reporter);
+        assertEquals(0, reporter.errors.size());
+        Node objLit = script.getFirstChild().getFirstChild().getFirstChild();
+        Node getProp = objLit.getFirstChild();
+        assertEquals(Token.GET, getProp.getType());
+        Node setProp = getProp.getNext();
+        assertEquals(Token.SET, setProp.getType());
     }
 
     @Test(timeout = 4000)
-    public void testAssignmentValidLhsDoesNotReportError() throws Exception {
-        CompilerEnvirons env = new CompilerEnvirons();
-        MockParser mockParser = new MockParser(env);
-        IRFactory factory = createFactory(mockParser);
-
-        Node nameLhs = factory.createName("validVar", 1, 0);
-        Node rhs = factory.createNumber(1.0, 1, 5);
-        factory.createAssignment(Token.ASSIGN, nameLhs, rhs, 1, 0);
-
-        Node propLhs = factory.createPropertyGet(nameLhs, null, "prop", 0, 1, 0, 1, 5);
-        factory.createAssignment(Token.ASSIGN, propLhs, rhs, 1, 0);
-
-        Node elemIdx = factory.createNumber(0.0);
-        Node elemLhs = factory.createElementGet(nameLhs, null, elemIdx, 0, 1, 0);
-        factory.createAssignment(Token.ASSIGN, elemLhs, rhs, 1, 0);
-
-        assertTrue("Valid LHS nodes should not report any assignment errors",
-                mockParser.reportedErrors.isEmpty());
+    public void testConditionalCatchClauseReportsError() {
+        String code = "try { foo(); } catch (e if e > 0) { bar(); }";
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        parseAndTransform(code, true, reporter);
+        assertTrue(reporter.errors.contains("Catch clauses are not supported"));
     }
 
-    // =========================================================================
-    // PARTITION D: Exception & Defensive Guard Paths
-    // =========================================================================
-
-    @Test(timeout = 4000)
-    public void testAddSwitchCaseThrowsOnInvalidNodeType() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node invalidSwitch = factory.createBlock(1, 0);
-        Node stmts = factory.createBlock(2, 0);
-
+    @Test(expected = IllegalStateException.class, timeout = 4000)
+    public void testTransformTokenTypeDefensiveExceptionOnUnknownToken() throws Throwable {
+        Method m = IRFactory.class.getDeclaredMethod("transformTokenType", int.class);
+        m.setAccessible(true);
         try {
-            factory.addSwitchCase(invalidSwitch, null, stmts, 1, 0);
-            fail("Expected RuntimeException from Kit.codeBug()");
-        } catch (RuntimeException expected) {
-            // Success: Kit.codeBug() produces RuntimeException
+            m.invoke(null, -99999);
+        } catch (java.lang.reflect.InvocationTargetException ite) {
+            throw ite.getCause();
         }
     }
 
     @Test(timeout = 4000)
-    public void testElementGetThrowsOnNullTargetWithoutNamespace() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
+    public void testProcessIllegalToken() {
+        RecordingErrorReporter reporter = new RecordingErrorReporter();
+        AstRoot root = new AstRoot();
+        EmptyExpression illegalNode = new EmptyExpression();
+        // Set an arbitrary unknown Rhino token
+        illegalNode.setType(9999);
+        root.addChild(illegalNode);
+        Config config = createTestConfig(true);
+        Node result = IRFactory.transformTree(root, "", config, reporter);
 
-        Node elem = factory.createNumber(0.0);
-        try {
-            factory.createElementGet(null, null, elem, 0, 1, 0);
-            fail("Expected RuntimeException when target is null without namespace");
-        } catch (RuntimeException expected) {
-            // Success
-        }
+        assertNotNull(result);
+        assertEquals(1, reporter.errors.size());
+        assertTrue(reporter.errors.get(0).startsWith("Unsupported syntax:"));
+    }
+
+    // -------------------------------------------------------------------------
+    // Partition E: Object Lifecycle & Contract Integrity
+    // -------------------------------------------------------------------------
+
+    @Test(timeout = 4000)
+    public void testTemplateNodeSourcePropertyPreservation() {
+        String code = "var a = 1; var b = 2;";
+        Node script = parseAndTransform(code);
+        assertEquals("testSource.js", script.getSourceFileName());
+        assertEquals("testSource.js", script.getFirstChild().getSourceFileName());
+        assertEquals("testSource.js", script.getLastChild().getSourceFileName());
     }
 
     @Test(timeout = 4000)
-    public void testIncDecInvalidTargetReportsError() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node numberLiteral = factory.createNumber(42.0);
-
-        Node decResult = factory.createIncDec(Token.DEC, false, numberLiteral, 1, 0);
-        assertNull(decResult);
-        assertEquals(1, parser.reportedErrors.size());
-        assertEquals("msg.bad.decr", parser.reportedErrors.get(0));
-
-        Node incResult = factory.createIncDec(Token.INC, false, numberLiteral, 1, 0);
-        assertNull(incResult);
-        assertEquals(2, parser.reportedErrors.size());
-        assertEquals("msg.bad.incr", parser.reportedErrors.get(1));
-    }
-
-    // =========================================================================
-    // PARTITION E: Function Lifecycle, Activations & Special Properties
-    // =========================================================================
-
-    @Test(timeout = 4000)
-    public void testInitFunctionFullBranchCoverage() {
-        MockParser parser = createDefaultParser();
-        parser.sourceName = "testSource.js";
-        IRFactory factory = createFactory(parser);
-
-        FunctionNode outer = factory.createFunction("outer", 1, 0);
-        outer.addParamOrVar("paramToRemove");
-        outer.addParamOrVar("keptVar");
-
-        // 1. Nested expression statement with non-empty name -> triggers removeParamOrVar
-        FunctionNode nestedExprStmt = factory.createFunction("paramToRemove", 2, 0);
-        nestedExprStmt.itsFunctionType = FunctionNode.FUNCTION_EXPRESSION_STATEMENT;
-        outer.addFunction(nestedExprStmt);
-
-        // 2. Nested expression statement with empty name -> name.length() == 0 branch
-        FunctionNode nestedEmptyName = factory.createFunction("", 3, 0);
-        nestedEmptyName.itsFunctionType = FunctionNode.FUNCTION_EXPRESSION_STATEMENT;
-        outer.addFunction(nestedEmptyName);
-
-        // 3. Nested expression statement with null name -> name == null branch
-        FunctionNode nestedNullName = new FunctionNode(null, 4, 0);
-        nestedNullName.itsFunctionType = FunctionNode.FUNCTION_EXPRESSION_STATEMENT;
-        outer.addFunction(nestedNullName);
-
-        // 4. Nested function with different type (not expression statement)
-        FunctionNode nestedDecl = factory.createFunction("regularDecl", 5, 0);
-        nestedDecl.itsFunctionType = FunctionNode.FUNCTION_STATEMENT;
-        outer.addFunction(nestedDecl);
-
-        Node args = new Node(Token.LP);
-        Node statements = factory.createBlock(6, 0);
-        JSDocInfo info = new JSDocInfo();
-
-        Node inited = factory.initFunction(outer, 42, args, info, statements, FunctionNode.FUNCTION_STATEMENT);
-
-        assertSame(outer, inited);
-        assertTrue(outer.itsNeedsActivation);
-        assertEquals(info, outer.getJSDocInfo());
-        assertEquals(42, outer.getIntProp(Node.FUNCTION_PROP, -1));
-        assertEquals("testSource.js", outer.getProp(Node.SOURCENAME_PROP));
-        // Verify paramToRemove was removed
-        assertEquals(-1, outer.getParamOrVarIndex("paramToRemove"));
-        assertTrue(outer.getParamOrVarIndex("keptVar") >= 0);
-    }
-
-    @Test(timeout = 4000)
-    public void testSpecialCallsEvalAndWith() {
-        MockParser parser = createDefaultParser();
-        FunctionNode fn = new FunctionNode("testFn", 1, 0);
-        parser.currentScriptOrFn = fn;
-        parser.insideFunc = true;
-        IRFactory factory = createFactory(parser);
-
-        // Call "eval" by NAME
-        Node evalName = factory.createName("eval", 1, 0);
-        Node callEval = factory.createCallOrNew(Token.CALL, evalName, 1, 0);
-        assertEquals(Node.SPECIALCALL_EVAL, callEval.getIntProp(Node.SPECIALCALL_PROP, -1));
-        assertTrue(fn.itsNeedsActivation);
-
-        // Call "With" by NAME
-        Node withName = factory.createName("With", 2, 0);
-        Node callWith = factory.createCallOrNew(Token.CALL, withName, 2, 0);
-        assertEquals(Node.SPECIALCALL_WITH, callWith.getIntProp(Node.SPECIALCALL_PROP, -1));
-
-        // Call property access "obj.eval"
-        Node obj = factory.createName("obj", 3, 0);
-        Node getPropEval = factory.createBinary(Token.DOT, obj, factory.createName("eval", 3, 4), 3, 0);
-        Node callPropEval = factory.createCallOrNew(Token.CALL, getPropEval, 3, 0);
-        assertEquals(Node.SPECIALCALL_EVAL, callPropEval.getIntProp(Node.SPECIALCALL_PROP, -1));
-
-        // Non-special call
-        Node normalCall = factory.createCallOrNew(Token.CALL, factory.createName("foo", 4, 0), 4, 0);
-        assertEquals(0, normalCall.getIntProp(Node.SPECIALCALL_PROP, 0));
-    }
-
-    @Test(timeout = 4000)
-    public void testActivationCheckOnArgumentsAndLength() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        env.setLanguageVersion(Context.VERSION_1_2);
-        env.activationNames = new HashMap<String, Boolean>();
-        env.activationNames.put("customActivatedVar", Boolean.TRUE);
-
-        MockParser parser = new MockParser(env);
-        FunctionNode fn = new FunctionNode("activationFn", 1, 0);
-        parser.currentScriptOrFn = fn;
-        parser.insideFunc = true;
-        IRFactory factory = createFactory(parser);
-
-        // "arguments" activates
-        fn.itsNeedsActivation = false;
-        factory.createName("arguments", 1, 0);
-        assertTrue(fn.itsNeedsActivation);
-
-        // compilerEnv.activationNames entry activates
-        fn.itsNeedsActivation = false;
-        factory.createName("customActivatedVar", 2, 0);
-        assertTrue(fn.itsNeedsActivation);
-
-        // "length" via GETPROP under VERSION_1_2 activates
-        fn.itsNeedsActivation = false;
-        Node target = factory.createName("arr", 3, 0);
-        factory.createPropertyGet(target, null, "length", 0, 3, 0, 3, 4);
-        assertTrue(fn.itsNeedsActivation);
-
-        // "length" via NAME under VERSION_1_2 does not activate
-        fn.itsNeedsActivation = false;
-        factory.createName("length", 4, 0);
-        assertFalse(fn.itsNeedsActivation);
-
-        // "length" via GETPROP under VERSION_1_5 does not activate
-        env.setLanguageVersion(Context.VERSION_1_5);
-        fn.itsNeedsActivation = false;
-        factory.createPropertyGet(target, null, "length", 0, 5, 0, 5, 4);
-        assertFalse(fn.itsNeedsActivation);
-    }
-
-    @Test(timeout = 4000)
-    public void testSpecialPropertiesProtoAndParent() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node target = factory.createName("obj", 1, 0);
-
-        // __proto__ is a special property in ScriptRuntime
-        Node protoGet = factory.createPropertyGet(target, null, "__proto__", 0, 1, 0, 1, 4);
-        assertEquals(Token.GET_REF, protoGet.getType());
-        Node refChild = protoGet.getFirstChild();
-        assertEquals(Token.REF_SPECIAL, refChild.getType());
-        assertEquals("__proto__", refChild.getProp(Node.NAME_PROP));
-
-        // Normal property name
-        Node normalGet = factory.createPropertyGet(target, null, "regularProp", 0, 1, 0, 1, 4);
-        assertEquals(Token.GETPROP, normalGet.getType());
-        assertEquals("regularProp", normalGet.getLastChild().getString());
-
-        // Target is null fallback
-        Node nullTargetGet = factory.createPropertyGet(null, null, "foo", 0, 1, 0, 1, 0);
-        assertEquals(Token.NAME, nullTargetGet.getType());
-        assertEquals("foo", nullTargetGet.getString());
-    }
-
-    @Test(timeout = 4000)
-    public void testMemberRefGetCombinations() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        Node target = factory.createName("targetObj", 1, 0);
-        Node elem = factory.createString("prop");
-
-        // 1. target != null, namespace != null ("*")
-        Node wildGet = factory.createElementGet(target, "*", elem, 1, 1, 0);
-        assertEquals(Token.GET_REF, wildGet.getType());
-        Node wildRef = wildGet.getFirstChild();
-        assertEquals(Token.REF_NS_MEMBER, wildRef.getType());
-        assertEquals(Token.NULL, wildRef.getFirstChild().getNext().getType()); // nsNode is NULL for "*"
-
-        // 2. target != null, namespace != null (named ns)
-        Node nsGet = factory.createElementGet(target, "myNs", elem, 2, 1, 0);
-        Node nsRef = nsGet.getFirstChild();
-        assertEquals(Token.REF_NS_MEMBER, nsRef.getType());
-        assertEquals("myNs", nsRef.getFirstChild().getNext().getString());
-
-        // 3. target == null, namespace != null
-        Node noTargetNsGet = factory.createElementGet(null, "myNs", elem, 0, 1, 0);
-        Node noTargetNsRef = noTargetNsGet.getFirstChild();
-        assertEquals(Token.REF_NS_NAME, noTargetNsRef.getType());
-
-        // 4. target == null, namespace == null with memberTypeFlags != 0
-        Node noTargetNoNsGet = factory.createElementGet(null, null, elem, 4, 1, 0);
-        Node noTargetNoNsRef = noTargetNoNsGet.getFirstChild();
-        assertEquals(Token.REF_NAME, noTargetNoNsRef.getType());
-        assertEquals(4, noTargetNoNsRef.getIntProp(Node.MEMBER_TYPE_PROP, 0));
-
-        // 5. target != null, namespace == null with memberTypeFlags != 0
-        Node targetNoNsGet = factory.createElementGet(target, null, elem, 8, 1, 0);
-        Node targetNoNsRef = targetNoNsGet.getFirstChild();
-        assertEquals(Token.REF_MEMBER, targetNoNsRef.getType());
-        assertEquals(8, targetNoNsRef.getIntProp(Node.MEMBER_TYPE_PROP, 0));
-    }
-
-    @Test(timeout = 4000)
-    public void testIncDecAllValidReferenceTypes() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        // Pre and post increment/decrement across valid reference targets
-        Node nameNode = factory.createName("v", 1, 0);
-        Node postInc = factory.createIncDec(Token.INC, true, nameNode, 1, 0);
-        assertNotNull(postInc);
-        assertEquals(1, postInc.getIntProp(Node.INCRDECR_PROP, -1));
-
-        Node preDec = factory.createIncDec(Token.DEC, false, nameNode, 1, 0);
-        assertNotNull(preDec);
-        assertEquals(0, preDec.getIntProp(Node.INCRDECR_PROP, -1));
-
-        Node propNode = factory.createPropertyGet(nameNode, null, "p", 0, 1, 0, 1, 2);
-        assertNotNull(factory.createIncDec(Token.INC, false, propNode, 1, 0));
-
-        Node elemNode = factory.createElementGet(nameNode, null, factory.createNumber(0.0), 0, 1, 0);
-        assertNotNull(factory.createIncDec(Token.INC, false, elemNode, 1, 0));
-
-        Node callNode = factory.createCallOrNew(Token.CALL, nameNode, 1, 0);
-        assertNotNull(factory.createIncDec(Token.INC, false, callNode, 1, 0));
-
-        Node refNode = factory.createElementGet(null, "ns", factory.createString("p"), 0, 1, 0);
-        assertNotNull(factory.createIncDec(Token.INC, false, refNode, 1, 0));
-    }
-
-    @Test(timeout = 4000)
-    public void testLeafAndTaggedNameAndMiscNodes() {
-        MockParser parser = createDefaultParser();
-        IRFactory factory = createFactory(parser);
-
-        // Leaves
-        Node leaf1 = factory.createLeaf(Token.NULL);
-        assertEquals(Token.NULL, leaf1.getType());
-
-        Node leaf2 = factory.createLeaf(Token.TRUE, 10, 5);
-        assertEquals(Token.TRUE, leaf2.getType());
-        assertEquals(10, leaf2.getLineno());
-        assertEquals(5, leaf2.getCharno());
-
-        // Error name
-        Node errName = factory.createErrorName();
-        assertEquals(Token.NAME, errName.getType());
-        assertEquals("error", errName.getString());
-
-        // Tagged name with and without JSDocInfo
-        Node untagged = factory.createTaggedName("x", null, 1, 0);
-        assertEquals("x", untagged.getString());
-        assertNull(untagged.getJSDocInfo());
-
-        JSDocInfo doc = new JSDocInfo();
-        Node tagged = factory.createTaggedName("y", doc, 1, 2);
-        assertEquals("y", tagged.getString());
-        assertEquals(doc, tagged.getJSDocInfo());
-
-        // Literals
-        Node num1 = factory.createNumber(3.14);
-        assertEquals(3.14, num1.getDouble(), 0.0001);
-
-        Node str1 = factory.createString("hello");
-        assertEquals("hello", str1.getString());
-
-        // Child addition
-        Node parent = factory.createBlock(1, 0);
-        Node child = factory.createLeaf(Token.EMPTY);
-        factory.addChildToBack(parent, child);
-        assertEquals(child, parent.getFirstChild());
+    public void testSwitchBlockSyntheticBlockProperty() {
+        String code = "switch (x) { case 1: var a = 1; break; }";
+        Node script = parseAndTransform(code);
+        Node switchNode = script.getFirstChild();
+        Node caseNode = switchNode.getChildAtIndex(1);
+        assertEquals(Token.CASE, caseNode.getType());
+        Node caseBlock = caseNode.getLastChild();
+        assertEquals(Token.BLOCK, caseBlock.getType());
+        assertTrue(caseBlock.getBooleanProp(Node.SYNTHETIC_BLOCK_PROP));
     }
 }

@@ -1,4 +1,4 @@
-package org.apache.commons.collections;
+package org.apache.commons.collections.buffer;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

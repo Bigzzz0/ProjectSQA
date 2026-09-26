@@ -1,0 +1,281 @@
+[
+  {
+    "bug": "Closure-18",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.Compiler",
+    "package_cls": "com.google.javascript.jscomp.CompilerDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_18b/CompilerDeepseekTest.java",
+    "sha256": "851a6cba41a35c1cdfce34d1a29ca248773d7e3aada3d8f6242f2bfb5b938d7c",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_18b/actual_prompt_Compiler.md"
+  },
+  {
+    "bug": "Closure-22",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.CheckSideEffects",
+    "package_cls": "com.google.javascript.jscomp.CheckSideEffectsDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_22b/CheckSideEffectsDeepseekTest.java",
+    "sha256": "33d01ff00929bed37f0df94330bdd7bfa1a4a321fe1ab31f9595e464b72494c4",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_22b/actual_prompt_CheckSideEffects.md"
+  },
+  {
+    "bug": "Closure-31",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.Compiler",
+    "package_cls": "com.google.javascript.jscomp.CompilerDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_31b/CompilerDeepseekTest.java",
+    "sha256": "b8814e2364f981d8267ee4d3d0dd1df3850b8b364a7283b2ad12fe3239672122",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_31b/actual_prompt_Compiler.md"
+  },
+  {
+    "bug": "Collections-8",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+    "package_cls": "org.apache.commons.collections.buffer.UnboundedFifoBufferDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Collections_8b/UnboundedFifoBufferDeepseekTest.java",
+    "sha256": "a29345e99be9ec0b6c0f3f78f167e22f6a4c64d981d7a3581bcc645a1abcc606",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Collections_8b/actual_prompt_UnboundedFifoBuffer.md"
+  },
+  {
+    "bug": "Collections-8",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "org.apache.commons.collections.buffer.UnboundedFifoBuffer",
+    "package_cls": "org.apache.commons.collections.buffer.UnboundedFifoBufferGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Collections_8b/UnboundedFifoBufferGeminiTest.java",
+    "sha256": "ab6d7934e3a3d4ff7814ca7e0ce457d8591aa533ff78b2c610a7e576101d2fa1",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Collections_8b/actual_prompt_UnboundedFifoBuffer.md"
+  },
+  {
+    "bug": "Lang-58",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "org.apache.commons.lang.math.NumberUtils",
+    "package_cls": "org.apache.commons.lang.math.NumberUtilsDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Lang_58b/NumberUtilsDeepseekTest.java",
+    "sha256": "fdaddd90292e0eec8653af65c1e271df048974a168c66861cbb9e661395b6e30",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Lang_58b/actual_prompt_NumberUtils.md"
+  },
+  {
+    "bug": "Lang-58",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "org.apache.commons.lang.math.NumberUtils",
+    "package_cls": "org.apache.commons.lang.math.NumberUtilsGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Lang_58b/NumberUtilsGeminiTest.java",
+    "sha256": "d6cab2fe714cb7a7be8c53de0232a8ac4647c463e40039c70391f01f2d9297e8",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Lang_58b/actual_prompt_NumberUtils.md"
+  },
+  {
+    "bug": "Closure-41",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.FunctionTypeBuilder",
+    "package_cls": "com.google.javascript.jscomp.FunctionTypeBuilderDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_41b/FunctionTypeBuilderDeepseekTest.java",
+    "sha256": "ef0e57714cc78a6efce3f1e505e28f57a3c748b2a76854b100ebd530c41bd926",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_41b/actual_prompt_FunctionTypeBuilder.md"
+  },
+  {
+    "bug": "JacksonCore-25",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.fasterxml.jackson.core.json.ReaderBasedJsonParser",
+    "package_cls": "com.fasterxml.jackson.core.json.ReaderBasedJsonParserDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/JacksonCore_25b/ReaderBasedJsonParserDeepseekTest.java",
+    "sha256": "29267a9cc023894af214d4ce05e94faea65a21c6ebe8fa863f646f057ab39854",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/JacksonCore_25b/actual_prompt_ReaderBasedJsonParser.md"
+  },
+  {
+    "bug": "Math-9",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+    "package_cls": "org.apache.commons.math3.geometry.euclidean.threed.LineDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Math_9b/LineDeepseekTest.java",
+    "sha256": "f03521a79759430eddbfa34153ebb182135d8940ddd4ddd96161e05a3047c0a1",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Math_9b/actual_prompt_Line.md"
+  },
+  {
+    "bug": "Math-9",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "org.apache.commons.math3.geometry.euclidean.threed.Line",
+    "package_cls": "org.apache.commons.math3.geometry.euclidean.threed.LineGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Math_9b/LineGeminiTest.java",
+    "sha256": "24d7b8467dccb8387e9118a946e8a44df6a7e674bd4b1d73135a8fe1f7d6af59",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Math_9b/actual_prompt_Line.md"
+  },
+  {
+    "bug": "Closure-34",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_34b/CodeGeneratorDeepseekTest.java",
+    "sha256": "c8bab734788ab15b9aca23209117054f009e1b978abea60befa46aa435a86cbd",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_34b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-34",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodePrinter",
+    "package_cls": "com.google.javascript.jscomp.CodePrinterDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_34b/CodePrinterDeepseekTest.java",
+    "sha256": "eae56c136e7270e7426cac83b5aa36558d2acb6fae097caad2d6c6053e28f573",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_34b/actual_prompt_CodePrinter.md"
+  },
+  {
+    "bug": "Closure-34",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_34b/CodeGeneratorGeminiTest.java",
+    "sha256": "d6e2fb3345c3112f86d2a0fc3b7d5374bf999a88cb2c5b91b92577f6802eb82f",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_34b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-34",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodePrinter",
+    "package_cls": "com.google.javascript.jscomp.CodePrinterGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_34b/CodePrinterGeminiTest.java",
+    "sha256": "4313ca87e423e5ae3fe78d3a58911a4a103cddd48ef2191bd216c96195e88249",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_34b/actual_prompt_CodePrinter.md"
+  },
+  {
+    "bug": "Closure-42",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_42b/IRFactoryDeepseekTest.java",
+    "sha256": "88720c1a172c8e7aacf84466796ccc04bb8106c3ce46a2d05a30d9f9d03047dd",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_42b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-42",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_42b/IRFactoryGeminiTest.java",
+    "sha256": "fd2e3786f757826c7565b6a3f9edc871e048ba42ff0d20282875522af26d412b",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_42b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-52",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_52b/CodeGeneratorDeepseekTest.java",
+    "sha256": "0fa3e695b40fd6c5cbd24b4e518f47ca169076f27a245dc2ae9bff3237d9d7a2",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_52b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-52",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_52b/CodeGeneratorGeminiTest.java",
+    "sha256": "60a9540dde57c9d4abca3d09b26270432e69071f805a1175bf19f465ad8e206b",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_52b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-81",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_81b/IRFactoryDeepseekTest.java",
+    "sha256": "6ff53440534b2c5ec3383c6304941a4a46df315ef942b0badf36853017206ccb",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_81b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-81",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_81b/IRFactoryGeminiTest.java",
+    "sha256": "8e4c2fdc1a7896266a0bd821a4bd247108f618baa31de71ea9fad56855071780",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_81b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-84",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_84b/IRFactoryDeepseekTest.java",
+    "sha256": "211ceac99a87f185b9738dc33ddbb50ece854e7f9cf681f1dc0bc55718026d4d",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_84b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-84",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_84b/IRFactoryGeminiTest.java",
+    "sha256": "37a8b918618fdda8c8c6829f4693124be324938dc889d56dbcaf27efaf003f81",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_84b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-122",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_122b/IRFactoryDeepseekTest.java",
+    "sha256": "8ade16ba37cb612f0dbd62e36c57aa712e18bcfe8da6fe7f2e204970d04e83bf",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_122b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-122",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.parsing.IRFactory",
+    "package_cls": "com.google.javascript.jscomp.parsing.IRFactoryGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_122b/IRFactoryGeminiTest.java",
+    "sha256": "67cd16b15ac12e95c4d200806ae6da22ad2b21263773a9dcd3920215e253d96a",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_122b/actual_prompt_IRFactory.md"
+  },
+  {
+    "bug": "Closure-123",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_123b/CodeGeneratorDeepseekTest.java",
+    "sha256": "b4d0450b4b0b7cc34bef5dae74178d3d914441d6cec2f959763417ba09fb2e10",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_123b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-123",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_123b/CodeGeneratorGeminiTest.java",
+    "sha256": "373216b2e06d17bb086aac9cf3d8cd144a3879e147956d6988f8d9ba92f3ba98",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_123b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-128",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_128b/CodeGeneratorDeepseekTest.java",
+    "sha256": "85289e8be3677f5910f5dd16e68705d456e3b145b551e067c0b9004fa460b69e",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_128b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-128",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.jscomp.CodeGenerator",
+    "package_cls": "com.google.javascript.jscomp.CodeGeneratorGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_128b/CodeGeneratorGeminiTest.java",
+    "sha256": "efbc33229e471f93cbd39cddaf996886efa21d057df7873fc75a647d25c1f9b8",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_128b/actual_prompt_CodeGenerator.md"
+  },
+  {
+    "bug": "Closure-131",
+    "tech": "DeepSeek V4 Flash",
+    "target_cls": "com.google.javascript.rhino.TokenStream",
+    "package_cls": "com.google.javascript.rhino.TokenStreamDeepseekTest",
+    "file_rel": "Deepseek-v4_flash/TestCode/Closure_131b/TokenStreamDeepseekTest.java",
+    "sha256": "7987dc7fa89cbd8ce98bee2be06a8a94845cc9f668f759f04d38cf77d805387d",
+    "prompt_rel": "Deepseek-v4_flash/Prompt/Closure_131b/actual_prompt_TokenStream.md"
+  },
+  {
+    "bug": "Closure-131",
+    "tech": "Gemini 3.8 Flash",
+    "target_cls": "com.google.javascript.rhino.TokenStream",
+    "package_cls": "com.google.javascript.rhino.TokenStreamGeminiTest",
+    "file_rel": "Gemini-3_8_flash/TestCode/Closure_131b/TokenStreamGeminiTest.java",
+    "sha256": "1cee1ad94aea1169941f906e6ca02de1eb7f788bcdec129c99a1928e65ec1625",
+    "prompt_rel": "Gemini-3_8_flash/Prompt/Closure_131b/actual_prompt_TokenStream.md"
+  }
+]

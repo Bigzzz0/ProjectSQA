@@ -1,1470 +1,1306 @@
-/* -*- Mode: java; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+/*
+ * Copyright 2004 The Closure Compiler Authors.
  *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-package org.mozilla.javascript;
+package com.google.javascript.jscomp;
 
-import org.mozilla.javascript.ast.AstRoot;
-import org.mozilla.javascript.ast.ScriptNode;
-import org.mozilla.javascript.ast.Jump;
-import org.mozilla.javascript.ast.FunctionNode;
+import com.google.common.base.Charsets;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.Maps;
+import com.google.javascript.jscomp.CompilerOptions.LanguageMode;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+import com.google.javascript.rhino.TokenStream;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.util.Map;
 
 /**
- * Generates bytecode for the Interpreter.
+ * CodeGenerator generates codes from a parse tree, sending it to the specified
+ * CodeConsumer.
+ *
  */
-class CodeGenerator extends Icode {
+class CodeGenerator {
+  private static final String LT_ESCAPED = "\\x3c";
+  private static final String GT_ESCAPED = "\\x3e";
 
-    private static final int MIN_LABEL_TABLE_SIZE = 32;
-    private static final int MIN_FIXUP_TABLE_SIZE = 40;
+  // A memoizer for formatting strings as JS strings.
+  private final Map<String, String> escapedJsStrings = Maps.newHashMap();
 
-    private CompilerEnvirons compilerEnv;
+  private static final char[] HEX_CHARS
+      = { '0', '1', '2', '3', '4', '5', '6', '7',
+          '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
 
-    private boolean itsInFunctionFlag;
-    private boolean itsInTryFlag;
+  private final CodeConsumer cc;
 
-    private InterpreterData itsData;
+  private final CharsetEncoder outputCharsetEncoder;
 
-    private ScriptNode scriptOrFn;
-    private int iCodeTop;
-    private int stackDepth;
-    private int lineNumber;
-    private int doubleTableTop;
+  private final boolean preferSingleQuotes;
+  private final boolean trustedStrings;
+  private final LanguageMode languageMode;
 
-    private ObjToIntMap strings = new ObjToIntMap(20);
-    private int localTop;
-    private int[] labelTable;
-    private int labelTableTop;
+  private CodeGenerator(CodeConsumer consumer) {
+    cc = consumer;
+    outputCharsetEncoder = null;
+    preferSingleQuotes = false;
+    trustedStrings = true;
+    languageMode = LanguageMode.ECMASCRIPT5;
+  }
 
-    // fixupTable[i] = (label_index << 32) | fixup_site
-    private long[] fixupTable;
-    private int fixupTableTop;
-    private ObjArray literalIds = new ObjArray();
+  static CodeGenerator forCostEstimation(CodeConsumer consumer) {
+    return new CodeGenerator(consumer);
+  }
 
-    private int exceptionTableTop;
+  CodeGenerator(
+      CodeConsumer consumer,
+      CompilerOptions options) {
+    cc = consumer;
 
-    // ECF_ or Expression Context Flags constants: for now only TAIL
-    private static final int ECF_TAIL = 1 << 0;
+    Charset outputCharset = options.getOutputCharset();
+    if (outputCharset == null || outputCharset == Charsets.US_ASCII) {
+      // If we want our default (pretending to be UTF-8, but escaping anything
+      // outside of straight ASCII), then don't use the encoder, but
+      // just special-case the code.  This keeps the normal path through
+      // the code identical to how it's been for years.
+      this.outputCharsetEncoder = null;
+    } else {
+      this.outputCharsetEncoder = outputCharset.newEncoder();
+    }
+    this.preferSingleQuotes = options.preferSingleQuotes;
+    this.trustedStrings = options.trustedStrings;
+    this.languageMode = options.getLanguageOut();
+  }
 
-    public InterpreterData compile(CompilerEnvirons compilerEnv,
-                                   ScriptNode tree,
-                                   String encodedSource,
-                                   boolean returnFunction)
-    {
-        this.compilerEnv = compilerEnv;
+  /**
+   * Insert a ECMASCRIPT 5 strict annotation.
+   */
+  public void tagAsStrict() {
+    add("'use strict';");
+  }
 
-        if (Token.printTrees) {
-            System.out.println("before transform:");
-            System.out.println(tree.toStringTree(tree));
+  void add(String str) {
+    cc.add(str);
+  }
+
+  private void addIdentifier(String identifier) {
+    cc.addIdentifier(identifierEscape(identifier));
+  }
+
+  void add(Node n) {
+    add(n, Context.OTHER);
+  }
+
+  void add(Node n, Context context) {
+    if (!cc.continueProcessing()) {
+      return;
+    }
+
+    int type = n.getType();
+    String opstr = NodeUtil.opToStr(type);
+    int childCount = n.getChildCount();
+    Node first = n.getFirstChild();
+    Node last = n.getLastChild();
+
+    // Handle all binary operators
+    if (opstr != null && first != last) {
+      Preconditions.checkState(
+          childCount == 2,
+          "Bad binary operator \"%s\": expected 2 arguments but got %s",
+          opstr, childCount);
+      int p = NodeUtil.precedence(type);
+
+      // For right-hand-side of operations, only pass context if it's
+      // the IN_FOR_INIT_CLAUSE one.
+      Context rhsContext = getContextForNoInOperator(context);
+
+      // Handle associativity.
+      // e.g. if the parse tree is a * (b * c),
+      // we can simply generate a * b * c.
+      if (last.getType() == type &&
+          NodeUtil.isAssociative(type)) {
+        addExpr(first, p, context);
+        cc.addOp(opstr, true);
+        addExpr(last, p, rhsContext);
+      } else if (NodeUtil.isAssignmentOp(n) && NodeUtil.isAssignmentOp(last)) {
+        // Assignments are the only right-associative binary operators
+        addExpr(first, p, context);
+        cc.addOp(opstr, true);
+        addExpr(last, p, rhsContext);
+      } else {
+        unrollBinaryOperator(n, type, opstr, context, rhsContext, p, p + 1);
+      }
+      return;
+    }
+
+    cc.startSourceMapping(n);
+
+    switch (type) {
+      case Token.TRY: {
+        Preconditions.checkState(first.getNext().isBlock() &&
+                !first.getNext().hasMoreThanOneChild());
+        Preconditions.checkState(childCount >= 2 && childCount <= 3);
+
+        add("try");
+        add(first, Context.PRESERVE_BLOCK);
+
+        // second child contains the catch block, or nothing if there
+        // isn't a catch block
+        Node catchblock = first.getNext().getFirstChild();
+        if (catchblock != null) {
+          add(catchblock);
         }
 
-        new NodeTransformer().transform(tree);
-
-        if (Token.printTrees) {
-            System.out.println("after transform:");
-            System.out.println(tree.toStringTree(tree));
+        if (childCount == 3) {
+          add("finally");
+          add(last, Context.PRESERVE_BLOCK);
         }
+        break;
+      }
 
-        if (returnFunction) {
-            scriptOrFn = tree.getFunctionNode(0);
+      case Token.CATCH:
+        Preconditions.checkState(childCount == 2);
+        add("catch(");
+        add(first);
+        add(")");
+        add(last, Context.PRESERVE_BLOCK);
+        break;
+
+      case Token.THROW:
+        Preconditions.checkState(childCount == 1);
+        add("throw");
+        add(first);
+
+        // Must have a ';' after a throw statement, otherwise safari can't
+        // parse this.
+        cc.endStatement(true);
+        break;
+
+      case Token.RETURN:
+        add("return");
+        if (childCount == 1) {
+          add(first);
         } else {
-            scriptOrFn = tree;
+          Preconditions.checkState(childCount == 0);
         }
-        itsData = new InterpreterData(compilerEnv.getLanguageVersion(),
-                                      scriptOrFn.getSourceName(),
-                                      encodedSource,
-                                      ((AstRoot)tree).isInStrictMode());
-        itsData.topLevel = true;
+        cc.endStatement();
+        break;
 
-        if (returnFunction) {
-            generateFunctionICode();
+      case Token.VAR:
+        if (first != null) {
+          add("var ");
+          addList(first, false, getContextForNoInOperator(context));
+        }
+        break;
+
+      case Token.LABEL_NAME:
+        Preconditions.checkState(!n.getString().isEmpty());
+        addIdentifier(n.getString());
+        break;
+
+      case Token.NAME:
+        if (first == null || first.isEmpty()) {
+          addIdentifier(n.getString());
         } else {
-            generateICodeFromTree(scriptOrFn);
+          Preconditions.checkState(childCount == 1);
+          addIdentifier(n.getString());
+          cc.addOp("=", true);
+          if (first.isComma()) {
+            addExpr(first, NodeUtil.precedence(Token.ASSIGN), Context.OTHER);
+          } else {
+            // Add expression, consider nearby code at lowest level of
+            // precedence.
+            addExpr(first, 0, getContextForNoInOperator(context));
+          }
         }
-        return itsData;
-    }
+        break;
 
-    private void generateFunctionICode()
-    {
-        itsInFunctionFlag = true;
+      case Token.ARRAYLIT:
+        add("[");
+        addArrayList(first);
+        add("]");
+        break;
 
-        FunctionNode theFunction = (FunctionNode)scriptOrFn;
+      case Token.PARAM_LIST:
+        add("(");
+        addList(first);
+        add(")");
+        break;
 
-        itsData.itsFunctionType = theFunction.getFunctionType();
-        itsData.itsNeedsActivation = theFunction.requiresActivation();
-        if (theFunction.getFunctionName() != null) {
-            itsData.itsName = theFunction.getName();
-        }
-        if (theFunction.isGenerator()) {
-          addIcode(Icode_GENERATOR);
-          addUint16(theFunction.getBaseLineno() & 0xFFFF);
-        }
+      case Token.COMMA:
+        Preconditions.checkState(childCount == 2);
+        unrollBinaryOperator(n, Token.COMMA, ",", context,
+            getContextForNoInOperator(context), 0, 0);
+        break;
 
-        generateICodeFromTree(theFunction.getLastChild());
-    }
+      case Token.NUMBER:
+        Preconditions.checkState(childCount == 0);
+        cc.addNumber(n.getDouble());
+        break;
 
-    private void generateICodeFromTree(Node tree)
-    {
-        generateNestedFunctions();
+      case Token.TYPEOF:
+      case Token.VOID:
+      case Token.NOT:
+      case Token.BITNOT:
+      case Token.POS: {
+        // All of these unary operators are right-associative
+        Preconditions.checkState(childCount == 1);
+        cc.addOp(NodeUtil.opToStrNoFail(type), false);
+        addExpr(first, NodeUtil.precedence(type), Context.OTHER);
+        break;
+      }
 
-        generateRegExpLiterals();
+      case Token.NEG: {
+        Preconditions.checkState(childCount == 1);
 
-        visitStatement(tree, 0);
-        fixLabelGotos();
-        // add RETURN_RESULT only to scripts as function always ends with RETURN
-        if (itsData.itsFunctionType == 0) {
-            addToken(Token.RETURN_RESULT);
-        }
-
-        if (itsData.itsICode.length != iCodeTop) {
-            // Make itsData.itsICode length exactly iCodeTop to save memory
-            // and catch bugs with jumps beyond icode as early as possible
-            byte[] tmp = new byte[iCodeTop];
-            System.arraycopy(itsData.itsICode, 0, tmp, 0, iCodeTop);
-            itsData.itsICode = tmp;
-        }
-        if (strings.size() == 0) {
-            itsData.itsStringTable = null;
+        // It's important to our sanity checker that the code
+        // we print produces the same AST as the code we parse back.
+        // NEG is a weird case because Rhino parses "- -2" as "2".
+        if (n.getFirstChild().isNumber()) {
+          cc.addNumber(-n.getFirstChild().getDouble());
         } else {
-            itsData.itsStringTable = new String[strings.size()];
-            ObjToIntMap.Iterator iter = strings.newIterator();
-            for (iter.start(); !iter.done(); iter.next()) {
-                String str = (String)iter.getKey();
-                int index = iter.getValue();
-                if (itsData.itsStringTable[index] != null) Kit.codeBug();
-                itsData.itsStringTable[index] = str;
-            }
-        }
-        if (doubleTableTop == 0) {
-            itsData.itsDoubleTable = null;
-        } else if (itsData.itsDoubleTable.length != doubleTableTop) {
-            double[] tmp = new double[doubleTableTop];
-            System.arraycopy(itsData.itsDoubleTable, 0, tmp, 0,
-                             doubleTableTop);
-            itsData.itsDoubleTable = tmp;
-        }
-        if (exceptionTableTop != 0
-            && itsData.itsExceptionTable.length != exceptionTableTop)
-        {
-            int[] tmp = new int[exceptionTableTop];
-            System.arraycopy(itsData.itsExceptionTable, 0, tmp, 0,
-                             exceptionTableTop);
-            itsData.itsExceptionTable = tmp;
+          cc.addOp(NodeUtil.opToStrNoFail(type), false);
+          addExpr(first, NodeUtil.precedence(type), Context.OTHER);
         }
 
-        itsData.itsMaxVars = scriptOrFn.getParamAndVarCount();
-        // itsMaxFrameArray: interpret method needs this amount for its
-        // stack and sDbl arrays
-        itsData.itsMaxFrameArray = itsData.itsMaxVars
-                                   + itsData.itsMaxLocals
-                                   + itsData.itsMaxStack;
+        break;
+      }
 
-        itsData.argNames = scriptOrFn.getParamAndVarNames();
-        itsData.argIsConst = scriptOrFn.getParamAndVarConst();
-        itsData.argCount = scriptOrFn.getParamCount();
+      case Token.HOOK: {
+        Preconditions.checkState(childCount == 3);
+        int p = NodeUtil.precedence(type);
+        Context rhsContext = Context.OTHER;
+        addExpr(first, p + 1, context);
+        cc.addOp("?", true);
+        addExpr(first.getNext(), 1, rhsContext);
+        cc.addOp(":", true);
+        addExpr(last, 1, rhsContext);
+        break;
+      }
 
-        itsData.encodedSourceStart = scriptOrFn.getEncodedSourceStart();
-        itsData.encodedSourceEnd = scriptOrFn.getEncodedSourceEnd();
-
-        if (literalIds.size() != 0) {
-            itsData.literalIds = literalIds.toArray();
+      case Token.REGEXP:
+        if (!first.isString() ||
+            !last.isString()) {
+          throw new Error("Expected children to be strings");
         }
 
-        if (Token.printICode) Interpreter.dumpICode(itsData);
-    }
+        String regexp = regexpEscape(first.getString(), outputCharsetEncoder);
 
-    private void generateNestedFunctions()
-    {
-        int functionCount = scriptOrFn.getFunctionCount();
-        if (functionCount == 0) return;
-
-        InterpreterData[] array = new InterpreterData[functionCount];
-        for (int i = 0; i != functionCount; i++) {
-            FunctionNode fn = scriptOrFn.getFunctionNode(i);
-            CodeGenerator gen = new CodeGenerator();
-            gen.compilerEnv = compilerEnv;
-            gen.scriptOrFn = fn;
-            gen.itsData = new InterpreterData(itsData);
-            gen.generateFunctionICode();
-            array[i] = gen.itsData;
+        // I only use one .add because whitespace matters
+        if (childCount == 2) {
+          add(regexp + last.getString());
+        } else {
+          Preconditions.checkState(childCount == 1);
+          add(regexp);
         }
-        itsData.itsNestedFunctions = array;
-    }
+        break;
 
-    private void generateRegExpLiterals()
-    {
-        int N = scriptOrFn.getRegexpCount();
-        if (N == 0) return;
-
-        Context cx = Context.getContext();
-        RegExpProxy rep = ScriptRuntime.checkRegExpProxy(cx);
-        Object[] array = new Object[N];
-        for (int i = 0; i != N; i++) {
-            String string = scriptOrFn.getRegexpString(i);
-            String flags = scriptOrFn.getRegexpFlags(i);
-            array[i] = rep.compileRegExp(cx, string, flags);
+      case Token.FUNCTION:
+        if (n.getClass() != Node.class) {
+          throw new Error("Unexpected Node subclass.");
         }
-        itsData.itsRegExpLiterals = array;
-    }
-
-    private void updateLineNumber(Node node)
-    {
-        int lineno = node.getLineno();
-        if (lineno != lineNumber && lineno >= 0) {
-            if (itsData.firstLinePC < 0) {
-                itsData.firstLinePC = lineno;
-            }
-            lineNumber = lineno;
-            addIcode(Icode_LINE);
-            addUint16(lineno & 0xFFFF);
+        Preconditions.checkState(childCount == 3);
+        boolean funcNeedsParens = (context == Context.START_OF_EXPR);
+        if (funcNeedsParens) {
+          add("(");
         }
-    }
 
-    private RuntimeException badTree(Node node)
-    {
-        throw new RuntimeException(node.toString());
-    }
+        add("function");
+        add(first);
 
-    private void visitStatement(Node node, int initialStackDepth)
-    {
-        int type = node.getType();
-        Node child = node.getFirstChild();
-        switch (type) {
+        add(first.getNext());
+        add(last, Context.PRESERVE_BLOCK);
+        cc.endFunction(context == Context.STATEMENT);
 
-          case Token.FUNCTION:
-            {
-                int fnIndex = node.getExistingIntProp(Node.FUNCTION_PROP);
-                int fnType = scriptOrFn.getFunctionNode(fnIndex).
-                                 getFunctionType();
-                // Only function expressions or function expression
-                // statements need closure code creating new function
-                // object on stack as function statements are initialized
-                // at script/function start.
-                // In addition, function expressions can not be present here
-                // at statement level, they must only be present as expressions.
-                if (fnType == FunctionNode.FUNCTION_EXPRESSION_STATEMENT) {
-                    addIndexOp(Icode_CLOSURE_STMT, fnIndex);
-                } else {
-                    if (fnType != FunctionNode.FUNCTION_STATEMENT) {
-                        throw Kit.codeBug();
-                    }
-                }
-                // For function statements or function expression statements
-                // in scripts, we need to ensure that the result of the script
-                // is the function if it is the last statement in the script.
-                // For example, eval("function () {}") should return a
-                // function, not undefined.
-                if (!itsInFunctionFlag) {
-                    addIndexOp(Icode_CLOSURE_EXPR, fnIndex);
-                    stackChange(1);
-                    addIcode(Icode_POP_RESULT);
-                    stackChange(-1);
-                }
-            }
-            break;
+        if (funcNeedsParens) {
+          add(")");
+        }
+        break;
 
-          case Token.LABEL:
-          case Token.LOOP:
-          case Token.BLOCK:
-          case Token.EMPTY:
-          case Token.WITH:
-            updateLineNumber(node);
-          case Token.SCRIPT:
-            // fall through
-            while (child != null) {
-                visitStatement(child, initialStackDepth);
-                child = child.getNext();
-            }
-            break;
+      case Token.GETTER_DEF:
+      case Token.SETTER_DEF:
+        Preconditions.checkState(n.getParent().isObjectLit());
+        Preconditions.checkState(childCount == 1);
+        Preconditions.checkState(first.isFunction());
 
-          case Token.ENTERWITH:
-            visitExpression(child, 0);
-            addToken(Token.ENTERWITH);
-            stackChange(-1);
-            break;
+        // Get methods are unnamed
+        Preconditions.checkState(first.getFirstChild().getString().isEmpty());
+        if (type == Token.GETTER_DEF) {
+          // Get methods have no parameters.
+          Preconditions.checkState(!first.getChildAtIndex(1).hasChildren());
+          add("get ");
+        } else {
+          // Set methods have one parameter.
+          Preconditions.checkState(first.getChildAtIndex(1).hasOneChild());
+          add("set ");
+        }
 
-          case Token.LEAVEWITH:
-            addToken(Token.LEAVEWITH);
-            break;
+        // The name is on the GET or SET node.
+        String name = n.getString();
+        Node fn = first;
+        Node parameters = fn.getChildAtIndex(1);
+        Node body = fn.getLastChild();
 
-          case Token.LOCAL_BLOCK:
-            {
-                int local = allocLocal();
-                node.putIntProp(Node.LOCAL_PROP, local);
-                updateLineNumber(node);
-                while (child != null) {
-                    visitStatement(child, initialStackDepth);
-                    child = child.getNext();
-                }
-                addIndexOp(Icode_LOCAL_CLEAR, local);
-                releaseLocal(local);
-            }
-            break;
+        // Add the property name.
+        if (!n.isQuotedString() &&
+            TokenStream.isJSIdentifier(name) &&
+            // do not encode literally any non-literal characters that were
+            // Unicode escaped.
+            NodeUtil.isLatin(name)) {
+          add(name);
+        } else {
+          // Determine if the string is a simple number.
+          double d = getSimpleNumber(name);
+          if (!Double.isNaN(d)) {
+            cc.addNumber(d);
+          } else {
+            addJsString(n);
+          }
+        }
 
-          case Token.DEBUGGER:
-            addIcode(Icode_DEBUGGER);
-            break;
+        add(parameters);
+        add(body, Context.PRESERVE_BLOCK);
+        break;
 
-          case Token.SWITCH:
-            updateLineNumber(node);
-            // See comments in IRFactory.createSwitch() for description
-            // of SWITCH node
-            {
-                visitExpression(child, 0);
-                for (Jump caseNode = (Jump)child.getNext();
-                     caseNode != null;
-                     caseNode = (Jump)caseNode.getNext())
-                {
-                    if (caseNode.getType() != Token.CASE)
-                        throw badTree(caseNode);
-                    Node test = caseNode.getFirstChild();
-                    addIcode(Icode_DUP);
-                    stackChange(1);
-                    visitExpression(test, 0);
-                    addToken(Token.SHEQ);
-                    stackChange(-1);
-                    // If true, Icode_IFEQ_POP will jump and remove case
-                    // value from stack
-                    addGoto(caseNode.target, Icode_IFEQ_POP);
-                    stackChange(-1);
-                }
-                addIcode(Icode_POP);
-                stackChange(-1);
-            }
-            break;
+      case Token.SCRIPT:
+      case Token.BLOCK: {
+        if (n.getClass() != Node.class) {
+          throw new Error("Unexpected Node subclass.");
+        }
+        boolean preserveBlock = context == Context.PRESERVE_BLOCK;
+        if (preserveBlock) {
+          cc.beginBlock();
+        }
 
-          case Token.TARGET:
-            markTargetLabel(node);
-            break;
+        boolean preferLineBreaks =
+            type == Token.SCRIPT ||
+            (type == Token.BLOCK &&
+                !preserveBlock &&
+                n.getParent() != null &&
+                n.getParent().isScript());
+        for (Node c = first; c != null; c = c.getNext()) {
+          add(c, Context.STATEMENT);
 
-          case Token.IFEQ :
-          case Token.IFNE :
-            {
-                Node target = ((Jump)node).target;
-                visitExpression(child, 0);
-                addGoto(target, type);
-                stackChange(-1);
-            }
-            break;
+          // VAR doesn't include ';' since it gets used in expressions
+          if (c.isVar()) {
+            cc.endStatement();
+          }
 
-          case Token.GOTO:
-            {
-                Node target = ((Jump)node).target;
-                addGoto(target, type);
-            }
-            break;
+          if (c.isFunction()) {
+            cc.maybeLineBreak();
+          }
 
-          case Token.JSR:
-            {
-                Node target = ((Jump)node).target;
-                addGoto(target, Icode_GOSUB);
-            }
-            break;
+          // Prefer to break lines in between top-level statements
+          // because top-level statements are more homogeneous.
+          if (preferLineBreaks) {
+            cc.notePreferredLineBreak();
+          }
+        }
+        if (preserveBlock) {
+          cc.endBlock(cc.breakAfterBlockFor(n, context == Context.STATEMENT));
+        }
+        break;
+      }
 
-          case Token.FINALLY:
-            {
-                // Account for incomming GOTOSUB address
-                stackChange(1);
-                int finallyRegister = getLocalBlockRef(node);
-                addIndexOp(Icode_STARTSUB, finallyRegister);
-                stackChange(-1);
-                while (child != null) {
-                    visitStatement(child, initialStackDepth);
-                    child = child.getNext();
-                }
-                addIndexOp(Icode_RETSUB, finallyRegister);
-            }
-            break;
+      case Token.FOR:
+        if (childCount == 4) {
+          add("for(");
+          if (first.isVar()) {
+            add(first, Context.IN_FOR_INIT_CLAUSE);
+          } else {
+            addExpr(first, 0, Context.IN_FOR_INIT_CLAUSE);
+          }
+          add(";");
+          add(first.getNext());
+          add(";");
+          add(first.getNext().getNext());
+          add(")");
+          addNonEmptyStatement(
+              last, getContextForNonEmptyExpression(context), false);
+        } else {
+          Preconditions.checkState(childCount == 3);
+          add("for(");
+          add(first);
+          add("in");
+          add(first.getNext());
+          add(")");
+          addNonEmptyStatement(
+              last, getContextForNonEmptyExpression(context), false);
+        }
+        break;
 
-          case Token.EXPR_VOID:
-          case Token.EXPR_RESULT:
-            updateLineNumber(node);
-            visitExpression(child, 0);
-            addIcode((type == Token.EXPR_VOID) ? Icode_POP : Icode_POP_RESULT);
-            stackChange(-1);
-            break;
+      case Token.DO:
+        Preconditions.checkState(childCount == 2);
+        add("do");
+        addNonEmptyStatement(first, Context.OTHER, false);
+        add("while(");
+        add(last);
+        add(")");
+        cc.endStatement();
+        break;
 
-          case Token.TRY:
-            {
-                Jump tryNode = (Jump)node;
-                int exceptionObjectLocal = getLocalBlockRef(tryNode);
-                int scopeLocal = allocLocal();
+      case Token.WHILE:
+        Preconditions.checkState(childCount == 2);
+        add("while(");
+        add(first);
+        add(")");
+        addNonEmptyStatement(
+            last, getContextForNonEmptyExpression(context), false);
+        break;
 
-                addIndexOp(Icode_SCOPE_SAVE, scopeLocal);
+      case Token.EMPTY:
+        Preconditions.checkState(childCount == 0);
+        break;
 
-                int tryStart = iCodeTop;
-                boolean savedFlag = itsInTryFlag;
-                itsInTryFlag = true;
-                while (child != null) {
-                    visitStatement(child, initialStackDepth);
-                    child = child.getNext();
-                }
-                itsInTryFlag = savedFlag;
+      case Token.GETPROP: {
+        Preconditions.checkState(
+            childCount == 2,
+            "Bad GETPROP: expected 2 children, but got %s", childCount);
+        Preconditions.checkState(
+            last.isString(),
+            "Bad GETPROP: RHS should be STRING");
+        boolean needsParens = (first.isNumber());
+        if (needsParens) {
+          add("(");
+        }
+        addExpr(first, NodeUtil.precedence(type), context);
+        if (needsParens) {
+          add(")");
+        }
+        if (this.languageMode == LanguageMode.ECMASCRIPT3
+            && TokenStream.isKeyword(last.getString())) {
+          // Check for ECMASCRIPT3 keywords.
+          add("[");
+          add(last);
+          add("]");
+        } else {
+          add(".");
+          addIdentifier(last.getString());
+        }
+        break;
+      }
 
-                Node catchTarget = tryNode.target;
-                if (catchTarget != null) {
-                    int catchStartPC
-                        = labelTable[getTargetLabel(catchTarget)];
-                    addExceptionHandler(
-                        tryStart, catchStartPC, catchStartPC,
-                        false, exceptionObjectLocal, scopeLocal);
-                }
-                Node finallyTarget = tryNode.getFinally();
-                if (finallyTarget != null) {
-                    int finallyStartPC
-                        = labelTable[getTargetLabel(finallyTarget)];
-                    addExceptionHandler(
-                        tryStart, finallyStartPC, finallyStartPC,
-                        true, exceptionObjectLocal, scopeLocal);
-                }
+      case Token.GETELEM:
+        Preconditions.checkState(
+            childCount == 2,
+            "Bad GETELEM: expected 2 children but got %s", childCount);
+        addExpr(first, NodeUtil.precedence(type), context);
+        add("[");
+        add(first.getNext());
+        add("]");
+        break;
 
-                addIndexOp(Icode_LOCAL_CLEAR, scopeLocal);
-                releaseLocal(scopeLocal);
-            }
-            break;
+      case Token.WITH:
+        Preconditions.checkState(childCount == 2);
+        add("with(");
+        add(first);
+        add(")");
+        addNonEmptyStatement(
+            last, getContextForNonEmptyExpression(context), false);
+        break;
 
-          case Token.CATCH_SCOPE:
-            {
-                int localIndex = getLocalBlockRef(node);
-                int scopeIndex = node.getExistingIntProp(Node.CATCH_SCOPE_PROP);
-                String name = child.getString();
-                child = child.getNext();
-                visitExpression(child, 0); // load expression object
-                addStringPrefix(name);
-                addIndexPrefix(localIndex);
-                addToken(Token.CATCH_SCOPE);
-                addUint8(scopeIndex != 0 ? 1 : 0);
-                stackChange(-1);
-            }
-            break;
+      case Token.INC:
+      case Token.DEC: {
+        Preconditions.checkState(childCount == 1);
+        String o = type == Token.INC ? "++" : "--";
+        int postProp = n.getIntProp(Node.INCRDECR_PROP);
+        // A non-zero post-prop value indicates a post inc/dec, default of zero
+        // is a pre-inc/dec.
+        if (postProp != 0) {
+          addExpr(first, NodeUtil.precedence(type), context);
+          cc.addOp(o, false);
+        } else {
+          cc.addOp(o, false);
+          add(first);
+        }
+        break;
+      }
 
-          case Token.THROW:
-            updateLineNumber(node);
-            visitExpression(child, 0);
-            addToken(Token.THROW);
-            addUint16(lineNumber & 0xFFFF);
-            stackChange(-1);
-            break;
+      case Token.CALL:
+        // We have two special cases here:
+        // 1) If the left hand side of the call is a direct reference to eval,
+        // then it must have a DIRECT_EVAL annotation. If it does not, then
+        // that means it was originally an indirect call to eval, and that
+        // indirectness must be preserved.
+        // 2) If the left hand side of the call is a property reference,
+        // then the call must not a FREE_CALL annotation. If it does, then
+        // that means it was originally an call without an explicit this and
+        // that must be preserved.
+        if (isIndirectEval(first)
+            || n.getBooleanProp(Node.FREE_CALL) && NodeUtil.isGet(first)) {
+          add("(0,");
+          addExpr(first, NodeUtil.precedence(Token.COMMA), Context.OTHER);
+          add(")");
+        } else {
+          addExpr(first, NodeUtil.precedence(type), context);
+        }
+        add("(");
+        addList(first.getNext());
+        add(")");
+        break;
 
-          case Token.RETHROW:
-            updateLineNumber(node);
-            addIndexOp(Token.RETHROW, getLocalBlockRef(node));
-            break;
+      case Token.IF:
+        boolean hasElse = childCount == 3;
+        boolean ambiguousElseClause =
+            context == Context.BEFORE_DANGLING_ELSE && !hasElse;
+        if (ambiguousElseClause) {
+          cc.beginBlock();
+        }
 
-          case Token.RETURN:
-            updateLineNumber(node);
-            if (node.getIntProp(Node.GENERATOR_END_PROP, 0) != 0) {
-                // We're in a generator, so change RETURN to GENERATOR_END
-                addIcode(Icode_GENERATOR_END);
-                addUint16(lineNumber & 0xFFFF);
-            } else if (child != null) {
-                visitExpression(child, ECF_TAIL);
-                addToken(Token.RETURN);
-                stackChange(-1);
+        add("if(");
+        add(first);
+        add(")");
+
+        if (hasElse) {
+          addNonEmptyStatement(
+              first.getNext(), Context.BEFORE_DANGLING_ELSE, false);
+          add("else");
+          addNonEmptyStatement(
+              last, getContextForNonEmptyExpression(context), false);
+        } else {
+          addNonEmptyStatement(first.getNext(), Context.OTHER, false);
+          Preconditions.checkState(childCount == 2);
+        }
+
+        if (ambiguousElseClause) {
+          cc.endBlock();
+        }
+        break;
+
+      case Token.NULL:
+        Preconditions.checkState(childCount == 0);
+        cc.addConstant("null");
+        break;
+
+      case Token.THIS:
+        Preconditions.checkState(childCount == 0);
+        add("this");
+        break;
+
+      case Token.FALSE:
+        Preconditions.checkState(childCount == 0);
+        cc.addConstant("false");
+        break;
+
+      case Token.TRUE:
+        Preconditions.checkState(childCount == 0);
+        cc.addConstant("true");
+        break;
+
+      case Token.CONTINUE:
+        Preconditions.checkState(childCount <= 1);
+        add("continue");
+        if (childCount == 1) {
+          if (!first.isLabelName()) {
+            throw new Error("Unexpected token type. Should be LABEL_NAME.");
+          }
+          add(" ");
+          add(first);
+        }
+        cc.endStatement();
+        break;
+
+      case Token.DEBUGGER:
+        Preconditions.checkState(childCount == 0);
+        add("debugger");
+        cc.endStatement();
+        break;
+
+      case Token.BREAK:
+        Preconditions.checkState(childCount <= 1);
+        add("break");
+        if (childCount == 1) {
+          if (!first.isLabelName()) {
+            throw new Error("Unexpected token type. Should be LABEL_NAME.");
+          }
+          add(" ");
+          add(first);
+        }
+        cc.endStatement();
+        break;
+
+      case Token.EXPR_RESULT:
+        Preconditions.checkState(childCount == 1);
+        add(first, Context.START_OF_EXPR);
+        cc.endStatement();
+        break;
+
+      case Token.NEW:
+        add("new ");
+        int precedence = NodeUtil.precedence(type);
+
+        // If the first child contains a CALL, then claim higher precedence
+        // to force parentheses. Otherwise, when parsed, NEW will bind to the
+        // first viable parentheses (don't traverse into functions).
+        if (NodeUtil.containsType(
+            first, Token.CALL, NodeUtil.MATCH_NOT_FUNCTION)) {
+          precedence = NodeUtil.precedence(first.getType()) + 1;
+        }
+        addExpr(first, precedence, Context.OTHER);
+
+        // '()' is optional when no arguments are present
+        Node next = first.getNext();
+        if (next != null) {
+          add("(");
+          addList(next);
+          add(")");
+        }
+        break;
+
+      case Token.STRING_KEY:
+        Preconditions.checkState(
+            childCount == 1, "Object lit key must have 1 child");
+        addJsString(n);
+        break;
+
+      case Token.STRING:
+        Preconditions.checkState(
+            childCount == 0, "A string may not have children");
+        addJsString(n);
+        break;
+
+      case Token.DELPROP:
+        Preconditions.checkState(childCount == 1);
+        add("delete ");
+        add(first);
+        break;
+
+      case Token.OBJECTLIT: {
+        boolean needsParens = (context == Context.START_OF_EXPR);
+        if (needsParens) {
+          add("(");
+        }
+        add("{");
+        for (Node c = first; c != null; c = c.getNext()) {
+          if (c != first) {
+            cc.listSeparator();
+          }
+
+          if (c.isGetterDef() || c.isSetterDef()) {
+            add(c);
+          } else {
+            Preconditions.checkState(c.isStringKey());
+            String key = c.getString();
+            // Object literal property names don't have to be quoted if they
+            // are not JavaScript keywords
+            if (!c.isQuotedString()
+                && !(languageMode == LanguageMode.ECMASCRIPT3
+                    && TokenStream.isKeyword(key))
+                && TokenStream.isJSIdentifier(key)
+                // do not encode literally any non-literal characters that
+                // were Unicode escaped.
+                && NodeUtil.isLatin(key)) {
+              add(key);
             } else {
-                addIcode(Icode_RETUNDEF);
+              // Determine if the string is a simple number.
+              double d = getSimpleNumber(key);
+              if (!Double.isNaN(d)) {
+                cc.addNumber(d);
+              } else {
+                addExpr(c, 1, Context.OTHER);
+              }
             }
-            break;
-
-          case Token.RETURN_RESULT:
-            updateLineNumber(node);
-            addToken(Token.RETURN_RESULT);
-            break;
-
-          case Token.ENUM_INIT_KEYS:
-          case Token.ENUM_INIT_VALUES:
-          case Token.ENUM_INIT_ARRAY:
-            visitExpression(child, 0);
-            addIndexOp(type, getLocalBlockRef(node));
-            stackChange(-1);
-            break;
-
-          case Icode_GENERATOR:
-            break;
-
-          default:
-            throw badTree(node);
+            add(":");
+            addExpr(c.getFirstChild(), 1, Context.OTHER);
+          }
         }
-
-        if (stackDepth != initialStackDepth) {
-            throw Kit.codeBug();
+        add("}");
+        if (needsParens) {
+          add(")");
         }
+        break;
+      }
+
+      case Token.SWITCH:
+        add("switch(");
+        add(first);
+        add(")");
+        cc.beginBlock();
+        addAllSiblings(first.getNext());
+        cc.endBlock(context == Context.STATEMENT);
+        break;
+
+      case Token.CASE:
+        Preconditions.checkState(childCount == 2);
+        add("case ");
+        add(first);
+        addCaseBody(last);
+        break;
+
+      case Token.DEFAULT_CASE:
+        Preconditions.checkState(childCount == 1);
+        add("default");
+        addCaseBody(first);
+        break;
+
+      case Token.LABEL:
+        Preconditions.checkState(childCount == 2);
+        if (!first.isLabelName()) {
+          throw new Error("Unexpected token type. Should be LABEL_NAME.");
+        }
+        add(first);
+        add(":");
+        addNonEmptyStatement(
+            last, getContextForNonEmptyExpression(context), true);
+        break;
+
+      case Token.CAST:
+        add("(");
+        add(first);
+        add(")");
+        break;
+
+      default:
+        throw new Error("Unknown type " + type + "\n" + n.toStringTree());
     }
 
-    private void visitExpression(Node node, int contextFlags)
-    {
-        int type = node.getType();
-        Node child = node.getFirstChild();
-        int savedStackDepth = stackDepth;
-        switch (type) {
+    cc.endSourceMapping(n);
+  }
 
-          case Token.FUNCTION:
-            {
-                int fnIndex = node.getExistingIntProp(Node.FUNCTION_PROP);
-                FunctionNode fn = scriptOrFn.getFunctionNode(fnIndex);
-                // See comments in visitStatement for Token.FUNCTION case
-                if (fn.getFunctionType() != FunctionNode.FUNCTION_EXPRESSION) {
-                    throw Kit.codeBug();
-                }
-                addIndexOp(Icode_CLOSURE_EXPR, fnIndex);
-                stackChange(1);
-            }
-            break;
-
-          case Token.LOCAL_LOAD:
-            {
-                int localIndex = getLocalBlockRef(node);
-                addIndexOp(Token.LOCAL_LOAD, localIndex);
-                stackChange(1);
-            }
-            break;
-
-          case Token.COMMA:
-            {
-                Node lastChild = node.getLastChild();
-                while (child != lastChild) {
-                    visitExpression(child, 0);
-                    addIcode(Icode_POP);
-                    stackChange(-1);
-                    child = child.getNext();
-                }
-                // Preserve tail context flag if any
-                visitExpression(child, contextFlags & ECF_TAIL);
-            }
-            break;
-
-          case Token.USE_STACK:
-            // Indicates that stack was modified externally,
-            // like placed catch object
-            stackChange(1);
-            break;
-
-          case Token.REF_CALL:
-          case Token.CALL:
-          case Token.NEW:
-            {
-                if (type == Token.NEW) {
-                    visitExpression(child, 0);
-                } else {
-                    generateCallFunAndThis(child);
-                }
-                int argCount = 0;
-                while ((child = child.getNext()) != null) {
-                    visitExpression(child, 0);
-                    ++argCount;
-                }
-                int callType = node.getIntProp(Node.SPECIALCALL_PROP,
-                                               Node.NON_SPECIALCALL);
-                if (type != Token.REF_CALL && callType != Node.NON_SPECIALCALL) {
-                    // embed line number and source filename
-                    addIndexOp(Icode_CALLSPECIAL, argCount);
-                    addUint8(callType);
-                    addUint8(type == Token.NEW ? 1 : 0);
-                    addUint16(lineNumber & 0xFFFF);
-                } else {
-                    // Only use the tail call optimization if we're not in a try
-                    // or we're not generating debug info (since the
-                    // optimization will confuse the debugger)
-                    if (type == Token.CALL && (contextFlags & ECF_TAIL) != 0 &&
-                        !compilerEnv.isGenerateDebugInfo() && !itsInTryFlag)
-                    {
-                        type = Icode_TAIL_CALL;
-                    }
-                    addIndexOp(type, argCount);
-                }
-                // adjust stack
-                if (type == Token.NEW) {
-                    // new: f, args -> result
-                    stackChange(-argCount);
-                } else {
-                    // call: f, thisObj, args -> result
-                    // ref_call: f, thisObj, args -> ref
-                    stackChange(-1 - argCount);
-                }
-                if (argCount > itsData.itsMaxCalleeArgs) {
-                    itsData.itsMaxCalleeArgs = argCount;
-                }
-            }
-            break;
-
-          case Token.AND:
-          case Token.OR:
-            {
-                visitExpression(child, 0);
-                addIcode(Icode_DUP);
-                stackChange(1);
-                int afterSecondJumpStart = iCodeTop;
-                int jump = (type == Token.AND) ? Token.IFNE : Token.IFEQ;
-                addGotoOp(jump);
-                stackChange(-1);
-                addIcode(Icode_POP);
-                stackChange(-1);
-                child = child.getNext();
-                // Preserve tail context flag if any
-                visitExpression(child, contextFlags & ECF_TAIL);
-                resolveForwardGoto(afterSecondJumpStart);
-            }
-            break;
-
-          case Token.HOOK:
-            {
-                Node ifThen = child.getNext();
-                Node ifElse = ifThen.getNext();
-                visitExpression(child, 0);
-                int elseJumpStart = iCodeTop;
-                addGotoOp(Token.IFNE);
-                stackChange(-1);
-                // Preserve tail context flag if any
-                visitExpression(ifThen, contextFlags & ECF_TAIL);
-                int afterElseJumpStart = iCodeTop;
-                addGotoOp(Token.GOTO);
-                resolveForwardGoto(elseJumpStart);
-                stackDepth = savedStackDepth;
-                // Preserve tail context flag if any
-                visitExpression(ifElse, contextFlags & ECF_TAIL);
-                resolveForwardGoto(afterElseJumpStart);
-            }
-            break;
-
-          case Token.GETPROP:
-          case Token.GETPROPNOWARN:
-            visitExpression(child, 0);
-            child = child.getNext();
-            addStringOp(type, child.getString());
-            break;
-
-          case Token.DELPROP:
-            boolean isName = child.getType() == Token.BINDNAME;
-            visitExpression(child, 0);
-            child = child.getNext();
-            visitExpression(child, 0);
-            if (isName) {
-                // special handling for delete name
-                addIcode(Icode_DELNAME);
-            } else {
-                addToken(Token.DELPROP);
-            }
-            stackChange(-1);
-            break;
-
-          case Token.GETELEM:
-          case Token.BITAND:
-          case Token.BITOR:
-          case Token.BITXOR:
-          case Token.LSH:
-          case Token.RSH:
-          case Token.URSH:
-          case Token.ADD:
-          case Token.SUB:
-          case Token.MOD:
-          case Token.DIV:
-          case Token.MUL:
-          case Token.EQ:
-          case Token.NE:
-          case Token.SHEQ:
-          case Token.SHNE:
-          case Token.IN:
-          case Token.INSTANCEOF:
-          case Token.LE:
-          case Token.LT:
-          case Token.GE:
-          case Token.GT:
-            visitExpression(child, 0);
-            child = child.getNext();
-            visitExpression(child, 0);
-            addToken(type);
-            stackChange(-1);
-            break;
-
-          case Token.POS:
-          case Token.NEG:
-          case Token.NOT:
-          case Token.BITNOT:
-          case Token.TYPEOF:
-          case Token.VOID:
-            visitExpression(child, 0);
-            if (type == Token.VOID) {
-                addIcode(Icode_POP);
-                addIcode(Icode_UNDEF);
-            } else {
-                addToken(type);
-            }
-            break;
-
-          case Token.GET_REF:
-          case Token.DEL_REF:
-            visitExpression(child, 0);
-            addToken(type);
-            break;
-
-          case Token.SETPROP:
-          case Token.SETPROP_OP:
-            {
-                visitExpression(child, 0);
-                child = child.getNext();
-                String property = child.getString();
-                child = child.getNext();
-                if (type == Token.SETPROP_OP) {
-                    addIcode(Icode_DUP);
-                    stackChange(1);
-                    addStringOp(Token.GETPROP, property);
-                    // Compensate for the following USE_STACK
-                    stackChange(-1);
-                }
-                visitExpression(child, 0);
-                addStringOp(Token.SETPROP, property);
-                stackChange(-1);
-            }
-            break;
-
-          case Token.SETELEM:
-          case Token.SETELEM_OP:
-            visitExpression(child, 0);
-            child = child.getNext();
-            visitExpression(child, 0);
-            child = child.getNext();
-            if (type == Token.SETELEM_OP) {
-                addIcode(Icode_DUP2);
-                stackChange(2);
-                addToken(Token.GETELEM);
-                stackChange(-1);
-                // Compensate for the following USE_STACK
-                stackChange(-1);
-            }
-            visitExpression(child, 0);
-            addToken(Token.SETELEM);
-            stackChange(-2);
-            break;
-
-          case Token.SET_REF:
-          case Token.SET_REF_OP:
-            visitExpression(child, 0);
-            child = child.getNext();
-            if (type == Token.SET_REF_OP) {
-                addIcode(Icode_DUP);
-                stackChange(1);
-                addToken(Token.GET_REF);
-                // Compensate for the following USE_STACK
-                stackChange(-1);
-            }
-            visitExpression(child, 0);
-            addToken(Token.SET_REF);
-            stackChange(-1);
-            break;
-
-          case Token.STRICT_SETNAME:
-          case Token.SETNAME:
-            {
-                String name = child.getString();
-                visitExpression(child, 0);
-                child = child.getNext();
-                visitExpression(child, 0);
-                addStringOp(type, name);
-                stackChange(-1);
-            }
-            break;
-
-          case Token.SETCONST:
-            {
-                String name = child.getString();
-                visitExpression(child, 0);
-                child = child.getNext();
-                visitExpression(child, 0);
-                addStringOp(Icode_SETCONST, name);
-                stackChange(-1);
-            }
-            break;
-
-          case Token.TYPEOFNAME:
-            {
-                int index = -1;
-                // use typeofname if an activation frame exists
-                // since the vars all exist there instead of in jregs
-                if (itsInFunctionFlag && !itsData.itsNeedsActivation)
-                    index = scriptOrFn.getIndexForNameNode(node);
-                if (index == -1) {
-                    addStringOp(Icode_TYPEOFNAME, node.getString());
-                    stackChange(1);
-                } else {
-                    addVarOp(Token.GETVAR, index);
-                    stackChange(1);
-                    addToken(Token.TYPEOF);
-                }
-            }
-            break;
-
-          case Token.BINDNAME:
-          case Token.NAME:
-          case Token.STRING:
-            addStringOp(type, node.getString());
-            stackChange(1);
-            break;
-
-          case Token.INC:
-          case Token.DEC:
-            visitIncDec(node, child);
-            break;
-
-          case Token.NUMBER:
-            {
-                double num = node.getDouble();
-                int inum = (int)num;
-                if (inum == num) {
-                    if (inum == 0) {
-                        addIcode(Icode_ZERO);
-                        // Check for negative zero
-                        if (1.0 / num < 0.0) {
-                            addToken(Token.NEG);
-                        }
-                    } else if (inum == 1) {
-                        addIcode(Icode_ONE);
-                    } else if ((short)inum == inum) {
-                        addIcode(Icode_SHORTNUMBER);
-                        // write short as uin16 bit pattern
-                        addUint16(inum & 0xFFFF);
-                    } else {
-                        addIcode(Icode_INTNUMBER);
-                        addInt(inum);
-                    }
-                } else {
-                    int index = getDoubleIndex(num);
-                    addIndexOp(Token.NUMBER, index);
-                }
-                stackChange(1);
-            }
-            break;
-
-          case Token.GETVAR:
-            {
-                if (itsData.itsNeedsActivation) Kit.codeBug();
-                int index = scriptOrFn.getIndexForNameNode(node);
-                addVarOp(Token.GETVAR, index);
-                stackChange(1);
-            }
-            break;
-
-          case Token.SETVAR:
-            {
-                if (itsData.itsNeedsActivation) Kit.codeBug();
-                int index = scriptOrFn.getIndexForNameNode(child);
-                child = child.getNext();
-                visitExpression(child, 0);
-                addVarOp(Token.SETVAR, index);
-            }
-            break;
-
-          case Token.SETCONSTVAR:
-            {
-                if (itsData.itsNeedsActivation) Kit.codeBug();
-                int index = scriptOrFn.getIndexForNameNode(child);
-                child = child.getNext();
-                visitExpression(child, 0);
-                addVarOp(Token.SETCONSTVAR, index);
-            }
-            break;
-
-          case Token.NULL:
-          case Token.THIS:
-          case Token.THISFN:
-          case Token.FALSE:
-          case Token.TRUE:
-            addToken(type);
-            stackChange(1);
-            break;
-
-          case Token.ENUM_NEXT:
-          case Token.ENUM_ID:
-            addIndexOp(type, getLocalBlockRef(node));
-            stackChange(1);
-            break;
-
-          case Token.REGEXP:
-            {
-                int index = node.getExistingIntProp(Node.REGEXP_PROP);
-                addIndexOp(Token.REGEXP, index);
-                stackChange(1);
-            }
-            break;
-
-          case Token.ARRAYLIT:
-          case Token.OBJECTLIT:
-            visitLiteral(node, child);
-            break;
-
-          case Token.ARRAYCOMP:
-            visitArrayComprehension(node, child, child.getNext());
-            break;
-
-          case Token.REF_SPECIAL:
-            visitExpression(child, 0);
-            addStringOp(type, (String)node.getProp(Node.NAME_PROP));
-            break;
-
-          case Token.REF_MEMBER:
-          case Token.REF_NS_MEMBER:
-          case Token.REF_NAME:
-          case Token.REF_NS_NAME:
-            {
-                int memberTypeFlags = node.getIntProp(Node.MEMBER_TYPE_PROP, 0);
-                // generate possible target, possible namespace and member
-                int childCount = 0;
-                do {
-                    visitExpression(child, 0);
-                    ++childCount;
-                    child = child.getNext();
-                } while (child != null);
-                addIndexOp(type, memberTypeFlags);
-                stackChange(1 - childCount);
-            }
-            break;
-
-          case Token.DOTQUERY:
-            {
-                int queryPC;
-                updateLineNumber(node);
-                visitExpression(child, 0);
-                addIcode(Icode_ENTERDQ);
-                stackChange(-1);
-                queryPC = iCodeTop;
-                visitExpression(child.getNext(), 0);
-                addBackwardGoto(Icode_LEAVEDQ, queryPC);
-            }
-            break;
-
-          case Token.DEFAULTNAMESPACE :
-          case Token.ESCXMLATTR :
-          case Token.ESCXMLTEXT :
-            visitExpression(child, 0);
-            addToken(type);
-            break;
-
-          case Token.YIELD:
-            if (child != null) {
-                visitExpression(child, 0);
-            } else {
-                addIcode(Icode_UNDEF);
-                stackChange(1);
-            }
-            addToken(Token.YIELD);
-            addUint16(node.getLineno() & 0xFFFF);
-            break;
-
-          case Token.WITHEXPR: {
-            Node enterWith = node.getFirstChild();
-            Node with = enterWith.getNext();
-            visitExpression(enterWith.getFirstChild(), 0);
-            addToken(Token.ENTERWITH);
-            stackChange(-1);
-            visitExpression(with.getFirstChild(), 0);
-            addToken(Token.LEAVEWITH);
-            break;
-          }
-
-          default:
-            throw badTree(node);
-        }
-        if (savedStackDepth + 1 != stackDepth) {
-            Kit.codeBug();
-        }
+  /**
+   * We could use addList recursively here, but sometimes we produce
+   * very deeply nested operators and run out of stack space, so we
+   * just unroll the recursion when possible.
+   *
+   * We assume nodes are left-recursive.
+   */
+  private void unrollBinaryOperator(
+      Node n, int op, String opStr, Context context,
+      Context rhsContext, int leftPrecedence, int rightPrecedence) {
+    Node firstNonOperator = n.getFirstChild();
+    while (firstNonOperator.getType() == op) {
+      firstNonOperator = firstNonOperator.getFirstChild();
     }
 
-    private void generateCallFunAndThis(Node left)
-    {
-        // Generate code to place on stack function and thisObj
-        int type = left.getType();
-        switch (type) {
-          case Token.NAME: {
-            String name = left.getString();
-            // stack: ... -> ... function thisObj
-            addStringOp(Icode_NAME_AND_THIS, name);
-            stackChange(2);
-            break;
-          }
-          case Token.GETPROP:
-          case Token.GETELEM: {
-            Node target = left.getFirstChild();
-            visitExpression(target, 0);
-            Node id = target.getNext();
-            if (type == Token.GETPROP) {
-                String property = id.getString();
-                // stack: ... target -> ... function thisObj
-                addStringOp(Icode_PROP_AND_THIS, property);
-                stackChange(1);
-            } else {
-                visitExpression(id, 0);
-                // stack: ... target id -> ... function thisObj
-                addIcode(Icode_ELEM_AND_THIS);
-            }
-            break;
-          }
-          default:
-            // Including Token.GETVAR
-            visitExpression(left, 0);
-            // stack: ... value -> ... function thisObj
-            addIcode(Icode_VALUE_AND_THIS);
-            stackChange(1);
-            break;
+    addExpr(firstNonOperator, leftPrecedence, context);
+
+    Node current = firstNonOperator;
+    do {
+      current = current.getParent();
+      cc.addOp(opStr, true);
+      addExpr(current.getFirstChild().getNext(), rightPrecedence, rhsContext);
+    } while (current != n);
+  }
+
+  static boolean isSimpleNumber(String s) {
+    int len = s.length();
+    if (len == 0) {
+      return false;
+    }
+    for (int index = 0; index < len; index++) {
+      char c = s.charAt(index);
+      if (c < '0' || c > '9') {
+        return false;
+      }
+    }
+    return len == 1 || s.charAt(0) != '0';
+  }
+
+  static double getSimpleNumber(String s) {
+    if (isSimpleNumber(s)) {
+      try {
+        long l = Long.parseLong(s);
+        if (l < NodeUtil.MAX_POSITIVE_INTEGER_NUMBER) {
+          return l;
         }
+      } catch (NumberFormatException e) {
+        // The number was too long to parse. Fall through to NaN.
+      }
+    }
+    return Double.NaN;
+  }
+
+  /**
+   * @return Whether the name is an indirect eval.
+   */
+  private boolean isIndirectEval(Node n) {
+    return n.isName() && "eval".equals(n.getString()) &&
+        !n.getBooleanProp(Node.DIRECT_EVAL);
+  }
+
+  /**
+   * Adds a block or expression, substituting a VOID with an empty statement.
+   * This is used for "for (...);" and "if (...);" type statements.
+   *
+   * @param n The node to print.
+   * @param context The context to determine how the node should be printed.
+   */
+  private void addNonEmptyStatement(
+      Node n, Context context, boolean allowNonBlockChild) {
+    Node nodeToProcess = n;
+
+    if (!allowNonBlockChild && !n.isBlock()) {
+      throw new Error("Missing BLOCK child.");
     }
 
-
-    private void visitIncDec(Node node, Node child)
-    {
-        int incrDecrMask = node.getExistingIntProp(Node.INCRDECR_PROP);
-        int childType = child.getType();
-        switch (childType) {
-          case Token.GETVAR : {
-            if (itsData.itsNeedsActivation) Kit.codeBug();
-            int i = scriptOrFn.getIndexForNameNode(child);
-            addVarOp(Icode_VAR_INC_DEC, i);
-            addUint8(incrDecrMask);
-            stackChange(1);
-            break;
-          }
-          case Token.NAME : {
-            String name = child.getString();
-            addStringOp(Icode_NAME_INC_DEC, name);
-            addUint8(incrDecrMask);
-            stackChange(1);
-            break;
-          }
-          case Token.GETPROP : {
-            Node object = child.getFirstChild();
-            visitExpression(object, 0);
-            String property = object.getNext().getString();
-            addStringOp(Icode_PROP_INC_DEC, property);
-            addUint8(incrDecrMask);
-            break;
-          }
-          case Token.GETELEM : {
-            Node object = child.getFirstChild();
-            visitExpression(object, 0);
-            Node index = object.getNext();
-            visitExpression(index, 0);
-            addIcode(Icode_ELEM_INC_DEC);
-            addUint8(incrDecrMask);
-            stackChange(-1);
-            break;
-          }
-          case Token.GET_REF : {
-            Node ref = child.getFirstChild();
-            visitExpression(ref, 0);
-            addIcode(Icode_REF_INC_DEC);
-            addUint8(incrDecrMask);
-            break;
-          }
-          default : {
-            throw badTree(node);
-          }
-        }
-    }
-
-    private void visitLiteral(Node node, Node child)
-    {
-        int type = node.getType();
-        int count;
-        Object[] propertyIds = null;
-        if (type == Token.ARRAYLIT) {
-            count = 0;
-            for (Node n = child; n != null; n = n.getNext()) {
-                ++count;
-            }
-        } else if (type == Token.OBJECTLIT) {
-            propertyIds = (Object[])node.getProp(Node.OBJECT_IDS_PROP);
-            count = propertyIds.length;
+    // Strip unneeded blocks, that is blocks with <2 children unless
+    // the CodePrinter specifically wants to keep them.
+    if (n.isBlock()) {
+      int count = getNonEmptyChildCount(n, 2);
+      if (count == 0) {
+        if (cc.shouldPreserveExtraBlocks()) {
+          cc.beginBlock();
+          cc.endBlock(cc.breakAfterBlockFor(n, context == Context.STATEMENT));
         } else {
-            throw badTree(node);
+          cc.endStatement(true);
         }
-        addIndexOp(Icode_LITERAL_NEW, count);
-        stackChange(2);
-        while (child != null) {
-            int childType = child.getType();
-            if (childType == Token.GET) {
-                visitExpression(child.getFirstChild(), 0);
-                addIcode(Icode_LITERAL_GETTER);
-            } else if (childType == Token.SET) {
-                visitExpression(child.getFirstChild(), 0);
-                addIcode(Icode_LITERAL_SETTER);
+        return;
+      }
+
+      if (count == 1) {
+        // Hack around a couple of browser bugs:
+        //   Safari needs a block around function declarations.
+        //   IE6/7 needs a block around DOs.
+        Node firstAndOnlyChild = getFirstNonEmptyChild(n);
+        boolean alwaysWrapInBlock = cc.shouldPreserveExtraBlocks();
+        if (alwaysWrapInBlock || isOneExactlyFunctionOrDo(firstAndOnlyChild)) {
+          cc.beginBlock();
+          add(firstAndOnlyChild, Context.STATEMENT);
+          cc.maybeLineBreak();
+          cc.endBlock(cc.breakAfterBlockFor(n, context == Context.STATEMENT));
+          return;
+        } else {
+          // Continue with the only child.
+          nodeToProcess = firstAndOnlyChild;
+        }
+      }
+
+      if (count > 1) {
+        context = Context.PRESERVE_BLOCK;
+      }
+    }
+
+    if (nodeToProcess.isEmpty()) {
+      cc.endStatement(true);
+    } else {
+      add(nodeToProcess, context);
+
+      // VAR doesn't include ';' since it gets used in expressions - so any
+      // VAR in a statement context needs a call to endStatement() here.
+      if (nodeToProcess.isVar()) {
+        cc.endStatement();
+      }
+    }
+  }
+
+  /**
+   * @return Whether the Node is a DO or FUNCTION (with or without
+   * labels).
+   */
+  private boolean isOneExactlyFunctionOrDo(Node n) {
+    if (n.isLabel()) {
+      Node labeledStatement = n.getLastChild();
+      if (!labeledStatement.isBlock()) {
+        return isOneExactlyFunctionOrDo(labeledStatement);
+      } else {
+        // For labels with block children, we need to ensure that a
+        // labeled FUNCTION or DO isn't generated when extraneous BLOCKs
+        // are skipped.
+        if (getNonEmptyChildCount(n, 2) == 1) {
+          return isOneExactlyFunctionOrDo(getFirstNonEmptyChild(n));
+        } else {
+          // Either a empty statement or an block with more than one child,
+          // way it isn't a FUNCTION or DO.
+          return false;
+        }
+      }
+    } else {
+      return (n.isFunction() || n.isDo());
+    }
+  }
+
+  private void addExpr(Node n, int minPrecedence, Context context) {
+    if ((NodeUtil.precedence(n.getType()) < minPrecedence) ||
+        ((context == Context.IN_FOR_INIT_CLAUSE) && n.isIn())){
+      add("(");
+      add(n, Context.OTHER);
+      add(")");
+    } else {
+      add(n, context);
+    }
+  }
+
+  void addList(Node firstInList) {
+    addList(firstInList, true, Context.OTHER);
+  }
+
+  void addList(Node firstInList, boolean isArrayOrFunctionArgument) {
+    addList(firstInList, isArrayOrFunctionArgument, Context.OTHER);
+  }
+
+  void addList(Node firstInList, boolean isArrayOrFunctionArgument,
+               Context lhsContext) {
+    for (Node n = firstInList; n != null; n = n.getNext()) {
+      boolean isFirst = n == firstInList;
+      if (isFirst) {
+        addExpr(n, isArrayOrFunctionArgument ? 1 : 0, lhsContext);
+      } else {
+        cc.listSeparator();
+        addExpr(n, isArrayOrFunctionArgument ? 1 : 0,
+            getContextForNoInOperator(lhsContext));
+      }
+    }
+  }
+
+  /**
+   * This function adds a comma-separated list as is specified by an ARRAYLIT
+   * node with the associated skipIndexes array.  This is a space optimization
+   * since we avoid creating a whole Node object for each empty array literal
+   * slot.
+   * @param firstInList The first in the node list (chained through the next
+   * property).
+   */
+  void addArrayList(Node firstInList) {
+    boolean lastWasEmpty = false;
+    for (Node n = firstInList; n != null; n = n.getNext()) {
+      if (n != firstInList) {
+        cc.listSeparator();
+      }
+      addExpr(n, 1, Context.OTHER);
+      lastWasEmpty = n.isEmpty();
+    }
+
+    if (lastWasEmpty) {
+      cc.listSeparator();
+    }
+  }
+
+  void addCaseBody(Node caseBody) {
+    cc.beginCaseBody();
+    add(caseBody);
+    cc.endCaseBody();
+  }
+
+  void addAllSiblings(Node n) {
+    for (Node c = n; c != null; c = c.getNext()) {
+      add(c);
+    }
+  }
+
+  /** Outputs a JS string, using the optimal (single/double) quote character */
+  private void addJsString(Node n) {
+    String s = n.getString();
+    boolean useSlashV = n.getBooleanProp(Node.SLASH_V);
+    if (useSlashV) {
+      add(jsString(n.getString(), useSlashV));
+    } else {
+      String cached = escapedJsStrings.get(s);
+      if (cached == null) {
+        cached = jsString(n.getString(), useSlashV);
+        escapedJsStrings.put(s, cached);
+      }
+      add(cached);
+    }
+  }
+
+  private String jsString(String s, boolean useSlashV) {
+    int singleq = 0, doubleq = 0;
+
+    // could count the quotes and pick the optimal quote character
+    for (int i = 0; i < s.length(); i++) {
+      switch (s.charAt(i)) {
+        case '"': doubleq++; break;
+        case '\'': singleq++; break;
+      }
+    }
+
+    String doublequote, singlequote;
+    char quote;
+    if (preferSingleQuotes ?
+        (singleq <= doubleq) : (singleq < doubleq)) {
+      // more double quotes so enclose in single quotes.
+      quote = '\'';
+      doublequote = "\"";
+      singlequote = "\\\'";
+    } else {
+      // more single quotes so escape the doubles
+      quote = '\"';
+      doublequote = "\\\"";
+      singlequote = "\'";
+    }
+
+    return strEscape(s, quote, doublequote, singlequote, "\\\\",
+        outputCharsetEncoder, useSlashV, false);
+  }
+
+  /** Escapes regular expression */
+  String regexpEscape(String s, CharsetEncoder outputCharsetEncoder) {
+    return strEscape(s, '/', "\"", "'", "\\", outputCharsetEncoder, false, true);
+  }
+
+  /**
+   * Escapes the given string to a double quoted (") JavaScript/JSON string
+   */
+  String escapeToDoubleQuotedJsString(String s) {
+    return strEscape(s, '"',  "\\\"", "\'", "\\\\", null, false, false);
+  }
+
+  /* If the user doesn't want to specify an output charset encoder, assume
+     they want Latin/ASCII characters only.
+   */
+  String regexpEscape(String s) {
+    return regexpEscape(s, null);
+  }
+
+  /** Helper to escape JavaScript string as well as regular expression */
+  private String strEscape(
+      String s,
+      char quote,
+      String doublequoteEscape,
+      String singlequoteEscape,
+      String backslashEscape,
+      CharsetEncoder outputCharsetEncoder,
+      boolean useSlashV,
+      boolean isRegexp) {
+    StringBuilder sb = new StringBuilder(s.length() + 2);
+    sb.append(quote);
+    for (int i = 0; i < s.length(); i++) {
+      char c = s.charAt(i);
+      switch (c) {
+        case '\0': sb.append("\\x00"); break;
+        case '\u000B':
+          if (useSlashV) {
+            sb.append("\\v");
+          } else {
+            sb.append("\\x0B");
+          }
+          break;
+        // From the SingleEscapeCharacter grammar production.
+        case '\b': sb.append("\\b"); break;
+        case '\f': sb.append("\\f"); break;
+        case '\n': sb.append("\\n"); break;
+        case '\r': sb.append("\\r"); break;
+        case '\t': sb.append("\\t"); break;
+        case '\\': sb.append(backslashEscape); break;
+        case '\"': sb.append(doublequoteEscape); break;
+        case '\'': sb.append(singlequoteEscape); break;
+
+        // From LineTerminators (ES5 Section 7.3, Table 3)
+        case '\u2028': sb.append("\\u2028"); break;
+        case '\u2029': sb.append("\\u2029"); break;
+
+        case '=':
+          // '=' is a syntactically signficant regexp character.
+          if (trustedStrings || isRegexp) {
+            sb.append(c);
+          } else {
+            sb.append("\\x3d");
+          }
+          break;
+
+        case '&':
+          if (trustedStrings || isRegexp) {
+            sb.append(c);
+          } else {
+            sb.append("\\x26");
+          }
+          break;
+
+        case '>':
+          if (!trustedStrings && !isRegexp) {
+            sb.append(GT_ESCAPED);
+            break;
+          }
+
+          // Break --> into --\> or ]]> into ]]\>
+          //
+          // This is just to prevent developers from shooting themselves in the
+          // foot, and does not provide the level of security that you get
+          // with trustedString == false.
+          if (i >= 2 &&
+              ((s.charAt(i - 1) == '-' && s.charAt(i - 2) == '-') ||
+               (s.charAt(i - 1) == ']' && s.charAt(i - 2) == ']'))) {
+            sb.append(GT_ESCAPED);
+          } else {
+            sb.append(c);
+          }
+          break;
+        case '<':
+          if (!trustedStrings && !isRegexp) {
+            sb.append(LT_ESCAPED);
+            break;
+          }
+
+          // Break </script into <\/script
+          // As above, this is just to prevent developers from doing this
+          // accidentally.
+          final String endScript = "/script";
+
+          // Break <!-- into <\!--
+          final String startComment = "!--";
+
+          if (s.regionMatches(true, i + 1, endScript, 0,
+                              endScript.length())) {
+            sb.append(LT_ESCAPED);
+          } else if (s.regionMatches(false, i + 1, startComment, 0,
+                                     startComment.length())) {
+            sb.append(LT_ESCAPED);
+          } else {
+            sb.append(c);
+          }
+          break;
+        default:
+          // If we're given an outputCharsetEncoder, then check if the
+          //  character can be represented in this character set.
+          if (outputCharsetEncoder != null) {
+            if (outputCharsetEncoder.canEncode(c)) {
+              sb.append(c);
             } else {
-                visitExpression(child, 0);
-                addIcode(Icode_LITERAL_SET);
+              // Unicode-escape the character.
+              appendHexJavaScriptRepresentation(sb, c);
             }
-            stackChange(-1);
-            child = child.getNext();
-        }
-        if (type == Token.ARRAYLIT) {
-            int[] skipIndexes = (int[])node.getProp(Node.SKIP_INDEXES_PROP);
-            if (skipIndexes == null) {
-                addToken(Token.ARRAYLIT);
+          } else {
+            // No charsetEncoder provided - pass straight Latin characters
+            // through, and escape the rest.  Doing the explicit character
+            // check is measurably faster than using the CharsetEncoder.
+            if (c > 0x1f && c < 0x7f) {
+              sb.append(c);
             } else {
-                int index = literalIds.size();
-                literalIds.add(skipIndexes);
-                addIndexOp(Icode_SPARE_ARRAYLIT, index);
+              // Other characters can be misinterpreted by some JS parsers,
+              // or perhaps mangled by proxies along the way,
+              // so we play it safe and Unicode escape them.
+              appendHexJavaScriptRepresentation(sb, c);
             }
-        } else {
-            int index = literalIds.size();
-            literalIds.add(propertyIds);
-            addIndexOp(Token.OBJECTLIT, index);
+          }
+      }
+    }
+    sb.append(quote);
+    return sb.toString();
+  }
+
+  static String identifierEscape(String s) {
+    // First check if escaping is needed at all -- in most cases it isn't.
+    if (NodeUtil.isLatin(s)) {
+      return s;
+    }
+
+    // Now going through the string to escape non-Latin characters if needed.
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < s.length(); i++) {
+      char c = s.charAt(i);
+      // Identifiers should always go to Latin1/ ASCII characters because
+      // different browser's rules for valid identifier characters are
+      // crazy.
+      if (c > 0x1F && c < 0x7F) {
+        sb.append(c);
+      } else {
+        appendHexJavaScriptRepresentation(sb, c);
+      }
+    }
+    return sb.toString();
+  }
+  /**
+   * @param maxCount The maximum number of children to look for.
+   * @return The number of children of this node that are non empty up to
+   * maxCount.
+   */
+  private static int getNonEmptyChildCount(Node n, int maxCount) {
+    int i = 0;
+    Node c = n.getFirstChild();
+    for (; c != null && i < maxCount; c = c.getNext()) {
+      if (c.isBlock()) {
+        i += getNonEmptyChildCount(c, maxCount - i);
+      } else if (!c.isEmpty()) {
+        i++;
+      }
+    }
+    return i;
+  }
+
+  /** Gets the first non-empty child of the given node. */
+  private static Node getFirstNonEmptyChild(Node n) {
+    for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+      if (c.isBlock()) {
+        Node result = getFirstNonEmptyChild(c);
+        if (result != null) {
+          return result;
         }
-        stackChange(-1);
+      } else if (!c.isEmpty()) {
+        return c;
+      }
     }
+    return null;
+  }
 
-    private void visitArrayComprehension(Node node, Node initStmt, Node expr)
-    {
-        // A bit of a hack: array comprehensions are implemented using
-        // statement nodes for the iteration, yet they appear in an
-        // expression context. So we pass the current stack depth to
-        // visitStatement so it can check that the depth is not altered
-        // by statements.
-        visitStatement(initStmt, stackDepth);
-        visitExpression(expr, 0);
+  // Information on the current context. Used for disambiguating special cases.
+  // For example, a "{" could indicate the start of an object literal or a
+  // block, depending on the current context.
+  enum Context {
+    STATEMENT,
+    BEFORE_DANGLING_ELSE, // a hack to resolve the else-clause ambiguity
+    START_OF_EXPR,
+    PRESERVE_BLOCK,
+    // Are we inside the init clause of a for loop?  If so, the containing
+    // expression can't contain an in operator.  Pass this context flag down
+    // until we reach expressions which no longer have the limitation.
+    IN_FOR_INIT_CLAUSE,
+    OTHER
+  }
+
+  private Context getContextForNonEmptyExpression(Context currentContext) {
+    return currentContext == Context.BEFORE_DANGLING_ELSE ?
+        Context.BEFORE_DANGLING_ELSE : Context.OTHER;
+  }
+
+  /**
+   * If we're in a IN_FOR_INIT_CLAUSE, we can't permit in operators in the
+   * expression.  Pass on the IN_FOR_INIT_CLAUSE flag through subexpressions.
+   */
+  private  Context getContextForNoInOperator(Context context) {
+    return (context == Context.IN_FOR_INIT_CLAUSE
+        ? Context.IN_FOR_INIT_CLAUSE : Context.OTHER);
+  }
+
+  /**
+   * @see #appendHexJavaScriptRepresentation(int, Appendable)
+   */
+  private static void appendHexJavaScriptRepresentation(
+      StringBuilder sb, char c) {
+    try {
+      appendHexJavaScriptRepresentation(c, sb);
+    } catch (IOException ex) {
+      // StringBuilder does not throw IOException.
+      throw new RuntimeException(ex);
     }
+  }
 
-    private int getLocalBlockRef(Node node)
-    {
-        Node localBlock = (Node)node.getProp(Node.LOCAL_BLOCK_PROP);
-        return localBlock.getExistingIntProp(Node.LOCAL_PROP);
+  /**
+   * Returns a JavaScript representation of the character in a hex escaped
+   * format.
+   *
+   * @param codePoint The code point to append.
+   * @param out The buffer to which the hex representation should be appended.
+   */
+  private static void appendHexJavaScriptRepresentation(
+      int codePoint, Appendable out)
+      throws IOException {
+    if (Character.isSupplementaryCodePoint(codePoint)) {
+      // Handle supplementary Unicode values which are not representable in
+      // JavaScript.  We deal with these by escaping them as two 4B sequences
+      // so that they will round-trip properly when sent from Java to JavaScript
+      // and back.
+      char[] surrogates = Character.toChars(codePoint);
+      appendHexJavaScriptRepresentation(surrogates[0], out);
+      appendHexJavaScriptRepresentation(surrogates[1], out);
+      return;
     }
-
-    private int getTargetLabel(Node target)
-    {
-        int label = target.labelId();
-        if (label != -1) {
-            return label;
-        }
-        label = labelTableTop;
-        if (labelTable == null || label == labelTable.length) {
-            if (labelTable == null) {
-                labelTable = new int[MIN_LABEL_TABLE_SIZE];
-            }else {
-                int[] tmp = new int[labelTable.length * 2];
-                System.arraycopy(labelTable, 0, tmp, 0, label);
-                labelTable = tmp;
-            }
-        }
-        labelTableTop = label + 1;
-        labelTable[label] = -1;
-
-        target.labelId(label);
-        return label;
-    }
-
-    private void markTargetLabel(Node target)
-    {
-        int label = getTargetLabel(target);
-        if (labelTable[label] != -1) {
-            // Can mark label only once
-            Kit.codeBug();
-        }
-        labelTable[label] = iCodeTop;
-    }
-
-    private void addGoto(Node target, int gotoOp)
-    {
-        int label = getTargetLabel(target);
-        if (!(label < labelTableTop)) Kit.codeBug();
-        int targetPC = labelTable[label];
-
-        if (targetPC != -1) {
-            addBackwardGoto(gotoOp, targetPC);
-        } else {
-            int gotoPC = iCodeTop;
-            addGotoOp(gotoOp);
-            int top = fixupTableTop;
-            if (fixupTable == null || top == fixupTable.length) {
-                if (fixupTable == null) {
-                    fixupTable = new long[MIN_FIXUP_TABLE_SIZE];
-                } else {
-                    long[] tmp = new long[fixupTable.length * 2];
-                    System.arraycopy(fixupTable, 0, tmp, 0, top);
-                    fixupTable = tmp;
-                }
-            }
-            fixupTableTop = top + 1;
-            fixupTable[top] = ((long)label << 32) | gotoPC;
-        }
-    }
-
-    private void fixLabelGotos()
-    {
-        for (int i = 0; i < fixupTableTop; i++) {
-            long fixup = fixupTable[i];
-            int label = (int)(fixup >> 32);
-            int jumpSource = (int)fixup;
-            int pc = labelTable[label];
-            if (pc == -1) {
-                // Unlocated label
-                throw Kit.codeBug();
-            }
-            resolveGoto(jumpSource, pc);
-        }
-        fixupTableTop = 0;
-    }
-
-    private void addBackwardGoto(int gotoOp, int jumpPC)
-    {
-        int fromPC = iCodeTop;
-        // Ensure that this is a jump backward
-        if (fromPC <= jumpPC) throw Kit.codeBug();
-        addGotoOp(gotoOp);
-        resolveGoto(fromPC, jumpPC);
-    }
-
-    private void resolveForwardGoto(int fromPC)
-    {
-        // Ensure that forward jump skips at least self bytecode
-        if (iCodeTop < fromPC + 3) throw Kit.codeBug();
-        resolveGoto(fromPC, iCodeTop);
-    }
-
-    private void resolveGoto(int fromPC, int jumpPC)
-    {
-        int offset = jumpPC - fromPC;
-        // Ensure that jumps do not overlap
-        if (0 <= offset && offset <= 2) throw Kit.codeBug();
-        int offsetSite = fromPC + 1;
-        if (offset != (short)offset) {
-            if (itsData.longJumps == null) {
-                itsData.longJumps = new UintMap();
-            }
-            itsData.longJumps.put(offsetSite, jumpPC);
-            offset = 0;
-        }
-        byte[] array = itsData.itsICode;
-        array[offsetSite] = (byte)(offset >> 8);
-        array[offsetSite + 1] = (byte)offset;
-    }
-
-    private void addToken(int token)
-    {
-        if (!Icode.validTokenCode(token)) throw Kit.codeBug();
-        addUint8(token);
-    }
-
-    private void addIcode(int icode)
-    {
-        if (!Icode.validIcode(icode)) throw Kit.codeBug();
-        // Write negative icode as uint8 bits
-        addUint8(icode & 0xFF);
-    }
-
-    private void addUint8(int value)
-    {
-        if ((value & ~0xFF) != 0) throw Kit.codeBug();
-        byte[] array = itsData.itsICode;
-        int top = iCodeTop;
-        if (top == array.length) {
-            array = increaseICodeCapacity(1);
-        }
-        array[top] = (byte)value;
-        iCodeTop = top + 1;
-    }
-
-    private void addUint16(int value)
-    {
-        if ((value & ~0xFFFF) != 0) throw Kit.codeBug();
-        byte[] array = itsData.itsICode;
-        int top = iCodeTop;
-        if (top + 2 > array.length) {
-            array = increaseICodeCapacity(2);
-        }
-        array[top] = (byte)(value >>> 8);
-        array[top + 1] = (byte)value;
-        iCodeTop = top + 2;
-    }
-
-    private void addInt(int i)
-    {
-        byte[] array = itsData.itsICode;
-        int top = iCodeTop;
-        if (top + 4 > array.length) {
-            array = increaseICodeCapacity(4);
-        }
-        array[top] = (byte)(i >>> 24);
-        array[top + 1] = (byte)(i >>> 16);
-        array[top + 2] = (byte)(i >>> 8);
-        array[top + 3] = (byte)i;
-        iCodeTop = top + 4;
-    }
-
-    private int getDoubleIndex(double num)
-    {
-        int index = doubleTableTop;
-        if (index == 0) {
-            itsData.itsDoubleTable = new double[64];
-        } else if (itsData.itsDoubleTable.length == index) {
-            double[] na = new double[index * 2];
-            System.arraycopy(itsData.itsDoubleTable, 0, na, 0, index);
-            itsData.itsDoubleTable = na;
-        }
-        itsData.itsDoubleTable[index] = num;
-        doubleTableTop = index + 1;
-        return index;
-    }
-
-    private void addGotoOp(int gotoOp)
-    {
-        byte[] array = itsData.itsICode;
-        int top = iCodeTop;
-        if (top + 3 > array.length) {
-            array = increaseICodeCapacity(3);
-        }
-        array[top] = (byte)gotoOp;
-        // Offset would written later
-        iCodeTop = top + 1 + 2;
-    }
-
-    private void addVarOp(int op, int varIndex)
-    {
-        switch (op) {
-          case Token.SETCONSTVAR:
-            if (varIndex < 128) {
-                addIcode(Icode_SETCONSTVAR1);
-                addUint8(varIndex);
-                return;
-            }
-            addIndexOp(Icode_SETCONSTVAR, varIndex);
-            return;
-          case Token.GETVAR:
-          case Token.SETVAR:
-            if (varIndex < 128) {
-                addIcode(op == Token.GETVAR ? Icode_GETVAR1 : Icode_SETVAR1);
-                addUint8(varIndex);
-                return;
-            }
-            // fallthrough
-          case Icode_VAR_INC_DEC:
-            addIndexOp(op, varIndex);
-            return;
-        }
-        throw Kit.codeBug();
-    }
-
-    private void addStringOp(int op, String str)
-    {
-        addStringPrefix(str);
-        if (Icode.validIcode(op)) {
-            addIcode(op);
-        } else {
-            addToken(op);
-        }
-    }
-
-    private void addIndexOp(int op, int index)
-    {
-        addIndexPrefix(index);
-        if (Icode.validIcode(op)) {
-            addIcode(op);
-        } else {
-            addToken(op);
-        }
-    }
-
-    private void addStringPrefix(String str)
-    {
-        int index = strings.get(str, -1);
-        if (index == -1) {
-            index = strings.size();
-            strings.put(str, index);
-        }
-        if (index < 4) {
-            addIcode(Icode_REG_STR_C0 - index);
-        } else if (index <= 0xFF) {
-            addIcode(Icode_REG_STR1);
-            addUint8(index);
-         } else if (index <= 0xFFFF) {
-            addIcode(Icode_REG_STR2);
-            addUint16(index);
-         } else {
-            addIcode(Icode_REG_STR4);
-            addInt(index);
-        }
-    }
-
-    private void addIndexPrefix(int index)
-    {
-        if (index < 0) Kit.codeBug();
-        if (index < 6) {
-            addIcode(Icode_REG_IND_C0 - index);
-        } else if (index <= 0xFF) {
-            addIcode(Icode_REG_IND1);
-            addUint8(index);
-         } else if (index <= 0xFFFF) {
-            addIcode(Icode_REG_IND2);
-            addUint16(index);
-         } else {
-            addIcode(Icode_REG_IND4);
-            addInt(index);
-        }
-    }
-
-    private void addExceptionHandler(int icodeStart, int icodeEnd,
-                                     int handlerStart, boolean isFinally,
-                                     int exceptionObjectLocal, int scopeLocal)
-    {
-        int top = exceptionTableTop;
-        int[] table = itsData.itsExceptionTable;
-        if (table == null) {
-            if (top != 0) Kit.codeBug();
-            table = new int[Interpreter.EXCEPTION_SLOT_SIZE * 2];
-            itsData.itsExceptionTable = table;
-        } else if (table.length == top) {
-            table = new int[table.length * 2];
-            System.arraycopy(itsData.itsExceptionTable, 0, table, 0, top);
-            itsData.itsExceptionTable = table;
-        }
-        table[top + Interpreter.EXCEPTION_TRY_START_SLOT]  = icodeStart;
-        table[top + Interpreter.EXCEPTION_TRY_END_SLOT]    = icodeEnd;
-        table[top + Interpreter.EXCEPTION_HANDLER_SLOT]    = handlerStart;
-        table[top + Interpreter.EXCEPTION_TYPE_SLOT]     = isFinally ? 1 : 0;
-        table[top + Interpreter.EXCEPTION_LOCAL_SLOT]    = exceptionObjectLocal;
-        table[top + Interpreter.EXCEPTION_SCOPE_SLOT]    = scopeLocal;
-
-        exceptionTableTop = top + Interpreter.EXCEPTION_SLOT_SIZE;
-    }
-
-    private byte[] increaseICodeCapacity(int extraSize)
-    {
-        int capacity = itsData.itsICode.length;
-        int top = iCodeTop;
-        if (top + extraSize <= capacity) throw Kit.codeBug();
-        capacity *= 2;
-        if (top + extraSize > capacity) {
-            capacity = top + extraSize;
-        }
-        byte[] array = new byte[capacity];
-        System.arraycopy(itsData.itsICode, 0, array, 0, top);
-        itsData.itsICode = array;
-        return array;
-    }
-
-    private void stackChange(int change)
-    {
-        if (change <= 0) {
-            stackDepth += change;
-        } else {
-            int newDepth = stackDepth + change;
-            if (newDepth > itsData.itsMaxStack) {
-                itsData.itsMaxStack = newDepth;
-            }
-            stackDepth = newDepth;
-        }
-    }
-
-    private int allocLocal()
-    {
-        int localSlot = localTop;
-        ++localTop;
-        if (localTop > itsData.itsMaxLocals) {
-            itsData.itsMaxLocals = localTop;
-        }
-        return localSlot;
-    }
-
-    private void releaseLocal(int localSlot)
-    {
-        --localTop;
-        if (localSlot != localTop) Kit.codeBug();
-    }
+    out.append("\\u")
+        .append(HEX_CHARS[(codePoint >>> 12) & 0xf])
+        .append(HEX_CHARS[(codePoint >>> 8) & 0xf])
+        .append(HEX_CHARS[(codePoint >>> 4) & 0xf])
+        .append(HEX_CHARS[codePoint & 0xf]);
+  }
 }

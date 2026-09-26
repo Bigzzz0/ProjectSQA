@@ -1,568 +1,796 @@
-package org.mozilla.javascript;
+package com.google.javascript.jscomp.parsing;
+
+/*
+ * [Branch & Defect Analysis Matrix]
+ * Target Class: com.google.javascript.jscomp.parsing.IRFactory
+ * Benchmark Ground Truth Defect: Defects4J Closure-81 / ParserTest::testForEach
+ * 
+ * Major Decision Branches & Condition Matrix:
+ * 1. ForInLoop & Language Extensions (Defect Hotspot):
+ *    - loopNode.isForEach() == true  --> MUST trigger "unsupported language extension: for each"
+ *                                        error and synthesize Token.EXPR_RESULT bare minimum.
+ *    - loopNode.isForEach() == false --> Standard Token.FOR AST generation.
+ * 2. Directive Parsing (parseDirectives):
+ *    - Single / Multiple "use strict" directives encoded onto Script/Function Node and removed.
+ *    - Non-directive expressions preserved.
+ * 3. Reserved Keywords Policy across Language Modes:
+ *    - ECMASCRIPT3: reservedKeywords == null.
+ *    - ECMASCRIPT5: ES5_RESERVED_KEYWORDS checked on Name identifiers.
+ *    - ECMASCRIPT5_STRICT: ES5_STRICT_RESERVED_KEYWORDS checked.
+ * 4. Validation Guards:
+ *    - Assignment targets: NAME, GETPROP, GETELEM allowed; others trigger "invalid assignment target".
+ *    - Increment/Decrement operands: invalid targets trigger "invalid increment/decrement target".
+ *    - Delete operands: only properties and names allowed; others trigger "Invalid delete operand...".
+ *    - Unnamed function statements (functionType != FUNCTION_EXPRESSION) trigger "unnamed function statement".
+ * 5. ES5 Object Literal Getters / Setters:
+ *    - LanguageMode.ECMASCRIPT3 triggers IE warnings ("getters/setters are not supported in Internet Explorer").
+ *    - Getter with parameters triggers "getters may not have parameters".
+ *    - Setter with != 1 parameter triggers "setters must have exactly one parameter".
+ * 6. Lexical & Literal Transformations:
+ *    - Unary NEG on NumberLiteral folds directly into negated double value.
+ *    - StringLiteral with '\u000B' and "\v" in source maps to Node.SLASH_V property.
+ *    - Suspicious block comments (/* @ or \n * @) trigger SUSPICIOUS_COMMENT_WARNING.
+ */
 
 import org.junit.Test;
-import org.mozilla.javascript.ast.*;
-
-import java.util.List;
-
 import static org.junit.Assert.*;
 
-/* [Branch & Defect Analysis Matrix]
- * Target Class: org.mozilla.javascript.IRFactory
- *
- * Decision / Branch Matrix Covered:
- * 1. transformTree(AstRoot): Strict mode handling, encoded source generation (isGeneratingSource = true/false),
- *    offset tracking, single & multi-statement script transformation.
- * 2. transform(AstNode) Switch Dispatch:
- *    - ARRAYCOMP (ArrayComprehension, multiple loops, for each, destructuring iterator, filter presence/absence)
- *    - ARRAYLIT (ArrayLiteral: empty, with elements, destructuring flag, trailing commas, skip indexes)
- *    - BLOCK (plain Block, Scope node pushing/popping)
- *    - BREAK / CONTINUE (labeled and unlabeled)
- *    - CALL (FunctionCall: 0 args, 1 arg, multiple args, eval / With special call triggers)
- *    - DO (DoLoop: body, condition)
- *    - FOR (ForLoop with let/var/expr initializer, condition, increment; ForInLoop standard and for-each)
- *    - FUNCTION (function statement, expression, closure, getters, setters, activation requirements)
- *    - GETELEM / GETPROP (ElementGet, PropertyGet, special properties like __proto__)
- *    - HOOK (ConditionalExpression: normal, constant folded ALWAYS_TRUE, constant folded ALWAYS_FALSE)
- *    - IF (IfStatement: then only, then-else, constant folding for true/false)
- *    - LITERALS (TRUE, FALSE, THIS, NULL, DEBUGGER, NUMBER, STRING, REGEXP)
- *    - NEW (NewExpression: with args, without args, with initializer)
- *    - OBJECTLIT (ObjectLiteral: empty, normal prop, getter/setter, number/string/name key, destructuring)
- *    - RETURN / YIELD (with value, without value, expression closure)
- *    - SWITCH (SwitchStatement: with cases, default case, mixed order, empty statements)
- *    - THROW / TRY (TryStatement: catch, catch-if condition, finally, try-catch-finally, empty try block)
- *    - UNARY (INC, DEC, NOT, BITNOT, NEG, TYPEOF, DELPROP on names, properties, elements, refs)
- *    - VARIABLES (VariableDeclaration: VAR, LET, CONST, destructuring var assignments, uninitialized)
- *    - XML AST nodes (XmlLiteral, XmlMemberGet, XmlRef, XmlElemRef, XmlPropRef, DefaultXmlNamespace)
- *    - Fallback / Unrecognized AstNode (IllegalArgumentException verification)
- *
- * Defect Zone:
- * - Closure Compiler / Rhino testForEach target: ForInLoop with isForEach() = true, iterating over object / array,
- *   verifying ENUM_INIT_VALUES vs ENUM_INIT_KEYS, scoping and destructured variable bindings in for-each loops.
- */
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+import com.google.javascript.rhino.head.CompilerEnvirons;
+import com.google.javascript.rhino.head.ErrorReporter;
+import com.google.javascript.rhino.head.EvaluatorException;
+import com.google.javascript.rhino.head.Parser;
+import com.google.javascript.rhino.head.Token.CommentType;
+import com.google.javascript.rhino.head.ast.*;
+import com.google.javascript.jscomp.parsing.Config;
+import com.google.javascript.jscomp.parsing.Config.LanguageMode;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+
 public class IRFactoryGeminiTest {
 
-    private ScriptNode parseAndTransform(String code) {
-        return parseAndTransform(code, Context.VERSION_1_8, true);
+  private static class RecordingErrorReporter implements ErrorReporter {
+    final List<String> warnings = new ArrayList<>();
+    final List<String> errors = new ArrayList<>();
+
+    @Override
+    public void warning(String message, String sourceName, int line, String lineSource, int lineOffset) {
+      warnings.add(message);
     }
 
-    private ScriptNode parseAndTransform(String code, int version, boolean generatingSource) {
-        CompilerEnvirons env = new CompilerEnvirons();
-        env.setLanguageVersion(version);
-        env.setGeneratingSource(generatingSource);
-        env.setReservedKeywordAsIdentifier(true);
-        env.setXmlAvailable(true);
-
-        IRFactory factory = new IRFactory(env);
-        AstRoot root = factory.parse(code, "test.js", 1);
-        return factory.transformTree(root);
+    @Override
+    public void error(String message, String sourceName, int line, String lineSource, int lineOffset) {
+      errors.add(message);
     }
 
-    // =========================================================================
-    // PARTITION A: Core Functional Logic & State Transitions
-    // =========================================================================
-
-    @Test(timeout = 4000)
-    public void testTransformTreeStrictModeAndSourceGeneration() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        env.setGeneratingSource(true);
-        IRFactory factory = new IRFactory(env);
-        AstRoot root = factory.parse("'use strict'; var x = 10;", "strict.js", 1);
-
-        ScriptNode script = factory.transformTree(root);
-        assertNotNull(script);
-        assertEquals(Token.SCRIPT, script.getType());
-        assertNotNull(script.getEncodedSource());
-        assertTrue(script.isInStrictMode());
+    @Override
+    public EvaluatorException runtimeError(String message, String sourceName, int line, String lineSource, int lineOffset) {
+      errors.add(message);
+      return new EvaluatorException(message, sourceName, line, lineSource, lineOffset);
     }
+  }
 
-    @Test(timeout = 4000)
-    public void testTransformTreeWithoutSourceGeneration() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        env.setGeneratingSource(false);
-        IRFactory factory = new IRFactory(env);
-        AstRoot root = factory.parse("var a = 1;", "nosource.js", 1);
-
-        ScriptNode script = factory.transformTree(root);
-        assertNotNull(script);
-        assertEquals(Token.SCRIPT, script.getType());
-        assertNull(script.getEncodedSource());
-    }
-
-    @Test(timeout = 4000)
-    public void testLiteralsAndIdentifiers() {
-        ScriptNode script = parseAndTransform("true; false; null; this; debugger; 123.45; 'hello'; /abc/g;");
-        assertNotNull(script);
-
-        Node first = script.getFirstChild();
-        assertNotNull(first);
-        assertEquals(Token.EXPR_RESULT, first.getType());
-        assertEquals(Token.TRUE, first.getFirstChild().getType());
-
-        Node second = first.getNext();
-        assertEquals(Token.FALSE, second.getFirstChild().getType());
-
-        Node third = second.getNext();
-        assertEquals(Token.NULL, third.getFirstChild().getType());
-
-        Node fourth = third.getNext();
-        assertEquals(Token.THIS, fourth.getFirstChild().getType());
-
-        Node debuggerNode = fourth.getNext();
-        assertEquals(Token.DEBUGGER, debuggerNode.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testBinaryExpressionsConstantFolding() {
-        // String + Number, Number + Number, Number - Number, 0 - x, x - 0, 1 * x, x * 1, x / 1
-        ScriptNode script = parseAndTransform(
-            "var a = 's' + 1; " +
-            "var b = 2 + 3; " +
-            "var c = 10 - 4; " +
-            "var d = 0 - a; " +
-            "var e = a - 0; " +
-            "var f = 1 * a; " +
-            "var g = a * 1; " +
-            "var h = a / 1; " +
-            "var i = 10 / 2;"
-        );
-        assertNotNull(script);
-        Node node = script.getFirstChild();
-        assertNotNull(node);
-        assertEquals(Token.VAR, node.getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testLogicalAndOrConstantFolding() {
-        // true && x -> x; false && x -> false; true || x -> true; false || x -> x
-        ScriptNode script = parseAndTransform(
-            "var a = true && 5; " +
-            "var b = false && 5; " +
-            "var c = true || 5; " +
-            "var d = false || 5;"
-        );
-        assertNotNull(script);
-        assertEquals(Token.VAR, script.getFirstChild().getType());
-    }
-
-    @Test(timeout = 4000)
-    public void testUnaryExpressions() {
-        ScriptNode script = parseAndTransform(
-            "var x = 10; " +
-            "+x; -x; ~5; -5; !true; !false; !x; typeof x; typeof(123);"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testDeleteExpressions() {
-        ScriptNode script = parseAndTransform(
-            "var obj = { a: 1, b: 2 }; " +
-            "delete obj.a; " +
-            "delete obj['b']; " +
-            "delete obj; " +
-            "delete foo(); " +
-            "delete 42;"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testIncDecExpressions() {
-        ScriptNode script = parseAndTransform(
-            "var x = 1; " +
-            "x++; ++x; x--; --x; " +
-            "var o = {p: 1}; " +
-            "o.p++; ++o.p; o['p']--; --o['p'];"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testIfElseStatements() {
-        // Conditionals: constant true, constant false, normal variable
-        ScriptNode script = parseAndTransform(
-            "if (true) { var a = 1; } " +
-            "if (false) { var b = 2; } else { var c = 3; } " +
-            "if (false) { var d = 4; } " +
-            "if (a > 0) { var e = 5; } else { var f = 6; }"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testConditionalExpression() {
-        ScriptNode script = parseAndTransform(
-            "var x = true ? 1 : 2; " +
-            "var y = false ? 3 : 4; " +
-            "var z = (x > 0) ? 5 : 6;"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testWhileAndDoWhileLoops() {
-        ScriptNode script = parseAndTransform(
-            "while (true) { break; } " +
-            "do { continue; } while (false);"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testForLoops() {
-        // Classic for-loop, empty parts, for-let loop splitting scope
-        ScriptNode script = parseAndTransform(
-            "for (var i = 0; i < 10; i++) {} " +
-            "for (;;) { break; } " +
-            "for (let j = 0; j < 5; j++) {}"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testSwitchStatementWithCasesAndDefault() {
-        ScriptNode script = parseAndTransform(
-            "switch (x) { " +
-            "  case 1: break; " +
-            "  case 2: var y = 2; " +
-            "  default: var def = 0; break; " +
-            "  case 3: break; " +
-            "}"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testTryCatchFinally() {
-        ScriptNode script = parseAndTransform(
-            "try { throw 'err'; } catch (e) { var handled = e; } " +
-            "try { var x = 1; } finally { var fin = 2; } " +
-            "try { var y = 1; } catch (e if e === 1) { var c1 = 1; } catch (e) { var c2 = 2; } finally { var f2 = 3; }"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testFunctionDeclarationsAndExpressions() {
-        ScriptNode script = parseAndTransform(
-            "function namedFn(a, b) { return a + b; } " +
-            "var anon = function(x) { return x * 2; }; " +
-            "var namedExpr = function inner(n) { return (n <= 1) ? 1 : n * inner(n - 1); }; " +
-            "(function() { eval('1'); With(obj); })();"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testObjectLiteralVariants() {
-        ScriptNode script = parseAndTransform(
-            "var obj = { " +
-            "  normal: 1, " +
-            "  'strKey': 2, " +
-            "  123: 3, " +
-            "  get getter() { return this.normal; }, " +
-            "  set setter(val) { this.normal = val; } " +
-            "};"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testArrayLiteralAndElisions() {
-        ScriptNode script = parseAndTransform("var arr = [1, , 2, , , 3];");
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testArrayComprehensions() {
-        ScriptNode script = parseAndTransform(
-            "var list = [x * 2 for (x in [1, 2, 3]) if (x > 1)]; " +
-            "var multi = [x + y for (x in [1, 2]) for (y in [3, 4])]; " +
-            "var destruct = [a + b for ([a, b] in [[1, 2], [3, 4]])];"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testWithStatement() {
-        ScriptNode script = parseAndTransform("var o = {a: 1}; with (o) { a = 2; }");
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testYieldStatement() {
-        ScriptNode script = parseAndTransform(
-            "function* gen() { " +
-            "  yield 1; " +
-            "  yield; " +
-            "}"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testSpecialPropertiesRef() {
-        ScriptNode script = parseAndTransform("var proto = obj.__proto__;");
-        assertNotNull(script);
-    }
-
-    // =========================================================================
-    // PARTITION B: Boundary Value Analysis (BVA) & Extremes
-    // =========================================================================
-
-    @Test(timeout = 4000)
-    public void testEmptyAstRoot() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        IRFactory factory = new IRFactory(env);
-        AstRoot root = new AstRoot();
-        ScriptNode result = factory.transformTree(root);
-        assertNotNull(result);
-        assertEquals(Token.SCRIPT, result.getType());
-        assertFalse(result.hasChildren());
-    }
-
-    @Test(timeout = 4000)
-    public void testNestedParenthesizedExpressions() {
-        ScriptNode script = parseAndTransform("var val = ((((42))));");
-        assertNotNull(script);
-        Node varNode = script.getFirstChild();
-        Node nameNode = varNode.getFirstChild();
-        Node initNode = nameNode.getFirstChild();
-        assertEquals(Boolean.TRUE, initNode.getProp(Node.PARENTHESIZED_PROP));
-    }
-
-    @Test(timeout = 4000)
-    public void testEmptySwitchStatement() {
-        ScriptNode script = parseAndTransform("switch (val) {}");
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testEmptyTryCatchVariants() {
-        // try block with empty body and empty finally
-        ScriptNode script = parseAndTransform("try {} catch(e) {} finally {}");
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testAssignmentOperators() {
-        ScriptNode script = parseAndTransform(
-            "var x = 10; " +
-            "x += 1; x -= 2; x *= 3; x /= 4; x %= 5; " +
-            "x <<= 1; x >>= 2; x >>>= 3; " +
-            "x &= 4; x ^= 5; x |= 6; " +
-            "var obj = {a: 1}; " +
-            "obj.a += 2; obj['a'] *= 3;"
-        );
-        assertNotNull(script);
-    }
-
-    @Test(timeout = 4000)
-    public void testLabeledBreakAndContinue() {
-        ScriptNode script = parseAndTransform(
-            "outer: for (var i = 0; i < 2; i++) { " +
-            "  inner: for (var j = 0; j < 2; j++) { " +
-            "    if (i === 1) continue outer; " +
-            "    if (j === 1) break inner; " +
-            "  } " +
-            "}"
-        );
-        assertNotNull(script);
-    }
-
-    // =========================================================================
-    // PARTITION C: Defect-Targeted Branch Zone (Defects4J testForEach)
-    // =========================================================================
-
-    /**
-     * Targets defects in `for each` loops (e.g. Defects4J ParserTest::testForEach),
-     * ensuring that:
-     * 1. `for each (var x in y)` creates an ENUM_INIT_VALUES initialization node.
-     * 2. `for each` handles destructuring assignment properly.
-     * 3. Non-foreach `for (var x in y)` creates an ENUM_INIT_KEYS node.
-     */
-    @Test(timeout = 4000)
-    public void testForEachLoopDefectTarget() {
-        ScriptNode script = parseAndTransform(
-            "var items = [10, 20, 30]; " +
-            "var sum = 0; " +
-            "for each (var item in items) { " +
-            "  sum += item; " +
-            "} " +
-            "for (var idx in items) { " +
-            "  sum += idx; " +
-            "}"
-        );
-        assertNotNull(script);
-
-        // Find the local block for the 'for each' statement
-        Node stmt = script.getFirstChild();
-        while (stmt != null && stmt.getType() != Token.LOCAL_BLOCK) {
-            stmt = stmt.getNext();
+  private Config createConfig(LanguageMode mode, boolean isIdeMode, boolean acceptConst) {
+    for (Constructor<?> c : Config.class.getDeclaredConstructors()) {
+      c.setAccessible(true);
+      Class<?>[] pTypes = c.getParameterTypes();
+      Object[] args = new Object[pTypes.length];
+      int boolCount = 0;
+      for (int i = 0; i < pTypes.length; i++) {
+        if (pTypes[i] == Set.class) {
+          args[i] = Collections.emptySet();
+        } else if (pTypes[i] == boolean.class) {
+          if (boolCount == 0) {
+            args[i] = isIdeMode;
+          } else {
+            args[i] = acceptConst;
+          }
+          boolCount++;
+        } else if (pTypes[i] == LanguageMode.class) {
+          args[i] = mode;
+        } else {
+          args[i] = null;
         }
-        assertNotNull("Must find LOCAL_BLOCK containing for-each loop", stmt);
-
-        // Inside LOCAL_BLOCK, the first child should be the LOOP node
-        Node loopNode = stmt.getFirstChild();
-        assertNotNull(loopNode);
-        assertEquals(Token.LOOP, loopNode.getType());
-
-        // First child of loopNode should be the ENUM_INIT_VALUES node because isForEach is true
-        Node initNode = loopNode.getFirstChild();
-        assertNotNull(initNode);
-        assertEquals("for-each should generate ENUM_INIT_VALUES", Token.ENUM_INIT_VALUES, initNode.getType());
-
-        // Now advance to the standard for-in loop
-        stmt = stmt.getNext();
-        while (stmt != null && stmt.getType() != Token.LOCAL_BLOCK) {
-            stmt = stmt.getNext();
-        }
-        assertNotNull("Must find second LOCAL_BLOCK containing standard for-in loop", stmt);
-
-        Node standardLoop = stmt.getFirstChild();
-        Node standardInit = standardLoop.getFirstChild();
-        assertEquals("Standard for-in should generate ENUM_INIT_KEYS", Token.ENUM_INIT_KEYS, standardInit.getType());
+      }
+      try {
+        return (Config) c.newInstance(args);
+      } catch (Exception ignored) {
+      }
     }
+    throw new IllegalStateException("Unable to construct Config instance reflectively.");
+  }
 
-    @Test(timeout = 4000)
-    public void testForEachWithDestructuring() {
-        ScriptNode script = parseAndTransform(
-            "var pairs = [{a: 1}, {a: 2}]; " +
-            "for each (var {a} in pairs) { " +
-            "  var res = a; " +
-            "}"
-        );
-        assertNotNull(script);
+  private Node transformTree(AstRoot root, String sourceString, Config config, ErrorReporter errorReporter) {
+    try {
+      Method m = Class.forName("com.google.javascript.jscomp.parsing.IRFactory")
+          .getDeclaredMethod("transformTree", AstRoot.class,
+              Class.forName("com.google.javascript.rhino.jstype.StaticSourceFile"),
+              String.class, Config.class, ErrorReporter.class);
+      m.setAccessible(true);
+      return (Node) m.invoke(null, root, null, sourceString, config, errorReporter);
+    } catch (InvocationTargetException e) {
+      Throwable target = e.getTargetException();
+      if (target instanceof RuntimeException) {
+        throw (RuntimeException) target;
+      }
+      throw new RuntimeException(target);
+    } catch (Exception e) {
+      throw new RuntimeException(e);
     }
+  }
 
-    @Test(timeout = 4000)
-    public void testArrayComprehensionWithForEach() {
-        ScriptNode script = parseAndTransform(
-            "var vals = [v * 2 for each (v in [10, 20, 30])];"
-        );
-        assertNotNull(script);
-    }
+  // =========================================================================
+  // PARTITION C: DEFECT-TARGETED BRANCH ZONE (Defects4J Closure-81: testForEach)
+  // =========================================================================
 
-    // =========================================================================
-    // PARTITION D: Exception & Defensive Guard Paths
-    // =========================================================================
+  /**
+   * Targets the defect in IRFactory.processForInLoop where loopNode.isForEach()
+   * is not checked and reported. The expected behavior is an explicit error
+   * "unsupported language extension: for each" and returning an EXPR_RESULT.
+   */
+  @Test(timeout = 4000)
+  public void testForEach_TriggersUnsupportedLanguageExtensionDefect() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT3, false, true);
 
-    @Test(timeout = 4000)
-    public void testTransformUnknownAstNodeThrowsException() {
-        IRFactory factory = new IRFactory();
-        AstNode unsupportedNode = new AstNode() {
-            @Override
-            public String toSource(int depth) { return ""; }
-            @Override
-            public int getType() { return 999999; /* Unknown token */ }
-        };
+    AstRoot root = new AstRoot();
+    ForInLoop forEachLoop = new ForInLoop();
+    forEachLoop.setIsForEach(true);
+    forEachLoop.setLineno(1);
 
-        try {
-            factory.transform(unsupportedNode);
-            fail("Expected IllegalArgumentException for unknown AstNode type");
-        } catch (IllegalArgumentException expected) {
-            assertTrue(expected.getMessage().contains("Can't transform"));
-        }
-    }
+    VariableDeclaration varDecl = new VariableDeclaration();
+    varDecl.setLineno(1);
+    VariableInitializer varInit = new VariableInitializer();
+    varInit.setLineno(1);
+    varInit.setTarget(new Name(0, "item"));
+    varDecl.addVariable(varInit);
 
-    @Test(timeout = 4000)
-    public void testInvalidDestructuringAssignmentReportError() {
-        // Bad destructuring op (e.g. += on array literal)
-        CompilerEnvirons env = new CompilerEnvirons();
-        TestErrorReporter errorReporter = new TestErrorReporter();
-        IRFactory factory = new IRFactory(env, errorReporter);
+    forEachLoop.setIterator(varDecl);
+    forEachLoop.setIteratedObject(new Name(0, "collection"));
+    Block body = new Block();
+    body.setLineno(1);
+    forEachLoop.setBody(body);
 
-        AstRoot root = factory.parse("([a, b] += 1);", "bad_destruct.js", 1);
-        factory.transformTree(root);
-        assertTrue(errorReporter.hasReportedError);
-    }
+    root.addChild(forEachLoop);
 
-    @Test(timeout = 4000)
-    public void testInvalidForInLhsReportError() {
-        CompilerEnvirons env = new CompilerEnvirons();
-        TestErrorReporter errorReporter = new TestErrorReporter();
-        IRFactory factory = new IRFactory(env, errorReporter);
+    Node result = transformTree(root, "for each (var item in collection) {}", config, errorReporter);
 
-        AstRoot root = factory.parse("for (5 in [1, 2]) {}", "bad_for_in.js", 1);
-        factory.transformTree(root);
-        assertTrue(errorReporter.hasReportedError);
-    }
+    assertNotNull("Transformed result should not be null", result);
+    // On the defective version, errorReporter.errors is empty because the check is missing!
+    assertEquals("Should report exactly 1 error for unsupported 'for each'", 1, errorReporter.errors.size());
+    assertTrue("Error message must indicate 'for each' extension failure",
+        errorReporter.errors.get(0).contains("unsupported language extension: for each"));
 
-    // =========================================================================
-    // PARTITION E: Object Lifecycle & Complex Features (E4X, Let, Destructuring)
-    // =========================================================================
+    Node firstChild = result.getFirstChild();
+    assertNotNull("Root SCRIPT should contain transformed child", firstChild);
+    // On the defective version, Token.FOR is returned instead of Token.EXPR_RESULT
+    assertEquals("Transformed 'for each' must produce EXPR_RESULT placeholder",
+        Token.EXPR_RESULT, firstChild.getType());
+  }
 
-    @Test(timeout = 4000)
-    public void testE4xExpressions() {
-        ScriptNode script = parseAndTransform(
-            "default xml namespace = 'http://example.com'; " +
-            "var xml = <order id='123'><item price='10'>Book</item></order>; " +
-            "var item = xml.item; " +
-            "var attr = xml.@id; " +
-            "var desc = xml..item; " +
-            "var elemRef = xml[item]; " +
-            "var nsRef = xml.ns::item;"
-        );
-        assertNotNull(script);
-    }
+  // =========================================================================
+  // PARTITION A: CORE FUNCTIONAL LOGIC & STATE TRANSITIONS
+  // =========================================================================
 
-    @Test(timeout = 4000)
-    public void testLetNodeExpressionsAndStatements() {
-        ScriptNode script = parseAndTransform(
-            "let (x = 1, y = 2) { var sum = x + y; } " +
-            "var res = let (a = 5) a * 2;"
-        );
-        assertNotNull(script);
-    }
+  @Test(timeout = 4000)
+  public void testScriptDirectivesExtraction() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
 
-    @Test(timeout = 4000)
-    public void testDestructuringInVariableDeclarations() {
-        ScriptNode script = parseAndTransform(
-            "var [a, b, c] = [1, 2, 3]; " +
-            "var {p1: x, p2: y} = {p1: 10, p2: 20}; " +
-            "let [h, ...tail] = [1, 2, 3, 4];"
-        );
-        assertNotNull(script);
-    }
+    AstRoot root = new AstRoot();
+    ExpressionStatement exprStmt = new ExpressionStatement();
+    StringLiteral directive = new StringLiteral();
+    directive.setValue("use strict");
+    exprStmt.setExpression(directive);
+    root.addChild(exprStmt);
 
-    @Test(timeout = 4000)
-    public void testFunctionWithDestructuringParams() {
-        ScriptNode script = parseAndTransform(
-            "function unpack([x, y], {name, age}) { return x + name; }"
-        );
-        assertNotNull(script);
-    }
+    ExpressionStatement normalStmt = new ExpressionStatement();
+    normalStmt.setExpression(new NumberLiteral(42.0));
+    root.addChild(normalStmt);
 
-    @Test(timeout = 4000)
-    public void testConstructorInvocations() {
-        IRFactory factory1 = new IRFactory();
-        assertNotNull(factory1);
+    Node scriptNode = transformTree(root, "'use strict'; 42;", config, errorReporter);
 
-        CompilerEnvirons env = new CompilerEnvirons();
-        IRFactory factory2 = new IRFactory(env);
-        assertNotNull(factory2);
+    assertEquals(Token.SCRIPT, scriptNode.getType());
+    Set<String> directives = scriptNode.getDirectives();
+    assertNotNull("Directives set should not be null", directives);
+    assertTrue("Directives should contain 'use strict'", directives.contains("use strict"));
+    assertEquals("Only the non-directive statement should remain as child",
+        1, scriptNode.getChildCount());
+  }
 
-        TestErrorReporter reporter = new TestErrorReporter();
-        IRFactory factory3 = new IRFactory(env, reporter);
-        assertNotNull(factory3);
-    }
+  @Test(timeout = 4000)
+  public void testFunctionWithDirectivesAndParameters() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
 
-    private static class TestErrorReporter implements ErrorReporter {
-        boolean hasReportedError = false;
+    AstRoot root = new AstRoot();
+    FunctionNode fn = new FunctionNode();
+    fn.setFunctionName(new Name(0, "compute"));
+    fn.addParam(new Name(0, "x"));
+    fn.addParam(new Name(0, "y"));
 
-        @Override
-        public void warning(String message, String sourceName, int line, String lineSource, int lineOffset) {}
+    Block body = new Block();
+    ExpressionStatement strictStmt = new ExpressionStatement();
+    StringLiteral str = new StringLiteral();
+    str.setValue("use strict");
+    strictStmt.setExpression(str);
+    body.addChild(strictStmt);
 
-        @Override
-        public void error(String message, String sourceName, int line, String lineSource, int lineOffset) {
-            hasReportedError = true;
-        }
+    ReturnStatement ret = new ReturnStatement();
+    InfixExpression add = new InfixExpression(com.google.javascript.rhino.head.Token.ADD,
+        new Name(0, "x"), new Name(0, "y"), 0);
+    ret.setReturnValue(add);
+    body.addChild(ret);
 
-        @Override
-        public EvaluatorException runtimeError(String message, String sourceName, int line, String lineSource, int lineOffset) {
-            hasReportedError = true;
-            return new EvaluatorException(message, sourceName, line, lineSource, lineOffset);
-        }
-    }
+    fn.setBody(body);
+    root.addChild(fn);
+
+    Node result = transformTree(root, "function compute(x, y) { 'use strict'; return x + y; }", config, errorReporter);
+    Node fnNode = result.getFirstChild();
+
+    assertEquals(Token.FUNCTION, fnNode.getType());
+    Node nameNode = fnNode.getFirstChild();
+    assertEquals("compute", nameNode.getString());
+
+    Node paramList = nameNode.getNext();
+    assertEquals(Token.PARAM_LIST, paramList.getType());
+    assertEquals(2, paramList.getChildCount());
+
+    Node bodyNode = paramList.getNext();
+    assertEquals(Token.BLOCK, bodyNode.getType());
+    assertNotNull("Function body should have directives", bodyNode.getDirectives());
+    assertTrue(bodyNode.getDirectives().contains("use strict"));
+  }
+
+  @Test(timeout = 4000)
+  public void testIfElseTransformation() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    IfStatement ifStmt = new IfStatement();
+    ifStmt.setCondition(new KeywordLiteral(com.google.javascript.rhino.head.Token.TRUE));
+    ifStmt.setThenPart(new ExpressionStatement(new NumberLiteral(1.0)));
+    ifStmt.setElsePart(new ExpressionStatement(new NumberLiteral(2.0)));
+    root.addChild(ifStmt);
+
+    Node script = transformTree(root, "if (true) 1; else 2;", config, errorReporter);
+    Node ifNode = script.getFirstChild();
+
+    assertEquals(Token.IF, ifNode.getType());
+    assertEquals(Token.TRUE, ifNode.getFirstChild().getType());
+    assertEquals(Token.BLOCK, ifNode.getFirstChild().getNext().getType());
+    assertEquals(Token.BLOCK, ifNode.getLastChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testDoWhileAndWhileLoops() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    DoLoop doLoop = new DoLoop();
+    doLoop.setBody(new ExpressionStatement(new NumberLiteral(1.0)));
+    doLoop.setCondition(new KeywordLiteral(com.google.javascript.rhino.head.Token.FALSE));
+    root.addChild(doLoop);
+
+    WhileLoop whileLoop = new WhileLoop();
+    whileLoop.setCondition(new KeywordLiteral(com.google.javascript.rhino.head.Token.TRUE));
+    whileLoop.setBody(new Block());
+    root.addChild(whileLoop);
+
+    Node script = transformTree(root, "do 1; while(false); while(true){}", config, errorReporter);
+    assertEquals(Token.DO, script.getFirstChild().getType());
+    assertEquals(Token.WHILE, script.getLastChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testForInNormalLoop() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    ForInLoop forIn = new ForInLoop();
+    forIn.setIsForEach(false);
+    forIn.setIterator(new Name(0, "k"));
+    forIn.setIteratedObject(new Name(0, "obj"));
+    forIn.setBody(new Block());
+    root.addChild(forIn);
+
+    Node script = transformTree(root, "for (k in obj) {}", config, errorReporter);
+    assertEquals(0, errorReporter.errors.size());
+    assertEquals(Token.FOR, script.getFirstChild().getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testBreakAndContinueWithLabels() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    LabeledStatement labeled = new LabeledStatement();
+    Label label = new Label(0, 0, "outer");
+    labeled.addLabel(label);
+
+    WhileLoop loop = new WhileLoop();
+    loop.setCondition(new KeywordLiteral(com.google.javascript.rhino.head.Token.TRUE));
+    Block body = new Block();
+
+    BreakStatement brk = new BreakStatement();
+    brk.setBreakLabel(new Name(0, "outer"));
+    body.addChild(brk);
+
+    ContinueStatement cont = new ContinueStatement();
+    cont.setLabel(new Name(0, "outer"));
+    body.addChild(cont);
+
+    loop.setBody(body);
+    labeled.setStatement(loop);
+    root.addChild(labeled);
+
+    Node script = transformTree(root, "outer: while(true) { break outer; continue outer; }", config, errorReporter);
+    Node labelNode = script.getFirstChild();
+    assertEquals(Token.LABEL, labelNode.getType());
+    assertEquals(Token.LABEL_NAME, labelNode.getFirstChild().getType());
+  }
+
+  // =========================================================================
+  // PARTITION B: BOUNDARY VALUE ANALYSIS (BVA) & EXTREMES
+  // =========================================================================
+
+  @Test(timeout = 4000)
+  public void testNumberLiteralStringFormatting() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    ObjectLiteral obj = new ObjectLiteral();
+    ObjectProperty prop1 = new ObjectProperty();
+    prop1.setLeft(new NumberLiteral(10.0));
+    prop1.setRight(new StringLiteral());
+    obj.addElement(prop1);
+
+    ObjectProperty prop2 = new ObjectProperty();
+    prop2.setLeft(new NumberLiteral(10.5));
+    prop2.setRight(new StringLiteral());
+    obj.addElement(prop2);
+
+    root.addChild(new ExpressionStatement(obj));
+
+    Node script = transformTree(root, "({10: '', 10.5: ''})", config, errorReporter);
+    Node objLit = script.getFirstChild().getFirstChild();
+
+    Node key1 = objLit.getFirstChild();
+    assertEquals("10", key1.getString());
+    assertTrue(key1.getBooleanProp(Node.QUOTED_PROP));
+
+    Node key2 = key1.getNext();
+    assertEquals("10.5", key2.getString());
+    assertTrue(key2.getBooleanProp(Node.QUOTED_PROP));
+  }
+
+  @Test(timeout = 4000)
+  public void testVerticalTabStringLiteral() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    String source = "'hello\\vworld'";
+    AstRoot root = new AstRoot();
+    StringLiteral strLit = new StringLiteral();
+    strLit.setValue("hello\u000Bworld");
+    strLit.setAbsolutePosition(0);
+    strLit.setLength(source.length());
+    root.addChild(new ExpressionStatement(strLit));
+
+    Node script = transformTree(root, source, config, errorReporter);
+    Node strNode = script.getFirstChild().getFirstChild();
+
+    assertEquals(Token.STRING, strNode.getType());
+    assertTrue("Should set SLASH_V prop when \\v is in source", strNode.getBooleanProp(Node.SLASH_V));
+  }
+
+  @Test(timeout = 4000)
+  public void testUnaryNegationFoldsNumber() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    UnaryExpression neg = new UnaryExpression();
+    neg.setType(com.google.javascript.rhino.head.Token.NEG);
+    neg.setOperand(new NumberLiteral(25.0));
+    root.addChild(new ExpressionStatement(neg));
+
+    Node script = transformTree(root, "-25;", config, errorReporter);
+    Node numNode = script.getFirstChild().getFirstChild();
+
+    assertEquals(Token.NUMBER, numNode.getType());
+    assertEquals(-25.0, numNode.getDouble(), 0.0001);
+  }
+
+  @Test(timeout = 4000)
+  public void testUnaryPostfixProperty() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    UnaryExpression inc = new UnaryExpression();
+    inc.setType(com.google.javascript.rhino.head.Token.INC);
+    inc.setIsPostfix(true);
+    inc.setOperand(new Name(0, "counter"));
+    root.addChild(new ExpressionStatement(inc));
+
+    Node script = transformTree(root, "counter++;", config, errorReporter);
+    Node incNode = script.getFirstChild().getFirstChild();
+
+    assertEquals(Token.INC, incNode.getType());
+    assertTrue("Postfix unary should have INCRDECR_PROP set", incNode.getBooleanProp(Node.INCRDECR_PROP));
+  }
+
+  @Test(timeout = 4000)
+  public void testRegExpLiteralWithAndWithoutFlags() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    RegExpLiteral re1 = new RegExpLiteral();
+    re1.setValue("abc");
+    re1.setFlags("gi");
+    root.addChild(new ExpressionStatement(re1));
+
+    RegExpLiteral re2 = new RegExpLiteral();
+    re2.setValue("xyz");
+    root.addChild(new ExpressionStatement(re2));
+
+    Node script = transformTree(root, "/abc/gi; /xyz/;", config, errorReporter);
+
+    Node n1 = script.getFirstChild().getFirstChild();
+    assertEquals(Token.REGEXP, n1.getType());
+    assertEquals("abc", n1.getFirstChild().getString());
+    assertEquals("gi", n1.getLastChild().getString());
+
+    Node n2 = script.getLastChild().getFirstChild();
+    assertEquals(Token.REGEXP, n2.getType());
+    assertEquals(1, n2.getChildCount());
+  }
+
+  @Test(timeout = 4000)
+  public void testSwitchStatementWithDefaultAndCases() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    SwitchStatement switchStmt = new SwitchStatement();
+    switchStmt.setExpression(new Name(0, "val"));
+
+    SwitchCase case1 = new SwitchCase();
+    case1.setExpression(new NumberLiteral(1.0));
+    case1.addStatement(new BreakStatement());
+    switchStmt.addCase(case1);
+
+    SwitchCase defaultCase = new SwitchCase();
+    defaultCase.addStatement(new BreakStatement());
+    switchStmt.addCase(defaultCase);
+
+    root.addChild(switchStmt);
+
+    Node script = transformTree(root, "switch(val) { case 1: break; default: break; }", config, errorReporter);
+    Node switchNode = script.getFirstChild();
+
+    assertEquals(Token.SWITCH, switchNode.getType());
+    Node caseNode = switchNode.getFirstChild().getNext();
+    assertEquals(Token.CASE, caseNode.getType());
+    Node defNode = caseNode.getNext();
+    assertEquals(Token.DEFAULT_CASE, defNode.getType());
+  }
+
+  @Test(timeout = 4000)
+  public void testTryCatchFinallyVariations() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    TryStatement tryFinally = new TryStatement();
+    tryFinally.setTryBlock(new Block());
+    tryFinally.setFinallyBlock(new Block());
+    root.addChild(tryFinally);
+
+    Node script = transformTree(root, "try {} finally {}", config, errorReporter);
+    Node tryNode = script.getFirstChild();
+
+    assertEquals(Token.TRY, tryNode.getType());
+    assertEquals(Token.BLOCK, tryNode.getFirstChild().getType()); // try block
+    assertEquals(Token.BLOCK, tryNode.getFirstChild().getNext().getType()); // catch container
+    assertEquals(Token.BLOCK, tryNode.getLastChild().getType()); // finally block
+  }
+
+  // =========================================================================
+  // PARTITION D: EXCEPTION & DEFENSIVE GUARD PATHS
+  // =========================================================================
+
+  @Test(timeout = 4000)
+  public void testInvalidAssignmentTargetReportsError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    Assignment assign = new Assignment();
+    assign.setType(com.google.javascript.rhino.head.Token.ASSIGN);
+    assign.setLeft(new NumberLiteral(5.0)); // Invalid LHS target
+    assign.setRight(new Name(0, "x"));
+    root.addChild(new ExpressionStatement(assign));
+
+    transformTree(root, "5 = x;", config, errorReporter);
+
+    assertEquals(1, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("invalid assignment target"));
+  }
+
+  @Test(timeout = 4000)
+  public void testInvalidDeleteOperandReportsError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    UnaryExpression del = new UnaryExpression();
+    del.setType(com.google.javascript.rhino.head.Token.DELPROP);
+    del.setOperand(new NumberLiteral(10.0));
+    root.addChild(new ExpressionStatement(del));
+
+    transformTree(root, "delete 10;", config, errorReporter);
+
+    assertEquals(1, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("Invalid delete operand"));
+  }
+
+  @Test(timeout = 4000)
+  public void testInvalidIncrementDecrementTargetReportsError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    UnaryExpression inc = new UnaryExpression();
+    inc.setType(com.google.javascript.rhino.head.Token.INC);
+    inc.setOperand(new StringLiteral());
+    root.addChild(new ExpressionStatement(inc));
+
+    UnaryExpression dec = new UnaryExpression();
+    dec.setType(com.google.javascript.rhino.head.Token.DEC);
+    dec.setOperand(new StringLiteral());
+    root.addChild(new ExpressionStatement(dec));
+
+    transformTree(root, "'a'++; 'b'--;", config, errorReporter);
+
+    assertEquals(2, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("invalid increment target"));
+    assertTrue(errorReporter.errors.get(1).contains("invalid decrement target"));
+  }
+
+  @Test(timeout = 4000)
+  public void testCatchClauseConditionNotSupported() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    TryStatement tryStmt = new TryStatement();
+    tryStmt.setTryBlock(new Block());
+    CatchClause catchClause = new CatchClause();
+    catchClause.setVarName(new Name(0, "e"));
+    catchClause.setCatchCondition(new Name(0, "condition"));
+    catchClause.setBody(new Block());
+    tryStmt.addCatchClause(catchClause);
+    root.addChild(tryStmt);
+
+    transformTree(root, "try {} catch(e if condition) {}", config, errorReporter);
+
+    assertEquals(1, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("Catch clauses are not supported"));
+  }
+
+  @Test(timeout = 4000)
+  public void testReservedKeywordInES5ReportsError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    root.addChild(new ExpressionStatement(new Name(0, "class")));
+
+    transformTree(root, "class;", config, errorReporter);
+
+    assertEquals(1, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("identifier is a reserved word"));
+  }
+
+  @Test(timeout = 4000)
+  public void testReservedKeywordInES5StrictReportsError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5_STRICT, false, true);
+
+    AstRoot root = new AstRoot();
+    root.addChild(new ExpressionStatement(new Name(0, "yield")));
+
+    transformTree(root, "yield;", config, errorReporter);
+
+    assertEquals(1, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("identifier is a reserved word"));
+  }
+
+  @Test(timeout = 4000)
+  public void testES3GettersAndSettersReportError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT3, false, true);
+
+    AstRoot root = new AstRoot();
+    ObjectLiteral obj = new ObjectLiteral();
+
+    ObjectProperty getter = new ObjectProperty();
+    getter.setType(com.google.javascript.rhino.head.Token.GET);
+    getter.setLeft(new Name(0, "x"));
+    getter.setRight(new FunctionNode());
+    obj.addElement(getter);
+
+    ObjectProperty setter = new ObjectProperty();
+    setter.setType(com.google.javascript.rhino.head.Token.SET);
+    setter.setLeft(new Name(0, "y"));
+    setter.setRight(new FunctionNode());
+    obj.addElement(setter);
+
+    root.addChild(new ExpressionStatement(obj));
+
+    transformTree(root, "({get x() {}, set y(v) {}})", config, errorReporter);
+
+    assertEquals(2, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("getters are not supported in Internet Explorer"));
+    assertTrue(errorReporter.errors.get(1).contains("setters are not supported in Internet Explorer"));
+  }
+
+  @Test(timeout = 4000)
+  public void testGetterWithParamsAndSetterWithoutParamsReportErrors() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    ObjectLiteral obj = new ObjectLiteral();
+
+    // Invalid getter with a param
+    ObjectProperty getter = new ObjectProperty();
+    getter.setType(com.google.javascript.rhino.head.Token.GET);
+    getter.setLeft(new Name(0, "val"));
+    FunctionNode fnGetter = new FunctionNode();
+    fnGetter.setBody(new Block());
+    fnGetter.addParam(new Name(0, "unexpectedArg"));
+    getter.setRight(fnGetter);
+    obj.addElement(getter);
+
+    // Invalid setter with 0 params
+    ObjectProperty setter = new ObjectProperty();
+    setter.setType(com.google.javascript.rhino.head.Token.SET);
+    setter.setLeft(new Name(0, "val"));
+    FunctionNode fnSetter = new FunctionNode();
+    fnSetter.setBody(new Block());
+    setter.setRight(fnSetter);
+    obj.addElement(setter);
+
+    root.addChild(new ExpressionStatement(obj));
+
+    transformTree(root, "({get val(x) {}, set val() {}})", config, errorReporter);
+
+    assertEquals(2, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("getters may not have parameters"));
+    assertTrue(errorReporter.errors.get(1).contains("setters must have exactly one parameter"));
+  }
+
+  @Test(timeout = 4000)
+  public void testDestructuringAssignmentReportsForbidden() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    ArrayLiteral arr = new ArrayLiteral();
+    arr.setIsDestructuring(true);
+    root.addChild(new ExpressionStatement(arr));
+
+    ObjectLiteral obj = new ObjectLiteral();
+    obj.setIsDestructuring(true);
+    root.addChild(new ExpressionStatement(obj));
+
+    transformTree(root, "[] = []; ({}) = {};", config, errorReporter);
+
+    assertEquals(2, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("destructuring assignment forbidden"));
+    assertTrue(errorReporter.errors.get(1).contains("destructuring assignment forbidden"));
+  }
+
+  @Test(timeout = 4000)
+  public void testConstKeywordWhenForbiddenReportsError() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    // acceptConstKeyword = false
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, false);
+
+    AstRoot root = new AstRoot();
+    VariableDeclaration constDecl = new VariableDeclaration();
+    constDecl.setType(com.google.javascript.rhino.head.Token.CONST);
+    VariableInitializer init = new VariableInitializer();
+    init.setTarget(new Name(0, "X"));
+    constDecl.addVariable(init);
+    root.addChild(constDecl);
+
+    transformTree(root, "const X = 1;", config, errorReporter);
+
+    assertEquals(1, errorReporter.errors.size());
+    assertTrue(errorReporter.errors.get(0).contains("Unsupported syntax: const"));
+  }
+
+  @Test(timeout = 4000)
+  public void testSuspiciousBlockCommentsEmitWarning() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    Comment comment1 = new Comment(0, 15, CommentType.BLOCK_COMMENT, "/* @type {number} */");
+    Comment comment2 = new Comment(20, 20, CommentType.BLOCK_COMMENT, "/*\n * @param {string} x\n */");
+    root.addComment(comment1);
+    root.addComment(comment2);
+
+    transformTree(root, "/* @type {number} */\n/*\n * @param {string} x\n */", config, errorReporter);
+
+    assertEquals(2, errorReporter.warnings.size());
+    assertTrue(errorReporter.warnings.get(0).contains("Non-JSDoc comment has annotations"));
+    assertTrue(errorReporter.warnings.get(1).contains("Non-JSDoc comment has annotations"));
+  }
+
+  // =========================================================================
+  // PARTITION E: OBJECT LIFECYCLE & CONTRACT INTEGRITY
+  // =========================================================================
+
+  @Test(timeout = 4000)
+  public void testParenthesizedExpressionPropMaintained() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    ParenthesizedExpression paren = new ParenthesizedExpression(new NumberLiteral(10.0));
+    root.addChild(new ExpressionStatement(paren));
+
+    Node script = transformTree(root, "(10);", config, errorReporter);
+    Node expr = script.getFirstChild().getFirstChild();
+
+    assertEquals(Boolean.TRUE, expr.getProp(Node.PARENTHESIZED_PROP));
+  }
+
+  @Test(timeout = 4000)
+  public void testIdeModeLengthTracking() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    // isIdeMode = true
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, true, true);
+
+    AstRoot root = new AstRoot();
+    NumberLiteral num = new NumberLiteral(123.0);
+    num.setLength(3);
+    root.addChild(new ExpressionStatement(num));
+
+    Node script = transformTree(root, "123;", config, errorReporter);
+    Node numNode = script.getFirstChild().getFirstChild();
+
+    assertEquals(3, numNode.getLength());
+  }
+
+  @Test(timeout = 4000)
+  public void testEmptyAstRootProducesScript() {
+    RecordingErrorReporter errorReporter = new RecordingErrorReporter();
+    Config config = createConfig(LanguageMode.ECMASCRIPT5, false, true);
+
+    AstRoot root = new AstRoot();
+    Node script = transformTree(root, "", config, errorReporter);
+
+    assertNotNull(script);
+    assertEquals(Token.SCRIPT, script.getType());
+    assertEquals(0, script.getChildCount());
+  }
 }

@@ -1,12 +1,14 @@
+package com.google.javascript.jscomp;
+
 import com.google.javascript.jscomp.*;
 import com.google.javascript.jscomp.Compiler;
 import com.google.javascript.rhino.Node;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class CompilerWhitespaceModeTest {
+public class CompilerDeepseekTest {
 
-  @Test
+  @Test(timeout = 4000)
   public void testDependencySortingWhitespaceMode() {
     Compiler compiler = new Compiler();
     CompilerOptions options = new CompilerOptions();

@@ -1,285 +1,251 @@
-/*
- * [Branch & Defect Analysis Matrix]
- * Target Class: org.mozilla.javascript.TokenStream
- * Defects4J Context: com.google.javascript.jscomp.ConvertToDottedPropertiesTest (testQuotedProps, testDoNotConvert)
- *
- * Key Areas Tested:
- * 1. Keyword Recognition & ES3/ES5 Reserved Words (isKeyword / stringToKeyword):
- *    - All keyword length buckets (2, 3, 4, 5, 6, 7, 8, 9, 10, 12 chars).
- *    - Strict match validation (prefix/suffix mismatches, non-keyword identifiers of same lengths).
- *    - Preservation of keywords (default, delete, null, true, false, etc.) critical to property dotting logic.
- * 2. Lexical Token Scanning (getToken):
- *    - Whitespace, BOM (\uFEFF), newlines (\r, \n, \r\n), and EOF tracking.
- *    - Identifiers: standard ASCII, unicode escapes (\uXXXX), bad unicode escapes, unicode keywords.
- *    - Numbers: decimal, hex (0x/0X), octal (077), bad octal (089), floats (.5, 1.2), exponents (1e-3, 1e+2, 1e5, bad exp 1e).
- *    - Strings: single/double quotes, escape sequences (\b, \f, \n, \r, \t, \v, \xHH, \uHHHH, octal, line continuations, unterminated).
- *    - Operators & Punctuation: compound assignments (+=, -=, <<=, >>=, >>>=, etc.), equality (==, ===, !=, !==),
- *      relations (<, <=, >, >=), dots (., .., .(), colons (:, ::), XML attribute (@), comments (//, /*, /**, <!--, -->).
- * 3. Regular Expressions (readRegExp):
- *    - Standard literal scanning, flags (g, i, m, y), character classes ([...]), escape sequences, unterminated REs.
- * 4. E4X / XML Token Scanning (getFirstXMLToken, getNextXMLToken):
- *    - XML start/end tags, empty elements, attributes, CDATA, comments, processing instructions, embedded JS ({...}).
- * 5. State & Defensive Paths:
- *    - Dual source initialization / null source rejection (Kit.codeBug).
- *    - Buffer expansion (identifiers > 128 chars, reader buffer refills > 512 chars).
- *    - Comments recording and offset/line retrieval across Reader vs String sources.
- */
-
-package org.mozilla.javascript;
+package com.google.javascript.rhino;
 
 import org.junit.Test;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
-
 import static org.junit.Assert.*;
+import com.google.javascript.rhino.TokenStream;
 
+/* [Branch & Defect Analysis Matrix]
+ * ---------------------------------------------------------------------------------------------------------
+ * Target Class: com.google.javascript.rhino.TokenStream
+ * Methods Under Test:
+ *   - boolean isKeyword(String name)
+ *   - boolean isJSIdentifier(String s)
+ *
+ * Branch & Coverage Matrix:
+ * 1. isKeyword:
+ *    - Length 2: 'if' (char(1)=='f', char(0)=='i'), 'in' (char(1)=='n', char(0)=='i'), 'do' (char(1)=='o', char(0)=='d')
+ *      Negatives: char(1) match but char(0) mismatch ("af", "an", "to"), char(1) mismatch ("ax")
+ *    - Length 3: 'for' ('f'), 'int' ('i'), 'new' ('n'), 'try' ('t'), 'var' ('v')
+ *      Negatives: char(0) match but char(1)/char(2) mismatch ("foo", "far", "inn", "ice", "net", "now", "tri", "toy", "vat", "von"), char(0) mismatch ("xyz")
+ *    - Length 4: 'byte' ('b'), 'case'/'char' ('c'), 'else'/'enum' ('e'), 'goto' ('g'), 'long' ('l'), 'null' ('n'), 'true'/'this' ('t'), 'void' ('v'), 'with' ('w')
+ *      Negatives: "barn", "cake", "cure", "cool", "czar", "cher", "ease", "elme", "exam", "etum", "echo", "good", "line", "none", "tree", "tune", "thus", "toys", "test", "very", "word", "zing"
+ *    - Length 5: 'class' (char(2)=='a'), 'break' ('e'), 'while' ('i'), 'false' ('l'), 'const'/'final' ('n'), 'float'/'short' ('o'), 'super' ('p'), 'throw' ('r'), 'catch' ('t')
+ *      Negatives: "chart", "bleed", "white", "folio", "clone", "fancy", "sound", "flock", "shoot", "block", "apple", "arrow", "match", "zebra"
+ *    - Length 6: 'native' (char(1)=='a'), 'delete'/'return' ('e'), 'throws' ('h'), 'import' ('m'), 'double' ('o'), 'static' ('t'), 'public' ('u'), 'switch' ('w'), 'export' ('x'), 'typeof' ('y')
+ *      Negatives: "banana", "device", "recipe", "letter", "phrase", "empire", "socket", "status", "summer", "awards", "expert", "system", "orange"
+ *    - Length 7: 'package' (char(1)=='a'), 'default' ('e'), 'finally' ('i'), 'boolean' ('o'), 'private' ('r'), 'extends' ('x')
+ *      Negatives: "palaces", "decimal", "picture", "brother", "profile", "example", "monkeys"
+ *    - Length 8: 'abstract' ('a'), 'continue' ('c'), 'debugger' ('d'), 'function' ('f'), 'volatile' ('v')
+ *      Negatives: "alphabet", "calendar", "diameter", "fraction", "velocity", "elephant"
+ *    - Length 9: 'interface' ('i'), 'protected' ('p'), 'transient' ('t')
+ *      Negatives: "important", "principal", "telephone", "universal"
+ *    - Length 10: 'implements' (char(1)=='m'), 'instanceof' ('n')
+ *      Negatives: "employment", "university", "california"
+ *    - Length 12: 'synchronized'
+ *      Negatives: "unauthorized"
+ *    - Other Lengths: 0 (""), 1 ("a"), 11 ("abcdefghijk"), 13 ("abcdefghijklm"), >13 ("supercalifragilistic")
+ * 2. isJSIdentifier:
+ *    - Length 0: returns false
+ *    - Length >= 1:
+ *      * Start character valid: letters, '$', '_'
+ *      * Start character invalid: digits ('0'-'9'), punctuation, operators, whitespace
+ *      * Subsequent characters valid: letters, digits, '$', '_'
+ *      * Subsequent characters invalid: operators, spaces, punctuation
+ *
+ * Known Defect (Defects4J - ConvertToDottedPropertiesTest / QuotedProps & DoNotConvert):
+ *    - In the defective version, TokenStream.isJSIdentifier returns true for keywords like "default", "delete",
+ *      "class", "for", "while", "null", "true", "false", causing property accesses like a['default'] to be
+ *      illegally transformed to a.default in ES3 contexts.
+ *    - Ground Truth: A reserved JavaScript keyword is NOT a valid JavaScript identifier.
+ * ---------------------------------------------------------------------------------------------------------
+ */
 public class TokenStreamGeminiTest {
 
-    private TokenStream createStringStream(String source) {
-        CompilerEnvirons compilerEnv = new CompilerEnvirons();
-        Parser parser = new Parser(compilerEnv);
-        return new TokenStream(parser, null, source, 1);
-    }
-
-    private TokenStream createReaderStream(String source) {
-        CompilerEnvirons compilerEnv = new CompilerEnvirons();
-        Parser parser = new Parser(compilerEnv);
-        return new TokenStream(parser, new StringReader(source), null, 1);
-    }
-
-    private TokenStream createCustomStream(String source, CompilerEnvirons env) {
-        Parser parser = new Parser(env);
-        return new TokenStream(parser, null, source, 1);
-    }
-
     // =========================================================================
-    // Partition A: Core Functional Logic & State Transitions
+    // Partition A: Core Functional Logic & State Transitions (Keywords by Length)
     // =========================================================================
 
     @Test(timeout = 4000)
-    public void testBasicPunctuationAndOperators() throws IOException {
-        String code = "; [ ] { } ( ) , ? : :: . .. .( | || |= ^ ^= & && &= = == === ! != !== ~ + ++ +=";
-        TokenStream ts = createStringStream(code);
+    public void testKeywordsLength2() {
+        assertTrue("Expected 'if' to be a keyword", TokenStream.isKeyword("if"));
+        assertTrue("Expected 'in' to be a keyword", TokenStream.isKeyword("in"));
+        assertTrue("Expected 'do' to be a keyword", TokenStream.isKeyword("do"));
 
-        assertEquals(Token.SEMI, ts.getToken());
-        assertEquals(Token.LB, ts.getToken());
-        assertEquals(Token.RB, ts.getToken());
-        assertEquals(Token.LC, ts.getToken());
-        assertEquals(Token.RC, ts.getToken());
-        assertEquals(Token.LP, ts.getToken());
-        assertEquals(Token.RP, ts.getToken());
-        assertEquals(Token.COMMA, ts.getToken());
-        assertEquals(Token.HOOK, ts.getToken());
-        assertEquals(Token.COLON, ts.getToken());
-        assertEquals(Token.COLONCOLON, ts.getToken());
-        assertEquals(Token.DOT, ts.getToken());
-        assertEquals(Token.DOTDOT, ts.getToken());
-        assertEquals(Token.DOTQUERY, ts.getToken());
-        assertEquals(Token.BITOR, ts.getToken());
-        assertEquals(Token.OR, ts.getToken());
-        assertEquals(Token.ASSIGN_BITOR, ts.getToken());
-        assertEquals(Token.BITXOR, ts.getToken());
-        assertEquals(Token.ASSIGN_BITXOR, ts.getToken());
-        assertEquals(Token.BITAND, ts.getToken());
-        assertEquals(Token.AND, ts.getToken());
-        assertEquals(Token.ASSIGN_BITAND, ts.getToken());
-        assertEquals(Token.ASSIGN, ts.getToken());
-        assertEquals(Token.EQ, ts.getToken());
-        assertEquals(Token.SHEQ, ts.getToken());
-        assertEquals(Token.NOT, ts.getToken());
-        assertEquals(Token.NE, ts.getToken());
-        assertEquals(Token.SHNE, ts.getToken());
-        assertEquals(Token.BITNOT, ts.getToken());
-        assertEquals(Token.ADD, ts.getToken());
-        assertEquals(Token.INC, ts.getToken());
-        assertEquals(Token.ASSIGN_ADD, ts.getToken());
-        assertEquals(Token.EOF, ts.getToken());
+        assertFalse("Expected 'af' not to be a keyword", TokenStream.isKeyword("af"));
+        assertFalse("Expected 'an' not to be a keyword", TokenStream.isKeyword("an"));
+        assertFalse("Expected 'to' not to be a keyword", TokenStream.isKeyword("to"));
+        assertFalse("Expected 'ax' not to be a keyword", TokenStream.isKeyword("ax"));
     }
 
     @Test(timeout = 4000)
-    public void testShiftAndRelationalOperators() throws IOException {
-        String code = "< <= << <<= > >= >> >>= >>> >>>= * *= % %= - -- -=";
-        TokenStream ts = createStringStream(code);
+    public void testKeywordsLength3() {
+        assertTrue("Expected 'for' to be a keyword", TokenStream.isKeyword("for"));
+        assertTrue("Expected 'int' to be a keyword", TokenStream.isKeyword("int"));
+        assertTrue("Expected 'new' to be a keyword", TokenStream.isKeyword("new"));
+        assertTrue("Expected 'try' to be a keyword", TokenStream.isKeyword("try"));
+        assertTrue("Expected 'var' to be a keyword", TokenStream.isKeyword("var"));
 
-        assertEquals(Token.LT, ts.getToken());
-        assertEquals(Token.LE, ts.getToken());
-        assertEquals(Token.LSH, ts.getToken());
-        assertEquals(Token.ASSIGN_LSH, ts.getToken());
-        assertEquals(Token.GT, ts.getToken());
-        assertEquals(Token.GE, ts.getToken());
-        assertEquals(Token.RSH, ts.getToken());
-        assertEquals(Token.ASSIGN_RSH, ts.getToken());
-        assertEquals(Token.URSH, ts.getToken());
-        assertEquals(Token.ASSIGN_URSH, ts.getToken());
-        assertEquals(Token.MUL, ts.getToken());
-        assertEquals(Token.ASSIGN_MUL, ts.getToken());
-        assertEquals(Token.MOD, ts.getToken());
-        assertEquals(Token.ASSIGN_MOD, ts.getToken());
-        assertEquals(Token.SUB, ts.getToken());
-        assertEquals(Token.DEC, ts.getToken());
-        assertEquals(Token.ASSIGN_SUB, ts.getToken());
-        assertEquals(Token.EOF, ts.getToken());
+        assertFalse("Expected 'foo' not to be a keyword", TokenStream.isKeyword("foo"));
+        assertFalse("Expected 'far' not to be a keyword", TokenStream.isKeyword("far"));
+        assertFalse("Expected 'inn' not to be a keyword", TokenStream.isKeyword("inn"));
+        assertFalse("Expected 'ice' not to be a keyword", TokenStream.isKeyword("ice"));
+        assertFalse("Expected 'net' not to be a keyword", TokenStream.isKeyword("net"));
+        assertFalse("Expected 'now' not to be a keyword", TokenStream.isKeyword("now"));
+        assertFalse("Expected 'tri' not to be a keyword", TokenStream.isKeyword("tri"));
+        assertFalse("Expected 'toy' not to be a keyword", TokenStream.isKeyword("toy"));
+        assertFalse("Expected 'vat' not to be a keyword", TokenStream.isKeyword("vat"));
+        assertFalse("Expected 'von' not to be a keyword", TokenStream.isKeyword("von"));
+        assertFalse("Expected 'xyz' not to be a keyword", TokenStream.isKeyword("xyz"));
     }
 
     @Test(timeout = 4000)
-    public void testXmlAttributeToken() throws IOException {
-        TokenStream ts = createStringStream("@foo");
-        assertEquals(Token.XMLATTR, ts.getToken());
-        assertEquals(Token.NAME, ts.getToken());
-        assertEquals("foo", ts.getString());
+    public void testKeywordsLength4() {
+        assertTrue("Expected 'byte' to be a keyword", TokenStream.isKeyword("byte"));
+        assertTrue("Expected 'case' to be a keyword", TokenStream.isKeyword("case"));
+        assertTrue("Expected 'char' to be a keyword", TokenStream.isKeyword("char"));
+        assertTrue("Expected 'else' to be a keyword", TokenStream.isKeyword("else"));
+        assertTrue("Expected 'enum' to be a keyword", TokenStream.isKeyword("enum"));
+        assertTrue("Expected 'goto' to be a keyword", TokenStream.isKeyword("goto"));
+        assertTrue("Expected 'long' to be a keyword", TokenStream.isKeyword("long"));
+        assertTrue("Expected 'null' to be a keyword", TokenStream.isKeyword("null"));
+        assertTrue("Expected 'true' to be a keyword", TokenStream.isKeyword("true"));
+        assertTrue("Expected 'this' to be a keyword", TokenStream.isKeyword("this"));
+        assertTrue("Expected 'void' to be a keyword", TokenStream.isKeyword("void"));
+        assertTrue("Expected 'with' to be a keyword", TokenStream.isKeyword("with"));
+
+        assertFalse("Expected 'barn' not to be a keyword", TokenStream.isKeyword("barn"));
+        assertFalse("Expected 'cake' not to be a keyword", TokenStream.isKeyword("cake"));
+        assertFalse("Expected 'cure' not to be a keyword", TokenStream.isKeyword("cure"));
+        assertFalse("Expected 'czar' not to be a keyword", TokenStream.isKeyword("czar"));
+        assertFalse("Expected 'cher' not to be a keyword", TokenStream.isKeyword("cher"));
+        assertFalse("Expected 'cool' not to be a keyword", TokenStream.isKeyword("cool"));
+        assertFalse("Expected 'ease' not to be a keyword", TokenStream.isKeyword("ease"));
+        assertFalse("Expected 'elme' not to be a keyword", TokenStream.isKeyword("elme"));
+        assertFalse("Expected 'exam' not to be a keyword", TokenStream.isKeyword("exam"));
+        assertFalse("Expected 'etum' not to be a keyword", TokenStream.isKeyword("etum"));
+        assertFalse("Expected 'echo' not to be a keyword", TokenStream.isKeyword("echo"));
+        assertFalse("Expected 'good' not to be a keyword", TokenStream.isKeyword("good"));
+        assertFalse("Expected 'line' not to be a keyword", TokenStream.isKeyword("line"));
+        assertFalse("Expected 'none' not to be a keyword", TokenStream.isKeyword("none"));
+        assertFalse("Expected 'tree' not to be a keyword", TokenStream.isKeyword("tree"));
+        assertFalse("Expected 'tune' not to be a keyword", TokenStream.isKeyword("tune"));
+        assertFalse("Expected 'thus' not to be a keyword", TokenStream.isKeyword("thus"));
+        assertFalse("Expected 'toys' not to be a keyword", TokenStream.isKeyword("toys"));
+        assertFalse("Expected 'test' not to be a keyword", TokenStream.isKeyword("test"));
+        assertFalse("Expected 'very' not to be a keyword", TokenStream.isKeyword("very"));
+        assertFalse("Expected 'word' not to be a keyword", TokenStream.isKeyword("word"));
+        assertFalse("Expected 'zing' not to be a keyword", TokenStream.isKeyword("zing"));
     }
 
     @Test(timeout = 4000)
-    public void testNumbersParsing() throws IOException {
-        String code = "0 123 0x1F 0X2A 077 12.34 .56 1e2 2E+3 3e-4";
-        TokenStream ts = createStringStream(code);
+    public void testKeywordsLength5() {
+        assertTrue("Expected 'class' to be a keyword", TokenStream.isKeyword("class"));
+        assertTrue("Expected 'break' to be a keyword", TokenStream.isKeyword("break"));
+        assertTrue("Expected 'while' to be a keyword", TokenStream.isKeyword("while"));
+        assertTrue("Expected 'false' to be a keyword", TokenStream.isKeyword("false"));
+        assertTrue("Expected 'const' to be a keyword", TokenStream.isKeyword("const"));
+        assertTrue("Expected 'final' to be a keyword", TokenStream.isKeyword("final"));
+        assertTrue("Expected 'float' to be a keyword", TokenStream.isKeyword("float"));
+        assertTrue("Expected 'short' to be a keyword", TokenStream.isKeyword("short"));
+        assertTrue("Expected 'super' to be a keyword", TokenStream.isKeyword("super"));
+        assertTrue("Expected 'throw' to be a keyword", TokenStream.isKeyword("throw"));
+        assertTrue("Expected 'catch' to be a keyword", TokenStream.isKeyword("catch"));
 
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(0.0, ts.getNumber(), 1e-9);
-        assertFalse(ts.isNumberOctal());
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(123.0, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(31.0, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(42.0, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(63.0, ts.getNumber(), 1e-9);
-        assertTrue(ts.isNumberOctal());
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(12.34, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(0.56, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(100.0, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(2000.0, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(0.0003, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.EOF, ts.getToken());
-        assertTrue(ts.eof());
+        assertFalse("Expected 'chart' not to be a keyword", TokenStream.isKeyword("chart"));
+        assertFalse("Expected 'bleed' not to be a keyword", TokenStream.isKeyword("bleed"));
+        assertFalse("Expected 'white' not to be a keyword", TokenStream.isKeyword("white"));
+        assertFalse("Expected 'folio' not to be a keyword", TokenStream.isKeyword("folio"));
+        assertFalse("Expected 'clone' not to be a keyword", TokenStream.isKeyword("clone"));
+        assertFalse("Expected 'fancy' not to be a keyword", TokenStream.isKeyword("fancy"));
+        assertFalse("Expected 'sound' not to be a keyword", TokenStream.isKeyword("sound"));
+        assertFalse("Expected 'flock' not to be a keyword", TokenStream.isKeyword("flock"));
+        assertFalse("Expected 'shoot' not to be a keyword", TokenStream.isKeyword("shoot"));
+        assertFalse("Expected 'block' not to be a keyword", TokenStream.isKeyword("block"));
+        assertFalse("Expected 'apple' not to be a keyword", TokenStream.isKeyword("apple"));
+        assertFalse("Expected 'arrow' not to be a keyword", TokenStream.isKeyword("arrow"));
+        assertFalse("Expected 'match' not to be a keyword", TokenStream.isKeyword("match"));
+        assertFalse("Expected 'zebra' not to be a keyword", TokenStream.isKeyword("zebra"));
     }
 
     @Test(timeout = 4000)
-    public void testStringLiteralParsingAndEscapes() throws IOException {
-        String code = "\"hello\\nworld\" 'quote\\'s' \"octal\\123\" \"hex\\x41\" \"uni\\u0042\" \"cont\\\ninued\" \"escapes\\b\\f\\r\\t\\v\"";
-        TokenStream ts = createStringStream(code);
+    public void testKeywordsLength6() {
+        assertTrue("Expected 'native' to be a keyword", TokenStream.isKeyword("native"));
+        assertTrue("Expected 'delete' to be a keyword", TokenStream.isKeyword("delete"));
+        assertTrue("Expected 'return' to be a keyword", TokenStream.isKeyword("return"));
+        assertTrue("Expected 'throws' to be a keyword", TokenStream.isKeyword("throws"));
+        assertTrue("Expected 'import' to be a keyword", TokenStream.isKeyword("import"));
+        assertTrue("Expected 'double' to be a keyword", TokenStream.isKeyword("double"));
+        assertTrue("Expected 'static' to be a keyword", TokenStream.isKeyword("static"));
+        assertTrue("Expected 'public' to be a keyword", TokenStream.isKeyword("public"));
+        assertTrue("Expected 'switch' to be a keyword", TokenStream.isKeyword("switch"));
+        assertTrue("Expected 'export' to be a keyword", TokenStream.isKeyword("export"));
+        assertTrue("Expected 'typeof' to be a keyword", TokenStream.isKeyword("typeof"));
 
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("hello\nworld", ts.getString());
-        assertEquals('"', ts.getQuoteChar());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("quote's", ts.getString());
-        assertEquals('\'', ts.getQuoteChar());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("octalS", ts.getString()); // \123 octal is 83 = 'S'
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("hexA", ts.getString());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("uniB", ts.getString());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("continued", ts.getString());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("escapes\b\f\r\t\u000B", ts.getString());
-
-        assertEquals(Token.EOF, ts.getToken());
+        assertFalse("Expected 'banana' not to be a keyword", TokenStream.isKeyword("banana"));
+        assertFalse("Expected 'device' not to be a keyword", TokenStream.isKeyword("device"));
+        assertFalse("Expected 'recipe' not to be a keyword", TokenStream.isKeyword("recipe"));
+        assertFalse("Expected 'letter' not to be a keyword", TokenStream.isKeyword("letter"));
+        assertFalse("Expected 'phrase' not to be a keyword", TokenStream.isKeyword("phrase"));
+        assertFalse("Expected 'empire' not to be a keyword", TokenStream.isKeyword("empire"));
+        assertFalse("Expected 'socket' not to be a keyword", TokenStream.isKeyword("socket"));
+        assertFalse("Expected 'status' not to be a keyword", TokenStream.isKeyword("status"));
+        assertFalse("Expected 'summer' not to be a keyword", TokenStream.isKeyword("summer"));
+        assertFalse("Expected 'awards' not to be a keyword", TokenStream.isKeyword("awards"));
+        assertFalse("Expected 'expert' not to be a keyword", TokenStream.isKeyword("expert"));
+        assertFalse("Expected 'system' not to be a keyword", TokenStream.isKeyword("system"));
+        assertFalse("Expected 'orange' not to be a keyword", TokenStream.isKeyword("orange"));
     }
 
     @Test(timeout = 4000)
-    public void testCommentsScanning() throws IOException {
-        String code = "// line comment\n/* block */\n/** jsdoc */\n<!-- html start\n--> html end\n";
-        TokenStream ts = createStringStream(code);
+    public void testKeywordsLength7() {
+        assertTrue("Expected 'package' to be a keyword", TokenStream.isKeyword("package"));
+        assertTrue("Expected 'default' to be a keyword", TokenStream.isKeyword("default"));
+        assertTrue("Expected 'finally' to be a keyword", TokenStream.isKeyword("finally"));
+        assertTrue("Expected 'boolean' to be a keyword", TokenStream.isKeyword("boolean"));
+        assertTrue("Expected 'private' to be a keyword", TokenStream.isKeyword("private"));
+        assertTrue("Expected 'extends' to be a keyword", TokenStream.isKeyword("extends"));
 
-        assertEquals(Token.COMMENT, ts.getToken());
-        assertEquals(Token.CommentType.LINE, ts.getCommentType());
-
-        assertEquals(Token.EOL, ts.getToken());
-
-        assertEquals(Token.COMMENT, ts.getToken());
-        assertEquals(Token.CommentType.BLOCK_COMMENT, ts.getCommentType());
-
-        assertEquals(Token.EOL, ts.getToken());
-
-        assertEquals(Token.COMMENT, ts.getToken());
-        assertEquals(Token.CommentType.JSDOC, ts.getCommentType());
-
-        assertEquals(Token.EOL, ts.getToken());
-
-        assertEquals(Token.COMMENT, ts.getToken());
-        assertEquals(Token.CommentType.HTML, ts.getCommentType());
-
-        assertEquals(Token.EOL, ts.getToken());
-
-        assertEquals(Token.COMMENT, ts.getToken());
-        assertEquals(Token.CommentType.HTML, ts.getCommentType());
+        assertFalse("Expected 'palaces' not to be a keyword", TokenStream.isKeyword("palaces"));
+        assertFalse("Expected 'decimal' not to be a keyword", TokenStream.isKeyword("decimal"));
+        assertFalse("Expected 'picture' not to be a keyword", TokenStream.isKeyword("picture"));
+        assertFalse("Expected 'brother' not to be a keyword", TokenStream.isKeyword("brother"));
+        assertFalse("Expected 'profile' not to be a keyword", TokenStream.isKeyword("profile"));
+        assertFalse("Expected 'example' not to be a keyword", TokenStream.isKeyword("example"));
+        assertFalse("Expected 'monkeys' not to be a keyword", TokenStream.isKeyword("monkeys"));
     }
 
     @Test(timeout = 4000)
-    public void testRegularExpressionScanning() throws IOException {
-        TokenStream ts = createStringStream("/[a-z/0-9]+\\/bar/gimy");
-        assertEquals(Token.DIV, ts.getToken());
-        ts.readRegExp(Token.DIV);
+    public void testKeywordsLength8() {
+        assertTrue("Expected 'abstract' to be a keyword", TokenStream.isKeyword("abstract"));
+        assertTrue("Expected 'continue' to be a keyword", TokenStream.isKeyword("continue"));
+        assertTrue("Expected 'debugger' to be a keyword", TokenStream.isKeyword("debugger"));
+        assertTrue("Expected 'function' to be a keyword", TokenStream.isKeyword("function"));
+        assertTrue("Expected 'volatile' to be a keyword", TokenStream.isKeyword("volatile"));
 
-        assertEquals("[a-z/0-9]+\\/bar", ts.getString());
-        assertEquals("gimy", ts.readAndClearRegExpFlags());
-        assertNull(ts.readAndClearRegExpFlags());
+        assertFalse("Expected 'alphabet' not to be a keyword", TokenStream.isKeyword("alphabet"));
+        assertFalse("Expected 'calendar' not to be a keyword", TokenStream.isKeyword("calendar"));
+        assertFalse("Expected 'diameter' not to be a keyword", TokenStream.isKeyword("diameter"));
+        assertFalse("Expected 'fraction' not to be a keyword", TokenStream.isKeyword("fraction"));
+        assertFalse("Expected 'velocity' not to be a keyword", TokenStream.isKeyword("velocity"));
+        assertFalse("Expected 'elephant' not to be a keyword", TokenStream.isKeyword("elephant"));
     }
 
     @Test(timeout = 4000)
-    public void testRegExpAssignDivContext() throws IOException {
-        TokenStream ts = createStringStream("/=foo/i");
-        assertEquals(Token.ASSIGN_DIV, ts.getToken());
-        ts.readRegExp(Token.ASSIGN_DIV);
+    public void testKeywordsLength9() {
+        assertTrue("Expected 'interface' to be a keyword", TokenStream.isKeyword("interface"));
+        assertTrue("Expected 'protected' to be a keyword", TokenStream.isKeyword("protected"));
+        assertTrue("Expected 'transient' to be a keyword", TokenStream.isKeyword("transient"));
 
-        assertEquals("=foo", ts.getString());
-        assertEquals("i", ts.readAndClearRegExpFlags());
+        assertFalse("Expected 'important' not to be a keyword", TokenStream.isKeyword("important"));
+        assertFalse("Expected 'principal' not to be a keyword", TokenStream.isKeyword("principal"));
+        assertFalse("Expected 'telephone' not to be a keyword", TokenStream.isKeyword("telephone"));
+        assertFalse("Expected 'universal' not to be a keyword", TokenStream.isKeyword("universal"));
     }
 
     @Test(timeout = 4000)
-    public void testE4XXmlTokenScanning() throws IOException {
-        String xml = "<root attr='val'><child/>text<!-- comment --><![CDATA[cdata]]><?pi info?></root>";
-        TokenStream ts = createStringStream(xml);
+    public void testKeywordsLength10() {
+        assertTrue("Expected 'implements' to be a keyword", TokenStream.isKeyword("implements"));
+        assertTrue("Expected 'instanceof' to be a keyword", TokenStream.isKeyword("instanceof"));
 
-        assertEquals(Token.LT, ts.getToken());
-        int firstXml = ts.getFirstXMLToken();
-        assertEquals(Token.XMLEND, firstXml);
-        assertNotNull(ts.getString());
+        assertFalse("Expected 'employment' not to be a keyword", TokenStream.isKeyword("employment"));
+        assertFalse("Expected 'university' not to be a keyword", TokenStream.isKeyword("university"));
+        assertFalse("Expected 'california' not to be a keyword", TokenStream.isKeyword("california"));
     }
 
     @Test(timeout = 4000)
-    public void testTokenToStringFormatting() {
-        TokenStream ts = createStringStream("foo");
-        boolean oldPrintTrees = Token.printTrees;
-        try {
-            Token.printTrees = false;
-            assertEquals("", ts.tokenToString(Token.NAME));
-
-            Token.printTrees = true;
-            ts.getToken();
-            assertEquals("NAME `foo'", ts.tokenToString(Token.NAME));
-            assertEquals("SEMI", ts.tokenToString(Token.SEMI));
-        } catch (IOException e) {
-            fail("Unexpected IOException: " + e.getMessage());
-        } finally {
-            Token.printTrees = oldPrintTrees;
-        }
+    public void testKeywordsLength12() {
+        assertTrue("Expected 'synchronized' to be a keyword", TokenStream.isKeyword("synchronized"));
+        assertFalse("Expected 'unauthorized' not to be a keyword", TokenStream.isKeyword("unauthorized"));
     }
 
     // =========================================================================
@@ -287,387 +253,113 @@ public class TokenStreamGeminiTest {
     // =========================================================================
 
     @Test(timeout = 4000)
-    public void testIsDigitAndIsJSSpaceBoundaries() {
-        assertTrue(TokenStream.isDigit('0'));
-        assertTrue(TokenStream.isDigit('9'));
-        assertFalse(TokenStream.isDigit('0' - 1));
-        assertFalse(TokenStream.isDigit('9' + 1));
-        assertFalse(TokenStream.isDigit(-1));
-
-        assertTrue(TokenStream.isJSSpace(0x20));
-        assertTrue(TokenStream.isJSSpace(0x09));
-        assertTrue(TokenStream.isJSSpace(0x0C));
-        assertTrue(TokenStream.isJSSpace(0x0B));
-        assertTrue(TokenStream.isJSSpace(0xA0));
-        assertTrue(TokenStream.isJSSpace('\uFEFF')); // BYTE_ORDER_MARK
-        assertTrue(TokenStream.isJSSpace(0x2000));   // Unicode SPACE_SEPARATOR
-        assertFalse(TokenStream.isJSSpace('a'));
-        assertFalse(TokenStream.isJSSpace('\n'));
-        assertFalse(TokenStream.isJSSpace('\r'));
+    public void testKeywordsLengthBoundaries() {
+        assertFalse("Empty string cannot be a keyword", TokenStream.isKeyword(""));
+        assertFalse("Length 1 'a' is not a keyword", TokenStream.isKeyword("a"));
+        assertFalse("Length 1 'x' is not a keyword", TokenStream.isKeyword("x"));
+        assertFalse("Length 11 is not handled as keyword", TokenStream.isKeyword("abcdefghijk"));
+        assertFalse("Length 13 is not handled as keyword", TokenStream.isKeyword("abcdefghijklm"));
+        assertFalse("Length > 13 is not handled as keyword", TokenStream.isKeyword("supercalifragilistic"));
     }
 
     @Test(timeout = 4000)
-    public void testEmptyAndSingleCharInputs() throws IOException {
-        TokenStream tsEmpty = createStringStream("");
-        assertEquals(Token.EOF, tsEmpty.getToken());
-        assertTrue(tsEmpty.eof());
-        assertEquals("", tsEmpty.getSourceString());
-
-        TokenStream tsSingle = createStringStream(";");
-        assertEquals(Token.SEMI, tsSingle.getToken());
-        assertEquals(0, tsSingle.getTokenBeg());
-        assertEquals(1, tsSingle.getTokenEnd());
-        assertEquals(1, tsSingle.getTokenLength());
-        assertEquals(Token.EOF, tsSingle.getToken());
+    public void testJSIdentifierValidScenarios() {
+        assertTrue("Single ASCII letter must be valid", TokenStream.isJSIdentifier("a"));
+        assertTrue("Single uppercase letter must be valid", TokenStream.isJSIdentifier("Z"));
+        assertTrue("Dollar sign must be valid start", TokenStream.isJSIdentifier("$"));
+        assertTrue("Underscore must be valid start", TokenStream.isJSIdentifier("_"));
+        assertTrue("Multi-char identifier with digits must be valid", TokenStream.isJSIdentifier("myVar123"));
+        assertTrue("Identifier starting with $ and containing _", TokenStream.isJSIdentifier("$foo_bar"));
+        assertTrue("Identifier starting with _ and containing $", TokenStream.isJSIdentifier("_foo$bar"));
     }
 
     @Test(timeout = 4000)
-    public void testLargeBufferGrowthForIdentifiers() throws IOException {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 300; i++) {
-            sb.append('a');
-        }
-        String largeId = sb.toString();
-        TokenStream ts = createStringStream(largeId);
-
-        assertEquals(Token.NAME, ts.getToken());
-        assertEquals(largeId, ts.getString());
-        assertEquals(300, ts.getTokenLength());
-    }
-
-    @Test(timeout = 4000)
-    public void testReaderBufferRefillAcrossLines() throws IOException {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 700; i++) {
-            sb.append("var x = 1;\n");
-        }
-        TokenStream ts = createReaderStream(sb.toString());
-
-        int tokenCount = 0;
-        int tok;
-        while ((tok = ts.getToken()) != Token.EOF) {
-            tokenCount++;
-            if (tok == Token.VAR) {
-                assertEquals("var x = 1;", ts.getLine().trim());
-            }
-        }
-        assertTrue(tokenCount > 2000);
-        assertEquals(701, ts.getLineno());
-    }
-
-    @Test(timeout = 4000)
-    public void testOctalAndHexFallbackInString() throws IOException {
-        // Test \x non-hex fallbacks: \xG -> "xG", \x1G -> "x1G"
-        String code = "\"\\xG\" \"\\x1G\" \"\\u123z\"";
-        TokenStream ts = createStringStream(code);
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("xG", ts.getString());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("x1G", ts.getString());
-
-        assertEquals(Token.STRING, ts.getToken());
-        assertEquals("u123z", ts.getString());
-    }
-
-    @Test(timeout = 4000)
-    public void testBadOctalDecimalSuperset() throws IOException {
-        // ECMA extension: 088 and 099 permitted with warning
-        TokenStream ts = createStringStream("088 099");
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(88.0, ts.getNumber(), 1e-9);
-
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(99.0, ts.getNumber(), 1e-9);
+    public void testJSIdentifierInvalidScenarios() {
+        assertFalse("Empty string is not a valid JS identifier", TokenStream.isJSIdentifier(""));
+        assertFalse("Digit start '0' is not a valid JS identifier", TokenStream.isJSIdentifier("0"));
+        assertFalse("Digit start '1abc' is not a valid JS identifier", TokenStream.isJSIdentifier("1abc"));
+        assertFalse("Hyphen is not a valid identifier character", TokenStream.isJSIdentifier("foo-bar"));
+        assertFalse("Dot is not a valid identifier character", TokenStream.isJSIdentifier("foo.bar"));
+        assertFalse("Whitespace is not a valid identifier character", TokenStream.isJSIdentifier("foo bar"));
+        assertFalse("Leading whitespace is not allowed", TokenStream.isJSIdentifier(" foo"));
+        assertFalse("Trailing whitespace is not allowed", TokenStream.isJSIdentifier("foo "));
+        assertFalse("Special symbols like '@' are not allowed", TokenStream.isJSIdentifier("@bar"));
+        assertFalse("Special symbols like '#' are not allowed", TokenStream.isJSIdentifier("#bar"));
+        assertFalse("Embedded invalid char", TokenStream.isJSIdentifier("abc+def"));
     }
 
     // =========================================================================
-    // Partition C: Defect-Targeted Branch Zone (Closure / Rhino Keywords Ground Truth)
+    // Partition C: Defect-Targeted Branch Zone (Closure Defect: Keywords as Identifiers)
     // =========================================================================
 
     /**
-     * Directly targets the failure condition identified in Defects4J:
-     * com.google.javascript.jscomp.ConvertToDottedPropertiesTest::testQuotedProps
-     * and testDoNotConvert.
-     * Validates that all ECMAScript reserved words and keywords are strictly
-     * detected by isKeyword(), ensuring property converters know which properties
-     * cannot be unquoted into dot notation (e.g., a['default'] -> a.default in ES3).
+     * Targets Defects4J regression in ConvertToDottedPropertiesTest::testQuotedProps
+     * and ConvertToDottedPropertiesTest::testDoNotConvert.
+     *
+     * In JavaScript, reserved words (keywords) are not valid Identifier names in AST contexts
+     * where bare identifiers are required without quotes. TokenStream.isJSIdentifier(s)
+     * must return false for all reserved keywords.
      */
     @Test(timeout = 4000)
-    public void testConvertToDottedPropertiesKeywordsGroundTruth() {
-        String[] keywords = {
-            "break", "case", "catch", "class", "const", "continue", "debugger",
-            "default", "delete", "do", "else", "enum", "export", "extends",
-            "false", "finally", "for", "function", "if", "import", "in",
-            "instanceof", "new", "null", "return", "super", "switch", "this",
-            "throw", "true", "try", "typeof", "var", "void", "while", "with",
-            // Reserved words
-            "abstract", "boolean", "byte", "char", "double", "final", "float",
-            "goto", "implements", "int", "interface", "long", "native",
-            "package", "private", "protected", "public", "short", "static",
-            "synchronized", "throws", "transient", "volatile",
-            // ES5 strict / 1.7+
-            "let", "yield"
-        };
-
-        for (String kw : keywords) {
-            assertTrue("TokenStream.isKeyword should return true for: " + kw,
-                       TokenStream.isKeyword(kw));
-        }
-
-        String[] nonKeywords = {
-            "", "a", "b", "c", "d", "e", "f", "g",
-            "defaults", "deleted", "trueVal", "falsehood", "nullable",
-            "instanceOf", "Function", "Var", "Class", "while1", "for_",
-            "foo", "bar", "baz", "qux", "propertyName", "get", "set"
-        };
-
-        for (String nonKw : nonKeywords) {
-            assertFalse("TokenStream.isKeyword should return false for: " + nonKw,
-                        TokenStream.isKeyword(nonKw));
-        }
+    public void testDefectReservedKeywordsMustNotBeJSIdentifiers() {
+        assertFalse("Reserved keyword 'default' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("default"));
+        assertFalse("Reserved keyword 'delete' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("delete"));
+        assertFalse("Reserved keyword 'class' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("class"));
+        assertFalse("Reserved keyword 'while' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("while"));
+        assertFalse("Reserved keyword 'for' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("for"));
+        assertFalse("Reserved keyword 'null' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("null"));
+        assertFalse("Reserved keyword 'true' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("true"));
+        assertFalse("Reserved keyword 'false' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("false"));
+        assertFalse("Reserved keyword 'function' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("function"));
+        assertFalse("Reserved keyword 'return' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("return"));
     }
 
     @Test(timeout = 4000)
-    public void testKeywordBucketExhaustiveBranches() {
-        // Length 2
-        assertTrue(TokenStream.isKeyword("if"));
-        assertTrue(TokenStream.isKeyword("in"));
-        assertTrue(TokenStream.isKeyword("do"));
-        assertFalse(TokenStream.isKeyword("it"));
-        assertFalse(TokenStream.isKeyword("no"));
-        assertFalse(TokenStream.isKeyword("ox"));
-
-        // Length 3
-        assertTrue(TokenStream.isKeyword("for"));
-        assertTrue(TokenStream.isKeyword("int"));
-        assertTrue(TokenStream.isKeyword("let"));
-        assertTrue(TokenStream.isKeyword("new"));
-        assertTrue(TokenStream.isKeyword("try"));
-        assertTrue(TokenStream.isKeyword("var"));
-        assertFalse(TokenStream.isKeyword("far"));
-        assertFalse(TokenStream.isKeyword("ink"));
-        assertFalse(TokenStream.isKeyword("low"));
-
-        // Length 4
-        assertTrue(TokenStream.isKeyword("byte"));
-        assertTrue(TokenStream.isKeyword("case"));
-        assertTrue(TokenStream.isKeyword("char"));
-        assertTrue(TokenStream.isKeyword("else"));
-        assertTrue(TokenStream.isKeyword("enum"));
-        assertTrue(TokenStream.isKeyword("goto"));
-        assertTrue(TokenStream.isKeyword("long"));
-        assertTrue(TokenStream.isKeyword("null"));
-        assertTrue(TokenStream.isKeyword("true"));
-        assertTrue(TokenStream.isKeyword("this"));
-        assertTrue(TokenStream.isKeyword("void"));
-        assertTrue(TokenStream.isKeyword("with"));
-        assertFalse(TokenStream.isKeyword("boat"));
-        assertFalse(TokenStream.isKeyword("cast"));
-        assertFalse(TokenStream.isKeyword("that"));
-
-        // Length 5
-        assertTrue(TokenStream.isKeyword("class"));
-        assertTrue(TokenStream.isKeyword("break"));
-        assertTrue(TokenStream.isKeyword("yield"));
-        assertTrue(TokenStream.isKeyword("while"));
-        assertTrue(TokenStream.isKeyword("false"));
-        assertTrue(TokenStream.isKeyword("const"));
-        assertTrue(TokenStream.isKeyword("final"));
-        assertTrue(TokenStream.isKeyword("float"));
-        assertTrue(TokenStream.isKeyword("short"));
-        assertTrue(TokenStream.isKeyword("super"));
-        assertTrue(TokenStream.isKeyword("throw"));
-        assertTrue(TokenStream.isKeyword("catch"));
-        assertFalse(TokenStream.isKeyword("clash"));
-        assertFalse(TokenStream.isKeyword("bread"));
-        assertFalse(TokenStream.isKeyword("water"));
-
-        // Length 6
-        assertTrue(TokenStream.isKeyword("native"));
-        assertTrue(TokenStream.isKeyword("delete"));
-        assertTrue(TokenStream.isKeyword("return"));
-        assertTrue(TokenStream.isKeyword("throws"));
-        assertTrue(TokenStream.isKeyword("import"));
-        assertTrue(TokenStream.isKeyword("double"));
-        assertTrue(TokenStream.isKeyword("static"));
-        assertTrue(TokenStream.isKeyword("public"));
-        assertTrue(TokenStream.isKeyword("switch"));
-        assertTrue(TokenStream.isKeyword("export"));
-        assertTrue(TokenStream.isKeyword("typeof"));
-        assertFalse(TokenStream.isKeyword("nation"));
-        assertFalse(TokenStream.isKeyword("retail"));
-
-        // Length 7
-        assertTrue(TokenStream.isKeyword("package"));
-        assertTrue(TokenStream.isKeyword("default"));
-        assertTrue(TokenStream.isKeyword("finally"));
-        assertTrue(TokenStream.isKeyword("boolean"));
-        assertTrue(TokenStream.isKeyword("private"));
-        assertTrue(TokenStream.isKeyword("extends"));
-        assertFalse(TokenStream.isKeyword("packing"));
-        assertFalse(TokenStream.isKeyword("defense"));
-
-        // Length 8
-        assertTrue(TokenStream.isKeyword("abstract"));
-        assertTrue(TokenStream.isKeyword("continue"));
-        assertTrue(TokenStream.isKeyword("debugger"));
-        assertTrue(TokenStream.isKeyword("function"));
-        assertTrue(TokenStream.isKeyword("volatile"));
-        assertFalse(TokenStream.isKeyword("absolute"));
-        assertFalse(TokenStream.isKeyword("fracture"));
-
-        // Length 9
-        assertTrue(TokenStream.isKeyword("interface"));
-        assertTrue(TokenStream.isKeyword("protected"));
-        assertTrue(TokenStream.isKeyword("transient"));
-        assertFalse(TokenStream.isKeyword("interfere"));
-
-        // Length 10
-        assertTrue(TokenStream.isKeyword("implements"));
-        assertTrue(TokenStream.isKeyword("instanceof"));
-        assertFalse(TokenStream.isKeyword("implementx"));
-
-        // Length 12
-        assertTrue(TokenStream.isKeyword("synchronized"));
-        assertFalse(TokenStream.isKeyword("synchronous1"));
-
-        // Odd lengths without keywords
-        assertFalse(TokenStream.isKeyword("elevenchars"));
-        assertFalse(TokenStream.isKeyword("thirteenchars"));
-    }
-
-    @Test(timeout = 4000)
-    public void testUnicodeEscapesInIdentifierKeywordConversion() throws IOException {
-        // \u0069f matches "if", but since it contains an escape, convertLastCharToHex is called!
-        TokenStream ts = createStringStream("\\u0069f");
-        assertEquals(Token.NAME, ts.getToken());
-        assertEquals("i\\u0066", ts.getString());
-
-        TokenStream ts2 = createStringStream("a\\u0062c");
-        assertEquals(Token.NAME, ts2.getToken());
-        assertEquals("abc", ts2.getString());
-    }
-
-    @Test(timeout = 4000)
-    public void testLanguageVersionLetAndYieldCompatibility() throws IOException {
-        CompilerEnvirons env16 = new CompilerEnvirons();
-        env16.setLanguageVersion(Context.VERSION_1_6);
-        TokenStream ts16 = createCustomStream("let yield", env16);
-
-        assertEquals(Token.NAME, ts16.getToken());
-        assertEquals("let", ts16.getString());
-        assertEquals(Token.NAME, ts16.getToken());
-        assertEquals("yield", ts16.getString());
-
-        CompilerEnvirons env17 = new CompilerEnvirons();
-        env17.setLanguageVersion(Context.VERSION_1_7);
-        TokenStream ts17 = createCustomStream("let yield", env17);
-
-        assertEquals(Token.LET, ts17.getToken());
-        assertEquals(Token.YIELD, ts17.getToken());
-    }
-
-    @Test(timeout = 4000)
-    public void testReservedKeywordAsIdentifierSetting() throws IOException {
-        CompilerEnvirons envRes = new CompilerEnvirons();
-        envRes.setReservedKeywordAsIdentifier(true);
-        TokenStream tsRes = createCustomStream("abstract", envRes);
-        assertEquals(Token.NAME, tsRes.getToken());
-
-        CompilerEnvirons envStrict = new CompilerEnvirons();
-        envStrict.setReservedKeywordAsIdentifier(false);
-        TokenStream tsStrict = createCustomStream("abstract", envStrict);
-        assertEquals(Token.RESERVED, tsStrict.getToken());
+    public void testDefectAdditionalKeywordsMustNotBeJSIdentifiers() {
+        assertFalse("Reserved keyword 'case' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("case"));
+        assertFalse("Reserved keyword 'catch' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("catch"));
+        assertFalse("Reserved keyword 'var' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("var"));
+        assertFalse("Reserved keyword 'if' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("if"));
+        assertFalse("Reserved keyword 'in' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("in"));
+        assertFalse("Reserved keyword 'do' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("do"));
+        assertFalse("Reserved keyword 'this' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("this"));
+        assertFalse("Reserved keyword 'typeof' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("typeof"));
+        assertFalse("Reserved keyword 'void' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("void"));
+        assertFalse("Reserved keyword 'with' must not be a valid JS identifier",
+                TokenStream.isJSIdentifier("with"));
     }
 
     // =========================================================================
     // Partition D: Exception & Defensive Guard Paths
     // =========================================================================
 
-    @Test(timeout = 4000)
-    public void testInvalidConstructorArgumentsBothNotNull() {
-        CompilerEnvirons compilerEnv = new CompilerEnvirons();
-        Parser parser = new Parser(compilerEnv);
-        try {
-            new TokenStream(parser, new StringReader(""), "not null", 1);
-            fail("Expected RuntimeException from Kit.codeBug");
-        } catch (RuntimeException expected) {
-            // Success
-        }
+    @Test(timeout = 4000, expected = NullPointerException.class)
+    public void testIsKeywordNullArgumentThrowsException() {
+        TokenStream.isKeyword(null);
     }
 
-    @Test(timeout = 4000)
-    public void testInvalidConstructorArgumentsBothNull() {
-        CompilerEnvirons compilerEnv = new CompilerEnvirons();
-        Parser parser = new Parser(compilerEnv);
-        try {
-            new TokenStream(parser, null, null, 1);
-            fail("Expected RuntimeException from Kit.codeBug");
-        } catch (RuntimeException expected) {
-            // Success
-        }
-    }
-
-    @Test(timeout = 4000)
-    public void testUnterminatedStringLiteralReturnsError() throws IOException {
-        TokenStream ts = createStringStream("\"unterminated");
-        assertEquals(Token.ERROR, ts.getToken());
-
-        TokenStream ts2 = createStringStream("'unterminated\n");
-        assertEquals(Token.ERROR, ts2.getToken());
-    }
-
-    @Test(timeout = 4000)
-    public void testMalformedUnicodeEscapeReturnsError() throws IOException {
-        TokenStream ts = createStringStream("\\u00ZX");
-        assertEquals(Token.ERROR, ts.getToken());
-
-        TokenStream ts2 = createStringStream("var a\\x;");
-        assertEquals(Token.VAR, ts2.getToken());
-        assertEquals(Token.ERROR, ts2.getToken());
-    }
-
-    @Test(timeout = 4000)
-    public void testMissingExponentInNumberReturnsError() throws IOException {
-        TokenStream ts = createStringStream("1e");
-        assertEquals(Token.ERROR, ts.getToken());
-
-        TokenStream ts2 = createStringStream("1e+");
-        assertEquals(Token.ERROR, ts2.getToken());
-    }
-
-    @Test(timeout = 4000)
-    public void testUnterminatedCommentReturnsCommentWithError() throws IOException {
-        TokenStream ts = createStringStream("/* unclosed block comment");
-        assertEquals(Token.COMMENT, ts.getToken());
-        assertEquals(Token.CommentType.BLOCK_COMMENT, ts.getCommentType());
-    }
-
-    @Test(timeout = 4000)
-    public void testIllegalTopLevelCharacterReturnsError() throws IOException {
-        TokenStream ts = createStringStream("#");
-        assertEquals(Token.ERROR, ts.getToken());
-    }
-
-    @Test(timeout = 4000)
-    public void testMalformedXmlTokensReturnError() throws IOException {
-        TokenStream ts = createStringStream("<tag attr='val");
-        assertEquals(Token.LT, ts.getToken());
-        assertEquals(Token.ERROR, ts.getFirstXMLToken());
-
-        TokenStream ts2 = createStringStream("<!-- unclosed comment");
-        assertEquals(Token.LT, ts2.getToken());
-        assertEquals(Token.ERROR, ts2.getFirstXMLToken());
-
-        TokenStream ts3 = createStringStream("<![CDATA[ unclosed cdata");
-        assertEquals(Token.LT, ts3.getToken());
-        assertEquals(Token.ERROR, ts3.getFirstXMLToken());
-
-        TokenStream ts4 = createStringStream("<?pi unclosed");
-        assertEquals(Token.LT, ts4.getToken());
-        assertEquals(Token.ERROR, ts4.getFirstXMLToken());
+    @Test(timeout = 4000, expected = NullPointerException.class)
+    public void testIsJSIdentifierNullArgumentThrowsException() {
+        TokenStream.isJSIdentifier(null);
     }
 
     // =========================================================================
@@ -675,54 +367,8 @@ public class TokenStreamGeminiTest {
     // =========================================================================
 
     @Test(timeout = 4000)
-    public void testCommentRecordingAndResetLifecycle() throws IOException {
-        CompilerEnvirons env = new CompilerEnvirons();
-        env.setRecordingComments(true);
-        Parser parser = new Parser(env);
-        String code = "// first comment\nvar a = 1;";
-
-        TokenStream tsString = new TokenStream(parser, null, code, 1);
-        assertEquals(Token.COMMENT, tsString.getToken());
-        assertEquals("// first comment", tsString.getAndResetCurrentComment());
-
-        TokenStream tsReader = new TokenStream(parser, new StringReader(code), null, 1);
-        assertEquals(Token.COMMENT, tsReader.getToken());
-        assertEquals("// first comment", tsReader.getAndResetCurrentComment());
-    }
-
-    @Test(timeout = 4000)
-    public void testPositionAndOffsetTracking() throws IOException {
-        String code = "var x = 10;\nvar y = 20;";
-        TokenStream ts = createStringStream(code);
-
-        assertEquals(Token.VAR, ts.getToken());
-        assertEquals(0, ts.getTokenBeg());
-        assertEquals(3, ts.getTokenEnd());
-        assertEquals(3, ts.getTokenLength());
-        assertEquals(1, ts.getLineno());
-        assertEquals(3, ts.getOffset());
-        assertEquals("var x = 10;", ts.getLine());
-
-        assertEquals(Token.NAME, ts.getToken());
-        assertEquals("x", ts.getString());
-
-        assertEquals(Token.ASSIGN, ts.getToken());
-        assertEquals(Token.NUMBER, ts.getToken());
-        assertEquals(Token.SEMI, ts.getToken());
-        assertEquals(Token.EOL, ts.getToken());
-
-        assertEquals(Token.VAR, ts.getToken());
-        assertEquals(2, ts.getLineno());
-        assertEquals("var y = 20;", ts.getLine());
-    }
-
-    @Test(timeout = 4000)
-    public void testHtmlCommentBacktrackingGuard() throws IOException {
-        // Tests '<!-' which is not '<!--' and must backtrack without infinite loop
-        TokenStream ts = createStringStream("<!- var x;");
-        assertEquals(Token.LT, ts.getToken());
-        assertEquals(Token.NOT, ts.getToken());
-        assertEquals(Token.SUB, ts.getToken());
-        assertEquals(Token.VAR, ts.getToken());
+    public void testTokenStreamInstantiation() {
+        TokenStream stream = new TokenStream();
+        assertNotNull("TokenStream instance should be successfully created", stream);
     }
 }

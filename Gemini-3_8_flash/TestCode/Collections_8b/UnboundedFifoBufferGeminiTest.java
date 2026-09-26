@@ -1,3 +1,5 @@
+package org.apache.commons.collections.buffer;
+
 /* [Branch & Defect Analysis Matrix]
  * ====================================================================================================
  * Target Class: org.apache.commons.collections.UnboundedFifoBuffer
@@ -47,7 +49,6 @@
  *   leading to incorrect size calculation (expected:<1> but was:<0>).
  * ====================================================================================================
  */
-package org.apache.commons.collections;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
