@@ -110,3 +110,4 @@ done
   * `Result_Round2/budget_comparison.md` (ตาราง Mean ± SD ตามข้อ 1.7)
   * สรุปจุดเด่น/ข้อจำกัดของ MIO ในเชิง Search-Based Testing
   * 📋 **รายงานการวิเคราะห์ข้อผิดพลาดและการประกันคุณภาพ (ฉบับส่งอาจารย์):** [MIO_FAILURE_ANALYSIS_REPORT.md](./MIO_FAILURE_ANALYSIS_REPORT.md)
+  * 🤖 **คลังพร้อมต์ AI สำหรับศึกษา MIO เชิงลึก (Master Prompt):** [MASTER_PROMPT_MIO_AI.md](./MASTER_PROMPT_MIO_AI.md)
