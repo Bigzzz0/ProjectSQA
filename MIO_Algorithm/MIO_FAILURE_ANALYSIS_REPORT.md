@@ -33,7 +33,7 @@
 
 ## 1. บทสรุปผู้บริหาร (Executive Summary)
 
-ในการทดลองสร้างชุดทดสอบซอฟต์แวร์อัตโนมัติด้วยขั้นตอนวิธี **Many-Objective Sorting Algorithm (MIO)** บนชุดมาตรฐาน **Defects4J Benchmark** จำนวน 17 โครงการ (รวมทั้งสิ้น 854 บั๊ก) พบว่าระบบสามารถสร้างชุดทดสอบได้อย่างสมบูรณ์ในระดับ **100% ครอบคลุมแล้วกว่า 12 โครงการ** (เช่น Chart, Codec, Collections, Csv, JacksonCore, JacksonXml, Jsoup, JXPath, Lang, Time เป็นต้น) และสูงกว่า 89–98% ในโปรเจกต์ขนาดใหญ่อื่นๆ
+ในการทดลองสร้างชุดทดสอบซอฟต์แวร์อัตโนมัติด้วยขั้นตอนวิธี **Many Independent Objective (MIO)** บนชุดมาตรฐาน **Defects4J Benchmark** จำนวน 17 โครงการ (รวมทั้งสิ้น 854 บั๊ก) พบว่าระบบสามารถสร้างชุดทดสอบได้อย่างสมบูรณ์ในระดับ **100% ครอบคลุมแล้วกว่า 12 โครงการ** (เช่น Chart, Codec, Collections, Csv, JacksonCore, JacksonXml, Jsoup, JXPath, Lang, Time เป็นต้น) และสูงกว่า 89–98% ในโปรเจกต์ขนาดใหญ่อื่นๆ
 
 อย่างไรก็ตาม ในกระบวนการรันเชิงลึก ทีมงานพบข้อผิดพลาดในบาง Target ซึ่งสามารถจัดหมวดหมู่อย่างโปร่งใสตามหลักการทดสอบซอฟต์แวร์ได้เป็น **2 กลุ่มชัดเจน**:
 
@@ -79,7 +79,7 @@ flowchart TD
         G -->|Compile Success| I[Export & Validate Classpath]
         I --> J[Launch EvoSuite 1.0.6 MIO]
         J -->|Search Budget: 30s, 60s, 120s| K{MIO Search Process}
-        K -->|Mutation / Crossover / Coverage Evaluation| L[Generate JUnit Test Suite]
+        K -->|Mutation / Statement Insertion / Coverage Evaluation| L[Generate JUnit Test Suite]
         L --> M[Export statistics.csv & coverage]
     end
     
@@ -140,7 +140,7 @@ flowchart LR
 ### 3.2 ข้อบกพร่องภายในตัวเอนจิ้น EvoSuite MIO (NPE in Chromosome Mutate): Gson-3b, Math-13b, Math-31b
 
 > [!WARNING]
-> ข้อผิดพลาดในหัวข้อนี้เกิดขึ้นจาก **Internal Engine Bug ของเครื่องมือ EvoSuite 1.0.6 เอง** โดยเกิดขึ้นเฉพาะในขั้นตอนวิธี MIO (Mutation Insertion Optimization) เมื่อต้องจัดการกับคลาสที่มี Reflection ลึกซึ้ง หรือคลาสที่เป็น **Abstract Class ที่มี Pure Abstract Methods**
+> ข้อผิดพลาดในหัวข้อนี้เกิดขึ้นจาก **Internal Engine Bug ของเครื่องมือ EvoSuite 1.0.6 เอง** โดยเกิดขึ้นเฉพาะในขั้นตอนวิธี MIO (Many Independent Objective) เมื่อต้องจัดการกับคลาสที่มี Reflection ลึกซึ้ง หรือคลาสที่เป็น **Abstract Class ที่มี Pure Abstract Methods**
 
 * **บั๊กที่ได้รับผลกระทบ:** `Gson-3b`, `Math-13b`, `Math-31b` (รวม 3 บั๊ก)
 

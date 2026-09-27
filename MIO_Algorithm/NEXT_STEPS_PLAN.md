@@ -62,7 +62,7 @@ flowchart TD
 ### 🟢 เฟส 1: การประมวลผลและสกัดสถิติเชิงลึก (Data Aggregation & Statistical Synthesis)
 
 #### 1.1 วัตถุประสงค์
-แปลงข้อมูลผลการทดลองดิบจำนวนกว่า **3,028 แถว** ใน [evosuite_budget_summary.csv](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv) ให้กลายเป็นค่าสถิติเชิงพรรณนา (Descriptive Statistics) ที่พร้อมนำไปอ้างอิงในงานวิจัย
+แปลงข้อมูลผลการทดลองดิบจำนวนกว่า **3,028 แถว** ใน [evosuite_budget_summary.csv](./Result_Round2/evosuite_budget_summary.csv) ให้กลายเป็นค่าสถิติเชิงพรรณนา (Descriptive Statistics) ที่พร้อมนำไปอ้างอิงในงานวิจัย
 
 #### 1.2 สิ่งที่ต้องคำนวณและสกัดออกมา
 1. **ภาพรวมทั้ง Benchmark (Overall Metrics across 834 bugs):**
@@ -164,15 +164,15 @@ flowchart TD
    * ความสำคัญของการทดสอบซอฟต์แวร์อัตโนมัติ
    * ปัญหาการทดสอบบน Defects4J Benchmark
 2. **หลักการและทฤษฎี (Theoretical Background):**
-   * การทำงานของ Many-Objective Sorting Algorithm (MIO) เทียบกับ Genetic Algorithm ดั้งเดิม (MOSA/GA)
-   * บทบาทของ Population Management และ Mutation Insertion
+   * การทำงานของ Many Independent Objective (MIO) เทียบกับ Genetic Algorithm ดั้งเดิม (MOSA/GA)
+   * บทบาทของ Target-Centric Archive และ Mutation/Statement Insertion
 3. **การออกแบบสภาพแวดล้อมและการทดลอง (Experimental Setup):**
    * Defects4J Framework, Docker Orchestration, Search Budgets (30s, 60s, 120s), Random Seeds
 4. **ผลการทดลองและการวิเคราะห์เชิงลึก (Empirical Results & Discussion):**
    * ตารางและกราฟจากเฟส 1 และ 2
    * การวิเคราะห์ Scaling Performance
 5. **การวิเคราะห์ข้อจำกัดและข้อผิดพลาดเชิงลึก (Failure Root Cause Analysis):**
-   * ดึงเนื้อหาจาก [MIO_FAILURE_ANALYSIS_REPORT.md](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md) อธิบาย 20 บั๊กที่ไม่ผ่าน (Mockito 15, Math 2, Gson 2, JacksonDatabind 1)
+   * ดึงเนื้อหาจาก [MIO_FAILURE_ANALYSIS_REPORT.md](./MIO_FAILURE_ANALYSIS_REPORT.md) อธิบาย 20 บั๊กที่ไม่ผ่าน (Mockito 15, Math 2, Gson 2, JacksonDatabind 1)
    * การพิสูจน์ Zero False Green Guarantee
 6. **การเปรียบเทียบข้ามอัลกอริทึม (Cross-Algorithm Comparison):**
    * การวิเคราะห์ Trade-offs ระหว่าง MIO vs. IPO vs. Dual-AI

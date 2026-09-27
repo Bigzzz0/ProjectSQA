@@ -1,4 +1,4 @@
-# MIO Algorithm (Mutation Insertion Optimization) via EvoSuite
+# MIO Algorithm (Many Independent Objective) via EvoSuite
 
 **ผู้รับผิดชอบหลัก:** Member 2 (นายแทนคุณ พันธ์นิกุล - Algorithm Lead 2)
 
@@ -9,7 +9,7 @@
 
 ## 📌 บทบาทและคำนิยามทางวิชาการ (Academic Context)
 
-* **ขั้นตอนวิธี (Algorithm):** **Mutation Insertion Optimization (MIO)** เป็น Search-Based Software Testing (SBST) Algorithm ที่ออกแบบโดย Andrea Arcuri (2018) สำหรับการสร้าง Test Suite แบบไดนามิก โดย MIO จะเก็บ Candidate Tests ไว้ในคลังข้อมูล (Archive) และค้นหากรณีทดสอบใหม่ด้วยการสุ่มแทรก (Insertion) และปรับเปลี่ยน (Mutation) ภายใต้ Search Budget ที่กำหนด
+* **ขั้นตอนวิธี (Algorithm):** **Many Independent Objective (MIO)** เป็น Search-Based Software Testing (SBST) Algorithm ที่ออกแบบโดย Andrea Arcuri (2017/2018) สำหรับการสร้าง Test Suite แบบไดนามิก โดย MIO มองว่าแต่ละเป้าหมายการทดสอบ (Coverage Goal: แต่ละกิ่งหรือบรรทัด) เป็นเป้าหมายย่อยที่อิสระต่อกัน (Independent Objective) มีคลังข้อมูลย่อย (Archive Bucket) จัดการเฉพาะ และค้นหากรณีทดสอบด้วยการสุ่มแทรก (Insertion) และปรับเปลี่ยน (Mutation) โดยไม่ใช้ Crossover ภายใต้ Search Budget ที่กำหนด
 * **เครื่องมือที่เลือกใช้ (Tool):** **EvoSuite Framework (Version 1.0.6)** โดยกำหนดพารามิเตอร์ `-Dalgorithm=MIO`
 * **เป้าหมายของ Member 2:** สร้าง JUnit Test Suite ระดับ State-of-the-Art ให้กับ **Target Modified Classes** ใน Defects4J พร้อมทำการทดลองเปรียบเทียบ Search Budget ต่างๆ ตามข้อกำหนด 1.7 ของรายวิชา
 
@@ -109,4 +109,4 @@ done
   * ขยายผลรันกับ Target Classes ในชุด Benchmark
   * `Result_Round2/budget_comparison.md` (ตาราง Mean ± SD ตามข้อ 1.7)
   * สรุปจุดเด่น/ข้อจำกัดของ MIO ในเชิง Search-Based Testing
-  * 📋 **รายงานการวิเคราะห์ข้อผิดพลาดและการประกันคุณภาพ (ฉบับส่งอาจารย์):** [MIO_FAILURE_ANALYSIS_REPORT.md](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md)
+  * 📋 **รายงานการวิเคราะห์ข้อผิดพลาดและการประกันคุณภาพ (ฉบับส่งอาจารย์):** [MIO_FAILURE_ANALYSIS_REPORT.md](./MIO_FAILURE_ANALYSIS_REPORT.md)

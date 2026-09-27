@@ -29,7 +29,7 @@
 1. **Computationally Expensive:** การรัน Test Suite ทั้งชุดซ้ำๆ ทุก Generation สิ้นเปลืองเวลาและ Search Budget มหาศาล
 2. **Destructive Crossover:** การนำโค้ดบรรทัดของเทส 2 อันมาตัดแปะข้ามกัน (Crossover) มักทำให้ Dependency ของอ็อบเจกต์พัง (เช่น บรรทัดประกาศตัวแปรหลุดหาย ทำให้โค้ดรันไม่ผ่าน)
 
-ด้วยเหตุนี้ **Dr. Andrea Arcuri (2018)** จึงได้คิดค้นและตีพิมพ์อัลกอริทึม **MIO (Mutation Insertion Optimization)** ขึ้นในวารสารระดับท็อปของโลก *ACM Transactions on Software Engineering and Methodology (TOSEM)* เพื่อปฏิวัติกระบวนการสร้างชุดทดสอบ:
+ด้วยเหตุนี้ **Dr. Andrea Arcuri (2017/2018)** จึงได้คิดค้นและตีพิมพ์อัลกอริทึม **MIO (Many Independent Objective)** ขึ้น (ได้รับรางวัล Best Paper Award ในงาน SSBSE 2017 และตีพิมพ์ในวารสารระดับนานาชาติ *Information and Software Technology (IST)*) เพื่อปฏิวัติกระบวนการสร้างชุดทดสอบ:
 
 ```mermaid
 graph LR
@@ -39,7 +39,7 @@ graph LR
         C1 --> D1[Slow Convergence]
     end
 
-    subgraph MIO_Paradigm["MIO (Mutation Insertion Optimization)"]
+    subgraph MIO_Paradigm["MIO (Many Independent Objective)"]
         A2[Independent Target Archives] --> B2[NO Crossover!]
         B2 --> C2[Pure Mutation & Statement Insertion]
         C2 --> D2[Blazing Fast & Fine-Grained Feedback]
@@ -203,7 +203,7 @@ sequenceDiagram
 
 ## 🎯 บทที่ 2: ความหมายเชิงลึกของ Code Coverage (Coverage Decoded)
 
-เมื่อเราสั่งรันสคริปต์ [batch_evosuite.py](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/Code/batch_evosuite.py) แล้วได้ผลลัพธ์ เช่น **`Coverage: 57.13%`** ตัวเลขนี้มีความหมายทางวิศวกรรมซอฟต์แวร์ดังนี้ครับ:
+เมื่อเราสั่งรันสคริปต์ [batch_evosuite.py](./Code/batch_evosuite.py) แล้วได้ผลลัพธ์ เช่น **`Coverage: 57.13%`** ตัวเลขนี้มีความหมายทางวิศวกรรมซอฟต์แวร์ดังนี้ครับ:
 
 ### 2.1 Line Coverage vs. Branch Coverage
 ในเกณฑ์ข้อกำหนดวิชาการข้อ **1.7** รายวิชากำหนดให้วัดผล 2 เกณฑ์หลัก:
@@ -229,10 +229,13 @@ sequenceDiagram
 * **Branch Coverage (%):** คือสัดส่วนของ **"กิ่งเงื่อนไขการตัดสินใจ (Branches: if, else, switch, while, for)"** ที่ชุดทดสอบทดสอบครบทั้งกรณีที่เป็น **จริง (True)** และ **เท็จ (False)**
   $$\text{Branch Coverage (\%)} = \left(\frac{\text{Covered Branches}}{\text{Total Branches}}\right) \times 100\%$$
 
+> ℹ️ **ข้อสังเกตเชิงเทคนิคเกี่ยวกับการรายงานค่า Coverage ของ EvoSuite:**  
+> เมื่อเรารัน EvoSuite ด้วยการระบุเป้าหมายผสม `-Dcriterion=LINE:BRANCH` ค่าสถิติที่บันทึกลงในไฟล์ `statistics.csv` และสรุปใน `evosuite_budget_summary.csv` จะเป็น **Multi-criterion Combined Coverage** (เปอร์เซ็นต์รวมของเป้าหมายบรรทัดและกิ่งที่พิชิตได้ต่อเป้าหมายทั้งหมด) ซึ่งสคริปต์ `batch_evosuite.py` จะบันทึกค่านั้นเป็นตัวแทนหลักสำหรับทั้ง Line และ Branch Coverage
+
 ---
 
 ### 2.2 ตัวอย่างจริงจากการทดลอง (กรณีศึกษา `Chart-1b`)
-จากผลการรัน [statistics.csv](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/Result_Round2/raw_reports/Chart_1b_30s_s101/statistics.csv):
+จากผลการรัน [statistics.csv](./Result_Round2/raw_reports/Chart_1b_30s_s101/statistics.csv):
 ```csv
 TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,LINE;BRANCH,0.4805882652152903,848,401
@@ -255,7 +258,7 @@ org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,LINE;BRANCH,0.480
 อาจารย์กำหนดให้เปรียบเทียบ **30s, 60s, 120s $\times$ 3 Seeds (101, 102, 103)** เพื่อพิสูจน์สมมติฐานทางวิชาการ:
 > *"เมื่อให้อัลกอริทึม MIO มีเวลาในการค้นหา (Search Budget) เพิ่มขึ้น โครงสร้างชุดทดสอบจะครอบคลุมกิ่งเงื่อนไขที่ซับซ้อนได้ลึกขึ้น ทำให้ค่า Mean Coverage ค่อย ๆ เพิ่มขึ้น และมีค่าส่วนเบี่ยงเบนมาตรฐาน (SD) ที่แคบลง"*
 
-ตัวอย่างผลลัพธ์จริงที่ระบบคำนวณและบันทึกลงใน [evosuite_budget_summary.csv](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv):
+ตัวอย่างผลลัพธ์จริงที่ระบบคำนวณและบันทึกลงใน [evosuite_budget_summary.csv](./Result_Round2/evosuite_budget_summary.csv):
 * **Budget 30s:** Mean Coverage = **`47.09% ± 2.97%`**
 * **Budget 60s:** Mean Coverage = **`57.13% ± 3.05%`**
 * **Budget 120s:** Mean Coverage = **`60.13% ± 2.09%`**  
@@ -267,7 +270,7 @@ org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,LINE;BRANCH,0.480
 
 ### 3.1 Defects4J รู้ได้อย่างไรว่ามีบั๊ก? (Ground Truth)
 Defects4J เป็นชุดข้อมูลมาตรฐานโลกที่รวบรวม **"บั๊กจริงที่เคยเกิดขึ้นจริงในประวัติศาสตร์ของซอฟต์แวร์ Open-Source"**
-* ทุกบั๊กในโฟลเดอร์ [target_benchmark/](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/target_benchmark) จะมีไฟล์บันทึกประวัติเฉลย (Ground Truth) เช่น [target_benchmark/Chart_1b/defects4j_info.txt](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/target_benchmark/Chart_1b/defects4j_info.txt):
+* ทุกบั๊กในโฟลเดอร์ [target_benchmark/](../target_benchmark/) จะมีไฟล์บันทึกประวัติเฉลย (Ground Truth) เช่น [target_benchmark/Chart_1b/defects4j_info.txt](../target_benchmark/Chart_1b/defects4j_info.txt):
   ```text
   Summary for Bug: Chart-1
   Root cause in triggering tests:
@@ -313,9 +316,9 @@ flowchart TD
 
 ---
 
-## 🧪 บทที่ 3: วิธีการทดสอบตรวจจับบั๊กด้วย Runner กลาง (How to Verify with Runner)
+## 🧪 บทที่ 4: วิธีการทดสอบตรวจจับบั๊กด้วย Runner กลาง (How to Verify with Runner)
 
-Member 4 ได้เตรียมเครื่องมือกลางสำหรับวัดผล Fault Detection ไว้แล้วใน [scripts/run_benchmark.py](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/scripts/run_benchmark.py)
+Member 4 ได้เตรียมเครื่องมือกลางสำหรับวัดผล Fault Detection ไว้แล้วใน [scripts/run_benchmark.py](../scripts/run_benchmark.py)
 
 เมื่อเราสั่งรัน MIO จนได้ไฟล์เทสใน `TestCode/<Project>_<Bug>b/` แล้ว เราสามารถทดสอบตรวจสอบได้ทันทีด้วยคำสั่ง:
 
@@ -375,9 +378,11 @@ python scripts/run_benchmark.py --technique mio --project Chart --bug 1
 > ไฟล์ Scaffolding คือไฟล์ควบคุมสภาพแวดล้อมจำลอง (Sandbox) ของ EvoSuite เพื่อป้องกันไม่ให้โค้ดเทสไปลบไฟล์จริงในเครื่อง หรือเปิด Socket กวนระบบเครือข่าย ทั้งสองไฟล์นี้จะทำงานคู่กันเสมอ
 
 ### Q3: เราต้องรัน `run_benchmark.py` เองทุกบั๊กหรือไม่?
-> **ไม่ต้องรันเองทุกบั๊กครับ!** หน้าที่หลักของ Member 2 คือรันเจนเนอเรตเทสเคสด้วย [MIO_RUN_CHEATSHEET.md](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/MIO_RUN_CHEATSHEET.md) แล้วเก็บสถิติลง `evosuite_budget_summary.csv` และส่งมอบไฟล์ใน `TestCode/`  
+> **ไม่ต้องรันเองทุกบั๊กครับ!** หน้าที่หลักของ Member 2 คือรันเจนเนอเรตเทสเคสด้วย [MIO_RUN_CHEATSHEET.md](./MIO_RUN_CHEATSHEET.md) แล้วเก็บสถิติลง `evosuite_budget_summary.csv` และส่งมอบไฟล์ใน `TestCode/`  
 > ส่วนการสั่งรันวัดผลรวมทั้งโครงการจะเป็นหน้าที่ของ **Member 4 (Infra Lead)** ที่จะรันแบตช์ใหญ่เทียบผลของสมาชิกทุกคนพร้อมกันครับ!
 
 ---
 *เอกสารอ้างอิงวิชาการ:*  
-*Arcuri, A. (2018). "A Many-Objective Optimization Approach for Test Suite Generation." ACM Transactions on Software Engineering and Methodology (TOSEM), 27(1), 1-36.*
+* Arcuri, A. (2018). "Test Suite Generation with the Many Independent Objective (MIO) Algorithm." *Information and Software Technology*, 104, 195-206.
+* Arcuri, A. (2017). "Many Independent Objective (MIO) Algorithm for Test Suite Generation." *In Search-Based Software Engineering (SSBSE 2017)*, Lecture Notes in Computer Science, vol 10452, Springer. (Best Paper Award)
+* Fraser, G., & Arcuri, A. (2011). "EvoSuite: Automatic Test Suite Generation for Object-Oriented Software." *In Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering (ESEC/FSE)*, pp. 416-419.

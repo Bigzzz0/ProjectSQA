@@ -6,7 +6,7 @@
 
 > [!IMPORTANT]
 > 📑 **รายงานการวิเคราะห์และตรวจสอบข้อผิดพลาด (Failure & QA Audit Report ฉบับส่งอาจารย์):**  
-> สามารถดูรายละเอียดเชิงลึกของข้อผิดพลาดที่ไม่สามารถแก้ได้ (Mockito JCenter Sunset, Gson-3/8) และประวัติการตรวจสอบ True Green ได้ที่ [MIO_FAILURE_ANALYSIS_REPORT.md](file:///c:/Users/tanku/Documents/GitHub/claude-code-main/ProjectSQA/MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md)
+> สามารถดูรายละเอียดเชิงลึกของข้อผิดพลาดที่ไม่สามารถแก้ได้ (Mockito JCenter Sunset, Gson-3/8) และประวัติการตรวจสอบ True Green ได้ที่ [MIO_FAILURE_ANALYSIS_REPORT.md](./MIO_FAILURE_ANALYSIS_REPORT.md)
 
 ---
 
