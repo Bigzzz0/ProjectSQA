@@ -22,7 +22,7 @@
 - Suite ที่ผ่าน fixed-version verification: `Combinatorial_IPO/TestCode/`
 - Manifest และ inventory: `Combinatorial_IPO/Results/`
 - รายงานผล IPO: [docs/RESULTS_REPORT.md](docs/RESULTS_REPORT.md)
-- คู่มือทำงานทั้งทีม: [TEAM_WORKFLOW_GUIDE.md](../TEAM_WORKFLOW_GUIDE.md)
+- คู่มือทำงานทั้งทีม: [TEAM_WORKFLOW_GUIDE.md](../docs/team/TEAM_WORKFLOW_GUIDE.md)
 
 ## ตรวจสอบ manifest และรัน unit tests
 

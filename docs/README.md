@@ -1,9 +1,12 @@
 # Project documents
 
-The final submission report remains at the repository root for easy access:
+This directory groups the report, presentation, demo, team workflow, and course reference files.
 
-- [`SQA_Final_Report.docx`](../SQA_Final_Report.docx) — editable Word copy
-- [`SQA_Final_Report.pdf`](../SQA_Final_Report.pdf) — submission PDF
-- [`Final_Report.md`](../Final_Report.md) — supporting Markdown copy
+- [`final/`](final/) — official DOCX and PDF report
+- [`reports/`](reports/) — supporting Markdown report and previous-round report
+- [`presentation/`](presentation/) — presentation content
+- [`demo/`](demo/) — live demo instructions and reproduction steps
+- [`team/`](team/) — team workflow and handoff guide
+- [`reference/`](reference/) — course assignment specification
 
-The [`reference/`](reference/) folder contains the assignment specification used to prepare the report.
+The repository root [`README.md`](../README.md) links directly to every main deliverable.

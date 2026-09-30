@@ -7,6 +7,8 @@
 
 คู่มือนี้เป็นแนวทางร่วมของสมาชิกทุกคน ตั้งแต่ตรวจ Defects4J target ส่งมอบ suite รัน benchmark วิเคราะห์ข้อมูล และเตรียมรายงาน/เดโม รายละเอียดเฉพาะเทคนิคอยู่ใน README ของแต่ละสายงาน
 
+ลิงก์ในคู่มือนี้ชี้ไปยังไฟล์ใน repository; คำสั่ง shell ให้รันจากโฟลเดอร์ root ของ repository เว้นแต่ระบุไว้เป็นอย่างอื่น
+
 > ตัวเลขและสถานะในเอกสารนี้ผูกกับ snapshot วันที่ 26 กันยายน 2569 หากมีการเพิ่มหรือแก้ suite ต้องประเมินใหม่และสร้างผลสรุปทั้งหมดจาก snapshot เดียวกันก่อนอ้างอิง
 
 ## สารบัญ
@@ -74,20 +76,20 @@ FDR ในตารางคำนวณจากจำนวน BUG_DETECTED �
 
 | ต้องการตรวจ | แหล่งอ้างอิง |
 |---|---|
-| ผลระดับ bug–technique | [master_benchmark_summary.csv](results/master_benchmark_summary.csv) |
-| สถิติและจำนวนสถานะ | [master_descriptive_stats.json](results/master_descriptive_stats.json) |
-| Suite และ hash | [suite_inventory.csv](results/suite_inventory.csv) |
-| ช่อง NO_SUITE และสาเหตุ audit | [suite_gap_audit.csv](results/suite_gap_audit.csv) |
-| ความหมาย field/ตัวหาร | [DATA_DICTIONARY.md](results/DATA_DICTIONARY.md) |
-| ผลดิบและ run records | [benchmark_results.csv](results/benchmark_results.csv), [results/](results/), progress.json |
-| Catalog และ target classes | [all_bugs_catalog.json](target_benchmark/all_bugs_catalog.json), [target_benchmark/](target_benchmark/) |
-| วิธีใช้ IPO | [Combinatorial_IPO/README.md](Combinatorial_IPO/README.md) |
-| วิธีใช้ MIO | [MIO_Algorithm/README.md](MIO_Algorithm/README.md) |
-| วิธีใช้ DeepSeek | [Deepseek-v4_flash/README.md](Deepseek-v4_flash/README.md) |
-| วิธีใช้ Gemini | [Gemini-3_8_flash/README.md](Gemini-3_8_flash/README.md) |
-| Docker และ Defects4J | [docker/README_DOCKER.md](docker/README_DOCKER.md) |
-| รายงานฉบับส่งหลัก | [SQA_Final_Report.docx](SQA_Final_Report.docx), [SQA_Final_Report.pdf](SQA_Final_Report.pdf) |
-| เอกสาร Markdown ประกอบ/สไลด์/เดโม | [Final_Report.md](Final_Report.md), [PRESENTATION_SLIDES.md](PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](DEMO_GUIDE.md) |
+| ผลระดับ bug–technique | [master_benchmark_summary.csv](../../results/master_benchmark_summary.csv) |
+| สถิติและจำนวนสถานะ | [master_descriptive_stats.json](../../results/master_descriptive_stats.json) |
+| Suite และ hash | [suite_inventory.csv](../../results/suite_inventory.csv) |
+| ช่อง NO_SUITE และสาเหตุ audit | [suite_gap_audit.csv](../../results/suite_gap_audit.csv) |
+| ความหมาย field/ตัวหาร | [DATA_DICTIONARY.md](../../results/DATA_DICTIONARY.md) |
+| ผลดิบและ run records | [benchmark_results.csv](../../results/benchmark_results.csv), [results/](../../results/), progress.json |
+| Catalog และ target classes | [all_bugs_catalog.json](../../target_benchmark/all_bugs_catalog.json), [target_benchmark/](../../target_benchmark/) |
+| วิธีใช้ IPO | [Combinatorial_IPO/README.md](../../Combinatorial_IPO/README.md) |
+| วิธีใช้ MIO | [MIO_Algorithm/README.md](../../MIO_Algorithm/README.md) |
+| วิธีใช้ DeepSeek | [Deepseek-v4_flash/README.md](../../Deepseek-v4_flash/README.md) |
+| วิธีใช้ Gemini | [Gemini-3_8_flash/README.md](../../Gemini-3_8_flash/README.md) |
+| Docker และ Defects4J | [docker/README_DOCKER.md](../../docker/README_DOCKER.md) |
+| รายงานฉบับส่งหลัก | [SQA_Final_Report.docx](../final/SQA_Final_Report.docx), [SQA_Final_Report.pdf](../final/SQA_Final_Report.pdf) |
+| เอกสาร Markdown ประกอบ/สไลด์/เดโม | [Final_Report.md](../reports/Final_Report.md), [PRESENTATION_SLIDES.md](../presentation/PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](../demo/DEMO_GUIDE.md) |
 
 ใช้ master benchmark สำหรับ FDR/coverage; ใช้ manifest เป็นหลักฐาน generation/verification; ใช้ prompt, configuration และ logs สำหรับทำซ้ำการสร้าง suite
 
@@ -134,7 +136,7 @@ FDR ในตารางคำนวณจากจำนวน BUG_DETECTED �
 docker exec defects4j_sqa defects4j info -p Math -b 2
 docker exec defects4j_sqa git -C /opt/defects4j rev-parse HEAD
 
-ดูรายละเอียดรุ่นเครื่องมือและคำสั่งปิด container ใน [คู่มือ Docker](docker/README_DOCKER.md). อย่าปิด Docker/WSL ระหว่างมี job ทำงาน และอย่าลบ volume ที่ยังเก็บผลโดยไม่สำรอง logs
+ดูรายละเอียดรุ่นเครื่องมือและคำสั่งปิด container ใน [คู่มือ Docker](../../docker/README_DOCKER.md). อย่าปิด Docker/WSL ระหว่างมี job ทำงาน และอย่าลบ volume ที่ยังเก็บผลโดยไม่สำรอง logs
 
 ### 6.3 ตรวจหรือสกัด target
 
@@ -157,7 +159,7 @@ docker exec defects4j_sqa git -C /opt/defects4j rev-parse HEAD
 4. ส่ง suite ที่ manifest ยืนยัน พร้อม path และ SHA-256
 5. แยก PICT reference ออกจาก Native IPO ห้ามเรียกผล PICT ว่าเป็น IPO
 
-อ้างอิง [IPO README](Combinatorial_IPO/README.md), [verified suite manifest](Combinatorial_IPO/Results/verified_suites_manifest.json) และ [IPO results report](Combinatorial_IPO/docs/RESULTS_REPORT.md). ปัจจุบัน manifest มี 277 verified target-class records ใน 257 bug IDs; benchmark มี suite 257 bug–IPO pairs.
+อ้างอิง [IPO README](../../Combinatorial_IPO/README.md), [verified suite manifest](../../Combinatorial_IPO/Results/verified_suites_manifest.json) และ [IPO results report](../../Combinatorial_IPO/docs/RESULTS_REPORT.md). ปัจจุบัน manifest มี 277 verified target-class records ใน 257 bug IDs; benchmark มี suite 257 bug–IPO pairs.
 
 ### Member 2 — MIO / EvoSuite
 
@@ -167,7 +169,7 @@ docker exec defects4j_sqa git -C /opt/defects4j rev-parse HEAD
 4. หาก generation ล้มเหลว ให้ส่ง error/log/configuration; benchmark เป็น NO_SUITE เมื่อไม่มี suite ให้ประเมิน
 5. ใช้ผลสรุปงบค้นหาจากรายงานปัจจุบัน อย่านำค่าสถิติรอบก่อนมาอ้างโดยไม่ตรวจ
 
-อ้างอิง [MIO README](MIO_Algorithm/README.md), [budget comparison](MIO_Algorithm/Result_Round2/budget_comparison.md) และ [failure analysis](MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md).
+อ้างอิง [MIO README](../../MIO_Algorithm/README.md), [budget comparison](../../MIO_Algorithm/Result_Round2/budget_comparison.md) และ [failure analysis](../../MIO_Algorithm/MIO_FAILURE_ANALYSIS_REPORT.md).
 
 ### Member 3 — DeepSeek และ Gemini
 
@@ -177,7 +179,7 @@ docker exec defects4j_sqa git -C /opt/defects4j rev-parse HEAD
 4. สำหรับบั๊กหลาย target classes ให้ระบุ class-to-suite mapping ให้ตรวจได้
 5. ให้ Member 4 ประเมิน suite บน buggy/fixed; generation log อย่างเดียวไม่ใช่หลักฐาน coverage/FDR
 
-อ้างอิง [DeepSeek README](Deepseek-v4_flash/README.md), [Gemini README](Gemini-3_8_flash/README.md) และ [M3 delivery report](results/DELIVERY_REPORT_M3.md). เก็บ prompt/result รายรอบไว้เป็น provenance; เมื่อแก้ suite ให้บันทึก run ใหม่ ไม่เขียนทับหลักฐานเก่า
+อ้างอิง [DeepSeek README](../../Deepseek-v4_flash/README.md), [Gemini README](../../Gemini-3_8_flash/README.md) และ [M3 delivery report](../../results/DELIVERY_REPORT_M3.md). เก็บ prompt/result รายรอบไว้เป็น provenance; เมื่อแก้ suite ให้บันทึก run ใหม่ ไม่เขียนทับหลักฐานเก่า
 
 ### Member 4 — Benchmark, analytics และเอกสาร
 
@@ -251,7 +253,7 @@ MIO budget, IPO suite size และ AI token/time เป็น generation metri
 
 ## 10. ตรวจรายงานและเตรียมเดโม
 
-ก่อนคัดลอกตัวเลข ให้ตรวจ snapshot date, denominator, จำนวน suite, detections และ coverage จาก master summary/JSON แล้วเทียบ [รายงานฉบับส่งหลัก DOCX](SQA_Final_Report.docx), [รายงานฉบับส่งหลัก PDF](SQA_Final_Report.pdf), [Markdown ประกอบ](Final_Report.md), [สไลด์](PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](DEMO_GUIDE.md), README และ workbook
+ก่อนคัดลอกตัวเลข ให้ตรวจ snapshot date, denominator, จำนวน suite, detections และ coverage จาก master summary/JSON แล้วเทียบ [รายงานฉบับส่งหลัก DOCX](../final/SQA_Final_Report.docx), [รายงานฉบับส่งหลัก PDF](../final/SQA_Final_Report.pdf), [Markdown ประกอบ](../reports/Final_Report.md), [สไลด์](../presentation/PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](../demo/DEMO_GUIDE.md), README และ workbook
 
 ลำดับเดโมที่แนะนำ:
 
@@ -261,7 +263,7 @@ MIO budget, IPO suite size และ AI token/time เป็น generation metri
 4. แสดงสถานะและ coverage ที่วัดได้จริง
 5. ครอบคลุมทั้ง 4 เทคนิคเมื่อมีหลักฐานที่รันได้; ถ้าไม่มี suite หรือ compile ไม่ผ่าน ให้อธิบายตามผลจริง ไม่สร้างผลแทน
 
-ใช้ลำดับและคำสั่งใน [DEMO_GUIDE.md](DEMO_GUIDE.md). เตรียม log สำรองได้เมื่อ Docker/API ช้า แต่ให้บอกผู้ฟังเมื่อสาธิตจาก log ที่บันทึกไว้
+ใช้ลำดับและคำสั่งใน [DEMO_GUIDE.md](../demo/DEMO_GUIDE.md). เตรียม log สำรองได้เมื่อ Docker/API ช้า แต่ให้บอกผู้ฟังเมื่อสาธิตจาก log ที่บันทึกไว้
 
 ## 11. Checklist ก่อนส่ง
 
@@ -296,6 +298,6 @@ MIO budget, IPO suite size และ AI token/time เป็น generation metri
 
 - MIO: EXECUTION_PLAN.md, NEXT_STEPS_PLAN.md, MIO_RUN_CHEATSHEET.md, manual_member2_mio_defects4j.md และ workflow_การทำงาน.md
 - IPO: docs/HANDOFF.md และ docs/RESULTS_REPORT.md เมื่อกล่าวถึงแผนหรือผลย้อนหลัง
-- [รายงานรอบที่ 1](Report_Round1_Draft.md)
+- [รายงานรอบที่ 1](../reports/history/Report_Round1_Draft.md)
 
 เอกสารย้อนหลังมีประโยชน์ต่อประวัติการตัดสินใจ แต่ตัวเลข จำนวน suite และคำสั่งเก่าห้ามใช้แทน snapshot ปัจจุบัน

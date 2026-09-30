@@ -1,6 +1,6 @@
 # 📑 รายงานผลการวิจัยและพัฒนาฉบับสมบูรณ์ (Final Project Report)
 
-> **เอกสาร Markdown ประกอบรายงาน:** ไฟล์ฉบับส่งหลักคือ [SQA_Final_Report.docx](SQA_Final_Report.docx) และ [SQA_Final_Report.pdf](SQA_Final_Report.pdf). ใช้ไฟล์นี้สำหรับอ่านและอ้างอิงข้อความประกอบเท่านั้น.
+> **เอกสาร Markdown ประกอบรายงาน:** ไฟล์ฉบับส่งหลักคือ [SQA_Final_Report.docx](../final/SQA_Final_Report.docx) และ [SQA_Final_Report.pdf](../final/SQA_Final_Report.pdf). ใช้ไฟล์นี้สำหรับอ่านและอ้างอิงข้อความประกอบเท่านั้น.
 
 ## การเปรียบเทียบเชิงประจักษ์ระหว่างการทดสอบด้วยปัญญาประดิษฐ์และขั้นตอนวิธีการสร้างชุดทดสอบอัตโนมัติบน Defects4J
 ### (AI-Assisted Testing vs. Automatic Test Case Generation Algorithms: A Large-Scale Empirical Benchmark and Evaluation on Defects4J)

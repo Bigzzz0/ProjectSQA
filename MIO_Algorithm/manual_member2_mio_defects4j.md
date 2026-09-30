@@ -90,7 +90,7 @@ flowchart TD
 ```bash
 git pull origin main
 ```
-*เพื่อดึงเอกสารคู่มือ `TEAM_WORKFLOW_GUIDE.md` และสคริปต์กลางทั้งหมดเข้ามาที่เครื่องของคุณ*
+*เพื่อดึงเอกสารคู่มือ `docs/team/TEAM_WORKFLOW_GUIDE.md` และสคริปต์กลางทั้งหมดเข้ามาที่เครื่องของคุณ*
 
 ---
 
